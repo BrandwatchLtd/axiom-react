@@ -35,6 +35,7 @@ module.exports = {
       { id: 'icon', children: require('./components/icon.md'), hidden: true },
       { id: 'icons', children: require('./components/icons.md') },
       { id: 'label', children: require('./components/label.md') },
+      { id: 'select', children: require('./components/select.md') },
       { id: 'status-indicator', children: require('./components/status-indicator.md') },
       { id: 'table', children: require('./components/table.md') },
       { id: 'tabset', children: require('./components/tabset.md') },
