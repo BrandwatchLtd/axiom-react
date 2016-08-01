@@ -3,9 +3,7 @@
     "development": {
       "presets": [
         "react",
-        "react-hmre",
-        "es2015",
-        "stage-0"
+        "es2015"
       ],
       "ignore": [
         "/node_modules\//"
@@ -14,8 +12,7 @@
     "production": {
       "presets": [
         "react",
-        "es2015",
-        "stage-0"
+        "es2015"
       ],
       "ignore": [
         "/node_modules\//"
