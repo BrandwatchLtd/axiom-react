@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
 export class LayoutHeader extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
   render() {
     const { children } = this.props;
 
@@ -15,5 +11,9 @@ export class LayoutHeader extends Component {
     );
   }
 }
+
+LayoutHeader.propTypes = {
+  children: PropTypes.node,
+};
 
 export default LayoutHeader;

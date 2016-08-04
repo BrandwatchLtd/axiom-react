@@ -1,0 +1,25 @@
+@mixin heading($heading) {
+  @if (map-has-key($font-headings, $heading)) {
+    $heading: map-get($font-headings, $heading);
+    $size: map-get($heading, size);
+    $family: map-get($heading, family);
+    $family-index: index($font-heading-families, $family);
+
+    font-family: $family;
+    font-size: $size;
+    font-weight: $font-weight-base;
+
+    @if ($family-index != 1) {
+      .ax-text--weak {
+        font-family: nth($font-heading-families, $family-index - 1);
+      }
+    }
+
+    @if ($family-index != length($font-heading-families)) {
+      strong {
+        font-family: nth($font-heading-families, $family-index + 1);
+        font-weight: $font-weight-base;
+      }
+    }
+  }
+}

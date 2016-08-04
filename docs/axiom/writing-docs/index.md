@@ -9,12 +9,6 @@ One aspect that is different is the ability to import Javascript resources. This
 
 Importing resources is exactly the same as importing in Javascript:
 
-```markdown
-\`\`\`imports
-import Something, { anotherThing } from 'somewhere';
-\`\`\`
-```
-
 *Note: The markdown files are executed in the same context of the babel and webpack configuration.*
 
 
@@ -39,40 +33,6 @@ There are some special properties you can give to elements to configure their ex
 * **snippetIgnore**: Example will be rendered but snippet will not be created for that element but will continue to check child element.
 
 
-# Example
-
-```markdown
-\`\`\`jsx
-<Component renderSkip>
-  Won't be rendered
-</Component>
-
-<Component snippetSkip>
-  No snippet created
-</Component>
-
-<Component>
-  <Component snippetReplace>
-    I'll be replace with placeholder content in the snippet>
-  </Component>
-</Component>
-
-<Component snippetIgnore>
-  I'll be rendered but my snippet won't be
-</Component>
-\`\`\`
-```
-
-
 # Advanced examples that require state
 
 There are times where examples are more complicated that require interactions and states. This is achievable by simply including an element with the property snippetSkip.
-
-
-# Example
-
-```markdown
-\`\`\`jsx
-<ComplicatedComponentExample snippetSkip />
-\`\`\`
-```
