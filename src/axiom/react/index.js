@@ -38,6 +38,8 @@ export { LabelGroup as LabelGroup } from './components/Label';
 export { LogoVertical as LogoVertical } from './components/Logo';
 export { LogoHorizontal as LogoHorizontal } from './components/Logo';
 
+export { Select as Select } from './components/Select';
+
 export { StatusIndicator as StatusIndicator } from './components/StatusIndicator';
 
 export { Tab as Tab } from './components/Tabset';

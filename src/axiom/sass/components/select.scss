@@ -1,0 +1,159 @@
+.pickadilly * {
+  box-sizing: border-box;
+}
+
+.pickadilly {
+  position: relative;
+}
+
+.pickadilly .pickadilly__control {
+  height: 24px;
+  line-height: 22px;
+  padding: 0 6px;
+  border: 1px solid #d2d1d1;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, #fcfcfc, #f0f0f0);
+  position: relative;
+  cursor: pointer;
+}
+
+.pickadilly .pickadilly__control--open {
+  z-index: 1;
+}
+
+.pickadilly .pickadilly__control--disabled {
+  opacity: 0.6;
+}
+
+.pickadilly .pickadilly__control--invalid {
+  background-color: #FDEAE8;
+  background-image: none;
+  border: 1px solid #c4363d;
+  color: #8a0a0a;
+}
+
+.pickadilly .pickadilly__control .pickadilly__icon--chevrondown,
+.pickadilly .pickadilly__control .pickadilly__icon--chevronup {
+  top: 4px;
+  right: 4px;
+  color: #208ec4;
+  font-size: 13px;
+}
+
+.pickadilly .pickadilly__placeholder {
+  padding-right: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.pickadilly .pickadilly__menu {
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  border: 1px solid #d2d1d1;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .24);
+}
+
+.pickadilly .pickadilly__search {
+  padding: 6px;
+}
+
+.pickadilly .pickadilly__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 2px 3px 22px;
+  background-image: url(data:image/png;base64,R0lGODlhEAAQALMAAJSUlP///8zMzK+vr+/v776+vtzc3JmZmff398TExKamptbW1rW1tefn5wAAAAAAACH5BAEHAAEALAAAAAAQABAAAARPMMhJq71YIpQnScrBGBkRFkW4YMWxBsSgNBZxFFQDvBQBCL2fBaEYcCSCA8kiABQIhMVBQbggEgcAYHo7WgwCgaHBcHoziDKuoyks2fBMBAA7);
+  background-position: 3px 3px;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .1) inset;
+  border-radius: 2px;
+  border: solid 1px #ddd;
+  border-top-color: #bbb;
+  border-left-color: #bbb;
+}
+
+.pickadilly .pickadilly__list {
+  max-height: 225px;
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  position: relative;
+}
+
+.pickadilly .pickadilly__item {
+  cursor: pointer;
+  padding: 6px;
+}
+
+.pickadilly .pickadilly__item--active {
+    background-color: #5fa9ea;
+    color: #fff;
+}
+
+.pickadilly .pickadilly__selection {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.pickadilly .pickadilly__selectionItem {
+    height: 24px;
+    line-height: 22px;
+    border: 1px solid #e9e9e9;
+    border-color: #e9e9e9 #d3d3d3 #d3d3d3 #e9e9e9;
+    background-color: #fafafa;
+    margin: 3px 0 3px 0;
+    cursor: default;
+    padding-left: 6px;
+    position: relative;
+}
+
+.pickadilly .pickadilly__selectionItem .pickadilly__icon--remove {
+    cursor: pointer;
+    top: 4px;
+    right: 4px;
+}
+
+.pickadilly .pickadilly__selectionItem .pickadilly__icon--remove:hover {
+    background-color: #ddd;
+    border-radius: 2px;
+    color: #555;
+}
+
+.pickadilly .pickadilly__icon {
+    width: 16px;
+    height: 16px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #8d8d8d;
+    position: absolute;
+    text-align: center;
+    font-family: FontAwesome;
+    font-weight: 400;
+}
+
+.pickadilly .pickadilly__icon:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.pickadilly .pickadilly__icon--remove:before {
+  content: "\f00d";
+}
+
+.pickadilly .pickadilly__icon--chevrondown:before {
+  content: "\f078";
+}
+
+.pickadilly .pickadilly__icon--chevronup:before {
+  content: "\f077";
+}
+
+.pickadilly .pickadilly__mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
