@@ -4,12 +4,6 @@ module.exports = {
   entry: {
     app: ['babel-polyfill', './src/client'],
   },
-  resolveLoader: {
-    modulesDirectories: [
-      'node_modules',
-      'webpack/loaders',
-    ],
-  },
   output: {
     path: './lib',
     filename: 'axiom.js',
@@ -24,9 +18,6 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.md/,
-      loaders: ['babel', 'markdown-jsx'],
-    }, {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel',
@@ -35,10 +26,5 @@ module.exports = {
         presets: ['es2015', 'react'],
       },
     }],
-  },
-  remarkable: {
-    preset: 'full',
-    linkify: true,
-    typographer: true,
   },
 };

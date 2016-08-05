@@ -1,9 +1,8 @@
 import React from 'react';
 
-export const title = 'Welcome to Axiom';
-
+export const title = 'Getting started';
 export const Description = () => (
   <div>
-    Axiom is the Brandwatch Style Guide
+    Getting started with Axiom is easy!
   </div>
 );
