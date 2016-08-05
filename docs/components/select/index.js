@@ -1,6 +1,11 @@
-const Introduction = require('./introduction.md');
+import React from 'react';
 
-export { default as default } from './Select';
 export const title = 'Select';
-export { Introduction };
+export const Description = () => (
+  <div>
+    Use the select component
+  </div>
+);
+
 export { default as Example } from './Example';
+export { default as default } from './Select';

@@ -12,7 +12,7 @@ try {
   server.use(`/${config.output.folderName}`, express.static(config.output.folderName));
 
   server.get('*', (req, res) => {
-    match({ routes: routes(), location: req.url }, (error, redirectLocation, renderProps) => {
+    match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
       if (error) {
         res.status(500).send({ error: error.message });
       } else if (redirectLocation) {

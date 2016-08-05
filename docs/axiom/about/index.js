@@ -1,4 +1,8 @@
-const Introduction = require('./introduction.md');
+import React from 'react';
 
 export const title = 'About';
-export { Introduction };
+export const Description = () => (
+  <div>
+    Use the select component
+  </div>
+);
