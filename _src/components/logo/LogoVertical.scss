@@ -1,0 +1,19 @@
+@import '../logo/_vars.js';
+
+// Logo: Vertical sizing
+.ax-logo--vertical--sm {
+  width: $logo-vertical-width-sm;
+  height: $logo-vertical-height-sm;
+}
+
+.ax-logo--vertical--md {
+  width: $logo-vertical-width-md;
+  height: $logo-vertical-height-md;
+}
+
+.ax-logo--vertical--lg {
+  width: $logo-vertical-width-lg;
+  height: $logo-vertical-height-lg;
+}
+
+
