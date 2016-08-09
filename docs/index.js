@@ -1,9 +1,5 @@
-import React from 'react';
+export { default as Select } from './components/select';
 
-export const title = 'Welcome to Axiom';
-
-export const Description = () => (
-  <div>
-    Axiom is the Brandwatch Style Guide
-  </div>
-);
+export { Layout } from './layout';
+export { LayoutHeader } from './layout';
+export { LayoutMain } from './layout';

@@ -5,6 +5,5 @@ export const server = {
 
 export const output = {
   folderName: 'lib',
-  css: 'axiom.css',
   js: 'axiom.js',
 };
