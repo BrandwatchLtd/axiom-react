@@ -2,14 +2,12 @@
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './src/client'],
+    axiom: ['babel-polyfill', './src/client'],
+    index: ['babel-polyfill', './docs'],
   },
   output: {
     path: './lib',
-    filename: 'axiom.js',
-    resolve: {
-      extensions: ['', '.js'],
-    },
+    filename: '[name].js',
   },
   externals: {
     'react/addons': true,
