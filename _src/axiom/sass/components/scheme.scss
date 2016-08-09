@@ -1,8 +1,0 @@
-@import '../core/mixins';
-@import './_mixins/scheme';
-
-// Scheme: Background colouring
-@include for-each-scheme {
-  background-color: scheme-prop(background-color);
-  color: scheme-text-color(scheme-prop(background-color));
-}
