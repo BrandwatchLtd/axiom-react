@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const Doc = ({ location }) => {
-  const docs = require('../docs/' + location.pathname);
+  const docs = require('../docs/' + location.pathname + '/index.docs.js');
 
   const { Description, Example, title } = docs;
 

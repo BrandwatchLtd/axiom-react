@@ -10,6 +10,7 @@ try {
   const server = express();
 
   server.use(`/${config.output.folderName}`, express.static(config.output.folderName));
+  server.use(`/static`, express.static('./static'));
 
   server.get('*', (req, res) => {
     match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
