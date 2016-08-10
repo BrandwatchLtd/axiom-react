@@ -2,7 +2,7 @@
  *
  */
 
-export default function Alias(matchRegex, replace) {
+function Alias(matchRegex, replace) {
   this.aliasMatchRegex = matchRegex;
   this.aliasReplace = replace;
 }
@@ -32,3 +32,4 @@ Alias.prototype.apply = function(compiler) {
   });
 }
 
+module.exports = Alias;
