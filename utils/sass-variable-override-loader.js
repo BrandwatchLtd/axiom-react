@@ -1,5 +1,5 @@
-import loaderUtils from 'loader-utils';
-import { AXIOM_SASS_VARIABLE_FORMAT } from './_config';
+var loaderUtils = require('loader-utils');
+var config = require('./_config');
 
 module.exports = function sassVariableOverrideLoader(source) {
   this.cacheable && this.cacheable();
@@ -8,7 +8,7 @@ module.exports = function sassVariableOverrideLoader(source) {
   const filename = webpackRemainingChain[webpackRemainingChain.length - 1];
   const { location } = loaderUtils.parseQuery(this.query);
 
-  if (!location || !AXIOM_SASS_VARIABLE_FORMAT.test(filename)) {
+  if (!location || !config.AXIOM_SASS_VARIABLE_FORMAT.test(filename)) {
     return source;
   }
 
