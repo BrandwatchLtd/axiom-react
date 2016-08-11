@@ -1,0 +1,14 @@
+@import '~bw-axiom/design-patterns/colors/mixins';
+@import '~bw-axiom/design-patterns/colors/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/mixins';
+
+.dm-doc-api__pre {
+  @include space-block();
+}
+
+.dm-doc-api__code {
+  border: 1px solid get-color($color-grey, 100);
+  background-color: get-color($color-grey, 50);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  white-space: normal;
+}

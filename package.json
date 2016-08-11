@@ -15,7 +15,7 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.client.config.js",
     "build:watch": "npm run build -- --watch",
-    "start": "NODE_ENV=development babel-node ./src/server.js",
+    "start": "NODE_ENV=development babel-node ./style-guide/server.js",
 
 
     "clean": "babel-node -e \"require('./scripts/clean').default()\"",

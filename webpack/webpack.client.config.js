@@ -8,7 +8,7 @@ var config = require('../config');
 
 module.exports = {
   entry: {
-    axiom: ['babel-polyfill', './src/client'],
+    axiom: ['babel-polyfill', './style-guide/client'],
     index: ['babel-polyfill', './docs'],
   },
   output: {
