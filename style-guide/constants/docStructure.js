@@ -1,15 +1,10 @@
-export default [{
-  id: 'axiom',
-  children: [{
-    id: 'about',
-  }, {
-    id: 'getting-started',
-  }, {
-    id: 'writing-docs',
-  }],
-}, {
-  id: 'components',
-  children: [{
-    id: 'select',
-  }],
-}];
+export default {
+  'Axiom': [
+    require('../../docs/axiom/about/index.docs.js'),
+    require('../../docs/axiom/getting-started/index.docs.js'),
+    require('../../docs/axiom/writing-docs/index.docs.js'),
+  ],
+  'Components': [
+    require('../../docs/components/select/index.docs.js'),
+  ],
+};

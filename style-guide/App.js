@@ -3,13 +3,27 @@ import { Layout, LayoutHeader, LayoutMain, LayoutSidebar, LayoutNav } from '../d
 import docStructure from './constants/docStructure';
 
 const App = ({ children }) => {
+  const items = [];
+
+  Object.keys(docStructure).forEach(title => {
+    const children = docStructure[title].map(({ title, route }) => ({
+      title,
+      route,
+    }));
+
+    items.push({
+      title,
+      children,
+    });
+  });
+
   return (
     <Layout>
       <LayoutHeader>
         Axiom | Brandwatch Style Guide
       </LayoutHeader>
       <LayoutSidebar>
-        <LayoutNav items={ docStructure } />
+        <LayoutNav items={ items } />
       </LayoutSidebar>
       <LayoutMain>
         <div>
