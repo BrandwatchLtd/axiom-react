@@ -1,7 +1,20 @@
 import React, { PropTypes } from 'react';
 
+const normalizePathname = (path) => {
+  let pathname = path;
+  if (!pathname.endsWith('/')) {
+    pathname = pathname + '/';
+  }
+
+  if (pathname === '/') {
+    pathname = '';
+  }
+
+  return pathname;
+};
+
 const Doc = ({ location }) => {
-  const docs = require('../docs/' + location.pathname + '/index.docs.js');
+  const docs = require('../docs/' + normalizePathname(location.pathname) + 'index.docs.js');
 
   const { Description, Example, title } = docs;
 
