@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import constants from '../../style-guide/_helper/constants';
 
-if (constants.__INCLUDE_CSS__) {
+if (__INCLUDE_CSS__) {
   require('./Layout.scss');
 }
 
