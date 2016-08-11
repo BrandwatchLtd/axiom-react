@@ -9,7 +9,7 @@ if (constants.__INCLUDE_CSS__) {
 export class Layout extends Component {
   render() {
     const { children } = this.props;
-    const classes = classnames('dm-layout');
+    const classes = classnames('ax-layout');
 
     return (
       <div className={ classes }>
