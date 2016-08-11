@@ -10,6 +10,10 @@ const normalizePathname = (path) => {
     pathname = '';
   }
 
+  if (pathname.startsWith('/')) {
+    pathname = pathname.replace(/^\/(.*)/g, '$1');
+  }
+
   return pathname;
 };
 

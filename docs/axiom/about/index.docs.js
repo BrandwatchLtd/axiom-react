@@ -1,8 +1,9 @@
 import React from 'react';
 
 export const title = 'About';
+export const route = 'axiom/about';
 export const Description = () => (
   <div>
-    Use the select component
+    About axiom
   </div>
 );

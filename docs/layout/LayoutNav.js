@@ -1,14 +1,21 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
 const LayoutNav = ({ items }) => (
   <div>
-    { console.log(items) }
-    nav
+    { items.map(({ title, children }, index) => (
+      <div key={ index }>
+        <div>{ title }</div>
+        { children.map(({ title, route }, index) => (
+          <Link key={ index } to={ route }>{ title }</Link>
+        )) }
+      </div>
+    )) }
   </div>
 );
 
 LayoutNav.propTypes = {
-  children: PropTypes.node,
+  items: PropTypes.array,
 };
 
 export default LayoutNav;
