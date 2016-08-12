@@ -16,18 +16,18 @@ const normalizePathname = (path) => {
   return ''.concat(!path.startsWith('/') ? '/' : '', path, !path.endsWith('/') ? '/' : '');
 };
 
-const renderExample = Example => {
-  if (!Example) {
+const renderExample = example => {
+  if (!example) {
     return null;
   }
 
   return (
     <div>
       JSX: <br />
-      { Example && jsxToString(Example) }
+      { example && jsxToString(example) }
       HTML: <br />
       <Code>
-        { html.prettyPrint(renderToStaticMarkup(Example)) }
+        { html.prettyPrint(renderToStaticMarkup(example)) }
       </Code>
     </div>
   );
@@ -36,13 +36,13 @@ const renderExample = Example => {
 const Doc = ({ location }) => {
   const docs = require('../docs' + normalizePathname(location.pathname) + 'index.docs.js');
 
-  const { Description, Example, title } = docs;
+  const { Description, example, title } = docs;
 
   return (
     <div>
       <h1>{ title }</h1>
       <Description />
-      { renderExample(Example) }
+      { renderExample(example) }
     </div>
   );
 };

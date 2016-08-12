@@ -8,4 +8,4 @@ export const Description = () => (
   </div>
 );
 
-export { default as Example } from './Example';
+export { default as example } from './example';
