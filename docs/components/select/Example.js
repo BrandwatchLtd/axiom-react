@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from './';
 
-const Example = () => (
+const Example = (
   <Select />
 );
 

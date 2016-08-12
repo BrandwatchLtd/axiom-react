@@ -1,4 +1,8 @@
 import React, { PropTypes } from 'react';
+import jsxToString from 'jsx-to-string';
+import { renderToStaticMarkup } from 'react-dom/server';
+import Code from '../docs/components/code';
+import html from 'html';
 
 /**
  * Normalize the pathname
@@ -12,6 +16,23 @@ const normalizePathname = (path) => {
   return ''.concat(!path.startsWith('/') ? '/' : '', path, !path.endsWith('/') ? '/' : '');
 };
 
+const renderExample = Example => {
+  if (!Example) {
+    return null;
+  }
+
+  return (
+    <div>
+      JSX: <br />
+      { Example && jsxToString(Example) }
+      HTML: <br />
+      <Code>
+        { html.prettyPrint(renderToStaticMarkup(Example)) }
+      </Code>
+    </div>
+  );
+};
+
 const Doc = ({ location }) => {
   const docs = require('../docs' + normalizePathname(location.pathname) + 'index.docs.js');
 
@@ -21,7 +42,7 @@ const Doc = ({ location }) => {
     <div>
       <h1>{ title }</h1>
       <Description />
-      { Example && <Example /> }
+      { renderExample(Example) }
     </div>
   );
 };
