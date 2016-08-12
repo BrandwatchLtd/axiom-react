@@ -43,10 +43,10 @@ function clearCachedFiles(file) {
   }
 }
 
-module.exports = function createSassVariableImporter(fileTest, aliases) {
-  if (!aliases) {
-    aliases = [];
-  }
+module.exports = function createSassVariableImporter(fileTest) {
+  // ToDO: aliases should be cleaned up as this isn't used any more. Previously
+  // it was set to use `~/bw-axiom/some/path`
+  const aliases = [];
   return function variableInjector(url, prev) {
     if (!fileTest.test(url)) {
       return nodeSass.NULL;
