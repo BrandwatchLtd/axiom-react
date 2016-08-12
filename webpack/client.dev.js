@@ -25,7 +25,7 @@ module.exports = {
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
   sassLoader: {
     importer: [
-      axiomSassVariableImporter(loader.aliases),
+      axiomSassVariableImporter(),
     ],
   },
   plugins: [new webpack.DefinePlugin({
