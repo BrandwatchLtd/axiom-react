@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const title = 'Select';
-export const route = 'components/select';
+export const route = '/components/select';
 export const Description = () => (
   <div>
     Use the select component

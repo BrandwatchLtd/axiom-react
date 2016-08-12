@@ -6,5 +6,6 @@ module.exports = {
   output: {
     folderName: 'lib',
     js: 'axiom.js',
+    css: 'axiom.css',
   },
 };

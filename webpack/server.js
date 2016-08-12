@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     server: ['babel-polyfill', './style-guide/server'],
   },
+  devtool: 'source-map',
   output: {
     path: './lib',
     filename: '[name].js',
