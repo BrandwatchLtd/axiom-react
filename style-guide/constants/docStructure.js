@@ -1,3 +1,7 @@
+/**
+ * ./docs/index.docs.js isn't listed here but it is the default route chosen in
+ * ./style-guide/Routes.js.
+ */
 export default {
   'Axiom': [
     require('../../docs/axiom/about/index.docs.js'),

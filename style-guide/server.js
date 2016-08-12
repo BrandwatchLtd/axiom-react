@@ -3,8 +3,8 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router'
 import * as config from '../config';
-import routes from './_helper/Routes';
-import Html from './_helper/Html';
+import routes from './Routes';
+import Html from './Html';
 
 try {
   const server = express();
