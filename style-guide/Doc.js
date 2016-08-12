@@ -16,6 +16,11 @@ const normalizePathname = (path) => {
   return ''.concat(!path.startsWith('/') ? '/' : '', path, !path.endsWith('/') ? '/' : '');
 };
 
+/**
+ * Render the provided example
+ * Renders the example component and also converts it to JSX and a plain HTML
+ * version to provide a better example
+ */
 const renderExample = example => {
   if (!example) {
     return null;
@@ -23,8 +28,10 @@ const renderExample = example => {
 
   return (
     <div>
+      Rendered: <br />
+      { example }
       JSX: <br />
-      { example && jsxToString(example) }
+      { jsxToString(example) }
       HTML: <br />
       <Code>
         { html.prettyPrint(renderToStaticMarkup(example)) }
