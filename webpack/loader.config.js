@@ -1,5 +1,4 @@
-const Alias = require('./utils/webpack-alias-plugin');
-var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   style: {
@@ -20,7 +19,11 @@ module.exports = {
       presets: ['es2015', 'react'],
     },
   },
-  aliases: [
-    new Alias(/^bw-axiom/, (resolve) => resolve.replace(/^bw-axiom(.*)/, path.resolve(__dirname, '../', 'docs') + '$1')),
-  ],
+  styleExtract: {
+    test: /\.(scss|css)$/,
+    loader: ExtractTextPlugin.extract(
+      'style',
+      `css!postcss!sass`
+    ),
+  },
 };
