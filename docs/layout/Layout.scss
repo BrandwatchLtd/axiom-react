@@ -1,0 +1,12 @@
+@import '../design-patterns/layout/_vars.js';
+@import './vars';
+
+.ax-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: green;
+  @media screen and (max-width: $layout-change-point) {
+    background: $color;
+  }
+}

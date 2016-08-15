@@ -1,0 +1,17 @@
+@import '../logo/_vars.js';
+
+// Logo: Horizontal sizing
+.ax-logo--horizontal--sm {
+  width: $logo-horizontal-width-sm;
+  height: $logo-horizontal-height-sm;
+}
+
+.ax-logo--horizontal--md {
+  width: $logo-horizontal-width-md;
+  height: $logo-horizontal-height-md;
+}
+
+.ax-logo--horizontal--lg {
+  width: $logo-horizontal-width-lg;
+  height: $logo-horizontal-height-lg;
+}
