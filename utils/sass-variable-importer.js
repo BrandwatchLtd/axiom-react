@@ -1,7 +1,7 @@
-import path from 'path';
-import nodeSass from 'node-sass';
-import decamelize from 'decamelize';
-import Alias from './webpack-alias-plugin';
+var path = require('path');
+var nodeSass = require('node-sass');
+var decamelize = require('decamelize');
+var Alias = require('./webpack-alias-plugin');
 
 /**
  *
@@ -47,14 +47,17 @@ function clearCachedFiles(file) {
   }
 }
 
-export default function createSassVariableImporter(fileTest, aliases = []) {
+module.exports = function createSassVariableImporter(fileTest, aliases) {
+  if (!aliases) {
+    aliases = [];
+  }
   return function variableInjector(url, prev) {
     if (!fileTest.test(url)) {
       return nodeSass.NULL;
     }
 
-    let variableSass = '';
-    let importPath;
+    var variableSass = '';
+    var importPath;
     const context = prev === 'stdin'
       ? this.options.includePaths
       : path.dirname(path.normalize(prev));

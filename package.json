@@ -13,11 +13,14 @@
     "url": "https://github.com/BrandwatchLtd/axiom.git"
   },
   "scripts": {
+    "build": "webpack --config webpack/webpack.client.config.js",
+    "build:watch": "npm run build -- --watch",
+    "start": "NODE_ENV=development babel-node ./src/server.js",
+
+
     "clean": "babel-node -e \"require('./scripts/clean').default()\"",
     "build-client": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/build-client').default()\"",
     "build-server": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/build-server').default()\"",
-    "eslint": "",
-    "start": "NODE_ENV=development BABEL_ENV=development babel-node -e \"require('./scripts/develop').default()\"",
     "prod": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/production').default()\"",
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
@@ -71,6 +74,7 @@
     "lodash": "^4.14.1",
     "mocha": "^3.0.2",
     "node-sass": "^3.8.0",
+    "markdown-loader": "^0.1.7",
     "postcss-loader": "^0.9.1",
     "prismjs": "^1.4.1",
     "react-dom": "^15.3.0",
@@ -84,6 +88,7 @@
     "redux-thunk": "^2.0.1",
     "remarkable": "^1.6.2",
     "sass-lint": "^1.8.2",
+    "remarkable-loader": "^0.2.1",
     "sass-loader": "^3.1.2",
     "serialize-javascript": "^1.1.2",
     "sinon": "^1.17.5",

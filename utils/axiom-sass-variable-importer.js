@@ -1,4 +1,6 @@
-import createSassVariableImporter from './sass-variable-importer';
-import { AXIOM_SASS_VARIABLE_FORMAT } from './_config';
+const createSassVariableImporter = require('./sass-variable-importer');
+const config = require('./_config');
 
-export default (aliases) => createSassVariableImporter(AXIOM_SASS_VARIABLE_FORMAT, aliases);
+module.exports = function(aliases) {
+  return createSassVariableImporter(config.AXIOM_SASS_VARIABLE_FORMAT, aliases);
+};

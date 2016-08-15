@@ -1,0 +1,13 @@
+// @import '~bw-axiom/design-patterns/layout/mixins';
+@import '~bw-axiom/design-patterns/layout/_vars.js';
+@import './vars';
+
+.dm-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: green;
+  @media screen and (max-width: $layout-change-point) {
+    background: $color;
+  }
+}
