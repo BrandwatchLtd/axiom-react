@@ -1,8 +1,10 @@
 import React from 'react';
-import Select from './';
+import Code from './';
 
 const Example = (
-  <Select />
+  <Code>
+    <div>Test</div>
+  </Code>
 );
 
 export default Example;

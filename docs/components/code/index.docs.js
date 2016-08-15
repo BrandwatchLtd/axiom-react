@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const title = 'Select';
-export const route = '/components/select';
+export const title = 'Code';
+export const route = '/components/code';
 export const Description = () => (
   <div>
-    Use the select component
+    The code component
   </div>
 );
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const title = 'Select';
-export const route = '/components/select';
+export const title = 'Button';
+export const route = '/components/button';
 export const Description = () => (
   <div>
-    Use the select component
+    The button component
   </div>
 );
 

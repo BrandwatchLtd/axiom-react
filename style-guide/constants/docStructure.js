@@ -10,5 +10,7 @@ export default {
   ],
   'Components': [
     require('../../docs/components/select/index.docs.js'),
+    require('../../docs/components/code/index.docs.js'),
+    require('../../docs/components/button/index.docs.js'),
   ],
 };

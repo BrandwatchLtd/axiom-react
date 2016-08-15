@@ -1,8 +1,8 @@
 import React from 'react';
-import Select from './';
+import Button from './';
 
 const Example = (
-  <Select />
+  <Button>Test</Button>
 );
 
 export default Example;
