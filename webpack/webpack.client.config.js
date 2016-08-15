@@ -1,14 +1,13 @@
 var loader = require('./loader.config');
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
-var axiomSassVariableImporter = require('../utils/axiom-sass-variable-importer');
-var config = require('../config');
+var axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
 
 'use strict';
 
 module.exports = {
   entry: {
-    axiom: ['babel-polyfill', './src/client'],
+    axiom: ['babel-polyfill', './style-guide/client'],
     index: ['babel-polyfill', './docs'],
   },
   output: {
@@ -26,7 +25,7 @@ module.exports = {
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
   sassLoader: {
     importer: [
-      axiomSassVariableImporter(config.webpack.aliases),
+      axiomSassVariableImporter(loader.aliases),
     ],
   },
   plugins: [new webpack.DefinePlugin({

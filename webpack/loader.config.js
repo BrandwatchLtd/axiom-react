@@ -1,3 +1,6 @@
+const Alias = require('./utils/webpack-alias-plugin');
+var path = require('path');
+
 module.exports = {
   style: {
     test: /\.(scss|css)$/,
@@ -17,4 +20,7 @@ module.exports = {
       presets: ['es2015', 'react'],
     },
   },
+  aliases: [
+    new Alias(/^bw-axiom/, (resolve) => resolve.replace(/^bw-axiom(.*)/, path.resolve(__dirname, '../', 'docs') + '$1')),
+  ],
 };

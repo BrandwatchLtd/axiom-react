@@ -1,30 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, browserHistory } from 'react-router';
-import { Provider } from 'react-redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import createStore from './redux/createStore';
-import createRoutes from './redux/createRoutes';
-import createDevTools from './redux/createDevTools';
+import Routes from './_helper/Routes';
+import { Router, useRouterHistory } from 'react-router';
+import { createHistory } from 'history';
 
-if (__INCLUDE_CSS__) {
-  require('./client.scss');
-}
+const history = useRouterHistory(createHistory)({
+  basename: '/',
+});
 
-const DevTools = createDevTools();
-const store = createStore(window.__data);
-const history = syncHistoryWithStore(browserHistory, store);
-const routes = createRoutes(store);
-
-if (__DEVELOPMENT__) {
-  render(
-    <DevTools store={ store } />,
-    document.getElementById('dev-tools')
-  );
-}
-
-render((
-  <Provider key="provider" store={ store } >
-    <Router history={ history } routes={ routes } />
-  </Provider>
-), document.getElementById('react-root'));
+render(<Router history={ history }>{ Routes }</Router>, document.getElementById('react-root'));

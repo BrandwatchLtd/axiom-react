@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import constants from '../../src/_helper/constants';
+import constants from '../../style-guide/_helper/constants';
 
 if (constants.__INCLUDE_CSS__) {
   require('./Layout.scss');
@@ -9,7 +9,7 @@ if (constants.__INCLUDE_CSS__) {
 export class Layout extends Component {
   render() {
     const { children } = this.props;
-    const classes = classnames('dm-layout');
+    const classes = classnames('ax-layout');
 
     return (
       <div className={ classes }>
