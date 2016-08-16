@@ -3,6 +3,7 @@ import jsxToString from 'jsx-to-string';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Code from '../docs/components/code';
 import html from 'html';
+import filterSnippets from './utils/filterSnippets';
 
 /**
  * Normalize the pathname
@@ -29,12 +30,12 @@ const renderExample = example => {
   return (
     <div>
       Rendered: <br />
-      { example }
+      { filterSnippets(example) }
       JSX: <br />
-      { jsxToString(example) }
+      { jsxToString(filterSnippets(example, 'static')) }
       HTML: <br />
       <Code>
-        { html.prettyPrint(renderToStaticMarkup(example)) }
+        { html.prettyPrint(renderToStaticMarkup(filterSnippets(example, 'static'))) }
       </Code>
     </div>
   );
