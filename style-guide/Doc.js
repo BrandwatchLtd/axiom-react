@@ -1,9 +1,6 @@
 import React, { PropTypes } from 'react';
-import jsxToString from 'jsx-to-string';
-import { renderToStaticMarkup } from 'react-dom/server';
 import Code from '../docs/components/code';
-import html from 'html';
-import filterSnippets from './utils/filterSnippets';
+import { filterRender } from './utils/filterSnippets';
 
 /**
  * Normalize the pathname
@@ -30,12 +27,14 @@ const renderExample = example => {
   return (
     <div>
       Rendered: <br />
-      { filterSnippets(example) }
+      { filterRender(example) }
       JSX: <br />
-      { jsxToString(filterSnippets(example, 'static')) }
-      HTML: <br />
-      <Code>
-        { html.prettyPrint(renderToStaticMarkup(filterSnippets(example, 'static'))) }
+      <Code language="jsx">
+        { example }
+      </Code>
+      <br />HTML: <br />
+      <Code language="html">
+        { example }
       </Code>
     </div>
   );

@@ -10,9 +10,14 @@ Article.propTypes = {
 };
 
 const Example = (
-  <Article snippetSkip={ true }>
-    <Button><div snippetReplace={ true }>Blabla</div></Button>
-  </Article>
+  <div>
+    <div className="renderSkip" renderSkip></div>
+    <div className="snippetSkipdiv" snippetSkip>
+    </div>
+    <Article snippetIgnore={ true }>
+      <Button><div snippetReplace={ true }>Blabla</div></Button>
+    </Article>
+  </div>
 );
 
 export default Example;
