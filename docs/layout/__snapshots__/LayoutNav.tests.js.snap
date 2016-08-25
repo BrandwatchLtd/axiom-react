@@ -1,0 +1,14 @@
+exports[`LayoutNav default renders 1`] = `
+<div>
+  <div>
+    <div>
+      Main page
+    </div>
+    <a
+      onClick={[Function bound handleClick]}
+      style={Object {}}>
+      Child title
+    </a>
+  </div>
+</div>
+`;

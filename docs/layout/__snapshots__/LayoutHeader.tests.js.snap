@@ -1,0 +1,7 @@
+exports[`LayoutHeader default renders 1`] = `
+<header>
+  <div>
+    Test
+  </div>
+</header>
+`;
