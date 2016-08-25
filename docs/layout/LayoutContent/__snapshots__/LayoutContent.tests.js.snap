@@ -1,5 +1,6 @@
 exports[`LayoutContent default renders 1`] = `
-<div>
+<div
+  className="ax-layout__content">
   <div>
     Test
   </div>

@@ -9,7 +9,7 @@ export class LayoutMain extends Component {
     const { children } = this.props;
 
     return (
-      <div>
+      <div className="ax-layout__main">
         { children }
       </div>
     );
