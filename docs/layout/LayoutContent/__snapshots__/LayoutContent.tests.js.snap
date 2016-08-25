@@ -1,0 +1,7 @@
+exports[`LayoutContent default renders 1`] = `
+<div>
+  <div>
+    Test
+  </div>
+</div>
+`;

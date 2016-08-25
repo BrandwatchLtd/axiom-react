@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { LayoutNav } from './';
+import LayoutNav from './';
 
 describe('LayoutNav', () => {
   let component;

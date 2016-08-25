@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { LayoutContent } from './';
+import LayoutContent from './';
 
 describe('LayoutContent', () => {
   let component;

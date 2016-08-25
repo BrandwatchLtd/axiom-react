@@ -1,16 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { LayoutMain } from './';
+import LayoutHeader from './';
 
-describe('LayoutMain', () => {
+describe('LayoutHeader', () => {
   let component;
 
   describe('default', () => {
     beforeEach(() => {
       component = renderer.create(
-        <LayoutMain>
+        <LayoutHeader>
           <div>Test</div>
-        </LayoutMain>).toJSON();
+        </LayoutHeader>).toJSON();
     });
 
     it('renders', () => {
