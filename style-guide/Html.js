@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { renderToString } from 'react-dom/server';
+import { Body } from '../docs/layout';
 
 const Html = ({ config, children }) => (
   <html lang="en-us">
@@ -12,10 +13,10 @@ const Html = ({ config, children }) => (
       <link href="static/favicon.ico" rel="icon" type="image/x-icon" />
       <link href={ `${config.output.folderName}/${config.output.css}` } rel="stylesheet" />
     </head>
-    <body>
+    <Body>
       <div dangerouslySetInnerHTML={ { __html: renderToString(children) } } id="react-root"></div>
       <script src={ `${config.output.folderName}/${config.output.js}` }></script>
-    </body>
+    </Body>
   </html>
 );
 
