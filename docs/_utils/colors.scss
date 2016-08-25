@@ -1,0 +1,12 @@
+/**
+ * Generate a CSS class for each color available
+ * $colors is supposed to be a key/value object
+ * $baseclass is a string, e.g. `ax-paragraph`
+ */
+@mixin color-variants($colors, $baseclass) {
+  @each $color, $hex in $colors {
+    .#{$baseclass}--#{$color} {
+      color: $hex;
+    }
+  }
+}

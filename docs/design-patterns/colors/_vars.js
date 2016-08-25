@@ -40,5 +40,6 @@ const colors = {
 
 module.exports = {
   ...colors,
+  colors,
   colorIds: Object.keys(colors),
 };
