@@ -22,9 +22,6 @@ const App = ({ children }) => {
   return (
     <Layout>
       <LayoutHeader>
-        <div style={ { position: 'absolute' } }>
-          <Logo />
-        </div>
         <Paragraph>
           Axiom | Brandwatch Style Guide
         </Paragraph>

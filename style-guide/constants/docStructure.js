@@ -13,4 +13,7 @@ export default {
     require('../../docs/components/code/index.docs.js'),
     require('../../docs/components/button/index.docs.js'),
   ],
+  'Typography': [
+    require('../../docs/typography/paragraph/index.docs.js'),
+  ],
 };
