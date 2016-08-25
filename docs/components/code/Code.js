@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import cleanSnippet from '../../../style-guide/utils/cleanSnippet';
-import { prepareSnippet } from '../../../style-guide/utils/code-formatting';
+import cleanSnippet from './utils/cleanSnippet';
+import { prepareSnippet } from './utils/code-formatting';
 
 if (__INCLUDE_CSS__) {
   require('prismjs/themes/prism.css');
