@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import Code from '../docs/components/code';
 import { filterRender } from './utils/filterSnippets';
 
@@ -19,17 +20,27 @@ const normalizePathname = (path) => {
  * Renders the example component and also converts it to JSX and a plain HTML
  * version to provide a better example
  */
-const renderExample = examples => {
+const renderExample = (examples, path) => {
   if (!examples) {
     return null;
   }
 
   return (
     <div>
+      <h3>States</h3>
+      <ul>
+        {
+          examples.map(({ name }, index) => (
+            <li key={ index }>
+              <Link to={ `/${path}#${name.toLowerCase()}` }>{ name }</Link>
+            </li>
+          ))
+        }
+      </ul>
       {
         examples.map(({ name, example }, index) => (
           <div key={ index }>
-            <h2>{ name }</h2><br />
+            <h2 id={ name.toLowerCase() }>{ name }</h2><br />
             { filterRender(example) }
             JSX: <br />
             <Code language="jsx">
@@ -55,7 +66,7 @@ const Doc = ({ location }) => {
     <div>
       <h1>{ title }</h1>
       <Description />
-      { renderExample(examples) }
+      { renderExample(examples, location.pathname) }
     </div>
   );
 };
