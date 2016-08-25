@@ -22,7 +22,7 @@ const Code = ({ children, language }) => {
 
 Code.propTypes = {
   children: PropTypes.node,
-  language: PropTypes.string,
+  language: PropTypes.string.isRequired,
 };
 
 export default Code;

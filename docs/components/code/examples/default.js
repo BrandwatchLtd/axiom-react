@@ -1,8 +1,8 @@
 import React from 'react';
-import Code from './';
+import Code from '../';
 
 const Example = (
-  <Code>
+  <Code language="html">
     <div>Test</div>
   </Code>
 );
