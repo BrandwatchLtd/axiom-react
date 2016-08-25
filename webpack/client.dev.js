@@ -2,6 +2,8 @@ var loader = require('./loader.config');
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var config = require('../config');
 
 'use strict';
 
@@ -20,7 +22,7 @@ module.exports = {
     'react/lib/ReactContext': true,
   },
   module: {
-    loaders: [loader.js, loader.style],
+    loaders: [loader.js, loader.style, loader.styleExtract],
   },
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
   sassLoader: {
@@ -30,5 +32,7 @@ module.exports = {
   },
   plugins: [new webpack.DefinePlugin({
     __INCLUDE_CSS__: true,
+  }), new ExtractTextPlugin(config.output.css, {
+    allChunks: true,
   })],
 };
