@@ -24,7 +24,7 @@
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
     "prepublish-sass": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/prepublish-sass').default()\"",
-    "test": "mocha $( find ./src ./utils ./style-guide -name '*.tests.js') ${exeparams[@]}"
+    "test": "jest"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
@@ -101,5 +101,19 @@
     "webpack-dev-server": "1.14.1",
     "webpack-node-externals": "1.3.3",
     "yaml-loader": "^0.4.0"
+  },
+  "jest": {
+    "automock": false,
+    "rootDir": "./",
+    "testRegex": ".*\\.tests\\.js$",
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/_src"],
+    "unmockedModulePathPatterns": ["react"],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "<rootDir>/test/styleMock.js",
+      "^.+\\.(gif)$": "<rootDir>/test/fileMock.js"
+    },
+    "globals": {
+      "__INCLUDE_CSS__": false
+    }
   }
 }

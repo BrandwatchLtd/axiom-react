@@ -1,0 +1,8 @@
+exports[`Layout default renders 1`] = `
+<div
+  className="ax-layout">
+  <div>
+    Test
+  </div>
+</div>
+`;
