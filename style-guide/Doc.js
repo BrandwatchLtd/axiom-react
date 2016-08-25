@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import Code from '../docs/components/code';
-import { filterRender } from './utils/filterSnippets';
+import { filterRender } from '../docs/components/code/utils/filterSnippets';
 
 /**
  * Normalize the pathname
