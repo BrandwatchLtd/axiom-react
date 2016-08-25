@@ -13,7 +13,7 @@
     "url": "https://github.com/BrandwatchLtd/axiom.git"
   },
   "scripts": {
-    "build": "webpack --config webpack/client.dev.js",
+    "build": "babel-node -e \"require('./scripts/build-client').default()\"",
     "build:watch": "npm run build -- --watch",
     "build:production": "webpack --config webpack/client.production.js",
     "start": "webpack --config webpack/server.js && node ./lib/server.js",
@@ -48,6 +48,7 @@
     "babel-core": "6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-loader": "6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "6.13.2",
     "babel-preset-react": "6.11.1",
@@ -74,9 +75,9 @@
     "jsx-to-string": "^0.2.15",
     "loader-utils": "^0.2.14",
     "lodash": "^4.14.1",
+    "markdown-loader": "^0.1.7",
     "mocha": "^3.0.2",
     "node-sass": "^3.8.0",
-    "markdown-loader": "^0.1.7",
     "postcss-loader": "^0.9.1",
     "prismjs": "^1.4.1",
     "react-dom": "^15.3.0",
@@ -106,8 +107,13 @@
     "automock": false,
     "rootDir": "./",
     "testRegex": ".*\\.tests\\.js$",
-    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/_src"],
-    "unmockedModulePathPatterns": ["react"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/_src"
+    ],
+    "unmockedModulePathPatterns": [
+      "react"
+    ],
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "<rootDir>/test/styleMock.js",
       "^.+\\.(gif)$": "<rootDir>/test/fileMock.js"

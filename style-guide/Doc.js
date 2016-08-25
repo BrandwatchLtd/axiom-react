@@ -30,11 +30,15 @@ const renderExample = (examples, path) => {
       <h3>States</h3>
       <ul>
         {
-          examples.map(({ name }, index) => (
-            <li key={ index }>
-              <Link to={ `/${path}#${name.toLowerCase()}` }>{ name }</Link>
-            </li>
-          ))
+          examples.map(({ name }, index) => {
+            const pathname = path.startsWith('/') ? path : `/${path}`;
+
+            return (
+              <li key={ index }>
+                <Link to={ `${pathname}#${name.toLowerCase()}` }>{ name }</Link>
+              </li>
+            );
+          })
         }
       </ul>
       {

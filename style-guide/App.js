@@ -3,6 +3,7 @@ import { Layout, LayoutHeader, LayoutMain, LayoutSidebar, LayoutNav, LayoutConte
 import Logo from '../docs/components/logo';
 import { Paragraph } from '../docs/typography';
 import docStructure from './constants/docStructure';
+import * as colors from '../docs/design-patterns/colors/_vars';
 
 const App = ({ children }) => {
   const items = [];
@@ -19,15 +20,18 @@ const App = ({ children }) => {
     });
   });
 
+  console.log(colors, colors.colorIds, colors.colorIds.video);
+
   return (
     <Layout>
       <LayoutHeader>
-        <Paragraph>
+        <Paragraph color={ colors.colorIds.video }>
           Axiom | Brandwatch Style Guide
         </Paragraph>
       </LayoutHeader>
       <LayoutMain>
         <LayoutSidebar>
+          <Logo />
           <LayoutNav items={ items } />
         </LayoutSidebar>
         <LayoutContent>
