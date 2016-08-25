@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Layout, LayoutHeader, LayoutMain, LayoutSidebar, LayoutNav, LayoutContent } from '../docs/layout';
 import Logo from '../docs/components/logo';
+import { Paragraph } from '../docs/typography';
 import docStructure from './constants/docStructure';
 
 const App = ({ children }) => {
@@ -24,7 +25,9 @@ const App = ({ children }) => {
         <div style={ { position: 'absolute' } }>
           <Logo />
         </div>
-        Axiom | Brandwatch Style Guide
+        <Paragraph>
+          Axiom | Brandwatch Style Guide
+        </Paragraph>
       </LayoutHeader>
       <LayoutMain>
         <LayoutSidebar>
