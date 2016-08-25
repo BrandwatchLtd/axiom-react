@@ -1,0 +1,8 @@
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
+
+.ax-layout__header {
+  display: flex;
+  background: $darkgrey;
+  padding: $spacing-base $spacing-lg;
+}

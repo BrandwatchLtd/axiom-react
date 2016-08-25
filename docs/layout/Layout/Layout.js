@@ -1,19 +1,23 @@
 import React, { Component, PropTypes } from 'react';
 
-export class LayoutMain extends Component {
+if (__INCLUDE_CSS__) {
+  require('./layout.scss');
+}
+
+export class Layout extends Component {
   render() {
     const { children } = this.props;
 
     return (
-      <div>
+      <div className="ax-layout">
         { children }
       </div>
     );
   }
 }
 
-LayoutMain.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node,
 };
 
-export default LayoutMain;
+export default Layout;

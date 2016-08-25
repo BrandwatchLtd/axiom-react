@@ -1,0 +1,13 @@
+exports[`Paragraph default renders 1`] = `
+<p
+  className="ax-paragraph ax-paragraph--darkgrey">
+  Test
+</p>
+`;
+
+exports[`Paragraph white renders 1`] = `
+<p
+  className="ax-paragraph ax-paragraph--white">
+  Test
+</p>
+`;

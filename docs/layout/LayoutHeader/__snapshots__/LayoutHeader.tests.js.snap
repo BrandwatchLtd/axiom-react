@@ -1,5 +1,6 @@
 exports[`LayoutHeader default renders 1`] = `
-<header>
+<header
+  className="ax-layout__header">
   <div>
     Test
   </div>

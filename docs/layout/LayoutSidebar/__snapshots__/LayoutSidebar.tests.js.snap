@@ -1,0 +1,8 @@
+exports[`LayoutSidebar default renders 1`] = `
+<div
+  className="ax-layout__sidebar">
+  <div>
+    Test
+  </div>
+</div>
+`;

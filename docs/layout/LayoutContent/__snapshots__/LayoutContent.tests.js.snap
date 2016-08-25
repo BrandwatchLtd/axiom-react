@@ -1,0 +1,8 @@
+exports[`LayoutContent default renders 1`] = `
+<div
+  className="ax-layout__content">
+  <div>
+    Test
+  </div>
+</div>
+`;

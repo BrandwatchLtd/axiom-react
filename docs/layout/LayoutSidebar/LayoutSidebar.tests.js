@@ -1,16 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Layout } from './';
+import LayoutSidebar from './';
 
-describe('Layout', () => {
+describe('LayoutSidebar', () => {
   let component;
 
   describe('default', () => {
     beforeEach(() => {
       component = renderer.create(
-        <Layout>
+        <LayoutSidebar>
           <div>Test</div>
-        </Layout>).toJSON();
+        </LayoutSidebar>
+      ).toJSON();
     });
 
     it('renders', () => {

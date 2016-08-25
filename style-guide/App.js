@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
-import { Layout, LayoutHeader, LayoutMain, LayoutSidebar, LayoutNav } from '../docs/layout';
+import { Layout, LayoutHeader, LayoutMain, LayoutSidebar, LayoutNav, LayoutContent } from '../docs/layout';
+import Logo from '../docs/components/logo';
+import { Paragraph } from '../docs/typography';
 import docStructure from './constants/docStructure';
 
 const App = ({ children }) => {
@@ -20,15 +22,22 @@ const App = ({ children }) => {
   return (
     <Layout>
       <LayoutHeader>
-        Axiom | Brandwatch Style Guide
-      </LayoutHeader>
-      <LayoutSidebar>
-        <LayoutNav items={ items } />
-      </LayoutSidebar>
-      <LayoutMain>
-        <div>
-          { children }
+        <div style={ { position: 'absolute' } }>
+          <Logo />
         </div>
+        <Paragraph>
+          Axiom | Brandwatch Style Guide
+        </Paragraph>
+      </LayoutHeader>
+      <LayoutMain>
+        <LayoutSidebar>
+          <LayoutNav items={ items } />
+        </LayoutSidebar>
+        <LayoutContent>
+          <div>
+            { children }
+          </div>
+        </LayoutContent>
       </LayoutMain>
     </Layout>
   );

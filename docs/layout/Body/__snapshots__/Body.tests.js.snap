@@ -1,0 +1,8 @@
+exports[`Body default renders 1`] = `
+<body
+  className="ax-body">
+  <div>
+    Test
+  </div>
+</body>
+`;
