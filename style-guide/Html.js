@@ -11,7 +11,6 @@ const Html = ({ config, children }) => (
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link href="static/favicon.ico" rel="icon" type="image/x-icon" />
-      <link href={ `${config.output.folderName}/${config.output.css}` } rel="stylesheet" />
     </head>
     <Body>
       <div dangerouslySetInnerHTML={ { __html: renderToString(children) } } id="react-root"></div>
