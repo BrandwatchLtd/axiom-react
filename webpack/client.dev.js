@@ -2,6 +2,7 @@ var loader = require('./loader.config');
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
+var config = require('../config');
 
 'use strict';
 
@@ -11,7 +12,7 @@ module.exports = {
     index: ['babel-polyfill', './docs'],
   },
   output: {
-    path: './lib',
+    path: config.output.folderName,
     filename: '[name].js',
   },
   externals: {
