@@ -1,37 +1,19 @@
-var loader = require('./loader.config');
-var autoprefixer = require('autoprefixer');
-var webpack = require('webpack');
-var axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
-var config = require('../config');
+import webpack from 'webpack';
+import loader from './loader.config';
+import sharedConfig from './client.shared';
 
-'use strict';
-
-module.exports = {
-  entry: {
-    axiom: ['babel-polyfill', './style-guide/client'],
-    index: ['babel-polyfill', './docs'],
-  },
-  devtool: 'source-map',
-  watch: true,
-  output: {
-    path: config.output.folderName,
-    filename: '[name].js',
-  },
-  externals: {
-    'react/addons': true,
-    'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true,
-  },
+export default {
+  entry: sharedConfig.entry,
+  output: sharedConfig.output,
+  externals: sharedConfig.externals,
+  postcss: sharedConfig.postcss,
+  sassLoader: sharedConfig.sassLoader,
   module: {
     loaders: [loader.js, loader.style],
-  },
-  postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
-  sassLoader: {
-    importer: [
-      axiomSassVariableImporter(),
-    ],
   },
   plugins: [new webpack.DefinePlugin({
     __INCLUDE_CSS__: true,
   })],
+  devtool: 'source-map',
+  watch: true,
 };
