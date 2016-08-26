@@ -10,8 +10,4 @@ const Logo = () => (
   </div>
 );
 
-Logo.propTypes = {
-  absolute: PropTypes.bool,
-}
-
 export default Logo;

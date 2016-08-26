@@ -1,14 +1,9 @@
 @import '../../design-patterns/colors/_vars.js';
+@import '../../_utils/colors';
 
 .ax-paragraph {
   font: 13px/19px Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-.ax-paragraph--darkgrey {
-  color: $darkgrey;
-}
-
-.ax-paragraph--white {
-  color: white;
-}
+@include color-variants($colors, 'ax-paragraph');

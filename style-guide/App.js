@@ -22,15 +22,13 @@ const App = ({ children }) => {
   return (
     <Layout>
       <LayoutHeader>
-        <div style={ { position: 'absolute' } }>
-          <Logo />
-        </div>
-        <Paragraph>
+        <Paragraph color="light-grey-background">
           Axiom | Brandwatch Style Guide
         </Paragraph>
       </LayoutHeader>
       <LayoutMain>
         <LayoutSidebar>
+          <Logo />
           <LayoutNav items={ items } />
         </LayoutSidebar>
         <LayoutContent>
