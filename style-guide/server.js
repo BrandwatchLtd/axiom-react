@@ -9,7 +9,7 @@ import Html from './Html';
 try {
   const server = express();
 
-  server.use(`/${config.output.folderName}`, express.static(config.output.folderName));
+  server.use(`/lib`, express.static('./lib'));
   server.use(`/static`, express.static('./static'));
 
   server.get('*', (req, res) => {

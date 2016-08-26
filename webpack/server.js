@@ -1,6 +1,7 @@
 var loader = require('./loader.config');
 var webpack = require('webpack');
 var webpackNodeExternals = require('webpack-node-externals');
+var config = require('../config');
 
 'use strict';
 
@@ -11,7 +12,7 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    path: './lib',
+    path: config.output.folderName,
     filename: '[name].js',
   },
   module: {
