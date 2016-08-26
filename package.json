@@ -13,6 +13,7 @@
     "url": "https://github.com/BrandwatchLtd/axiom.git"
   },
   "scripts": {
+    "dev": "babel-node -e \"require('./scripts/develop').default()\"",
     "build": "babel-node -e \"require('./scripts/build-client').default()\"",
     "build:watch": "babel-node -e \"require('./scripts/develop-client').default()\"",
     "build:production": "webpack --config webpack/client.production.js",
