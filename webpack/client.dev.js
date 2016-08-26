@@ -11,6 +11,8 @@ module.exports = {
     axiom: ['babel-polyfill', './style-guide/client'],
     index: ['babel-polyfill', './docs'],
   },
+  devtool: 'source-map',
+  watch: true,
   output: {
     path: config.output.folderName,
     filename: '[name].js',

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import webpack from 'webpack';
-import webpackConfig from '../webpack/client.dev';
+import webpackConfig from '../webpack/client.production';
 
 export default function buildClient() {
   return new Promise((resolve, reject) => {

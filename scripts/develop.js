@@ -6,7 +6,7 @@ import * as config from '../config';
 
 export default function develop() {
   clean()
-    // .then(() => watchServer())
-    // .then(() => watchClient())
-    // .then(() => server(config.output.styleGuide.serverDevJSFilename));
+    .then(() => watchServer())
+    .then(() => watchClient())
+    .then(() => server(config.server.filename));
 }
