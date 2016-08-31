@@ -9,8 +9,6 @@ import { Provider } from 'react-redux';
 import * as config from '../config';
 import createStore from './redux/createStore';
 import createRoutes from './redux/createRoutes';
-import { initialState as searchInitialState } from './reducers/search';
-import { searchDocumentation } from './utils/documentation-search';
 import Html from './components/Html';
 
 try {
@@ -19,20 +17,9 @@ try {
   server.use(`/${config.output.folderName}`, express.static(config.output.folderName));
   server.use('/assets', express.static('static/assets'));
   server.use('/favicon.ico', express.static('static/favicon.ico'));
-  server.use('/api/search', (req, res) => {
-    res.status(200).json({
-      results: searchDocumentation(req.query.q),
-    });
-  });
 
   server.get('*', (req, res) => {
-    const initialState = {
-      search: {
-        ...searchInitialState,
-        results: req.query.q ? searchDocumentation(req.query.q) : [],
-      },
-    };
-
+    const initialState = {};
     const store = createStore(initialState);
     const routes = createRoutes(store);
 
