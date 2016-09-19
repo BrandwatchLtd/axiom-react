@@ -9,7 +9,6 @@ if (__INCLUDE_CSS__) {
 export class CheckBox extends Component {
   static propTypes = {
     children: { node: true },
-    inline: { bool: true },
   };
 
   render() {

@@ -3,7 +3,7 @@
 @import '../form/_vars.js';
 
 .ax-checkbox__label {
-  &:before {
+  &::before {
     @include icon($fa-var-check);
     border-radius: $form-input-border-radius;
   }

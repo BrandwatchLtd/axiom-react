@@ -12,13 +12,11 @@
 .ax-list--inline {
   display: flex;
   flex-wrap: wrap;
-
-  &--start  { justify-content: flex-start; }
-  &--center { justify-content: center; }
-  &--end    { justify-content: flex-end; }
+  padding: 0;
 
   > li {
     padding: 0 $spacing-sm 0 0;
+    list-style: none;
 
     &::after {
       margin: 0 0 0 $spacing-sm;

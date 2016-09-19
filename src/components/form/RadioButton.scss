@@ -2,7 +2,7 @@
 @import '../icon/vars';
 
 .ax-radio__label {
-  &:before {
+  &::before {
     @include icon($fa-var-circle);
     border-radius: 50%;
   }

@@ -5,6 +5,7 @@ import ChedioButtoxGroup from './ChedioButtoxGroup';
 export class RadioButtonGroup extends Component {
   static propTypes = {
     children: { node: true },
+    inline: { bool: true },
   };
 
   render() {
