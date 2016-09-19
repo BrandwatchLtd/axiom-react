@@ -1,6 +1,6 @@
 import { browserHistory } from 'react-router';
 import * as routes from 'style-guide/constants/Routing';
-import { getFirstDocumentPath } from 'style-guide/utils/markdown-document';
+import { getFirstPath } from 'style-guide/utils/examples';
 
 export function goToSearchPage(q) {
   browserHistory.push({
@@ -11,6 +11,6 @@ export function goToSearchPage(q) {
 
 export function goToDocs() {
   browserHistory.push({
-    pathname: getFirstDocumentPath(),
+    pathname: getFirstPath(),
   });
 }

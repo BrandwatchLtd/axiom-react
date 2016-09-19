@@ -56,6 +56,11 @@ export function getMarkdownImports(route) {
   }
 }
 
+export function getDocsData(route) {
+  const { docs = {} } = (getMarkdownContent(route) || {});
+  return docs;
+}
+
 export function hasMarkdownContent(path, route =  pathToMarkdownRoute(path)) {
   return Array.isArray(route) && typeof getMarkdownContentFunction(route) === 'function';
 }

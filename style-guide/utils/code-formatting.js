@@ -8,7 +8,7 @@ import { js as beautifyJs, html as beautifyHtml, css as beautifyCSS } from 'js-b
 function formatHtml(html) {
   return beautifyHtml(html, {
     indent_size: 2,
-    preserve_newlines: true,
+    preserve_newlines: false,
     unformatted: [],
   });
 }
@@ -26,7 +26,7 @@ function formatJs(js) {
 function formatJsx(jsx) {
   return beautifyHtml(jsx, {
     indent_size: 2,
-    preserve_newlines: true,
+    preserve_newlines: false,
     unformatted: [],
   });
 }

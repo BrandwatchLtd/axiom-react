@@ -8,7 +8,7 @@ if (__INCLUDE_CSS__) {
 
 export default class CodeSnippet extends Component {
   static propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.node,
     language: PropTypes.string.isRequired,
   };
 

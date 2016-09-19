@@ -1,9 +1,9 @@
 import * as types from 'style-guide/constants/ActionTypes';
-import { getFirstDocumentRoute } from 'style-guide/utils/markdown-document';
+import { getFirstRoute } from 'style-guide/utils/examples';
 
 export const initialState = {
-  activePath: getFirstDocumentRoute(),
-  openPath: getFirstDocumentRoute(),
+  activePath: getFirstRoute(),
+  openPath: getFirstRoute(),
   visible: false,
 };
 

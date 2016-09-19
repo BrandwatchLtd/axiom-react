@@ -10,12 +10,12 @@ export default class CodeTabset extends Component {
   render() {
     const { children } = this.props;
     const codeSnippets = Array.isArray(children) ? children : [children];
-    const tabOrder = [ 'jsx', 'sass', 'js', 'html' ];
+    const tabOrder = [ 'jsx', 'scss', 'js', 'html' ];
     const titleMap = {
       html: 'Raw HTML',
       jsx: 'React',
       js: 'JS',
-      sass: 'Sass',
+      scss: 'Scss',
     };
 
     return (
