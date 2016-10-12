@@ -2,7 +2,6 @@ module.exports = [{
   id: 'axiom',
   name: 'Axiom',
   children: [
-    require('bw-axiom/axiom/about'),
     require('bw-axiom/axiom/getting-started'),
   ],
 }, {
@@ -12,13 +11,6 @@ module.exports = [{
     require('bw-axiom/design-patterns/colors/example'),
     require('bw-axiom/design-patterns/date-and-time/example'),
     require('bw-axiom/design-patterns/numbers/example'),
-  ],
-}, {
-  id: 'writing-and-voice',
-  name: 'Writing and Voice',
-  children: [
-    require('bw-axiom/writing-and-voice/character'),
-    require('bw-axiom/writing-and-voice/text'),
   ],
 }, {
   id: 'components',

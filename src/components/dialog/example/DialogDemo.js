@@ -8,7 +8,7 @@ import DialogBody from '../DialogBody';
 import DialogFooter from '../DialogFooter';
 import DialogTitle from '../DialogTitle';
 
-export default class DialogExample extends Component {
+export default class DialogDemo extends Component {
   static propTypes = {
     withFooter: PropTypes.bool,
     withTitle: PropTypes.bool,

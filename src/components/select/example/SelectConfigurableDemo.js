@@ -7,6 +7,8 @@ import TextInput from '../../form/TextInput';
 import Select from '../Select';
 import Heading from '../../typography/Heading';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
+import Example from 'style-guide/components/Example/Example';
+import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class SelectConfigurableDemo extends Component {
 
@@ -86,52 +88,54 @@ export default class SelectConfigurableDemo extends Component {
     };
 
     return (
-      <Grid gutters="xlarge">
-        <GridCell>
-          <Select { ...selectConfig } />
+      <Example name="Select">
+        <Grid gutters="xlarge">
+          <GridCell>
+            <Select { ...selectConfig } />
 
-          <Heading level={ 5 }>Selected value</Heading>
-          <CodeSnippet language="js">{ `${JSON.stringify(selection)}` }</CodeSnippet>
+            <Heading level={ 5 }>Selected value</Heading>
+            <CodeSnippet language="js">{ `${JSON.stringify(selection)}` }</CodeSnippet>
 
-          <Heading level={ 5 }>Current props config</Heading>
-          <CodeSnippet language="js">{ `${JSON.stringify(selectConfig)}` }</CodeSnippet>
-        </GridCell>
+            <Heading level={ 5 }>Current props config</Heading>
+            <CodeSnippet language="js">{ `${JSON.stringify(selectConfig)}` }</CodeSnippet>
+          </GridCell>
 
-        <GridCell shrink={ true }>
-          <Heading level={ 5 }>Data type options</Heading>
+          <GridCell shrink={ true }>
+            <Heading level={ 5 }>Data type options</Heading>
 
-          <RadioButton
-              checked={ isString }
-              onChange={ () => this.updateDataType('string') }>
-            Array of strings
-          </RadioButton>
+            <RadioButton
+                checked={ isString }
+                onChange={ () => this.updateDataType('string') }>
+              Array of strings
+            </RadioButton>
 
-          <RadioButton
-              checked={ isObject }
-              onChange={ () => this.updateDataType('object') }>
-            Array of objects
-          </RadioButton>
+            <RadioButton
+                checked={ isObject }
+                onChange={ () => this.updateDataType('object') }>
+              Array of objects
+            </RadioButton>
 
-          <Heading level={ 5 }>Config</Heading>
+            <Heading level={ 5 }>Config</Heading>
 
-          <CheckBox
-              checked={ multiselect }
-              onChange={ ::this.toggleMultiselect }>
-            With multiple selection?
-          </CheckBox>
+            <CheckBox
+                checked={ multiselect }
+                onChange={ ::this.toggleMultiselect }>
+              With multiple selection?
+            </CheckBox>
 
-          <CheckBox
-              checked={ hideSelected }
-              onChange={ () => this.setState({ hideSelected: !hideSelected }) }>
-            Hide selected items?
-          </CheckBox>
+            <CheckBox
+                checked={ hideSelected }
+                onChange={ () => this.setState({ hideSelected: !hideSelected }) }>
+              Hide selected items?
+            </CheckBox>
 
-          <TextInput
-              label="Max menu height"
-              onChange={ ::this.updateMaxHeight }
-              value={ maxHeight } />
-        </GridCell>
-      </Grid>
+            <TextInput
+                label="Max menu height"
+                onChange={ ::this.updateMaxHeight }
+                value={ maxHeight } />
+          </GridCell>
+        </Grid>
+      </Example>
     );
   }
 }

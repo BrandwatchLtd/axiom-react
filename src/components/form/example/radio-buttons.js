@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Heading from '../../typography/Heading';
 import RadioButton from '../RadioButton';
 import RadioButtonGroup from '../RadioButtonGroup';
+import Example from 'style-guide/components/Example/Example';
+import Snippet from 'style-guide/components/Example/Snippet';
 
-export const base = (
-  <RadioButtonGroup>
-    <RadioButton>Unchecked radio button</RadioButton>
-    <RadioButton defaultChecked={ true }>Checked radio button</RadioButton>
-    <RadioButton disabled={ true }>Disabled radio button</RadioButton>
-  </RadioButtonGroup>
-);
+export default class FormExample extends Component {
+  render() {
+    return (
+      <Example name="RadioButtons">
+        <Snippet>
+          <RadioButtonGroup>
+            <RadioButton>Unchecked Radio button</RadioButton>
+            <RadioButton defaultChecked={ true }>Checked Radio button</RadioButton>
+            <RadioButton disabled={ true }>Disabled Radio button</RadioButton>
+          </RadioButtonGroup>
+        </Snippet>
 
-export const inline = (
-  <RadioButtonGroup inline={ true }>
-    <RadioButton name="radio-inline">Radio button</RadioButton>
-    <RadioButton name="radio-inline">Radio button</RadioButton>
-    <RadioButton name="radio-inline">Radio button</RadioButton>
-  </RadioButtonGroup>
-);
+        <Heading level={ 5 }>Inline RadioButtons</Heading>
+        <Snippet>
+          <RadioButtonGroup inline={ true }>
+            <RadioButton>Radio button</RadioButton>
+            <RadioButton>Radio button</RadioButton>
+            <RadioButton>Radio button</RadioButton>
+          </RadioButtonGroup>
+        </Snippet>
+      </Example>
+    );
+  }
+}

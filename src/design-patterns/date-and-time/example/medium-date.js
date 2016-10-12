@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Paragraph from '../../../components/typography/Paragraph';
 import Strong from '../../../components/typography/Strong';
-import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 import { mediumDate, mediumDateWithTime } from '../date-and-time';
+import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
+import Example from 'style-guide/components/Example/Example';
 
-export default [
-  <Paragraph key="1">
-    <Strong>Without time:</Strong> { mediumDate(new Date) }<br />
-    <Strong>With time:</Strong> { mediumDateWithTime(new Date) }
-  </Paragraph>,
+export default class DateExample extends Component {
+  render() {
+    return (
+      <Example name="Medium date">
+        <Paragraph>
+          <Strong>Without time:</Strong> { mediumDate(new Date) }<br />
+          <Strong>With time:</Strong> { mediumDateWithTime(new Date) }<br />
+        </Paragraph>
 
-  <CodeSnippet key="2" language="js">{
+        <CodeSnippet language="js">{
 `mediumDate(new Date);
 mediumDateWithTime(new Date);`
-  }</CodeSnippet>,
-];
+          }</CodeSnippet>
+      </Example>
+    );
+  }
+}

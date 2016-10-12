@@ -8,12 +8,11 @@ import Heading from 'bw-axiom/components/typography/Heading';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
 import { getPathData, pathToRoute } from 'style-guide/utils/examples';
-import { renderExamples } from 'style-guide/components/Example/utils';
-import Level1 from 'style-guide/components/Example/Level1';
 
 export class Doc extends Component {
   static propTypes = {
     location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
       query: PropTypes.object.isRequired,
     }).isRequired,
     routeParams: PropTypes.object.isRequired,
@@ -51,7 +50,12 @@ export class Doc extends Component {
         </Billboard>
 
         <LayoutContent padded={ true }>
-          { renderExamples(examples, Level1, { routeParams, queryParams }) }
+          { examples.map((Example, index) =>
+            <Example
+                key={ index }
+                queryParams={ queryParams }
+                routeParams={ routeParams } />
+          ) }
         </LayoutContent>
       </div>
     );

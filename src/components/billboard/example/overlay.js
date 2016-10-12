@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Billboard from '../Billboard';
+import Example from 'style-guide/components/Example/Example';
+import Snippet from 'style-guide/components/Example/Snippet';
 
-export default (
-  <Billboard color="grey" image="/assets/axiom-bg.jpg" overlay={ true } variation="900">
-    I am a billboard with an overlay!
-  </Billboard>
-);
+export default class BillboardExample extends Component {
+  render() {
+    return (
+      <Example name="Overlay Billboard">
+        <Snippet>
+          <Billboard color="grey" image="/assets/axiom-bg.jpg" overlay={ true } variation="900">
+            I am a billboard with an overlay!
+          </Billboard>
+        </Snippet>
+      </Example>
+    );
+  }
+}

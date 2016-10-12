@@ -5,6 +5,7 @@ function iconSort(a, b) {
 }
 
 export const iconList = [...icons].sort(iconSort);
+
 export const iconCategories = [...icons].reduce((categories, icon) => {
   icon.categories.forEach((category) => {
     categories[category] = [
