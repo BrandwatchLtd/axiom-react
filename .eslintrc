@@ -6,6 +6,7 @@
     "amd": true,
     "node": true,
     "mocha": true,
+    "jest": true,
   },
   "globals": {
     "__PACKAGE_NAME__": true,

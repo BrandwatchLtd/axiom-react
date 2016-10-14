@@ -1,0 +1,10 @@
+{
+  "moduleNameMapper": {
+    "^.+\\.(scss|css|less)$": "<rootDir>/test/__mocks__/styleMock.js"
+  },
+  "moduleFileExtensions": ["js"],
+  "moduleDirectories": ["node_modules"],
+  "globals": {
+    "__INCLUDE_CSS__": false
+  }
+}
