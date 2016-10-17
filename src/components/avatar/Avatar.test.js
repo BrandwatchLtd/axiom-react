@@ -2,10 +2,30 @@ import React from 'react';
 import Avatar from './Avatar';
 import renderer from 'react-test-renderer';
 
-test('Avatar', () => {
-  const component = renderer.create(
-    <Avatar size="small" src="/image/path" />
+import { avatarSizes } from '../avatar/_vars';
+
+function getComponent(props = {}) {
+  return renderer.create(
+    <Avatar src="/image/path" { ...props } />
   );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+}
+
+describe('Avatar', () => {
+  it('renders with defaultProps', () => {
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  describe('avatarSizes', () => {
+    const avatarSizeIds = avatarSizes.map(({ id }) => id);
+
+    avatarSizeIds.forEach(size => {
+      it(`renders with ${size}`, () => {
+        const component = getComponent({ size });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
 });

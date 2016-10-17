@@ -3,9 +3,9 @@ import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { avatarSizes } from '../avatar/_vars';
 
-// if (__INCLUDE_CSS__) {
-//   require('./Avatar.scss');
-// }
+if (__INCLUDE_CSS__) {
+  require('./Avatar.scss');
+}
 
 const avatarSizeIds = avatarSizes.map(({ id }) => id);
 const avatarSizeDefaultId = avatarSizes.find((size) => size.default).id;

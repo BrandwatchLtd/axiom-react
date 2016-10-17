@@ -1,0 +1,97 @@
+exports[`Grid properties fit renders with breakpoint large 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--true ax-grid--fit--large">
+  <div />
+</div>
+`;
+
+exports[`Grid properties fit renders with breakpoint medium 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--true ax-grid--fit--medium">
+  <div />
+</div>
+`;
+
+exports[`Grid properties fit renders with breakpoint small 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--true ax-grid--fit--small">
+  <div />
+</div>
+`;
+
+exports[`Grid properties fit renders with value true 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--true ax-grid--fit">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with gutter large 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--large">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with gutter medium 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--medium">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with gutter small 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--small">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with gutter xlarge 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--xlarge">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with gutter xsmall 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--xsmall">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with gutter xxlarge 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--xxlarge">
+  <div />
+</div>
+`;
+
+exports[`Grid properties gutters renders with value false 1`] = `
+<div
+  className="ax-grid ax-grid--gutters-none">
+  <div />
+</div>
+`;
+
+exports[`Grid properties renders with hGutters property set to false 1`] = `
+<div
+  className="ax-grid ax-grid--gutters-none-h ax-grid--gutters--true">
+  <div />
+</div>
+`;
+
+exports[`Grid properties renders with vGutters property set to false 1`] = `
+<div
+  className="ax-grid ax-grid--gutters-none-v ax-grid--gutters--true">
+  <div />
+</div>
+`;
+
+exports[`Grid renders with defaultProps 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--true">
+  <div />
+</div>
+`;
