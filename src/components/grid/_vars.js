@@ -1,5 +1,5 @@
-import { layoutWidthSm } from '../../design-patterns/layout/_vars';
-import { spacingXs, spacingSm, spacingBase, spacingLg, spacingXl, spacingXxl } from '../../design-patterns/spacing/_vars';
+const { layoutWidthSm } = require('../../design-patterns/layout/_vars');
+const { spacingXs, spacingSm, spacingBase, spacingLg, spacingXl, spacingXxl } = require('../../design-patterns/spacing/_vars');
 
 module.exports = {
   gridChangePoint: layoutWidthSm,

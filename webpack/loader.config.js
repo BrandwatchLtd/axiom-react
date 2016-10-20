@@ -1,7 +1,7 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import * as config from '../config';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const config = require('../config');
 
-export const js = {
+const js = {
   test: /\.js$/,
   loaders: [
     'babel',
@@ -10,17 +10,17 @@ export const js = {
   exclude: /node_modules/,
 };
 
-export const json = {
+const json = {
   test: /\.json$/,
   loader: 'json',
 };
 
-export const yml = {
+const yml = {
   test: /\.yml$/,
   loader: 'json!yaml',
 };
 
-export const style = {
+const style = {
   test: /\.(scss|css)$/,
   loaders: [
     'style',
@@ -28,17 +28,17 @@ export const style = {
     'postcss',
     'sass',
   ],
-}
+};
 
-export const styleExtract = {
+const styleExtract = {
   test: /\.(scss|css)$/,
   loader: ExtractTextPlugin.extract(
     'style',
-    `css!postcss!sass`,
+    'css!postcss!sass'
   ),
 };
 
-export const fonts = {
+const fonts = {
   test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
   loader: 'file-loader',
   include: [
@@ -46,11 +46,21 @@ export const fonts = {
   ],
 };
 
-export const markdown = {
+const markdown = {
   test: /\.md$/,
   exclude: /node_modules/,
   loaders: [
     'babel',
     'markdown-documentation',
   ],
+};
+
+module.exports = {
+  js,
+  json,
+  yml,
+  style,
+  styleExtract,
+  fonts,
+  markdown,
 };

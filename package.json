@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "node ./scripts/clean",
-    "build-client": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/build-client').default()\"",
+    "build-client": "NODE_ENV=production BABEL_ENV=production node ./scripts/build-client",
     "build-server": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/build-server').default()\"",
     "lint": "npm run lint-js && npm run lint-sass",
     "lint-js": "node_modules/.bin/eslint --config .eslintrc ./src ./style-guide",

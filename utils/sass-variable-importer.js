@@ -1,7 +1,7 @@
-import path from 'path';
-import nodeSass from 'node-sass';
-import decamelize from 'decamelize';
-import Alias from './webpack-alias-plugin';
+const path = require('path');
+const nodeSass = require('node-sass');
+const decamelize = require('decamelize');
+const Alias = require('./webpack-alias-plugin');
 
 /**
  *
@@ -25,13 +25,13 @@ function formatValue(value) {
   if (typeof value === 'object') {
     if (Array.isArray(value)) {
       return `(${value.map((arrayValue) => {
-        return `${formatValue(arrayValue)}`
+        return `${formatValue(arrayValue)}`;
       })})`;
     }
 
     return `(${Object.keys(value).map((key) => {
       return `${formatKey(key)}:${formatValue(value[key])}`;
-    })})`
+    })})`;
   }
 
   return JSON.stringify(value).replace(/"/g, '');
@@ -47,7 +47,7 @@ function clearCachedFiles(file) {
   }
 }
 
-export default function createSassVariableImporter(fileTest, aliases = []) {
+module.exports = function createSassVariableImporter(fileTest, aliases = []) {
   return function variableInjector(url, prev) {
     if (!fileTest.test(url)) {
       return nodeSass.NULL;
@@ -71,25 +71,26 @@ export default function createSassVariableImporter(fileTest, aliases = []) {
     }
 
     if (require.cache[importPath]) {
-      clearCachedFiles(require.cache[importPath])
+      clearCachedFiles(require.cache[importPath]);
     }
 
     try {
       const jsVariables = require(importPath);
       variableSass = Object.keys(jsVariables).reduce((acc, jsKey) => {
-        const sassKey = `$${formatKey(jsKey)}`
+        const sassKey = `$${formatKey(jsKey)}`;
         const sassValue = formatValue(jsVariables[jsKey]);
 
         return `${acc}\n${sassKey}: ${sassValue};`
           // TODO: Weird Sass issue with having only one element.
           .replace(/\)\)/g, '),)');
       }, '');
-    } catch(e) {
+    } catch (e) {
+      /* eslint-disable no-console */
       console.error(e);
     }
 
     return {
       contents: variableSass,
     };
-  }
-}
+  };
+};

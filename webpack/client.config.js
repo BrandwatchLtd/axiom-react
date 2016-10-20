@@ -1,11 +1,11 @@
-import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import autoprefixer from 'autoprefixer';
-import * as config from '../config';
-import axiomSassVariableImporter from '../utils/axiom-sass-variable-importer';
-import { js, json, yml, styleExtract, fonts, markdown } from './loader.config.js';
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const config = require('../config');
+const axiomSassVariableImporter = require('../utils/axiom-sass-variable-importer');
+const { js, json, yml, styleExtract, fonts, markdown } = require('./loader.config.js');
 
-export default {
+module.exports = {
   target: 'web',
   context: __dirname,
   cache: false,
@@ -42,8 +42,7 @@ export default {
         // warnings: false,
       // },
     // }),
-    new webpack.DefinePlugin({
-      ...config.webpack.globals,
+    new webpack.DefinePlugin(Object.assign({}, config.webpack.globals, {
       __CLIENT__: true,
       __SERVER__: false,
       __PRODUCTION__: true,
@@ -52,7 +51,7 @@ export default {
       'process.env': {
         NODE_ENV: '"production"',
       },
-    }),
+    })),
     new ExtractTextPlugin(config.output.styleGuide.clientProdCSSFilename, {
       allChunks: true,
     }),

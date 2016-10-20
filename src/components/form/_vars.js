@@ -1,6 +1,6 @@
-import { colorWhite, colorGrey, colorPrimary, colorGreen, colorRed } from '../../design-patterns/colors/_vars';
-import { componentPaddingVBase, componentPaddingHBase } from '../../design-patterns/spacing/_vars';
-import { lineHeightPx } from '../typography/_vars';
+const { colorWhite, colorGrey, colorPrimary, colorGreen, colorRed } = require('../../design-patterns/colors/_vars');
+const { componentPaddingVBase, componentPaddingHBase } = require('../../design-patterns/spacing/_vars');
+const { lineHeightPx } = require('../typography/_vars');
 
 const formInputBorderWidth = 1;
 

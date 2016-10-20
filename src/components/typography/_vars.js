@@ -1,4 +1,4 @@
-import { spacingSm, spacingBase } from '../../design-patterns/spacing/_vars';
+const { spacingSm, spacingBase } = require('../../design-patterns/spacing/_vars');
 
 const scales = {
   scaleMinorSecond: 1.067,

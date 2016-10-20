@@ -2,10 +2,10 @@
   "env": {
     "development": {
       "presets": [
+        "es2015",
+        "stage-0",
         "react",
         "react-hmre",
-        "es2015",
-        "stage-0"
       ],
       "ignore": [
         "/node_modules\//"
@@ -13,9 +13,9 @@
     },
     "production": {
       "presets": [
-        "react",
         "es2015",
-        "stage-0"
+        "stage-0",
+        "react",
       ],
       "ignore": [
         "/node_modules\//"

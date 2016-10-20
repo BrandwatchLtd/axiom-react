@@ -1,5 +1,5 @@
-import * as spacing from '../../design-patterns/spacing/_vars';
-import { fontSizeSm, fontSizeMd, fontSizeBase } from '../typography/_vars';
+const spacing = require('../../design-patterns/spacing/_vars');
+const { fontSizeSm, fontSizeMd, fontSizeBase } = require('../typography/_vars');
 
 module.exports = {
   labelSizes: [{

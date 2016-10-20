@@ -1,5 +1,5 @@
-import palette from './_vars_palette';
-import aliases from './_vars_aliases';
+const palette = require('./_vars_palette');
+const aliases = require('./_vars_aliases');
 
 const colorPalette = [[
   { name: 'red', color: palette.colorRed },
@@ -95,10 +95,7 @@ const colorVariations = colors.reduce((acc, { color }) => {
   return acc;
 }, []);
 
-module.exports = {
-  ...palette,
-  ...aliases,
-
+module.exports = Object.assign({}, palette, aliases, {
   dropShadowLight: '0 0 1px 0 rgba(44, 54, 67, 0.10)',
   dropShadowBase: '0 0 1px 0 rgba(44, 54, 67, 0.25)',
   dropShadowDark: '0 0 1px 0 rgba(44, 54, 67, 0.40)',
@@ -122,4 +119,4 @@ module.exports = {
     ...colors.map(({ name }) => name),
     'primary',
   ],
-};
+});

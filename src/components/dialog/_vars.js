@@ -1,4 +1,4 @@
-import { transitionTimeBase } from '../../design-patterns/animations/_vars';
+const { transitionTimeBase } = require('../../design-patterns/animations/_vars');
 
 module.exports = {
   dialogSizes: [

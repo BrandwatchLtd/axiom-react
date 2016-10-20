@@ -1,4 +1,4 @@
-import palette from './_vars_palette';
+const palette = require('./_vars_palette');
 
 module.exports = {
   colorFeedbackSuccess: palette.colorGreen,
