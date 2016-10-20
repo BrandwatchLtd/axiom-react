@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import webpack from 'webpack';
-import webpackConfig from '../webpack/server.config';
+const webpack = require('webpack');
+const webpackConfig = require('../webpack/server.config');
 
-export default function buildClient() {
+function buildClient() {
   return new Promise((resolve, reject) => {
     const compiler = webpack(webpackConfig);
 
@@ -29,3 +29,5 @@ export default function buildClient() {
     });
   });
 }
+
+buildClient();

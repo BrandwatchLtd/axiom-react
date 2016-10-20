@@ -1,9 +1,9 @@
-import webpack from 'webpack';
-import webpackNodeExternals from 'webpack-node-externals';
-import * as config from '../config';
-import { js, json, yml, markdown } from './loader.config.js';
+const webpack = require('webpack');
+const webpackNodeExternals = require('webpack-node-externals');
+const config = require('../config');
+const { js, json, yml, markdown } = require('./loader.config.js');
 
-export default {
+module.exports = {
   target: 'node',
   context: __dirname,
   cache: false,
@@ -25,8 +25,7 @@ export default {
   },
   plugins: [
     ...config.webpack.aliases,
-    new webpack.DefinePlugin({
-      ...config.webpack.globals,
+    new webpack.DefinePlugin(Object.assign({}, config.webpack.globals, {
       __CLIENT__: false,
       __SERVER__: true,
       __PRODUCTION__: true,
@@ -35,7 +34,7 @@ export default {
       'process.env': {
         NODE_ENV: '"production"',
       },
-    }),
+    })),
   ],
   externals: [webpackNodeExternals()],
   module: {
