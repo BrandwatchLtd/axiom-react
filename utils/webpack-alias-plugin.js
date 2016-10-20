@@ -2,14 +2,14 @@
  *
  */
 
-export default function Alias(matchRegex, replace) {
+function Alias(matchRegex, replace) {
   this.aliasMatchRegex = matchRegex;
   this.aliasReplace = replace;
 }
 
 Alias.prototype.isMatch = function(path) {
   return this.aliasMatchRegex.test(path);
-}
+};
 
 Alias.prototype.replace = function(path) {
   if (typeof this.aliasReplace === 'function') {
@@ -17,7 +17,7 @@ Alias.prototype.replace = function(path) {
   }
 
   return this.aliasReplace;
-}
+};
 
 Alias.prototype.apply = function(compiler) {
   compiler.plugin('normal-module-factory', (nmf) => {
@@ -30,5 +30,6 @@ Alias.prototype.apply = function(compiler) {
       return callback(null, result);
     });
   });
-}
+};
 
+module.exports = Alias;

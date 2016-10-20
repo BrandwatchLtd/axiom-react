@@ -13,7 +13,7 @@
     "url": "https://github.com/BrandwatchLtd/axiom.git"
   },
   "scripts": {
-    "clean": "babel-node -e \"require('./scripts/clean').default()\"",
+    "clean": "node ./scripts/clean",
     "build-client": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/build-client').default()\"",
     "build-server": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/build-server').default()\"",
     "lint": "npm run lint-js && npm run lint-sass",

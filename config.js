@@ -1,10 +1,10 @@
-import path from 'path';
-import Alias from './utils/webpack-alias-plugin';
-import { name, version } from './package.json';
+const path = require('path');
+const Alias = require('./utils/webpack-alias-plugin');
+const { name, version } = require('./package.json');
 
 const outputFolderName = 'lib';
 
-export const paths = {
+const paths = {
   nodeModules: path.resolve(__dirname, 'node_modules'),
   output: path.resolve(__dirname, outputFolderName),
   source: path.resolve(__dirname, 'src'),
@@ -15,7 +15,7 @@ export const paths = {
 paths.sassConfig = path.join(paths.styleGuide, 'style', 'index.js');
 paths.sassVariables = path.join(paths.styleGuide, 'style', 'variables.js');
 
-export const webpack = {
+const webpack = {
   devServerHostname: 'localhost',
   devServerPort: 8080,
   globals: {
@@ -29,16 +29,16 @@ export const webpack = {
   ],
 };
 
-export const server = {
+const server = {
   hostname: process.env.HOSTNAME || 'localhost',
   port: process.env.PORT || 4000,
 };
 
-export const nodeModules = {
+const nodeModules = {
   fontAwesome: path.join(paths.nodeModules, 'font-awesome'),
 };
 
-export const output = {
+const output = {
   folderName: outputFolderName,
   path: paths.output,
   styleGuide: {
@@ -50,9 +50,18 @@ export const output = {
   },
 };
 
-export const entries = {
+const entries = {
   styleGuide: {
     client: path.join(paths.styleGuide, 'client.js'),
     server: path.join(paths.styleGuide, 'server.js'),
   },
+};
+
+module.exports = {
+  paths,
+  webpack,
+  server,
+  nodeModules,
+  output,
+  entries,
 };
