@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import webpack from 'webpack';
-import webpackConfig from '../webpack/client.development.config';
-import WebpackDevServer from 'webpack-dev-server';
-import * as config from '../config';
+const webpack = require('webpack');
+const webpackConfig = require('../webpack/client.development.config');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('../config');
 
 // Config for minimal console.log mess.
 const statOptions = {
@@ -15,7 +15,7 @@ const statOptions = {
   chunkModules: false,
 };
 
-export default function watchClient() {
+module.exports = function watchClient() {
   return new Promise((resolve) => {
     const compiler = webpack(webpackConfig);
 
@@ -38,4 +38,4 @@ export default function watchClient() {
       resolve();
     });
   });
-}
+};

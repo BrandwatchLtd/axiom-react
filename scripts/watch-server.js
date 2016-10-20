@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import webpack from 'webpack';
-import webpackConfig from '../webpack/server.development.config';
+const webpack = require('webpack');
+const webpackConfig = require('../webpack/server.development.config');
 
 // Config for minimal console.log mess.
 const statOptions = {
@@ -13,7 +13,7 @@ const statOptions = {
   chunkModules: false,
 };
 
-export default function watchServer() {
+module.exports = function watchServer() {
   return new Promise((resolve, reject) => {
     const compiler = webpack(webpackConfig);
 
@@ -30,4 +30,4 @@ export default function watchServer() {
       resolve();
     });
   });
-}
+};
