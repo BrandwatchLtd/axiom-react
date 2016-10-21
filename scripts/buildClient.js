@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 const webpack = require('webpack');
-const webpackConfig = require('../webpack/server.config');
+const webpackConfig = require('../webpack/client.config');
+const isCalledDirectly = require('./isCalledDirectly');
 
 function buildClient() {
   return new Promise((resolve, reject) => {
     const compiler = webpack(webpackConfig);
 
-    console.log('Ax:: Build Server [1/2]');
+    console.log('Ax:: Build Client [1/2]');
 
     compiler.run((error, stats) => {
       if (error) {
@@ -23,11 +24,15 @@ function buildClient() {
         chunkModules: false,
       }));
 
-      console.log('Ax:: Build Server [2/2]');
+      console.log('Ax:: Build Client [2/2]');
 
       resolve();
     });
   });
 }
 
-buildClient();
+if (isCalledDirectly(__dirname, 'buildClient')) {
+  buildClient();
+}
+
+module.exports = buildClient;
