@@ -54,6 +54,7 @@ const entries = {
   styleGuide: {
     client: path.join(paths.styleGuide, 'client.js'),
     server: path.join(paths.styleGuide, 'server.js'),
+    static: path.join(paths.styleGuide, 'static.js'),
   },
 };
 

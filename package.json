@@ -27,7 +27,8 @@
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --ignore example,*.test.js --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
     "prepublish-sass": "NODE_ENV=production BABEL_ENV=production node ./scripts/prepublish-sass",
-    "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json"
+    "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json",
+    "static": "NODE_ENV=production BABEL_ENV=production node ./scripts/static",
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
@@ -95,6 +96,7 @@
     "sass-loader": "^3.1.2",
     "serialize-javascript": "^1.1.2",
     "sinon": "^1.17.5",
+    "static-site-generator-webpack-plugin": "^3.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "uuid": "^2.0.1",
