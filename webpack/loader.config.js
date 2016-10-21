@@ -46,15 +46,6 @@ const fonts = {
   ],
 };
 
-const markdown = {
-  test: /\.md$/,
-  exclude: /node_modules/,
-  loaders: [
-    'babel',
-    'markdown-documentation',
-  ],
-};
-
 module.exports = {
   js,
   json,
@@ -62,5 +53,4 @@ module.exports = {
   style,
   styleExtract,
   fonts,
-  markdown,
 };

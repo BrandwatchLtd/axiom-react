@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const config = require('../config');
 const axiomSassVariableImporter = require('../utils/axiom-sass-variable-importer');
-const { js, json, yml, styleExtract, fonts, markdown } = require('./loader.config.js');
+const { js, json, yml, styleExtract, fonts } = require('./loader.config.js');
 
 module.exports = {
   target: 'web',
@@ -57,7 +57,7 @@ module.exports = {
     }),
   ],
   module:  {
-    loaders: [js, json, yml, styleExtract, fonts, markdown],
+    loaders: [js, json, yml, styleExtract, fonts],
   },
   sassLoader: {
     importer: [

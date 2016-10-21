@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const webpackNodeExternals = require('webpack-node-externals');
 const config = require('../config');
-const { js, json, yml, markdown } = require('./loader.config.js');
+const { js, json, yml } = require('./loader.config.js');
 
 module.exports = {
   target: 'node',
@@ -38,6 +38,6 @@ module.exports = {
   ],
   externals: [webpackNodeExternals()],
   module: {
-    loaders: [js, json, yml, markdown],
+    loaders: [js, json, yml],
   },
 };

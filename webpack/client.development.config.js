@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const webpackConfig = require('./client.config');
-const { js, json, yml, style, fonts, markdown } = require('./loader.config.js');
+const { js, json, yml, style, fonts } = require('./loader.config.js');
 const config = require('../config');
 
 module.exports = Object.assign({}, webpackConfig, {
@@ -32,6 +32,6 @@ module.exports = Object.assign({}, webpackConfig, {
     })),
   ],
   module: Object.assign({}, webpackConfig.module, {
-    loaders: [js, json, yml, style, fonts, markdown],
+    loaders: [js, json, yml, style, fonts],
   }),
 });

@@ -1,7 +1,6 @@
 import Prism from 'prismjs';
 import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-jsx';
-import 'prismjs/components/prism-markdown';
 import 'prismjs/components/prism-scss';
 import { js as beautifyJs, html as beautifyHtml, css as beautifyCSS } from 'js-beautify';
 
@@ -51,23 +50,12 @@ function prepareJSSnippet(snippet) {
   return transformSnippet(snippet, [ formatJs]);
 }
 
-function prepareMarkdownSnippet(snippet) {
-  const language = (/^```(\w*)/.exec(snippet) || [])[1] ;
-
-  if (language && prepareMap[language]) {
-    return prepareMap[language](snippet);
-  }
-
-  return snippet;
-}
-
 export const prepareMap = {
   html: prepareHTMLSnippet,
   js: prepareJSSnippet,
   javascript: prepareJSSnippet,
   json: (json) => json,
   jsx: prepareJSXSnippet,
-  markdown: prepareMarkdownSnippet,
   scss: prepareSassSnippet,
 };
 
@@ -77,7 +65,6 @@ export const highlightMap = {
   javascript: Prism.languages.javascript,
   json: Prism.languages.json,
   jsx: Prism.languages.jsx,
-  markdown: Prism.languages.markdown,
   scss: Prism.languages.scss,
 };
 
@@ -87,7 +74,6 @@ export const classMap = {
   javascript: 'language-javascript',
   json: 'language-json',
   jsx: 'language-jsx',
-  markdown: 'language-markdown',
   scss: 'language-scss',
 };
 
