@@ -30,9 +30,8 @@
     "preprepublish": "npm run nvm",
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
-    "preprepublish-sass": "npm run nvm",
-    "prepublish-sass": "NODE_ENV=production BABEL_ENV=production node ./scripts/prepublish-sass",
-    "jest": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json"
+    "prepublish-sass": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/prepublish-sass').default()\"",
+    "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
@@ -81,7 +80,6 @@
     "json-loader": "0.5.4",
     "loader-utils": "^0.2.14",
     "lodash": "^4.14.1",
-    "mocha": "^3.0.2",
     "node-sass": "^3.8.0",
     "postcss-loader": "^0.9.1",
     "prismjs": "^1.4.1",
