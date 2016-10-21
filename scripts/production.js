@@ -1,12 +1,14 @@
-import clean from './clean';
-import buildClient from './build-client';
-import buildServer from './build-server';
-import server from './server';
-import * as config from '../config';
+const clean = require('./clean');
+const buildClient = require('./buildClient');
+const buildServer = require('./buildServer');
+const server = require('./server');
+const config = require('../config');
 
-export default function production() {
+function production() {
   clean()
     .then(() => buildServer())
     .then(() => buildClient())
     .then(() => server(config.output.styleGuide.serverProdJSFilename));
 }
+
+production();
