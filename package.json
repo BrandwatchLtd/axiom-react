@@ -29,11 +29,15 @@
     "prepublish-sass": "NODE_ENV=production BABEL_ENV=production node ./scripts/prepublish-sass",
     "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json",
     "static": "NODE_ENV=production BABEL_ENV=production node ./scripts/static",
+    "prehttp": "npm run nvm",
+    "http": "http-server ./docs -p 4001 -d false"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
     "classnames": "^2.2.1",
+    "copy": "^0.3.0",
     "font-awesome": "^4.5.0",
+    "http-server": "^0.9.0",
     "moment": "^2.14.1",
     "normalize.css": "^4.2.0",
     "numbro": "^1.9.2",
