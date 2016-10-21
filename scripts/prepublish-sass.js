@@ -1,9 +1,11 @@
-import { copy } from 'fs-extra';
-import glob from 'glob';
-import * as config from '../config';
+const { copy } = require('fs-extra');
+const glob = require('glob');
+const config = require('../config');
 
-export default function prepublishSass() {
+function prepublishSass() {
   glob.sync(`${config.paths.source}/**/*.scss`).forEach((file) => {
-    copy(file, `${config.paths.output}${file.split(config.paths.source)[1]}`)
+    copy(file, `${config.paths.output}${file.split(config.paths.source)[1]}`);
   });
 }
+
+prepublishSass();

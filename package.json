@@ -23,7 +23,7 @@
     "prod": "NODE_ENV=production BABEL_ENV=production node ./scripts/production",
     "prepublish": "npm run clean && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
-    "prepublish-sass": "NODE_ENV=production BABEL_ENV=production babel-node -e \"require('./scripts/prepublish-sass').default()\"",
+    "prepublish-sass": "NODE_ENV=production BABEL_ENV=production node ./scripts/prepublish-sass",
     "test": "mocha $( find ./src ./utils ./style-guide -name '*.tests.js') ${exeparams[@]}"
   },
   "dependencies": {
