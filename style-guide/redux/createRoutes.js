@@ -1,10 +1,9 @@
 import React from 'react';
-import { Route, IndexRedirect } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 import { navigationRouteEnter } from 'style-guide/actions/navigation';
 import * as routes from 'style-guide/constants/Routing';
 import App from 'style-guide/containers/App';
 import Doc from 'style-guide/containers/Doc';
-import YouAreLost from 'style-guide/containers/YouAreLost';
 import { getFirstPath, hasPathGotData, pathToRoute } from 'style-guide/utils/examples';
 
 function onDocRouteEnter(dispatch) {
@@ -24,12 +23,9 @@ export default function createRoutes(store) {
 
   return (
     <Route path="/">
-      <IndexRedirect to={ getFirstPath() } />
       <Route component={ App }>
-        <Route component={ YouAreLost } path={ routes.NOT_FOUND } />
-        <Route path={ routes.DOCS }>
-          <Route component={ Doc } onEnter={ onDocRouteEnter(dispatch) } path="**/*" />
-        </Route>
+        <IndexRoute component={ Doc } />
+        <Route component={ Doc } onEnter={ onDocRouteEnter(dispatch) } path="**/*" />
       </Route>
     </Route>
   );

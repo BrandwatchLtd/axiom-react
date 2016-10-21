@@ -8,6 +8,7 @@ import Heading from 'bw-axiom/components/typography/Heading';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
 import { getPathData, pathToRoute } from 'style-guide/utils/examples';
+import { getFirstPath } from 'style-guide/utils/examples';
 
 export class Doc extends Component {
   static propTypes = {
@@ -27,8 +28,13 @@ export class Doc extends Component {
       },
     } = this.props;
 
-    const route = pathToRoute(pathname);
-    const { examples, title, location, components } = getPathData(pathname);
+    let tempPath = pathname;
+    if (tempPath === '/') {
+      tempPath = getFirstPath();
+    }
+
+    const route = pathToRoute(tempPath);
+    const { examples, title, location, components } = getPathData(tempPath);
 
     return (
       <div>

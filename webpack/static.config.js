@@ -4,8 +4,9 @@ const config = require('../config');
 const { js, json, yml } = require('./loader.config.js');
 
 const paths = [
-  '/docs/design-patterns/colors',
-  '/docs/axiom/getting-started',
+  '/',
+  '/design-patterns/colors',
+  '/axiom/getting-started',
 ];
 
 module.exports = {
