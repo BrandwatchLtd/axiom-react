@@ -1,7 +1,6 @@
 @import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/colors/mixins';
 
-
 // Links
 a {
   position: relative;
@@ -24,17 +23,21 @@ a.ax-link {
   &:not(.ax-link--inherit-color) {
     color: get-color($color-primary);
 
-    &:hover {
+    &:hover:not(.ax-link--disabled) {
       color: get-color($color-primary, 600);
     }
   }
 
   // Underline for main links but this will need to be
   // suppressed for things like menu links and icons.
-  &:not(.ax-link--no-decoration) {
+  &:not(.ax-link--no-decoration):not(.ax-link--disabled) {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &.ax-link--disabled:hover {
+    cursor: default;
   }
 }
 // sass-lint:enable no-qualifying-elements

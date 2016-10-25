@@ -10,6 +10,7 @@ if (__INCLUDE_CSS__) {
 export class Link extends Component {
   static propTypes = {
     children: { node: true },
+    disabled: { bool: true },
     inheritColor: { bool: true },
     noDecoration: { bool: true },
     supressStyle: { bool: true },
@@ -21,6 +22,7 @@ export class Link extends Component {
       className,
       children,
       to,
+      disabled,
       inheritColor,
       noDecoration,
       supressStyle,
@@ -29,6 +31,7 @@ export class Link extends Component {
 
     const classes = classnames(className, {
       'ax-link': supressStyle !== true,
+      'ax-link--disabled': disabled,
       'ax-link--inherit-color': inheritColor,
       'ax-link--no-decoration': noDecoration,
     });

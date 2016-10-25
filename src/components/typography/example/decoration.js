@@ -11,9 +11,9 @@ export default class TypeExample extends Component {
     return (
       <Example name="Decoration">
         <Snippet>
-          <Paragraph><Italic>This text is italicised</Italic></Paragraph>,
-          <Paragraph><Underline>This text is underlined</Underline></Paragraph>,
-          <Paragraph><Strike>This text is strike through</Strike></Paragraph>,
+          <Paragraph><Italic>This text is italicised</Italic></Paragraph>
+          <Paragraph><Underline>This text is underlined</Underline></Paragraph>
+          <Paragraph><Strike>This text is strike through</Strike></Paragraph>
         </Snippet>
       </Example>
     );
