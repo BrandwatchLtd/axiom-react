@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import MenuItem from '../menu/MenuItem';
 
 export class Tab extends Component {
   static propTypes = {
-    children: { node: true },
+    title: { node: true },
   };
 
   render() {
-    const { className, children, ...rest } = this.props;
-    const classes = classnames(className, 'ax-tabs__content');
+    const { title, ...rest } = this.props;
 
     return (
-      <div { ...rest } className={ classes }>
-        { children }
-      </div>
+      <MenuItem { ...rest }>
+        { title }
+      </MenuItem>
     );
   }
 }

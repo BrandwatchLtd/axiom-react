@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import React, { Component, Children, cloneElement } from 'react';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import Link from '../typography/Link';
+import Menu from '../menu/Menu';
+import Tab from './Tab';
 
 if (__INCLUDE_CSS__) {
   require('./Tabset.scss');
@@ -30,32 +30,27 @@ export class Tabset extends Component {
   }
 
   render() {
-    const { className, children, ...rest } = this.props;
+    const { children } = this.props;
     const { activeTabIndex } = this.state;
-    const tabs = (Array.isArray(children) ? children : [children]).filter((tab) => tab !== undefined);
-    const tabTitles = tabs.map(({ props: { title } }) => title);
-    const activeTab = tabs.find((tab, index) => index === activeTabIndex);
-    const classes = classnames(className, 'ax-tabs');
+    const activeTabContent = Children.toArray(children)[activeTabIndex].props.children;
+    const tabs = Children.toArray(children)
+      .filter(({ type }) => type === Tab)
+      .map((child, index) => cloneElement(child, {
+        isActive: index === activeTabIndex,
+        onClick: () => this.activateTab(index),
+      }));
 
     return (
-      <div { ...rest } className={ classes }>
-        <ul className="ax-tabs__nav">
-          { tabTitles.map((title, index) => {
-            const tabClassName = classnames('ax-tabs__nav-item', {
-              'ax-tabs__nav-item--active': index === activeTabIndex,
-            });
+      <div className="ax-tabset">
+        <div className="ax-tabset__menu">
+          <Menu>
+            { tabs }
+          </Menu>
+        </div>
 
-            return (
-              <li className={ tabClassName } key={ index } onClick={ () => this.activateTab(index) } title={ title }>
-                <Link className="ax-tabs__nav-link" supressStyle={ true }>
-                  { title }
-                </Link>
-              </li>
-            );
-          }) }
-        </ul>
-
-        { activeTab }
+        <div className="ax-tabset__content">
+          { activeTabContent }
+        </div>
       </div>
     );
   }
