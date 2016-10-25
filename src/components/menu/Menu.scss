@@ -1,0 +1,12 @@
+@import '../../design-patterns/spacing/mixins';
+
+.ax-menu {
+  @include space-block();
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: auto;
+}
+

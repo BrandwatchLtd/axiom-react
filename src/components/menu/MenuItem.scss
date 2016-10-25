@@ -1,0 +1,45 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/mixins';
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
+@import '../typography/_vars.js';
+
+.ax-menu__item {
+  display: inline-flex;
+  margin: 0 $component-margin-h-base 0 0;
+  list-style: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ax-menu__item-link {
+  @include transition((border-bottom-color));
+
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  padding: $component-padding-v-base $component-padding-h-base;
+  border-bottom: 4px solid transparent;
+  font-size: $font-size-md;
+  font-weight: $font-weight-strong;
+  text-transform: uppercase;
+
+  .ax-menu__item:hover & {
+    border-bottom-color: get-color($color-grey, 200);
+  }
+
+  .ax-menu__item--active &,
+  .ax-menu__item--active:hover & {
+    border-bottom-color: get-color($color-primary, A400);
+  }
+
+  .ax-menu__item--disabled &,
+  .ax-menu__item--disabled:hover & {
+    border-bottom-color: transparent;
+    color: get-color($color-grey);
+  }
+}
+
