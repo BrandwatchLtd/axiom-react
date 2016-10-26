@@ -1,4 +1,6 @@
 lib/
 node_modules/
 npm-debug.log
-docs/
+docs/*
+!docs/favicon.ico
+!docs/assets/

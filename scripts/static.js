@@ -7,7 +7,7 @@ function createStatic() {
   clean()
     .then(() => buildClient())
     .then(() => {
-      copy('lib/*', 'docs/assets', function() {});
+      copy('lib/*', 'docs/lib', function() {});
       return;
     })
     .then(() => buildStatic());
