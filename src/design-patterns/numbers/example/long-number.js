@@ -43,7 +43,7 @@ export default class LongNumber extends Component {
           </GridCell>
 
           <GridCell>
-            <Heading level={ 5 }>Formatted number</Heading>
+            <Heading>Formatted number</Heading>
             <Paragraph>{ longNumber(number, precision) }</Paragraph>
           </GridCell>
         </Grid>

@@ -18,8 +18,8 @@ $nav-second-level-item-active-background-color: $color-grey-1;
 .dm-nav__link {
   display: block;
   padding: $component-padding-sm $page-padding-h;
+  font-family: $font-family-medium;
   font-size: $font-size-md;
-  font-weight: $font-weight-strong;
 
   .dm-nav__list-item--has-submenu > &::after {
     @include icon($fa-var-chevron-right);

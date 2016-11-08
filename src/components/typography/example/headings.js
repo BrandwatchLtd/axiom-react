@@ -10,12 +10,13 @@ export default class TypeExample extends Component {
     return (
       <Example name="Headings">
         <Snippet>
-          { Heading.__ax_propTypes.level.oneOf.map((level, index) =>
-            <Heading key={ index } level={ level }>
-              h{ level }.
-              <Weak> Weak </Weak>
-              Standard
+          { Heading.__ax_propTypes.style.oneOf.map((style, index) =>
+            <Heading key={ index } style={ style }>
+              { style }: [
+              <Weak> Weak </Weak>/
+              Standard/
               <Strong> Strong </Strong>
+              ]
             </Heading>
           ) }
         </Snippet>

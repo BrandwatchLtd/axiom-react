@@ -17,7 +17,7 @@ export default class FormExample extends Component {
           </RadioButtonGroup>
         </Snippet>
 
-        <Heading level={ 5 }>Inline RadioButtons</Heading>
+        <Heading>Inline RadioButtons</Heading>
         <Snippet>
           <RadioButtonGroup inline={ true }>
             <RadioButton>Radio button</RadioButton>

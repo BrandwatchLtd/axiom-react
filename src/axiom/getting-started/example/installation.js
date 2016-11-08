@@ -9,12 +9,12 @@ export default class Installation extends Component {
   render() {
     return (
       <Example name="Installation">
-        <Heading level={ 5 }>Getting started with the Pattern Library in a new App</Heading>
+        <Heading>Getting started with the Pattern Library in a new App</Heading>
         <Paragraph>
           If you're on the current popular stack train (React, Redux, Webpack etc...) then head over to the <Link href="https://github.com/BrandwatchLtd/axiom-starter-app">Axiom Starter App</Link> where it's ready to roll.
         </Paragraph>
 
-        <Heading level={ 5 }>Getting started with the Pattern Library in an existing App</Heading>
+        <Heading>Getting started with the Pattern Library in an existing App</Heading>
         <CodeSnippet language="json">{
 `{
   "dependencies": {

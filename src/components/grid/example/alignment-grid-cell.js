@@ -10,7 +10,7 @@ export default class GridExample extends Component {
   render() {
     return (
       <Example name="Grid Cell alignment controlled by Grid Cell">
-        <Heading level={ 5 }>Vertical</Heading>
+        <Heading>Vertical</Heading>
         <Snippet>
           <Grid snippetIgnore={ true } style={ { minHeight: 180 } }>
             { GridCell.__ax_propTypes.vAlign.oneOf.map((vAlign, index) =>

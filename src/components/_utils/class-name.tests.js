@@ -45,8 +45,8 @@ describe('components: utils : class-name', () => {
       });
 
       describe('text weights', () => {
-        it('can add the bold class', () => {
-          assert.equal(mergeClassNameSets({ textBold: true }, ['text']), 'ax-text--bold');
+        it('can add the strong class', () => {
+          assert.equal(mergeClassNameSets({ textStrong: true }, ['text']), 'ax-text--strong');
         });
 
         it('can add the weak class', () => {
@@ -131,7 +131,7 @@ describe('components: utils : class-name', () => {
         textLeft: true,
         textCenter: true,
         textRight: true,
-        textBold: true,
+        textStrong: true,
         textWeak: true,
         textBreak: true,
         textCase: true,

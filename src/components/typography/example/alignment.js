@@ -15,7 +15,7 @@ export default class TypeExample extends Component {
           <Paragraph textRight={ true }>This text is right aligned</Paragraph>
         </Snippet>
 
-        <Heading level={ 5 }>Responsive</Heading>
+        <Heading>Responsive</Heading>
         <Snippet>
           { breakpointIds.map((id) => [
             <Paragraph textLeft={ id } textRight={ true }>

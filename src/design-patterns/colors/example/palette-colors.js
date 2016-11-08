@@ -84,7 +84,7 @@ export default class PaletteColors extends Component {
     return (
       <Example name="Palette Colors">
         { palette.map(({ name, colors }, index) => [
-          <Heading key={ `${index}-heading` } level={ 5 }>{ name }</Heading>,
+          <Heading key={ `${index}-heading` }>{ name }</Heading>,
           <ColorSwatch colors={ colors } key={ `${index}-swatch` } />,
         ]) }
       </Example>

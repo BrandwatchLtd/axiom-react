@@ -9,12 +9,12 @@ export default class Sass extends Component {
   render() {
     return (
       <Example name="Sass Setup">
-        <Heading level={ 5 }>Variables</Heading>
+        <Heading>Variables</Heading>
         <Paragraph>
           The Sass variables are all in Javascript files, this is so they can easily be configured and included into Javascript (for example with PropTypes) (it's much easier to get variables into Sass than it is to get them out)... for this we use a custom <Link href="https://github.com/sass/node-sass#importer--v200---experimental">sass importer</Link>.
         </Paragraph>
 
-        <Heading level={ 5 }>Sass variable importer [REQUIRED]</Heading>
+        <Heading>Sass variable importer [REQUIRED]</Heading>
         <Paragraph>
           This adds the ability to inject the Javascript Sass variables using node-sass' custom <Link href="https://github.com/sass/node-sass#importer--v200---experimental">sass importer</Link>
         </Paragraph>
@@ -39,7 +39,7 @@ import createSassVariableImporter from 'bw-axiom/lib/utils/axiom-sass-variable-i
 }`
         }</CodeSnippet>
 
-        <Heading level={ 5 }>Sass variable override loader [OPTIONAL]</Heading>
+        <Heading>Sass variable override loader [OPTIONAL]</Heading>
         <Paragraph>
           This is for overriding any of the Axiom defaults, whether they are in the Sass or in the Javascript files.
         </Paragraph>

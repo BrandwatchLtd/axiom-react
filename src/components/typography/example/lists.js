@@ -9,7 +9,7 @@ export default class TypeExample extends Component {
   render() {
     return (
       <Example name="Lists">
-        <Heading level={ 5 }>Ordered</Heading>
+        <Heading>Ordered</Heading>
         <Snippet>
           <List ordered={ true }>
             <ListItem>Lorem ipsum dolor sit amet</ListItem>
@@ -19,7 +19,7 @@ export default class TypeExample extends Component {
           </List>
         </Snippet>
 
-        <Heading level={ 5 }>Unordered</Heading>
+        <Heading>Unordered</Heading>
         <Snippet>
           <List ordered={ false }>
             <ListItem>Lorem ipsum dolor sit amet</ListItem>
@@ -29,7 +29,7 @@ export default class TypeExample extends Component {
           </List>
         </Snippet>
 
-        <Heading level={ 5 }>Inline</Heading>
+        <Heading>Inline</Heading>
         <Snippet>
           <List inline={ true }>
             <ListItem>Lorem ipsum dolor sit amet</ListItem>

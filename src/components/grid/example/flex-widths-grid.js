@@ -10,7 +10,7 @@ export default class GridExample extends Component {
   render() {
     return (
       <Example name="Flex widths (grid level)">
-        <Heading level={ 5 }>Full width</Heading>
+        <Heading>Full width</Heading>
         <Snippet>
           <Grid full={ true }>
             <GridCell snippetReplace={ true }>
@@ -23,7 +23,7 @@ export default class GridExample extends Component {
           </Grid>
         </Snippet>
 
-        <Heading level={ 5 }>Fit (equal widths)</Heading>
+        <Heading>Fit (equal widths)</Heading>
         <Snippet>
           <Grid fit={ true }>
             <GridCell snippetReplace={ true }>

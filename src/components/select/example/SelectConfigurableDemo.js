@@ -92,15 +92,15 @@ export default class SelectConfigurableDemo extends Component {
           <GridCell>
             <Select { ...selectConfig } />
 
-            <Heading level={ 5 }>Selected value</Heading>
+            <Heading>Selected value</Heading>
             <CodeSnippet language="js">{ `${JSON.stringify(selection)}` }</CodeSnippet>
 
-            <Heading level={ 5 }>Current props config</Heading>
+            <Heading>Current props config</Heading>
             <CodeSnippet language="js">{ `${JSON.stringify(selectConfig)}` }</CodeSnippet>
           </GridCell>
 
           <GridCell shrink={ true }>
-            <Heading level={ 5 }>Data type options</Heading>
+            <Heading>Data type options</Heading>
 
             <RadioButton
                 checked={ isString }
@@ -114,7 +114,7 @@ export default class SelectConfigurableDemo extends Component {
               Array of objects
             </RadioButton>
 
-            <Heading level={ 5 }>Config</Heading>
+            <Heading>Config</Heading>
 
             <CheckBox
                 checked={ multiselect }

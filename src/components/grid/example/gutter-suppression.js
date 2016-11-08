@@ -10,7 +10,7 @@ export default class GridExample extends Component {
   render() {
     return (
       <Example name="Gutter suppression">
-        <Heading level={ 5 }>No vertical gutters</Heading>
+        <Heading>No vertical gutters</Heading>
         <Snippet>
           <Grid vGutters={ false }>
             <GridCell snippetReplace={ true }>
@@ -23,7 +23,7 @@ export default class GridExample extends Component {
           </Grid>
         </Snippet>
 
-        <Heading level={ 5 }>No horizontal gutters</Heading>
+        <Heading>No horizontal gutters</Heading>
         <Snippet>
           <Grid hGutters={ false }>
             <GridCell snippetReplace={ true }>
@@ -36,7 +36,7 @@ export default class GridExample extends Component {
           </Grid>
         </Snippet>
 
-        <Heading level={ 5 }>No vertical or horizontal gutters</Heading>
+        <Heading>No vertical or horizontal gutters</Heading>
         <Snippet>
           <Grid gutters={ false }>
             <GridCell snippetReplace={ true }>

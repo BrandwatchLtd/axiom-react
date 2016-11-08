@@ -9,7 +9,7 @@ export default class LabelExample extends Component {
   render() {
     return (
       <Example name="Colored Labels">
-        <Heading level={ 5 }>Plaette Colors</Heading>
+        <Heading>Plaette Colors</Heading>
         <Snippet>
           <LabelGroup snippetIgnore={ true }>
             { Label.__ax_propTypes.color.oneOf.map((id, index) =>

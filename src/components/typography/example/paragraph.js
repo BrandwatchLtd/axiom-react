@@ -17,21 +17,21 @@ export default class TypeExample extends Component {
           </Paragraph>
         </Snippet>
 
-        <Heading level={ 5 }>Strong</Heading>
+        <Heading>Strong</Heading>
         <Snippet>
           <Paragraph>
             <Strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis, est dapibus aliquet tristique, ante orci porta ligula, sit amet bibendum diam lectus eu erat.</Strong>
           </Paragraph>
         </Snippet>
 
-        <Heading level={ 5 }>Weak</Heading>
+        <Heading>Weak</Heading>
         <Snippet>
           <Paragraph>
             <Weak>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis, est dapibus aliquet tristique, ante orci porta ligula, sit amet bibendum diam lectus eu erat.</Weak>
           </Paragraph>
         </Snippet>
 
-        <Heading level={ 5 }>Small</Heading>
+        <Heading>Small</Heading>
         <Snippet>
           <Paragraph>
             <Small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis, est dapibus aliquet tristique, ante orci porta ligula, sit amet bibendum diam lectus eu erat.</Small>

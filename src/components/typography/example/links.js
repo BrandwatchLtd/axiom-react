@@ -10,7 +10,7 @@ export default class TypeExample extends Component {
     return (
       <Example name="Links">
         <Snippet>
-          <Heading level={ 3 } snippetIgnore={ true }>
+          <Heading snippetIgnore={ true } style="headline">
             Lorem ipsum dolor sit amet, <Link>consectetur</Link> adipiscing
             elit. Donec tempus ut felis vitae hendrerit.
           </Heading>
@@ -20,7 +20,7 @@ export default class TypeExample extends Component {
           </Paragraph>
         </Snippet>
 
-        <Heading level={ 5 }>Disabled links</Heading>
+        <Heading>Disabled links</Heading>
         <Snippet>
           <Paragraph snippetIgnore={ true }>
             Lorem ipsum dolor sit amet, <Link disabled={ true }>consectetur</Link> adipiscing

@@ -21,7 +21,7 @@ export default class Example extends Component {
 
     return (
       <ExampleBox>
-        <Heading level={ 4 }>{ name }</Heading>
+        <Heading style="title">{ name }</Heading>
         { Children.toArray(children).reduce((children, child) => {
           if (child.type === Snippet) {
             children.push(filterRender(child.props.children));

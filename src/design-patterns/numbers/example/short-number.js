@@ -43,7 +43,7 @@ export default class ShortNumber extends Component {
           </GridCell>
 
           <GridCell>
-            <Heading level={ 5 }>Formatted number</Heading>
+            <Heading>Formatted number</Heading>
             <Paragraph>{ shortNumber(number, precision) }</Paragraph>
           </GridCell>
         </Grid>

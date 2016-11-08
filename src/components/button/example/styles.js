@@ -9,7 +9,7 @@ export default class ButtonExample extends Component {
   render() {
     return (
       <Example name="Styles">
-        <Heading level={ 5 }>Primary</Heading>
+        <Heading>Primary</Heading>
         <Snippet>
           <ButtonGroup snippetIgnore={ true }>
             <Button style="primary">
@@ -22,7 +22,7 @@ export default class ButtonExample extends Component {
           </ButtonGroup>
         </Snippet>
 
-        <Heading level={ 5 }>Secondary</Heading>
+        <Heading>Secondary</Heading>
         <Snippet>
           <ButtonGroup snippetIgnore={ true }>
             <Button style="secondary">
@@ -35,7 +35,7 @@ export default class ButtonExample extends Component {
           </ButtonGroup>
         </Snippet>
 
-        <Heading level={ 5 }>Tertiary</Heading>
+        <Heading>Tertiary</Heading>
         <Snippet>
           <ButtonGroup snippetIgnore={ true }>
             <Button style="tertiary">

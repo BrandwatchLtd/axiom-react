@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
 if (__INCLUDE_CSS__) {
@@ -11,10 +12,11 @@ export class Strong extends Component {
   };
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, className, ...rest } = this.props;
+    const classes = classnames(className, 'ax-text--strong');
 
     return (
-      <strong { ...rest }>
+      <strong { ...rest } className={ classes }>
         { children }
       </strong>
     );

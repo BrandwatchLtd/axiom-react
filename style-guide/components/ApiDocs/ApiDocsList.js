@@ -4,6 +4,7 @@ import GridCell from 'bw-axiom/components/grid/GridCell';
 import Label from 'bw-axiom/components/label/Label';
 import LabelGroup from 'bw-axiom/components/label/LabelGroup';
 import Heading from 'bw-axiom/components/typography/Heading';
+import Paragraph from 'bw-axiom/components/typography/Paragraph';
 import ApiDocsPropType from 'style-guide/components/ApiDocs/ApiDocsPropType';
 
 if (__INCLUDE_CSS__) {
@@ -21,13 +22,13 @@ export default class ApiDocsList extends Component {
 
     return (
       <div className="dm-api-docs-list">
-        <Heading key="heading" level={ 4 }>{ componentName }</Heading>
+        <Heading key="heading" style="title">{ componentName }</Heading>
 
         { Object.keys(propTypes).sort().map((key, index) =>
           <div className="dm-api-docs-list__item" key={ index }>
             <Grid>
               <GridCell>
-                <Heading key="heading" level={ 5 }>{ key }</Heading>
+                <Paragraph>{ key }</Paragraph>
               </GridCell>
 
               <GridCell shrink={ true }>

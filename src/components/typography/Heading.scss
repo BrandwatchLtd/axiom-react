@@ -1,7 +1,20 @@
-@import '../typography/mixins';
+@import '../typography/_vars.js';
 
-h1 { @include heading(h1) }
-h2 { @include heading(h2) }
-h3 { @include heading(h3) }
-h4 { @include heading(h4) }
-h5 { @include heading(h5) }
+.ax-heading {
+  font-family: $font-family-regular;
+  font-weight: 400;
+  line-height: $line-height-dyn;
+
+  &:first-child { margin-top: 0; }
+  &:last-child  { margin-bottom: 0; }
+
+  .ax-text--weak   { font-family: $font-family-light; }
+  .ax-text--strong { font-family: $font-family-medium; }
+}
+
+@each $font-heading in $font-headings {
+  .ax-heading--#{map-get($font-heading, id)} {
+    margin: map-get($font-heading, margin);
+    font-size: map-get($font-heading, size);
+  }
+}

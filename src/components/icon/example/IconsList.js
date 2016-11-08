@@ -61,7 +61,7 @@ export default class IconsList extends Component {
         { do {
           if (search) {
             <ExampleBox>
-              <Heading level={ 4 }>Search for { search }</Heading>
+              <Heading style="title">Search for { search }</Heading>
 
               { do {
                 if (foundIcons.length) {
@@ -84,7 +84,7 @@ export default class IconsList extends Component {
 
             {Object.keys(iconCategories).map((category, index) =>
               <ExampleBox key={ index }>
-                <Heading level={ 4 }>{ category }</Heading>
+                <Heading style="title">{ category }</Heading>
                 <IconGrid icons={ iconCategories[category] } />
               </ExampleBox>
             );}

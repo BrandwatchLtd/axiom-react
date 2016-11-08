@@ -17,7 +17,7 @@ export default class FormExample extends Component {
           </CheckBoxGroup>
         </Snippet>
 
-        <Heading level={ 5 }>Inline Checkboxes</Heading>
+        <Heading>Inline Checkboxes</Heading>
         <Snippet>
           <CheckBoxGroup inline={ true }>
             <CheckBox>Check box</CheckBox>

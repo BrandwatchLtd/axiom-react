@@ -28,7 +28,6 @@ module.exports = [{
     require('bw-axiom/components/logo/example'),
     require('bw-axiom/components/menu/example'),
     require('bw-axiom/components/select/example'),
-    require('bw-axiom/components/table/example'),
     require('bw-axiom/components/tabset/example'),
     require('bw-axiom/components/typography/example'),
   ],

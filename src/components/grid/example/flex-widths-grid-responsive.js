@@ -11,7 +11,7 @@ export default class GridExample extends Component {
   render() {
     return (
       <Example name="Flex widths (grid level responsive)">
-        <Heading level={ 5 }>Full width</Heading>
+        <Heading>Full width</Heading>
         <Snippet>
           { breakpoints.map(({ id }, index) =>
             <Grid full={ id } key={ index }>
@@ -26,7 +26,7 @@ export default class GridExample extends Component {
           ) }
         </Snippet>
 
-        <Heading level={ 5 }>Fit (equal widths)</Heading>
+        <Heading>Fit (equal widths)</Heading>
         <Snippet>
           { breakpoints.map(({ id }, index) =>
             <Grid fit={ id } full={ true } key={ index }>

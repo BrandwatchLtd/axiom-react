@@ -16,7 +16,7 @@ const CLASS_NAMES_SETS = {
       [`ax-text--center--${props.textCenter}`]: props.textCenter && props.textCenter !== true,
       'ax-text--right': props.textRight === true,
       [`ax-text--right--${props.textRight}`]: props.textRight && props.textRight !== true,
-      'ax-text--bold': props.textBold === true,
+      'ax-text--strong': props.textStrong === true,
       'ax-text--weak': props.textWeak === true,
       'ax-text--break-none': props.textBreak === 'none',
       'ax-text--break-all': props.textBreak === 'all',
@@ -43,7 +43,7 @@ export function removeClassNameSetProps(props) {
   return omit(props, [
     'hiddenUntil', 'visibleUntil',
     'textLeft', 'textCenter', 'textRight',
-    'textBold', 'textWeak',
+    'textStrong', 'textWeak',
     'textBreak',
     'textCase',
     'textEllipsis',

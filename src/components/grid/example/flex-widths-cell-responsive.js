@@ -11,7 +11,7 @@ export default class GridExample extends Component {
   render() {
     return (
       <Example name="Flex sizing (cell level responsive)">
-        <Heading level={ 5 }>Full width</Heading>
+        <Heading>Full width</Heading>
         <Snippet>
           <Grid snippetIgnore={ true }>
             { breakpoints.map(({ id }, index) =>
@@ -22,7 +22,7 @@ export default class GridExample extends Component {
           </Grid>
         </Snippet>
 
-        <Heading level={ 5 }>Shrink (to contents)</Heading>
+        <Heading>Shrink (to contents)</Heading>
         <Snippet>
           <Grid snippetIgnore={ true }>
             { breakpoints.map(({ id }, index) =>

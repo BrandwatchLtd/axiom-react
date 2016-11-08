@@ -3,6 +3,7 @@ import humanize from 'humanize-string';
 import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
 import Heading from 'bw-axiom/components/typography/Heading';
+import Weak from 'bw-axiom/components/typography/Weak';
 import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
 import ExampleBox from './ExampleBox';
 
@@ -26,8 +27,10 @@ export default class ExampleHeader extends Component {
       <ExampleBox>
         <Grid vAlign="bottom">
           <GridCell>
-            <Heading level={ 4 } textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
-            <Heading level={ 2 } textCase="capital">{ title }</Heading>
+            <Heading style="title" textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
+            <Heading style="display" textCase="capital">
+              <Weak>{ title }</Weak>
+            </Heading>
           </GridCell>
 
           { do { if (location && components) {

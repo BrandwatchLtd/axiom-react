@@ -1,65 +1,22 @@
 const { componentPaddingSm, componentPaddingLg } = require('../../design-patterns/spacing/_vars');
 
-const scales = {
-  scaleMinorSecond: 1.067,
-  scaleMajorSecond: 1.125,
-  scaleMinorThird: 1.200,
-  scaleMajorThird: 1.250,
-  scalePerfectForth: 1.333,
-  scaleAugmentedForth: 1.414,
-  scalePerfectFifth: 1.500,
-  scaleGoldenRatio: 1.618,
-};
-
 const fontHelvetica = '(Helvetica, Arial, sans-serif)';
-const fontRobotoThin = `(Roboto-Thin, ${fontHelvetica})`;
-const fontRobotoLight = `(Roboto-Light, ${fontHelvetica})`;
-const fontRobotoRegular = `(Roboto-Regular, ${fontHelvetica})`;
-const fontRobotoMedium = `(Roboto-Medium, ${fontHelvetica})`;
-const fontRobotoBold = `(Roboto-Bold, ${fontHelvetica})`;
-
-const fontFamilyBody = fontHelvetica;
-const fontFamilyH1 = fontRobotoThin;
-const fontFamilyH2 = fontRobotoThin;
-const fontFamilyH3 = fontRobotoLight;
-const fontFamilyH4 = fontRobotoLight;
-const fontFamilyH5 = fontRobotoMedium;
-
-const fontSizeRatio = scales.scaleAugmentedForth;
+const fontFamilyThin = `(Roboto-Thin, ${fontHelvetica})`;
+const fontFamilyLight = `(Roboto-Light, ${fontHelvetica})`;
+const fontFamilyRegular = `(Roboto-Regular, ${fontHelvetica})`;
+const fontFamilyMedium = `(Roboto-Medium, ${fontHelvetica})`;
+const fontFamilyBold = `(Roboto-Bold, ${fontHelvetica})`;
 
 const fontSizePx = 14; // PX
 const fontSizeEm = 1; // Em
 
 const lineHeightPx = 22;
 
-let fontSizeH5 =  fontSizeEm;
-let fontSizeH4 =  fontSizeH5 * fontSizeRatio;
-let fontSizeH3 =  fontSizeH4 * fontSizeRatio;
-let fontSizeH2 =  fontSizeH3 * fontSizeRatio;
-let fontSizeH1 =  fontSizeH2 * fontSizeRatio;
-
-fontSizeH5 = `${fontSizeH5}rem`;
-fontSizeH4 = `${fontSizeH4}rem`;
-fontSizeH3 = `${fontSizeH3}rem`;
-fontSizeH2 = `${fontSizeH2}rem`;
-fontSizeH1 = `${fontSizeH1}rem`;
-
 module.exports = {
-  fontFamilyBody,
-  fontFamilyH1,
-  fontFamilyH2,
-  fontFamilyH3,
-  fontFamilyH4,
-  fontFamilyH5,
+  fontFamilyBody: fontHelvetica,
 
   fontSizeBase: `${fontSizePx}px`,
   fontSizeEm: `${fontSizeEm}rem`,
-
-  fontSizeH5,
-  fontSizeH4,
-  fontSizeH3,
-  fontSizeH2,
-  fontSizeH1,
 
   fontSizeMd: '12px',
   fontSizeSm: '11px',
@@ -68,23 +25,32 @@ module.exports = {
   lineHeight: `${lineHeightPx}px`,
   lineHeightDyn: 1.2,
 
-  fontWeightWeak: 300,
-  fontWeightBase: 400,
-  fontWeightStrong: 700,
+  fontFamilyThin,
+  fontFamilyLight,
+  fontFamilyRegular,
+  fontFamilyMedium,
+  fontFamilyBold,
 
-  fontHeadings: {
-    H1: { family: fontFamilyH1, size: fontSizeH1, margin: `${componentPaddingLg} 0` },
-    H2: { family: fontFamilyH2, size: fontSizeH2, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
-    H3: { family: fontFamilyH3, size: fontSizeH3, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
-    H4: { family: fontFamilyH4, size: fontSizeH4, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
-    H5: { family: fontFamilyH5, size: fontSizeH5, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
-  },
-
-  fontHeadingFamilies: [
-    fontRobotoThin,
-    fontRobotoLight,
-    fontRobotoRegular,
-    fontRobotoMedium,
-    fontRobotoBold,
-  ],
+  fontHeadings: [{
+    id: 'display',
+    size: '40px',
+    margin: `${componentPaddingLg} 0`,
+    tag: 'h1',
+  }, {
+    id: 'headline',
+    size: '22px',
+    margin: `${componentPaddingLg} 0 ${componentPaddingLg}`,
+    tag: 'h2',
+  }, {
+    id: 'title',
+    size: '18px',
+    margin: `${componentPaddingLg} 0 ${componentPaddingLg}`,
+    tag: 'h3',
+  }, {
+    id: 'large',
+    size: '16px',
+    margin: `${componentPaddingLg} 0 ${componentPaddingLg}`,
+    tag: 'h4',
+    default: true,
+  }],
 };
