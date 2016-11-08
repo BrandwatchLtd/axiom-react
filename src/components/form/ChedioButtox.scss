@@ -2,11 +2,10 @@
 @import '../../design-patterns/animations/_vars.js';
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../icon/mixins';
-@import '../icon/vars';
 @import '../form/_vars.js';
 @import '../typography/_vars.js';
 
+$checkbox-size: $line-height + ($component-border-width * 2);
 
 .ax-chedio-buttox__container {
   @include space-block();
@@ -18,7 +17,7 @@
 .ax-chedio-buttox__container--space {
   .ax-chedio-buttox__label {
     &::before {
-      margin: 0 $component-margin-h-sm 0 0;
+      margin: 0 $component-margin-sm 0 0;
     }
   }
 }
@@ -39,7 +38,7 @@
 
     display: flex;
     align-items: flex-start;
-    line-height: $form-checkbox-size;
+    line-height: $checkbox-size;
     cursor: pointer;
 
     &::before {
@@ -49,9 +48,9 @@
       flex: none;
       align-items: center;
       justify-content: center;
-      width: $form-checkbox-size;
-      height: $form-checkbox-size;
-      border-width: $form-input-border-width;
+      width: $checkbox-size;
+      height: $checkbox-size;
+      border-width: $component-border-width;
       border-style: solid;
       font-size: $font-size-sm;
     }

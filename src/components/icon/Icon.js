@@ -30,7 +30,7 @@ export class Icon extends Component {
       name,
       size = propTypes.size.default,
       fixedWidth,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,

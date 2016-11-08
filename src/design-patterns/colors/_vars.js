@@ -1,122 +1,121 @@
-const palette = require('./_vars_palette');
-const aliases = require('./_vars_aliases');
+/**
+ * Palette
+ */
+const colorWhite0 = '#ffffff';
 
-const colorPalette = [[
-  { name: 'red', color: palette.colorRed },
-  { name: 'pink', color: palette.colorPink },
-  { name: 'purple', color: palette.colorPurple },
-], [
-  { name: 'deep-purple', color: palette.colorDeepPurple },
-  { name: 'indigo', color: palette.colorIndigo },
-  { name: 'blue', color: palette.colorBlue },
-], [
-  { name: 'light-blue', color: palette.colorLightBlue },
-  { name: 'cyan', color: palette.colorCyan },
-  { name: 'teal', color: palette.colorTeal },
-], [
-  { name: 'green', color: palette.colorGreen },
-  { name: 'light-green', color: palette.colorLightGreen },
-  { name: 'lime', color: palette.colorLime },
-], [
-  { name: 'yellow', color: palette.colorYellow },
-  { name: 'amber', color: palette.colorAmber },
-  { name: 'orange', color: palette.colorOrange },
-  { name: 'deep-orange', color: palette.colorDeepOrange },
-], [
-  { name: 'brown', color: palette.colorBrown },
-  { name: 'grey', color: palette.colorGrey },
-  { name: 'blue-grey', color: palette.colorBlueGrey },
-]];
+const colorBlack0 = '#000000';
 
-const colorAliases = [{
-  heading: 'Feedback',
-  colors: [[
-    { name: 'feedback-success', color: aliases.colorFeedbackSuccess },
-    { name: 'feedback-info', color: aliases.colorFeedbackInfo },
-  ], [
-    { name: 'feedback-danger', color: aliases.colorFeedbackDanger },
-    { name: 'feedback-error', color: aliases.colorFeedbackError },
-  ], [
-    { name: 'feedback-neutral', color: aliases.colorFeedbackNeutral },
-  ]],
-}, {
-  heading: 'Sentiment',
-  colors: [[
-    { name: 'sentiment-positive', color: aliases.colorSentimentPositive },
-    { name: 'sentiment-neutral', color: aliases.colorSentimentNeutral },
-    { name: 'sentiment-negative', color: aliases.colorSentimentNegative },
-  ]],
-}, {
-  heading: 'Gender',
-  colors: [[
-    { name: 'gender-male', color: aliases.colorGenderMale },
-    { name: 'gender-female', color: aliases.colorGenderFemale },
-  ]],
-}, {
-  heading: 'Account types',
-  colors: [[
-    { name: 'account-type-individual', color: aliases.colorAccountTypeIndividual },
-    { name: 'account-type-organisational', color: aliases.colorAccountTypeOrganisational },
-  ]],
-}];
+const colorGrey0 = '#f7f5f9';
+const colorGrey1 = '#f2f0f9';
+const colorGrey2 = '#edebf4';
+const colorGrey3 = '#e8e6ef';
+const colorGrey4 = '#e3e1ea';
+const colorGrey5 = '#d4d2db';
+const colorGrey6 = '#cac8d1';
+const colorGrey7 = '#c0bec7';
+const colorGrey8 = '#98969f';
+const colorGrey9 = '#706e77';
+const colorGrey10 = '#5c5a63';
+const colorGrey11 = '#48464f';
 
-const colorPaletteFlattened =
-  colorPalette.reduce((acc, colors) => {
-    colors.forEach((color) => {
-      acc.push(color);
-    });
+const colorBlue0 = '#2997cd';
+const colorBlue1 = '#1f8dc3';
+const colorBlue2 = '#1583b9';
 
-    return acc;
-  }, []);
+const colorRed0 = '#dc6d6d';
+const colorPink0 = '#ff586f';
+const colorOrange0 = '#f46b00';
+const colorOrangeLight0 = '#ff8f00';
+const colorYellow0 = '#f6be00';
+const colorGreen0 = '#8ea53c';
+const colorBlueLight0 = '#5fc3e6';
+const colorPurple0 = '#9c7cb6';
 
-const colorAliasesFlattened =
-  colorAliases.reduce((acc, group) => {
-    group.colors.forEach((colors) => {
-      colors.forEach((color) => {
-        acc.push(color);
-      });
-    });
+/**
+ * Context
+ */
+const colorPrimary0 = colorBlue0;
+const colorPrimary1 = colorBlue1;
+const colorPrimary2 = colorBlue2;
 
-    return acc;
-  }, []);
+/**
+ * Text Colors
+ */
+const textColorLight = colorGrey0;
+const textColorSubtle = colorGrey5;
+const textColorDark = colorGrey11;
 
-const colors = [
-  ...colorPaletteFlattened,
-  ...colorAliasesFlattened,
-];
-
-const colorVariations = colors.reduce((acc, { color }) => {
-  Object.keys(color).forEach((variation) => {
-    if (!acc.includes(variation)) {
-      acc.push(variation);
-    }
-  });
-
-  return acc;
-}, []);
-
-module.exports = Object.assign({}, palette, aliases, {
-  dropShadowLight: '0 0 1px 0 rgba(44, 54, 67, 0.10)',
-  dropShadowBase: '0 0 1px 0 rgba(44, 54, 67, 0.25)',
-  dropShadowDark: '0 0 1px 0 rgba(44, 54, 67, 0.40)',
-
-  colorLuminancePoint: 0.50,
-  colorBaseVariation: 500,
-  colorAccentBaseVariation: 'A400',
-
-  colorPalette,
-  colorPaletteFlattened,
-  colorAliases,
-  colorAliasesFlattened,
-
-  colorPrimary: palette.colorBlue,
-  colorTextDark: palette.colorGrey[900],
-  colorTextLight: palette.colorGrey[50],
-
-  colors,
-  colorVariations,
-  colorIds: [
-    ...colors.map(({ name }) => name),
-    'primary',
+const textColorMap = {
+  [textColorLight]: [
+    colorBlack0,
+    colorGrey8,
+    colorGrey9,
+    colorGrey10,
+    colorGrey11,
+    colorRed0,
+    colorPink0,
+    colorOrange0,
+    colorOrangeLight0,
+    colorYellow0,
+    colorGreen0,
+    colorBlue0,
+    colorBlue1,
+    colorBlue2,
+    colorBlueLight0,
+    colorPurple0,
   ],
-});
+  [textColorDark]: [
+    colorWhite0,
+    colorGrey0,
+    colorGrey1,
+    colorGrey2,
+    colorGrey3,
+    colorGrey4,
+    colorGrey5,
+    colorGrey6,
+    colorGrey7,
+  ],
+};
+
+module.exports = {
+  colorWhite0,
+  colorBlack0,
+  colorGrey0,
+  colorGrey1,
+  colorGrey2,
+  colorGrey3,
+  colorGrey4,
+  colorGrey5,
+  colorGrey6,
+  colorGrey7,
+  colorGrey8,
+  colorGrey9,
+  colorGrey10,
+  colorGrey11,
+
+  colorRed0,
+  colorPink0,
+  colorOrange0,
+  colorOrangeLight0,
+  colorYellow0,
+  colorGreen0,
+  colorBlue0,
+  colorBlue1,
+  colorBlue2,
+  colorBlueLight0,
+  colorPurple0,
+
+  colorPrimary0,
+  colorPrimary1,
+  colorPrimary2,
+
+  textColorLight,
+  textColorSubtle,
+  textColorDark,
+
+  textColorMap,
+
+  dropShadowLight: `0 0 1px 0 rgba(${colorGrey0}, 0.10)`,
+  dropShadowBase: `0 0 1px 0 rgba(${colorGrey0}, 0.25)`,
+  dropShadowDark: `0 0 1px 0 rgba(${colorGrey0}, 0.40)`,
+};

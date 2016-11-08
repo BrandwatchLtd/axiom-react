@@ -19,7 +19,7 @@ export class LogoVertical extends Component {
       height,
       viewBoxWidth,
       viewBoxHeight,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className, 'ax-logo');

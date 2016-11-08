@@ -26,7 +26,7 @@ export class Link extends Component {
       inheritColor,
       noDecoration,
       supressStyle,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className, {

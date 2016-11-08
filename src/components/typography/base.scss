@@ -1,5 +1,4 @@
 @import '../../design-patterns/colors/_vars.js';
-@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
 @import '../typography/_vars.js';
 
@@ -44,18 +43,9 @@ body {
 .ax-text--break-all  { white-space: initial; word-break: break-all; }
 .ax-text--break-word { white-space: initial; word-wrap: break-word; }
 
-
-// Color variations
-@include for-each-color {
-  .ax-text--#{color-prop(name)} {
-    color: get-color(color-prop(color), 500);
-  }
-}
-
-.ax-text--primary {
-  color: get-color($color-primary, 500);
-}
-
+.ax-text--light  { color: $text-color-light; }
+.ax-text--subtle { color: $text-color-subtle; }
+.ax-text--dark   { color: $text-color-dark; }
 
 //
 .ax-text--ellipsis {

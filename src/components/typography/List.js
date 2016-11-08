@@ -21,7 +21,7 @@ export class List extends Component {
       ordered,
       inline,
       aligned = !inline,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,

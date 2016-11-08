@@ -30,7 +30,7 @@ export class GridCell extends Component {
       fifth,
       sixth,
       vAlign,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,

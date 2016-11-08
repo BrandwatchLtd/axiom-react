@@ -1,24 +1,17 @@
 const spacing = require('../../design-patterns/spacing/_vars');
-const { fontSizeSm, fontSizeMd, fontSizeBase } = require('../typography/_vars');
+const { fontSizeMd, fontSizeBase } = require('../typography/_vars');
 
 module.exports = {
-  buttonBorderWidth: '1px',
-  buttonBorderRadius: '2px',
   buttonSizes: [{
     id: 'small',
-    paddingV: 0,
-    paddingH: spacing.componentPaddingHSm,
-    fontSize: fontSizeSm,
-  }, {
-    id: 'medium',
-    paddingV: spacing.componentPaddingVSm,
-    paddingH: spacing.componentPaddingHSm,
     fontSize: fontSizeMd,
+    paddingV: spacing.componentPaddingSm,
+    paddingH: spacing.componentPaddingSm,
     default: true,
   }, {
     id: 'large',
-    paddingV: spacing.componentPaddingVBase,
-    paddingH: spacing.componentPaddingHBase,
     fontSize: fontSizeBase,
+    paddingV: spacing.componentPaddingLg,
+    paddingH: spacing.componentPaddingLg,
   }],
 };

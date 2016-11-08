@@ -1,55 +1,36 @@
+@import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../../design-patterns/utilities/mixins';
-@import '../../components/_vars.js';
 @import '../dialog/_vars.js';
 
-// Dialog Overlay
-.ax-dialog__overlay {
-  @include overlay();
-
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: $container-padding-v-base $container-padding-h-base;
-  z-index: $z-index-dialog;
-}
-
-
-// Dialog: Base
 .ax-dialog {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-height: 100%;
-  z-index: $z-index-dialog + 1;
+  margin: 0 auto;
+  border-radius: $component-border-radius;
+  background-color: $color-white-0;
+}
 
-  &:focus {
-    outline: none;
-  }
+.ax-dialog__header,
+.ax-dialog__footer {
+  padding: $container-padding-lg;
 }
 
 .ax-dialog__body {
-  flex: 1;
-  overflow: auto;
+  padding: 0 $container-padding-lg;
+
+  &:first-child { padding-top: $container-padding-lg; }
+  &:last-child  { padding-bottom: $container-padding-lg; }
 }
 
-
-// Dialog: Card
-.ax-dialog__card {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-.ax-dialog__card-title,
-.ax-dialog__card-footer {
+.ax-dialog__header,
+.ax-dialog__footer {
   flex: 0 0 auto;
+}
+
+.ax-dialog__body {
+  flex: 1 1 0%;
+  overflow: auto;
 }
 
 
@@ -61,29 +42,5 @@
 }
 
 .ax-dialog--fullscreen {
-  min-width: 100%;
-  min-height: 100%;
+  height: 100vh;
 }
-
-
-// sass-lint:disable class-name-format
-
-// React modal animations
-.ReactModal__Overlay,
-.ReactModal__Content {
-  animation-duration: $dialog-animation-duration;
-  animation-fill-mode: forwards;
-}
-
-.ReactModal__Overlay--after-open   { animation-name: appear-fade; }
-.ReactModal__Overlay--before-close { animation-name: disappear-fade; }
-
-.ReactModal__Content--after-open   { animation-name: appear-standard; }
-.ReactModal__Content--before-close { animation-name: disappear-standard; }
-
-// Stop body scrolling
-.ReactModal__Body--open {
-  overflow: hidden;
-}
-
-// sass-lint:enable class-name-format

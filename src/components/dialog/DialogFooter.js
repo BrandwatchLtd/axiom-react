@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import CardFooter from '../card/CardFooter';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 
 export class DialogFooter extends Component {
@@ -10,12 +9,12 @@ export class DialogFooter extends Component {
 
   render() {
     const { children, className, ...rest } = this.props;
-    const classes = classnames(className, 'ax-dialog__card-footer');
+    const classes = classnames(className, 'ax-dialog__footer');
 
     return (
-      <CardFooter { ...rest } className={ classes }>
+      <div { ...rest } className={ classes }>
         { children }
-      </CardFooter>
+      </div>
     );
   }
 }

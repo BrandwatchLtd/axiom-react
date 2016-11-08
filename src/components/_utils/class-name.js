@@ -25,7 +25,9 @@ const CLASS_NAMES_SETS = {
       'ax-text--capitalize': props.textCase === 'capital',
       'ax-text--lowercase': props.textCase === 'lower',
       'ax-text--ellipsis': props.textEllipsis === true,
-      [`ax-text--${props.textColor}`]: props.textColor,
+      'ax-text--light': props.textLight,
+      'ax-text--dark': props.textDark,
+      'ax-text--subtle': props.textSubtle,
     });
   },
 };
@@ -45,6 +47,6 @@ export function removeClassNameSetProps(props) {
     'textBreak',
     'textCase',
     'textEllipsis',
-    'textColor',
+    'textLight', 'textDark', 'textSubtle',
   ]);
 }

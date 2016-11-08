@@ -3,5 +3,5 @@
 
 // Container: Block
 .ax-container--block {
-  @include space-block();
+  @include space-block($container-margin-sm);
 }

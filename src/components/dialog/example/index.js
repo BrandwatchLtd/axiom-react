@@ -6,7 +6,7 @@ export const components = [
   require('../Dialog').default,
   require('../DialogBody').default,
   require('../DialogFooter').default,
-  require('../DialogTitle').default,
+  require('../DialogHeader').default,
 ];
 
 export const examples = [

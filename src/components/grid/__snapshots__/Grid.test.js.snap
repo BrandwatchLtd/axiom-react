@@ -26,20 +26,6 @@ exports[`Grid properties fit renders with value true 1`] = `
 </div>
 `;
 
-exports[`Grid properties gutters renders with gutter large 1`] = `
-<div
-  className="ax-grid ax-grid--gutters--large">
-  <div />
-</div>
-`;
-
-exports[`Grid properties gutters renders with gutter medium 1`] = `
-<div
-  className="ax-grid ax-grid--gutters--medium">
-  <div />
-</div>
-`;
-
 exports[`Grid properties gutters renders with gutter small 1`] = `
 <div
   className="ax-grid ax-grid--gutters--small">
@@ -47,23 +33,9 @@ exports[`Grid properties gutters renders with gutter small 1`] = `
 </div>
 `;
 
-exports[`Grid properties gutters renders with gutter xlarge 1`] = `
+exports[`Grid properties gutters renders with gutter large 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--xlarge">
-  <div />
-</div>
-`;
-
-exports[`Grid properties gutters renders with gutter xsmall 1`] = `
-<div
-  className="ax-grid ax-grid--gutters--xsmall">
-  <div />
-</div>
-`;
-
-exports[`Grid properties gutters renders with gutter xxlarge 1`] = `
-<div
-  className="ax-grid ax-grid--gutters--xxlarge">
+  className="ax-grid ax-grid--gutters--large">
   <div />
 </div>
 `;

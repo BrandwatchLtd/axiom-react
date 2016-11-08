@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { findComponent } from '../_utils/components';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
-import { colorIds } from '../../design-patterns/colors/_vars';
 import { buttonSizes } from '../button/_vars';
 import Icon from '../icon/Icon';
 
@@ -18,7 +17,7 @@ const propsTypes = {
   children: { node: true },
   circular: { bool: true },
   outlined: { bool: true },
-  color: { oneOf: [...colorIds], default: 'primary' },
+  style: { oneOf: ['primary', 'secondary', 'tertiary'], default: 'primary' },
   full: { oneOf: [true, ...breakpointIds] },
   size: { oneOf: buttonSizeIds, default: buttonSizeDefaultId },
 };
@@ -31,11 +30,11 @@ export class Button extends Component {
       className,
       circular,
       children,
-      color = propsTypes.color.default,
+      style = propsTypes.style.default,
       size = propsTypes.size.default,
       full,
       outlined,
-      ...rest,
+      ...rest
     } = this.props;
 
     const icon = findComponent(children, Icon);
@@ -43,7 +42,7 @@ export class Button extends Component {
     const classes = classnames(className,
       'ax-button', {
         [`ax-button--${size}`]: size,
-        [`ax-button--${color}`]: color,
+        [`ax-button--${style}`]: style,
         'ax-button--outlined': outlined,
         'ax-button--circular': circular,
         'ax-button--full': full === true,

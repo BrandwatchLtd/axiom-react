@@ -1,50 +1,19 @@
-const spacingXs = '3px';
-const spacingSm = '6px';
-const spacingBase = '12px';
-const spacingLg = '24px';
-const spacingXl = '36px';
-const spacingXxl = '48px';
-
 module.exports = {
-  spacingXs,
-  spacingSm,
-  spacingBase,
-  spacingLg,
-  spacingXl,
-  spacingXxl,
+  pagePaddingV: '24px',
+  pagePaddingH: '24px',
 
-  pagePaddingV: spacingLg,
-  pagePaddingH: spacingLg,
+  componentBorderWidth: '1px',
+  componentBorderRadius: '3px',
 
-  containerPaddingVSm: spacingBase,
-  containerPaddingVBase: spacingLg,
-  containerPaddingVLg: spacingXl,
+  componentPaddingSm: '6px',
+  componentPaddingLg: '12px',
 
-  containerPaddingHSm: spacingBase,
-  containerPaddingHBase: spacingLg,
-  containerPaddingHLg: spacingXl,
+  componentMarginSm: '6px',
+  componentMarginLg: '12px',
 
-  containerMarginVSm: spacingBase,
-  containerMarginVBase: spacingLg,
-  containerMarginVLg: spacingXl,
+  containerPaddingSm: '12px',
+  containerPaddingLg: '24px',
 
-  containerMarginHSm: spacingBase,
-  containerMarginHBase: spacingLg,
-  containerMarginHLg: spacingXl,
-
-  componentPaddingVSm: spacingXs,
-  componentPaddingVBase: spacingSm,
-  componentPaddingVLg: spacingBase,
-
-  componentPaddingHSm: spacingSm,
-  componentPaddingHBase: spacingBase,
-  componentPaddingHLg: spacingLg,
-
-  componentMarginVSm: spacingSm,
-  componentMarginVBase: spacingBase,
-  componentMarginVLg: spacingLg,
-
-  componentMarginHSm: spacingSm,
-  componentMarginHBase: spacingBase,
-  componentMarginHLg: spacingLg,
+  containerMarginSm: '12px',
+  containerMarginLg: '24px',
 };

@@ -1,13 +1,12 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import humanize from 'humanize-string';
-import Billboard from 'bw-axiom/components/billboard/Billboard';
-import Grid from 'bw-axiom/components/grid/Grid';
-import GridCell from 'bw-axiom/components/grid/GridCell';
-import Heading from 'bw-axiom/components/typography/Heading';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
-import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
+import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
 import { getPathData, pathToRoute } from 'style-guide/utils/examples';
+
+if (__INCLUDE_CSS__) {
+  require('./Doc.scss');
+}
 
 export class Doc extends Component {
   static propTypes = {
@@ -31,32 +30,27 @@ export class Doc extends Component {
     const { examples, title, location, components } = getPathData(pathname);
 
     return (
-      <div>
-        <Billboard color="blue-grey" image="/assets/axiom-bg.jpg" overlay={ true } size="large">
-          <LayoutContent padded={ true }>
-            <Grid vAlign="bottom">
-              <GridCell>
-                <Heading level={ 4 } textCase="capital">{ humanize(route.slice(0, -1).join(' / ')) }</Heading>
-                <Heading level={ 2 } textCase="capital">{ title }</Heading>
-              </GridCell>
-
-              { do { if (location && components) {
-                <GridCell shrink={ true }>
-                  <ApiDocsDialogTrigger imports={ { location, components } } />
-                </GridCell>;
-              } } }
-            </Grid>
+      <div className="dm-doc">
+        <div className="dm-doc__header">
+          <LayoutContent>
+            <ExampleHeader
+                components={ components }
+                location={ location }
+                title={ title }
+                trail={ route.slice(0, -1) } />
           </LayoutContent>
-        </Billboard>
+        </div>
 
-        <LayoutContent padded={ true }>
-          { examples.map((Example, index) =>
-            <Example
-                key={ index }
-                queryParams={ queryParams }
-                routeParams={ routeParams } />
-          ) }
-        </LayoutContent>
+        <div className="dm-doc__body">
+          <LayoutContent>
+            { examples.map((Example, index) =>
+              <Example
+                  key={ index }
+                  queryParams={ queryParams }
+                  routeParams={ routeParams } />
+            ) }
+          </LayoutContent>
+        </div>
       </div>
     );
   }

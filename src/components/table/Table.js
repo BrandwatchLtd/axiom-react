@@ -21,7 +21,7 @@ export class Table extends Component {
       sortable,
       striped,
       borders,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,

@@ -1,6 +1,7 @@
 @import '../../design-patterns/spacing/mixins';
+@import '../../design-patterns/spacing/_vars.js';
 
 // Form: Base
 .ax-form {
-  @include space-block();
+  @include space-block($container-margin-sm);
 }

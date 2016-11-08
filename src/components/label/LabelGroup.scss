@@ -4,6 +4,6 @@
 
 // Label Group
 .ax-label__group {
-  @include space-block($component-margin-v-base);
+  @include space-block();
   @include inline-component-container(ax-label);
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { enhance, addPropTypes } from '../_utils/components';
 import Logo from '../logo/Logo';
 
-export class LogoVertical extends Component {
+export class LogoHorizontal extends Component {
   static propTypes = {};
 
   render() {
@@ -48,6 +48,6 @@ export class LogoVertical extends Component {
   }
 }
 
-export default enhance(LogoVertical)(
+export default enhance(LogoHorizontal)(
   addPropTypes(),
 );

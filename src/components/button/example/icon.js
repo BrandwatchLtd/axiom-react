@@ -11,17 +11,12 @@ export default class ButtonExample extends Component {
       <Example name="Buttons with an Icon">
         <Snippet>
           <ButtonGroup snippetIgnore={ true }>
-            <Button color="red" size="small">
-              Small <Icon name="trash" />
-            </Button>
-
-            <Button color="yellow" size="medium">
-              Regular <Icon name="warning" />
-            </Button>
-
-            <Button color="green" size="large">
-              Large <Icon name="check" />
-            </Button>
+            { Button.__ax_propTypes.size.oneOf.map((size, index) =>
+              <Button key={ index } size={ size }>
+                Button ({ size.toUpperCase() })
+                <Icon name="trash" />
+              </Button>
+            ) }
           </ButtonGroup>
         </Snippet>
       </Example>

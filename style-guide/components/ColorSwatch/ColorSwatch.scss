@@ -1,33 +1,8 @@
-@import '~bw-axiom/design-patterns/colors/mixins';
-@import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/mixins';
 
-$color-box-border-radius: 2px;
+.dm-color-swatch {
+  @include space-block();
 
-.dm-color-box {
-  padding: $component-padding-v-base $component-padding-h-base;
-  text-overflow: ellipsis;
-  overflow: hidden;
-
-  &:first-child { border-radius: $color-box-border-radius $color-box-border-radius 0 0; }
-  &:last-child  { border-radius: 0 0 $color-box-border-radius $color-box-border-radius; }
-}
-
-.dm-color-box--base {
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  padding: $component-padding-v-lg $component-padding-h-base;
-}
-
-.dm-color-box--accent {
-  margin: $component-margin-v-sm 0 0;
-}
-
-@include for-each-color {
-  @each $variation, $hex in color-prop(color) {
-    .dm-color--#{color-prop(name)}--#{$variation} {
-      background-color: $hex;
-      color: get-text-color($hex);
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -8,7 +8,9 @@ export default class FormExample extends Component {
     return (
       <Example name="Text area">
         <Snippet>
-          <TextArea placeholder="Text area" />
+          <TextArea
+              label="Text area label"
+              placeholder="Text area" />
         </Snippet>
       </Example>
     );

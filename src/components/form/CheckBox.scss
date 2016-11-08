@@ -1,10 +1,10 @@
+@import '../../design-patterns/spacing/_vars.js';
 @import '../icon/mixins';
 @import '../icon/vars';
-@import '../form/_vars.js';
 
 .ax-checkbox__label {
   &::before {
     @include icon($fa-var-check);
-    border-radius: $form-input-border-radius;
+    border-radius: $component-border-radius;
   }
 }

@@ -1,16 +1,5 @@
-@import '../avatar/_vars.js';
-
 // Avatar Base
 .ax-avatar {
   display: block;
   border-radius: 50%;
-}
-
-
-// Avatar: Sizes
-@each $avatar-size in $avatar-sizes {
-  .ax-avatar--#{map-get($avatar-size, id)} {
-    width: map-get($avatar-size, size);
-    height: map-get($avatar-size, size);
-  }
 }

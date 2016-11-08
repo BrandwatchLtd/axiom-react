@@ -1,7 +1,7 @@
 @import '../../design-patterns/spacing/mixins';
 
 .ax-menu {
-  @include space-block();
+  @include space-block($component-padding-lg);
 
   display: flex;
   margin: 0;

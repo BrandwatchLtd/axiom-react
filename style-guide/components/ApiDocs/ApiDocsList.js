@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import CardList from 'bw-axiom/components/card/CardList';
-import CardListItem from 'bw-axiom/components/card/CardListItem';
 import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
 import Label from 'bw-axiom/components/label/Label';
@@ -8,19 +6,26 @@ import LabelGroup from 'bw-axiom/components/label/LabelGroup';
 import Heading from 'bw-axiom/components/typography/Heading';
 import ApiDocsPropType from 'style-guide/components/ApiDocs/ApiDocsPropType';
 
+if (__INCLUDE_CSS__) {
+  require('./ApiDocsList.scss');
+}
+
 export default class ApiDocsList extends Component {
   static propTypes = {
+    componentName: PropTypes.string.isRequired,
     propTypes: PropTypes.object.isRequired,
   };
 
   render()  {
-    const { propTypes } = this.props;
+    const { componentName, propTypes } = this.props;
 
     return (
-      <CardList>
-        { Object.keys(propTypes).sort().map((key) =>
-          <CardListItem key={ key }>
-            <Grid vAlign="middle">
+      <div className="dm-api-docs-list">
+        <Heading key="heading" level={ 4 }>{ componentName }</Heading>
+
+        { Object.keys(propTypes).sort().map((key, index) =>
+          <div className="dm-api-docs-list__item" key={ index }>
+            <Grid>
               <GridCell>
                 <Heading key="heading" level={ 5 }>{ key }</Heading>
               </GridCell>
@@ -29,7 +34,7 @@ export default class ApiDocsList extends Component {
                 <LabelGroup key="labels">
                   { do {
                     if (propTypes[key].default !== undefined) {
-                      <Label color="green" size="small">
+                      <Label color="pink" size="small">
                         Defaults: { JSON.stringify(propTypes[key].default) }
                       </Label>;
                     }
@@ -38,7 +43,7 @@ export default class ApiDocsList extends Component {
                     if (propTypes[key].isRequired) {
                       <Label color="red" size="small">Required</Label>;
                     } else {
-                      <Label color="blue" size="small">Optional</Label>;
+                      <Label color="grey" size="small">Optional</Label>;
                     }
                   } }
                 </LabelGroup>
@@ -46,9 +51,9 @@ export default class ApiDocsList extends Component {
             </Grid>
 
             <ApiDocsPropType propType={ propTypes[key] } />
-          </CardListItem>
+          </div>
         ) }
-      </CardList>
+      </div>
     );
   }
 }

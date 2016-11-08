@@ -3,7 +3,7 @@
 // Trick to allow small inline components to vertically space themselves
 // correctly and not break the vertical flow when stacked when going responsive.
 
-@mixin inline-component-container($component, $component-space: $component-margin-h-sm) {
+@mixin inline-component-container($component, $component-space: $component-margin-sm) {
   &,
   &:last-child {
     margin-bottom: -$component-space;

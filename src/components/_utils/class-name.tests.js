@@ -85,6 +85,20 @@ describe('components: utils : class-name', () => {
       it('can add the ellipsis class', () => {
         assert.equal(mergeClassNameSets({ textEllipsis: true }, ['text']), 'ax-text--ellipsis');
       });
+
+      describe('text coloring', () => {
+        it('can add the textLight class', () => {
+          assert.equal(mergeClassNameSets({ textLight: true }, ['text']), 'ax-text--light');
+        });
+
+        it('can add the textDark class', () => {
+          assert.equal(mergeClassNameSets({ textDark: true }, ['text']), 'ax-text--dark');
+        });
+
+        it('can add the textSubtle class', () => {
+          assert.equal(mergeClassNameSets({ textSubtle: true }, ['text']), 'ax-text--subtle');
+        });
+      });
     });
 
     describe('merge class sets', () => {
@@ -122,7 +136,9 @@ describe('components: utils : class-name', () => {
         textBreak: true,
         textCase: true,
         textEllipsis: true,
-        textColor: true,
+        textLight: true,
+        textSubtle: true,
+        textDark: true,
       }), {
         foo: 'bar',
       });

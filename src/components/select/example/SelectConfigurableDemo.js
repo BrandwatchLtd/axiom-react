@@ -8,7 +8,6 @@ import Select from '../Select';
 import Heading from '../../typography/Heading';
 import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class SelectConfigurableDemo extends Component {
 
@@ -89,7 +88,7 @@ export default class SelectConfigurableDemo extends Component {
 
     return (
       <Example name="Select">
-        <Grid gutters="xlarge">
+        <Grid gutters="large">
           <GridCell>
             <Select { ...selectConfig } />
 

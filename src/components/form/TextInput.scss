@@ -6,67 +6,14 @@
 @import '../../design-patterns/spacing/mixins';
 @import '../form/_vars.js';
 
-// Input: Text and Textarea
-.ax-input__group {
-  @include space-block();
-
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-
-
-// Input: Focus
-.ax-input__group--focus {
-  .ax-input__icon-container {
-    border-color: $input-focus-color;
-  }
-
-  .ax-input__icon {
-    color: $input-focus-color;
-  }
-}
-
-
-// Input: Validation
-.ax-input__group--valid {
-  .ax-input__icon-container {
-    border-color: $input-valid-color;
-  }
-
-  .ax-input__icon {
-    color: $input-valid-color;
-  }
-}
-
-.ax-input__group--invalid {
-  .ax-input__icon-container {
-    border-color: $input-invalid-color;
-  }
-
-  .ax-input__icon {
-    color: $input-invalid-color;
-  }
-}
-
-
 // Input: Button
 .ax-input__button-container {
   display: flex;
-
-  @include screen-less-than(breakpoint-prop(width, breakpoint-first())) {
-    flex-direction: column;
-  }
 }
 
 .ax-input__button {
-  margin: 0 0 0 $form-input-h-padding;
-
-  @include screen-less-than(breakpoint-prop(width, breakpoint-first())) {
-    margin: $component-margin-v-sm 0 0;
-  }
+  margin: 0 0 0 $component-padding-sm;
 }
-
 
 // Input: Icon
 .ax-input__icon-container {
@@ -77,29 +24,35 @@
   flex-grow: 1;
   flex-shrink: 1;
   align-items: center;
-  border: $form-input-border-width solid $input-border-color;
+  border: $component-border-width solid $input-border-color;
   border-style: solid;
-  border-radius: $form-input-border-radius;
+  border-radius: $component-border-radius;
   background-color: $input-background-color;
+}
+
+.ax-input__icon-container--focused {
+  border-color: $input-focus-color;
+
+  .ax-input__icon {
+    color: $input-focus-color;
+  }
 }
 
 .ax-input__icon {
   @include transition((color), $transition-time-fast);
 
-  padding: 0 $form-input-h-padding 0 0;
+  padding: 0 $component-padding-sm 0 0;
   color: $input-placeholder-color;
 }
 
 
 // Input
 .ax-input {
-  @include transition((color), $transition-time-fast);
-
   flex-grow: 1;
   flex-shrink: 1;
   width: 100%;
   min-width: 0;
-  padding: $form-input-v-padding $form-input-h-padding;
+  padding: $component-padding-sm;
   border: 0;
   background-color: transparent;
   color: get-text-color($input-background-color);

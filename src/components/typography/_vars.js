@@ -1,4 +1,4 @@
-const { spacingSm, spacingBase } = require('../../design-patterns/spacing/_vars');
+const { componentPaddingSm, componentPaddingLg } = require('../../design-patterns/spacing/_vars');
 
 const scales = {
   scaleMinorSecond: 1.067,
@@ -73,11 +73,11 @@ module.exports = {
   fontWeightStrong: 700,
 
   fontHeadings: {
-    h1: { family: fontFamilyH1, size: fontSizeH1, margin: `${spacingBase} 0` },
-    h2: { family: fontFamilyH2, size: fontSizeH2, margin: `${spacingSm} 0 ${spacingSm}` },
-    h3: { family: fontFamilyH3, size: fontSizeH3, margin: `${spacingSm} 0 ${spacingSm}` },
-    h4: { family: fontFamilyH4, size: fontSizeH4, margin: `${spacingSm} 0 ${spacingSm}` },
-    h5: { family: fontFamilyH5, size: fontSizeH5, margin: `${spacingSm} 0 ${spacingSm}` },
+    H1: { family: fontFamilyH1, size: fontSizeH1, margin: `${componentPaddingLg} 0` },
+    H2: { family: fontFamilyH2, size: fontSizeH2, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
+    H3: { family: fontFamilyH3, size: fontSizeH3, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
+    H4: { family: fontFamilyH4, size: fontSizeH4, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
+    H5: { family: fontFamilyH5, size: fontSizeH5, margin: `${componentPaddingSm} 0 ${componentPaddingSm}` },
   },
 
   fontHeadingFamilies: [

@@ -1,0 +1,16 @@
+@import '../../design-patterns/spacing/_vars.js';
+@import '../../design-patterns/spacing/mixins';
+
+// Input: Group
+.ax-input__group {
+  @include space-block();
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+// Input: Label
+.ax-input__label {
+  margin: 0 0 $component-padding-sm;
+}

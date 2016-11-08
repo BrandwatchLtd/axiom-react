@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes, addClassName } from '../_utils/components';
-import CardTitle from '../card/CardTitle';
 import Grid from '../grid/Grid';
 import GridCell from '../grid/GridCell';
 import Icon from '../icon/Icon';
 import Link from '../typography/Link';
 
-export class DialogTitle extends Component {
+export class DialogHeader extends Component {
   static propTypes = {
     children: { node: true, isRequired: true },
     onRequestClose: { func: true, isRequired: true },
@@ -15,10 +14,10 @@ export class DialogTitle extends Component {
 
   render() {
     const { children, className, onRequestClose, ...rest } = this.props;
-    const classes = classnames(className, 'ax-dialog__card-title');
+    const classes = classnames(className, 'ax-dialog__header');
 
     return (
-      <CardTitle { ...rest } className={ classes }>
+      <div { ...rest } className={ classes }>
         <Grid responsive={ false }>
           <GridCell>
             { children }
@@ -30,12 +29,12 @@ export class DialogTitle extends Component {
             </Link>
           </GridCell>
         </Grid>
-      </CardTitle>
+      </div>
     );
   }
 }
 
-export default enhance(DialogTitle)(
+export default enhance(DialogHeader)(
   addPropTypes('global', 'text'),
   addClassName('global', 'text'),
 );

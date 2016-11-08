@@ -11,11 +11,17 @@ export default class AvatarExample extends Component {
       <Example name="Sized Avatars">
         <Snippet>
           <Grid snippetIgnore={ true } vAlign="bottom">
-            { Avatar.__ax_propTypes.size.oneOf.map((size, index) =>
-              <GridCell key={ index } shrink={ true } snippetIgnore={ true }>
-                <Avatar size={ size } src="/assets/avatar.png" />
-              </GridCell>
-            ) }
+            <GridCell shrink={ true } snippetIgnore={ true }>
+              <Avatar size={ 40 } src="/assets/avatar.png" />
+            </GridCell>
+
+            <GridCell shrink={ true } snippetIgnore={ true }>
+              <Avatar size={ 80 } src="/assets/avatar.png" />
+            </GridCell>
+
+            <GridCell shrink={ true } snippetIgnore={ true }>
+              <Avatar size={ 120 } src="/assets/avatar.png" />
+            </GridCell>
           </Grid>
         </Snippet>
       </Example>

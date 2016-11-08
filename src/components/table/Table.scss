@@ -1,4 +1,3 @@
-@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/spacing/_vars.js';
 @import '../icon/mixins';
@@ -6,9 +5,9 @@
 @import '../typography/_vars.js';
 
 $table-border-width: 1px;
-$table-border-color: get-color($color-grey, 200);
-$table-row-background-color-odd: get-color($color-grey, 50);
-$table-row-background-color-even: get-color($color-white);
+$table-border-color: $color-grey-3;
+$table-row-background-color-odd: $color-grey-0;
+$table-row-background-color-even: $color-white-0;
 
 // Table: Base
 .ax-table {
@@ -18,7 +17,7 @@ $table-row-background-color-even: get-color($color-white);
 
   th,
   td {
-    padding: $component-padding-v-base $component-padding-h-sm;
+    padding: $component-padding-sm;
     font-weight: normal;
     vertical-align: middle;
   }
@@ -73,7 +72,7 @@ $table-row-background-color-even: get-color($color-white);
     cursor: pointer;
 
     &::after {
-      margin: 0 0 0 $component-padding-h-sm;
+      margin: 0 0 0 $component-padding-sm;
     }
   }
 

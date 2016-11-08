@@ -1,6 +1,9 @@
 @import '../../design-patterns/spacing/mixins';
 
-.ax-tabset,
+.ax-tabset {
+  @include space-block($container-margin-sm);
+}
+
 .ax-tabset__menu,
 .ax-tabset__content {
   @include space-block();

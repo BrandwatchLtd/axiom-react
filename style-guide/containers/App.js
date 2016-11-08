@@ -6,7 +6,6 @@ import Layout from 'style-guide/components/Layout/Layout';
 import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
 import LayoutSidebar from 'style-guide/components/Layout/LayoutSidebar';
 import LayoutMain from 'style-guide/components/Layout/LayoutMain';
-import LayoutFooter from 'style-guide/components/Layout/LayoutFooter';
 import Nav from 'style-guide/components/Navigation/Nav';
 import { buildNavigationItems } from 'style-guide/utils/navigation';
 
@@ -55,7 +54,6 @@ export class App extends Component {
         <LayoutMain>
           { children }
         </LayoutMain>
-        <LayoutFooter />
       </Layout>
     );
   }

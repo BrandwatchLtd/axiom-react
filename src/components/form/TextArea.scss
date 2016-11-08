@@ -1,18 +1,41 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/animations/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
 @import '../form/_vars.js';
+
+$textarea-height: 200px;
 
 // Textarea: Base
 .ax-textarea {
   @include transition((border-color), $transition-time-fast);
 
-  min-height: $form-textarea-height;
-  border: $form-input-border-width solid $input-border-color;
-  border-radius: $form-input-border-radius;
-  background-color: transparent;
+  width: 100%;
+  min-height: $textarea-height;
+  padding: $component-padding-sm;
+  border: $component-border-width solid $input-border-color;
+  border-radius: $component-border-radius;
+  background-color: $input-background-color;
+  color: get-text-color($input-background-color);
+  line-height: inherit;
   resize: none;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
 
   &:focus {
     border-color: $input-focus-color;
+  }
+
+  &:disabled {
+    background-color: $input-disabled-color;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
   }
 }

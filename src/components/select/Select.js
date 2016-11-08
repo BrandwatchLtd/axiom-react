@@ -61,7 +61,7 @@ export class Select extends Component {
       noItemsText = 'No items to select',
       onOpen = () => {},
       onClose = () => {},
-      ...rest,
+      ...rest
     } = this.props;
 
     return {

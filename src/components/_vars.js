@@ -1,4 +1,4 @@
 module.exports = {
   zIndexSelect: 400,
-  zIndexDialog: 900,
+  zIndexModal: 900,
 };

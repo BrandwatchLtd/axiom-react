@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import Grid from '../../../components/grid/Grid';
-import GridCell from '../../../components/grid/GridCell';
 import Heading from '../../../components/typography/Heading';
-import { colorAliases } from '../../colors/_vars';
+import colors from '../../colors/_vars';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 import Example from 'style-guide/components/Example/Example';
 
-export default class ContextColors extends Component {
+export default class PaletteColors extends Component {
   render() {
+    const palette = [{
+      name: 'Primary',
+      colors: [
+        { variable: 'color-primary-0', hex: colors.colorPrimary0 },
+        { variable: 'color-primary-1', hex: colors.colorPrimary1 },
+        { variable: 'color-primary-2', hex: colors.colorPrimary2 },
+      ],
+    }];
+
     return (
       <Example name="Context Colors">
-        { colorAliases.map(({ heading, colors }, t) => [
-          <Heading key={ t } level={ 5 }>{ heading }</Heading>,
-          colors.map((group, m) =>
-            <Grid key={ `${t}${m}` }>
-              { group.map(({ name, color }, b) =>
-                <GridCell key={ `${t}${m}${b}` }>
-                  <ColorSwatch color={ color } name={ name } />
-                </GridCell>
-              ) }
-            </Grid>
-          ),
+        { palette.map(({ name, colors }, index) => [
+          <Heading key={ `${index}-heading` } level={ 5 }>{ name }</Heading>,
+          <ColorSwatch colors={ colors } key={ `${index}-swatch` } />,
         ]) }
       </Example>
     );

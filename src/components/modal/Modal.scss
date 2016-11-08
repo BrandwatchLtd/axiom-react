@@ -1,0 +1,52 @@
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
+@import '../../components/_vars.js';
+@import '../modal/_vars.js';
+
+
+.ax-modal__overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: fade-out($color-grey-11, .3);
+  z-index: $z-index-modal;
+}
+
+.ax-modal {
+  display: flex;
+  flex-direction: column;
+  padding: $container-padding-sm;
+  overflow: auto;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// sass-lint:disable class-name-format
+
+// React modal animations
+.ReactModal__Overlay,
+.ReactModal__Content {
+  animation-duration: $modal-animation-duration;
+  animation-fill-mode: forwards;
+}
+
+.ReactModal__Overlay--after-open   { animation-name: appear-fade; }
+.ReactModal__Overlay--before-close { animation-name: disappear-fade; }
+
+.ReactModal__Content--after-open   { animation-name: appear-standard; }
+.ReactModal__Content--before-close { animation-name: disappear-standard; }
+
+// Stop body scrolling
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+// sass-lint:enable class-name-format

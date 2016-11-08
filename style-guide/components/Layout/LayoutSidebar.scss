@@ -1,5 +1,5 @@
 @import '~bw-axiom/design-patterns/animations/mixins';
-@import '~bw-axiom/design-patterns/colors/mixins';
+@import '~bw-axiom/design-patterns/colors/_vars.js';
 @import '~bw-axiom/design-patterns/layout/mixins';
 @import '~bw-axiom/design-patterns/layout/_vars.js';
 @import './vars';
@@ -14,7 +14,6 @@
   width: $sidebar-width;
   border-right: $sidebar-border-width solid $sidebar-border-color;
   background-color: $sidebar-background-color;
-  color: get-text-color($sidebar-background-color);
   overflow: auto;
 
   @include screen-less-than($layout-change-point) {

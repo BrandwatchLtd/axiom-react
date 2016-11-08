@@ -21,7 +21,7 @@ export class ChedioButtox extends Component {
       inputClassName,
       inputType,
       labelClassName,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,

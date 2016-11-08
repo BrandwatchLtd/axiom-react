@@ -1,0 +1,11 @@
+@import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/mixins';
+
+.dm-doc {
+  padding: $page-padding-v 0;
+}
+
+.dm-doc__header,
+.dm-doc__body {
+  @include space-block($page-padding-v);
+}

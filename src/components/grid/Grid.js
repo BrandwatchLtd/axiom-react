@@ -33,7 +33,7 @@ export class Grid extends Component {
       fit,
       vAlign,
       hAlign,
-      ...rest,
+      ...rest
     } = this.props;
 
     const classes = classnames(className,

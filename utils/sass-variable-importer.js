@@ -1,20 +1,13 @@
 const path = require('path');
 const nodeSass = require('node-sass');
-const decamelize = require('decamelize');
 const Alias = require('./webpack-alias-plugin');
 
-/**
- *
- */
-
 function formatKey(key) {
-  const decamelized = decamelize(key, '-');
-
-  if (decamelized.includes('-')) {
-    return decamelized;
-  }
-
-  return key;
+  return key.startsWith('#') ? key : key
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/([A-Z])([A-Z])/g, '$1-$2')
+    .replace(/([a-z])(\d+)/g, '$1-$2')
+    .toLowerCase();
 }
 
 function formatValue(value) {

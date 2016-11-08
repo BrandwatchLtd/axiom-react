@@ -1,5 +1,6 @@
 @import '../layout/mixins';
 
+// sass-lint:disable no-important
 @include for-each-breakpoint {
   .ax-hidden-until--#{breakpoint-prop(id)}  {
     @include screen-less-than {
@@ -13,3 +14,4 @@
     }
   }
 }
+// sass-lint:enable no-important

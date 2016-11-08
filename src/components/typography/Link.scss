@@ -1,5 +1,4 @@
 @import '../../design-patterns/colors/_vars.js';
-@import '../../design-patterns/colors/mixins';
 
 // Links
 a {
@@ -21,10 +20,10 @@ a.ax-link {
   // Color links but this will need to be
   // suppressed for things like menu.
   &:not(.ax-link--inherit-color) {
-    color: get-color($color-primary);
+    color: $color-primary-1;
 
     &:hover:not(.ax-link--disabled) {
-      color: get-color($color-primary, 600);
+      color: $color-primary-0;
     }
   }
 

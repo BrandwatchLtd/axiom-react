@@ -1,4 +1,3 @@
-@import '~bw-axiom/design-patterns/colors/mixins';
 @import '~bw-axiom/design-patterns/layout/mixins';
 @import '~bw-axiom/design-patterns/layout/_vars.js';
 @import '~bw-axiom/design-patterns/spacing/_vars.js';
@@ -17,7 +16,6 @@
   border-right: $sidebar-border-width solid $sidebar-border-color;
   border-bottom: $sidebar-border-width solid transparent;
   background-color: $header-background-color;
-  color: get-text-color($header-background-color);
   text-align: center;
   z-index: $z-index-layout-header;
 

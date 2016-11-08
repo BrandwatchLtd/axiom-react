@@ -19,12 +19,3 @@
     width: 100%;
   }
 }
-
-.dm-layout__content--padded {
-  padding: 0 $page-padding-h;
-
-  @include screen-less-than($layout-change-point) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}

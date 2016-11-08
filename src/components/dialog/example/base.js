@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dialog from '../Dialog';
-import DialogTitle from '../DialogTitle';
+import DialogHeader from '../DialogHeader';
 import DialogBody from '../DialogBody';
 import DialogFooter from '../DialogFooter';
 import Paragraph from '../../typography/Paragraph';
@@ -17,7 +17,7 @@ export default class DialogExample extends Component {
 
         <Snippet>
           <Dialog renderSkip={ true }>
-            <DialogTitle onRequestClose={ Function }>...</DialogTitle>
+            <DialogHeader onRequestClose={ Function }>...</DialogHeader>
             <DialogBody>...</DialogBody>
             <DialogFooter>...</DialogFooter>
           </Dialog>

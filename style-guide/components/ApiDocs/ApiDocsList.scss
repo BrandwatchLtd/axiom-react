@@ -1,0 +1,17 @@
+@import '~bw-axiom/design-patterns/colors/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/mixins';
+
+.dm-api-docs-list {
+  @include space-block($container-margin-lg);
+}
+
+.dm-api-docs-list__item {
+  padding: $container-margin-sm 0;
+  border-bottom: $component-border-width solid $color-grey-2;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}

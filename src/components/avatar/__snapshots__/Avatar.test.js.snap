@@ -1,23 +1,23 @@
-exports[`Avatar avatarSizes renders with large 1`] = `
+exports[`Avatar renders with custom size 1`] = `
 <img
-  className="ax-avatar ax-avatar--large"
-  src="/image/path" />
-`;
-
-exports[`Avatar avatarSizes renders with medium 1`] = `
-<img
-  className="ax-avatar ax-avatar--medium"
-  src="/image/path" />
-`;
-
-exports[`Avatar avatarSizes renders with small 1`] = `
-<img
-  className="ax-avatar ax-avatar--small"
-  src="/image/path" />
+  className="ax-avatar"
+  src="/image/path"
+  style={
+    Object {
+      "height": 50,
+      "width": 50,
+    }
+  } />
 `;
 
 exports[`Avatar renders with defaultProps 1`] = `
 <img
-  className="ax-avatar ax-avatar--medium"
-  src="/image/path" />
+  className="ax-avatar"
+  src="/image/path"
+  style={
+    Object {
+      "height": 35,
+      "width": 35,
+    }
+  } />
 `;

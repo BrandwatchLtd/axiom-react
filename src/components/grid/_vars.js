@@ -1,15 +1,11 @@
 const { layoutWidthSm } = require('../../design-patterns/layout/_vars');
-const { spacingXs, spacingSm, spacingBase, spacingLg, spacingXl, spacingXxl } = require('../../design-patterns/spacing/_vars');
+const { containerMarginSm, containerMarginLg } = require('../../design-patterns/spacing/_vars');
 
 module.exports = {
   gridChangePoint: layoutWidthSm,
   gridGutters: [
-    { id: 'xsmall', size: spacingXs },
-    { id: 'small', size: spacingSm },
-    { id: 'medium', size: spacingBase, default: true },
-    { id: 'large', size: spacingLg },
-    { id: 'xlarge', size: spacingXl },
-    { id: 'xxlarge', size: spacingXxl },
+    { id: 'small', size: containerMarginSm, default: true },
+    { id: 'large', size: containerMarginLg },
   ],
   gridWidths: [
     { id: 'half', percent: `${100 / 2}%` },

@@ -22,7 +22,7 @@
     "Promise": true,
   },
   "rules": {
-    "comma-dangle": [1, "always-multiline"],
+    "comma-dangle": [2, "always-multiline"],
     "func-style": [2, "declaration"],
     "indent": [2, 2, {"SwitchCase": 0}],
     "keyword-spacing": [2],

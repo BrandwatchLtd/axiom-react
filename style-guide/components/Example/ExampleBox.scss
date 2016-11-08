@@ -1,0 +1,8 @@
+@import '~bw-axiom/design-patterns/spacing/mixins';
+@import '~bw-axiom/design-patterns/spacing/_vars.js';
+
+.dm-example-box {
+  @include space-block($container-margin-sm);
+
+  padding: $page-padding-v $page-padding-h;
+}

@@ -1,6 +1,6 @@
 @import './_vars.js';
 
-@mixin space-inline($vertical: $component-margin-v-base, $horizontal: $vertical) {
+@mixin space-inline($vertical: $component-margin-sm, $horizontal: $vertical) {
   margin: 0 $horizontal $vertical 0;
 
   &:last-child {
@@ -10,7 +10,7 @@
 }
 
 
-@mixin space-block($vertical: $component-margin-v-base, $horizontal: 0) {
+@mixin space-block($vertical: $component-margin-sm, $horizontal: 0) {
   margin: $vertical $horizontal;
 
   &:first-child { margin-top: 0; }

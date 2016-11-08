@@ -1,3 +1,4 @@
+@import '../../design-patterns/spacing/_vars.js';
 @import '../../components/_vars.js';
 @import '../form/_vars.js';
 
@@ -10,9 +11,9 @@
   margin: 0;
   padding: 0;
   transform: translateY(100%);
-  border-right: $form-input-border-width solid $input-border-color;
-  border-bottom: $form-input-border-width solid $input-border-color;
-  border-left: $form-input-border-width solid $input-border-color;
+  border-right: $component-border-width solid $input-border-color;
+  border-bottom: $component-border-width solid $input-border-color;
+  border-left: $component-border-width solid $input-border-color;
   background-color: $input-background-color;
   list-style: none;
   overflow: auto;

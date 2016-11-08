@@ -1,12 +1,12 @@
-@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/spacing/_vars.js';
 @import '../form/_vars.js';
 
 .ax-select__list-item {
   display: block;
-  padding: $form-input-v-padding $form-input-h-padding;
-  border-bottom: $form-input-border-width solid $input-border-color;
+  padding: $component-padding-sm;
+  border-bottom: $component-border-width solid $input-border-color;
 
   &:last-child {
     border-bottom: 0;
@@ -18,9 +18,10 @@
 }
 
 .ax-select__list-item--active {
-  background-color: get-color($color-grey, 50);
+  background-color: $color-grey-2;
 }
 
 .ax-select__list-item--selected {
-  background-color: get-color($color-primary, 50);
+  background-color: $color-primary-0;
+  color: get-text-color($color-primary-0);
 }

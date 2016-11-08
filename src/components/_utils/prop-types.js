@@ -1,6 +1,5 @@
 import { PropTypes } from 'react';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
-import { colorIds } from '../../design-patterns/colors/_vars';
 
 const PROP_TYPE_MAP = {
   any: PropTypes.any,
@@ -33,7 +32,9 @@ export const PROP_TYPES_SETS = {
     textBreak: { oneOf: ['none', 'all', 'word'] },
     textCase: { oneOf: ['upper', 'capital', 'lower'] },
     textEllipsis: { bool: true },
-    textColor: { oneOf: [...colorIds], default: 'primary' },
+    textLight: { bool: true },
+    textDark: { bool: true },
+    textSubtle: { bool: true },
   },
 };
 

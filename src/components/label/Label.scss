@@ -6,25 +6,21 @@
 @import '../label/_vars.js';
 @import '../typography/_vars.js';
 
-$label-border-width: 1px;
-$label-border-radius: 2px;
-
 // Label: Base
 .ax-label {
-  @include space-inline($component-margin-h-sm);
+  @include space-inline();
 
   display: inline-block;
   position: relative;
-  border-width: $label-border-width;
+  border-width: $component-border-width;
   border-style: solid;
-  border-radius: $label-border-radius;
+  border-radius: $component-border-radius;
   border-color: transparent;
   background-color: transparent;
   font-weight: $font-weight-strong;
   text-align: center;
   vertical-align: middle;
 }
-
 
 // Label: Sizing
 @each $label-size in $label-sizes {
@@ -37,7 +33,7 @@ $label-border-radius: 2px;
 
 // Label: Full width
 @mixin label-full-width {
-  @include space-block($component-margin-v-sm);
+  @include space-block();
 
   display: block;
   width: 100%;
@@ -55,26 +51,10 @@ $label-border-radius: 2px;
   }
 }
 
-
-// Label: Colouring
-@mixin label-color-filled($color) {
-  border-color: get-color($color, 300);
-  background-color: get-color($color, 50);
-  color: get-color($color, 900);
-}
-
-@include for-each-color {
-  .ax-label--#{color-prop(name)} {
-    @include label-color-filled(color-prop(color));
+@each $label-color in $label-colors {
+  .ax-label--#{map-get($label-color, id)} {
+    border-color: map-get($label-color, color);
+    background-color: map-get($label-color, color);
+    color: get-text-color(map-get($label-color, color));
   }
-}
-
-.ax-label--primary {
-  @include label-color-filled($color-primary);
-}
-
-
-// Label: Icon
-.ax-label__icon {
-  margin-right: $component-margin-h-sm;
 }

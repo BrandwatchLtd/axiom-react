@@ -1,5 +1,6 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/animations/_vars.js';
+@import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/_vars.js';
@@ -17,18 +18,19 @@ button {
 }
 
 .ax-button {
-  @include space-inline($component-margin-h-sm);
+  @include space-inline();
   @include transition((background-color, border-color, color), $transition-time-fast);
 
   display: inline-block;
   position: relative;
-  border-width: $button-border-width;
+  border-width: $component-border-width;
   border-style: solid;
-  border-radius: $button-border-radius;
+  border-radius: $component-border-radius;
   border-color: transparent;
   background-color: transparent;
   font-weight: $font-weight-strong;
   text-align: center;
+  text-transform: uppercase;
   cursor: pointer;
   vertical-align: middle;
 
@@ -55,7 +57,7 @@ button {
 
 // Button: Full width
 @mixin button-full-width {
-  @include space-block($component-margin-v-sm);
+  @include space-block();
 
   display: block;
   width: 100%;
@@ -75,77 +77,54 @@ button {
 
 
 // Button: Coloured
-@mixin button-color-filled($color) {
-  border-color: get-color($color, 500);
-  background-color: get-color($color, 400);
-  color: get-text-color(get-color($color, 400));
-
-  &:hover {
-    border-color: get-color($color, 600);
-    background-color: get-color($color, 500);
-    color: get-text-color(get-color($color, 500));
-  }
-
-  &:active,
-  &.active {
-    border-color: get-color($color, 700);
-    background-color: get-color($color, 600);
-    color: get-text-color(get-color($color, 600));
-  }
-
-  &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active {
-    border-color: get-color($color, 100);
-    background-color: get-color($color, 50);
-    color: get-color($color, 100);
-  }
-}
-
-@mixin button-color-outlined($color) {
-  border-color: get-color($color, 500);
-  color: get-color($color, 500);
-
-  &:hover {
-    border-color: get-color($color, 600);
-    color: get-color($color, 600);
-  }
-
-  &:active,
-  &.active {
-    border-color: get-color($color, 700);
-    background-color: get-color($color, 600);
-    color: get-text-color(get-color($color, 600));
-  }
-
-  &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active {
-    border-color: get-color($color, 100);
-    color: get-color($color, 100);
-  }
-}
-
-@include for-each-color {
-  .ax-button--#{color-prop(name)} {
-    &:not(.ax-button--outlined) {
-      @include button-color-filled(color-prop(color));
-    }
-
-    &.ax-button--outlined {
-      @include button-color-outlined(color-prop(color));
-    }
-  }
-}
-
 .ax-button--primary {
-  &:not(.ax-button--outlined) {
-    @include button-color-filled($color-primary);
+  border-color: $color-primary-1;
+  background-color: $color-primary-1;
+  color: get-text-color($color-primary-1);
+
+  &:hover  {
+    border-color: $color-primary-0;
+    background-color: $color-primary-0;
   }
 
-  &.ax-button--outlined {
-    @include button-color-outlined($color-primary);
+  &:active {
+    border-color: $color-primary-2;
+    background-color: $color-primary-2;
   }
+
+  &[disabled] {
+    border-color: $color-grey-4;
+    background-color: $color-grey-4;
+    color: $color-grey-7;
+  }
+}
+
+.ax-button--secondary {
+  border-color: $color-primary-1;
+  color: $color-primary-1;
+
+  &:hover  {
+    border-color: $color-primary-0;
+    color: $color-primary-0;
+  }
+
+  &:active {
+    border-color: $color-primary-2;
+    color: $color-primary-2;
+  }
+
+  &[disabled] {
+    border-color: $color-grey-7;
+    color: $color-grey-7;
+  }
+}
+
+.ax-button--tertiary {
+  color: $color-primary-1;
+
+  &:hover     { color: $color-primary-0; }
+  &:active    { color: $color-primary-2; }
+  &[disabled] { color: $color-grey-7; }
 }
 
 
@@ -156,8 +135,8 @@ button {
 
   @each $button-size in $button-sizes {
     &.ax-button--#{map-get($button-size, id)} {
-      width: $line-height + (map-get($button-size, padding-v) * 2);
-      height: $line-height + (map-get($button-size, padding-v) * 2);
+      width: $line-height + (map-get($button-size, padding-v) * 2) + ($component-border-width * 2);
+      height: $line-height + (map-get($button-size, padding-v) * 2) + ($component-border-width * 2);
     }
   }
 }
@@ -165,5 +144,5 @@ button {
 
 // Button: Icon
 .ax-button__icon {
-  margin-right: $component-margin-h-sm;
+  margin-right: $component-margin-sm;
 }

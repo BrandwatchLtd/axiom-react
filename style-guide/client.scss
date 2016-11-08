@@ -1,4 +1,3 @@
-@import '~bw-axiom/design-patterns/colors/mixins';
 @import '~bw-axiom/design-patterns/colors/_vars.js';
 
 html {
@@ -6,8 +5,8 @@ html {
 }
 
 body {
-  background-color: get-color($color-grey, 50);
-  color: get-text-color(get-color($color-grey, 50));
+  background-color: $color-white-0;
+  color: $color-grey-11;
 }
 
 body,
