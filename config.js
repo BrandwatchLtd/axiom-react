@@ -49,6 +49,9 @@ const output = {
     serverDevJSFilename: 'style-guide.server.js',
     serverProdJSFilename: 'style-guide.server.js',
   },
+  docs: {
+    jsFilename: 'static.js',
+  },
 };
 
 const entries = {

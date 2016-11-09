@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
+const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const webpackConfig = require('../webpack/static.config');
+const config = require('../config');
 
 function buildStatic() {
   return new Promise((resolve, reject) => {
@@ -24,6 +27,8 @@ function buildStatic() {
       }));
 
       console.log('Ax:: Build Static [2/2]');
+
+      fs.unlinkSync(path.resolve(config.paths.docs, config.output.docs.jsFilename));
 
       resolve();
     });
