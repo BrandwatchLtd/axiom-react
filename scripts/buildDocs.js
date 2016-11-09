@@ -3,7 +3,7 @@ const buildStatic = require('./buildStatic');
 const buildClient = require('./buildClient');
 const copy = require('copy');
 
-function createStatic() {
+function buildDocs() {
   clean()
     .then(() => buildClient())
     .then(() => {
@@ -13,4 +13,4 @@ function createStatic() {
     .then(() => buildStatic());
 }
 
-createStatic();
+buildDocs();
