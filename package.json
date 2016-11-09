@@ -16,12 +16,13 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "clean": "node ./scripts/clean",
     "buildDocs": "NODE_ENV=production BABEL_ENV=production node ./scripts/buildDocs",
     "lint": "npm run lint-js && npm run lint-sass",
     "lint-js": "eslint --config .eslintrc ./src ./style-guide",
     "lint-sass": "sass-lint --config .sass-lint.yml -v",
     "start": "NODE_ENV=development BABEL_ENV=development node ./scripts/start",
-    "prepublish": "npm run test && npm run prepublish-javascript && npm run prepublish-sass",
+    "prepublish": "npm run clean && npm run test && npm run prepublish-javascript && npm run prepublish-sass",
     "prepublish-javascript": "BABEL_ENV=production babel ./src --ignore example,*.test.js --out-dir ./lib && babel ./utils --out-dir ./lib/utils",
     "prepublish-sass": "NODE_ENV=production BABEL_ENV=production node ./scripts/prepublish-sass",
     "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json",

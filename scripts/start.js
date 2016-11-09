@@ -1,5 +1,5 @@
 const clean = require('./clean');
-const watchClient = require('./watch-client');
+const watchClient = require('./watchClient');
 const server = require('./server');
 const buildClient = require('./buildClient');
 

@@ -6,7 +6,12 @@ const isCalledDirectly = require('./isCalledDirectly');
 function clean() {
   console.log('Ax:: Clean [1/2]');
 
-  return del([`${config.paths.output}/**`, `!${config.paths.output}`])
+  return del([
+    `${config.paths.output}/**`,
+    `!${config.paths.output}`,
+    `${config.paths.docs}/**`,
+    `!${config.paths.docs}`,
+    `!${config.paths.docs}/assets/**`])
     .then(() => console.log('Ax:: Clean [2/2]'));
 }
 
