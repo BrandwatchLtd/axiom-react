@@ -1,14 +1,13 @@
 const clean = require('./clean');
 const watchClient = require('./watch-client');
-const watchServer = require('./watch-server');
 const server = require('./server');
-const config = require('../config');
+const buildClient = require('./buildClient');
 
 function start() {
   clean()
-    .then(() => watchServer())
+    .then(() => buildClient())
     .then(() => watchClient())
-    .then(() => server(config.output.styleGuide.serverDevJSFilename));
+    .then(() => server());
 }
 
 start();

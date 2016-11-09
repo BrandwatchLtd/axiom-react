@@ -1,12 +1,11 @@
 /* eslint-disable no-console */
-const path = require('path');
 const forever = require('forever');
 const config = require('../config');
 
-module.exports = function server(filename) {
+module.exports = function server() {
   console.log('Ax:: Starting server...');
 
-  return forever.start(path.join(config.output.path, filename), {
+  return forever.start(config.entries.styleGuide.server, {
     minUptime: 1000,
     spinSleepTime: 1000,
   });

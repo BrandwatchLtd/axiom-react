@@ -18,7 +18,6 @@
   "scripts": {
     "clean": "node ./scripts/clean",
     "buildClient": "NODE_ENV=production BABEL_ENV=production node ./scripts/buildClient",
-    "buildServer": "NODE_ENV=production BABEL_ENV=production node ./scripts/buildServer",
     "lint": "npm run lint-js && npm run lint-sass",
     "lint-js": "eslint --config .eslintrc ./src ./style-guide",
     "lint-sass": "sass-lint --config .sass-lint.yml -v",
@@ -29,7 +28,6 @@
     "prepublish-sass": "NODE_ENV=production BABEL_ENV=production node ./scripts/prepublish-sass",
     "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json",
     "static": "NODE_ENV=production BABEL_ENV=production node ./scripts/static",
-    "prehttp": "npm run nvm",
     "http": "http-server ./docs -p 4001 -d false"
   },
   "dependencies": {
