@@ -30,18 +30,18 @@ export default class ApiDocsDialog extends Component {
         <DialogBody>
           <CodeTabset>
             <CodeSnippet language="js">
-              { components.map(({ __ax_displayName }) =>
-                `import ${__ax_displayName} from '${location}/${__ax_displayName}';`
+              { components.map(({ displayName }) =>
+                `import ${displayName} from '${location}/${displayName}';`
               ).join('\n') }
             </CodeSnippet>
           </CodeTabset>
 
           { components
               .filter(({ __ax_propTypes = {} }) => Object.keys(__ax_propTypes).length)
-              .map(({ __ax_displayName, __ax_propTypes }) =>
+              .map(({ displayName, __ax_propTypes }) =>
                 <ApiDocsList
-                    componentName={ __ax_displayName }
-                    key={ __ax_displayName }
+                    componentName={ displayName }
+                    key={ displayName }
                     propTypes={ __ax_propTypes } />
           ) }
         </DialogBody>

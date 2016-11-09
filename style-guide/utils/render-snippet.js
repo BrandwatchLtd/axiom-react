@@ -25,7 +25,6 @@ export function jsxRender(snippet) {
       useBooleanShorthandSyntax: false,
       showDefaultProps: false,
       filterProps: ['key'],
-      displayName: ({ type: { __ax_displayName } }) => __ax_displayName,
     });
   } catch (e) {
     console.error(`

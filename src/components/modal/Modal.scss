@@ -21,6 +21,7 @@
 .ax-modal {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
   padding: $container-padding-sm;
   overflow: auto;
 

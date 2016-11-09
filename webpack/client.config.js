@@ -33,15 +33,14 @@ module.exports = {
     ...config.webpack.aliases,
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    // TODO: Can't enable this until UglifyJS2 Harmony is released
-    // https://github.com/mishoo/UglifyJS2/issues/448
-    // new webpack.optimize.UglifyJsPlugin({
-      // compress: {
-        // keep_fnames: true,
-        // keep_classnames: true,
-        // warnings: false,
-      // },
-    // }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        keep_fnames: true,
+      },
+    }),
     new webpack.DefinePlugin(Object.assign({}, config.webpack.globals, {
       __CLIENT__: true,
       __SERVER__: false,

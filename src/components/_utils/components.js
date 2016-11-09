@@ -9,16 +9,9 @@ export function findComponents(components, Component) {
   return Children.toArray(components).filter(({ type }) => type === Component);
 }
 
-function addDisplayName(Component) {
-  Component.__ax_displayName = Component.name;
-
-  return Component;
-}
-
 export function enhance(Component) {
   return (...transforms) => {
     return [
-      addDisplayName,
       ...transforms,
     ].reduce((result, transform) => {
       return transform(result);
