@@ -1,10 +1,4 @@
 module.exports = [{
-  id: 'home',
-  name: 'home',
-  children: [
-    require('bw-axiom/axiom/home'),
-  ],
-}, {
   id: 'axiom',
   name: 'Axiom',
   children: [

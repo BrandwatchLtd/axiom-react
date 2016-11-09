@@ -7,7 +7,6 @@ const { js, json, yml } = require('./loader.config.js');
 // files to be compiled with babel.
 const paths = [
   '/',
-  '/axiom/getting-started',
   '/design-patterns/colors',
   '/design-patterns/date-and-time',
   '/design-patterns/numbers',
