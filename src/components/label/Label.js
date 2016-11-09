@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 import { labelSizes, labelColors } from '../label/_vars';
 
 if (__INCLUDE_CSS__) {
@@ -44,15 +45,12 @@ export class Label extends Component {
     );
 
     return (
-      <span { ...rest } className={ classes }>
+      <Base { ...rest } Component="span" className={ classes }>
         { children }
-      </span>
+      </Base>
     );
   }
 }
 
-export default enhance(Label)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Label)(addPropTypes());
 

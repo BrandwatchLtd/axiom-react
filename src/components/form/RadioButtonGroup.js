@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import ChedioButtoxGroup from './ChedioButtoxGroup';
 
 export class RadioButtonGroup extends Component {
@@ -15,7 +15,4 @@ export class RadioButtonGroup extends Component {
   }
 }
 
-export default enhance(RadioButtonGroup)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(RadioButtonGroup)(addPropTypes());

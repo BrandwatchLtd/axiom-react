@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash/omit';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 import { buildSelectableItems, defaultInputDisplayValue } from './_utils';
 import Icon from '../icon/Icon';
 import TextInput from '../form/TextInput';
@@ -198,7 +199,7 @@ export class Select extends Component {
     });
 
     return (
-      <div
+      <Base
           className={ classes }
           onBlur={ ::this.close }
           onFocus={ ::this.open }
@@ -225,12 +226,9 @@ export class Select extends Component {
         <SelectMask
             isOpen={ isOpen }
             onClick={ ::this.close } />
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(Select)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(Select)(addPropTypes());

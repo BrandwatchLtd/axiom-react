@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 
 if (__INCLUDE_CSS__) {
   require('./ButtonGroup.scss');
@@ -26,7 +26,4 @@ export class ButtonGroup extends Component {
   }
 }
 
-export default enhance(ButtonGroup)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(ButtonGroup)(addPropTypes());

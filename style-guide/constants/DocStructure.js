@@ -17,6 +17,7 @@ module.exports = [{
   name: 'Components',
   children: [
     require('bw-axiom/components/avatar/example'),
+    require('bw-axiom/components/base/example'),
     require('bw-axiom/components/button/example'),
     require('bw-axiom/components/dialog/example'),
     require('bw-axiom/components/form/example'),

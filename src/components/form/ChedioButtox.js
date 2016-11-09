@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./ChedioButtox.scss');
@@ -31,17 +32,14 @@ export class ChedioButtox extends Component {
     );
 
     return (
-      <label className={ classes }>
+      <Base Component="label" className={ classes }>
         <input { ...rest } className={ classnames('ax-chedio-buttox', inputClassName) } type={ inputType } />
         <span className={ classnames('ax-chedio-buttox__label', labelClassName) }>
           { children }
         </span>
-      </label>
+      </Base>
     );
   }
 }
 
-export default enhance(ChedioButtox)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(ChedioButtox)(addPropTypes());

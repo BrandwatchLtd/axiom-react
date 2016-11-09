@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Menu.scss');
@@ -16,15 +17,12 @@ export class Menu extends Component {
     const classes = classnames('ax-menu', className);
 
     return (
-      <ul { ...rest } className={ classes }>
+      <Base { ...rest } Component="ul" className={ classes }>
         { children }
-      </ul>
+      </Base>
     );
   }
 }
 
-export default enhance(Menu)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Menu)(addPropTypes());
 

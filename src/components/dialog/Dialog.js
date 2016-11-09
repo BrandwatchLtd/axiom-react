@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import Modal from '../modal/Modal';
 import { dialogSizes } from './_vars';
-
-
 
 if (__INCLUDE_CSS__) {
   require('./Dialog.scss');
@@ -48,7 +46,4 @@ export class Dialog extends Component {
   }
 }
 
-export default enhance(Dialog)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Dialog)(addPropTypes());

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import Image from '../image/Image';
 
 if (__INCLUDE_CSS__) {
@@ -30,7 +30,4 @@ export class Avatar extends Component {
   }
 }
 
-export default enhance(Avatar)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(Avatar)(addPropTypes());

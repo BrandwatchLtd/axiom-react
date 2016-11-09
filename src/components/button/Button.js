@@ -1,8 +1,9 @@
 import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import { findComponent } from '../_utils/components';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
+import Base from '../base/Base';
 import { buttonSizes } from '../button/_vars';
 import Icon from '../icon/Icon';
 
@@ -51,7 +52,7 @@ export class Button extends Component {
     );
 
     return (
-      <button { ...rest } className={ classes }>
+      <Base Component="button" { ...rest } className={ classes }>
         { do { if (icon) {
           cloneElement(icon, {
             className: classnames({
@@ -61,12 +62,9 @@ export class Button extends Component {
         } } }
 
         { filteredChildren }
-      </button>
+      </Base>
     );
   }
 }
 
-export default enhance(Button)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Button)(addPropTypes());

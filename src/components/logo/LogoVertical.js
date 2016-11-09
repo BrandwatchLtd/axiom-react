@@ -46,6 +46,4 @@ export class LogoVertical extends Component {
   }
 }
 
-export default enhance(LogoVertical)(
-  addPropTypes(),
-);
+export default enhance(LogoVertical)(addPropTypes());

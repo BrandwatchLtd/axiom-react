@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 import Grid from '../grid/Grid';
 import GridCell from '../grid/GridCell';
 import Icon from '../icon/Icon';
@@ -17,7 +18,7 @@ export class DialogHeader extends Component {
     const classes = classnames(className, 'ax-dialog__header');
 
     return (
-      <div { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes }>
         <Grid responsive={ false }>
           <GridCell>
             { children }
@@ -29,12 +30,9 @@ export class DialogHeader extends Component {
             </Link>
           </GridCell>
         </Grid>
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(DialogHeader)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(DialogHeader)(addPropTypes());

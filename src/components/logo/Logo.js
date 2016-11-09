@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 export class LogoVertical extends Component {
   static propTypes = {
@@ -30,9 +31,9 @@ export class LogoVertical extends Component {
     };
 
     return (
-      <div { ...rest } className={ classes } style={ style }>
+      <Base { ...rest } className={ classes } style={ style }>
         { children }
-      </div>
+      </Base>
     );
   }
 }

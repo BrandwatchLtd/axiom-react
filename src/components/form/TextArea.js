@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import TextGroup from './TextGroup';
 
 if (__INCLUDE_CSS__) {
@@ -23,7 +23,4 @@ export class TextArea extends Component {
   }
 }
 
-export default enhance(TextArea)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(TextArea)(addPropTypes());

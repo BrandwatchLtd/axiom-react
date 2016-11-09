@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 export class ListItem extends Component {
   static propTypes = {
@@ -10,14 +11,11 @@ export class ListItem extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <li { ...rest }>
+      <Base { ...rest } Component="li">
         { children }
-      </li>
+      </Base>
     );
   }
 }
 
-export default enhance(ListItem)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(ListItem)(addPropTypes());

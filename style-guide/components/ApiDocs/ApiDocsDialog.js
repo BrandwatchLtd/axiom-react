@@ -20,6 +20,7 @@ export default class ApiDocsDialog extends Component {
 
   render() {
     const { components, location, isOpen, onRequestClose } = this.props;
+
     return (
       <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
         <DialogHeader onRequestClose={ onRequestClose }>
@@ -36,7 +37,7 @@ export default class ApiDocsDialog extends Component {
           </CodeTabset>
 
           { components
-              .filter(({ __ax_propTypes }) => Object.keys(__ax_propTypes).length)
+              .filter(({ __ax_propTypes = {} }) => Object.keys(__ax_propTypes).length)
               .map(({ __ax_displayName, __ax_propTypes }) =>
                 <ApiDocsList
                     componentName={ __ax_displayName }

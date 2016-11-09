@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 import Link from '../typography/Link';
 
 if (__INCLUDE_CSS__) {
@@ -22,7 +23,7 @@ export class MenuItem extends Component {
     });
 
     return (
-      <li className={ classes }>
+      <Base Component="li" className={ classes }>
         <Link
             className="ax-menu__item-link"
             disabled={ isDisabled }
@@ -31,12 +32,9 @@ export class MenuItem extends Component {
             { ...rest }>
           { children }
         </Link>
-      </li>
+      </Base>
     );
   }
 }
 
-export default enhance(MenuItem)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(MenuItem)(addPropTypes());

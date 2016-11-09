@@ -1,11 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 import humanize from 'humanize-string';
+import isPlainObject from 'lodash/isPlainObject';
 import Grid from 'bw-axiom/components/grid/Grid';
 import GridCell from 'bw-axiom/components/grid/GridCell';
 import Heading from 'bw-axiom/components/typography/Heading';
 import Weak from 'bw-axiom/components/typography/Weak';
 import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
 import ExampleBox from './ExampleBox';
+
+function shouldShowApiDocs(components) {
+  return Array.isArray(components) && components.some(({ __ax_propTypes }) =>
+    isPlainObject(__ax_propTypes)
+  );
+}
 
 export default class ExampleHeader extends Component {
   static propTypes = {
@@ -33,7 +40,7 @@ export default class ExampleHeader extends Component {
             </Heading>
           </GridCell>
 
-          { do { if (location && components) {
+          { do { if (shouldShowApiDocs(components)) {
             <GridCell shrink={ true }>
               <ApiDocsDialogTrigger imports={ { location, components } } />
             </GridCell>;

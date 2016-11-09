@@ -1,4 +1,4 @@
-const { componentPaddingSm, componentPaddingLg } = require('../../design-patterns/spacing/_vars');
+const { componentPaddingLg } = require('../../design-patterns/spacing/_vars');
 
 const fontHelvetica = '(Helvetica, Arial, sans-serif)';
 const fontFamilyThin = `(Roboto-Thin, ${fontHelvetica})`;
@@ -13,7 +13,7 @@ const fontSizeEm = 1; // Em
 const lineHeightPx = 22;
 
 module.exports = {
-  fontFamilyBody: fontHelvetica,
+  fontFamilyBody: fontFamilyRegular,
 
   fontSizeBase: `${fontSizePx}px`,
   fontSizeEm: `${fontSizeEm}rem`,

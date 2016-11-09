@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import Strong from '../typography/Strong';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./TextGroup.scss');
@@ -17,7 +18,7 @@ export default class TextGroup extends Component {
     const classes = classnames(className, 'ax-input__group');
 
     return (
-      <label className={ classes }>
+      <Base Component="label" className={ classes }>
         { do { if (label) {
           <div className="ax-input__label">
             <Strong>{ label }</Strong>
@@ -25,7 +26,7 @@ export default class TextGroup extends Component {
         } } }
 
         { children }
-      </label>
+      </Base>
     );
   }
 }

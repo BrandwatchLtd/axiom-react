@@ -1,5 +1,6 @@
 import React, { Component, Children, cloneElement } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 import Menu from '../menu/Menu';
 import Tab from './Tab';
 
@@ -41,7 +42,7 @@ export class Tabset extends Component {
       }));
 
     return (
-      <div className="ax-tabset">
+      <Base className="ax-tabset">
         <div className="ax-tabset__menu">
           <Menu>
             { tabs }
@@ -51,13 +52,10 @@ export class Tabset extends Component {
         <div className="ax-tabset__content">
           { activeTabContent }
         </div>
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(Tabset)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Tabset)(addPropTypes());
 

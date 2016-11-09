@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link as RouterLink } from 'react-router';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Link.scss');
@@ -45,14 +46,11 @@ export class Link extends Component {
     }
 
     return (
-      <a { ...rest } className={ classes }>
+      <Base { ...rest } Component="a" className={ classes }>
         { children }
-      </a>
+      </Base>
     );
   }
 }
 
-export default enhance(Link)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Link)(addPropTypes());

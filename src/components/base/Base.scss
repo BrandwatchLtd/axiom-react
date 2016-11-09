@@ -1,5 +1,9 @@
+@import '~normalize.css/normalize.css';
+@import '../../design-patterns/animations/animations';
 @import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/layout/mixins';
+@import '../../design-patterns/layout/layout';
+@import '../../design-patterns/utilities/utilities';
 @import '../typography/_vars.js';
 
 // sass-lint:disable no-vendor-prefixes
@@ -54,5 +58,3 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-
-

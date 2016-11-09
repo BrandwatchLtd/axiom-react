@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Form.scss');
@@ -16,14 +17,11 @@ export class Form extends Component {
     const classes = classnames(className, 'ax-form');
 
     return (
-      <form { ...rest } className={ classes }>
+      <Base { ...rest } Component="form" className={ classes }>
         { children }
-      </form>
+      </Base>
     );
   }
 }
 
-export default enhance(Form)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Form)(addPropTypes());

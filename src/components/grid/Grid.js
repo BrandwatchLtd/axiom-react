@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import { breakpointIds } from '../../design-patterns/layout/_vars';
+import Base from '../base/Base';
 import { gridGutters } from './_vars';
 
 if (__INCLUDE_CSS__) {
@@ -59,14 +60,11 @@ export class Grid extends Component {
     );
 
     return (
-      <div { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(Grid)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Grid)(addPropTypes());

@@ -1,14 +1,5 @@
-import React, { Children } from 'react';
-import { mergeClassNameSets, removeClassNameSetProps } from './class-name';
-import { mergePropTypeSets, mapToPropTypes } from './prop-types';
-
-if (__INCLUDE_CSS__) {
-  require('normalize.css/normalize.css');
-  require('../../design-patterns/animations/animations.scss');
-  require('../../design-patterns/layout/layout.scss');
-  require('../../design-patterns/utilities/utilities.scss');
-  require('../typography/base.scss');
-}
+import { Children } from 'react';
+import { mapToPropTypes } from './prop-types';
 
 export function findComponent(components, Component) {
   return Children.toArray(components).find(({ type }) => type === Component);
@@ -35,14 +26,14 @@ export function enhance(Component) {
   };
 }
 
-export function addPropTypes(...propSets) {
+export function addPropTypes() {
   return (Component) => {
-    if (!Component.__ax_propTypes) Component.__ax_propTypes = { ...Component.propTypes };
-    if (!Component.__ax_propTypesSet) Component.__ax_propTypesSet = mergePropTypeSets(propSets);
+    if (!Component.__ax_propTypes) {
+      Component.__ax_propTypes = { ...Component.propTypes };
+    }
 
     Component.propTypes = mapToPropTypes({
       ...Component.__ax_propTypes,
-      ...Component.__ax_propTypesSet,
     });
 
     return Component;
@@ -55,20 +46,4 @@ export function extendClass(Component, Wrapped) {
   }
 
   return Wrapped;
-}
-
-export function addClassName(...classNameSets) {
-  return (Component) => {
-    return extendClass(Component,
-      class Wrapped extends Component {
-        render() {
-          return (
-            <Component { ...removeClassNameSetProps(this.props) }
-                className={ mergeClassNameSets(this.props, classNameSets) }
-                ref="original" />
-          );
-        }
-      }
-    );
-  };
 }

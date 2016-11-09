@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addClassName } from 'bw-axiom/components/_utils/components';
+import Base from 'bw-axiom/components/base/Base';
 import Italic from 'bw-axiom/components/typography/Italic';
 import Strong from 'bw-axiom/components/typography/Strong';
 
@@ -8,7 +8,7 @@ if (__INCLUDE_CSS__) {
   require('./ColorSwatchColor.scss');
 }
 
-export class ColorSwatchColor extends Component {
+export default class ColorSwatchColor extends Component {
   static propTypes = {
     className: PropTypes.string,
     color: PropTypes.shape({
@@ -18,17 +18,15 @@ export class ColorSwatchColor extends Component {
   };
 
   render() {
-    const { className, color } = this.props;
+    const { className, color, ...rest } = this.props;
     const { hex, variable } = color;
     const classes = classnames(className, 'dm-color-swatch__color');
 
     return (
-      <div className={ classes } style={ { backgroundColor: hex } }>
+      <Base { ...rest } className={ classes } style={ { backgroundColor: hex } }>
         <Strong textEllipsis={ true }>${ variable }</Strong>
         <Italic textEllipsis={ true }>{ hex }</Italic>
-      </div>
+      </Base>
     );
   }
 }
-
-export default enhance(ColorSwatchColor)(addClassName('text'));

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./LabelGroup.scss');
@@ -16,14 +17,11 @@ export class LabelGroup extends Component {
     const classes = classnames(className, 'ax-label__group');
 
     return (
-      <div { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(LabelGroup)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(LabelGroup)(addPropTypes());

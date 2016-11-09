@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Strike.scss');
@@ -14,14 +15,11 @@ export class Strike extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <del { ...rest }>
+      <Base { ...rest } Component="del">
         { children }
-      </del>
+      </Base>
     );
   }
 }
 
-export default enhance(Strike)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Strike)(addPropTypes());

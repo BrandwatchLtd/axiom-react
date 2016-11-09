@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName, findComponent } from '../_utils/components';
+import { enhance, addPropTypes, findComponent } from '../_utils/components';
 import ButtonGroup from '../button/ButtonGroup';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
@@ -75,7 +75,4 @@ export class TextInput extends Component {
   }
 }
 
-export default enhance(TextInput)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(TextInput)(addPropTypes());

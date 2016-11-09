@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 export class DialogFooter extends Component {
   static propTypes = {
@@ -12,14 +13,11 @@ export class DialogFooter extends Component {
     const classes = classnames(className, 'ax-dialog__footer');
 
     return (
-      <div { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(DialogFooter)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(DialogFooter)(addPropTypes());

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import ChedioButtoxGroup from './ChedioButtoxGroup';
 
 export class CheckBoxGroup extends Component {
@@ -15,7 +15,4 @@ export class CheckBoxGroup extends Component {
   }
 }
 
-export default enhance(CheckBoxGroup)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(CheckBoxGroup)(addPropTypes());

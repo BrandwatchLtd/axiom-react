@@ -1,6 +1,7 @@
-import { Component, createElement } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 import { fontHeadings } from './_vars';
 
 if (__INCLUDE_CSS__) {
@@ -30,14 +31,10 @@ export class Heading extends Component {
       [`ax-heading--${style}`]: style,
     });
 
-    return createElement(tag, {
-      className: classes,
-      ...rest,
-    });
+    return (
+      <Base { ...rest } Component={ tag } className={ classes } />
+    );
   }
 }
 
-export default enhance(Heading)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(Heading)(addPropTypes());

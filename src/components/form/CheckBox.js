@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import ChedioButtox from './ChedioButtox';
 
 if (__INCLUDE_CSS__) {
@@ -22,7 +22,4 @@ export class CheckBox extends Component {
   }
 }
 
-export default enhance(CheckBox)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(CheckBox)(addPropTypes());

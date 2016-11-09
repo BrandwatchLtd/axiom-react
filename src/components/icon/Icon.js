@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Icon.scss');
@@ -42,12 +43,9 @@ export class Icon extends Component {
     );
 
     return (
-      <i { ...rest } className={ classes } />
+      <Base { ...rest } Component="i" className={ classes } />
     );
   }
 }
 
-export default enhance(Icon)(
-  addPropTypes('global'),
-  addClassName('global'),
-);
+export default enhance(Icon)(addPropTypes());

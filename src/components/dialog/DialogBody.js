@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 export class DialogBody extends Component {
   static propTypes = {
@@ -12,14 +13,11 @@ export class DialogBody extends Component {
     const classes = classnames(className, 'ax-dialog__body');
 
     return (
-      <div { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
 
-export default enhance(DialogBody)(
-  addPropTypes('global', 'text'),
-  addClassName('global', 'text'),
-);
+export default enhance(DialogBody)(addPropTypes());

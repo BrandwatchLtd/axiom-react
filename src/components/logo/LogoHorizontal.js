@@ -48,6 +48,4 @@ export class LogoHorizontal extends Component {
   }
 }
 
-export default enhance(LogoHorizontal)(
-  addPropTypes(),
-);
+export default enhance(LogoHorizontal)(addPropTypes());

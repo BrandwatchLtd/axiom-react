@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
-import { enhance, addPropTypes, addClassName } from '../_utils/components';
+import { enhance, addPropTypes } from '../_utils/components';
 import { modalAnimationDuration } from './_vars';
 
 if (__INCLUDE_CSS__) {
@@ -32,7 +32,4 @@ export class Modal extends Component {
   }
 }
 
-export default enhance(Modal)(
-  addPropTypes(),
-  addClassName(),
-);
+export default enhance(Modal)(addPropTypes());
