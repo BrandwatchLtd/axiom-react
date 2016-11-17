@@ -1,9 +1,0 @@
-@import '../../design-patterns/spacing/_vars.js';
-@import '../../design-patterns/spacing/mixins';
-@import '../containers/mixins';
-
-// Label Group
-.ax-label__group {
-  @include space-block($component-margin-v-base);
-  @include inline-component-container(ax-label);
-}

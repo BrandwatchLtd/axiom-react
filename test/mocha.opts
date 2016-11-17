@@ -1,3 +1,0 @@
---require babel-core/register
---require babel-polyfill/browser.js
---require test/mochaSetup.js

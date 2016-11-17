@@ -1,9 +1,0 @@
-@import '../icon/mixins';
-@import '../icon/vars';
-
-.ax-radio__label {
-  &::before {
-    @include icon($fa-var-circle);
-    border-radius: 50%;
-  }
-}
