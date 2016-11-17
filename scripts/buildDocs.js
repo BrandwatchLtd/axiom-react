@@ -10,6 +10,10 @@ function buildDocs() {
       copy('lib/*', 'docs/lib', function() {});
       return;
     })
+    .then(() => {
+      copy('assets/*', 'docs/assets', function() {});
+      return;
+    })
     .then(() => buildStatic());
 }
 
