@@ -14,7 +14,7 @@ export function pathToRoute(path) {
   const match = path.match(matchRegex);
 
   if (match) {
-    return match[1].split('/');
+    return match[1].replace(/\/$/g, '').split('/');
   }
 
   return null;
