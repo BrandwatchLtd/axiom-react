@@ -7,11 +7,19 @@ function buildDocs() {
   clean()
     .then(() => buildClient())
     .then(() => {
-      copy('lib/*', 'docs/lib', function() {});
+      copy('lib/*', 'docs/lib', function(error) {
+        if (error) {
+          throw error;
+        }
+      });
       return;
     })
     .then(() => {
-      copy('assets/*', 'docs/assets', function() {});
+      copy('assets/*', 'docs/assets', function(error) {
+        if (error) {
+          throw error;
+        }
+      });
       return;
     })
     .then(() => buildStatic());
