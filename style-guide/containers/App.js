@@ -1,43 +1,56 @@
 import React, { PropTypes, Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as navigationActions from 'style-guide/actions/navigation';
 import Layout from 'style-guide/components/Layout/Layout';
 import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
 import LayoutSidebar from 'style-guide/components/Layout/LayoutSidebar';
 import LayoutMain from 'style-guide/components/Layout/LayoutMain';
 import Nav from 'style-guide/components/Navigation/Nav';
+import { getFirstRoute, hasPathGotData, pathToRoute } from 'style-guide/utils/examples';
 import { buildNavigationItems } from 'style-guide/utils/navigation';
 
-export class App extends Component {
+export default class App extends Component {
   static propTypes = {
     children: PropTypes.any,
-    dispatch: PropTypes.func.isRequired,
-    location: PropTypes.object.isRequired,
-    navigationState: PropTypes.shape({
-      activePath: PropTypes.array.isRequired,
-      openPath: PropTypes.array.isRequired,
+    location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
     }).isRequired,
   };
 
   componentWillMount() {
-    const { dispatch } = this.props;
-    this.boundNavigationActions = bindActionCreators(navigationActions, dispatch);
+    const { location } = this.props;
+    const { pathname } = location;
+
+    this.updateActiveRouteState(pathname);
   }
 
-  onItemClick({ path }) {
-    const { navigationSetOpenPath } = this.boundNavigationActions;
-    navigationSetOpenPath(path);
+  componentWillUpdate(nextProps) {
+    const { location } = this.props;
+    const { pathname } = location;
+    const { location: nextLocation } = nextProps;
+    const { pathname: nextPathname } = nextLocation;
+
+    if (nextPathname !== pathname) {
+      this.updateActiveRouteState(nextPathname);
+    }
+  }
+
+  onItemClick({ route }) {
+    this.setState({ openRoute: route });
+  }
+
+  updateActiveRouteState(pathname) {
+    const currentRoute = hasPathGotData(pathname)
+      ? pathToRoute(pathname)
+      : getFirstRoute();
+
+    this.setState({
+      activeRoute: currentRoute,
+      openRoute: currentRoute,
+    });
   }
 
   render() {
-    const {
-      children,
-      navigationState: {
-        activePath,
-        openPath,
-      },
-    } = this.props;
+    const { children } = this.props;
+    const { activeRoute, openRoute } = this.state;
 
     return (
       <Layout>
@@ -47,7 +60,7 @@ export class App extends Component {
 
         <LayoutSidebar>
           <Nav
-              items={ buildNavigationItems(activePath, openPath) }
+              items={ buildNavigationItems(activeRoute, openRoute) }
               onItemClick={ ::this.onItemClick } />
         </LayoutSidebar>
 
@@ -58,11 +71,3 @@ export class App extends Component {
     );
   }
 }
-
-function select(state) {
-  return {
-    navigationState: state.navigation,
-  };
-}
-
-export default connect(select)(App);

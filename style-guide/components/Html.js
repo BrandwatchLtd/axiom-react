@@ -1,16 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import { renderToString } from 'react-dom/server';
-import serialize from 'serialize-javascript';
 import * as config from '../../config';
 
 export default class Html extends Component {
   static propTypes = {
     children: PropTypes.any,
-    store: PropTypes.object,
   };
 
   render() {
-    const { store, children } = this.props;
+    const { children } = this.props;
 
     return (
       <html lang="en-us">
@@ -25,7 +23,6 @@ export default class Html extends Component {
 
         <body className="scheme-axiom">
           <div className="dm-app-container" dangerouslySetInnerHTML={ { __html: renderToString(children) } } id="react-root"></div>
-          <script dangerouslySetInnerHTML={ { __html: `window.__data=${serialize(store.getState())};` } } />
           <script src={ `/lib/${config.output.styleGuide.clientProdJSFilename}` }></script>
         </body>
       </html>

@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
 import { getPathData, pathToRoute } from 'style-guide/utils/examples';
@@ -9,7 +8,7 @@ if (__INCLUDE_CSS__) {
   require('./Doc.scss');
 }
 
-export class Doc extends Component {
+export default class Doc extends Component {
   static propTypes = {
     location: PropTypes.shape({
       pathname: PropTypes.string.isRequired,
@@ -61,10 +60,3 @@ export class Doc extends Component {
     );
   }
 }
-
-
-function select() {
-  return {};
-}
-
-export default connect(select)(Doc);
