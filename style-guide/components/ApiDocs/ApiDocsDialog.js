@@ -12,7 +12,7 @@ import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
 
 export default class ApiDocsDialog extends Component {
   static propTypes = {
-    components: PropTypes.array.isRequired,
+    components: PropTypes.object.isRequired,
     isOpen: PropTypes.bool.isRequired,
     location: PropTypes.string.isRequired,
     onRequestClose: PropTypes.func.isRequired,
@@ -30,19 +30,19 @@ export default class ApiDocsDialog extends Component {
         <DialogBody>
           <CodeTabset>
             <CodeSnippet language="js">
-              { components.map(({ displayName }) =>
+              { Object.keys(components).map((displayName) =>
                 `import ${displayName} from '${location}/${displayName}';`
               ).join('\n') }
             </CodeSnippet>
           </CodeTabset>
 
-          { components
-              .filter(({ __ax_propTypes = {} }) => Object.keys(__ax_propTypes).length)
-              .map(({ displayName, __ax_propTypes }) =>
+          { Object.keys(components)
+              .filter((displayName) => Object.keys(components[displayName]).length > 0)
+              .map((displayName) =>
                 <ApiDocsList
                     componentName={ displayName }
                     key={ displayName }
-                    propTypes={ __ax_propTypes } />
+                    props={ components[displayName] } />
           ) }
         </DialogBody>
         <DialogFooter>

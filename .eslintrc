@@ -17,6 +17,7 @@
     "__PRODUCTION__": true,
     "__DEVELOPMENT__": true,
     "__INCLUDE_CSS__": true,
+    "__COMPONENT_DOCS__": true,
     "document": true,
     "window": true,
     "Promise": true,

@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const config = require('../config');
 const { js, json, yml } = require('./loader.config.js');
+const generate = require('../scripts/component-docs');
 
 // ToDo this should be read from `DocStructure` but apparently this requires the
 // files to be compiled with babel.
@@ -44,6 +45,7 @@ module.exports = {
       'process.env': {
         NODE_ENV: '"production"',
       },
+      __COMPONENT_DOCS__: JSON.stringify(generate()),
     })),
     new StaticSiteGeneratorPlugin('main', paths),
   ],

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Brandwatch | Axiom</title>
+    <meta charSet="utf-8" />
+    <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link href="/assets/favicon.ico" rel="shortcut icon" />
+    <% if (stylesheet) { %>
+      <link href="<%= stylesheet %>" rel="stylesheet" />
+    <% } %>
+  </head>
+  <body>
+    <div class="dm-app-container" id="react-root">
+      <% if (children) { %>
+        <%= children %>
+      <% } %>
+    </div>
+
+    <% if (__COMPONENT_DOCS__) { %>
+      <script type="application/javascript">
+        window.__COMPONENT_DOCS__ = <%- __COMPONENT_DOCS__ %>
+      </script>
+    <% } %>
+
+    <% if (script) { %>
+      <script src="<%= script %>" type="application/javascript"></script>
+    <% } %>
+  </body>
+</html>

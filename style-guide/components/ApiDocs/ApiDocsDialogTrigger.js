@@ -6,7 +6,7 @@ import ApiDocsDialog from 'style-guide/components/ApiDocs/ApiDocsDialog';
 export default class DocApiDialogTrigger extends Component {
   static propTypes = {
     imports: PropTypes.shape({
-      components: PropTypes.array.isRequired,
+      components: PropTypes.object.isRequired,
       location: PropTypes.string.isRequired,
     }).isRequired,
   };

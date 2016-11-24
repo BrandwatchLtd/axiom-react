@@ -9,14 +9,12 @@ import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTr
 import ExampleBox from './ExampleBox';
 
 function shouldShowApiDocs(components) {
-  return Array.isArray(components) && components.some(({ __ax_propTypes }) =>
-    isPlainObject(__ax_propTypes)
-  );
+  return isPlainObject(components) && Object.keys(components).length > 0;
 }
 
 export default class ExampleHeader extends Component {
   static propTypes = {
-    components: PropTypes.array,
+    components: PropTypes.object,
     location: PropTypes.string,
     title: PropTypes.string.isRequired,
     trail: PropTypes.array.isRequired,

@@ -32,14 +32,19 @@ export default class Doc extends Component {
     }
 
     const route = pathToRoute(tempPath);
-    const { examples, title, location, components } = getPathData(tempPath);
+    const { examples, title, location, components = [] } = getPathData(tempPath);
+    const componentDocs = components
+      .filter(({ displayName, name }) => __COMPONENT_DOCS__[displayName || name])
+      .reduce((docs, { displayName, name }) => ({ ...docs,
+        [displayName || name]: __COMPONENT_DOCS__[displayName || name],
+      }), {});
 
     return (
       <div className="dm-doc">
         <div className="dm-doc__header">
           <LayoutContent>
             <ExampleHeader
-                components={ components }
+                components={ componentDocs }
                 location={ location }
                 title={ title }
                 trail={ route.slice(0, -1) } />
@@ -50,6 +55,7 @@ export default class Doc extends Component {
           <LayoutContent>
             { examples.map((Example, index) =>
               <Example
+                  components={ componentDocs }
                   key={ index }
                   queryParams={ queryParams }
                   routeParams={ routeParams } />

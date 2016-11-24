@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const config = require('../config');
 const axiomSassVariableImporter = require('../utils/axiom-sass-variable-importer');
 const { js, json, yml, styleExtract, fonts } = require('./loader.config.js');
+const generate = require('../scripts/component-docs');
 
 module.exports = {
   target: 'web',
@@ -50,6 +51,7 @@ module.exports = {
       'process.env': {
         NODE_ENV: '"production"',
       },
+      __COMPONENT_DOCS__: JSON.stringify(generate()),
     })),
     new ExtractTextPlugin(config.output.styleGuide.clientProdCSSFilename, {
       allChunks: true,
