@@ -1,40 +1,39 @@
-import React, { Component, Children, cloneElement } from 'react';
+import React, { Component, Children, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import { findComponent } from '../_utils/components';
-import { breakpointIds } from '../../design-patterns/layout/_vars';
 import Base from '../base/Base';
-import { buttonSizes } from '../button/_vars';
 import Icon from '../icon/Icon';
 
 if (__INCLUDE_CSS__) {
   require('./Button.scss');
 }
 
-const buttonSizeIds = buttonSizes.map(({ id }) => id);
-const buttonSizeDefaultId = buttonSizes.find((size) => size.default).id;
+export default class Button extends Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    /** Converts the button a perfect circle, purposely for smaller isometric (like icons) content.  */
+    circular: PropTypes.bool,
+    full: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    size: PropTypes.oneOf(['small', 'large']),
+    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  };
 
-const propsTypes = {
-  children: { node: true },
-  circular: { bool: true },
-  outlined: { bool: true },
-  style: { oneOf: ['primary', 'secondary', 'tertiary'], default: 'primary' },
-  full: { oneOf: [true, ...breakpointIds] },
-  size: { oneOf: buttonSizeIds, default: buttonSizeDefaultId },
-};
-
-export class Button extends Component {
-  static propTypes = propsTypes;
+  static defaultProps ={
+    style: 'primary',
+    size: 'small',
+  };
 
   render() {
     const {
       className,
       circular,
       children,
-      style = propsTypes.style.default,
-      size = propsTypes.size.default,
+      style,
+      size,
       full,
-      outlined,
       ...rest
     } = this.props;
 
@@ -44,7 +43,6 @@ export class Button extends Component {
       'ax-button', {
         [`ax-button--${size}`]: size,
         [`ax-button--${style}`]: style,
-        'ax-button--outlined': outlined,
         'ax-button--circular': circular,
         'ax-button--full': full === true,
         [`ax-button--full--${full}`]: full && full !== true,
@@ -66,5 +64,3 @@ export class Button extends Component {
     );
   }
 }
-
-export default enhance(Button)(addPropTypes());

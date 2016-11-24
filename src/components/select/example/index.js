@@ -7,5 +7,5 @@ export const components = [
 ];
 
 export const examples = [
-  require('./SelectConfigurableDemo').default,
+//   require('./SelectConfigurableDemo').default,
 ];

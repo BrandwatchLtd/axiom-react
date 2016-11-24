@@ -9,9 +9,9 @@ export default class BaseExample extends Component {
     return (
       <Example name="Base component">
         <Paragraph>
-          The Base component provides as a way to add global abilities to every
+          The Base component provides a way to add global abilities to every
           component. For example text alignment. The idea is to remove the need
-          to add generic utility classes.
+          to add generic CSS utility classes.
         </Paragraph>
 
         <Paragraph>

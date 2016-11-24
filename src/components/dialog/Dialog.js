@@ -1,30 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Modal from '../modal/Modal';
-import { dialogSizes } from './_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Dialog.scss');
 }
 
-const dialogSizeIds = dialogSizes.map(({ id }) => id);
-const dialogSizeDefaultId = dialogSizes.find((size) => size.default).id;
+export default class Dialog extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    fullscreen: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+  };
 
-const propTypes = {
-  children: { node: true, isRequired: true  },
-  fullscreen: { bool: true },
-  size: { oneOf: dialogSizeIds, default: dialogSizeDefaultId },
-};
-
-export class Dialog extends Component {
-  static propTypes = propTypes;
+  static defaultProps = {
+    size: 'small',
+  };
 
   render() {
     const {
       children,
       className,
-      size = propTypes.size.default,
+      size,
       fullscreen,
       ...rest
     } = this.props;
@@ -45,5 +42,3 @@ export class Dialog extends Component {
     );
   }
 }
-
-export default enhance(Dialog)(addPropTypes());

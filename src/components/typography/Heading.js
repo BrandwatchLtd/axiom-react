@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
-import { fontHeadings } from './_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Heading.scss');
 }
 
-const headingIds = fontHeadings.map(({ id }) => id);
-const headingDefaultId = fontHeadings.find((heading) => heading.default).id;
-
-const propTypes = {
-  children: { node: true, required: true },
-  style: { oneOf: headingIds, default: headingDefaultId },
+const TAG_MAP = {
+  display: 'h1',
+  headline: 'h2',
+  title: 'h3',
+  large: 'h4',
 };
 
-export class Heading extends Component {
-  static propTypes = propTypes;
+export default class Heading extends Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    style: PropTypes.oneOf(['display', 'headline', 'title', 'large']),
+  };
+
+  static defaultProps = {
+    style: 'large',
+  };
 
   render() {
-    const {
-      className,
-      style = propTypes.style.default,
-      ...rest
-    } = this.props;
-
-    const { tag } = fontHeadings.find(({ id }) => id === style);
+    const { className, style, ...rest } = this.props;
     const classes = classnames(className, 'ax-heading', {
       [`ax-heading--${style}`]: style,
     });
 
     return (
-      <Base { ...rest } Component={ tag } className={ classes } />
+      <Base { ...rest } Component={ TAG_MAP[style] } className={ classes } />
     );
   }
 }
-
-export default enhance(Heading)(addPropTypes());

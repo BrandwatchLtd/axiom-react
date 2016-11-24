@@ -2,9 +2,6 @@ import React from 'react';
 import Grid from './Grid';
 import renderer from 'react-test-renderer';
 
-import { breakpointIds } from '../../design-patterns/layout/_vars';
-import { gridGutters } from './_vars';
-
 function getComponent(props = {}) {
   return renderer.create(
     <Grid { ...props }>
@@ -38,10 +35,16 @@ describe('Grid', () => {
         matchSnapshot({ fit: true });
       });
 
-      breakpointIds.forEach(breakpoint => {
-        it(`renders with breakpoint ${breakpoint}`, () => {
-          matchSnapshot({ fit: breakpoint });
-        });
+      it('renders with value small', () => {
+        matchSnapshot({ fit: 'small' });
+      });
+
+      it('renders with value medium', () => {
+        matchSnapshot({ fit: 'medium' });
+      });
+
+      it('renders with value large', () => {
+        matchSnapshot({ fit: 'large' });
       });
     });
 
@@ -50,12 +53,12 @@ describe('Grid', () => {
         matchSnapshot({ gutters: false });
       });
 
-      const gridGutterIds = gridGutters.map(({ id }) => id);
+      it('renders with value small', () => {
+        matchSnapshot({ gutters: 'small' });
+      });
 
-      gridGutterIds.forEach(gutter => {
-        it(`renders with gutter ${gutter}`, () => {
-          matchSnapshot({ gutters: gutter });
-        });
+      it('renders with value large', () => {
+        matchSnapshot({ gutters: 'large' });
       });
     });
   });

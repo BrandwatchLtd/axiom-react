@@ -1,5 +1,5 @@
-import React, { Component, Children, cloneElement } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, Children, PropTypes, cloneElement } from 'react';
+import omit from 'lodash/omit';
 import Base from '../base/Base';
 import Menu from '../menu/Menu';
 import Tab from './Tab';
@@ -8,10 +8,10 @@ if (__INCLUDE_CSS__) {
   require('./Tabset.scss');
 }
 
-export class Tabset extends Component {
+export default class Tabset extends Component {
   static propTypes = {
-    activeTabIndex: { number: true },
-    children: { node: true },
+    activeTabIndex: PropTypes.number,
+    children: PropTypes.node,
   };
 
   componentWillMount() {
@@ -31,7 +31,7 @@ export class Tabset extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
     const { activeTabIndex } = this.state;
     const activeTabContent = Children.toArray(children)[activeTabIndex].props.children;
     const tabs = Children.toArray(children)
@@ -42,7 +42,7 @@ export class Tabset extends Component {
       }));
 
     return (
-      <Base className="ax-tabset">
+      <Base { ...omit(rest, ['activeTabIndex']) } className="ax-tabset">
         <div className="ax-tabset__menu">
           <Menu>
             { tabs }
@@ -56,6 +56,3 @@ export class Tabset extends Component {
     );
   }
 }
-
-export default enhance(Tabset)(addPropTypes());
-

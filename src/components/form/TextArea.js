@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import TextGroup from './TextGroup';
 
 if (__INCLUDE_CSS__) {
   require('./TextArea.scss');
 }
 
-export class TextArea extends Component {
+export default class TextArea extends Component {
   static propTypes = {
-    children: { node: true },
-    label: { string: true },
+    label: PropTypes.string,
   };
 
   render() {
@@ -22,5 +20,3 @@ export class TextArea extends Component {
     );
   }
 }
-
-export default enhance(TextArea)(addPropTypes());

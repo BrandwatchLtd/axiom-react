@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Underline.scss');
 }
 
-export class Underline extends Component {
+export default class Underline extends Component {
   static propTypes = {
-    children: { node: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -21,5 +20,3 @@ export class Underline extends Component {
     );
   }
 }
-
-export default enhance(Underline)(addPropTypes());

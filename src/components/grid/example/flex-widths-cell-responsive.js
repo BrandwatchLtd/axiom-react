@@ -1,21 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Grid from '../Grid';
 import GridCell from '../GridCell';
 import Heading from '../../typography/Heading';
-import { breakpoints } from '../../../design-patterns/layout/_vars';
 import DemoBox from 'style-guide/components/DemoBox/DemoBox';
 import Example from 'style-guide/components/Example/Example';
 import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class GridExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      GridCell: PropTypes.shape({
+        fit: PropTypes.shape({
+          values: PropTypes.array.isRequired,
+        }).isRequired,
+        full: PropTypes.shape({
+          values: PropTypes.array.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+  }
+
   render() {
+    const { components } = this.props;
+    const { GridCell: { fit, full } } = components;
+
     return (
       <Example name="Flex sizing (cell level responsive)">
         <Heading>Full width</Heading>
         <Snippet>
           <Grid snippetIgnore={ true }>
-            { breakpoints.map(({ id }, index) =>
-              <GridCell full={ id } key={ index }>
+            { full.values.map((id) =>
+              <GridCell full={ id } key={ id }>
                 <DemoBox snippetReplace={ true }>Full (> { id })</DemoBox>
               </GridCell>
             ) }
@@ -25,8 +40,8 @@ export default class GridExample extends Component {
         <Heading>Shrink (to contents)</Heading>
         <Snippet>
           <Grid snippetIgnore={ true }>
-            { breakpoints.map(({ id }, index) =>
-              <GridCell key={ index } shrink={ id }>
+            { fit.values.map((id) =>
+              <GridCell key={ id } shrink={ id }>
                 <DemoBox snippetReplace={ true }>Shrink (> { id })</DemoBox>
               </GridCell>
             ) }

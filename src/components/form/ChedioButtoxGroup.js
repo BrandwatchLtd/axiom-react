@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./ChedioButtoxGroup.scss');
 }
 
-export class ChedioButtoxGroup extends Component {
+export default class ChedioButtoxGroup extends Component {
   static propTypes = {
-    children: { node: true },
-    inline: { bool: true },
+    children: PropTypes.node,
+    inline: PropTypes.bool,
   };
 
   render() {
@@ -26,5 +25,3 @@ export class ChedioButtoxGroup extends Component {
     );
   }
 }
-
-export default enhance(ChedioButtoxGroup)(addPropTypes());

@@ -1,5 +1,5 @@
-@import '../typography/_vars.js';
+@import '../typography/vars';
 
 .ax-text--weak {
-  font-family: $font-family-light;
+  font-weight: $font-weight-light;
 }

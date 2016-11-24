@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import Logo from '../logo/Logo';
 
-export class LogoVertical extends Component {
-  static propTypes = {};
+export default class LogoVertical extends Component {
+  static propTypes = {
+    height: PropTypes.number,
+    width: PropTypes.number,
+  };
 
   render() {
     const { ...rest } = this.props;
@@ -45,5 +47,3 @@ export class LogoVertical extends Component {
     );
   }
 }
-
-export default enhance(LogoVertical)(addPropTypes());

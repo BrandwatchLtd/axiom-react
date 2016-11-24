@@ -1,7 +1,7 @@
-@import '../typography/_vars.js';
+@import '../typography/vars';
 
 $fa-font-path: '~font-awesome/fonts' !default;
-$fa-font-size-base: $font-size-base;
+$fa-font-size-base: $font-size-body;
 $fa-css-prefix: ax-icon;
 
 @import '~font-awesome/scss/variables';

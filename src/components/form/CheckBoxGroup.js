@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import ChedioButtoxGroup from './ChedioButtoxGroup';
 
-export class CheckBoxGroup extends Component {
+export default class CheckBoxGroup extends Component {
   static propTypes = {
-    children: { node: true },
-    inline: { bool: true },
+    children: PropTypes.node,
+    inline: PropTypes.bool,
   };
 
   render() {
@@ -14,5 +13,3 @@ export class CheckBoxGroup extends Component {
     );
   }
 }
-
-export default enhance(CheckBoxGroup)(addPropTypes());

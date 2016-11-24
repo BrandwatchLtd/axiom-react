@@ -1,23 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Image from '../image/Image';
 
 if (__INCLUDE_CSS__) {
   require('./Avatar.scss');
 }
 
-const propTypes = {
-  size: { number: true, default: 35 },
-};
+export default class Avatar extends Component {
+  static propTypes = {
+    /** The width and height of the image.  */
+    size: PropTypes.number,
+  };
 
-export class Avatar extends Component {
-  static propTypes = propTypes;
+  static defaultProps = {
+    size: 35,
+  };
 
   render() {
     const {
       className,
-      size = propTypes.size.default,
+      size,
       ...rest
     } = this.props;
 
@@ -29,5 +31,3 @@ export class Avatar extends Component {
     );
   }
 }
-
-export default enhance(Avatar)(addPropTypes());

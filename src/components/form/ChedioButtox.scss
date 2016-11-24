@@ -2,10 +2,10 @@
 @import '../../design-patterns/animations/_vars.js';
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../form/_vars.js';
-@import '../typography/_vars.js';
+@import '../form/vars';
+@import '../typography/vars';
 
-$checkbox-size: $line-height + ($component-border-width * 2);
+$checkbox-size: $line-height-body-px + ($component-border-width * 2);
 
 .ax-chedio-buttox__container {
   @include space-block();

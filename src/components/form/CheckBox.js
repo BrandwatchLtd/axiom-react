@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import ChedioButtox from './ChedioButtox';
 
 if (__INCLUDE_CSS__) {
   require('./CheckBox.scss');
 }
 
-export class CheckBox extends Component {
+export default class CheckBox extends Component {
   static propTypes = {
-    children: { node: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -21,5 +20,3 @@ export class CheckBox extends Component {
     );
   }
 }
-
-export default enhance(CheckBox)(addPropTypes());

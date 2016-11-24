@@ -4,15 +4,15 @@
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/layout/layout';
 @import '../../design-patterns/utilities/utilities';
-@import '../typography/_vars.js';
+@import '../typography/vars';
 
 // sass-lint:disable no-vendor-prefixes
 
 html,
 body {
   font-family: $font-family-body;
-  font-size: $font-size-base;
-  line-height: $line-height;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

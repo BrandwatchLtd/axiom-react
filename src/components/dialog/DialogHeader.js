@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 import Grid from '../grid/Grid';
 import GridCell from '../grid/GridCell';
 import Icon from '../icon/Icon';
 import Link from '../typography/Link';
 
-export class DialogHeader extends Component {
+export default class DialogHeader extends Component {
   static propTypes = {
-    children: { node: true, isRequired: true },
-    onRequestClose: { func: true, isRequired: true },
+    children: PropTypes.node,
+    onRequestClose: PropTypes.func.isRequired,
   };
 
   render() {
@@ -34,5 +33,3 @@ export class DialogHeader extends Component {
     );
   }
 }
-
-export default enhance(DialogHeader)(addPropTypes());

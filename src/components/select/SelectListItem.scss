@@ -1,7 +1,7 @@
 @import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../form/_vars.js';
+@import '../form/vars';
 
 .ax-select__list-item {
   display: block;

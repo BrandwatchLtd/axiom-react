@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 import Link from '../typography/Link';
 
@@ -8,11 +7,11 @@ if (__INCLUDE_CSS__) {
   require('./MenuItem.scss');
 }
 
-export class MenuItem extends Component {
+export default class MenuItem extends Component {
   static propTypes = {
-    children: { node: true },
-    isActive: { bool: true },
-    isDisabled: { bool: true },
+    children: PropTypes.node,
+    isActive: PropTypes.bool,
+    isDisabled: PropTypes.bool,
   };
 
   render() {
@@ -36,5 +35,3 @@ export class MenuItem extends Component {
     );
   }
 }
-
-export default enhance(MenuItem)(addPropTypes());

@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Strike.scss');
 }
 
-export class Strike extends Component {
+export default class Strike extends Component {
   static propTypes = {
-    children: { node: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -21,5 +20,3 @@ export class Strike extends Component {
     );
   }
 }
-
-export default enhance(Strike)(addPropTypes());

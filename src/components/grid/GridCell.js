@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
-import { breakpointIds } from '../../design-patterns/layout/_vars';
 
-export class GridCell extends Component {
+export default class GridCell extends Component {
   static propTypes = {
-    children: { any: true },
-    fifth: { oneOf: [true, ...breakpointIds] },
-    fit: { oneOf: [true, ...breakpointIds] },
-    full: { oneOf: [true, ...breakpointIds] },
-    half: { oneOf: [true, ...breakpointIds] },
-    quarter: { oneOf: [true, ...breakpointIds] },
-    shrink: { oneOf: [true, ...breakpointIds] },
-    sixth: { oneOf: [true, ...breakpointIds] },
-    third: { oneOf: [true, ...breakpointIds] },
-    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
+    children: PropTypes.node,
+    fit: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    full: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    shrink: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    style: PropTypes.object,
+    vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
+    width: PropTypes.number,
   };
 
   render() {
@@ -24,12 +28,9 @@ export class GridCell extends Component {
       children,
       full,
       fit,
+      width,
       shrink,
-      half,
-      third,
-      quarter,
-      fifth,
-      sixth,
+      style,
       vAlign,
       ...rest
     } = this.props;
@@ -41,29 +42,23 @@ export class GridCell extends Component {
         'ax-grid__cell--bottom': vAlign === 'bottom',
         'ax-grid__cell--full': full === true,
         'ax-grid__cell--fit': fit === true,
+        'ax-grid__cell--percent': width,
         'ax-grid__cell--shrink': shrink === true,
-        'ax-grid__cell--half': half === true,
-        'ax-grid__cell--third': third === true,
-        'ax-grid__cell--quarter': quarter === true,
-        'ax-grid__cell--fifth': fifth === true,
-        'ax-grid__cell--sixth': sixth === true,
         [`ax-grid__cell--full--${full}`]: full && full !== true,
         [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
         [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
-        [`ax-grid__cell--half--${half}`]: half && half !== true,
-        [`ax-grid__cell--third--${third}`]: third && third !== true,
-        [`ax-grid__cell--quarter--${quarter}`]: quarter && quarter !== true,
-        [`ax-grid__cell--fifth--${fifth}`]: fifth && fifth !== true,
-        [`ax-grid__cell--sixth--${sixth}`]: sixth && sixth !== true,
       },
     );
 
+    const styles = {
+      ...style,
+      width: width && `${Math.max(0, Math.min(width, 100))}%`,
+    };
+
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes } style={ styles }>
         { children }
       </Base>
     );
   }
 }
-
-export default enhance(GridCell)(addPropTypes());

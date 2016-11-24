@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import Logo from '../logo/Logo';
 
-export class LogoHorizontal extends Component {
-  static propTypes = {};
+export default class LogoHorizontal extends Component {
+  static propTypes = {
+    height: PropTypes.number,
+    width: PropTypes.number,
+  };
 
   render() {
-    const { ...rest } = this.props;
     const viewBoxWidth = 349;
     const viewBoxHeight = 64;
 
     return (
-      <Logo { ...rest } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
+      <Logo { ...this.props } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
         <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0px" y="0px">
           <g>
             <g>
@@ -47,5 +48,3 @@ export class LogoHorizontal extends Component {
     );
   }
 }
-
-export default enhance(LogoHorizontal)(addPropTypes());

@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Form.scss');
 }
 
-export class Form extends Component {
+export default class Form extends Component {
   static propTypes = {
-    children: { node: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -23,5 +22,3 @@ export class Form extends Component {
     );
   }
 }
-
-export default enhance(Form)(addPropTypes());

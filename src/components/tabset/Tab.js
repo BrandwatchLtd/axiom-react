@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import MenuItem from '../menu/MenuItem';
 
-export class Tab extends Component {
+export default class Tab extends Component {
   static propTypes = {
-    title: { node: true },
+    title: PropTypes.node,
   };
 
   render() {
@@ -17,5 +16,3 @@ export class Tab extends Component {
     );
   }
 }
-
-export default enhance(Tab)(addPropTypes());

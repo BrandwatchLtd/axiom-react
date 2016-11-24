@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Heading from '../../typography/Heading';
 import Grid from '../Grid';
 import GridCell from '../GridCell';
@@ -7,13 +7,29 @@ import Example from 'style-guide/components/Example/Example';
 import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class GridExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      Grid: PropTypes.shape({
+        vAlign: PropTypes.shape({
+          values: PropTypes.array.isRequired,
+        }).isRequired,
+        hAlign: PropTypes.shape({
+          values: PropTypes.array.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+  }
+
   render() {
+    const { components } = this.props;
+    const { Grid: { vAlign, hAlign } } = components;
+
     return (
       <Example name="Grid Cell alignment controlled by Grid">
         <Heading>Vertical</Heading>
         <Snippet>
-          { Grid.__ax_propTypes.vAlign.oneOf.map((vAlign, index) =>
-            <Grid key={ index } style={ { minHeight: 180 } } vAlign={ vAlign }>
+          { vAlign.values.map((vAlign) =>
+            <Grid key={ vAlign } style={ { minHeight: 180 } } vAlign={ vAlign }>
               <GridCell snippetReplace={ true }>
                 <DemoBox>{ vAlign }</DemoBox>
               </GridCell>
@@ -27,8 +43,8 @@ export default class GridExample extends Component {
 
         <Heading>Horizontal</Heading>
         <Snippet>
-          { Grid.__ax_propTypes.hAlign.oneOf.map((hAlign, index) =>
-            <Grid hAlign={ hAlign } key={ index }>
+          { hAlign.values.map((hAlign) =>
+            <Grid hAlign={ hAlign } key={ hAlign }>
               <GridCell snippetReplace={ true }>
                 <DemoBox>{ hAlign }</DemoBox>
               </GridCell>

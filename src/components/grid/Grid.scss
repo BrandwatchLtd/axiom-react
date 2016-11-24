@@ -1,11 +1,12 @@
 @import '../../design-patterns/layout/mixins';
-@import '../grid/_vars.js';
+@import '../../design-patterns/layout/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
 @import '../grid/mixins';
 
 
 // Grid: Base
 .ax-grid {
-  @include grid-gutter(grid-gutter-default());
+  @include grid-gutter($container-margin-sm);
 
   display: flex;
   flex-wrap: wrap;
@@ -43,13 +44,9 @@
 .ax-grid__cell--bottom { align-self: flex-end; }
 
 
-
 // Grid: Gutter sizing
-@each $grid-gutter in $grid-gutters {
-  .ax-grid--gutters--#{grid-gutter-id($grid-gutter)} {
-    @include grid-gutter(grid-gutter-width($grid-gutter));
-  }
-}
+.ax-grid--gutters--small { @include grid-gutter($container-margin-sm); }
+.ax-grid--gutters--large { @include grid-gutter($container-margin-lg); }
 
 
 // Grid: Gutter removal
@@ -85,7 +82,7 @@
 // When below the lowest given breakpoint cells
 // will flex to 100%. Can be suppressed with with the
 // --unresponsive modifier.
-@include screen-less-than($grid-change-point) {
+@include screen-less-than($layout-width-sm) {
   .ax-grid {
     &:not(.ax-grid--unresponsive) {
       > .ax-grid__cell {

@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./ChedioButtox.scss');
 }
 
-export class ChedioButtox extends Component {
+export default class ChedioButtox extends Component {
   static propTypes = {
-    children: { node: true },
-    inputClassName: { string: true },
-    inputType: { string: true, isRequired: true },
-    labelClassName: { string: true },
+    children: PropTypes.node,
+    inputClassName: PropTypes.string,
+    inputType: PropTypes.string.isRequired,
+    labelClassName: PropTypes.string,
   };
 
   render() {
@@ -41,5 +40,3 @@ export class ChedioButtox extends Component {
     );
   }
 }
-
-export default enhance(ChedioButtox)(addPropTypes());

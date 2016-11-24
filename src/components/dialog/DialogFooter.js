@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
-export class DialogFooter extends Component {
+export default class DialogFooter extends Component {
   static propTypes = {
-    children: { node: true, isRequired: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -19,5 +18,3 @@ export class DialogFooter extends Component {
     );
   }
 }
-
-export default enhance(DialogFooter)(addPropTypes());

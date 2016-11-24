@@ -1,35 +1,48 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
-import { breakpointIds } from '../../design-patterns/layout/_vars';
 import Base from '../base/Base';
-import { gridGutters } from './_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Grid.scss');
 }
 
-export class Grid extends Component {
+export default class Grid extends Component {
   static propTypes = {
-    children: { node: true, isRequired: true },
-    fit: { oneOf: [true, ...breakpointIds] },
-    full: { oneOf: [true, ...breakpointIds] },
-    gutters: { oneOf: [false, ...gridGutters.map(({ id }) => id)] },
-    hAlign: { oneOf: ['left', 'center', 'right', 'around', 'between'] },
-    hGutters: { bool: true },
-    responsive: { oneOf: [false] },
-    vAlign: { oneOf: ['top', 'middle', 'bottom'] },
-    vGutters: { bool: true },
+    children: PropTypes.node,
+    fit: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    full: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    gutters: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'large']),
+    ]),
+    hAlign: PropTypes.oneOf(['left', 'center', 'right', 'around', 'between']),
+    hGutters: PropTypes.bool,
+    responsive: PropTypes.bool,
+    vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
+    vGutters: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    responsive: true,
+    gutters: true,
+    vGutters: true,
+    hGutters: true,
   };
 
   render() {
     const {
       className,
       children,
-      responsive = true,
-      gutters = true,
-      vGutters = true,
-      hGutters = true,
+      responsive,
+      gutters,
+      vGutters,
+      hGutters,
       full,
       fit,
       vAlign,
@@ -43,7 +56,7 @@ export class Grid extends Component {
         'ax-grid--gutters-none': gutters === false,
         'ax-grid--gutters-none-v': vGutters === false,
         'ax-grid--gutters-none-h': hGutters === false,
-        [`ax-grid--gutters--${gutters}`]: gutters,
+        [`ax-grid--gutters--${gutters}`]: typeof gutters === 'string',
         'ax-grid--full': full === true,
         [`ax-grid--full--${full}`]: full && full !== true,
         'ax-grid--fit': fit === true,
@@ -66,5 +79,3 @@ export class Grid extends Component {
     );
   }
 }
-
-export default enhance(Grid)(addPropTypes());

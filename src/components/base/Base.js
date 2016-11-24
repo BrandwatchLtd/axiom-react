@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { breakpointIds } from '../../design-patterns/layout/_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Base.scss');
@@ -12,31 +11,31 @@ export default class Base extends Component {
     className: PropTypes.string,
     hiddenUntil: PropTypes.oneOfType([
       PropTypes.bool,
-      PropTypes.oneOf(breakpointIds),
+      PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     textBreak: PropTypes.oneOf(['none', 'all', 'word']),
     textCase: PropTypes.oneOf(['upper', 'capital', 'lower']),
     textCenter: PropTypes.oneOfType([
       PropTypes.bool,
-      PropTypes.oneOf(breakpointIds),
+      PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     textDark: PropTypes.bool,
     textEllipsis: PropTypes.bool,
     textLeft: PropTypes.oneOfType([
       PropTypes.bool,
-      PropTypes.oneOf(breakpointIds),
+      PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     textLight: PropTypes.bool,
     textRight: PropTypes.oneOfType([
       PropTypes.bool,
-      PropTypes.oneOf(breakpointIds),
+      PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     textStrong: PropTypes.bool,
     textSubtle: PropTypes.bool,
     textWeak: PropTypes.bool,
     visibleUntil: PropTypes.oneOfType([
       PropTypes.bool,
-      PropTypes.oneOf(breakpointIds),
+      PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
   };
 

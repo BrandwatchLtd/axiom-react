@@ -5,8 +5,7 @@
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/_vars.js';
 @import '../../design-patterns/spacing/mixins';
-@import '../typography/_vars.js';
-@import '../button/_vars.js';
+@import '../typography/vars';
 
 // Button: Core
 button {
@@ -28,7 +27,7 @@ button {
   border-radius: $component-border-radius;
   border-color: transparent;
   background-color: transparent;
-  font-family: $font-family-bold;
+  font-weight: $font-weight-bold;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
@@ -42,15 +41,6 @@ button {
   &[disabled]:hover,
   &[disabled]:active {
     cursor: default;
-  }
-}
-
-
-// Button: sizes
-@each $button-size in $button-sizes {
-  .ax-button--#{map-get($button-size, id)} {
-    padding: map-get($button-size, padding-v) map-get($button-size, padding-h);
-    font-size: map-get($button-size, font-size);
   }
 }
 
@@ -127,18 +117,36 @@ button {
   &[disabled] { color: $color-grey-7; }
 }
 
+@function button-size($padding) {
+  @return $line-height-body-px + ( $padding * 2) + ($component-border-width * 2);
+}
+
+
+// Button: sizes
+.ax-button--small {
+  padding: $component-padding-sm;
+  font-size: $font-size-md;
+
+  &.ax-button--circular {
+    width: button-size($component-padding-sm);
+    height: button-size($component-padding-sm);
+  }
+}
+
+.ax-button--large {
+  padding: $component-padding-lg;
+
+  &.ax-button--circular {
+    width: button-size($component-padding-lg);
+    height: button-size($component-padding-lg);
+  }
+}
+
 
 // Button: Circular
 .ax-button--circular {
   padding: 0;
   border-radius: 50%;
-
-  @each $button-size in $button-sizes {
-    &.ax-button--#{map-get($button-size, id)} {
-      width: $line-height + (map-get($button-size, padding-v) * 2) + ($component-border-width * 2);
-      height: $line-height + (map-get($button-size, padding-v) * 2) + ($component-border-width * 2);
-    }
-  }
 }
 
 

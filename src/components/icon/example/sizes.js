@@ -7,21 +7,29 @@ import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class IconExample extends Component {
   static propTypes = {
+    components: PropTypes.shape({
+      Icon: PropTypes.shape({
+        size: PropTypes.shape({
+          values: PropTypes.array.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
     queryParams: PropTypes.shape({
       iconId: PropTypes.string.isRequired,
     }).isRequired,
   };
 
   render() {
-    const { queryParams } = this.props;
+    const { components, queryParams } = this.props;
     const { iconId } = queryParams;
+    const { Icon: { size } } = components;
 
     return (
       <Example name="Icon sizes">
         <Snippet>
           <Grid snippetIgnore={ true } vAlign="middle">
-            { Icon.__ax_propTypes.size.oneOf.map((size, index) =>
-              <GridCell key={ index } shrink={ true } snippetIgnore={ true }>
+            { size.values.map((size) =>
+              <GridCell key={ size } shrink={ true } snippetIgnore={ true }>
                 <Icon name={ iconId } size={ size } />
               </GridCell>
             ) }

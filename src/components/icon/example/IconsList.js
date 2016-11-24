@@ -82,8 +82,8 @@ export default class IconsList extends Component {
 
           } else {
 
-            {Object.keys(iconCategories).map((category, index) =>
-              <ExampleBox key={ index }>
+            {Object.keys(iconCategories).map((category) =>
+              <ExampleBox key={ category }>
                 <Heading style="title">{ category }</Heading>
                 <IconGrid icons={ iconCategories[category] } />
               </ExampleBox>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Button from '../../button/Button';
 import ButtonGroup from '../../button/ButtonGroup';
 import Dialog from '../Dialog';
@@ -7,10 +7,21 @@ import Example from 'style-guide/components/Example/Example';
 import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class DialogSizes extends Component {
-  static propTypes = {};
+  static propTypes = {
+    components: PropTypes.shape({
+      Dialog: PropTypes.shape({
+        size: PropTypes.shape({
+          values: PropTypes.array.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+  };
 
   componentWillMount() {
-    Dialog.__ax_propTypes.size.oneOf.forEach((size) => {
+    const { components } = this.props;
+    const { Dialog: { size } } = components;
+
+    size.values.forEach((size) => {
       this.closeDialog(size)();
     });
   }
@@ -28,10 +39,13 @@ export default class DialogSizes extends Component {
   }
 
   render() {
+    const { components } = this.props;
+    const { Dialog: { size } } = components;
+
     return (
       <Example name="Sized Dialogs">
         <ButtonGroup>
-          { Dialog.__ax_propTypes.size.oneOf.map((size) =>
+          { size.values.map((size) =>
             <Button key={ size } onClick={ ::this.openDialog(size) }>
               Open { size.toUpperCase() } Dialog
               <DialogDemo
@@ -45,8 +59,8 @@ export default class DialogSizes extends Component {
         </ButtonGroup>
 
         <Snippet>
-          { Dialog.__ax_propTypes.size.oneOf.map((size, index) =>
-            <Dialog key={ index } renderSkip={ true } size={ size }>...</Dialog>
+          { size.values.map((size) =>
+            <Dialog key={ size } renderSkip={ true } size={ size }>...</Dialog>
           ) }
         </Snippet>
       </Example>

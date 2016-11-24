@@ -19,7 +19,6 @@ export const examples = [
   require('./headings').default,
   require('./paragraph').default,
   require('./decoration').default,
-  require('./alignment').default,
   require('./case').default,
   require('./colors').default,
   require('./links').default,

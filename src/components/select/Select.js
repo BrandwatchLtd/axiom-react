@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash/omit';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 import { buildSelectableItems, defaultInputDisplayValue } from './_utils';
 import Icon from '../icon/Icon';
@@ -26,23 +25,36 @@ const propIgnoreList = [
   'inputDisplayValue', 'onOpen', 'onClose', 'onSelect',
 ];
 
-const propTypes = {
-  displayValue: { func: true },
-  hideSelected: { bool: true, default: false },
-  identifier: { func: true },
-  inputDisplayValue: { func: true },
-  items: { array: true, isRequired: true },
-  maxHeight: { number: true, default: 200 },
-  multiselect: { bool: true, default: false },
-  noItemsText: { string: true },
-  selection: { any: true },
-  onClose: { func: true },
-  onOpen: { func: true },
-  onSelect: { func: true, required: true },
-};
+export default class Select extends Component {
+  static propTypes = {
+    displayValue: PropTypes.func,
+    hideSelected: PropTypes.bool,
+    identifier: PropTypes.func,
+    inputDisplayValue: PropTypes.func,
+    items: PropTypes.array.isRequired,
+    maxHeight: PropTypes.number,
+    multiselect: PropTypes.bool,
+    noItemsText: PropTypes.string,
+    selection: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.string),
+      PropTypes.arrayOf(PropTypes.object),
+    ]),
+    onClose: PropTypes.func,
+    onOpen: PropTypes.func,
+    onSelect: PropTypes.func.isRequired,
+  };
 
-export class Select extends Component {
-  static propTypes = propTypes;
+  static defaultProps = {
+    displayValue: (item) => item,
+    hideSelected: false,
+    identifier: (item) => item,
+    inputDisplayValue: defaultInputDisplayValue,
+    maxHeight: 200,
+    multiselect: false,
+    noItemsText: 'No items to select',
+    onOpen: () => {},
+    onClose: () => {},
+  };
 
   componentWillMount() {
     this.setState({
@@ -53,33 +65,9 @@ export class Select extends Component {
     });
   }
 
-  getProps() {
-    const {
-      displayValue = (item) => item,
-      identifier = (item) => item,
-      inputDisplayValue = defaultInputDisplayValue,
-      maxHeight = propTypes.maxHeight.default,
-      noItemsText = 'No items to select',
-      onOpen = () => {},
-      onClose = () => {},
-      ...rest
-    } = this.props;
-
-    return {
-      ...rest,
-      displayValue,
-      identifier,
-      inputDisplayValue,
-      maxHeight,
-      noItemsText,
-      onOpen,
-      onClose,
-    };
-  }
-
   getInputDisplayValue() {
     const { filterText, isOpen } = this.state;
-    const { inputDisplayValue, selection } = this.getProps();
+    const { inputDisplayValue, selection } = this.props;
 
     if (isOpen) {
       return filterText;
@@ -89,30 +77,30 @@ export class Select extends Component {
       return '';
     }
 
-    return inputDisplayValue(this.getProps(), this.state) || '';
+    return inputDisplayValue(this.props, this.state) || '';
   }
 
   getSelection() {
-    const { multiselect, selection } = this.getProps();
+    const { multiselect, selection } = this.props;
     return multiselect && !Array.isArray(selection)
       ? (selection ? [selection] : [])
       : selection;
   }
 
   hasSelection() {
-    const { multiselect } = this.getProps();
+    const { multiselect } = this.props;
     const selection = this.getSelection();
     return multiselect ? selection.length : !!selection;
   }
 
   close() {
-    const { onClose } = this.getProps();
+    const { onClose } = this.props;
     this.setState({ isOpen: false });
     onClose();
   }
 
   open() {
-    const { onOpen } = this.getProps();
+    const { onOpen } = this.props;
     this.setState({ isOpen: true });
     onOpen();
   }
@@ -128,7 +116,7 @@ export class Select extends Component {
   }
 
   handleItemClick(item) {
-    const { multiselect, onSelect } = this.getProps();
+    const { multiselect, onSelect } = this.props;
     const { isSelected, value } = item;
 
     onSelect(isSelected ? this.deselect(value) : this.select(value), value);
@@ -139,7 +127,7 @@ export class Select extends Component {
   }
 
   deselect(value) {
-    const { identifier, multiselect } = this.getProps();
+    const { identifier, multiselect } = this.props;
     const selection = this.getSelection();
 
     return multiselect
@@ -148,7 +136,7 @@ export class Select extends Component {
   }
 
   select(value) {
-    const { multiselect } = this.getProps();
+    const { multiselect } = this.props;
     const selection = this.getSelection();
 
     return multiselect
@@ -192,8 +180,8 @@ export class Select extends Component {
 
   render() {
     const { isOpen, scrollToActiveIndex } = this.state;
-    const { maxHeight, noItemsText, ...rest } = this.getProps();
-    const items = buildSelectableItems(this.getProps(), this.state);
+    const { maxHeight, noItemsText, ...rest } = this.props;
+    const items = buildSelectableItems(this.props, this.state);
     const classes = classnames('ax-select', {
       'ax-select--open': isOpen,
     });
@@ -230,5 +218,3 @@ export class Select extends Component {
     );
   }
 }
-
-export default enhance(Select)(addPropTypes());

@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
@@ -9,7 +8,7 @@ if (__INCLUDE_CSS__) {
 
 export class BlockContainer extends Component {
   static propTypes = {
-    children: { node: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -23,5 +22,3 @@ export class BlockContainer extends Component {
     );
   }
 }
-
-export default enhance(BlockContainer)(addPropTypes());

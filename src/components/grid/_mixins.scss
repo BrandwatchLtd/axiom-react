@@ -1,25 +1,8 @@
 @import '../../design-patterns/layout/mixins';
-@import '../grid/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
 
-@function grid-gutter-default() {
-  @each $grid-gutter in $grid-gutters {
-    @if (map-get($grid-gutter, default) == true) {
-      @return map-get($grid-gutter, size);
-    }
-  }
-}
-
-@function grid-gutter-id($grid-gutter) {
-  @return map-get($grid-gutter, id);
-}
-
-@function grid-gutter-width($grid-gutter) {
-  @return map-get($grid-gutter, size);
-}
-
-@mixin grid-gutter($size) {
-  $vertical-gutter: grid-gutter-default();
-  $horizontal-gutter: $size;
+@mixin grid-gutter($horizontal-gutter) {
+  $vertical-gutter: $container-margin-sm;
 
   margin: $vertical-gutter 0 (-$vertical-gutter) (-$horizontal-gutter);
 
@@ -60,16 +43,7 @@
       > .ax-grid__cell--fit#{$size-class}     { flex: 1; }
       > .ax-grid__cell--full#{$size-class}    { flex: 0 0 100%; }
       > .ax-grid__cell--shrink#{$size-class}  { flex: 0 1 auto; }
-
-      @each $grid-width in $grid-widths {
-        $width-id: map-get($grid-width, id);
-        $width-percent: map-get($grid-width, percent);
-
-        > .ax-grid__cell--#{$width-id}#{$size-class} {
-          flex: none;
-          width: $width-percent;
-        }
-      }
+      > .ax-grid__cell--percent#{$size-class} { flex: none; }
 
       &.ax-grid--fit#{$size-class} > .ax-grid__cell {
         flex: 1;

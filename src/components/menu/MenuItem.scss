@@ -1,7 +1,7 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../typography/_vars.js';
+@import '../typography/vars';
 
 .ax-menu__item {
   display: inline-flex;
@@ -22,8 +22,8 @@
   justify-content: center;
   padding: $component-padding-sm;
   border-bottom: 4px solid transparent;
-  font-family: $font-family-medium;
   font-size: $font-size-md;
+  font-weight: $font-weight-bold;
   text-transform: uppercase;
 
   .ax-menu__item:hover & {

@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./List.scss');
 }
 
-export class List extends Component {
+export default class List extends Component {
   static propTypes = {
-    aligned: { bool: true },
-    children: { node: true },
-    inline: { bool: true },
-    ordered: { bool: true },
+    children: PropTypes.node,
+    inline: PropTypes.bool,
+    ordered: PropTypes.bool,
   };
 
   render() {
@@ -21,14 +19,12 @@ export class List extends Component {
       children,
       ordered,
       inline,
-      aligned = !inline,
       ...rest
     } = this.props;
 
     const tag = ordered ? 'ol' : 'ul';
     const classes = classnames(className,
       'ax-list', {
-        'ax-list--aligned': aligned === true,
         'ax-list--inline': inline === true,
       }
     );
@@ -40,5 +36,3 @@ export class List extends Component {
     );
   }
 }
-
-export default enhance(List)(addPropTypes());

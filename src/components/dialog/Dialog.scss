@@ -1,6 +1,5 @@
 @import '../../design-patterns/colors/_vars.js';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../dialog/_vars.js';
 
 .ax-dialog {
   display: flex;
@@ -35,11 +34,9 @@
 
 
 // Dialog: Sizes
-@each $dialog-size in $dialog-sizes {
-  .ax-dialog--#{map-get($dialog-size, id)} {
-    max-width: map-get($dialog-size, width);
-  }
-}
+.ax-dialog--small  { max-width: 400px; }
+.ax-dialog--medium { max-width: 600px; }
+.ax-dialog--large  { max-width: 800px; }
 
 .ax-dialog--fullscreen {
   height: 100vh;

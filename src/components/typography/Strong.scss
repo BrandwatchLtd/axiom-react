@@ -1,6 +1,5 @@
-@import '../typography/_vars.js';
+@import '../typography/vars';
 
 .ax-text--strong {
-  font-family: $font-family-medium;
-  font-weight: 400;
+  font-weight: $font-weight-bold;
 }

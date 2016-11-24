@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
-export class LogoVertical extends Component {
+export default class LogoVertical extends Component {
   static propTypes = {
-    children: { node: true, isRequired: true },
-    height: { number: true },
-    viewBoxHeight: { number: true, isRequired: true  },
-    viewBoxWidth: { number: true, isRequired: true },
-    width: { number: true },
+    children: PropTypes.node.isRequired,
+    height: PropTypes.number,
+    viewBoxHeight: PropTypes.number.isRequired,
+    viewBoxWidth: PropTypes.number.isRequired,
+    width: PropTypes.number,
   };
 
   render() {
@@ -37,7 +36,3 @@ export class LogoVertical extends Component {
     );
   }
 }
-
-export default enhance(LogoVertical)(
-  addPropTypes(),
-);

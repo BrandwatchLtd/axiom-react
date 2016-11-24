@@ -1,24 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactModal from 'react-modal';
-import { enhance, addPropTypes } from '../_utils/components';
 import { modalAnimationDuration } from './_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Modal.scss');
 }
 
-const propTypes = {
-  overlayClassName: { string: true },
-  withOverlay: { bool: true, default: true },
-};
+export default class Modal extends Component {
+  static propTypes = {
+    overlayClassName: PropTypes.string,
+    withOverlay: PropTypes.bool,
+  };
 
-export class Modal extends Component {
-  static propTypes = propTypes;
+  static defaultProps = {
+    withOverlay: true,
+  };
 
   render() {
     const {
       overlayClassName,
-      withOverlay = propTypes.withOverlay.default,
+      withOverlay,
       ...rest
     } = this.props;
 
@@ -31,5 +32,3 @@ export class Modal extends Component {
     );
   }
 }
-
-export default enhance(Modal)(addPropTypes());

@@ -1,10 +1,10 @@
 @import '../../design-patterns/colors/mixins';
+@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/layout/_vars.js';
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/_vars.js';
-@import '../label/_vars.js';
-@import '../typography/_vars.js';
+@import '../typography/vars';
 
 // Label: Base
 .ax-label {
@@ -17,17 +17,19 @@
   border-radius: $component-border-radius;
   border-color: transparent;
   background-color: transparent;
-  font-family: $font-family-medium;
+  font-weight: $font-weight-bold;
   text-align: center;
   vertical-align: middle;
 }
 
 // Label: Sizing
-@each $label-size in $label-sizes {
-  .ax-label--#{map-get($label-size, id)} {
-    padding: map-get($label-size, padding-v) map-get($label-size, padding-h);
-    font-size: map-get($label-size, font-size);
-  }
+.ax-label--small {
+  padding: 0 $component-padding-sm;
+  font-size: $font-size-md;
+}
+
+.ax-label--large {
+  padding: $component-padding-sm;
 }
 
 
@@ -51,10 +53,22 @@
   }
 }
 
-@each $label-color in $label-colors {
-  .ax-label--#{map-get($label-color, id)} {
-    border-color: map-get($label-color, color);
-    background-color: map-get($label-color, color);
-    color: get-text-color(map-get($label-color, color));
-  }
+
+// Label: colors
+@mixin label-color($color) {
+  border-color: $color;
+  background-color: $color;
+  color: get-text-color($color);
 }
+
+.ax-label--white { @include label-color($color-white-0); }
+.ax-label--grey { @include label-color($color-grey-1); }
+.ax-label--red { @include label-color($color-red-0); }
+.ax-label--pink { @include label-color($color-pink-0); }
+.ax-label--orange { @include label-color($color-orange-0); }
+.ax-label--orange-light { @include label-color($color-orange-light-0); }
+.ax-label--yellow { @include label-color($color-yellow-0); }
+.ax-label--green { @include label-color($color-green-0); }
+.ax-label--blue { @include label-color($color-blue-0); }
+.ax-label--blue-light { @include label-color($color-blue-light-0); }
+.ax-label--purple { @include label-color($color-purple-0); }

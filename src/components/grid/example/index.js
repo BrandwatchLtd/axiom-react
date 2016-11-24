@@ -16,8 +16,7 @@ export const examples = [
   require('./flex-widths-grid-responsive').default,
   require('./flex-widths-cell').default,
   require('./flex-widths-cell-responsive').default,
-  require('./base-12-widths').default,
-  require('./base-12-widths-responsive').default,
+  require('./percentage-widths').default,
   require('./alignment-grid').default,
   require('./alignment-grid-cell').default,
 ];

@@ -1,6 +1,6 @@
 @import '../../design-patterns/spacing/_vars.js';
-@import '../../components/_vars.js';
-@import '../form/_vars.js';
+@import '../../components/vars';
+@import '../form/vars';
 
 .ax-select__list {
   display: none;

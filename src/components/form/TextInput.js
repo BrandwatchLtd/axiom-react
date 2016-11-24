@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes, findComponent } from '../_utils/components';
+import { findComponent } from '../_utils/components';
 import ButtonGroup from '../button/ButtonGroup';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
@@ -10,12 +10,12 @@ if (__INCLUDE_CSS__) {
   require('./TextInput.scss');
 }
 
-export class TextInput extends Component {
+export default class TextInput extends Component {
   static propTypes = {
-    children: { node: true },
-    label: { string: true },
-    onBlur: { func: true },
-    onFocus: { func: true },
+    children: PropTypes.node,
+    label: PropTypes.string,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
   };
 
   componentWillMount() {
@@ -74,5 +74,3 @@ export class TextInput extends Component {
     );
   }
 }
-
-export default enhance(TextInput)(addPropTypes());

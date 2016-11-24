@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { breakpointIds } from '../../design-patterns/layout/_vars';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
-import { labelSizes, labelColors } from '../label/_vars';
 
 if (__INCLUDE_CSS__) {
   require('./Label.scss');
 }
 
+export default class Label extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    color: PropTypes.oneOf([
+      'white', 'grey', 'red', 'pink', 'orange', 'orange-light',
+      'yellow', 'green', 'blue', 'blue-light', 'purple',
+    ]),
+    full: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
+    size: PropTypes.oneOf(['small', 'large']),
+  };
 
-const labelSizeIds = labelSizes.map(({ id }) => id);
-const labelSizeDefaultId = labelSizes.find((size) => size.default).id;
-const labelColorIds = labelColors.map(({ id }) => id);
-const labelColorDefaultId = labelColors.find((color) => color.default).id;
-
-const propTypes = {
-  children: { node: true },
-  color: { oneOf: labelColorIds, default: labelColorDefaultId },
-  size: { oneOf: labelSizeIds, default: labelSizeDefaultId },
-  full: { oneOf: [true, ...breakpointIds] },
-};
-
-export class Label extends Component {
-  static propTypes = propTypes;
+  static defaultProps = {
+    color: 'grey',
+    size: 'small',
+  };
 
   render() {
     const {
       className,
       children,
-      color = propTypes.color.default,
-      size = propTypes.size.default,
+      color,
+      size,
       full,
       ...rest
     } = this.props;
@@ -51,6 +51,3 @@ export class Label extends Component {
     );
   }
 }
-
-export default enhance(Label)(addPropTypes());
-

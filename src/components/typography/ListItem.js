@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { enhance, addPropTypes } from '../_utils/components';
+import React, { Component, PropTypes } from 'react';
 import Base from '../base/Base';
 
-export class ListItem extends Component {
+export default class ListItem extends Component {
   static propTypes = {
-    children: { node: true },
+    children: PropTypes.node,
   };
 
   render() {
@@ -17,5 +16,3 @@ export class ListItem extends Component {
     );
   }
 }
-
-export default enhance(ListItem)(addPropTypes());

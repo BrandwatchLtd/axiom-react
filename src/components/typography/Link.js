@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link as RouterLink } from 'react-router';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./Link.scss');
 }
 
-export class Link extends Component {
+export default class Link extends Component {
   static propTypes = {
-    children: { node: true },
-    disabled: { bool: true },
-    inheritColor: { bool: true },
-    noDecoration: { bool: true },
-    supressStyle: { bool: true },
-    to: { string: true },
+    children: PropTypes.node,
+    disabled: PropTypes.bool,
+    inheritColor: PropTypes.bool,
+    noDecoration: PropTypes.bool,
+    supressStyle: PropTypes.bool,
+    to: PropTypes.string,
   };
 
   render() {
@@ -52,5 +51,3 @@ export class Link extends Component {
     );
   }
 }
-
-export default enhance(Link)(addPropTypes());

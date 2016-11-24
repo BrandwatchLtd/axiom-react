@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
+import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
   require('./ButtonGroup.scss');
 }
 
-export class ButtonGroup extends Component {
+export default class ButtonGroup extends Component {
   static propTypes = {
-    children: { node: true },
-    joined: { bool: true },
+    children: PropTypes.node.isRequired,
   };
 
   render() {
-    const { className, children, joined, ...rest } = this.props;
-    const classes = classnames(className, 'ax-button__group', {
-      'ax-button__group--joined': joined,
-    });
+    const { className, children, ...rest } = this.props;
+    const classes = classnames(className, 'ax-button__group');
 
     return (
-      <div { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
-
-export default enhance(ButtonGroup)(addPropTypes());

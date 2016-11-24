@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { enhance, addPropTypes } from '../_utils/components';
 import Base from '../base/Base';
 
 if (__INCLUDE_CSS__) {
@@ -16,20 +15,22 @@ const sizeToFaMap = {
   'xxxlarge': '5x',
 };
 
-const propTypes = {
-  fixedWidth: { bool: true },
-  name: { string: true, isRequired: true },
-  size: { oneOf: Object.keys(sizeToFaMap), default: 'small' },
-};
+export default class Icon extends Component {
+  static propTypes = {
+    fixedWidth: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge']),
+  };
 
-export class Icon extends Component {
-  static propTypes = propTypes;
+  static defaultProps = {
+    size: 'small',
+  };
 
   render() {
     const {
       className,
       name,
-      size = propTypes.size.default,
+      size,
       fixedWidth,
       ...rest
     } = this.props;
@@ -47,5 +48,3 @@ export class Icon extends Component {
     );
   }
 }
-
-export default enhance(Icon)(addPropTypes());
