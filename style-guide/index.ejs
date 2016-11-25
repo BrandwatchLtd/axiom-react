@@ -7,25 +7,19 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
     <link href="/assets/favicon.ico" rel="shortcut icon" />
-    <% if (stylesheet) { %>
-      <link href="<%= stylesheet %>" rel="stylesheet" />
+    <% if (htmlWebpackPlugin.options.stylesheet) { %>
+      <link href="<%= htmlWebpackPlugin.options.stylesheet %>" rel="stylesheet">
     <% } %>
   </head>
   <body>
     <div class="dm-app-container" id="react-root">
-      <% if (children) { %>
-        <%= children %>
+      <% if (htmlWebpackPlugin.options.html) { %>
+        <%= htmlWebpackPlugin.options.html %>
       <% } %>
     </div>
 
-    <% if (__COMPONENT_DOCS__) { %>
-      <script type="application/javascript">
-        window.__COMPONENT_DOCS__ = <%- __COMPONENT_DOCS__ %>
-      </script>
-    <% } %>
-
-    <% if (script) { %>
-      <script src="<%= script %>" type="application/javascript"></script>
+    <% if (htmlWebpackPlugin.options.script) { %>
+      <script src="<%= htmlWebpackPlugin.options.script %>" type="application/javascript"></script>
     <% } %>
   </body>
 </html>

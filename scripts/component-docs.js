@@ -86,7 +86,6 @@ function extractProps({ props = {} }) {
 }
 
 module.exports = function generate() {
-
   return Object.keys(componentFiles).reduce((components, component) => {
     components[component] = extractProps(reactDocgen.parse(
       fs.readFileSync(path.resolve(__dirname, componentFiles[component]))
