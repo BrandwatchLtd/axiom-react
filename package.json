@@ -19,7 +19,7 @@
     "lint": "yarn run lint-js && yarn run lint-sass",
     "lint-js": "eslint --config .eslintrc ./src ./style-guide ./utils",
     "lint-sass": "sass-lint --config .sass-lint.yml -v",
-    "start": "webpack-dev-server --inline --hot --history-api-fallback --content-base style-guide/",
+    "start": "webpack-dev-server --port 4000 --inline --hot --history-api-fallback --content-base style-guide/",
     "static-site": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js",
     "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json"
   },

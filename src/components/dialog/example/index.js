@@ -1,15 +1,4 @@
-export const title = 'Dialog';
-export const id ='dialog';
-export const location = 'bw-axiom/components/dialog';
-
-export const components = [
-  require('../Dialog').default,
-  require('../DialogBody').default,
-  require('../DialogFooter').default,
-  require('../DialogHeader').default,
-];
-
-export const examples = [
+module.exports = [
   require('./base').default,
   require('./sizes').default,
   require('./fullscreen').default,

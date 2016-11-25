@@ -14,10 +14,7 @@ export default class Example extends Component {
   };
 
   render() {
-    const {
-      name,
-      children,
-    } = this.props;
+    const { name, children } = this.props;
 
     return (
       <ExampleBox>

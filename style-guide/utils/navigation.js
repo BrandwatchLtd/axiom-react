@@ -1,28 +1,24 @@
 import humanize from 'humanize-string';
-import { getStructure, routeToPath, getFirstPath } from 'style-guide/utils/examples';
+import { getStructure } from 'style-guide/utils/structure';
 
-function buildNavigationItem({ children, hidden, id }, activePath, openPath, firstPath, parentPaths = []) {
-  const thisRoute = [...parentPaths, id];
-  const navigationItemChildren = Array.isArray(children)
-    ? children.filter(({ hidden }) => !hidden).map((child) => buildNavigationItem(child, activePath, openPath, firstPath, thisRoute))
-    : null;
+export function buildNavigationItems(activePath, openPath, structure = getStructure(), items = []) {
+  if (Array.isArray(structure)) {
+    structure.forEach((structure) =>
+      buildNavigationItems(activePath, openPath, structure, items)
+    );
+  } else if (structure.hasExamples || Array.isArray(structure.children)) {
+    items.push({
+      id: structure.id,
+      name: humanize(structure.id),
+      to: structure.children ? null : structure.path,
+      path: structure.path,
+      isOpen: openPath.includes(structure.path),
+      isActive: structure.path === activePath,
+      children: Array.isArray(structure.children)
+        ? buildNavigationItems(activePath, openPath, structure.children)
+        : null,
+    });
+  }
 
-  const to = firstPath === '/' + thisRoute.join('/') ? '/' : routeToPath(thisRoute);
-
-  return {
-    id,
-    name: humanize(id),
-    to: navigationItemChildren ? null : to,
-    route: thisRoute,
-    children: navigationItemChildren,
-    isOpen: thisRoute.join() === openPath.slice(0, thisRoute.length).join(),
-    isActive: thisRoute.join() === activePath.slice(0, thisRoute.length).join(),
-  };
-}
-
-export function buildNavigationItems(activePath, openPath) {
-  const firstPath = getFirstPath();
-  return getStructure().map((item) => {
-    return buildNavigationItem(item, activePath, openPath, firstPath);
-  });
+  return items;
 }

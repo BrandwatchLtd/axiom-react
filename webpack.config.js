@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const generate = require('./scripts/component-docs');
+const structureGenerator = require('./scripts/structure-generator');
 const Alias = require('./utils/webpack-alias-plugin');
 const axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
 
@@ -50,7 +50,7 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       __INCLUDE_CSS__: true,
-      __COMPONENT_DOCS__: JSON.stringify(generate()),
+      __STRUCTURE__: JSON.stringify(structureGenerator()),
     }),
   ],
   resolve: {

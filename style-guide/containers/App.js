@@ -4,7 +4,6 @@ import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
 import LayoutSidebar from 'style-guide/components/Layout/LayoutSidebar';
 import LayoutMain from 'style-guide/components/Layout/LayoutMain';
 import Nav from 'style-guide/components/Navigation/Nav';
-import { getFirstRoute, hasPathGotData, pathToRoute } from 'style-guide/utils/examples';
 import { buildNavigationItems } from 'style-guide/utils/navigation';
 
 export default class App extends Component {
@@ -33,24 +32,20 @@ export default class App extends Component {
     }
   }
 
-  onItemClick({ route }) {
-    this.setState({ openRoute: route });
+  onItemClick({ path }) {
+    this.setState({ openPath: path });
   }
 
   updateActiveRouteState(pathname) {
-    const currentRoute = hasPathGotData(pathname)
-      ? pathToRoute(pathname)
-      : getFirstRoute();
-
     this.setState({
-      activeRoute: currentRoute,
-      openRoute: currentRoute,
+      activePath: pathname,
+      openPath: pathname,
     });
   }
 
   render() {
     const { children } = this.props;
-    const { activeRoute, openRoute } = this.state;
+    const { activePath, openPath } = this.state;
 
     return (
       <Layout>
@@ -60,7 +55,7 @@ export default class App extends Component {
 
         <LayoutSidebar>
           <Nav
-              items={ buildNavigationItems(activeRoute, openRoute) }
+              items={ buildNavigationItems(activePath, openPath) }
               onItemClick={ ::this.onItemClick } />
         </LayoutSidebar>
 

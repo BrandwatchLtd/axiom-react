@@ -38,7 +38,7 @@ export default class NavListItem extends Component {
       return () => onClick(item);
     }
 
-    const hasChildren = Array.isArray(children) && children.length;
+    const hasChildren = Array.isArray(children) && children.length > 0;
     const classes = classnames(className,
       'dm-nav__list-item', {
         'dm-nav__list-item--open': hasChildren && isOpen,

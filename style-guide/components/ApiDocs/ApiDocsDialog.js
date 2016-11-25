@@ -14,12 +14,12 @@ export default class ApiDocsDialog extends Component {
   static propTypes = {
     components: PropTypes.object.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    location: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
     onRequestClose: PropTypes.func.isRequired,
   };
 
   render() {
-    const { components, location, isOpen, onRequestClose } = this.props;
+    const { components, path, isOpen, onRequestClose } = this.props;
 
     return (
       <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
@@ -31,7 +31,7 @@ export default class ApiDocsDialog extends Component {
           <CodeTabset>
             <CodeSnippet language="js">
               { Object.keys(components).map((displayName) =>
-                `import ${displayName} from '${location}/${displayName}';`
+                `import ${displayName} from 'bw-axiom${path}/${displayName}';`
               ).join('\n') }
             </CodeSnippet>
           </CodeTabset>

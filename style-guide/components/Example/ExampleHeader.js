@@ -15,18 +15,14 @@ function shouldShowApiDocs(components) {
 export default class ExampleHeader extends Component {
   static propTypes = {
     components: PropTypes.object,
-    location: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    trail: PropTypes.array.isRequired,
+    path: PropTypes.string,
   };
 
   render() {
-    const {
-      components,
-      location,
-      title,
-      trail,
-    } = this.props;
+    const { components, path } = this.props;
+    const route = path.match(/([a-z-]+)/g);
+    const title = route[route.length - 1];
+    const trail = route.slice(0, -1);
 
     return (
       <ExampleBox>
@@ -34,13 +30,13 @@ export default class ExampleHeader extends Component {
           <GridCell>
             <Heading style="title" textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
             <Heading style="display" textCase="capital">
-              <Weak>{ title }</Weak>
+              <Weak>{ humanize(title) }</Weak>
             </Heading>
           </GridCell>
 
           { do { if (shouldShowApiDocs(components)) {
             <GridCell shrink={ true }>
-              <ApiDocsDialogTrigger imports={ { location, components } } />
+              <ApiDocsDialogTrigger imports={ { path, components } } />
             </GridCell>;
           } } }
         </Grid>

@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react';
+import Examples from 'style-guide/constants/Examples';
 import LayoutContent from 'style-guide/components/Layout/LayoutContent';
 import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
-import { getPathData, pathToRoute } from 'style-guide/utils/examples';
-import { getFirstPath } from 'style-guide/utils/examples';
+import { getFirstPath, getPathData } from 'style-guide/utils/structure';
 
 if (__INCLUDE_CSS__) {
   require('./Doc.scss');
@@ -26,28 +26,16 @@ export default class Doc extends Component {
       },
     } = this.props;
 
-    let tempPath = pathname;
-    if (tempPath === '/') {
-      tempPath = getFirstPath();
-    }
-
-    const route = pathToRoute(tempPath);
-    const { examples, title, location, components = [] } = getPathData(tempPath);
-    const componentDocs = components
-      .filter(({ displayName, name }) => __COMPONENT_DOCS__[displayName || name])
-      .reduce((docs, { displayName, name }) => ({ ...docs,
-        [displayName || name]: __COMPONENT_DOCS__[displayName || name],
-      }), {});
+    const { path, components = [] } = getPathData(pathname === '/' ? getFirstPath() : pathname);
+    const examples = Examples[path];
 
     return (
       <div className="dm-doc">
         <div className="dm-doc__header">
           <LayoutContent>
             <ExampleHeader
-                components={ componentDocs }
-                location={ location }
-                title={ title }
-                trail={ route.slice(0, -1) } />
+                components={ components }
+                path={ path } />
           </LayoutContent>
         </div>
 
@@ -55,7 +43,7 @@ export default class Doc extends Component {
           <LayoutContent>
             { examples.map((Example, index) =>
               <Example
-                  components={ componentDocs }
+                  components={ components }
                   key={ index }
                   queryParams={ queryParams }
                   routeParams={ routeParams } />

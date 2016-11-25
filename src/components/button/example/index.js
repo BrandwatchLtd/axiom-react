@@ -1,13 +1,4 @@
-export const title = 'Button';
-export const id = 'button';
-export const location = 'bw-axiom/components/button';
-
-export const components = [
-  require('../Button').default,
-  require('../ButtonGroup').default,
-];
-
-export const examples = [
+module.exports = [
   require('./styles').default,
   require('./sizes').default,
   require('./circular').default,
