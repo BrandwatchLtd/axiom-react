@@ -30,18 +30,11 @@ module.exports = {
       test: /\.json$/,
       loaders: ['json'],
     }, {
-      test: /\.yml$/,
-      loaders: ['json', 'yaml'],
-    }, {
       test: /\.ejs$/,
       loaders: ['ejs'],
     }, {
       test: /\.s?css$/,
       loader: ExtractTextPlugin.extract('style', 'css!postcss!sass'),
-    }, {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: 'file-loader?name=./assets/[name].[ext]',
-      include: /node_modules\/font-awesome/,
     }],
   },
   output: {

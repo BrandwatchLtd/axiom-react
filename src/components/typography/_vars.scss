@@ -10,5 +10,5 @@ $font-weight-regular: 400;
 $font-weight-bold: 500;
 
 $line-height-body: 1.6;
-$line-height-body-px: $font-size-body * $line-height-body;
+$line-height-body-px: floor($font-size-body * $line-height-body);
 $line-height-heading: 1.2;

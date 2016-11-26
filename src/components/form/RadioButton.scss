@@ -1,9 +1,48 @@
-@import '../icon/mixins';
-@import '../icon/vars';
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/animations/_vars.js';
+@import '../form/vars';
 
-.ax-radio__label {
+.ax-radio__indicator {
+  border-radius: 50%;
+
   &::before {
-    @include icon($fa-var-circle);
+    @include transition((background-color), $transition-time-fast);
+
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    bottom: 25%;
+    left: 25%;
     border-radius: 50%;
+  }
+}
+
+.ax-radio {
+  + .ax-radio__indicator::before {
+    background-color: transparent;
+  }
+
+  &:hover {
+    + .ax-radio__indicator::before {
+      background-color: $input-placeholder-color;
+    }
+  }
+
+  &:focus {
+    + .ax-radio__indicator::before {
+      background-color: $input-focus-color;
+    }
+  }
+
+  &:checked {
+    + .ax-radio__indicator::before {
+      background-color: $input-checked-color;
+    }
+  }
+
+  &:disabled {
+    + .ax-radio__indicator::before {
+      background-color: transparent;
+    }
   }
 }

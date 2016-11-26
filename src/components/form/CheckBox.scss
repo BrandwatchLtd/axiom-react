@@ -1,10 +1,52 @@
 @import '../../design-patterns/spacing/_vars.js';
-@import '../icon/mixins';
-@import '../icon/vars';
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/animations/_vars.js';
+@import '../form/vars';
 
-.ax-checkbox__label {
+.ax-checkbox__indicator {
+  border-radius: $component-border-radius;
+
   &::before {
-    @include icon($fa-var-check);
-    border-radius: $component-border-radius;
+    @include transition((border-color), $transition-time-fast);
+
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    bottom: 40%;
+    left: 20%;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
   }
 }
+
+.ax-checkbox {
+  + .ax-checkbox__indicator::before {
+    border-color: transparent;
+  }
+
+  &:hover {
+    + .ax-checkbox__indicator::before {
+      border-color: $input-placeholder-color;
+    }
+  }
+
+  &:focus {
+    + .ax-checkbox__indicator::before {
+      border-color: $input-focus-color;
+    }
+  }
+
+  &:checked {
+    + .ax-checkbox__indicator::before {
+      border-color: $input-checked-color;
+    }
+  }
+
+  &:disabled {
+    + .ax-checkbox__indicator::before {
+      border-color: transparent;
+    }
+  }
+}
+

@@ -25,7 +25,7 @@ export default class DialogHeader extends Component {
 
           <GridCell shrink={ true }>
             <Link onClick={ onRequestClose } supressStyle={ true }>
-              <Icon name="times" size="medium" />
+              <Icon name="cross" />
             </Link>
           </GridCell>
         </Grid>

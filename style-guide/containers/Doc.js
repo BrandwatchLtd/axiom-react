@@ -17,6 +17,15 @@ export default class Doc extends Component {
     routeParams: PropTypes.object.isRequired,
   };
 
+  shouldComponentUpdate(nextProps) {
+    const { location } = this.props;
+    const { pathname } = location;
+    const { location: nextLocation } = nextProps;
+    const { pathname: nextPathname } = nextLocation;
+
+    return nextPathname !== pathname;
+  }
+
   render() {
     const {
       routeParams,

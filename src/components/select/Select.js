@@ -199,7 +199,10 @@ export default class Select extends Component {
             className="ax-select__input"
             onChange={ (event) => this.setState({ filterText: event.target.value }) }
             value={ this.getInputDisplayValue() }>
-          <Icon name={ isOpen ? 'chevron-up' : 'chevron-down' } size="small" />
+
+          { do { if (!isOpen) {
+            <Icon name="chevron-down" />
+          } } }
         </TextInput>
 
         <SelectList

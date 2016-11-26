@@ -26,8 +26,6 @@
   "dependencies": {
     "autoprefixer": "^6.4.0",
     "classnames": "^2.2.1",
-    "copy-webpack-plugin": "^4.0.1",
-    "font-awesome": "^4.5.0",
     "moment": "^2.14.1",
     "normalize.css": "^4.2.0",
     "numbro": "^1.9.2",
@@ -51,7 +49,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.5.0",
     "clean-webpack-plugin": "^0.1.14",
-    "copy": "^0.3.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "ejs": "^2.5.2",
     "ejs-loader": "^0.3.0",
@@ -59,11 +57,7 @@
     "eslint": "^3.7.1",
     "eslint-plugin-react": "^6.0.0",
     "expect": "^1.20.2",
-    "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "fs-extra": "^0.30.0",
-    "fuse.js": "^2.4.1",
     "glob": "^7.0.3",
     "html-webpack-plugin": "^2.24.1",
     "http-server": "^0.9.0",
@@ -80,16 +74,13 @@
     "react-dom": "^15.3.0",
     "react-element-to-jsx-string": "^4.2.0",
     "react-test-renderer": "^15.3.2",
-    "remarkable": "^1.6.2",
     "sass-lint": "^1.10.0",
     "sass-loader": "^3.1.2",
     "sinon": "^1.17.5",
     "static-site-generator-webpack-plugin": "^3.0.0",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
     "uuid": "^2.0.1",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "1.14.1",
-    "yaml-loader": "^0.4.0"
+    "webpack-dev-server": "1.14.1"
   }
 }

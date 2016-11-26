@@ -33,7 +33,7 @@ export default class LayoutHeader extends Component {
 
           <GridCell shrink={ true } visibleUntil="small">
             <Link inheritColor={ true } noDecoration={ true } onClick={ toggleSidebar } >
-              <Icon name="bars" size="medium" />
+              <Icon name="ellipsis" size="large" />
             </Link>
           </GridCell>
         </Grid>

@@ -1,7 +1,4 @@
-export const title = 'Colors';
-export const id = 'colors';
-
-export const examples = [
+module.exports = [
   require('./palette-colors').default,
   require('./context-colors').default,
 ];

@@ -14,9 +14,9 @@ export default class RadioButton extends Component {
     return (
       <ChedioButtox
           { ...this.props }
+          indicatorClassName="ax-radio__indicator"
           inputClassName="ax-radio"
-          inputType="radio"
-          labelClassName="ax-radio__label" />
+          inputType="radio" />
     );
   }
 }

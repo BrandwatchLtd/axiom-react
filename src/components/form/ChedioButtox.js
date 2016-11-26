@@ -9,9 +9,9 @@ if (__INCLUDE_CSS__) {
 export default class ChedioButtox extends Component {
   static propTypes = {
     children: PropTypes.node,
+    indicatorClassName: PropTypes.string,
     inputClassName: PropTypes.string,
     inputType: PropTypes.string.isRequired,
-    labelClassName: PropTypes.string,
   };
 
   render() {
@@ -20,7 +20,7 @@ export default class ChedioButtox extends Component {
       children,
       inputClassName,
       inputType,
-      labelClassName,
+      indicatorClassName,
       ...rest
     } = this.props;
 
@@ -33,9 +33,8 @@ export default class ChedioButtox extends Component {
     return (
       <Base Component="label" className={ classes }>
         <input { ...rest } className={ classnames('ax-chedio-buttox', inputClassName) } type={ inputType } />
-        <span className={ classnames('ax-chedio-buttox__label', labelClassName) }>
-          { children }
-        </span>
+        <span className={ classnames('ax-chedio-buttox__indicator', indicatorClassName) } />
+        <span className="ax-chedio-buttox__label">{ children }</span>
       </Base>
     );
   }

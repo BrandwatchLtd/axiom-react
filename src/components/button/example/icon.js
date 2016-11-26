@@ -27,7 +27,7 @@ export default class ButtonExample extends Component {
             { size.values.map((size) =>
               <Button key={ size } size={ size }>
                 Button ({ size.toUpperCase() })
-                <Icon name="trash" />
+                <Icon name="twitter" />
               </Button>
             ) }
           </ButtonGroup>

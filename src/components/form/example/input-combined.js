@@ -21,7 +21,7 @@ export default class FormExample extends Component {
           <TextInput
               label="Text input with an Icon"
               placeholder="Icon input...">
-            <Icon name="calendar" />
+            <Icon name="cross" />
           </TextInput>
         </Snippet>
 
@@ -29,7 +29,7 @@ export default class FormExample extends Component {
           <TextInput
               label="Text input with a button and an Icon"
               placeholder="Icon and Button input...">
-            <Icon name="calendar" />
+            <Icon name="cross" />
             <Button>Submit</Button>
           </TextInput>
         </Snippet>

@@ -27,15 +27,8 @@ module.exports = {
       test: /\.json$/,
       loaders: ['json'],
     }, {
-      test: /\.yml$/,
-      loaders: ['json', 'yaml'],
-    }, {
       test: /\.s?css$/,
       loaders: ['style', 'css', 'postcss', 'sass'],
-    }, {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loaders: ['file-loader'],
-      include: /node_modules\/font-awesome/,
     }],
   },
   output: {

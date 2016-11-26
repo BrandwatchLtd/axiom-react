@@ -30,7 +30,7 @@ export default class ButtonExample extends Component {
             { style.values.map((style) =>
               size.values.map((size) =>
                 <Button circular={ true } key={ `${style}${size}` } size={ size } style={ style }>
-                  <Icon name="bolt" snippetReplace={ true } />
+                  <Icon name="ellipsis" snippetReplace={ true } />
                 </Button>
               )
             ) }
