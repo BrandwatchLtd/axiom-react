@@ -1,0 +1,18 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/spacing/_vars.js';
+@import './vars';
+
+.ax-platform__canvas {
+  @include transition((transform));
+
+  flex: 1 1 auto;
+  margin-right: $platform-dock-size;
+  padding: $container-padding-lg;
+  transform: translateX($platform-dock-size);
+  overflow: auto;
+}
+
+.ax-platform__canvas--shifted {
+  margin-right: $platform-dock-size + $platform-console-size;
+  transform: translateX($platform-dock-size + $platform-console-size);
+}

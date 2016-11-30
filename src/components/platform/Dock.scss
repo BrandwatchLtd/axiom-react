@@ -1,0 +1,18 @@
+@import '../../design-patterns/colors/_vars.js';
+@import '../vars';
+@import './vars';
+
+.ax-platform__dock {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  width: $platform-dock-size;
+  margin: 0;
+  padding: 0;
+  background-color: $color-grey-11;
+  list-style: none;
+  z-index: $z-index-platform;
+}

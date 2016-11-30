@@ -10,6 +10,7 @@ module.exports = {
   '/components/label': require('../../src/components/label/example'),
   '/components/logo': require('../../src/components/logo/example'),
   '/components/menu': require('../../src/components/menu/example'),
+  '/components/platform': require('../../src/components/platform/example'),
   '/components/select': require('../../src/components/select/example'),
   '/components/tabset': require('../../src/components/tabset/example'),
   '/components/typography': require('../../src/components/typography/example'),

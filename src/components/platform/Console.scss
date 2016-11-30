@@ -1,0 +1,24 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/spacing/_vars.js';
+@import '../vars';
+@import './vars';
+
+.ax-platform__console {
+  @include transition((transform));
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $platform-console-size;
+  padding: $container-padding-lg;
+  transform: translateX(-100%);
+  background-color: $color-grey-10;
+  color: $color-white-0;
+  z-index: $z-index-platform - 1;
+}
+
+.ax-platform__console--visible {
+  transform: translateX($platform-dock-size);
+}

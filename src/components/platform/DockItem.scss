@@ -1,0 +1,31 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/_vars.js';
+@import './vars';
+
+.ax-platform__dock-item {
+  @include transition((background-color));
+
+  display: flex;
+  flex-direction: column;
+  height: $platform-dock-size;
+  color: $color-white-0;
+
+  &:hover {
+    background-color: $color-grey-9;
+  }
+}
+
+.ax-platform__dock-item:active,
+.ax-platform__dock-item--active,
+.ax-platform__dock-item--active:hover {
+  background-color: $color-grey-10;
+}
+
+.ax-platform__dock-item-link {
+  display: flex;
+  flex: 1 0 0%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
