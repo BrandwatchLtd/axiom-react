@@ -1,0 +1,48 @@
+@import '../../design-patterns/colors/_vars.js';
+@import '../../design-patterns/layout/_vars.js';
+@import '../../design-patterns/spacing/mixins';
+@import '../../design-patterns/spacing/_vars.js';
+
+.ax-login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 $page-padding-h;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ax-login__header {
+  @include space-block($container-margin-lg);
+
+  flex: 0 1 auto;
+}
+
+.ax-login__header-container {
+  max-width: $layout-width-md;
+  margin: 0 auto;
+}
+
+.ax-login__logo {
+  display: inline-block;
+  background-color: $color-grey-0;
+}
+
+.ax-login__body {
+  @include space-block($container-margin-lg);
+
+  flex: 1 1 auto;
+}
+
+.ax-login__form {
+  max-width: $layout-width-xs;
+  margin: 0 auto;
+}
+
+.ax-login__footer {
+  @include space-block($container-margin-lg);
+
+  flex: 0 1 auto;
+  padding: $container-padding-sm;
+}

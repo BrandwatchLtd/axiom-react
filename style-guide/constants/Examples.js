@@ -13,6 +13,7 @@ module.exports = {
   '/components/select': require('../../src/components/select/example'),
   '/components/tabset': require('../../src/components/tabset/example'),
   '/components/typography': require('../../src/components/typography/example'),
+  '/composites/login': require('../../src/composites/login/example'),
   '/design-patterns/colors': require('../../src/design-patterns/colors/example'),
   '/design-patterns/date-and-time': require('../../src/design-patterns/date-and-time/example'),
   '/design-patterns/numbers': require('../../src/design-patterns/numbers/example'),

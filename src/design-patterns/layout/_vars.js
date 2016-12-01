@@ -1,3 +1,4 @@
+const layoutWidthXs = '450px';
 const layoutWidthSm = '768px';
 const layoutWidthMd = '992px';
 const layoutWidthLg = '1200px';
@@ -9,6 +10,7 @@ const breakpoints = [
 ];
 
 module.exports = {
+  layoutWidthXs,
   layoutWidthSm,
   layoutWidthMd,
   layoutWidthLg,
