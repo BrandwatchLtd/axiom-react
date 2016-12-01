@@ -14,6 +14,7 @@ export default class TextInput extends Component {
   static propTypes = {
     children: PropTypes.node,
     label: PropTypes.string,
+    style: PropTypes.oneOf(['translucent']),
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
   };
@@ -35,25 +36,30 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { className, children, label, ...rest } = this.props;
+    const { className, children, label, style, ...rest } = this.props;
     const { hasFocus } = this.state;
     const button = findComponent(children, Button);
     const icon = findComponent(children, Icon);
+
+    const textGroupClasses = classnames(className, {
+      [`ax-input__group--${style}`]: style,
+    });
+
     const iconContainerClasses = classnames('ax-input__icon-container', {
       'ax-input__icon-container--focused': hasFocus,
     });
 
     return (
-      <TextGroup className={ className } label={ label }>
+      <TextGroup className={ textGroupClasses } label={ label }>
         <div className="ax-input__button-container">
           <div className={ iconContainerClasses }>
             <input
+                type="text"
                 { ...rest }
                 className="ax-input"
                 onBlur={ ::this.handleOnBlur }
                 onFocus={ ::this.handleOnFocus }
-                ref="input"
-                type="text"  />
+                ref="input"  />
 
             { do { if (icon) {
               <div className="ax-input__icon">

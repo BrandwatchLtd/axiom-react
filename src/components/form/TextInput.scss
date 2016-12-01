@@ -21,8 +21,7 @@
 
   display: flex;
   position: relative;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1 1 auto;
   align-items: center;
   border: $component-border-width solid $input-border-color;
   border-style: solid;
@@ -48,14 +47,13 @@
 
 // Input
 .ax-input {
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1 1 auto;
   width: 100%;
   min-width: 0;
   padding: $component-padding-sm;
   border: 0;
   background-color: transparent;
-  color: get-text-color($input-background-color);
+  color: inherit;
   line-height: inherit;
   text-overflow: ellipsis;
   appearance: none;
@@ -74,5 +72,33 @@
     &::placeholder {
       color: transparent;
     }
+  }
+
+  // sass-lint:disable no-vendor-prefixes
+  // Hack: around webkits autofill styling
+  @keyframes inputAutofillFix {
+    to {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    animation-name: inputAutofillFix;
+    animation-fill-mode: forwards;
+  }
+  // sass-lint:enable no-vendor-prefixes
+}
+
+
+
+// Translucent coloring
+.ax-input__group--translucent {
+  .ax-input__icon-container {
+    border-color: transparent;
+    background-color: fade-out($input-background-color, .85);
   }
 }
