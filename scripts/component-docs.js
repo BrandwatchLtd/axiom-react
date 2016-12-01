@@ -45,7 +45,12 @@ function extractProps({ props = {} }) {
 }
 
 module.exports = function generate(file) {
-  return extractProps(reactDocgen.parse(
-    fs.readFileSync(path.resolve(__dirname, file))
-  ));
+  try {
+    return extractProps(reactDocgen.parse(
+      fs.readFileSync(path.resolve(__dirname, file))
+    ));
+  } catch (error) {
+    console.error(`ERROR: Extract Docs from '${file}'`);
+    console.error(error);
+  }
 };
