@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Grid from 'bw-axiom/components/grid/Grid';
-import GridCell from 'bw-axiom/components/grid/GridCell';
-import Icon from 'bw-axiom/components/icon/Icon';
-import Heading from 'bw-axiom/components/typography/Heading';
-import Link from 'bw-axiom/components/typography/Link';
+import { Grid, GridCell, Icon, Heading, Link } from 'bw-axiom/';
 
 if (__INCLUDE_CSS__) {
   require('./LayoutHeader.scss');

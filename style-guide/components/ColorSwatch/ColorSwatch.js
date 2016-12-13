@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import colors from 'bw-axiom/design-patterns/colors/_vars';
+import { colors } from 'bw-axiom';
 import ColorSwatchColor from './ColorSwatchColor';
 
 if (__INCLUDE_CSS__) {

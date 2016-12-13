@@ -1,11 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import humanize from 'humanize-string';
 import isPlainObject from 'lodash/isPlainObject';
-import Grid from 'bw-axiom/components/grid/Grid';
-import GridCell from 'bw-axiom/components/grid/GridCell';
-import Heading from 'bw-axiom/components/typography/Heading';
-import Weak from 'bw-axiom/components/typography/Weak';
-import ApiDocsDialogTrigger from 'style-guide/components/ApiDocs/ApiDocsDialogTrigger';
+import { Grid, GridCell, Heading, Weak } from 'bw-axiom';
+import ApiDocs from '../ApiDocs';
 import ExampleBox from './ExampleBox';
 
 function shouldShowApiDocs(components) {
@@ -36,7 +33,7 @@ export default class ExampleHeader extends Component {
 
           { do { if (shouldShowApiDocs(components)) {
             <GridCell shrink={ true }>
-              <ApiDocsDialogTrigger imports={ { path, components } } />
+              <ApiDocs imports={ { path, components } } />
             </GridCell>;
           } } }
         </Grid>

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Heading from 'bw-axiom/components/typography/Heading';
-import ApiDocsProp from 'style-guide/components/ApiDocs/ApiDocsProp';
+import { Heading } from 'bw-axiom';
+import ApiDocsProp from './ApiDocsProp';
 
 if (__INCLUDE_CSS__) {
   require('./ApiDocsList.scss');

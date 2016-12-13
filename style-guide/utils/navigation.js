@@ -1,5 +1,5 @@
 import humanize from 'humanize-string';
-import { getFirstPath, getStructure } from 'style-guide/utils/structure';
+import { getFirstPath, getStructure } from './structure';
 
 export function normalisePathname(pathname) {
   return `/${(pathname === '/' ? getFirstPath() : pathname)

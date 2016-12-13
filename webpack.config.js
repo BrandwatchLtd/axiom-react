@@ -52,7 +52,6 @@ module.exports = {
   resolve: {
     alias: {
       'bw-axiom': src,
-      'style-guide': styleGuide,
     },
   },
   sassLoader: {

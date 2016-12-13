@@ -1,9 +1,9 @@
 import React, { PropTypes, Component } from 'react';
-import Examples from 'style-guide/constants/Examples';
-import LayoutContent from 'style-guide/components/Layout/LayoutContent';
-import ExampleHeader from 'style-guide/components/Example/ExampleHeader';
-import { normalisePathname } from 'style-guide/utils/navigation';
-import { getPathData } from 'style-guide/utils/structure';
+import Examples from '../constants/Examples';
+import { normalisePathname } from '../utils/navigation';
+import { getPathData } from '../utils/structure';
+import { LayoutContent } from '../components/Layout';
+import { ExampleHeader } from '../components/Example';
 
 if (__INCLUDE_CSS__) {
   require('./Doc.scss');

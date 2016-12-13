@@ -1,10 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import Layout from 'style-guide/components/Layout/Layout';
-import LayoutHeader from 'style-guide/components/Layout/LayoutHeader';
-import LayoutSidebar from 'style-guide/components/Layout/LayoutSidebar';
-import LayoutMain from 'style-guide/components/Layout/LayoutMain';
-import Nav from 'style-guide/components/Navigation/Nav';
-import { buildNavigationItem, buildNavigationItems, normalisePathname } from 'style-guide/utils/navigation';
+import { buildNavigationItem, buildNavigationItems, normalisePathname } from '../utils/navigation';
+import { Layout, LayoutHeader, LayoutSidebar, LayoutMain } from '../components/Layout';
+import Navigation from '../components/Navigation';
 
 export default class App extends Component {
   static propTypes = {
@@ -62,7 +59,7 @@ export default class App extends Component {
         </LayoutHeader>
 
         <LayoutSidebar>
-          <Nav
+          <Navigation
               items={ navigationItems }
               onItemClick={ ::this.onItemClick } />
         </LayoutSidebar>

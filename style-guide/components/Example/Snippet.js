@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
-import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
-import { filterSnippet } from 'style-guide/utils/example-filter';
-import renderSnippet, { jsxRender, htmlRender } from 'style-guide/utils/render-snippet';
+import { filterSnippet } from '../../utils/example-filter';
+import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet';
+import { CodeSnippet, CodeTabset } from '../CodeSnippet';
 
 export default class Snippet extends Component {
   static propTypes = {

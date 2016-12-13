@@ -1,11 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Grid from 'bw-axiom/components/grid/Grid';
-import GridCell from 'bw-axiom/components/grid/GridCell';
-import Label from 'bw-axiom/components/label/Label';
-import LabelGroup from 'bw-axiom/components/label/LabelGroup';
-import Italic from 'bw-axiom/components/typography/Italic';
-import Paragraph from 'bw-axiom/components/typography/Paragraph';
-import Strong from 'bw-axiom/components/typography/Strong';
+import { Grid, GridCell, Label, LabelGroup, Italic, Paragraph, Strong } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./ApiDocsProp.scss');

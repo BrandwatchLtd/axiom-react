@@ -1,14 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import ButtonGroup from 'bw-axiom/components/button/ButtonGroup';
-import Button from 'bw-axiom/components/button/Button';
-import Dialog from 'bw-axiom/components/dialog/Dialog';
-import DialogBody from 'bw-axiom/components/dialog/DialogBody';
-import DialogFooter from 'bw-axiom/components/dialog/DialogFooter';
-import DialogHeader from 'bw-axiom/components/dialog/DialogHeader';
-import Heading from 'bw-axiom/components/typography/Heading';
-import ApiDocsList from 'style-guide/components/ApiDocs/ApiDocsList';
-import CodeTabset from 'style-guide/components/CodeSnippet/CodeTabset';
-import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
+import { ButtonGroup, Button, Dialog, DialogBody, DialogFooter, DialogHeader, Heading } from 'bw-axiom';
+import { CodeSnippet, CodeTabset } from '../CodeSnippet';
+import ApiDocsList from './ApiDocsList';
 
 export default class ApiDocsDialog extends Component {
   static propTypes = {

@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Base from 'bw-axiom/components/base/Base';
-import Italic from 'bw-axiom/components/typography/Italic';
-import Strong from 'bw-axiom/components/typography/Strong';
+import { Base, Italic, Strong } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./ColorSwatchColor.scss');

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import Link from 'bw-axiom/components/typography/Link';
+import { Link } from 'bw-axiom';
 import NavList from './NavList';
 
 if (__INCLUDE_CSS__) {

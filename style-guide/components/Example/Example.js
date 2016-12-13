@@ -1,6 +1,6 @@
 import React, { Children, Component, PropTypes } from 'react';
-import Heading from 'bw-axiom/components/typography/Heading';
-import { filterRender } from 'style-guide/utils/example-filter';
+import { Heading } from 'bw-axiom';
+import { filterRender } from '../../utils/example-filter';
 import ExampleBox from './ExampleBox';
 import Snippet from './Snippet';
 
