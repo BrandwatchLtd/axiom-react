@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { CodeSnippet, Example } from 'style-guide';
 import Paragraph from '../../../components/typography/Paragraph';
 import Strong from '../../../components/typography/Strong';
 import { mediumDate, mediumDateWithTime } from '../date-and-time';
-import CodeSnippet from 'style-guide/components/CodeSnippet/CodeSnippet';
-import Example from 'style-guide/components/Example/Example';
 
 export default class DateExample extends Component {
   render() {

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Menu from '../Menu';
 import MenuItem from '../MenuItem';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class MenuExample extends Component {
   render() {

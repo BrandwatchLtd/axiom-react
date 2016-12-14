@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Button from '../../button/Button';
 import ButtonGroup from '../../button/ButtonGroup';
 import Dialog from '../Dialog';
 import DialogDemo from './DialogDemo';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class DialogExample extends Component {
   componentWillMount() {

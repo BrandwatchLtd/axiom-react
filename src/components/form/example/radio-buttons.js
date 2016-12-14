@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Heading from '../../typography/Heading';
 import RadioButton from '../RadioButton';
 import RadioButtonGroup from '../RadioButtonGroup';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class FormExample extends Component {
   render() {

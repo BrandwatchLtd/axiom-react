@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Platform from '../Platform';
 import Dock from '../Dock';
 import DockItem from '../DockItem';
 import Console from '../Console';
 import Canvas from '../Canvas';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class PlatformExample extends Component {
   componentWillMount() {

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import CheckBox from '../CheckBox';
 import CheckBoxGroup from '../CheckBoxGroup';
 import Heading from '../../typography/Heading';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class FormExample extends Component {
   render() {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Paragraph from '../Paragraph';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class TypeExample extends Component {
   render() {

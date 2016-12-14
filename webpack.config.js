@@ -3,14 +3,6 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const structureGenerator = require('./scripts/structure-generator');
-const Alias = require('./utils/webpack-alias-plugin');
-const src = path.resolve(__dirname, 'src');
-const styleGuide = path.resolve(__dirname, 'style-guide');
-
-const aliases = [
-  new Alias(/^bw-axiom/, (path) => path.replace(/^bw-axiom(.*)/, `${src}$1`)),
-  new Alias(/^style-guide/, (path) => path.replace(/^style-guide(.*)/, `${styleGuide}$1`)),
-];
 
 module.exports = {
   entry: {
@@ -34,7 +26,6 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    ...aliases,
     new HtmlWebpackPlugin({
       template: './style-guide/index.ejs',
       basename: '/',
@@ -49,7 +40,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'bw-axiom': src,
+      'bw-axiom': path.resolve(__dirname, 'src'),
+      'style-guide': path.resolve(__dirname, 'style-guide/components'),
     },
   },
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],

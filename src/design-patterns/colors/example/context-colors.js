@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import { ColorSwatch, Example } from 'style-guide';
 import Heading from '../../../components/typography/Heading';
 import { getCSSVar } from '../../../utils';
-import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
-import Example from 'style-guide/components/Example/Example';
 
 export default class PaletteColors extends Component {
   render() {

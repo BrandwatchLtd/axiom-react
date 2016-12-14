@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Paragraph from '../Paragraph';
 import Italic from '../Italic';
 import Underline from '../Underline';
 import Strike from '../Strike';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class TypeExample extends Component {
   render() {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
+import { Example, Snippet } from 'style-guide';
 import Login from '../Login';
 
 class LoginExample extends Component {

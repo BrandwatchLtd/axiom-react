@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Tabset from '../Tabset';
 import Tab from '../Tab';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class TabSetExample extends Component {
   render() {

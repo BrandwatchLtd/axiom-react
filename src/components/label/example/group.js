@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import LabelGroup from '../LabelGroup';
 import Label from '../Label';
 import Paragraph from '../../typography/Paragraph';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class LabelExample extends Component {
   render() {

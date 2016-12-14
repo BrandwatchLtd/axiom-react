@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import { Example, Snippet } from 'style-guide';
 import ButtonGroup from '../ButtonGroup';
 import Button from '../Button';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class ButtonExample extends Component {
   static propTypes = {

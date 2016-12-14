@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Dialog from '../Dialog';
 import DialogHeader from '../DialogHeader';
 import DialogBody from '../DialogBody';
 import DialogFooter from '../DialogFooter';
 import Paragraph from '../../typography/Paragraph';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class DialogExample extends Component {
   render() {

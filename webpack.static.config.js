@@ -5,16 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-const Alias = require('./utils/webpack-alias-plugin');
 const structureGenerator = require('./scripts/structure-generator');
-
-const src = path.resolve(__dirname, 'src');
-const styleGuide = path.resolve(__dirname, 'style-guide');
-
-const aliases = [
-  new Alias(/^bw-axiom/, (path) => path.replace(/^bw-axiom(.*)/, `${src}$1`)),
-  new Alias(/^style-guide/, (path) => path.replace(/^style-guide(.*)/, `${styleGuide}$1`)),
-];
 
 module.exports = {
   entry: {
@@ -43,7 +34,6 @@ module.exports = {
     libraryTarget: 'umd',
   },
   plugins: [
-    ...aliases,
     new CleanWebpackPlugin(['static']),
     new ExtractTextPlugin('./assets/bundle.css', { allChunks: true }),
     new CopyWebpackPlugin([{ from: './style-guide/assets', to: './assets' }]),
@@ -57,8 +47,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'bw-axiom': src,
-      'style-guide': styleGuide,
+      'bw-axiom': path.resolve(__dirname, 'src'),
+      'style-guide': path.resolve(__dirname, 'style-guide/components'),
     },
   },
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],

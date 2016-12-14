@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { Example, Snippet } from 'style-guide';
 import Icon from '../../icon/Icon';
 import Button from '../../button/Button';
 import TextInput from '../TextInput';
-import Example from 'style-guide/components/Example/Example';
-import Snippet from 'style-guide/components/Example/Snippet';
 
 export default class FormExample extends Component {
   render() {
