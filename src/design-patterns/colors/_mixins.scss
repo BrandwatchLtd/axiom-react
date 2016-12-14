@@ -32,6 +32,7 @@ $text-color-map: (
     $color-grey-6,
     $color-grey-7,
   ),
+
 );
 
 @function get-text-color($match) {

@@ -1,8 +1,0 @@
-@import '~bw-axiom/design-patterns/spacing/mixins';
-
-.dm-color-swatch {
-  @include space-block();
-
-  display: flex;
-  flex-wrap: wrap;
-}
