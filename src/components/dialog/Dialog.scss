@@ -4,7 +4,7 @@
 .ax-dialog {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: $component-border-radius;
   background-color: $color-white-0;
@@ -34,9 +34,9 @@
 
 
 // Dialog: Sizes
-.ax-dialog--small  { max-width: 400px; }
-.ax-dialog--medium { max-width: 600px; }
-.ax-dialog--large  { max-width: 800px; }
+.ax-dialog--small  { width: 400px; }
+.ax-dialog--medium { width: 600px; }
+.ax-dialog--large  { width: 800px; }
 
 .ax-dialog--fullscreen {
   height: 100vh;

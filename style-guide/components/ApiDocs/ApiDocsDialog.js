@@ -12,10 +12,10 @@ export default class ApiDocsDialog extends Component {
   };
 
   render() {
-    const { components, path, isOpen, onRequestClose } = this.props;
+    const { components, isOpen, onRequestClose } = this.props;
 
     return (
-      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="large">
+      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="medium">
         <DialogHeader onRequestClose={ onRequestClose }>
           <Heading style="title">API Docs</Heading>
         </DialogHeader>
@@ -23,9 +23,7 @@ export default class ApiDocsDialog extends Component {
         <DialogBody>
           <CodeTabset>
             <CodeSnippet language="js">
-              { Object.keys(components).map((displayName) =>
-                `import ${displayName} from 'bw-axiom${path}/${displayName}';`
-              ).join('\n') }
+              {`import { ${Object.keys(components).join(', ')} } from 'bw-axiom';`}
             </CodeSnippet>
           </CodeTabset>
 
