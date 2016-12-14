@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Icon from '../../icon/Icon';
-import Button from '../../button/Button';
-import TextInput from '../TextInput';
+import { Icon, Button, TextInput } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {

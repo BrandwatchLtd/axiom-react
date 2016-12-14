@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import ButtonGroup from '../ButtonGroup';
-import Button from '../Button';
-import Paragraph from '../../typography/Paragraph';
+import { ButtonGroup, Button, Paragraph } from 'bw-axiom';
 
 export default class ButtonExample extends Component {
   render() {

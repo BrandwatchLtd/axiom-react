@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Grid from '../../grid/Grid';
-import GridCell from '../../grid/GridCell';
-import TextInput from '../TextInput';
+import { Grid, GridCell, TextInput } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {

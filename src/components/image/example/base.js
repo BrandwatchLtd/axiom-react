@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Image from '../Image';
+import { Image } from 'bw-axiom';
 
 export default class ImageExample extends Component {
   render() {

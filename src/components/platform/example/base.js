@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Platform from '../Platform';
-import Dock from '../Dock';
-import DockItem from '../DockItem';
-import Console from '../Console';
-import Canvas from '../Canvas';
+import { Platform, Dock, DockItem, Console, Canvas } from 'bw-axiom';
 
 export default class PlatformExample extends Component {
   componentWillMount() {

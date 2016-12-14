@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ColorSwatch, Example } from 'style-guide';
-import Heading from '../../../components/typography/Heading';
-import { getCSSVar } from '../../../utils';
+import { Heading, getCSSVar } from 'bw-axiom';
 
 export default class PaletteColors extends Component {
   render() {

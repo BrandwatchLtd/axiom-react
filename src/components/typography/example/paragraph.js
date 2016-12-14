@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Heading from '../Heading';
-import Paragraph from '../Paragraph';
-import Small from '../Small';
-import Strong from '../Strong';
-import Weak from '../Weak';
+import { Heading, Paragraph, Small, Strong, Weak } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {

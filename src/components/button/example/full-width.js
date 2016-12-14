@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import ButtonGroup from '../ButtonGroup';
-import Button from '../Button';
+import { ButtonGroup, Button } from 'bw-axiom';
 
 export default class ButtonExample extends Component {
   static propTypes = {

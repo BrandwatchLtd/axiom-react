@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import Grid from '../../grid/Grid';
-import GridCell from '../../grid/GridCell';
-import CheckBox from '../../form/CheckBox';
-import RadioButton from '../../form/RadioButton';
-import TextInput from '../../form/TextInput';
-import Select from '../Select';
-import Heading from '../../typography/Heading';
+import { Grid, GridCell, CheckBox, RadioButton, TextInput, Select, Heading } from 'bw-axiom';
 
 export default class SelectConfigurableDemo extends Component {
 

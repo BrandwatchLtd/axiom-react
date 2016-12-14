@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Paragraph from '../../typography/Paragraph';
-import Base from '../Base';
+import { Base, Paragraph } from 'bw-axiom';
 
 export default class BaseExample extends Component {
   render() {

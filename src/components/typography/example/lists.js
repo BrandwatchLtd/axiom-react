@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import List from '../List';
-import ListItem from '../ListItem';
-import Heading from '../../typography/Heading';
+import { List, ListItem, Heading } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {

@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Heading from '../Heading';
-import Strong from '../Strong';
-import Weak from '../Weak';
+import { Heading, Strong, Weak } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   static propTypes = {

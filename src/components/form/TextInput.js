@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { findComponent } from '../_utils/components';
+import { findComponent } from '../../utils';
 import ButtonGroup from '../button/ButtonGroup';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';

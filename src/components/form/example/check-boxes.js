@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import CheckBox from '../CheckBox';
-import CheckBoxGroup from '../CheckBoxGroup';
-import Heading from '../../typography/Heading';
+import { CheckBox, CheckBoxGroup, Heading } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {

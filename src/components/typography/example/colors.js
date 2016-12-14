@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Paragraph from '../Paragraph';
+import { Paragraph } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {

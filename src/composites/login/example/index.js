@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Login from '../Login';
+import { Login } from 'bw-axiom';
 
 class LoginExample extends Component {
 
@@ -15,7 +15,7 @@ class LoginExample extends Component {
     };
 
     return (
-      <Example title="Login page">
+      <Example name="Login page">
         <Snippet>
           <div snippetIgnore={ true } style={ containerStyles }>
             <Login

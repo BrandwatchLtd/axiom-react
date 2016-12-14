@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Heading from '../../typography/Heading';
-import RadioButton from '../RadioButton';
-import RadioButtonGroup from '../RadioButtonGroup';
+import { Heading, RadioButton, RadioButtonGroup } from 'bw-axiom';
 
 export default class FormExample extends Component {
   render() {

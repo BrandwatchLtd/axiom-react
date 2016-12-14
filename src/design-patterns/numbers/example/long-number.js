@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import Grid from '../../../components/grid/Grid';
-import GridCell from '../../../components/grid/GridCell';
-import TextInput from '../../../components/form/TextInput';
-import Heading from '../../../components/typography/Heading';
-import Paragraph from '../../../components/typography/Paragraph';
-import { longNumber } from '../numbers';
+import { Grid, GridCell, TextInput, Heading, Paragraph, longNumber } from 'bw-axiom';
 
 export default class LongNumber extends Component {
   componentWillMount() {

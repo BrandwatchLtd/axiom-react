@@ -40,7 +40,9 @@ function generateStructure() {
       hasExamples: hasExamples(path.join(src, section, module)),
       path: `/${section}/${module}`,
     })),
-  }));
+  })).filter(({ children }) =>
+    children.some(({ hasExamples }) => hasExamples)
+  );
 }
 
 function extract(extraction, extracted = [], structure = generateStructure()) {

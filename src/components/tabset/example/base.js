@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Tabset from '../Tabset';
-import Tab from '../Tab';
+import { Tabset, Tab } from 'bw-axiom';
 
 export default class TabSetExample extends Component {
   render() {

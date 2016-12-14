@@ -1,6 +1,6 @@
 import React, { Component, Children, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
-import { findComponent } from '../_utils/components';
+import { findComponent } from '../../utils';
 import Base from '../base/Base';
 import Icon from '../icon/Icon';
 

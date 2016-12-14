@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Menu from '../Menu';
-import MenuItem from '../MenuItem';
+import { Menu, MenuItem } from 'bw-axiom';
 
 export default class MenuExample extends Component {
   render() {

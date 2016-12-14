@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import LabelGroup from '../LabelGroup';
-import Label from '../Label';
-import Paragraph from '../../typography/Paragraph';
+import { Label, LabelGroup, Paragraph } from 'bw-axiom';
 
 export default class LabelExample extends Component {
   render() {

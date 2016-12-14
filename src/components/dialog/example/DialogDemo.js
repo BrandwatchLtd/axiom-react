@@ -1,11 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Button from '../../button/Button';
-import ButtonGroup from '../../button/ButtonGroup';
-import Paragraph from '../../typography/Paragraph';
-import Dialog from '../Dialog';
-import DialogBody from '../DialogBody';
-import DialogFooter from '../DialogFooter';
-import DialogHeader from '../DialogHeader';
+import { ButtonGroup, Button, Paragraph, Dialog, DialogBody, DialogFooter, DialogHeader } from 'bw-axiom';
 
 export default class DialogDemo extends Component {
   static propTypes = {

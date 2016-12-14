@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import Button from '../../button/Button';
-import ButtonGroup from '../../button/ButtonGroup';
-import Dialog from '../Dialog';
+import { ButtonGroup, Button, Dialog } from 'bw-axiom';
 import DialogDemo from './DialogDemo';
 
 export default class DialogExample extends Component {
