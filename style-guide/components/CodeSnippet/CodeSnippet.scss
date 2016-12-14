@@ -1,6 +1,6 @@
-@import '~bw-axiom/design-patterns/colors/_vars.js';
+@import '~bw-axiom/design-patterns/colors/vars';
 @import '~bw-axiom/design-patterns/spacing/mixins';
-@import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/vars';
 
 // sass-lint:disable no-qualifying-elements
 
@@ -8,7 +8,7 @@ pre[class*='language-'] {
   @include space-block($container-margin-sm);
 
   padding: $container-padding-sm;
-  border: 1px solid $color-grey-1;
-  border-radius: 2px;
+  border: $component-border-width solid $color-grey-1;
+  border-radius: $component-border-radius;
   background-color: $color-grey-0;
 }

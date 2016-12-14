@@ -1,5 +1,5 @@
 @import '../../design-patterns/layout/mixins';
-@import '../../design-patterns/spacing/_vars.js';
+@import '../../design-patterns/spacing/vars';
 
 @mixin grid-gutter($horizontal-gutter) {
   $vertical-gutter: $container-margin-sm;

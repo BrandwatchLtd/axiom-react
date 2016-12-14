@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Heading from '../../../components/typography/Heading';
-import colors from '../../colors/_vars';
+import { getCSSVar } from '../../../utils';
 import ColorSwatch from 'style-guide/components/ColorSwatch/ColorSwatch';
 import Example from 'style-guide/components/Example/Example';
 
@@ -9,75 +9,75 @@ export default class PaletteColors extends Component {
     const palette = [{
       name: 'White',
       colors: [
-        { variable: 'color-white-0', hex: colors.colorWhite0 },
+        { variable: 'color-white-0', hex: getCSSVar('color-white-0') },
       ],
     }, {
       name: 'Black',
       colors: [
-        { variable: 'color-black-0', hex: colors.colorBlack0 },
+        { variable: 'color-black-0', hex: getCSSVar('color-black-0') },
       ],
     }, {
       name: 'Grey',
       colors: [
-        { variable: 'color-grey-0', hex: colors.colorGrey0 },
-        { variable: 'color-grey-1', hex: colors.colorGrey1 },
-        { variable: 'color-grey-2', hex: colors.colorGrey2 },
-        { variable: 'color-grey-3', hex: colors.colorGrey3 },
-        { variable: 'color-grey-4', hex: colors.colorGrey4 },
-        { variable: 'color-grey-5', hex: colors.colorGrey5 },
-        { variable: 'color-grey-6', hex: colors.colorGrey6 },
-        { variable: 'color-grey-7', hex: colors.colorGrey7 },
-        { variable: 'color-grey-8', hex: colors.colorGrey8 },
-        { variable: 'color-grey-9', hex: colors.colorGrey9 },
-        { variable: 'color-grey-10', hex: colors.colorGrey10 },
-        { variable: 'color-grey-11', hex: colors.colorGrey11 },
+        { variable: 'color-grey-0', hex: getCSSVar('color-grey-0') },
+        { variable: 'color-grey-1', hex: getCSSVar('color-grey-1') },
+        { variable: 'color-grey-2', hex: getCSSVar('color-grey-2') },
+        { variable: 'color-grey-3', hex: getCSSVar('color-grey-3') },
+        { variable: 'color-grey-4', hex: getCSSVar('color-grey-4') },
+        { variable: 'color-grey-5', hex: getCSSVar('color-grey-5') },
+        { variable: 'color-grey-6', hex: getCSSVar('color-grey-6') },
+        { variable: 'color-grey-7', hex: getCSSVar('color-grey-7') },
+        { variable: 'color-grey-8', hex: getCSSVar('color-grey-8') },
+        { variable: 'color-grey-9', hex: getCSSVar('color-grey-9') },
+        { variable: 'color-grey-10', hex: getCSSVar('color-grey-10') },
+        { variable: 'color-grey-11', hex: getCSSVar('color-grey-11') },
       ],
     }, {
       name: 'Red',
       colors: [
-        { variable: 'color-red-0', hex: colors.colorRed0 },
+        { variable: 'color-red-0', hex: getCSSVar('color-red-0') },
       ],
     }, {
       name: 'Pink',
       colors: [
-        { variable: 'color-pink-0', hex: colors.colorPink0 },
+        { variable: 'color-pink-0', hex: getCSSVar('color-pink-0') },
       ],
     }, {
       name: 'Orange',
       colors: [
-        { variable: 'color-orange-0', hex: colors.colorOrange0 },
+        { variable: 'color-orange-0', hex: getCSSVar('color-orange-0') },
       ],
     }, {
       name: 'Orange (light)',
       colors: [
-        { variable: 'color-orange-light-0', hex: colors.colorOrangeLight0 },
+        { variable: 'color-orange-light-0', hex: getCSSVar('color-orange-light-0') },
       ],
     }, {
       name: 'Yellow',
       colors: [
-        { variable: 'color-yellow-0', hex: colors.colorYellow0 },
+        { variable: 'color-yellow-0', hex: getCSSVar('color-yellow-0') },
       ],
     }, {
       name: 'Green',
       colors: [
-        { variable: 'color-green-0', hex: colors.colorGreen0 },
+        { variable: 'color-green-0', hex: getCSSVar('color-green-0') },
       ],
     }, {
       name: 'Blue',
       colors: [
-        { variable: 'color-blue-0', hex: colors.colorBlue0 },
-        { variable: 'color-blue-1', hex: colors.colorBlue1 },
-        { variable: 'color-blue-2', hex: colors.colorBlue2 },
+        { variable: 'color-blue-0', hex: getCSSVar('color-blue-0') },
+        { variable: 'color-blue-1', hex: getCSSVar('color-blue-1') },
+        { variable: 'color-blue-2', hex: getCSSVar('color-blue-2') },
       ],
     }, {
       name: 'Blue (light)',
       colors: [
-        { variable: 'color-blue-light-0', hex: colors.colorBlueLight0 },
+        { variable: 'color-blue-light-0', hex: getCSSVar('color-blue-light-0') },
       ],
     }, {
       name: 'Purple',
       colors: [
-        { variable: 'color-purple-0', hex: colors.colorPurple0 },
+        { variable: 'color-purple-0', hex: getCSSVar('color-purple-0') },
       ],
     }];
 

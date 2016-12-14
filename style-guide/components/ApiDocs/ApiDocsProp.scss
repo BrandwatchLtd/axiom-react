@@ -1,4 +1,4 @@
-@import '~bw-axiom/design-patterns/colors/_vars.js';
+@import '~bw-axiom/design-patterns/colors/vars';
 @import '~bw-axiom/design-patterns/spacing/mixins';
 
 .dm-doc-api__pre {
@@ -7,7 +7,7 @@
 
 .dm-doc-api__code {
   padding: 0 $component-padding-sm;
-  border: 1px solid $color-grey-1;
+  border: $component-border-width solid $color-grey-1;
   background-color: $color-grey-0;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   white-space: normal;

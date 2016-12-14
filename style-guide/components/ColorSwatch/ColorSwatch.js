@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { colors } from 'bw-axiom';
 import ColorSwatchColor from './ColorSwatchColor';
 
 if (__INCLUDE_CSS__) {
@@ -7,11 +6,11 @@ if (__INCLUDE_CSS__) {
 }
 
 function hasDarkText(hex) {
-  return colors.textColorMap[colors.textColorDark].includes(hex);
+  // return colors.textColorMap[colors.textColorDark].includes(hex);
 }
 
 function hasLightText(hex) {
-  return colors.textColorMap[colors.textColorLight].includes(hex);
+  // return colors.textColorMap[colors.textColorLight].includes(hex);
 }
 
 export default class ColorSwatch extends Component {

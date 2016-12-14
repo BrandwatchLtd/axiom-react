@@ -1,0 +1,10 @@
+$layout-width-xs: 450px;
+$layout-width-sm: 768px;
+$layout-width-md: 992px;
+$layout-width-lg: 1200px;
+
+$breakpoints: (
+  ( id: 'small', width: $layout-width-sm ),
+  ( id: 'medium', width: $layout-width-md ),
+  ( id: 'large', width: $layout-width-lg ),
+);

@@ -1,8 +1,13 @@
-@import '../../design-patterns/colors/_vars.js';
-@import '../../design-patterns/spacing/_vars.js';
+@import '../../design-patterns/animations/vars';
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
 @import '../../components/vars';
-@import '../modal/_vars.js';
 
+$modal-animation-duration: $transition-time-base;
+
+:root {
+  #{--modal-animation-duration}: $modal-animation-duration;
+}
 
 .ax-modal__overlay {
   display: flex;

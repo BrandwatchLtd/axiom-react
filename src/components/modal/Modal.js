@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactModal from 'react-modal';
-import { modalAnimationDuration } from './_vars';
+import { getCSSVar } from '../../utils';
 
 if (__INCLUDE_CSS__) {
   require('./Modal.scss');
@@ -27,7 +27,7 @@ export default class Modal extends Component {
       <ReactModal
           { ...rest }
           className="ax-modal"
-          closeTimeoutMS={ parseInt(modalAnimationDuration, 10) }
+          closeTimeoutMS={ parseInt(getCSSVar('modal-animation-duration'), 10) }
           overlayClassName={ withOverlay && (overlayClassName || 'ax-modal__overlay') } />
     );
   }

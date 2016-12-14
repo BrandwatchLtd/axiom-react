@@ -49,6 +49,5 @@ export { default as Weak } from './components/typography/Weak';
 export { default as Login } from './composites/login/Login';
 
 // Design Patterns
-export * as colors from './design-patterns/colors/_vars';
 export * as dateFormatting from './design-patterns/date-and-time/date-and-time';
 export * as numberFormatting from './design-patterns/numbers/numbers';

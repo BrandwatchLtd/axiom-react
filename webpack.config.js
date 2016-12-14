@@ -4,8 +4,6 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const structureGenerator = require('./scripts/structure-generator');
 const Alias = require('./utils/webpack-alias-plugin');
-const axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
-
 const src = path.resolve(__dirname, 'src');
 const styleGuide = path.resolve(__dirname, 'style-guide');
 
@@ -53,11 +51,6 @@ module.exports = {
     alias: {
       'bw-axiom': src,
     },
-  },
-  sassLoader: {
-    importer: [
-      axiomSassVariableImporter(aliases),
-    ],
   },
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
 };

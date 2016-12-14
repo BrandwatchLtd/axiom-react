@@ -1,5 +1,5 @@
-@import '~bw-axiom/design-patterns/colors/_vars.js';
-@import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/colors/vars';
+@import '~bw-axiom/design-patterns/spacing/vars';
 @import '~bw-axiom/components/typography/vars';
 
 //
@@ -11,7 +11,7 @@
   justify-content: center;
   min-height: 50px;
   padding: $component-padding-sm;
-  border: 1px solid $color-blue-2;
+  border: $component-border-width solid $color-blue-2;
   background-color: $color-blue-0;
   color: $color-white-0;
   font-size: $font-size-sm;

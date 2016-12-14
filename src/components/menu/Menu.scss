@@ -1,4 +1,5 @@
 @import '../../design-patterns/spacing/mixins';
+@import '../../design-patterns/spacing/vars';
 
 .ax-menu {
   @include space-block($component-padding-lg);

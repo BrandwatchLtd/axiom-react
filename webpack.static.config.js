@@ -6,7 +6,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const Alias = require('./utils/webpack-alias-plugin');
-const axiomSassVariableImporter = require('./utils/axiom-sass-variable-importer');
 const structureGenerator = require('./scripts/structure-generator');
 
 const src = path.resolve(__dirname, 'src');
@@ -61,11 +60,6 @@ module.exports = {
       'bw-axiom': src,
       'style-guide': styleGuide,
     },
-  },
-  sassLoader: {
-    importer: [
-      axiomSassVariableImporter(aliases),
-    ],
   },
   postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
 };

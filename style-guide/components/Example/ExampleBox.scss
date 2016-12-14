@@ -1,5 +1,5 @@
 @import '~bw-axiom/design-patterns/spacing/mixins';
-@import '~bw-axiom/design-patterns/spacing/_vars.js';
+@import '~bw-axiom/design-patterns/spacing/vars';
 
 .dm-example-box {
   @include space-block($container-margin-sm);
