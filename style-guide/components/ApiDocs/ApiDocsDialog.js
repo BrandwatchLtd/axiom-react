@@ -1,5 +1,13 @@
 import React, { PropTypes, Component } from 'react';
-import { ButtonGroup, Button, Dialog, DialogBody, DialogFooter, DialogHeader, Heading } from 'bw-axiom';
+import {
+  ButtonGroup,
+  Button,
+  Dialog,
+  DialogBody,
+  DialogFooter,
+  DialogHeader,
+  Heading,
+} from 'bw-axiom';
 import { CodeSnippet, CodeTabset } from '../CodeSnippet';
 import ApiDocsList from './ApiDocsList';
 

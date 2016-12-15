@@ -29,7 +29,8 @@ export function buildSelectableItems(props, state) {
 
   return items
     .map((value) => buildSelectableItem(value, props))
-    .filter(({ displayValue }) => !filterText || displayValue.toLowerCase().includes(filterText.toLowerCase()))
+    .filter(({ displayValue }) => !filterText ||
+      displayValue.toLowerCase().includes(filterText.toLowerCase()))
     .filter(({ isSelected }) => !hideSelected || !isSelected)
     .map((item, index) => {
       return {

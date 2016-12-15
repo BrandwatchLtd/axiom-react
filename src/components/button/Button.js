@@ -11,7 +11,10 @@ if (__INCLUDE_CSS__) {
 export default class Button extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    /** Converts the button a perfect circle, purposely for smaller isometric (like icons) content.  */
+    /**
+     * Converts the button a perfect circle, purposely for smaller isometric
+     * (like icons) content.
+     */
     circular: PropTypes.bool,
     full: PropTypes.oneOfType([
       PropTypes.bool,
@@ -37,8 +40,6 @@ export default class Button extends Component {
       ...rest
     } = this.props;
 
-    const icon = findComponent(children, Icon);
-    const filteredChildren = Children.toArray(children).filter((component) => component.type !== Icon);
     const classes = classnames(className,
       'ax-button', {
         [`ax-button--${size}`]: size,
@@ -48,6 +49,11 @@ export default class Button extends Component {
         [`ax-button--full--${full}`]: full && full !== true,
       },
     );
+
+    const icon = findComponent(children, Icon);
+    const filteredChildren = Children
+      .toArray(children)
+      .filter((component) => component.type !== Icon);
 
     return (
       <Base Component="button" { ...rest } className={ classes }>

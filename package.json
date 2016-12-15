@@ -19,7 +19,7 @@
     "build-static": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js",
     "gh-pages": "BASENAME_ENV=\"'/axiom/'\" yarn build-static && gh-pages -d ./static",
     "lint": "yarn run lint-js && yarn run lint-sass",
-    "lint-js": "eslint --config .eslintrc ./src ./style-guide ./utils",
+    "lint-js": "eslint --config .eslintrc ./src ./style-guide",
     "lint-sass": "sass-lint --config .sass-lint.yml -v",
     "prepublish": "rm -rf ./lib && yarn prepublish-js && yarn prepublish-sass",
     "prepublish-js": "NODE_ENV=production BABEL_ENV=production babel ./src --ignore example,*.test.js --out-dir ./lib",

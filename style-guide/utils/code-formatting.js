@@ -2,7 +2,11 @@ import Prism from 'prismjs';
 import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-scss';
-import { js as beautifyJs, html as beautifyHtml, css as beautifyCSS } from 'js-beautify';
+import {
+  js as beautifyJs,
+  html as beautifyHtml,
+  css as beautifyCSS,
+} from 'js-beautify';
 
 function formatHtml(html) {
   return beautifyHtml(html, {
@@ -31,7 +35,9 @@ function formatJsx(jsx) {
 }
 
 function transformSnippet(snippet, transforms) {
-  return transforms.reduce((transformedContent, transform) => transform(transformedContent), snippet);
+  return transforms.reduce((transformedContent, transform) =>
+    transform(transformedContent), snippet
+  );
 }
 
 function prepareHTMLSnippet(snippet) {
@@ -78,9 +84,17 @@ export const classMap = {
 };
 
 export function prepareSnippet(snippet, language) {
-  if (!prepareMap[language]) throw Error(`No prepare function available for language '${language}'`);
-  if (!highlightMap[language]) throw Error(`No highlight available for language '${language}'`);
-  if (!classMap[language]) throw Error(`No class available for language '${language}'`);
+  if (!prepareMap[language]) {
+    throw Error(`No prepare function available for language '${language}'`);
+  }
+
+  if (!highlightMap[language]) {
+    throw Error(`No highlight available for language '${language}'`);
+  }
+
+  if (!classMap[language]) {
+    throw Error(`No class available for language '${language}'`);
+  }
 
   return {
     className: classMap[language],

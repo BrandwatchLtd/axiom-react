@@ -11,7 +11,9 @@ export default class FormExample extends Component {
             <RadioButton>Unchecked Radio button</RadioButton>
             <RadioButton defaultChecked={ true }>Checked Radio button</RadioButton>
             <RadioButton disabled={ true }>Disabled Radio button</RadioButton>
-            <RadioButton defaultChecked={ true } disabled={ true }>Disabled checked Radio button</RadioButton>
+            <RadioButton defaultChecked={ true } disabled={ true }>
+              Disabled checked Radio button
+            </RadioButton>
           </RadioButtonGroup>
         </Snippet>
 

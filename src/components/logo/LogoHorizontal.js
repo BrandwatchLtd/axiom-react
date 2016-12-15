@@ -11,6 +11,7 @@ export default class LogoHorizontal extends Component {
     const viewBoxWidth = 349;
     const viewBoxHeight = 64;
 
+    /* eslint-disable max-len */
     return (
       <Logo { ...this.props } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
         <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0px" y="0px">
@@ -46,5 +47,6 @@ export default class LogoHorizontal extends Component {
         </svg>
       </Logo>
     );
+    /* eslint-enable max-len */
   }
 }

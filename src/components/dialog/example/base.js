@@ -7,7 +7,9 @@ export default class DialogExample extends Component {
     return (
       <Example name="Dialog">
         <Paragraph>
-          The Dialog component is an interface to the [react-modal](https://github.com/reactjs/react-modal) component. All properties you pass to Dialog will forward to the modal component.
+          The Dialog component is an interface to the
+          [react-modal](https://github.com/reactjs/react-modal) component. All
+          properties you pass to Dialog will forward to the modal component.
         </Paragraph>
 
         <Snippet>

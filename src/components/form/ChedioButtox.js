@@ -32,7 +32,10 @@ export default class ChedioButtox extends Component {
 
     return (
       <Base Component="label" className={ classes }>
-        <input { ...rest } className={ classnames('ax-chedio-buttox', inputClassName) } type={ inputType } />
+        <input { ...rest }
+            className={ classnames('ax-chedio-buttox', inputClassName) }
+            type={ inputType } />
+
         <span className={ classnames('ax-chedio-buttox__indicator', indicatorClassName) } />
         <span className="ax-chedio-buttox__label">{ children }</span>
       </Base>

@@ -1,5 +1,13 @@
 import React, { Component, PropTypes } from 'react';
-import { ButtonGroup, Button, Paragraph, Dialog, DialogBody, DialogFooter, DialogHeader } from 'bw-axiom';
+import {
+  ButtonGroup,
+  Button,
+  Paragraph,
+  Dialog,
+  DialogBody,
+  DialogFooter,
+  DialogHeader,
+} from 'bw-axiom';
 
 export default class DialogDemo extends Component {
   static propTypes = {
