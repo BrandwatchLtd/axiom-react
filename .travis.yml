@@ -4,9 +4,9 @@ script:
   - yarn lint
   - yarn test
 before_install:
-  - bash ./ssh.sh
+  - bash ./deploy/ssh.sh
 after_success:
-  - bash ./deploy.sh
+  - bash ./deploy/deploy.sh
 env:
   global:
   - SOURCE_BRANCH: master
