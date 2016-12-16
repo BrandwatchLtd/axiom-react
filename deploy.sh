@@ -28,7 +28,7 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
 # Clean static existing contents
-rm -rf static/**/* || exit 0
+# rm -rf static/**/* || exit 0
 
 # Run our compile script
 doCompile
@@ -47,9 +47,8 @@ fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
-git add --all .
+git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
-
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 # ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
