@@ -23,7 +23,7 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
 # Create static files
-BASENAME_ENV="'/axiom/'" NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js
+BASENAME_ENV="'/axiom/'" NODE_ENV=production BABEL_ENV=production $(npm bin)/webpack --config webpack.static.config.js
 
 cd static
 
