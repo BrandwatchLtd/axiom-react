@@ -2,7 +2,7 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="master"
-TARGET_BRANCH="gh-pages-test2"
+TARGET_BRANCH="gh-pages-travis-deploy-test"
 
 function doCompile {
   yarn build-static
@@ -27,14 +27,20 @@ cd static
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
+echo "FIRST STATUS"
+git status
+
 # Clean static existing contents
-# rm -rf static/**/* || exit 0
+rm -rf static/**/* || exit 0
 
 # Run our compile script
 doCompile
 
 # Now let's go have some fun with the cloned repo
 cd static
+
+echo "GIT STATUS"
+git status
 
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
@@ -47,7 +53,7 @@ fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
-git add .
+git add --all .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc

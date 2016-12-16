@@ -5,7 +5,7 @@ import { Avatar, Grid, GridCell } from 'bw-axiom';
 export default class AvatarExample extends Component {
   render() {
     return (
-      <Example name="Sized Avatars changed title">
+      <Example name="Sized Avatars">
         <Snippet>
           <Grid snippetIgnore={ true } vAlign="bottom">
             <GridCell shrink={ true } snippetIgnore={ true }>

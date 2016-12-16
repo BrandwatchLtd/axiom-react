@@ -5,7 +5,7 @@ import { Base, Paragraph } from 'bw-axiom';
 export default class BaseExample extends Component {
   render() {
     return (
-      <Example name="Base component test change">
+      <Example name="Base component">
         <Paragraph>
           The Base component provides a way to add global abilities to every
           component. For example text alignment. The idea is to remove the need
