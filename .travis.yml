@@ -6,7 +6,7 @@ script:
 before_install:
   - bash ./ssh.sh
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH ]; then yarn gh-pages ; fi
+  - yarn gh-pages
 env:
   global:
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages
