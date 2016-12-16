@@ -2,7 +2,6 @@
   "moduleNameMapper": {
     "^.+\\.(scss|css|less)$": "<rootDir>/test/__mocks__/styleMock.js"
   },
-  "testRegex": "\\.(test|tests|spec)\\.(js|jsx)$",
   "moduleFileExtensions": ["js"],
   "moduleDirectories": ["node_modules"],
   "globals": {
