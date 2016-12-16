@@ -4,9 +4,10 @@ script:
   - yarn lint
   - yarn test
 before_install:
-  - bash ./ssh.sh
+  - ./ssh.sh
 after_success:
-  - git config --global user.email "travis@github-pages" && git config --global user.name "Travis" && yarn gh-pages
+  - ./deploy.sh
 env:
   global:
+  - COMMIT_AUTHOR_NAME: Travis CI
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages
