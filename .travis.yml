@@ -1,9 +1,12 @@
 language: node_js
 cache: yarn
 script:
-- yarn lint
-- yarn test
-- bash ./deploy.sh
+  - yarn lint
+  - yarn test
+before_install:
+  - bash ./ssh.sh
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "$SOURCE_BRANCH ]; then yarn gh-pages ; fi
 env:
   global:
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages

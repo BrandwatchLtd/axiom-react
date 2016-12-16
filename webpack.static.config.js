@@ -34,9 +34,7 @@ module.exports = {
     libraryTarget: 'umd',
   },
   plugins: [
-    new CleanWebpackPlugin(['static'], {
-      exclude: ['.git'],
-    }),
+    new CleanWebpackPlugin(['static']),
     new ExtractTextPlugin('./assets/bundle.css', { allChunks: true }),
     new CopyWebpackPlugin([{ from: './style-guide/assets', to: './assets' }]),
     new StaticSiteGeneratorPlugin('main', structureGenerator.extractPaths()),
