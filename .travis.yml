@@ -4,9 +4,9 @@ script:
   - yarn lint
   - yarn test
 before_install:
-  - ./ssh.sh
+  - bash ./ssh.sh
 after_success:
-  - ./deploy.sh
+  - bash ./deploy.sh
 env:
   global:
   - COMMIT_AUTHOR_NAME: Travis CI
