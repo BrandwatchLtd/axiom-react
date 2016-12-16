@@ -7,9 +7,3 @@ script:
 env:
   global:
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages
-before_install:
-- openssl aes-256-cbc -K $encrypted_5890ad0da7e1_key -iv $encrypted_5890ad0da7e1_iv
-  -in publish-key.enc -out publish-key -d
-- chmod 600 publish-key
-- eval "$(ssh-agent -s)"
-- ssh-add publish-key

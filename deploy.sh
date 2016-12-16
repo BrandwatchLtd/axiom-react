@@ -23,7 +23,7 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
 # Create static files
-NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js
+BASENAME_ENV="'/axiom/'" NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js
 
 cd static
 
@@ -39,6 +39,11 @@ fi
 # Commit the changes
 git add --all .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
+
+openssl aes-256-cbc -K $encrypted_5890ad0da7e1_key -iv $encrypted_5890ad0da7e1_iv -in ../publish-key.enc -out publish-key -d
+chmod 600 publish-key
+eval "$(ssh-agent -s)"
+ssh-add publish-key
 
 # Push to remote
 git push $SSH_REPO $TARGET_BRANCH
