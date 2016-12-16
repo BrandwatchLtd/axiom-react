@@ -9,5 +9,6 @@ after_success:
   - bash ./deploy.sh
 env:
   global:
+  - SOURCE_BRANCH: master
   - COMMIT_AUTHOR_NAME: Travis CI
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages
