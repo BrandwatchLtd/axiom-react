@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const structureGenerator = require('./scripts/structure-generator');
@@ -34,7 +34,9 @@ module.exports = {
     libraryTarget: 'umd',
   },
   plugins: [
-    // new CleanWebpackPlugin(['static']),
+    new CleanWebpackPlugin(['static'], {
+      exclude: ['.git'],
+    }),
     new ExtractTextPlugin('./assets/bundle.css', { allChunks: true }),
     new CopyWebpackPlugin([{ from: './style-guide/assets', to: './assets' }]),
     new StaticSiteGeneratorPlugin('main', structureGenerator.extractPaths()),

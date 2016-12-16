@@ -5,7 +5,7 @@ import { Image } from 'bw-axiom';
 export default class ImageExample extends Component {
   render() {
     return (
-      <Example name="Base Image copy test change">
+      <Example name="Base Image">
         <Snippet>
           <Image src="assets/axiom-bg.jpg" />
         </Snippet>
