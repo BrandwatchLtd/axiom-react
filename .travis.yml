@@ -6,7 +6,7 @@ script:
 before_install:
   - bash ./ssh.sh
 after_success:
-  - yarn gh-pages
+  - git config --global user.email "travis@github-pages" && git config --global user.name "Travis" && yarn gh-pages
 env:
   global:
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages
