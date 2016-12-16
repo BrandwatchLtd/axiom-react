@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
+echo "TRAVIS_SECURE_ENV_VARS?"
+echo TRAVIS_SECURE_ENV_VARS
+echo "----TRAVIS_SECURE_ENV_VARS----"
+
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages-test"
 
@@ -57,7 +61,7 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 # ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 # ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 # openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../publish-key.enc -out publish-key -d
-# openssl aes-256-cbc -K $encrypted_5890ad0da7e1_key -iv $encrypted_5890ad0da7e1_iv -in ../publish-key.enc -out publish-key -d
+openssl aes-256-cbc -K $encrypted_5890ad0da7e1_key -iv $encrypted_5890ad0da7e1_iv -in publish-key.enc -out publish-key -d
 chmod 600 ../publish-key
 eval `ssh-agent -s`
 ssh-add ../publish-key
