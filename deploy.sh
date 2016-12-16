@@ -58,9 +58,9 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 # ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 # openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../publish-key.enc -out publish-key -d
 # openssl aes-256-cbc -K $encrypted_5890ad0da7e1_key -iv $encrypted_5890ad0da7e1_iv -in ../publish-key.enc -out publish-key -d
-chmod 600 publish-key
+chmod 600 ../publish-key
 eval `ssh-agent -s`
-ssh-add publish-key
+ssh-add ../publish-key
 
 # Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
