@@ -2,7 +2,7 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="master"
-TARGET_BRANCH="gh-pages-test"
+TARGET_BRANCH="gh-pages-test2"
 
 function doCompile {
   yarn build-static
