@@ -6,15 +6,15 @@ export default class GridExample extends Component {
   render() {
     return (
       <Example name="Flex widths (grid level)">
-        <Heading>Full width</Heading>
+        <Heading>Fill width</Heading>
         <Snippet>
-          <Grid full={ true }>
+          <Grid fill={ true }>
             <GridCell snippetReplace={ true }>
-              <DemoBox>Full</DemoBox>
+              <DemoBox>Fill</DemoBox>
             </GridCell>
 
             <GridCell snippetReplace={ true }>
-              <DemoBox>Full</DemoBox>
+              <DemoBox>Fill</DemoBox>
             </GridCell>
           </Grid>
         </Snippet>
@@ -28,6 +28,32 @@ export default class GridExample extends Component {
 
             <GridCell snippetReplace={ true }>
               <DemoBox>Fit</DemoBox>
+            </GridCell>
+          </Grid>
+        </Snippet>
+
+        <Heading>Full width</Heading>
+        <Snippet>
+          <Grid full={ true }>
+            <GridCell snippetReplace={ true }>
+              <DemoBox>Full</DemoBox>
+            </GridCell>
+
+            <GridCell snippetReplace={ true }>
+              <DemoBox>Full</DemoBox>
+            </GridCell>
+          </Grid>
+        </Snippet>
+
+        <Heading>Shrink width</Heading>
+        <Snippet>
+          <Grid shrink={ true }>
+            <GridCell snippetReplace={ true }>
+              <DemoBox>Shrink</DemoBox>
+            </GridCell>
+
+            <GridCell snippetReplace={ true }>
+              <DemoBox>Shrink</DemoBox>
             </GridCell>
           </Grid>
         </Snippet>

@@ -40,7 +40,7 @@ export default class GridExample extends Component {
         <Heading>Horizontal</Heading>
         <Snippet>
           { hAlign.values.map((hAlign) =>
-            <Grid hAlign={ hAlign } key={ hAlign }>
+            <Grid hAlign={ hAlign } key={ hAlign } shrink={ true }>
               <GridCell snippetReplace={ true }>
                 <DemoBox>{ hAlign }</DemoBox>
               </GridCell>

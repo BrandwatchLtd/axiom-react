@@ -40,18 +40,16 @@
 
   @include grid-breakpoint($breakpoint-width) {
     .ax-grid {
-      > .ax-grid__cell--fit#{$size-class}     { flex: 1; }
+      > .ax-grid__cell--fill#{$size-class}    { flex: 1 1 auto; }
+      > .ax-grid__cell--fit#{$size-class}     { flex: 1 1 0%; }
       > .ax-grid__cell--full#{$size-class}    { flex: 0 0 100%; }
       > .ax-grid__cell--shrink#{$size-class}  { flex: 0 1 auto; }
       > .ax-grid__cell--percent#{$size-class} { flex: none; }
 
-      &.ax-grid--fit#{$size-class} > .ax-grid__cell {
-        flex: 1;
-      }
-
-      &.ax-grid--full#{$size-class} > .ax-grid__cell {
-        flex: 0 0 100%;
-      }
+      &.ax-grid--fill#{$size-class} > .ax-grid__cell   { flex: 1 1 auto; }
+      &.ax-grid--fit#{$size-class} > .ax-grid__cell    { flex: 1 1 0%; }
+      &.ax-grid--full#{$size-class} > .ax-grid__cell   { flex: 0 0 100%; }
+      &.ax-grid--shrink#{$size-class} > .ax-grid__cell { flex: 0 1 auto; }
     }
   }
 }

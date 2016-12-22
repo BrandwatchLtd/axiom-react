@@ -19,7 +19,7 @@
 
 // Grid Cell: Base
 .ax-grid__cell {
-  flex: 1;
+  flex: 1 1 0%;
   min-width: 0;
 }
 
@@ -77,6 +77,13 @@
   }
 }
 
+// Create the grid sizing classes to span all breakpoints
+@include make-responsive-grid(false);
+
+// Create the responsive grid
+@include for-each-breakpoint {
+  @include make-responsive-grid(true);
+}
 
 // Grid Cell: Sizing
 // When below the lowest given breakpoint cells
@@ -90,12 +97,4 @@
       }
     }
   }
-}
-
-// Create the grid sizing classes to span all breakpoints
-@include make-responsive-grid(false);
-
-// Create the responsive grid
-@include for-each-breakpoint {
-  @include make-responsive-grid(true);
 }

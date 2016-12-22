@@ -9,6 +9,10 @@ if (__INCLUDE_CSS__) {
 export default class Grid extends Component {
   static propTypes = {
     children: PropTypes.node,
+    fill: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
     fit: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
@@ -24,6 +28,10 @@ export default class Grid extends Component {
     hAlign: PropTypes.oneOf(['left', 'center', 'right', 'around', 'between']),
     hGutters: PropTypes.bool,
     responsive: PropTypes.bool,
+    shrink: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['small', 'medium', 'large']),
+    ]),
     vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
     vGutters: PropTypes.bool,
   };
@@ -43,8 +51,10 @@ export default class Grid extends Component {
       gutters,
       vGutters,
       hGutters,
-      full,
+      fill,
       fit,
+      full,
+      shrink,
       vAlign,
       hAlign,
       ...rest
@@ -57,10 +67,14 @@ export default class Grid extends Component {
         'ax-grid--gutters-none-v': vGutters === false,
         'ax-grid--gutters-none-h': hGutters === false,
         [`ax-grid--gutters--${gutters}`]: typeof gutters === 'string',
-        'ax-grid--full': full === true,
-        [`ax-grid--full--${full}`]: full && full !== true,
+        'ax-grid--fill': fill === true,
+        [`ax-grid--fill--${fill}`]: fill && fill !== true,
         'ax-grid--fit': fit === true,
         [`ax-grid--fit--${fit}`]: fit && fit !== true,
+        'ax-grid--full': full === true,
+        [`ax-grid--full--${full}`]: full && full !== true,
+        'ax-grid--shrink': shrink === true,
+        [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
         'ax-grid--top': vAlign === 'top',
         'ax-grid--middle': vAlign === 'middle',
         'ax-grid--bottom': vAlign === 'bottom',
