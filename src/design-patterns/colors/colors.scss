@@ -1,33 +1,36 @@
 @import './vars';
 
 :root {
-  #{--color-white-0}: $color-white-0;
-  #{--color-black-0}: $color-black-0;
-  #{--color-grey-0}: $color-grey-0;
-  #{--color-grey-1}: $color-grey-1;
-  #{--color-grey-2}: $color-grey-2;
-  #{--color-grey-3}: $color-grey-3;
-  #{--color-grey-4}: $color-grey-4;
-  #{--color-grey-5}: $color-grey-5;
-  #{--color-grey-6}: $color-grey-6;
-  #{--color-grey-7}: $color-grey-7;
-  #{--color-grey-8}: $color-grey-8;
-  #{--color-grey-9}: $color-grey-9;
-  #{--color-grey-10}: $color-grey-10;
-  #{--color-grey-11}: $color-grey-11;
-  #{--color-blue-0}: $color-blue-0;
-  #{--color-blue-1}: $color-blue-1;
-  #{--color-blue-2}: $color-blue-2;
-  #{--color-red-0}: $color-red-0;
-  #{--color-pink-0}: $color-pink-0;
-  #{--color-orange-0}: $color-orange-0;
-  #{--color-orange-light-0}: $color-orange-light-0;
-  #{--color-yellow-0}: $color-yellow-0;
-  #{--color-green-0}: $color-green-0;
-  #{--color-blue-light-0}: $color-blue-light-0;
-  #{--color-purple-0}: $color-purple-0;
+  #{--color-ui-dark-0}: $color-ui-dark-0;
+  #{--color-ui-dark-1}: $color-ui-dark-1;
+  #{--color-ui-dark-2}: $color-ui-dark-2;
 
-  #{--color-primary-0}: $color-primary-0;
-  #{--color-primary-1}: $color-primary-1;
-  #{--color-primary-2}: $color-primary-2;
+  #{--color-ui-primary-0}: $color-ui-primary-0;
+  #{--color-ui-primary-1}: $color-ui-primary-1;
+  #{--color-ui-primary-2}: $color-ui-primary-2;
+
+  #{--color-ui-light-0}: $color-ui-light-0;
+  #{--color-ui-light-1}: $color-ui-light-1;
+  #{--color-ui-light-2}: $color-ui-light-2;
+  #{--color-ui-white}: $color-ui-white;
+
+  #{--color-ui-valid}: $color-ui-valid;
+  #{--color-ui-invalid}: $color-ui-invalid;
+
+  #{--color-brand-pink}: $color-brand-pink;
+  #{--color-brand-orange}: $color-brand-orange;
+  #{--color-brand-amber}: $color-brand-amber;
+  #{--color-brand-yellow}: $color-brand-yellow;
+  #{--color-brand-green}: $color-brand-green;
+  #{--color-brand-aqua}: $color-brand-aqua;
+  #{--color-brand-blue}: $color-brand-blue;
+  #{--color-brand-purple}: $color-brand-purple;
+  #{--color-brand-grey}: $color-brand-grey;
+
+  #{--color-context-component-border}: $color-context-component-border;
+
+  #{--color-context-disabled-background}: $color-context-disabled-background;
+  #{--color-context-disabled-text}: $color-context-disabled-text;
+  #{--color-context-subtle-text}: $color-context-subtle-text;
+  #{--color-context-standard-text}: $color-context-standard-text;
 }

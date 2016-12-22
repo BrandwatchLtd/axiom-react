@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import Base from '../base/Base';
-import Link from '../typography/Link';
 
 if (__INCLUDE_CSS__) {
   require('./MenuItem.scss');
@@ -9,28 +8,23 @@ if (__INCLUDE_CSS__) {
 
 export default class MenuItem extends Component {
   static propTypes = {
+    active: PropTypes.bool,
     children: PropTypes.node,
-    isActive: PropTypes.bool,
-    isDisabled: PropTypes.bool,
+    disabled: PropTypes.bool,
   };
 
   render() {
-    const { className, children, isActive, isDisabled, ...rest } = this.props;
+    const { className, children, active, disabled, ...rest } = this.props;
     const classes = classnames(className, 'ax-menu__item', {
-      'ax-menu__item--active': isActive,
-      'ax-menu__item--disabled': isDisabled,
+      'ax-menu__item--active': active,
+      'ax-menu__item--disabled': disabled,
     });
 
     return (
       <Base Component="li" className={ classes }>
-        <Link
-            className="ax-menu__item-link"
-            disabled={ isDisabled }
-            inheritColor={ true }
-            noDecoration={ true }
-            { ...rest }>
+        <button { ...rest } className="ax-menu__item-button" disabled={ disabled }>
           { children }
-        </Link>
+        </button>
       </Base>
     );
   }

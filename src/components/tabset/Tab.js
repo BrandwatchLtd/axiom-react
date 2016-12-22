@@ -10,7 +10,7 @@ export default class Tab extends Component {
     const { title, ...rest } = this.props;
 
     return (
-      <MenuItem { ...rest }>
+      <MenuItem { ...rest } title={ title }>
         { title }
       </MenuItem>
     );

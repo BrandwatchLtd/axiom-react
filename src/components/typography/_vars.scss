@@ -1,14 +1,22 @@
 $font-family-body: 'Roboto', Helvetica, Arial, sans-serif;
 
-$font-size-body: 14px;
-$font-size-md: 12px;
-$font-size-sm: 11px;
-
-$font-weight-thin: 100;
-$font-weight-light: 300;
+$font-weight-thin:    100;
+$font-weight-light:   300;
 $font-weight-regular: 400;
-$font-weight-bold: 500;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
 
-$line-height-body: 1.6;
+$font-size-heading-display:  40px;
+$font-size-heading-headline: 22px;
+$font-size-heading-title:    18px;
+$font-size-heading-large:    16px;
+
+$font-size-body:  13px;
+$font-size-small: 12px;
+
+$line-height-body:    1.4;
 $line-height-body-px: floor($font-size-body * $line-height-body);
 $line-height-heading: 1.2;
+
+$letter-spacing-large: -0.2px;
+$letter-spacing-small:  0.03px;

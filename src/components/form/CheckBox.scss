@@ -27,12 +27,12 @@
 
   &:hover:not(:checked):not(:disabled) {
     + .ax-checkbox__indicator::before {
-      border-color: $input-placeholder-color;
+      border-color: $input-border-color;
     }
   }
 
   &:focus {
-    border-color: $input-focus-color;
+    border-color: $input-focus-border-color;
   }
 
   &:checked {

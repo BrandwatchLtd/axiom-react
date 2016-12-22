@@ -1,0 +1,37 @@
+@import '../../design-patterns/spacing/vars';
+@import '../../design-patterns/spacing/mixins';
+@import './vars';
+
+$heading-map: (
+  'display': ($font-size-heading-display, $font-weight-thin, $font-weight-medium, -1),
+  'headline': ($font-size-heading-headline, -1, $font-weight-medium, -1),
+  'title': ($font-size-heading-title, -1, $font-weight-regular, $font-weight-bold),
+  'large': ($font-size-heading-large, -1, $font-weight-regular, $font-weight-bold),
+);
+
+@mixin heading($style) {
+  $font-config: map-get($heading-map, $style);
+  $size: nth($font-config, 1);
+  $weight-weak: nth($font-config, 2);
+  $weight-standard: nth($font-config, 3);
+  $weight-strong: nth($font-config, 4);
+
+  @include space-block($component-padding-lg);
+
+  font-size: $size;
+  font-weight: $weight-standard;
+  letter-spacing: $letter-spacing-large;
+  line-height: $line-height-heading;
+
+  @if $weight-weak != -1 {
+    .ax-text--weak {
+      font-weight: $weight-weak;
+    }
+  }
+
+  @if $weight-strong != -1 {
+    .ax-text--strong {
+      font-weight: $weight-strong;
+    }
+  }
+}

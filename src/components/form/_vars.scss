@@ -1,8 +1,22 @@
 @import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
+@import '../typography/vars';
 
-$input-background-color: $color-white-0;
-$input-border-color: $color-grey-3;
-$input-checked-color: $color-primary-0;
-$input-disabled-color: $color-grey-0;
-$input-focus-color: $color-primary-0;
-$input-placeholder-color: $color-grey-5;
+$input-border-width: $component-border-width;
+$input-padding-horizontal: $component-padding-lg;
+$input-padding-vertical-small: $component-padding-sm;
+$input-padding-vertical-large: $component-padding-lg;
+
+$input-border-color: $color-context-component-border;
+$input-background-color: $color-ui-white;
+$input-placeholder-color: $color-context-disabled-text;
+
+$input-disabled-background-color: $color-ui-light-1;
+
+$input-focus-border-color: fade-out($color-ui-primary-1, .5);
+$input-valid-border-color: fade-out($color-ui-valid, .6);
+$input-invalid-border-color: fade-out($color-ui-invalid, .75);
+$input-invalid-color: $color-ui-invalid;
+
+$input-checked-color: $color-ui-primary-1;
+$input-checkbox-size: $line-height-body-px + ($input-border-width * 2);

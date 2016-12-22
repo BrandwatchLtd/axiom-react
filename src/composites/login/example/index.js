@@ -19,8 +19,10 @@ class LoginExample extends Component {
         <Snippet>
           <div snippetIgnore={ true } style={ containerStyles }>
             <Login
+                application="Audiences"
                 backgroundImage="assets/axiom-bg.jpg"
-                onSubmit={ ::this.handleSubmit }/>
+                onSubmit={ ::this.handleSubmit }
+                textLight={ true } />
           </div>
         </Snippet>
       </Example>

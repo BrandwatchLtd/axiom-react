@@ -9,10 +9,10 @@
     @include transition((background-color), $transition-time-fast);
 
     position: absolute;
-    top: 25%;
-    right: 25%;
-    bottom: 25%;
-    left: 25%;
+    top: ($input-checkbox-size / 4);
+    right: ($input-checkbox-size / 4);
+    bottom: ($input-checkbox-size / 4);
+    left: ($input-checkbox-size / 4);
     border-radius: 50%;
   }
 }
@@ -29,7 +29,7 @@
   }
 
   &:focus {
-    background-color: $input-focus-color;
+    background-color: $input-focus-border-color;
   }
 
   &:checked {

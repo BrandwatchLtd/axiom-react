@@ -9,10 +9,9 @@
   bottom: 0;
   left: 0;
   flex-direction: column;
-  width: $platform-dock-size;
   margin: 0;
   padding: 0;
-  background-color: $color-grey-11;
+  background-color: $color-ui-dark-1;
   list-style: none;
   z-index: $z-index-platform;
 }

@@ -1,60 +1,53 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/animations/vars';
-@import '../../design-patterns/colors/mixins';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
 @import '../form/vars';
+@import '../typography/vars';
 
-// Input: Button
-.ax-input__button-container {
-  display: flex;
-}
-
-.ax-input__button {
-  margin: 0 0 0 $component-padding-sm;
-}
-
-// Input: Icon
-.ax-input__icon-container {
+.ax-input__container {
   @include transition((border-color), $transition-time-fast);
 
   display: flex;
   position: relative;
   flex: 1 1 auto;
   align-items: center;
-  border: $component-border-width solid $input-border-color;
+  border: $component-border-width solid $color-context-component-border;
   border-style: solid;
   border-radius: $component-border-radius;
   background-color: $input-background-color;
+  font-size: $font-size-small;
 }
 
-.ax-input__icon-container--focused {
-  border-color: $input-focus-color;
+.ax-input__container--focused {
+  border-color: $input-focus-border-color;
+}
 
-  .ax-input__icon {
-    color: $input-focus-color;
+.ax-input__container--valid {
+  border-color: $input-valid-border-color;
+}
+
+.ax-input__container--invalid {
+  border-color: $input-invalid-border-color;
+  color: $input-invalid-color;
+
+  .ax-input {
+    &::placeholder {
+      color: $input-invalid-color;
+    }
   }
 }
 
 .ax-input__icon {
-  @include transition((color), $transition-time-fast);
-
-  padding: 0 $component-padding-sm 0 0;
-  color: $input-placeholder-color;
+  padding: 0 $input-padding-horizontal 0 0;
 }
-
 
 // Input
 .ax-input {
   flex: 1 1 auto;
-  width: 100%;
-  min-width: 0;
-  padding: $component-padding-sm;
   border: 0;
   background-color: transparent;
-  color: inherit;
-  line-height: inherit;
   text-overflow: ellipsis;
   appearance: none;
 
@@ -63,7 +56,7 @@
   }
 
   &:disabled {
-    background-color: $input-disabled-color;
+    background-color: $input-disabled-background-color;
   }
 
   &:focus {
@@ -78,7 +71,7 @@
   // Hack: around webkits autofill styling
   @keyframes inputAutofillFix {
     to {
-      background-color: inherit;
+      background-color: transparent;
       color: inherit;
     }
   }
@@ -94,11 +87,22 @@
 }
 
 
-
-// Translucent coloring
-.ax-input__group--translucent {
-  .ax-input__icon-container {
-    border-color: transparent;
-    background-color: fade-out($input-background-color, .85);
+// Sizing
+.ax-input__container--small {
+  .ax-input {
+    padding: $input-padding-vertical-small $input-padding-horizontal;
   }
+}
+
+.ax-input__container--large {
+  .ax-input {
+    padding: $input-padding-vertical-large $input-padding-horizontal;
+  }
+}
+
+
+// Styles
+.ax-input__container--translucent {
+  border-color: transparent;
+  background-color: fade-out($input-background-color, .85);
 }

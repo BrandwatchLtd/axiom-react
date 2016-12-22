@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Heading, Label, LabelGroup } from 'bw-axiom';
+import { Label, LabelGroup } from 'bw-axiom';
 
 export default class LabelExample extends Component {
   static propTypes = {
@@ -19,7 +19,6 @@ export default class LabelExample extends Component {
 
     return (
       <Example name="Colored Labels">
-        <Heading>Plaette Colors</Heading>
         <Snippet>
           <LabelGroup snippetIgnore={ true }>
             { color.values.map((id) =>

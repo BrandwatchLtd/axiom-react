@@ -11,14 +11,20 @@ export default class Console extends Component {
     isVisible: PropTypes.bool,
   };
 
+  static contextTypes = {
+    consoleWidth: PropTypes.number.isRequired,
+  };
+
   render() {
     const { children, isVisible } = this.props;
+    const { consoleWidth } = this.context;
+    const style = { width: consoleWidth };
     const classes = classnames('ax-platform__console', {
       'ax-platform__console--visible': isVisible,
     });
 
     return (
-      <div className={ classes }>
+      <div className={ classes } style={ style }>
         { children }
       </div>
     );

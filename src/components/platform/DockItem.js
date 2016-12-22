@@ -8,21 +8,21 @@ if (__INCLUDE_CSS__) {
 
 export default class DockItem extends Component {
   static propTypes = {
+    active: PropTypes.bool,
     icon: PropTypes.string.isRequired,
-    isActive: PropTypes.bool,
     onClick: PropTypes.func,
   };
 
   render() {
-    const { icon, isActive, onClick } = this.props;
+    const { icon, active, onClick } = this.props;
     const classes = classnames('ax-platform__dock-item', {
-      'ax-platform__dock-item--active': isActive,
+      'ax-platform__dock-item--active': active,
     });
 
     return (
       <li className={ classes }>
         <a className="ax-platform__dock-item-link" onClick={ onClick }>
-          <Icon name={ icon } size="large" />
+          <Icon name={ icon } size={ 24 } />
         </a>
       </li>
     );

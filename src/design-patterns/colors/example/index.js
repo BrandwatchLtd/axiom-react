@@ -1,15 +1,5 @@
-import React, { Component } from 'react';
-import { Example } from 'style-guide';
-// import ColorSwatch from './ColorSwatch';
-
-class Colors extends Component {
-  render() {
-    return (
-      <Example name="Colors">
-
-      </Example>
-    );
-  }
-}
-
-module.exports = [ Colors ];
+module.exports = [
+  require('./ui-colors').default,
+  require('./branding-colors').default,
+  require('./context-colors').default,
+];

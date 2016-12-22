@@ -1,8 +1,8 @@
-import React, { Component, Children, PropTypes, cloneElement } from 'react';
+import React, { Component, Children, PropTypes } from 'react';
 import classnames from 'classnames';
 import { findComponent } from '../../utils';
 import Base from '../base/Base';
-import Icon from '../icon/Icon';
+import ButtonIcon from './ButtonIcon';
 
 if (__INCLUDE_CSS__) {
   require('./Button.scss');
@@ -11,11 +11,6 @@ if (__INCLUDE_CSS__) {
 export default class Button extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    /**
-     * Converts the button a perfect circle, purposely for smaller isometric
-     * (like icons) content.
-     */
-    circular: PropTypes.bool,
     full: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
@@ -32,7 +27,6 @@ export default class Button extends Component {
   render() {
     const {
       className,
-      circular,
       children,
       style,
       size,
@@ -44,28 +38,18 @@ export default class Button extends Component {
       'ax-button', {
         [`ax-button--${size}`]: size,
         [`ax-button--${style}`]: style,
-        'ax-button--circular': circular,
         'ax-button--full': full === true,
         [`ax-button--full--${full}`]: full && full !== true,
       },
     );
 
-    const icon = findComponent(children, Icon);
-    const filteredChildren = Children
-      .toArray(children)
-      .filter((component) => component.type !== Icon);
+    const icon = findComponent(children, ButtonIcon);
+    const filteredChildren = Children.toArray(children)
+      .filter(({ type }) => type !== ButtonIcon);
 
     return (
       <Base Component="button" { ...rest } className={ classes }>
-        { do { if (icon) {
-          cloneElement(icon, {
-            className: classnames({
-              'ax-button__icon': filteredChildren.length,
-            }),
-            size,
-          });
-        } } }
-
+        { icon }
         { filteredChildren }
       </Base>
     );

@@ -14,8 +14,9 @@
   width: $sidebar-width;
   border-right: $sidebar-border-width solid $sidebar-border-color;
   background-color: $sidebar-background-color;
+  color: $sidebar-color;
   overflow: auto;
-  z-index: 200;
+  z-index: $z-index-layout-header;
 
   @include screen-less-than($layout-change-point) {
     @include transition((transform));

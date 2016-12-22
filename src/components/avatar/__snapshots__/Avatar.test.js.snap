@@ -1,6 +1,6 @@
 exports[`Avatar renders with custom size 1`] = `
 <img
-  className="ax-avatar"
+  className="ax-avatar ax-avatar--small"
   src="/image/path"
   style={
     Object {
@@ -12,12 +12,36 @@ exports[`Avatar renders with custom size 1`] = `
 
 exports[`Avatar renders with defaultProps 1`] = `
 <img
-  className="ax-avatar"
+  className="ax-avatar ax-avatar--small"
   src="/image/path"
   style={
     Object {
       "height": 35,
       "width": 35,
+    }
+  } />
+`;
+
+exports[`Avatar renders with large when 70 or more 1`] = `
+<img
+  className="ax-avatar ax-avatar--large"
+  src="/image/path"
+  style={
+    Object {
+      "height": 70,
+      "width": 70,
+    }
+  } />
+`;
+
+exports[`Avatar renders with small when less than 70 1`] = `
+<img
+  className="ax-avatar ax-avatar--small"
+  src="/image/path"
+  style={
+    Object {
+      "height": 69,
+      "width": 69,
     }
   } />
 `;

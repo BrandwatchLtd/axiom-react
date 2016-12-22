@@ -1,16 +1,6 @@
-@import '../../design-patterns/spacing/vars';
-@import '../typography/vars';
+@import '../typography/mixins';
 
-.ax-heading {
-  margin: $component-padding-lg 0;
-  font-weight: $font-weight-regular;
-  line-height: $line-height-heading;
-
-  &:first-child { margin-top: 0; }
-  &:last-child  { margin-bottom: 0; }
-}
-
-.ax-heading--display  { font-size: 40px; }
-.ax-heading--headline { font-size: 22px; }
-.ax-heading--title    { font-size: 18px; }
-.ax-heading--large    { font-size: 16px; }
+.ax-heading--display  { @include heading('display') }
+.ax-heading--headline { @include heading('headline') }
+.ax-heading--title    { @include heading('title') }
+.ax-heading--large    { @include heading('large') }

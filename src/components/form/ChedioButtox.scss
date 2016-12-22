@@ -5,17 +5,21 @@
 @import '../form/vars';
 @import '../typography/vars';
 
-$checkbox-size: $line-height-body-px + ($component-border-width * 2);
-
 .ax-chedio-buttox__container {
   @include space-block();
 
   display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ax-chedio-buttox__container--disabled {
+  cursor: default;
 }
 
 .ax-chedio-buttox__container--space {
   .ax-chedio-buttox__indicator {
-    margin: 0 $component-margin-sm 0 0;
+    margin: 0 $component-padding-sm 0 0;
   }
 }
 
@@ -24,17 +28,12 @@ $checkbox-size: $line-height-body-px + ($component-border-width * 2);
   opacity: 0;
   z-index: -1;
 
-  + .ax-chedio-buttox__indicator,
-  ~ .ax-chedio-buttox__label {
-    cursor: pointer;
-  }
-
   + .ax-chedio-buttox__indicator {
     @include transition((background-color, border-color, color), $transition-time-fast);
     position: relative;
-    width: $checkbox-size;
-    height: $checkbox-size;
-    border: $component-border-width solid $input-border-color;
+    width: $input-checkbox-size;
+    height: $input-checkbox-size;
+    border: $input-border-width solid $input-border-color;
     background-color: $input-background-color;
 
     &::before {
@@ -44,18 +43,13 @@ $checkbox-size: $line-height-body-px + ($component-border-width * 2);
 
   &:disabled {
     + .ax-chedio-buttox__indicator {
-      background-color: $input-disabled-color;
-    }
-
-    + .ax-chedio-buttox__indicator,
-    ~ .ax-chedio-buttox__label {
-      cursor: default;
+      background-color: $input-disabled-background-color;
     }
   }
 
   &:focus {
     + .ax-chedio-buttox__indicator {
-      border-color: $input-focus-color;
+      border-color: $input-focus-border-color;
     }
   }
 }

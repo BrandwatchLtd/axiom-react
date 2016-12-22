@@ -20,4 +20,16 @@ describe('Avatar', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with small when less than 70', () => {
+    const component = getComponent({ size: 69 });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with large when 70 or more', () => {
+    const component = getComponent({ size: 70 });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

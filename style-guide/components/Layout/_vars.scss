@@ -2,15 +2,14 @@
 @import '~bw-axiom/design-patterns/layout/vars';
 
 $layout-change-point: $layout-width-sm;
-
 $z-index-layout-header: 400;
 
 $header-height-sm: 50px;
 $header-height-lg: 100px;
-$header-background-color: $color-white-0;
 
 $sidebar-width: 240px;
-$sidebar-header-background-color: $color-white-0;
-$sidebar-background-color: $color-white-0;
-$sidebar-border-color: $color-grey-2;
+$sidebar-background-color: $color-ui-white;
+$sidebar-color: $color-context-standard-text;
+$sidebar-active-color: $color-ui-primary-1;
+$sidebar-border-color: $color-ui-light-1;
 $sidebar-border-width: 1px;

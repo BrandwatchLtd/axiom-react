@@ -1,8 +1,6 @@
 @import '~bw-axiom/design-patterns/colors/vars';
 @import '~bw-axiom/design-patterns/spacing/vars';
-@import '~bw-axiom/components/typography/vars';
 
-//
 .dm-demo-box {
   display: flex;
   flex: 1 1 auto;
@@ -11,13 +9,7 @@
   justify-content: center;
   min-height: 50px;
   padding: $component-padding-sm;
-  border: $component-border-width solid $color-blue-2;
-  background-color: $color-blue-0;
-  color: $color-white-0;
-  font-size: $font-size-sm;
-  text-transform: uppercase;
-}
-
-.dm-demo-container {
-  min-height: 180px;
+  border: $component-border-width solid $color-context-component-border;
+  background-color: $color-ui-primary-1;
+  color: $color-ui-light-1;
 }

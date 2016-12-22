@@ -2,12 +2,16 @@
 @import '../../design-patterns/spacing/vars';
 
 .ax-menu {
-  @include space-block($component-padding-lg);
-
   display: flex;
-  margin: 0;
   padding: 0;
   white-space: nowrap;
   overflow: auto;
 }
 
+.ax-menu--small {
+  @include space-block($component-padding-sm);
+}
+
+.ax-menu--large {
+  @include space-block($component-padding-lg);
+}

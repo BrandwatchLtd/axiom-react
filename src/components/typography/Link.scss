@@ -2,7 +2,6 @@
 
 // Links
 a {
-  position: relative;
   color: inherit;
   font-style: inherit;
   text-decoration: inherit;
@@ -17,26 +16,11 @@ a {
 
 // sass-lint:disable no-qualifying-elements
 a.ax-link {
-  // Color links but this will need to be
-  // suppressed for things like menu.
   &:not(.ax-link--inherit-color) {
-    color: $color-primary-1;
+    color: $color-ui-primary-1;
 
-    &:hover:not(.ax-link--disabled) {
-      color: $color-primary-0;
-    }
-  }
-
-  // Underline for main links but this will need to be
-  // suppressed for things like menu links and icons.
-  &:not(.ax-link--no-decoration):not(.ax-link--disabled) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &.ax-link--disabled:hover {
-    cursor: default;
+    &:hover  { color: $color-ui-primary-2; }
+    &:active { color: $color-ui-primary-0; }
   }
 }
 // sass-lint:enable no-qualifying-elements

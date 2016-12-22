@@ -3,20 +3,13 @@
 @import '../../design-patterns/spacing/vars';
 @import '../form/vars';
 
-$textarea-height: 200px;
-
-// Textarea: Base
 .ax-textarea {
   @include transition((border-color), $transition-time-fast);
 
-  width: 100%;
-  min-height: $textarea-height;
-  padding: $component-padding-sm;
-  border: $component-border-width solid $input-border-color;
+  padding: $input-padding-vertical-small $input-padding-horizontal;
+  border: $input-border-width solid $input-border-color;
   border-radius: $component-border-radius;
   background-color: $input-background-color;
-  color: get-text-color($input-background-color);
-  line-height: inherit;
   resize: none;
 
   &::placeholder {
@@ -24,18 +17,28 @@ $textarea-height: 200px;
   }
 
   &:focus {
-    border-color: $input-focus-color;
-  }
-
-  &:disabled {
-    background-color: $input-disabled-color;
-  }
-
-  &:focus {
+    border-color: $input-focus-border-color;
     outline: none;
 
     &::placeholder {
       color: transparent;
     }
+  }
+
+  &:disabled {
+    background-color: $input-disabled-background-color;
+  }
+}
+
+.ax-textarea--valid  {
+  border-color: $input-valid-border-color;
+}
+
+.ax-textarea--invalid {
+  border-color: $input-invalid-border-color;
+  color: $input-invalid-color;
+
+  &::placeholder {
+    color: $input-invalid-color;
   }
 }

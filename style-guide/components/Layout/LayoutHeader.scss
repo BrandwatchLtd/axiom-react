@@ -15,7 +15,8 @@
   padding: 0 $page-padding-h;
   border-right: $sidebar-border-width solid $sidebar-border-color;
   border-bottom: $sidebar-border-width solid transparent;
-  background-color: $header-background-color;
+  background-color: $sidebar-background-color;
+  color: $sidebar-color;
   text-align: center;
   z-index: $z-index-layout-header;
 

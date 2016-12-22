@@ -6,7 +6,7 @@
 .dm-layout__main {
   display: flex;
   position: relative;
-  flex: 1;
+  flex: 1 1 0%;
   flex-direction: column;
 
   .dm-layout__header ~ & {

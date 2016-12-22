@@ -9,11 +9,18 @@ if (__INCLUDE_CSS__) {
 export default class Menu extends Component {
   static propTypes = {
     children: PropTypes.node,
+    size: PropTypes.oneOf(['small', 'large']),
+  };
+
+  static defaultProps = {
+    size: 'small',
   };
 
   render() {
-    const { className, children, ...rest } = this.props;
-    const classes = classnames('ax-menu', className);
+    const { className, children, size, ...rest } = this.props;
+    const classes = classnames(className, 'ax-menu', {
+      [`ax-menu--${size}`]: size,
+    });
 
     return (
       <Base { ...rest } Component="ul" className={ classes }>

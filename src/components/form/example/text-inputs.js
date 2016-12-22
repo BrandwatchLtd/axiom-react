@@ -20,6 +20,21 @@ export default class FormExample extends Component {
                   placeholder="Disabled input..." />
             </GridCell>
           </Grid>
+
+          <Grid snippetIgnore={ true }>
+            <GridCell snippetIgnore={ true }>
+              <TextInput
+                  label="Valid"
+                  placeholder="Valid input..."
+                  valid={ true } />
+            </GridCell>
+            <GridCell snippetIgnore={ true }>
+              <TextInput
+                  invalid={ true }
+                  label="Invalid"
+                  placeholder="Invalid input..." />
+            </GridCell>
+          </Grid>
         </Snippet>
       </Example>
     );

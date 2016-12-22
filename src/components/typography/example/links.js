@@ -16,14 +16,6 @@ export default class TypeExample extends Component {
             elit. Donec tempus ut felis vitae hendrerit.
           </Paragraph>
         </Snippet>
-
-        <Heading>Disabled links</Heading>
-        <Snippet>
-          <Paragraph snippetIgnore={ true }>
-            Lorem ipsum dolor sit amet, <Link disabled={ true }>consectetur</Link> adipiscing
-            elit. Donec tempus ut felis vitae hendrerit.
-          </Paragraph>
-        </Snippet>
       </Example>
     );
   }

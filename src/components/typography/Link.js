@@ -10,9 +10,7 @@ if (__INCLUDE_CSS__) {
 export default class Link extends Component {
   static propTypes = {
     children: PropTypes.node,
-    disabled: PropTypes.bool,
     inheritColor: PropTypes.bool,
-    noDecoration: PropTypes.bool,
     supressStyle: PropTypes.bool,
     to: PropTypes.string,
   };
@@ -22,18 +20,14 @@ export default class Link extends Component {
       className,
       children,
       to,
-      disabled,
       inheritColor,
-      noDecoration,
       supressStyle,
       ...rest
     } = this.props;
 
     const classes = classnames(className, {
       'ax-link': supressStyle !== true,
-      'ax-link--disabled': disabled,
       'ax-link--inherit-color': inheritColor,
-      'ax-link--no-decoration': noDecoration,
     });
 
     if (to) {

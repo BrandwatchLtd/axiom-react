@@ -61,7 +61,7 @@ export default class ApiDocsProp extends Component {
             <LabelGroup>
               { do {
                 if (defaultValue !== undefined) {
-                  <Label color="blue" size="small">
+                  <Label color="grey" size="small">
                     Default: <Italic>{ defaultValue.computed
                       ? 'Computed'
                       : JSON.stringify(defaultValue.value)
@@ -71,7 +71,7 @@ export default class ApiDocsProp extends Component {
               } }
 
               { do { if (required) {
-                <Label color="red" size="small">Required</Label>;
+                <Label color="invalid" size="small">Required</Label>;
               } } }
             </LabelGroup>
           </GridCell>

@@ -48,9 +48,9 @@ body {
 .ax-text--break-all  { white-space: initial; word-break: break-all; }
 .ax-text--break-word { white-space: initial; word-wrap: break-word; }
 
-.ax-text--light  { color: $text-color-light; }
-.ax-text--subtle { color: $text-color-subtle; }
-.ax-text--dark   { color: $text-color-dark; }
+.ax-text--light  { color: $color-ui-light-1; } // Revisit
+.ax-text--subtle { color: $color-context-subtle-text; }
+.ax-text--dark   { color: $color-context-standard-text; }
 
 //
 .ax-text--ellipsis {

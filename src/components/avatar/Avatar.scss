@@ -1,5 +1,11 @@
+@import '../../design-patterns/colors/vars';
+
 // Avatar Base
 .ax-avatar {
   display: block;
+  border: 0 solid $color-context-component-border;
   border-radius: 50%;
 }
+
+.ax-avatar--small { border-width: 1px; }
+.ax-avatar--large { border-width: 2px; }

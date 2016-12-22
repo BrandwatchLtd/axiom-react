@@ -24,12 +24,12 @@ export default class LayoutHeader extends Component {
       <header className={ classes }>
         <Grid responsive={ false } vAlign="middle">
           <GridCell>
-            <Heading>{ children }</Heading>
+            <Heading style="title">{ children }</Heading>
           </GridCell>
 
           <GridCell shrink={ true } visibleUntil="small">
-            <Link inheritColor={ true } noDecoration={ true } onClick={ toggleSidebar } >
-              <Icon name="ellipsis" size="large" />
+            <Link inheritColor={ true } onClick={ toggleSidebar }>
+              <Icon name="ellipsis" />
             </Link>
           </GridCell>
         </Grid>

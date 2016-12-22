@@ -1,3 +1,4 @@
+@import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
 
@@ -20,6 +21,7 @@
 
     &::after {
       margin: 0 0 0 $component-padding-sm;
+      color: $color-context-component-border;
       content: '|';
     }
 

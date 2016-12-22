@@ -23,8 +23,11 @@ export default class Avatar extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className, 'ax-avatar');
     const style = { height: size, width: size };
+    const classes = classnames(className, 'ax-avatar', {
+      'ax-avatar--small': size < 70,
+      'ax-avatar--large': size >= 70,
+    });
 
     return (
       <Image { ...rest } className={ classes } style={ style }  />

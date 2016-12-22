@@ -8,7 +8,7 @@
 
 .dm-api-docs-list__item {
   padding: $container-margin-sm 0;
-  border-bottom: $component-border-width solid $color-grey-2;
+  border-bottom: $component-border-width solid $color-context-component-border;
 
   &:last-child {
     padding-bottom: 0;

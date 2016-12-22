@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { ButtonGroup, Button, Icon } from 'bw-axiom';
+import { ButtonGroup, Button, ButtonIcon } from 'bw-axiom';
 
 export default class ButtonExample extends Component {
   static propTypes = {
@@ -24,7 +24,7 @@ export default class ButtonExample extends Component {
             { size.values.map((size) =>
               <Button key={ size } size={ size }>
                 Button ({ size.toUpperCase() })
-                <Icon name="twitter" />
+                <ButtonIcon name="twitter" />
               </Button>
             ) }
           </ButtonGroup>

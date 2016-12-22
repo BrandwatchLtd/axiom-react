@@ -37,17 +37,15 @@ export default class Tabset extends Component {
     const tabs = Children.toArray(children)
       .filter(({ type }) => type === Tab)
       .map((child, index) => cloneElement(child, {
-        isActive: index === activeTabIndex,
+        active: index === activeTabIndex,
         onClick: () => this.activateTab(index),
       }));
 
     return (
       <Base { ...omit(rest, ['activeTabIndex']) } className="ax-tabset">
-        <div className="ax-tabset__menu">
-          <Menu>
-            { tabs }
-          </Menu>
-        </div>
+        <Menu>
+          { tabs }
+        </Menu>
 
         <div className="ax-tabset__content">
           { activeTabContent }

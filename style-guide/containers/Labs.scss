@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   background-image: (
-    repeating-linear-gradient(0deg, transparent, transparent 10px, $color-grey-2 1px, transparent 11px),
-    repeating-linear-gradient(90deg, transparent, transparent 10px, $color-grey-2 1px, transparent 11px)
+    repeating-linear-gradient(0deg, transparent, transparent 10px, $color-ui-light-1 1px, transparent 11px),
+    repeating-linear-gradient(90deg, transparent, transparent 10px, $color-ui-light-1 1px, transparent 11px)
   );
 }

@@ -40,45 +40,49 @@ export default class PlatformExample extends Component {
     return (
       <Example name="Platform">
         <div style={ containerStyle }>
-          <Platform>
+          <Platform consoleWidth={ 420 }>
             <Dock>
               <DockItem
+                  active={ active === 0 }
                   icon="burger"
-                  isActive={ active === 0 }
                   onClick={ () => this.setActive(0, active) }>
 
               </DockItem>
 
               <DockItem
+                  active={ active === 1 }
                   icon="twitter"
-                  isActive={ active === 1 }
                   onClick={ () => this.setActive(1, active) }>
 
               </DockItem>
 
               <DockItem
+                  active={ active === 2 }
                   icon="ellipsis"
-                  isActive={ active === 2 }
                   onClick={ () => this.setActive(2, active) }>
 
               </DockItem>
             </Dock>
 
             <Console isVisible={ !!consoleContent[active] }>
-              { consoleContent[active] ? consoleContent[active] : null }
+              <div style={ { padding: 12 } }>
+                { consoleContent[active] ? consoleContent[active] : null }
+              </div>
             </Console>
 
             <Canvas isShifted={ !!consoleContent[active] }>
-              { canvasContent[active] || canvasContent[previousActive] }
+              <div style={ { padding: 12 } }>
+                { canvasContent[active] || canvasContent[previousActive] }
+              </div>
             </Canvas>
 
           </Platform>
         </div>
 
         <Snippet>
-          <Platform renderSkip={ true }>
+          <Platform consoleWidth={ 420 } renderSkip={ true }>
             <Dock>
-              <DockItem icon="ellipsis" isActive={ true }>DockItem</DockItem>
+              <DockItem active={ true } icon="ellipsis">DockItem</DockItem>
             </Dock>
 
             <Console isVisible={ true }>Console</Console>

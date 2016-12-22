@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { Link } from 'bw-axiom';
+import { Link, Strong } from 'bw-axiom';
 import NavList from './NavList';
 
 if (__INCLUDE_CSS__) {
@@ -53,7 +53,9 @@ export default class NavListItem extends Component {
             className="dm-nav__link"
             onClick={ createOnItemClickHandler() }
             supressStyle={ true }
-            to={ to }>{ name }</Link>
+            to={ to }>
+          <Strong>{ name }</Strong>
+        </Link>
 
         { do {
           if (hasChildren) {

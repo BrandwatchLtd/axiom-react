@@ -36,16 +36,16 @@ rules:
       convention: hyphenatedlowercase
   hex-length:
     - 1
-    - style: short
+    - style: long
   hex-notation:
     - 1
-    - style: lowercase
+    - style: uppercase
   id-name-format: 1
   indentation:
     - 1
     - size: 2
   leading-zero:
-    - 1
+    - 0
     - include: false
   mixin-name-format:
     - 1
@@ -80,7 +80,7 @@ rules:
     - allow-element-with-attribute: false
       allow-element-with-class: false
       allow-element-with-id: false
-  no-trailing-zero: 1
+  no-trailing-zero: 0
   no-url-protocols: 1
   no-vendor-prefixes:
     - 1
