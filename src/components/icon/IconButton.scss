@@ -1,0 +1,32 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/animations/vars';
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
+@import '../../design-patterns/spacing/mixins';
+
+.ax-icon-button {
+  @include space-inline();
+  @include transition((background-color, border-color, color), $transition-time-fast);
+
+  border: $component-border-width solid $color-context-component-border;
+  border-style: solid;
+  border-radius: 50%;
+  color: $color-context-subtle-text;
+  line-height: 0;
+
+  &:hover {
+    border-color: transparent;
+    background-color: $color-context-component-border;
+    color: $color-ui-primary-1;
+  }
+
+  &:active {
+    border-color: transparent;
+    background-color: $color-ui-primary-1;
+    color: $color-ui-light-1;
+  }
+}
+
+.ax-icon-button--small  { padding: $component-padding-sm; }
+.ax-icon-button--medium { padding: $component-padding-md; }
+.ax-icon-button--large  { padding: $component-padding-lg; }

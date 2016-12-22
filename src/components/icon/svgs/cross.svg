@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
     <title>cross</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="cross" fill="#000000">
-            <polygon points="6.68232327 10 0 3.31767673 3.31767673 0 10 6.68232327 16.6823233 0 20 3.31767673 13.3176767 10 20 16.6823233 16.6823233 20 10 13.3176767 3.31767673 20 0 16.6823233"></polygon>
+    <g id="Assets---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cross" fill="#48464F">
+            <path d="M5.5,7 L2,3.5 L3.5,2 L7,5.5 L10.5,2 L12,3.5 L8.5,7 L12,10.5 L10.5,12 L7,8.5 L3.5,12 L2,10.5 L5.5,7 Z"></path>
         </g>
     </g>
 </svg>

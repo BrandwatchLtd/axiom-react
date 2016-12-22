@@ -22,9 +22,9 @@ export default class IconExample extends Component {
         <Grid>
           { name.values.map((name) =>
             <GridCell key={ name } width={ 25 }>
-              <Grid responsive={ false }>
+              <Grid responsive={ false } vAlign="middle">
                 <GridCell shrink={ true }>
-                  <Icon name={ name } />
+                  <Icon name={ name } size={ 24 } />
                 </GridCell>
 
                 <GridCell>
