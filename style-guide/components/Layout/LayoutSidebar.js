@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import GithubLink from '../GithubLink/GithubLink';
 
 if (__INCLUDE_CSS__) {
   require('./LayoutSidebar.scss');
@@ -16,7 +17,13 @@ export default class LayoutSidebar extends Component {
 
     return (
       <div className={ classes }>
-        { children }
+        <div className="dm-layout__sidebar-body">
+          { children }
+        </div>
+
+        <div className="dm-layout__sidebar-footer">
+          <GithubLink />
+        </div>
       </div>
     );
   }
