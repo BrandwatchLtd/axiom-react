@@ -24,7 +24,7 @@
 
   &:hover:not(:checked):not(:disabled) {
     + .ax-radio__indicator::before {
-      background-color: $input-placeholder-color;
+      background-color: $input-border-color;
     }
   }
 
@@ -40,7 +40,7 @@
 
   &:disabled:checked {
     + .ax-radio__indicator::before {
-      background-color: $input-placeholder-color;
+      background-color: $input-border-color;
     }
   }
 }

@@ -105,4 +105,10 @@
 .ax-input__container--translucent {
   border-color: transparent;
   background-color: fade-out($input-background-color, .85);
+
+  .ax-input {
+    &::placeholder {
+      color: fade-out($color-ui-light-1, 0.4);
+    }
+  }
 }

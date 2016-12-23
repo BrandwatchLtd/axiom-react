@@ -43,7 +43,7 @@
 
   &:disabled:checked {
     + .ax-checkbox__indicator::before {
-      border-color: $input-placeholder-color;
+      border-color: $input-border-color;
     }
   }
 }
