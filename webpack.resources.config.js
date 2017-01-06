@@ -1,0 +1,51 @@
+const path = require('path');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+module.exports = {
+  entry: ['./src/index.js'],
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loaders: ['babel'],
+    }, {
+      test: /\.s?css$/,
+      loader: ExtractTextPlugin.extract('style', 'css?minimize!postcss!sass'),
+    }],
+  },
+  output: {
+    filename: './dist/axiom.min.js',
+  },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new ExtractTextPlugin('./dist/axiom.min.css', { allChunks: true }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        keep_fnames: true,
+      },
+    }),
+    new webpack.DefinePlugin({
+      __INCLUDE_CSS__: true,
+      __DEVELOPMENT__: false,
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+  ],
+  resolve: {
+    alias: {
+      'bw-axiom': path.resolve(__dirname, 'src'),
+    },
+  },
+  postcss: () => [
+    autoprefixer({ browsers: ['last 2 versions'] }),
+  ],
+};

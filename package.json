@@ -1,7 +1,7 @@
 {
   "name": "bw-axiom",
-  "description": "",
-  "version": "0.0.8",
+  "description": "Axiom - Brandwatch Pattern Library",
+  "version": "0.0.1",
   "main": "./lib",
   "license": "MIT",
   "homepage": "BrandwatchLtd.github.io/axiom",
@@ -16,6 +16,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "build-resources": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.resources.config.js",
     "build-static": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js",
     "gh-pages": "BASENAME_ENV=\"'/axiom/'\" yarn build-static && gh-pages -d ./static",
     "lint": "yarn run lint-js && yarn run lint-sass",
