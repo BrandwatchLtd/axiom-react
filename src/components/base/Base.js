@@ -19,14 +19,13 @@ export default class Base extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    textDark: PropTypes.bool,
+    textDisabled: PropTypes.bool,
     textEllipsis: PropTypes.bool,
     textInvalid: PropTypes.bool,
     textLeft: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    textLight: PropTypes.bool,
     textRight: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
@@ -35,6 +34,7 @@ export default class Base extends Component {
     textSubtle: PropTypes.bool,
     textValid: PropTypes.bool,
     textWeak: PropTypes.bool,
+    theme: PropTypes.oneOf(['light', 'dark']),
     visibleUntil: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
@@ -53,16 +53,16 @@ export default class Base extends Component {
       textBreak,
       textCase,
       textCenter,
-      textDark,
+      textDisabled,
       textEllipsis,
       textInvalid,
       textLeft,
-      textLight,
       textRight,
       textStrong,
       textSubtle,
       textValid,
       textWeak,
+      theme,
       visibleUntil,
       ...rest
     } = this.props;
@@ -85,11 +85,11 @@ export default class Base extends Component {
       'ax-text--strong': textStrong === true,
       'ax-text--weak': textWeak === true,
       [`ax-visible-until--${visibleUntil}`]: visibleUntil,
-      'ax-text--light': textLight,
       'ax-text--subtle': textSubtle,
-      'ax-text--dark': textDark,
+      'ax-text--disabled': textDisabled,
       'ax-text--valid': textValid,
       'ax-text--invalid': textInvalid,
+      [`ax-theme--${theme}`]: theme,
     });
 
     return (
