@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const packageJSON = require('./package.json');
+const version = packageJSON.version;
 
 module.exports = {
   entry: ['./src/index.js'],
@@ -20,10 +23,18 @@ module.exports = {
     filename: './dist/axiom.min.js',
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new ExtractTextPlugin('./dist/axiom.min.css', { allChunks: true }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new CleanWebpackPlugin(['dist']),
+    new ExtractTextPlugin('./dist/axiom.min.css', { allChunks: true }),
+    new ExtractTextPlugin(`./dist/axiom.${version}.min.css`, { allChunks: true }),
+    new webpack.DefinePlugin({
+      __INCLUDE_CSS__: true,
+      __DEVELOPMENT__: false,
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
@@ -32,12 +43,12 @@ module.exports = {
         keep_fnames: true,
       },
     }),
-    new webpack.DefinePlugin({
-      __INCLUDE_CSS__: true,
-      __DEVELOPMENT__: false,
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
+    new CompressionPlugin({
+      asset: '[path]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$/,
+      threshold: 10240,
+      minRatio: 0.8,
     }),
   ],
   resolve: {

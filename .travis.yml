@@ -1,12 +1,17 @@
 language: node_js
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - ~/bin
+    - ~/opt
 script:
   - yarn lint
   - yarn test
 before_install:
   - bash ./deploy/ssh.sh
 after_success:
-  - bash ./deploy/deploy.sh
+  - bash ./deploy/deploy_to_ghpages.sh
+  - bash ./deploy/deploy_to_gcp.sh
 env:
   global:
   - SOURCE_BRANCH: master
