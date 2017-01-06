@@ -4,17 +4,27 @@ import ColorSwatch from './ColorSwatch';
 
 export default class ColorsExample extends Component {
   render() {
-    const brandColors = [
-      'color-context-disabled-background',
-      'color-context-component-border',
-      'color-context-disabled-text',
-      'color-context-subtle-text',
-      'color-context-standard-text',
+    const borderColors = [
+      'color-context-border',
+    ];
+
+    const backgroundColors = [
+      'color-context-background',
+      'color-context-background-disabled',
+      'color-context-background-subtle',
+    ];
+
+    const textColors = [
+      'color-context-text',
+      'color-context-text-disabled',
+      'color-context-text-subtle',
     ];
 
     return (
       <Example name="Context">
-        <ColorSwatch colors={ brandColors } />
+        <ColorSwatch colors={ borderColors } />
+        <ColorSwatch colors={ backgroundColors } />
+        <ColorSwatch colors={ textColors } />
       </Example>
     );
   }

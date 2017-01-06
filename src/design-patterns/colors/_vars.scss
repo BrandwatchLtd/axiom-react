@@ -10,7 +10,8 @@ $color-ui-primary-2: #33A1D7;
 $color-ui-light-0: #E3E1EB;
 $color-ui-light-1: #F2F0F9;
 $color-ui-light-2: #F8F6F9;
-$color-ui-white: #FFFFFF;
+
+$color-ui-white:   #FFFFFF;
 
 $color-ui-valid: #00BE96;
 $color-ui-invalid: #F0006E;
@@ -24,12 +25,3 @@ $color-brand-aqua: #5FC3E6;
 $color-brand-blue: #008EB4;
 $color-brand-purple: #9C7CB6;
 $color-brand-grey: #969C9E;
-
-
-// Context Colours
-$color-context-component-border: rgba($color-ui-dark-0, 0.20);
-
-$color-context-disabled-background: rgba($color-ui-dark-0, 0.05);
-$color-context-disabled-text: rgba($color-ui-dark-0, 0.30);
-$color-context-subtle-text: rgba($color-ui-dark-0, 0.70);
-$color-context-standard-text: $color-ui-dark-0;

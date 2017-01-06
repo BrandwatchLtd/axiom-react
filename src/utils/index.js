@@ -4,13 +4,17 @@ export function findComponent(components, Component) {
   return Children.toArray(components).find(({ type }) => type === Component);
 }
 
-export function getCSSVar(variable) {
+export function getCSSVar(variable, context = document) {
   if (typeof window === 'undefined') {
     return '';
   }
 
+  if (context === document) {
+    context = document.documentElement;
+  }
+
   return window
-    .getComputedStyle(document.documentElement)
+    .getComputedStyle(context)
     .getPropertyValue(`--${variable}`)
     .trim();
 }

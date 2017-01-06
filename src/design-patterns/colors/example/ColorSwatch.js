@@ -5,6 +5,14 @@ if (__INCLUDE_CSS__) {
   require('./ColorSwatch.scss');
 }
 
+function getColor(color) {
+  if (typeof document === 'undefined') {
+    return '';
+  }
+
+  return getCSSVar(color) || getCSSVar(color, document.body);
+}
+
 export default class ColorSwatch extends Component {
   static propTypes = {
     colors: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -21,13 +29,13 @@ export default class ColorSwatch extends Component {
               <GridCell>
                 <div
                     className="dm-color-swatch__color"
-                    style={ { backgroundColor: getCSSVar(color) } }/>
+                    style={ { backgroundColor: getColor(color) } }/>
               </GridCell>
 
               <GridCell>
                 <Paragraph>
                   <Strong>${ color }</Strong><br />
-                  <Italic textSubtle={ true }>{ getCSSVar(color) }</Italic>
+                  <Italic textSubtle={ true }>{ getColor(color) }</Italic>
                 </Paragraph>
               </GridCell>
             </Grid>

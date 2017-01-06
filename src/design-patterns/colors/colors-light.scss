@@ -1,0 +1,15 @@
+@import './vars';
+
+// sass-lint:disable no-color-literals
+@mixin theme-light {
+  #{--color-context-border}: rgba($color-ui-dark-0, 0.20);
+
+  #{--color-context-background}: $color-ui-white;
+  #{--color-context-background-subtle}: rgba($color-ui-dark-0, 0.20);
+  #{--color-context-background-disabled}: rgba($color-ui-dark-0, 0.05);
+
+  #{--color-context-text}: $color-ui-dark-0;
+  #{--color-context-text-subtle}: rgba($color-ui-dark-0, 0.70);
+  #{--color-context-text-disabled}: rgba($color-ui-dark-0, 0.30);
+}
+// sass-lint:enable no-color-literals
