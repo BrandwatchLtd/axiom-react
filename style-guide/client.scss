@@ -1,12 +1,17 @@
 @import '~bw-axiom/design-patterns/colors/vars';
+@import '~bw-axiom/design-patterns/colors/colors-dark';
+@import '~bw-axiom/design-patterns/colors/colors-light';
+
+.dm-theme--dark  { @include theme-dark; }
+.dm-theme--light { @include theme-light; }
 
 html {
   height: 100%;
 }
 
 body {
-  background-color: $color-ui-white;
-  color: $color-context-standard-text;
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
 }
 
 body,

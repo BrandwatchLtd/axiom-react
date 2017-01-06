@@ -13,9 +13,8 @@
   left: 0;
   flex-direction: column;
   width: $sidebar-width;
-  border-right: $sidebar-border-width solid $sidebar-border-color;
-  background-color: $sidebar-background-color;
-  color: $sidebar-color;
+  border-right: $sidebar-border-width solid var(--color-context-border);
+  background-color: var(--color-context-background);
   z-index: $z-index-layout-header;
 
   @include screen-less-than($layout-change-point) {

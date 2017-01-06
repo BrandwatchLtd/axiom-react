@@ -13,10 +13,9 @@
   width: $sidebar-width;
   height: $header-height-lg;
   padding: 0 $page-padding-h;
-  border-right: $sidebar-border-width solid $sidebar-border-color;
+  border-right: $sidebar-border-width solid var(--color-context-border);
   border-bottom: $sidebar-border-width solid transparent;
-  background-color: $sidebar-background-color;
-  color: $sidebar-color;
+  background-color: var(--color-context-background);
   text-align: center;
   z-index: $z-index-layout-header;
 
@@ -24,7 +23,7 @@
     width: 100%;
     height: $header-height-sm;
     border-right: 0;
-    border-bottom-color: $sidebar-border-color;
+    border-bottom-color: var(--color-context-border);
     text-align: left;
   }
 

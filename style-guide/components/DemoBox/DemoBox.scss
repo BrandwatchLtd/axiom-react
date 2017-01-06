@@ -9,7 +9,7 @@
   justify-content: center;
   min-height: 50px;
   padding: $component-padding-sm;
-  border: $component-border-width solid $color-context-component-border;
-  background-color: $color-ui-primary-1;
-  color: $color-ui-light-1;
+  border: $component-border-width solid var(--color-context-border);
+  background-color: var(--color-context-background-disabled);
+  color: var(--color-context-text-subtle);
 }

@@ -15,7 +15,7 @@
 }
 
 .ax-menu__item-button {
-  @include transition((border-bottom-color));
+  @include transition((color, border-bottom-color));
   @include heading('headline');
 
   display: flex;
