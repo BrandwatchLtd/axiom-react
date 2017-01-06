@@ -18,11 +18,11 @@ $input-large-font-size: $font-size-heading-large;
 $input-small-line-height: $button-line-height;
 $input-large-line-height: $font-size-heading-large;
 
-$input-border-color: $color-context-component-border;
-$input-background-color: $color-ui-white;
-$input-placeholder-color: $color-context-disabled-text;
+$input-border-color: var(--color-context-border);
+$input-background-color: var(--color-context-background);
+$input-placeholder-color: var(--color-context-text-disabled);
 
-$input-disabled-background-color: $color-ui-light-1;
+$input-disabled-background-color: var(--color-context-background-disabled);
 
 $input-focus-border-color: fade-out($color-ui-primary-1, .5);
 $input-valid-border-color: fade-out($color-ui-valid, .6);

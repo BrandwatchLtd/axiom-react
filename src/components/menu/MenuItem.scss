@@ -41,7 +41,7 @@
   .ax-menu__item--disabled &,
   .ax-menu__item--disabled:hover & {
     border-bottom-color: transparent;
-    color: $color-context-disabled-text;
+    color: var(--color-context-text-disabled);
     cursor: default;
   }
 }

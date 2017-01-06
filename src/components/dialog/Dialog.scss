@@ -1,14 +1,18 @@
 @import '../../design-patterns/colors/vars';
+@import '../../design-patterns/colors/colors-light';
 @import '../../design-patterns/spacing/vars';
 
 .ax-dialog {
+  @include theme-light;
+
   display: flex;
   flex-direction: column;
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
   border-radius: $component-border-radius;
-  background-color: $color-ui-white;
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
 }
 
 .ax-dialog__header,

@@ -5,7 +5,7 @@ import { Login } from 'bw-axiom';
 class LoginExample extends Component {
 
   handleSubmit({ username, password }) {
-    window.alert(`Login attempted with username '${username}' and passowrd '${password}'`);
+    window.alert(`Login attempted with username '${username}' and password '${password}'`);
   }
 
   render() {
@@ -24,7 +24,7 @@ class LoginExample extends Component {
                 error="Sorry but we don't recognise your username and password combination.
                   Please check your details and try again."
                 onSubmit={ ::this.handleSubmit }
-                textLight={ true } />
+                theme="dark" />
           </div>
         </Snippet>
       </Example>

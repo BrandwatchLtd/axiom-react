@@ -7,9 +7,8 @@ export default class TypeExample extends Component {
     return (
       <Example name="Colors">
         <Snippet>
-          <Paragraph textDark={ true }>This color is dark</Paragraph>
           <Paragraph textSubtle={ true }>This color is subtle</Paragraph>
-          <Paragraph textLight={ true }>This color is light</Paragraph>
+          <Paragraph textDisabled={ true }>This color is disabled</Paragraph>
         </Snippet>
       </Example>
     );

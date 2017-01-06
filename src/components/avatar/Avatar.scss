@@ -3,7 +3,7 @@
 // Avatar Base
 .ax-avatar {
   display: block;
-  border: 0 solid $color-context-component-border;
+  border: 0 solid var(--color-context-border);
   border-radius: 50%;
 }
 

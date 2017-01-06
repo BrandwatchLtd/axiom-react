@@ -10,6 +10,7 @@ if (__INCLUDE_CSS__) {
 export default class TextInput extends Component {
   static propTypes = {
     children: PropTypes.node,
+    disabled: PropTypes.bool,
     invalid: PropTypes.bool,
     label: PropTypes.string,
     size: PropTypes.oneOf(['small', 'large']),
@@ -40,12 +41,13 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { children, valid, invalid, label, size, style, ...rest } = this.props;
+    const { children, disabled, valid, invalid, label, size, style, ...rest } = this.props;
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIcon);
     const iconContainerClasses = classnames('ax-input__container', {
       [`ax-input__container--${style}`]: style,
       [`ax-input__container--${size}`]: size,
+      'ax-input__container--disabled': disabled,
       'ax-input__container--focused': hasFocus,
       'ax-input__container--valid': valid,
       'ax-input__container--invalid': invalid,

@@ -22,7 +22,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 
   &::after {
     flex: 1 1 auto;
-    border-bottom: 1px solid $color-context-component-border;
+    border-bottom: 1px solid var(--color-context-border);
     content: '';
   }
 }
@@ -34,7 +34,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
   margin: 0 $tabset-tab-spacing 0 0;
   border: 1px solid transparent;
   border-radius: 3px 3px 0 0;
-  background-color: fade-out($color-ui-dark-1, 0.80);
+  background-color: var(--color-context-background-subtle);
   list-style: none;
 
   &::after {
@@ -43,7 +43,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
     bottom: -1px;
     width: $tabset-tab-spacing;
     transform: translateX(100%);
-    border-bottom: 1px solid $color-context-component-border;
+    border-bottom: 1px solid var(--color-context-border);
     content: '';
   }
 
@@ -53,15 +53,15 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 }
 
 .ax-tabset__list-item--active {
-  border-color: $color-context-component-border;
+  border-color: var(--color-context-border);
   border-bottom-color: transparent;
-  background-color: $color-ui-white;
+  background-color: var(--color-context-background);
 }
 
 .ax-tabset__list-item--disabled {
-  border-bottom-color: $color-context-component-border;
-  background-color: $color-context-disabled-background;
-  color: $color-context-disabled-text;
+  border-bottom-color: var(--color-context-border);
+  background-color: var(--color-context-background-disabled);
+  color: var(--color-context-text-disabled);
 }
 
 .ax-tabset__button {

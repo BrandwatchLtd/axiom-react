@@ -13,11 +13,15 @@
   position: relative;
   flex: 1 1 auto;
   align-items: center;
-  border: $input-border-width solid $color-context-component-border;
+  border: $input-border-width solid $input-border-color;
   border-style: solid;
   border-radius: $input-border-radius;
   background-color: $input-background-color;
   font-size: $font-size-small;
+}
+
+.ax-input__container--disabled {
+  background-color: $input-disabled-background-color;
 }
 
 .ax-input__container--focused {
@@ -49,10 +53,6 @@
 
   &::placeholder {
     color: $input-placeholder-color;
-  }
-
-  &:disabled {
-    background-color: $input-disabled-background-color;
   }
 
   &:focus {
@@ -114,11 +114,11 @@
 // Styles
 .ax-input__container--translucent {
   border-color: transparent;
-  background-color: fade-out($input-background-color, .85);
+  background-color: var(--color-context-background-subtle);
 
   .ax-input {
     &::placeholder {
-      color: fade-out($color-ui-light-1, 0.4);
+      color: var(--color-context-text-subtle);
     }
   }
 }

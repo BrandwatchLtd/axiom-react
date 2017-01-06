@@ -78,14 +78,14 @@ button {
   &:active { background-color: $color-ui-primary-0; }
 
   &[disabled] {
-    background-color: $color-context-disabled-background;
-    color: $color-context-disabled-text;
+    background-color: var(--color-context-background-disabled);
+    color: var(--color-context-text-disabled);
   }
 }
 
 
 .ax-button--secondary {
-  border-color: $color-context-component-border;
+  border-color: var(--color-context-border);
   color: $color-ui-primary-1;
 
   &:hover  {
@@ -100,8 +100,8 @@ button {
   }
 
   &[disabled] {
-    border-color: $color-context-component-border;
-    color: $color-context-disabled-text;
+    border-color: var(--color-context-border);
+    color: var(--color-context-text-disabled);
   }
 }
 
@@ -110,7 +110,7 @@ button {
 
   &:hover     { color: $color-ui-primary-2; }
   &:active    { color: $color-ui-primary-0; }
-  &[disabled] { color: $color-context-disabled-text; }
+  &[disabled] { color: var(--color-context-text-disabled); }
 }
 
 

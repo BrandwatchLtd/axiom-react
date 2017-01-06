@@ -9,15 +9,15 @@
   @include transition((background-color, border-color, color), $transition-time-fast);
 
   padding: 0;
-  border: 0px solid $color-context-component-border;
+  border: 0px solid var(--color-context-border);
   border-style: solid;
   border-radius: 50%;
-  color: $color-context-subtle-text;
+  color: var(--color-context-text-subtle);
   line-height: 0;
 
   &:hover {
     border-color: transparent;
-    background-color: $color-context-component-border;
+    background-color: var(--color-context-border);
     color: $color-ui-primary-1;
   }
 

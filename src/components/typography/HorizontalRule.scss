@@ -5,7 +5,7 @@
 .ax-horizontal-rule {
   @include space-block();
 
-  border-top: $component-border-width solid $color-context-component-border;
+  border-top: $component-border-width solid var(--color-context-border);
   border-right: 0;
   border-bottom: 0;
   border-left: 0;

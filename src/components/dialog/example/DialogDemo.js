@@ -80,7 +80,7 @@ export default class DialogDemo extends Component {
             if (withFooter) {
               <DialogFooter>
                 <ButtonGroup>
-                  <Button onClick={ onRequestClose }>Done</Button>
+                  <Button onClick={ onRequestClose } style="secondary">Done</Button>
                 </ButtonGroup>
               </DialogFooter>;
             }
