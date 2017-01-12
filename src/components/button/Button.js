@@ -1,6 +1,6 @@
 import React, { Component, Children, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
-import { Base, ButtonIcon, findComponent } from 'bw-axiom';
+import { Base, ButtonIcon } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Button.scss');
@@ -17,7 +17,7 @@ export default class Button extends Component {
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   };
 
-  static defaultProps ={
+  static defaultProps = {
     style: 'primary',
     size: 'medium',
   };
@@ -41,17 +41,17 @@ export default class Button extends Component {
       },
     );
 
-    const icon = findComponent(children, ButtonIcon);
-    const filteredChildren = Children.toArray(children)
-      .filter(({ type }) => type !== ButtonIcon);
+    const mappedChildren = Children.toArray(children).map((child, index, array) =>
+      child.type !== ButtonIcon ? child : cloneElement(child, {
+        isEnd: index === array.length - 1,
+        isStart: index === 0,
+        size,
+      })
+    );
 
     return (
       <Base Component="button" { ...rest } className={ classes }>
-        { do { if (icon) {
-          cloneElement(icon, { size });
-        } } }
-
-        { filteredChildren }
+        { mappedChildren }
       </Base>
     );
   }

@@ -12,7 +12,7 @@
   display: inline-flex;
   position: relative;
   align-items: center;
-  padding: $component-padding-sm $component-padding-md;
+  padding: $component-padding-md $component-padding-lg;
   border-radius: $component-border-radius;
   background-color: transparent;
   font-size: $font-size-small;
@@ -62,9 +62,4 @@
 .ax-label--invalid {
   background-color: $color-ui-invalid;
   color: $color-ui-light-1;
-}
-
-// Icon
-.ax-label__icon {
-  margin: 0 0 0 $component-padding-sm;
 }

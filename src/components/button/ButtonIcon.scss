@@ -1,0 +1,9 @@
+@import '../../design-patterns/spacing/vars';
+
+.ax-button__icon {
+  display: inline-flex;
+  margin: 0 $component-padding-sm;
+}
+
+.ax-button__icon--start { margin-left: 0; }
+.ax-button__icon--end   { margin-right: 0; }

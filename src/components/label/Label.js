@@ -1,6 +1,6 @@
-import React, { Children, Component, PropTypes } from 'react';
+import React, { Children, Component, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
-import { Base, LabelIcon, findComponent } from 'bw-axiom';
+import { Base, LabelIcon } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Label.scss');
@@ -37,14 +37,16 @@ export default class Label extends Component {
       },
     );
 
-    const icon = findComponent(children, LabelIcon);
-    const filteredChildren = Children.toArray(children)
-      .filter(({ type }) => type !== LabelIcon);
+    const mappedChildren = Children.toArray(children).map((child, index, array) =>
+      child.type !== LabelIcon ? child : cloneElement(child, {
+        isEnd: index === array.length - 1,
+        isStart: index === 0,
+      })
+    );
 
     return (
       <Base { ...rest } Component="span" className={ classes }>
-        { filteredChildren }
-        { icon }
+        { mappedChildren }
       </Base>
     );
   }

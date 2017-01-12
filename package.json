@@ -1,7 +1,7 @@
 {
   "name": "bw-axiom",
   "description": "Axiom - Brandwatch Pattern Library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./lib",
   "license": "MIT",
   "homepage": "BrandwatchLtd.github.io/axiom",

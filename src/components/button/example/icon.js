@@ -20,14 +20,19 @@ export default class ButtonExample extends Component {
     return (
       <Example name="Buttons with an Icon">
         <Snippet>
-          <ButtonGroup snippetIgnore={ true }>
-            { size.values.map((size) =>
-              <Button key={ size } size={ size }>
+          { size.values.map((size) =>
+            <ButtonGroup key={ size } snippetIgnore={ true }>
+              <Button size={ size }>
+                <ButtonIcon name="chevron-left" />
                 Button { size.toUpperCase() }
-                <ButtonIcon name="twitter" />
               </Button>
-            ) }
-          </ButtonGroup>
+
+              <Button size={ size }>
+                Button { size.toUpperCase() }
+                <ButtonIcon name="chevron-right" />
+              </Button>
+            </ButtonGroup>
+          ) }
         </Snippet>
       </Example>
     );
