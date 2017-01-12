@@ -22,9 +22,9 @@ export default class ButtonIcon extends Component {
     });
 
     const sizeMap = {
-      'small': 12,
-      'medium': 12,
-      'large': 16,
+      'small': '0.75rem',
+      'medium': '0.75rem',
+      'large': '1rem',
     };
 
     return (

@@ -8,6 +8,6 @@ pre[class*='language-'] {
   @include space-block();
 
   padding: $component-padding-md;
-  border-radius: $component-border-radius;
+  border-radius: 0.1875rem;
   background-color: $color-ui-light-2;
 }

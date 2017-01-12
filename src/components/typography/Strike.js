@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
 
-if (__INCLUDE_CSS__) {
-  require('./Strike.scss');
-}
-
 export default class Strike extends Component {
   static propTypes = {
     children: PropTypes.node,

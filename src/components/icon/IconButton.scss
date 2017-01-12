@@ -9,7 +9,7 @@
   @include transition((background-color, border-color, color), $transition-time-fast);
 
   padding: 0;
-  border: 0px solid var(--color-context-border);
+  border: 0 solid var(--color-context-border);
   border-style: solid;
   border-radius: 50%;
   color: var(--color-context-text-subtle);
@@ -29,19 +29,19 @@
 }
 
 .ax-icon-button--small {
-  width: 24px;
-  height: 24px;
-  border-width: 1px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.0625rem;
 }
 
 .ax-icon-button--medium {
-  width: 48px;
-  height: 48px;
-  border-width: 1px;
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.0625rem;
 }
 
 .ax-icon-button--large {
-  width: 72px;
-  height: 72px;
-  border-width: 2px;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-width: 0.125rem;
 }

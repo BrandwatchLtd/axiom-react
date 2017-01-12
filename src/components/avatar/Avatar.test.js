@@ -16,19 +16,19 @@ describe('Avatar', () => {
   });
 
   it('renders with custom size', () => {
-    const component = getComponent({ size: 50 });
+    const component = getComponent({ size: '4rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with small when less than 70', () => {
-    const component = getComponent({ size: 69 });
+  it('renders with small when less than 4.5rem', () => {
+    const component = getComponent({ size: '4.4rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with large when 70 or more', () => {
-    const component = getComponent({ size: 70 });
+  it('renders with large when 4.5rem or more', () => {
+    const component = getComponent({ size: '4.5rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

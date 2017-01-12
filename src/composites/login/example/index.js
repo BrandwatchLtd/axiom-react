@@ -19,7 +19,7 @@ class LoginExample extends Component {
         <Snippet>
           <div snippetIgnore={ true } style={ containerStyles }>
             <Login
-                application="Audiences"
+                application="Axiom"
                 backgroundImage="assets/axiom-bg.jpg"
                 error="Sorry but we don't recognise your username and password combination.
                   Please check your details and try again."

@@ -1,6 +1,9 @@
 @import '~bw-axiom/design-patterns/colors/vars';
 @import '~bw-axiom/design-patterns/spacing/vars';
 
+$labs-square-size: $spacing-grid-size * 3;
+$labs-border-width: 0.0625rem;
+
 .dm-labs {
   display: flex;
   position: absolute;
@@ -13,8 +16,8 @@
   justify-content: center;
   padding: $page-padding-v $page-padding-h;
   background-image: (
-    repeating-linear-gradient(0deg, transparent, transparent 10px, var(--color-context-border) 1px, transparent 11px),
-    repeating-linear-gradient(90deg, transparent, transparent 10px, var(--color-context-border) 1px, transparent 11px)
+    repeating-linear-gradient(0deg, transparent, transparent $labs-square-size, var(--color-context-border) $labs-border-width, transparent ($labs-square-size + $labs-border-width)),
+    repeating-linear-gradient(90deg, transparent, transparent $labs-square-size, var(--color-context-border) $labs-border-width, transparent ($labs-square-size + $labs-border-width))
   );
 }
 
@@ -22,5 +25,5 @@
   max-width: 100%;
   padding: $container-padding-lg;
   background-color: var(--color-context-background);
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow($drop-shadow);
 }

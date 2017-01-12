@@ -6,8 +6,6 @@ if (__INCLUDE_CSS__) {
   require('./Icon.scss');
 }
 
-const ICON_VIEW_BOX = 14;
-
 /* eslint-disable max-len, react/jsx-sort-props */
 const ICON_NAME_MAP = {
   'arrow-down': <polygon points="2 3 7.06940274 11 12 3" />,
@@ -57,11 +55,11 @@ export default class Icon extends Component {
       'tag',
       'twitter',
     ]),
-    size: PropTypes.number,
+    size: PropTypes.string,
   };
 
   static defaultProps = {
-    size: 14,
+    size: '0.875rem',
   };
 
   render() {
@@ -73,7 +71,7 @@ export default class Icon extends Component {
           Component="svg"
           className={ classes }
           height={ size }
-          viewBox={ `0 0 ${ICON_VIEW_BOX} ${ICON_VIEW_BOX}` }
+          viewBox="0 0 14 14"
           width={ size }>
         { ICON_NAME_MAP[name] }
       </Base>

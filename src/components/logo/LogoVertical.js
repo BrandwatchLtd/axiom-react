@@ -3,8 +3,8 @@ import Logo from './Logo';
 
 export default class LogoVertical extends Component {
   static propTypes = {
-    height: PropTypes.number,
-    width: PropTypes.number,
+    height: PropTypes.string,
+    width: PropTypes.string,
   };
 
   render() {
@@ -15,7 +15,7 @@ export default class LogoVertical extends Component {
     /* eslint-disable max-len */
     return (
       <Logo { ...rest } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
-        <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0px" y="0px">
+        <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0%" y="0%">
           <g>
             <circle cx="75.9" cy="56.2" fill="#FF8F00" r="6.4"/>
             <circle cx="57.4" cy="59.7" fill="#F46B00" r="9.8"/>

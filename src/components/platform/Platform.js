@@ -7,11 +7,11 @@ if (__INCLUDE_CSS__) {
 export default class Platform extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    consoleWidth: PropTypes.number.isRequired,
+    consoleWidth: PropTypes.string.isRequired,
   };
 
   static childContextTypes = {
-    consoleWidth: PropTypes.number.isRequired,
+    consoleWidth: PropTypes.string.isRequired,
   };
 
   getChildContext() {

@@ -9,10 +9,10 @@ if (__INCLUDE_CSS__) {
 export default class LogoVertical extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    height: PropTypes.number,
+    height: PropTypes.string,
     viewBoxHeight: PropTypes.number.isRequired,
     viewBoxWidth: PropTypes.number.isRequired,
-    width: PropTypes.number,
+    width: PropTypes.string,
   };
 
   render() {
@@ -29,8 +29,8 @@ export default class LogoVertical extends Component {
     const classes = classnames(className, 'ax-logo');
     const viewBoxAspectRatio = viewBoxWidth / viewBoxHeight;
     const style = {
-      width: height ? (height * viewBoxAspectRatio) : width,
-      height: height ? height : (width / viewBoxAspectRatio),
+      width: height ? `${(parseFloat(height, 10) * viewBoxAspectRatio)}rem` : width,
+      height: height ? height : `${(parseFloat(width, 10) / viewBoxAspectRatio)}rem`,
     };
 
     return (

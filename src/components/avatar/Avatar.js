@@ -9,11 +9,11 @@ if (__INCLUDE_CSS__) {
 export default class Avatar extends Component {
   static propTypes = {
     /** The width and height of the image.  */
-    size: PropTypes.number,
+    size: PropTypes.string,
   };
 
   static defaultProps = {
-    size: 35,
+    size: '2rem',
   };
 
   render() {
@@ -25,8 +25,8 @@ export default class Avatar extends Component {
 
     const style = { height: size, width: size };
     const classes = classnames(className, 'ax-avatar', {
-      'ax-avatar--small': size < 70,
-      'ax-avatar--large': size >= 70,
+      'ax-avatar--small': parseFloat(size, 10) < 4.5,
+      'ax-avatar--large': parseFloat(size, 10) >= 4.5,
     });
 
     return (

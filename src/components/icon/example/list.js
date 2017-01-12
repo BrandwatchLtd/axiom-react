@@ -24,7 +24,7 @@ export default class IconExample extends Component {
             <GridCell key={ name } width={ 25 }>
               <Grid responsive={ false } vAlign="middle">
                 <GridCell shrink={ true }>
-                  <Icon name={ name } size={ 24 } />
+                  <Icon name={ name } size="1.5rem" />
                 </GridCell>
 
                 <GridCell>

@@ -9,15 +9,15 @@ export default class IconExample extends Component {
         <Snippet>
           <Grid snippetIgnore={ true }>
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Icon name="twitter" size={ 24 } />
+              <Icon name="twitter" size="2rem" />
             </GridCell>
 
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Icon name="twitter" size={ 36 } />
+              <Icon name="twitter" size="3rem" />
             </GridCell>
 
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Icon name="twitter" size={ 50 } />
+              <Icon name="twitter" size="4rem" />
             </GridCell>
           </Grid>
         </Snippet>

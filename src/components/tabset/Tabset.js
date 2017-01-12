@@ -36,8 +36,13 @@ export default class Tabset extends Component {
   render() {
     const { children, size, ...rest } = this.props;
     const { activeTabIndex } = this.state;
-    const activeTabContent = Children.toArray(children)[activeTabIndex].props.children;
-    const tabs = Children.toArray(children)
+    const arrayChildren = Children.toArray(children);
+
+    const activeTabContent = arrayChildren[activeTabIndex]
+      ? arrayChildren[activeTabIndex].props.children
+      : null;
+
+    const tabs = arrayChildren
       .filter(({ type }) => type === Tab)
       .map((child, index) => cloneElement(child, {
         active: index === activeTabIndex,

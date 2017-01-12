@@ -34,13 +34,12 @@ export default class PlatformExample extends Component {
       height: 600,
       width: '100%',
       overflow: 'hidden',
-      boxShadow: '0 0 10px 2px rgba(0, 0, 0, .2)',
     };
 
     return (
       <Example name="Platform">
         <div style={ containerStyle }>
-          <Platform consoleWidth={ 420 }>
+          <Platform consoleWidth="26.25rem">
             <Dock>
               <DockItem
                   active={ active === 0 }
@@ -80,7 +79,7 @@ export default class PlatformExample extends Component {
         </div>
 
         <Snippet renderSkip={ true }>
-          <Platform consoleWidth={ 420 }>
+          <Platform consoleWidth="26.25rem">
             <Dock>
               <DockItem active={ true } icon="ellipsis">DockItem</DockItem>
             </Dock>

@@ -12,7 +12,7 @@ export default class Console extends Component {
   };
 
   static contextTypes = {
-    consoleWidth: PropTypes.number.isRequired,
+    consoleWidth: PropTypes.string.isRequired,
   };
 
   render() {

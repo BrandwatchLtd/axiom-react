@@ -10,13 +10,13 @@
     @include transition((border-color), $transition-time-fast);
 
     position: absolute;
-    top: floor($input-checkbox-size / 4);
-    right: floor($input-checkbox-size / 5);
-    bottom: floor($input-checkbox-size / 2.5);
-    left: floor($input-checkbox-size / 5);
+    top: 0.25rem;
+    right: 0.1875rem;
+    bottom: 0.375rem;
+    left: 0.1875rem;
     transform: rotate(-45deg);
-    border-bottom: 2px solid;
-    border-left: 2px solid;
+    border-bottom: 0.125rem solid;
+    border-left: 0.125rem solid;
   }
 }
 

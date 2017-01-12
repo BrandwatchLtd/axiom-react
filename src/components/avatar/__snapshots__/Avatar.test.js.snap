@@ -4,8 +4,8 @@ exports[`Avatar renders with custom size 1`] = `
   src="/image/path"
   style={
     Object {
-      "height": 50,
-      "width": 50,
+      "height": "4rem",
+      "width": "4rem",
     }
   } />
 `;
@@ -16,32 +16,32 @@ exports[`Avatar renders with defaultProps 1`] = `
   src="/image/path"
   style={
     Object {
-      "height": 35,
-      "width": 35,
+      "height": "2rem",
+      "width": "2rem",
     }
   } />
 `;
 
-exports[`Avatar renders with large when 70 or more 1`] = `
+exports[`Avatar renders with large when 4.5rem or more 1`] = `
 <img
   className="ax-avatar ax-avatar--large"
   src="/image/path"
   style={
     Object {
-      "height": 70,
-      "width": 70,
+      "height": "4.5rem",
+      "width": "4.5rem",
     }
   } />
 `;
 
-exports[`Avatar renders with small when less than 70 1`] = `
+exports[`Avatar renders with small when less than 4.5rem 1`] = `
 <img
   className="ax-avatar ax-avatar--small"
   src="/image/path"
   style={
     Object {
-      "height": 69,
-      "width": 69,
+      "height": "4.4rem",
+      "width": "4.4rem",
     }
   } />
 `;

@@ -8,15 +8,15 @@ export default class TabSetExample extends Component {
       <Example name="Sizes">
         <Snippet>
           <Tabset size="small">
-            <Tab title="Lorem ipsum"></Tab>
-            <Tab title="Nunc eu massa ligula"></Tab>
-            <Tab disabled={ true } title="I'm Disabled!"></Tab>
+            <Tab snippetIgnore={ true } title="Lorem ipsum"></Tab>
+            <Tab snippetIgnore={ true } title="Nunc eu massa ligula"></Tab>
+            <Tab disabled={ true } snippetIgnore={ true } title="I'm Disabled!"></Tab>
           </Tabset>
 
           <Tabset size="large">
-            <Tab title="Lorem ipsum"></Tab>
-            <Tab title="Nunc eu massa ligula"></Tab>
-            <Tab disabled={ true } title="I'm Disabled!"></Tab>
+            <Tab snippetIgnore={ true } title="Lorem ipsum"></Tab>
+            <Tab snippetIgnore={ true } title="Nunc eu massa ligula"></Tab>
+            <Tab disabled={ true } snippetIgnore={ true } title="I'm Disabled!"></Tab>
           </Tabset>
         </Snippet>
       </Example>

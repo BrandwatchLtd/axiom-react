@@ -1,8 +1,8 @@
 @import '../../design-patterns/spacing/vars';
 @import '../typography/vars';
 
-$button-border-width: 1px;
-$button-border-radius: 3px;
+$button-border-width: 0.0625rem;
+$button-border-radius: 0.1875rem;
 
 $button-small-vertical-padding: $component-padding-sm;
 $button-medium-vertical-padding: $component-padding-md;

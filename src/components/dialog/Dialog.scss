@@ -10,9 +10,10 @@
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
-  border-radius: $component-border-radius;
+  border-radius: 0.1875rem;
   background-color: var(--color-context-background);
   color: var(--color-context-text);
+  filter: drop-shadow($drop-shadow);
 }
 
 .ax-dialog__header,
@@ -39,9 +40,9 @@
 
 
 // Dialog: Sizes
-.ax-dialog--small  { width: 400px; }
-.ax-dialog--medium { width: 600px; }
-.ax-dialog--large  { width: 800px; }
+.ax-dialog--small  { width: 20rem; }
+.ax-dialog--medium { width: 37.5rem; }
+.ax-dialog--large  { width: 50rem; }
 
 .ax-dialog--fullscreen {
   height: 100vh;

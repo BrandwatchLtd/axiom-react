@@ -12,7 +12,7 @@
   bottom: 0;
   left: 0;
   transform: translateX(-100%);
-  border-right: 1px solid $color-ui-light-0;
+  border-right: 0.0625rem solid $color-ui-light-0;
   background-color: $color-ui-light-1;
   z-index: $z-index-platform - 1;
 }

@@ -3,8 +3,8 @@ import Logo from './Logo';
 
 export default class LogoHorizontal extends Component {
   static propTypes = {
-    height: PropTypes.number,
-    width: PropTypes.number,
+    height: PropTypes.string,
+    width: PropTypes.string,
   };
 
   render() {
@@ -14,7 +14,7 @@ export default class LogoHorizontal extends Component {
     /* eslint-disable max-len */
     return (
       <Logo { ...this.props } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
-        <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0px" y="0px">
+        <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0%" y="0%">
           <g>
             <g>
               <ellipse cx="50.7388235" cy="26.624" fill="#FF8F00" rx="5.42117647" ry="5.46133333"></ellipse>

@@ -12,7 +12,7 @@ export default class TextInputIcon extends Component {
     return (
       <span className="ax-input__icon">
         <Link { ...rest } inheritColor={ true }>
-          <Icon name={ name } size={ 12 } />
+          <Icon name={ name } size="0.75rem" />
         </Link>
       </span>
     );

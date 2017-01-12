@@ -7,9 +7,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
+  min-height: $spacing-grid-size * 12;
   padding: $component-padding-sm;
-  border: $component-border-width solid var(--color-context-border);
+  border: 0.0625rem solid var(--color-context-border);
   background-color: var(--color-context-background-disabled);
   color: var(--color-context-text-subtle);
 }

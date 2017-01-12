@@ -58,7 +58,7 @@ export default class Login extends Component {
         <div className="ax-login__header">
           <div className="ax-login__header-container">
             <div className="ax-login__logo">
-              <LogoVertical height={ 140 } />
+              <LogoVertical height="8.75rem" />
             </div>
           </div>
         </div>

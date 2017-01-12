@@ -22,7 +22,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 
   &::after {
     flex: 1 1 auto;
-    border-bottom: 1px solid var(--color-context-border);
+    border-bottom: 0.0625rem solid var(--color-context-border);
     content: '';
   }
 }
@@ -32,18 +32,18 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 
   position: relative;
   margin: 0 $tabset-tab-spacing 0 0;
-  border: 1px solid transparent;
-  border-radius: 3px 3px 0 0;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.1875rem 0.1875rem 0 0;
   background-color: var(--color-context-background-subtle);
   list-style: none;
 
   &::after {
     position: absolute;
-    right: -1px;
-    bottom: -1px;
+    right: -0.0625rem;
+    bottom: -0.0625rem;
     width: $tabset-tab-spacing;
     transform: translateX(100%);
-    border-bottom: 1px solid var(--color-context-border);
+    border-bottom: 0.0625rem solid var(--color-context-border);
     content: '';
   }
 
@@ -83,7 +83,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 
   &:not(.ax-tabset__list-item--active) {
     .ax-tabset__button {
-      padding-top: $tabset-tab-small-vertical-padding - 1px;
+      padding-top: $tabset-tab-small-vertical-padding - 0.0625rem;
     }
   }
 }
@@ -96,7 +96,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 
   &:not(.ax-tabset__list-item--active) {
     .ax-tabset__button {
-      padding-top: $tabset-tab-large-vertical-padding - 1px;
+      padding-top: $tabset-tab-large-vertical-padding - 0.0625rem;
     }
   }
 }

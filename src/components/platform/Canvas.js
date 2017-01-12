@@ -11,7 +11,7 @@ export default class Canvas extends Component {
   };
 
   static contextTypes = {
-    consoleWidth: PropTypes.number.isRequired,
+    consoleWidth: PropTypes.string.isRequired,
   };
 
   render() {
@@ -19,7 +19,7 @@ export default class Canvas extends Component {
     const { consoleWidth } = this.context;
     const style = {
       marginRight: isShifted && consoleWidth,
-      transform: isShifted && `translateX(${consoleWidth}px)`,
+      transform: isShifted && `translateX(${consoleWidth})`,
     };
 
     return (

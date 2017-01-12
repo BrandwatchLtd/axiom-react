@@ -15,7 +15,7 @@ export default class CardContent extends Component {
     return (
       <Grid vAlign="middle">
         <GridCell shrink={ true } textCenter="small">
-          <Avatar size={ 80 } src="assets/avatar.png" />
+          <Avatar size="5rem" src="assets/avatar.png" />
         </GridCell>
 
         <GridCell>

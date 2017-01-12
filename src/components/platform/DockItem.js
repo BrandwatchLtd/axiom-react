@@ -22,7 +22,7 @@ export default class DockItem extends Component {
     return (
       <li className={ classes }>
         <a className="ax-platform__dock-item-link" onClick={ onClick }>
-          <Icon name={ icon } size={ 24 } />
+          <Icon name={ icon } size="1.5rem" />
         </a>
       </li>
     );
