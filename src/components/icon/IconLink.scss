@@ -1,0 +1,11 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/vars';
+
+.ax-icon-link {
+  @include transition((color));
+
+  color: var(--color-context-text-subtle);
+
+  &:hover  { color: $color-ui-primary-2; }
+  &:active { color: $color-ui-primary-0; }
+}

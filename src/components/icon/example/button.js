@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Grid, GridCell, IconButton, Icon } from 'bw-axiom';
+import { Grid, GridCell, IconButton } from 'bw-axiom';
 
 export default class ButtonExample extends Component {
   static propTypes = {
@@ -23,9 +23,13 @@ export default class ButtonExample extends Component {
           <Grid shrink={ true } snippetIgnore={ true }>
             { size.values.map((size) =>
               <GridCell key={ size } snippetIgnore={ true }>
-                <IconButton size={ size }>
-                  <Icon name="ellipsis" />
-                </IconButton>
+                <IconButton name="ellipsis" size={ size } />
+              </GridCell>
+            ) }
+
+            { size.values.map((size) =>
+              <GridCell key={ `${size}d` } snippetIgnore={ true }>
+                <IconButton disabled={ true } name="ellipsis" size={ size } />
               </GridCell>
             ) }
           </Grid>
