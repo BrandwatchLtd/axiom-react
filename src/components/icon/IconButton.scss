@@ -26,6 +26,14 @@
     background-color: $color-ui-primary-1;
     color: $color-ui-light-1;
   }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    border-color: var(--color-context-border);
+    background-color: transparent;
+    color: var(--color-context-text-disabled);
+  }
 }
 
 .ax-icon-button--small {

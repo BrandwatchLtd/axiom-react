@@ -1,6 +1,6 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { Base } from 'bw-axiom';
+import { Base, Icon } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./IconButton.scss');
@@ -8,7 +8,7 @@ if (__INCLUDE_CSS__) {
 
 export default class IconButton extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    name: PropTypes.string.isRequired,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
@@ -17,7 +17,7 @@ export default class IconButton extends Component {
   }
 
   render() {
-    const { children, className, size, ...rest } = this.props;
+    const { className, name, size, ...rest } = this.props;
     const classes = classnames(className, 'ax-icon-button', {
       [`ax-icon-button--${size}`]: size,
     });
@@ -30,7 +30,7 @@ export default class IconButton extends Component {
 
     return (
       <Base Component="button" { ...rest } className={ classes }>
-        { cloneElement(children, { size: sizeMap[size] }) }
+        <Icon name={ name } size={ sizeMap[size] } />
       </Base>
     );
   }

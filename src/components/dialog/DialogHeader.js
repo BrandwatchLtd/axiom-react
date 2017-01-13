@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { Base, Grid, GridCell, Icon, Link  } from 'bw-axiom';
+import { Base, Grid, GridCell, IconLink  } from 'bw-axiom';
 
 export default class DialogHeader extends Component {
   static propTypes = {
@@ -20,9 +20,7 @@ export default class DialogHeader extends Component {
           </GridCell>
 
           <GridCell shrink={ true }>
-            <Link onClick={ onRequestClose } supressStyle={ true }>
-              <Icon name="cross" />
-            </Link>
+            <IconLink name="cross" onClick={ onRequestClose } />
           </GridCell>
         </Grid>
       </Base>
