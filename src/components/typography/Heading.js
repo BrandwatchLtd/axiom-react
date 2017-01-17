@@ -24,8 +24,8 @@ export default class Heading extends Component {
   };
 
   render() {
-    const { className, style, ...rest } = this.props;
-    const classes = classnames(className, 'ax-heading', {
+    const { style, ...rest } = this.props;
+    const classes = classnames('ax-heading', {
       [`ax-heading--${style}`]: style,
     });
 

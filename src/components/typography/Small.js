@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -12,11 +11,10 @@ export default class Small extends Component {
   };
 
   render() {
-    const { children, className, ...rest } = this.props;
-    const classes = classnames('ax-small', className);
+    const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } Component="small" className={ classes }>
+      <Base { ...rest } Component="small" className="ax-small">
         { children }
       </Base>
     );

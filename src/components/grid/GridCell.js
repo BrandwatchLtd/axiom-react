@@ -28,7 +28,6 @@ export default class GridCell extends Component {
 
   render() {
     const {
-      className,
       children,
       fill,
       fit,
@@ -40,22 +39,20 @@ export default class GridCell extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className,
-      'ax-grid__cell', {
-        'ax-grid__cell--top': vAlign === 'top',
-        'ax-grid__cell--middle': vAlign === 'middle',
-        'ax-grid__cell--bottom': vAlign === 'bottom',
-        'ax-grid__cell--fill': fill === true,
-        'ax-grid__cell--fit': fit === true,
-        'ax-grid__cell--full': full === true,
-        'ax-grid__cell--percent': width,
-        'ax-grid__cell--shrink': shrink === true,
-        [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
-        [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
-        [`ax-grid__cell--full--${full}`]: full && full !== true,
-        [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
-      },
-    );
+    const classes = classnames('ax-grid__cell', {
+      'ax-grid__cell--top': vAlign === 'top',
+      'ax-grid__cell--middle': vAlign === 'middle',
+      'ax-grid__cell--bottom': vAlign === 'bottom',
+      'ax-grid__cell--fill': fill === true,
+      'ax-grid__cell--fit': fit === true,
+      'ax-grid__cell--full': full === true,
+      'ax-grid__cell--percent': width,
+      'ax-grid__cell--shrink': shrink === true,
+      [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
+      [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
+      [`ax-grid__cell--full--${full}`]: full && full !== true,
+      [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
+    });
 
     const styles = {
       ...style,

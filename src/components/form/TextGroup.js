@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base, Strong } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -13,11 +12,10 @@ export default class TextGroup extends Component {
   };
 
   render() {
-    const { className, children, label } = this.props;
-    const classes = classnames(className, 'ax-input__group');
+    const { children, label } = this.props;
 
     return (
-      <Base Component="label" className={ classes }>
+      <Base Component="label" className="ax-input__group">
         { do { if (label) {
           <div className="ax-input__label">
             <Strong>{ label }</Strong>

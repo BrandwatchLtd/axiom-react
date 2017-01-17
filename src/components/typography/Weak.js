@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -12,11 +11,10 @@ export default class Weak extends Component {
   };
 
   render() {
-    const { className, children, ...rest } = this.props;
-    const classes = classnames(className, 'ax-text--weak');
+    const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } Component="span" className={ classes }>
+      <Base { ...rest } Component="span" className="ax-text--weak">
         { children }
       </Base>
     );

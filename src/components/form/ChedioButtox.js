@@ -17,7 +17,6 @@ export default class ChedioButtox extends Component {
 
   render() {
     const {
-      className,
       children,
       disabled,
       inputClassName,
@@ -26,7 +25,7 @@ export default class ChedioButtox extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className, 'ax-chedio-buttox__container', {
+    const classes = classnames('ax-chedio-buttox__container', {
       'ax-chedio-buttox__container--disabled': disabled,
       'ax-chedio-buttox__container--space': !!children,
     });

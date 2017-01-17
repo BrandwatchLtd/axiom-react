@@ -24,7 +24,6 @@ export default class Button extends Component {
 
   render() {
     const {
-      className,
       children,
       style,
       size,
@@ -32,14 +31,12 @@ export default class Button extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className,
-      'ax-button', {
-        [`ax-button--${size}`]: size,
-        [`ax-button--${style}`]: style,
-        'ax-button--full': full === true,
-        [`ax-button--full--${full}`]: full && full !== true,
-      },
-    );
+    const classes = classnames('ax-button', {
+      [`ax-button--${size}`]: size,
+      [`ax-button--${style}`]: style,
+      'ax-button--full': full === true,
+      [`ax-button--full--${full}`]: full && full !== true,
+    });
 
     const mappedChildren = Children.toArray(children).map((child, index, array) =>
       child.type !== ButtonIcon ? child : cloneElement(child, {

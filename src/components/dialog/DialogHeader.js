@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base, Grid, GridCell, IconLink  } from 'bw-axiom';
 
 export default class DialogHeader extends Component {
@@ -9,11 +8,10 @@ export default class DialogHeader extends Component {
   };
 
   render() {
-    const { children, className, onRequestClose, ...rest } = this.props;
-    const classes = classnames(className, 'ax-dialog__header');
+    const { children, onRequestClose, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className="ax-dialog__header">
         <Grid responsive={ false }>
           <GridCell>
             { children }

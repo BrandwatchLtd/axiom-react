@@ -8,13 +8,12 @@ export default class LogoVertical extends Component {
   };
 
   render() {
-    const { ...rest } = this.props;
     const viewBoxWidth = 120;
     const viewBoxHeight = 143;
 
     /* eslint-disable max-len */
     return (
-      <Logo { ...rest } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
+      <Logo { ...this.props } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
         <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0%" y="0%">
           <g>
             <circle cx="75.9" cy="56.2" fill="#FF8F00" r="6.4"/>

@@ -14,8 +14,8 @@ export default class MenuItem extends Component {
   };
 
   render() {
-    const { className, children, active, disabled, ...rest } = this.props;
-    const classes = classnames(className, 'ax-menu__item', {
+    const { children, active, disabled, ...rest } = this.props;
+    const classes = classnames('ax-menu__item', {
       'ax-menu__item--active': active,
       'ax-menu__item--disabled': disabled,
     });

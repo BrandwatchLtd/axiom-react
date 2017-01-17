@@ -17,7 +17,6 @@ export default class Link extends Component {
 
   render() {
     const {
-      className,
       children,
       to,
       inheritColor,
@@ -25,7 +24,7 @@ export default class Link extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className, {
+    const classes = classnames({
       'ax-link': supressStyle !== true,
       'ax-link--inherit-color': inheritColor,
     });

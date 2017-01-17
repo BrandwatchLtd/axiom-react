@@ -20,18 +20,15 @@ export default class Dialog extends Component {
   render() {
     const {
       children,
-      className,
       size,
       fullscreen,
       ...rest
     } = this.props;
 
-    const classes = classnames(className,
-      'ax-dialog', {
-        'ax-dialog--fullscreen': fullscreen,
-        [`ax-dialog--${size}`]: !fullscreen && size,
-      },
-    );
+    const classes = classnames('ax-dialog', {
+      'ax-dialog--fullscreen': fullscreen,
+      [`ax-dialog--${size}`]: !fullscreen && size,
+    });
 
     return (
       <Modal { ...rest }>

@@ -13,8 +13,8 @@ export default class ChedioButtoxGroup extends Component {
   };
 
   render() {
-    const { className, children, inline, ...rest } = this.props;
-    const classes = classnames(className, 'ax-chedio-buttox__group', {
+    const { children, inline, ...rest } = this.props;
+    const classes = classnames('ax-chedio-buttox__group', {
       'ax-chedio-buttox__group--inline': inline,
     });
 

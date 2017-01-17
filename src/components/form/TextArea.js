@@ -17,11 +17,11 @@ export default class TextArea extends Component {
   };
 
   render() {
-    const { className, height, label, ...rest } = this.props;
+    const { height, label, ...rest } = this.props;
     const style = { minHeight: height };
 
     return (
-      <TextGroup className={ className } label={ label }>
+      <TextGroup label={ label }>
         <Base { ...rest } Component="textarea" className="ax-textarea" style={ style } />
       </TextGroup>
     );

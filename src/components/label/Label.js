@@ -22,20 +22,17 @@ export default class Label extends Component {
 
   render() {
     const {
-      className,
       children,
       color,
       full,
       ...rest
     } = this.props;
 
-    const classes = classnames(className,
-      'ax-label', {
-        [`ax-label--${color}`]: color,
-        'ax-label--full': full === true,
-        [`ax-label--full--${full}`]: full & full !== true,
-      },
-    );
+    const classes = classnames('ax-label', {
+      [`ax-label--${color}`]: color,
+      'ax-label--full': full === true,
+      [`ax-label--full--${full}`]: full & full !== true,
+    });
 
     const mappedChildren = Children.toArray(children).map((child, index, array) =>
       child.type !== LabelIcon ? child : cloneElement(child, {

@@ -17,14 +17,9 @@ export default class Avatar extends Component {
   };
 
   render() {
-    const {
-      className,
-      size,
-      ...rest
-    } = this.props;
-
+    const { size, ...rest } = this.props;
     const style = { height: size, width: size };
-    const classes = classnames(className, 'ax-avatar', {
+    const classes = classnames('ax-avatar', {
       'ax-avatar--small': parseFloat(size, 10) < 4.5,
       'ax-avatar--large': parseFloat(size, 10) >= 4.5,
     });

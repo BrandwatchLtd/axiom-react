@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 export default class DialogFooter extends Component {
@@ -8,11 +7,10 @@ export default class DialogFooter extends Component {
   };
 
   render() {
-    const { children, className, ...rest } = this.props;
-    const classes = classnames(className, 'ax-dialog__footer');
+    const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className="ax-dialog__footer">
         { children }
       </Base>
     );

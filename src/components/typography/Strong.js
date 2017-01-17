@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -12,11 +11,10 @@ export default class Strong extends Component {
   };
 
   render() {
-    const { children, className, ...rest } = this.props;
-    const classes = classnames(className, 'ax-text--strong');
+    const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } Component="strong" className={ classes }>
+      <Base { ...rest } Component="strong" className="ax-text--strong">
         { children }
       </Base>
     );

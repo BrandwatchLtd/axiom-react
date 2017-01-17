@@ -45,7 +45,6 @@ export default class Grid extends Component {
 
   render() {
     const {
-      className,
       children,
       responsive,
       gutters,
@@ -60,31 +59,29 @@ export default class Grid extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className,
-      'ax-grid', {
-        'ax-grid--unresponsive': responsive === false,
-        'ax-grid--gutters-none': gutters === false,
-        'ax-grid--gutters-none-v': vGutters === false,
-        'ax-grid--gutters-none-h': hGutters === false,
-        [`ax-grid--gutters--${gutters}`]: typeof gutters === 'string',
-        'ax-grid--fill': fill === true,
-        [`ax-grid--fill--${fill}`]: fill && fill !== true,
-        'ax-grid--fit': fit === true,
-        [`ax-grid--fit--${fit}`]: fit && fit !== true,
-        'ax-grid--full': full === true,
-        [`ax-grid--full--${full}`]: full && full !== true,
-        'ax-grid--shrink': shrink === true,
-        [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
-        'ax-grid--top': vAlign === 'top',
-        'ax-grid--middle': vAlign === 'middle',
-        'ax-grid--bottom': vAlign === 'bottom',
-        'ax-grid--left': hAlign === 'left',
-        'ax-grid--center': hAlign === 'center',
-        'ax-grid--right': hAlign === 'right',
-        'ax-grid--around': hAlign === 'around',
-        'ax-grid--between': hAlign === 'between',
-      },
-    );
+    const classes = classnames('ax-grid', {
+      'ax-grid--unresponsive': responsive === false,
+      'ax-grid--gutters-none': gutters === false,
+      'ax-grid--gutters-none-v': vGutters === false,
+      'ax-grid--gutters-none-h': hGutters === false,
+      [`ax-grid--gutters--${gutters}`]: typeof gutters === 'string',
+      'ax-grid--fill': fill === true,
+      [`ax-grid--fill--${fill}`]: fill && fill !== true,
+      'ax-grid--fit': fit === true,
+      [`ax-grid--fit--${fit}`]: fit && fit !== true,
+      'ax-grid--full': full === true,
+      [`ax-grid--full--${full}`]: full && full !== true,
+      'ax-grid--shrink': shrink === true,
+      [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
+      'ax-grid--top': vAlign === 'top',
+      'ax-grid--middle': vAlign === 'middle',
+      'ax-grid--bottom': vAlign === 'bottom',
+      'ax-grid--left': hAlign === 'left',
+      'ax-grid--center': hAlign === 'center',
+      'ax-grid--right': hAlign === 'right',
+      'ax-grid--around': hAlign === 'around',
+      'ax-grid--between': hAlign === 'between',
+    });
 
     return (
       <Base { ...rest } className={ classes }>

@@ -17,8 +17,8 @@ export default class IconButton extends Component {
   }
 
   render() {
-    const { className, name, size, ...rest } = this.props;
-    const classes = classnames(className, 'ax-icon-button', {
+    const { name, size, ...rest } = this.props;
+    const classes = classnames('ax-icon-button', {
       [`ax-icon-button--${size}`]: size,
     });
 
