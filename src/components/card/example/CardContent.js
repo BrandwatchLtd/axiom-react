@@ -19,7 +19,7 @@ export default class CardContent extends Component {
         </GridCell>
 
         <GridCell>
-          <Heading>Some heading</Heading>
+          <Heading style="title">Some heading</Heading>
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Nunc commodo egestas fringilla. In a arcu erat. Ut vestibulum
