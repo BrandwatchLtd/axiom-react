@@ -3,6 +3,7 @@ module.exports = {
   '/components/base': require('../../src/components/base/example'),
   '/components/button': require('../../src/components/button/example'),
   '/components/card': require('../../src/components/card/example'),
+  '/components/context': require('../../src/components/context/example'),
   '/components/dialog': require('../../src/components/dialog/example'),
   '/components/form': require('../../src/components/form/example'),
   '/components/grid': require('../../src/components/grid/example'),

@@ -1,0 +1,27 @@
+@import '../../design-patterns/animations/vars';
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
+
+.ax-context-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ax-context-menu__item {
+  @include transition((background-color, color), $transition-time-fast);
+
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
+
+  &:hover {
+    background-color: $color-ui-primary-1;
+    color: $color-ui-light-1;
+  }
+}
+
+.ax-context-menu__item-link {
+  display: block;
+  padding: $container-padding-sm $container-padding-lg;
+}

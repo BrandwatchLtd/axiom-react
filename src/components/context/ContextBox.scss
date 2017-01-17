@@ -1,0 +1,110 @@
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/colors/colors-light';
+@import '../../design-patterns/spacing/vars';
+
+$context-box-tip-size: $spacing-grid-size * 3;
+$context-box-tip-padding: $spacing-grid-size * 2;
+$context-box-tip-space: $spacing-grid-size * 2;
+
+.ax-context-box {
+  @include theme-light;
+
+  position: relative;
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
+  filter: drop-shadow($drop-shadow);
+
+  &::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: $context-box-tip-size;
+    border-style: solid;
+    border-color: transparent;
+    content: '';
+  }
+}
+
+.ax-context-box--top-start,
+.ax-context-box--top-middle,
+.ax-context-box--top-end {
+  margin-bottom: $context-box-tip-size;
+  padding-bottom: $context-box-tip-space;
+
+  &::before {
+    bottom: -($context-box-tip-size * 2);
+    border-top-color: var(--color-context-background);
+  }
+}
+
+.ax-context-box--bottom-start,
+.ax-context-box--bottom-middle,
+.ax-context-box--bottom-end {
+  margin-top: $context-box-tip-size;
+  padding-top: $context-box-tip-space;
+
+  &::before {
+    top: -($context-box-tip-size * 2);
+    border-bottom-color: var(--color-context-background);
+  }
+}
+
+.ax-context-box--right-start,
+.ax-context-box--right-middle,
+.ax-context-box--right-end {
+  margin-left: $context-box-tip-size;
+  padding-left: $context-box-tip-space;
+
+  &::before {
+    left: -($context-box-tip-size * 2);
+    border-right-color: var(--color-context-background);
+  }
+}
+
+.ax-context-box--left-start,
+.ax-context-box--left-middle,
+.ax-context-box--left-end {
+  margin-right: $context-box-tip-size;
+  padding-right: $context-box-tip-space;
+
+  &::before {
+    right: -($context-box-tip-size * 2);
+    border-left-color: var(--color-context-background);
+  }
+}
+
+.ax-context-box--top-start::before,
+.ax-context-box--bottom-start::before {
+  left: $context-box-tip-padding;
+}
+
+.ax-context-box--top-middle::before,
+.ax-context-box--bottom-middle::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ax-context-box--top-end::before,
+.ax-context-box--bottom-end::before {
+  right: $context-box-tip-padding;
+}
+
+.ax-context-box--right-start::before,
+.ax-context-box--left-start::before {
+  top: $context-box-tip-padding;
+}
+
+.ax-context-box--right-middle::before,
+.ax-context-box--left-middle::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ax-context-box--right-end::before,
+.ax-context-box--left-end::before {
+  bottom: $context-box-tip-padding;
+}
+
+.ax-context-box--padded {
+  padding: $container-padding-lg;
+}
