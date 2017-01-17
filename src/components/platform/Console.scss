@@ -1,3 +1,4 @@
+@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
@@ -5,7 +6,7 @@
 @import './vars';
 
 .ax-platform__console {
-  @include transition((transform));
+  @include transition((transform), $transition-time-slow);
 
   position: absolute;
   top: 0;

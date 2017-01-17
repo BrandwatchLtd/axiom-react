@@ -1,4 +1,3 @@
-@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
@@ -10,7 +9,7 @@
 }
 
 .ax-context-menu__item {
-  @include transition((background-color, color), $transition-time-fast);
+  @include transition((background-color, color));
 
   background-color: var(--color-context-background);
   color: var(--color-context-text);

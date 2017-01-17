@@ -1,5 +1,4 @@
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
@@ -7,7 +6,7 @@
 @import './vars';
 
 .ax-input__container {
-  @include transition((border-color), $transition-time-fast);
+  @include transition((border-color));
 
   display: flex;
   position: relative;

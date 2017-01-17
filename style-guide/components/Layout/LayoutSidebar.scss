@@ -1,3 +1,4 @@
+@import '~bw-axiom/design-patterns/animations/vars';
 @import '~bw-axiom/design-patterns/animations/mixins';
 @import '~bw-axiom/design-patterns/colors/vars';
 @import '~bw-axiom/design-patterns/layout/mixins';
@@ -18,7 +19,7 @@
   z-index: $z-index-layout-header;
 
   @include screen-less-than($layout-change-point) {
-    @include transition((transform));
+    @include transition((transform), $transition-time-slow);
 
     top: $header-height-sm;
     transform: translateX(-100%);
@@ -39,7 +40,7 @@
     margin-left: $sidebar-width;
 
     @include screen-less-than($layout-change-point) {
-      @include transition((transform));
+      @include transition((transform), $transition-time-slow);
 
       margin-left: 0;
 

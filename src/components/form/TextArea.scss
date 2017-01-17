@@ -1,10 +1,9 @@
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/spacing/vars';
 @import '../form/vars';
 
 .ax-textarea {
-  @include transition((border-color), $transition-time-fast);
+  @include transition((border-color));
 
   padding: $input-small-vertical-padding $input-small-horizontal-padding;
   border: $input-border-width solid $input-border-color;

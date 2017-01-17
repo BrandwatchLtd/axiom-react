@@ -1,13 +1,12 @@
-@import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/animations/vars';
+@import '../../design-patterns/spacing/vars';
 @import './vars';
 
 .ax-checkbox__indicator {
   border-radius: $input-border-radius;
 
   &::before {
-    @include transition((border-color), $transition-time-fast);
+    @include transition((border-color));
 
     position: absolute;
     top: 0.25rem;

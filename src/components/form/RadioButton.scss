@@ -1,12 +1,11 @@
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/animations/vars';
 @import '../form/vars';
 
 .ax-radio__indicator {
   border-radius: 50%;
 
   &::before {
-    @include transition((background-color), $transition-time-fast);
+    @include transition((background-color));
 
     position: absolute;
     top: ($input-checkbox-size / 4);

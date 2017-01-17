@@ -1,9 +1,10 @@
+@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/spacing/vars';
 @import './vars';
 
 .ax-platform__canvas {
-  @include transition((transform));
+  @include transition((transform), $transition-time-slow);
 
   flex: 1 1 auto;
   margin-left: $platform-dock-size;

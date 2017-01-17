@@ -1,5 +1,4 @@
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../form/vars';
@@ -29,7 +28,7 @@
   z-index: -1;
 
   + .ax-chedio-buttox__indicator {
-    @include transition((background-color, border-color, color), $transition-time-fast);
+    @include transition((background-color, border-color, color));
 
     position: relative;
     width: $input-checkbox-size;

@@ -1,4 +1,3 @@
-@import '../../design-patterns/animations/vars';
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
@@ -28,7 +27,7 @@ $tabset-tab-large-vertical-padding: $component-padding-lg;
 }
 
 .ax-tabset__list-item {
-  @include transition((border-color, background-color, color), $transition-time-fast);
+  @include transition((border-color, background-color, color));
 
   position: relative;
   margin: 0 $tabset-tab-spacing 0 0;
