@@ -8,18 +8,26 @@ if (__INCLUDE_CSS__) {
 
 export default class Link extends Component {
   static propTypes = {
+    Component: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.func,
+    ]),
     children: PropTypes.node,
     inheritColor: PropTypes.bool,
   };
 
+  static defaultProps = {
+    Component: 'a',
+  };
+
   render() {
-    const { children, inheritColor, ...rest } = this.props;
+    const { children, Component, inheritColor, ...rest } = this.props;
     const classes = classnames('ax-link', {
       'ax-link--inherit-color': inheritColor,
     });
 
     return (
-      <Base { ...rest } Component="a" className={ classes }>
+      <Base { ...rest } Component={ Component } className={ classes }>
         { children }
       </Base>
     );

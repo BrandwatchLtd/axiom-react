@@ -7,7 +7,10 @@ if (__INCLUDE_CSS__) {
 
 export default class Base extends Component {
   static propTypes = {
-    Component: PropTypes.string,
+    Component: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.func,
+    ]),
     className: PropTypes.string,
     hiddenUntil: PropTypes.oneOfType([
       PropTypes.bool,
