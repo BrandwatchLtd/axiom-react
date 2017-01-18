@@ -34,6 +34,7 @@
     "lodash.omit": "^4.5.0",
     "moment": "^2.14.1",
     "normalize.css": "^4.2.0",
+    "popper.js": "^1.0.4",
     "react-modal": "^1.4.0"
   },
   "peerDependencies": {

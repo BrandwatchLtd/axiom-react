@@ -4622,6 +4622,10 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
+popper.js:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.0.4.tgz#8b4b567abdd7ac7747b9799bb7553c62e47f30dd"
+
 postcss-calc@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"

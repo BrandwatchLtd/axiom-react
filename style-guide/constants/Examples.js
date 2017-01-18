@@ -14,6 +14,7 @@ module.exports = {
   '/components/logo': require('../../src/components/logo/example'),
   '/components/menu': require('../../src/components/menu/example'),
   '/components/platform': require('../../src/components/platform/example'),
+  '/components/position': require('../../src/components/position/example'),
   '/components/tabset': require('../../src/components/tabset/example'),
   '/components/typography': require('../../src/components/typography/example'),
   '/composites/login': require('../../src/composites/login/example'),
