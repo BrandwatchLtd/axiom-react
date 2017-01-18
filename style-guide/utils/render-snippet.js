@@ -13,9 +13,7 @@ export function htmlRender(snippet) {
     const html = renderToStaticMarkup(snippet);
     return html.trim() && html !== '<noscript></noscript>' ? html : '';
   } catch (e) {
-    console.error(`
-      "${snippet}" was passed to 'renderToStaticMarkup'.
-      It should be a React element only.`);
+    console.error(e);
   }
 }
 
@@ -27,9 +25,7 @@ export function jsxRender(snippet) {
       filterProps: ['key'],
     });
   } catch (e) {
-    console.error(`
-      "${snippet}" was passed to 'reactElementToJsxString'.
-      It should be a React element only.`);
+    console.error(e);
   }
 }
 /* eslint-disable no-console */
