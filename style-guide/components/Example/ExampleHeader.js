@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import humanize from 'humanize-string';
-import isPlainObject from 'lodash/isPlainObject';
+import isPlainObject from 'lodash.isPlainObject';
 import { Grid, GridCell, Heading, Weak } from 'bw-axiom';
 import ApiDocs from '../ApiDocs';
 import ExampleBox from './ExampleBox';

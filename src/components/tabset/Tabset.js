@@ -1,5 +1,5 @@
 import React, { Component, Children, PropTypes, cloneElement } from 'react';
-import omit from 'lodash/omit';
+import omit from 'lodash.omit';
 import { Base, Tab } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {

@@ -1,7 +1,7 @@
 import { createElement } from 'react';
 import { v4 } from 'uuid';
-import omit from 'lodash/omit';
-import uniq from 'lodash/uniq';
+import omit from 'lodash.omit';
+import uniq from 'lodash.uniq';
 import { isReactElement, isReactElements } from './react-elements';
 
 const PLACEHOLDER = '...';
