@@ -32,7 +32,12 @@ export default class ContextBoxExample extends Component {
       <Example name="Positions">
         <Snippet>
           { position.values.map((position) =>
-            <Grid fit="medium" full={ true } key={ position } snippetIgnore={ true }>
+            <Grid
+                fit="medium"
+                full={ true }
+                gutters="large"
+                key={ position }
+                snippetIgnore={ true }>
               { offset.values.map((offset) =>
                 <GridCell key={ offset } snippetIgnore={ true }>
                   <ContextBox offset={ offset } position={ position }>

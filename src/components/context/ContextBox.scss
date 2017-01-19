@@ -73,9 +73,13 @@ $context-box-tip-space: $spacing-grid-size * 2;
   }
 }
 
-.ax-context-box--top-start::before,
-.ax-context-box--bottom-start::before {
-  left: $context-box-tip-padding;
+.ax-context-box--top-start,
+.ax-context-box--bottom-start {
+  transform: translateX($context-box-tip-size);
+
+  &::before {
+    left: $context-box-tip-padding;
+  }
 }
 
 .ax-context-box--top-middle::before,
@@ -84,14 +88,22 @@ $context-box-tip-space: $spacing-grid-size * 2;
   transform: translateX(-50%);
 }
 
-.ax-context-box--top-end::before,
-.ax-context-box--bottom-end::before {
-  right: $context-box-tip-padding;
+.ax-context-box--top-end,
+.ax-context-box--bottom-end {
+  transform: translateX(-$context-box-tip-size);
+
+  &::before {
+    right: $context-box-tip-padding;
+  }
 }
 
-.ax-context-box--right-start::before,
-.ax-context-box--left-start::before {
-  top: $context-box-tip-padding;
+.ax-context-box--right-start,
+.ax-context-box--left-start {
+  transform: translateY($context-box-tip-size);
+
+  &::before {
+    top: $context-box-tip-padding;
+  }
 }
 
 .ax-context-box--right-middle::before,
@@ -100,9 +112,13 @@ $context-box-tip-space: $spacing-grid-size * 2;
   transform: translateY(-50%);
 }
 
-.ax-context-box--right-end::before,
-.ax-context-box--left-end::before {
-  bottom: $context-box-tip-padding;
+.ax-context-box--right-end,
+.ax-context-box--left-end {
+  transform: translateY(-$context-box-tip-size);
+
+  &::before {
+    bottom: $context-box-tip-padding;
+  }
 }
 
 .ax-context-box--padded {

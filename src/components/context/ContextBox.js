@@ -11,7 +11,7 @@ export default class ContextBox extends Component {
     children: PropTypes.node,
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
     padded: PropTypes.bool,
-    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
   };
 
   static defaultProps = {
