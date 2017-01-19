@@ -21,10 +21,10 @@ export default class Platform extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <div className="ax-platform">
+      <div { ...rest } className="ax-platform">
         { children }
       </div>
     );

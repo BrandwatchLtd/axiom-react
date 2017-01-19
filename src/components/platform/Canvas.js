@@ -15,7 +15,7 @@ export default class Canvas extends Component {
   };
 
   render() {
-    const { children, isShifted } = this.props;
+    const { children, isShifted, ...rest } = this.props;
     const { consoleWidth } = this.context;
     const style = {
       marginRight: isShifted && consoleWidth,
@@ -23,7 +23,7 @@ export default class Canvas extends Component {
     };
 
     return (
-      <div className="ax-platform__canvas" style={ style }>
+      <div { ...rest } className="ax-platform__canvas" style={ style }>
         { children }
       </div>
     );

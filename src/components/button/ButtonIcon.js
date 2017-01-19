@@ -15,7 +15,7 @@ export default class ButtonIcon extends Component {
   };
 
   render () {
-    const { isEnd, isStart, name, size } = this.props;
+    const { isEnd, isStart, name, size, ...rest } = this.props;
     const classes = classnames('ax-button__icon', {
       'ax-button__icon--start': isStart,
       'ax-button__icon--end': isEnd,
@@ -28,7 +28,7 @@ export default class ButtonIcon extends Component {
     };
 
     return (
-      <span className={ classes }>
+      <span { ...rest } className={ classes }>
         <Icon name={ name } size={ sizeMap[size] } />
       </span>
     );

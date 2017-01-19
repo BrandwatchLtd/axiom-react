@@ -12,10 +12,10 @@ export default class TextGroup extends Component {
   };
 
   render() {
-    const { children, label } = this.props;
+    const { children, label, ...rest } = this.props;
 
     return (
-      <Base Component="label" className="ax-input__group">
+      <Base { ...rest } Component="label" className="ax-input__group">
         { do { if (label) {
           <div className="ax-input__label">
             <Strong>{ label }</Strong>

@@ -10,10 +10,10 @@ export default class Dock extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <ul className="ax-platform__dock">
+      <ul { ...rest } className="ax-platform__dock">
         { children }
       </ul>
     );

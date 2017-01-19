@@ -14,14 +14,14 @@ export default class CardListItem extends Component {
   };
 
   render() {
-    const { active, children, onClick } = this.props;
+    const { active, children, onClick, ...rest } = this.props;
     const classes = classnames('ax-card-list__item', {
       'ax-card-list__item--active': active,
       'ax-card-list__item--clickable': onClick,
     });
 
     return (
-      <Base Component="li" className={ classes } onClick={ onClick }>
+      <Base { ...rest } Component="li" className={ classes } onClick={ onClick }>
         { children }
       </Base>
     );

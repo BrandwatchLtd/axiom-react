@@ -16,7 +16,7 @@ export default class Console extends Component {
   };
 
   render() {
-    const { children, isVisible } = this.props;
+    const { children, isVisible, ...rest } = this.props;
     const { consoleWidth } = this.context;
     const style = { width: consoleWidth };
     const classes = classnames('ax-platform__console', {
@@ -24,7 +24,7 @@ export default class Console extends Component {
     });
 
     return (
-      <div className={ classes } style={ style }>
+      <div { ...rest } className={ classes } style={ style }>
         { children }
       </div>
     );

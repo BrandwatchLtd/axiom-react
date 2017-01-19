@@ -13,13 +13,13 @@ export default class Card extends Component {
   };
 
   render() {
-    const { children, compact } = this.props;
+    const { children, compact, ...rest } = this.props;
     const classes = classnames('ax-card', {
       'ax-card--compact': compact,
     });
 
     return (
-      <Base className={ classes }>
+      <Base { ...rest } className={ classes }>
         { children }
       </Base>
     );

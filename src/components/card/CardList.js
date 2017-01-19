@@ -11,10 +11,10 @@ export default class CardList extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <Base Component="ul" className="ax-card-list">
+      <Base { ...rest } Component="ul" className="ax-card-list">
         { children }
       </Base>
     );
