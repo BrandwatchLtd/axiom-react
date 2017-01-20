@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import omit from 'lodash.omit';
 import {
   Base,
   LogoVertical,
@@ -54,7 +55,7 @@ export default class Login extends Component {
     const style = { backgroundImage: `url(${backgroundImage})` };
 
     return (
-      <Base { ...rest } className="ax-login" style={ style }>
+      <Base { ...omit(rest, ['onSubmit']) } className="ax-login" style={ style }>
         <div className="ax-login__header">
           <div className="ax-login__header-container">
             <div className="ax-login__logo">
