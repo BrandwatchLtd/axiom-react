@@ -7,11 +7,10 @@ cache:
 script:
   - yarn lint
   - yarn test
-before_install:
-  - bash ./deploy/ssh.sh
 after_success:
-  - bash ./deploy/deploy_to_ghpages.sh
+  - bash ./deploy/publish_to_npm.sh
   - bash ./deploy/deploy_to_gcp.sh
+  - bash ./deploy/deploy_to_ghpages.sh
 env:
   global:
   - SOURCE_BRANCH: master
