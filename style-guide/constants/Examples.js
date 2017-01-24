@@ -1,4 +1,5 @@
 module.exports = {
+  '/components/alert': require('../../src/components/alert/example'),
   '/components/avatar': require('../../src/components/avatar/example'),
   '/components/base': require('../../src/components/base/example'),
   '/components/button': require('../../src/components/button/example'),

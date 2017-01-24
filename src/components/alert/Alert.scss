@@ -1,0 +1,27 @@
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/mixins';
+@import '../../design-patterns/spacing/vars';
+@import '../typography/vars';
+
+.ax-alert {
+  @include space-block;
+
+  padding: $component-padding-lg $page-padding-h;
+  font-weight: $font-weight-medium;
+}
+
+// Alert: colors
+.ax-alert--grey {
+  background-color: $color-ui-light-1;
+  color: $color-ui-dark-0;
+}
+
+.ax-alert--valid {
+  background-color: $color-ui-valid;
+  color: $color-ui-light-1;
+}
+
+.ax-alert--invalid {
+  background-color: $color-ui-invalid;
+  color: $color-ui-light-1;
+}
