@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import omit from 'lodash.omit';
 
 if (__INCLUDE_CSS__) {
   require('./Platform.scss');
@@ -24,7 +25,7 @@ export default class Platform extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <div { ...rest } className="ax-platform">
+      <div { ...omit(rest, ['consoleWidth']) } className="ax-platform">
         { children }
       </div>
     );
