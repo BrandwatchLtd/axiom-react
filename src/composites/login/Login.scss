@@ -3,6 +3,9 @@
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/vars';
 
+$logo-flag-top-padding: $spacing-grid-size * 6;
+$logo-flag-padding: $spacing-grid-size * 4;
+
 .ax-login {
   display: flex;
   flex-direction: column;
@@ -27,8 +30,9 @@
 
 .ax-login__logo {
   display: inline-block;
+  padding: $logo-flag-top-padding $logo-flag-padding $logo-flag-padding;
   background-color: $color-ui-light-2;
-  color: $color-ui-dark-0;
+  vertical-align: top;
 }
 
 .ax-login__body {

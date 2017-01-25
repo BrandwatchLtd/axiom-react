@@ -2,12 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import omit from 'lodash.omit';
 import {
   Base,
-  LogoVertical,
   Button,
   ButtonGroup,
   Form,
   TextInput,
   Link,
+  LogoVertical,
   Paragraph,
   Heading,
   Strong,
@@ -59,7 +59,7 @@ export default class Login extends Component {
         <div className="ax-login__header">
           <div className="ax-login__header-container">
             <div className="ax-login__logo">
-              <LogoVertical height="8.75rem" />
+              <LogoVertical height="6.25rem" />
             </div>
           </div>
         </div>
