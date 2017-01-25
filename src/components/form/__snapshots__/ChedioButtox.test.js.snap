@@ -1,0 +1,31 @@
+exports[`ChedioButtox renders when disabled 1`] = `
+<label
+  className="ax-chedio-buttox__container ax-chedio-buttox__container--disabled">
+  <input
+    className="ax-chedio-buttox ax-ipsum"
+    disabled={true}
+    type="checkbox" />
+  <span
+    className="ax-chedio-buttox__indicator ax-lorem" />
+  <span
+    className="ax-chedio-buttox__label">
+    Lorem ipsum
+  </span>
+</label>
+`;
+
+exports[`ChedioButtox renders with defaultProps 1`] = `
+<label
+  className="ax-chedio-buttox__container">
+  <input
+    className="ax-chedio-buttox ax-ipsum"
+    disabled={undefined}
+    type="checkbox" />
+  <span
+    className="ax-chedio-buttox__indicator ax-lorem" />
+  <span
+    className="ax-chedio-buttox__label">
+    Lorem ipsum
+  </span>
+</label>
+`;

@@ -1,0 +1,97 @@
+exports[`ContextBox renders bottom end 1`] = `
+<div
+  className="ax-context-box ax-context-box--bottom-end ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders bottom middle 1`] = `
+<div
+  className="ax-context-box ax-context-box--bottom-middle ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders bottom start 1`] = `
+<div
+  className="ax-context-box ax-context-box--bottom-start ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders left end 1`] = `
+<div
+  className="ax-context-box ax-context-box--left-end ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders left middle 1`] = `
+<div
+  className="ax-context-box ax-context-box--left-middle ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders left start 1`] = `
+<div
+  className="ax-context-box ax-context-box--left-start ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders right end 1`] = `
+<div
+  className="ax-context-box ax-context-box--right-end ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders right middle 1`] = `
+<div
+  className="ax-context-box ax-context-box--right-middle ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders right start 1`] = `
+<div
+  className="ax-context-box ax-context-box--right-start ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders top end 1`] = `
+<div
+  className="ax-context-box ax-context-box--top-end ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders top middle 1`] = `
+<div
+  className="ax-context-box ax-context-box--top-middle ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders top start 1`] = `
+<div
+  className="ax-context-box ax-context-box--top-start ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders unpadded 1`] = `
+<div
+  className="ax-context-box ax-context-box--top-middle">
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders with defaultProps 1`] = `
+<div
+  className="ax-context-box ax-context-box--top-middle ax-context-box--padded">
+  Lorem ipsum
+</div>
+`;

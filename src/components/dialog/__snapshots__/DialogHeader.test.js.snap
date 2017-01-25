@@ -1,0 +1,41 @@
+exports[`DialogHeader renders with defaultProps 1`] = `
+<div
+  className="ax-dialog__header">
+  <div
+    className="ax-grid ax-grid--unresponsive">
+    <div
+      className="ax-grid__cell"
+      style={
+        Object {
+          "width": undefined,
+        }
+      }>
+      Lorem ipsum
+    </div>
+    <div
+      className="ax-grid__cell ax-grid__cell--shrink"
+      style={
+        Object {
+          "width": undefined,
+        }
+      }>
+      <a
+        className="ax-icon-link"
+        onClick={undefined}>
+        <svg
+          className="ax-icon"
+          style={
+            Object {
+              "height": "0.875rem",
+              "width": "0.875rem",
+            }
+          }
+          viewBox="0 0 14 14">
+          <path
+            d="M5.5,7 L2,3.5 L3.5,2 L7,5.5 L10.5,2 L12,3.5 L8.5,7 L12,10.5 L10.5,12 L7,8.5 L3.5,12 L2,10.5 L5.5,7 Z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+`;

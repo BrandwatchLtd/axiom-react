@@ -1,0 +1,10 @@
+exports[`CardList renders with defaultProps 1`] = `
+<ul
+  className="ax-card-list">
+  <li
+    className="ax-card-list__item"
+    onClick={undefined}>
+    Lorem Ipsum
+  </li>
+</ul>
+`;

@@ -1,0 +1,9 @@
+exports[`ContextMenuItem renders with defaultProps 1`] = `
+<li
+  className="ax-context-menu__item">
+  <a
+    className="ax-context-menu__item-link">
+    Lorem ipsum
+  </a>
+</li>
+`;

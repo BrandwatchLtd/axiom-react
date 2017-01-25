@@ -1,0 +1,45 @@
+exports[`TextArea renders with a label 1`] = `
+<label
+  className="ax-input__group">
+  <div
+    className="ax-input__label">
+    <strong
+      className="ax-text--strong">
+      Lorem ipsum
+    </strong>
+  </div>
+  <textarea
+    className="ax-textarea"
+    style={
+      Object {
+        "minHeight": 150,
+      }
+    } />
+</label>
+`;
+
+exports[`TextArea renders with custom height 1`] = `
+<label
+  className="ax-input__group">
+  <textarea
+    className="ax-textarea"
+    style={
+      Object {
+        "minHeight": 300,
+      }
+    } />
+</label>
+`;
+
+exports[`TextArea renders with defaultProps 1`] = `
+<label
+  className="ax-input__group">
+  <textarea
+    className="ax-textarea"
+    style={
+      Object {
+        "minHeight": 150,
+      }
+    } />
+</label>
+`;

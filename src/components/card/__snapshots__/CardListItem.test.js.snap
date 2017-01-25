@@ -1,0 +1,23 @@
+exports[`CardListItem renders active 1`] = `
+<li
+  className="ax-card-list__item ax-card-list__item--active"
+  onClick={undefined}>
+  Lorem Ipsum
+</li>
+`;
+
+exports[`CardListItem renders clickable 1`] = `
+<li
+  className="ax-card-list__item ax-card-list__item--clickable"
+  onClick={[Function]}>
+  Lorem Ipsum
+</li>
+`;
+
+exports[`CardListItem renders with defaultProps 1`] = `
+<li
+  className="ax-card-list__item"
+  onClick={undefined}>
+  Lorem Ipsum
+</li>
+`;

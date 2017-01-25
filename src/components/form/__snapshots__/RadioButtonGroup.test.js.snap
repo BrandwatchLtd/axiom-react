@@ -1,0 +1,18 @@
+exports[`RadioButton renders with defaultProps 1`] = `
+<div
+  className="ax-chedio-buttox__group">
+  <label
+    className="ax-chedio-buttox__container">
+    <input
+      className="ax-chedio-buttox ax-radio"
+      disabled={undefined}
+      type="radio" />
+    <span
+      className="ax-chedio-buttox__indicator ax-radio__indicator" />
+    <span
+      className="ax-chedio-buttox__label">
+      Lorem ipsum
+    </span>
+  </label>
+</div>
+`;

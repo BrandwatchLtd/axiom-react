@@ -1,0 +1,6 @@
+exports[`DialogBody renders with defaultProps 1`] = `
+<div
+  className="ax-dialog__body">
+  Lorem ipsum
+</div>
+`;

@@ -1,0 +1,13 @@
+exports[`Card renders compact 1`] = `
+<div
+  className="ax-card ax-card--compact">
+  Lorem Ipsum
+</div>
+`;
+
+exports[`Card renders with defaultProps 1`] = `
+<div
+  className="ax-card">
+  Lorem Ipsum
+</div>
+`;

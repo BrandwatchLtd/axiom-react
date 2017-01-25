@@ -1,0 +1,6 @@
+exports[`Form renders with defaultProps 1`] = `
+<form
+  className="ax-form">
+  Lorem ipsum
+</form>
+`;

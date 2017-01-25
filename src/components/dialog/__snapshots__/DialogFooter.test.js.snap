@@ -1,0 +1,6 @@
+exports[`DialogFooter renders with defaultProps 1`] = `
+<div
+  className="ax-dialog__footer">
+  Lorem ipsum
+</div>
+`;

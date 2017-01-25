@@ -1,0 +1,15 @@
+exports[`CheckBox renders with defaultProps 1`] = `
+<label
+  className="ax-chedio-buttox__container">
+  <input
+    className="ax-chedio-buttox ax-checkbox"
+    disabled={undefined}
+    type="checkbox" />
+  <span
+    className="ax-chedio-buttox__indicator ax-checkbox__indicator" />
+  <span
+    className="ax-chedio-buttox__label">
+    Lorem ipsum
+  </span>
+</label>
+`;
