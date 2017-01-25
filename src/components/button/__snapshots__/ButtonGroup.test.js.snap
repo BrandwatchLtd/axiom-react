@@ -1,0 +1,9 @@
+exports[`ButtonGroup renders with defaultProps 1`] = `
+<div
+  className="ax-button__group">
+  <button
+    className="ax-button ax-button--medium ax-button--primary">
+    Lorem ipsum
+  </button>
+</div>
+`;
