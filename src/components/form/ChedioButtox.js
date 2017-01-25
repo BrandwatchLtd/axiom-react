@@ -8,11 +8,11 @@ if (__INCLUDE_CSS__) {
 
 export default class ChedioButtox extends Component {
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     disabled: PropTypes.bool,
-    indicatorClassName: PropTypes.string,
-    inputClassName: PropTypes.string,
-    inputType: PropTypes.string.isRequired,
+    indicatorClassName: PropTypes.string.isRequired,
+    inputClassName: PropTypes.string.isRequired,
+    inputType: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
   };
 
   render() {
@@ -27,7 +27,6 @@ export default class ChedioButtox extends Component {
 
     const classes = classnames('ax-chedio-buttox__container', {
       'ax-chedio-buttox__container--disabled': disabled,
-      'ax-chedio-buttox__container--space': !!children,
     });
 
     return (

@@ -16,12 +16,6 @@
   cursor: default;
 }
 
-.ax-chedio-buttox__container--space {
-  .ax-chedio-buttox__indicator {
-    margin: 0 $component-padding-sm 0 0;
-  }
-}
-
 .ax-chedio-buttox {
   position: absolute;
   opacity: 0;
@@ -33,6 +27,7 @@
     position: relative;
     width: $input-checkbox-size;
     height: $input-checkbox-size;
+    margin: 0 $component-padding-sm 0 0;
     border: $input-border-width solid $input-border-color;
     background-color: $input-background-color;
 
