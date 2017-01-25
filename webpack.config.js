@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const structureGenerator = require('./scripts/structure-generator');
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     main: './style-guide/client.js',
   },
