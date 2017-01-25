@@ -60,6 +60,7 @@ export default class TextInput extends Component {
               type="text"
               { ...rest }
               className="ax-input"
+              disabled={ disabled }
               onBlur={ ::this.handleOnBlur }
               onFocus={ ::this.handleOnFocus }
               ref="input"  />
