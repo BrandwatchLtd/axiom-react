@@ -24,6 +24,7 @@ $context-tip-size: $spacing-grid-size * 3;
   border-width: $context-tip-size;
   border-style: solid;
   border-color: transparent;
+  pointer-events: none;
 }
 
 .ax-context--top {
