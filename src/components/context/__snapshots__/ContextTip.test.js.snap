@@ -1,0 +1,9 @@
+exports[`ContextTip renders with defaultProps 1`] = `
+<div
+  className="ax-context-box ax-context-box--padding-small">
+  <p
+    className="ax-paragraph">
+    Lorem ipsum
+  </p>
+</div>
+`;
