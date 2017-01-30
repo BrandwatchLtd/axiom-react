@@ -24,6 +24,7 @@ export { default as Context } from './components/context/Context';
 export { default as ContextBox } from './components/context/ContextBox';
 export { default as ContextMenu } from './components/context/ContextMenu';
 export { default as ContextMenuItem } from './components/context/ContextMenuItem';
+export { default as ContextTip } from './components/context/ContextTip';
 export { default as Dialog } from './components/dialog/Dialog';
 export { default as DialogBody } from './components/dialog/DialogBody';
 export { default as DialogFooter } from './components/dialog/DialogFooter';
@@ -75,6 +76,9 @@ export { default as Tabset } from './components/tabset/Tabset';
 export { default as TextArea } from './components/form/TextArea';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';
+export { default as Tooltip } from './components/tooltip/Tooltip';
+export { default as TooltipContent } from './components/tooltip/TooltipContent';
+export { default as TooltipTarget } from './components/tooltip/TooltipTarget';
 export { default as Underline } from './components/typography/Underline';
 export { default as Weak } from './components/typography/Weak';
 
