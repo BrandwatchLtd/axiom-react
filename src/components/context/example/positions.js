@@ -14,7 +14,7 @@ import {
 export default class ContextBoxExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      ContextBox: PropTypes.shape({
+      Context: PropTypes.shape({
         position: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
@@ -24,7 +24,7 @@ export default class ContextBoxExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { ContextBox: { position } } = components;
+    const { Context: { position } } = components;
 
     return (
       <Example name="Positions">
