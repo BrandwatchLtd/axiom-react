@@ -24,14 +24,15 @@ if (typeof document !== 'undefined') {
 export default (locals, callback) => {
   const history = createMemoryHistory({ basename: __BASENAME__ });
   const location = history.createLocation(locals.path);
+  const hash = locals.webpackStats.hash;
 
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     callback(null, template({
       htmlWebpackPlugin: {
         options: {
           basename: __BASENAME__,
-          stylesheet: 'assets/bundle.min.css',
-          script: 'assets/bundle.min.js',
+          stylesheet: `assets/bundle.${hash}.min.css`,
+          script: `assets/bundle.${hash}.min.js`,
           html: renderToString(<RouterContext { ...renderProps } />),
         },
       },

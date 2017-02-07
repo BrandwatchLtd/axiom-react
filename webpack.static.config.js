@@ -28,14 +28,14 @@ module.exports = {
     }],
   },
   output: {
-    filename: './assets/bundle.min.js',
+    filename: './assets/bundle.[hash].min.js',
     path: './static/',
     publicPath: '/',
     libraryTarget: 'umd',
   },
   plugins: [
     new CleanWebpackPlugin(['static']),
-    new ExtractTextPlugin('./assets/bundle.min.css', { allChunks: true }),
+    new ExtractTextPlugin('./assets/bundle.[hash].min.css', { allChunks: true }),
     new CopyWebpackPlugin([{ from: './style-guide/assets', to: './assets' }]),
     new StaticSiteGeneratorPlugin('main', structureGenerator.extractPaths()),
     new webpack.optimize.DedupePlugin(),
