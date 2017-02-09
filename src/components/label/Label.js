@@ -9,7 +9,7 @@ if (__INCLUDE_CSS__) {
 export default class Label extends Component {
   static propTypes = {
     children: PropTypes.node,
-    color: PropTypes.oneOf(['white', 'grey', 'success', 'error']),
+    color: PropTypes.oneOf(['white', 'success', 'error']),
     full: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
@@ -18,7 +18,7 @@ export default class Label extends Component {
   };
 
   static defaultProps = {
-    color: 'grey',
+    color: 'white',
     size: 'medium',
   };
 
@@ -38,10 +38,17 @@ export default class Label extends Component {
       [`ax-label--full--${full}`]: full & full !== true,
     });
 
+    const themeMap = {
+      white: 'light',
+      success: 'dark',
+      error: 'dark',
+    };
+
     const mappedChildren = Children.toArray(children).map((child, index, array) =>
       child.type !== LabelIcon ? child : cloneElement(child, {
         isEnd: index === array.length - 1,
         isStart: index === 0,
+        theme: themeMap[color],
         size,
       })
     );

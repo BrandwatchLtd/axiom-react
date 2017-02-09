@@ -1,4 +1,6 @@
 @import '../../design-patterns/colors/vars';
+@import '../../design-patterns/colors/colors-light';
+@import '../../design-patterns/colors/colors-dark';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/layout/vars';
 @import '../../design-patterns/spacing/mixins';
@@ -56,12 +58,6 @@
 .ax-label--white {
   border-color: var(--color-context-border-subtle);
   background-color: $color-ui-white;
-  color: $color-ui-dark-0;
-}
-
-.ax-label--grey {
-  border-color: transparent;
-  background-color: $color-ui-light-2;
   color: $color-ui-dark-0;
 }
 
