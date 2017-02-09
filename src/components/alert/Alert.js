@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { Base, Grid, GridCell, Icon, Link } from 'bw-axiom';
+import { Base, Grid, GridCell, IconLink } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Alert.scss');
@@ -23,7 +23,7 @@ export default class Alert extends Component {
 
     return (
       <Base { ...rest } className={ classes }>
-        <Grid responsive={ false } >
+        <Grid responsive={ false }>
           <GridCell>
             { children }
           </GridCell>

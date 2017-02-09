@@ -9,7 +9,6 @@
 // Label: Base
 .ax-label {
   display: inline-flex;
-  position: relative;
   align-items: center;
   border-width: $component-border-width;
   border-style: solid;
@@ -17,6 +16,8 @@
   background-color: transparent;
   line-height: $component-line-height;
   text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .ax-label--small {

@@ -4,8 +4,9 @@
 .ax-icon-link {
   @include transition((color));
 
-  display: flex;
+  display: inline-flex;
   color: var(--color-context-text-subtle);
+  vertical-align: middle;
 
   &:hover  {
     color: var(--color-context-text);
