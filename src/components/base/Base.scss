@@ -79,8 +79,9 @@ body {
 
 .ax-text--subtle   { color: var(--color-context-text-subtle); }
 .ax-text--disabled { color: var(--color-context-text-disabled); }
-.ax-text--valid    { color: $color-ui-valid; }
-.ax-text--invalid  { color: $color-ui-invalid; }
+.ax-text--success  { color: $color-ui-success; }
+.ax-text--warning  { color: $color-ui-warning; }
+.ax-text--error    { color: $color-ui-error; }
 
 //
 .ax-text--ellipsis {

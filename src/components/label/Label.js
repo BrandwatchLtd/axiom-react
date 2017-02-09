@@ -9,7 +9,7 @@ if (__INCLUDE_CSS__) {
 export default class Label extends Component {
   static propTypes = {
     children: PropTypes.node,
-    color: PropTypes.oneOf(['white', 'grey', 'valid', 'invalid']),
+    color: PropTypes.oneOf(['white', 'grey', 'success', 'error']),
     full: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),

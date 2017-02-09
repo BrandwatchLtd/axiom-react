@@ -221,8 +221,8 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textInvalid', () => {
-    const component = getComponent({ textInvalid: true });
+  it('renders textError', () => {
+    const component = getComponent({ textError: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -239,8 +239,14 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textValid', () => {
-    const component = getComponent({ textValid: true });
+  it('renders textSuccess', () => {
+    const component = getComponent({ textSuccess: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textWarning', () => {
+    const component = getComponent({ textWarning: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

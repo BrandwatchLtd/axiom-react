@@ -5,29 +5,28 @@
 @import '../vars';
 
 .ax-alert {
-  @include space-block;
+  @include space-block();
 
   padding: $component-padding-vertical-large $page-padding-h;
   font-weight: $font-weight-medium;
 }
 
-// Alert: colors
-.ax-alert--grey {
-  background-color: $color-ui-light-2;
-  color: $color-ui-dark-0;
-}
-
-.ax-alert--valid {
-  background-color: $color-ui-valid;
+.ax-alert--success {
+  background-color: $color-ui-success;
   color: $color-ui-light-2;
 }
 
-.ax-alert--invalid {
-  background-color: $color-ui-invalid;
+.ax-alert--warning {
+  background-color: $color-ui-warning;
   color: $color-ui-light-2;
 }
 
-.ax-alert--primary {
-  background-color: $color-ui-primary-1;
+.ax-alert--error {
+  background-color: $color-ui-error;
+  color: $color-ui-light-2;
+}
+
+.ax-alert--info {
+  background-color: $color-ui-primary-2;
   color: $color-ui-light-2;
 }

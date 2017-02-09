@@ -9,12 +9,12 @@ if (__INCLUDE_CSS__) {
 export default class Alert extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    color: PropTypes.oneOf(['grey', 'valid', 'invalid', 'primary']),
+    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
     onRemoveClick: PropTypes.func,
   };
 
   static defaultProps = {
-    color: 'grey',
+    color: 'info',
   };
 
   render() {
@@ -30,9 +30,7 @@ export default class Alert extends Component {
 
           { do { if (onRemoveClick) {
             <GridCell shrink={ true }>
-              <Link inheritColor={ true } onClick={ onRemoveClick }>
-                <Icon name="cross" />
-              </Link>
+              <IconLink name="cross" onClick={ onRemoveClick } theme="dark" />
             </GridCell>;
           } } }
         </Grid>

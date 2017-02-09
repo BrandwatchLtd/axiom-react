@@ -7,9 +7,7 @@ export default class AlertExample extends Component {
     return (
       <Example name="Removable Alerts">
         <Snippet>
-          <Alert
-              color="valid"
-              onRemoveClick={ () => {} }>
+          <Alert onRemoveClick={ () => {} }>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
             accumsan quam, ut ullamcorper nulla.
           </Alert>

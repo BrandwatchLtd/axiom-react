@@ -10,9 +10,9 @@ $input-placeholder-color: var(--color-context-text-disabled);
 $input-disabled-background-color: var(--color-context-background-disabled);
 
 $input-focus-border-color: fade-out($color-ui-primary-1, .5);
-$input-valid-border-color: fade-out($color-ui-valid, .6);
-$input-invalid-border-color: fade-out($color-ui-invalid, .75);
-$input-invalid-color: $color-ui-invalid;
+$input-valid-border-color: fade-out($color-ui-success, .6);
+$input-invalid-border-color: fade-out($color-ui-error, .75);
+$input-invalid-color: $color-ui-error;
 
 $input-checked-color: $color-ui-primary-1;
 $input-checkbox-size: 1rem;

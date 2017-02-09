@@ -64,14 +64,14 @@
   color: $color-ui-dark-0;
 }
 
-.ax-label--valid {
+.ax-label--success {
   border-color: transparent;
-  background-color: $color-ui-valid;
+  background-color: $color-ui-success;
   color: $color-ui-light-2;
 }
 
-.ax-label--invalid {
+.ax-label--error {
   border-color: transparent;
-  background-color: $color-ui-invalid;
+  background-color: $color-ui-error;
   color: $color-ui-light-2;
 }

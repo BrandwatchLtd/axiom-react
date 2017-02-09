@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Alert } from 'bw-axiom';
+import { Alert, Strong } from 'bw-axiom';
 
 export default class AlertExample extends Component {
   static propTypes = {
@@ -22,8 +22,9 @@ export default class AlertExample extends Component {
         <Snippet>
           { color.values.map((color) =>
             <Alert color={ color } key={ color }>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-              accumsan quam, ut ullamcorper nulla.
+              <Strong snippetIgnore={ true } textCase="capital">{ color }</Strong>: Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nam ac accumsan quam,
+              ut ullamcorper nulla.
             </Alert>
           ) }
         </Snippet>

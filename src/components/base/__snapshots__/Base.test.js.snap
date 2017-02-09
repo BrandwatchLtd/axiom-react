@@ -92,9 +92,9 @@ exports[`Base renders textEllipsis 1`] = `
   className="ax-text--ellipsis" />
 `;
 
-exports[`Base renders textInvalid 1`] = `
+exports[`Base renders textError 1`] = `
 <div
-  className="ax-text--invalid" />
+  className="ax-text--error" />
 `;
 
 exports[`Base renders textLeft always 1`] = `
@@ -147,9 +147,9 @@ exports[`Base renders textSubtle 1`] = `
   className="ax-text--subtle" />
 `;
 
-exports[`Base renders textValid 1`] = `
+exports[`Base renders textSuccess 1`] = `
 <div
-  className="ax-text--valid" />
+  className="ax-text--success" />
 `;
 
 exports[`Base renders textWarning 1`] = `

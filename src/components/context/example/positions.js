@@ -44,7 +44,7 @@ export default class ContextBoxExample extends Component {
                     </Paragraph>
 
                     <LabelGroup textCase="capital">
-                      <Label color="valid">Postion: { position }</Label>
+                      <Label color="success">Postion: { position }</Label>
                     </LabelGroup>
                   </div>
                 </ContextBox>

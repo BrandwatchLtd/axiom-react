@@ -25,8 +25,9 @@ export default class ColorsExample extends Component {
     ];
 
     const validities = [
-      'color-ui-invalid',
-      'color-ui-valid',
+      'color-ui-success',
+      'color-ui-warning',
+      'color-ui-error',
     ];
 
     return (
