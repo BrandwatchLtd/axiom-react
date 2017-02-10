@@ -3,12 +3,12 @@ import { Example, Snippet } from 'style-guide';
 import {
   Button,
   ButtonGroup,
+  ButtonIcon,
   ContextMenu,
   ContextMenuItem,
   Dropdown,
   DropdownButton,
   DropdownMenu,
-  Icon,
 } from 'bw-axiom';
 
 export default class DropdownExample extends Component {
@@ -22,7 +22,7 @@ export default class DropdownExample extends Component {
             <Dropdown>
               <DropdownButton>
                 <Button style="secondary">
-                  <Icon name="chevron-down" />
+                  <ButtonIcon name="chevron-down" />
                 </Button>
               </DropdownButton>
 

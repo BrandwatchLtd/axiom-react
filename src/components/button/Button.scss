@@ -130,14 +130,29 @@ button {
 .ax-button--small {
   padding: $component-padding-vertical-small $component-padding-horizontal-small;
   font-size: $font-size-small;
+
+  &.ax-button--icon-only {
+    padding-right: $component-padding-vertical-small;
+    padding-left: $component-padding-vertical-small;
+  }
 }
 
 .ax-button--medium {
   padding: $component-padding-vertical-medium $component-padding-horizontal-medium;
   font-size: $font-size-small;
+
+  &.ax-button--icon-only {
+    padding-right: $component-padding-vertical-medium;
+    padding-left: $component-padding-vertical-medium;
+  }
 }
 
 .ax-button--large {
   padding: $component-padding-vertical-large $component-padding-horizontal-large;
   font-size: $font-size-large;
+
+  &.ax-button--icon-only {
+    padding-right: $component-padding-vertical-large;
+    padding-left: $component-padding-vertical-large;
+  }
 }

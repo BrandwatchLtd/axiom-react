@@ -18,18 +18,16 @@ export default class ButtonExample extends Component {
     const { Button: { size } } = components;
 
     return (
-      <Example name="Buttons with an Icon">
+      <Example name="Buttons with ButtonIcon only">
         <Snippet>
           { size.values.map((size) =>
-            <ButtonGroup key={ size } snippetIgnore={ true }>
-              <Button size={ size }>
-                <ButtonIcon name="chevron-left" />
+            <ButtonGroup joined={ true } key={ size } snippetIgnore={ true }>
+              <Button size={ size } style="secondary">
                 Button { size.toUpperCase() }
               </Button>
 
-              <Button size={ size }>
-                Button { size.toUpperCase() }
-                <ButtonIcon name="chevron-right" />
+              <Button size={ size } style="secondary">
+                <ButtonIcon name="chevron-down" />
               </Button>
             </ButtonGroup>
           ) }

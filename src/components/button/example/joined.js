@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { ButtonGroup, Button, Icon } from 'bw-axiom';
+import { ButtonGroup, Button, ButtonIcon } from 'bw-axiom';
 
 export default class ButtonExample extends Component {
   render() {
@@ -11,7 +11,7 @@ export default class ButtonExample extends Component {
             <Button style="secondary">Action</Button>
             <Button style="secondary">Twitter</Button>
             <Button style="secondary">
-              <Icon name="twitter" />
+              <ButtonIcon name="twitter" />
             </Button>
           </ButtonGroup>
         </Snippet>

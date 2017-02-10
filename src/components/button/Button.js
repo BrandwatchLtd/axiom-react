@@ -31,14 +31,17 @@ export default class Button extends Component {
       ...rest
     } = this.props;
 
+    const childrenArray = Children.toArray(children);
+    const iconOnly = childrenArray.length === 1 && childrenArray[0].type === ButtonIcon;
     const classes = classnames('ax-button', {
       [`ax-button--${size}`]: size,
       [`ax-button--${style}`]: style,
+      'ax-button--icon-only': iconOnly,
       'ax-button--full': full === true,
       [`ax-button--full--${full}`]: full && full !== true,
     });
 
-    const mappedChildren = Children.toArray(children).map((child, index, array) =>
+    const mappedChildren = childrenArray.map((child, index, array) =>
       child.type !== ButtonIcon ? child : cloneElement(child, {
         isEnd: index === array.length - 1,
         isStart: index === 0,
