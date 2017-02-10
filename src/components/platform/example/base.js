@@ -29,21 +29,21 @@ export default class PlatformExample extends Component {
             <Dock>
               <DockItem
                   active={ active === 0 }
-                  icon="burger"
+                  icon="home"
                   onClick={ () => this.setActive(0) }>
 
               </DockItem>
 
               <DockItem
                   active={ active === 1 }
-                  icon="twitter"
+                  icon="folder"
                   onClick={ () => this.setActive(1) }>
 
               </DockItem>
 
               <DockItem
                   active={ active === 2 }
-                  icon="ellipsis"
+                  icon="tag"
                   onClick={ () => this.setActive(2) }>
 
               </DockItem>

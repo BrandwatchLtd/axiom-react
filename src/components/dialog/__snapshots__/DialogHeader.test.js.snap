@@ -30,9 +30,9 @@ exports[`DialogHeader renders with defaultProps 1`] = `
               "width": "1rem",
             }
           }
-          viewBox="0 0 14 14">
-          <path
-            d="M5.5,7 L2,3.5 L3.5,2 L7,5.5 L10.5,2 L12,3.5 L8.5,7 L12,10.5 L10.5,12 L7,8.5 L3.5,12 L2,10.5 L5.5,7 Z" />
+          viewBox="0 0 16 16">
+          <polygon
+            points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8" />
         </svg>
       </a>
     </div>

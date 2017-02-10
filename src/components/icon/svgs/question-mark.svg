@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>question-mark</title>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Help</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Assets---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="question-mark" fill="#48464F">
-            <path d="M7,13.125 C6.38,13.125 5.875,12.62 5.875,12 C5.875,11.379 6.38,10.875 7,10.875 C7.62,10.875 8.125,11.379 8.125,12 C8.125,12.62 7.62,13.125 7,13.125 Z M8,9.5 L6,9.5 L6,9.062 C6,8.442 6.221,7.852 6.616,7.309 C6.897,6.922 7.231,6.608 7.526,6.331 L7.621,6.241 C8.248,5.648 8.603,5.278 8.597,4.559 C8.597,3.674 7.88,3 7,3 C6.12,3 5.403,3.674 5.403,4.555 L5.403,5 L3.445,5 L3.445,4.555 C3.445,2.595 5.04,1 7,1 C8.955,1 10.55,2.594 10.555,4.553 C10.564,6.153 9.525,7.136 8.968,7.664 L8.89,7.737 C8.615,7.996 8.356,8.24 8.195,8.46 C8.038,8.677 8,8.84 8,9.062 L8,9.5 Z"></path>
+    <defs>
+        <path d="M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z M9,10.25 L7,10.25 L7,10.062 C7,9.442 7.221,8.852 7.616,8.309 C7.897,7.922 8.231,7.608 8.526,7.331 L8.621,7.241 C9.248,6.648 9.603,6.278 9.597,5.559 C9.597,4.674 8.88,4 8,4 C7.12,4 6.403,4.674 6.403,5.555 L6.403,6 L4.445,6 L4.445,5.555 C4.445,3.595 6.04,2 8,2 C9.955,2 11.55,3.594 11.555,5.553 C11.564,7.153 10.525,8.136 9.968,8.664 L9.89,8.737 C9.615,8.996 9.356,9.24 9.195,9.46 C9.038,9.677 9,9.84 9,10.062 L9,10.25 Z" id="path-1"></path>
+    </defs>
+    <g id="Final---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Help">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use fill="#48464F" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>
