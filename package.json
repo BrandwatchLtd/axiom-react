@@ -66,6 +66,7 @@
     "humanize-string": "^1.0.1",
     "jest": "^18.0.0",
     "js-beautify": "^1.6.2",
+    "jsdom": "^9.10.0",
     "json-loader": "0.5.4",
     "lodash.isplainobject": "^4.0.6",
     "lodash.uniq": "^4.5.0",
