@@ -1,0 +1,15 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/animations/vars';
+@import '../../design-patterns/colors/vars';
+
+.ax-progress-finite__background {
+  fill: none;
+  stroke: var(--color-context-background-subtle);
+}
+
+.ax-progress-finite__arc {
+  @include transition((stroke-dashoffset), $transition-time-slow);
+
+  fill: none;
+  stroke: $color-ui-primary-2;
+}

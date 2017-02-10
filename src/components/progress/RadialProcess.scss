@@ -1,0 +1,24 @@
+@import '../../design-patterns/spacing/mixins';
+@import '../vars';
+
+.ax-radial-progress {
+  @include space-block();
+}
+
+.ax-radial-progress--small {
+  width: $component-round-size-small;
+  height: $component-round-size-small;
+  border-width: $component-border-width-small;
+}
+
+.ax-radial-progress--medium {
+  width: $component-round-size-medium;
+  height: $component-round-size-medium;
+  border-width: $component-border-width-medium;
+}
+
+.ax-radial-progress--large {
+  width: $component-round-size-large;
+  height: $component-round-size-large;
+  border-width: $component-border-width-large;
+}

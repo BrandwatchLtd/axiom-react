@@ -1,0 +1,68 @@
+exports[`ProgressInfinite renders with color subtle 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle">
+  <svg
+    viewBox="0 0 24 24">
+    <g
+      transform="translate(12, 12) rotate(-90)">
+      <circle
+        className="ax-progress-infinite__arc"
+        r={10}
+        style={
+          Object {
+            "stroke": "url(#ax-progress-infinite__filter--subtle)",
+            "strokeDasharray": 62.83185307179586,
+            "strokeDashoffset": 15.707963267948966,
+            "strokeWidth": 4,
+          }
+        } />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`ProgressInfinite renders with color white 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--white">
+  <svg
+    viewBox="0 0 24 24">
+    <g
+      transform="translate(12, 12) rotate(-90)">
+      <circle
+        className="ax-progress-infinite__arc"
+        r={10}
+        style={
+          Object {
+            "stroke": "url(#ax-progress-infinite__filter--white)",
+            "strokeDasharray": 62.83185307179586,
+            "strokeDashoffset": 15.707963267948966,
+            "strokeWidth": 4,
+          }
+        } />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`ProgressInfinite renders with defaultProps 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle">
+  <svg
+    viewBox="0 0 24 24">
+    <g
+      transform="translate(12, 12) rotate(-90)">
+      <circle
+        className="ax-progress-infinite__arc"
+        r={10}
+        style={
+          Object {
+            "stroke": "url(#ax-progress-infinite__filter--subtle)",
+            "strokeDasharray": 62.83185307179586,
+            "strokeDashoffset": 15.707963267948966,
+            "strokeWidth": 4,
+          }
+        } />
+    </g>
+  </svg>
+</div>
+`;
