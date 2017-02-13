@@ -43,7 +43,8 @@
 
 
 // Grid: Gutter sizing
-.ax-grid--gutters--small { @include grid-gutter($spacing-grid-size * 4); }
+.ax-grid--gutters--small { @include grid-gutter($spacing-grid-size * 2); }
+.ax-grid--gutters--medium { @include grid-gutter($spacing-grid-size * 4); }
 .ax-grid--gutters--large { @include grid-gutter($spacing-grid-size * 6); }
 
 

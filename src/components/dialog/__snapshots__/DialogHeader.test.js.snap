@@ -2,7 +2,7 @@ exports[`DialogHeader renders with defaultProps 1`] = `
 <div
   className="ax-dialog__header">
   <div
-    className="ax-grid ax-grid--unresponsive ax-grid--gutters--small">
+    className="ax-grid ax-grid--unresponsive ax-grid--gutters--medium">
     <div
       className="ax-grid__cell"
       style={

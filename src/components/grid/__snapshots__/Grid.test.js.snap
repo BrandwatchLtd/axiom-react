@@ -1,27 +1,27 @@
 exports[`Grid properties fit renders with value large 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--small ax-grid--fit--large">
+  className="ax-grid ax-grid--gutters--medium ax-grid--fit--large">
   <div />
 </div>
 `;
 
 exports[`Grid properties fit renders with value medium 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--small ax-grid--fit--medium">
+  className="ax-grid ax-grid--gutters--medium ax-grid--fit--medium">
   <div />
 </div>
 `;
 
 exports[`Grid properties fit renders with value small 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--small ax-grid--fit--small">
+  className="ax-grid ax-grid--gutters--medium ax-grid--fit--small">
   <div />
 </div>
 `;
 
 exports[`Grid properties fit renders with value true 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--small ax-grid--fit">
+  className="ax-grid ax-grid--gutters--medium ax-grid--fit">
   <div />
 </div>
 `;
@@ -40,6 +40,13 @@ exports[`Grid properties gutters renders with value large 1`] = `
 </div>
 `;
 
+exports[`Grid properties gutters renders with value medium 1`] = `
+<div
+  className="ax-grid ax-grid--gutters--medium">
+  <div />
+</div>
+`;
+
 exports[`Grid properties gutters renders with value small 1`] = `
 <div
   className="ax-grid ax-grid--gutters--small">
@@ -49,21 +56,21 @@ exports[`Grid properties gutters renders with value small 1`] = `
 
 exports[`Grid properties renders with hGutters property set to false 1`] = `
 <div
-  className="ax-grid ax-grid--gutters-none-h ax-grid--gutters--small">
+  className="ax-grid ax-grid--gutters-none-h ax-grid--gutters--medium">
   <div />
 </div>
 `;
 
 exports[`Grid properties renders with vGutters property set to false 1`] = `
 <div
-  className="ax-grid ax-grid--gutters-none-v ax-grid--gutters--small">
+  className="ax-grid ax-grid--gutters-none-v ax-grid--gutters--medium">
   <div />
 </div>
 `;
 
 exports[`Grid renders with defaultProps 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--small">
+  className="ax-grid ax-grid--gutters--medium">
   <div />
 </div>
 `;

@@ -23,7 +23,7 @@ export default class Grid extends Component {
     ]),
     gutters: PropTypes.oneOfType([
       PropTypes.bool,
-      PropTypes.oneOf(['small', 'large']),
+      PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     hAlign: PropTypes.oneOf(['left', 'center', 'right', 'around', 'between']),
     hGutters: PropTypes.bool,
@@ -38,7 +38,7 @@ export default class Grid extends Component {
 
   static defaultProps = {
     responsive: true,
-    gutters: 'small',
+    gutters: 'medium',
     vGutters: true,
     hGutters: true,
   };

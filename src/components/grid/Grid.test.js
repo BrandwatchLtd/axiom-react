@@ -57,6 +57,10 @@ describe('Grid', () => {
         matchSnapshot({ gutters: 'small' });
       });
 
+      it('renders with value medium', () => {
+        matchSnapshot({ gutters: 'medium' });
+      });
+
       it('renders with value large', () => {
         matchSnapshot({ gutters: 'large' });
       });
