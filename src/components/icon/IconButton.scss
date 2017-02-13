@@ -9,7 +9,6 @@
   @include transition((background-color, border-color, color));
 
   border: 0 solid var(--color-context-border);
-  border-style: solid;
   border-radius: 50%;
   color: var(--color-context-text-subtle);
   line-height: 0;

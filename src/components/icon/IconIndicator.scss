@@ -1,0 +1,34 @@
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/vars';
+@import '../../design-patterns/spacing/mixins';
+@import '../vars';
+
+.ax-icon-indicator {
+  @include space-block();
+
+  border: 0 solid transparent;
+  border-radius: 50%;
+  color: $color-ui-light-2;
+  line-height: 0;
+}
+
+.ax-icon-indicator--small {
+  padding: $spacing-grid-size - $component-border-width-small;
+  border-width: $component-border-width-small;
+}
+
+.ax-icon-indicator--medium {
+  padding: ($spacing-grid-size * 2) - $component-border-width-small;
+  border-width: $component-border-width-small;
+}
+
+.ax-icon-indicator--large {
+  padding: ($spacing-grid-size * 3) - $component-border-width-large;
+  border-width: $component-border-width-large;
+}
+
+.ax-icon-indicator--success { background-color: $color-ui-success; }
+.ax-icon-indicator--warning { background-color: $color-ui-warning; }
+.ax-icon-indicator--error   { background-color: $color-ui-error; }
+.ax-icon-indicator--info    { background-color: $color-ui-primary-2; }
+.ax-icon-indicator--subtle  { background-color: var(--color-context-background-subtle); }
