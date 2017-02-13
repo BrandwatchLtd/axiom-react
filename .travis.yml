@@ -7,12 +7,6 @@ cache:
 script:
 - yarn lint
 - yarn test
-before_install:
-- openssl aes-256-cbc -K $encrypted_6e634bd6cce3_key -iv $encrypted_6e634bd6cce3_iv
-  -in deploy_key.enc -out deploy_key -d
-- chmod 600 deploy_key
-- eval `ssh-agent -s`
-- ssh-add deploy_key
 after_success:
 - bash ./deploy/publish_to_npm.sh
 - bash ./deploy/deploy_to_ghpages.sh
