@@ -5,14 +5,17 @@ import ColorSwatch from './ColorSwatch';
 export default class ColorsExample extends Component {
   render() {
     const brandColors = [
+      'color-brand-rose',
       'color-brand-pink',
-      'color-brand-orange',
-      'color-brand-amber',
-      'color-brand-yellow',
-      'color-brand-green',
-      'color-brand-aqua',
-      'color-brand-blue',
       'color-brand-purple',
+      'color-brand-lilac',
+      'color-brand-blue',
+      'color-brand-teal',
+      'color-brand-green',
+      'color-brand-chartreuse',
+      'color-brand-amber',
+      'color-brand-orange',
+      'color-brand-brown',
       'color-brand-grey',
     ];
 
