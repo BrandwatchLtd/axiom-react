@@ -1,6 +1,7 @@
 exports[`Avatar renders with custom size 1`] = `
 <img
   className="ax-avatar ax-avatar--small"
+  onError={undefined}
   src="/image/path"
   style={
     Object {
@@ -13,6 +14,7 @@ exports[`Avatar renders with custom size 1`] = `
 exports[`Avatar renders with defaultProps 1`] = `
 <img
   className="ax-avatar ax-avatar--small"
+  onError={undefined}
   src="/image/path"
   style={
     Object {
@@ -25,6 +27,7 @@ exports[`Avatar renders with defaultProps 1`] = `
 exports[`Avatar renders with large when 4.5rem or more 1`] = `
 <img
   className="ax-avatar ax-avatar--large"
+  onError={undefined}
   src="/image/path"
   style={
     Object {
@@ -37,6 +40,7 @@ exports[`Avatar renders with large when 4.5rem or more 1`] = `
 exports[`Avatar renders with small when less than 4.5rem 1`] = `
 <img
   className="ax-avatar ax-avatar--small"
+  onError={undefined}
   src="/image/path"
   style={
     Object {
