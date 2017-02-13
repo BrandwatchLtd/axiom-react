@@ -5,6 +5,7 @@ export { default as Base } from './components/base/Base';
 export { default as Button } from './components/button/Button';
 export { default as ButtonGroup } from './components/button/ButtonGroup';
 export { default as ButtonIcon } from './components/button/ButtonIcon';
+export { default as Candytar } from './components/avatar/Candytar';
 export { default as Canvas } from './components/platform/Canvas';
 export { default as Card } from './components/card/Card';
 export { default as CardList } from './components/card/CardList';

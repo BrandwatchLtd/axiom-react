@@ -1,0 +1,90 @@
+@import '../../design-patterns/colors/vars';
+
+.ax-candytar-placeholder--body {
+  filter: url(#ax-candytar-placeholder__filter);
+}
+
+.ax-candytar-placeholder--rose {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-rose;
+  }
+}
+
+.ax-candytar-placeholder--pink {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-pink;
+  }
+}
+
+.ax-candytar-placeholder--purple {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-purple;
+  }
+}
+
+.ax-candytar-placeholder--lilac {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-lilac;
+  }
+}
+
+.ax-candytar-placeholder--blue {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-blue;
+  }
+}
+
+.ax-candytar-placeholder--teal {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-teal;
+  }
+}
+
+.ax-candytar-placeholder--green {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-green;
+  }
+}
+
+.ax-candytar-placeholder--chartreuse {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-chartreuse;
+  }
+}
+
+.ax-candytar-placeholder--amber {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-amber;
+  }
+}
+
+.ax-candytar-placeholder--orange {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-orange;
+  }
+}
+
+.ax-candytar-placeholder--brown {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-brown;
+  }
+}
+
+.ax-candytar-placeholder--grey {
+  .ax-candytar-placeholder--body,
+  .ax-candytar-placeholder--background {
+    fill: $color-brand-grey;
+  }
+}
+
