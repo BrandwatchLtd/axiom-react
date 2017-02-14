@@ -1,51 +1,24 @@
 exports[`Avatar renders with custom size 1`] = `
-<img
-  className="ax-avatar ax-avatar--small"
-  onError={undefined}
-  src="/image/path"
+<div
+  className="ax-image-circle"
   style={
     Object {
       "height": "4rem",
       "width": "4rem",
     }
-  } />
-`;
-
-exports[`Avatar renders with defaultProps 1`] = `
-<img
-  className="ax-avatar ax-avatar--small"
-  onError={undefined}
-  src="/image/path"
-  style={
-    Object {
-      "height": "2rem",
-      "width": "2rem",
-    }
-  } />
-`;
-
-exports[`Avatar renders with large when 4.5rem or more 1`] = `
-<img
-  className="ax-avatar ax-avatar--large"
-  onError={undefined}
-  src="/image/path"
-  style={
-    Object {
-      "height": "4.5rem",
-      "width": "4.5rem",
-    }
-  } />
-`;
-
-exports[`Avatar renders with small when less than 4.5rem 1`] = `
-<img
-  className="ax-avatar ax-avatar--small"
-  onError={undefined}
-  src="/image/path"
-  style={
-    Object {
-      "height": "4.4rem",
-      "width": "4.4rem",
-    }
-  } />
+  }>
+  <div
+    className="ax-image-circle__image">
+    <img
+      className="ax-image"
+      onError={[Function]}
+      src="/image/path"
+      style={
+        Object {
+          "height": "4rem",
+          "width": "4rem",
+        }
+      } />
+  </div>
+</div>
 `;
