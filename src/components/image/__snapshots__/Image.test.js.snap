@@ -1,0 +1,13 @@
+exports[`Image renders with defaultProps 1`] = `
+<img
+  className=""
+  src="/image.png" />
+`;
+
+exports[`Image renders with extra props 1`] = `
+<img
+  alt="Lorem"
+  className=""
+  src="/image.png"
+  title="Lorem" />
+`;
