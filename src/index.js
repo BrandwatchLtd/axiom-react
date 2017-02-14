@@ -42,6 +42,7 @@ export { default as IconButton } from './components/icon/IconButton';
 export { default as IconIndicator } from './components/icon/IconIndicator';
 export { default as IconLink } from './components/icon/IconLink';
 export { default as Image }  from './components/image/Image';
+export { default as ImageCircle }  from './components/image/ImageCircle';
 export { default as Italic } from './components/typography/Italic';
 export { default as Label } from './components/label/Label';
 export { default as LabelGroup } from './components/label/LabelGroup';

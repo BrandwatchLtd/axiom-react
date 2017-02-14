@@ -1,0 +1,69 @@
+@import '../../design-patterns/animations/mixins';
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/mixins';
+@import '../vars';
+
+.ax-image-circle {
+  @include space-block;
+
+  display: block;
+  position: relative;
+}
+
+.ax-image-circle__image {
+  border-width: 0;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: var(--color-context-border);
+  overflow: hidden;
+}
+
+.ax-image-circle__icon {
+  @include transition((opacity, background-color, color));
+
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: fade-out($color-ui-light-2, 0.20);
+  color: $color-ui-primary-1;
+  opacity: 0;
+}
+
+.ax-image-circle--border-small {
+  .ax-image-circle__image {
+    border-width: $component-border-width-small;
+  }
+
+  .ax-image-circle__icon {
+    margin: $component-border-width-small;
+  }
+}
+
+.ax-image-circle--border-large {
+  .ax-image-circle__image {
+    border-width: $component-border-width-large;
+  }
+
+  .ax-image-circle__icon {
+    margin: $component-border-width-large;
+  }
+}
+
+.ax-image-circle:hover {
+  .ax-image-circle__icon {
+    opacity: 1;
+  }
+}
+
+.ax-image-circle:active {
+  .ax-image-circle__icon {
+    background-color: fade-out($color-ui-primary-1, 0.20);
+    color: $color-ui-light-2;
+  }
+}

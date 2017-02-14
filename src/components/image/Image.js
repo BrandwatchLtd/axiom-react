@@ -8,6 +8,7 @@ if (__INCLUDE_CSS__) {
 export default class Image extends Component {
   static propTypes = {
     children: PropTypes.node,
+    src: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -31,7 +32,11 @@ export default class Image extends Component {
     }
 
     return (
-      <Base Component="img" { ...rest } onError={ children && ::this.showFallback } />
+      <Base
+          className="ax-image"
+          { ...rest }
+          Component="img"
+          onError={ children && ::this.showFallback } />
     );
   }
 }
