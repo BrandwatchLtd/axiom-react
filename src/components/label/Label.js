@@ -35,7 +35,7 @@ export default class Label extends Component {
       [`ax-label--${color}`]: color,
       [`ax-label--${size}`]: size,
       'ax-label--full': full === true,
-      [`ax-label--full--${full}`]: full & full !== true,
+      [`ax-label--full--${full}`]: typeof full === 'string',
     });
 
     const themeMap = {

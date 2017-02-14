@@ -37,7 +37,7 @@ export default class Button extends Component {
       'ax-button--joined': joined,
       'ax-button--icon-only': iconOnly,
       'ax-button--full': full === true,
-      [`ax-button--full--${full}`]: full && full !== true,
+      [`ax-button--full--${full}`]: typeof full === 'string',
     });
 
     const mappedChildren = childrenArray.map((child, index, array) =>
