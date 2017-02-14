@@ -6,25 +6,27 @@
 .ax-icon-indicator {
   @include space-block();
 
-  border: 0 solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   color: $color-ui-light-2;
   line-height: 0;
 }
 
 .ax-icon-indicator--small {
-  padding: $spacing-grid-size - $component-border-width-small;
-  border-width: $component-border-width-small;
+  width: $component-round-size-small;
+  height: $component-round-size-small;
 }
 
 .ax-icon-indicator--medium {
-  padding: ($spacing-grid-size * 2) - $component-border-width-small;
-  border-width: $component-border-width-small;
+  width: $component-round-size-medium;
+  height: $component-round-size-medium;
 }
 
 .ax-icon-indicator--large {
-  padding: ($spacing-grid-size * 3) - $component-border-width-large;
-  border-width: $component-border-width-large;
+  width: $component-round-size-large;
+  height: $component-round-size-large;
 }
 
 .ax-icon-indicator--success { background-color: $color-ui-success; }

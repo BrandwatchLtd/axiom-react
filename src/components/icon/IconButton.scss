@@ -35,16 +35,19 @@
 }
 
 .ax-icon-button--small {
-  padding: $spacing-grid-size - $component-border-width-small;
+  width: $component-round-size-small;
+  height: $component-round-size-small;
   border-width: $component-border-width-small;
 }
 
 .ax-icon-button--medium {
-  padding: ($spacing-grid-size * 2) - $component-border-width-small;
-  border-width: $component-border-width-small;
+  width: $component-round-size-medium;
+  height: $component-round-size-medium;
+  border-width: $component-border-width-medium;
 }
 
 .ax-icon-button--large {
-  padding: ($spacing-grid-size * 3) - $component-border-width-large;
+  width: $component-round-size-large;
+  height: $component-round-size-large;
   border-width: $component-border-width-large;
 }
