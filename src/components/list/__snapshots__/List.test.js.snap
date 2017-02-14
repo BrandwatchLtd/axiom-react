@@ -1,0 +1,29 @@
+exports[`List renders with defaultProps 1`] = `
+<ul
+  className="ax-list">
+  <li
+    className="ax-list__item">
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`List renders with inline 1`] = `
+<ul
+  className="ax-list ax-list--inline">
+  <li
+    className="ax-list__item">
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`List renders with ordered 1`] = `
+<ol
+  className="ax-list">
+  <li
+    className="ax-list__item">
+    Lorem Ipsum
+  </li>
+</ol>
+`;

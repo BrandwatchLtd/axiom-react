@@ -1,0 +1,6 @@
+exports[`ListItem renders with defaultProps 1`] = `
+<li
+  className="ax-list__item">
+  Lorem Ipsum
+</li>
+`;
