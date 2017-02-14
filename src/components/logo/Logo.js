@@ -5,7 +5,7 @@ if (__INCLUDE_CSS__) {
   require('./Logo.scss');
 }
 
-export default class LogoVertical extends Component {
+export default class Logo extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     height: PropTypes.string,
