@@ -1,85 +1,92 @@
 @import '../../design-patterns/colors/vars';
+@import '../../design-patterns/spacing/mixins';
+
+.ax-candytar {
+  @include space-block();
+
+  display: block;
+}
 
 .ax-candytar--rose {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-rose;
   }
 }
 
 .ax-candytar--pink {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-pink;
   }
 }
 
 .ax-candytar--purple {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-purple;
   }
 }
 
 .ax-candytar--lilac {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-lilac;
   }
 }
 
 .ax-candytar--blue {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-blue;
   }
 }
 
 .ax-candytar--teal {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-teal;
   }
 }
 
 .ax-candytar--green {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-green;
   }
 }
 
 .ax-candytar--chartreuse {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-chartreuse;
   }
 }
 
 .ax-candytar--amber {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-amber;
   }
 }
 
 .ax-candytar--orange {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-orange;
   }
 }
 
 .ax-candytar--brown {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-brown;
   }
 }
 
 .ax-candytar--grey {
-  .ax-candytar--body,
-  .ax-candytar--background {
+  .ax-candytar__body,
+  .ax-candytar__background {
     fill: $color-brand-grey;
   }
 }
