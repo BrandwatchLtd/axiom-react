@@ -1,0 +1,9 @@
+exports[`LabelGroup renders with defaultProps 1`] = `
+<div
+  className="ax-label__group">
+  <span
+    className="ax-label ax-label--white ax-label--medium">
+    Lorem ipsum
+  </span>
+</div>
+`;
