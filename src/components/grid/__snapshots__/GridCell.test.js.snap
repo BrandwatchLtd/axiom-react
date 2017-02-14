@@ -1,0 +1,251 @@
+exports[`GridCell fill renders with value large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fill renders with value medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fill renders with value small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fill renders with value true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fit renders with value large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fit renders with value medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fit renders with value small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell fit renders with value true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell full renders with value large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell full renders with value medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell full renders with value small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell full renders with value true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with customWidth 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--percent"
+  style={
+    Object {
+      "width": "67%",
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with defaultProps 1`] = `
+<div
+  className="ax-grid__cell"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell shrink renders with value large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--shrink--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell shrink renders with value medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--shrink--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell shrink renders with value small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--shrink--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell shrink renders with value true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--shrink"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell vAlign renders with value large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--bottom"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell vAlign renders with value medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--middle"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;
+
+exports[`GridCell vAlign renders with value small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--top"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }>
+  <div />
+</div>
+`;

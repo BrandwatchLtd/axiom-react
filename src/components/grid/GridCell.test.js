@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Grid } from 'bw-axiom';
+import { GridCell } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <Grid { ...props }>
+    <GridCell { ...props }>
       <div></div>
-    </Grid>
+    </GridCell>
   );
 }
 
@@ -16,21 +16,13 @@ function matchSnapshot(props = {}) {
   expect(tree).toMatchSnapshot();
 }
 
-describe('Grid', () => {
+describe('GridCell', () => {
   it('renders with defaultProps', () => {
     matchSnapshot();
   });
 
-  it('renders with vGutters false', () => {
-    matchSnapshot({ vGutters: false });
-  });
-
-  it('renders with hGutters false', () => {
-    matchSnapshot({ hGutters: false });
-  });
-
-  it('renders with responsive false', () => {
-    matchSnapshot({ responsive: false });
+  it('renders with customWidth', () => {
+    matchSnapshot({ width: 67 });
   });
 
   describe('fit', () => {
@@ -102,24 +94,6 @@ describe('Grid', () => {
 
     it('renders with value large', () => {
       matchSnapshot({ shrink: 'large' });
-    });
-  });
-
-  describe('gutters', () => {
-    it('renders with value false', () => {
-      matchSnapshot({ gutters: false });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ gutters: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ gutters: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ gutters: 'large' });
     });
   });
 

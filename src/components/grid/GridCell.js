@@ -21,7 +21,6 @@ export default class GridCell extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    style: PropTypes.object,
     vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
     width: PropTypes.number,
   };
@@ -34,7 +33,6 @@ export default class GridCell extends Component {
       full,
       width,
       shrink,
-      style,
       vAlign,
       ...rest
     } = this.props;
@@ -55,7 +53,6 @@ export default class GridCell extends Component {
     });
 
     const styles = {
-      ...style,
       width: width && `${Math.max(0, Math.min(width, 100))}%`,
     };
 
