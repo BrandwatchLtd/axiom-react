@@ -1,3 +1,10 @@
+// Utils
+export * from './utils';
+
+// Design Patterns
+export * from './design-patterns/date-and-time/date-and-time';
+export * from './design-patterns/numbers/numbers';
+
 // Components
 export { default as Alert } from './components/alert/Alert';
 export { default as Avatar } from './components/avatar/Avatar';
@@ -67,10 +74,3 @@ export { default as Weak } from './components/typography/Weak';
 
 // Composites
 export { default as Login } from './composites/login/Login';
-
-// Design Patterns
-export * from './design-patterns/date-and-time/date-and-time';
-export * from './design-patterns/numbers/numbers';
-
-// Utils
-export * from './utils';
