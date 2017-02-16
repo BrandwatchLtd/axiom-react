@@ -15,7 +15,7 @@ export default class ProgressTransitionsExample extends Component {
 
   static propTypes = {
     components: PropTypes.shape({
-      ProgressInfinite: PropTypes.shape({
+      RadialProgress: PropTypes.shape({
         size: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
@@ -72,13 +72,13 @@ export default class ProgressTransitionsExample extends Component {
   render() {
     const { percent } = this.state;
     const { components } = this.props;
-    const { ProgressInfinite: { size } } = components;
+    const { RadialProgress: { size } } = components;
 
     return (
       <Example name="Progress transitions">
         <Grid>
           { size.values.map((size) =>
-            <GridCell key={ size } shrink={ true } snippetIgnore={ true }>
+            <GridCell key={ size } shrink={ true }>
               <Progress percent={ percent } size={ size }/>
             </GridCell>
           ) }
