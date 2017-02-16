@@ -34,6 +34,10 @@ export default class ProgressTransitionsExample extends Component {
     this.start();
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.tickTimeout);
+  }
+
   restart() {
     this.setState({
       ...initialState,
@@ -63,7 +67,7 @@ export default class ProgressTransitionsExample extends Component {
     });
 
     if (percent >= 100) {
-      setTimeout(this.restart.bind(this), 5000);
+      this.tickTimeout = setTimeout(this.restart.bind(this), 5000);
     } else {
       this.start();
     }
