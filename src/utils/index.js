@@ -28,7 +28,8 @@ export function svgDefineOnce(html) {
   if (!svgContainer) {
     svgContainer = document.createElement('div');
     svgContainer.setAttribute('id', SVG_ELEMENT_ID);
-    svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg"></svg>';
+    svgContainer.setAttribute('style', 'height: 0px;');
+    svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="0" width="0"></svg>';
     document.body.appendChild(svgContainer);
   }
 
