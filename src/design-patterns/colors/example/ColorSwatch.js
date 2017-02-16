@@ -35,7 +35,7 @@ export default class ColorSwatch extends Component {
               <GridCell>
                 <Paragraph>
                   <Strong>${ color }</Strong><br />
-                  <Italic textSubtle={ true }>{ getColor(color) }</Italic>
+                  <Italic textColor="subtle">{ getColor(color) }</Italic>
                 </Paragraph>
               </GridCell>
             </Grid>

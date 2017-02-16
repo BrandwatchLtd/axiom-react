@@ -7,8 +7,11 @@ export default class TypeExample extends Component {
     return (
       <Example name="Colors">
         <Snippet>
-          <Paragraph textSubtle={ true }>This color is subtle</Paragraph>
-          <Paragraph textDisabled={ true }>This color is disabled</Paragraph>
+          <Paragraph textColor="subtle">This color is subtle</Paragraph>
+          <Paragraph textColor="disabled">This color is disabled</Paragraph>
+          <Paragraph textColor="success">This color is success</Paragraph>
+          <Paragraph textColor="warning">This color is warning</Paragraph>
+          <Paragraph textColor="error">This color is error</Paragraph>
         </Snippet>
       </Example>
     );

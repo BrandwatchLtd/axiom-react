@@ -92,7 +92,7 @@ export default class Login extends Component {
             </Form>
 
             { do { if (error) {
-              <Paragraph textError={ true }>
+              <Paragraph textColor="error">
                 <Strong>{ error }</Strong>
               </Paragraph>;
             } } }

@@ -161,6 +161,36 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders textColor disabled', () => {
+    const component = getComponent({ textColor: 'disabled' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textColor error', () => {
+    const component = getComponent({ textColor: 'error' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textColor subtle', () => {
+    const component = getComponent({ textColor: 'subtle' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textColor success', () => {
+    const component = getComponent({ textColor: 'success' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textColor warning', () => {
+    const component = getComponent({ textColor: 'warning' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders textLeft always', () => {
     const component = getComponent({ textLeft: true });
     const tree = component.toJSON();
@@ -209,44 +239,14 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textDisabled', () => {
-    const component = getComponent({ textDisabled: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders textEllipsis', () => {
     const component = getComponent({ textEllipsis: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textError', () => {
-    const component = getComponent({ textError: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders textStrong', () => {
     const component = getComponent({ textStrong: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders textSubtle', () => {
-    const component = getComponent({ textSubtle: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders textSuccess', () => {
-    const component = getComponent({ textSuccess: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders textWarning', () => {
-    const component = getComponent({ textWarning: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

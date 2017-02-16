@@ -21,8 +21,8 @@ export default class BaseExample extends Component {
           <Base
               Component="header"
               textCenter={ true }
-              textStrong={ true }
-              textSubtle={ true }>
+              textColor="subtle"
+              textStrong={ true }>
             I'm a center aligned subtly strong { '<header>' }
           </Base>
         </Snippet>

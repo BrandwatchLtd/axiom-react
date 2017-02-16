@@ -82,19 +82,34 @@ exports[`Base renders textCenter passed small breakpoint 1`] = `
   className="ax-text--center--small" />
 `;
 
-exports[`Base renders textDisabled 1`] = `
+exports[`Base renders textColor disabled 1`] = `
 <div
-  className="ax-text--disabled" />
+  className="ax-text--color-disabled" />
+`;
+
+exports[`Base renders textColor error 1`] = `
+<div
+  className="ax-text--color-error" />
+`;
+
+exports[`Base renders textColor subtle 1`] = `
+<div
+  className="ax-text--color-subtle" />
+`;
+
+exports[`Base renders textColor success 1`] = `
+<div
+  className="ax-text--color-success" />
+`;
+
+exports[`Base renders textColor warning 1`] = `
+<div
+  className="ax-text--color-warning" />
 `;
 
 exports[`Base renders textEllipsis 1`] = `
 <div
   className="ax-text--ellipsis" />
-`;
-
-exports[`Base renders textError 1`] = `
-<div
-  className="ax-text--error" />
 `;
 
 exports[`Base renders textLeft always 1`] = `
@@ -140,21 +155,6 @@ exports[`Base renders textRight passed small breakpoint 1`] = `
 exports[`Base renders textStrong 1`] = `
 <div
   className="ax-text--strong" />
-`;
-
-exports[`Base renders textSubtle 1`] = `
-<div
-  className="ax-text--subtle" />
-`;
-
-exports[`Base renders textSuccess 1`] = `
-<div
-  className="ax-text--success" />
-`;
-
-exports[`Base renders textWarning 1`] = `
-<div
-  className="ax-text--warning" />
 `;
 
 exports[`Base renders textWeak 1`] = `
