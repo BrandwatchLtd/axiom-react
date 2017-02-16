@@ -3,7 +3,7 @@
 @import './vars';
 
 .ax-heading--display,
-.ax-heading--headling,
+.ax-heading--headline,
 .ax-heading--title,
 .ax-heading--large {
   @include space-block($spacing-grid-size);
