@@ -6,13 +6,12 @@
   @include space-block();
 }
 
-.ax-list--inline,
 .ax-list--inline {
   padding: 0;
   list-style: none;
 
   .ax-list__item {
-    display: inline;
+    display: inline-flex;
     padding: 0 $spacing-grid-size * 2;
     border-right: 0.0625rem solid var(--color-context-border);
 

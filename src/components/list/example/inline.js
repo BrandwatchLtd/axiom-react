@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { List, ListItem } from 'bw-axiom';
+import { Heading, List, ListItem, Paragraph } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {
@@ -8,10 +8,18 @@ export default class TypeExample extends Component {
       <Example name="Inline">
         <Snippet>
           <List inline={ true }>
-            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-            <ListItem>Consectetur adipiscing elit</ListItem>
-            <ListItem>Integer molestie lorem at massa</ListItem>
-            <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+            <ListItem>
+              <Heading>Lorem ipsum dolor sit amet</Heading>
+            </ListItem>
+            <ListItem>
+              <Paragraph>Consectetur adipiscing elit</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>Integer molestie lorem at massa</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>Facilisis in pretium nisl aliquet</Paragraph>
+            </ListItem>
           </List>
         </Snippet>
       </Example>
