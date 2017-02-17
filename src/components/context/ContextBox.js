@@ -33,7 +33,9 @@ export default class ContextBox extends Component {
 
     return (
       <Base { ...rest } className={ classes } style={ style } theme={ theme }>
-        { children }
+        <div className="ax-context-box__content">
+          { children }
+        </div>
 
         <span
             className="ax-context-box__arrow"

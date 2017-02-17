@@ -6,7 +6,10 @@ exports[`ContextBox renders bottom 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -20,7 +23,10 @@ exports[`ContextBox renders custom width 1`] = `
       "width": "20rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -34,7 +40,10 @@ exports[`ContextBox renders left 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -48,7 +57,10 @@ exports[`ContextBox renders padding large 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -62,7 +74,10 @@ exports[`ContextBox renders padding none 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -76,7 +91,10 @@ exports[`ContextBox renders padding small 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -90,7 +108,10 @@ exports[`ContextBox renders right 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -104,7 +125,10 @@ exports[`ContextBox renders top 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -118,7 +142,10 @@ exports[`ContextBox renders with defaultProps 1`] = `
       "width": "14.5rem",
     }
   }>
-  Lorem ipsum
+  <div
+    className="ax-context-box__content">
+    Lorem ipsum
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>

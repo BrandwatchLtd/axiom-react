@@ -6,16 +6,19 @@ exports[`ContextMenu renders custom width 1`] = `
       "width": "20rem",
     }
   }>
-  <ul
-    className="ax-context-menu">
-    <li
-      className="ax-context-menu__item">
-      <a
-        className="ax-context-menu__item-link">
-        Lorem ipsum
-      </a>
-    </li>
-  </ul>
+  <div
+    className="ax-context-box__content">
+    <ul
+      className="ax-context-menu">
+      <li
+        className="ax-context-menu__item">
+        <a
+          className="ax-context-menu__item-link">
+          Lorem ipsum
+        </a>
+      </li>
+    </ul>
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
@@ -29,16 +32,19 @@ exports[`ContextMenu renders with defaultProps 1`] = `
       "width": "14.5rem",
     }
   }>
-  <ul
-    className="ax-context-menu">
-    <li
-      className="ax-context-menu__item">
-      <a
-        className="ax-context-menu__item-link">
-        Lorem ipsum
-      </a>
-    </li>
-  </ul>
+  <div
+    className="ax-context-box__content">
+    <ul
+      className="ax-context-menu">
+      <li
+        className="ax-context-menu__item">
+        <a
+          className="ax-context-menu__item-link">
+          Lorem ipsum
+        </a>
+      </li>
+    </ul>
+  </div>
   <span
     className="ax-context-box__arrow" />
 </div>
