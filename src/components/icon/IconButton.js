@@ -9,7 +9,7 @@ if (__INCLUDE_CSS__) {
 export default class IconButton extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   };
 
   static defaultProps = {
@@ -26,6 +26,7 @@ export default class IconButton extends Component {
       'small': '1rem',
       'medium': '2rem',
       'large': '3rem',
+      'huge': '6rem',
     };
 
     return (
