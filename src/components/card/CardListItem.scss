@@ -4,10 +4,6 @@
 .ax-card-list__item {
   border-bottom: 0.0625rem solid var(--color-context-border);
   background-color: var(--color-context-background);
-
-  &:last-child {
-    border-bottom: 0;
-  }
 }
 
 .ax-card-list__item--clickable {
