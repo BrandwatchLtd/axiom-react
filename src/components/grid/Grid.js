@@ -25,14 +25,14 @@ export default class Grid extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    hAlign: PropTypes.oneOf(['left', 'center', 'right', 'around', 'between']),
+    hAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
     hGutters: PropTypes.bool,
     responsive: PropTypes.bool,
     shrink: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
+    vAlign: PropTypes.oneOf(['start', 'middle', 'end']),
     vGutters: PropTypes.bool,
   };
 
@@ -73,14 +73,8 @@ export default class Grid extends Component {
       [`ax-grid--full--${full}`]: full && full !== true,
       'ax-grid--shrink': shrink === true,
       [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
-      'ax-grid--top': vAlign === 'top',
-      'ax-grid--middle': vAlign === 'middle',
-      'ax-grid--bottom': vAlign === 'bottom',
-      'ax-grid--left': hAlign === 'left',
-      'ax-grid--center': hAlign === 'center',
-      'ax-grid--right': hAlign === 'right',
-      'ax-grid--around': hAlign === 'around',
-      'ax-grid--between': hAlign === 'between',
+      [`ax-grid--v-${vAlign}`]: vAlign,
+      [`ax-grid--h-${hAlign}`]: hAlign,
     });
 
     return (

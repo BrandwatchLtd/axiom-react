@@ -114,7 +114,7 @@ export default class PositionExample extends Component {
 
         <Snippet>
           <Grid
-              hAlign="center"
+              hAlign="middle"
               responsive={ false }
               snippetIgnore={ true }
               style={ { minHeight: 180 } }

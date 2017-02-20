@@ -23,23 +23,23 @@
 
 
 // Grid: Vertical alignment
-.ax-grid--top    { align-items: flex-start; }
-.ax-grid--middle { align-items: center; }
-.ax-grid--bottom { align-items: flex-end; }
+.ax-grid--v-start  { align-items: flex-start; }
+.ax-grid--v-middle { align-items: center; }
+.ax-grid--v-end    { align-items: flex-end; }
 
 
 // Grid: Horizontal alignment
-.ax-grid--left       { justify-content: flex-start; }
-.ax-grid--center     { justify-content: center; }
-.ax-grid--right      { justify-content: flex-end; }
-.ax-grid--around     { justify-content: space-around; }
-.ax-grid--between    { justify-content: space-between; }
+.ax-grid--h-start    { justify-content: flex-start; }
+.ax-grid--h-middle   { justify-content: center; }
+.ax-grid--h-end      { justify-content: flex-end; }
+.ax-grid--h-around   { justify-content: space-around; }
+.ax-grid--h-between  { justify-content: space-between; }
 
 
 // Grid Cell: Vertical alignment
-.ax-grid__cell--top    { align-self: flex-start; }
+.ax-grid__cell--start  { align-self: flex-start; }
 .ax-grid__cell--middle { align-self: center; }
-.ax-grid__cell--bottom { align-self: flex-end; }
+.ax-grid__cell--end    { align-self: flex-end; }
 
 
 // Grid: Gutter sizing

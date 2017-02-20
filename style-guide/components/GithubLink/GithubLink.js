@@ -6,7 +6,7 @@ export default class GithubLink extends Component {
     /* eslint-disable max-len, react/jsx-sort-props */
     return (
       <Link href="https://github.com/BrandwatchLtd/axiom" inheritColor={ true } target="_blank">
-        <Grid hAlign="center" responsive={ false } shrink={ true }>
+        <Grid hAlign="middle" responsive={ false } shrink={ true }>
           <GridCell>
             <svg
                 height="20"

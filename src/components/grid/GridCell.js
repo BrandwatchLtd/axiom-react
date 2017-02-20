@@ -21,7 +21,7 @@ export default class GridCell extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    vAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
+    vAlign: PropTypes.oneOf(['start', 'middle', 'end']),
     width: PropTypes.number,
   };
 
@@ -38,9 +38,7 @@ export default class GridCell extends Component {
     } = this.props;
 
     const classes = classnames('ax-grid__cell', {
-      'ax-grid__cell--top': vAlign === 'top',
-      'ax-grid__cell--middle': vAlign === 'middle',
-      'ax-grid__cell--bottom': vAlign === 'bottom',
+      [`ax-grid__cell--${vAlign}`]: vAlign,
       'ax-grid__cell--fill': fill === true,
       'ax-grid__cell--fit': fit === true,
       'ax-grid__cell--full': full === true,

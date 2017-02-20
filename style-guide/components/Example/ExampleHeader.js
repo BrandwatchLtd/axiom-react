@@ -23,7 +23,7 @@ export default class ExampleHeader extends Component {
 
     return (
       <ExampleBox>
-        <Grid vAlign="bottom">
+        <Grid vAlign="end">
           <GridCell>
             <Heading style="title" textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
             <Heading style="display" textCase="capital">

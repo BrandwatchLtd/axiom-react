@@ -168,21 +168,21 @@ exports[`Grid shrink renders with value true 1`] = `
 
 exports[`Grid vAlign renders with value large 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--medium ax-grid--bottom">
+  className="ax-grid ax-grid--gutters--medium ax-grid--v-bottom">
   <div />
 </div>
 `;
 
 exports[`Grid vAlign renders with value medium 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--medium ax-grid--middle">
+  className="ax-grid ax-grid--gutters--medium ax-grid--v-middle">
   <div />
 </div>
 `;
 
 exports[`Grid vAlign renders with value small 1`] = `
 <div
-  className="ax-grid ax-grid--gutters--medium ax-grid--top">
+  className="ax-grid ax-grid--gutters--medium ax-grid--v-top">
   <div />
 </div>
 `;

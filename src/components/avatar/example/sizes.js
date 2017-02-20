@@ -7,7 +7,7 @@ export default class AvatarExample extends Component {
     return (
       <Example name="Sized Avatars">
         <Snippet>
-          <Grid snippetIgnore={ true } vAlign="bottom">
+          <Grid snippetIgnore={ true } vAlign="end">
             <GridCell shrink={ true } snippetIgnore={ true }>
               <Avatar border="small" size="2rem" src="assets/avatar.png" />
             </GridCell>
