@@ -1,7 +1,6 @@
 module.exports = [
-  require('./finite').default,
-  require('./infinite').default,
-  require('./transitions').default,
-  require('./sizes').default,
-  require('./colors').default,
+  require('./finite-sizes').default,
+  require('./infinite-sizes').default,
+  require('./infinite-colors').default,
+  require('./progress-sizes').default,
 ];

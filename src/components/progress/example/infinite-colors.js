@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
 import { Label, Grid, GridCell, ProgressInfinite } from 'bw-axiom';
 
-export default class ProgressColorsExample extends Component {
-
+export default class ProgressExample extends Component {
   render() {
     return (
-      <Example name="Progress colors">
+      <Example name="ProgressInfinite colors">
         <Snippet>
           <Grid snippetIgnore={ true } vAlign="middle">
             <GridCell shrink={ true } snippetIgnore={ true }>
