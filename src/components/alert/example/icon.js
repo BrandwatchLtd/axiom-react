@@ -1,32 +1,37 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Alert, Strong } from 'bw-axiom';
+import { Alert, Grid, GridCell, IconIndicator, ProgressInfinite } from 'bw-axiom';
 
 export default class AlertExample extends Component {
-  static propTypes = {
-    components: PropTypes.shape({
-      Alert: PropTypes.shape({
-        color: PropTypes.shape({
-          values: PropTypes.array.isRequired,
-        }).isRequired,
-      }).isRequired,
-    }).isRequired,
-  };
-
   render() {
-    const { components } = this.props;
-    const { Alert: { color } } = components;
-
     return (
-      <Example name="Colored Alerts with IconIndicator">
+      <Example name="With an IconIndicator or Progress">
         <Snippet>
-          { color.values.map((color) =>
-            <Alert color={ color } key={ color } withIcon={ true }>
-              <Strong snippetIgnore={ true } textCase="capital">{ color }</Strong>: Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Nam ac accumsan quam,
-              ut ullamcorper nulla.
-            </Alert>
-          ) }
+          <Alert color="error">
+            <Grid gutters="small" vAlign="middle">
+              <GridCell shrink={ true }>
+                <IconIndicator color="subtle" name="warning" />
+              </GridCell>
+
+              <GridCell>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+                accumsan quam, ut ullamcorper nulla.
+              </GridCell>
+            </Grid>
+          </Alert>
+
+          <Alert>
+            <Grid gutters="small" vAlign="middle">
+              <GridCell shrink={ true }>
+                <ProgressInfinite color="white" />
+              </GridCell>
+
+              <GridCell>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+                accumsan quam, ut ullamcorper nulla.
+              </GridCell>
+            </Grid>
+          </Alert>
         </Snippet>
       </Example>
     );

@@ -1,5 +1,5 @@
 module.exports = [
   require('./colors').default,
-  require('./icon').default,
   require('./removable').default,
+  require('./icon').default,
 ];

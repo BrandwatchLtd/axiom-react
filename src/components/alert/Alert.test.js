@@ -44,10 +44,4 @@ describe('Alert', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders with withIcon', () => {
-    const component = getComponent({ withIcon: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });
