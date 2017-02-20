@@ -18,7 +18,7 @@ export default class IconIndicatorExample extends Component {
     const { IconIndicator: { size } } = components;
 
     return (
-      <Example name="Icon buttons">
+      <Example name="IconIndicator sizes">
         <Snippet>
           <Grid shrink={ true } snippetIgnore={ true }>
             { size.values.map((size) =>
