@@ -26,7 +26,7 @@ export default class IconButton extends Component {
       'small': '1rem',
       'medium': '2rem',
       'large': '3rem',
-      'huge': '6rem',
+      'huge': '5rem',
     };
 
     return (
