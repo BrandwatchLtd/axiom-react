@@ -17,12 +17,6 @@ describe('Card', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with size small', () => {
-    const component = getComponent({ size: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders with size medium', () => {
     const component = getComponent({ size: 'medium' });
     const tree = component.toJSON();

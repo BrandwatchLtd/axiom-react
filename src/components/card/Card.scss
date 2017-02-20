@@ -1,10 +1,6 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/spacing/vars';
 
-.ax-card--small {
-  padding: ($spacing-grid-size * 2);
-}
-
 .ax-card--medium {
   padding: ($spacing-grid-size * 4);
 }

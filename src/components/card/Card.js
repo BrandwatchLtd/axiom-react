@@ -11,7 +11,7 @@ export default class Card extends Component {
     active: PropTypes.bool,
     children: PropTypes.node,
     compact: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(['medium', 'large']),
     onClick: PropTypes.func,
   };
 

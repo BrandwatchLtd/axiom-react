@@ -45,11 +45,3 @@ exports[`Card renders with size medium 1`] = `
   Lorem Ipsum
 </div>
 `;
-
-exports[`Card renders with size small 1`] = `
-<div
-  className="ax-card ax-card--small"
-  onClick={undefined}>
-  Lorem Ipsum
-</div>
-`;
