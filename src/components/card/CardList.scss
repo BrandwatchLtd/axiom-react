@@ -1,8 +1,15 @@
 @import '../../design-patterns/spacing/mixins';
+@import '../vars';
 
 .ax-card-list {
   @include space-block();
 
   padding: 0;
   list-style: none;
+}
+
+.ax-card-list--separators {
+  .ax-card-list__item {
+    border-bottom: $component-border-width solid var(--color-context-border);
+  }
 }

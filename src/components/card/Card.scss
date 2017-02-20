@@ -1,9 +1,32 @@
+@import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/spacing/vars';
 
-.ax-card {
-  padding: $page-padding-v $page-padding-h;
+.ax-card--small {
+  padding: ($spacing-grid-size * 2);
+}
+
+.ax-card--medium {
+  padding: ($spacing-grid-size * 4);
+}
+
+.ax-card--large {
+  padding: ($spacing-grid-size * 6);
 }
 
 .ax-card--compact {
-  padding: ($spacing-grid-size * 4) 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.ax-card--clickable {
+  @include transition((background-color));
+
+  cursor: pointer;
+
+  &:not(.ax-card--compact) {
+    &:hover,
+    &.ax-card--active {
+      background-color: var(--color-context-background-disabled);
+    }
+  }
 }

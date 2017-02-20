@@ -6,24 +6,24 @@ import CardContent from './CardContent';
 export default class CardExample extends Component {
   render() {
     return (
-      <Example name="List of Cards">
+      <Example name="List of Cards with separators">
         <Snippet>
-          <CardList>
+          <CardList separators={ true }>
             <CardListItem>
               <Card>
-                <CardContent snippetSkip={ true }  />
+                <CardContent snippetReplace={ true }  />
               </Card>
             </CardListItem>
 
             <CardListItem>
               <Card>
-                <CardContent snippetSkip={ true }  />
+                <CardContent snippetReplace={ true }  />
               </Card>
             </CardListItem>
 
             <CardListItem>
               <Card>
-                <CardContent snippetSkip={ true }  />
+                <CardContent snippetReplace={ true }  />
               </Card>
             </CardListItem>
           </CardList>

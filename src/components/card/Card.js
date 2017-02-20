@@ -8,18 +8,28 @@ if (__INCLUDE_CSS__) {
 
 export default class Card extends Component {
   static propTypes = {
+    active: PropTypes.bool,
     children: PropTypes.node,
     compact: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    onClick: PropTypes.func,
+  };
+
+  static defaultProps = {
+    size: 'medium',
   };
 
   render() {
-    const { children, compact, ...rest } = this.props;
+    const { active, children, compact, onClick, size, ...rest } = this.props;
     const classes = classnames('ax-card', {
+      'ax-card--active': active,
+      'ax-card--clickable': onClick,
       'ax-card--compact': compact,
+      [`ax-card--${size}`]: size,
     });
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes } onClick={ onClick }>
         { children }
       </Base>
     );

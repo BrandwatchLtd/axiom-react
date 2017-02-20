@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { CardList, CardListItem, Heading } from 'bw-axiom';
+import { CardList, CardListItem, Heading, HorizontalRule } from 'bw-axiom';
 import ApiDocsProp from './ApiDocsProp';
 
 export default class ApiDocsList extends Component {
@@ -22,6 +22,8 @@ export default class ApiDocsList extends Component {
                 propName={ prop } />
           </CardListItem>
         ) }
+
+        <HorizontalRule />
       </CardList>
     );
   }

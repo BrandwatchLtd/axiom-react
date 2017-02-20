@@ -1,18 +1,8 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
+@import '../vars';
 
 .ax-card-list__item {
-  border-bottom: 0.0625rem solid var(--color-context-border);
-  background-color: var(--color-context-background);
+  border-bottom: $component-border-width solid var(--color-context-border);
 }
 
-.ax-card-list__item--clickable {
-  @include transition((background-color));
-
-  cursor: pointer;
-}
-
-.ax-card-list__item--clickable:hover,
-.ax-card-list__item--active {
-  background-color: var(--color-context-background-disabled);
-}

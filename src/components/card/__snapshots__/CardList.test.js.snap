@@ -2,8 +2,17 @@ exports[`CardList renders with defaultProps 1`] = `
 <ul
   className="ax-card-list">
   <li
-    className="ax-card-list__item"
-    onClick={undefined}>
+    className="ax-card-list__item">
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`CardList renders with separators 1`] = `
+<ul
+  className="ax-card-list ax-card-list--separators">
+  <li
+    className="ax-card-list__item">
     Lorem Ipsum
   </li>
 </ul>

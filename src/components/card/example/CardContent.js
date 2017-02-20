@@ -1,40 +1,34 @@
-import React, { Component } from 'react';
-import {
-  Avatar,
-  ButtonGroup,
-  Button,
-  Grid,
-  GridCell,
-  Heading,
-  Paragraph,
-} from 'bw-axiom';
-
+import React, { Component, PropTypes } from 'react';
+import { Candytar, Grid, GridCell, Heading, Paragraph } from 'bw-axiom';
 
 export default class CardContent extends Component {
+  static propTypes = {
+    heading: PropTypes.string,
+    size: PropTypes.string,
+  };
+
+  static defaultProps = {
+    heading: 'Lorem ipsum',
+    size: 'medium',
+  };
+
   render() {
+    const { heading, size } = this.props;
+
     return (
-      <Grid gutters="large" responsive={ false } vAlign="middle">
-        <GridCell shrink={ true } textCenter="small">
-          <Avatar size="5rem" src="assets/avatar.png" />
+      <Grid gutters={ size } responsive={ false } vAlign="middle">
+        <GridCell shrink={ true }>
+          <Candytar color="lilac" size="4.5rem" />
         </GridCell>
 
         <GridCell>
-          <Heading style="title">Some heading</Heading>
+          <Heading style="title">{ heading }</Heading>
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Nunc commodo egestas fringilla. In a arcu erat. Ut vestibulum
             sollicitudin orci, ut blandit ante. Vestibulum tempus rhoncus
             vehicula.
           </Paragraph>
-        </GridCell>
-
-        <GridCell full={ true } shrink="small">
-          <ButtonGroup>
-            <Button
-                full="small"
-                onClick={ (e) => e.stopPropagation() }
-                style="secondary">Button</Button>
-          </ButtonGroup>
         </GridCell>
       </Grid>
     );

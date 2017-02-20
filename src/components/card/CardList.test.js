@@ -16,4 +16,10 @@ describe('CardList', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with separators', () => {
+    const component = getComponent({ separators: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

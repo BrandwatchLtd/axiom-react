@@ -16,16 +16,4 @@ describe('CardListItem', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders active', () => {
-    const component = getComponent({ active: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders clickable', () => {
-    const component = getComponent({ onClick: () => {} });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });
