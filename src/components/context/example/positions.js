@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Example, Snippet } from 'style-guide';
 import {
+  Context,
   ContextBox,
   Grid,
   GridCell,
@@ -35,19 +36,21 @@ export default class ContextBoxExample extends Component {
               snippetIgnore={ true }>
             { position.values.map((position) =>
               <GridCell key={ position } snippetIgnore={ true }>
-                <ContextBox position={ position } width="100%">
-                  <div snippetReplace={ true }>
-                    <Heading style="title">Lorem Ipsum</Heading>
-                    <Paragraph>
-                      Quisque id hendrerit dolor. In congue vulputate mi, et
-                      accumsan magna tristique id.
-                    </Paragraph>
+                <Context position={ position } width="100%">
+                  <ContextBox>
+                    <div snippetReplace={ true }>
+                      <Heading style="title">Lorem Ipsum</Heading>
+                      <Paragraph>
+                        Quisque id hendrerit dolor. In congue vulputate mi, et
+                        accumsan magna tristique id.
+                      </Paragraph>
 
-                    <LabelGroup textCase="capital">
-                      <Label color="success">Postion: { position }</Label>
-                    </LabelGroup>
-                  </div>
-                </ContextBox>
+                      <LabelGroup textCase="capital">
+                        <Label color="success">Postion: { position }</Label>
+                      </LabelGroup>
+                    </div>
+                  </ContextBox>
+                </Context>
               </GridCell>
             ) }
           </Grid>

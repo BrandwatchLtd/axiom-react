@@ -1,51 +1,15 @@
-exports[`ContextMenu renders custom width 1`] = `
-<div
-  className="ax-context-box ax-context-box--top ax-context-box--padding-none ax-theme--light"
-  style={
-    Object {
-      "width": "20rem",
-    }
-  }>
-  <div
-    className="ax-context-box__content">
-    <ul
-      className="ax-context-menu">
-      <li
-        className="ax-context-menu__item">
-        <a
-          className="ax-context-menu__item-link">
-          Lorem ipsum
-        </a>
-      </li>
-    </ul>
-  </div>
-  <span
-    className="ax-context-box__arrow" />
-</div>
-`;
-
 exports[`ContextMenu renders with defaultProps 1`] = `
 <div
-  className="ax-context-box ax-context-box--top ax-context-box--padding-none ax-theme--light"
-  style={
-    Object {
-      "width": "14.5rem",
-    }
-  }>
-  <div
-    className="ax-context-box__content">
-    <ul
-      className="ax-context-menu">
-      <li
-        className="ax-context-menu__item">
-        <a
-          className="ax-context-menu__item-link">
-          Lorem ipsum
-        </a>
-      </li>
-    </ul>
-  </div>
-  <span
-    className="ax-context-box__arrow" />
+  className="ax-context-box ax-context-box--padding-none">
+  <ul
+    className="ax-context-menu">
+    <li
+      className="ax-context-menu__item">
+      <a
+        className="ax-context-menu__item-link">
+        Lorem ipsum
+      </a>
+    </li>
+  </ul>
 </div>
 `;

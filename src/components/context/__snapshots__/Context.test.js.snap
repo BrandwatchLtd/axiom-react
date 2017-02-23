@@ -1,0 +1,101 @@
+exports[`Context renders bottom 1`] = `
+<div
+  className="ax-context ax-context--bottom ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  <div
+    className="ax-context__content">
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow" />
+</div>
+`;
+
+exports[`Context renders custom width 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--light"
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }>
+  <div
+    className="ax-context__content">
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow" />
+</div>
+`;
+
+exports[`Context renders left 1`] = `
+<div
+  className="ax-context ax-context--left ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  <div
+    className="ax-context__content">
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow" />
+</div>
+`;
+
+exports[`Context renders right 1`] = `
+<div
+  className="ax-context ax-context--right ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  <div
+    className="ax-context__content">
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow" />
+</div>
+`;
+
+exports[`Context renders top 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  <div
+    className="ax-context__content">
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow" />
+</div>
+`;
+
+exports[`Context renders with defaultProps 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }>
+  <div
+    className="ax-context__content">
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow" />
+</div>
+`;

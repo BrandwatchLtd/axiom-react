@@ -16,10 +16,4 @@ describe('ContextMenu', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders custom width', () => {
-    const component = getComponent({ width: '20rem' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });

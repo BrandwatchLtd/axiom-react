@@ -4,6 +4,7 @@ import {
   Avatar,
   CheckBox,
   CheckBoxGroup,
+  Context,
   ContextBox,
   Grid,
   GridCell,
@@ -126,10 +127,12 @@ export default class PositionExample extends Component {
                 </PositionTarget>
 
                 <PositionContent>
-                  <ContextBox>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis at velit ut nisl eleifend volutpat.
-                  </ContextBox>
+                  <Context>
+                    <ContextBox>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Duis at velit ut nisl eleifend volutpat.
+                    </ContextBox>
+                  </Context>
                 </PositionContent>
               </Position>
             </GridCell>
