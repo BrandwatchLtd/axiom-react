@@ -7,7 +7,6 @@ export default class LogoExample extends Component {
     return (
       <Example name="Horizontal">
         <Snippet>
-          <LogoHorizontal width="8rem" />
           <LogoHorizontal height="3rem" />
         </Snippet>
       </Example>
