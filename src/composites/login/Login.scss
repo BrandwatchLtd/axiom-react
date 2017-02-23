@@ -3,8 +3,7 @@
 @import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/vars';
 
-$logo-flag-top-padding: $spacing-grid-size * 6;
-$logo-flag-padding: $spacing-grid-size * 4;
+$login-header-height: 7.75rem;
 
 .ax-login {
   display: flex;
@@ -19,37 +18,28 @@ $logo-flag-padding: $spacing-grid-size * 4;
 }
 
 .ax-login__header {
-  @include space-block($page-padding-v);
-
   flex: 0 1 auto;
+  min-height: $login-header-height;
 }
 
 .ax-login__header-container {
   max-width: $layout-width-md;
+  height: var(--login-logo-height);
   margin: 0 auto;
-}
-
-.ax-login__logo {
-  display: inline-block;
-  padding: $logo-flag-top-padding $logo-flag-padding $logo-flag-padding;
-  background-color: $color-ui-light-2;
-  vertical-align: top;
 }
 
 .ax-login__body {
-  @include space-block($page-padding-v);
+  @include space-block();
 
+  display: flex;
   flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 $login-header-height;
 }
 
 .ax-login__form {
-  max-width: $layout-width-xs;
+  width: $layout-width-xs;
+  max-width: 100%;
   margin: 0 auto;
-}
-
-.ax-login__footer {
-  @include space-block($page-padding-v);
-
-  flex: 0 1 auto;
-  padding: $page-padding-v;
 }

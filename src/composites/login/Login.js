@@ -5,9 +5,11 @@ import {
   Button,
   ButtonGroup,
   Form,
+  Grid,
+  GridCell,
   TextInput,
   Link,
-  LogoVertical,
+  LogoTab,
   Paragraph,
   Heading,
   Strong,
@@ -58,9 +60,7 @@ export default class Login extends Component {
       <Base { ...omit(rest, ['onSubmit']) } className="ax-login" style={ style }>
         <div className="ax-login__header">
           <div className="ax-login__header-container">
-            <div className="ax-login__logo">
-              <LogoVertical height="6.25rem" />
-            </div>
+            <LogoTab color="grey" height="7.75rem" />
           </div>
         </div>
 
@@ -83,27 +83,31 @@ export default class Login extends Component {
                   style="translucent"
                   type="password"
                   value={ password } />
-              <ButtonGroup>
-                <Button
-                    full="small"
-                    size="large"
-                    type="submit">Login</Button>
-              </ButtonGroup>
+
+              <Grid vAlign="middle">
+                <GridCell shrink={ true }>
+                  <ButtonGroup>
+                    <Button
+                        full="small"
+                        size="large"
+                        type="submit">Login</Button>
+                  </ButtonGroup>
+                </GridCell>
+
+                <GridCell>
+                  <Paragraph textCenter={ true } textRight="small">
+                    <Link href="https://app.brandwatch.com/login" target="_blank">
+                      <Strong>Forgot login details?</Strong>
+                    </Link>
+                  </Paragraph>
+                </GridCell>
+              </Grid>
             </Form>
 
-            { do { if (error) {
-              <Paragraph textColor="error">
-                <Strong>{ error }</Strong>
-              </Paragraph>;
-            } } }
+            <Paragraph textColor="error">
+              <Strong>{ error }</Strong>
+            </Paragraph>
           </div>
-        </div>
-
-        <div className="ax-login__footer">
-          <Paragraph textCenter={ true } textRight="small">
-            Forgotten your Brandwatch password? <Link href="https://app.brandwatch.com/login">
-            Reset it here. </Link>
-          </Paragraph>
         </div>
       </Base>
     );
