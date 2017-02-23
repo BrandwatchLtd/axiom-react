@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { ContextMenu, ContextMenuItem, Grid, GridCell } from 'bw-axiom';
+import { Context, ContextMenu, ContextMenuItem, Grid, GridCell } from 'bw-axiom';
 
 export default class ContextMenuExample extends Component {
   render() {
@@ -9,35 +9,39 @@ export default class ContextMenuExample extends Component {
         <Snippet>
           <Grid snippetIgnore={ true }>
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <ContextMenu position="bottom">
-                <ContextMenuItem>
-                  Nam dignissim bibendum
-                </ContextMenuItem>
+              <Context position="bottom">
+                <ContextMenu>
+                  <ContextMenuItem>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
 
-                <ContextMenuItem>
-                  Nam dignissim bibendum
-                </ContextMenuItem>
+                  <ContextMenuItem snippetSkip={ true }>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
 
-                <ContextMenuItem>
-                  Nam dignissim bibendum
-                </ContextMenuItem>
-              </ContextMenu>
+                  <ContextMenuItem snippetSkip={ true }>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
+                </ContextMenu>
+              </Context>
             </GridCell>
 
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <ContextMenu position="right">
-                <ContextMenuItem>
-                  Nam dignissim bibendum
-                </ContextMenuItem>
+              <Context position="right">
+                <ContextMenu>
+                  <ContextMenuItem>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
 
-                <ContextMenuItem>
-                  Nam dignissim bibendum
-                </ContextMenuItem>
+                  <ContextMenuItem snippetSkip={ true }>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
 
-                <ContextMenuItem>
-                  Nam dignissim bibendum
-                </ContextMenuItem>
-              </ContextMenu>
+                  <ContextMenuItem snippetSkip={ true }>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
+                </ContextMenu>
+              </Context>
             </GridCell>
           </Grid>
         </Snippet>
