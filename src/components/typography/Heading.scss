@@ -12,6 +12,7 @@
 .ax-heading--display {
   font-size: $font-size-display;
   font-weight: $font-weight-medium;
+  letter-spacing: $letter-spacing-display;
   line-height: $line-height-display;
 
   &.ax-text--weak,
@@ -23,12 +24,14 @@
 .ax-heading--headline {
   font-size: $font-size-headline;
   font-weight: $font-weight-headline-standard;
+  letter-spacing: $letter-spacing-headline;
   line-height: $line-height-headline;
 }
 
 .ax-heading--title {
   font-size: $font-size-title;
   font-weight: $font-weight-title-standard;
+  letter-spacing: $letter-spacing-title;
   line-height: $line-height-title;
 
   &.ax-text--strong,
