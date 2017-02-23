@@ -1,0 +1,10 @@
+@import '../../components/vars';
+
+.ax-user-menu__content {
+  &::before {
+    display: block;
+    margin: 0 ($spacing-grid-size * 6);
+    border-bottom: $component-border-width solid var(--color-context-border);
+    content: '';
+  }
+}

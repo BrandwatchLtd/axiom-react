@@ -20,6 +20,7 @@ export { default as CardListItem } from './components/card/CardListItem';
 export { default as CheckBox } from './components/form/CheckBox';
 export { default as CheckBoxGroup } from './components/form/CheckBoxGroup';
 export { default as Console } from './components/platform/Console';
+export { default as Context } from './components/context/Context';
 export { default as ContextBox } from './components/context/ContextBox';
 export { default as ContextMenu } from './components/context/ContextMenu';
 export { default as ContextMenuItem } from './components/context/ContextMenuItem';
@@ -79,3 +80,4 @@ export { default as Weak } from './components/typography/Weak';
 
 // Composites
 export { default as Login } from './composites/login/Login';
+export { default as UserMenu } from './composites/usermenu/UserMenu';
