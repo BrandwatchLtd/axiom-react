@@ -9,7 +9,7 @@ export default class ImageExample extends Component {
         <Paragraph>
           As a precautionary measure, Images can be given a child to render
           if the first image fails to load. This pattern can be stacked
-          as many times as you like.
+          as many times as you like. This doesn't have to be an image fallback.
         </Paragraph>
 
         <Snippet>
@@ -19,10 +19,6 @@ export default class ImageExample extends Component {
             </Image>
           </Image>
         </Snippet>
-
-        <Paragraph>
-          This doesn't have to be an image fallback.
-        </Paragraph>
 
         <Snippet>
           <Avatar size="8rem" src="assets/WRONG.jpg">

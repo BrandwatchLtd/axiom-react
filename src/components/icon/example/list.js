@@ -22,7 +22,7 @@ export default class IconExample extends Component {
         <Grid>
           { name.values.map((name) =>
             <GridCell key={ name } width={ 25 }>
-              <Grid responsive={ false } vAlign="middle">
+              <Grid gutters="small" responsive={ false } vAlign="middle">
                 <GridCell shrink={ true }>
                   <Icon name={ name } size="1.5rem" />
                 </GridCell>
