@@ -9,7 +9,7 @@ if (__INCLUDE_CSS__) {
 export default class Image extends Component {
   static propTypes = {
     children: PropTypes.node,
-    src: PropTypes.string.isRequired,
+    src: PropTypes.string,
     onError: PropTypes.func,
   };
 
@@ -32,11 +32,11 @@ export default class Image extends Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, src, ...rest } = this.props;
     const { fallback } = this.state;
     const classes = classnames('ax-image', {});
 
-    if (fallback && children) {
+    if (!src || (fallback && children)) {
       return children;
     }
 
@@ -45,7 +45,8 @@ export default class Image extends Component {
           { ...rest }
           Component="img"
           className={ classes }
-          onError={ ::this.handleError } />
+          onError={ ::this.handleError }
+          src={ src } />
     );
   }
 }
