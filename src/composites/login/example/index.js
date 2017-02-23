@@ -10,8 +10,7 @@ class LoginExample extends Component {
 
   render() {
     const containerStyles = {
-      width: '100%',
-      height: 600,
+      height: '40rem',
     };
 
     return (
