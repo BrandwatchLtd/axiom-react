@@ -4,7 +4,7 @@ import { ImageCircle } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ImageCircle { ...props } size="3rem" />
+    <ImageCircle { ...props } size="3rem" src="/lorem.jpg" />
   );
 }
 
