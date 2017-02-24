@@ -1,8 +1,20 @@
+exports[`CardList renders with compact 1`] = `
+<ul
+  className="ax-card-list ax-card-list--medium ax-card-list--compact">
+  <li
+    className="ax-card"
+    onClick={undefined}>
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
 exports[`CardList renders with defaultProps 1`] = `
 <ul
-  className="ax-card-list">
+  className="ax-card-list ax-card-list--medium">
   <li
-    className="ax-card-list__item">
+    className="ax-card"
+    onClick={undefined}>
     Lorem Ipsum
   </li>
 </ul>
@@ -10,9 +22,32 @@ exports[`CardList renders with defaultProps 1`] = `
 
 exports[`CardList renders with separators 1`] = `
 <ul
-  className="ax-card-list ax-card-list--separators">
+  className="ax-card-list ax-card-list--medium ax-card-list--separators">
   <li
-    className="ax-card-list__item">
+    className="ax-card"
+    onClick={undefined}>
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`CardList renders with size large 1`] = `
+<ul
+  className="ax-card-list ax-card-list--large">
+  <li
+    className="ax-card"
+    onClick={undefined}>
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`CardList renders with size medium 1`] = `
+<ul
+  className="ax-card-list ax-card-list--medium">
+  <li
+    className="ax-card"
+    onClick={undefined}>
     Lorem Ipsum
   </li>
 </ul>

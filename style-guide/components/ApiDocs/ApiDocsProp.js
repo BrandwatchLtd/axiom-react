@@ -57,7 +57,7 @@ export default class ApiDocsProp extends Component {
     const hasDefault = defaultValue !== undefined;
 
     return (
-      <Card compact={ true }>
+      <Card>
         <Grid>
           <GridCell>
             <Paragraph><Strong>{ propName }</Strong></Paragraph>

@@ -1,8 +1,0 @@
-@import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/colors/vars';
-@import '../vars';
-
-.ax-card-list__item {
-  border-bottom: $component-border-width solid var(--color-context-border);
-}
-

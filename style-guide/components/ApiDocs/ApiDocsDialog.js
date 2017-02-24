@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import { Dialog, DialogBody, DialogHeader, Heading } from 'bw-axiom';
+import { CardList, Dialog, DialogBody, DialogHeader, Heading } from 'bw-axiom';
 import { CodeSnippet, CodeTabset } from '../CodeSnippet';
-import ApiDocsList from './ApiDocsList';
+import ApiDocsProp from './ApiDocsProp';
 
 export default class ApiDocsDialog extends Component {
   static propTypes = {
@@ -29,12 +29,20 @@ export default class ApiDocsDialog extends Component {
 
           { Object.keys(components)
               .filter((displayName) => Object.keys(components[displayName]).length > 0)
-              .map((displayName) =>
-                <ApiDocsList
-                    componentName={ displayName }
-                    key={ displayName }
-                    props={ components[displayName] } />
-          ) }
+              .map((displayName, index) => [
+                <Heading key={ index } style="headline" underline={ true }>
+                  { displayName }
+                </Heading>,
+                <CardList compact={ true } key={ displayName }>
+                  { Object.keys(components[displayName]).sort().map((prop, index) =>
+                    <ApiDocsProp
+                        key={ index }
+                        propData={ components[displayName][prop] }
+                        propName={ prop } />
+                  ) }
+                </CardList>,
+              ] )
+          }
         </DialogBody>
       </Dialog>
     );

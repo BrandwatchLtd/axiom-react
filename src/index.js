@@ -16,7 +16,6 @@ export { default as Candytar } from './components/avatar/Candytar';
 export { default as Canvas } from './components/platform/Canvas';
 export { default as Card } from './components/card/Card';
 export { default as CardList } from './components/card/CardList';
-export { default as CardListItem } from './components/card/CardListItem';
 export { default as CheckBox } from './components/form/CheckBox';
 export { default as CheckBoxGroup } from './components/form/CheckBoxGroup';
 export { default as Console } from './components/platform/Console';

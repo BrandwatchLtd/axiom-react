@@ -1,6 +1,0 @@
-exports[`CardListItem renders with defaultProps 1`] = `
-<li
-  className="ax-card-list__item">
-  Lorem Ipsum
-</li>
-`;

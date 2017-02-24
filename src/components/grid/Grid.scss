@@ -51,6 +51,7 @@
 // Grid: Gutter removal
 .ax-grid--gutters-none,
 .ax-grid--gutters-none-v {
+  margin-top: 0;
   margin-bottom: 0;
 
   > .ax-grid__cell {

@@ -1,47 +1,23 @@
 exports[`Card renders with active 1`] = `
-<div
-  className="ax-card ax-card--active ax-card--medium"
+<li
+  className="ax-card ax-card--active"
   onClick={undefined}>
   Lorem Ipsum
-</div>
-`;
-
-exports[`Card renders with compact 1`] = `
-<div
-  className="ax-card ax-card--compact ax-card--medium"
-  onClick={undefined}>
-  Lorem Ipsum
-</div>
+</li>
 `;
 
 exports[`Card renders with defaultProps 1`] = `
-<div
-  className="ax-card ax-card--medium"
+<li
+  className="ax-card"
   onClick={undefined}>
   Lorem Ipsum
-</div>
+</li>
 `;
 
 exports[`Card renders with onClick styles 1`] = `
-<div
-  className="ax-card ax-card--clickable ax-card--medium"
+<li
+  className="ax-card ax-card--clickable"
   onClick={[Function]}>
   Lorem Ipsum
-</div>
-`;
-
-exports[`Card renders with size large 1`] = `
-<div
-  className="ax-card ax-card--large"
-  onClick={undefined}>
-  Lorem Ipsum
-</div>
-`;
-
-exports[`Card renders with size medium 1`] = `
-<div
-  className="ax-card ax-card--medium"
-  onClick={undefined}>
-  Lorem Ipsum
-</div>
+</li>
 `;
