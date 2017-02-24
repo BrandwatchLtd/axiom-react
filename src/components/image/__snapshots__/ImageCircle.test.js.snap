@@ -12,7 +12,12 @@ exports[`ImageCircle renders with border large 1`] = `
     <img
       className="ax-image"
       onError={[Function]}
-      src="/lorem.jpg" />
+      src="/lorem.jpg"
+      style={
+        Object {
+          "width": "100%",
+        }
+      } />
   </div>
 </div>
 `;
@@ -31,7 +36,12 @@ exports[`ImageCircle renders with border small 1`] = `
     <img
       className="ax-image"
       onError={[Function]}
-      src="/lorem.jpg" />
+      src="/lorem.jpg"
+      style={
+        Object {
+          "width": "100%",
+        }
+      } />
   </div>
 </div>
 `;
@@ -50,7 +60,12 @@ exports[`ImageCircle renders with defaultProps 1`] = `
     <img
       className="ax-image"
       onError={[Function]}
-      src="/lorem.jpg" />
+      src="/lorem.jpg"
+      style={
+        Object {
+          "width": "100%",
+        }
+      } />
   </div>
 </div>
 `;
@@ -69,7 +84,12 @@ exports[`ImageCircle renders with overlay icon 1`] = `
     <img
       className="ax-image"
       onError={[Function]}
-      src="/lorem.jpg" />
+      src="/lorem.jpg"
+      style={
+        Object {
+          "width": "100%",
+        }
+      } />
   </div>
   <div
     className="ax-image-circle__icon">
