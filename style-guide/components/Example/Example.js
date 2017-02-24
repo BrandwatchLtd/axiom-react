@@ -1,5 +1,4 @@
 import React, { Children, Component, PropTypes } from 'react';
-import { Heading } from 'bw-axiom';
 import { filterRender } from '../../utils/example-filter';
 import ExampleBox from './ExampleBox';
 import Snippet from './Snippet';
@@ -17,8 +16,7 @@ export default class Example extends Component {
     const { name, children } = this.props;
 
     return (
-      <ExampleBox>
-        <Heading style="title">{ name }</Heading>
+      <ExampleBox name={ name }>
         { Children.toArray(children).reduce((children, child) => {
           if (child.type === Snippet && !child.props.renderSkip) {
             children.push(filterRender(child.props.children));

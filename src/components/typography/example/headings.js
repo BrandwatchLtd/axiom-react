@@ -1,72 +1,27 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Grid, GridCell, Heading, HorizontalRule, Strong, Weak } from 'bw-axiom';
+import { Heading, Strong, Weak } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {
     return (
       <Example name="Headings">
-        <Grid vAlign="middle">
-          <GridCell>
-            <Heading>Display</Heading>
-          </GridCell>
+        <Snippet>
+          <Heading style="display">
+            <Weak>Display Weak</Weak> / Display Standard
+          </Heading>
 
-          <GridCell shrink={ true }>
-            <Heading style="display">
-              <Weak>Weak [ Aa Zz ]</Weak> / Standard [ Aa Zz ]
-            </Heading>
-          </GridCell>
-        </Grid>
+          <Heading style="headline">
+            Headline Standard
+          </Heading>
 
-        <HorizontalRule />
+          <Heading style="title">
+            Title Standard / <Strong>Title Strong</Strong>
+          </Heading>
 
-        <Grid vAlign="middle">
-          <GridCell>
-            <Heading>Headline</Heading>
-          </GridCell>
-
-          <GridCell shrink={ true }>
-            <Heading style="headline">
-              Standard [ Aa Zz ]
-            </Heading>
-          </GridCell>
-        </Grid>
-
-        <HorizontalRule />
-
-        <Grid vAlign="middle">
-          <GridCell>
-            <Heading>Title</Heading>
-          </GridCell>
-
-          <GridCell shrink={ true }>
-            <Heading style="title">
-              Standard [ Aa Zz ] / <Strong>Strong [ Aa Zz ]</Strong>
-            </Heading>
-          </GridCell>
-        </Grid>
-
-        <HorizontalRule />
-
-        <Grid vAlign="middle">
-          <GridCell>
-            <Heading>Large</Heading>
-          </GridCell>
-
-          <GridCell shrink={ true }>
-            <Heading style="large">
-              Standard [ Aa Zz ] / <Strong>Strong [ Aa Zz ]</Strong>
-            </Heading>
-          </GridCell>
-        </Grid>
-
-        <HorizontalRule />
-
-        <Snippet renderSkip={ true }>
-          <Heading style="display">... <Weak>...</Weak></Heading>
-          <Heading style="headline">...</Heading>
-          <Heading style="title">... <Strong>...</Strong></Heading>
-          <Heading style="large">... <Strong>...</Strong></Heading>
+          <Heading style="large">
+            Large Standard / <Strong>Large Strong</Strong>
+          </Heading>
         </Snippet>
       </Example>
     );

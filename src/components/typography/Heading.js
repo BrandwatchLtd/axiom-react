@@ -17,6 +17,7 @@ export default class Heading extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     style: PropTypes.oneOf(['display', 'headline', 'title', 'large']),
+    underline: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -24,9 +25,9 @@ export default class Heading extends Component {
   };
 
   render() {
-    const { style, ...rest } = this.props;
-    const classes = classnames('ax-heading', {
-      [`ax-heading--${style}`]: style,
+    const { underline, style, ...rest } = this.props;
+    const classes = classnames('ax-heading', `ax-heading--${style}`, {
+      'ax-heading--underline': underline,
     });
 
     return (

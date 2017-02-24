@@ -3,7 +3,10 @@ import humanize from 'humanize-string';
 import isPlainObject from 'lodash.isplainobject';
 import { Grid, GridCell, Heading, Weak } from 'bw-axiom';
 import ApiDocs from '../ApiDocs';
-import ExampleBox from './ExampleBox';
+
+if (__INCLUDE_CSS__) {
+  require('./ExampleHeader.scss');
+}
 
 function shouldShowApiDocs(components) {
   return isPlainObject(components) && Object.keys(components).length > 0;
@@ -22,7 +25,7 @@ export default class ExampleHeader extends Component {
     const trail = route.slice(0, -1);
 
     return (
-      <ExampleBox>
+      <div className="dm-example-header">
         <Grid vAlign="end">
           <GridCell>
             <Heading style="title" textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
@@ -37,7 +40,7 @@ export default class ExampleHeader extends Component {
             </GridCell>;
           } } }
         </Grid>
-      </ExampleBox>
+      </div>
     );
   }
 }

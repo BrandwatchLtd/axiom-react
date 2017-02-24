@@ -1,12 +1,13 @@
 @import '../../design-patterns/spacing/vars';
 @import '../../design-patterns/spacing/mixins';
+@import '../vars';
 @import './vars';
 
 .ax-heading--display,
 .ax-heading--headline,
 .ax-heading--title,
 .ax-heading--large {
-  @include space-block($spacing-grid-size);
+  margin: 0;
 }
 
 .ax-heading--display {
@@ -48,5 +49,20 @@
   &.ax-text--strong,
   .ax-text--strong {
     font-weight: $font-weight-large-strong;
+  }
+}
+
+.ax-heading--underline {
+  &.ax-heading--display,
+  &.ax-heading--headline {
+    border-bottom: $component-border-width solid var(--color-context-border);
+  }
+
+  &.ax-heading--display  {
+    padding: 0 0 ($spacing-grid-size * 3);
+  }
+
+  &.ax-heading--headline {
+    padding: 0 0 ($spacing-grid-size * 2);
   }
 }
