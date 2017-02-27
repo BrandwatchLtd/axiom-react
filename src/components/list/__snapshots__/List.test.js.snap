@@ -1,6 +1,6 @@
 exports[`List renders with defaultProps 1`] = `
 <ul
-  className="ax-list">
+  className="ax-list ax-space--small">
   <li
     className="ax-list__item">
     Lorem Ipsum
@@ -10,7 +10,7 @@ exports[`List renders with defaultProps 1`] = `
 
 exports[`List renders with inline 1`] = `
 <ul
-  className="ax-list ax-list--inline">
+  className="ax-list ax-list--inline ax-space--small">
   <li
     className="ax-list__item">
     Lorem Ipsum
@@ -20,7 +20,7 @@ exports[`List renders with inline 1`] = `
 
 exports[`List renders with ordered 1`] = `
 <ol
-  className="ax-list">
+  className="ax-list ax-space--small">
   <li
     className="ax-list__item">
     Lorem Ipsum

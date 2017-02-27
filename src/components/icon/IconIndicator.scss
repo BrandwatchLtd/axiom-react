@@ -1,11 +1,8 @@
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
 @import '../vars';
 
 .ax-icon-indicator {
-  @include space-block();
-
   display: flex;
   align-items: center;
   justify-content: center;

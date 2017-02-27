@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Base } from 'bw-axiom';
 import { prepareSnippet } from '../../utils/code-formatting';
 
 if (__INCLUDE_CSS__) {
@@ -16,11 +17,11 @@ export default class CodeSnippet extends Component {
     const { className, code } = prepareSnippet(children, language);
 
     return (
-      <pre className={ className }>
+      <Base Component="pre" className={ className } space="medium">
         <code
             className={ className }
             dangerouslySetInnerHTML={ { __html: code } } />
-      </pre>
+      </Base>
     );
   }
 }

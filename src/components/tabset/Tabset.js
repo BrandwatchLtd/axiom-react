@@ -51,7 +51,7 @@ export default class Tabset extends Component {
       }));
 
     return (
-      <Base { ...omit(rest, ['activeTabIndex']) } className="ax-tabset">
+      <Base space="medium" { ...omit(rest, ['activeTabIndex']) } className="ax-tabset">
         <ul className="ax-tabset__list">
           { tabs }
         </ul>

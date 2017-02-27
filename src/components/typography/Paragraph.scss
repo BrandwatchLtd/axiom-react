@@ -1,6 +1,0 @@
-@import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
-
-.ax-paragraph {
-  @include space-block($spacing-grid-size);
-}

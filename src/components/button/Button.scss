@@ -2,7 +2,6 @@
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
 @import '../typography/vars';
 @import '../vars';
 
@@ -63,8 +62,6 @@ button {
 
 // Button: Full width
 @mixin button-full-width {
-  @include space-block();
-
   display: block;
   width: 100%;
 }

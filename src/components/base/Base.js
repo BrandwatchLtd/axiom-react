@@ -16,6 +16,7 @@ export default class Base extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
+    space: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
     textBreak: PropTypes.oneOf(['none', 'all', 'word']),
     textCase: PropTypes.oneOf(['upper', 'capital', 'lower']),
     textCenter: PropTypes.oneOfType([
@@ -50,6 +51,7 @@ export default class Base extends Component {
       Component,
       className,
       hiddenUntil,
+      space,
       textBreak,
       textCase,
       textCenter,
@@ -65,6 +67,7 @@ export default class Base extends Component {
     } = this.props;
 
     const classes = classnames(className, {
+      [`ax-space--${space}`]: space,
       'ax-text--break-all': textBreak === 'all',
       'ax-text--break-none': textBreak === 'none',
       'ax-text--break-word': textBreak === 'word',

@@ -1,13 +1,10 @@
 @import '../../design-patterns/animations/mixins';
-@import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../typography/vars';
 @import '../vars';
 @import './vars';
 
 .ax-chedio-buttox__container {
-  @include space-block($spacing-grid-size * 2);
-
   display: flex;
   align-items: center;
   cursor: pointer;

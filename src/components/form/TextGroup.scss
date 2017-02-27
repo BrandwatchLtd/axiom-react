@@ -1,5 +1,4 @@
 @import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
 
 input,
 textarea {
@@ -13,17 +12,12 @@ textarea {
   }
 }
 
-// Input: Group
 .ax-input__group {
-  @include space-block();
-
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
-// Input: Label
 .ax-input__label {
-  @include space-block($spacing-grid-size);
+  margin-bottom: $spacing-grid-size;
 }
-

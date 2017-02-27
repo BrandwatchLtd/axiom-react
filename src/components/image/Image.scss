@@ -1,8 +1,4 @@
-@import '../../design-patterns/spacing/mixins';
-
 .ax-image {
-  @include space-block;
-
   display: block;
   max-width: 100%;
 }

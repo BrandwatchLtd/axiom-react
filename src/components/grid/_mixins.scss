@@ -1,28 +1,20 @@
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/spacing/vars';
 
-@mixin grid-gutter($horizontal-gutter) {
-  $vertical-gutter: $spacing-grid-size * 4;
+@mixin grid-gutter($gutter-size) {
+  &:not(.ax-grid--gutters-none):not(.ax-grid--gutters-none-h) {
+    margin-left: -$gutter-size;
 
-  margin: $vertical-gutter 0 (-$vertical-gutter) (-$horizontal-gutter);
-
-  > .ax-grid__cell {
-    padding: 0 0 $vertical-gutter $horizontal-gutter;
-  }
-
-  &[class^='grid-full'],
-  &[class*=' grid-full'] {
     > .ax-grid__cell {
-      padding-bottom: $vertical-gutter;
+      padding-left: $gutter-size;
     }
   }
 
-  @include screen-less-than(breakpoint-prop(width, breakpoint-first())) {
-    &:not(.ax-grid--gutters-none),
-    &:not(.ax-grid--gutters-none-v) {
-      > .grid-cell {
-        padding-bottom: $vertical-gutter;
-      }
+  &:not(.ax-grid--gutters-none):not(.ax-grid--gutters-none-v) {
+    margin-bottom: -$gutter-size;
+
+    > .ax-grid__cell {
+      padding-bottom: $gutter-size;
     }
   }
 }

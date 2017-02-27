@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
@@ -9,17 +8,13 @@ if (__INCLUDE_CSS__) {
 export default class ChedioButtoxGroup extends Component {
   static propTypes = {
     children: PropTypes.node,
-    inline: PropTypes.bool,
   };
 
   render() {
-    const { children, inline, ...rest } = this.props;
-    const classes = classnames('ax-chedio-buttox__group', {
-      'ax-chedio-buttox__group--inline': inline,
-    });
+    const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className="ax-chedio-buttox__group">
         { children }
       </Base>
     );

@@ -8,10 +8,6 @@
 .ax-grid {
   display: flex;
   flex-wrap: wrap;
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 
@@ -43,39 +39,10 @@
 
 
 // Grid: Gutter sizing
-.ax-grid--gutters--small { @include grid-gutter($spacing-grid-size * 4); }
+.ax-grid--gutters--small  { @include grid-gutter($spacing-grid-size * 4); }
 .ax-grid--gutters--medium { @include grid-gutter($spacing-grid-size * 6); }
-.ax-grid--gutters--large { @include grid-gutter($spacing-grid-size * 8); }
+.ax-grid--gutters--large  { @include grid-gutter($spacing-grid-size * 8); }
 
-
-// Grid: Gutter removal
-.ax-grid--gutters-none,
-.ax-grid--gutters-none-v {
-  margin-top: 0;
-  margin-bottom: 0;
-
-  > .ax-grid__cell {
-    padding-bottom: 0;
-  }
-}
-
-.ax-grid--gutters-none,
-.ax-grid--gutters-none-h {
-  margin-left: 0;
-
-  > .ax-grid__cell {
-    padding-left: 0;
-  }
-}
-
-
-// Grid: Grid cell height alignment
-.ax-grid--full-height {
-  > .ax-grid__cell {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 // Create the grid sizing classes to span all breakpoints
 @include make-responsive-grid(false);

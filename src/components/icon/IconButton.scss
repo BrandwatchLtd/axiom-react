@@ -1,11 +1,9 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
 @import '../vars';
 
 .ax-icon-button {
-  @include space-block();
   @include transition((background-color, border-color, color));
 
   border: 0 solid var(--color-context-border);

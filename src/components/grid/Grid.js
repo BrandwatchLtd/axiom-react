@@ -78,8 +78,10 @@ export default class Grid extends Component {
     });
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base space="medium" { ...rest } className="ax-grid__container">
+        <div className={ classes }>
+          { children }
+        </div>
       </Base>
     );
   }

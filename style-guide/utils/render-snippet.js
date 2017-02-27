@@ -22,7 +22,7 @@ export function jsxRender(snippet) {
     return reactElementToJsxString(snippet, {
       useBooleanShorthandSyntax: false,
       showDefaultProps: false,
-      filterProps: ['key'],
+      filterProps: ['key', 'space'],
     });
   } catch (e) {
     console.error(e);

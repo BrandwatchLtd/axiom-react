@@ -31,7 +31,7 @@ export default class Heading extends Component {
     });
 
     return (
-      <Base { ...rest } Component={ TAG_MAP[style] } className={ classes } />
+      <Base space="tiny" { ...rest } Component={ TAG_MAP[style] } className={ classes } />
     );
   }
 }

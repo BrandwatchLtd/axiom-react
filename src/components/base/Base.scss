@@ -5,6 +5,7 @@
 @import '../../design-patterns/colors/colors-dark';
 @import '../../design-patterns/colors/colors-light';
 @import '../../design-patterns/layout/mixins';
+@import '../../design-patterns/spacing/vars';
 @import '../typography/vars';
 
 *,
@@ -89,4 +90,38 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+// Spacing
+.ax-space--none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ax-space--tiny {
+  margin-top: ($spacing-grid-size * 2);
+  margin-bottom: ($spacing-grid-size * 2);
+}
+
+.ax-space--small  {
+  margin-top: ($spacing-grid-size * 4);
+  margin-bottom: ($spacing-grid-size * 4);
+}
+
+.ax-space--medium {
+  margin-top: ($spacing-grid-size * 6);
+  margin-bottom: ($spacing-grid-size * 6);
+}
+
+.ax-space--large  {
+  margin-top: ($spacing-grid-size * 8);
+  margin-bottom: ($spacing-grid-size * 8);
+}
+
+.ax-space--tiny,
+.ax-space--small,
+.ax-space--medium,
+.ax-space--large {
+  &:first-child { margin-top: 0; }
+  &:last-child  { margin-bottom: 0; }
 }

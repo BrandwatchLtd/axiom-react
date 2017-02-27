@@ -8,7 +8,11 @@ if (__INCLUDE_CSS__) {
 export default class HorizontalRule extends Component {
   render() {
     return (
-      <Base Component="hr" className="ax-horizontal-rule" />
+      <Base
+          space="small"
+          { ...this.props }
+          Component="hr"
+          className="ax-horizontal-rule" />
     );
   }
 }

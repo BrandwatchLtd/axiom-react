@@ -3,7 +3,6 @@
 @import '../../design-patterns/colors/colors-dark';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/layout/vars';
-@import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../typography/vars';
 @import '../vars';
@@ -35,8 +34,6 @@
 
 // Label: Full width
 @mixin label-full-width {
-  @include space-block();
-
   display: block;
   width: 100%;
 }

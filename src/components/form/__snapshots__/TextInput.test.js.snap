@@ -1,6 +1,6 @@
 exports[`TextInput renders when disabled 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--medium ax-input__container--disabled">
     <input
@@ -15,7 +15,7 @@ exports[`TextInput renders when disabled 1`] = `
 
 exports[`TextInput renders when invalid 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--medium ax-input__container--invalid">
     <input
@@ -30,7 +30,7 @@ exports[`TextInput renders when invalid 1`] = `
 
 exports[`TextInput renders when valid 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--medium ax-input__container--valid">
     <input
@@ -45,7 +45,7 @@ exports[`TextInput renders when valid 1`] = `
 
 exports[`TextInput renders with TextInputIcon 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--medium">
     <input
@@ -78,7 +78,7 @@ exports[`TextInput renders with TextInputIcon 1`] = `
 
 exports[`TextInput renders with defaultProps 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--medium">
     <input
@@ -93,7 +93,7 @@ exports[`TextInput renders with defaultProps 1`] = `
 
 exports[`TextInput renders with label 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__label">
     <strong
@@ -115,7 +115,7 @@ exports[`TextInput renders with label 1`] = `
 
 exports[`TextInput renders with size large 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--large">
     <input
@@ -130,7 +130,7 @@ exports[`TextInput renders with size large 1`] = `
 
 exports[`TextInput renders with size medium 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--medium">
     <input
@@ -145,7 +145,7 @@ exports[`TextInput renders with size medium 1`] = `
 
 exports[`TextInput renders with style translucent 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__container ax-input__container--translucent ax-input__container--medium">
     <input

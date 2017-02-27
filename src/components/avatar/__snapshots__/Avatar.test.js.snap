@@ -10,7 +10,7 @@ exports[`Avatar renders with custom size 1`] = `
   <div
     className="ax-image-circle__image">
     <img
-      className="ax-image"
+      className="ax-image ax-space--small"
       onError={[Function]}
       src="/image/path" />
   </div>

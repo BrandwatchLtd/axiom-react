@@ -1,16 +1,8 @@
 @import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
 @import './vars';
 
-// Button Group: Base
 .ax-chedio-buttox__group {
-  @include space-block();
-}
-
-.ax-chedio-buttox__group--inline {
-  @include space-inline-children($spacing-grid-size * 6);
-
   .ax-chedio-buttox__container {
-    display: inline-flex;
+    margin: ($spacing-grid-size * 2) 0;
   }
 }

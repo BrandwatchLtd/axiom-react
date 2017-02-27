@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import omit from 'lodash.omit';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 
@@ -24,12 +23,16 @@ export default class ButtonGroup extends Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
-    const classes = classnames('ax-button__group');
+    const { children, joined, ...rest } = this.props;
+    const classes = classnames('ax-button__group', {
+      'ax-button__group--joined': joined,
+    });
 
     return (
-      <Base { ...omit(rest, ['joined']) } className={ classes }>
-        { children }
+      <Base space="medium" { ...rest } className="ax-button__container">
+        <div className={ classes }>
+          { children }
+        </div>
       </Base>
     );
   }

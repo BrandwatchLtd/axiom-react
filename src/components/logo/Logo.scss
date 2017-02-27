@@ -1,7 +1,3 @@
-@import '../../design-patterns/spacing/mixins';
-
 .ax-logo {
-  @include space-block();
-
   max-width: 100%;
 }

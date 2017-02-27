@@ -19,13 +19,9 @@ export default class ExampleBox extends Component {
 
     return (
       <div className="dm-example-box">
-        <div className="dm-exmaple-box__header">
-          <Heading style="title">{ name }</Heading>
-        </div>
+        <Heading space="medium" style="title">{ name }</Heading>
 
-        <div className="dm-example-box__content">
-          { children }
-        </div>
+        { children }
       </div>
     );
   }

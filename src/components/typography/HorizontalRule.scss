@@ -1,11 +1,7 @@
-@import '../../design-patterns/colors/vars';
-@import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
+@import '../vars';
 
 .ax-horizontal-rule {
-  @include space-block();
-
-  border-top: 0.0625rem solid var(--color-context-border);
+  border-top: $component-border-width solid var(--color-context-border);
   border-right: 0;
   border-bottom: 0;
   border-left: 0;

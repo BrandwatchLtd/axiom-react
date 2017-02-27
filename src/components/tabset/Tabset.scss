@@ -1,17 +1,11 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
-@import '../../design-patterns/spacing/mixins';
 @import '../vars';
 
-.ax-tabset {
-  @include space-block();
-}
-
 .ax-tabset__list {
-  @include space-block();
-
   display: flex;
   align-items: flex-end;
+  margin: 0 0 ($spacing-grid-size * 6);
   padding: 0;
 
   &::after {
@@ -61,10 +55,6 @@
 .ax-tabset__button {
   color: inherit;
   line-height: $component-line-height;
-}
-
-.ax-tabset__content {
-  @include space-block();
 }
 
 // Tab sizing

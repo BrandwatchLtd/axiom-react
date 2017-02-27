@@ -1,7 +1,0 @@
-@import '../../design-patterns/spacing/mixins';
-@import '../../design-patterns/spacing/vars';
-
-// Form: Base
-.ax-form {
-  @include space-block();
-}

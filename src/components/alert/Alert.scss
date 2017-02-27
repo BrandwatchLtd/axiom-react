@@ -1,13 +1,10 @@
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/colors/colors-dark';
-@import '../../design-patterns/spacing/mixins';
 @import '../../design-patterns/spacing/vars';
 @import '../typography/vars';
 @import '../vars';
 
 .ax-alert {
-  @include space-block();
-
   padding: $component-padding-vertical-large $page-padding-h;
   color: $color-ui-light-2;
   font-weight: $font-weight-medium;

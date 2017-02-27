@@ -1,11 +1,8 @@
 @import '../../design-patterns/animations/mixins';
 @import '../../design-patterns/colors/vars';
-@import '../../design-patterns/spacing/mixins';
 @import '../vars';
 
 .ax-image-circle {
-  @include space-block;
-
   display: block;
   position: relative;
 }

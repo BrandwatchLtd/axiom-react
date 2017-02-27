@@ -2,39 +2,42 @@ exports[`DialogHeader renders with defaultProps 1`] = `
 <div
   className="ax-dialog__header">
   <div
-    className="ax-grid ax-grid--unresponsive ax-grid--gutters--medium">
+    className="ax-grid__container ax-space--medium">
     <div
-      className="ax-grid__cell"
-      style={
-        Object {
-          "width": undefined,
-        }
-      }>
-      Lorem ipsum
-    </div>
-    <div
-      className="ax-grid__cell ax-grid__cell--shrink"
-      style={
-        Object {
-          "width": undefined,
-        }
-      }>
-      <a
-        className="ax-icon-link"
-        onClick={undefined}>
-        <svg
-          className="ax-icon"
-          style={
-            Object {
-              "height": "1rem",
-              "width": "1rem",
-            }
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--medium">
+      <div
+        className="ax-grid__cell"
+        style={
+          Object {
+            "width": undefined,
           }
-          viewBox="0 0 16 16">
-          <polygon
-            points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8" />
-        </svg>
-      </a>
+        }>
+        Lorem ipsum
+      </div>
+      <div
+        className="ax-grid__cell ax-grid__cell--shrink"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }>
+        <a
+          className="ax-icon-link"
+          onClick={undefined}>
+          <svg
+            className="ax-icon"
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16">
+            <polygon
+              points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8" />
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </div>

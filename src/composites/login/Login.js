@@ -66,7 +66,9 @@ export default class Login extends Component {
 
         <div className="ax-login__body">
           <div className="ax-login__form">
-            <Heading style="display">{ application }<Weak>/ Login</Weak></Heading>
+            <Heading space="small" style="display">
+              { application }<Weak>/ Login</Weak>
+            </Heading>
 
             <Form onSubmit={ ::this.handleSubmit }>
               <TextInput
@@ -84,7 +86,7 @@ export default class Login extends Component {
                   type="password"
                   value={ password } />
 
-              <Grid vAlign="middle">
+              <Grid space="small" vAlign="middle">
                 <GridCell shrink={ true }>
                   <ButtonGroup>
                     <Button
@@ -104,7 +106,7 @@ export default class Login extends Component {
               </Grid>
             </Form>
 
-            <Paragraph textColor="error">
+            <Paragraph space="small" textColor="error">
               <Strong>{ error }</Strong>
             </Paragraph>
           </div>

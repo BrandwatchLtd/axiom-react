@@ -1,9 +1,5 @@
 @import '~bw-axiom/design-patterns/colors/vars';
-@import '~bw-axiom/design-patterns/spacing/mixins';
-
-.dm-doc-api__pre {
-  @include space-block();
-}
+@import '~bw-axiom/design-patterns/spacing/vars';
 
 .dm-doc-api__code {
   padding: $spacing-grid-size ($spacing-grid-size * 2);

@@ -29,35 +29,3 @@ exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
   </label>
 </div>
 `;
-
-exports[`ChedioButtoxGroup renders with inline 1`] = `
-<div
-  className="ax-chedio-buttox__group ax-chedio-buttox__group--inline">
-  <label
-    className="ax-chedio-buttox__container">
-    <input
-      className="ax-chedio-buttox"
-      disabled={undefined}
-      type={undefined} />
-    <span
-      className="ax-chedio-buttox__indicator" />
-    <span
-      className="ax-chedio-buttox__label">
-      Lorem ipsum
-    </span>
-  </label>
-  <label
-    className="ax-chedio-buttox__container">
-    <input
-      className="ax-chedio-buttox"
-      disabled={undefined}
-      type={undefined} />
-    <span
-      className="ax-chedio-buttox__indicator" />
-    <span
-      className="ax-chedio-buttox__label">
-      Lorem ipsum
-    </span>
-  </label>
-</div>
-`;

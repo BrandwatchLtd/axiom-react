@@ -1,9 +1,6 @@
 @import '../../design-patterns/colors/vars';
-@import '../../design-patterns/spacing/mixins';
 
 .ax-candytar {
-  @include space-block();
-
   display: block;
 }
 

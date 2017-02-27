@@ -14,7 +14,7 @@ export default class LabelGroup extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-label__group">
+      <Base space="small" { ...rest } className="ax-label__group">
         { children }
       </Base>
     );

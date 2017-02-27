@@ -18,10 +18,4 @@ describe('ChedioButtoxGroup', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders with inline', () => {
-    const component = getComponent({ inline: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });

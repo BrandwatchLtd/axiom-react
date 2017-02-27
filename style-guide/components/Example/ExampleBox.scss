@@ -1,13 +1,5 @@
-@import '~bw-axiom/design-patterns/spacing/mixins';
 @import '~bw-axiom/design-patterns/spacing/vars';
 
 .dm-example-box {
-  @include space-block();
-
   padding: $page-padding-v $page-padding-h;
-}
-
-.dm-example-box__header,
-.dm-example-box__content {
-  @include space-block();
 }

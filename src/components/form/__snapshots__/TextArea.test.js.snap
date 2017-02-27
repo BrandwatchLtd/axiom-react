@@ -1,6 +1,6 @@
 exports[`TextArea renders with a label 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <div
     className="ax-input__label">
     <strong
@@ -20,7 +20,7 @@ exports[`TextArea renders with a label 1`] = `
 
 exports[`TextArea renders with custom height 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <textarea
     className="ax-textarea"
     style={
@@ -33,7 +33,7 @@ exports[`TextArea renders with custom height 1`] = `
 
 exports[`TextArea renders with defaultProps 1`] = `
 <label
-  className="ax-input__group">
+  className="ax-input__group ax-space--small">
   <textarea
     className="ax-textarea"
     style={

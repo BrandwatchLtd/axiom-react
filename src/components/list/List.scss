@@ -1,10 +1,5 @@
 @import '../../design-patterns/spacing/vars';
-@import '../../design-patterns/spacing/mixins';
-
-// List styling
-.ax-list {
-  @include space-block();
-}
+@import '../vars';
 
 .ax-list--inline {
   padding: 0;
@@ -12,14 +7,12 @@
 
   .ax-list__item {
     display: inline-flex;
-    padding: 0 $spacing-grid-size * 2;
-    border-right: 0.0625rem solid var(--color-context-border);
-
-    &:first-child {
-      padding-left: 0;
-    }
+    margin: 0 ($spacing-grid-size * 2) 0 0;
+    padding: 0 ($spacing-grid-size * 2) 0 0;
+    border-right: $component-border-width solid var(--color-context-border);
 
     &:last-child  {
+      margin-right: 0;
       padding-right: 0;
       border-right-width: 0;
     }

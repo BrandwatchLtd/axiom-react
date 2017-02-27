@@ -30,7 +30,7 @@ export default class List extends Component {
     );
 
     return (
-      <Base { ...rest } Component={ tag } className={ classes }>
+      <Base space="small" { ...rest } Component={ tag } className={ classes }>
         { children }
       </Base>
     );

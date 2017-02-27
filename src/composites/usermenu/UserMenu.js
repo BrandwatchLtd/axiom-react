@@ -56,9 +56,9 @@ export default class UserMenu extends Component {
             <ContextBox>
               <Grid gutters="large" responsive={ false } vAlign="middle">
                 <GridCell>
-                  <Heading style="title">{ firstName } { lastName }</Heading>
-                  <Paragraph textColor="subtle">{ email }</Paragraph>
-                  <ButtonGroup>
+                  <Heading space="none" style="title">{ firstName } { lastName }</Heading>
+                  <Paragraph space="none" textColor="subtle">{ email }</Paragraph>
+                  <ButtonGroup space="small">
                     <Button data-tid="logout" onClick={ onLogout }>Sign Out</Button>
                   </ButtonGroup>
                 </GridCell>

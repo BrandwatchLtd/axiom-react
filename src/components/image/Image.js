@@ -42,6 +42,7 @@ export default class Image extends Component {
 
     return (
       <Base
+          space="small"
           { ...rest }
           Component="img"
           className={ classes }

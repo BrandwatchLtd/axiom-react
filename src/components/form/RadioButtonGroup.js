@@ -4,7 +4,6 @@ import ChedioButtoxGroup from './ChedioButtoxGroup';
 export default class RadioButtonGroup extends Component {
   static propTypes = {
     children: PropTypes.node,
-    inline: PropTypes.bool,
   };
 
   render() {

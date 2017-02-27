@@ -1,13 +1,10 @@
 @import '~bw-axiom/design-patterns/colors/vars';
-@import '~bw-axiom/design-patterns/spacing/mixins';
 @import '~bw-axiom/design-patterns/spacing/vars';
 @import '~bw-axiom/components/typography/vars';
 
 // sass-lint:disable no-qualifying-elements
 
 pre[class*='language-'] {
-  @include space-block();
-
   padding: ($spacing-grid-size * 3);
   background-color: var(--color-context-background-disabled);
   overflow: auto;

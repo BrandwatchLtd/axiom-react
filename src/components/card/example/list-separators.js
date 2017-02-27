@@ -7,12 +7,12 @@ export default class CardExample extends Component {
   render() {
     return (
       <Example name="List of Cards with separators">
-        <Heading style="headline" underline={ true }>
+        <Heading space="none" style="headline" underline={ true }>
           Medium list of cards
         </Heading>
 
         <Snippet>
-          <Grid vGutters={ false }>
+          <Grid space="none" vGutters={ false }>
             <GridCell>
               <CardList separators={ true }>
                 <Card>
