@@ -30,6 +30,10 @@ export default class ColorsExample extends Component {
       'color-ui-error',
     ];
 
+    const attention = [
+      'color-ui-highlight',
+    ];
+
     return (
       <Example name="UI Colors">
         <Grid>
@@ -41,6 +45,7 @@ export default class ColorsExample extends Component {
           <GridCell>
             <ColorSwatch colors={ primaries } />
             <ColorSwatch colors={ validities } />
+            <ColorSwatch colors={ attention } />
           </GridCell>
         </Grid>
       </Example>
