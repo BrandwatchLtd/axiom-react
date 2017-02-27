@@ -1,0 +1,21 @@
+@import '../../design-patterns/colors/vars';
+@import '../vars';
+
+.ax-chart-panels {
+  display: flex;
+
+  > .ax-chart-panel {
+    flex: 1 1 auto;
+
+    &:not(:first-child) {
+      border-left: $component-border-width solid $color-ui-light-0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

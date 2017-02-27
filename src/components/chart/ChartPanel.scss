@@ -1,0 +1,21 @@
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/colors/colors-light';
+@import '../../design-patterns/spacing/vars';
+@import '../vars';
+
+.ax-chart-panel {
+  @include theme-light;
+
+  border-radius: 0.375rem;
+  background-color: $color-ui-light-2;
+  color: var(--color-context-text);
+}
+
+.ax-chart-panel__header {
+  border-bottom: $component-border-width solid $color-ui-light-0;
+}
+
+.ax-chart-panel__header,
+.ax-chart-panel__body {
+  padding: ($spacing-grid-size * 3) ($spacing-grid-size * 4);
+}

@@ -4,6 +4,7 @@ module.exports = {
   '/components/base': require('../../src/components/base/example'),
   '/components/button': require('../../src/components/button/example'),
   '/components/card': require('../../src/components/card/example'),
+  '/components/chart': require('../../src/components/chart/example'),
   '/components/context': require('../../src/components/context/example'),
   '/components/dialog': require('../../src/components/dialog/example'),
   '/components/dropdown': require('../../src/components/dropdown/example'),
