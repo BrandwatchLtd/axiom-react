@@ -8,7 +8,7 @@
 .ax-platform__console {
   @include transition((transform), $transition-time-slow);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
