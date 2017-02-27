@@ -8,16 +8,17 @@ if (__INCLUDE_CSS__) {
 export default class ContextMenuItem extends Component {
   static propTypes = {
     children: PropTypes.node,
+    disabled: PropTypes.bool,
   };
 
   render() {
     const { children, ...rest } = this.props;
 
     return (
-      <Base Component="li" className="ax-context-menu__item">
-        <a { ...rest } className="ax-context-menu__item-link">
+      <Base Component="li" className="ax-context-menu__list-item">
+        <button { ...rest } className="ax-context-menu__item">
           { children }
-        </a>
+        </button>
       </Base>
     );
   }

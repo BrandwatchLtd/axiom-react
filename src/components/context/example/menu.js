@@ -15,6 +15,10 @@ export default class ContextMenuExample extends Component {
                     Nam dignissim bibendum
                   </ContextMenuItem>
 
+                  <ContextMenuItem disabled={ true }>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
+
                   <ContextMenuItem snippetSkip={ true }>
                     Nam dignissim bibendum
                   </ContextMenuItem>
@@ -30,6 +34,10 @@ export default class ContextMenuExample extends Component {
               <Context position="right">
                 <ContextMenu>
                   <ContextMenuItem>
+                    Nam dignissim bibendum
+                  </ContextMenuItem>
+
+                  <ContextMenuItem disabled={ true }>
                     Nam dignissim bibendum
                   </ContextMenuItem>
 

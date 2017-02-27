@@ -4,11 +4,11 @@ exports[`ContextMenu renders with defaultProps 1`] = `
   <ul
     className="ax-context-menu">
     <li
-      className="ax-context-menu__item">
-      <a
-        className="ax-context-menu__item-link">
+      className="ax-context-menu__list-item">
+      <button
+        className="ax-context-menu__item">
         Lorem ipsum
-      </a>
+      </button>
     </li>
   </ul>
 </div>
