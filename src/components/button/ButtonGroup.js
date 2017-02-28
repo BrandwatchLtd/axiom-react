@@ -24,12 +24,12 @@ export default class ButtonGroup extends Component {
 
   render() {
     const { children, joined, ...rest } = this.props;
-    const classes = classnames('ax-button__group', {
-      'ax-button__group--joined': joined,
+    const classes = classnames('ax-button-group', {
+      'ax-button-group--joined': joined,
     });
 
     return (
-      <Base space="medium" { ...rest } className="ax-button__container">
+      <Base space="medium" { ...rest } className="ax-button-group__container">
         <div className={ classes }>
           { children }
         </div>

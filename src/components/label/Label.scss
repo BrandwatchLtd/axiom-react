@@ -11,6 +11,7 @@
 .ax-label {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   border-width: $component-border-width;
   border-style: solid;
   border-radius: $component-border-radius;
@@ -32,20 +33,14 @@
 }
 
 
-// Label: Full width
-@mixin label-full-width {
-  display: block;
-  width: 100%;
-}
-
 .ax-label--full {
-  @include label-full-width;
+  width: 100%;
 }
 
 @include for-each-breakpoint {
   @include screen-less-than {
     .ax-label--full--#{breakpoint-prop(id)} {
-      @include label-full-width;
+      width: 100%;
     }
   }
 }

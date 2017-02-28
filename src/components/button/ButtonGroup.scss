@@ -2,12 +2,11 @@
 
 $button-spacing: $spacing-grid-size * 2;
 
-.ax-button__group:not(.ax-button__group--joined) {
+.ax-button-group:not(.ax-button-group--joined) {
   margin-bottom: -$button-spacing;
-  margin-left: -$button-spacing;
 
   > .ax-button {
+    margin-right: $button-spacing;
     margin-bottom: $button-spacing;
-    margin-left: $button-spacing;
   }
 }

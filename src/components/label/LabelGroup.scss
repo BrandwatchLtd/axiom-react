@@ -2,13 +2,11 @@
 
 $label-spacing: $spacing-grid-size * 2;
 
-// Label Group
-.ax-label__group {
+.ax-label-group {
   margin-bottom: -$label-spacing;
-  margin-left: -$label-spacing;
 
   > .ax-label {
+    margin-right: $label-spacing;
     margin-bottom: $label-spacing;
-    margin-left: $label-spacing;
   }
 }

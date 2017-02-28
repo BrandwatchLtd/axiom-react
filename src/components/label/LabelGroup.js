@@ -14,8 +14,10 @@ export default class LabelGroup extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base space="small" { ...rest } className="ax-label__group">
-        { children }
+      <Base space="small" { ...rest } className="ax-label-group__container">
+        <div className="ax-label-group">
+          { children }
+        </div>
       </Base>
     );
   }

@@ -31,6 +31,7 @@ button {
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   border-width: $component-border-width;
   border-style: solid;
   border-radius: $component-border-radius;
@@ -59,21 +60,14 @@ button {
   }
 }
 
-
-// Button: Full width
-@mixin button-full-width {
-  display: block;
-  width: 100%;
-}
-
 .ax-button--full {
-  @include button-full-width;
+  width: 100%;
 }
 
 @include for-each-breakpoint {
   @include screen-less-than {
     .ax-button--full--#{breakpoint-prop(id)} {
-      @include button-full-width;
+      width: 100%;
     }
   }
 }

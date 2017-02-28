@@ -2,12 +2,16 @@
 
 exports[`LabelGroup renders with defaultProps 1`] = `
 <div
-  className="ax-label__group ax-space--small"
+  className="ax-label-group__container ax-space--small"
 >
-  <span
-    className="ax-label ax-label--white ax-label--medium"
+  <div
+    className="ax-label-group"
   >
-    Lorem ipsum
-  </span>
+    <span
+      className="ax-label ax-label--white ax-label--medium"
+    >
+      Lorem ipsum
+    </span>
+  </div>
 </div>
 `;
