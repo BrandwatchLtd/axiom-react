@@ -1,0 +1,61 @@
+@import '../../design-patterns/colors/vars';
+@import '../../design-patterns/colors/colors-light';
+@import '../../design-patterns/colors/colors-dark';
+@import '../../design-patterns/layout/mixins';
+@import '../../design-patterns/layout/vars';
+@import '../typography/vars';
+@import '../vars';
+
+.ax-badge {
+  display: inline-flex;
+  justify-content: flex-end;
+  padding: 0 ($component-line-height / 2);
+  border-radius: $component-line-height;
+  font-size: $font-size-small;
+  line-height: $component-line-height;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+@mixin badge-full-width {
+  display: block;
+  width: 100%;
+}
+
+.ax-badge--full {
+  width: 100%;
+}
+
+@include for-each-breakpoint {
+  @include screen-less-than {
+    .ax-badge--full--#{breakpoint-prop(id)} {
+      width: 100%;
+    }
+  }
+}
+
+.ax-badge--faded {
+  background-color: var(--color-context-background-faded);
+  color: var(--color-context-text-subtle);
+}
+
+.ax-badge--highlight {
+  @include theme-light;
+
+  background-color: $color-ui-highlight;
+  color: var(--color-context-text-subtle);
+}
+
+.ax-badge--success {
+  @include theme-dark;
+
+  background-color: $color-ui-success;
+  color: $color-ui-light-2;
+}
+
+.ax-badge--error {
+  @include theme-dark;
+
+  background-color: $color-ui-error;
+  color: $color-ui-light-2;
+}

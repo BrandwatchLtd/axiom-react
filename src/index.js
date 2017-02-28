@@ -8,6 +8,8 @@ export * from './design-patterns/numbers/numbers';
 // Components
 export { default as Alert } from './components/alert/Alert';
 export { default as Avatar } from './components/avatar/Avatar';
+export { default as Badge } from './components/badge/Badge';
+export { default as BadgeGroup } from './components/badge/BadgeGroup';
 export { default as Base } from './components/base/Base';
 export { default as Button } from './components/button/Button';
 export { default as ButtonGroup } from './components/button/ButtonGroup';

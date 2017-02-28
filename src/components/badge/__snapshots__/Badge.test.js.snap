@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge renders always full width 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders always full width at large breakpoint 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full--large"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders always full width at medium breakpoint 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders always full width at small breakpoint 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full--small"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders colors error 1`] = `
+<span
+  className="ax-badge ax-badge--error"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders colors faded 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders colors highlight 1`] = `
+<span
+  className="ax-badge ax-badge--highlight"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders colors success 1`] = `
+<span
+  className="ax-badge ax-badge--success"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Badge renders with defaultProps 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  Lorem Ipsum
+</span>
+`;

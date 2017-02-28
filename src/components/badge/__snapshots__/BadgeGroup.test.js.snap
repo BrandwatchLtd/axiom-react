@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeGroup renders with defaultProps 1`] = `
+<div
+  className="ax-badge-group__container ax-space--small"
+>
+  <div
+    className="ax-badge-group"
+  >
+    <span
+      className="ax-badge ax-badge--faded"
+    >
+      Lorem ipsum
+    </span>
+  </div>
+</div>
+`;

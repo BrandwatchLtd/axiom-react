@@ -1,6 +1,7 @@
 module.exports = {
   '/components/alert': require('../../src/components/alert/example'),
   '/components/avatar': require('../../src/components/avatar/example'),
+  '/components/badge': require('../../src/components/badge/example'),
   '/components/base': require('../../src/components/base/example'),
   '/components/button': require('../../src/components/button/example'),
   '/components/card': require('../../src/components/card/example'),
