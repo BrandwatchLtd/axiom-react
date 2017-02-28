@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableBody renders 1`] = `
+<td
+  className="ax-table__cell"
+>
+  123456
+</td>
+`;

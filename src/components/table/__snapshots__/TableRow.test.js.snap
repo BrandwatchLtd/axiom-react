@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHead renders with defaultProps 1`] = `
+<tr
+  className="ax-table__row"
+>
+  <td
+    className="ax-table__cell"
+  >
+    123456
+  </td>
+</tr>
+`;

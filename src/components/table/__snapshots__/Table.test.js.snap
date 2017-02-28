@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders 1`] = `
+<table
+  className="ax-table ax-table--borders ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with borders disabled 1`] = `
+<table
+  className="ax-table ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with compact 1`] = `
+<table
+  className="ax-table ax-table--compact ax-table--borders ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;

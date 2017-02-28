@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHead renders 1`] = `
+<thead
+  className="ax-table__head"
+>
+  <tr
+    className="ax-table__row"
+  />
+</thead>
+`;
