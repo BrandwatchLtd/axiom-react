@@ -18,7 +18,7 @@ export default class LabelExample extends Component {
     const { Label: { full } } = components;
 
     return (
-      <Example name="Full width buttons">
+      <Example name="Full width Labels">
         <Snippet>
           <LabelGroup snippetIgnore={ true }>
             <Label full={ true }>Always full width</Label>
