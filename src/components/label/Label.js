@@ -10,6 +10,11 @@ export default class Label extends Component {
   static propTypes = {
     children: PropTypes.node,
     color: PropTypes.oneOf(['white', 'success', 'error']),
+    /**
+     * A true value will apply full width styling consistently.
+     * Small, medium and large values correspond to the break points and will
+     * be applied below that point.
+     */
     full: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
