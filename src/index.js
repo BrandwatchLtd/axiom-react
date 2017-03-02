@@ -18,6 +18,7 @@ export { default as Candytar } from './components/avatar/Candytar';
 export { default as Canvas } from './components/platform/Canvas';
 export { default as Card } from './components/card/Card';
 export { default as CardList } from './components/card/CardList';
+export { default as ChartHeading } from './components/chart/ChartHeading';
 export { default as ChartPanel } from './components/chart/ChartPanel';
 export { default as ChartPanelBody } from './components/chart/ChartPanelBody';
 export { default as ChartPanelHeader } from './components/chart/ChartPanelHeader';
