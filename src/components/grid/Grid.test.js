@@ -110,6 +110,10 @@ describe('Grid', () => {
       matchSnapshot({ gutters: false });
     });
 
+    it('renders with value tiny', () => {
+      matchSnapshot({ gutters: 'tiny' });
+    });
+
     it('renders with value small', () => {
       matchSnapshot({ gutters: 'small' });
     });

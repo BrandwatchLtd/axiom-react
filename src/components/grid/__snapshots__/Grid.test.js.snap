@@ -192,6 +192,18 @@ exports[`Grid gutters renders with value small 1`] = `
 </div>
 `;
 
+exports[`Grid gutters renders with value tiny 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--gutters--tiny"
+  >
+    <div />
+  </div>
+</div>
+`;
+
 exports[`Grid renders with defaultProps 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
