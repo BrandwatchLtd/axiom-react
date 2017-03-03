@@ -100,6 +100,12 @@ exports[`Base renders textCenter passed small breakpoint 1`] = `
 />
 `;
 
+exports[`Base renders textColor dark 1`] = `
+<div
+  className="ax-text--color-dark"
+/>
+`;
+
 exports[`Base renders textColor disabled 1`] = `
 <div
   className="ax-text--color-disabled"
@@ -109,6 +115,12 @@ exports[`Base renders textColor disabled 1`] = `
 exports[`Base renders textColor error 1`] = `
 <div
   className="ax-text--color-error"
+/>
+`;
+
+exports[`Base renders textColor light 1`] = `
+<div
+  className="ax-text--color-light"
 />
 `;
 

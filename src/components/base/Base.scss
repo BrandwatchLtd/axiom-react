@@ -80,6 +80,8 @@ body {
 
 .ax-text--color-subtle   { color: var(--color-context-text-subtle); }
 .ax-text--color-disabled { color: var(--color-context-text-disabled); }
+.ax-text--color-dark     { color: $color-ui-dark-0; }
+.ax-text--color-light    { color: $color-ui-light-2; }
 .ax-text--color-success  { color: $color-ui-success; }
 .ax-text--color-warning  { color: $color-ui-warning; }
 .ax-text--color-error    { color: $color-ui-error; }

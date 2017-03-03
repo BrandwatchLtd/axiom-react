@@ -23,7 +23,15 @@ export default class Base extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    textColor: PropTypes.oneOf(['disabled', 'error', 'subtle', 'success', 'warning']),
+    textColor: PropTypes.oneOf([
+      'dark',
+      'disabled',
+      'error',
+      'light',
+      'subtle',
+      'success',
+      'warning',
+    ]),
     textEllipsis: PropTypes.bool,
     textLeft: PropTypes.oneOfType([
       PropTypes.bool,

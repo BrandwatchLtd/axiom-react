@@ -161,6 +161,12 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders textColor dark', () => {
+    const component = getComponent({ textColor: 'dark' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders textColor disabled', () => {
     const component = getComponent({ textColor: 'disabled' });
     const tree = component.toJSON();
@@ -169,6 +175,12 @@ describe('Base', () => {
 
   it('renders textColor error', () => {
     const component = getComponent({ textColor: 'error' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textColor light', () => {
+    const component = getComponent({ textColor: 'light' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
