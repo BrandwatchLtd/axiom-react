@@ -8,7 +8,6 @@ export default class ChartBodyContent extends Component {
       justifyContent: 'center',
       alignItems: 'center',
       height: '6rem',
-      minWidth: '20rem',
     };
 
     return (
