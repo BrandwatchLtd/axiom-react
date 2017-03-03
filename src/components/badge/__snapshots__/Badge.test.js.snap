@@ -4,7 +4,19 @@ exports[`Badge renders always full width 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -12,7 +24,19 @@ exports[`Badge renders always full width at large breakpoint 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full--large"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -20,7 +44,19 @@ exports[`Badge renders always full width at medium breakpoint 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full--medium"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -28,7 +64,99 @@ exports[`Badge renders always full width at small breakpoint 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full--small"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors amber 1`] = `
+<span
+  className="ax-badge ax-badge--amber"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors blue 1`] = `
+<span
+  className="ax-badge ax-badge--blue"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors brown 1`] = `
+<span
+  className="ax-badge ax-badge--brown"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors chartreuse 1`] = `
+<span
+  className="ax-badge ax-badge--chartreuse"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -36,7 +164,19 @@ exports[`Badge renders colors error 1`] = `
 <span
   className="ax-badge ax-badge--error"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -44,7 +184,59 @@ exports[`Badge renders colors faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors green 1`] = `
+<span
+  className="ax-badge ax-badge--green"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors grey 1`] = `
+<span
+  className="ax-badge ax-badge--grey"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -52,7 +244,119 @@ exports[`Badge renders colors highlight 1`] = `
 <span
   className="ax-badge ax-badge--highlight"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors lilac 1`] = `
+<span
+  className="ax-badge ax-badge--lilac"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors orange 1`] = `
+<span
+  className="ax-badge ax-badge--orange"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors pink 1`] = `
+<span
+  className="ax-badge ax-badge--pink"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors purple 1`] = `
+<span
+  className="ax-badge ax-badge--purple"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors rose 1`] = `
+<span
+  className="ax-badge ax-badge--rose"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -60,7 +364,99 @@ exports[`Badge renders colors success 1`] = `
 <span
   className="ax-badge ax-badge--success"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders colors teal 1`] = `
+<span
+  className="ax-badge ax-badge--teal"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.5,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity maximum 1 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity minimum 0 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;
 
@@ -68,6 +464,18 @@ exports[`Badge renders with defaultProps 1`] = `
 <span
   className="ax-badge ax-badge--faded"
 >
-  Lorem Ipsum
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
 </span>
 `;

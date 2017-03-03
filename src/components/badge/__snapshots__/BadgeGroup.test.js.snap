@@ -10,7 +10,19 @@ exports[`BadgeGroup renders with defaultProps 1`] = `
     <span
       className="ax-badge ax-badge--faded"
     >
-      Lorem ipsum
+      <span
+        className="ax-badge__background"
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      />
+      <span
+        className="ax-badge__content"
+      >
+        Lorem ipsum
+      </span>
     </span>
   </div>
 </div>

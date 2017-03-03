@@ -14,30 +14,22 @@ export default class BadgeExample extends Component {
 
         <Snippet>
           <BadgeGroup>
-            <Badge>A Badge</Badge>
             <Badge color="highlight">A Badge</Badge>
-            <Badge color="success">A Badge</Badge>
-            <Badge color="error">A Badge</Badge>
-            <Badge>A Badge</Badge>
-            <Badge color="highlight">A Badge</Badge>
-            <Badge color="success">A Badge</Badge>
-            <Badge color="error">A Badge</Badge>
-            <Badge>A Badge</Badge>
-            <Badge color="highlight">A Badge</Badge>
-            <Badge color="success">A Badge</Badge>
-            <Badge color="error">A Badge</Badge>
-            <Badge>A Badge</Badge>
-            <Badge color="highlight">A Badge</Badge>
-            <Badge color="success">A Badge</Badge>
-            <Badge color="error">A Badge</Badge>
-            <Badge>A Badge</Badge>
-            <Badge color="highlight">A Badge</Badge>
-            <Badge color="success">A Badge</Badge>
-            <Badge color="error">A Badge</Badge>
-            <Badge>A Badge</Badge>
-            <Badge color="highlight">A Badge</Badge>
-            <Badge color="success">A Badge</Badge>
-            <Badge color="error">A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
+            <Badge color="highlight" snippetIgnore={ true }>A Badge</Badge>
           </BadgeGroup>
         </Snippet>
       </Example>

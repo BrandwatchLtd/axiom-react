@@ -1,6 +1,4 @@
 @import '../../design-patterns/colors/vars';
-@import '../../design-patterns/colors/colors-light';
-@import '../../design-patterns/colors/colors-dark';
 @import '../../design-patterns/layout/mixins';
 @import '../../design-patterns/layout/vars';
 @import '../typography/vars';
@@ -8,18 +6,49 @@
 
 .ax-badge {
   display: inline-flex;
+  position: relative;
   justify-content: flex-end;
   padding: 0 ($component-line-height / 2);
   border-radius: $component-line-height;
   font-size: $font-size-small;
   line-height: $component-line-height;
   white-space: nowrap;
+  overflow: hidden;
   vertical-align: middle;
 }
 
-@mixin badge-full-width {
-  display: block;
-  width: 100%;
+.ax-badge__content {
+  position: relative;
+}
+
+.ax-badge__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ax-badge__background {
+  .ax-badge--faded &      { background-color: var(--color-context-background-faded); }
+
+  .ax-badge--highlight &  { background-color: $color-ui-highlight; }
+
+  .ax-badge--success &    { background-color: $color-ui-success; }
+  .ax-badge--error &      { background-color: $color-ui-error; }
+
+  .ax-badge--rose &       { background-color: $color-brand-rose; }
+  .ax-badge--pink &       { background-color: $color-brand-pink; }
+  .ax-badge--purple &     { background-color: $color-brand-purple; }
+  .ax-badge--lilac &      { background-color: $color-brand-lilac; }
+  .ax-badge--blue &       { background-color: $color-brand-blue; }
+  .ax-badge--teal &       { background-color: $color-brand-teal; }
+  .ax-badge--green &      { background-color: $color-brand-green; }
+  .ax-badge--chartreuse & { background-color: $color-brand-chartreuse; }
+  .ax-badge--amber &      { background-color: $color-brand-amber; }
+  .ax-badge--orange &     { background-color: $color-brand-orange; }
+  .ax-badge--brown &      { background-color: $color-brand-brown; }
+  .ax-badge--grey &       { background-color: $color-brand-grey; }
 }
 
 .ax-badge--full {
@@ -32,30 +61,4 @@
       width: 100%;
     }
   }
-}
-
-.ax-badge--faded {
-  background-color: var(--color-context-background-faded);
-  color: var(--color-context-text-subtle);
-}
-
-.ax-badge--highlight {
-  @include theme-light;
-
-  background-color: $color-ui-highlight;
-  color: var(--color-context-text-subtle);
-}
-
-.ax-badge--success {
-  @include theme-dark;
-
-  background-color: $color-ui-success;
-  color: $color-ui-light-2;
-}
-
-.ax-badge--error {
-  @include theme-dark;
-
-  background-color: $color-ui-error;
-  color: $color-ui-light-2;
 }
