@@ -22,10 +22,11 @@ export default class Table extends Component {
       children,
       compact,
       borders,
+      className,
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-table', {
+    const classes = classnames(className, 'ax-table', {
       'ax-table--compact': compact,
       'ax-table--borders': borders === true,
     });
