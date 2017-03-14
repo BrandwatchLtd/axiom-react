@@ -16,6 +16,10 @@ export default class Word extends Component {
     y: PropTypes.number.isRequired,
   };
 
+  static defaultProps = {
+    textAnchor: 'middle',
+  };
+
   render() {
     const { color, font, fontSize, text, textAnchor, x, y } = this.props;
     const style = {
