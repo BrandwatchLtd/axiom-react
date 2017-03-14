@@ -1,6 +1,6 @@
 export const wordArray = [{
   color: 'rgb(57, 59, 121)',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '100px',
   x: -61,
   y: 57,
@@ -8,7 +8,7 @@ export const wordArray = [{
   textAnchor: 'middle',
 }, {
   color: 'rgb(82, 84, 163)',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '91px',
   x: -54,
   y: -23,
@@ -16,7 +16,7 @@ export const wordArray = [{
   textAnchor: 'middle',
 }, {
   color: 'rgb(107, 110, 207)',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '86px',
   x: -227,
   y: 106,
@@ -24,7 +24,7 @@ export const wordArray = [{
   textAnchor: 'middle',
 }, {
   color: 'rgb(181, 207, 107)',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '37px',
   x: 117,
   y: -143,
@@ -32,7 +32,7 @@ export const wordArray = [{
   textAnchor: 'middle',
 }, {
   color: 'rgb(156, 158, 222)',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '72px',
   x:-199,
   y:-139,
@@ -41,7 +41,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(99, 121, 57)',
   fontSize: '64px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   x: -92,
   y: -77,
   text: 'area',
@@ -49,7 +49,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 162, 82)',
   fontSize: '64px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'algorithm',
   x: 179,
@@ -57,7 +57,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(181, 207, 107)',
   fontSize: '64px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'layout',
   x: 196,
@@ -65,7 +65,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 219, 156)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'candidate',
   x: 244,
@@ -73,7 +73,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 109, 49)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'step',
   x: -4,
@@ -81,7 +81,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(189, 158, 57)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'collision',
   x: -60,
@@ -89,7 +89,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 186, 82)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'bounding',
   x: -149,
@@ -97,7 +97,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 203, 148)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'without',
   x: 113,
@@ -105,7 +105,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(132, 60, 57)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'retrieve',
   x: 53,
@@ -113,7 +113,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(173, 73, 74)',
   fontSize: '52px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'operation',
   x: 286,
@@ -121,7 +121,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(214, 97, 107)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'perform',
   x: -241,
@@ -129,7 +129,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 150, 156)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'hierarchical',
   x: 303,
@@ -137,7 +137,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(123, 65, 115)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'time',
   x: -194,
@@ -145,7 +145,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(165, 81, 148)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: '32',
   x: 261,
@@ -153,7 +153,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 109, 189)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'possible',
   x: -34,
@@ -161,7 +161,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(222, 158, 214)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'draw',
   x: 115,
@@ -169,7 +169,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(57, 59, 121)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'placement',
   x: 41,
@@ -177,7 +177,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(82, 84, 163)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'data',
   x: 148,
@@ -185,7 +185,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(107, 110, 207)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'pixel',
   x: 189,
@@ -193,7 +193,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(156, 158, 222)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'expensive',
   x: -263,
@@ -201,7 +201,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(99, 121, 57)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'pixels',
   x: 259,
@@ -209,7 +209,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 162, 82)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'even',
   x: 145,
@@ -217,7 +217,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 219, 156)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'implementation',
   x: -311,
@@ -225,7 +225,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 109, 49)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'simple',
   x: -179,
@@ -233,7 +233,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(189, 158, 57)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'detection',
   x: -161,
@@ -241,7 +241,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 186, 82)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'starting',
   x: -313,
@@ -249,7 +249,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 203, 148)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'larger',
   x: -33,
@@ -257,7 +257,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(132, 60, 57)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'whole',
   x: 82,
@@ -265,7 +265,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(173, 73, 74)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'previously',
   x: -187,
@@ -273,7 +273,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(214, 97, 107)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'comparing',
   x: -63,
@@ -281,7 +281,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 150, 156)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'move',
   x: -215,
@@ -289,7 +289,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(123, 65, 115)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'box',
   x: 317,
@@ -297,7 +297,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(165, 81, 148)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'large',
   x: 240,
@@ -305,7 +305,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 109, 189)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'think',
   x: -309,
@@ -313,7 +313,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(222, 158, 214)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'version',
   x: 211,
@@ -321,7 +321,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(57, 59, 121)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'single',
   x: 342,
@@ -329,7 +329,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(82, 84, 163)',
   fontSize: '37px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'tree',
   x: 99,
@@ -337,7 +337,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(156, 158, 222)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'always',
   x: -100,
@@ -345,7 +345,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(99, 121, 57)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'use',
   x: -109,
@@ -353,7 +353,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 162, 82)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'overlap',
   x: 86,
@@ -361,7 +361,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(181, 207, 107)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'animations',
   x: -120,
@@ -369,7 +369,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 219, 156)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'prevents',
   x: 162,
@@ -377,7 +377,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 109, 49)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'browsers',
   x: -85,
@@ -385,7 +385,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(189, 158, 57)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'event',
   x: -145,
@@ -393,31 +393,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 186, 82)',
   fontSize: '10px',
-  font: 'Roboto',
-  textAnchor: 'middle',
-  text: 'loop',
-  x: 212,
-  y: 69,
-}, {
-  color: 'rgb(231, 203, 148)',
-  fontSize: '10px',
-  font: 'Roboto',
-  textAnchor: 'middle',
-  text: 'blocking',
-  x: 51,
-  y: -134,
-}, {
-  color: 'rgb(132, 60, 57)',
-  fontSize: '10px',
-  font: 'Roboto',
-  textAnchor: 'middle',
-  text: 'placing',
-  x: 44,
-  y: -116,
-}, {
-  color: 'rgb(173, 73, 74)',
-  fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'incredibly',
   x: 212,
@@ -425,7 +401,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(214, 97, 107)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'available',
   x: 81,
@@ -433,7 +409,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 150, 156)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'GitHub',
   x: 77,
@@ -441,7 +417,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(123, 65, 115)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'important',
   x: 263,
@@ -449,7 +425,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(165, 81, 148)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'Attempt',
   x: -202,
@@ -457,7 +433,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 109, 189)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'place',
   x: 233,
@@ -465,7 +441,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(222, 158, 214)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'point',
   x: 4,
@@ -473,7 +449,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(57, 59, 121)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'usually',
   x: -116,
@@ -481,7 +457,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(82, 84, 163)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'near',
   x: 79,
@@ -489,7 +465,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(107, 110, 207)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'middle',
   x: -46,
@@ -497,7 +473,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(156, 158, 222)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'somewhere',
   x: 77,
@@ -505,7 +481,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(99, 121, 57)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'central',
   x: 271,
@@ -513,7 +489,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 162, 82)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'horizontal',
   x: 4,
@@ -521,7 +497,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(181, 207, 107)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'line',
   x: 182,
@@ -529,7 +505,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(206, 219, 156)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'intersects',
   x: -205,
@@ -537,7 +513,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(140, 109, 49)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'open',
   x: -194,
@@ -545,7 +521,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(189, 158, 57)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'source',
   x: -227,
@@ -553,7 +529,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 186, 82)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'one',
   x: 50,
@@ -561,7 +537,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 203, 148)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'along',
   x: 171,
@@ -569,7 +545,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(132, 60, 57)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'increasing',
   x: 82,
@@ -577,7 +553,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(173, 73, 74)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'spiral',
   x: -48,
@@ -585,7 +561,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(214, 97, 107)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'Repeat',
   x: -178,
@@ -593,7 +569,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(231, 150, 156)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'intersections',
   x: -265,
@@ -601,7 +577,7 @@ export const wordArray = [{
 }, {
   color: 'rgb(123, 65, 115)',
   fontSize: '10px',
-  font: 'Roboto',
+  font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
   text: 'found',
   x: -9,
