@@ -2,7 +2,7 @@
 
 exports[`Table renders 1`] = `
 <table
-  className="ax-table ax-table--borders ax-space--medium"
+  className="ax-table ax-table--borders ax-table--gutters-medium-h ax-space--medium"
 >
   <tbody
     className="ax-table__body"
@@ -12,7 +12,7 @@ exports[`Table renders 1`] = `
 
 exports[`Table renders with borders disabled 1`] = `
 <table
-  className="ax-table ax-space--medium"
+  className="ax-table ax-table--gutters-medium-h ax-space--medium"
 >
   <tbody
     className="ax-table__body"
@@ -22,7 +22,17 @@ exports[`Table renders with borders disabled 1`] = `
 
 exports[`Table renders with compact 1`] = `
 <table
-  className="ax-table ax-table--compact ax-table--borders ax-space--medium"
+  className="ax-table ax-table--compact ax-table--borders ax-table--gutters-medium-h ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with hGutters="small" 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--gutters-small-h ax-space--medium"
 >
   <tbody
     className="ax-table__body"

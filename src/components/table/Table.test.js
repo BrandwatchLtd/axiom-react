@@ -28,4 +28,10 @@ describe('Table', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with hGutters="small"', () => {
+    const component = getComponent({ hGutters: 'small' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

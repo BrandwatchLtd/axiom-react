@@ -5,7 +5,8 @@
 $table-padding-vertical-small: $spacing-grid-size * 2;
 $table-padding-vertical-large: $spacing-grid-size * 5;
 
-$table-padding-horizontal: $spacing-grid-size * 8;
+$table-padding-horizontal-small: $spacing-grid-size * 3;
+$table-padding-horizontal-medium: $spacing-grid-size * 8;
 
 // Table styling
 .ax-table {
@@ -13,8 +14,12 @@ $table-padding-horizontal: $spacing-grid-size * 8;
   border-spacing: 0;
 }
 
-.ax-table__cell {
-  padding-right: $table-padding-horizontal;
+.ax-table--gutters-small-h .ax-table__cell {
+  padding-right: $table-padding-horizontal-small;
+}
+
+.ax-table--gutters-medium-h .ax-table__cell {
+  padding-right: $table-padding-horizontal-medium;
 }
 
 .ax-table__cell--grow {

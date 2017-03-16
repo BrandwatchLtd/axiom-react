@@ -11,10 +11,12 @@ export default class Table extends Component {
     borders: PropTypes.bool,
     children: PropTypes.node,
     compact: PropTypes.bool,
+    hGutters: PropTypes.oneOf(['small', 'medium']),
   };
 
   static defaultProps = {
     borders: true,
+    hGutters: 'medium',
   };
 
   render() {
@@ -22,12 +24,14 @@ export default class Table extends Component {
       children,
       compact,
       borders,
+      hGutters,
       ...rest
     } = this.props;
 
     const classes = classnames('ax-table', {
       'ax-table--compact': compact,
       'ax-table--borders': borders === true,
+      [`ax-table--gutters-${hGutters}-h`]: true,
     });
 
     return (
