@@ -7,3 +7,11 @@ exports[`TableBody renders 1`] = `
   123456
 </td>
 `;
+
+exports[`TableBody renders with grow 1`] = `
+<td
+  className="ax-table__cell ax-table__cell--grow"
+>
+  123456
+</td>
+`;

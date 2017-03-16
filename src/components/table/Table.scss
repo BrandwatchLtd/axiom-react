@@ -17,6 +17,10 @@ $table-padding-horizontal: $spacing-grid-size * 8;
   padding-right: $table-padding-horizontal;
 }
 
+.ax-table__cell--grow {
+  width: 100%;
+}
+
 .ax-table__head {
   .ax-table__cell {
     padding-top: $table-padding-vertical-small;
