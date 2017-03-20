@@ -11,22 +11,22 @@ export default class TableExample extends Component {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>Id</Strong>
+                  <Strong snippetReplace={ true }>Id</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>First name</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>First name</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>Last name</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>Last name</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>City</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>City</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>Birthday</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>Birthday</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>Enabled</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>Enabled</Strong>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -35,19 +35,19 @@ export default class TableExample extends Component {
                 <TableCell>
                   1
                 </TableCell>
-                <TableCell>
+                <TableCell snippetSkip={ true }>
                   Max
                 </TableCell>
-                <TableCell>
+                <TableCell snippetSkip={ true }>
                   Mustermann
                 </TableCell>
-                <TableCell>
+                <TableCell snippetSkip={ true }>
                   Stuttgart
                 </TableCell>
-                <TableCell>
+                <TableCell snippetSkip={ true }>
                   17-Apr-1990
                 </TableCell>
-                <TableCell>
+                <TableCell snippetSkip={ true }>
                   Enabled
                 </TableCell>
               </TableRow>

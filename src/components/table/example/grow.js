@@ -10,27 +10,27 @@ export default class TableExample extends Component {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>Id</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>Id</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>First name</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>First name</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>Last name</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>Last name</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>City</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>City</Strong>
                 </TableCell>
                 <TableCell grow={ true }>
-                  <Strong snippetIgnore={ true }>Birthday</Strong>
+                  <Strong snippetReplace={ true }>Birthday</Strong>
                 </TableCell>
-                <TableCell>
-                  <Strong snippetIgnore={ true }>Enabled</Strong>
+                <TableCell snippetSkip={ true }>
+                  <Strong>Enabled</Strong>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody snippetSkip={ true }>
               <TableRow>
                 <TableCell>
                   1
@@ -51,7 +51,7 @@ export default class TableExample extends Component {
                   Enabled
                 </TableCell>
               </TableRow>
-              <TableRow snippetSkip={ true }>
+              <TableRow>
                 <TableCell>
                   26
                 </TableCell>

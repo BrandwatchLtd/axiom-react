@@ -8,30 +8,30 @@ export default class TableExample extends Component {
       <Example name="Horizontal Gutters">
         <Snippet>
           <Table borders={ false } compact={ true } hGutters="small">
-            <TableHead>
-              <TableRow snippetReplace={ true }>
+            <TableHead snippetSkip={ true }>
+              <TableRow>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>Id</Strong>
+                  <Strong>Id</Strong>
                 </TableCell>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>First name</Strong>
+                  <Strong>First name</Strong>
                 </TableCell>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>Last name</Strong>
+                  <Strong>Last name</Strong>
                 </TableCell>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>City</Strong>
+                  <Strong>City</Strong>
                 </TableCell>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>Birthday</Strong>
+                  <Strong>Birthday</Strong>
                 </TableCell>
                 <TableCell>
-                  <Strong snippetIgnore={ true }>Enabled</Strong>
+                  <Strong>Enabled</Strong>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
-              <TableRow snippetReplace={ true }>
+            <TableBody snippetSkip={ true }>
+              <TableRow>
                 <TableCell>
                   1
                 </TableCell>
@@ -51,7 +51,7 @@ export default class TableExample extends Component {
                   Enabled
                 </TableCell>
               </TableRow>
-              <TableRow snippetReplace={ true }>
+              <TableRow>
                 <TableCell>
                   26
                 </TableCell>
