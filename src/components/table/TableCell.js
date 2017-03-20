@@ -5,7 +5,7 @@ import classnames from 'classnames';
 export default class TableCell extends Component {
   static propTypes = {
     children: PropTypes.node,
-    grow: PropTypes.boolean,
+    grow: PropTypes.bool,
   };
 
   static defaultProps = {
