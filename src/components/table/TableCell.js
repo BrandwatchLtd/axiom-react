@@ -8,10 +8,6 @@ export default class TableCell extends Component {
     grow: PropTypes.bool,
   };
 
-  static defaultProps = {
-    grow: false,
-  };
-
   render() {
     const {
       children,
