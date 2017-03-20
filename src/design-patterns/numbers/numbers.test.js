@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { NUMBER_SEPARATOR, shortNumber, longNumber } from 'bw-axiom';
+import { NUMBER_SEPARATOR, shortNumber, longNumber, tinyNumber } from 'bw-axiom';
 
 const NS = NUMBER_SEPARATOR;
 
@@ -60,6 +60,37 @@ describe('Number formatting', () => {
       assert.equal(shortNumber(1555555, 1), '1.6 million');
       assert.equal(shortNumber(1555555555, 1), '1.6 billion');
       assert.equal(shortNumber(1555555555555, 1), '1.6 trillion');
+    });
+  });
+
+  describe('tinyNumber', () => {
+    it('invalid', () => {
+      assert.equal(tinyNumber(null), '-');
+      assert.equal(tinyNumber(undefined), '-');
+      assert.equal(tinyNumber(true), '-');
+      assert.equal(tinyNumber('a'), '-');
+    });
+
+    it('below the threshold', () => {
+      assert.equal(tinyNumber(9999), `9${NS}999`);
+    });
+
+    it('without precision', () => {
+      assert.equal(tinyNumber(15555, false), '15.555K');
+    });
+
+    it('default precision', () => {
+      assert.equal(tinyNumber(15555), '16K');
+      assert.equal(tinyNumber(1555555), '2M');
+      assert.equal(tinyNumber(1555555555), '2B');
+      assert.equal(tinyNumber(1555555555555), '2T');
+    });
+
+    it('with precision', () => {
+      assert.equal(tinyNumber(15555, 1), '15.6K');
+      assert.equal(tinyNumber(1555555, 1), '1.6M');
+      assert.equal(tinyNumber(1555555555, 1), '1.6B');
+      assert.equal(tinyNumber(1555555555555, 1), '1.6T');
     });
   });
 });

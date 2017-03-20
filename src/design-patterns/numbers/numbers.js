@@ -16,6 +16,30 @@ function toFixed(number, precision) {
   return number.toString().replace(/\.0+$|(\.[0-9]*[1-9])0+$/, '$1');
 }
 
+function toSuffixed(number, precision, suffixes) {
+  const threshold = 9999;
+  const metricSuffix = [
+    { n: 1E12, suffix: suffixes.TRILLION },
+    { n: 1E9, suffix: suffixes.BILLION },
+    { n: 1E6, suffix: suffixes.MILLION },
+    { n: 1E3, suffix: suffixes.THOUSAND },
+  ];
+
+  if (isInvalidNumber(number)) {
+    return '-';
+  }
+
+  if (number <= threshold) {
+    return longNumber(number, precision);
+  }
+
+  for (let i = 0; i < metricSuffix.length; i++) {
+    if (number >= metricSuffix[i].n) {
+      return `${toFixed(number / metricSuffix[i].n, precision)}${metricSuffix[i].suffix}`;
+    }
+  }
+}
+
 export function longNumber(number, precision = 0) {
   if (isInvalidNumber(number)) {
     return '-';
@@ -28,25 +52,19 @@ export function longNumber(number, precision = 0) {
 }
 
 export function shortNumber(number, precision = 0) {
-  const threshold = 9999;
-  const metricPrefixes = [
-    { n: 1E12, prefix: 'trillion' },
-    { n: 1E9, prefix: 'billion' },
-    { n: 1E6, prefix: 'million' },
-    { n: 1E3, prefix: 'thousand' },
-  ];
+  return toSuffixed(number, precision, {
+    TRILLION: ' trillion',
+    BILLION: ' billion',
+    MILLION: ' million',
+    THOUSAND: ' thousand',
+  });
+}
 
-  if (isInvalidNumber(number)) {
-    return '-';
-  }
-
-  if (number <= threshold) {
-    return longNumber(number, precision);
-  }
-
-  for (let i = 0; i < metricPrefixes.length; i++) {
-    if (number >= metricPrefixes[i].n) {
-      return `${toFixed(number / metricPrefixes[i].n, precision)} ${metricPrefixes[i].prefix}`;
-    }
-  }
+export function tinyNumber(number, precision = 0) {
+  return toSuffixed(number, precision, {
+    TRILLION: 'T',
+    BILLION: 'B',
+    MILLION: 'M',
+    THOUSAND: 'K',
+  });
 }
