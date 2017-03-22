@@ -29,7 +29,6 @@
   line-height: ($spacing-grid-size * 6);
 
   .ax-menu__item:hover & {
-    border-bottom-color: $color-ui-primary-2;
     color: $color-ui-primary-2;
   }
 
