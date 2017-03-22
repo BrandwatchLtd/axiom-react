@@ -1,17 +1,15 @@
 @import './vars';
 
-// sass-lint:disable no-color-literals
 @mixin theme-light {
-  #{--color-context-border}: rgba($color-ui-dark-0, 0.20);
-  #{--color-context-border-subtle}: rgba($color-ui-dark-0, 0.15);
+  #{--color-context-border}: $color-theme-light-context-border;
+  #{--color-context-border-subtle}: $color-theme-light-context-border-subtle;
 
-  #{--color-context-background}: $color-ui-white;
-  #{--color-context-background-disabled}: rgba($color-ui-dark-0, 0.05);
-  #{--color-context-background-faded}: rgba($color-ui-dark-0, 0.10);
-  #{--color-context-background-subtle}: rgba($color-ui-dark-0, 0.15);
+  #{--color-context-background}: $color-theme-light-context-background;
+  #{--color-context-background-disabled}: $color-theme-light-context-background-disabled;
+  #{--color-context-background-faded}: $color-theme-light-context-background-faded;
+  #{--color-context-background-subtle}: $color-theme-light-context-background-subtle;
 
-  #{--color-context-text}: $color-ui-dark-0;
-  #{--color-context-text-subtle}: rgba($color-ui-dark-0, 0.75);
-  #{--color-context-text-disabled}: rgba($color-ui-dark-0, 0.30);
+  #{--color-context-text}: $color-theme-light-context-text;
+  #{--color-context-text-subtle}: $color-theme-light-context-text-subtle;
+  #{--color-context-text-disabled}: $color-theme-light-context-text-disabled;
 }
-// sass-lint:enable no-color-literals
