@@ -22,7 +22,7 @@ export default class TinyNumber extends Component {
     const { number, precision } = this.state;
 
     return (
-      <Example name="Short number">
+      <Example name="Tiny number">
         <Grid>
           <GridCell>
             <TextInput
