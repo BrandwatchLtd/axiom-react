@@ -13,10 +13,10 @@ export default class TableExample extends Component {
                 <TableCell snippetSkip={ true }>
                   <Strong>Id</Strong>
                 </TableCell>
-                <TableCell snippetSkip={ true }>
+                <TableCell snippetSkip={ true } textBreak="none">
                   <Strong>First name</Strong>
                 </TableCell>
-                <TableCell snippetSkip={ true }>
+                <TableCell snippetSkip={ true } textBreak="none">
                   <Strong>Last name</Strong>
                 </TableCell>
                 <TableCell snippetSkip={ true }>

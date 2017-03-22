@@ -9,3 +9,43 @@ exports[`TableHead renders 1`] = `
   />
 </thead>
 `;
+
+exports[`TableHead renders with rowPadding large 1`] = `
+<thead
+  className="ax-table__head"
+>
+  <tr
+    className="ax-table__row"
+  />
+</thead>
+`;
+
+exports[`TableHead renders with rowPadding medium 1`] = `
+<thead
+  className="ax-table__head"
+>
+  <tr
+    className="ax-table__row"
+  />
+</thead>
+`;
+
+exports[`TableHead renders with rowPadding none 1`] = `
+<thead
+  className="ax-table__head"
+>
+  <tr
+    className="ax-table__row"
+  />
+</thead>
+`;
+
+exports[`TableHead renders with rowPadding small 1`] = `
+<thead
+  className="ax-table__head"
+>
+  <tr
+    className="ax-table__row"
+  />
+</thead>
+`;

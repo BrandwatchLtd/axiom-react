@@ -2,11 +2,13 @@
 @import '../../design-patterns/colors/vars';
 @import '../../design-patterns/spacing/vars';
 
-$table-padding-vertical-small: $spacing-grid-size * 2;
-$table-padding-vertical-large: $spacing-grid-size * 5;
+$table-row-padding-small: $spacing-grid-size * 1;
+$table-row-padding-medium: $spacing-grid-size * 2;
+$table-row-padding-large: $spacing-grid-size * 4;
 
-$table-padding-horizontal-small: $spacing-grid-size * 3;
-$table-padding-horizontal-medium: $spacing-grid-size * 8;
+$table-column-padding-small: $spacing-grid-size * 1;
+$table-column-padding-medium: $spacing-grid-size * 2;
+$table-column-padding-large: $spacing-grid-size * 4;
 
 // Table styling
 .ax-table {
@@ -14,39 +16,65 @@ $table-padding-horizontal-medium: $spacing-grid-size * 8;
   border-spacing: 0;
 }
 
-.ax-table--gutters-small-h .ax-table__cell {
-  padding-right: $table-padding-horizontal-small;
-}
-
-.ax-table--gutters-medium-h .ax-table__cell {
-  padding-right: $table-padding-horizontal-medium;
-}
-
-.ax-table__cell--grow {
-  width: 100%;
-}
-
-.ax-table__head {
+.ax-table--column-padding-small {
   .ax-table__cell {
-    padding-top: $table-padding-vertical-small;
-    padding-bottom: $table-padding-vertical-small;
+    padding-right: $table-column-padding-small;
+    padding-left: $table-column-padding-small;
   }
 }
 
-.ax-table__body {
+.ax-table--column-padding-medium {
   .ax-table__cell {
-    padding-top: $table-padding-vertical-large;
-    padding-bottom: $table-padding-vertical-large;
+    padding-right: $table-column-padding-medium;
+    padding-left: $table-column-padding-medium;
   }
 }
 
-.ax-table__row {
-  .ax-table__cell:last-child {
+.ax-table--column-padding-large {
+  .ax-table__cell {
+    padding-right: $table-column-padding-large;
+    padding-left: $table-column-padding-large;
+  }
+}
+
+.ax-table--column-padding-none {
+  .ax-table__cell {
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
-.ax-table--compact {
+.ax-table__cell {
+  &:first-child { padding-left: 0; }
+  &:last-child  { padding-right: 0; }
+}
+
+.ax-table--row-padding-small,
+.ax-table__head--row-padding-small {
+  .ax-table__cell {
+    padding-top: $table-row-padding-small;
+    padding-bottom: $table-row-padding-small;
+  }
+}
+
+.ax-table--row-padding-medium,
+.ax-table__head--row-padding-medium {
+  .ax-table__cell {
+    padding-top: $table-row-padding-medium;
+    padding-bottom: $table-row-padding-medium;
+  }
+}
+
+.ax-table--row-padding-large,
+.ax-table__head--row-padding-large {
+  .ax-table__cell {
+    padding-top: $table-row-padding-large;
+    padding-bottom: $table-row-padding-large;
+  }
+}
+
+.ax-table--row-padding-none,
+.ax-table__head--row-padding-none {
   .ax-table__cell {
     padding-top: 0;
     padding-bottom: 0;
@@ -57,4 +85,14 @@ $table-padding-horizontal-medium: $spacing-grid-size * 8;
   .ax-table__cell {
     border-bottom: $component-border-width-medium solid var(--color-context-border);
   }
+}
+
+.ax-table__head {
+  .ax-table__row {
+    line-height: 1;
+  }
+}
+
+.ax-table__cell--grow {
+  width: 100%;
 }

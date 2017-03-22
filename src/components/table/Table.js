@@ -10,28 +10,22 @@ export default class Table extends Component {
   static propTypes = {
     borders: PropTypes.bool,
     children: PropTypes.node,
-    compact: PropTypes.bool,
-    hGutters: PropTypes.oneOf(['small', 'medium']),
+    columnPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+    rowPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   };
 
   static defaultProps = {
     borders: true,
-    hGutters: 'medium',
+    columnPadding: 'small',
+    rowPadding: 'small',
   };
 
   render() {
-    const {
-      children,
-      compact,
-      borders,
-      hGutters,
-      ...rest
-    } = this.props;
-
+    const { children, borders, columnPadding, rowPadding, ...rest } = this.props;
     const classes = classnames('ax-table', {
-      'ax-table--compact': compact,
       'ax-table--borders': borders === true,
-      [`ax-table--gutters-${hGutters}-h`]: true,
+      [`ax-table--column-padding-${columnPadding}`]: columnPadding,
+      [`ax-table--row-padding-${rowPadding}`]: rowPadding,
     });
 
     return (

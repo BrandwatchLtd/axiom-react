@@ -2,7 +2,7 @@
 
 exports[`Table renders 1`] = `
 <table
-  className="ax-table ax-table--borders ax-table--gutters-medium-h ax-space--medium"
+  className="ax-table ax-table--borders ax-table--column-padding-small ax-table--row-padding-small ax-space--medium"
 >
   <tbody
     className="ax-table__body"
@@ -12,7 +12,7 @@ exports[`Table renders 1`] = `
 
 exports[`Table renders with borders disabled 1`] = `
 <table
-  className="ax-table ax-table--gutters-medium-h ax-space--medium"
+  className="ax-table ax-table--column-padding-small ax-table--row-padding-small ax-space--medium"
 >
   <tbody
     className="ax-table__body"
@@ -20,9 +20,9 @@ exports[`Table renders with borders disabled 1`] = `
 </table>
 `;
 
-exports[`Table renders with compact 1`] = `
+exports[`Table renders with columnPadding large 1`] = `
 <table
-  className="ax-table ax-table--compact ax-table--borders ax-table--gutters-medium-h ax-space--medium"
+  className="ax-table ax-table--borders ax-table--column-padding-large ax-table--row-padding-small ax-space--medium"
 >
   <tbody
     className="ax-table__body"
@@ -30,9 +30,69 @@ exports[`Table renders with compact 1`] = `
 </table>
 `;
 
-exports[`Table renders with hGutters="small" 1`] = `
+exports[`Table renders with columnPadding medium 1`] = `
 <table
-  className="ax-table ax-table--borders ax-table--gutters-small-h ax-space--medium"
+  className="ax-table ax-table--borders ax-table--column-padding-medium ax-table--row-padding-small ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with columnPadding none 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--column-padding-none ax-table--row-padding-small ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with columnPadding small 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--column-padding-small ax-table--row-padding-small ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with rowPadding large 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--column-padding-small ax-table--row-padding-large ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with rowPadding medium 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--column-padding-small ax-table--row-padding-medium ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with rowPadding none 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--column-padding-small ax-table--row-padding-none ax-space--medium"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
+
+exports[`Table renders with rowPadding small 1`] = `
+<table
+  className="ax-table ax-table--borders ax-table--column-padding-small ax-table--row-padding-small ax-space--medium"
 >
   <tbody
     className="ax-table__body"
