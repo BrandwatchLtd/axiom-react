@@ -26,4 +26,22 @@ describe('LabelIcon', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with color white', () => {
+    const component = getComponent({ color: 'white' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with color success', () => {
+    const component = getComponent({ color: 'success' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with color error', () => {
+    const component = getComponent({ color: 'error' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

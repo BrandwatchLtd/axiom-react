@@ -32,4 +32,10 @@ describe('IconButton', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with size huge', () => {
+    const component = getComponent({ size: 'huge' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

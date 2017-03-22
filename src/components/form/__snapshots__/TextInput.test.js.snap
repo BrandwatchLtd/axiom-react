@@ -72,7 +72,8 @@ exports[`TextInput renders with TextInputIcon 1`] = `
       className="ax-input__icon"
     >
       <a
-        className="ax-icon-link"
+        className="ax-link ax-link--style-subtle"
+        name="twitter"
       >
         <svg
           className="ax-icon"

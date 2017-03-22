@@ -154,7 +154,7 @@ exports[`Alert renders with onRemoveClick 1`] = `
         }
       >
         <a
-          className="ax-icon-link ax-theme--dark"
+          className="ax-link ax-link--style-light"
           onClick={[Function]}
         >
           <svg

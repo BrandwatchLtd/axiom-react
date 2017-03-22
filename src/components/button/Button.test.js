@@ -75,6 +75,30 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders circular size small', () => {
+    const component = getComponent({ circular: 'small' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders circular size medium', () => {
+    const component = getComponent({ circular: 'medium' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders circular size large', () => {
+    const component = getComponent({ circular: 'large' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders circular size huge', () => {
+    const component = getComponent({ circular: 'huge' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('with ButtonIcon', () => {
     it('adds space to start if first child', () => {
       const component = getComponent({}, [

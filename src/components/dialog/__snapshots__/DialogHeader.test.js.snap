@@ -29,7 +29,7 @@ exports[`DialogHeader renders with defaultProps 1`] = `
         }
       >
         <a
-          className="ax-icon-link"
+          className="ax-link ax-link--style-subtle"
           onClick={undefined}
         >
           <svg

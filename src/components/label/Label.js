@@ -43,17 +43,11 @@ export default class Label extends Component {
       [`ax-label--full--${full}`]: typeof full === 'string',
     });
 
-    const themeMap = {
-      white: 'light',
-      success: 'dark',
-      error: 'dark',
-    };
-
     const mappedChildren = Children.toArray(children).map((child, index, array) =>
       child.type !== LabelIcon ? child : cloneElement(child, {
         isEnd: index === array.length - 1,
         isStart: index === 0,
-        theme: themeMap[color],
+        color,
         size,
       })
     );

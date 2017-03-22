@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import { Base, Grid, GridCell, IconLink } from 'bw-axiom';
+import { Base, Grid, GridCell, Icon, Link } from 'bw-axiom';
 
 if (__INCLUDE_CSS__) {
   require('./Alert.scss');
@@ -30,7 +30,9 @@ export default class Alert extends Component {
 
           { do { if (onRemoveClick) {
             <GridCell shrink={ true }>
-              <IconLink name="cross" onClick={ onRemoveClick } theme="dark" />
+              <Link onClick={ onRemoveClick } style="light">
+                <Icon name="cross" />
+              </Link>
             </GridCell>;
           } } }
         </Grid>

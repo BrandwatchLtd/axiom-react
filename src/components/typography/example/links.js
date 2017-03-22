@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Heading, Paragraph, Link } from 'bw-axiom';
+import { Alert, Paragraph, Link } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {
     return (
       <Example name="Links">
         <Snippet>
-          <Heading snippetIgnore={ true } style="headline">
-            Lorem ipsum dolor sit amet, <Link>consectetur</Link> adipiscing
-            elit. Donec tempus ut felis vitae hendrerit.
-          </Heading>
           <Paragraph snippetIgnore={ true }>
-            Lorem ipsum dolor sit amet, <Link snippetIgnore={ true }>consectetur</Link> adipiscing
-            elit. Donec tempus ut felis vitae hendrerit.
+            <Link style="inherit">Inherit link style</Link>
           </Paragraph>
+          <Paragraph snippetIgnore={ true }>
+            <Link style="normal">Normal link style</Link>
+          </Paragraph>
+          <Paragraph snippetIgnore={ true }>
+            <Link style="subtle">Subtle link style</Link>
+          </Paragraph>
+          <Alert snippetIgnore={ true }>
+            <Paragraph snippetIgnore={ true }>
+              <Link style="light">Light link style (used on colored backgrounds)</Link>
+            </Paragraph>
+          </Alert>
         </Snippet>
       </Example>
     );

@@ -13,17 +13,18 @@ export default class Link extends Component {
       PropTypes.func,
     ]),
     children: PropTypes.node,
-    inheritColor: PropTypes.bool,
+    style: PropTypes.oneOf(['inherit', 'normal', 'subtle', 'light']),
   };
 
   static defaultProps = {
     Component: 'a',
+    style: 'normal',
   };
 
   render() {
-    const { children, Component, inheritColor, ...rest } = this.props;
+    const { children, Component, style, ...rest } = this.props;
     const classes = classnames('ax-link', {
-      'ax-link--inherit-color': inheritColor,
+      [`ax-link--style-${style}`]: style,
     });
 
     return (

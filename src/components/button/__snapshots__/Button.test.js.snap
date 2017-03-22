@@ -32,6 +32,38 @@ exports[`Button renders always full width at small breakpoint 1`] = `
 </button>
 `;
 
+exports[`Button renders circular size huge 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--circular-huge"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders circular size large 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--circular-large"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders circular size medium 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--circular-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders circular size small 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
+>
+  Lorem Ipsum
+</button>
+`;
+
 exports[`Button renders large size 1`] = `
 <button
   className="ax-button ax-button--large ax-button--primary"

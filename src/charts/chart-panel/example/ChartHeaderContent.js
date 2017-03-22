@@ -10,7 +10,7 @@ export default class ChartHeaderContent extends Component {
         </GridCell>
 
         <GridCell shrink={ true }>
-          <Link inheritColor={ true }>
+          <Link style="inherit">
             <Icon name="question-mark-circle" />
           </Link>
         </GridCell>

@@ -14,8 +14,12 @@ export default class ThemeSwitcher extends Component {
   render() {
     return (
       <Paragraph textCenter={ true } textColor="subtle">
-        <Link inheritColor={ true } onClick={ () => setTheme(THEME_LIGHT) }>Light </Link>/
-        <Link inheritColor={ true } onClick={ () => setTheme(THEME_DARK) }> Dark</Link>
+        <Link
+            onClick={ () => setTheme(THEME_LIGHT) }
+            style="subtle">Light </Link>/
+        <Link
+            onClick={ () => setTheme(THEME_DARK) }
+            style="subtle"> Dark</Link>
       </Paragraph>
     );
   }
