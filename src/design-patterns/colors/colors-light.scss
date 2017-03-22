@@ -3,15 +3,15 @@
 // sass-lint:disable no-color-literals
 @mixin theme-light {
   #{--color-context-border}: rgba($color-ui-dark-0, 0.20);
-  #{--color-context-border-subtle}: rgba($color-ui-dark-0, 0.10);
+  #{--color-context-border-subtle}: rgba($color-ui-dark-0, 0.15);
 
   #{--color-context-background}: $color-ui-white;
   #{--color-context-background-disabled}: rgba($color-ui-dark-0, 0.05);
   #{--color-context-background-faded}: rgba($color-ui-dark-0, 0.10);
-  #{--color-context-background-subtle}: rgba($color-ui-dark-0, 0.20);
+  #{--color-context-background-subtle}: rgba($color-ui-dark-0, 0.15);
 
   #{--color-context-text}: $color-ui-dark-0;
-  #{--color-context-text-subtle}: rgba($color-ui-dark-0, 0.80);
-  #{--color-context-text-disabled}: rgba($color-ui-dark-0, 0.35);
+  #{--color-context-text-subtle}: rgba($color-ui-dark-0, 0.75);
+  #{--color-context-text-disabled}: rgba($color-ui-dark-0, 0.30);
 }
 // sass-lint:enable no-color-literals
