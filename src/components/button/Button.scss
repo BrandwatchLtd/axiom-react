@@ -99,17 +99,14 @@ button {
   border-color: var(--color-context-border);
   color: $color-ui-primary-1;
 
-  &:hover  {
-    border-color: transparent;
-    background-color: var(--color-context-border);
-    color: $color-ui-primary-2;
-  }
-
+  &:hover,
   &:active {
     border-color: transparent;
-    background-color: $color-ui-primary-0;
-    color: $color-ui-light-2;
+    background-color: var(--color-context-background-subtle);
   }
+
+  &:hover  { color: $color-ui-primary-2; }
+  &:active { color: $color-ui-primary-0; }
 
   &:disabled {
     border-color: var(--color-context-border);
@@ -121,19 +118,9 @@ button {
 .ax-button--tertiary {
   color: $color-ui-primary-1;
 
-  &:hover {
-    background-color: var(--color-context-border);
-    color: $color-ui-primary-2;
-  }
-
-  &:active {
-    color: $color-ui-primary-0;
-  }
-
-  &:disabled {
-    background-color: transparent;
-    color: var(--color-context-text-disabled);
-  }
+  &:hover    { color: $color-ui-primary-2; }
+  &:active   { color: $color-ui-primary-0; }
+  &:disabled { color: var(--color-context-text-disabled); }
 }
 
 
