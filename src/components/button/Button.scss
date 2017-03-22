@@ -154,3 +154,48 @@ button {
     padding-left: $component-padding-vertical-large;
   }
 }
+
+.ax-button--huge {
+  padding: $component-padding-vertical-large $component-padding-horizontal-large;
+  font-size: $font-size-large;
+
+  &.ax-button--icon-only {
+    padding-right: $component-padding-vertical-large;
+    padding-left: $component-padding-vertical-large;
+  }
+}
+
+.ax-button--circular-small,
+.ax-button--circular-medium,
+.ax-button--circular-large,
+.ax-button--circular-huge {
+  padding: 0;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.ax-button--circular-small {
+  width: $component-round-size-small;
+  height: $component-round-size-small;
+  border-width: $component-border-width-small;
+}
+
+.ax-button--circular-medium {
+  width: $component-round-size-medium;
+  height: $component-round-size-medium;
+  border-width: $component-border-width-medium;
+}
+
+.ax-button--circular-large {
+  width: $component-round-size-large;
+  height: $component-round-size-large;
+  border-width: $component-border-width-large;
+}
+
+.ax-button--circular-huge {
+  width: $component-round-size-huge;
+  height: $component-round-size-huge;
+  border-width: $component-border-width-huge;
+}
+
+

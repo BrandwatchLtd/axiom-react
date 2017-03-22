@@ -9,6 +9,7 @@ if (__INCLUDE_CSS__) {
 export default class Button extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    circular: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
     /**
      * A true value will apply full width styling consistently.
      * Small, medium and large values correspond to the break points and will
@@ -33,14 +34,15 @@ export default class Button extends Component {
 
   render() {
     const { joined } = this.context;
-    const { children, style, size, full, ...rest } = this.props;
+    const { children, circular, style, size, full, ...rest } = this.props;
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && childrenArray[0].type === ButtonIcon;
     const classes = classnames('ax-button', {
       [`ax-button--${size}`]: size,
       [`ax-button--${style}`]: style,
+      [`ax-button--circular-${circular}`]: circular,
       'ax-button--joined': joined,
-      'ax-button--icon-only': iconOnly,
+      'ax-button--icon-only': !circular && iconOnly,
       'ax-button--full': full === true,
       [`ax-button--full--${full}`]: typeof full === 'string',
     });
