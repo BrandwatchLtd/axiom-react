@@ -8,22 +8,20 @@ function getComponent(props = {}) {
   );
 }
 
-function matchSnapshot(props = {}) {
-  const component = getComponent(props);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-}
-
 describe('ProgressInfinite', () => {
   it('renders with defaultProps', () => {
-    matchSnapshot();
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with color white', () => {
-    matchSnapshot({ color: 'white' });
-  });
-
-  it('renders with color subtle', () => {
-    matchSnapshot({ color: 'subtle' });
+  describe('renders with color', () => {
+    ['white', 'subtle'].forEach((color) => {
+      it(color, () => {
+        const component = getComponent({ color });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 });

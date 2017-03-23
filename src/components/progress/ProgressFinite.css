@@ -1,0 +1,15 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+
+.ax-progress-finite__background {
+  fill: none;
+  stroke: var(--color-context-background-subtle);
+}
+
+.ax-progress-finite__arc {
+  fill: none;
+  stroke: var(--color-ui-primary-2);
+  transition-property: stroke-dashoffset;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}

@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Logo.scss');
-}
+import './Logo.css';
 
 export default class Logo extends Component {
   static propTypes = {

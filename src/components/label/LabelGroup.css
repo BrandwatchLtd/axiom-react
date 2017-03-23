@@ -1,0 +1,14 @@
+@import '../../materials/sizing';
+
+:root {
+  --cmp-label-spacing: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-label-group {
+  margin-bottom: calc(var(--cmp-label-spacing) * -1);
+
+  & > .ax-label {
+    margin-right: var(--cmp-label-spacing);
+    margin-bottom: var(--cmp-label-spacing);
+  }
+}

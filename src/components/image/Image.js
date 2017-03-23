@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('../image/Image.scss');
-}
+import './Image.css';
 
 export default class Image extends Component {
   static propTypes = {

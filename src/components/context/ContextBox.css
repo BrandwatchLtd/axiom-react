@@ -1,0 +1,4 @@
+@import './vars';
+
+.ax-context-box--padding-small { padding: var(--cmp-context-padding-small); }
+.ax-context-box--padding-large { padding: var(--cmp-context-padding-large); }

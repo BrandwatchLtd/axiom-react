@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Grid.scss');
-}
+import './Grid.css';
 
 export default class Grid extends Component {
   static propTypes = {
@@ -26,21 +23,25 @@ export default class Grid extends Component {
       PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
     ]),
     hAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
-    hGutters: PropTypes.bool,
+    hGutters: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
+    ]),
     responsive: PropTypes.bool,
     shrink: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     vAlign: PropTypes.oneOf(['start', 'middle', 'end']),
-    vGutters: PropTypes.bool,
+    vGutters: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
+    ]),
   };
 
   static defaultProps = {
     responsive: true,
     gutters: 'medium',
-    vGutters: true,
-    hGutters: true,
   };
 
   render() {
@@ -48,8 +49,8 @@ export default class Grid extends Component {
       children,
       responsive,
       gutters,
-      vGutters,
-      hGutters,
+      hGutters = gutters,
+      vGutters = gutters,
       fill,
       fit,
       full,
@@ -60,11 +61,9 @@ export default class Grid extends Component {
     } = this.props;
 
     const classes = classnames('ax-grid', {
-      'ax-grid--unresponsive': responsive === false,
-      'ax-grid--gutters-none': gutters === false,
-      'ax-grid--gutters-none-v': vGutters === false,
-      'ax-grid--gutters-none-h': hGutters === false,
-      [`ax-grid--gutters--${gutters}`]: typeof gutters === 'string',
+      'ax-grid--responsive': responsive,
+      [`ax-grid--gutters-h--${hGutters}`]: typeof hGutters === 'string',
+      [`ax-grid--gutters-v--${vGutters}`]: typeof vGutters === 'string',
       'ax-grid--fill': fill === true,
       [`ax-grid--fill--${fill}`]: fill && fill !== true,
       'ax-grid--fit': fit === true,

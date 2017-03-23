@@ -1,12 +1,23 @@
 import React, { Component, PropTypes } from 'react';
-
-if (__INCLUDE_CSS__) {
-  require('./Word.scss');
-}
+import classnames from 'classnames';
+import './Word.css';
 
 export default class Word extends Component {
   static propTypes = {
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+      'rose',
+      'pink',
+      'purple',
+      'lilac',
+      'blue',
+      'teal',
+      'green',
+      'chartreuse',
+      'amber',
+      'orange',
+      'brown',
+      'grey',
+    ]),
     font: PropTypes.oneOf(['Roboto, Helvetica, Arial, sans-serif']).isRequired,
     fontSize: PropTypes.string,
     text: PropTypes.string,
@@ -26,15 +37,21 @@ export default class Word extends Component {
 
   render() {
     const { color, font, fontSize, text, textAnchor, x, y } = this.props;
+    const classes = classnames('ax-word', {
+      [`ax-word--${color}`]: color,
+    });
+
     const style = {
-      fill: color,
       fontFamily: font,
       fontSize: fontSize,
-      transform: `translate(${x}px,${y}px)`,
     };
 
     return (
-      <text className="ax-word" style={ style } textAnchor={ textAnchor }>
+      <text
+          className={ classes }
+          style={ style }
+          textAnchor={ textAnchor }
+          transform={ `translate(${x},${y})` }>
         { text }
       </text>
     );

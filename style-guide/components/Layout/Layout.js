@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-
-if (__INCLUDE_CSS__) {
-  require('./Layout.scss');
-}
+import './Layout.css';
 
 export default class Layout extends Component {
   static propTypes = {

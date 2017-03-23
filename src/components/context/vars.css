@@ -1,0 +1,8 @@
+@import '../../materials/sizing';
+
+:root {
+  --cmp-context-tip-size: calc(var(--spacing-grid-size) * 3);
+  --cmp-context-tip-space: calc(var(--spacing-grid-size) * 2);
+  --cmp-context-padding-small: calc(var(--spacing-grid-size) * 4);
+  --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
+}

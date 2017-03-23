@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./List.scss');
-}
+import './List.css';
 
 export default class List extends Component {
   static propTypes = {

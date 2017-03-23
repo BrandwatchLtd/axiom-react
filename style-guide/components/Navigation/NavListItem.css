@@ -1,0 +1,26 @@
+@import '../../../src/materials/colors';
+@import '../../../src/materials/sizing';
+
+.dm-nav__link {
+  display: block;
+  padding: var(--spacing-grid-size) var(--page-padding-h);
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+.dm-nav__list-item--active .dm-nav__link {
+  color: var(--color-ui-primary-1);
+}
+
+.dm-nav__list-item--open {
+  margin-bottom: calc(var(--spacing-grid-size) * 2);
+}
+
+.dm-nav__list-item {
+  list-style: none;
+
+  & .dm-nav__list-item .dm-nav__link {
+    padding-left: calc(var(--page-padding-h) + calc(var(--spacing-grid-size) * 3));
+  }
+}

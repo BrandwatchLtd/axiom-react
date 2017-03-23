@@ -1,0 +1,27 @@
+@import './vars';
+
+.ax-context-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ax-context--top,
+.ax-context--bottom {
+  & .ax-context-menu {
+    padding-top: var(--cmp-context-tip-space);
+    padding-bottom: var(--cmp-context-tip-space);
+  }
+}
+
+.ax-context--right {
+  & .ax-context-menu {
+    padding-left: var(--cmp-context-tip-space);
+  }
+}
+
+.ax-context--left {
+  & .ax-context-menu {
+    padding-right: var(--cmp-context-tip-space);
+  }
+}

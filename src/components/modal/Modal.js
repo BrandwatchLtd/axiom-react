@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactModal from 'react-modal';
-import { getCSSVar } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Modal.scss');
-}
+import './Modal.css';
 
 export default class Modal extends Component {
   static propTypes = {
@@ -27,7 +23,7 @@ export default class Modal extends Component {
       <ReactModal
           { ...rest }
           className="ax-modal"
-          closeTimeoutMS={ parseInt(getCSSVar('modal-animation-duration'), 10) }
+          closeTimeoutMS={ 200 }
           overlayClassName={ withOverlay && (overlayClassName || 'ax-modal__overlay') } />
     );
   }

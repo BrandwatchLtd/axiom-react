@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Icon } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ButtonIcon.scss');
-}
+import './ButtonIcon.css';
 
 export default class ButtonIcon extends Component {
   static propTypes = {

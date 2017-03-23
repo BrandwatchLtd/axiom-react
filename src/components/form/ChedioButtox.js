@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ChedioButtox.scss');
-}
+import './ChedioButtox.css';
 
 export default class ChedioButtox extends Component {
   static propTypes = {
@@ -30,7 +27,7 @@ export default class ChedioButtox extends Component {
     });
 
     return (
-      <Base Component="label" className={ classes }>
+      <Base Component="label" className={ classes } space="tiny">
         <input { ...rest }
             className={ classnames('ax-chedio-buttox', inputClassName) }
             disabled={ disabled }

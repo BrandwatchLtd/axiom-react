@@ -3,13 +3,9 @@ import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
 import { findComponent, PositionContent, PositionTarget } from 'bw-axiom';
 import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
-
-if (__INCLUDE_CSS__) {
-  require('./Position.scss');
-}
+import './Position.css';
 
 /* eslint-disable react/no-find-dom-node */
-
 export default class Position extends Component {
   static propTypes = {
     children: PropTypes.array.isRequired,

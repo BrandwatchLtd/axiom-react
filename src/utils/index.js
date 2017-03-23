@@ -36,7 +36,7 @@ export function svgDefineOnce(html) {
   const tempSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   tempSvg.innerHTML = html.trim();
 
-  if (!document.getElementById(tempSvg.firstChild.getAttribute('id'))) {
+  if (tempSvg.firstChild && !document.getElementById(tempSvg.firstChild.getAttribute('id'))) {
     svgContainer.querySelector('svg').appendChild(tempSvg.firstChild);
   }
 }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContextBox renders padding large 1`] = `
+exports[`ContextBox renders with defaultProps 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-large"
 >
@@ -8,7 +8,15 @@ exports[`ContextBox renders padding large 1`] = `
 </div>
 `;
 
-exports[`ContextBox renders padding none 1`] = `
+exports[`ContextBox renders with padding large 1`] = `
+<div
+  className="ax-context-box ax-context-box--padding-large"
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders with padding none 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-none"
 >
@@ -16,17 +24,9 @@ exports[`ContextBox renders padding none 1`] = `
 </div>
 `;
 
-exports[`ContextBox renders padding small 1`] = `
+exports[`ContextBox renders with padding small 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-small"
->
-  Lorem ipsum
-</div>
-`;
-
-exports[`ContextBox renders with defaultProps 1`] = `
-<div
-  className="ax-context-box ax-context-box--padding-large"
 >
   Lorem ipsum
 </div>

@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import './Candytar.css';
 import './_filter';
-
-if (__INCLUDE_CSS__) {
-  require('./Candytar.scss');
-}
 
 function defaultPickerFn(colors) {
   return colors[Math.floor(Math.random() * colors.length)];

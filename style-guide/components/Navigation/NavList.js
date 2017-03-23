@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import NavListItem from './NavListItem';
-
-if (__INCLUDE_CSS__) {
-  require('./NavList.scss');
-}
+import './NavList.css';
 
 export default class NavList extends Component {
   static propTypes = {

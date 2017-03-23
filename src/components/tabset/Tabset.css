@@ -1,0 +1,90 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-tabset-list-space: calc(var(--spacing-grid-size) * 6);
+}
+
+.ax-tabset__list {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 var(--cmp-tabset-list-space);
+  padding: 0;
+
+  &::after {
+    content: '';
+    flex: 1 1 auto;
+    border-bottom: var(--component-border-width) solid var(--color-context-border);
+  }
+}
+
+.ax-tabset__list-item {
+  position: relative;
+  margin: 0 var(--component-padding-vertical-medium) 0 0;
+  border: var(--component-border-width) solid transparent;
+  border-radius: var(--component-border-radius) var(--component-border-radius) 0 0;
+  background-color: var(--color-context-background-subtle);
+  list-style: none;
+  transition-property: background-color, border-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: calc(var(--component-border-width) * -1);
+    bottom: calc(var(--component-border-width) * -1);
+    width: var(--component-padding-vertical-medium);
+    transform: translateX(100%);
+    border-bottom: var(--component-border-width) solid var(--color-context-border);
+  }
+}
+
+.ax-tabset__list-item--active {
+  padding-bottom: var(--component-border-width);
+  border-color: var(--color-context-border);
+  border-bottom-color: transparent;
+  background-color: var(--color-context-background);
+  color: var(--color-ui-primary-0);
+}
+
+.ax-tabset__list-item--disabled {
+  border-bottom-color: var(--color-context-border);
+  background-color: var(--color-context-background-disabled);
+}
+
+.ax-tabset__button {
+  outline: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  line-height: var(--component-line-height);
+  transition-property: color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:hover {
+    color: var(--color-ui-primary-1);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    color: var(--color-context-text-disabled);
+    cursor: default;
+  }
+}
+
+.ax-tabset--medium .ax-tabset__button {
+  padding:
+    calc(var(--component-padding-vertical-medium) - var(--component-border-width))
+    var(--component-padding-horizontal-medium)
+    var(--component-padding-vertical-medium);
+}
+
+.ax-tabset--large .ax-tabset__button {
+  padding:
+    calc(var(--component-padding-vertical-large) - var(--component-border-width))
+    var(--component-padding-horizontal-large)
+    var(--component-padding-vertical-large);
+}

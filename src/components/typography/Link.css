@@ -1,0 +1,41 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+
+.ax-link {
+  color: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+  transition-property: color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:hover,
+  &:active {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+  }
+}
+
+.ax-link--style-normal {
+  color: var(--color-ui-primary-1);
+
+  &:hover  { color: var(--color-ui-primary-2); }
+  &:active { color: var(--color-ui-primary-0); }
+}
+
+.ax-link--style-subtle {
+  color: var(--color-context-text);
+
+  &:hover  { color: var(--color-ui-primary-2); }
+  &:active { color: var(--color-ui-primary-0); }
+}
+
+.ax-link--style-light {
+  color: var(--color-theme-dark-text-subtle);
+
+  &:hover,
+  &:active {
+    color: var(--color-theme-dark-text);
+  }
+}

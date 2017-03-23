@@ -1,11 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import GithubLink from '../GithubLink/GithubLink';
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
-
-if (__INCLUDE_CSS__) {
-  require('./LayoutSidebar.scss');
-}
+// import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 export default class LayoutSidebar extends Component {
   static propTypes = {
@@ -23,7 +19,7 @@ export default class LayoutSidebar extends Component {
         </div>
 
         <div className="dm-layout__sidebar-footer">
-          <ThemeSwitcher />
+          {/*<ThemeSwitcher />*/}
           <GithubLink />
         </div>
       </div>

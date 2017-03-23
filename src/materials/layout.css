@@ -1,0 +1,18 @@
+:root {
+  --layout-width-tiny: 23rem;
+  --layout-width-small: 48rem;
+  --layout-width-medium: 62rem;
+  --layout-width-large: 75rem;
+
+  --z-index-platform: 1;
+  --z-index-position: 2;
+  --z-index-modal: 2;
+}
+
+@custom-media --screen-less-than-small (max-width: 47.9375rem);
+@custom-media --screen-less-than-medium (max-width: 61.9375rem);
+@custom-media --screen-less-than-large (max-width: 74.9375rem);
+
+@custom-media --screen-more-than-small (min-width: 48rem);
+@custom-media --screen-more-than-medium (min-width: 62rem);
+@custom-media --screen-more-than-large (min-width: 75rem);

@@ -1,0 +1,16 @@
+@import '../../materials/colors';
+@import '../../materials/layout';
+
+.ax-platform__dock {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-ui-dark-0);
+  list-style: none;
+  z-index: var(--z-index-platform);
+}

@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base, Icon, Image } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('../image/ImageCircle.scss');
-}
+import './ImageCircle.css';
 
 export default class ImageCircle extends Component {
   static propTypes = {

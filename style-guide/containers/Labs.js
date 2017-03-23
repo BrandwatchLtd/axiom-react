@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 // import { } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Labs.scss');
-}
+import './Labs.css';
 
 export default class Labs extends Component {
   render() {

@@ -21,7 +21,7 @@ export default class DropdownExample extends Component {
             </TooltipTarget>
 
             <TooltipContent>
-              <Context theme="dark">
+              <Context>
                 <ContextTip>
                   <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

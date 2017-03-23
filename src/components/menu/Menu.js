@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Menu.scss');
-}
+import './Menu.css';
 
 export default class Menu extends Component {
   static propTypes = {

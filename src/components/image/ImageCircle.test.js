@@ -8,29 +8,29 @@ function getComponent(props = {}) {
   );
 }
 
-function matchSnapshot(props = {}) {
-  const component = getComponent(props);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-}
-
 describe('ImageCircle', () => {
   it('renders with defaultProps', () => {
-    matchSnapshot();
-  });
-
-  it('renders with border small', () => {
-    matchSnapshot({ border: 'small' });
-  });
-
-  it('renders with border large', () => {
-    matchSnapshot({ border: 'large' });
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with overlay icon', () => {
-    matchSnapshot({
+    const component = getComponent({
       overlayIconName: 'twitter',
       overlayIconSize: '2rem',
+    });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  describe('renders with border', () => {
+    ['small', 'large'].forEach((border) => {
+      it(border, () => {
+        const component = getComponent({ border });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 });

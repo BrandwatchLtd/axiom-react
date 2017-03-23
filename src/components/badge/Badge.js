@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Badge.scss');
-}
+import './Badge.css';
 
 export default class Badge extends Component {
   static propTypes = {

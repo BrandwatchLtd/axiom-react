@@ -15,17 +15,19 @@ import {
   Strong,
   Weak,
 } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Login.scss');
-}
+import './Login.css';
 
 export default class Login extends Component {
   static propTypes = {
     application: PropTypes.string.isRequired,
     backgroundImage: PropTypes.string.isRequired,
     error: PropTypes.string,
+    theme: PropTypes.oneOf(['dark', 'light']),
     onSubmit: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    theme: 'light',
   };
 
   componentWillMount() {
@@ -52,12 +54,19 @@ export default class Login extends Component {
   }
 
   render() {
-    const { application, backgroundImage, error, ...rest } = this.props;
+    const { application, backgroundImage, error, theme, ...rest } = this.props;
     const { username, password } = this.state;
     const style = { backgroundImage: `url(${backgroundImage})` };
+    const textColor = {
+      dark: 'light',
+      light: 'dark',
+    }[theme];
 
     return (
-      <Base { ...omit(rest, ['onSubmit']) } className="ax-login" style={ style }>
+      <Base { ...omit(rest, ['onSubmit']) }
+          className="ax-login"
+          style={ style }
+          textColor={ textColor }>
         <div className="ax-login__header">
           <div className="ax-login__header-container">
             <LogoTab color="grey" height="7.75rem" />
@@ -75,14 +84,14 @@ export default class Login extends Component {
                   onChange={ ::this.handleUsernameChange }
                   placeholder="Username"
                   size="large"
-                  style="translucent"
+                  theme={ theme }
                   value={ username } />
 
               <TextInput
                   onChange={ ::this.handlePasswordChange }
                   placeholder="Password"
                   size="large"
-                  style="translucent"
+                  theme={ theme }
                   type="password"
                   value={ password } />
 

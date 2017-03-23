@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ButtonGroup.scss');
-}
+import './ButtonGroup.css';
 
 export default class ButtonGroup extends Component {
   static propTypes = {

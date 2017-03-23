@@ -15,88 +15,44 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders always full width', () => {
-    const component = getComponent({ full: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with full', () => {
+    [true, 'small', 'medium', 'large'].forEach((full) => {
+      it(full, () => {
+        const component = getComponent({ full });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
-  it('renders always full width at small breakpoint', () => {
-    const component = getComponent({ full: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with size', () => {
+    ['small', 'medium', 'large'].forEach((size) => {
+      it(size, () => {
+        const component = getComponent({ size });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
-  it('renders always full width at medium breakpoint', () => {
-    const component = getComponent({ full: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with style', () => {
+    ['primary', 'secondary', 'tertiary'].forEach((style) => {
+      it(style, () => {
+        const component = getComponent({ style });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
-  it('renders always full width at large breakpoint', () => {
-    const component = getComponent({ full: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders small size', () => {
-    const component = getComponent({ size: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders medium size', () => {
-    const component = getComponent({ size: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders large size', () => {
-    const component = getComponent({ size: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders primary style', () => {
-    const component = getComponent({ style: 'primary' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders secondary style', () => {
-    const component = getComponent({ style: 'secondary' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders tertiary style', () => {
-    const component = getComponent({ style: 'tertiary' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders circular size small', () => {
-    const component = getComponent({ circular: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders circular size medium', () => {
-    const component = getComponent({ circular: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders circular size large', () => {
-    const component = getComponent({ circular: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders circular size huge', () => {
-    const component = getComponent({ circular: 'huge' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with circular', () => {
+    ['small', 'medium', 'large', 'huge'].forEach((circular) => {
+      it(circular, () => {
+        const component = getComponent({ circular });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
   describe('with ButtonIcon', () => {

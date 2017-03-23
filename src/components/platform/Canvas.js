@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-
-if (__INCLUDE_CSS__) {
-  require('./Canvas.scss');
-}
+import './Canvas.css';
 
 export default class Canvas extends Component {
   static propTypes = {

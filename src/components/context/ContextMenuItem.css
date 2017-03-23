@@ -1,0 +1,31 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import './vars';
+
+:root {
+  --cmp-context-menu-item-padding-vertical: calc(var(--spacing-grid-size) * 3);
+}
+
+.ax-context-menu__item {
+  display: block;
+  width: 100%;
+  padding: var(--cmp-context-menu-item-padding-vertical) var(--cmp-context-padding-large);
+  outline: 0;
+  border: 0;
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
+  text-align: left;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:disabled {
+    color: var(--color-context-text-disabled);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-ui-primary-2);
+    color: var(--color-ui-light-2);
+    cursor: pointer;
+  }
+}

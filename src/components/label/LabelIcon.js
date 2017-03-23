@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Icon, Link } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./LabelIcon.scss');
-}
+import './LabelIcon.css';
 
 export default class LabelIcon extends Component {
   static propTypes = {

@@ -17,18 +17,6 @@ describe('CardList', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with size medium', () => {
-    const component = getComponent({ size: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with size large', () => {
-    const component = getComponent({ size: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders with compact', () => {
     const component = getComponent({ compact: true });
     const tree = component.toJSON();
@@ -39,5 +27,15 @@ describe('CardList', () => {
     const component = getComponent({ separators: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  describe('renders with size', () => {
+    ['medium', 'large'].forEach((size) => {
+      it(size, () => {
+        const component = getComponent({ size });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 });

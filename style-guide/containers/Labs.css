@@ -1,0 +1,42 @@
+@import '../../src/materials/colors';
+@import '../../src/materials/sizing';
+
+:root {
+  --sg-labs-square-size: calc(var(--spacing-grid-size) * 3);
+  --sg-labs-border-width: 0.0625rem;
+}
+
+.dm-labs {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--page-padding-v) var(--page-padding-h);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent var(--sg-labs-square-size),
+      var(--color-context-border) var(--sg-labs-border-width),
+      transparent calc(var(--sg-labs-square-size) + var(--sg-labs-border-width))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent var(--sg-labs-square-size),
+      var(--color-context-border) var(--sg-labs-border-width),
+      transparent calc(var(--sg-labs-square-size) + var(--sg-labs-border-width))
+    );
+}
+
+.dm-labs__canvas {
+  max-width: 100%;
+  padding: var(--page-padding-v) var(--page-padding-h);
+  background-color: var(--color-context-background);
+  filter: drop-shadow(var(--drop-shadow));
+}

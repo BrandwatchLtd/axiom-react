@@ -17,21 +17,13 @@ describe('ContextBox', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders padding none', () => {
-    const component = getComponent({ padding: 'none' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders padding small', () => {
-    const component = getComponent({ padding: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders padding large', () => {
-    const component = getComponent({ padding: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with padding', () => {
+    ['none', 'small', 'large'].forEach((padding) => {
+      it(padding, () => {
+        const component = getComponent({ padding });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 });

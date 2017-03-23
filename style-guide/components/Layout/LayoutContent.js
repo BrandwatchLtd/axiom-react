@@ -1,9 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-if (__INCLUDE_CSS__) {
-  require('./LayoutContent.scss');
-}
-
 export default class LayoutContent extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

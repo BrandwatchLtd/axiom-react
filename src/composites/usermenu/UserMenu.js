@@ -15,10 +15,7 @@ import {
   Link,
   Paragraph,
 } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./UserMenu.scss');
-}
+import './UserMenu.css';
 
 function stringToColor(string) {
   return (colors) =>  colors[
@@ -55,7 +52,7 @@ export default class UserMenu extends Component {
           <Context width="auto">
             <ContextBox>
               <Grid gutters="large" responsive={ false } vAlign="middle">
-                <GridCell>
+                <GridCell fill={ true }>
                   <Heading space="none" style="title">{ firstName } { lastName }</Heading>
                   <Paragraph space="none" textColor="subtle">{ email }</Paragraph>
                   <ButtonGroup space="small">

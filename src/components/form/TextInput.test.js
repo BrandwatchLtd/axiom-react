@@ -33,24 +33,6 @@ describe('TextInput', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with size medium', () => {
-    const component = getComponent({ size: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with size large', () => {
-    const component = getComponent({ size: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with style translucent', () => {
-    const component = getComponent({ style: 'translucent' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders when valid', () => {
     const component = getComponent({ valid: true });
     const tree = component.toJSON();
@@ -63,5 +45,25 @@ describe('TextInput', () => {
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  describe('renders with size', () => {
+    ['medium', 'large'].forEach((size) => {
+      it(size, () => {
+        const component = getComponent({ size });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('render with theme', () => {
+    ['dark', 'light'].forEach((theme) => {
+      it(theme, () => {
+        const component = getComponent({ theme });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 });

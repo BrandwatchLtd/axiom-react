@@ -2,10 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { TextInputIcon, findComponent } from 'bw-axiom';
 import TextGroup from './TextGroup';
-
-if (__INCLUDE_CSS__) {
-  require('./TextInput.scss');
-}
+import './TextInput.css';
 
 export default class TextInput extends Component {
   static propTypes = {
@@ -14,7 +11,7 @@ export default class TextInput extends Component {
     invalid: PropTypes.bool,
     label: PropTypes.string,
     size: PropTypes.oneOf(['medium', 'large']),
-    style: PropTypes.oneOf(['translucent']),
+    theme: PropTypes.oneOf(['dark', 'light']),
     valid: PropTypes.bool,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
@@ -41,12 +38,12 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { children, disabled, valid, invalid, label, size, style, ...rest } = this.props;
+    const { children, disabled, valid, invalid, label, size, theme, ...rest } = this.props;
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIcon);
     const iconContainerClasses = classnames('ax-input__container', {
-      [`ax-input__container--${style}`]: style,
       [`ax-input__container--${size}`]: size,
+      [`ax-input__container--${theme}`]: theme,
       'ax-input__container--disabled': disabled,
       'ax-input__container--focused': hasFocus,
       'ax-input__container--valid': valid,

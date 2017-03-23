@@ -8,30 +8,28 @@ function getComponent(props = {}) {
   );
 }
 
-function matchSnapshot(props = {}) {
-  const component = getComponent(props);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-}
-
 describe('Progress', () => {
   it('renders with defaultProps', () => {
-    matchSnapshot();
-  });
-
-  it('renders an infinite progress indicator', () => {
-    matchSnapshot();
-  });
-
-  it('renders a finite progress indicator', () => {
-    matchSnapshot({ percent: 50 });
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders an error indicator', () => {
-    matchSnapshot({ error: true });
+    const component = getComponent({ error: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders a success indicator', () => {
-    matchSnapshot({ complete: true });
+    const component = getComponent({ complete: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders a finite progress indicator', () => {
+    const component = getComponent({ percent: 50 });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

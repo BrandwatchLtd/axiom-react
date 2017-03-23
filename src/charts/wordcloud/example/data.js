@@ -1,5 +1,3 @@
-import { getCSSVar } from 'bw-axiom';
-
 export const wordArray = [{
   font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '100px',
@@ -15,7 +13,7 @@ export const wordArray = [{
   text: 'words',
   textAnchor: 'middle',
 }, {
-  color: getCSSVar('color-brand-teal'),
+  color: 'teal',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '86px',
   x: 253,
@@ -93,7 +91,7 @@ export const wordArray = [{
   x: 593,
   y: 223,
 }, {
-  color: getCSSVar('color-brand-pink'),
+  color: 'pink',
   fontSize: '52px',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
@@ -115,7 +113,7 @@ export const wordArray = [{
   x: 239,
   y: 307,
 }, {
-  color: getCSSVar('color-brand-teal'),
+  color: 'teal',
   fontSize: '37px',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
@@ -277,7 +275,7 @@ export const wordArray = [{
   x: 171,
   y: 467,
 }, {
-  color: getCSSVar('color-brand-pink'),
+  color: 'pink',
   fontSize: '37px',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',

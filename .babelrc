@@ -7,9 +7,6 @@
         "react",
         "react-hmre",
       ],
-      "ignore": [
-        "/node_modules\//"
-      ]
     },
     "production": {
       "presets": [
@@ -17,9 +14,6 @@
         "stage-0",
         "react",
       ],
-      "ignore": [
-        "/node_modules\//"
-      ]
     }
   }
 }

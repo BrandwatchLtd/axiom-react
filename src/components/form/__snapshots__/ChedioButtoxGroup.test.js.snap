@@ -2,10 +2,10 @@
 
 exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
 <div
-  className="ax-chedio-buttox__group"
+  className="ax-chedio-buttox-group"
 >
   <label
-    className="ax-chedio-buttox__container"
+    className="ax-chedio-buttox__container ax-space--tiny"
   >
     <input
       className="ax-chedio-buttox"
@@ -22,7 +22,7 @@ exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
     </span>
   </label>
   <label
-    className="ax-chedio-buttox__container"
+    className="ax-chedio-buttox__container ax-space--tiny"
   >
     <input
       className="ax-chedio-buttox"

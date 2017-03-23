@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./CardList.scss');
-}
+import './CardList.css';
 
 export default class CardList extends Component {
   static propTypes = {

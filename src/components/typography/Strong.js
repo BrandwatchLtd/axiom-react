@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Strong.scss');
-}
+import './Strong.css';
 
 export default class Strong extends Component {
   static propTypes = {

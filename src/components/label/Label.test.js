@@ -15,58 +15,34 @@ describe('Label', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders always full width', () => {
-    const component = getComponent({ full: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with color', () => {
+    ['white', 'success', 'error'].forEach((color) => {
+      it(color, () => {
+        const component = getComponent({ color });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
-  it('renders always full width at small breakpoint', () => {
-    const component = getComponent({ full: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with full', () => {
+    [true, 'small', 'medium', 'large'].forEach((full) => {
+      it(full, () => {
+        const component = getComponent({ full });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
-  it('renders always full width at medium breakpoint', () => {
-    const component = getComponent({ full: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders always full width at large breakpoint', () => {
-    const component = getComponent({ full: 'large' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders small size', () => {
-    const component = getComponent({ size: 'small' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders medium size', () => {
-    const component = getComponent({ size: 'medium' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders colors white', () => {
-    const component = getComponent({ color: 'white' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders colors success', () => {
-    const component = getComponent({ color: 'success' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders colors error', () => {
-    const component = getComponent({ color: 'error' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('render with size', () => {
+    ['small', 'medium'].forEach((size) => {
+      it(size, () => {
+        const component = getComponent({ size });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
   describe('with LabelIcon', () => {

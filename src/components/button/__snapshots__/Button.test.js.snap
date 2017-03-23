@@ -1,38 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders always full width 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders always full width at large breakpoint 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full--large"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders always full width at medium breakpoint 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full--medium"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders always full width at small breakpoint 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full--small"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders circular size huge 1`] = `
+exports[`Button renders with circular huge 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-huge"
 >
@@ -40,7 +8,7 @@ exports[`Button renders circular size huge 1`] = `
 </button>
 `;
 
-exports[`Button renders circular size large 1`] = `
+exports[`Button renders with circular large 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-large"
 >
@@ -48,7 +16,7 @@ exports[`Button renders circular size large 1`] = `
 </button>
 `;
 
-exports[`Button renders circular size medium 1`] = `
+exports[`Button renders with circular medium 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-medium"
 >
@@ -56,57 +24,9 @@ exports[`Button renders circular size medium 1`] = `
 </button>
 `;
 
-exports[`Button renders circular size small 1`] = `
+exports[`Button renders with circular small 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders large size 1`] = `
-<button
-  className="ax-button ax-button--large ax-button--primary"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders medium size 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders primary style 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders secondary style 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--secondary"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders small size 1`] = `
-<button
-  className="ax-button ax-button--small ax-button--primary"
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders tertiary style 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--tertiary"
 >
   Lorem Ipsum
 </button>
@@ -115,6 +35,86 @@ exports[`Button renders tertiary style 1`] = `
 exports[`Button renders with defaultProps 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full large 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--full--large"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full medium 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--full--medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full small 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--full--small"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full true 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--full"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with size large 1`] = `
+<button
+  className="ax-button ax-button--large ax-button--primary"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with size medium 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with size small 1`] = `
+<button
+  className="ax-button ax-button--small ax-button--primary"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style primary 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style secondary 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--secondary"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style tertiary 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--tertiary"
 >
   Lorem Ipsum
 </button>

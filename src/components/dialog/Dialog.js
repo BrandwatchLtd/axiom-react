@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Modal } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Dialog.scss');
-}
+import './Dialog.css';
 
 export default class Dialog extends Component {
   static propTypes = {

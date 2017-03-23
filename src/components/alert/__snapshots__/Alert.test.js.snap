@@ -8,7 +8,7 @@ exports[`Alert renders with color error 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+      className="ax-grid ax-grid--gutters-h--small ax-grid--gutters-v--small ax-grid--v-middle"
     >
       <div
         className="ax-grid__cell"
@@ -33,7 +33,7 @@ exports[`Alert renders with color info 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+      className="ax-grid ax-grid--gutters-h--small ax-grid--gutters-v--small ax-grid--v-middle"
     >
       <div
         className="ax-grid__cell"
@@ -58,7 +58,7 @@ exports[`Alert renders with color success 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+      className="ax-grid ax-grid--gutters-h--small ax-grid--gutters-v--small ax-grid--v-middle"
     >
       <div
         className="ax-grid__cell"
@@ -83,7 +83,7 @@ exports[`Alert renders with color warning 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+      className="ax-grid ax-grid--gutters-h--small ax-grid--gutters-v--small ax-grid--v-middle"
     >
       <div
         className="ax-grid__cell"
@@ -108,7 +108,7 @@ exports[`Alert renders with defaultProps 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+      className="ax-grid ax-grid--gutters-h--small ax-grid--gutters-v--small ax-grid--v-middle"
     >
       <div
         className="ax-grid__cell"
@@ -133,7 +133,7 @@ exports[`Alert renders with onRemoveClick 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+      className="ax-grid ax-grid--gutters-h--small ax-grid--gutters-v--small ax-grid--v-middle"
     >
       <div
         className="ax-grid__cell"

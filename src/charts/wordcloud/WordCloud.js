@@ -14,8 +14,10 @@ export default class WordCloud extends Component {
       height,
       width,
     } = this.props;
+
     return (
-      <Base Component="svg"
+      <Base
+          Component="svg"
           className="ax-word-cloud"
           height="100%"
           version="1.1"

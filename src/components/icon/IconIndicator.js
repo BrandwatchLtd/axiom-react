@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base, Icon } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./IconIndicator.scss');
-}
+import './IconIndicator.css';
 
 export default class IconIndicator extends Component {
   static propTypes = {

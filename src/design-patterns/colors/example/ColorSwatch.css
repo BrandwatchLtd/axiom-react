@@ -1,0 +1,46 @@
+@import '../../../materials/colors';
+@import '../../../materials/sizing';
+
+.dm-color-swatch {
+  height: calc(var(--spacing-grid-size) * 16);
+  border-top: 0.0625rem solid var(--color-context-border);
+  border-bottom: 0.0625rem solid var(--color-context-border);
+
+  &--ui-dark-0 { background-color: var(--color-ui-dark-0); }
+  &--ui-dark-1 { background-color: var(--color-ui-dark-1); }
+  &--ui-dark-2 { background-color: var(--color-ui-dark-2); }
+  &--ui-light-0 { background-color: var(--color-ui-light-0); }
+  &--ui-light-1 { background-color: var(--color-ui-light-1); }
+  &--ui-light-2 { background-color: var(--color-ui-light-2); }
+  &--ui-white { background-color: var(--color-ui-white); }
+  &--ui-primary-0 { background-color: var(--color-ui-primary-0); }
+  &--ui-primary-1 { background-color: var(--color-ui-primary-1); }
+  &--ui-primary-2 { background-color: var(--color-ui-primary-2); }
+  &--ui-success { background-color: var(--color-ui-success); }
+  &--ui-warning { background-color: var(--color-ui-warning); }
+  &--ui-error { background-color: var(--color-ui-error); }
+  &--ui-highlight { background-color: var(--color-ui-highlight); }
+
+  &--brand-rose { background-color: var(--color-brand-rose); }
+  &--brand-pink { background-color: var(--color-brand-pink); }
+  &--brand-purple { background-color: var(--color-brand-purple); }
+  &--brand-lilac { background-color: var(--color-brand-lilac); }
+  &--brand-blue { background-color: var(--color-brand-blue); }
+  &--brand-teal { background-color: var(--color-brand-teal); }
+  &--brand-green { background-color: var(--color-brand-green); }
+  &--brand-chartreuse { background-color: var(--color-brand-chartreuse); }
+  &--brand-amber { background-color: var(--color-brand-amber); }
+  &--brand-orange { background-color: var(--color-brand-orange); }
+  &--brand-brown { background-color: var(--color-brand-brown); }
+  &--brand-grey { background-color: var(--color-brand-grey); }
+
+  &--context-border-subtle { background-color: var(--color-context-border-subtle); }
+  &--context-border { background-color: var(--color-context-border); }
+  &--context-background { background-color: var(--color-context-background); }
+  &--context-background-disabled { background-color: var(--color-context-background-disabled); }
+  &--context-background-faded { background-color: var(--color-context-background-faded); }
+  &--context-background-subtle { background-color: var(--color-context-background-subtle); }
+  &--context-text { background-color: var(--color-context-text); }
+  &--context-text-disabled { background-color: var(--color-context-text-disabled); }
+  &--context-text-subtle { background-color: var(--color-context-text-subtle); }
+}

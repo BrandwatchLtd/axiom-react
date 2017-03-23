@@ -1,0 +1,105 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-context-tip-size: calc(var(--spacing-grid-size) * 3);
+}
+
+.ax-context {
+  position: relative;
+  filter: drop-shadow(var(--drop-shadow));
+}
+
+.ax-context__content {
+  border-radius: var(--component-border-radius);
+  overflow: hidden;
+}
+
+.ax-context__arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: var(--cmp-context-tip-size);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.ax-context--dark {
+  & .ax-context__content {
+    background-color: var(--color-theme-dark-background);
+    color: var(--color-theme-dark-text);
+  }
+
+  & .ax-context__arrow {
+    border-color: var(--color-theme-dark-background);
+  }
+}
+
+.ax-context--light {
+  & .ax-context__content {
+    background-color: var(--color-theme-light-background);
+    color: var(--color-theme-light-text);
+  }
+
+  & .ax-context__arrow {
+    border-color: var(--color-theme-light-background);
+  }
+}
+
+.ax-context--top,
+.ax-context--bottom {
+  & .ax-context__arrow {
+    left: calc(50% - var(--cmp-context-tip-size));
+  }
+}
+
+.ax-context--right,
+.ax-context--left {
+  & .ax-context__arrow {
+    top: calc(50% - var(--cmp-context-tip-size));
+  }
+}
+
+.ax-context--top {
+  margin-bottom: var(--cmp-context-tip-size);
+
+  & .ax-context__arrow {
+    bottom: calc(var(--cmp-context-tip-size) * -2);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.ax-context--right {
+  margin-left: var(--cmp-context-tip-size);
+
+  & .ax-context__arrow {
+    left: calc(var(--cmp-context-tip-size) * -2);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.ax-context--bottom {
+  margin-top: var(--cmp-context-tip-size);
+
+  & .ax-context__arrow {
+    top: calc(var(--cmp-context-tip-size) * -2);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.ax-context--left {
+  margin-right: var(--cmp-context-tip-size);
+
+  & .ax-context__arrow {
+    right: calc(var(--cmp-context-tip-size) * -2);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+}

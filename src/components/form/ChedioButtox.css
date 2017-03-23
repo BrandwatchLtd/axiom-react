@@ -1,0 +1,42 @@
+@import '../../materials/animations';
+@import '../../materials/sizing';
+@import './vars';
+
+:root {
+  --cmp-chedio-indicator-space: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-chedio-buttox__container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ax-chedio-buttox__container--disabled {
+  cursor: default;
+}
+
+.ax-chedio-buttox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.ax-chedio-buttox__indicator {
+  position: relative;
+  width: var(--cmp-input-checkbox-size);
+  height: var(--cmp-input-checkbox-size);
+  margin: 0 var(--cmp-chedio-indicator-space) 0 0;
+  border: var(--component-border-width) solid var(--cmp-input-border-color);
+  background-color: var(--cmp-input-background-color);
+  transition-property: background-color, border-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  @nest .ax-chedio-buttox:focus + &    { border-color: var(--cmp-input-border-color-focused); }
+  @nest .ax-chedio-buttox:disabled + & { background-color: var(--cmp-input-background-color-disabled); }
+
+  &::before {
+    content: '';
+  }
+}

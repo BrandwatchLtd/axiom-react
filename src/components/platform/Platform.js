@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import omit from 'lodash.omit';
-
-if (__INCLUDE_CSS__) {
-  require('./Platform.scss');
-}
+import './Platform.css';
 
 export default class Platform extends Component {
   static propTypes = {

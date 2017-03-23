@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Link.scss');
-}
+import './Link.css';
 
 export default class Link extends Component {
   static propTypes = {

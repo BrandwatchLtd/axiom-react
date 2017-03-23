@@ -1,0 +1,24 @@
+@import '../../materials/animations';
+@import './vars';
+
+.ax-radio__indicator {
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    top: calc(var(--cmp-input-checkbox-size) / 4);
+    right: calc(var(--cmp-input-checkbox-size) / 4);
+    bottom: calc(var(--cmp-input-checkbox-size) / 4);
+    left: calc(var(--cmp-input-checkbox-size) / 4);
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: var(--transition-time-base);
+    transition-timing-function: var(--transition-function);
+
+    @nest .ax-radio + &                  { background-color: transparent; }
+    @nest .ax-radio:hover + &            { background-color: var(--cmp-input-border-color); }
+    @nest .ax-radio:checked + &          { background-color: var(--cmp-input-color-checked); }
+    @nest .ax-radio:disabled + &         { background-color: transparent; }
+    @nest .ax-radio:disabled:checked + & { background-color: var(--cmp-input-border-color); }
+  }
+}

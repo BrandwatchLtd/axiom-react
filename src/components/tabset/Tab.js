@@ -6,18 +6,16 @@ export default class Tab extends Component {
   static propTypes = {
     active: PropTypes.bool,
     disabled: PropTypes.bool,
-    size: PropTypes.string,
     title: PropTypes.node,
   };
 
   render() {
     /* eslint-disable react/prop-types */
-    const { active, disabled, onClick, size, title, ...rest } = this.props;
+    const { active, disabled, onClick, title, ...rest } = this.props;
     /* eslint-enable react/prop-types */
     const classes = classnames('ax-tabset__list-item', {
       'ax-tabset__list-item--active': active,
       'ax-tabset__list-item--disabled': disabled,
-      [`ax-tabset__list-item--${size}`]: size,
     });
 
     return (

@@ -1,0 +1,29 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-chart-panel-padding-vertical: calc(var(--spacing-grid-size) * 3);
+  --cmp-chart-panel-padding-horizontal: calc(var(--spacing-grid-size) * 4);
+}
+
+.ax-chart-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.375rem;
+  background-color: var(--color-ui-light-2);
+  color: var(--color-context-text);
+}
+
+.ax-chart-panel__header,
+.ax-chart-panel__body {
+  padding: var(--cmp-chart-panel-padding-vertical) var(--cmp-chart-panel-padding-horizontal);
+}
+
+.ax-chart-panel__header {
+  border-bottom: var(--component-border-width) solid var(--color-ui-light-0);
+}
+
+.ax-chart-panel__body {
+  position: relative;
+  flex: 1 1 auto;
+}

@@ -3,10 +3,7 @@ import humanize from 'humanize-string';
 import isPlainObject from 'lodash.isplainobject';
 import { Grid, GridCell, Heading, Weak } from 'bw-axiom';
 import ApiDocs from '../ApiDocs';
-
-if (__INCLUDE_CSS__) {
-  require('./ExampleHeader.scss');
-}
+import './ExampleHeader.css';
 
 function shouldShowApiDocs(components) {
   return isPlainObject(components) && Object.keys(components).length > 0;

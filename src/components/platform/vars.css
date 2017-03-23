@@ -1,0 +1,6 @@
+@import '../../materials/sizing';
+
+:root {
+  --cmp-platform-dock-size: calc(var(--spacing-grid-size) * 16);
+}
+

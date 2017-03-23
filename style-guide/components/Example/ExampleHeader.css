@@ -1,0 +1,5 @@
+@import '../../../src/materials/sizing';
+
+.dm-example-header {
+  padding: var(--page-padding-v) var(--page-padding-h);
+}

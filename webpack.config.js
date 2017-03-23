@@ -1,25 +1,24 @@
 const path = require('path');
 const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const structureGenerator = require('./scripts/structure-generator');
 
+const modulesToTranspile = [
+  'get-own-enumerable-property-symbols',
+  'stringify-object',
+];
+
 module.exports = {
   devtool: 'source-map',
-  entry: {
-    main: './style-guide/client.js',
-  },
+  entry: './style-guide/client.js',
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ['babel'],
+      exclude: new RegExp(`node_modules/(?!(${modulesToTranspile.join('|')}))`),
+      use: ['babel-loader'],
     }, {
-      test: /\.json$/,
-      loaders: ['json'],
-    }, {
-      test: /\.s?css$/,
-      loaders: ['style', 'css', 'postcss', 'sass'],
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
     }],
   },
   output: {
@@ -31,12 +30,9 @@ module.exports = {
       template: './style-guide/index.ejs',
       basename: '/',
     }),
-    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
-      __INCLUDE_CSS__: true,
-      __STRUCTURE__: JSON.stringify(structureGenerator()),
       __BASENAME__: '"/"',
-      __DEVELOPMENT__: true,
+      __STRUCTURE__: JSON.stringify(structureGenerator()),
     }),
   ],
   resolve: {
@@ -45,5 +41,4 @@ module.exports = {
       'style-guide': path.resolve(__dirname, 'style-guide/components'),
     },
   },
-  postcss: () => [autoprefixer({ browsers: ['last 2 versions'] })],
 };

@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Icon.scss');
-}
+import './Icon.css';
 
 /* eslint-disable quotes, max-len, comma-dangle, react/jsx-sort-props */
 const ICON_NAME_MAP = {

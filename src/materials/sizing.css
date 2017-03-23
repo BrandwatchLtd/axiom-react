@@ -1,0 +1,36 @@
+/* stylelint-disable max-line-length */
+:root {
+  --spacing-grid-size: 0.25rem;
+
+  --page-padding-h: calc(var(--spacing-grid-size) * 6);
+  --page-padding-v: calc(var(--spacing-grid-size) * 6);
+
+  --component-line-height: 1rem;
+
+  --component-border-width-small: 0.0625rem;
+  --component-border-width-medium: 0.0625rem;
+  --component-border-width-large: 0.125rem;
+  --component-border-width-huge: 0.125rem;
+  --component-border-width: var(--component-border-width-small);
+
+  --component-border-radius: 0.1875rem;
+
+  --component-margin-vertical-tiny: calc(var(--spacing-grid-size) * 2);
+  --component-margin-vertical-small: calc(var(--spacing-grid-size) * 4);
+  --component-margin-vertical-medium: calc(var(--spacing-grid-size) * 6);
+  --component-margin-vertical-large: calc(var(--spacing-grid-size) * 8);
+
+  --component-padding-vertical-small: calc(var(--spacing-grid-size) - var(--component-border-width-small));
+  --component-padding-vertical-medium: calc(calc(var(--spacing-grid-size) * 2) - var(--component-border-width-small));
+  --component-padding-vertical-large: calc(calc(var(--spacing-grid-size) * 3) - var(--component-border-width-small));
+
+  --component-padding-horizontal-small: calc(var(--spacing-grid-size) * 3);
+  --component-padding-horizontal-medium: calc(var(--spacing-grid-size) * 3);
+  --component-padding-horizontal-large: calc(var(--spacing-grid-size) * 4);
+
+  --component-round-size-small: calc(var(--spacing-grid-size) * 6);
+  --component-round-size-medium: calc(var(--spacing-grid-size) * 12);
+  --component-round-size-large: calc(var(--spacing-grid-size) * 18);
+  --component-round-size-huge: calc(var(--spacing-grid-size) * 30);
+}
+/* stylelint-enable */

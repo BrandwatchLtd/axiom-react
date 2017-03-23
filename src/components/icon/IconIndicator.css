@@ -1,0 +1,32 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+.ax-icon-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-ui-light-2);
+  line-height: 0;
+}
+
+.ax-icon-indicator--small {
+  width: var(--component-round-size-small);
+  height: var(--component-round-size-small);
+}
+
+.ax-icon-indicator--medium {
+  width: var(--component-round-size-medium);
+  height: var(--component-round-size-medium);
+}
+
+.ax-icon-indicator--large {
+  width: var(--component-round-size-large);
+  height: var(--component-round-size-large);
+}
+
+.ax-icon-indicator--success { background-color: var(--color-ui-success); }
+.ax-icon-indicator--warning { background-color: var(--color-ui-warning); }
+.ax-icon-indicator--error   { background-color: var(--color-ui-error); }
+.ax-icon-indicator--info    { background-color: var(--color-ui-primary-2); }
+.ax-icon-indicator--subtle  { background-color: var(--color-context-background-subtle); }

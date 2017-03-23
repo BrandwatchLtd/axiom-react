@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadialProgress renders with defaultProps 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--small"
+/>
+`;
+
+exports[`RadialProgress renders with size large 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--large"
+/>
+`;
+
+exports[`RadialProgress renders with size medium 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--medium"
+/>
+`;
+
+exports[`RadialProgress renders with size small 1`] = `
+<div
+  className="ax-radial-progress ax-radial-progress--small"
+/>
+`;

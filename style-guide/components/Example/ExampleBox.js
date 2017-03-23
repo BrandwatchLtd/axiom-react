@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Heading } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ExampleBox.scss');
-}
+import './ExampleBox.css';
 
 export default class ExampleBox extends Component {
   static propTypes = {

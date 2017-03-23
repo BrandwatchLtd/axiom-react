@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./HorizontalRule.scss');
-}
+import './HorizontalRule.css';
 
 export default class HorizontalRule extends Component {
   render() {

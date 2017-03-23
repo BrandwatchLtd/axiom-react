@@ -1,11 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { getArcProperties } from './utils';
 import RadialProgress from './RadialProgress';
+import './ProgressFinite.css';
 import './_filter';
-
-if (__INCLUDE_CSS__) {
-  require('./ProgressFinite.scss');
-}
 
 export default class ProgressFinite extends Component {
 

@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Icon } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./DockItem.scss');
-}
+import './DockItem.css';
 
 export default class DockItem extends Component {
   static propTypes = {

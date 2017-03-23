@@ -1,13 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./RadialProcess.scss');
-}
+import './RadialProgress.css';
 
 export default class RadialProgress extends Component {
-
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string.isRequired,

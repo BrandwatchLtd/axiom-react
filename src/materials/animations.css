@@ -1,0 +1,6 @@
+:root {
+  --transition-time-fast: 100ms;
+  --transition-time-base: 200ms;
+  --transition-time-slow: 400ms;
+  --transition-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

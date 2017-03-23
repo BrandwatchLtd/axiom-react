@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog renders with defaultProps 1`] = `<noscript />`;
+
+exports[`Dialog renders with fullscreen 1`] = `<noscript />`;
+
+exports[`Dialog renders with size large 1`] = `<noscript />`;
+
+exports[`Dialog renders with size medium 1`] = `<noscript />`;
+
+exports[`Dialog renders with size small 1`] = `<noscript />`;

@@ -9,10 +9,7 @@ import {
   Paragraph,
   Strong,
 } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ApiDocsProp.scss');
-}
+import './ApiDocsProp.css';
 
 const PROP_TYPE_MAP = {
   array: 'Array',

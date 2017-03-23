@@ -1,0 +1,42 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-dialog-width-small: 20rem;
+  --cmp-dialog-width-medium: 37.5rem;
+  --cmp-dialog-width-large: 50rem;
+}
+
+.ax-dialog {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.1875rem;
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
+  filter: drop-shadow(var(--drop-shadow));
+}
+
+.ax-dialog__header,
+.ax-dialog__footer {
+  flex: 0 1 auto;
+  padding: var(--page-padding-v) var(--page-padding-h);
+}
+
+.ax-dialog__body {
+  flex: 1 1 auto;
+  padding: 0 var(--page-padding-h);
+  overflow: auto;
+
+  &:first-child { padding-top: var(--page-padding-v); }
+  &:last-child  { padding-bottom: var(--page-padding-v); }
+}
+
+.ax-dialog--small  { width: var(--cmp-dialog-width-small); }
+.ax-dialog--medium { width: var(--cmp-dialog-width-medium); }
+.ax-dialog--large  { width: var(--cmp-dialog-width-large); }
+
+.ax-dialog--fullscreen {
+  height: 100vh;
+}

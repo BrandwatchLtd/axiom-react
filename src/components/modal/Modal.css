@@ -1,0 +1,47 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import '../../materials/layout';
+@import '../../materials/sizing';
+
+.ax-modal__overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: color(var(--color-ui-dark-0) alpha(30%));
+  z-index: var(--z-index-modal);
+}
+
+.ax-modal {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: var(--page-padding-v) var(--page-padding-h);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* stylelint-disable selector-class-pattern */
+.ReactModal__Overlay,
+.ReactModal__Content {
+  animation-duration: var(--transition-time-base);
+  animation-fill-mode: forwards;
+}
+
+.ReactModal__Overlay--after-open   { animation-name: appear-fade; }
+.ReactModal__Overlay--before-close { animation-name: disappear-fade; }
+
+.ReactModal__Content--after-open   { animation-name: appear-standard; }
+.ReactModal__Content--before-close { animation-name: disappear-standard; }
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+/* stylelint-enable */

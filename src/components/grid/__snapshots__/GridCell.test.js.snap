@@ -1,174 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GridCell fill renders with value large 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fill--large"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fill renders with value medium 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fill--medium"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fill renders with value small 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fill--small"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fill renders with value true 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fill"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fit renders with value large 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fit--large"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fit renders with value medium 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fit--medium"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fit renders with value small 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fit--small"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell fit renders with value true 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--fit"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell full renders with value large 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--full--large"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell full renders with value medium 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--full--medium"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell full renders with value small 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--full--small"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell full renders with value true 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--full"
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div />
-</div>
-`;
-
-exports[`GridCell renders with customWidth 1`] = `
-<div
-  className="ax-grid__cell ax-grid__cell--percent"
-  style={
-    Object {
-      "width": "67%",
-    }
-  }
->
-  <div />
-</div>
-`;
-
 exports[`GridCell renders with defaultProps 1`] = `
 <div
   className="ax-grid__cell"
@@ -182,7 +13,163 @@ exports[`GridCell renders with defaultProps 1`] = `
 </div>
 `;
 
-exports[`GridCell shrink renders with value large 1`] = `
+exports[`GridCell renders with fill large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fill medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fill small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fill true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fill"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fit large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fit medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fit small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with fit true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--fit"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with full large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with full medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with full small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with full true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--full"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with shrink large 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--shrink--large"
   style={
@@ -195,7 +182,7 @@ exports[`GridCell shrink renders with value large 1`] = `
 </div>
 `;
 
-exports[`GridCell shrink renders with value medium 1`] = `
+exports[`GridCell renders with shrink medium 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--shrink--medium"
   style={
@@ -208,7 +195,7 @@ exports[`GridCell shrink renders with value medium 1`] = `
 </div>
 `;
 
-exports[`GridCell shrink renders with value small 1`] = `
+exports[`GridCell renders with shrink small 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--shrink--small"
   style={
@@ -221,7 +208,7 @@ exports[`GridCell shrink renders with value small 1`] = `
 </div>
 `;
 
-exports[`GridCell shrink renders with value true 1`] = `
+exports[`GridCell renders with shrink true 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--shrink"
   style={
@@ -234,9 +221,9 @@ exports[`GridCell shrink renders with value true 1`] = `
 </div>
 `;
 
-exports[`GridCell vAlign renders with value large 1`] = `
+exports[`GridCell renders with vAlign end 1`] = `
 <div
-  className="ax-grid__cell ax-grid__cell--bottom"
+  className="ax-grid__cell ax-grid__cell--end"
   style={
     Object {
       "width": undefined,
@@ -247,7 +234,7 @@ exports[`GridCell vAlign renders with value large 1`] = `
 </div>
 `;
 
-exports[`GridCell vAlign renders with value medium 1`] = `
+exports[`GridCell renders with vAlign middle 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--middle"
   style={
@@ -260,9 +247,9 @@ exports[`GridCell vAlign renders with value medium 1`] = `
 </div>
 `;
 
-exports[`GridCell vAlign renders with value small 1`] = `
+exports[`GridCell renders with vAlign start 1`] = `
 <div
-  className="ax-grid__cell ax-grid__cell--top"
+  className="ax-grid__cell ax-grid__cell--start"
   style={
     Object {
       "width": undefined,

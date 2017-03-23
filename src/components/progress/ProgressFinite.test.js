@@ -8,18 +8,16 @@ function getComponent(props = {}) {
   );
 }
 
-function matchSnapshot(props = {}) {
-  const component = getComponent(props);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-}
-
 describe('ProgressFinite', () => {
   it('renders with defaultProps', () => {
-    matchSnapshot();
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with percent props', () => {
-    matchSnapshot({ percent: 50 });
+    const component = getComponent({ percent: 50 });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

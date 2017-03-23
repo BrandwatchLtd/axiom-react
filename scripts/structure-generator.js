@@ -64,7 +64,7 @@ function extractPaths() {
     if (structure.hasExamples) {
       extracted.push(structure.path);
     }
-  }, ['/', '/labs']);
+  }, ['/']);
 }
 
 module.exports = generateStructure;

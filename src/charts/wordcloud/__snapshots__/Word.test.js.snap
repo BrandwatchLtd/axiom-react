@@ -1,16 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Word renders with color amber 1`] = `
+<text
+  className="ax-word ax-word--amber"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color blue 1`] = `
+<text
+  className="ax-word ax-word--blue"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color brown 1`] = `
+<text
+  className="ax-word ax-word--brown"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color chartreuse 1`] = `
+<text
+  className="ax-word ax-word--chartreuse"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color green 1`] = `
+<text
+  className="ax-word ax-word--green"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color grey 1`] = `
+<text
+  className="ax-word ax-word--grey"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color lilac 1`] = `
+<text
+  className="ax-word ax-word--lilac"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color orange 1`] = `
+<text
+  className="ax-word ax-word--orange"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color pink 1`] = `
+<text
+  className="ax-word ax-word--pink"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color purple 1`] = `
+<text
+  className="ax-word ax-word--purple"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color rose 1`] = `
+<text
+  className="ax-word ax-word--rose"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
+exports[`Word renders with color teal 1`] = `
+<text
+  className="ax-word ax-word--teal"
+  style={
+    Object {
+      "fontFamily": undefined,
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(undefined,undefined)"
+/>
+`;
+
 exports[`Word renders with defaultProps 1`] = `
 <text
   className="ax-word"
   style={
     Object {
-      "fill": undefined,
       "fontFamily": undefined,
       "fontSize": undefined,
-      "transform": "translate(0px,0px)",
     }
   }
   textAnchor="middle"
+  transform="translate(0,0)"
 />
 `;

@@ -1,0 +1,37 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import './vars';
+
+.ax-platform__dock-item {
+  display: flex;
+  flex-direction: column;
+  width: var(--cmp-platform-dock-size);
+  height: var(--cmp-platform-dock-size);
+  color: var(--color-ui-light-2);
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:hover {
+    color: var(--color-ui-primary-2);
+  }
+
+  &:active {
+    color: var(--color-ui-primary-1);
+  }
+}
+
+.ax-platform__dock-item--active,
+.ax-platform__dock-item--active:hover {
+  background-color: var(--color-ui-primary-1);
+  color: var(--color-ui-light-2);
+}
+
+.ax-platform__dock-item-link {
+  display: flex;
+  flex: 1 0 0%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

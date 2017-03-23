@@ -1,10 +1,8 @@
 import React, { Component, Children, PropTypes, cloneElement } from 'react';
+import classnames from 'classnames';
 import omit from 'lodash.omit';
 import { Base, Tab } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Tabset.scss');
-}
+import './Tabset.css';
 
 export default class Tabset extends Component {
   static propTypes = {
@@ -37,6 +35,7 @@ export default class Tabset extends Component {
     const { children, size, ...rest } = this.props;
     const { activeTabIndex } = this.state;
     const arrayChildren = Children.toArray(children);
+    const classes = classnames('ax-tabset', `ax-tabset--${size}`);
 
     const activeTabContent = arrayChildren[activeTabIndex]
       ? arrayChildren[activeTabIndex].props.children
@@ -47,11 +46,10 @@ export default class Tabset extends Component {
       .map((child, index) => cloneElement(child, {
         active: index === activeTabIndex,
         onClick: () => this.activateTab(index),
-        size,
       }));
 
     return (
-      <Base space="medium" { ...omit(rest, ['activeTabIndex']) } className="ax-tabset">
+      <Base space="medium" { ...omit(rest, ['activeTabIndex']) } className={ classes }>
         <ul className="ax-tabset__list">
           { tabs }
         </ul>

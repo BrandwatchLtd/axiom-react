@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base, Strong } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./TextGroup.scss');
-}
+import './TextGroup.css';
 
 export default class TextGroup extends Component {
   static propTypes = {

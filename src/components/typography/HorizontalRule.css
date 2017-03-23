@@ -1,0 +1,9 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+.ax-horizontal-rule {
+  border-top: var(--component-border-width) solid var(--color-context-border);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}

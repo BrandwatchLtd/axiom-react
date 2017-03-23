@@ -1,0 +1,5 @@
+@import '../../materials/typography';
+
+.ax-small {
+  font-size: var(--font-size-small);
+}

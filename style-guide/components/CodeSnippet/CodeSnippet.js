@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
 import { prepareSnippet } from '../../utils/code-formatting';
-
-if (__INCLUDE_CSS__) {
-  require('./CodeSnippet.scss');
-}
+import './CodeSnippet.css';
 
 export default class CodeSnippet extends Component {
   static propTypes = {

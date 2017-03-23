@@ -1,10 +1,7 @@
 import React, { Component, Children, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
 import { Base, ButtonIcon } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Button.scss');
-}
+import './Button.css';
 
 export default class Button extends Component {
   static propTypes = {

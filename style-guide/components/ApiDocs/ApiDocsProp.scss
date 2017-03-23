@@ -1,9 +1,0 @@
-@import '~bw-axiom/design-patterns/colors/vars';
-@import '~bw-axiom/design-patterns/spacing/vars';
-
-.dm-doc-api__code {
-  padding: $spacing-grid-size ($spacing-grid-size * 2);
-  background-color: $color-ui-light-2;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  white-space: normal;
-}

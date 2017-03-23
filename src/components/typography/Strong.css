@@ -1,0 +1,5 @@
+@import '../../materials/typography';
+
+.ax-text--strong {
+  font-weight: var(--font-weight-bold);
+}

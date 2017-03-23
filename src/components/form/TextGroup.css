@@ -1,0 +1,33 @@
+@import '../../materials/sizing';
+@import './vars';
+
+.ax-input,
+.ax-textarea {
+  width: 100%;
+  min-width: 0;
+  color: inherit;
+  appearance: none;
+
+  &::placeholder {
+    opacity: 1;
+    color: var(--cmp-input-color-placeholder);
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.ax-input__group {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.ax-input__label {
+  margin-bottom: var(--spacing-grid-size);
+}

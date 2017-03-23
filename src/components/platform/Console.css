@@ -1,0 +1,25 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import '../../materials/layout';
+@import '../../materials/sizing';
+@import './vars';
+
+.ax-platform__console {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  border-right: var(--component-border-width) solid var(--color-ui-light-0);
+  background-color: var(--color-ui-light-2);
+  color: var(--color-ui-dark-0);
+  overflow: auto;
+  z-index: calc(var(--z-index-platform) - 1);
+  transition-property: transform;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-platform__console--visible {
+  transform: translateX(var(--cmp-platform-dock-size));
+}

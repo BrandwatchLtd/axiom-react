@@ -1,405 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge renders always full width 1`] = `
-<span
-  className="ax-badge ax-badge--faded ax-badge--full"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders always full width at large breakpoint 1`] = `
-<span
-  className="ax-badge ax-badge--faded ax-badge--full--large"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders always full width at medium breakpoint 1`] = `
-<span
-  className="ax-badge ax-badge--faded ax-badge--full--medium"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders always full width at small breakpoint 1`] = `
-<span
-  className="ax-badge ax-badge--faded ax-badge--full--small"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors amber 1`] = `
-<span
-  className="ax-badge ax-badge--amber"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors blue 1`] = `
-<span
-  className="ax-badge ax-badge--blue"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors brown 1`] = `
-<span
-  className="ax-badge ax-badge--brown"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors chartreuse 1`] = `
-<span
-  className="ax-badge ax-badge--chartreuse"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors error 1`] = `
-<span
-  className="ax-badge ax-badge--error"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors faded 1`] = `
-<span
-  className="ax-badge ax-badge--faded"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors green 1`] = `
-<span
-  className="ax-badge ax-badge--green"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors grey 1`] = `
-<span
-  className="ax-badge ax-badge--grey"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors highlight 1`] = `
-<span
-  className="ax-badge ax-badge--highlight"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors lilac 1`] = `
-<span
-  className="ax-badge ax-badge--lilac"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors orange 1`] = `
-<span
-  className="ax-badge ax-badge--orange"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors pink 1`] = `
-<span
-  className="ax-badge ax-badge--pink"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors purple 1`] = `
-<span
-  className="ax-badge ax-badge--purple"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors rose 1`] = `
-<span
-  className="ax-badge ax-badge--rose"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors success 1`] = `
-<span
-  className="ax-badge ax-badge--success"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
-exports[`Badge renders colors teal 1`] = `
-<span
-  className="ax-badge ax-badge--teal"
->
-  <span
-    className="ax-badge__background"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  />
-  <span
-    className="ax-badge__content"
-  >
-    Lorem Ipsum
-  </span>
-</span>
-`;
-
 exports[`Badge renders opacity 1`] = `
 <span
   className="ax-badge ax-badge--faded"
@@ -460,9 +60,409 @@ exports[`Badge renders opacity minimum 0 1`] = `
 </span>
 `;
 
+exports[`Badge renders with color amber 1`] = `
+<span
+  className="ax-badge ax-badge--amber"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color blue 1`] = `
+<span
+  className="ax-badge ax-badge--blue"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color brown 1`] = `
+<span
+  className="ax-badge ax-badge--brown"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color chartreuse 1`] = `
+<span
+  className="ax-badge ax-badge--chartreuse"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color error 1`] = `
+<span
+  className="ax-badge ax-badge--error"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color faded 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color green 1`] = `
+<span
+  className="ax-badge ax-badge--green"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color grey 1`] = `
+<span
+  className="ax-badge ax-badge--grey"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color highlight 1`] = `
+<span
+  className="ax-badge ax-badge--highlight"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color lilac 1`] = `
+<span
+  className="ax-badge ax-badge--lilac"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color orange 1`] = `
+<span
+  className="ax-badge ax-badge--orange"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color pink 1`] = `
+<span
+  className="ax-badge ax-badge--pink"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color purple 1`] = `
+<span
+  className="ax-badge ax-badge--purple"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color rose 1`] = `
+<span
+  className="ax-badge ax-badge--rose"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color success 1`] = `
+<span
+  className="ax-badge ax-badge--success"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with color teal 1`] = `
+<span
+  className="ax-badge ax-badge--teal"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
 exports[`Badge renders with defaultProps 1`] = `
 <span
   className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with full large 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full--large"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with full medium 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full--medium"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with full small 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full--small"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders with full true 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--full"
 >
   <span
     className="ax-badge__background"

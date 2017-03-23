@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextInput render with theme dark 1`] = `
+<label
+  className="ax-input__group ax-space--small"
+>
+  <div
+    className="ax-input__container ax-input__container--medium ax-input__container--dark"
+  >
+    <input
+      className="ax-input"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`TextInput render with theme light 1`] = `
+<label
+  className="ax-input__group ax-space--small"
+>
+  <div
+    className="ax-input__container ax-input__container--medium ax-input__container--light"
+  >
+    <input
+      className="ax-input"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
 exports[`TextInput renders when disabled 1`] = `
 <label
   className="ax-input__group ax-space--small"
@@ -164,24 +200,6 @@ exports[`TextInput renders with size medium 1`] = `
 >
   <div
     className="ax-input__container ax-input__container--medium"
-  >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-  </div>
-</label>
-`;
-
-exports[`TextInput renders with style translucent 1`] = `
-<label
-  className="ax-input__group ax-space--small"
->
-  <div
-    className="ax-input__container ax-input__container--translucent ax-input__container--medium"
   >
     <input
       className="ax-input"

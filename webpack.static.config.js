@@ -1,58 +1,62 @@
 const path = require('path');
 const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const structureGenerator = require('./scripts/structure-generator');
 
+const modulesToTranspile = [
+  'get-own-enumerable-property-symbols',
+  'stringify-object',
+];
+
 module.exports = {
-  entry: {
-    main: './style-guide/static.js',
-  },
+  entry: './style-guide/static.js',
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ['babel'],
-    }, {
-      test: /\.json$/,
-      loaders: ['json'],
+      exclude: new RegExp(`node_modules/(?!(${modulesToTranspile.join('|')}))`),
+      use: ['babel-loader'],
     }, {
       test: /\.ejs$/,
-      loaders: ['ejs'],
+      use: ['ejs-loader'],
     }, {
-      test: /\.s?css$/,
-      loader: ExtractTextPlugin.extract('style', 'css?minimize!postcss!sass'),
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract({
+        use: [{
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            minimize: true,
+          },
+        }, {
+          loader: 'postcss-loader',
+        }],
+      }),
     }],
   },
   output: {
     filename: './assets/bundle.[hash].min.js',
-    path: './static/',
+    path: path.resolve(__dirname, 'static'),
     publicPath: '/',
     libraryTarget: 'umd',
   },
   plugins: [
     new CleanWebpackPlugin(['static']),
-    new ExtractTextPlugin('./assets/bundle.[hash].min.css', { allChunks: true }),
-    new CopyWebpackPlugin([{ from: './style-guide/assets', to: './assets' }]),
-    new StaticSiteGeneratorPlugin('main', structureGenerator.extractPaths()),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-      mangle: {
-        keep_fnames: true,
-      },
+    new ExtractTextPlugin({
+      filename: './assets/bundle.[hash].min.css',
+    }),
+    new CopyWebpackPlugin([{
+      from: './style-guide/assets',
+      to: './assets',
+    }]),
+    new StaticSiteGeneratorPlugin({
+      paths: structureGenerator.extractPaths(),
     }),
     new webpack.DefinePlugin({
-      __INCLUDE_CSS__: true,
       __STRUCTURE__: JSON.stringify(structureGenerator()),
       __BASENAME__: process.env.BASENAME_ENV || '"/"',
-      __DEVELOPMENT__: false,
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
       },
@@ -64,7 +68,4 @@ module.exports = {
       'style-guide': path.resolve(__dirname, 'style-guide/components'),
     },
   },
-  postcss: () => [
-    autoprefixer({ browsers: ['last 2 versions'] }),
-  ],
 };

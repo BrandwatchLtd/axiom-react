@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
 import TextGroup from './TextGroup';
-
-if (__INCLUDE_CSS__) {
-  require('./TextArea.scss');
-}
+import './TextArea.css';
 
 export default class TextArea extends Component {
   static propTypes = {

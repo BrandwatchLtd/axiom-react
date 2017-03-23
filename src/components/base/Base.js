@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-
-if (__INCLUDE_CSS__) {
-  require('./Base.scss');
-}
+import './Base.css';
 
 export default class Base extends Component {
   static propTypes = {
@@ -12,10 +9,7 @@ export default class Base extends Component {
       PropTypes.func,
     ]),
     className: PropTypes.string,
-    hiddenUntil: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    hiddenUntil: PropTypes.oneOf(['small', 'medium', 'large']),
     space: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
     textBreak: PropTypes.oneOf(['none', 'all', 'word']),
     textCase: PropTypes.oneOf(['upper', 'capital', 'lower']),
@@ -43,11 +37,7 @@ export default class Base extends Component {
     ]),
     textStrong: PropTypes.bool,
     textWeak: PropTypes.bool,
-    theme: PropTypes.oneOf(['light', 'dark']),
-    visibleUntil: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    visibleUntil: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
   static defaultProps = {
@@ -69,7 +59,6 @@ export default class Base extends Component {
       textRight,
       textStrong,
       textWeak,
-      theme,
       visibleUntil,
       ...rest
     } = this.props;
@@ -93,7 +82,6 @@ export default class Base extends Component {
       'ax-text--strong': textStrong === true,
       'ax-text--uppercase': textCase === 'upper',
       'ax-text--weak': textWeak === true,
-      [`ax-theme--${theme}`]: theme,
       [`ax-visible-until--${visibleUntil}`]: visibleUntil,
     });
 

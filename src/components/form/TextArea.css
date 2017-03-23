@@ -1,0 +1,30 @@
+@import '../../materials/animations';
+@import '../../materials/sizing';
+@import './vars';
+
+.ax-textarea {
+  padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-small);
+  border: var(--component-border-width) solid var(--cmp-input-border-color);
+  border-radius: var(--component-border-radius);
+  background-color: var(--cmp-input-background-color);
+  resize: none;
+  transition-property: border-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:focus { border-color: var(--cmp-input-border-color-focused); }
+  &:disabled { background-color: var(--cmp-input-background-color-disabled); }
+}
+
+.ax-textarea--valid  {
+  border-color: var(--cmp-input-border-color-valid);
+}
+
+.ax-textarea--invalid {
+  border-color: var(--cmp-input-border-color-invalid);
+  color: var(--cmp-input-color-invalid);
+
+  &::placeholder {
+    color: var(--cmp-input-color-invalid);
+  }
+}

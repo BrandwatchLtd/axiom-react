@@ -17,33 +17,29 @@ describe('Context', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders top', () => {
-    const component = getComponent({ position: 'top' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders right', () => {
-    const component = getComponent({ position: 'right' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders bottom', () => {
-    const component = getComponent({ position: 'bottom' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders left', () => {
-    const component = getComponent({ position: 'left' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders custom width', () => {
     const component = getComponent({ width: '20rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  describe('renders with position', () => {
+    ['top', 'bottom', 'right', 'left'].forEach((position) => {
+      it(position, () => {
+        const component = getComponent({ position });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('renders with theme', () => {
+    ['dark', 'light'].forEach((theme) => {
+      it(theme, () => {
+        const component = getComponent({ theme });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 });

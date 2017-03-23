@@ -3,10 +3,7 @@ import classnames from 'classnames';
 import { Link as RouterLink } from 'react-router';
 import { Strong } from 'bw-axiom';
 import NavList from './NavList';
-
-if (__INCLUDE_CSS__) {
-  require('./NavListItem.scss');
-}
+import './NavListItem.css';
 
 export default class NavListItem extends Component {
   static propTypes = {

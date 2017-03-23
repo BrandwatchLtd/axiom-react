@@ -1,0 +1,15 @@
+@import '../../../src/materials/colors';
+@import '../../../src/materials/sizing';
+
+.dm-demo-box {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(var(--spacing-grid-size) * 12);
+  padding: calc(var(--spacing-grid-size) * 2);
+  border: 0.0625rem solid var(--color-context-border);
+  background-color: var(--color-context-background-disabled);
+  color: var(--color-context-text-subtle);
+}

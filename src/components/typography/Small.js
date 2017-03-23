@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Small.scss');
-}
+import './Small.css';
 
 export default class Small extends Component {
   static propTypes = {

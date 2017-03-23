@@ -1,0 +1,61 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-card-medium-padding: calc(var(--spacing-grid-size) * 4);
+  --cmp-card-large-padding: calc(var(--spacing-grid-size) * 6);
+}
+
+.ax-card-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ax-card-list--medium {
+  padding: var(--cmp-card-medium-padding) 0;
+
+  & .ax-card {
+    padding: var(--cmp-card-medium-padding);
+  }
+}
+
+.ax-card-list--large  {
+  padding: var(--cmp-card-large-padding) 0;
+
+  & .ax-card {
+    padding: var(--cmp-card-large-padding);
+  }
+}
+
+.ax-card-list--compact {
+  & .ax-card {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.ax-card-list--separators {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  & .ax-card {
+    border-bottom: var(--component-border-width) solid var(--color-context-border);
+  }
+}
+
+.ax-card--clickable {
+  cursor: pointer;
+}
+
+.ax-card-list:not(.ax-card-list--compact) .ax-card--clickable {
+  transition-property: background-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:hover,
+  &.ax-card--active {
+    background-color: var(--color-context-background-disabled);
+  }
+}

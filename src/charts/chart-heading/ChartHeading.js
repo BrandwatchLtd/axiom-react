@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ChartHeading.scss');
-}
+import './ChartHeading.css';
 
 export default class ChartHeading extends Component {
   static propTypes = {

@@ -4,10 +4,7 @@ import { render } from 'react-dom';
 import { useRouterHistory, Router } from 'react-router';
 import { createHistory } from 'history';
 import routes from './routes';
-
-if (__INCLUDE_CSS__) {
-  require('./client.scss');
-}
+import './client.css';
 
 const browserHistory = useRouterHistory(createHistory)({
   basename: __BASENAME__,

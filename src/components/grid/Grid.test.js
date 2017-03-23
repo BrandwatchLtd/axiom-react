@@ -10,134 +10,106 @@ function getComponent(props = {}) {
   );
 }
 
-function matchSnapshot(props = {}) {
-  const component = getComponent(props);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-}
-
 describe('Grid', () => {
   it('renders with defaultProps', () => {
-    matchSnapshot();
-  });
-
-  it('renders with vGutters false', () => {
-    matchSnapshot({ vGutters: false });
-  });
-
-  it('renders with hGutters false', () => {
-    matchSnapshot({ hGutters: false });
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with responsive false', () => {
-    matchSnapshot({ responsive: false });
+    const component = getComponent({ responsive: false });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
-  describe('fit', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ fit: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ fit: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ fit: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ fit: 'large' });
+  describe('renders with fill', () => {
+    [true, 'small', 'medium', 'large'].forEach((fill) => {
+      it(fill, () => {
+        const component = getComponent({ fill });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('fill', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ fill: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ fill: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ fill: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ fill: 'large' });
+  describe('renders with fit', () => {
+    [true, 'small', 'medium', 'large'].forEach((fit) => {
+      it(fit, () => {
+        const component = getComponent({ fit });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('full', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ full: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ full: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ full: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ full: 'large' });
+  describe('renders with full', () => {
+    [true, 'small', 'medium', 'large'].forEach((full) => {
+      it(full, () => {
+        const component = getComponent({ full });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('shrink', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ shrink: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ shrink: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ shrink: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ shrink: 'large' });
+  describe('renders with gutters', () => {
+    [false, 'tiny', 'small', 'medium', 'large'].forEach((gutters) => {
+      it(gutters, () => {
+        const component = getComponent({ gutters });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('gutters', () => {
-    it('renders with value false', () => {
-      matchSnapshot({ gutters: false });
-    });
-
-    it('renders with value tiny', () => {
-      matchSnapshot({ gutters: 'tiny' });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ gutters: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ gutters: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ gutters: 'large' });
+  describe('renders with hAlign', () => {
+    ['start', 'middle', 'end', 'around', 'between'].forEach((hAlign) => {
+      it(hAlign, () => {
+        const component = getComponent({ hAlign });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('vAlign', () => {
-    it('renders with value small', () => {
-      matchSnapshot({ vAlign: 'top' });
+  describe('renders with hGutters', () => {
+    [false, 'tiny', 'small', 'medium', 'large'].forEach((hGutters) => {
+      it(hGutters, () => {
+        const component = getComponent({ hGutters });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
+  });
 
-    it('renders with value medium', () => {
-      matchSnapshot({ vAlign: 'middle' });
+  describe('renders with shrink', () => {
+    [true, 'small', 'medium', 'large'].forEach((shrink) => {
+      it(shrink, () => {
+        const component = getComponent({ shrink });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
+  });
 
-    it('renders with value large', () => {
-      matchSnapshot({ vAlign: 'bottom' });
+  describe('renders with vAlign', () => {
+    ['start', 'middle', 'end'].forEach((vAlign) => {
+      it(vAlign, () => {
+        const component = getComponent({ vAlign });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('renders with vGutters', () => {
+    [false, 'tiny', 'small', 'medium', 'large'].forEach((vGutters) => {
+      it(vGutters, () => {
+        const component = getComponent({ vGutters });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 });

@@ -10,104 +10,60 @@ function getComponent(props = {}) {
   );
 }
 
-function matchSnapshot(props = {}) {
-  const component = getComponent(props);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-}
-
 describe('GridCell', () => {
   it('renders with defaultProps', () => {
-    matchSnapshot();
+    const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with customWidth', () => {
-    matchSnapshot({ width: 67 });
-  });
-
-  describe('fit', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ fit: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ fit: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ fit: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ fit: 'large' });
+  describe('renders with fill', () => {
+    [true, 'small', 'medium', 'large'].forEach((fill) => {
+      it(fill, () => {
+        const component = getComponent({ fill });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('fill', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ fill: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ fill: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ fill: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ fill: 'large' });
+  describe('renders with fit', () => {
+    [true, 'small', 'medium', 'large'].forEach((fit) => {
+      it(fit, () => {
+        const component = getComponent({ fit });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('full', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ full: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ full: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ full: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ full: 'large' });
+  describe('renders with full', () => {
+    [true, 'small', 'medium', 'large'].forEach((full) => {
+      it(full, () => {
+        const component = getComponent({ full });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('shrink', () => {
-    it('renders with value true', () => {
-      matchSnapshot({ shrink: true });
-    });
-
-    it('renders with value small', () => {
-      matchSnapshot({ shrink: 'small' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ shrink: 'medium' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ shrink: 'large' });
+  describe('renders with shrink', () => {
+    [true, 'small', 'medium', 'large'].forEach((shrink) => {
+      it(shrink, () => {
+        const component = getComponent({ shrink });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
-  describe('vAlign', () => {
-    it('renders with value small', () => {
-      matchSnapshot({ vAlign: 'top' });
-    });
-
-    it('renders with value medium', () => {
-      matchSnapshot({ vAlign: 'middle' });
-    });
-
-    it('renders with value large', () => {
-      matchSnapshot({ vAlign: 'bottom' });
+  describe('renders with vAlign', () => {
+    ['start', 'middle', 'end'].forEach((vAlign) => {
+      it(vAlign, () => {
+        const component = getComponent({ vAlign });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 });

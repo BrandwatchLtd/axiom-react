@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-
-if (__INCLUDE_CSS__) {
-  require('./Console.scss');
-}
+import './Console.css';
 
 export default class Console extends Component {
   static propTypes = {

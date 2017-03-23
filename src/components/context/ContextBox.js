@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./ContextBox.scss');
-}
+import './ContextBox.css';
 
 export default class ContextBox extends Component {
   static propTypes = {

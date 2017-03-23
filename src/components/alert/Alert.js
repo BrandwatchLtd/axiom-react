@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Base, Grid, GridCell, Icon, Link } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Alert.scss');
-}
+import './Alert.css';
 
 export default class Alert extends Component {
   static propTypes = {

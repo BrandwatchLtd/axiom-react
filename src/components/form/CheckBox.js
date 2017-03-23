@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ChedioButtox from './ChedioButtox';
-
-if (__INCLUDE_CSS__) {
-  require('./CheckBox.scss');
-}
+import './CheckBox.css';
 
 export default class CheckBox extends Component {
   static propTypes = {

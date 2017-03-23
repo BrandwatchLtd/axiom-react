@@ -4,10 +4,7 @@ import { normalisePathname } from '../utils/navigation';
 import { getPathData } from '../utils/structure';
 import { LayoutContent } from '../components/Layout';
 import { ExampleHeader } from '../components/Example';
-
-if (__INCLUDE_CSS__) {
-  require('./Doc.scss');
-}
+import './Doc.css';
 
 export default class Doc extends Component {
   static propTypes = {

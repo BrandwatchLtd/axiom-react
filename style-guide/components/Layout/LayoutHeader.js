@@ -2,10 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { Grid, GridCell, Icon, Link, Heading  } from 'bw-axiom/';
 
-if (__INCLUDE_CSS__) {
-  require('./LayoutHeader.scss');
-}
-
 export default class LayoutHeader extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

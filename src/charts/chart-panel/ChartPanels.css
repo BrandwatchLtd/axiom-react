@@ -1,0 +1,21 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+.ax-chart-panels {
+  display: flex;
+
+  & > .ax-chart-panel {
+    flex: 1 1 0%;
+
+    &:not(:first-child) {
+      border-left: var(--component-border-width) solid var(--color-ui-light-0);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

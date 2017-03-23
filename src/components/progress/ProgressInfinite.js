@@ -2,14 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import { getArcProperties } from './utils';
 import RadialProgress from './RadialProgress';
+import './ProgressInfinite.css';
 import './_filter';
 
-if (__INCLUDE_CSS__) {
-  require('./ProgressInfinite.scss');
-}
-
 export default class ProgressInfinite extends Component {
-
   static propTypes = {
     color: PropTypes.oneOf([
       'subtle',

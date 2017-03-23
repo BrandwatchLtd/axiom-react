@@ -12,7 +12,7 @@ fi
 curl ci-utils.bwcom.io/gcloud/install | bash
 curl ci-utils.bwcom.io/gcloud/auth | bash
 
-yarn build-resources
+yarn build-css
 
 gsutil \
   -h "Content-Encoding:gzip" \

@@ -6,10 +6,7 @@ import { useRouterHistory, match, RouterContext, Router } from 'react-router';
 import { createMemoryHistory, createHistory } from 'history';
 import routes from './routes';
 import template from './index.ejs';
-
-if (__INCLUDE_CSS__) {
-  require('./client.scss');
-}
+import './client.css';
 
 if (typeof document !== 'undefined') {
   const browserHistory = useRouterHistory(createHistory)({

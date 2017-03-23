@@ -1,227 +1,335 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grid fill renders with value large 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fill--large"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fill renders with value medium 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fill--medium"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fill renders with value small 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fill--small"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fill renders with value true 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fill"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fit renders with value large 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fit--large"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fit renders with value medium 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fit--medium"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fit renders with value small 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fit--small"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid fit renders with value true 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--fit"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid full renders with value large 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--full--large"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid full renders with value medium 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--full--medium"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid full renders with value small 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--full--small"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid full renders with value true 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--full"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid gutters renders with value false 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters-none"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid gutters renders with value large 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--large"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid gutters renders with value medium 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--medium"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid gutters renders with value small 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--small"
-  >
-    <div />
-  </div>
-</div>
-`;
-
-exports[`Grid gutters renders with value tiny 1`] = `
-<div
-  className="ax-grid__container ax-space--medium"
->
-  <div
-    className="ax-grid ax-grid--gutters--tiny"
-  >
-    <div />
-  </div>
-</div>
-`;
-
 exports[`Grid renders with defaultProps 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid renders with hGutters false 1`] = `
+exports[`Grid renders with fill large 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters-none-h ax-grid--gutters--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fill--large"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fill medium 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fill--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fill small 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fill--small"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fill true 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fill"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fit large 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fit--large"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fit medium 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fit--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fit small 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fit--small"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with fit true 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--fit"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with full large 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--full--large"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with full medium 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--full--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with full small 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--full--small"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with full true 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--full"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with gutters  1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with gutters large 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--large ax-grid--gutters-v--large"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with gutters medium 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with gutters small 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--small ax-grid--gutters-v--small"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with gutters tiny 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--tiny ax-grid--gutters-v--tiny"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hAlign around 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--h-around"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hAlign between 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--h-between"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hAlign end 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--h-end"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hAlign middle 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--h-middle"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hAlign start 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--h-start"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hGutters  1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-v--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hGutters large 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--large ax-grid--gutters-v--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hGutters medium 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hGutters small 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--small ax-grid--gutters-v--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with hGutters tiny 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--tiny ax-grid--gutters-v--medium"
   >
     <div />
   </div>
@@ -233,103 +341,151 @@ exports[`Grid renders with responsive false 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--unresponsive ax-grid--gutters--medium"
+    className="ax-grid ax-grid--gutters-h--medium ax-grid--gutters-v--medium"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid renders with vGutters false 1`] = `
+exports[`Grid renders with shrink large 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters-none-v ax-grid--gutters--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--shrink--large"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid shrink renders with value large 1`] = `
+exports[`Grid renders with shrink medium 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--shrink--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--shrink--medium"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid shrink renders with value medium 1`] = `
+exports[`Grid renders with shrink small 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--shrink--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--shrink--small"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid shrink renders with value small 1`] = `
+exports[`Grid renders with shrink true 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--shrink--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--shrink"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid shrink renders with value true 1`] = `
+exports[`Grid renders with vAlign end 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--shrink"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--v-end"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid vAlign renders with value large 1`] = `
+exports[`Grid renders with vAlign middle 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--v-bottom"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--v-middle"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid vAlign renders with value medium 1`] = `
+exports[`Grid renders with vAlign start 1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--v-middle"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium ax-grid--v-start"
   >
     <div />
   </div>
 </div>
 `;
 
-exports[`Grid vAlign renders with value small 1`] = `
+exports[`Grid renders with vGutters  1`] = `
 <div
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters--medium ax-grid--v-top"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with vGutters large 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--large"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with vGutters medium 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--medium"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with vGutters small 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--small"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Grid renders with vGutters tiny 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-h--medium ax-grid--gutters-v--tiny"
   >
     <div />
   </div>

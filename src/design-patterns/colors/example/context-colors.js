@@ -5,21 +5,21 @@ import ColorSwatch from './ColorSwatch';
 export default class ColorsExample extends Component {
   render() {
     const borderColors = [
-      'color-context-border-subtle',
-      'color-context-border',
+      'context-border-subtle',
+      'context-border',
     ];
 
     const backgroundColors = [
-      'color-context-background',
-      'color-context-background-disabled',
-      'color-context-background-faded',
-      'color-context-background-subtle',
+      'context-background',
+      'context-background-disabled',
+      'context-background-faded',
+      'context-background-subtle',
     ];
 
     const textColors = [
-      'color-context-text-disabled',
-      'color-context-text-subtle',
-      'color-context-text',
+      'context-text-disabled',
+      'context-text-subtle',
+      'context-text',
     ];
 
     return (

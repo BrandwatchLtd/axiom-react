@@ -1,0 +1,15 @@
+@import '../../materials/sizing';
+
+:root {
+  --cmp-badge-spacing: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-badge-group {
+  margin-bottom: calc(var(--cmp-badge-spacing) * -1);
+
+  & > .ax-badge {
+    margin-right: var(--cmp-badge-spacing);
+    margin-bottom: var(--cmp-badge-spacing);
+  }
+}
+

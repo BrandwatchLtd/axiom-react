@@ -1,10 +1,7 @@
 import React, { Children, Component, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
 import { Base, LabelIcon } from 'bw-axiom';
-
-if (__INCLUDE_CSS__) {
-  require('./Label.scss');
-}
+import './Label.css';
 
 export default class Label extends Component {
   static propTypes = {

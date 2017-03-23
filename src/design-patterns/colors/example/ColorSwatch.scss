@@ -1,8 +1,0 @@
-@import '../../spacing/vars';
-@import '../vars';
-
-.dm-color-swatch__color {
-  height: $spacing-grid-size * 16;
-  border-top: 0.0625rem solid var(--color-context-border);
-  border-bottom: 0.0625rem solid var(--color-context-border);
-}
