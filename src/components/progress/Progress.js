@@ -4,21 +4,25 @@ import { Base, IconIndicator, ProgressFinite, ProgressInfinite } from 'bw-axiom'
 export default class Progress extends Component {
 
   static propTypes = {
+    error: PropTypes.bool,
     percent: PropTypes.number,
   };
 
   render() {
     const {
+      error,
       percent,
       ...rest
     } = this.props;
 
     return (
       <Base { ...rest } className="ax-progress">
-        { do { if (!isNaN(parseFloat(percent)) && percent < 100) {
-          <ProgressFinite { ...rest } percent={ percent } />;
+        { do { if (error) {
+          <IconIndicator { ...rest } color="error" name="warning" />;
         } else if (percent === 100) {
           <IconIndicator { ...rest } color="success" name="tick" />;
+        } else if (!isNaN(parseFloat(percent))) {
+          <ProgressFinite { ...rest } percent={ percent } />;
         } else {
           <ProgressInfinite { ...rest } />;
         } } }

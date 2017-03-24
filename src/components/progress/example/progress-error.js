@@ -19,8 +19,8 @@ export default class ProgressTransitionsExample extends Component {
     const { RadialProgress: { size } } = components;
 
     return (
-      <Example name="Progress transitions">
-        <ProgressTransitions sizes={ size.values }/>
+      <Example name="Progress errors">
+        <ProgressTransitions errorPercent={ 70 } sizes={ size.values }/>
       </Example>
     );
   }
