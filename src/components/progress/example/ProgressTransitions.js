@@ -81,13 +81,22 @@ export default class ProgressTransitions extends Component {
         <Grid>
           { sizes.map((size) =>
             <GridCell key={ size } shrink={ true }>
-              <Progress error={ error } percent={ percent } size={ size }/>
+              <Progress
+                  complete={ percent === 100 }
+                  error={ error }
+                  percent={ percent }
+                  size={ size } />
             </GridCell>
           ) }
         </Grid>
         <Snippet renderSkip={ true }>
           { sizes.map((size) =>
-            <Progress error={ error } key={ size } percent={ percent } size={ size }/>
+            <Progress
+                complete={ percent === 100 }
+                error={ error }
+                key={ size }
+                percent={ percent }
+                size={ size } />
           ) }
         </Snippet>
       </Base>

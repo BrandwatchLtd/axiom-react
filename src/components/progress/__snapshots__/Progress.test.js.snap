@@ -64,6 +64,31 @@ exports[`Progress renders a success indicator 1`] = `
 </div>
 `;
 
+exports[`Progress renders an error indicator 1`] = `
+<div
+  className="ax-progress"
+>
+  <div
+    className="ax-icon-indicator ax-icon-indicator--error ax-icon-indicator--small"
+  >
+    <svg
+      className="ax-icon"
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M6.25,2 L9.75,2 L9.25,10.25 L6.75,10.25 L6.25,2 Z M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
 exports[`Progress renders an infinite progress indicator 1`] = `
 <div
   className="ax-progress"

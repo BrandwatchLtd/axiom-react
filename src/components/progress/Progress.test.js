@@ -27,7 +27,11 @@ describe('Progress', () => {
     matchSnapshot({ percent: 50 });
   });
 
+  it('renders an error indicator', () => {
+    matchSnapshot({ error: true });
+  });
+
   it('renders a success indicator', () => {
-    matchSnapshot({ percent: 100 });
+    matchSnapshot({ complete: true });
   });
 });
