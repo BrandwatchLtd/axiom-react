@@ -63,20 +63,20 @@ describe('Grid', () => {
     });
   });
 
-  describe('renders with hAlign', () => {
-    ['start', 'middle', 'end', 'around', 'between'].forEach((hAlign) => {
-      it(hAlign, () => {
-        const component = getComponent({ hAlign });
+  describe('renders with horizontalAlign', () => {
+    ['start', 'middle', 'end', 'around', 'between'].forEach((horizontalAlign) => {
+      it(horizontalAlign, () => {
+        const component = getComponent({ horizontalAlign });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
     });
   });
 
-  describe('renders with hGutters', () => {
-    [false, 'tiny', 'small', 'medium', 'large'].forEach((hGutters) => {
-      it(hGutters, () => {
-        const component = getComponent({ hGutters });
+  describe('renders with horizontalGutters', () => {
+    [false, 'tiny', 'small', 'medium', 'large'].forEach((horizontalGutters) => {
+      it(horizontalGutters, () => {
+        const component = getComponent({ horizontalGutters });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
@@ -93,20 +93,20 @@ describe('Grid', () => {
     });
   });
 
-  describe('renders with vAlign', () => {
-    ['start', 'middle', 'end'].forEach((vAlign) => {
-      it(vAlign, () => {
-        const component = getComponent({ vAlign });
+  describe('renders with verticalAlign', () => {
+    ['start', 'middle', 'end'].forEach((verticalAlign) => {
+      it(verticalAlign, () => {
+        const component = getComponent({ verticalAlign });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
     });
   });
 
-  describe('renders with vGutters', () => {
-    [false, 'tiny', 'small', 'medium', 'large'].forEach((vGutters) => {
-      it(vGutters, () => {
-        const component = getComponent({ vGutters });
+  describe('renders with verticalGutters', () => {
+    [false, 'tiny', 'small', 'medium', 'large'].forEach((verticalGutters) => {
+      it(verticalGutters, () => {
+        const component = getComponent({ verticalGutters });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });

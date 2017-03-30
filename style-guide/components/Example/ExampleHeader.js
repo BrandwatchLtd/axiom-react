@@ -23,7 +23,7 @@ export default class ExampleHeader extends Component {
 
     return (
       <div className="dm-example-header">
-        <Grid vAlign="end">
+        <Grid verticalAlign="end">
           <GridCell>
             <Heading style="title" textCase="capital">{ humanize(trail.join(' / ')) }</Heading>
             <Heading style="display" textCase="capital">

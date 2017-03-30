@@ -18,39 +18,39 @@
   min-width: 0;
 }
 
-.ax-grid--v-start  { align-items: flex-start; }
-.ax-grid--v-middle { align-items: center; }
-.ax-grid--v-end    { align-items: flex-end; }
+.ax-grid--vertical-start  { align-items: flex-start; }
+.ax-grid--vertical-middle { align-items: center; }
+.ax-grid--vertical-end    { align-items: flex-end; }
 
-.ax-grid--h-start    { justify-content: flex-start; }
-.ax-grid--h-middle   { justify-content: center; }
-.ax-grid--h-end      { justify-content: flex-end; }
-.ax-grid--h-around   { justify-content: space-around; }
-.ax-grid--h-between  { justify-content: space-between; }
+.ax-grid--horionztal-start    { justify-content: flex-start; }
+.ax-grid--horizontal-middle   { justify-content: center; }
+.ax-grid--horizontal-end      { justify-content: flex-end; }
+.ax-grid--horizontal-around   { justify-content: space-around; }
+.ax-grid--horizontal-between  { justify-content: space-between; }
 
 .ax-grid__cell--start  { align-self: flex-start; }
 .ax-grid__cell--middle { align-self: center; }
 .ax-grid__cell--end    { align-self: flex-end; }
 
-.ax-grid--gutters-h--tiny { margin-left: calc(var(--cmp-grid-gutter-size-tiny) * -1); }
-.ax-grid--gutters-h--small { margin-left: calc(var(--cmp-grid-gutter-size-small) * -1); }
-.ax-grid--gutters-h--medium { margin-left: calc(var(--cmp-grid-gutter-size-medium) * -1); }
-.ax-grid--gutters-h--large { margin-left: calc(var(--cmp-grid-gutter-size-large) * -1); }
+.ax-grid--gutters-horizontal--tiny   { margin-left: calc(var(--cmp-grid-gutter-size-tiny) * -1); }
+.ax-grid--gutters-horizontal--small  { margin-left: calc(var(--cmp-grid-gutter-size-small) * -1); }
+.ax-grid--gutters-horizontal--medium { margin-left: calc(var(--cmp-grid-gutter-size-medium) * -1); }
+.ax-grid--gutters-horizontal--large  { margin-left: calc(var(--cmp-grid-gutter-size-large) * -1); }
 
-.ax-grid--gutters-v--tiny { margin-bottom: calc(var(--cmp-grid-gutter-size-tiny) * -1); }
-.ax-grid--gutters-v--small { margin-bottom: calc(var(--cmp-grid-gutter-size-small) * -1); }
-.ax-grid--gutters-v--medium { margin-bottom: calc(var(--cmp-grid-gutter-size-medium) * -1); }
-.ax-grid--gutters-v--large { margin-bottom: calc(var(--cmp-grid-gutter-size-large) * -1); }
+.ax-grid--gutters-vertical--tiny   { margin-bottom: calc(var(--cmp-grid-gutter-size-tiny) * -1); }
+.ax-grid--gutters-vertical--small  { margin-bottom: calc(var(--cmp-grid-gutter-size-small) * -1); }
+.ax-grid--gutters-vertical--medium { margin-bottom: calc(var(--cmp-grid-gutter-size-medium) * -1); }
+.ax-grid--gutters-vertical--large  { margin-bottom: calc(var(--cmp-grid-gutter-size-large) * -1); }
 
-.ax-grid--gutters-h--tiny > .ax-grid__cell { padding-left: var(--cmp-grid-gutter-size-tiny); }
-.ax-grid--gutters-h--small > .ax-grid__cell { padding-left: var(--cmp-grid-gutter-size-small); }
-.ax-grid--gutters-h--medium > .ax-grid__cell { padding-left: var(--cmp-grid-gutter-size-medium); }
-.ax-grid--gutters-h--large > .ax-grid__cell { padding-left: var(--cmp-grid-gutter-size-large); }
+.ax-grid--gutters-horizontal--tiny > .ax-grid__cell   { padding-left: var(--cmp-grid-gutter-size-tiny); }
+.ax-grid--gutters-horizontal--small > .ax-grid__cell  { padding-left: var(--cmp-grid-gutter-size-small); }
+.ax-grid--gutters-horizontal--medium > .ax-grid__cell { padding-left: var(--cmp-grid-gutter-size-medium); }
+.ax-grid--gutters-horizontal--large > .ax-grid__cell  { padding-left: var(--cmp-grid-gutter-size-large); }
 
-.ax-grid--gutters-v--tiny > .ax-grid__cell { padding-bottom: var(--cmp-grid-gutter-size-tiny); }
-.ax-grid--gutters-v--small > .ax-grid__cell { padding-bottom: var(--cmp-grid-gutter-size-small); }
-.ax-grid--gutters-v--medium > .ax-grid__cell { padding-bottom: var(--cmp-grid-gutter-size-medium); }
-.ax-grid--gutters-v--large > .ax-grid__cell { padding-bottom: var(--cmp-grid-gutter-size-large); }
+.ax-grid--gutters-vertical--tiny > .ax-grid__cell   { padding-bottom: var(--cmp-grid-gutter-size-tiny); }
+.ax-grid--gutters-vertical--small > .ax-grid__cell  { padding-bottom: var(--cmp-grid-gutter-size-small); }
+.ax-grid--gutters-vertical--medium > .ax-grid__cell { padding-bottom: var(--cmp-grid-gutter-size-medium); }
+.ax-grid--gutters-vertical--large > .ax-grid__cell  { padding-bottom: var(--cmp-grid-gutter-size-large); }
 
 .ax-grid__cell--fill    { flex: 1 1 auto; }
 .ax-grid__cell--fit     { flex: 1 1 0%; }

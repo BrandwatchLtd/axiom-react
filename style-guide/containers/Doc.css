@@ -1,5 +1,5 @@
 @import '../../src/materials/sizing';
 
 .dm-doc {
-  padding: var(--page-padding-v) 0;
+  padding: var(--page-padding-vertical) 0;
 }

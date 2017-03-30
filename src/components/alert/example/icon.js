@@ -8,7 +8,7 @@ export default class AlertExample extends Component {
       <Example name="With an IconIndicator or Progress">
         <Snippet>
           <Alert color="error">
-            <Grid gutters="small" vAlign="middle">
+            <Grid gutters="small" verticalAlign="middle">
               <GridCell shrink={ true }>
                 <IconIndicator color="subtle" name="warning" />
               </GridCell>
@@ -21,7 +21,7 @@ export default class AlertExample extends Component {
           </Alert>
 
           <Alert>
-            <Grid gutters="small" vAlign="middle">
+            <Grid gutters="small" verticalAlign="middle">
               <GridCell shrink={ true }>
                 <ProgressInfinite color="white" />
               </GridCell>

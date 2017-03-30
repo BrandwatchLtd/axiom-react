@@ -6,7 +6,7 @@ export default class GridExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
       GridCell: PropTypes.shape({
-        vAlign: PropTypes.shape({
+        verticalAlign: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
       }).isRequired,
@@ -15,16 +15,16 @@ export default class GridExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { GridCell: { vAlign } } = components;
+    const { GridCell: { verticalAlign } } = components;
 
     return (
       <Example name="Grid Cell alignment controlled by Grid Cell">
         <Heading>Vertical</Heading>
         <Snippet>
           <Grid snippetIgnore={ true } style={ { minHeight: 180 } }>
-            { vAlign.values.map((vAlign) =>
-              <GridCell key={ vAlign } vAlign={ vAlign }>
-                <DemoBox snippetReplace={ true }>{ vAlign }</DemoBox>
+            { verticalAlign.values.map((verticalAlign) =>
+              <GridCell key={ verticalAlign } verticalAlign={ verticalAlign }>
+                <DemoBox snippetReplace={ true }>{ verticalAlign }</DemoBox>
               </GridCell>
             ) }
           </Grid>

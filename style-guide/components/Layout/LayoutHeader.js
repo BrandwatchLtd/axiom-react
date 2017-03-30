@@ -18,7 +18,7 @@ export default class LayoutHeader extends Component {
 
     return (
       <header className={ classes }>
-        <Grid responsive={ false } vAlign="middle">
+        <Grid responsive={ false } verticalAlign="middle">
           <GridCell>
             <Heading style="title">{ children }</Heading>
           </GridCell>

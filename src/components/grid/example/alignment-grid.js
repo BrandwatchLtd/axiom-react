@@ -6,10 +6,10 @@ export default class GridExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
       Grid: PropTypes.shape({
-        vAlign: PropTypes.shape({
+        horizontalAlign: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
-        hAlign: PropTypes.shape({
+        verticalAlign: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
       }).isRequired,
@@ -18,20 +18,23 @@ export default class GridExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { Grid: { vAlign, hAlign } } = components;
+    const { Grid: { verticalAlign, horizontalAlign } } = components;
 
     return (
       <Example name="Grid Cell alignment controlled by Grid">
         <Heading>Vertical</Heading>
         <Snippet>
-          { vAlign.values.map((vAlign) =>
-            <Grid key={ vAlign } style={ { minHeight: 180 } } vAlign={ vAlign }>
+          { verticalAlign.values.map((verticalAlign) =>
+            <Grid
+                key={ verticalAlign }
+                style={ { minHeight: 180 } }
+                verticalAlign={ verticalAlign }>
               <GridCell snippetReplace={ true }>
-                <DemoBox>{ vAlign }</DemoBox>
+                <DemoBox>{ verticalAlign }</DemoBox>
               </GridCell>
 
               <GridCell snippetReplace={ true }>
-                <DemoBox>{ vAlign }</DemoBox>
+                <DemoBox>{ verticalAlign }</DemoBox>
               </GridCell>
             </Grid>
           ) }
@@ -39,14 +42,17 @@ export default class GridExample extends Component {
 
         <Heading>Horizontal</Heading>
         <Snippet>
-          { hAlign.values.map((hAlign) =>
-            <Grid hAlign={ hAlign } key={ hAlign } shrink={ true }>
+          { horizontalAlign.values.map((horizontalAlign) =>
+            <Grid
+                horizontalAlign={ horizontalAlign }
+                key={ horizontalAlign }
+                shrink={ true }>
               <GridCell snippetReplace={ true }>
-                <DemoBox>{ hAlign }</DemoBox>
+                <DemoBox>{ horizontalAlign }</DemoBox>
               </GridCell>
 
               <GridCell snippetReplace={ true }>
-                <DemoBox>{ hAlign }</DemoBox>
+                <DemoBox>{ horizontalAlign }</DemoBox>
               </GridCell>
             </Grid>
           ) }

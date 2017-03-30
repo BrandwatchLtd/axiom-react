@@ -95,7 +95,7 @@ export default class Login extends Component {
                   type="password"
                   value={ password } />
 
-              <Grid space="small" vAlign="middle">
+              <Grid space="small" verticalAlign="middle">
                 <GridCell shrink={ true }>
                   <ButtonGroup>
                     <Button

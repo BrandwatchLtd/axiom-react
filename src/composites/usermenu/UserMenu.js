@@ -51,7 +51,7 @@ export default class UserMenu extends Component {
         <DropdownMenu>
           <Context width="auto">
             <ContextBox>
-              <Grid gutters="large" responsive={ false } vAlign="middle">
+              <Grid gutters="large" responsive={ false } verticalAlign="middle">
                 <GridCell fill={ true }>
                   <Heading space="none" style="title">{ firstName } { lastName }</Heading>
                   <Paragraph space="none" textColor="subtle">{ email }</Paragraph>

@@ -22,8 +22,8 @@ export default class Grid extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
     ]),
-    hAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
-    hGutters: PropTypes.oneOfType([
+    horizontalAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
+    horizontalGutters: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
     ]),
@@ -32,8 +32,8 @@ export default class Grid extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    vAlign: PropTypes.oneOf(['start', 'middle', 'end']),
-    vGutters: PropTypes.oneOfType([
+    verticalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
+    verticalGutters: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
     ]),
@@ -49,21 +49,21 @@ export default class Grid extends Component {
       children,
       responsive,
       gutters,
-      hGutters = gutters,
-      vGutters = gutters,
+      horizontalGutters = gutters,
+      verticalGutters = gutters,
       fill,
       fit,
       full,
       shrink,
-      vAlign,
-      hAlign,
+      verticalAlign,
+      horizontalAlign,
       ...rest
     } = this.props;
 
     const classes = classnames('ax-grid', {
       'ax-grid--responsive': responsive,
-      [`ax-grid--gutters-h--${hGutters}`]: typeof hGutters === 'string',
-      [`ax-grid--gutters-v--${vGutters}`]: typeof vGutters === 'string',
+      [`ax-grid--gutters-horizontal--${horizontalGutters}`]: typeof horizontalGutters === 'string',
+      [`ax-grid--gutters-vertical--${verticalGutters}`]: typeof verticalGutters === 'string',
       'ax-grid--fill': fill === true,
       [`ax-grid--fill--${fill}`]: fill && fill !== true,
       'ax-grid--fit': fit === true,
@@ -72,8 +72,8 @@ export default class Grid extends Component {
       [`ax-grid--full--${full}`]: full && full !== true,
       'ax-grid--shrink': shrink === true,
       [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
-      [`ax-grid--v-${vAlign}`]: vAlign,
-      [`ax-grid--h-${hAlign}`]: hAlign,
+      [`ax-grid--vertical-${verticalAlign}`]: verticalAlign,
+      [`ax-grid--horizontal-${horizontalAlign}`]: horizontalAlign,
     });
 
     return (

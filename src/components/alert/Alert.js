@@ -20,7 +20,7 @@ export default class Alert extends Component {
 
     return (
       <Base { ...rest } className={ classes }>
-        <Grid gutters="small" responsive={ false } vAlign="middle">
+        <Grid gutters="small" responsive={ false } verticalAlign="middle">
           <GridCell>
             { children }
           </GridCell>

@@ -12,7 +12,7 @@ export default class CardExample extends Component {
         </Heading>
 
         <Snippet>
-          <Grid space="none" vGutters={ false }>
+          <Grid space="none" verticalGutters={ false }>
             <GridCell>
               <CardList separators={ true }>
                 <Card>

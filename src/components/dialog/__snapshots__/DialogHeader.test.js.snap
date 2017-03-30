@@ -8,7 +8,7 @@ exports[`DialogHeader renders with defaultProps 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--gutters-h--medium ax-grid--gutters-v--medium"
+      className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium"
     >
       <div
         className="ax-grid__cell"

@@ -16,7 +16,7 @@ export default class CardContent extends Component {
     const { heading, size } = this.props;
 
     return (
-      <Grid gutters={ size } responsive={ false } vAlign="middle">
+      <Grid gutters={ size } responsive={ false } verticalAlign="middle">
         <GridCell shrink={ true }>
           <Candytar color="lilac" size="4.5rem" />
         </GridCell>

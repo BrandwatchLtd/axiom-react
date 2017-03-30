@@ -12,15 +12,15 @@ export default class ColorSwatch extends Component {
     const { colors } = this.props;
 
     return (
-      <Grid fill={ true } hGutters={ false }>
+      <Grid fill={ true } horizontalGutters={ false }>
         { colors.map((color) =>
           <GridCell key={ color }>
             <Grid
                 full="small"
                 responsive={ false }
                 textBreak="none"
-                vAlign="middle"
-                vGutters="tiny">
+                verticalAlign="middle"
+                verticalGutters="tiny">
               <GridCell>
                 <div className={ classnames('dm-color-swatch', `dm-color-swatch--${color}`) } />
               </GridCell>

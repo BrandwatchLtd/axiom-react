@@ -21,16 +21,16 @@
 .ax-dialog__header,
 .ax-dialog__footer {
   flex: 0 1 auto;
-  padding: var(--page-padding-v) var(--page-padding-h);
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }
 
 .ax-dialog__body {
   flex: 1 1 auto;
-  padding: 0 var(--page-padding-h);
+  padding: 0 var(--page-padding-horizontal);
   overflow: auto;
 
-  &:first-child { padding-top: var(--page-padding-v); }
-  &:last-child  { padding-bottom: var(--page-padding-v); }
+  &:first-child { padding-top: var(--page-padding-vertical); }
+  &:last-child  { padding-bottom: var(--page-padding-vertical); }
 }
 
 .ax-dialog--small  { width: var(--cmp-dialog-width-small); }

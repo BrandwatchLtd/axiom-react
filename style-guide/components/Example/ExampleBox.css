@@ -1,5 +1,5 @@
 @import '../../../src/materials/sizing';
 
 .dm-example-box {
-  padding: var(--page-padding-v) var(--page-padding-h);
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }

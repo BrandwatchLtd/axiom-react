@@ -21,7 +21,7 @@ export default class GridCell extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
-    vAlign: PropTypes.oneOf(['start', 'middle', 'end']),
+    verticalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
     width: PropTypes.number,
   };
 
@@ -33,12 +33,12 @@ export default class GridCell extends Component {
       full,
       width,
       shrink,
-      vAlign,
+      verticalAlign,
       ...rest
     } = this.props;
 
     const classes = classnames('ax-grid__cell', {
-      [`ax-grid__cell--${vAlign}`]: vAlign,
+      [`ax-grid__cell--${verticalAlign}`]: verticalAlign,
       'ax-grid__cell--fill': fill === true,
       'ax-grid__cell--fit': fit === true,
       'ax-grid__cell--full': full === true,

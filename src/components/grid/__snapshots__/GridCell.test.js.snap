@@ -221,7 +221,7 @@ exports[`GridCell renders with shrink true 1`] = `
 </div>
 `;
 
-exports[`GridCell renders with vAlign end 1`] = `
+exports[`GridCell renders with verticalAlign end 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--end"
   style={
@@ -234,7 +234,7 @@ exports[`GridCell renders with vAlign end 1`] = `
 </div>
 `;
 
-exports[`GridCell renders with vAlign middle 1`] = `
+exports[`GridCell renders with verticalAlign middle 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--middle"
   style={
@@ -247,7 +247,7 @@ exports[`GridCell renders with vAlign middle 1`] = `
 </div>
 `;
 
-exports[`GridCell renders with vAlign start 1`] = `
+exports[`GridCell renders with verticalAlign start 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--start"
   style={

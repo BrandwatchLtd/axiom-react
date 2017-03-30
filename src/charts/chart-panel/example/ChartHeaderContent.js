@@ -4,7 +4,7 @@ import { Grid, GridCell, Icon, Link, Strong } from 'bw-axiom';
 export default class ChartHeaderContent extends Component {
   render() {
     return (
-      <Grid responsive={ false } vAlign="middle">
+      <Grid responsive={ false } verticalAlign="middle">
         <GridCell>
           <Strong>Chart Header</Strong> Lorem Ipsum
         </GridCell>

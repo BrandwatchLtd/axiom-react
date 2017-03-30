@@ -115,11 +115,11 @@ export default class PositionExample extends Component {
 
         <Snippet>
           <Grid
-              hAlign="middle"
+              horizontalAlign="middle"
               responsive={ false }
               snippetIgnore={ true }
               style={ { minHeight: 180 } }
-              vAlign="middle">
+              verticalAlign="middle">
             <GridCell shrink={ true } snippetIgnore={ true }>
               <Position isVisible={ isVisble } offset={ offset } position={ position }>
                 <PositionTarget>

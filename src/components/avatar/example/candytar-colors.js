@@ -20,7 +20,7 @@ export default class AvatarExample extends Component {
     return (
       <Example name="Candytar colors">
         <Snippet>
-          <Grid snippetIgnore={ true } vAlign="end">
+          <Grid snippetIgnore={ true } verticalAlign="end">
             { color.values.map((color) =>
               <GridCell key={ color } shrink={ true } snippetIgnore={ true }>
                 <Candytar color={ color } size="3rem" />

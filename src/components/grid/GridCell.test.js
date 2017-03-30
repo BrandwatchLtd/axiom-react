@@ -57,10 +57,10 @@ describe('GridCell', () => {
     });
   });
 
-  describe('renders with vAlign', () => {
-    ['start', 'middle', 'end'].forEach((vAlign) => {
-      it(vAlign, () => {
-        const component = getComponent({ vAlign });
+  describe('renders with verticalAlign', () => {
+    ['start', 'middle', 'end'].forEach((verticalAlign) => {
+      it(verticalAlign, () => {
+        const component = getComponent({ verticalAlign });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });

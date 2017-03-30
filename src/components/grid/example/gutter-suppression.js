@@ -8,7 +8,7 @@ export default class GridExample extends Component {
       <Example name="Gutter suppression">
         <Heading>No vertical gutters</Heading>
         <Snippet>
-          <Grid vGutters={ false }>
+          <Grid verticalGutters={ false }>
             <GridCell snippetReplace={ true }>
               <DemoBox>Fit / Full</DemoBox>
             </GridCell>
@@ -21,7 +21,7 @@ export default class GridExample extends Component {
 
         <Heading>No horizontal gutters</Heading>
         <Snippet>
-          <Grid hGutters={ false }>
+          <Grid horizontalGutters={ false }>
             <GridCell snippetReplace={ true }>
               <DemoBox>Fit / Full</DemoBox>
             </GridCell>

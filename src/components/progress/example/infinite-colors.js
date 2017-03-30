@@ -7,7 +7,7 @@ export default class ProgressExample extends Component {
     return (
       <Example name="ProgressInfinite colors">
         <Snippet>
-          <Grid snippetIgnore={ true } vAlign="middle">
+          <Grid snippetIgnore={ true } verticalAlign="middle">
             <GridCell shrink={ true } snippetIgnore={ true }>
               <ProgressInfinite color="subtle" />
             </GridCell>

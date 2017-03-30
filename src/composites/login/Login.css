@@ -10,7 +10,7 @@
   flex: 1 1 auto;
   flex-direction: column;
   height: 100%;
-  padding: 0 var(--page-padding-h);
+  padding: 0 var(--page-padding-horizontal);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

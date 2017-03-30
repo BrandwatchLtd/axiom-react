@@ -2,8 +2,8 @@
 :root {
   --spacing-grid-size: 0.25rem;
 
-  --page-padding-h: calc(var(--spacing-grid-size) * 6);
-  --page-padding-v: calc(var(--spacing-grid-size) * 6);
+  --page-padding-horizontal: calc(var(--spacing-grid-size) * 6);
+  --page-padding-vertical: calc(var(--spacing-grid-size) * 6);
 
   --component-line-height: 1rem;
 

@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--page-padding-v) var(--page-padding-h);
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
   background-image:
     repeating-linear-gradient(
       0deg,
@@ -36,7 +36,7 @@
 
 .dm-labs__canvas {
   max-width: 100%;
-  padding: var(--page-padding-v) var(--page-padding-h);
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
   background-color: var(--color-context-background);
   filter: drop-shadow(var(--drop-shadow));
 }

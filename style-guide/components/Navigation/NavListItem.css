@@ -3,7 +3,7 @@
 
 .dm-nav__link {
   display: block;
-  padding: var(--spacing-grid-size) var(--page-padding-h);
+  padding: var(--spacing-grid-size) var(--page-padding-horizontal);
   color: inherit;
   text-decoration: inherit;
   cursor: pointer;
@@ -21,6 +21,6 @@
   list-style: none;
 
   & .dm-nav__list-item .dm-nav__link {
-    padding-left: calc(var(--page-padding-h) + calc(var(--spacing-grid-size) * 3));
+    padding-left: calc(var(--page-padding-horizontal) + calc(var(--spacing-grid-size) * 3));
   }
 }

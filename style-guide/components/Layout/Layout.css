@@ -28,7 +28,7 @@
   justify-content: center;
   width: var(--sg-sidebar-width);
   height: var(--sg-header-height-lg);
-  padding: 0 var(--page-padding-h);
+  padding: 0 var(--page-padding-horizontal);
   border-right: var(--sg-sidebar-border-width) solid var(--color-context-border);
   border-bottom: var(--sg-sidebar-border-width) solid transparent;
   background-color: var(--color-context-background);
@@ -56,7 +56,7 @@
 
 .dm-layout__sidebar-footer {
   flex: 0 1 auto;
-  padding: var(--page-padding-v) var(--page-padding-h);
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }
 
 .dm-layout__main {
