@@ -36,7 +36,7 @@ export default class Word extends Component {
   };
 
   render() {
-    const { color, font, fontSize, text, textAnchor, x, y } = this.props;
+    const { color, font, fontSize, text, textAnchor, x, y, ...rest } = this.props;
     const classes = classnames('ax-word', {
       [`ax-word--${color}`]: color,
     });
@@ -47,7 +47,7 @@ export default class Word extends Component {
     };
 
     return (
-      <text
+      <text { ...rest }
           className={ classes }
           style={ style }
           textAnchor={ textAnchor }

@@ -13,10 +13,11 @@ export default class WordCloud extends Component {
       children,
       height,
       width,
+      ...rest
     } = this.props;
 
     return (
-      <Base
+      <Base { ...rest }
           Component="svg"
           className="ax-word-cloud"
           height="100%"
