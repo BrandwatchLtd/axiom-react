@@ -21,8 +21,9 @@ export default class TextInput extends Component {
     size: 'medium',
   };
 
-  componentWillMount() {
-    this.setState({ hasFocus: false });
+  constructor(props) {
+    super(props);
+    this.state = { hasFocus: false };
   }
 
   handleOnBlur() {

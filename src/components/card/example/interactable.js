@@ -4,8 +4,9 @@ import { Card, CardList } from 'bw-axiom';
 import CardContent from './CardContent';
 
 export default class CardExample extends Component {
-  componentWillMount() {
-    this.setState({ active: undefined });
+  constructor(props) {
+    super(props);
+    this.state = { active: undefined };
   }
 
   render() {

@@ -15,8 +15,11 @@ export default class Tabset extends Component {
     size: 'medium',
   };
 
-  componentWillMount() {
-    this.activateTab(this.props.activeTabIndex);
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTabIndex: props.activeTabIndex || 0,
+    };
   }
 
   componentWillReceiveProps(nextProps) {

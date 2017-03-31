@@ -3,11 +3,12 @@ import { Example, Snippet } from 'style-guide';
 import { Menu, MenuItem } from 'bw-axiom';
 
 export default class MenuExample extends Component {
-  componentWillMount() {
-    this.setState({
+  constructor(props) {
+    super(props);
+    this.state = {
       activeIndex: 0,
       disabledIndex: 1,
-    });
+    };
   }
 
   render() {
