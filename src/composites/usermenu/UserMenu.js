@@ -15,7 +15,6 @@ import {
   Link,
   Paragraph,
 } from 'bw-axiom';
-import './UserMenu.css';
 
 function stringToColor(string) {
   return (colors) =>  colors[
@@ -68,11 +67,7 @@ export default class UserMenu extends Component {
               </Grid>
             </ContextBox>
 
-            { do { if (children) {
-              <div className="ax-user-menu__content">
-                { children }
-              </div>;
-            } } }
+            { children }
           </Context>
         </DropdownMenu>
       </Dropdown>

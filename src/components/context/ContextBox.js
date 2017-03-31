@@ -19,9 +19,7 @@ export default class ContextBox extends Component {
     );
 
     return (
-      <Base { ...rest } className={ classes }>
-
-      </Base>
+      <Base { ...rest } className={ classes } />
     );
   }
 }

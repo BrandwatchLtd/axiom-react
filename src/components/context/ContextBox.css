@@ -1,4 +1,41 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
 @import './vars';
 
-.ax-context-box--padding-small { padding: var(--cmp-context-padding-small); }
-.ax-context-box--padding-large { padding: var(--cmp-context-padding-large); }
+.ax-context-box {
+  position: relative;
+}
+
+.ax-context-box--padding-small {
+  padding: var(--cmp-context-padding-small);
+
+  & + .ax-context-box::before {
+    right: var(--cmp-context-padding-small);
+    left: var(--cmp-context-padding-small);
+  }
+}
+
+.ax-context-box--padding-large {
+  padding: var(--cmp-context-padding-large);
+
+  & + .ax-context-box::before {
+    right: var(--cmp-context-padding-large);
+    left: var(--cmp-context-padding-large);
+  }
+}
+
+.ax-context-box + .ax-context-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-bottom-width: var(--component-border-width);
+  border-bottom-style: solid;
+}
+
+.ax-context--dark .ax-context-box::before {
+  border-bottom-color: var(--color-theme-dark-border);
+}
+
+.ax-context--light .ax-context-box::before {
+  border-bottom-color: var(--color-theme-light-border);
+}

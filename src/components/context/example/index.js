@@ -3,4 +3,5 @@ module.exports = [
   require('./menu').default,
   require('./tip').default,
   require('./theme').default,
+  require('./combinations').default,
 ];
