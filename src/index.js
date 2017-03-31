@@ -93,6 +93,8 @@ export { default as ChartPanel } from './charts/chart-panel/ChartPanel';
 export { default as ChartPanels } from './charts/chart-panel/ChartPanels';
 export { default as ChartPanelHeader } from './charts/chart-panel/ChartPanelHeader';
 export { default as ChartPanelBody } from './charts/chart-panel/ChartPanelBody';
+export { default as DataPoint } from './charts/data-point/DataPoint';
+export { default as DataPoints } from './charts/data-point/DataPoints';
 export { default as Word } from './charts/wordcloud/Word';
 export { default as WordCloud } from './charts/wordcloud/WordCloud';
 

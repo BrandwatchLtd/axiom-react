@@ -1,6 +1,7 @@
 module.exports = {
   '/charts/chart-heading': require('../../src/charts/chart-heading/example'),
   '/charts/chart-panel': require('../../src/charts/chart-panel/example'),
+  '/charts/data-point': require('../../src/charts/data-point/example'),
   '/charts/wordcloud': require('../../src/charts/wordcloud/example'),
   '/components/alert': require('../../src/components/alert/example'),
   '/components/avatar': require('../../src/components/avatar/example'),

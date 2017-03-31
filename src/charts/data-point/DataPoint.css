@@ -1,0 +1,21 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+.ax-data-point {
+  color: inherit;
+  fill: currentColor;
+  stroke: var(--color-context-background);
+}
+
+.ax-data-point--rose { color: var(--color-brand-rose); }
+.ax-data-point--pink { color: var(--color-brand-pink); }
+.ax-data-point--purple { color: var(--color-brand-purple); }
+.ax-data-point--lilac { color: var(--color-brand-lilac); }
+.ax-data-point--blue { color: var(--color-brand-blue); }
+.ax-data-point--teal { color: var(--color-brand-teal); }
+.ax-data-point--green { color: var(--color-brand-green); }
+.ax-data-point--chartreuse { color: var(--color-brand-chartreuse); }
+.ax-data-point--amber { color: var(--color-brand-amber); }
+.ax-data-point--orange { color: var(--color-brand-orange); }
+.ax-data-point--brown { color: var(--color-brand-brown); }
+.ax-data-point--grey { color: var(--color-brand-grey); }
