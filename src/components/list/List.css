@@ -10,6 +10,7 @@
     margin: 0 calc(var(--spacing-grid-size) * 2) 0 0;
     padding: 0 calc(var(--spacing-grid-size) * 2) 0 0;
     border-right: var(--component-border-width) solid var(--color-context-border);
+    vertical-align: middle;
 
     &:last-child  {
       margin-right: 0;
