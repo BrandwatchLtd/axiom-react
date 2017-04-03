@@ -12,7 +12,7 @@
   transform: translateX(-100%);
   border-right: var(--component-border-width) solid var(--color-ui-light-0);
   background-color: var(--color-ui-light-2);
-  color: var(--color-ui-dark-0);
+  color: var(--color-ui-dark-2);
   overflow: auto;
   z-index: calc(var(--z-index-platform) - 1);
   transition-property: transform;

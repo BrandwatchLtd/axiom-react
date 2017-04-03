@@ -46,17 +46,17 @@
 .ax-label--white {
   border-color: var(--color-context-border-subtle);
   background-color: var(--color-ui-white);
-  color: var(--color-ui-dark-0);
+  color: var(--color-theme-light-text);
 }
 
 .ax-label--success {
   border-color: transparent;
   background-color: var(--color-ui-success);
-  color: var(--color-ui-light-2);
+  color: var(--color-theme-dark-text);
 }
 
 .ax-label--error {
   border-color: transparent;
   background-color: var(--color-ui-error);
-  color: var(--color-ui-light-2);
+  color: var(--color-theme-dark-text);
 }
