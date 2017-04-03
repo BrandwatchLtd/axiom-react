@@ -20,9 +20,9 @@ export default class DataPointExample extends Component {
     return (
       <Example name="Single DataPoint">
         <Snippet>
-          <Grid snippetIgnore="ignore">
+          <Grid gutters="tiny" responsive={ false } snippetIgnore="ignore">
             { color.values.map((color) =>
-              <GridCell key={ color } snippetIgnore="ignore">
+              <GridCell key={ color } shrink={ true } snippetIgnore="ignore">
                 <DataPoints height="2rem" snippetIgnore="ignore">
                   <DataPoint color={ color } />
                 </DataPoints>

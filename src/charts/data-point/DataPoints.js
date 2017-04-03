@@ -1,5 +1,6 @@
 import React, { Children, Component, PropTypes, cloneElement } from 'react';
 import { Base } from 'bw-axiom';
+import './DataPoints.css';
 
 const VB_HEIGHT = 24;
 const DATA_POINT_GROUP_SHIFT = 8;
