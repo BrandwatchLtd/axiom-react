@@ -3,7 +3,7 @@
 
 .dm-doc-api__code {
   padding: var(--spacing-grid-size) calc(var(--spacing-grid-size) * 2);
-  background-color: var(--color-ui-light-2);
+  background-color: var(--color-ui-light--light);
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   white-space: normal;
 }

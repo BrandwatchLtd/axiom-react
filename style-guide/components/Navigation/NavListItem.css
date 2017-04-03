@@ -10,7 +10,7 @@
 }
 
 .dm-nav__list-item--active .dm-nav__link {
-  color: var(--color-ui-primary-1);
+  color: var(--color-ui-primary);
 }
 
 .dm-nav__list-item--open {

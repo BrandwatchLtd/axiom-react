@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--color-ui-light-2);
+  color: var(--color-ui-light--light);
   line-height: 0;
 }
 
@@ -28,5 +28,5 @@
 .ax-icon-indicator--success { background-color: var(--color-ui-success); }
 .ax-icon-indicator--warning { background-color: var(--color-ui-warning); }
 .ax-icon-indicator--error   { background-color: var(--color-ui-error); }
-.ax-icon-indicator--info    { background-color: var(--color-ui-primary-2); }
+.ax-icon-indicator--info    { background-color: var(--color-ui-primary--light); }
 .ax-icon-indicator--subtle  { background-color: var(--color-context-background-subtle); }

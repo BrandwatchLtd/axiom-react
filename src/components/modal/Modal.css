@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: color(var(--color-ui-dark-2) alpha(30%));
+  background-color: color(var(--color-ui-dark--light) alpha(30%));
   z-index: var(--z-index-modal);
 }
 

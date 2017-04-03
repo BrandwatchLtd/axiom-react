@@ -41,13 +41,13 @@
 
 /* stylelint-disable no-descending-specificity */
 .ax-menu__item:hover .ax-menu__item-button {
-  color: var(--color-ui-primary-2);
+  color: var(--color-ui-primary--light);
   cursor: pointer;
 }
 
 .ax-menu__item--active .ax-menu__item-button,
 .ax-menu__item--active:hover .ax-menu__item-button {
-  border-bottom-color: var(--color-ui-primary-0);
+  border-bottom-color: var(--color-ui-primary--dark);
   color: inherit;
 }
 

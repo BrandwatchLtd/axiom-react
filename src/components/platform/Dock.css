@@ -10,7 +10,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: var(--color-ui-dark-2);
+  background-color: var(--color-ui-dark--light);
   list-style: none;
   z-index: var(--z-index-platform);
 }

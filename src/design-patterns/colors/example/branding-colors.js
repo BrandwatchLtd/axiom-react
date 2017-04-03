@@ -23,10 +23,10 @@ export default class ColorsExample extends Component {
       <Example name="Branding">
         { brandColors.map((brandColor) =>
           <ColorSwatch colors={ [
-            `${brandColor}-0`,
-            `${brandColor}-1`,
-            `${brandColor}-2`,
-          ] } />
+            `${brandColor}--dark`,
+            `${brandColor}`,
+            `${brandColor}--light`,
+          ] } key={ brandColor }/>
         ) }
 
       </Example>

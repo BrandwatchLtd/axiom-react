@@ -56,17 +56,17 @@ code[class*='language-'] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: var(--color-ui-primary-2);
+  color: var(--color-ui-primary--light);
 }
 
 .token.function {
-  color: var(--color-brand-pink-1);
+  color: var(--color-brand-pink);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: var(--color-brand-amber-1);
+  color: var(--color-brand-amber);
 }
 
 .token.important,

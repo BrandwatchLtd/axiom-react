@@ -9,11 +9,11 @@
 
 .ax-alert {
   padding: var(--cmp-alert-padding-vertical) var(--cmp-alert-padding-horizontal);
-  color: var(--color-ui-light-2);
+  color: var(--color-ui-light--light);
   font-weight: var(--font-weight-medium);
 }
 
 .ax-alert--success { background-color: var(--color-ui-success); }
 .ax-alert--warning { background-color: var(--color-ui-warning); }
 .ax-alert--error   { background-color: var(--color-ui-error); }
-.ax-alert--info    { background-color: var(--color-ui-primary-2); }
+.ax-alert--info    { background-color: var(--color-ui-primary--light); }

@@ -5,7 +5,7 @@
   --cmp-input-checkbox-size: calc(var(--spacing-grid-size) * 4);
 
   --cmp-input-border-color: var(--color-context-border);
-  --cmp-input-border-color-focused: color(var(--color-ui-primary-1) alpha(50%));
+  --cmp-input-border-color-focused: color(var(--color-ui-primary) alpha(50%));
   --cmp-input-border-color-valid: color(var(--color-ui-success) alpha(40%));
   --cmp-input-border-color-invalid: color(var(--color-ui-error) alpha(25%));
 
@@ -13,6 +13,6 @@
   --cmp-input-background-color-disabled: var(--color-context-background-disabled);
 
   --cmp-input-color-placeholder: var(--color-context-text-disabled);
-  --cmp-input-color-checked: var(--color-ui-primary-1);
+  --cmp-input-color-checked: var(--color-ui-primary);
   --cmp-input-color-invalid: var(--color-ui-error);
 }

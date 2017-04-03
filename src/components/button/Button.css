@@ -70,16 +70,16 @@
 
 .ax-button--primary {
   border-color: transparent;
-  background-color: var(--color-ui-primary-1);
-  color: var(--color-ui-light-2);
+  background-color: var(--color-ui-primary);
+  color: var(--color-ui-light--light);
 
   /* Pattern obscurity */
   &.ax-button--joined:not(:first-child) {
-    border-left-color: color(var(--color-ui-light-1) alpha(45%));
+    border-left-color: color(var(--color-ui-light) alpha(45%));
   }
 
-  &:hover  { background-color: var(--color-ui-primary-2); }
-  &:active { background-color: var(--color-ui-primary-0); }
+  &:hover  { background-color: var(--color-ui-primary--light); }
+  &:active { background-color: var(--color-ui-primary--dark); }
 
   &:disabled {
     background-color: var(--color-context-background-disabled);
@@ -89,7 +89,7 @@
 
 .ax-button--secondary {
   border-color: var(--color-context-border);
-  color: var(--color-ui-primary-1);
+  color: var(--color-ui-primary);
 
   &:hover,
   &:active {
@@ -97,8 +97,8 @@
     background-color: var(--color-context-background-subtle);
   }
 
-  &:hover  { color: var(--color-ui-primary-2); }
-  &:active { color: var(--color-ui-primary-0); }
+  &:hover  { color: var(--color-ui-primary--light); }
+  &:active { color: var(--color-ui-primary--dark); }
 
   &:disabled {
     border-color: var(--color-context-border);
@@ -108,10 +108,10 @@
 }
 
 .ax-button--tertiary {
-  color: var(--color-ui-primary-1);
+  color: var(--color-ui-primary);
 
-  &:hover    { color: var(--color-ui-primary-2); }
-  &:active   { color: var(--color-ui-primary-0); }
+  &:hover    { color: var(--color-ui-primary--light); }
+  &:active   { color: var(--color-ui-primary--dark); }
   &:disabled { color: var(--color-context-text-disabled); }
 }
 

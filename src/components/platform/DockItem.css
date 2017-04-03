@@ -7,24 +7,24 @@
   flex-direction: column;
   width: var(--cmp-platform-dock-size);
   height: var(--cmp-platform-dock-size);
-  color: var(--color-ui-light-2);
+  color: var(--color-ui-light--light);
   transition-property: background-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
   &:hover {
-    color: var(--color-ui-primary-2);
+    color: var(--color-ui-primary--light);
   }
 
   &:active {
-    color: var(--color-ui-primary-1);
+    color: var(--color-ui-primary);
   }
 }
 
 .ax-platform__dock-item--active,
 .ax-platform__dock-item--active:hover {
-  background-color: var(--color-ui-primary-1);
-  color: var(--color-ui-light-2);
+  background-color: var(--color-ui-primary);
+  color: var(--color-ui-light--light);
 }
 
 .ax-platform__dock-item-link {

@@ -6,15 +6,15 @@ import ColorSwatch from './ColorSwatch';
 export default class ColorsExample extends Component {
   render() {
     const darkGreys = [
-      'ui-dark-0',
-      'ui-dark-1',
-      'ui-dark-2',
+      'ui-dark--dark',
+      'ui-dark',
+      'ui-dark--light',
     ];
 
     const lightGreys = [
-      'ui-light-0',
-      'ui-light-1',
-      'ui-light-2',
+      'ui-light--dark',
+      'ui-light',
+      'ui-light--light',
     ];
 
     const white = [
@@ -22,9 +22,9 @@ export default class ColorsExample extends Component {
     ];
 
     const primaries = [
-      'ui-primary-0',
-      'ui-primary-1',
-      'ui-primary-2',
+      'ui-primary--dark',
+      'ui-primary',
+      'ui-primary--light',
     ];
 
     const validities = [

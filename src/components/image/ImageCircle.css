@@ -26,8 +26,8 @@
   justify-content: center;
   opacity: 0;
   border-radius: 50%;
-  background-color: color(var(--color-ui-light-2) alpha(80%));
-  color: var(--color-ui-primary-1);
+  background-color: color(var(--color-ui-light--light) alpha(80%));
+  color: var(--color-ui-primary);
   transition-property: opacity, background-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
@@ -61,7 +61,7 @@
 
 .ax-image-circle:active {
   & .ax-image-circle__icon {
-    background-color: color(var(--color-ui-primary-1) alpha(80%));
-    color: var(--color-ui-light-2);
+    background-color: color(var(--color-ui-primary) alpha(80%));
+    color: var(--color-ui-light--light);
   }
 }

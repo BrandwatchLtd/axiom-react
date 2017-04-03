@@ -24,8 +24,8 @@
   }
 
   &:hover:not(:disabled) {
-    background-color: var(--color-ui-primary-2);
-    color: var(--color-ui-light-2);
+    background-color: var(--color-ui-primary--light);
+    color: var(--color-ui-light--light);
     cursor: pointer;
   }
 }

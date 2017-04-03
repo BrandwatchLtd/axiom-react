@@ -46,7 +46,7 @@
   border-color: var(--color-context-border);
   border-bottom-color: transparent;
   background-color: var(--color-context-background);
-  color: var(--color-ui-primary-0);
+  color: var(--color-ui-primary--dark);
 }
 
 .ax-tabset__list-item--disabled {
@@ -65,7 +65,7 @@
   transition-timing-function: var(--transition-function);
 
   &:hover {
-    color: var(--color-ui-primary-1);
+    color: var(--color-ui-primary);
     cursor: pointer;
   }
 
