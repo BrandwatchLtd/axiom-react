@@ -60,13 +60,13 @@ code[class*='language-'] {
 }
 
 .token.function {
-  color: var(--color-brand-pink);
+  color: var(--color-brand-pink-1);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: var(--color-brand-amber);
+  color: var(--color-brand-amber-1);
 }
 
 .token.important,

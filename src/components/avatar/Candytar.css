@@ -7,83 +7,83 @@
 .ax-candytar--rose {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-rose);
+    fill: var(--color-brand-rose-1);
   }
 }
 
 .ax-candytar--pink {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-pink);
+    fill: var(--color-brand-pink-1);
   }
 }
 
 .ax-candytar--purple {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-purple);
+    fill: var(--color-brand-purple-1);
   }
 }
 
 .ax-candytar--lilac {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-lilac);
+    fill: var(--color-brand-lilac-1);
   }
 }
 
 .ax-candytar--blue {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-blue);
+    fill: var(--color-brand-blue-1);
   }
 }
 
 .ax-candytar--teal {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-teal);
+    fill: var(--color-brand-teal-1);
   }
 }
 
 .ax-candytar--green {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-green);
+    fill: var(--color-brand-green-1);
   }
 }
 
 .ax-candytar--chartreuse {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-chartreuse);
+    fill: var(--color-brand-chartreuse-1);
   }
 }
 
 .ax-candytar--amber {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-amber);
+    fill: var(--color-brand-amber-1);
   }
 }
 
 .ax-candytar--orange {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-orange);
+    fill: var(--color-brand-orange-1);
   }
 }
 
 .ax-candytar--brown {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-brown);
+    fill: var(--color-brand-brown-1);
   }
 }
 
 .ax-candytar--grey {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-grey);
+    fill: var(--color-brand-grey-1);
   }
 }

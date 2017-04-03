@@ -15,6 +15,9 @@ export default class ColorsExample extends Component {
       'ui-light-0',
       'ui-light-1',
       'ui-light-2',
+    ];
+
+    const white = [
       'ui-white',
     ];
 
@@ -40,6 +43,7 @@ export default class ColorsExample extends Component {
           <GridCell>
             <ColorSwatch colors={ darkGreys } />
             <ColorSwatch colors={ lightGreys } />
+            <ColorSwatch colors={ white } />
           </GridCell>
 
           <GridCell>

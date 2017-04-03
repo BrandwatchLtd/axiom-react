@@ -32,18 +32,18 @@
 .ax-badge--highlight .ax-badge__background { background-color: var(--color-ui-highlight); }
 .ax-badge--success .ax-badge__background { background-color: var(--color-ui-success); }
 .ax-badge--error .ax-badge__background { background-color: var(--color-ui-error); }
-.ax-badge--rose .ax-badge__background { background-color: var(--color-brand-rose); }
-.ax-badge--pink .ax-badge__background { background-color: var(--color-brand-pink); }
-.ax-badge--purple .ax-badge__background { background-color: var(--color-brand-purple); }
-.ax-badge--lilac .ax-badge__background { background-color: var(--color-brand-lilac); }
-.ax-badge--blue .ax-badge__background { background-color: var(--color-brand-blue); }
-.ax-badge--teal .ax-badge__background { background-color: var(--color-brand-teal); }
-.ax-badge--green .ax-badge__background { background-color: var(--color-brand-green); }
-.ax-badge--chartreuse .ax-badge__background { background-color: var(--color-brand-chartreuse); }
-.ax-badge--amber .ax-badge__background { background-color: var(--color-brand-amber); }
-.ax-badge--orange .ax-badge__background { background-color: var(--color-brand-orange); }
-.ax-badge--brown .ax-badge__background { background-color: var(--color-brand-brown); }
-.ax-badge--grey .ax-badge__background { background-color: var(--color-brand-grey); }
+.ax-badge--rose .ax-badge__background { background-color: var(--color-brand-rose-1); }
+.ax-badge--pink .ax-badge__background { background-color: var(--color-brand-pink-1); }
+.ax-badge--purple .ax-badge__background { background-color: var(--color-brand-purple-1); }
+.ax-badge--lilac .ax-badge__background { background-color: var(--color-brand-lilac-1); }
+.ax-badge--blue .ax-badge__background { background-color: var(--color-brand-blue-1); }
+.ax-badge--teal .ax-badge__background { background-color: var(--color-brand-teal-1); }
+.ax-badge--green .ax-badge__background { background-color: var(--color-brand-green-1); }
+.ax-badge--chartreuse .ax-badge__background { background-color: var(--color-brand-chartreuse-1); }
+.ax-badge--amber .ax-badge__background { background-color: var(--color-brand-amber-1); }
+.ax-badge--orange .ax-badge__background { background-color: var(--color-brand-orange-1); }
+.ax-badge--brown .ax-badge__background { background-color: var(--color-brand-brown-1); }
+.ax-badge--grey .ax-badge__background { background-color: var(--color-brand-grey-1); }
 
 .ax-badge--full {
   width: 100%;
