@@ -3,7 +3,11 @@
 exports[`DataPoints it renders with type grouped 1`] = `
 <svg
   className="ax-data-points"
-  height="1rem"
+  style={
+    Object {
+      "height": "1rem",
+    }
+  }
   viewBox="0 0 40 24"
 >
   <circle
@@ -33,7 +37,11 @@ exports[`DataPoints it renders with type grouped 1`] = `
 exports[`DataPoints it renders with type stacked 1`] = `
 <svg
   className="ax-data-points"
-  height="1rem"
+  style={
+    Object {
+      "height": "1rem",
+    }
+  }
   viewBox="0 0 24 24"
 >
   <circle
@@ -63,7 +71,11 @@ exports[`DataPoints it renders with type stacked 1`] = `
 exports[`DataPoints renders with defaultProps 1`] = `
 <svg
   className="ax-data-points"
-  height="1rem"
+  style={
+    Object {
+      "height": "1rem",
+    }
+  }
   viewBox="0 0 24 24"
 >
   <circle

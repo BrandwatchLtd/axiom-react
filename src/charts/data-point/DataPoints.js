@@ -42,14 +42,16 @@ export default class DataPoints extends Component {
   };
 
   render() {
-    const { children, type, ...rest } = this.props;
+    const { children, height, type, ...rest } = this.props;
     const arrayChildren = Children.toArray(children);
     const vbWidth = getWidth(type, arrayChildren.length);
+    const style = { height };
 
     return (
       <Base { ...rest }
           Component="svg"
           className="ax-data-points"
+          style={ style }
           viewBox={ `0 0 ${vbWidth} ${VB_HEIGHT}` }>
         { arrayChildren.map((child, n) =>
           cloneElement(child, {
