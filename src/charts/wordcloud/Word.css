@@ -1,8 +1,19 @@
+@import '../../materials/animations';
 @import '../../materials/colors';
 
+@keyframes appear-word {
+  from  { opacity: 0; }
+  to    { opacity: 1; }
+}
+
 .ax-word {
+  opacity: 0;
   color: inherit;
   fill: currentColor;
+  animation-name: appear-word;
+  animation-duration: var(--transition-time-slow);
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--transition-function);
 }
 
 .ax-word--rose { color: var(--color-brand-rose); }

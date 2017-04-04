@@ -4,6 +4,7 @@ import './Word.css';
 
 export default class Word extends Component {
   static propTypes = {
+    animationDelay: PropTypes.string,
     color: PropTypes.oneOf([
       'rose',
       'pink',
@@ -32,18 +33,31 @@ export default class Word extends Component {
   };
 
   static defaultProps = {
+    animationDelay: '0',
     textAnchor: 'middle',
   };
 
   render() {
-    const { color, font, fontSize, text, textAnchor, x, y, ...rest } = this.props;
+    const {
+      animationDelay,
+      color,
+      font,
+      fontSize,
+      text,
+      textAnchor,
+      x,
+      y,
+      ...rest
+    } = this.props;
+
     const classes = classnames('ax-word', {
       [`ax-word--${color}`]: color,
     });
 
     const style = {
       fontFamily: font,
-      fontSize: fontSize,
+      fontSize,
+      animationDelay,
     };
 
     return (

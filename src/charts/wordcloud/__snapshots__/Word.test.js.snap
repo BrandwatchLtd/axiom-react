@@ -5,6 +5,7 @@ exports[`Word renders with color amber 1`] = `
   className="ax-word ax-word--amber"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -19,6 +20,7 @@ exports[`Word renders with color blue 1`] = `
   className="ax-word ax-word--blue"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -33,6 +35,7 @@ exports[`Word renders with color brown 1`] = `
   className="ax-word ax-word--brown"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -47,6 +50,7 @@ exports[`Word renders with color chartreuse 1`] = `
   className="ax-word ax-word--chartreuse"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -61,6 +65,7 @@ exports[`Word renders with color green 1`] = `
   className="ax-word ax-word--green"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -75,6 +80,7 @@ exports[`Word renders with color grey 1`] = `
   className="ax-word ax-word--grey"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -89,6 +95,7 @@ exports[`Word renders with color lilac 1`] = `
   className="ax-word ax-word--lilac"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -103,6 +110,7 @@ exports[`Word renders with color orange 1`] = `
   className="ax-word ax-word--orange"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -117,6 +125,7 @@ exports[`Word renders with color pink 1`] = `
   className="ax-word ax-word--pink"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -131,6 +140,7 @@ exports[`Word renders with color purple 1`] = `
   className="ax-word ax-word--purple"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -145,6 +155,7 @@ exports[`Word renders with color rose 1`] = `
   className="ax-word ax-word--rose"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -159,6 +170,7 @@ exports[`Word renders with color teal 1`] = `
   className="ax-word ax-word--teal"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }
@@ -173,6 +185,7 @@ exports[`Word renders with defaultProps 1`] = `
   className="ax-word"
   style={
     Object {
+      "animationDelay": "0",
       "fontFamily": undefined,
       "fontSize": undefined,
     }

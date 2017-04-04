@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Children, cloneElement, Component, PropTypes } from 'react';
 import { Base } from 'bw-axiom';
 
 export default class WordCloud extends Component {
@@ -24,7 +24,11 @@ export default class WordCloud extends Component {
           version="1.1"
           viewBox={ `0 0 ${width} ${height}` }
           width="100%">
-        { children }
+        { Children.map(children, (child, index) =>
+          cloneElement(child, {
+            animationDelay: `${ index * 10 + 200 }ms`,
+          })
+        ) }
       </Base>
     );
   }
