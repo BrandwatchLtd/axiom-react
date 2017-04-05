@@ -10,13 +10,13 @@ export default class TooltipTarget extends Component {
     showTooltip: PropTypes.func.isRequired,
   };
 
-  handleMouseEnter(...args) {
+  handleMouseMove(...args) {
     const { children } = this.props;
     const { showTooltip } = this.context;
-    const { onMouseEnter = () => {} } = children.props;
+    const { onMouseMove = () => {} } = children.props;
 
     showTooltip();
-    onMouseEnter(...args);
+    onMouseMove(...args);
   }
 
   handleMouseLeave(...args) {
@@ -33,7 +33,7 @@ export default class TooltipTarget extends Component {
 
     return cloneElement(children, {
       ...rest,
-      onMouseEnter: ::this.handleMouseEnter,
+      onMouseMove: ::this.handleMouseMove,
       onMouseLeave: ::this.handleMouseLeave,
     });
   }

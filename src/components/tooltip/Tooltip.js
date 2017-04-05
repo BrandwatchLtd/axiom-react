@@ -37,7 +37,11 @@ export default class Tooltip extends Component {
   }
 
   show() {
-    this.setState({ isVisible: true });
+    const { isVisible } = this.state;
+
+    if (!isVisible) {
+      this.setState({ isVisible: true });
+    }
   }
 
   hide() {
