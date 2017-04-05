@@ -71,6 +71,8 @@ export { default as RadioButtonGroup } from './components/form/RadioButtonGroup'
 export { default as Small } from './components/typography/Small';
 export { default as Strike } from './components/typography/Strike';
 export { default as Strong } from './components/typography/Strong';
+export { default as Subscript } from './components/typography/Subscript';
+export { default as Superscript } from './components/typography/Superscript';
 export { default as Tab } from './components/tabset/Tab';
 export { default as Tabset } from './components/tabset/Tabset';
 export { default as Table } from './components/table/Table';
