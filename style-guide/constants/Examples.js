@@ -22,6 +22,7 @@ module.exports = {
   '/components/menu': require('../../src/components/menu/example'),
   '/components/position': require('../../src/components/position/example'),
   '/components/progress': require('../../src/components/progress/example'),
+  '/components/reveal': require('../../src/components/reveal/example'),
   '/components/tabset': require('../../src/components/tabset/example'),
   '/components/table': require('../../src/components/table/example'),
   '/components/tooltip': require('../../src/components/tooltip/example'),

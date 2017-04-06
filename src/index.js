@@ -68,6 +68,7 @@ export { default as ProgressFinite } from './components/progress/ProgressFinite'
 export { default as ProgressInfinite } from './components/progress/ProgressInfinite';
 export { default as RadioButton } from './components/form/RadioButton';
 export { default as RadioButtonGroup } from './components/form/RadioButtonGroup';
+export { default as Reveal } from './components/reveal/Reveal';
 export { default as Small } from './components/typography/Small';
 export { default as Strike } from './components/typography/Strike';
 export { default as Strong } from './components/typography/Strong';
