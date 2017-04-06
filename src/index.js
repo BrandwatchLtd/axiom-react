@@ -100,4 +100,5 @@ export { default as WordCloud } from './charts/wordcloud/WordCloud';
 
 // Composites
 export { default as Login } from './composites/login/Login';
+export { default as Pagination } from './composites/pagination/Pagination';
 export { default as UserMenu } from './composites/usermenu/UserMenu';

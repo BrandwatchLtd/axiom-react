@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Composite: Pagination renders with defaultProps 1`] = `
+<div
+  className="ax-button-group__container ax-space--medium ax-text--center"
+>
+  <div
+    className="ax-button-group"
+  >
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <polygon
+          points="11 4 9.5 2.5 4 8 9.5 13.5 11 12 7 8"
+        />
+      </svg>
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      3
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      4
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      5
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      6
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      7
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8,10 C6.8954305,10 6,9.1045695 6,8 C6,6.8954305 6.8954305,6 8,6 C9.1045695,6 10,6.8954305 10,8 C10,9.1045695 9.1045695,10 8,10 Z M3,10 C1.8954305,10 1,9.1045695 1,8 C1,6.8954305 1.8954305,6 3,6 C4.1045695,6 5,6.8954305 5,8 C5,9.1045695 4.1045695,10 3,10 Z M13,10 C11.8954305,10 11,9.1045695 11,8 C11,6.8954305 11.8954305,6 13,6 C14.1045695,6 15,6.8954305 15,8 C15,9.1045695 14.1045695,10 13,10 Z"
+        />
+      </svg>
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      onClick={[Function]}
+    >
+      10
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <polygon
+          points="5 12 6.5 13.5 12 8 6.5 2.5 5 4 9 8"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Composite: Pagination renders without displayRange 1`] = `
+<div
+  className="ax-button-group__container ax-space--medium ax-text--center"
+>
+  <div
+    className="ax-button-group"
+  >
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <polygon
+          points="11 4 9.5 2.5 4 8 9.5 13.5 11 12 7 8"
+        />
+      </svg>
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <polygon
+          points="5 12 6.5 13.5 12 8 6.5 2.5 5 4 9 8"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Composite: Pagination renders without pages 1`] = `
+<div
+  className="ax-button-group__container ax-space--medium ax-text--center"
+>
+  <div
+    className="ax-button-group"
+  >
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <polygon
+          points="11 4 9.5 2.5 4 8 9.5 13.5 11 12 7 8"
+        />
+      </svg>
+    </button>
+    <button
+      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      >
+        <polygon
+          points="5 12 6.5 13.5 12 8 6.5 2.5 5 4 9 8"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

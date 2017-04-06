@@ -27,6 +27,7 @@ module.exports = {
   '/components/tooltip': require('../../src/components/tooltip/example'),
   '/components/typography': require('../../src/components/typography/example'),
   '/composites/login': require('../../src/composites/login/example'),
+  '/composites/pagination': require('../../src/composites/pagination/example'),
   '/composites/usermenu': require('../../src/composites/usermenu/example'),
   '/design-patterns/colors': require('../../src/design-patterns/colors/example'),
   '/design-patterns/date-and-time': require('../../src/design-patterns/date-and-time/example'),

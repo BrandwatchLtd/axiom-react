@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Composite: PaginationButton renders with active state 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Composite: PaginationButton renders with circular 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Composite: PaginationButton renders with defaultProps 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Composite: PaginationButton renders with onClick 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Composite: PaginationButton renders with page in double digits 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Composite: PaginationButton renders with page in single digits 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Composite: PaginationButton renders with page in treble digits 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary ax-button--stadium-small"
+  onClick={[Function]}
+/>
+`;
