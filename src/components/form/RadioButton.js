@@ -1,12 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ChedioButtox from './ChedioButtox';
 import './RadioButton.css';
 
 export default class RadioButton extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
   render() {
     return (
       <ChedioButtox

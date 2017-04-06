@@ -7,7 +7,6 @@ export default class ApiDocsDialog extends Component {
   static propTypes = {
     components: PropTypes.object.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    path: PropTypes.string.isRequired,
     onRequestClose: PropTypes.func.isRequired,
   };
 

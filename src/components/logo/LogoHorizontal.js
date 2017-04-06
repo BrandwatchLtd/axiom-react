@@ -1,12 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Logo from './Logo';
 
 export default class LogoHorizontal extends Component {
-  static propTypes = {
-    height: PropTypes.string,
-    width: PropTypes.string,
-  };
-
   render() {
     const viewBoxWidth = 150;
     const viewBoxHeight = 30;

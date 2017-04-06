@@ -9,7 +9,6 @@ export default class Snippet extends Component {
       PropTypes.node,
       PropTypes.arrayOf(PropTypes.node),
     ]),
-    renderSkip: PropTypes.bool,
   }
 
   render() {
