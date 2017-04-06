@@ -7,25 +7,40 @@
 
 .ax-context {
   position: relative;
-  filter: drop-shadow(var(--drop-shadow));
+
+  @supports (filter: drop-shadow(var(--drop-shadow))) {
+    filter: drop-shadow(var(--drop-shadow));
+  }
 }
 
 .ax-context__content {
+  border-width: var(--component-border-width);
+  border-style: solid;
   border-radius: var(--component-border-radius);
   overflow: hidden;
+
+  @supports (filter: drop-shadow(var(--drop-shadow))) {
+    border-width: 0;
+  }
 }
 
 .ax-context__arrow {
+  display: none;
   position: absolute;
   width: 0;
   height: 0;
   border-width: var(--cmp-context-tip-size);
   border-style: solid;
   pointer-events: none;
+
+  @supports (filter: drop-shadow(var(--drop-shadow))) {
+    display: block;
+  }
 }
 
 .ax-context--dark {
   & .ax-context__content {
+    border-color: var(--color-theme-dark-border);
     background-color: var(--color-theme-dark-background);
     color: var(--color-theme-dark-text);
   }
@@ -37,6 +52,7 @@
 
 .ax-context--light {
   & .ax-context__content {
+    border-color: var(--color-theme-light-border);
     background-color: var(--color-theme-light-background);
     color: var(--color-theme-light-text);
   }
