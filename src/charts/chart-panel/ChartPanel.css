@@ -27,3 +27,24 @@
   position: relative;
   flex: 1 1 auto;
 }
+
+.ax-chart-panel__body--vertical-start,
+.ax-chart-panel__body--vertical-middle,
+.ax-chart-panel__body--vertical-end,
+.ax-chart-panel__body--vertical-around,
+.ax-chart-panel__body--vertical-between,
+.ax-chart-panel__body--horizontal-start,
+.ax-chart-panel__body--horizontal-middle,
+.ax-chart-panel__body--horizontal-end {
+  display: flex;
+  flex-direction: column;
+}
+
+.ax-chart-panel__body--vertical-start { justify-content: flex-start; }
+.ax-chart-panel__body--vertical-middle { justify-content: center; }
+.ax-chart-panel__body--vertical-end { justify-content: flex-end; }
+.ax-chart-panel__body--vertical-around { justify-content: space-around; }
+.ax-chart-panel__body--vertical-between { justify-content: space-between; }
+.ax-chart-panel__body--horizontal-start { align-items: flex-start; }
+.ax-chart-panel__body--horizontal-middle { align-items: center; }
+.ax-chart-panel__body--horizontal-end { align-items: flex-end; }

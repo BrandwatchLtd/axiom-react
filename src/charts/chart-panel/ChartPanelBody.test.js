@@ -14,4 +14,24 @@ describe('ChartPanelBody', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  describe('renders with horizontalAlign', () => {
+    ['start', 'middle', 'end'].forEach((horizontalAlign) => {
+      it(horizontalAlign, () => {
+        const component = getComponent({ horizontalAlign });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  it('renders with verticalAlign', () => {
+    ['start', 'middle', 'end', 'around', 'between'].forEach((verticalAlign) => {
+      it(verticalAlign, () => {
+        const component = getComponent({ verticalAlign });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
 });

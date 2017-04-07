@@ -3,6 +3,33 @@
 exports[`ChartPanel renders with defaultProps 1`] = `
 <div
   className="ax-chart-panel"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
+>
+  <div
+    className="ax-chart-panel__header"
+  >
+    Lorem Ipsum
+  </div>
+  <div
+    className="ax-chart-panel__body"
+  >
+    Lorem Ipsum
+  </div>
+</div>
+`;
+
+exports[`ChartPanel renders with minHeight 1`] = `
+<div
+  className="ax-chart-panel"
+  style={
+    Object {
+      "minHeight": "10rem",
+    }
+  }
 >
   <div
     className="ax-chart-panel__header"

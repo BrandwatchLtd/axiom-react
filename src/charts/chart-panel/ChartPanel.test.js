@@ -17,4 +17,10 @@ describe('ChartPanel', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with minHeight', () => {
+    const component = getComponent({ minimumHeight: '10rem' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

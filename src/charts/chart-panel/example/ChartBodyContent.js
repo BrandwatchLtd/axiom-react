@@ -7,7 +7,7 @@ export default class ChartBodyContent extends Component {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '6rem',
+      height: '3rem',
     };
 
     return (

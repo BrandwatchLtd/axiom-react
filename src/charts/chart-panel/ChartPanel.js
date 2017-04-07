@@ -5,13 +5,14 @@ import './ChartPanel.css';
 export default class ChartPanel extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    minimumHeight: PropTypes.string,
   };
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, minimumHeight, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-chart-panel">
+      <Base { ...rest } className="ax-chart-panel" style={ { minHeight: minimumHeight } }>
         { children }
       </Base>
     );
