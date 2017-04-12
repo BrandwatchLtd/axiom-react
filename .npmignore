@@ -4,5 +4,7 @@ src
 static
 style-guide
 test
+deploy_key.enc
 npm-debug.log
+postcss.config.js
 yarn-error.log

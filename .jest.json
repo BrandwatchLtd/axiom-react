@@ -4,8 +4,5 @@
     "^bw-axiom$": "<rootDir>/src/index.js"
   },
   "moduleFileExtensions": ["js"],
-  "moduleDirectories": ["node_modules"],
-  "globals": {
-    "__INCLUDE_CSS__": false
-  }
+  "moduleDirectories": ["node_modules"]
 }
