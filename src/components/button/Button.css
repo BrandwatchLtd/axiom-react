@@ -188,3 +188,11 @@
   border-width: var(--component-border-width-huge);
 }
 
+.ax-button--stadium-small {
+  min-width: var(--component-round-size-small);
+  height: var(--component-round-size-small);
+  padding: 0 calc(var(--component-round-size-small) / 4);
+  border-width: var(--component-border-width-small);
+  border-radius: var(--component-round-size-small);
+  line-height: 0;
+}

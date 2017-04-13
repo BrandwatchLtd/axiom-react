@@ -55,6 +55,17 @@ describe('Button', () => {
     });
   });
 
+  describe('renders with stadium', () => {
+    ['small'].forEach((stadium) => {
+      it(stadium, () => {
+        const component = getComponent({ stadium });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+
   describe('with ButtonIcon', () => {
     it('adds space to start if first child', () => {
       const component = getComponent({}, [

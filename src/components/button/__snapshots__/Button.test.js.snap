@@ -96,6 +96,14 @@ exports[`Button renders with size small 1`] = `
 </button>
 `;
 
+exports[`Button renders with stadium small 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--stadium-small"
+>
+  Lorem Ipsum
+</button>
+`;
+
 exports[`Button renders with style primary 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"

@@ -17,6 +17,7 @@ export default class Button extends Component {
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    stadium: PropTypes.oneOf(['small']),
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   };
 
@@ -31,13 +32,14 @@ export default class Button extends Component {
 
   render() {
     const { joined } = this.context;
-    const { children, circular, style, size, full, ...rest } = this.props;
+    const { children, circular, stadium, style, size, full, ...rest } = this.props;
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && childrenArray[0].type === ButtonIcon;
     const classes = classnames('ax-button', {
       [`ax-button--${size}`]: size,
       [`ax-button--${style}`]: style,
       [`ax-button--circular-${circular}`]: circular,
+      [`ax-button--stadium-${stadium}`]: stadium,
       'ax-button--joined': joined,
       'ax-button--icon-only': !circular && iconOnly,
       'ax-button--full': full === true,
