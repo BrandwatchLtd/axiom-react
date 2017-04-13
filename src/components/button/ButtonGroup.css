@@ -4,6 +4,10 @@
   --cmp-button-spacing: calc(var(--spacing-grid-size) * 2);
 }
 
+.ax-button-group__container {
+  overflow: hidden;
+}
+
 .ax-button-group:not(.ax-button-group--joined) {
   margin-bottom: calc(var(--cmp-button-spacing) * -1);
 

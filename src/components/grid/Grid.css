@@ -8,6 +8,10 @@
   --cmp-grid-gutter-size-large: calc(var(--spacing-grid-size) * 8);
 }
 
+.ax-grid__container {
+  overflow: hidden;
+}
+
 .ax-grid {
   display: flex;
   flex-wrap: wrap;

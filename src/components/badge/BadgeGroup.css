@@ -4,6 +4,10 @@
   --cmp-badge-spacing: calc(var(--spacing-grid-size) * 2);
 }
 
+.ax-badge-group__container {
+  overflow: hidden;
+}
+
 .ax-badge-group {
   margin-bottom: calc(var(--cmp-badge-spacing) * -1);
 

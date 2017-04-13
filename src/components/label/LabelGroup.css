@@ -4,6 +4,10 @@
   --cmp-label-spacing: calc(var(--spacing-grid-size) * 2);
 }
 
+.ax-label-group__container {
+  overflow: hidden;
+}
+
 .ax-label-group {
   margin-bottom: calc(var(--cmp-label-spacing) * -1);
 
