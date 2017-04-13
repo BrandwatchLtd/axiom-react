@@ -29,19 +29,15 @@ export default class ProgressFinite extends Component {
     } = getArcProperties({ percent });
 
     return (
-      <RadialProgress { ...rest } className="ax-progress-finite">
-        <svg viewBox={ `0 0 ${ diameter } ${ diameter }` }>
-          <g transform={ `translate(${ diameter / 2 }, ${ diameter / 2 }) rotate(-90)` }>
-            <circle
-                className="ax-progress-finite__background"
-                r={ innerRadius }
-                style={ { strokeWidth } } />
-            <circle
-                className="ax-progress-finite__arc"
-                r={ innerRadius }
-                style={ { strokeDasharray, strokeDashoffset, strokeWidth } } />
-          </g>
-        </svg>
+      <RadialProgress { ...rest } className="ax-progress-finite" diameter={ diameter }>
+        <circle
+            className="ax-progress-finite__background"
+            r={ innerRadius }
+            style={ { strokeWidth } } />
+        <circle
+            className="ax-progress-finite__arc"
+            r={ innerRadius }
+            style={ { strokeDasharray, strokeDashoffset, strokeWidth } } />
       </RadialProgress>
     );
   }

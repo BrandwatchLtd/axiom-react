@@ -32,20 +32,16 @@ export default class ProgressInfinite extends Component {
     } = getArcProperties({ percent: 75 });
 
     return (
-      <RadialProgress { ...rest } className={ classes }>
-        <svg viewBox={ `0 0 ${ diameter } ${ diameter }` }>
-          <g transform={ `translate(${ diameter / 2 }, ${ diameter / 2 }) rotate(-90)` }>
-            <circle
-                className="ax-progress-infinite__arc"
-                r={ innerRadius }
-                style={ {
-                  stroke: `url(#ax-progress-infinite__filter--${ color })`,
-                  strokeDasharray,
-                  strokeDashoffset,
-                  strokeWidth,
-                } } />
-          </g>
-        </svg>
+      <RadialProgress { ...rest } className={ classes } diameter={ diameter }>
+        <circle
+            className="ax-progress-infinite__arc"
+            r={ innerRadius }
+            style={ {
+              stroke: `url(#ax-progress-infinite__filter--${ color })`,
+              strokeDasharray,
+              strokeDashoffset,
+              strokeWidth,
+            } } />
       </RadialProgress>
     );
   }

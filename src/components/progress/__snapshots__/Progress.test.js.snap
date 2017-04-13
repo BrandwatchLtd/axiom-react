@@ -1,121 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Progress renders a finite progress indicator 1`] = `
-<div
-  className="ax-progress"
+<svg
+  className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  viewBox="0 0 24 24"
 >
-  <div
-    className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  <g
+    transform="translate(12, 12) rotate(-90)"
   >
-    <svg
-      viewBox="0 0 24 24"
-    >
-      <g
-        transform="translate(12, 12) rotate(-90)"
-      >
-        <circle
-          className="ax-progress-finite__background"
-          r={10}
-          style={
-            Object {
-              "strokeWidth": 4,
-            }
-          }
-        />
-        <circle
-          className="ax-progress-finite__arc"
-          r={10}
-          style={
-            Object {
-              "strokeDasharray": 62.83185307179586,
-              "strokeDashoffset": 31.41592653589793,
-              "strokeWidth": 4,
-            }
-          }
-        />
-      </g>
-    </svg>
-  </div>
-</div>
+    <circle
+      className="ax-progress-finite__background"
+      r={10}
+      style={
+        Object {
+          "strokeWidth": 4,
+        }
+      }
+    />
+    <circle
+      className="ax-progress-finite__arc"
+      r={10}
+      style={
+        Object {
+          "strokeDasharray": 62.83185307179586,
+          "strokeDashoffset": 31.41592653589793,
+          "strokeWidth": 4,
+        }
+      }
+    />
+  </g>
+</svg>
 `;
 
 exports[`Progress renders a success indicator 1`] = `
 <div
-  className="ax-progress"
+  className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--small"
 >
-  <div
-    className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--small"
-  >
-    <svg
-      className="ax-icon"
-      style={
-        Object {
-          "height": "1rem",
-          "width": "1rem",
-        }
+  <svg
+    className="ax-icon"
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
       }
-      viewBox="0 0 16 16"
-    >
-      <polygon
-        points="4 7.5 6 9.5 12 3.5 13.5 5 6 12.5 2.5 9"
-      />
-    </svg>
-  </div>
+    }
+    viewBox="0 0 16 16"
+  >
+    <polygon
+      points="4 7.5 6 9.5 12 3.5 13.5 5 6 12.5 2.5 9"
+    />
+  </svg>
 </div>
 `;
 
 exports[`Progress renders an error indicator 1`] = `
 <div
-  className="ax-progress"
+  className="ax-icon-indicator ax-icon-indicator--error ax-icon-indicator--small"
 >
-  <div
-    className="ax-icon-indicator ax-icon-indicator--error ax-icon-indicator--small"
-  >
-    <svg
-      className="ax-icon"
-      style={
-        Object {
-          "height": "1rem",
-          "width": "1rem",
-        }
+  <svg
+    className="ax-icon"
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
       }
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M6.25,2 L9.75,2 L9.25,10.25 L6.75,10.25 L6.25,2 Z M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z"
-      />
-    </svg>
-  </div>
+    }
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M6.25,2 L9.75,2 L9.25,10.25 L6.75,10.25 L6.25,2 Z M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z"
+    />
+  </svg>
 </div>
 `;
 
 exports[`Progress renders with defaultProps 1`] = `
-<div
-  className="ax-progress"
+<svg
+  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  viewBox="0 0 24 24"
 >
-  <div
-    className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  <g
+    transform="translate(12, 12) rotate(-90)"
   >
-    <svg
-      viewBox="0 0 24 24"
-    >
-      <g
-        transform="translate(12, 12) rotate(-90)"
-      >
-        <circle
-          className="ax-progress-infinite__arc"
-          r={10}
-          style={
-            Object {
-              "stroke": "url(#ax-progress-infinite__filter--subtle)",
-              "strokeDasharray": 62.83185307179586,
-              "strokeDashoffset": 15.707963267948966,
-              "strokeWidth": 4,
-            }
-          }
-        />
-      </g>
-    </svg>
-  </div>
-</div>
+    <circle
+      className="ax-progress-infinite__arc"
+      r={10}
+      style={
+        Object {
+          "stroke": "url(#ax-progress-infinite__filter--subtle)",
+          "strokeDasharray": 62.83185307179586,
+          "strokeDashoffset": 15.707963267948966,
+          "strokeWidth": 4,
+        }
+      }
+    />
+  </g>
+</svg>
 `;

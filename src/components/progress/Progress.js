@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Base, IconIndicator, ProgressFinite, ProgressInfinite } from 'bw-axiom';
+import { IconIndicator, ProgressFinite, ProgressInfinite } from 'bw-axiom';
 
 export default class Progress extends Component {
 
@@ -17,18 +17,18 @@ export default class Progress extends Component {
       ...rest
     } = this.props;
 
-    return (
-      <Base { ...rest } className="ax-progress">
-        { do { if (error) {
-          <IconIndicator { ...rest } color="error" name="warning" />;
-        } else if (complete) {
-          <IconIndicator { ...rest } color="success" name="tick" />;
-        } else if (!isNaN(parseFloat(percent))) {
-          <ProgressFinite { ...rest } percent={ percent } />;
-        } else {
-          <ProgressInfinite { ...rest } />;
-        } } }
-      </Base>
-    );
+    if (error) {
+      return <IconIndicator { ...rest } color="error" name="warning" />;
+    }
+
+    if (complete) {
+      return <IconIndicator { ...rest } color="success" name="tick" />;
+    }
+
+    if (!isNaN(parseFloat(percent))) {
+      return <ProgressFinite { ...rest } percent={ percent } />;
+    }
+
+    return <ProgressInfinite { ...rest } />;
   }
 }

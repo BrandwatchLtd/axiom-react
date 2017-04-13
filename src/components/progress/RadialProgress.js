@@ -7,6 +7,7 @@ export default class RadialProgress extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string.isRequired,
+    diameter: PropTypes.number.isRequired,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
@@ -15,7 +16,7 @@ export default class RadialProgress extends Component {
   };
 
   render() {
-    const { children, className, size, ...rest } = this.props;
+    const { children, className, diameter, size, ...rest } = this.props;
     const classes = classnames(
       'ax-radial-progress',
       `ax-radial-progress--${size}`,
@@ -23,8 +24,13 @@ export default class RadialProgress extends Component {
     );
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base { ...rest }
+          Component="svg"
+          className={ classes }
+          viewBox={ `0 0 ${ diameter } ${ diameter }` }>
+        <g transform={ `translate(${ diameter / 2 }, ${ diameter / 2 }) rotate(-90)` }>
+          { children }
+        </g>
       </Base>
     );
   }

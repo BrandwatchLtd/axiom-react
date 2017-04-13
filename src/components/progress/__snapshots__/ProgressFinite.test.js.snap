@@ -1,71 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressFinite renders with defaultProps 1`] = `
-<div
+<svg
   className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  viewBox="0 0 24 24"
 >
-  <svg
-    viewBox="0 0 24 24"
+  <g
+    transform="translate(12, 12) rotate(-90)"
   >
-    <g
-      transform="translate(12, 12) rotate(-90)"
-    >
-      <circle
-        className="ax-progress-finite__background"
-        r={10}
-        style={
-          Object {
-            "strokeWidth": 4,
-          }
+    <circle
+      className="ax-progress-finite__background"
+      r={10}
+      style={
+        Object {
+          "strokeWidth": 4,
         }
-      />
-      <circle
-        className="ax-progress-finite__arc"
-        r={10}
-        style={
-          Object {
-            "strokeDasharray": 62.83185307179586,
-            "strokeDashoffset": 62.83185307179586,
-            "strokeWidth": 4,
-          }
+      }
+    />
+    <circle
+      className="ax-progress-finite__arc"
+      r={10}
+      style={
+        Object {
+          "strokeDasharray": 62.83185307179586,
+          "strokeDashoffset": 62.83185307179586,
+          "strokeWidth": 4,
         }
-      />
-    </g>
-  </svg>
-</div>
+      }
+    />
+  </g>
+</svg>
 `;
 
 exports[`ProgressFinite renders with percent props 1`] = `
-<div
+<svg
   className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  viewBox="0 0 24 24"
 >
-  <svg
-    viewBox="0 0 24 24"
+  <g
+    transform="translate(12, 12) rotate(-90)"
   >
-    <g
-      transform="translate(12, 12) rotate(-90)"
-    >
-      <circle
-        className="ax-progress-finite__background"
-        r={10}
-        style={
-          Object {
-            "strokeWidth": 4,
-          }
+    <circle
+      className="ax-progress-finite__background"
+      r={10}
+      style={
+        Object {
+          "strokeWidth": 4,
         }
-      />
-      <circle
-        className="ax-progress-finite__arc"
-        r={10}
-        style={
-          Object {
-            "strokeDasharray": 62.83185307179586,
-            "strokeDashoffset": 31.41592653589793,
-            "strokeWidth": 4,
-          }
+      }
+    />
+    <circle
+      className="ax-progress-finite__arc"
+      r={10}
+      style={
+        Object {
+          "strokeDasharray": 62.83185307179586,
+          "strokeDashoffset": 31.41592653589793,
+          "strokeWidth": 4,
         }
-      />
-    </g>
-  </svg>
-</div>
+      }
+    />
+  </g>
+</svg>
 `;

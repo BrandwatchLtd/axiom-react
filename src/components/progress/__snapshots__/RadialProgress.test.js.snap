@@ -1,25 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadialProgress renders with defaultProps 1`] = `
-<div
+<svg
   className="ax-radial-progress ax-radial-progress--small"
-/>
+  viewBox="0 0 75 75"
+>
+  <g
+    transform="translate(37.5, 37.5) rotate(-90)"
+  />
+</svg>
 `;
 
 exports[`RadialProgress renders with size large 1`] = `
-<div
+<svg
   className="ax-radial-progress ax-radial-progress--large"
-/>
+  viewBox="0 0 75 75"
+>
+  <g
+    transform="translate(37.5, 37.5) rotate(-90)"
+  />
+</svg>
 `;
 
 exports[`RadialProgress renders with size medium 1`] = `
-<div
+<svg
   className="ax-radial-progress ax-radial-progress--medium"
-/>
+  viewBox="0 0 75 75"
+>
+  <g
+    transform="translate(37.5, 37.5) rotate(-90)"
+  />
+</svg>
 `;
 
 exports[`RadialProgress renders with size small 1`] = `
-<div
+<svg
   className="ax-radial-progress ax-radial-progress--small"
-/>
+  viewBox="0 0 75 75"
+>
+  <g
+    transform="translate(37.5, 37.5) rotate(-90)"
+  />
+</svg>
 `;

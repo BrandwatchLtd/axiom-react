@@ -1,19 +1,22 @@
 @import '../../materials/sizing';
 
+.ax-radial-progress {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .ax-radial-progress--small {
   width: var(--component-round-size-small);
   height: var(--component-round-size-small);
-  border-width: var(--component-border-width-small);
 }
 
 .ax-radial-progress--medium {
   width: var(--component-round-size-medium);
   height: var(--component-round-size-medium);
-  border-width: var(--component-border-width-medium);
 }
 
 .ax-radial-progress--large {
   width: var(--component-round-size-large);
   height: var(--component-round-size-large);
-  border-width: var(--component-border-width-large);
 }
