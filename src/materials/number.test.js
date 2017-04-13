@@ -1,4 +1,3 @@
-import assert from 'assert';
 import { NUMBER_SEPARATOR, shortNumber, longNumber, tinyNumber } from 'bw-axiom';
 
 const NS = NUMBER_SEPARATOR;
@@ -6,91 +5,91 @@ const NS = NUMBER_SEPARATOR;
 describe('Number formatting', () => {
   describe('longNumber', () => {
     it('invalid', () => {
-      assert.equal(longNumber(null), '-');
-      assert.equal(longNumber(undefined), '-');
-      assert.equal(longNumber(true), '-');
-      assert.equal(longNumber('a'), '-');
+      expect(longNumber(null)).toBe('-');
+      expect(longNumber(undefined)).toBe('-');
+      expect(longNumber(true)).toBe('-');
+      expect(longNumber('a')).toBe('-');
     });
 
     it('without precision', () => {
-      assert.equal(longNumber(9999.5555, false), `9${NS}999.5555`);
+      expect(longNumber(9999.5555, false)).toBe(`9${NS}999.5555`);
     });
 
     it('strips extra padding', () => {
-      assert.equal(longNumber(9999, 20), `9${NS}999`);
+      expect(longNumber(9999, 20)).toBe(`9${NS}999`);
     });
 
     it('default precision', () => {
-      assert.equal(longNumber(9999.5555), `10${NS}000`);
+      expect(longNumber(9999.5555)).toBe(`10${NS}000`);
     });
 
     it('with precision', () => {
-      assert.equal(longNumber(9999.5555, 1), `9${NS}999.6`);
-      assert.equal(longNumber(9999.5555, 2), `9${NS}999.56`);
-      assert.equal(longNumber(9999.5555, 3), `9${NS}999.556`);
-      assert.equal(longNumber(9999.5555, 4), `9${NS}999.5555`);
+      expect(longNumber(9999.5555, 1)).toBe(`9${NS}999.6`);
+      expect(longNumber(9999.5555, 2)).toBe(`9${NS}999.56`);
+      expect(longNumber(9999.5555, 3)).toBe(`9${NS}999.556`);
+      expect(longNumber(9999.5555, 4)).toBe(`9${NS}999.5555`);
     });
   });
 
   describe('shortNumber', () => {
     it('invalid', () => {
-      assert.equal(shortNumber(null), '-');
-      assert.equal(shortNumber(undefined), '-');
-      assert.equal(shortNumber(true), '-');
-      assert.equal(shortNumber('a'), '-');
+      expect(shortNumber(null)).toBe('-');
+      expect(shortNumber(undefined)).toBe('-');
+      expect(shortNumber(true)).toBe('-');
+      expect(shortNumber('a')).toBe('-');
     });
 
     it('below the threshold', () => {
-      assert.equal(shortNumber(9999), `9${NS}999`);
+      expect(shortNumber(9999)).toBe(`9${NS}999`);
     });
 
     it('without precision', () => {
-      assert.equal(shortNumber(15555, false), '15.555 thousand');
+      expect(shortNumber(15555, false)).toBe('15.555 thousand');
     });
 
     it('default precision', () => {
-      assert.equal(shortNumber(15555), '16 thousand');
-      assert.equal(shortNumber(1555555), '2 million');
-      assert.equal(shortNumber(1555555555), '2 billion');
-      assert.equal(shortNumber(1555555555555), '2 trillion');
+      expect(shortNumber(15555)).toBe('16 thousand');
+      expect(shortNumber(1555555)).toBe('2 million');
+      expect(shortNumber(1555555555)).toBe('2 billion');
+      expect(shortNumber(1555555555555)).toBe('2 trillion');
     });
 
     it('with precision', () => {
-      assert.equal(shortNumber(15555, 1), '15.6 thousand');
-      assert.equal(shortNumber(1555555, 1), '1.6 million');
-      assert.equal(shortNumber(1555555555, 1), '1.6 billion');
-      assert.equal(shortNumber(1555555555555, 1), '1.6 trillion');
+      expect(shortNumber(15555, 1)).toBe('15.6 thousand');
+      expect(shortNumber(1555555, 1)).toBe('1.6 million');
+      expect(shortNumber(1555555555, 1)).toBe('1.6 billion');
+      expect(shortNumber(1555555555555, 1)).toBe('1.6 trillion');
     });
   });
 
   describe('tinyNumber', () => {
     it('invalid', () => {
-      assert.equal(tinyNumber(null), '-');
-      assert.equal(tinyNumber(undefined), '-');
-      assert.equal(tinyNumber(true), '-');
-      assert.equal(tinyNumber('a'), '-');
+      expect(tinyNumber(null)).toBe('-');
+      expect(tinyNumber(undefined)).toBe('-');
+      expect(tinyNumber(true)).toBe('-');
+      expect(tinyNumber('a')).toBe('-');
     });
 
     it('below the threshold', () => {
-      assert.equal(tinyNumber(9999), `9${NS}999`);
+      expect(tinyNumber(9999)).toBe(`9${NS}999`);
     });
 
     it('without precision', () => {
-      assert.equal(tinyNumber(15555, false), '15.555K');
+      expect(tinyNumber(15555, false)).toBe('15.555K');
     });
 
     it('default precision', () => {
-      assert.equal(tinyNumber(15555), '16K');
-      assert.equal(tinyNumber(1555555), '2M');
-      assert.equal(tinyNumber(1555555555), '2B');
-      assert.equal(tinyNumber(1555555555555), '2T');
+      expect(tinyNumber(15555)).toBe('16K');
+      expect(tinyNumber(1555555)).toBe('2M');
+      expect(tinyNumber(1555555555)).toBe('2B');
+      expect(tinyNumber(1555555555555)).toBe('2T');
     });
 
     it('with precision', () => {
-      assert.equal(tinyNumber(15555, 1), '15.6K');
-      assert.equal(tinyNumber(1555555, 1), '1.6M');
-      assert.equal(tinyNumber(1555555555, 1), '1.6B');
-      assert.equal(tinyNumber(1555555555555, 1), '1.6T');
+      expect(tinyNumber(15555, 1)).toBe('15.6K');
+      expect(tinyNumber(1555555, 1)).toBe('1.6M');
+      expect(tinyNumber(1555555555, 1)).toBe('1.6B');
+      expect(tinyNumber(1555555555555, 1)).toBe('1.6T');
     });
   });
 });
