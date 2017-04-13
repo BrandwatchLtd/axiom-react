@@ -115,6 +115,14 @@
   &:disabled { color: var(--color-context-text-disabled); }
 }
 
+.ax-button--quaternary {
+  color: var(--color-context-text-subtle);
+
+  &:hover    { color: var(--color-ui-primary--light); }
+  &:active   { color: var(--color-ui-primary--dark); }
+  &:disabled { color: var(--color-context-text-disabled); }
+}
+
 .ax-button--small {
   padding: var(--component-padding-vertical-small) var(--component-padding-horizontal-small);
   font-size: var(--font-size-small);

@@ -36,7 +36,7 @@ describe('Button', () => {
   });
 
   describe('renders with style', () => {
-    ['primary', 'secondary', 'tertiary'].forEach((style) => {
+    ['primary', 'secondary', 'tertiary', 'quaternary'].forEach((style) => {
       it(style, () => {
         const component = getComponent({ style });
         const tree = component.toJSON();

@@ -17,7 +17,7 @@ export default class Button extends Component {
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
-    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   };
 
   static contextTypes = {

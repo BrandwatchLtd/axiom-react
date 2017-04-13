@@ -104,6 +104,14 @@ exports[`Button renders with style primary 1`] = `
 </button>
 `;
 
+exports[`Button renders with style quaternary 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--quaternary"
+>
+  Lorem Ipsum
+</button>
+`;
+
 exports[`Button renders with style secondary 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary"
