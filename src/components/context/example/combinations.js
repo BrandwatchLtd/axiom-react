@@ -56,18 +56,27 @@ export default class ContextTipExample extends Component {
               <Context position="top">
                 <ContextBox>
                   <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis at velit ut nisl eleifend volutpat.
+                    Menu combination
                   </Paragraph>
                 </ContextBox>
 
                 <ContextMenu>
                   <ContextMenuItem>
-                    Settings
+                    Group 1
                   </ContextMenuItem>
 
                   <ContextMenuItem>
-                    Help!
+                    Group 1
+                  </ContextMenuItem>
+                </ContextMenu>
+
+                <ContextMenu>
+                  <ContextMenuItem>
+                    Group 2
+                  </ContextMenuItem>
+
+                  <ContextMenuItem>
+                    Group 2
                   </ContextMenuItem>
                 </ContextMenu>
               </Context>

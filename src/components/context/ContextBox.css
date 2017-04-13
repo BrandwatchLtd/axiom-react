@@ -8,20 +8,10 @@
 
 .ax-context-box--padding-small {
   padding: var(--cmp-context-padding-small);
-
-  & + .ax-context-box::before {
-    right: var(--cmp-context-padding-small);
-    left: var(--cmp-context-padding-small);
-  }
 }
 
 .ax-context-box--padding-large {
   padding: var(--cmp-context-padding-large);
-
-  & + .ax-context-box::before {
-    right: var(--cmp-context-padding-large);
-    left: var(--cmp-context-padding-large);
-  }
 }
 
 .ax-context-box + .ax-context-box::before {
@@ -30,6 +20,17 @@
   top: 0;
   border-bottom-width: var(--component-border-width);
   border-bottom-style: solid;
+}
+
+.ax-context-box--padding-small::before {
+  right: var(--cmp-context-padding-small);
+  left: var(--cmp-context-padding-small);
+}
+
+.ax-context-box--padding-none::before,
+.ax-context-box--padding-large::before {
+  right: var(--cmp-context-padding-large);
+  left: var(--cmp-context-padding-large);
 }
 
 .ax-context--dark .ax-context-box::before {
