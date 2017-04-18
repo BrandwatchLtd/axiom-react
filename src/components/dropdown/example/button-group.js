@@ -5,11 +5,11 @@ import {
   ButtonGroup,
   ButtonIcon,
   Context,
-  ContextMenu,
-  ContextMenuItem,
   Dropdown,
-  DropdownButton,
+  DropdownContent,
   DropdownMenu,
+  DropdownMenuItem,
+  DropdownTarget,
 } from 'bw-axiom';
 
 export default class DropdownExample extends Component {
@@ -21,21 +21,21 @@ export default class DropdownExample extends Component {
             <Button style="secondary">Primary Action</Button>
 
             <Dropdown>
-              <DropdownButton>
+              <DropdownTarget>
                 <Button style="secondary">
                   <ButtonIcon name="chevron-down" />
                 </Button>
-              </DropdownButton>
+              </DropdownTarget>
 
-              <DropdownMenu>
+              <DropdownContent>
                 <Context>
-                  <ContextMenu>
-                    <ContextMenuItem>Option 1</ContextMenuItem>
-                    <ContextMenuItem>Option 2</ContextMenuItem>
-                    <ContextMenuItem>Option 3</ContextMenuItem>
-                  </ContextMenu>
+                  <DropdownMenu>
+                    <DropdownMenuItem>Option 1</DropdownMenuItem>
+                    <DropdownMenuItem>Option 2</DropdownMenuItem>
+                    <DropdownMenuItem>Option 3</DropdownMenuItem>
+                  </DropdownMenu>
                 </Context>
-              </DropdownMenu>
+              </DropdownContent>
             </Dropdown>
           </ButtonGroup>
         </Snippet>

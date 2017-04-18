@@ -1,30 +1,18 @@
-import { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { ContextMenu } from 'bw-axiom';
 
 export default class DropdownMenu extends Component {
   static propTypes = {
     children: PropTypes.node,
-    onClick: PropTypes.func,
   };
-
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-  };
-
-  handleClick(...args) {
-    const { children } = this.props;
-    const { closeDropdown } = this.context;
-    const { onClick = () => {} } = children.props;
-
-    closeDropdown();
-    onClick(...args);
-  }
 
   render() {
     const { children, ...rest } = this.props;
 
-    return cloneElement(children, {
-      ...rest,
-      onClick: ::this.handleClick,
-    });
+    return (
+      <ContextMenu { ...rest }>
+        { children }
+      </ContextMenu>
+    );
   }
 }

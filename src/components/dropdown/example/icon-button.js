@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
 import {
   Context,
-  ContextMenu,
-  ContextMenuItem,
   Dropdown,
-  DropdownButton,
+  DropdownContent,
   DropdownMenu,
+  DropdownMenuItem,
+  DropdownTarget,
   IconButton,
 } from 'bw-axiom';
 
@@ -16,19 +16,19 @@ export default class DropdownExample extends Component {
       <Example name="Dropdown with IconButton">
         <Snippet>
           <Dropdown offset="start" position="right">
-            <DropdownButton>
+            <DropdownTarget>
               <IconButton name="ellipsis" />
-            </DropdownButton>
+            </DropdownTarget>
 
-            <DropdownMenu>
+            <DropdownContent>
               <Context>
-                <ContextMenu>
-                  <ContextMenuItem>Option 1</ContextMenuItem>
-                  <ContextMenuItem>Option 2</ContextMenuItem>
-                  <ContextMenuItem>Option 3</ContextMenuItem>
-                </ContextMenu>
+                <DropdownMenu>
+                  <DropdownMenuItem>Option 1</DropdownMenuItem>
+                  <DropdownMenuItem>Option 2</DropdownMenuItem>
+                  <DropdownMenuItem>Option 3</DropdownMenuItem>
+                </DropdownMenu>
               </Context>
-            </DropdownMenu>
+            </DropdownContent>
           </Dropdown>
         </Snippet>
       </Example>

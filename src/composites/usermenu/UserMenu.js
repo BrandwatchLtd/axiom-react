@@ -7,8 +7,8 @@ import {
   ContextBox,
   Candytar,
   Dropdown,
-  DropdownButton,
-  DropdownMenu,
+  DropdownTarget,
+  DropdownContent,
   Grid,
   GridCell,
   Heading,
@@ -39,15 +39,15 @@ export default class UserMenu extends Component {
 
     return (
       <Dropdown position="bottom">
-        <DropdownButton>
+        <DropdownTarget>
           <Link>
             <Avatar size="2rem" src={ imageSrc }>
               <Candytar picker={ userColorPicker } size="2rem" />
             </Avatar>
           </Link>
-        </DropdownButton>
+        </DropdownTarget>
 
-        <DropdownMenu>
+        <DropdownContent>
           <Context width="auto">
             <ContextBox>
               <Grid gutters="large" responsive={ false } verticalAlign="middle">
@@ -69,7 +69,7 @@ export default class UserMenu extends Component {
 
             { children }
           </Context>
-        </DropdownMenu>
+        </DropdownContent>
       </Dropdown>
     );
   }

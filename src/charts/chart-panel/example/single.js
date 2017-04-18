@@ -11,8 +11,8 @@ import {
   ContextMenu,
   ContextMenuItem,
   Dropdown,
-  DropdownButton,
-  DropdownMenu,
+  DropdownTarget,
+  DropdownContent,
   Heading,
 } from 'bw-axiom';
 import ChartHeaderContent from './ChartHeaderContent';
@@ -71,13 +71,13 @@ export default class ChartPanelExample extends Component {
 
         <ButtonGroup>
           <Dropdown offset="start" position="right">
-            <DropdownButton>
+            <DropdownTarget>
               <Button style="secondary">Horizontal Alignments
                 <ButtonIcon name="chevron-down"/>
               </Button>
-            </DropdownButton>
+            </DropdownTarget>
 
-            <DropdownMenu>
+            <DropdownContent>
               <Context>
                 <ContextMenu>
                   { horizontalAlign.values.map((alignment) =>
@@ -88,7 +88,7 @@ export default class ChartPanelExample extends Component {
                   )}
                 </ContextMenu>
               </Context>
-            </DropdownMenu>
+            </DropdownContent>
           </Dropdown>
         </ButtonGroup>
 
@@ -109,13 +109,13 @@ export default class ChartPanelExample extends Component {
 
         <ButtonGroup>
           <Dropdown offset="start" position="right">
-            <DropdownButton>
+            <DropdownTarget>
               <Button style="secondary">Vertical Alignments
                 <ButtonIcon name="chevron-down"/>
               </Button>
-            </DropdownButton>
+            </DropdownTarget>
 
-            <DropdownMenu>
+            <DropdownContent>
               <Context>
                 <ContextMenu>
                   { verticalAlign.values.map((alignment) =>
@@ -126,7 +126,7 @@ export default class ChartPanelExample extends Component {
                   )}
                 </ContextMenu>
               </Context>
-            </DropdownMenu>
+            </DropdownContent>
           </Dropdown>
         </ButtonGroup>
 

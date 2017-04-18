@@ -1,6 +1,6 @@
 import { Component, PropTypes, cloneElement } from 'react';
 
-export default class DropdownButton extends Component {
+export default class DropdownTarget extends Component {
   static propTypes = {
     children: PropTypes.node,
   };

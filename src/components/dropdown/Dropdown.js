@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import {
-  DropdownButton,
-  DropdownMenu,
+  DropdownTarget,
+  DropdownContent,
   Position,
   PositionTarget,
   PositionContent,
@@ -54,8 +54,8 @@ export default class Dropdown extends Component {
           isVisible={ isVisible }
           onMaskClick={ ::this.close }
           position={ position }>
-        <PositionTarget>{ findComponent(children, DropdownButton) }</PositionTarget>
-        <PositionContent>{ findComponent(children, DropdownMenu) }</PositionContent>
+        <PositionTarget>{ findComponent(children, DropdownTarget) }</PositionTarget>
+        <PositionContent>{ findComponent(children, DropdownContent) }</PositionContent>
       </Position>
     );
   }
