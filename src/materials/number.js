@@ -46,7 +46,8 @@ export function longNumber(number, precision = 0) {
   }
 
   const [ integer, fraction ] = toFixed(number, precision).split('.');
-  const formatted = integer.replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${NUMBER_SEPARATOR}`);
+  const formatted = parseFloat(integer)
+    .toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${NUMBER_SEPARATOR}`);
 
   return fraction ? `${formatted}.${fraction}` : formatted;
 }

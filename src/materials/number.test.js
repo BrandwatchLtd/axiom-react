@@ -70,6 +70,10 @@ describe('Number formatting', () => {
       expect(tinyNumber('a')).toBe('-');
     });
 
+    it('negative zero', () => {
+      expect(tinyNumber(-0.01)).toBe('0');
+    });
+
     it('below the threshold', () => {
       expect(tinyNumber(9999)).toBe(`9${NS}999`);
     });
