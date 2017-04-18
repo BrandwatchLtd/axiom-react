@@ -2,10 +2,10 @@
 
 exports[`Composite: Pagination renders with defaultProps 1`] = `
 <div
-  className="ax-button-group__container ax-space--medium ax-text--center"
+  className="ax-inline-group ax-button-group ax-space--medium ax-text--center"
 >
   <div
-    className="ax-button-group"
+    className="ax-inline-group__spacer"
   >
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
@@ -121,10 +121,10 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
 
 exports[`Composite: Pagination renders without displayRange 1`] = `
 <div
-  className="ax-button-group__container ax-space--medium ax-text--center"
+  className="ax-inline-group ax-button-group ax-space--medium ax-text--center"
 >
   <div
-    className="ax-button-group"
+    className="ax-inline-group__spacer"
   >
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
@@ -172,10 +172,10 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
 
 exports[`Composite: Pagination renders without pages 1`] = `
 <div
-  className="ax-button-group__container ax-space--medium ax-text--center"
+  className="ax-inline-group ax-button-group ax-space--medium ax-text--center"
 >
   <div
-    className="ax-button-group"
+    className="ax-inline-group__spacer"
   >
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"

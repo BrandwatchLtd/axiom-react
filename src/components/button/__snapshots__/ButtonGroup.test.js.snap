@@ -2,10 +2,10 @@
 
 exports[`ButtonGroup renders with defaultProps 1`] = `
 <div
-  className="ax-button-group__container ax-space--medium"
+  className="ax-inline-group ax-button-group ax-space--medium"
 >
   <div
-    className="ax-button-group"
+    className="ax-inline-group__spacer"
   >
     <button
       className="ax-button ax-button--medium ax-button--primary"

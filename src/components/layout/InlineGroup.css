@@ -1,0 +1,20 @@
+@import '../../materials/sizing';
+
+:root {
+  --cmp-inline-spacing: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-inline-group {
+  overflow: hidden;
+}
+
+.ax-inline-group__spacer {
+  margin-bottom: calc(var(--cmp-inline-spacing) * -1);
+
+  /* stylelint-disable selector-no-universal */
+  & > * {
+    margin-right: var(--cmp-inline-spacing);
+    margin-bottom: var(--cmp-inline-spacing);
+  }
+  /* stylelint-enable */
+}

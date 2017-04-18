@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
-import { Base } from 'bw-axiom';
-import './ButtonGroup.css';
+import { Base, InlineGroup } from 'bw-axiom';
 
 export default class ButtonGroup extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     joined: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    space: 'medium',
   };
 
   static childContextTypes = {
@@ -21,16 +23,16 @@ export default class ButtonGroup extends Component {
 
   render() {
     const { children, joined, ...rest } = this.props;
-    const classes = classnames('ax-button-group', {
-      'ax-button-group--joined': joined,
-    });
 
     return (
-      <Base space="medium" { ...rest } className="ax-button-group__container">
-        <div className={ classes }>
-          { children }
-        </div>
+      <Base { ...rest }
+          Component={ joined ? 'div' : InlineGroup }
+          className="ax-button-group">
+        { children }
       </Base>
     );
   }
 }
+
+
+

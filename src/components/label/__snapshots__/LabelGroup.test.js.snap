@@ -2,10 +2,10 @@
 
 exports[`LabelGroup renders with defaultProps 1`] = `
 <div
-  className="ax-label-group__container ax-space--small"
+  className="ax-inline-group ax-label-group ax-space--small"
 >
   <div
-    className="ax-label-group"
+    className="ax-inline-group__spacer"
   >
     <span
       className="ax-label ax-label--white ax-label--medium"

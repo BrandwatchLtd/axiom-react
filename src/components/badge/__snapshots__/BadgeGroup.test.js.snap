@@ -2,10 +2,10 @@
 
 exports[`BadgeGroup renders with defaultProps 1`] = `
 <div
-  className="ax-badge-group__container ax-space--small"
+  className="ax-inline-group ax-badge-group ax-space--small"
 >
   <div
-    className="ax-badge-group"
+    className="ax-inline-group__spacer"
   >
     <span
       className="ax-badge ax-badge--faded"
