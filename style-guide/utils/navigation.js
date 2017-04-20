@@ -1,34 +1,39 @@
-import humanize from 'humanize-string';
-import { getFirstPath, getStructure } from './structure';
+import { Children } from 'react';
+import routes from '../routes';
 
-export function normalisePathname(pathname) {
-  return `/${(pathname === '/' ? getFirstPath() : pathname)
-    .replace(__BASENAME__, '/')
-    .replace(/^\/|\/$/, '')}`;
+const basenameRegex = new RegExp(`${__BASENAME__}/`);
+
+export function normalisePath(path) {
+  return `/${path
+    .replace(basenameRegex, '')
+    .replace(/(^\/*|\/*$)/g, '')}`;
 }
 
-export function buildNavigationItem(activePath, openPath, structure) {
-  return {
-    id: structure.id,
-    name: humanize(structure.id),
-    path: structure.path,
-    to: structure.children ? null : structure.path,
-    isOpen: openPath.includes(structure.path),
-    isActive: structure.path === activePath,
-    children: Array.isArray(structure.children)
-      ? buildNavigationItems(activePath, openPath, structure.children)
-      : null,
-  };
+export function trailToPath(trail) {
+  return normalisePath(trail.join('/'));
 }
 
-export function buildNavigationItems(activePath, openPath, structure = getStructure(), items = []) {
-  if (Array.isArray(structure)) {
-    structure.forEach((structure) =>
-      buildNavigationItems(activePath, openPath, structure, items)
-    );
-  } else if (structure.hasExamples || Array.isArray(structure.children)) {
-    items.push(buildNavigationItem(activePath, openPath, structure));
+export function pathToTrail(path) {
+  return normalisePath(path).match(/([a-z-]+)/g);
+}
+
+export function findRoute(path) {
+  return flattenRoute(routes)[normalisePath(path)];
+}
+
+export function findChildRoutes(path) {
+  return findRoute(path).props.children.filter((c) => c);
+}
+
+export function flattenRoute(route, flat = {}, trail = []) {
+  trail = [...trail, route.props.path];
+  flat[trailToPath(trail)] = route;
+
+  if (route.props.children) {
+    Children.toArray(route.props.children).forEach((route) => {
+      flattenRoute(route, flat, trail);
+    });
   }
 
-  return items;
+  return flat;
 }

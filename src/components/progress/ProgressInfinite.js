@@ -12,10 +12,12 @@ export default class ProgressInfinite extends Component {
       'subtle',
       'white',
     ]),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
   static defaultProps = {
     color: 'subtle',
+    size: 'small',
   }
 
   render() {

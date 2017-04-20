@@ -30,7 +30,7 @@ export default class NavList extends Component {
 
     return (
       <ul className={ classes }>
-        { items.filter(({ hidden }) => !hidden).map((item, index) =>
+        { items.map((item, index) =>
           <NavListItem item={ item } key={ index } onClick={ onItemClick } />
         ) }
       </ul>

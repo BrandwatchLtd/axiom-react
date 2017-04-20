@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Base } from 'bw-axiom';
 
 export default class LayoutContent extends Component {
   static propTypes = {
@@ -7,12 +8,12 @@ export default class LayoutContent extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
 
     return (
-      <div className="dm-layout__content">
+      <Base { ...rest } className="dm-layout__content">
         { children }
-      </div>
+      </Base>
     );
   }
 }

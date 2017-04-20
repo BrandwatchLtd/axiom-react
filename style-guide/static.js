@@ -23,16 +23,24 @@ export default (locals, callback) => {
   const location = history.createLocation(locals.path);
   const hash = locals.webpackStats.hash;
 
-  match({ routes, location }, (error, redirectLocation, renderProps) => {
-    callback(null, template({
-      htmlWebpackPlugin: {
-        options: {
-          basename: __BASENAME__,
-          stylesheet: `assets/bundle.${hash}.min.css`,
-          script: `assets/bundle.${hash}.min.js`,
-          html: renderToString(<RouterContext { ...renderProps } />),
+  function matchLocation(location) {
+    match({ routes, location }, (error, redirectLocation, renderProps) => {
+      if (redirectLocation) {
+        return matchLocation(redirectLocation);
+      }
+
+      callback(null, template({
+        htmlWebpackPlugin: {
+          options: {
+            basename: __BASENAME__,
+            stylesheet: `assets/bundle.${hash}.min.css`,
+            script: `assets/bundle.${hash}.min.js`,
+            html: renderToString(<RouterContext { ...renderProps } />),
+          },
         },
-      },
-    }));
-  });
+      }));
+    });
+  }
+
+  matchLocation(location);
 };

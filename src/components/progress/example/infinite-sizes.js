@@ -6,7 +6,7 @@ import { Grid, GridCell, ProgressInfinite } from 'bw-axiom';
 export default class ProgressExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      RadialProgress: PropTypes.shape({
+      ProgressInfinite: PropTypes.shape({
         size: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
@@ -16,7 +16,7 @@ export default class ProgressExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { RadialProgress: { size } } = components;
+    const { ProgressInfinite: { size } } = components;
 
     return (
       <Example name="ProgressInfinite sizes">

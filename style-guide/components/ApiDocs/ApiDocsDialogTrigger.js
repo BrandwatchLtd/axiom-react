@@ -7,7 +7,6 @@ export default class DocApiDialogTrigger extends Component {
   static propTypes = {
     imports: PropTypes.shape({
       components: PropTypes.object.isRequired,
-      path: PropTypes.string.isRequired,
     }).isRequired,
   };
 
@@ -26,7 +25,7 @@ export default class DocApiDialogTrigger extends Component {
   render() {
     const { imports } = this.props;
     const { isOpen } = this.state;
-    const { components, path } = imports;
+    const { components } = imports;
 
     return (
       <ButtonGroup>
@@ -35,8 +34,7 @@ export default class DocApiDialogTrigger extends Component {
           <ApiDocsDialog
               components={ components }
               isOpen={ isOpen }
-              onRequestClose={ ::this.closeDialog }
-              path={ path } />
+              onRequestClose={ ::this.closeDialog } />
         </Button>
       </ButtonGroup>
     );

@@ -8,10 +8,6 @@ export default class ButtonGroup extends Component {
     joined: PropTypes.bool,
   };
 
-  static defaultProps = {
-    space: 'medium',
-  };
-
   static childContextTypes = {
     joined: PropTypes.bool,
   };
@@ -26,7 +22,7 @@ export default class ButtonGroup extends Component {
     const { children, joined, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
+      <Base space="medium" { ...rest }
           Component={ joined ? 'div' : InlineGroup }
           className="ax-button-group">
         { children }

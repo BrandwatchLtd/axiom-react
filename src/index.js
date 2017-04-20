@@ -39,14 +39,14 @@ export { default as DropdownMenuItem } from './components/dropdown/DropdownMenuI
 export { default as DropdownTarget } from './components/dropdown/DropdownTarget';
 export { default as Form } from './components/form/Form';
 export { default as Grid } from './components/grid/Grid';
-export { default as GridCell }  from './components/grid/GridCell';
+export { default as GridCell } from './components/grid/GridCell';
 export { default as Heading } from './components/typography/Heading';
 export { default as HorizontalRule } from './components/typography/HorizontalRule';
 export { default as Icon } from './components/icon/Icon';
 export { default as IconButton } from './components/icon/IconButton';
 export { default as IconIndicator } from './components/icon/IconIndicator';
-export { default as Image }  from './components/image/Image';
-export { default as ImageCircle }  from './components/image/ImageCircle';
+export { default as Image } from './components/image/Image';
+export { default as ImageCircle } from './components/image/ImageCircle';
 export { default as InlineGroup } from './components/layout/InlineGroup';
 export { default as Italic } from './components/typography/Italic';
 export { default as Label } from './components/label/Label';

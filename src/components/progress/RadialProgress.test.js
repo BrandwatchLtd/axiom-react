@@ -4,7 +4,7 @@ import RadialProgress from './RadialProgress';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <RadialProgress diameter={ 75 } { ...props } />
+    <RadialProgress diameter={ 75 } size="small" { ...props } />
   );
 }
 

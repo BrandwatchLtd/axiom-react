@@ -1,42 +1,29 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Examples from '../constants/Examples';
-import { normalisePathname } from '../utils/navigation';
-import { getPathData } from '../utils/structure';
+import { findRoute } from '../utils/navigation';
 import { LayoutContent } from '../components/Layout';
 import { ExampleHeader } from '../components/Example';
 import './Doc.css';
 
 export default class Doc extends Component {
-  static propTypes = {
-    location: PropTypes.shape({
-      pathname: PropTypes.string.isRequired,
-      query: PropTypes.object.isRequired,
-    }).isRequired,
-    routeParams: PropTypes.object.isRequired,
+  static contextTypes = {
+    pathname: PropTypes.string.isRequired,
   };
 
-  shouldComponentUpdate(nextProps) {
-    const { location } = this.props;
-    const { pathname } = location;
-    const { location: nextLocation } = nextProps;
-    const { pathname: nextPathname } = nextLocation;
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    const { pathname } = this.context;
+    const { pathname: nextPathname } = nextContext;
 
     return nextPathname !== pathname;
   }
 
   render() {
-    const {
-      routeParams,
-      location: {
-        pathname,
-        query: queryParams,
-      },
-    } = this.props;
-
-    const normalisedPath = normalisePathname(pathname);
-    const { path, components = [] } = getPathData(normalisedPath);
-    const examples = Examples[path];
+    const { pathname } = this.context;
+    const { props } = findRoute(pathname);
+    const { examples, name, apiDocs = [] } = props;
+    const components = apiDocs.reduce((docs, componentName) => ({ ...docs,
+      [componentName]: __COMPONENT_PROPS__[componentName],
+    }), {});
 
     return (
       <div className="dm-doc">
@@ -44,7 +31,7 @@ export default class Doc extends Component {
           <LayoutContent>
             <ExampleHeader
                 components={ components }
-                path={ path } />
+                name={ name } />
           </LayoutContent>
         </div>
 
@@ -52,10 +39,8 @@ export default class Doc extends Component {
           <LayoutContent>
             { examples.map((Example, index) =>
               <Example
-                  components={ components }
-                  key={ index }
-                  queryParams={ queryParams }
-                  routeParams={ routeParams } />
+                  components={ __COMPONENT_PROPS__ }
+                  key={ index } />
             ) }
           </LayoutContent>
         </div>

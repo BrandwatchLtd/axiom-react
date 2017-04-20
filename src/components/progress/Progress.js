@@ -8,6 +8,11 @@ export default class Progress extends Component {
     complete: PropTypes.bool,
     error: PropTypes.bool,
     percent: PropTypes.number,
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+  };
+
+  static defaultProps = {
+    size: 'small',
   };
 
   render() {

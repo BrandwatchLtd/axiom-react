@@ -7,15 +7,11 @@ export default class LabelGroup extends Component {
     children: PropTypes.node,
   };
 
-  static defaultProps = {
-    space: 'small',
-  };
-
   render() {
     const { children, ...rest } = this.props;
 
     return (
-      <InlineGroup { ...rest } className="ax-label-group">
+      <InlineGroup space="small" { ...rest } className="ax-label-group">
         { children }
       </InlineGroup>
     );

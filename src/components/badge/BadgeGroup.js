@@ -7,15 +7,11 @@ export default class BadgeGroup extends Component {
     children: PropTypes.node,
   };
 
-  static defaultProps = {
-    space: 'small',
-  };
-
   render() {
     const { children, ...rest } = this.props;
 
     return (
-      <InlineGroup { ...rest } className="ax-badge-group">
+      <InlineGroup space="small" { ...rest } className="ax-badge-group">
         { children }
       </InlineGroup>
     );

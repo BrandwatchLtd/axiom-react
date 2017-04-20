@@ -9,9 +9,8 @@
     "jest": true,
   },
   "globals": {
-    "__INCLUDE_CSS__": true,
-    "__STRUCTURE__": true,
     "__BASENAME__": true,
+    "__COMPONENT_PROPS__": true,
     "__DEVELOPMENT__": true,
     "document": true,
     "window": true,

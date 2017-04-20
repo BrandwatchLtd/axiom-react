@@ -9,10 +9,12 @@ export default class ProgressFinite extends Component {
 
   static propTypes = {
     percent: PropTypes.number.isRequired,
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
   static defaultProps = {
     percent: 0,
+    size: 'small',
   }
 
   render() {

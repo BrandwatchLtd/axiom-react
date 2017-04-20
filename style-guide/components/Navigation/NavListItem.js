@@ -33,10 +33,6 @@ export default class NavListItem extends Component {
       },
     } = this.props;
 
-    function createOnItemClickHandler() {
-      return () => onClick(item);
-    }
-
     const hasChildren = Array.isArray(children) && children.length > 0;
     const classes = classnames(className,
       'dm-nav__list-item', {
@@ -48,12 +44,12 @@ export default class NavListItem extends Component {
 
     return (
       <li className={ classes }>
-        { do { if (to) {
+        { do { if (!hasChildren) {
           <RouterLink className="dm-nav__link" to={ to }>
             <Strong>{ name }</Strong>
           </RouterLink>;
         } else {
-          <a className="dm-nav__link" onClick={ createOnItemClickHandler() }>
+          <a className="dm-nav__link" onClick={ () => onClick(item) }>
             <Strong>{ name }</Strong>
           </a>;
         } } }

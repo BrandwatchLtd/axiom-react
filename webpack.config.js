@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const structureGenerator = require('./scripts/structure-generator');
+const generateComponentProps = require('./scripts/component-docs');
 
 const modulesToTranspile = [
   'get-own-enumerable-property-symbols',
@@ -32,7 +32,8 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       __BASENAME__: '"/"',
-      __STRUCTURE__: JSON.stringify(structureGenerator()),
+      __COMPONENT_PROPS__: JSON.stringify(generateComponentProps()),
+      __DEVELOPMENT__: true,
     }),
   ],
   resolve: {

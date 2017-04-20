@@ -9,11 +9,7 @@ export default class RadialProgress extends Component {
     children: PropTypes.node.isRequired,
     className: PropTypes.string.isRequired,
     diameter: PropTypes.number.isRequired,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
-  };
-
-  static defaultProps = {
-    size: 'small',
+    size: PropTypes.string.isRequired,
   };
 
   render() {

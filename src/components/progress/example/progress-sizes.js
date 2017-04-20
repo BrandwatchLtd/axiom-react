@@ -7,7 +7,7 @@ export default class ProgressTransitionsExample extends Component {
 
   static propTypes = {
     components: PropTypes.shape({
-      RadialProgress: PropTypes.shape({
+      Progress: PropTypes.shape({
         size: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
@@ -17,7 +17,7 @@ export default class ProgressTransitionsExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { RadialProgress: { size } } = components;
+    const { Progress: { size } } = components;
 
     return (
       <Example name="Progress transitions">

@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-const structureGenerator = require('./scripts/structure-generator');
+const generateComponentProps = require('./scripts/component-docs');
 
 const modulesToTranspile = [
   'get-own-enumerable-property-symbols',
@@ -52,11 +52,47 @@ module.exports = {
       to: './assets',
     }]),
     new StaticSiteGeneratorPlugin({
-      paths: structureGenerator.extractPaths(),
+      paths: [
+        '/',
+        '/docs/materials/colors',
+        '/docs/materials/date-and-time',
+        '/docs/materials/numbers',
+        '/docs/components/alert',
+        '/docs/components/avatar',
+        '/docs/components/badge',
+        '/docs/components/base',
+        '/docs/components/button',
+        '/docs/components/card',
+        '/docs/components/context',
+        '/docs/components/dialog',
+        '/docs/components/dropdown',
+        '/docs/components/form',
+        '/docs/components/grid',
+        '/docs/components/icon',
+        '/docs/components/image',
+        '/docs/components/label',
+        '/docs/components/list',
+        '/docs/components/logo',
+        '/docs/components/menu',
+        '/docs/components/position',
+        '/docs/components/progress',
+        '/docs/components/reveal',
+        '/docs/components/table',
+        '/docs/components/tabset',
+        '/docs/components/tooltip',
+        '/docs/components/typography',
+        '/docs/composites/login',
+        '/docs/composites/pagination',
+        '/docs/composites/usermenu',
+        '/docs/charts/chart-heading',
+        '/docs/charts/data-point',
+        '/docs/charts/wordcloud',
+      ],
     }),
     new webpack.DefinePlugin({
-      __STRUCTURE__: JSON.stringify(structureGenerator()),
       __BASENAME__: process.env.BASENAME_ENV || '"/"',
+      __COMPONENT_PROPS__: JSON.stringify(generateComponentProps()),
+      __DEVELOPMENT__: false,
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
       },

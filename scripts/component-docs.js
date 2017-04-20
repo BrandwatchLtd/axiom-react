@@ -19,7 +19,7 @@ function castValue(value) {
 }
 
 function normaliseValue(prop) {
-  return !prop ? undefined : Object.assign({}, prop, {
+  return prop && Object.assign({}, prop, {
     value: castValue(prop.value),
   });
 }
@@ -44,13 +44,29 @@ function extractProps({ props = {} }) {
   }), {});
 }
 
-module.exports = function generate(file) {
+function readFileProps(file) {
   try {
-    return extractProps(reactDocgen.parse(
-      fs.readFileSync(path.resolve(__dirname, file))
-    ));
+    return extractProps(reactDocgen.parse(fs.readFileSync(file)));
   } catch (error) {
     console.error(`ERROR: Extract Docs from '${file}'`);
     console.error(error);
   }
+}
+
+module.exports = function generate() {
+  const components = {};
+  const componentExportRegex = /^export\s+{\s*default\s+as\s+(\w+)\s*}\s+from\s+'(.*)';$/gm;
+  const srcDir = path.resolve(__dirname, '../src');
+  const fileContent = fs.readFileSync(path.resolve(srcDir, 'index.js'), 'utf8');
+  let match;
+
+  while ((match = componentExportRegex.exec(fileContent)) !== null) {
+    if (match.index === componentExportRegex.lastIndex) {
+      componentExportRegex.lastIndex++;
+    }
+
+    components[match[1]] = readFileProps(`${path.resolve(srcDir, match[2])}.js`);
+  }
+
+  return components;
 };
