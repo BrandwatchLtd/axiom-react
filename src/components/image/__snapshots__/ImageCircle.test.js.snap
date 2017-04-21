@@ -15,7 +15,6 @@ exports[`ImageCircle renders with border large 1`] = `
   >
     <img
       className="ax-image ax-space--small"
-      onError={[Function]}
       src="/lorem.jpg"
       style={
         Object {
@@ -42,7 +41,6 @@ exports[`ImageCircle renders with border small 1`] = `
   >
     <img
       className="ax-image ax-space--small"
-      onError={[Function]}
       src="/lorem.jpg"
       style={
         Object {
@@ -69,7 +67,6 @@ exports[`ImageCircle renders with defaultProps 1`] = `
   >
     <img
       className="ax-image ax-space--small"
-      onError={[Function]}
       src="/lorem.jpg"
       style={
         Object {
@@ -96,7 +93,6 @@ exports[`ImageCircle renders with overlay icon 1`] = `
   >
     <img
       className="ax-image ax-space--small"
-      onError={[Function]}
       src="/lorem.jpg"
       style={
         Object {

@@ -21,7 +21,7 @@ export default class ImageExample extends Component {
         </Snippet>
 
         <Snippet>
-          <Avatar size="8rem" src="assets/WRONG.jpg">
+          <Avatar border="large" size="8rem" src="assets/WRONG.jpg">
             <Candytar size="8rem" />
           </Avatar>
         </Snippet>

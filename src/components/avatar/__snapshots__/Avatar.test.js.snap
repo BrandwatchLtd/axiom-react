@@ -15,7 +15,6 @@ exports[`Avatar renders with custom size 1`] = `
   >
     <img
       className="ax-image ax-space--small"
-      onError={[Function]}
       src="/image/path"
       style={
         Object {

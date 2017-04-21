@@ -3,7 +3,6 @@
 exports[`Image renders with defaultProps 1`] = `
 <img
   className="ax-image ax-space--small"
-  onError={[Function]}
   src="/image.png"
 />
 `;
@@ -12,7 +11,6 @@ exports[`Image renders with extra props 1`] = `
 <img
   alt="Lorem"
   className="ax-image ax-space--small"
-  onError={[Function]}
   src="/image.png"
   title="Lorem"
 />

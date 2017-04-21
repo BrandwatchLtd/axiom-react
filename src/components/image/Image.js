@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Base } from 'bw-axiom';
+import { Base, ImageFallback } from 'bw-axiom';
 import './Image.css';
 
 export default class Image extends Component {
@@ -11,41 +10,21 @@ export default class Image extends Component {
     onError: PropTypes.func,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      fallback: false,
-    };
-  }
-
-  handleError(...args) {
-    const { onError } = this.props;
-
-    this.setState({ fallback: true });
-
-    if (typeof onError === 'function') {
-      onError(...args);
-    }
-  }
-
   render() {
-    const { children, src, ...rest } = this.props;
-    const { fallback } = this.state;
-    const classes = classnames('ax-image', {});
-
-    if (!src || (fallback && children)) {
-      return children;
-    }
+    const { children, onError, src, ...rest } = this.props;
 
     return (
-      <Base
-          space="small"
-          { ...rest }
-          Component="img"
-          className={ classes }
-          onError={ ::this.handleError }
-          src={ src } />
+      <ImageFallback
+          fallback={ children }
+          onError={ onError }
+          src={ src }>
+        <Base
+            space="small"
+            { ...rest }
+            Component="img"
+            className="ax-image"
+            src={ src } />
+      </ImageFallback>
     );
   }
 }
