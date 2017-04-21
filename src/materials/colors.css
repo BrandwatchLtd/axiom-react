@@ -73,6 +73,7 @@
   --color-theme-light-border: color(var(--color-ui-dark--light) alpha(20%));
   --color-theme-light-border-subtle: color(var(--color-ui-dark--light) alpha(15%));
   --color-theme-light-background: var(--color-ui-white);
+  --color-theme-light-background-active: var(--color-ui-light--light);
   --color-theme-light-background-disabled: color(var(--color-ui-dark--light) alpha(5%));
   --color-theme-light-background-faded: color(var(--color-ui-dark--light) alpha(10%));
   --color-theme-light-background-subtle: color(var(--color-ui-dark--light) alpha(15%));
@@ -83,6 +84,7 @@
   --color-theme-dark-border: color(var(--color-ui-light--light) alpha(20%));
   --color-theme-dark-border-subtle: color(var(--color-ui-light--light) alpha(15%));
   --color-theme-dark-background: var(--color-ui-dark--light);
+  --color-theme-dark-background-active: var(--color-ui-dark);
   --color-theme-dark-background-disabled: color(var(--color-ui-light--light) alpha(5%));
   --color-theme-dark-background-faded: color(var(--color-ui-light--light) alpha(10%));
   --color-theme-dark-background-subtle: color(var(--color-ui-light--light) alpha(15%));

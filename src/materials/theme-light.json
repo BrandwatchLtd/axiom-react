@@ -3,6 +3,7 @@
   "color-context-border-subtle": "var(--color-theme-light-border-subtle)",
 
   "color-context-background": "var(--color-theme-light-background)",
+  "color-context-background-active": "var(--color-theme-light-background-active)",
   "color-context-background-disabled": "var(--color-theme-light-background-disabled)",
   "color-context-background-faded": "var(--color-theme-light-background-faded)",
   "color-context-background-subtle": "var(--color-theme-light-background-subtle)",

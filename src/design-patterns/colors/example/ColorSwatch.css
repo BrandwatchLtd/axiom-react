@@ -61,6 +61,7 @@
   &--context-border-subtle { background-color: var(--color-context-border-subtle); }
   &--context-border { background-color: var(--color-context-border); }
   &--context-background { background-color: var(--color-context-background); }
+  &--context-background-active { background-color: var(--color-context-background-active); }
   &--context-background-disabled { background-color: var(--color-context-background-disabled); }
   &--context-background-faded { background-color: var(--color-context-background-faded); }
   &--context-background-subtle { background-color: var(--color-context-background-subtle); }

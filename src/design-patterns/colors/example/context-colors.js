@@ -11,6 +11,7 @@ export default class ColorsExample extends Component {
 
     const backgroundColors = [
       'context-background',
+      'context-background-active',
       'context-background-disabled',
       'context-background-faded',
       'context-background-subtle',
