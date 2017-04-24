@@ -36,6 +36,13 @@
   &[disabled]:active {
     cursor: default;
   }
+
+  /* Works around flex alignment bug in Safari */
+  &::before,
+  &::after {
+    content: '';
+    flex: 1 0 auto;
+  }
 }
 
 .ax-button--joined {
