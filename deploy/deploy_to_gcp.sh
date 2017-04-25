@@ -17,7 +17,7 @@ yarn build-css
 gsutil \
   -h "Content-Encoding:gzip" \
   -h "Cache-Control:public,max-age=315360000" \
-  cp -r dist/axiom.*.css gs://$STORAGE_BUCKET
+  cp -r dist/*.css gs://$STORAGE_BUCKET
 
 # Set public access to bucket
 gsutil acl -r ch -u AllUsers:R gs://$STORAGE_BUCKET
