@@ -4,7 +4,6 @@
 .ax-data-point {
   color: inherit;
   fill: currentColor;
-  stroke: var(--color-context-background);
 }
 
 .ax-data-point--rose { color: var(--color-brand-rose); }

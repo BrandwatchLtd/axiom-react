@@ -5,7 +5,6 @@ import './DataPoint.css';
 
 export default class DataPoint extends Component {
   static propTypes = {
-    borderWidth: PropTypes.number,
     color: PropTypes.oneOf([
       'rose',
       'pink',
@@ -26,7 +25,7 @@ export default class DataPoint extends Component {
   };
 
   render() {
-    const { borderWidth, color, radius, x, y, ...rest } = this.props;
+    const { color, radius, x, y, ...rest } = this.props;
     const classes = classnames('ax-data-point', `ax-data-point--${color}`);
 
     return (
@@ -34,8 +33,7 @@ export default class DataPoint extends Component {
           className={ classes }
           cx={ x }
           cy={ y }
-          r={ radius }
-          strokeWidth={ borderWidth } />
+          r={ radius } />
     );
   }
 }

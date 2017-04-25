@@ -18,14 +18,4 @@ describe('DataPoints', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  describe('it renders with type', () => {
-    ['grouped', 'stacked'].forEach((type) => {
-      it(type, () => {
-        const component = getComponent({ type });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-  });
 });

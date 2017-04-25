@@ -1,79 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataPoints it renders with type grouped 1`] = `
-<svg
-  className="ax-data-points"
-  style={
-    Object {
-      "height": "1rem",
-    }
-  }
-  viewBox="0 0 40 24"
->
-  <circle
-    className="ax-data-point ax-data-point--blue"
-    cx={12}
-    cy={12}
-    r={12.75}
-    strokeWidth={1.5}
-  />
-  <circle
-    className="ax-data-point ax-data-point--pink"
-    cx={20}
-    cy={12}
-    r={12.75}
-    strokeWidth={1.5}
-  />
-  <circle
-    className="ax-data-point ax-data-point--amber"
-    cx={28}
-    cy={12}
-    r={12.75}
-    strokeWidth={1.5}
-  />
-</svg>
-`;
-
-exports[`DataPoints it renders with type stacked 1`] = `
-<svg
-  className="ax-data-points"
-  style={
-    Object {
-      "height": "1rem",
-    }
-  }
-  viewBox="0 0 24 24"
->
-  <circle
-    className="ax-data-point ax-data-point--blue"
-    cx={12}
-    cy={12}
-    r={12}
-    strokeWidth={0}
-  />
-  <circle
-    className="ax-data-point ax-data-point--pink"
-    cx={12}
-    cy={12}
-    r={8}
-    strokeWidth={0}
-  />
-  <circle
-    className="ax-data-point ax-data-point--amber"
-    cx={12}
-    cy={12}
-    r={4}
-    strokeWidth={0}
-  />
-</svg>
-`;
-
 exports[`DataPoints renders with defaultProps 1`] = `
 <svg
   className="ax-data-points"
   style={
     Object {
       "height": "1rem",
+      "width": "1rem",
     }
   }
   viewBox="0 0 24 24"
@@ -83,21 +16,18 @@ exports[`DataPoints renders with defaultProps 1`] = `
     cx={12}
     cy={12}
     r={12}
-    strokeWidth={0}
   />
   <circle
     className="ax-data-point ax-data-point--pink"
     cx={12}
     cy={12}
     r={8}
-    strokeWidth={0}
   />
   <circle
     className="ax-data-point ax-data-point--amber"
     cx={12}
     cy={12}
     r={4}
-    strokeWidth={0}
   />
 </svg>
 `;
