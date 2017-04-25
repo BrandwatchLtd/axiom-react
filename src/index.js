@@ -20,6 +20,8 @@ export { default as Card } from './components/card/Card';
 export { default as CardList } from './components/card/CardList';
 export { default as CheckBox } from './components/form/CheckBox';
 export { default as CheckBoxGroup } from './components/form/CheckBoxGroup';
+export { default as ColorPicker } from './components/color-picker/ColorPicker';
+export { default as ColorPickerOption } from './components/color-picker/ColorPickerOption';
 export { default as Console } from './components/platform/Console';
 export { default as Context } from './components/context/Context';
 export { default as ContextBox } from './components/context/ContextBox';

@@ -66,6 +66,12 @@ export default (
             examples={ require('../src/components/card/example') }
             component={ Doc } />
         <Route
+            path="color-picker"
+            name="Color Picker"
+            apiDocs={ ['ColorPicker'] }
+            examples={ require('../src/components/color-picker/example') }
+            component={ Doc } />
+        <Route
             path="context"
             name="Context"
             apiDocs={ ['Context', 'ContextBox', 'ContextMenu', 'ContextMenuItem', 'ContextTip'] }

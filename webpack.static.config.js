@@ -63,6 +63,7 @@ module.exports = {
         '/docs/components/base',
         '/docs/components/button',
         '/docs/components/card',
+        '/docs/components/color-picker',
         '/docs/components/context',
         '/docs/components/dialog',
         '/docs/components/dropdown',
