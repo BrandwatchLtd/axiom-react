@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Snippet } from 'style-guide';
 import { Base, Grid, GridCell, Progress } from 'bw-axiom';
 

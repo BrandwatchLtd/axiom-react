@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Example } from 'style-guide';
 import ProgressTransitions from './ProgressTransitions';
 

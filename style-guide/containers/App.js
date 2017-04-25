@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { buildNavigationItem, buildNavigationItems, normalisePathname } from '../utils/navigation';
 import { Layout, LayoutHeader, LayoutSidebar, LayoutMain } from '../components/Layout';
 import Navigation from '../components/Navigation';

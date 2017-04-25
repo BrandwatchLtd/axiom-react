@@ -13,7 +13,7 @@ export default class DialogExample extends Component {
         </Paragraph>
 
         <Snippet renderSkip={ true }>
-          <Dialog>
+          <Dialog contentLabel="Dialog Example">
             <DialogHeader onRequestClose={ Function }>...</DialogHeader>
             <DialogBody>...</DialogBody>
             <DialogFooter>...</DialogFooter>

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Link as RouterLink } from 'react-router';
 import { Link as AxiomLink } from 'bw-axiom';
 

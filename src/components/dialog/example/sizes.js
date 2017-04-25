@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
 import { ButtonGroup, Button, Dialog } from 'bw-axiom';
 import DialogDemo from './DialogDemo';
@@ -57,7 +58,9 @@ export default class DialogSizes extends Component {
 
         <Snippet renderSkip={ true }>
           { size.values.map((size) =>
-            <Dialog key={ size } size={ size }>...</Dialog>
+            <Dialog contentLabel={ `Dialog ${size} Size Demo` } key={ size } size={ size }>
+              ...
+            </Dialog>
           ) }
         </Snippet>
       </Example>

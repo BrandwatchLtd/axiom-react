@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {
   ButtonGroup,
   Button,
@@ -22,7 +23,7 @@ export default class DialogDemo extends Component {
 
 
     return (
-      <Dialog { ...this.props }>
+      <Dialog contentLabel="Dialog Demo" { ...this.props }>
         {
           do {
             if (withTitle) {

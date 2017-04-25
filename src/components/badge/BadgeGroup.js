@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { InlineGroup } from 'bw-axiom';
 
 export default class BadgeGroup extends Component {

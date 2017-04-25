@@ -1,4 +1,5 @@
-import React, { Children, Component, PropTypes, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+import React, { Children, Component, cloneElement } from 'react';
 import classnames from 'classnames';
 import { Base, LabelIcon } from 'bw-axiom';
 import './Label.css';

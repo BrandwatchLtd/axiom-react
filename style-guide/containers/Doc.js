@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import Examples from '../constants/Examples';
 import { normalisePathname } from '../utils/navigation';
 import { getPathData } from '../utils/structure';

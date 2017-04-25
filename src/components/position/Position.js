@@ -1,4 +1,5 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
 import { findComponent, PositionContent, PositionTarget } from 'bw-axiom';

@@ -1,4 +1,5 @@
-import React, { Children, cloneElement, Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Children, cloneElement, Component } from 'react';
 import { Base } from 'bw-axiom';
 
 export default class WordCloud extends Component {

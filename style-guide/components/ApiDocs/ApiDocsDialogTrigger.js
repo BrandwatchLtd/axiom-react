@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Button, ButtonGroup } from 'bw-axiom';
 import ApiDocsDialog from './ApiDocsDialog';
 

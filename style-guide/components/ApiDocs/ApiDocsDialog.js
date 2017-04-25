@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { CardList, Dialog, DialogBody, DialogHeader, Heading } from 'bw-axiom';
 import { CodeSnippet, CodeTabset } from '../CodeSnippet';
 import ApiDocsProp from './ApiDocsProp';
@@ -14,7 +15,11 @@ export default class ApiDocsDialog extends Component {
     const { components, isOpen, onRequestClose } = this.props;
 
     return (
-      <Dialog isOpen={ isOpen } onRequestClose={ onRequestClose } size="medium">
+      <Dialog
+          contentLabel="API Docs Dialog"
+          isOpen={ isOpen }
+          onRequestClose={ onRequestClose }
+          size="medium">
         <DialogHeader onRequestClose={ onRequestClose }>
           <Heading style="title">API Docs</Heading>
         </DialogHeader>

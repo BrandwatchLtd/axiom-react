@@ -32,7 +32,7 @@ export default class DialogExample extends Component {
         </ButtonGroup>
 
         <Snippet renderSkip={ true }>
-          <Dialog fullScreen={ true }>...</Dialog>
+          <Dialog contentLabel="Dialog Fullscreen Example" fullScreen={ true }>...</Dialog>
         </Snippet>
       </Example>
     );

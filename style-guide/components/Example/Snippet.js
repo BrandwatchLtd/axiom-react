@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { filterSnippet } from '../../utils/example-filter';
 import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet';
 import { CodeSnippet, CodeTabset } from '../CodeSnippet';

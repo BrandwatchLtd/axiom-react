@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import humanize from 'humanize-string';
 import isPlainObject from 'lodash.isplainobject';
 import { Grid, GridCell, Heading, Weak } from 'bw-axiom';

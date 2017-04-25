@@ -1,4 +1,5 @@
-import { Component, PropTypes, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+import { Component, cloneElement } from 'react';
 
 export default class PositionContent extends Component {
   static propTypes = {

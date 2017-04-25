@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Grid, GridCell, Icon, Link, Strong } from 'bw-axiom';
 
 export default class ChartHeaderContent extends Component {
