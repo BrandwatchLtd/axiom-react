@@ -5,9 +5,9 @@ import {
   Button,
   ButtonGroup,
   ButtonIcon,
-  ChartPanel,
-  ChartPanelHeader,
-  ChartPanelBody,
+  Panel,
+  PanelHeader,
+  PanelBody,
   Context,
   ContextMenu,
   ContextMenuItem,
@@ -19,10 +19,10 @@ import {
 import ChartHeaderContent from './ChartHeaderContent';
 import ChartBodyContent from './ChartBodyContent';
 
-export default class ChartPanelExample extends Component {
+export default class PanelExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      ChartPanelBody: PropTypes.shape({
+      PanelBody: PropTypes.shape({
         horizontalAlign: PropTypes.array.isRequired,
         verticalAlign: PropTypes.array.isRequired,
       }).isRequired,
@@ -53,21 +53,21 @@ export default class ChartPanelExample extends Component {
   render() {
     const { components } = this.props;
     const { horizontalAlignment, verticalAlignment } = this.state;
-    const { ChartPanelBody: { horizontalAlign, verticalAlign } } = components;
+    const { PanelBody: { horizontalAlign, verticalAlign } } = components;
 
     return (
-      <Example name="Singular ChartPanel">
+      <Example name="Singular Panel">
         <Heading>Default</Heading>
         <Snippet>
-          <ChartPanel>
-            <ChartPanelHeader>
+          <Panel>
+            <PanelHeader>
               <ChartHeaderContent alignment="default alignment" snippetReplace={ true } />
-            </ChartPanelHeader>
+            </PanelHeader>
 
-            <ChartPanelBody>
+            <PanelBody>
               <ChartBodyContent snippetReplace={ true } />
-            </ChartPanelBody>
-          </ChartPanel>
+            </PanelBody>
+          </Panel>
         </Snippet>
 
         <ButtonGroup>
@@ -94,18 +94,18 @@ export default class ChartPanelExample extends Component {
         </ButtonGroup>
 
         <Snippet>
-          <ChartPanel>
-            <ChartPanelHeader>
+          <Panel>
+            <PanelHeader>
               <ChartHeaderContent
                   alignment={ horizontalAlignment }
                   alignmentText="when horizontally aligned with"
                   snippetReplace={ true } />
-            </ChartPanelHeader>
+            </PanelHeader>
 
-            <ChartPanelBody horizontalAlign={ horizontalAlignment }>
+            <PanelBody horizontalAlign={ horizontalAlignment }>
               <ChartBodyContent snippetReplace={ true } />
-            </ChartPanelBody>
-          </ChartPanel>
+            </PanelBody>
+          </Panel>
         </Snippet>
 
         <ButtonGroup>
@@ -132,19 +132,19 @@ export default class ChartPanelExample extends Component {
         </ButtonGroup>
 
         <Snippet>
-          <ChartPanel minimumHeight="20rem">
-            <ChartPanelHeader>
+          <Panel minimumHeight="20rem">
+            <PanelHeader>
               <ChartHeaderContent
                   alignment={ verticalAlignment }
                   alignmentText="when vertically aligned with"
                   snippetReplace={ true } />
-            </ChartPanelHeader>
+            </PanelHeader>
 
-            <ChartPanelBody verticalAlign={ verticalAlignment }>
+            <PanelBody verticalAlign={ verticalAlignment }>
               <ChartBodyContent snippetReplace={ true } />
               <ChartBodyContent snippetReplace={ true } />
-            </ChartPanelBody>
-          </ChartPanel>
+            </PanelBody>
+          </Panel>
         </Snippet>
       </Example>
     );

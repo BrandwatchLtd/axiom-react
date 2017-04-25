@@ -1,17 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ChartPanel, ChartPanelHeader, ChartPanelBody } from 'bw-axiom';
+import { Panel, PanelHeader, PanelBody } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ChartPanel { ...props }>
-      <ChartPanelHeader>Lorem Ipsum</ChartPanelHeader>
-      <ChartPanelBody>Lorem Ipsum</ChartPanelBody>
-    </ChartPanel>
+    <Panel { ...props }>
+      <PanelHeader>Lorem Ipsum</PanelHeader>
+      <PanelBody>Lorem Ipsum</PanelBody>
+    </Panel>
   );
 }
 
-describe('ChartPanel', () => {
+describe('Panel', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();

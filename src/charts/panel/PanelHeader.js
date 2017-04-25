@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import './ChartPanels.css';
 
-export default class ChartPanelHeader extends Component {
+export default class PanelHeader extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -10,7 +11,7 @@ export default class ChartPanelHeader extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <div { ...rest } className="ax-chart-panel__header">
+      <div { ...rest } className="ax-panel__header">
         { children }
       </div>
     );

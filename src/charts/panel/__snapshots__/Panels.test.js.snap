@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChartPanels renders with defaultProps 1`] = `
+exports[`Panels renders with defaultProps 1`] = `
 <div
-  className="ax-chart-panels"
+  className="ax-panels"
 >
   <div
-    className="ax-chart-panel"
+    className="ax-panel"
     style={
       Object {
         "minHeight": undefined,
@@ -15,7 +15,7 @@ exports[`ChartPanels renders with defaultProps 1`] = `
     Lorem Ipsum
   </div>
   <div
-    className="ax-chart-panel"
+    className="ax-panel"
     style={
       Object {
         "minHeight": undefined,

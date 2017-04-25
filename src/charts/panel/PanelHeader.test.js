@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ChartPanelHeader } from 'bw-axiom';
+import { PanelHeader } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ChartPanelHeader { ...props }>Lorem Ipsum</ChartPanelHeader>
+    <PanelHeader { ...props }>Lorem Ipsum</PanelHeader>
   );
 }
 
-describe('ChartPanelHeader', () => {
+describe('PanelHeader', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();

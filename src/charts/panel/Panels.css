@@ -1,10 +1,10 @@
 @import '../../materials/colors';
 @import '../../materials/sizing';
 
-.ax-chart-panels {
+.ax-panels {
   display: flex;
 
-  & > .ax-chart-panel {
+  & > .ax-panel {
     flex: 1 1 0%;
 
     &:not(:first-child) {

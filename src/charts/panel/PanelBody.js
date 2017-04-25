@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Base } from 'bw-axiom';
 import classnames from 'classnames';
 
-export default class ChartPanelBody extends Component {
+export default class PanelBody extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     horizontalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
@@ -12,9 +12,9 @@ export default class ChartPanelBody extends Component {
 
   render() {
     const { children, horizontalAlign, verticalAlign, ...rest } = this.props;
-    const classes = classnames('ax-chart-panel__body', {
-      [`ax-chart-panel__body--vertical-${verticalAlign}`]: verticalAlign,
-      [`ax-chart-panel__body--horizontal-${horizontalAlign}`]: horizontalAlign,
+    const classes = classnames('ax-panel__body', {
+      [`ax-panel__body--vertical-${verticalAlign}`]: verticalAlign,
+      [`ax-panel__body--horizontal-${horizontalAlign}`]: horizontalAlign,
     });
 
     return (

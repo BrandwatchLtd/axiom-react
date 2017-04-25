@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ChartPanelHeader renders with defaultProps 1`] = `
-<div
-  className="ax-chart-panel__header"
->
-  Lorem Ipsum
-</div>
-`;
