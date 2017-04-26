@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataPickerMenu renders with defaultProps 1`] = `
+<div
+  className="ax-context ax-context--top ax-context--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+  >
+    <div
+      className="ax-context-box ax-context-box--padding-none"
+    >
+      <ul
+        className="ax-context-menu"
+      >
+        Lorem Ipsum
+      </ul>
+    </div>
+  </div>
+  <span
+    className="ax-context__arrow"
+  />
+</div>
+`;
+
+exports[`DataPickerMenu renders with position 1`] = `
+<div
+  className="ax-context ax-context--bottom ax-context--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+  >
+    <div
+      className="ax-context-box ax-context-box--padding-none"
+    >
+      <ul
+        className="ax-context-menu"
+      >
+        Lorem Ipsum
+      </ul>
+    </div>
+  </div>
+  <span
+    className="ax-context__arrow"
+  />
+</div>
+`;

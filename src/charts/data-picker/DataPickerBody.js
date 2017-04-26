@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import './Panel.css';
+import {
+  PanelBody,
+} from 'bw-axiom';
 
-export default class PanelHeader extends Component {
+export default class DataPickerBody extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
   };
 
   render() {
     const { children, ...rest } = this.props;
-
     return (
-      <div { ...rest } className="ax-panel__header">
+      <PanelBody { ...rest }>
         { children }
-      </div>
+      </PanelBody>
     );
   }
 }
+

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import './Panel.css';
+import { Context, DropdownMenu } from 'bw-axiom';
 
-export default class PanelHeader extends Component {
+export default class DataPickerMenu extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -11,9 +11,13 @@ export default class PanelHeader extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <div { ...rest } className="ax-panel__header">
-        { children }
-      </div>
+      <Context { ...rest }>
+        <DropdownMenu>
+          { children }
+        </DropdownMenu>
+      </Context>
     );
   }
 }
+
+

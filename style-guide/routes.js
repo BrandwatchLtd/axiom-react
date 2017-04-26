@@ -212,14 +212,20 @@ export default (
         <Route
             path="chart-panel"
             name="Chart Panel"
-            apiDocs={ ['ChartPanels', 'ChartPanel', 'ChartPanelBody', 'ChartPanelHeader'] }
-            examples={ require('../src/charts/chart-panel/example') }
+            apiDocs={ ['Panels', 'Panel', 'PanelBody', 'PanelHeader'] }
+            examples={ require('../src/charts/panel/example') }
             component={ Doc } />
         <Route
             path="data-point"
             name="Data Points"
             apiDocs={ ['DataPoints', 'DataPoint'] }
             examples={ require('../src/charts/data-point/example') }
+            component={ Doc } />
+        <Route
+            path="data-picker"
+            name="Data Picker"
+            apiDocs={ [] }
+            examples={ require('../src/charts/data-picker/example') }
             component={ Doc } />
         <Route
             path="dot-plot"

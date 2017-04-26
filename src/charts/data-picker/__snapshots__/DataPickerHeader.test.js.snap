@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataPickerHeader renders with color 1`] = `
+<div
+  className="ax-panel__header"
+>
+  <div
+    className="ax-grid__container ax-space--medium"
+  >
+    <div
+      className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+    >
+      <div
+        className="ax-grid__cell ax-grid__cell--shrink"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <svg
+          className="ax-data-points"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="ax-data-point ax-data-point--blue"
+            cx={12}
+            cy={12}
+            r={12}
+          />
+        </svg>
+      </div>
+      <div
+        className="ax-grid__cell"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <h3
+          className="ax-heading ax-heading--title ax-space--tiny"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DataPickerHeader renders with defaultProps 1`] = `
+<div
+  className="ax-panel__header"
+>
+  <div
+    className="ax-grid__container ax-space--medium"
+  >
+    <div
+      className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+    >
+      <div
+        className="ax-grid__cell ax-grid__cell--shrink"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <svg
+          className="ax-data-points"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="ax-data-point ax-data-point--undefined"
+            cx={12}
+            cy={12}
+            r={12}
+          />
+        </svg>
+      </div>
+      <div
+        className="ax-grid__cell"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <h3
+          className="ax-heading ax-heading--title ax-space--tiny"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DataPickerHeader renders with headerText 1`] = `
+<div
+  className="ax-panel__header"
+>
+  <div
+    className="ax-grid__container ax-space--medium"
+  >
+    <div
+      className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+    >
+      <div
+        className="ax-grid__cell ax-grid__cell--shrink"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <svg
+          className="ax-data-points"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="ax-data-point ax-data-point--undefined"
+            cx={12}
+            cy={12}
+            r={12}
+          />
+        </svg>
+      </div>
+      <div
+        className="ax-grid__cell"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <h3
+          className="ax-heading ax-heading--title ax-space--tiny"
+        >
+          Test
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataPickerMenuItem renders with defaultProps 1`] = `
+<li
+  className="ax-context-menu__list-item"
+>
+  <button
+    className="ax-context-menu__item"
+    onClick={[Function]}
+  >
+    Lorem Ipsum
+  </button>
+</li>
+`;
+
+exports[`DataPickerMenuItem renders with onClick 1`] = `
+<li
+  className="ax-context-menu__list-item"
+>
+  <button
+    className="ax-context-menu__item"
+    onClick={[Function]}
+  >
+    Lorem Ipsum
+  </button>
+</li>
+`;
