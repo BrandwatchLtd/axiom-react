@@ -150,6 +150,12 @@ export default (
             examples={ require('../src/components/reveal/example') }
             component={ Doc } />
         <Route
+            path="statcard"
+            name="Stat Cards"
+            apiDocs={ ['Stat', 'StatCard', 'StatCards', 'StatHeading'] }
+            examples={ require('../src/components/statcard/example') }
+            component={ Doc } />
+        <Route
             path="table"
             name="Table"
             apiDocs={ ['Table', 'TableBody', 'TableCell', 'TableHead', 'TableRow'] }

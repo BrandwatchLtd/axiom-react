@@ -1,0 +1,13 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-stat-card-vertical-padding: calc(var(--spacing-grid-size) * 3);
+  --cmp-stat-card-horizontal-padding: calc(var(--spacing-grid-size) * 4);
+}
+
+.ax-stat-cards__card {
+  padding: var(--cmp-stat-card-vertical-padding) var(--cmp-stat-card-horizontal-padding);
+  border-radius: var(--component-border-radius-large);
+  background-color: var(--color-context-background-active);
+}

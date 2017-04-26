@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatCards renders with defaultProps 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--fill"
+  >
+    Lorem
+  </div>
+</div>
+`;

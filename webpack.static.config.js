@@ -77,6 +77,7 @@ module.exports = {
         '/docs/components/position',
         '/docs/components/progress',
         '/docs/components/reveal',
+        '/docs/components/statcard',
         '/docs/components/table',
         '/docs/components/tabset',
         '/docs/components/tooltip',

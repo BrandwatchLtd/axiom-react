@@ -1,0 +1,32 @@
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --cmp-stat-vertical-padding: calc(var(--spacing-grid-size) / 2);
+  --cmp-stat-spacing: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-stat-cards__stat {
+  padding-top: var(--cmp-stat-vertical-padding);
+  padding-bottom: var(--cmp-stat-vertical-padding);
+  list-style: none;
+
+  & + & {
+    margin-left: var(--cmp-stat-spacing);
+    padding-left: var(--cmp-stat-spacing);
+    border-left: var(--component-border-width) solid var(--color-context-border);
+  }
+}
+
+.ax-stat-cards__stat--rose { color: var(--color-brand-rose); }
+.ax-stat-cards__stat--pink { color: var(--color-brand-pink); }
+.ax-stat-cards__stat--purple { color: var(--color-brand-purple); }
+.ax-stat-cards__stat--lilac { color: var(--color-brand-lilac); }
+.ax-stat-cards__stat--blue { color: var(--color-brand-blue); }
+.ax-stat-cards__stat--teal { color: var(--color-brand-teal); }
+.ax-stat-cards__stat--green { color: var(--color-brand-green); }
+.ax-stat-cards__stat--chartreuse { color: var(--color-brand-chartreuse); }
+.ax-stat-cards__stat--amber { color: var(--color-brand-amber); }
+.ax-stat-cards__stat--orange { color: var(--color-brand-orange); }
+.ax-stat-cards__stat--brown { color: var(--color-brand-brown); }
+.ax-stat-cards__stat--grey { color: var(--color-brand-grey); }
