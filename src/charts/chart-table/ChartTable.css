@@ -1,0 +1,17 @@
+@import '../../materials/sizing';
+
+:root {
+  --cmp-chart-table-row-padding: calc((var(--spacing-grid-size) * 3) / 2);
+}
+
+.ax-chart-table,
+.ax-chart-table__rows {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.ax-chart-table__cell {
+  padding-top: var(--cmp-chart-table-row-padding);
+  padding-bottom: var(--cmp-chart-table-row-padding);
+}

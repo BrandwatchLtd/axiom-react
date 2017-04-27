@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartTable renders with defaultProps 1`] = `
+<div
+  className="ax-chart-table"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartTable renders with labelColumnWidth 1`] = `
+<div
+  className="ax-chart-table"
+>
+  Lorem Ipsum
+</div>
+`;

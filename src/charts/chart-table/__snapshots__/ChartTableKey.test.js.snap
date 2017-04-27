@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartTableKey renders with defaultProps 1`] = `
+<div
+  className="ax-chart-table__key ax-space--tiny"
+>
+  Lorem
+</div>
+`;

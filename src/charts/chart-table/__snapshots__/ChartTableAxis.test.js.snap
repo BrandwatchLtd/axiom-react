@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartTableAxis renders with defaultProps 1`] = `
+<div
+  className="ax-chart-table__axis ax-space--tiny"
+>
+  <div
+    className="ax-space--tiny"
+  >
+    <div
+      className="ax-chart-axis-labels"
+      style={
+        Object {
+          "marginLeft": undefined,
+        }
+      }
+    >
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          0%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          10%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          20%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          30%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          40%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          50%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          60%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          70%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          80%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          90%
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "10%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          100%
+        </small>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ax-text--center ax-text--color-subtle"
+  >
+    <small
+      className="ax-small"
+    >
+      Lorem Ipsum
+    </small>
+  </div>
+</div>
+`;
+
+exports[`ChartTableAxis renders with labels 1`] = `
+<div
+  className="ax-chart-table__axis ax-space--tiny"
+>
+  <div
+    className="ax-space--tiny"
+  >
+    <div
+      className="ax-chart-axis-labels"
+      style={
+        Object {
+          "marginLeft": undefined,
+        }
+      }
+    >
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "100%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          1
+        </small>
+      </div>
+      <div
+        className="ax-chart-axis-labels__label"
+        style={
+          Object {
+            "flexBasis": "100%",
+          }
+        }
+      >
+        <small
+          className="ax-small ax-text--color-subtle"
+        >
+          2
+        </small>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ax-text--center ax-text--color-subtle"
+  >
+    <small
+      className="ax-small"
+    >
+      Lorem Ipsum
+    </small>
+  </div>
+</div>
+`;
