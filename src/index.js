@@ -97,6 +97,8 @@ export { default as ChartAxisLabels } from './charts/chart-axis/ChartAxisLabels'
 export { default as ChartAxisTitle } from './charts/chart-axis/ChartAxisTitle';
 export { default as ChartGrid } from './charts/chart-grid/ChartGrid';
 export { default as ChartHeading } from './charts/chart-heading/ChartHeading';
+export { default as ChartKey } from './charts/chart-key/ChartKey';
+export { default as ChartKeyItem } from './charts/chart-key/ChartKeyItem';
 export { default as ChartPanel } from './charts/chart-panel/ChartPanel';
 export { default as ChartPanelBody } from './charts/chart-panel/ChartPanelBody';
 export { default as ChartPanelHeader } from './charts/chart-panel/ChartPanelHeader';

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartKey renders with defaultProps 1`] = `
+<div
+  className="ax-grid__container ax-space--medium"
+>
+  <div
+    className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--horizontal-middle"
+  >
+    <div
+      className="ax-grid__cell"
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+    >
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
+        >
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            Lorem
+          </div>
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <strong
+              className="ax-text--strong ax-text--color-subtle"
+            >
+              Ipsum
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
