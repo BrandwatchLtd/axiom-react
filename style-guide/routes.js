@@ -216,6 +216,12 @@ export default (
             examples={ require('../src/charts/data-point/example') }
             component={ Doc } />
         <Route
+            path="dot-plot"
+            name="Dot Plot"
+            apiDocs={ ['DotPlot', 'Dot'] }
+            examples={ require('../src/charts/dot-plot/example') }
+            component={ Doc } />
+        <Route
             path="wordcloud"
             name="Word Cloud"
             apiDocs={ ['WordCloud', 'Word'] }

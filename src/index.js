@@ -113,6 +113,9 @@ export { default as ChartTableRows } from './charts/chart-table/ChartTableRows';
 export { default as ChartTableVisual } from './charts/chart-table/ChartTableVisual';
 export { default as DataPoint } from './charts/data-point/DataPoint';
 export { default as DataPoints } from './charts/data-point/DataPoints';
+export { default as Dot } from './charts/dot-plot/Dot';
+export { default as DotPlot } from './charts/dot-plot/DotPlot';
+export { default as DotPlotLine } from './charts/dot-plot/DotPlotLine';
 export { default as Word } from './charts/wordcloud/Word';
 export { default as WordCloud } from './charts/wordcloud/WordCloud';
 

@@ -1,0 +1,10 @@
+@import '../../materials/colors';
+
+.ax-dot-plot__line {
+  display: block;
+}
+
+.ax-dot-plot__line-path {
+  stroke: var(--color-theme-light-text-disabled);
+  vector-effect: non-scaling-stroke;
+}

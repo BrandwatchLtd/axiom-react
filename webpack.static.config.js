@@ -86,6 +86,7 @@ module.exports = {
         '/docs/composites/usermenu',
         '/docs/charts/chart-heading',
         '/docs/charts/data-point',
+        '/docs/charts/dot-plot',
         '/docs/charts/wordcloud',
       ],
     }),
