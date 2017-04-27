@@ -1,0 +1,18 @@
+@import '../../materials/layout';
+
+.ax-chart-axis-labels {
+  display: flex;
+}
+
+.ax-chart-axis-labels__label {
+  flex-grow: 1;
+  flex-shrink: 0;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+@media (--screen-less-than-small) {
+  .ax-chart-axis-labels__label:nth-child(even) {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartAxisLabels renders with defaultProps 1`] = `
+<div
+  className="ax-chart-axis-labels"
+>
+  <div
+    className="ax-chart-axis-labels__label"
+    style={
+      Object {
+        "flexBasis": "50%",
+      }
+    }
+  >
+    <small
+      className="ax-small ax-text--color-subtle"
+    >
+      0%
+    </small>
+  </div>
+  <div
+    className="ax-chart-axis-labels__label"
+    style={
+      Object {
+        "flexBasis": "50%",
+      }
+    }
+  >
+    <small
+      className="ax-small ax-text--color-subtle"
+    >
+      50%
+    </small>
+  </div>
+  <div
+    className="ax-chart-axis-labels__label"
+    style={
+      Object {
+        "flexBasis": "50%",
+      }
+    }
+  >
+    <small
+      className="ax-small ax-text--color-subtle"
+    >
+      100%
+    </small>
+  </div>
+</div>
+`;

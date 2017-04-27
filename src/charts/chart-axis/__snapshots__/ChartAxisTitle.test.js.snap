@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartAxisTitle renders with defaultProps 1`] = `
+<div
+  className="ax-text--center ax-text--color-subtle"
+>
+  <small
+    className="ax-small"
+  >
+    Lorem
+  </small>
+</div>
+`;
