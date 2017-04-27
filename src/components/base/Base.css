@@ -64,6 +64,10 @@ body {
   line-height: var(--line-height-body);
 }
 
+svg:not(:root) {
+  overflow: visible;
+}
+
 /* stylelint-disable declaration-no-important */
 @media (--screen-less-than-small) {
   .ax-hidden-until--small  {
