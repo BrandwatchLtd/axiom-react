@@ -26,8 +26,8 @@ export default class Tooltip extends Component {
 
   getChildContext() {
     return {
-      hideTooltip: ::this.hide,
-      showTooltip: ::this.show,
+      hideTooltip: () => this.hide(),
+      showTooltip: () => this.show(),
     };
   }
 

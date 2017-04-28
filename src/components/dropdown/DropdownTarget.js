@@ -24,7 +24,7 @@ export default class DropdownTarget extends Component {
 
     return cloneElement(children, {
       ...rest,
-      onClick: ::this.handleClick,
+      onClick: this.handleClick.bind(this),
     });
   }
 }

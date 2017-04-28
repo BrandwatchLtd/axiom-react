@@ -34,8 +34,8 @@ export default class TooltipTarget extends Component {
 
     return cloneElement(children, {
       ...rest,
-      onMouseMove: ::this.handleMouseMove,
-      onMouseLeave: ::this.handleMouseLeave,
+      onMouseMove: this.handleMouseMove.bind(this),
+      onMouseLeave: this.handleMouseLeave.bind(this),
     });
   }
 }

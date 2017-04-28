@@ -33,14 +33,14 @@ export default class TableExample extends Component {
     return (
       <Example name="Reveal">
         <ButtonGroup space="none">
-          <Button onClick={ ::this.handleOnClick } style="secondary">
+          <Button onClick={ () => this.handleOnClick() } style="secondary">
             Toggle visibility: { visible ? 'OFF' : 'ON' }
           </Button>
         </ButtonGroup>
 
 
         <CardList size="large">
-          <Card active={ visible } onClick={ ::this.handleOnClick }>
+          <Card active={ visible } onClick={ () => this.handleOnClick() }>
             <Grid
                 gutters="large"
                 responsive={ false }
@@ -73,7 +73,7 @@ export default class TableExample extends Component {
               </Paragraph>
 
               <ButtonGroup>
-                <Button onClick={ ::this.handleOnClick } style="secondary">
+                <Button onClick={ () => this.handleOnClick() } style="secondary">
                   Toggle visibility: { visible ? 'OFF' : 'ON' }
                 </Button>
               </ButtonGroup>

@@ -26,8 +26,8 @@ export default class Dropdown extends Component {
 
   getChildContext() {
     return {
-      closeDropdown: ::this.close,
-      openDropdown: ::this.open,
+      closeDropdown: () => this.close(),
+      openDropdown: () => this.open(),
     };
   }
 
@@ -53,7 +53,7 @@ export default class Dropdown extends Component {
       <Position
           { ...rest }
           isVisible={ isVisible }
-          onMaskClick={ ::this.close }
+          onMaskClick={ () => this.close() }
           position={ position }>
         <PositionTarget>{ findComponent(children, DropdownTarget) }</PositionTarget>
         <PositionContent>{ findComponent(children, DropdownContent) }</PositionContent>

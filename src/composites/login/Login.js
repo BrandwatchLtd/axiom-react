@@ -80,16 +80,16 @@ export default class Login extends Component {
               { application }<Weak>/ Login</Weak>
             </Heading>
 
-            <Form onSubmit={ ::this.handleSubmit }>
+            <Form onSubmit={ e => this.handleSubmit(e) }>
               <TextInput
-                  onChange={ ::this.handleUsernameChange }
+                  onChange={ e => this.handleUsernameChange(e) }
                   placeholder="Username"
                   size="large"
                   theme={ theme }
                   value={ username } />
 
               <TextInput
-                  onChange={ ::this.handlePasswordChange }
+                  onChange={ e => this.handlePasswordChange(e) }
                   placeholder="Password"
                   size="large"
                   theme={ theme }

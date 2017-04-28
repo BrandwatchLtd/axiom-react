@@ -20,12 +20,12 @@ export default class DialogExample extends Component {
     return (
       <Example name="Fullscreen Dialog">
         <ButtonGroup>
-          <Button onClick={ ::this.openDialog }>
+          <Button onClick={ () => this.openDialog() }>
             Open Fullscreen Dialog
             <DialogDemo
                 fullscreen={ true }
                 isOpen={ this.state.isOpen }
-                onRequestClose={ ::this.closeDialog }
+                onRequestClose={ () => this.closeDialog() }
                 withFooter={ true }
                 withTitle={ true } />
           </Button>

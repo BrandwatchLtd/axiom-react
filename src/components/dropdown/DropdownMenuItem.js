@@ -29,7 +29,7 @@ export default class DropdownMenuItem extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <ContextMenuItem { ...rest } onClick={ ::this.handleClick }>
+      <ContextMenuItem { ...rest } onClick={ this.handleClick.bind(this) }>
         { children }
       </ContextMenuItem>
     );

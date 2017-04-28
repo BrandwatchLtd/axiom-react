@@ -75,10 +75,11 @@ export default class Position extends Component {
 
   createPopper() {
     const { placement: statePlacement } = this.state;
+    const boundHandlePlacementChange = this.handlePlacementChange.bind(this);
 
     this._popper = new popperJS(this._target, this._content, {
-      onCreate: ::this.handlePlacementChange,
-      onUpdate: ::this.handlePlacementChange,
+      onCreate: boundHandlePlacementChange,
+      onUpdate: boundHandlePlacementChange,
       placement: statePlacement,
       modifiers: {
         arrow: {

@@ -29,12 +29,12 @@ export default class DocApiDialogTrigger extends Component {
 
     return (
       <ButtonGroup>
-        <Button onClick={ ::this.openDialog }>
+        <Button onClick={ () => this.openDialog() }>
           View API Docs
           <ApiDocsDialog
               components={ components }
               isOpen={ isOpen }
-              onRequestClose={ ::this.closeDialog } />
+              onRequestClose={ () => this.closeDialog() } />
         </Button>
       </ButtonGroup>
     );

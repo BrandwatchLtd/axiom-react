@@ -28,12 +28,12 @@ export default class ShortNumber extends Component {
             <TextInput
                 defaultValue={ number }
                 label="Number to format"
-                onChange={ ::this.updateNumber } />
+                onChange={ e => this.updateNumber(e) } />
 
             <TextInput
                 defaultValue={ precision }
                 label="Precision (decimals)"
-                onChange={ ::this.updatePrecision } />
+                onChange={ e => this.updatePrecision(e) } />
           </GridCell>
 
           <GridCell>

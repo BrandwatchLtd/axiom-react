@@ -44,11 +44,11 @@ export default class DialogSizes extends Component {
       <Example name="Sized Dialogs">
         <ButtonGroup>
           { size.values.map((size) =>
-            <Button key={ size } onClick={ ::this.openDialog(size) }>
+            <Button key={ size } onClick={ this.openDialog(size).bind(this) }>
               Open { size.toUpperCase() } Dialog
               <DialogDemo
                   isOpen={ this.state[size] }
-                  onRequestClose={ ::this.closeDialog(size) }
+                  onRequestClose={ this.closeDialog(size).bind(this) }
                   size={ size }
                   withFooter={ true }
                   withTitle={ true } />

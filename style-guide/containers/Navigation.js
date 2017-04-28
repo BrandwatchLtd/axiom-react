@@ -70,7 +70,7 @@ export default class Navigation extends Component {
     return (
       <Nav
           items={ this.getNavigationItems() }
-          onItemClick={ ::this.handleItemClick } />
+          onItemClick={ this.handleItemClick.bind(this) } />
     );
   }
 }

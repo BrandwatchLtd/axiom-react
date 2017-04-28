@@ -60,8 +60,8 @@ export default class TextInput extends Component {
               { ...rest }
               className="ax-input"
               disabled={ disabled }
-              onBlur={ ::this.handleOnBlur }
-              onFocus={ ::this.handleOnFocus }
+              onBlur={ () => this.handleOnBlur() }
+              onFocus={ () => this.handleOnFocus() }
               ref="input"  />
           { icon }
         </div>

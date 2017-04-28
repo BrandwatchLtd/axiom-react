@@ -16,9 +16,9 @@ export default class Layout extends Component {
 
   getChildContext() {
     return {
-      showSidebar: ::this.showSidebar,
-      hideSidebar: ::this.hideSidebar,
-      toggleSidebar: ::this.toggleSidebar,
+      showSidebar: () => this.showSidebar(),
+      hideSidebar: () => this.hideSidebar(),
+      toggleSidebar: () => this.toggleSidebar(),
     };
   }
 
