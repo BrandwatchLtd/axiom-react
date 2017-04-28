@@ -20,6 +20,7 @@
 .ax-modal {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
   min-height: 0;
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 
