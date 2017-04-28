@@ -19,13 +19,13 @@ export default class Snippet extends Component {
 
     return (
       <CodeTabset>
-        { do { if (jsxSnippet) {
-          <CodeSnippet language="jsx">{ jsxSnippet }</CodeSnippet>;
-        } } }
+        { jsxSnippet && (
+          <CodeSnippet language="jsx">{ jsxSnippet }</CodeSnippet>
+        ) }
 
-        { do { if (htmlSnippet) {
-          <CodeSnippet language="html">{ htmlSnippet }</CodeSnippet>;
-        } } }
+        { htmlSnippet && (
+          <CodeSnippet language="html">{ htmlSnippet }</CodeSnippet>
+        ) }
       </CodeTabset>
     );
   }

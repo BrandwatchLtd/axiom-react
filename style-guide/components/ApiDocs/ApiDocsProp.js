@@ -60,31 +60,29 @@ export default class ApiDocsProp extends Component {
           <GridCell>
             <Paragraph><Strong>{ propName }</Strong></Paragraph>
 
-            { do { if (description) {
-              <Paragraph>{ description }</Paragraph>;
-            } } }
+            { description && (
+              <Paragraph>{ description }</Paragraph>
+            ) }
           </GridCell>
 
-          { do { if (hasDefault || required) {
+          { (hasDefault || required) && (
             <GridCell shrink={ true }>
               <LabelGroup>
-                { do {
-                  if (hasDefault) {
-                    <Label size="small">
-                      Default: <Italic>{ defaultValue.computed
-                        ? 'Computed'
-                        : JSON.stringify(defaultValue.value)
-                      }</Italic>
-                    </Label>;
-                  }
-                } }
+                { hasDefault && (
+                  <Label size="small">
+                    Default: <Italic>{ defaultValue.computed
+                      ? 'Computed'
+                      : JSON.stringify(defaultValue.value)
+                    }</Italic>
+                  </Label>
+                ) }
 
-                { do { if (required) {
-                  <Label color="error" size="small">Required</Label>;
-                } } }
+                { required && (
+                  <Label color="error" size="small">Required</Label>
+                ) }
               </LabelGroup>
-            </GridCell>;
-          } } }
+            </GridCell>
+          ) }
         </Grid>
 
         <pre className="dm-doc-api__pre">
@@ -96,4 +94,3 @@ export default class ApiDocsProp extends Component {
     );
   }
 }
-

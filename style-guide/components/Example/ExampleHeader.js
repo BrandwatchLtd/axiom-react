@@ -27,11 +27,11 @@ export default class ExampleHeader extends Component {
             </Heading>
           </GridCell>
 
-          { do { if (shouldShowApiDocs(components)) {
+          { shouldShowApiDocs(components) && (
             <GridCell shrink={ true }>
               <ApiDocs imports={ { components } } />
-            </GridCell>;
-          } } }
+            </GridCell>
+          ) }
         </Grid>
       </div>
     );

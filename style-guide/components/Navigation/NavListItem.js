@@ -44,24 +44,22 @@ export default class NavListItem extends Component {
 
     return (
       <li className={ classes }>
-        { do { if (!hasChildren) {
+        { !hasChildren ? (
           <RouterLink className="dm-nav__link" to={ to }>
             <Strong>{ name }</Strong>
-          </RouterLink>;
-        } else {
+          </RouterLink>
+        ) : (
           <a className="dm-nav__link" onClick={ () => onClick(item) }>
             <Strong>{ name }</Strong>
-          </a>;
-        } } }
+          </a>
+        ) }
 
-        { do {
-          if (hasChildren) {
-            <NavList
-                isOpen={ isOpen }
-                items={ children }
-                onItemClick={ onClick } />;
-          }
-        } }
+        { hasChildren && (
+          <NavList
+              isOpen={ isOpen }
+              items={ children }
+              onItemClick={ onClick } />
+        ) }
       </li>
     );
   }

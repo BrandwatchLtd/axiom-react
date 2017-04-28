@@ -128,9 +128,9 @@ export default class Position extends Component {
           }
         </div>
 
-        { do { if (onMaskClick) {
-          <div className="ax-position__mask" onClick={ onMaskClick } />;
-        } } }
+        { onMaskClick && (
+          <div className="ax-position__mask" onClick={ onMaskClick } />
+        ) }
       </div>
     );
   }

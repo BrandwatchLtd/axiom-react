@@ -14,11 +14,11 @@ export default class TextGroup extends Component {
 
     return (
       <Base space="small" { ...rest } Component="label" className="ax-input__group">
-        { do { if (label) {
+        { label && (
           <div className="ax-input__label">
             <Strong>{ label }</Strong>
-          </div>;
-        } } }
+          </div>
+        ) }
 
         { children }
       </Base>

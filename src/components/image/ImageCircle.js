@@ -44,11 +44,11 @@ export default class ImageCircle extends Component {
                 style={ { width: '100%' } } />
           </div>
 
-          { do { if (overlayIconName) {
+          { overlayIconName && (
             <div className="ax-image-circle__icon">
               <Icon name={ overlayIconName } size={ overlayIconSize } />
-            </div>;
-          } } }
+            </div>
+          ) }
         </Base>
       </ImageFallback>
     );

@@ -25,13 +25,11 @@ export default class DialogDemo extends Component {
     return (
       <Dialog contentLabel="Dialog Demo" { ...this.props }>
         {
-          do {
-            if (withTitle) {
-              <DialogHeader onRequestClose={ onRequestClose }>
-                <Heading style="title">Dialog Title</Heading>
-              </DialogHeader>;
-            }
-          }
+          withTitle && (
+            <DialogHeader onRequestClose={ onRequestClose }>
+              <Heading style="title">Dialog Title</Heading>
+            </DialogHeader>
+          )
         }
 
         <DialogBody>
@@ -78,15 +76,13 @@ export default class DialogDemo extends Component {
         </DialogBody>
 
         {
-          do {
-            if (withFooter) {
-              <DialogFooter>
-                <ButtonGroup>
-                  <Button onClick={ onRequestClose } style="secondary">Done</Button>
-                </ButtonGroup>
-              </DialogFooter>;
-            }
-          }
+          withFooter && (
+            <DialogFooter>
+              <ButtonGroup>
+                <Button onClick={ onRequestClose } style="secondary">Done</Button>
+              </ButtonGroup>
+            </DialogFooter>
+          )
         }
       </Dialog>
     );

@@ -46,7 +46,7 @@ export default class Pagination extends Component {
           <Icon name="chevron-left" />
         </PaginationButton>
 
-        { do { if (showPrevious) [
+        { showPrevious && [
           <PaginationButton
               key="page-first"
               onClick={ onPageChange }
@@ -59,9 +59,9 @@ export default class Pagination extends Component {
               key="page-first-ellipsis">
             <Icon name="ellipsis" />
           </PaginationButton>,
-        ]; } }
+        ] }
 
-        { do { if (displayRange) {
+        { Boolean(displayRange) && (
           getDisplayRange(currentPage, displayRange, totalPages).map((n) =>
             <PaginationButton
                 active={ currentPage === n }
@@ -70,10 +70,10 @@ export default class Pagination extends Component {
                 page={ n }>
               { n }
             </PaginationButton>
-          );
-        } } }
+          )
+        ) }
 
-        { do { if (showNext) [
+        { showNext && [
           <PaginationButton
               circular="small"
               disabled={ true }
@@ -86,7 +86,7 @@ export default class Pagination extends Component {
               page={ totalPages }>
             { totalPages }
           </PaginationButton>,
-        ]; } }
+        ] }
 
         <PaginationButton
             circular="small"

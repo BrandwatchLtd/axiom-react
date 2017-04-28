@@ -26,13 +26,13 @@ export default class Alert extends Component {
             { children }
           </GridCell>
 
-          { do { if (onRemoveClick) {
+          { onRemoveClick && (
             <GridCell shrink={ true }>
               <Link onClick={ onRemoveClick } style="light">
                 <Icon name="cross" />
               </Link>
-            </GridCell>;
-          } } }
+            </GridCell>
+          ) }
         </Grid>
       </Base>
     );
