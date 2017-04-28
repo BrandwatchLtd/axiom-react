@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bar renders with color amber 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--amber"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color blue 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--blue"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color brown 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--brown"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color chartreuse 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--chartreuse"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color green 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--green"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color grey 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--grey"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color lilac 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--lilac"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color orange 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--orange"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color pink 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--pink"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color purple 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--purple"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color rose 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--rose"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color teal 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect ax-bar-chart__bar-rect--teal"
+      style={
+        Object {
+          "flexBasis": "undefined%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with defaultProps 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        43
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect"
+      style={
+        Object {
+          "flexBasis": "43%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with percentage 1 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        1
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect"
+      style={
+        Object {
+          "flexBasis": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Bar renders with percentage 100 1`] = `
+<div
+  className="ax-bar-chart__bar-container"
+>
+  <div
+    className="ax-bar-chart__bar"
+  >
+    <div
+      className="ax-bar-chart__bar-label"
+    >
+      <small
+        className="ax-small ax-text--color-subtle"
+      >
+        100
+        %
+      </small>
+    </div>
+    <div
+      className="ax-bar-chart__bar-rect"
+      style={
+        Object {
+          "flexBasis": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

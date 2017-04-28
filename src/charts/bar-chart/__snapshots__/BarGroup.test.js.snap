@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarGroup renders with defaultProps 1`] = `
+<div
+  className="ax-bar-chart__group"
+>
+  <div
+    className="ax-bar-chart__group-bars"
+  />
+  <div
+    className="ax-bar-chart__group-label"
+  >
+    <h4
+      className="ax-heading ax-heading--large ax-space--tiny"
+    >
+      <strong
+        className="ax-text--strong"
+      >
+        a_label
+      </strong>
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`BarGroup renders with ratio if provided 1`] = `
+<div
+  className="ax-bar-chart__group"
+>
+  <div
+    className="ax-bar-chart__group-bars"
+  />
+  <div
+    className="ax-bar-chart__group-label"
+  >
+    <p
+      className="ax-paragraph ax-space--tiny"
+    >
+      <small
+        className="ax-small"
+      >
+        <span
+          className="ax-text--weak"
+        >
+          45
+          %
+        </span>
+      </small>
+    </p>
+    <h4
+      className="ax-heading ax-heading--large ax-space--tiny"
+    >
+      <strong
+        className="ax-text--strong"
+      />
+    </h4>
+  </div>
+</div>
+`;

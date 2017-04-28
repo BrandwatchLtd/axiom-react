@@ -1,0 +1,6 @@
+@import '../../materials/sizing';
+
+.ax-bar-chart {
+  display: flex;
+  flex-wrap: wrap;
+}

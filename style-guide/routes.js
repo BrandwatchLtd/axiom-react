@@ -204,6 +204,12 @@ export default (
             examples={ require('../src/charts/chart-heading/example') }
             component={ Doc } />
         <Route
+            path="bar-chart"
+            name="Bar Chart"
+            apiDocs={ ['Bar','BarChart', 'BarGroup'] }
+            examples={ require('../src/charts/bar-chart/example') }
+            component={ Doc } />
+        <Route
             path="chart-panel"
             name="Chart Panel"
             apiDocs={ ['ChartPanels', 'ChartPanel', 'ChartPanelBody', 'ChartPanelHeader'] }

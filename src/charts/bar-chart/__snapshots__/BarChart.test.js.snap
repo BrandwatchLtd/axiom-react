@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarChart renders with defaultProps 1`] = `
+<div
+  className="ax-bar-chart"
+  style={
+    Object {
+      "height": 256,
+    }
+  }
+/>
+`;
