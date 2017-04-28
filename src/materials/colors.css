@@ -1,8 +1,8 @@
 /* stylelint-disable color-no-hex */
 :root {
-  --color-ui-dark--dark: #2F2D36;
-  --color-ui-dark: #34323B;
-  --color-ui-dark--light: #48464F;
+  --color-ui-dark--dark: #343239;
+  --color-ui-dark: #434148;
+  --color-ui-dark--light: #48464D;
 
   --color-ui-primary--dark: #1F8DC3;
   --color-ui-primary: #239EDC;
