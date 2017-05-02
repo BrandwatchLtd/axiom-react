@@ -8,7 +8,7 @@ function buildItem({ props }, activePath, openPath, parentPath = '') {
   return {
     name: props.name,
     to: path,
-    isOpen: openPath.includes(path),
+    isOpen: openPath.indexOf(path) !== -1,
     isActive: path === activePath,
     children: Array.isArray(props.children)
       ? props.children.map((child) => buildItem(child, activePath, openPath, path))

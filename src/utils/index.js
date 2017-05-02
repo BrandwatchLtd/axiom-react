@@ -3,7 +3,8 @@ import { Children } from 'react';
 const isServer = typeof window === 'undefined';
 
 export function findComponent(components, Component) {
-  return Children.toArray(components).find(({ type }) => type === Component);
+  const arr = Children.toArray(components);
+  for (let i = 0; i < arr.length; i++) if (arr[i].type === Component) return arr[i];
 }
 
 export function getCSSVar(variable, context) {
