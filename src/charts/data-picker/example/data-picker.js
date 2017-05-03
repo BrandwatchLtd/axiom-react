@@ -76,7 +76,7 @@ export default class DataPickerExample extends Component {
                             onClick={ onClick.bind(this, id) }>
                           { name }
                         </DataPickerMenuItem>
-                      ))}
+                      ) ) }
                     </DataPickerMenu>
                   </DataPickerHeader>
 
@@ -87,8 +87,7 @@ export default class DataPickerExample extends Component {
                   </DataPickerBody> }
                 </DataPicker>
               </GridCell>
-            )
-            ) }
+            ) ) }
           </Grid>
         </Snippet>
 

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Context,
+  DataPoint,
+  DataPoints,
   Dropdown,
   DropdownContent,
-  DropdownMenu,
   DropdownTarget,
   Grid,
   GridCell,
@@ -41,7 +41,7 @@ export default class DataPickerHeader extends Component {
         <Grid gutters="tiny" verticalAlign="middle">
           <GridCell shrink={ true }>
             <DataPoints height="1rem">
-              <DataPoint color={ color } radius={ 1 } />
+              <DataPoint color={ color } radius={ .75 } />
             </DataPoints>
           </GridCell>
           <GridCell>
