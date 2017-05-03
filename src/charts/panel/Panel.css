@@ -23,13 +23,10 @@
   padding: var(--cmp-panel-padding-vertical) var(--cmp-panel-padding-horizontal);
 }
 
-.ax-panel__header {
-  border-bottom: var(--component-border-width) solid var(--color-ui-light--dark);
-}
-
 .ax-panel__body {
   position: relative;
   flex: 1 1 auto;
+  border-top: var(--component-border-width) solid var(--color-ui-light--dark);
 }
 
 .ax-panel__body--vertical-start,
