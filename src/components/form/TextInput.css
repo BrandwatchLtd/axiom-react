@@ -24,6 +24,7 @@
   background-color: transparent;
   text-overflow: ellipsis;
   line-height: var(--component-line-height);
+  overflow: visible; /*  Show the overflow in Edge. */
 
   &::placeholder {
     color: var(--cmp-input-color-placeholder);

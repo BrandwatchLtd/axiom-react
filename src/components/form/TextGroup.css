@@ -5,7 +5,9 @@
 .ax-textarea {
   width: 100%;
   min-width: 0;
+  margin: 0; /* Remove the margin in Firefox and Safari. */
   color: inherit;
+  font: inherit;
   appearance: none;
 
   &::placeholder {
