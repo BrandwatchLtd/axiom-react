@@ -47,13 +47,6 @@ exports[`BarGroup renders with ratio if provided 1`] = `
         </span>
       </small>
     </p>
-    <h4
-      className="ax-heading ax-heading--large ax-space--tiny"
-    >
-      <strong
-        className="ax-text--strong"
-      />
-    </h4>
   </div>
 </div>
 `;
