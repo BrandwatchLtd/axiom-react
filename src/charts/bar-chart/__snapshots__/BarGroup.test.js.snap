@@ -7,6 +7,16 @@ exports[`BarGroup renders with defaultProps 1`] = `
   <div
     className="ax-bar-chart__group-bars"
   />
+</div>
+`;
+
+exports[`BarGroup renders with label if provided 1`] = `
+<div
+  className="ax-bar-chart__group"
+>
+  <div
+    className="ax-bar-chart__group-bars"
+  />
   <div
     className="ax-bar-chart__group-label"
   >
@@ -16,7 +26,7 @@ exports[`BarGroup renders with defaultProps 1`] = `
       <strong
         className="ax-text--strong"
       >
-        a_label
+        45-53
       </strong>
     </h4>
   </div>
