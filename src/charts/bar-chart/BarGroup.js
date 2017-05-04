@@ -6,7 +6,7 @@ import './BarGroup.css';
 export default class BarGroup extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     ratio: PropTypes.string,
   };
 
@@ -23,12 +23,15 @@ export default class BarGroup extends Component {
         <div className="ax-bar-chart__group-bars">
           { children }
         </div>
+        { (ratio || label) &&
         <div className="ax-bar-chart__group-label">
           { ratio && <Paragraph>
             <Small><Weak>{ ratio }%</Weak></Small>
           </Paragraph> }
-          <Heading><Strong>{label}</Strong></Heading>
+          { label && <Heading>
+            <Strong>{label}</Strong></Heading> }
         </div>
+        }
       </div>
     );
   }

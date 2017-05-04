@@ -228,6 +228,12 @@ export default (
             examples={ require('../src/charts/dot-plot/example') }
             component={ Doc } />
         <Route
+            path="axis-label"
+            name="Axis Label"
+            apiDocs={ ['Axis', 'AxisLabel'] }
+            examples={ require('../src/charts/axis-label/example') }
+            component={ Doc } />
+        <Route
             path="wordcloud"
             name="Word Cloud"
             apiDocs={ ['WordCloud', 'Word'] }
