@@ -30,7 +30,6 @@ export default class BarChartTwoSeriesWithRatios extends Component {
               </Axis>
             </GridCell>
           </Grid>
-
         </Snippet>
       </Example>
     );
