@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './BarGroup.css';
+import { Base } from 'bw-axiom';
+import './Axis.css';
 
-export default class BarGroup extends Component {
+export default class Axis extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -14,11 +15,9 @@ export default class BarGroup extends Component {
     } = this.props;
 
     return (
-      <div { ...rest } className="ax-bar-chart__group">
-        <div className="ax-bar-chart__group-bars">
-          { children }
-        </div>
-      </div>
+      <Base { ...rest } className="ax-axis-labels">
+        { children }
+      </Base>
     );
   }
 }

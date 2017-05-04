@@ -93,6 +93,8 @@ export { default as Underline } from './components/typography/Underline';
 export { default as Weak } from './components/typography/Weak';
 
 // Charts
+export { default as Axis } from './charts/axis-label/Axis';
+export { default as AxisLabel } from './charts/axis-label/AxisLabel';
 export { default as Bar } from './charts/bar-chart/Bar';
 export { default as BarChart } from './charts/bar-chart/BarChart';
 export { default as BarGroup } from './charts/bar-chart/BarGroup';

@@ -1,0 +1,4 @@
+.ax-axis-labels {
+  display: flex;
+  flex-direction: row;
+}
