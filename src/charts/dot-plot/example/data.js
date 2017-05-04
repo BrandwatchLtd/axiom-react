@@ -27,4 +27,22 @@ export const data = [{
 }, {
   label: 'Travel',
   data: [50, 54, 46],
+}, {
+  label: 'Animals & Pets',
+  data: [40, 45, 53],
+}, {
+  label: 'Automotive',
+  data: [50, 38, 45],
+}, {
+  label: 'TV',
+  data: [65, 67, 58],
+}, {
+  label: 'Environment',
+  data: [43, 55, 50],
+}, {
+  label: 'Fashion',
+  data: [10, 45, 26],
+}, {
+  label: 'Music',
+  data: [69, 58, 41],
 }];

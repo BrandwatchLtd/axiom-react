@@ -1,3 +1,5 @@
+@import '../../materials/sizing';
+
 .ax-chart-table__grid-container {
   position: relative;
 }
@@ -7,5 +9,8 @@
   top: 0;
   right: 0;
   bottom: 0;
+
+  /* prevents DataPoints from being clipped on right edge */
+  padding-right: calc(var(--spacing-grid-size) * 2);
   z-index: -1;
 }

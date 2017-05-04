@@ -8,7 +8,7 @@ export default class DotPlotExample extends Component {
     return (
       <Example name="DotPlot">
         <Snippet>
-          { data.map(({ data, label }, index) =>
+          { data.slice(0, 6).map(({ data, label }, index) =>
             <Base
                 key={ label }
                 snippetIgnore={ true }

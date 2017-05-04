@@ -1,4 +1,5 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
 import {
   ChartTableRows,
@@ -7,20 +8,44 @@ import {
   ChartTableVisual,
 } from 'bw-axiom';
 
-function getComponent(props = {}) {
+class ContextProvider extends Component {
+  getChildContext () {
+    return this.props.context;
+  }
+  render () {
+    return this.props.children;
+  }
+}
+
+ContextProvider.childContextTypes = {
+  setRowsCount: PropTypes.func.isRequired,
+};
+
+ContextProvider.propTypes = {
+  children: PropTypes.node,
+  context: PropTypes.object.isRequired,
+};
+
+function getComponent(props = {}, context) {
   return renderer.create(
-    <ChartTableRows { ...props }>
-      <ChartTableRow>
-        <ChartTableLabel>Lorem</ChartTableLabel>
-        <ChartTableVisual>Lorem</ChartTableVisual>
-      </ChartTableRow>
-    </ChartTableRows>
+    <ContextProvider context={ context }>
+      <ChartTableRows { ...props }>
+        <ChartTableRow>
+          <ChartTableLabel>Lorem</ChartTableLabel>
+          <ChartTableVisual>Lorem</ChartTableVisual>
+        </ChartTableRow>
+      </ChartTableRows>
+    </ContextProvider>
   );
 }
 
 describe('ChartTableRows', () => {
+  function setRowsCount () {}
+
   it('renders with defaultProps', () => {
-    const component = getComponent();
+    const component = getComponent({}, {
+      setRowsCount,
+    });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -5,15 +5,18 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
   className="ax-chart-table__axis ax-space--tiny"
 >
   <div
-    className="ax-space--tiny"
+    className="ax-chart-table__axis-row-container ax-space--tiny"
   >
     <div
-      className="ax-chart-axis-labels"
+      className="ax-chart-table__axis-button-container"
       style={
         Object {
-          "marginLeft": undefined,
+          "flexBasis": undefined,
         }
       }
+    />
+    <div
+      className="ax-chart-axis-labels"
     >
       <div
         className="ax-chart-axis-labels__label"
@@ -188,15 +191,18 @@ exports[`ChartTableAxis renders with labels 1`] = `
   className="ax-chart-table__axis ax-space--tiny"
 >
   <div
-    className="ax-space--tiny"
+    className="ax-chart-table__axis-row-container ax-space--tiny"
   >
     <div
-      className="ax-chart-axis-labels"
+      className="ax-chart-table__axis-button-container"
       style={
         Object {
-          "marginLeft": undefined,
+          "flexBasis": undefined,
         }
       }
+    />
+    <div
+      className="ax-chart-axis-labels"
     >
       <div
         className="ax-chart-axis-labels__label"

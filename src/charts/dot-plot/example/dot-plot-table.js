@@ -24,7 +24,10 @@ export default class DotPlotExample extends Component {
     return (
       <Example name="DotPlot inside ChartTable">
         <Snippet>
-          <ChartTable>
+          <ChartTable
+              collapsedVisibleRowCount={ 6 }
+              expandButtonSuffix="Categories"
+              labelColumnWidth="11rem">
             <ChartTableGrid>
               <ChartTableRows>
                 { data.map(({ label, data }, i) =>

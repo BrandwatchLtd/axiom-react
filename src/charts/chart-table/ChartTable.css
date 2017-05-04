@@ -1,7 +1,29 @@
+@import '../../materials/animations';
 @import '../../materials/sizing';
 
 :root {
   --cmp-chart-table-row-padding: calc((var(--spacing-grid-size) * 3) / 2);
+}
+
+.ax-chart-table__axis-button-container {
+  flex-shrink: 0;
+}
+
+.ax-chart-table__axis-row-container {
+  display: flex;
+}
+
+.ax-chart-table__collapse-expand-text {
+  margin-left: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-chart-table__cell {
+  padding-top: var(--cmp-chart-table-row-padding);
+  padding-bottom: var(--cmp-chart-table-row-padding);
+}
+
+.ax-chart-table__cell:first-child {
+  padding-left: calc(var(--spacing-grid-size) * 6);
 }
 
 .ax-chart-table,
@@ -11,7 +33,11 @@
   border-spacing: 0;
 }
 
-.ax-chart-table__cell {
-  padding-top: var(--cmp-chart-table-row-padding);
-  padding-bottom: var(--cmp-chart-table-row-padding);
+.ax-chart-table__rows-container {
+  /* prevents DataPoints from being clipped on right edge */
+  padding-right: calc(var(--spacing-grid-size) * 2);
+  overflow-y: hidden;
+  transition-property: height;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
 }
