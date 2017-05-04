@@ -198,28 +198,16 @@ export default (
 
       <Route path="charts" name="Charts & Visualisations">
         <Route
-            path="chart-heading"
-            name="Chart Heading"
-            apiDocs={ ['ChartHeading'] }
-            examples={ require('../src/charts/chart-heading/example') }
-            component={ Doc } />
-        <Route
             path="bar-chart"
             name="Bar Chart"
             apiDocs={ ['Bar','BarChart', 'BarGroup'] }
             examples={ require('../src/charts/bar-chart/example') }
             component={ Doc } />
         <Route
-            path="chart-panel"
-            name="Chart Panel"
-            apiDocs={ ['Panels', 'Panel', 'PanelBody', 'PanelHeader'] }
-            examples={ require('../src/charts/panel/example') }
-            component={ Doc } />
-        <Route
-            path="data-point"
-            name="Data Points"
-            apiDocs={ ['DataPoints', 'DataPoint'] }
-            examples={ require('../src/charts/data-point/example') }
+            path="chart-heading"
+            name="Chart Heading"
+            apiDocs={ ['ChartHeading'] }
+            examples={ require('../src/charts/chart-heading/example') }
             component={ Doc } />
         <Route
             path="data-picker"
@@ -228,10 +216,22 @@ export default (
             examples={ require('../src/charts/data-picker/example') }
             component={ Doc } />
         <Route
+            path="data-point"
+            name="Data Points"
+            apiDocs={ ['DataPoints', 'DataPoint'] }
+            examples={ require('../src/charts/data-point/example') }
+            component={ Doc } />
+        <Route
             path="dot-plot"
             name="Dot Plot"
             apiDocs={ ['DotPlot', 'Dot'] }
             examples={ require('../src/charts/dot-plot/example') }
+            component={ Doc } />
+        <Route
+            path="panel"
+            name="Panel"
+            apiDocs={ ['Panels', 'Panel', 'PanelBody', 'PanelHeader'] }
+            examples={ require('../src/charts/panel/example') }
             component={ Doc } />
         <Route
             path="wordcloud"
