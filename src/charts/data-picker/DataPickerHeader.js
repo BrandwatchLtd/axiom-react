@@ -13,6 +13,7 @@ import {
   Link,
   PanelHeader,
 } from 'bw-axiom';
+import './DataPickerHeader.css';
 
 export default class DataPickerHeader extends Component {
   static propTypes = {
@@ -49,14 +50,16 @@ export default class DataPickerHeader extends Component {
               <Dropdown>
                 <DropdownTarget>
                   <Link style="subtle">
-                    <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
-                      <GridCell shrink={ true }>
-                        <Heading style="title">{ headerText }</Heading>
-                      </GridCell>
-                      <GridCell>
+                    <div className="ax-data-picker__header-title">
+                      <div className="ax-data-picker__header-title-text">
+                        <Heading style="title" textEllipsis={ true } title={ headerText }>
+                          { headerText }
+                        </Heading>
+                      </div>
+                      <div className="ax-data-picker__header-title-icon">
                         <Icon name="chevron-down"/>
-                      </GridCell>
-                    </Grid>
+                      </div>
+                    </div>
                   </Link>
                 </DropdownTarget>
 

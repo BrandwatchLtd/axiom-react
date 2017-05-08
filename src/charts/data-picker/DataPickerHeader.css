@@ -1,0 +1,15 @@
+@import '../../materials/sizing';
+
+.ax-data-picker__header-title {
+  display: flex;
+}
+
+.ax-data-picker__header-title-text {
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+
+.ax-data-picker__header-title-icon {
+  flex: 0 0 auto;
+  margin-left: calc(var(--spacing-grid-size) * 2);
+}
