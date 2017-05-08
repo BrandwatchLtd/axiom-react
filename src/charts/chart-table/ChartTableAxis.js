@@ -5,7 +5,7 @@ import { Base, ChartAxisLabels, ChartAxisTitle } from 'bw-axiom';
 export default class ChartTableAxis extends Component {
   static propTypes = {
     labels: PropTypes.array.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
   };
 
   static defaultProps = {
