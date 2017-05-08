@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import './Panel.css';
 
 export default class PanelHeader extends Component {
   static propTypes = {
