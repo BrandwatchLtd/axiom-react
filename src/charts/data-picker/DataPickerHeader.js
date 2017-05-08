@@ -38,7 +38,7 @@ export default class DataPickerHeader extends Component {
     const { children, color, headerText, ...rest } = this.props;
     return (
       <PanelHeader { ...rest }>
-        <Grid gutters="tiny" verticalAlign="middle">
+        <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
           <GridCell shrink={ true }>
             <DataPoints height="1rem">
               <DataPoint color={ color } radius={ .75 } />
@@ -49,7 +49,7 @@ export default class DataPickerHeader extends Component {
               <Dropdown>
                 <DropdownTarget>
                   <Link style="subtle">
-                    <Grid gutters="tiny" verticalAlign="middle">
+                    <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
                       <GridCell shrink={ true }>
                         <Heading style="title">{ headerText }</Heading>
                       </GridCell>
@@ -74,4 +74,3 @@ export default class DataPickerHeader extends Component {
     );
   }
 }
-
