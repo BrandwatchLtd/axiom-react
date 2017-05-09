@@ -9,6 +9,7 @@
 
 .ax-reveal__inner {
   transform: translateY(25%);
+  overflow: hidden;
   transition-property: transform;
   transition-duration: var(--transition-time-slow);
   transition-timing-function: var(--transition-function);
