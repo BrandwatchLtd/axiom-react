@@ -5,7 +5,7 @@ exports[`StatCards renders with defaultProps 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--fill"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--fill ax-grid--wrap"
   >
     Lorem
   </div>

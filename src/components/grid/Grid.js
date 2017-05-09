@@ -38,26 +38,29 @@ export default class Grid extends Component {
       PropTypes.bool,
       PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
     ]),
+    wrap: PropTypes.bool,
   };
 
   static defaultProps = {
     responsive: true,
     gutters: 'medium',
+    wrap: true,
   };
 
   render() {
     const {
       children,
-      responsive,
-      gutters,
-      horizontalGutters = gutters,
-      verticalGutters = gutters,
       fill,
       fit,
       full,
+      gutters,
+      horizontalAlign,
+      horizontalGutters = gutters,
+      responsive,
       shrink,
       verticalAlign,
-      horizontalAlign,
+      verticalGutters = gutters,
+      wrap,
       ...rest
     } = this.props;
 
@@ -75,6 +78,7 @@ export default class Grid extends Component {
       [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
       [`ax-grid--vertical-${verticalAlign}`]: verticalAlign,
       [`ax-grid--horizontal-${horizontalAlign}`]: horizontalAlign,
+      'ax-grid--wrap': wrap === true,
     });
 
     return (

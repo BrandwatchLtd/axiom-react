@@ -5,7 +5,7 @@ exports[`ChartKey renders with defaultProps 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--horizontal-middle"
+    className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--horizontal-middle ax-grid--wrap"
   >
     <div
       className="ax-grid__cell"
@@ -19,7 +19,7 @@ exports[`ChartKey renders with defaultProps 1`] = `
         className="ax-grid__container ax-space--medium"
       >
         <div
-          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
         >
           <div
             className="ax-grid__cell"

@@ -8,10 +8,10 @@ exports[`DataPickerHeader renders with color 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
     >
       <div
-        className="ax-grid__cell ax-grid__cell--shrink"
+        className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
@@ -61,10 +61,10 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
     >
       <div
-        className="ax-grid__cell ax-grid__cell--shrink"
+        className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
@@ -114,10 +114,10 @@ exports[`DataPickerHeader renders with headerText 1`] = `
     className="ax-grid__container ax-space--medium"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
     >
       <div
-        className="ax-grid__cell ax-grid__cell--shrink"
+        className="ax-grid__cell"
         style={
           Object {
             "width": undefined,

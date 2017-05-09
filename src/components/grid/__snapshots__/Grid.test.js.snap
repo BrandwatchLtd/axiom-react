@@ -5,7 +5,7 @@ exports[`Grid renders with defaultProps 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -17,7 +17,7 @@ exports[`Grid renders with fill large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill--large ax-grid--wrap"
   >
     <div />
   </div>
@@ -29,7 +29,7 @@ exports[`Grid renders with fill medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -41,7 +41,7 @@ exports[`Grid renders with fill small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill--small ax-grid--wrap"
   >
     <div />
   </div>
@@ -53,7 +53,7 @@ exports[`Grid renders with fill true 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fill ax-grid--wrap"
   >
     <div />
   </div>
@@ -65,7 +65,7 @@ exports[`Grid renders with fit large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit--large ax-grid--wrap"
   >
     <div />
   </div>
@@ -77,7 +77,7 @@ exports[`Grid renders with fit medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -89,7 +89,7 @@ exports[`Grid renders with fit small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit--small ax-grid--wrap"
   >
     <div />
   </div>
@@ -101,7 +101,7 @@ exports[`Grid renders with fit true 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--fit ax-grid--wrap"
   >
     <div />
   </div>
@@ -113,7 +113,7 @@ exports[`Grid renders with full large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full--large ax-grid--wrap"
   >
     <div />
   </div>
@@ -125,7 +125,7 @@ exports[`Grid renders with full medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -137,7 +137,7 @@ exports[`Grid renders with full small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full--small ax-grid--wrap"
   >
     <div />
   </div>
@@ -149,7 +149,7 @@ exports[`Grid renders with full true 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--full ax-grid--wrap"
   >
     <div />
   </div>
@@ -161,7 +161,7 @@ exports[`Grid renders with gutters  1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive"
+    className="ax-grid ax-grid--responsive ax-grid--wrap"
   >
     <div />
   </div>
@@ -173,7 +173,7 @@ exports[`Grid renders with gutters large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--large ax-grid--gutters-vertical--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--large ax-grid--gutters-vertical--large ax-grid--wrap"
   >
     <div />
   </div>
@@ -185,7 +185,7 @@ exports[`Grid renders with gutters medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -197,7 +197,7 @@ exports[`Grid renders with gutters small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--wrap"
   >
     <div />
   </div>
@@ -209,7 +209,7 @@ exports[`Grid renders with gutters tiny 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--wrap"
   >
     <div />
   </div>
@@ -221,7 +221,7 @@ exports[`Grid renders with horizontalAlign around 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-around"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-around ax-grid--wrap"
   >
     <div />
   </div>
@@ -233,7 +233,7 @@ exports[`Grid renders with horizontalAlign between 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-between"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-between ax-grid--wrap"
   >
     <div />
   </div>
@@ -245,7 +245,7 @@ exports[`Grid renders with horizontalAlign end 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-end"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-end ax-grid--wrap"
   >
     <div />
   </div>
@@ -257,7 +257,7 @@ exports[`Grid renders with horizontalAlign middle 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-middle"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-middle ax-grid--wrap"
   >
     <div />
   </div>
@@ -269,7 +269,7 @@ exports[`Grid renders with horizontalAlign start 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-start"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--horizontal-start ax-grid--wrap"
   >
     <div />
   </div>
@@ -281,7 +281,7 @@ exports[`Grid renders with horizontalGutters  1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -293,7 +293,7 @@ exports[`Grid renders with horizontalGutters large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--large ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--large ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -305,7 +305,7 @@ exports[`Grid renders with horizontalGutters medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -317,7 +317,7 @@ exports[`Grid renders with horizontalGutters small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -329,7 +329,7 @@ exports[`Grid renders with horizontalGutters tiny 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -341,7 +341,7 @@ exports[`Grid renders with responsive false 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -353,7 +353,7 @@ exports[`Grid renders with shrink large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink--large ax-grid--wrap"
   >
     <div />
   </div>
@@ -365,7 +365,7 @@ exports[`Grid renders with shrink medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -377,7 +377,7 @@ exports[`Grid renders with shrink small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink--small ax-grid--wrap"
   >
     <div />
   </div>
@@ -389,7 +389,7 @@ exports[`Grid renders with shrink true 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--wrap"
   >
     <div />
   </div>
@@ -401,7 +401,7 @@ exports[`Grid renders with verticalAlign end 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-end"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-end ax-grid--wrap"
   >
     <div />
   </div>
@@ -413,7 +413,7 @@ exports[`Grid renders with verticalAlign middle 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-middle"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-middle ax-grid--wrap"
   >
     <div />
   </div>
@@ -425,7 +425,7 @@ exports[`Grid renders with verticalAlign start 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-start"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-start ax-grid--wrap"
   >
     <div />
   </div>
@@ -437,7 +437,7 @@ exports[`Grid renders with verticalGutters  1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -449,7 +449,7 @@ exports[`Grid renders with verticalGutters large 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--large"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--large ax-grid--wrap"
   >
     <div />
   </div>
@@ -461,7 +461,7 @@ exports[`Grid renders with verticalGutters medium 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap"
   >
     <div />
   </div>
@@ -473,7 +473,7 @@ exports[`Grid renders with verticalGutters small 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--small"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--small ax-grid--wrap"
   >
     <div />
   </div>
@@ -485,7 +485,7 @@ exports[`Grid renders with verticalGutters tiny 1`] = `
   className="ax-grid__container ax-space--medium"
 >
   <div
-    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--tiny"
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--tiny ax-grid--wrap"
   >
     <div />
   </div>

@@ -14,13 +14,14 @@
 
 .ax-grid {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .ax-grid__cell {
   flex: 1 1 0%;
   min-width: 0;
 }
+
+.ax-grid--wrap { flex-wrap: wrap; }
 
 .ax-grid--vertical-start  { align-items: flex-start; }
 .ax-grid--vertical-middle { align-items: center; }
