@@ -39,8 +39,12 @@ export default class DataPickerHeader extends Component {
     const { children, color, headerText, ...rest } = this.props;
     return (
       <PanelHeader { ...rest }>
-        <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
-          <GridCell shrink={ true }>
+        <Grid gutters="tiny"
+            responsive={ false }
+            shrink={ true }
+            verticalAlign="middle"
+            wrap={ false }>
+          <GridCell>
             <DataPoints height="1rem">
               <DataPoint color={ color } radius={ .75 } />
             </DataPoints>
