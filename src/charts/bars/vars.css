@@ -1,0 +1,13 @@
+@import '../../materials/sizing';
+@import '../../materials/typography';
+
+/**
+ *  [1] Needed to normalise bar widths. However
+ *      this is not in relation to anything so
+ *      will need adjusting if text widths change :sob:
+ */
+:root {
+  --cmp-label-margin: calc(var(--spacing-grid-size) * 2);
+  --cmp-label-line-height: var(--line-height-body);  /* [1] */
+  --cmp-label-width: calc(2rem + var(--cmp-label-margin));  /* [1] */
+}

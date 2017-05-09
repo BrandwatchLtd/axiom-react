@@ -104,6 +104,8 @@ export { default as BarGroup } from './charts/bar-chart/BarGroup';
 export { default as ChartAxisLabels } from './charts/chart-axis/ChartAxisLabels';
 export { default as ChartAxisTitle } from './charts/chart-axis/ChartAxisTitle';
 export { default as ChartGrid } from './charts/chart-grid/ChartGrid';
+export { default as Bars } from './charts/bars/Bars';
+export { default as Bar } from './charts/bars/Bar';
 export { default as ChartHeading } from './charts/chart-heading/ChartHeading';
 export { default as ChartKey } from './charts/chart-key/ChartKey';
 export { default as ChartKeyItem } from './charts/chart-key/ChartKeyItem';

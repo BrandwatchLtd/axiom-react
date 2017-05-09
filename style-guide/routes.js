@@ -210,6 +210,12 @@ export default (
             examples={ require('../src/charts/bar-chart/example') }
             component={ Doc } />
         <Route
+            path="bars"
+            name="Bars"
+            apiDocs={ ['Bars', 'Bar'] }
+            examples={ require('../src/charts/bars/example') }
+            component={ Doc } />
+        <Route
             path="chart-heading"
             name="Chart Heading"
             apiDocs={ ['ChartHeading'] }

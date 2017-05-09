@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bars renders with defaultProps 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bars renders with direction down 1`] = `
+<div
+  className="ax-bars ax-bars--down"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bars renders with direction left 1`] = `
+<div
+  className="ax-bars ax-bars--left"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": false,
+            "width": "50%",
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": undefined,
+              "minHeight": "1rem",
+              "minWidth": false,
+              "width": false,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bars renders with direction right 1`] = `
+<div
+  className="ax-bars ax-bars--right"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": false,
+            "width": "50%",
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": undefined,
+              "minHeight": "1rem",
+              "minWidth": false,
+              "width": false,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bars renders with direction up 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bars renders with label 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="ax-bars__label"
+  >
+    <small
+      className="ax-small"
+    >
+      <span
+        className="ax-text--weak"
+      >
+        Lorem
+      </span>
+    </small>
+  </div>
+</div>
+`;
