@@ -34,8 +34,6 @@
 }
 
 .ax-chart-table__rows-container {
-  /* prevents DataPoints from being clipped on right edge */
-  padding-right: calc(var(--spacing-grid-size) * 2);
   overflow-y: hidden;
   transition-property: height;
   transition-duration: var(--transition-time-base);

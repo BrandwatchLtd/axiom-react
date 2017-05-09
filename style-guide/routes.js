@@ -222,6 +222,12 @@ export default (
             examples={ require('../src/charts/chart-heading/example') }
             component={ Doc } />
         <Route
+            path="chart-table"
+            name="Chart Table"
+            apiDocs={ ['ChartTable', 'ChartTableGrid', 'ChartTableRows', 'ChartTableRow', 'ChartTableLabel', 'ChartTableVisual', 'ChartTableAxis', 'ChartTableKey'] }
+            examples={ require('../src/charts/chart-table/example') }
+            component={ Doc } />
+        <Route
             path="data-picker"
             name="Data Picker"
             apiDocs={ [] }

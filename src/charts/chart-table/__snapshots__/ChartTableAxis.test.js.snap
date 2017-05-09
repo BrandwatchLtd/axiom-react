@@ -16,10 +16,10 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
       }
     />
     <div
-      className="ax-chart-axis-labels"
+      className="ax-chart-table__axis-labels"
     >
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -33,7 +33,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -47,7 +47,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -61,7 +61,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -75,7 +75,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -89,7 +89,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -103,7 +103,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -117,7 +117,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -131,7 +131,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -145,7 +145,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -159,7 +159,7 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "10%",
@@ -174,15 +174,15 @@ exports[`ChartTableAxis renders with defaultProps 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="ax-text--center ax-text--color-subtle"
+  <p
+    className="ax-paragraph ax-space--tiny ax-text--center ax-text--color-subtle"
   >
     <small
       className="ax-small"
     >
       Lorem Ipsum
     </small>
-  </div>
+  </p>
 </div>
 `;
 
@@ -202,10 +202,10 @@ exports[`ChartTableAxis renders with labels 1`] = `
       }
     />
     <div
-      className="ax-chart-axis-labels"
+      className="ax-chart-table__axis-labels"
     >
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "100%",
@@ -219,7 +219,7 @@ exports[`ChartTableAxis renders with labels 1`] = `
         </small>
       </div>
       <div
-        className="ax-chart-axis-labels__label"
+        className="ax-chart-table__axis-label"
         style={
           Object {
             "flexBasis": "100%",
@@ -234,14 +234,14 @@ exports[`ChartTableAxis renders with labels 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="ax-text--center ax-text--color-subtle"
+  <p
+    className="ax-paragraph ax-space--tiny ax-text--center ax-text--color-subtle"
   >
     <small
       className="ax-small"
     >
       Lorem Ipsum
     </small>
-  </div>
+  </p>
 </div>
 `;

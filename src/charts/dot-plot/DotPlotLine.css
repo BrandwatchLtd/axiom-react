@@ -2,6 +2,7 @@
 
 .ax-dot-plot__line {
   display: block;
+  overflow: visible;
 }
 
 .ax-dot-plot__line-path {

@@ -88,6 +88,7 @@ module.exports = {
         '/docs/charts/bar-chart',
         '/docs/charts/bars',
         '/docs/charts/chart-heading',
+        '/docs/charts/chart-table',
         '/docs/charts/data-picker',
         '/docs/charts/data-point',
         '/docs/charts/dot-plot',

@@ -41,7 +41,7 @@ export default class DotPlot extends Component {
               x={ `${child.props.percent}%` } >
             { child }
           </DataPoints>
-        ) };
+        ) }
       </Base>
     );
   }

@@ -1,11 +1,13 @@
 @import '../../materials/layout';
+@import '../bars/vars';
 
-.ax-chart-axis-labels {
+.ax-chart-table__axis-labels {
   display: flex;
-  width: 100%;
+  flex: 1 1 auto;
+  padding-right: var(--cmp-label-width);
 }
 
-.ax-chart-axis-labels__label {
+.ax-chart-table__axis-label {
   flex-grow: 1;
   flex-shrink: 0;
   transform: translate(-50%, 0);
@@ -13,7 +15,7 @@
 }
 
 @media (--screen-less-than-small) {
-  .ax-chart-axis-labels__label:nth-child(even) {
+  .ax-chart-table__axis-label:nth-child(even) {
     visibility: hidden;
   }
 }

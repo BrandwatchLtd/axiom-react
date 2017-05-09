@@ -1,16 +1,47 @@
-@import '../../materials/sizing';
+@import '../../materials/colors';
+@import '../../materials/layout';
+@import '../bars/vars';
 
 .ax-chart-table__grid-container {
   position: relative;
 }
 
 .ax-chart-table__grid {
+  display: flex;
   position: absolute;
   top: 0;
-  right: 0;
+  right: var(--cmp-label-width);
   bottom: 0;
-
-  /* prevents DataPoints from being clipped on right edge */
-  padding-right: calc(var(--spacing-grid-size) * 2);
+  flex-direction: column;
   z-index: -1;
+}
+
+.ax-chart-table__grid-lines {
+  display: flex;
+  flex: 1 0 100%;
+  max-height: 100%;
+}
+
+.ax-chart-table__grid-lines-svg {
+  display: block;
+  flex: 1 1 0%;
+  width: 100%;
+  overflow: visible;
+}
+
+.ax-chart-table__grid-line-svg {
+  overflow: visible;
+}
+
+.ax-chart-table__grid-line {
+  stroke: var(--color-context-border-subtle);
+  vector-effect: non-scaling-stroke;
+}
+
+@media (--screen-less-than-small) {
+  .ax-chart-table__grid-line-svg:nth-child(even) {
+    & .ax-chart-grid__line {
+      display: none;
+    }
+  }
 }

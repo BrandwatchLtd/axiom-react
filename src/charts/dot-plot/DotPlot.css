@@ -1,4 +1,7 @@
+@import '../bars/vars';
+
 .ax-dot-plot {
   display: block;
-  width: 100%;
+  width: calc(100% - var(--cmp-label-width));
+  overflow: visible;
 }

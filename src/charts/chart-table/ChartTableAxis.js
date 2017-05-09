@@ -2,16 +2,17 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
   Base,
-  ChartAxisLabels,
-  ChartAxisTitle,
   Icon,
   Link,
+  Paragraph,
+  Small,
   Strong,
 } from 'bw-axiom';
+import './ChartTableAxis.css';
 
 export default class ChartTableAxis extends Component {
   static propTypes = {
-    labels: PropTypes.array.isRequired,
+    labels: PropTypes.array,
     title: PropTypes.string,
   };
 
@@ -50,6 +51,7 @@ export default class ChartTableAxis extends Component {
       toggleExpand,
     } = this.context;
     const { labels, title, ...rest } = this.props;
+    const flexBasis = `${100 / (labels.length - 1)}%`;
 
     return (
       <Base { ...rest }
@@ -79,13 +81,24 @@ export default class ChartTableAxis extends Component {
               </Link>
             )}
           </div>
-          <ChartAxisLabels labels={ labels } />
+
+          <div
+              className="ax-chart-table__axis-labels">
+            { labels.map((x) =>
+              <div
+                  className="ax-chart-table__axis-label"
+                  key={ x }
+                  style={ { flexBasis } }>
+                <Small textColor="subtle">{ x }</Small>
+              </div>
+            ) }
+          </div>
         </Base>
 
         { title && (
-          <ChartAxisTitle>
-            { title }
-          </ChartAxisTitle>
+          <Paragraph textCenter={ true } textColor="subtle">
+            <Small>{ title }</Small>
+          </Paragraph>
         ) }
       </Base>
     );

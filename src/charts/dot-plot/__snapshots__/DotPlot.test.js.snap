@@ -64,7 +64,6 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
       r={12}
     />
   </svg>
-  ;
 </svg>
 `;
 
@@ -132,7 +131,6 @@ exports[`ChartTableRows renders with height 1`] = `
       r={12}
     />
   </svg>
-  ;
 </svg>
 `;
 
@@ -200,6 +198,5 @@ exports[`ChartTableRows renders with unsorted children 1`] = `
       r={12}
     />
   </svg>
-  ;
 </svg>
 `;
