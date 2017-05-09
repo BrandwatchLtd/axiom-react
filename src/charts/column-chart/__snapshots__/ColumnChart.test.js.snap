@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnChart renders with defaultProps 1`] = `
+<div
+  className="ax-column-chart"
+  style={
+    Object {
+      "height": "10rem",
+    }
+  }
+>
+  Lorem
+</div>
+`;

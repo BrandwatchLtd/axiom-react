@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnChartXAxisLabel renders with defaultProps 1`] = `
+<div
+  className="ax-column-chart__x-axis-label"
+>
+  <h4
+    className="ax-heading ax-heading--large ax-space--tiny"
+  >
+    <strong
+      className="ax-text--strong"
+    >
+      Lorem
+    </strong>
+  </h4>
+</div>
+`;

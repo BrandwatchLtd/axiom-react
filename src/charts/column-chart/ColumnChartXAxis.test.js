@@ -1,14 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { BarChart } from 'bw-axiom';
+import { ColumnChart, ColumnChartXAxis } from 'bw-axiom';
 
-function getComponent() {
+function getComponent(props = {}) {
   return renderer.create(
-    <BarChart height={ 256 }/>
+    <ColumnChart yAxisWidth="10rem">
+      <ColumnChartXAxis { ...props }>
+        Lorem
+      </ColumnChartXAxis>
+    </ColumnChart>
   );
 }
 
-describe('BarChart', () => {
+describe('ColumnChartXAxis', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();

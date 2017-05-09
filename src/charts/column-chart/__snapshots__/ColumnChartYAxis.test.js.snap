@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnChartYAxis renders with align bottom 1`] = `
+<div
+  className="ax-column-chart"
+  style={
+    Object {
+      "height": undefined,
+    }
+  }
+>
+  <div
+    className="ax-column-chart__y-axis ax-column-chart__y-axis--bottom"
+    style={
+      Object {
+        "flexBasis": "10rem",
+      }
+    }
+  >
+    <div
+      className="ax-column-chart__y-axis-content"
+    >
+      Lorem
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColumnChartYAxis renders with align top 1`] = `
+<div
+  className="ax-column-chart"
+  style={
+    Object {
+      "height": undefined,
+    }
+  }
+>
+  <div
+    className="ax-column-chart__y-axis ax-column-chart__y-axis--top"
+    style={
+      Object {
+        "flexBasis": "10rem",
+      }
+    }
+  >
+    <div
+      className="ax-column-chart__y-axis-content"
+    >
+      Lorem
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColumnChartYAxis renders with defaultProps 1`] = `
+<div
+  className="ax-column-chart"
+  style={
+    Object {
+      "height": undefined,
+    }
+  }
+>
+  <div
+    className="ax-column-chart__y-axis ax-column-chart__y-axis--bottom"
+    style={
+      Object {
+        "flexBasis": "10rem",
+      }
+    }
+  >
+    <div
+      className="ax-column-chart__y-axis-content"
+    >
+      Lorem
+    </div>
+  </div>
+</div>
+`;

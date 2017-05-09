@@ -1,0 +1,9 @@
+@import './vars';
+
+.ax-column-chart__bars {
+  display: flex;
+  flex: 1 1 0%;
+  margin-right: var(--column-spacing);
+
+  &:last-child { margin-right: 0; }
+}

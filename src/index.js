@@ -98,9 +98,6 @@ export { default as Underline } from './components/typography/Underline';
 export { default as Weak } from './components/typography/Weak';
 
 // Charts
-export { default as Bar } from './charts/bar-chart/Bar';
-export { default as BarChart } from './charts/bar-chart/BarChart';
-export { default as BarGroup } from './charts/bar-chart/BarGroup';
 export { default as Bars } from './charts/bars/Bars';
 export { default as Bar } from './charts/bars/Bar';
 export { default as ChartHeading } from './charts/chart-heading/ChartHeading';
@@ -114,6 +111,13 @@ export { default as ChartTableLabel } from './charts/chart-table/ChartTableLabel
 export { default as ChartTableRow } from './charts/chart-table/ChartTableRow';
 export { default as ChartTableRows } from './charts/chart-table/ChartTableRows';
 export { default as ChartTableVisual } from './charts/chart-table/ChartTableVisual';
+export { default as ColumnChart } from './charts/column-chart/ColumnChart';
+export { default as ColumnChartBars } from './charts/column-chart/ColumnChartBars';
+export { default as ColumnChartRow } from './charts/column-chart/ColumnChartRow';
+export { default as ColumnChartVisual } from './charts/column-chart/ColumnChartVisual';
+export { default as ColumnChartXAxis } from './charts/column-chart/ColumnChartXAxis';
+export { default as ColumnChartXAxisLabel } from './charts/column-chart/ColumnChartXAxisLabel';
+export { default as ColumnChartYAxis } from './charts/column-chart/ColumnChartYAxis';
 export { default as DataPoint } from './charts/data-point/DataPoint';
 export { default as DataPoints } from './charts/data-point/DataPoints';
 export { default as DataPicker } from './charts/data-picker/DataPicker';

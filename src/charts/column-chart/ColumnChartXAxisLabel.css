@@ -1,0 +1,10 @@
+@import './vars';
+
+.ax-column-chart__x-axis-label {
+  flex: 1 1 0%;
+  margin-right: var(--column-spacing);
+  text-align: center;
+  pointer-events: none;
+
+  &:last-child { margin-right: 0; }
+}

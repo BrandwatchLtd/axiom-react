@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnChartXAxis renders with defaultProps 1`] = `
+<div
+  className="ax-column-chart"
+  style={
+    Object {
+      "height": undefined,
+    }
+  }
+>
+  <div
+    className="ax-column-chart__x-axis"
+    style={
+      Object {
+        "paddingLeft": "10rem",
+      }
+    }
+  >
+    Lorem
+  </div>
+</div>
+`;

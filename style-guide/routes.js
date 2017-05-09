@@ -204,12 +204,6 @@ export default (
 
       <Route path="charts" name="Charts & Visualisations">
         <Route
-            path="bar-chart"
-            name="Bar Chart"
-            apiDocs={ ['Bar','BarChart', 'BarGroup'] }
-            examples={ require('../src/charts/bar-chart/example') }
-            component={ Doc } />
-        <Route
             path="bars"
             name="Bars"
             apiDocs={ ['Bars', 'Bar'] }
@@ -226,6 +220,11 @@ export default (
             name="Chart Table"
             apiDocs={ ['ChartTable', 'ChartTableGrid', 'ChartTableRows', 'ChartTableRow', 'ChartTableLabel', 'ChartTableVisual', 'ChartTableAxis', 'ChartTableKey'] }
             examples={ require('../src/charts/chart-table/example') }
+            component={ Doc } />
+        <Route
+            path="column-chart"
+            name="Column Chart"
+            examples={ require('../src/charts/column-chart/example') }
             component={ Doc } />
         <Route
             path="data-picker"
