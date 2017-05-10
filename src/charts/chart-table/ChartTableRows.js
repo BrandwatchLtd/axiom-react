@@ -9,6 +9,7 @@ export default class ChartTableRows extends Component {
   static contextTypes = {
     collapsedVisibleRowCount: PropTypes.number,
     isExpanded: PropTypes.bool.isRequired,
+    rowsCount: PropTypes.number,
     setRowsCount: PropTypes.func.isRequired,
   }
 
@@ -40,8 +41,8 @@ export default class ChartTableRows extends Component {
   }
 
   componentWillReceiveProps(nextProps, nextContext) {
-    const { isExpanded } = this.context;
-    const { isExpanded: willBeExpanded } = nextContext;
+    const { isExpanded, rowsCount } = this.context;
+    const { isExpanded: willBeExpanded, rowsCount: nextRowsCount } = nextContext;
     const currentCount = Children.count(this.props.children);
     const nextCount = Children.count(nextProps.children);
 
@@ -49,6 +50,8 @@ export default class ChartTableRows extends Component {
       this.collapse();
     } else if (!isExpanded && willBeExpanded) {
       this.expand();
+    } else if (!willBeExpanded && rowsCount !== nextRowsCount) {
+      this.setToVisbleRowHeight();
     }
 
     if (nextCount !== currentCount) this.context.setRowsCount(nextCount);
