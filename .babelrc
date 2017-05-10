@@ -7,12 +7,18 @@
         "react",
         "react-hmre",
       ],
+      "plugins": [
+        "./scripts/babel-plugin-inline-svg-import.js",
+      ],
     },
     "production": {
       "presets": [
         "es2015",
         "stage-2",
         "react",
+      ],
+      "plugins": [
+        "./scripts/babel-plugin-inline-svg-import.js",
       ],
     }
   }
