@@ -1,0 +1,8 @@
+@import '../../materials/typography';
+
+.ax-text--superscript {
+  top: 0;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  vertical-align: super;
+}

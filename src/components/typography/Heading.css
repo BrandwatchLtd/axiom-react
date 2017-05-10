@@ -12,6 +12,11 @@
   & .ax-text--weak {
     font-weight: var(--font-weight-display-weak);
   }
+
+  & .ax-text--subscript,
+  & .ax-text--superscript {
+    font-size: 50%;
+  }
 }
 
 .ax-heading--headline {
