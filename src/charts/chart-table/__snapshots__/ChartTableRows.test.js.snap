@@ -2,37 +2,41 @@
 
 exports[`ChartTableRows renders with defaultProps 1`] = `
 <div
-  className="ax-chart-table__rows-container"
-  style={
-    Object {
-      "height": "auto",
-    }
-  }
+  className="ax-chart-table"
 >
-  <table
-    className="ax-chart-table__rows"
+  <div
+    className="ax-chart-table__rows-container"
+    style={
+      Object {
+        "height": null,
+      }
+    }
   >
-    <tbody>
-      <tr
-        className="ax-chart-table__row"
-      >
-        <td
-          className="ax-chart-table__cell ax-text--color-subtle"
-          style={
-            Object {
-              "width": undefined,
+    <table
+      className="ax-chart-table__rows"
+    >
+      <tbody>
+        <tr
+          className="ax-chart-table__row"
+        >
+          <td
+            className="ax-chart-table__cell ax-text--color-subtle"
+            style={
+              Object {
+                "width": "10rem",
+              }
             }
-          }
-        >
-          Lorem
-        </td>
-        <td
-          className="ax-chart-table__cell"
-        >
-          Lorem
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          >
+            Lorem
+          </td>
+          <td
+            className="ax-chart-table__cell"
+          >
+            Lorem
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;

@@ -1,7 +1,5 @@
-import sum from 'lodash/sum';
 import PropTypes from 'prop-types';
 import React, { Children, Component } from 'react';
-import { Base } from 'bw-axiom';
 
 export default class ChartTableRows extends Component {
   static propTypes = {
@@ -14,17 +12,26 @@ export default class ChartTableRows extends Component {
     setRowsCount: PropTypes.func.isRequired,
   }
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      trHeights: null,
+      height: null,
     };
   }
 
   componentDidMount() {
-    if (this.tbody) { // not defined when running tests
-      const trHeights = [...this.tbody.querySelectorAll('tbody > tr')].map(tr => tr.offsetHeight);
-      this.setState({ trHeights });
+    const { isExpanded } = this.context;
+
+    this.el.addEventListener('transitionend', () => {
+      if (this.context.isExpanded) {
+        this.setState({
+          height: 'auto',
+        });
+      }
+    });
+
+    if (!isExpanded) {
+      this.setToVisbleRowHeight();
     }
   }
 
@@ -32,32 +39,61 @@ export default class ChartTableRows extends Component {
     this.context.setRowsCount(Children.count(this.props.children));
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps, nextContext) {
+    const { isExpanded } = this.context;
+    const { isExpanded: willBeExpanded } = nextContext;
     const currentCount = Children.count(this.props.children);
     const nextCount = Children.count(nextProps.children);
+
+    if (isExpanded && !willBeExpanded) {
+      this.collapse();
+    } else if (!isExpanded && willBeExpanded) {
+      this.expand();
+    }
+
     if (nextCount !== currentCount) this.context.setRowsCount(nextCount);
   }
 
-  render() {
-    const { collapsedVisibleRowCount, isExpanded } = this.context;
-    const { children, ...rest } = this.props;
-    const { trHeights } = this.state;
+  collapse() {
+    this.setState({
+      height: this.tbody.offsetHeight,
+    });
 
-    const height = trHeights
-      ? sum(isExpanded ? trHeights : trHeights.slice(0, collapsedVisibleRowCount))
-      : 'auto';
+    window.requestAnimationFrame(() => {
+      this.setToVisbleRowHeight();
+    });
+  }
+
+  expand() {
+    this.setState({
+      height: this.tbody.offsetHeight,
+    });
+  }
+
+  setToVisbleRowHeight() {
+    const { collapsedVisibleRowCount } = this.context;
+    const height = [...this.tbody.querySelectorAll('tbody > tr')]
+      .slice(0, collapsedVisibleRowCount)
+      .reduce((height, tr) => height + tr.offsetHeight, 0);
+
+    this.setState({ height });
+  }
+
+  render() {
+    const { children, ...rest } = this.props;
+    const { height } = this.state;
 
     return (
-      <Base { ...rest }
-          Component="div"
+      <div { ...rest }
           className="ax-chart-table__rows-container"
+          ref={ (el) => this.el = el }
           style={ { height } }>
         <table className="ax-chart-table__rows">
           <tbody ref={ tbody => this.tbody = tbody }>
             { children }
           </tbody>
         </table>
-      </Base>
+      </div>
     );
   }
 }
