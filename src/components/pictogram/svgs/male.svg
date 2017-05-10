@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="40px" viewBox="0 0 16 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>male</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="male" fill="#000000">
+            <path d="M12.002,7 C13.934,7 15.5,8.566 15.5,10.498 L15.5,12 L15.5,21.75 C15.5,22.44 14.94,23 14.25,23 C13.559,23 13,22.44 13,21.75 L13,12 L12,12 L12,23 L12,38.25 C12,39.216 11.216,40 10.25,40 C9.283,40 8.5,39.216 8.5,38.25 L8.5,23 L7.5,23 L7.5,38.25 C7.5,39.216 6.716,40 5.75,40 C4.783,40 4,39.216 4,38.25 L4,23 L4,12 L3,12 L3,21.75 C3,22.44 2.44,23 1.75,23 C1.059,23 0.5,22.44 0.5,21.75 L0.5,12 L0.5,10.498 C0.5,8.566 2.066,7 3.998,7 L4,7 L12,7 L12.002,7 Z M7.9999,6 C6.3429,6 4.9999,4.657 4.9999,3 C4.9999,1.343 6.3429,0 7.9999,0 C9.6569,0 10.9999,1.343 10.9999,3 C10.9999,4.657 9.6569,6 7.9999,6 Z" id="Male"></path>
+        </g>
+    </g>
+</svg>

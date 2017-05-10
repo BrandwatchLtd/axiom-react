@@ -138,6 +138,12 @@ export default (
             examples={ require('../src/components/menu/example') }
             component={ Doc } />
         <Route
+            path="pictogram"
+            name="Pictogram"
+            apiDocs={ ['Pictogram'] }
+            examples={ require('../src/components/pictogram/example') }
+            component={ Doc } />
+        <Route
             path="position"
             name="Position"
             apiDocs={ ['Position', 'PositionContent', 'PositionTarget'] }

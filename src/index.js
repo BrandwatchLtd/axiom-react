@@ -65,6 +65,7 @@ export { default as Menu } from './components/menu/Menu';
 export { default as MenuItem } from './components/menu/MenuItem';
 export { default as Modal } from './components/modal/Modal';
 export { default as Paragraph } from './components/typography/Paragraph';
+export { default as Pictogram } from './components/pictogram/Pictogram';
 export { default as Platform } from './components/platform/Platform';
 export { default as Position } from './components/position/Position';
 export { default as PositionContent } from './components/position/PositionContent';
