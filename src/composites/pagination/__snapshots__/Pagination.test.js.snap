@@ -13,7 +13,12 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--chevron-left"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -21,11 +26,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <polygon
-          points="11 4 9.5 2.5 4 8 9.5 13.5 11 12 7 8"
-        />
-      </svg>
+      />
     </button>
     <button
       className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
@@ -75,7 +76,12 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--ellipsis"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-5 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -83,11 +89,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <path
-          d="M8,10 C6.8954305,10 6,9.1045695 6,8 C6,6.8954305 6.8954305,6 8,6 C9.1045695,6 10,6.8954305 10,8 C10,9.1045695 9.1045695,10 8,10 Z M3,10 C1.8954305,10 1,9.1045695 1,8 C1,6.8954305 1.8954305,6 3,6 C4.1045695,6 5,6.8954305 5,8 C5,9.1045695 4.1045695,10 3,10 Z M13,10 C11.8954305,10 11,9.1045695 11,8 C11,6.8954305 11.8954305,6 13,6 C14.1045695,6 15,6.8954305 15,8 C15,9.1045695 14.1045695,10 13,10 Z"
-        />
-      </svg>
+      />
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
@@ -101,7 +103,12 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--chevron-right"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -109,11 +116,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <polygon
-          points="5 12 6.5 13.5 12 8 6.5 2.5 5 4 9 8"
-        />
-      </svg>
+      />
     </button>
   </div>
 </div>
@@ -132,7 +135,12 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--chevron-left"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -140,11 +148,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <polygon
-          points="11 4 9.5 2.5 4 8 9.5 13.5 11 12 7 8"
-        />
-      </svg>
+      />
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
@@ -152,7 +156,12 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--chevron-right"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -160,11 +169,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <polygon
-          points="5 12 6.5 13.5 12 8 6.5 2.5 5 4 9 8"
-        />
-      </svg>
+      />
     </button>
   </div>
 </div>
@@ -183,7 +188,12 @@ exports[`Composite: Pagination renders without pages 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--chevron-left"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -191,11 +201,7 @@ exports[`Composite: Pagination renders without pages 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <polygon
-          points="11 4 9.5 2.5 4 8 9.5 13.5 11 12 7 8"
-        />
-      </svg>
+      />
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
@@ -203,7 +209,12 @@ exports[`Composite: Pagination renders without pages 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="ax-icon"
+        className="ax-icon ax-icon--chevron-right"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+          }
+        }
         style={
           Object {
             "height": "1rem",
@@ -211,11 +222,7 @@ exports[`Composite: Pagination renders without pages 1`] = `
           }
         }
         viewBox="0 0 16 16"
-      >
-        <polygon
-          points="5 12 6.5 13.5 12 8 6.5 2.5 5 4 9 8"
-        />
-      </svg>
+      />
     </button>
   </div>
 </div>

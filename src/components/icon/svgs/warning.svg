@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Warning</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M6.25,2 L9.75,2 L9.25,10.25 L6.75,10.25 L6.25,2 Z M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z" id="path-1"></path>
-    </defs>
-    <g id="Final---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Warning">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use fill="#48464F" xlink:href="#path-1"></use>
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>warning</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="warning" fill="#000000">
+            <path d="M6.25,2 L9.75,2 L9.25,10.25 L6.75,10.25 L6.25,2 Z M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z" id="Warning"></path>
         </g>
     </g>
 </svg>

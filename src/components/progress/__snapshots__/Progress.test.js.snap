@@ -37,7 +37,12 @@ exports[`Progress renders a success indicator 1`] = `
   className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--small"
 >
   <svg
-    className="ax-icon"
+    className="ax-icon ax-icon--tick"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M4 7.5l2 2 6-6L13.5 5 6 12.5 2.5 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+      }
+    }
     style={
       Object {
         "height": "1rem",
@@ -45,11 +50,7 @@ exports[`Progress renders a success indicator 1`] = `
       }
     }
     viewBox="0 0 16 16"
-  >
-    <polygon
-      points="4 7.5 6 9.5 12 3.5 13.5 5 6 12.5 2.5 9"
-    />
-  </svg>
+  />
 </div>
 `;
 
@@ -58,7 +59,12 @@ exports[`Progress renders an error indicator 1`] = `
   className="ax-icon-indicator ax-icon-indicator--error ax-icon-indicator--small"
 >
   <svg
-    className="ax-icon"
+    className="ax-icon ax-icon--warning"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
     style={
       Object {
         "height": "1rem",
@@ -66,11 +72,7 @@ exports[`Progress renders an error indicator 1`] = `
       }
     }
     viewBox="0 0 16 16"
-  >
-    <path
-      d="M6.25,2 L9.75,2 L9.25,10.25 L6.75,10.25 L6.25,2 Z M6.625,13 C6.625,12.241 7.24222222,11.625 8,11.625 C8.75777778,11.625 9.375,12.241 9.375,13 C9.375,13.7577778 8.75777778,14.375 8,14.375 C7.24222222,14.375 6.625,13.7577778 6.625,13 Z"
-    />
-  </svg>
+  />
 </div>
 `;
 

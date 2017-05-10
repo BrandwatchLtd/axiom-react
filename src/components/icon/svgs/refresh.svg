@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Refresh</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M14,8 L13,2.5 L11.712,4.288 C10.762,3.338 9.45,2.75 8,2.75 C5.101,2.75 2.75,5.101 2.75,8 C2.75,10.899 5.101,13.25 8,13.25 C9.45,13.25 10.762,12.662 11.712,11.712 L10.226,10.226 C9.656,10.797 8.868,11.15 8,11.15 C6.263,11.15 4.85,9.737 4.85,8 C4.85,6.263 6.263,4.85 8,4.85 C8.868,4.85 9.656,5.203 10.226,5.774 L8.5,7 L14,8 Z" id="path-1"></path>
-    </defs>
-    <g id="Final---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Refresh">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use fill="#48464F" xlink:href="#path-1"></use>
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>refresh</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="refresh" fill="#000000">
+            <path d="M14,8 L13,2.5 L11.712,4.288 C10.762,3.338 9.45,2.75 8,2.75 C5.101,2.75 2.75,5.101 2.75,8 C2.75,10.899 5.101,13.25 8,13.25 C9.45,13.25 10.762,12.662 11.712,11.712 L10.226,10.226 C9.656,10.797 8.868,11.15 8,11.15 C6.263,11.15 4.85,9.737 4.85,8 C4.85,6.263 6.263,4.85 8,4.85 C8.868,4.85 9.656,5.203 10.226,5.774 L8.5,7 L14,8 Z" id="Refresh"></path>
         </g>
     </g>
 </svg>

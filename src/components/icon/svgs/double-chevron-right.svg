@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Double Chevron Right</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M3,11.5 L6.5,8 L3,4.5 L4.5,3 L9.5,8 L4.5,13 L3,11.5 Z M8,11.5 L11.5,8 L8,4.5 L9.5,3 L14.5,8 L9.5,13 L8,11.5 Z" id="path-1"></path>
-    </defs>
-    <g id="Final---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Double-Chevron-Right">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use fill="#48464F" fill-rule="nonzero" xlink:href="#path-1"></use>
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>double-chevron-right</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="double-chevron-right" fill-rule="nonzero" fill="#000000">
+            <path d="M3,11.5 L6.5,8 L3,4.5 L4.5,3 L9.5,8 L4.5,13 L3,11.5 Z M8,11.5 L11.5,8 L8,4.5 L9.5,3 L14.5,8 L9.5,13 L8,11.5 Z" id="Double-Chevron-Right"></path>
         </g>
     </g>
 </svg>

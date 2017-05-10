@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Upload to Cloud</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M12.967,7.174 C12.797,4.844 10.873,3 8.5,3 C6.535,3 4.882,4.268 4.268,6.024 C2.445,6.145 1,7.647 1,9.5 C1,11.433 2.567,13 4.5,13 L7,13 L7,10 L5,10 L8,6 L11,10 L9,10 L9,13 L12.5,13 L13,12.817 C14.162,12.403 15,11.305 15,10 C15,8.684 14.147,7.578 12.967,7.174" id="path-1"></path>
-    </defs>
-    <g id="Final---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Upload-to-Cloud">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use fill="#48464F" xlink:href="#path-1"></use>
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>cloud-upload</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cloud-upload" fill="#000000">
+            <path d="M12.967,7.174 C12.797,4.844 10.873,3 8.5,3 C6.535,3 4.882,4.268 4.268,6.024 C2.445,6.145 1,7.647 1,9.5 C1,11.433 2.567,13 4.5,13 L7,13 L7,10 L5,10 L8,6 L11,10 L9,10 L9,13 L12.5,13 L13,12.817 C14.162,12.403 15,11.305 15,10 C15,8.684 14.147,7.578 12.967,7.174" id="Upload-to-Cloud"></path>
         </g>
     </g>
 </svg>

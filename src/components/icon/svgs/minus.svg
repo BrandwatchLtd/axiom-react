@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Minus</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="3" y="7" width="10" height="2"></rect>
-    </defs>
-    <g id="Final---SVGs-for-Harry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Minus">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use fill="#48464F" xlink:href="#path-1"></use>
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>minus</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="minus" fill="#000000">
+            <rect id="Minus" x="3" y="7" width="10" height="2"></rect>
         </g>
     </g>
 </svg>

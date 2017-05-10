@@ -158,7 +158,12 @@ exports[`Alert renders with onRemoveClick 1`] = `
           onClick={[Function]}
         >
           <svg
-            className="ax-icon"
+            className="ax-icon ax-icon--cross"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M9.5 8L13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5l3.5 3.5 1.5-1.5L9.5 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+              }
+            }
             style={
               Object {
                 "height": "1rem",
@@ -166,11 +171,7 @@ exports[`Alert renders with onRemoveClick 1`] = `
               }
             }
             viewBox="0 0 16 16"
-          >
-            <polygon
-              points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8"
-            />
-          </svg>
+          />
         </a>
       </div>
     </div>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>heart</title>
+    <title>dot</title>
     <desc>Created with sketchtool.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="heart" fill="#000000">
-            <path d="M10.802,3 C9.63,3 8.531,3.989 8.002,4.547 C7.473,3.989 6.374,3 5.202,3 C3.199,3 2,4.253 2,6.351 C2,8.07 3.474,9.51 3.528,9.56 C3.528,9.56 7.895,14 8.002,14 C8.11,14 12.47,9.574 12.47,9.574 C12.531,9.51 14.004,8.07 14.004,6.351 C14.004,4.253 12.805,3 10.802,3" id="Heart"></path>
+        <g id="dot" fill="#000000">
+            <circle id="Dot" cx="8" cy="8" r="6"></circle>
         </g>
     </g>
 </svg>
