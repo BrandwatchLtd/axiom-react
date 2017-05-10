@@ -87,6 +87,8 @@ module.exports = {
         '/docs/composites/pagination',
         '/docs/composites/usermenu',
         '/docs/charts/bars',
+        '/docs/charts/bar-chart',
+        '/docs/charts/chart',
         '/docs/charts/chart-heading',
         '/docs/charts/chart-table',
         '/docs/charts/column-chart',
