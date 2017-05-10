@@ -24,6 +24,7 @@ export default class ChartTable extends Component {
   };
 
   static defaultProps = {
+    expandButtonSuffix: 'Items',
     labelColumnWidth: '10rem',
   };
 
@@ -38,12 +39,21 @@ export default class ChartTable extends Component {
   }
 
   getChildContext() {
+    const {
+      collapsedVisibleRowCount,
+      expandButtonSuffix,
+      labelColumnWidth,
+    } = this.props;
+
+    const collapsible = collapsedVisibleRowCount != null &&
+      this.state.rowsCount > collapsedVisibleRowCount;
+
     return {
-      collapsedVisibleRowCount: this.props.collapsedVisibleRowCount,
-      collapsible: this.props.collapsedVisibleRowCount != null,
-      expandButtonSuffix: this.props.expandButtonSuffix || 'Items',
+      collapsedVisibleRowCount,
+      collapsible,
+      expandButtonSuffix,
       isExpanded: this.state.isExpanded,
-      labelColumnWidth: this.props.labelColumnWidth,
+      labelColumnWidth,
       toggleExpand: this.toggleExpand,
       rowsCount: this.state.rowsCount,
       setRowsCount: this.setRowsCount,

@@ -25,15 +25,19 @@ export default class DotPlotExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nextRowCount: 8,
       rowData: data.slice(0, 7),
     };
   }
 
   addRow() {
-    this.setState((state) => ({
-      nextRowCount: state.nextRowCount + 1,
-      rowData: data.slice(0, state.nextRowCount),
+    this.setState(({ rowData }) => ({
+      rowData: data.slice(0, rowData.length + 1),
+    }));
+  }
+
+  removeRow() {
+    this.setState(({ rowData }) => ({
+      rowData: data.slice(0, rowData.length - 1),
     }));
   }
 
@@ -46,7 +50,12 @@ export default class DotPlotExample extends Component {
           <Button
               disabled={ rowData.length === data.length }
               onClick={ () => this.addRow() }>
-            Add another row of data
+            Add a row of data
+          </Button>
+          <Button
+              disabled={ rowData.length === 0 }
+              onClick={ () => this.removeRow() }>
+            Remove a row of data
           </Button>
         </ButtonGroup>
 
