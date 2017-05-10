@@ -11,7 +11,7 @@ export const data = [{
   data: [50, 100],
 }, {
   label: 'Games',
-  data: [10, 55],
+  data: [5, 95],
 }, {
   label: 'Family & Parenting',
   data: [80, 20],
@@ -20,7 +20,7 @@ export const data = [{
   data: [53, 70],
 }, {
   label: 'Books',
-  data: [40, 48],
+  data: [5, 10],
 }, {
   label: 'Travel',
   data: [54, 46],

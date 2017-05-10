@@ -63,7 +63,7 @@
   flex-direction: column;
 
   & .ax-bars__bars {
-    padding-top: var(--cmp-label-line-height);
+    padding-top: var(--cmp-label-height);
   }
 
   & .ax-bars__label {
@@ -87,7 +87,7 @@
   flex-direction: column-reverse;
 
   & .ax-bars__bars {
-    padding-bottom: var(--cmp-label-line-height);
+    padding-bottom: var(--cmp-label-height);
   }
 
   & .ax-bars__label {

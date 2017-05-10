@@ -4,7 +4,7 @@
 
 .ax-bars__bar {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 0%;
 }
 
 .ax-bars__bar--center {
@@ -117,14 +117,14 @@
 
 .ax-bars--up {
   & .ax-bars__bar-label {
-    margin-top: calc(var(--cmp-label-line-height) * -1);
+    margin-top: calc(var(--cmp-label-height) * -1);
     padding-bottom: var(--cmp-label-margin);
   }
 }
 
 .ax-bars--down {
   & .ax-bars__bar-label {
-    margin-bottom: calc(var(--cmp-label-line-height) * -1);
+    margin-bottom: calc(var(--cmp-label-height) * -1);
     padding-top: var(--cmp-label-margin);
   }
 }
