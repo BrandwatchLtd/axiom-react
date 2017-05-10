@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
 import {
+  Button,
+  ButtonGroup,
   ChartKey,
   ChartKeyItem,
   ChartTable,
@@ -20,15 +22,42 @@ import {
 import { labels, data } from './data';
 
 export default class DotPlotExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nextRowCount: 8,
+      rowData: data.slice(0, 7),
+    };
+  }
+
+  addRow() {
+    this.setState((state) => ({
+      nextRowCount: state.nextRowCount + 1,
+      rowData: data.slice(0, state.nextRowCount),
+    }));
+  }
+
   render() {
+    const { rowData } = this.state;
+
     return (
-      <Example name="DotPlot inside ChartTable">
+      <Example name="DotPlot inside collapsible ChartTable">
+        <ButtonGroup>
+          <Button
+              disabled={ rowData.length === data.length }
+              onClick={ () => this.addRow() }>
+            Add another row of data
+          </Button>
+        </ButtonGroup>
+
         <Snippet>
           <ChartTable
+              collapsedVisibleRowCount={ 6 }
+              expandButtonSuffix="Categories"
               labelColumnWidth="11rem">
-            <ChartTableGrid>
+            <ChartTableGrid snippetSkip={ true }>
               <ChartTableRows>
-                { data.map(({ label, data }, i) =>
+                { rowData.map(({ label, data }, i) =>
                   <ChartTableRow key={ label } snippetSkip={ i > 0 }>
                     <ChartTableLabel>{ label }</ChartTableLabel>
                     <ChartTableVisual>
@@ -45,8 +74,8 @@ export default class DotPlotExample extends Component {
                 ) }
               </ChartTableRows>
             </ChartTableGrid>
-            <ChartTableAxis title="% of each something" />
-            <ChartTableKey>
+            <ChartTableAxis  snippetSkip={ true } title="% of each something" />
+            <ChartTableKey snippetSkip={ true }>
               <ChartKey>
                 { labels.map(({ name, color }) =>
                   <ChartKeyItem key={ name } label={ name }>
