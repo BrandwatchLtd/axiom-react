@@ -38,7 +38,7 @@ exports[`ChartTableGrid renders with count 1`] = `
           preserveAspectRatio="none"
           viewBox="0 0 1 1"
           width="1"
-          x="10%"
+          x="25%"
         >
           <path
             className="ax-chart-table__grid-line"
@@ -53,7 +53,7 @@ exports[`ChartTableGrid renders with count 1`] = `
           preserveAspectRatio="none"
           viewBox="0 0 1 1"
           width="1"
-          x="20%"
+          x="50%"
         >
           <path
             className="ax-chart-table__grid-line"
@@ -68,7 +68,7 @@ exports[`ChartTableGrid renders with count 1`] = `
           preserveAspectRatio="none"
           viewBox="0 0 1 1"
           width="1"
-          x="30%"
+          x="75%"
         >
           <path
             className="ax-chart-table__grid-line"
@@ -83,7 +83,7 @@ exports[`ChartTableGrid renders with count 1`] = `
           preserveAspectRatio="none"
           viewBox="0 0 1 1"
           width="1"
-          x="40%"
+          x="100%"
         >
           <path
             className="ax-chart-table__grid-line"

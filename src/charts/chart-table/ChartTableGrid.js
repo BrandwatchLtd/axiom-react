@@ -20,7 +20,7 @@ export default class ChartTableGrid extends Component {
   render() {
     const { labelColumnWidth } = this.context;
     const { children, count, ...rest } = this.props;
-    const increments = Array.apply(null, { length: count }).map((_, i) => i * 10);
+    const increments = Array.apply(null, { length: count }).map((_, i) => i * (100 / (count - 1)));
 
     return (
       <Base { ...rest } className="ax-chart-table__grid-container">
