@@ -9,6 +9,18 @@ export default class ContextMenuExample extends Component {
         <Snippet>
           <Grid snippetIgnore={ true }>
             <GridCell shrink={ true } snippetIgnore={ true }>
+              <Context position="right">
+                <ContextMenu>
+                  {Array.apply(null, { length: 32 }).map((_, i) => (
+                    <ContextMenuItem key={ i } snippetSkip={ i > 4 }>
+                      Option { i + 1 }
+                    </ContextMenuItem>
+                  ))}
+                </ContextMenu>
+              </Context>
+            </GridCell>
+
+            <GridCell shrink={ true } snippetIgnore={ true }>
               <Context position="bottom">
                 <ContextMenu>
                   <ContextMenuItem>
@@ -31,7 +43,7 @@ export default class ContextMenuExample extends Component {
             </GridCell>
 
             <GridCell shrink={ true } snippetIgnore={ true }>
-              <Context position="right">
+              <Context position="left">
                 <ContextMenu>
                   <ContextMenuItem>
                     Nam dignissim bibendum

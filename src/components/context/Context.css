@@ -17,7 +17,11 @@
   border-width: var(--component-border-width);
   border-style: solid;
   border-radius: var(--component-border-radius);
-  overflow: hidden;
+  overflow-y: auto;
+  /* stylelint-disable */
+  /* ensures rounded corners in Safari */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /* stylelint-enable */
 
   @supports (filter: drop-shadow(var(--drop-shadow))) {
     border-width: 0;

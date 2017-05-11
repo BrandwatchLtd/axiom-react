@@ -1,5 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Context renders custom maxHeight 1`] = `
+<div
+  className="ax-context ax-context--top ax-context--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "20rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+  <span
+    className="ax-context__arrow"
+  />
+</div>
+`;
+
 exports[`Context renders custom width 1`] = `
 <div
   className="ax-context ax-context--top ax-context--light"
@@ -11,6 +36,11 @@ exports[`Context renders custom width 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -31,6 +61,11 @@ exports[`Context renders with defaultProps 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -51,6 +86,11 @@ exports[`Context renders with position bottom 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -71,6 +111,11 @@ exports[`Context renders with position left 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -91,6 +136,11 @@ exports[`Context renders with position right 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -111,6 +161,11 @@ exports[`Context renders with position top 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -131,6 +186,11 @@ exports[`Context renders with theme dark 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>
@@ -151,6 +211,11 @@ exports[`Context renders with theme light 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     Lorem ipsum
   </div>

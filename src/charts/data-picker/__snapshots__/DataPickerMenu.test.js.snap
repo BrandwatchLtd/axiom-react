@@ -11,6 +11,11 @@ exports[`DataPickerMenu renders with defaultProps 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     <div
       className="ax-context-box ax-context-box--padding-none"
@@ -39,6 +44,11 @@ exports[`DataPickerMenu renders with position 1`] = `
 >
   <div
     className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
   >
     <div
       className="ax-context-box ax-context-box--padding-none"
