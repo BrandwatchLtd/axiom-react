@@ -37,11 +37,3 @@
   stroke: var(--color-context-border-subtle);
   vector-effect: non-scaling-stroke;
 }
-
-@media (--screen-less-than-small) {
-  .ax-chart-table__grid-line-svg:nth-child(even) {
-    & .ax-chart-grid__line {
-      display: none;
-    }
-  }
-}

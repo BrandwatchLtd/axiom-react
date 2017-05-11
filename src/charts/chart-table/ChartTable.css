@@ -1,8 +1,18 @@
 @import '../../materials/animations';
+@import '../../materials/layout';
 @import '../../materials/sizing';
 
 :root {
   --cmp-chart-table-row-padding: calc((var(--spacing-grid-size) * 3) / 2);
+}
+
+@media (--screen-less-than-small) {
+  .ax-chart-table--responsive {
+    & .ax-chart-table__grid-line-svg:nth-child(even),
+    & .ax-chart-table__axis-label:nth-child(even) {
+      visibility: hidden;
+    }
+  }
 }
 
 .ax-chart-table__axis-button-container {

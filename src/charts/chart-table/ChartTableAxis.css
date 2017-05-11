@@ -13,9 +13,3 @@
   transform: translate(-50%, 0);
   text-align: center;
 }
-
-@media (--screen-less-than-small) {
-  .ax-chart-table__axis-label:nth-child(even) {
-    visibility: hidden;
-  }
-}

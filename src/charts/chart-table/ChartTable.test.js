@@ -22,4 +22,10 @@ describe('ChartTable', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders without responsive', () => {
+    const component = getComponent({ responsive: false });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

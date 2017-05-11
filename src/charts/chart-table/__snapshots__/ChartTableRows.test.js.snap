@@ -2,7 +2,7 @@
 
 exports[`ChartTableRows renders with defaultProps 1`] = `
 <div
-  className="ax-chart-table"
+  className="ax-chart-table ax-chart-table--responsive"
 >
   <div
     className="ax-chart-table__rows-container"

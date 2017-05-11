@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
+import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 import './ChartTable.css';
 
@@ -10,6 +11,7 @@ export default class ChartTable extends Component {
     collapsedVisibleRowCount: PropTypes.number,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string,
+    responsive: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -26,6 +28,7 @@ export default class ChartTable extends Component {
   static defaultProps = {
     expandButtonSuffix: 'Items',
     labelColumnWidth: '10rem',
+    responsive: true,
   };
 
   constructor(props) {
@@ -61,7 +64,10 @@ export default class ChartTable extends Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, responsive, ...rest } = this.props;
+    const classes = classnames('ax-chart-table', {
+      'ax-chart-table--responsive': responsive,
+    });
 
     return (
       <Base
@@ -70,7 +76,7 @@ export default class ChartTable extends Component {
             'expandButtonSuffix',
             'labelColumnWidth',
           ]) }
-          className="ax-chart-table">
+          className={ classes }>
         { children }
       </Base>
     );
