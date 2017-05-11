@@ -1,6 +1,8 @@
 @import '../../materials/animations';
+@import '../../materials/colors';
 @import '../../materials/layout';
 @import '../../materials/sizing';
+@import '../bars/vars';
 
 :root {
   --cmp-chart-table-row-padding: calc((var(--spacing-grid-size) * 3) / 2);
@@ -15,28 +17,6 @@
   }
 }
 
-.ax-chart-table__axis-button-container {
-  flex-shrink: 0;
-}
-
-.ax-chart-table__axis-row-container {
-  display: flex;
-}
-
-.ax-chart-table__collapse-expand-text {
-  margin-left: calc(var(--spacing-grid-size) * 2);
-}
-
-.ax-chart-table__cell {
-  padding-top: var(--cmp-chart-table-row-padding);
-  padding-bottom: var(--cmp-chart-table-row-padding);
-}
-
-.ax-chart-table__cell:first-child {
-  padding-left: calc(var(--spacing-grid-size) * 6);
-}
-
-.ax-chart-table,
 .ax-chart-table__rows {
   width: 100%;
   border-collapse: collapse;
@@ -48,4 +28,74 @@
   transition-property: height;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
+}
+
+.ax-chart-table__cell {
+  padding-top: var(--cmp-chart-table-row-padding);
+  padding-bottom: var(--cmp-chart-table-row-padding);
+}
+
+.ax-chart-table__cell:first-child {
+  padding-left: calc(var(--spacing-grid-size) * 6);
+}
+
+.ax-chart-table__grid-container {
+  position: relative;
+}
+
+.ax-chart-table__grid {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: var(--cmp-label-width);
+  bottom: 0;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.ax-chart-table__grid-lines {
+  display: flex;
+  flex: 1 0 100%;
+  max-height: 100%;
+}
+
+.ax-chart-table__grid-lines-svg {
+  display: block;
+  flex: 1 1 0%;
+  width: 100%;
+  overflow: visible;
+}
+
+.ax-chart-table__grid-line-svg {
+  overflow: visible;
+}
+
+.ax-chart-table__grid-line {
+  stroke: var(--color-context-border-subtle);
+  vector-effect: non-scaling-stroke;
+}
+
+.ax-chart-table__axis-button-container {
+  flex-shrink: 0;
+}
+
+.ax-chart-table__axis-row-container {
+  display: flex;
+}
+
+.ax-chart-table__axis-labels {
+  display: flex;
+  flex: 1 1 auto;
+  padding-right: var(--cmp-label-width);
+}
+
+.ax-chart-table__axis-label {
+  flex-grow: 1;
+  flex-shrink: 0;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+.ax-chart-table__collapse-expand-text {
+  margin-left: calc(var(--spacing-grid-size) * 2);
 }

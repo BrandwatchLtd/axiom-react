@@ -8,7 +8,6 @@ import {
   Small,
   Strong,
 } from 'bw-axiom';
-import './ChartTableAxis.css';
 
 export default class ChartTableAxis extends Component {
   static propTypes = {
