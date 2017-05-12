@@ -18,23 +18,17 @@ exports[`DataPickerHeader renders with color 1`] = `
           }
         }
       >
-        <svg
-          className="ax-data-points"
+        <div
+          className="ax-color-picker__option ax-color-picker__option--blue"
+          onClick={undefined}
           style={
             Object {
-              "height": "1rem",
-              "width": "1rem",
+              "borderWidth": "0.1875rem",
+              "height": ".75rem",
+              "width": ".75rem",
             }
           }
-          viewBox="0 0 24 24"
-        >
-          <circle
-            className="ax-data-point ax-data-point--blue"
-            cx={12}
-            cy={12}
-            r={12}
-          />
-        </svg>
+        />
       </div>
       <div
         className="ax-grid__cell"
@@ -71,23 +65,17 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
           }
         }
       >
-        <svg
-          className="ax-data-points"
+        <div
+          className="ax-color-picker__option ax-color-picker__option--empty"
+          onClick={undefined}
           style={
             Object {
-              "height": "1rem",
-              "width": "1rem",
+              "borderWidth": "0.1875rem",
+              "height": ".75rem",
+              "width": ".75rem",
             }
           }
-          viewBox="0 0 24 24"
-        >
-          <circle
-            className="ax-data-point ax-data-point--undefined"
-            cx={12}
-            cy={12}
-            r={12}
-          />
-        </svg>
+        />
       </div>
       <div
         className="ax-grid__cell"
@@ -124,23 +112,17 @@ exports[`DataPickerHeader renders with headerText 1`] = `
           }
         }
       >
-        <svg
-          className="ax-data-points"
+        <div
+          className="ax-color-picker__option ax-color-picker__option--empty"
+          onClick={undefined}
           style={
             Object {
-              "height": "1rem",
-              "width": "1rem",
+              "borderWidth": "0.1875rem",
+              "height": ".75rem",
+              "width": ".75rem",
             }
           }
-          viewBox="0 0 24 24"
-        >
-          <circle
-            className="ax-data-point ax-data-point--undefined"
-            cx={12}
-            cy={12}
-            r={12}
-          />
-        </svg>
+        />
       </div>
       <div
         className="ax-grid__cell"

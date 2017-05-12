@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
   Context,
-  DataPoint,
-  DataPoints,
+  ColorPicker,
+  ColorPickerOption,
   Dropdown,
   DropdownContent,
   DropdownTarget,
@@ -33,11 +33,21 @@ export default class DataPickerHeader extends Component {
       'brown',
       'grey',
     ]),
+    colorOptions: PropTypes.array,
     headerText: PropTypes.string,
+    onSelectColor: PropTypes.func,
   };
 
   render() {
-    const { children, color, headerText, ...rest } = this.props;
+    const {
+      children,
+      color,
+      colorOptions,
+      headerText,
+      onSelectColor,
+      ...rest
+    } = this.props;
+
     return (
       <PanelHeader { ...rest }>
         <Grid gutters="tiny"
@@ -46,9 +56,14 @@ export default class DataPickerHeader extends Component {
             verticalAlign="middle"
             wrap={ false }>
           <GridCell>
-            <DataPoints height="1rem">
-              <DataPoint color={ color } radius={ .75 } />
-            </DataPoints>
+            { onSelectColor ? (
+              <ColorPicker
+                  colorOptions={ colorOptions }
+                  onSelectColor={ onSelectColor }
+                  selected={ color } />
+            ) : (
+              <ColorPickerOption color={ color } />
+            ) }
           </GridCell>
           <GridCell>
             { children && (

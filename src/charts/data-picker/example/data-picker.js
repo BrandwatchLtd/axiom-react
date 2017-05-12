@@ -36,15 +36,12 @@ export default class DataPickerExample extends Component {
     const thirdSelectedValue = getData().filter((query) => query.id === selectedIds[2])[0];
     const defaultText = 'Please select a value';
     const data = [{
-      color: 'amber',
       id: 0,
       value: firstSelectedValue,
     }, {
-      color: 'blue',
       id: 1,
       value: secondSelectedValue,
     }, {
-      color: 'pink',
       id: 2,
       value: thirdSelectedValue,
     }];
@@ -52,12 +49,12 @@ export default class DataPickerExample extends Component {
     return (
       <Example name="Data Picker">
         <Snippet>
-          <Grid gutters="tiny" snippetIgnore="ignore">
+          <Grid gutters="tiny" snippetIgnore={ true }>
             { data.map(({ color, id, value }, i) => (
-              <GridCell key={ id } snippetIgnore="ignore">
+              <GridCell key={ id } snippetIgnore={ true }>
                 <DataPicker isInactive={ !value } snippetSkip={ i > 0 }>
                   <DataPickerHeader
-                      color={ color }
+                      color={ value && value.color }
                       headerText={ value ? value.name : defaultText }>
                     <DropdownMenu>
                       <DropdownMenuItem onClick={ () => this.onSelect(i, undefined) }>
@@ -75,23 +72,17 @@ export default class DataPickerExample extends Component {
                     </DropdownMenu>
                   </DataPickerHeader>
 
-                  { value && <DataPickerBody>
-                    <Heading style="headline"><Weak>
-                      { longNumber(value.authors) }
-                    </Weak></Heading>
-                  </DataPickerBody> }
+                  { value && (
+                    <DataPickerBody>
+                      <Heading snippetReplace={ true } style="headline"><Weak>
+                        { longNumber(value.authors) }
+                      </Weak></Heading>
+                    </DataPickerBody>
+                  ) }
                 </DataPicker>
               </GridCell>
             ) ) }
           </Grid>
-        </Snippet>
-
-        <Snippet>
-          <DataPicker isInactive={ true }>
-            <DataPickerHeader
-                color="pink"
-                headerText="No values to choose from" />
-          </DataPicker>
         </Snippet>
       </Example>
     );

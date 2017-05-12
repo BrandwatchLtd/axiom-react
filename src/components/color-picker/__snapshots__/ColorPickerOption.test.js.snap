@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPickerOption renders with color amber 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--amber"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color blue 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--blue"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color brown 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--brown"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color chartreuse 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--chartreuse"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color green 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--green"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color grey 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--grey"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color lilac 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--lilac"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color orange 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--orange"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color pink 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--pink"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color purple 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--purple"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color rose 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--rose"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color teal 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--teal"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with defaultProps 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with onClick 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--clickable"
+  onClick={[Function]}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with size 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty"
+  onClick={undefined}
+  style={
+    Object {
+      "borderWidth": "0.25rem",
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+/>
+`;

@@ -20,6 +20,7 @@ export default class ColorPickerOption extends Component {
       'grey',
     ]),
     size: PropTypes.string,
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {
@@ -27,13 +28,17 @@ export default class ColorPickerOption extends Component {
   };
 
   render() {
-    const { color = 'empty', size, ...rest } = this.props;
+    const { color = 'empty', onClick, size, ...rest } = this.props;
     const borderWidth = `${parseFloat(size) / 4}rem`;
-    const classes = classnames('ax-color-picker__option', `ax-color-picker__option--${color}`);
+    const classes = classnames('ax-color-picker__option', `ax-color-picker__option--${color}`, {
+      'ax-color-picker__option--clickable': onClick,
+    });
+
     return (
       <Base
           { ...rest }
           className={ classes }
+          onClick={ onClick }
           style={ { borderWidth, height: size, width: size } } />
     );
   }
