@@ -224,7 +224,7 @@ export default (
         <Route
             path="chart"
             name="Chart"
-            apiDocs={ ['Chart'] }
+            apiDocs={ ['Chart', 'ChartBody', 'ChartHeader', 'ChartTitle'] }
             examples={ require('../src/charts/chart/example') }
             component={ Doc } />
         <Route
