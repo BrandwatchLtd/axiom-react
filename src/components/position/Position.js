@@ -111,6 +111,13 @@ export default class Position extends Component {
     delete this._content;
     delete this._popper;
     delete this._target;
+
+    const placement = positionToPlacement(this.props.position, this.props.offset);
+
+    if (placement !== this.state.placement) {
+      this.setState({ placement });
+    }
+
   }
 
   renderContent() {
