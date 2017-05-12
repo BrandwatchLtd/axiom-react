@@ -5,7 +5,7 @@
 .ax-color-picker__option {
   border-radius: 50%;
   cursor: pointer;
-  transition-property: background-color;
+  transition-property: background-color, border-color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 }
