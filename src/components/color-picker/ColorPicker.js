@@ -62,7 +62,10 @@ export default class ColorPicker extends Component {
         <DropdownContent>
           <Context width={ width }>
             <ContextBox>
-              <Grid gutters="small" horizontalAlign="middle">
+              <Grid
+                  gutters="small"
+                  horizontalAlign="middle"
+                  responsive={ false }>
                 { options.map(((color)=> (
                   <GridCell key={ color } shrink={ true }>
                     <ColorPickerOption
