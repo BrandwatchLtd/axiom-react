@@ -4,9 +4,14 @@ cache:
   directories:
   - "~/bin"
   - "~/opt"
+before_install:
+- mkdir tmp
+before_script:
+- bash ./deploy/travis_setup.sh
 script:
 - yarn lint
-- yarn test
+- yarn ci:test
+- yarn ci:build:static
 after_success:
 - bash ./deploy/publish_to_npm.sh
 - bash ./deploy/deploy_to_ghpages.sh

@@ -16,18 +16,18 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "build-css": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.css.config.js",
-    "build-static": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js",
-    "gh-pages": "BASENAME_ENV=\"'/axiom/'\" yarn build-static && gh-pages -d ./static --repo git@github.com:BrandwatchLtd/axiom.git",
-    "lint": "yarn run lint-js && yarn run lint-css",
-    "lint-css": "stylelint 'src/**/*.css' 'style-guide/**/*.css'",
-    "lint-js": "eslint --config .eslintrc ./src ./style-guide",
-    "prepublish": "rm -rf ./lib && yarn prepublish-js && yarn prepublish-css",
-    "prepublish-css": "rsync -a --prune-empty-dirs --exclude 'example/*.css' --include '*/' --include '*.css' --include 'theme-*.json' --exclude '*' ./src/* ./lib",
-    "prepublish-js": "NODE_ENV=production BABEL_ENV=production babel ./src --ignore example,*.test.js --out-dir ./lib",
+    "build:css": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.css.config.js",
+    "build:static": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js",
+    "ci:build:static": "BASENAME_ENV=\"'/axiom/'\" yarn build:static",
+    "ci:test": "NODE_ENV=production jest --testPathPattern tmp --config .jest.ci.json",
+    "gh-pages": "gh-pages -d ./static --repo git@github.com:BrandwatchLtd/axiom.git",
+    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint:css": "stylelint 'src/**/*.css' 'style-guide/**/*.css'",
+    "lint:js": "eslint --config .eslintrc src style-guide",
+    "prepublish": "rm -rf lib && rsync -a --prune-empty-dirs --exclude '*.test.js' --exclude '__snapshots__/*' tmp/ lib",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start": "webpack-dev-server --port 4000 --inline --hot --history-api-fallback --content-base style-guide/",
-    "test": "NODE_ENV=production BABEL_ENV=production jest --config .jest.json"
+    "test": "NODE_ENV=production BABEL_ENV=production jest --testPathPattern src --config .jest.json"
   },
   "dependencies": {
     "classnames": "^2.2.1",
