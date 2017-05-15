@@ -2,6 +2,7 @@
 
 .ax-data-picker__header-title {
   display: flex;
+  align-items: center;
 }
 
 .ax-data-picker__header-title-text {
