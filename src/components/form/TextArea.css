@@ -7,7 +7,6 @@
   border: var(--component-border-width) solid var(--cmp-input-border-color);
   border-radius: var(--component-border-radius);
   background-color: var(--cmp-input-background-color);
-  overflow: auto; /* Remove the default vertical scrollbar in IE. */
   resize: none;
   transition-property: border-color;
   transition-duration: var(--transition-time-base);

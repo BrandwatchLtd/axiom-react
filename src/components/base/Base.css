@@ -1,7 +1,7 @@
+@import './globals';
 @import '../../materials/colors';
 @import '../../materials/layout';
 @import '../../materials/sizing';
-@import '../../materials/typography';
 
 /* Hack: around webkits autofill styling */
 @keyframes inputAutofillFix {
@@ -34,55 +34,6 @@
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
-}
-
-/* stylelint-disable selector-no-universal */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-/* stylelint-enable */
-
-html,
-body {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-  /* stylelint-disable property-no-vendor-prefix */
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  /* stylelint-enable property-no-vendor-prefix */
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-variant-ligatures: common-ligatures;
-  text-rendering: optimizeLegibility;
-  line-height: var(--line-height-body);
-}
-
-/* stylelint-disable selector-no-type */
-button {
-  /* normalise button styles */
-  margin: 0;
-  font: inherit;
-
-  /* Show the overflow in Edge. */
-  overflow: visible;
-}
-/* stylelint-enable selector-no-type */
-
-/* Remove the inner border and padding in Firefox. */
-button::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
 }
 
 /* stylelint-disable declaration-no-important */
