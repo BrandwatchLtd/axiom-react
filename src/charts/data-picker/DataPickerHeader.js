@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
+  Context,
   DataPoint,
   DataPoints,
   Dropdown,
@@ -68,7 +69,9 @@ export default class DataPickerHeader extends Component {
                 </DropdownTarget>
 
                 <DropdownContent>
-                  { children }
+                  <Context>
+                    { children }
+                  </Context>
                 </DropdownContent>
               </Dropdown>
             )}

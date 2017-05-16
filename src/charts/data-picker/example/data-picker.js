@@ -3,59 +3,49 @@ import { Example, Snippet } from 'style-guide';
 import { getData } from './data';
 import {
   DataPicker,
-  DataPickerHeader,
   DataPickerBody,
-  DataPickerMenu,
-  DataPickerMenuItem,
+  DataPickerHeader,
+  DropdownMenu,
+  DropdownMenuItem,
   Grid,
   GridCell,
   Heading,
-  Weak,
   longNumber,
+  Weak,
 } from 'bw-axiom';
 
 export default class DataPickerExample extends Component {
   constructor() {
     super();
     this.state = {
-      firstSelectedId: undefined,
-      secondSelectedId: undefined,
-      thirdSelectedId: undefined,
+      selectedIds: Array(3),
     };
   }
 
-  onFirstMenuItemClick(id) {
-    this.setState({ firstSelectedId: id });
-  }
-
-  onSecondMenuItemClick(id) {
-    this.setState({ secondSelectedId: id });
-  }
-
-  onThirdMenuItemClick(id) {
-    this.setState({ thirdSelectedId: id });
+  onSelect (selectedIdsIndex, id) {
+    this.setState(state => {
+      state.selectedIds[selectedIdsIndex] = id;
+      return state;
+    });
   }
 
   render() {
-    const { firstSelectedId, secondSelectedId, thirdSelectedId } = this.state;
-    const firstSelectedValue = getData().filter((query) => query.id === firstSelectedId)[0];
-    const secondSelectedValue = getData().filter((query) => query.id === secondSelectedId)[0];
-    const thirdSelectedValue = getData().filter((query) => query.id === thirdSelectedId)[0];
+    const { selectedIds } = this.state;
+    const firstSelectedValue = getData().filter((query) => query.id === selectedIds[0])[0];
+    const secondSelectedValue = getData().filter((query) => query.id === selectedIds[1])[0];
+    const thirdSelectedValue = getData().filter((query) => query.id === selectedIds[2])[0];
     const defaultText = 'Please select a value';
     const data = [{
       color: 'amber',
-      id: firstSelectedId,
-      onClick: this.onFirstMenuItemClick,
+      id: 0,
       value: firstSelectedValue,
     }, {
       color: 'blue',
-      id: secondSelectedId,
-      onClick: this.onSecondMenuItemClick,
+      id: 1,
       value: secondSelectedValue,
     }, {
       color: 'pink',
-      id: thirdSelectedId,
-      onClick: this.onThirdMenuItemClick,
+      id: 2,
       value: thirdSelectedValue,
     }];
 
@@ -63,21 +53,26 @@ export default class DataPickerExample extends Component {
       <Example name="Data Picker">
         <Snippet>
           <Grid gutters="tiny" snippetIgnore="ignore">
-            { data.map(({ color, id, onClick, value }, i) => (
+            { data.map(({ color, id, value }, i) => (
               <GridCell key={ id } snippetIgnore="ignore">
-                <DataPicker isInactive={ !value }snippetSkip={ i > 0 }>
+                <DataPicker isInactive={ !value } snippetSkip={ i > 0 }>
                   <DataPickerHeader
                       color={ color }
                       headerText={ value ? value.name : defaultText }>
-                    <DataPickerMenu>
+                    <DropdownMenu>
+                      <DropdownMenuItem onClick={ () => this.onSelect(i, undefined) }>
+                        Please select a value
+                      </DropdownMenuItem>
+                    </DropdownMenu>
+                    <DropdownMenu>
                       { getData().map(({ id, name }) => (
-                        <DataPickerMenuItem
+                        <DropdownMenuItem
                             key={ id }
-                            onClick={ onClick.bind(this, id) }>
+                            onClick={ () => this.onSelect(i, id) }>
                           { name }
-                        </DataPickerMenuItem>
+                        </DropdownMenuItem>
                       ) ) }
-                    </DataPickerMenu>
+                    </DropdownMenu>
                   </DataPickerHeader>
 
                   { value && <DataPickerBody>

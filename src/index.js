@@ -130,8 +130,6 @@ export { default as DataPoints } from './charts/data-point/DataPoints';
 export { default as DataPicker } from './charts/data-picker/DataPicker';
 export { default as DataPickerHeader } from './charts/data-picker/DataPickerHeader';
 export { default as DataPickerBody } from './charts/data-picker/DataPickerBody';
-export { default as DataPickerMenu } from './charts/data-picker/DataPickerMenu';
-export { default as DataPickerMenuItem } from './charts/data-picker/DataPickerMenuItem';
 export { default as Dot } from './charts/dot-plot/Dot';
 export { default as DotPlot } from './charts/dot-plot/DotPlot';
 export { default as DotPlotLine } from './charts/dot-plot/DotPlotLine';
