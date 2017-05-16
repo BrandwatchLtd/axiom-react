@@ -24,7 +24,7 @@
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint 'src/**/*.css' 'style-guide/**/*.css'",
     "lint:js": "eslint --config .eslintrc src style-guide",
-    "prepublish": "rm -rf lib && rsync -a --prune-empty-dirs --exclude '*.test.js' --exclude '__snapshots__/*' tmp/ lib",
+    "prepublish": "mkdir -p tmp && rm -rf lib && rsync -a --prune-empty-dirs --exclude '*.test.js' --exclude '__snapshots__/*' tmp/ lib",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start": "webpack-dev-server --port 4000 --inline --hot --history-api-fallback --content-base style-guide/",
     "test": "NODE_ENV=production BABEL_ENV=production jest --testPathPattern src --config .jest.json"
