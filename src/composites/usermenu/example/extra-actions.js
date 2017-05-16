@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { ContextMenu, ContextMenuItem, Grid, GridCell, UserMenu } from 'bw-axiom';
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  Grid,
+  GridCell,
+  UserMenu,
+} from 'bw-axiom';
 
 export default class UserMenuExample extends Component {
   render() {
@@ -15,15 +21,15 @@ export default class UserMenuExample extends Component {
                   imageSrc=""
                   lastName="Ipsum"
                   onLogout={ () => {} }>
-                <ContextMenu>
-                  <ContextMenuItem>
+                <DropdownMenu>
+                  <DropdownMenuItem>
                     Settings
-                  </ContextMenuItem>
+                  </DropdownMenuItem>
 
-                  <ContextMenuItem>
+                  <DropdownMenuItem>
                     Help!
-                  </ContextMenuItem>
-                </ContextMenu>
+                  </DropdownMenuItem>
+                </DropdownMenu>
               </UserMenu>
             </GridCell>
           </Grid>
