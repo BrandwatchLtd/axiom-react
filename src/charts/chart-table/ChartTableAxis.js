@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
   Base,
+  Grid,
+  GridCell,
   Icon,
   Link,
   Paragraph,
@@ -62,21 +64,16 @@ export default class ChartTableAxis extends Component {
               style={ { flexBasis: labelColumnWidth } }>
             {collapsible && (
               <Link onClick={ toggleExpand } style="subtle">
-                {isExpanded ? (
-                  <Strong>
-                    <Icon name="box-collapse"/>
-                    <span className="ax-chart-table__collapse-expand-text">
-                      Collapse
-                    </span>
-                  </Strong>
-                ) : (
-                  <Strong>
-                    <Icon name="box-expand"/>
-                    <span className="ax-chart-table__collapse-expand-text">
-                      {`See All ${rowsCount} ${expandButtonSuffix}`}
-                    </span>
-                  </Strong>
-                )}
+                <Strong>
+                  <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
+                    <GridCell shrink={ true }>
+                      <Icon name={ `box-${isExpanded ? 'collapse' : 'expand'}` }/>
+                    </GridCell>
+                    <GridCell shrink={ true }>
+                      {isExpanded ? 'Collapse' : `See All ${rowsCount} ${expandButtonSuffix}`}
+                    </GridCell>
+                  </Grid>
+                </Strong>
               </Link>
             )}
           </div>

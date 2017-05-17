@@ -95,7 +95,3 @@
   transform: translate(-50%, 0);
   text-align: center;
 }
-
-.ax-chart-table__collapse-expand-text {
-  margin-left: calc(var(--spacing-grid-size) * 2);
-}
