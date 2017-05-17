@@ -31,8 +31,8 @@ export default class ChartExample extends Component {
         <Snippet>
           <Chart>
             <ChartHeader>
-              <ChartTitle snippetReplace={ true }>
-                <Strong>Lorem Ipsum</Strong> (dolor sit amet)
+              <ChartTitle>
+                <Strong snippetReplace={ true }>Lorem Ipsum</Strong> (dolor sit amet)
               </ChartTitle>
             </ChartHeader>
             <ChartBody>
