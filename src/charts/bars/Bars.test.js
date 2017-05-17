@@ -32,4 +32,10 @@ describe('Bars', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with separated', () => {
+    const component = getComponent({ separated: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

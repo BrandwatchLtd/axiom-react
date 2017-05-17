@@ -9,6 +9,7 @@ export default class Bars extends Component {
     children: PropTypes.node.isRequired,
     direction: PropTypes.oneOf(['up', 'right', 'down', 'left']),
     label: PropTypes.string,
+    separated: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -26,8 +27,10 @@ export default class Bars extends Component {
   }
 
   render() {
-    const { children, direction, label, ...rest } = this.props;
-    const classes = classnames('ax-bars', `ax-bars--${direction}`);
+    const { children, direction, label, separated, ...rest } = this.props;
+    const classes = classnames('ax-bars', `ax-bars--${direction}`, {
+      'ax-bars--separated': separated,
+    });
 
     return (
       <Base { ...rest } className={ classes }>

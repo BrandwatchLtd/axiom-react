@@ -36,6 +36,11 @@
     width: 100%;
     height: 100%;
   }
+
+  &.ax-bars--separated .ax-bars__bar-rect {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
 }
 
 .ax-bars--up,
@@ -56,6 +61,11 @@
 .ax-bars--left {
   & .ax-bars__bars {
     flex-direction: column;
+  }
+
+  &.ax-bars--separated .ax-bars__bar-rect {
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
 }
 

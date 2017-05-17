@@ -15,6 +15,7 @@ export default class BarsExample extends Component {
                     direction="left"
                     key={ index }
                     snippetSkip={ index !== 0 }
+                    separated={true}
                     space="small">
                   { data.map((value, index) =>
                     <Bar
@@ -32,6 +33,7 @@ export default class BarsExample extends Component {
                     direction="right"
                     key={ index }
                     snippetSkip={ index !== 0 }
+                    separated={true}
                     space="small">
                   { data.map((value, index) =>
                     <Bar
