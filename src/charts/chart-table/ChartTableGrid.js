@@ -23,8 +23,6 @@ export default class ChartTableGrid extends Component {
 
     return (
       <Base { ...rest } className="ax-chart-table__grid-container">
-        { children }
-
         <div
             className="ax-chart-table__grid"
             style={ { left: labelColumnWidth } }>
@@ -49,6 +47,7 @@ export default class ChartTableGrid extends Component {
             </svg>
           </div>
         </div>
+        { children }
       </Base>
     );
   }

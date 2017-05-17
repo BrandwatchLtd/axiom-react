@@ -24,6 +24,7 @@
 }
 
 .ax-chart-table__rows-container {
+  position: relative;
   overflow-y: hidden;
   transition-property: height;
   transition-duration: var(--transition-time-base);
@@ -50,7 +51,6 @@
   right: var(--cmp-label-width);
   bottom: 0;
   flex-direction: column;
-  z-index: -1;
 }
 
 .ax-chart-table__grid-lines {
