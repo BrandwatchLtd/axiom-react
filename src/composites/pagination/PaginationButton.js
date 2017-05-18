@@ -23,7 +23,7 @@ export default class PaginationButton extends Component {
       <Button { ...rest }
           circular={ circular || page <= 99 ? 'small' : undefined }
           onClick={ () => onClick(page) }
-          stadium={ !circular && page > 99 ? 'small': undefined }
+          stadium={ !circular && page > 99 ? 'small' : undefined }
           style={ active ? 'primary' : 'quaternary' } />
     );
   }

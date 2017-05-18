@@ -23,7 +23,7 @@ export default class TooltipTarget extends Component {
   handleMouseLeave(...args) {
     const { children } = this.props;
     const { hideTooltip } = this.context;
-    const { onMouseLeave =() => {} } = children.props;
+    const { onMouseLeave = () => {} } = children.props;
 
     hideTooltip();
     onMouseLeave(...args);

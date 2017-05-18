@@ -18,6 +18,8 @@
   },
   "rules": {
     "comma-dangle": [2, "always-multiline"],
+    "comma-spacing": [2],
+    "eol-last": [2],
     "func-style": [2, "declaration"],
     "indent": [2, 2, {"SwitchCase": 0}],
     "keyword-spacing": [2],
@@ -44,5 +46,6 @@
     "react/jsx-sort-props": [2],
     "react/jsx-uses-react": [2],
     "semi": [2, "always"],
+    "space-infix-ops": [2]
   }
 }

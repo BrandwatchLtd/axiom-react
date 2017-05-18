@@ -20,7 +20,7 @@ import {
 function stringToColor(string) {
   return (colors) =>  colors[
     string.split('').reduce((acc, val) =>acc + val.charCodeAt(), 0)
-      % (colors.length -1)
+      % (colors.length - 1)
   ];
 }
 
