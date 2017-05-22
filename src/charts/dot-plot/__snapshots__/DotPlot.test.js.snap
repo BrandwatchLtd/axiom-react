@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChartTableRows renders with defaultProps 1`] = `
+exports[`DotPlot renders with sorted data 1`] = `
 <svg
   className="ax-dot-plot"
   style={
@@ -69,76 +69,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
 </svg>
 `;
 
-exports[`ChartTableRows renders with height 1`] = `
-<svg
-  className="ax-dot-plot"
-  style={
-    Object {
-      "height": "1rem",
-      "marginLeft": "-0.5rem",
-    }
-  }
->
-  <svg
-    className="ax-dot-plot__line"
-    height="1px"
-    preserveAspectRatio="none"
-    shapeRendering="crispEdges"
-    viewBox="0 0 1 1"
-    width="10%"
-    x="10%"
-    y="50%"
-  >
-    <path
-      className="ax-dot-plot__line-path"
-      d="M 0 1 H 1"
-      strokeWidth="1"
-    />
-  </svg>
-  <svg
-    className="ax-data-points"
-    onClick={undefined}
-    preserveAspectRatio="xMinYMin meet"
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 24 24"
-    x="10%"
-  >
-    <circle
-      className="ax-data-point ax-data-point--blue"
-      cx={12}
-      cy={12}
-      r={12}
-    />
-  </svg>
-  <svg
-    className="ax-data-points"
-    onClick={undefined}
-    preserveAspectRatio="xMinYMin meet"
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 24 24"
-    x="20%"
-  >
-    <circle
-      className="ax-data-point ax-data-point--pink"
-      cx={12}
-      cy={12}
-      r={12}
-    />
-  </svg>
-</svg>
-`;
-
-exports[`ChartTableRows renders with unsorted children 1`] = `
+exports[`DotPlot renders with unsorted data 1`] = `
 <svg
   className="ax-dot-plot"
   style={
@@ -175,10 +106,10 @@ exports[`ChartTableRows renders with unsorted children 1`] = `
       }
     }
     viewBox="0 0 24 24"
-    x="10%"
+    x="20%"
   >
     <circle
-      className="ax-data-point ax-data-point--blue"
+      className="ax-data-point ax-data-point--pink"
       cx={12}
       cy={12}
       r={12}
@@ -195,10 +126,10 @@ exports[`ChartTableRows renders with unsorted children 1`] = `
       }
     }
     viewBox="0 0 24 24"
-    x="20%"
+    x="10%"
   >
     <circle
-      className="ax-data-point ax-data-point--pink"
+      className="ax-data-point ax-data-point--blue"
       cx={12}
       cy={12}
       r={12}

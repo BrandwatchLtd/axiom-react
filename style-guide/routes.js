@@ -259,7 +259,7 @@ export default (
         <Route
             path="dot-plot"
             name="Dot Plot"
-            apiDocs={ ['DotPlot', 'Dot'] }
+            apiDocs={ ['DotPlotChart'] }
             examples={ require('../src/charts/dot-plot/example') }
             component={ Doc } />
         <Route

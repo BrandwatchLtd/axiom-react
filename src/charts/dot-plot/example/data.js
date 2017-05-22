@@ -1,48 +1,20 @@
-export const labels = [{
-  name: 'Brand A',
-  color: 'blue',
-}, {
-  name: 'Brand B',
-  color: 'pink',
-}, {
-  name: 'Brand C',
-  color: 'lilac',
-}];
+export const chartKey = [
+  { color: 'blue', label: 'Brand A' },
+  { color: 'pink', label: 'Brand B' },
+  { color: 'lilac', label: 'Brand C' },
+];
 
-export const data = [{
-  label: 'Family',
-  data: [0, 50, 100],
-}, {
-  label: 'Games',
-  data: [90, 10, 55],
-}, {
-  label: 'Family & Parenting',
-  data: [45, 80, 20],
-}, {
-  label: 'Technology',
-  data: [30, 53, 70],
-}, {
-  label: 'Books',
-  data: [60, 40, 48],
-}, {
-  label: 'Travel',
-  data: [50, 54, 46],
-}, {
-  label: 'Animals & Pets',
-  data: [40, 45, 53],
-}, {
-  label: 'Automotive',
-  data: [50, 38, 45],
-}, {
-  label: 'TV',
-  data: [65, 67, 58],
-}, {
-  label: 'Environment',
-  data: [43, 55, 50],
-}, {
-  label: 'Fashion',
-  data: [10, 45, 26],
-}, {
-  label: 'Music',
-  data: [69, 58, 41],
-}];
+export const data = [
+  { label: 'Family', values: { blue: 0, lilac: 100, pink: 50 } },
+  { label: 'Games', values: { blue: 90, lilac: 55, pink: 10 } },
+  { label: 'Family & Parenting', values: { blue: 45, lilac: 20, pink: 80 } },
+  { label: 'Technology', values: { blue: 30, lilac: 53, pink: 70 } },
+  { label: 'Books', values: { blue: 60, lilac: 48, pink: 40 } },
+  { label: 'Travel', values: { blue: 50, lilac: 46, pink: 54 } },
+  { label: '2 stacked & 1 single', values: { blue: 40, lilac: 53, pink: 40 } },
+  { label: '3 stacked', values: { blue: 50, lilac: 50, pink: 50 } },
+  { label: 'Environment', values: { blue: 43, lilac: 50, pink: 55 } },
+  { label: 'Music', values: { blue: 69, lilac: 41, pink: 58 } },
+  { label: '1 data point', values: { blue: 69 } },
+  { label: '2 data points', values: { blue: 25, lilac: 50 } },
+];

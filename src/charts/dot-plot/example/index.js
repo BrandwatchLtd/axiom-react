@@ -1,3 +1,5 @@
 module.exports = [
-  require('./chart-table').default,
+  require('./basic-chart').default,
+  require('./collapsible').default,
+  require('./custom-x-labels').default,
 ];

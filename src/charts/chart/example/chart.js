@@ -4,25 +4,11 @@ import {
   Chart,
   ChartBody,
   ChartHeader,
-  ChartKey,
-  ChartKeyItem,
-  ChartTable,
-  ChartTableAxis,
-  ChartTableGrid,
-  ChartTableKey,
-  ChartTableLabel,
-  ChartTableRow,
-  ChartTableRows,
-  ChartTableVisual,
   ChartTitle,
-  DataPoints,
-  DataPoint,
-  Dot,
-  DotPlot,
-  DotPlotLine,
+  DotPlotChart,
   Strong,
 } from 'bw-axiom';
-import { labels, data } from '../../dot-plot/example/data';
+import { chartKey, data } from '../../dot-plot/example/data';
 
 export default class ChartExample extends Component {
   render() {
@@ -36,47 +22,14 @@ export default class ChartExample extends Component {
               </ChartTitle>
             </ChartHeader>
             <ChartBody>
-              <ChartTable
+              <DotPlotChart
+                  axisTitle="% of each something"
+                  chartKey={ chartKey }
+                  chartKeyLineLabel="Size of Difference"
                   collapsedVisibleRowCount={ 6 }
+                  data={ data }
                   expandButtonSuffix="Categories"
-                  labelColumnWidth="11rem"
-                  snippetReplace={ true }>
-                <ChartTableGrid>
-                  <ChartTableRows>
-                    { data.map(({ label, data }) =>
-                      <ChartTableRow key={ label }>
-                        <ChartTableLabel>{ label }</ChartTableLabel>
-                        <ChartTableVisual>
-                          <DotPlot>
-                            { data.map((value, index) =>
-                              <Dot
-                                  color={ labels[index].color }
-                                  key={ index }
-                                  percent={ value } />
-                            ) }
-                          </DotPlot>
-                        </ChartTableVisual>
-                      </ChartTableRow>
-                    ) }
-                  </ChartTableRows>
-                </ChartTableGrid>
-                <ChartTableAxis title="% of each something" />
-                <ChartTableKey>
-                  <ChartKey>
-                    { labels.map(({ name, color }) =>
-                      <ChartKeyItem key={ name } label={ name }>
-                        <DataPoints size="0.75rem">
-                          <DataPoint color={ color } />
-                        </DataPoints>
-                      </ChartKeyItem>
-                    ) }
-
-                    <ChartKeyItem label="Size of Difference">
-                      <DotPlotLine width="0.75rem" />
-                    </ChartKeyItem>
-                  </ChartKey>
-                </ChartTableKey>
-              </ChartTable>
+                  labelColumnWidth="11rem" />
             </ChartBody>
           </Chart>
         </Snippet>

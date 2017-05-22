@@ -1,37 +1,31 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DotPlot, Dot } from 'bw-axiom';
+import DotPlot from './DotPlot';
 
-function getComponent(props = {}, children = [
-  <Dot color="blue" percent={ 10 } />,
-  <Dot color="pink" percent={ 20 } />,
-]) {
-  return renderer.create(
-    <DotPlot { ...props }>
-      { children }
-    </DotPlot>
-  );
+function getComponent(props) {
+  return renderer.create(<DotPlot { ...props } />);
 }
 
-describe('ChartTableRows', () => {
-  it('renders with defaultProps', () => {
-    const component = getComponent();
+describe('DotPlot', () => {
+  it('renders with sorted data', () => {
+    const component = getComponent({
+      data: [
+        { color: 'blue', value: 10 },
+        { color: 'pink', value: 20 },
+      ],
+    });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with unsorted children', () => {
-    const component = getComponent({}, [
-      <Dot color="pink" percent={ 20 } />,
-      <Dot color="blue" percent={ 10 } />,
-    ]);
+  it('renders with unsorted data', () => {
+    const component = getComponent({
+      data: [
+        { color: 'pink', value: 20 },
+        { color: 'blue', value: 10 },
+      ],
+    });
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with height', () => {
-    const component = getComponent({ height: '1rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

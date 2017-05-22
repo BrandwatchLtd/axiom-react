@@ -1,0 +1,5308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DotPlotChart renders as collapsible 1`] = `
+<div
+  className="ax-chart-table ax-chart-table--responsive"
+>
+  <div
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-lines"
+      >
+        <svg
+          className="ax-chart-table__grid-lines-svg"
+        >
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="0%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="10%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="20%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="30%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="40%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="50%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="60%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="70%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="80%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="90%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="100%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+        </svg>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__rows-container"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <table
+        className="ax-chart-table__rows"
+      >
+        <tbody>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Family
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="100%"
+                  x="0%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="0%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="100%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Games
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="80%"
+                  x="10%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="10%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="55%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="90%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Family & Parenting
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="60%"
+                  x="20%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="20%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="45%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="80%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Technology
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="40%"
+                  x="30%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="30%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="53%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="70%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Books
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="20%"
+                  x="40%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="40%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="48%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="60%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Travel
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="8%"
+                  x="46%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="46%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="54%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              2 stacked & 1 single
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="13%"
+                  x="40%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="40%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={6}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="53%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              3 stacked
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0%"
+                  x="50%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={8}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={4}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Environment
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="12%"
+                  x="43%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="43%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="55%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Music
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="28%"
+                  x="41%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="41%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="58%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="69%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              1 data point
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0%"
+                  x="69%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="69%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              2 data points
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="25%"
+                  x="25%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="25%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__axis ax-space--tiny"
+  >
+    <div
+      className="ax-chart-table__axis-row-container ax-space--tiny"
+    >
+      <div
+        className="ax-chart-table__axis-button-container"
+        style={
+          Object {
+            "flexBasis": "11rem",
+          }
+        }
+      >
+        <a
+          className="ax-link ax-link--style-subtle"
+          onClick={[Function]}
+        >
+          <strong
+            className="ax-text--strong"
+          >
+            <div
+              className="ax-grid__container ax-space--medium"
+            >
+              <div
+                className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
+              >
+                <div
+                  className="ax-grid__cell ax-grid__cell--shrink"
+                  style={
+                    Object {
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <svg
+                    className="ax-icon ax-icon--box-expand"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": "1rem",
+                        "width": "1rem",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                  />
+                </div>
+                <div
+                  className="ax-grid__cell ax-grid__cell--shrink"
+                  style={
+                    Object {
+                      "width": undefined,
+                    }
+                  }
+                >
+                  See All 12 test-expandButtonSuffix
+                </div>
+              </div>
+            </div>
+          </strong>
+        </a>
+      </div>
+      <div
+        className="ax-chart-table__axis-labels"
+      >
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            10%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            20%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            30%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            40%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            50%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            60%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            70%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            80%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            90%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </div>
+      </div>
+    </div>
+    <p
+      className="ax-paragraph ax-space--tiny ax-text--center ax-text--color-subtle"
+    >
+      <small
+        className="ax-small"
+      >
+        test-axisTitle
+      </small>
+    </p>
+  </div>
+  <div
+    className="ax-chart-table__key ax-space--tiny"
+  >
+    <div
+      className="ax-grid__container ax-space--medium"
+    >
+      <div
+        className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--horizontal-middle ax-grid--wrap"
+      >
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand A
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand B
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand C
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0.75rem"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  test-chartKeyLineLabel
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DotPlotChart renders with basic props 1`] = `
+<div
+  className="ax-chart-table ax-chart-table--responsive"
+>
+  <div
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-lines"
+      >
+        <svg
+          className="ax-chart-table__grid-lines-svg"
+        >
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="0%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="10%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="20%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="30%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="40%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="50%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="60%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="70%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="80%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="90%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="100%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+        </svg>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__rows-container"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <table
+        className="ax-chart-table__rows"
+      >
+        <tbody>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Family
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="100%"
+                  x="0%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="0%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="100%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Games
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="80%"
+                  x="10%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="10%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="55%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="90%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Family & Parenting
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="60%"
+                  x="20%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="20%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="45%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="80%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Technology
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="40%"
+                  x="30%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="30%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="53%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="70%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Books
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="20%"
+                  x="40%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="40%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="48%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="60%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Travel
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="8%"
+                  x="46%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="46%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="54%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              2 stacked & 1 single
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="13%"
+                  x="40%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="40%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={6}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="53%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              3 stacked
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0%"
+                  x="50%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={8}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={4}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Environment
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="12%"
+                  x="43%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="43%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="55%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Music
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="28%"
+                  x="41%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="41%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="58%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="69%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              1 data point
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0%"
+                  x="69%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="69%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              2 data points
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="25%"
+                  x="25%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="25%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__axis ax-space--tiny"
+  >
+    <div
+      className="ax-chart-table__axis-row-container ax-space--tiny"
+    >
+      <div
+        className="ax-chart-table__axis-button-container"
+        style={
+          Object {
+            "flexBasis": "11rem",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__axis-labels"
+      >
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            10%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            20%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            30%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            40%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            50%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            60%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            70%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            80%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            90%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "10%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__key ax-space--tiny"
+  >
+    <div
+      className="ax-grid__container ax-space--medium"
+    >
+      <div
+        className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--horizontal-middle ax-grid--wrap"
+      >
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand A
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand B
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand C
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0.75rem"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  test-chartKeyLineLabel
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DotPlotChart renders with custom axis 1`] = `
+<div
+  className="ax-chart-table ax-chart-table--responsive"
+>
+  <div
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-lines"
+      >
+        <svg
+          className="ax-chart-table__grid-lines-svg"
+        >
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="0%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="10%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="20%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="30%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="40%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="50%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="60%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="70%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="80%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="90%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+          <svg
+            className="ax-chart-table__grid-line-svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1 1"
+            width="1"
+            x="100%"
+          >
+            <path
+              className="ax-chart-table__grid-line"
+              d="M 0 0 V 1"
+              shapeRendering="crispEdges"
+              strokeDasharray="1, 1"
+              strokeWidth="1"
+            />
+          </svg>
+        </svg>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__rows-container"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <table
+        className="ax-chart-table__rows"
+      >
+        <tbody>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Family
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="100%"
+                  x="0%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="0%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="100%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Games
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="80%"
+                  x="10%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="10%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="55%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="90%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Family & Parenting
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="60%"
+                  x="20%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="20%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="45%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="80%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Technology
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="40%"
+                  x="30%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="30%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="53%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="70%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Books
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="20%"
+                  x="40%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="40%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="48%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="60%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Travel
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="8%"
+                  x="46%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="46%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="54%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              2 stacked & 1 single
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="13%"
+                  x="40%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="40%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={6}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="53%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              3 stacked
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0%"
+                  x="50%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={8}
+                  />
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={4}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Environment
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="12%"
+                  x="43%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="43%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="55%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              Music
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="28%"
+                  x="41%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="41%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="58%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="69%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              1 data point
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0%"
+                  x="69%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="69%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+          <tr
+            className="ax-chart-table__row"
+          >
+            <td
+              className="ax-chart-table__cell ax-text--color-subtle"
+              style={
+                Object {
+                  "width": "11rem",
+                }
+              }
+            >
+              2 data points
+            </td>
+            <td
+              className="ax-chart-table__cell"
+            >
+              <svg
+                className="ax-dot-plot"
+                style={
+                  Object {
+                    "height": "0.8125rem",
+                    "marginLeft": "-0.40625rem",
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="25%"
+                  x="25%"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="25%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
+                  style={
+                    Object {
+                      "height": "0.8125rem",
+                      "width": "0.8125rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  x="50%"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__axis ax-space--tiny"
+  >
+    <div
+      className="ax-chart-table__axis-row-container ax-space--tiny"
+    >
+      <div
+        className="ax-chart-table__axis-button-container"
+        style={
+          Object {
+            "flexBasis": "11rem",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__axis-labels"
+      >
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "20%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "20%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            20%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "20%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            40%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "20%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            60%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "20%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            80%
+          </small>
+        </div>
+        <div
+          className="ax-chart-table__axis-label"
+          style={
+            Object {
+              "flexBasis": "20%",
+            }
+          }
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </div>
+      </div>
+    </div>
+    <p
+      className="ax-paragraph ax-space--tiny ax-text--center ax-text--color-subtle"
+    >
+      <small
+        className="ax-small"
+      >
+        test-axisTitle
+      </small>
+    </p>
+  </div>
+  <div
+    className="ax-chart-table__key ax-space--tiny"
+  >
+    <div
+      className="ax-grid__container ax-space--medium"
+    >
+      <div
+        className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--shrink ax-grid--horizontal-middle ax-grid--wrap"
+      >
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--blue"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand A
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--pink"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand B
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-data-points"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "height": "0.75rem",
+                      "width": "0.75rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="ax-data-point ax-data-point--lilac"
+                    cx={12}
+                    cy={12}
+                    r={12}
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  Brand C
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-grid__container ax-space--medium"
+          >
+            <div
+              className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"
+            >
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <svg
+                  className="ax-dot-plot__line"
+                  height="1px"
+                  preserveAspectRatio="none"
+                  shapeRendering="crispEdges"
+                  viewBox="0 0 1 1"
+                  width="0.75rem"
+                  y="50%"
+                >
+                  <path
+                    className="ax-dot-plot__line-path"
+                    d="M 0 1 H 1"
+                    strokeWidth="1"
+                  />
+                </svg>
+              </div>
+              <div
+                className="ax-grid__cell"
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <strong
+                  className="ax-text--strong ax-text--color-subtle"
+                >
+                  test-chartKeyLineLabel
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
