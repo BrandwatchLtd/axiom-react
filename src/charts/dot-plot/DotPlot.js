@@ -35,9 +35,9 @@ export default class DotPlot extends Component {
         <DotPlotLine width={ `${ range }%` } x={ `${ x }%` } />
         { arrayChildren.map((child, index) =>
           <DataPoints
-              height={ height }
               key={ index }
               preserveAspectRatio="xMinYMin meet"
+              size={ height }
               x={ `${child.props.percent}%` } >
             { child }
           </DataPoints>

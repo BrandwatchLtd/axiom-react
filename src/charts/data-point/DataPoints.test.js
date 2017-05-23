@@ -4,7 +4,7 @@ import { DataPoints, DataPoint } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <DataPoints height="1rem" { ...props }>
+    <DataPoints size="1rem" { ...props }>
       <DataPoint color="blue" />
       <DataPoint color="pink" />
       <DataPoint color="amber" />

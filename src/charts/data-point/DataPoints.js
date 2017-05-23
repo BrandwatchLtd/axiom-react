@@ -8,12 +8,12 @@ const VB_HEIGHT = 24;
 export default class DataPoints extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    height: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
   };
 
   render() {
-    const { children, height, ...rest } = this.props;
-    const style = { height, width: height };
+    const { children, size, ...rest } = this.props;
+    const style = { height: size, width: size };
 
     return (
       <Base { ...rest }

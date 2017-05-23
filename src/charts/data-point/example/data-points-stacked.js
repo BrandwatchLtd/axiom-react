@@ -7,7 +7,7 @@ export default class DataPointExample extends Component {
     return (
       <Example name="DataPoints stacked">
         <Snippet>
-          <DataPoints height="1.5rem">
+          <DataPoints size="1.5rem">
             <DataPoint color="blue" />
             <DataPoint color="pink" />
             <DataPoint color="amber" />
@@ -17,4 +17,3 @@ export default class DataPointExample extends Component {
     );
   }
 }
-

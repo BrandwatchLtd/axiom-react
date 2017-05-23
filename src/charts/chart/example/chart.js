@@ -65,7 +65,7 @@ export default class ChartExample extends Component {
                   <ChartKey>
                     { labels.map(({ name, color }) =>
                       <ChartKeyItem key={ name } label={ name }>
-                        <DataPoints height="0.75rem">
+                        <DataPoints size="0.75rem">
                           <DataPoint color={ color } />
                         </DataPoints>
                       </ChartKeyItem>
@@ -84,5 +84,3 @@ export default class ChartExample extends Component {
     );
   }
 }
-
-

@@ -24,7 +24,7 @@ export default class DataPointExample extends Component {
           <Grid gutters="tiny" responsive={ false } snippetIgnore="ignore">
             { color.values.map((color) =>
               <GridCell key={ color } shrink={ true } snippetIgnore="ignore">
-                <DataPoints height="2rem" snippetIgnore="ignore">
+                <DataPoints size="2rem" snippetIgnore="ignore">
                   <DataPoint color={ color } />
                 </DataPoints>
               </GridCell>
@@ -35,4 +35,3 @@ export default class DataPointExample extends Component {
     );
   }
 }
-
