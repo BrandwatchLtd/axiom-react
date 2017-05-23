@@ -3,6 +3,40 @@
 exports[`DataPoints renders with defaultProps 1`] = `
 <svg
   className="ax-data-points"
+  onClick={undefined}
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+  viewBox="0 0 24 24"
+>
+  <circle
+    className="ax-data-point ax-data-point--blue"
+    cx={12}
+    cy={12}
+    r={12}
+  />
+  <circle
+    className="ax-data-point ax-data-point--pink"
+    cx={12}
+    cy={12}
+    r={8}
+  />
+  <circle
+    className="ax-data-point ax-data-point--amber"
+    cx={12}
+    cy={12}
+    r={4}
+  />
+</svg>
+`;
+
+exports[`DataPoints renders with onClick 1`] = `
+<svg
+  className="ax-data-points ax-data-points--clickable"
+  onClick={[Function]}
   style={
     Object {
       "height": "1rem",

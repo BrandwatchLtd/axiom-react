@@ -1,3 +1,62 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
 .ax-data-points {
   display: block;
+}
+
+.ax-data-point {
+  color: inherit;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-data-point--rose { color: var(--color-brand-rose); }
+.ax-data-point--pink { color: var(--color-brand-pink); }
+.ax-data-point--purple { color: var(--color-brand-purple); }
+.ax-data-point--lilac { color: var(--color-brand-lilac); }
+.ax-data-point--blue { color: var(--color-brand-blue); }
+.ax-data-point--teal { color: var(--color-brand-teal); }
+.ax-data-point--green { color: var(--color-brand-green); }
+.ax-data-point--chartreuse { color: var(--color-brand-chartreuse); }
+.ax-data-point--amber { color: var(--color-brand-amber); }
+.ax-data-point--orange { color: var(--color-brand-orange); }
+.ax-data-point--brown { color: var(--color-brand-brown); }
+.ax-data-point--grey { color: var(--color-brand-grey); }
+
+.ax-data-points--clickable {
+  cursor: pointer;
+
+  &:hover {
+    & .ax-data-point--rose { color: var(--color-brand-rose--light); }
+    & .ax-data-point--pink { color: var(--color-brand-pink--light); }
+    & .ax-data-point--purple { color: var(--color-brand-purple--light); }
+    & .ax-data-point--lilac { color: var(--color-brand-lilac--light); }
+    & .ax-data-point--blue { color: var(--color-brand-blue--light); }
+    & .ax-data-point--teal { color: var(--color-brand-teal--light); }
+    & .ax-data-point--green { color: var(--color-brand-green--light); }
+    & .ax-data-point--chartreuse { color: var(--color-brand-chartreuse--light); }
+    & .ax-data-point--amber { color: var(--color-brand-amber--light); }
+    & .ax-data-point--orange { color: var(--color-brand-orange--light); }
+    & .ax-data-point--brown { color: var(--color-brand-brown--light); }
+    & .ax-data-point--grey { color: var(--color-brand-grey--light); }
+  }
+
+  &:active {
+    & .ax-data-point--rose { color: var(--color-brand-rose--dark); }
+    & .ax-data-point--pink { color: var(--color-brand-pink--dark); }
+    & .ax-data-point--purple { color: var(--color-brand-purple--dark); }
+    & .ax-data-point--lilac { color: var(--color-brand-lilac--dark); }
+    & .ax-data-point--blue { color: var(--color-brand-blue--dark); }
+    & .ax-data-point--teal { color: var(--color-brand-teal--dark); }
+    & .ax-data-point--green { color: var(--color-brand-green--dark); }
+    & .ax-data-point--chartreuse { color: var(--color-brand-chartreuse--dark); }
+    & .ax-data-point--amber { color: var(--color-brand-amber--dark); }
+    & .ax-data-point--orange { color: var(--color-brand-orange--dark); }
+    & .ax-data-point--brown { color: var(--color-brand-brown--dark); }
+    & .ax-data-point--grey { color: var(--color-brand-grey--dark); }
+  }
 }

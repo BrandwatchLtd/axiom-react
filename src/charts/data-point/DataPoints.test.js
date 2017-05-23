@@ -18,4 +18,10 @@ describe('DataPoints', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with onClick', () => {
+    const component = getComponent({ onClick: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
