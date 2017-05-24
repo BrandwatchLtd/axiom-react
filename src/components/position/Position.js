@@ -12,6 +12,7 @@ export default class Position extends Component {
     children: PropTypes.array.isRequired,
     isVisible: PropTypes.bool.isRequired,
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
+    parentNode: PropTypes.object,
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
     onMaskClick: PropTypes.func,
   };
@@ -67,9 +68,12 @@ export default class Position extends Component {
   }
 
   createReactRootNode() {
+    const parentNode = this.props.parentNode || document.body;
     this._reactRootNode = document.createElement('div');
     this._reactRootNode.classList.add('AxiomPositionRoot');
-    document.body.appendChild(this._reactRootNode);
+
+    parentNode.appendChild(this._reactRootNode);
+
     this.renderSubtree();
   }
 
@@ -103,9 +107,12 @@ export default class Position extends Component {
   }
 
   destroy() {
+    const parentNode = this.props.parentNode || document.body;
+
     this._popper.destroy();
     ReactDOM.unmountComponentAtNode(this._reactRootNode);
-    document.body.removeChild(this._reactRootNode);
+
+    parentNode.removeChild(this._reactRootNode);
 
     delete this._reactRootNode;
     delete this._content;
