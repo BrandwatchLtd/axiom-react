@@ -74,3 +74,7 @@ cd axiom
 yarn install
 yarn start
 ```
+
+### Testing within an application
+
+Npm/yarn link won't work out of the box as the `main` directory specified in `package.json` is `lib`. To populate this directory with your local changes, run `yarn build:local`. You can then run `npm link` as normal, and then `npm link bw-axiom` from your application directory.

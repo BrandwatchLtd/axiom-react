@@ -18,6 +18,7 @@
   "scripts": {
     "build:css": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.css.config.js",
     "build:static": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.static.config.js",
+    "build:local": ". ./deploy/travis_setup.sh && yarn prepublish",
     "ci:build:static": "BASENAME_ENV=\"'/axiom/'\" yarn build:static",
     "ci:test": "NODE_ENV=production jest --testPathPattern tmp --config .jest.ci.json",
     "gh-pages": "gh-pages -d ./static --repo git@github.com:BrandwatchLtd/axiom.git",
