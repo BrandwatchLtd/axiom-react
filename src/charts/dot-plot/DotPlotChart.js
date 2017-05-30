@@ -21,6 +21,7 @@ import './DotPlot.css';
 
 export default class DotPlotChart extends Component {
   static propTypes = {
+    ContextComponent: PropTypes.func,
     axisTitle: PropTypes.string,
     chartKey: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.oneOf([
@@ -56,6 +57,7 @@ export default class DotPlotChart extends Component {
       chartKey,
       chartKeyLineLabel,
       collapsedVisibleRowCount,
+      ContextComponent,
       data,
       expandButtonSuffix,
       labelColumnWidth,
@@ -87,7 +89,10 @@ export default class DotPlotChart extends Component {
               <ChartTableRow key={ label }>
                 <ChartTableLabel>{ label }</ChartTableLabel>
                 <ChartTableVisual>
-                  <DotPlot data={ dotPlotData } />
+                  <DotPlot
+                      ContextComponent={ ContextComponent }
+                      data={ dotPlotData }
+                      label={ label } />
                 </ChartTableVisual>
               </ChartTableRow>
             ) }

@@ -1620,6 +1620,7 @@ exports[`DotPlotChart renders as collapsible 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -1678,6 +1679,7 @@ exports[`DotPlotChart renders as collapsible 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -1736,6 +1738,7 @@ exports[`DotPlotChart renders as collapsible 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -3389,6 +3392,7 @@ exports[`DotPlotChart renders with basic props 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -3447,6 +3451,7 @@ exports[`DotPlotChart renders with basic props 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -3505,6 +3510,7 @@ exports[`DotPlotChart renders with basic props 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -5097,6 +5103,7 @@ exports[`DotPlotChart renders with custom axis 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -5155,6 +5162,7 @@ exports[`DotPlotChart renders with custom axis 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",
@@ -5213,6 +5221,7 @@ exports[`DotPlotChart renders with custom axis 1`] = `
                 <svg
                   className="ax-data-points"
                   onClick={undefined}
+                  preserveAspectRatio="xMinYMin meet"
                   style={
                     Object {
                       "height": "0.75rem",

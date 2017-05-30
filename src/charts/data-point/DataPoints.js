@@ -25,6 +25,7 @@ export default class DataPoints extends Component {
           Component="svg"
           className={ classes }
           onClick={ onClick }
+          preserveAspectRatio="xMinYMin meet"
           style={ style }
           viewBox={ `0 0 ${VB_HEIGHT} ${VB_HEIGHT}` }>
         { Children.toArray(children).map((child, n, { length }) =>

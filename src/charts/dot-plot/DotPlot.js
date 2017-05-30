@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { DataPoints, DataPoint } from 'bw-axiom';
+import { Base } from 'bw-axiom';
+import DotPlotContext from './DotPlotContext';
 import DotPlotLine from './DotPlotLine';
 import './DotPlot.css';
 
+export const DOT_PLOT_DIAMETER = 0.8125;
+
 export default class DotPlot extends Component {
   static propTypes = {
+    ContextComponent: PropTypes.func,
     data: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.oneOf([
         'rose',
@@ -23,18 +27,17 @@ export default class DotPlot extends Component {
       ]).isRequired,
       value: PropTypes.number.isRequired,
     })).isRequired,
+    label: PropTypes.string,
   };
 
   render() {
-    const { data } = this.props;
-    const diameter = 0.8125;
-    const height = `${diameter}rem`;
+    const { ContextComponent, data, label, ...rest } = this.props;
     const xValues = data.map(({ value }) => value);
     const x = Math.min(...xValues);
     const range = Math.max(...xValues) - x;
     const style = {
-      height,
-      marginLeft: `-${diameter / 2}rem`,
+      height: `${DOT_PLOT_DIAMETER}rem`,
+      marginLeft: `-${DOT_PLOT_DIAMETER / 2}rem`,
     };
 
     // [{color: String, value: Number}] -> [{colors: [String], value: Number}]
@@ -50,20 +53,21 @@ export default class DotPlot extends Component {
     }, []);
 
     return (
-      <svg
+      <Base { ...rest }
+          Component="svg"
           className="ax-dot-plot"
           style={ style }>
         <DotPlotLine width={ `${ range }%` } x={ `${ x }%` } />
-        { stackedData.map(({ value, colors }, i) => (
-          <DataPoints
-              key={ i }
-              preserveAspectRatio="xMinYMin meet"
-              size={ height }
-              x={ `${value}%` } >
-            {colors.map((color, index) => <DataPoint color={ color } key={ index } />)}
-          </DataPoints>
-        )) }
-      </svg>
+        { stackedData.map(({ value, colors }) =>
+          <DotPlotContext
+              ContextComponent={ ContextComponent }
+              colors={ colors }
+              data={ data }
+              key={ value }
+              label={ label }
+              value={ value } />
+        )  }
+      </Base>
     );
   }
 }

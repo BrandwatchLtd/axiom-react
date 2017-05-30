@@ -4,6 +4,7 @@ exports[`DataPoints renders with defaultProps 1`] = `
 <svg
   className="ax-data-points"
   onClick={undefined}
+  preserveAspectRatio="xMinYMin meet"
   style={
     Object {
       "height": "1rem",
@@ -37,6 +38,7 @@ exports[`DataPoints renders with onClick 1`] = `
 <svg
   className="ax-data-points ax-data-points--clickable"
   onClick={[Function]}
+  preserveAspectRatio="xMinYMin meet"
   style={
     Object {
       "height": "1rem",
