@@ -27,24 +27,12 @@ export default class ChartTableGrid extends Component {
             className="ax-chart-table__grid"
             style={ { left: labelColumnWidth } }>
           <div className="ax-chart-table__grid-lines">
-            <svg className="ax-chart-table__grid-lines-svg">
-              { increments.map((x) =>
-                <svg
-                    className="ax-chart-table__grid-line-svg"
-                    key={ x }
-                    preserveAspectRatio="none"
-                    viewBox="0 0 1 1"
-                    width="1"
-                    x={ `${x}%` }>
-                  <path
-                      className="ax-chart-table__grid-line"
-                      d="M 0 0 V 1"
-                      shapeRendering="crispEdges"
-                      strokeDasharray="1, 1"
-                      strokeWidth="1" />
-                </svg>
-              ) }
-            </svg>
+            { increments.map((x) =>
+              <div
+                  className="ax-chart-table__grid-line"
+                  key={ x }
+                  style={ { left: `${x}%` } } />
+            ) }
           </div>
         </div>
         { children }

@@ -1,21 +1,46 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import './DotPlotLine.css';
+import classnames from 'classnames';
 
 export default class DotPlotLine extends Component {
+  static propTypes = {
+    faded: PropTypes.bool,
+    from: PropTypes.number,
+    height: PropTypes.string,
+    hidden: PropTypes.bool,
+    to: PropTypes.number,
+    width: PropTypes.string,
+  };
+
+  static defaultProps = {
+    from: 0,
+    height: '0.75rem',
+    to: 100,
+    width: '100%',
+  };
+
   render() {
+    const {
+      faded,
+      from: fromX,
+      height,
+      hidden,
+      to,
+      width,
+      ...rest
+    } = this.props;
+
+    const style = { height, width };
+    const lineStyle = { left: `${fromX}%`, right: `${100 - to}%` };
+    const classes = classnames('ax-dot-plot__line', {
+      'ax-dot-plot__line--faded': faded,
+      'ax-dot-plot__line--hidden': hidden,
+    });
+
     return (
-      <svg { ...this.props }
-          className="ax-dot-plot__line"
-          height="1px"
-          preserveAspectRatio="none"
-          shapeRendering="crispEdges"
-          viewBox="0 0 1 1"
-          y="50%">
-        <path
-            className="ax-dot-plot__line-path"
-            d="M 0 1 H 1"
-            strokeWidth="1" />
-      </svg>
+      <div { ...rest } className={ classes } style={ style }>
+        <div className="ax-dot-plot__line-path" style={ lineStyle } />
+      </div>
     );
   }
 }

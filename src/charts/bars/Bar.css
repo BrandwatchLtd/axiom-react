@@ -1,6 +1,6 @@
 @import '../../materials/animations';
 @import '../../materials/colors';
-@import './vars';
+@import '../vars';
 
 .ax-bars__bar {
   display: flex;
@@ -12,7 +12,7 @@
 
 .ax-bars__bar-label {
   align-self: center;
-  line-height: var(--cmp-label-line-height);
+  line-height: var(--cmp-chart-label-line-height);
 }
 
 .ax-bars__bar-rect {
@@ -110,7 +110,7 @@
 .ax-bars--right,
 .ax-bars--left {
   & .ax-bars__bar-label {
-    flex: 0 0 var(--cmp-label-width);
+    flex: 0 0 var(--cmp-chart-label-width);
   }
 }
 
@@ -123,28 +123,28 @@
 
 .ax-bars--up {
   & .ax-bars__bar-label {
-    margin-top: calc(var(--cmp-label-height) * -1);
-    padding-bottom: var(--cmp-label-margin);
+    margin-top: calc(var(--cmp-chart-label-height) * -1);
+    padding-bottom: var(--cmp-chart-label-margin);
   }
 }
 
 .ax-bars--down {
   & .ax-bars__bar-label {
-    margin-bottom: calc(var(--cmp-label-height) * -1);
-    padding-top: var(--cmp-label-margin);
+    margin-bottom: calc(var(--cmp-chart-label-height) * -1);
+    padding-top: var(--cmp-chart-label-margin);
   }
 }
 
 .ax-bars--right {
   & .ax-bars__bar-label {
-    margin-right: calc(var(--cmp-label-width) * -1);
-    padding-left: var(--cmp-label-margin);
+    margin-right: calc(var(--cmp-chart-label-width) * -1);
+    padding-left: var(--cmp-chart-label-margin);
   }
 }
 
 .ax-bars--left {
   & .ax-bars__bar-label {
-    margin-left: calc(var(--cmp-label-width) * -1);
-    padding-right: var(--cmp-label-margin);
+    margin-left: calc(var(--cmp-chart-label-width) * -1);
+    padding-right: var(--cmp-chart-label-margin);
   }
 }

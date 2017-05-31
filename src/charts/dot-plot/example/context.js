@@ -21,10 +21,7 @@ import { chartKey, data } from './data';
 class ContextDemoComponent extends Component {
   static propTypes = {
     colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-    data: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      value: PropTypes.number.isRequired,
-    })).isRequired,
+    data: PropTypes.object.isRequired,
     value: PropTypes.number.isRequired,
   };
 
@@ -36,7 +33,7 @@ class ContextDemoComponent extends Component {
         <ContextBox>
           <List inline={ true } textCenter={ true }>
             <ListItem>
-              <Grid gutters="tiny" verticalAlign="middle">
+              <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
                 <GridCell shrink={ true }>
                   <DataPoints size="1.5rem">
                     { colors.map((color) =>

@@ -3,15 +3,22 @@ import React, { Component } from 'react';
 import { Base } from 'bw-axiom';
 import DotPlotContext from './DotPlotContext';
 import DotPlotLine from './DotPlotLine';
+import DotPlotValue from './DotPlotValue';
+import {
+  getLines,
+  getDotColors,
+  isDotFaded,
+  isDotHidden,
+  isValueHidden,
+  isValueStrong,
+} from './utils';
 import './DotPlot.css';
-
-export const DOT_PLOT_DIAMETER = 0.8125;
 
 export default class DotPlot extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
     data: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.oneOf([
+      colors: PropTypes.arrayOf(PropTypes.oneOf([
         'rose',
         'pink',
         'purple',
@@ -24,49 +31,63 @@ export default class DotPlot extends Component {
         'orange',
         'brown',
         'grey',
-      ]).isRequired,
+      ])).isRequired,
       value: PropTypes.number.isRequired,
     })).isRequired,
     label: PropTypes.string,
+    mouseOverColors: PropTypes.arrayOf(PropTypes.string),
+    mouseOverRowIndex: PropTypes.number,
+    rawData: PropTypes.object.isRequired,
+    rowIndex: PropTypes.number.isRequired,
+    onDotMouseEnter: PropTypes.func.isRequired,
+    onDotMouseLeave: PropTypes.func.isRequired,
   };
 
   render() {
-    const { ContextComponent, data, label, ...rest } = this.props;
-    const xValues = data.map(({ value }) => value);
-    const x = Math.min(...xValues);
-    const range = Math.max(...xValues) - x;
-    const style = {
-      height: `${DOT_PLOT_DIAMETER}rem`,
-      marginLeft: `-${DOT_PLOT_DIAMETER / 2}rem`,
-    };
-
-    // [{color: String, value: Number}] -> [{colors: [String], value: Number}]
-    const stackedData = data.reduce((acc, val) => {
-      for (const data of acc) {
-        if (data.value === val.value) {
-          data.colors.push(val.color);
-          return acc;
-        }
-      }
-      acc.push({ value: val.value, colors: [val.color] });
-      return acc;
-    }, []);
+    const {
+      ContextComponent,
+      data,
+      label,
+      mouseOverColors,
+      mouseOverRowIndex,
+      onDotMouseEnter,
+      onDotMouseLeave,
+      rawData,
+      rowIndex,
+      ...rest
+    } = this.props;
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className="ax-dot-plot"
-          style={ style }>
-        <DotPlotLine width={ `${ range }%` } x={ `${ x }%` } />
-        { stackedData.map(({ value, colors }) =>
+      <Base { ...rest } className="ax-dot-plot">
+        { getLines(data, mouseOverRowIndex, mouseOverColors, rowIndex)
+          .map(({ faded, fromX, toX }) =>
+            <div className="ax-dot-plot__line-container" key={ fromX }>
+              <DotPlotLine faded={ faded } from={ fromX } to={ toX } />
+            </div>
+          )
+        }
+
+        { data.map(({ colors, value }) =>
           <DotPlotContext
               ContextComponent={ ContextComponent }
-              colors={ colors }
-              data={ data }
+              colors={ getDotColors(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              data={ rawData }
+              faded={ isDotFaded(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              hidden={ isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
               key={ value }
               label={ label }
+              onMouseEnter={ () => onDotMouseEnter(colors) }
+              onMouseLeave={ onDotMouseLeave }
               value={ value } />
-        )  }
+        ) }
+
+        { data.map(({ colors, value }) =>
+          <DotPlotValue
+              hidden={ isValueHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              key={ value }
+              textStrong={ isValueStrong(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              value={ value } />
+        ) }
       </Base>
     );
   }

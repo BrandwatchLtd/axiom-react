@@ -7,10 +7,7 @@ export default class DotPlotContext extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
     colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-    data: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      value: PropTypes.number.isRequired,
-    })).isRequired,
+    data: PropTypes.object.isRequired,
     label: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
   };

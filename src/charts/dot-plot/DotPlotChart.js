@@ -16,7 +16,7 @@ import {
 } from 'bw-axiom';
 import DotPlot from './DotPlot';
 import DotPlotLine from './DotPlotLine';
-
+import { formatData } from './utils';
 import './DotPlot.css';
 
 export default class DotPlotChart extends Component {
@@ -51,6 +51,28 @@ export default class DotPlotChart extends Component {
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      mouseOverColors: [],
+      mouseOverRowIndex: -1,
+    };
+  }
+
+  handleDotMouseEnter(rowIndex, colors) {
+    this.setState({
+      mouseOverColors: colors,
+      mouseOverRowIndex: rowIndex,
+    });
+  }
+
+  handleDotMouseLeave() {
+    this.setState({
+      mouseOverColors: [],
+      mouseOverRowIndex: -1,
+    });
+  }
+
   render() {
     const {
       axisTitle,
@@ -64,21 +86,10 @@ export default class DotPlotChart extends Component {
       xAxisLabels,
     } = this.props;
 
-    const responsive = !xAxisLabels || Boolean(xAxisLabels.length % 2);
+    const { mouseOverColors, mouseOverRowIndex } = this.state;
     const gridCount = xAxisLabels && xAxisLabels.length;
-    const colorOrder = {};
-    chartKey.forEach(({ color }, i) => colorOrder[color] = i);
-
-    const formattedData = data.map(({ label, values }) => {
-      const dotPlotData = Object.keys(values)
-        .map(color => ({ color, value: values[color] }))
-        .sort((a, b) => {
-          const valueDifference = a.value - b.value;
-          return valueDifference ? valueDifference : colorOrder[a.color] - colorOrder[b.color];
-        });
-
-      return { dotPlotData, label };
-    });
+    const responsive = !xAxisLabels || Boolean(xAxisLabels.length % 2);
+    const formattedData = formatData(chartKey, data);
 
     return (
       <ChartTable
@@ -88,14 +99,23 @@ export default class DotPlotChart extends Component {
           responsive={ responsive }>
         <ChartTableGrid count={ gridCount }>
           <ChartTableRows>
-            { formattedData.map(({ dotPlotData, label }) =>
+            { formattedData.map(({ values, label }, index) =>
               <ChartTableRow key={ label }>
-                <ChartTableLabel>{ label }</ChartTableLabel>
+                <ChartTableLabel
+                    textStrong={ index === mouseOverRowIndex }>
+                  { label }
+                </ChartTableLabel>
                 <ChartTableVisual>
                   <DotPlot
                       ContextComponent={ ContextComponent }
-                      data={ dotPlotData }
-                      label={ label } />
+                      data={ values }
+                      label={ label }
+                      mouseOverColors={ mouseOverColors }
+                      mouseOverRowIndex={ mouseOverRowIndex }
+                      onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
+                      onDotMouseLeave={ () => this.handleDotMouseLeave() }
+                      rawData={ data[index] }
+                      rowIndex={ index }  />
                 </ChartTableVisual>
               </ChartTableRow>
             ) }
@@ -114,7 +134,7 @@ export default class DotPlotChart extends Component {
               </ChartKeyItem>
             ) }
             <ChartKeyItem label={ chartKeyLineLabel }>
-              <DotPlotLine width="0.75rem" />
+              <DotPlotLine width="1rem" />
             </ChartKeyItem>
           </ChartKey>
         </ChartTableKey>

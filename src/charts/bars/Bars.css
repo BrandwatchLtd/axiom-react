@@ -1,8 +1,8 @@
 @import '../../materials/sizing';
-@import './vars';
+@import '../vars';
 
 :root {
-  --cmp-label-spacing: calc(var(--spacing-grid-size) * 3);
+  --cmp-chart-label-spacing: calc(var(--spacing-grid-size) * 3);
 }
 
 .ax-bars {
@@ -63,11 +63,11 @@
   flex-direction: column;
 
   & .ax-bars__bars {
-    padding-top: var(--cmp-label-height);
+    padding-top: var(--cmp-chart-label-height);
   }
 
   & .ax-bars__label {
-    margin-top: var(--cmp-label-spacing);
+    margin-top: var(--cmp-chart-label-spacing);
   }
 }
 
@@ -75,11 +75,11 @@
   flex-direction: row-reverse;
 
   & .ax-bars__bars {
-    padding-right: var(--cmp-label-width);
+    padding-right: var(--cmp-chart-overflow-space);
   }
 
   & .ax-bars__label {
-    margin-right: var(--cmp-label-spacing);
+    margin-right: var(--cmp-chart-label-spacing);
   }
 }
 
@@ -87,11 +87,11 @@
   flex-direction: column-reverse;
 
   & .ax-bars__bars {
-    padding-bottom: var(--cmp-label-height);
+    padding-bottom: var(--cmp-chart-label-height);
   }
 
   & .ax-bars__label {
-    margin-bottom: var(--cmp-label-spacing);
+    margin-bottom: var(--cmp-chart-label-spacing);
   }
 }
 
@@ -99,10 +99,10 @@
   flex-direction: row;
 
   & .ax-bars__bars {
-    padding-left: var(--cmp-label-width);
+    padding-left: var(--cmp-chart-overflow-space);
   }
 
   & .ax-bars__label {
-    margin-left: var(--cmp-label-spacing);
+    margin-left: var(--cmp-chart-label-spacing);
   }
 }

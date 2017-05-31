@@ -15,85 +15,46 @@ exports[`ChartTableGrid renders with count 1`] = `
     <div
       className="ax-chart-table__grid-lines"
     >
-      <svg
-        className="ax-chart-table__grid-lines-svg"
-      >
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="0%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="25%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="50%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="75%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="100%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-      </svg>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "0%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "25%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "75%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "100%",
+          }
+        }
+      />
     </div>
   </div>
 </div>
@@ -114,175 +75,94 @@ exports[`ChartTableGrid renders with defaultProps 1`] = `
     <div
       className="ax-chart-table__grid-lines"
     >
-      <svg
-        className="ax-chart-table__grid-lines-svg"
-      >
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="0%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="10%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="20%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="30%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="40%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="50%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="60%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="70%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="80%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="90%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-        <svg
-          className="ax-chart-table__grid-line-svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1 1"
-          width="1"
-          x="100%"
-        >
-          <path
-            className="ax-chart-table__grid-line"
-            d="M 0 0 V 1"
-            shapeRendering="crispEdges"
-            strokeDasharray="1, 1"
-            strokeWidth="1"
-          />
-        </svg>
-      </svg>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "0%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "10%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "20%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "30%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "40%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "60%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "70%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "80%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "90%",
+          }
+        }
+      />
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "100%",
+          }
+        }
+      />
     </div>
   </div>
 </div>
