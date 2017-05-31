@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar renders 1`] = `
+<li
+  className="ax-list__item"
+>
+  <a
+    className="ax-link ax-link--style-subtle"
+  >
+    <div
+      className="ax-grid__container ax-space--medium"
+    >
+      <div
+        className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--vertical-middle ax-grid--wrap"
+      >
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          Test
+        </div>
+      </div>
+    </div>
+  </a>
+</li>
+`;
+
+exports[`Toolbar renders with an icon 1`] = `
+<li
+  className="ax-list__item"
+>
+  <a
+    className="ax-link ax-link--style-subtle"
+  >
+    <div
+      className="ax-grid__container ax-space--medium"
+    >
+      <div
+        className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--vertical-middle ax-grid--wrap"
+      >
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          Test
+        </div>
+        <div
+          className="ax-grid__cell ax-grid__cell--shrink"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          <svg
+            className="ax-icon ax-icon--chevron-down"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M4 5L2.5 6.5 8 12l5.5-5.5L12 5 8 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+    </div>
+  </a>
+</li>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar renders 1`] = `
+<ul
+  className="ax-list ax-list--inline ax-space--small"
+>
+  <li
+    className="ax-list__item"
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+    >
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--tiny ax-grid--vertical-middle ax-grid--wrap"
+        >
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            Test
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+`;

@@ -82,6 +82,7 @@ module.exports = {
         '/docs/components/statcard',
         '/docs/components/table',
         '/docs/components/tabset',
+        '/docs/components/toolbar',
         '/docs/components/tooltip',
         '/docs/components/typography',
         '/docs/composites/login',

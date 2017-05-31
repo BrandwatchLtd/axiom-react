@@ -180,6 +180,12 @@ export default (
             examples={ require('../src/components/tabset/example') }
             component={ Doc } />
         <Route
+            path="toolbar"
+            name="Toolbar"
+            apiDocs={ ['Toolbar', 'Tool'] }
+            examples={ require('../src/components/toolbar/example') }
+            component={ Doc } />
+        <Route
             path="tooltip"
             name="Tooltip"
             apiDocs={ ['Tooltip', 'TooltipContent', 'TooltipTarget'] }
