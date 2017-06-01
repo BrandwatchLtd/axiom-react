@@ -20,7 +20,7 @@ exports[`DataPickerHeader renders with color 1`] = `
       >
         <div
           className="ax-color-picker__option ax-color-picker__option--blue"
-          onClick={undefined}
+          onClick={[Function]}
           style={
             Object {
               "borderWidth": "0.1875rem",
@@ -67,7 +67,7 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
       >
         <div
           className="ax-color-picker__option ax-color-picker__option--empty"
-          onClick={undefined}
+          onClick={[Function]}
           style={
             Object {
               "borderWidth": "0.1875rem",
@@ -114,7 +114,7 @@ exports[`DataPickerHeader renders with headerText 1`] = `
       >
         <div
           className="ax-color-picker__option ax-color-picker__option--empty"
-          onClick={undefined}
+          onClick={[Function]}
           style={
             Object {
               "borderWidth": "0.1875rem",

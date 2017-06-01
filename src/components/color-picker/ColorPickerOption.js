@@ -19,26 +19,51 @@ export default class ColorPickerOption extends Component {
       'brown',
       'grey',
     ]),
+    disabled: PropTypes.bool,
     size: PropTypes.string,
     onClick: PropTypes.func,
   };
 
+  constructor(props) {
+    super(props);
+    this.boundHandleClick = this.handleClick.bind(this);
+  }
+
+  static contextTypes = {
+    closeDropdown: PropTypes.func,
+  }
+
   static defaultProps = {
+    disabled: false,
     size: '.75rem',
   };
 
+  handleClick(...args) {
+    const { closeDropdown } = this.context;
+    const { disabled, onClick } = this.props;
+
+    if (closeDropdown && !disabled) {
+      closeDropdown();
+    }
+
+    if (onClick) {
+      onClick(...args);
+    }
+  }
+
   render() {
-    const { color = 'empty', onClick, size, ...rest } = this.props;
+    const { color = 'empty', disabled, onClick, size, ...rest } = this.props;
     const borderWidth = `${parseFloat(size) / 4}rem`;
     const classes = classnames('ax-color-picker__option', `ax-color-picker__option--${color}`, {
-      'ax-color-picker__option--clickable': onClick,
+      'ax-color-picker__option--clickable': onClick && !disabled,
+      'ax-color-picker__option--disabled': disabled,
     });
 
     return (
       <Base
           { ...rest }
           className={ classes }
-          onClick={ onClick }
+          onClick={ this.boundHandleClick }
           style={ { borderWidth, height: size, width: size } } />
     );
   }

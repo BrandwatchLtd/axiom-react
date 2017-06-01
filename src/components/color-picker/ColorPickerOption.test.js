@@ -49,4 +49,11 @@ describe('ColorPickerOption', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with disabled', () => {
+    const component = getComponent({ disabled: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
 });

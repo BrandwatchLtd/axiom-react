@@ -3,7 +3,7 @@
 exports[`ColorPickerOption renders with color amber 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--amber"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -17,7 +17,7 @@ exports[`ColorPickerOption renders with color amber 1`] = `
 exports[`ColorPickerOption renders with color blue 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--blue"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -31,7 +31,7 @@ exports[`ColorPickerOption renders with color blue 1`] = `
 exports[`ColorPickerOption renders with color brown 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--brown"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -45,7 +45,7 @@ exports[`ColorPickerOption renders with color brown 1`] = `
 exports[`ColorPickerOption renders with color chartreuse 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--chartreuse"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -59,7 +59,7 @@ exports[`ColorPickerOption renders with color chartreuse 1`] = `
 exports[`ColorPickerOption renders with color green 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--green"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -73,7 +73,7 @@ exports[`ColorPickerOption renders with color green 1`] = `
 exports[`ColorPickerOption renders with color grey 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--grey"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -87,7 +87,7 @@ exports[`ColorPickerOption renders with color grey 1`] = `
 exports[`ColorPickerOption renders with color lilac 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--lilac"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -101,7 +101,7 @@ exports[`ColorPickerOption renders with color lilac 1`] = `
 exports[`ColorPickerOption renders with color orange 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--orange"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -115,7 +115,7 @@ exports[`ColorPickerOption renders with color orange 1`] = `
 exports[`ColorPickerOption renders with color pink 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--pink"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -129,7 +129,7 @@ exports[`ColorPickerOption renders with color pink 1`] = `
 exports[`ColorPickerOption renders with color purple 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--purple"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -143,7 +143,7 @@ exports[`ColorPickerOption renders with color purple 1`] = `
 exports[`ColorPickerOption renders with color rose 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--rose"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -157,7 +157,7 @@ exports[`ColorPickerOption renders with color rose 1`] = `
 exports[`ColorPickerOption renders with color teal 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--teal"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -171,7 +171,21 @@ exports[`ColorPickerOption renders with color teal 1`] = `
 exports[`ColorPickerOption renders with defaultProps 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--empty"
-  onClick={undefined}
+  onClick={[Function]}
+  style={
+    Object {
+      "borderWidth": "0.1875rem",
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with disabled 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--disabled"
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.1875rem",
@@ -199,7 +213,7 @@ exports[`ColorPickerOption renders with onClick 1`] = `
 exports[`ColorPickerOption renders with size 1`] = `
 <div
   className="ax-color-picker__option ax-color-picker__option--empty"
-  onClick={undefined}
+  onClick={[Function]}
   style={
     Object {
       "borderWidth": "0.25rem",

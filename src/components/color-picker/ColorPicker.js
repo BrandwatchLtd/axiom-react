@@ -13,6 +13,7 @@ import {
 
 export default class ColorPicker extends Component {
   static propTypes = {
+    disabledOptions: PropTypes.arrayOf(PropTypes.string),
     options: PropTypes.array,
     selected: PropTypes.oneOf([
       'rose',
@@ -33,6 +34,7 @@ export default class ColorPicker extends Component {
   };
 
   static defaultProps = {
+    disabledOptions: [],
     options: [
       'rose',
       'pink',
@@ -51,7 +53,7 @@ export default class ColorPicker extends Component {
   };
 
   render() {
-    const { onSelectColor, options, selected, width, ...rest } = this.props;
+    const { disabledOptions, onSelectColor, options, selected, width, ...rest } = this.props;
 
     return (
       <Dropdown position="bottom" { ... rest }>
@@ -66,13 +68,17 @@ export default class ColorPicker extends Component {
                   gutters="small"
                   horizontalAlign="middle"
                   responsive={ false }>
-                { options.map(((color)=> (
-                  <GridCell key={ color } shrink={ true }>
-                    <ColorPickerOption
-                        color={ color }
-                        onClick={ () => { onSelectColor(color); } } />
-                  </GridCell>
-                ) ) ) }
+                { options.map(((color)=> {
+                  const isColorDisabled = disabledOptions.indexOf(color) !== -1;
+                  return (
+                    <GridCell key={ color } shrink={ true }>
+                      <ColorPickerOption
+                          color={ color }
+                          disabled={ isColorDisabled }
+                          onClick={ () => isColorDisabled || onSelectColor(color) } />
+                    </GridCell>
+                  );
+                } ) ) }
               </Grid>
             </ContextBox>
           </Context>

@@ -26,6 +26,10 @@
   border: solid var(--color-context-background-subtle);
 }
 
+.ax-color-picker__option--disabled {
+  opacity: 0.1;
+}
+
 .ax-color-picker__option--clickable {
   cursor: pointer;
 
