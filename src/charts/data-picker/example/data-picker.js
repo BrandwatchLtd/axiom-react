@@ -34,7 +34,6 @@ export default class DataPickerExample extends Component {
     const firstSelectedValue = getData().filter((query) => query.id === selectedIds[0])[0];
     const secondSelectedValue = getData().filter((query) => query.id === selectedIds[1])[0];
     const thirdSelectedValue = getData().filter((query) => query.id === selectedIds[2])[0];
-    const defaultText = 'Please select a value';
     const data = [{
       id: 0,
       value: firstSelectedValue,
@@ -52,15 +51,12 @@ export default class DataPickerExample extends Component {
           <Grid gutters="tiny" snippetIgnore={ true }>
             { data.map(({ color, id, value }, i) => (
               <GridCell key={ id } snippetIgnore={ true }>
-                <DataPicker isInactive={ !value } snippetSkip={ i > 0 }>
-                  <DataPickerHeader
-                      color={ value && value.color }
-                      headerText={ value ? value.name : defaultText }>
-                    <DropdownMenu>
-                      <DropdownMenuItem onClick={ () => this.onSelect(i, undefined) }>
-                        Please select a value
-                      </DropdownMenuItem>
-                    </DropdownMenu>
+                <DataPicker
+                    color={ value && value.color }
+                    placeholder="Please select a value"
+                    snippetSkip={ i > 0 }
+                    value={ value && value.name }>
+                  <DataPickerHeader>
                     <DropdownMenu>
                       { getData().map(({ id, name }) => (
                         <DropdownMenuItem

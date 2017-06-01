@@ -26,10 +26,11 @@ export default class DataPickerExample extends Component {
     const selected = getData().find(({ id }) => id === selectedId);
 
     return (
-      <Example name="Data Picker with ColorPicker">
+      <Example name="Clearable Data Picker">
         <Snippet>
           <DataPicker
               color={ selectedColor || (selected && selected.color) }
+              onClear={ () => this.setState({ selectedColor: undefined, selectedId: undefined }) }
               onSelectColor={ (color) => this.setState({ selectedColor: color }) }
               placeholder="Please select a value"
               value={ selected && selected.name }>

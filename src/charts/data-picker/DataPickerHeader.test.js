@@ -1,10 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DataPickerHeader } from 'bw-axiom';
+import { DataPicker, DataPickerHeader } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <DataPickerHeader { ...props } />
+    <DataPicker { ...props } placeholder="Placeholder">
+      <DataPickerHeader />
+    </DataPicker>
   );
 }
 
@@ -21,8 +23,14 @@ describe('DataPickerHeader', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with headerText', () => {
-    const component = getComponent({ headerText: 'Test' });
+  it('renders with onClear', () => {
+    const component = getComponent({ onClear: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with value', () => {
+    const component = getComponent({ value: 'Value' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

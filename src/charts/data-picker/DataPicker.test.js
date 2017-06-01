@@ -4,7 +4,8 @@ import { DataPicker } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <DataPicker { ...props }>
+    <DataPicker { ...props }
+        placeholder="Lorem ipsum">
       Lorem Ipsum
     </DataPicker>
   );
@@ -13,6 +14,12 @@ function getComponent(props = {}) {
 describe('DataPicker', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with value', () => {
+    const component = getComponent({ value: 'Dolar amor' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

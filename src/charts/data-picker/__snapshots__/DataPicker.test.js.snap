@@ -2,6 +2,19 @@
 
 exports[`DataPicker renders with defaultProps 1`] = `
 <div
+  className="ax-panel ax-panel--inactive"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`DataPicker renders with value 1`] = `
+<div
   className="ax-panel"
   style={
     Object {

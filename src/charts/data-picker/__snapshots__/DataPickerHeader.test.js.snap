@@ -2,45 +2,60 @@
 
 exports[`DataPickerHeader renders with color 1`] = `
 <div
-  className="ax-panel__header"
+  className="ax-panel ax-panel--inactive"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-panel__header"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
+      className="ax-data-picker__header"
     >
       <div
-        className="ax-grid__cell"
-        style={
-          Object {
-            "width": undefined,
-          }
-        }
+        className="ax-grid__container ax-space--medium"
       >
         <div
-          className="ax-color-picker__option ax-color-picker__option--blue"
-          onClick={[Function]}
-          style={
-            Object {
-              "borderWidth": "0.1875rem",
-              "height": ".75rem",
-              "width": ".75rem",
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+        >
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
             }
-          }
-        />
-      </div>
-      <div
-        className="ax-grid__cell"
-        style={
-          Object {
-            "width": undefined,
-          }
-        }
-      >
-        <h3
-          className="ax-heading ax-heading--title ax-space--tiny"
-        />
+          >
+            <div
+              className="ax-color-picker__option ax-color-picker__option--blue"
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderWidth": "0.1875rem",
+                  "height": ".75rem",
+                  "width": ".75rem",
+                }
+              }
+            />
+          </div>
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <h3
+              className="ax-heading ax-heading--title ax-space--tiny"
+            >
+              Placeholder
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -49,94 +64,184 @@ exports[`DataPickerHeader renders with color 1`] = `
 
 exports[`DataPickerHeader renders with defaultProps 1`] = `
 <div
-  className="ax-panel__header"
+  className="ax-panel ax-panel--inactive"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-panel__header"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
+      className="ax-data-picker__header"
     >
       <div
-        className="ax-grid__cell"
-        style={
-          Object {
-            "width": undefined,
-          }
-        }
+        className="ax-grid__container ax-space--medium"
       >
         <div
-          className="ax-color-picker__option ax-color-picker__option--empty"
-          onClick={[Function]}
-          style={
-            Object {
-              "borderWidth": "0.1875rem",
-              "height": ".75rem",
-              "width": ".75rem",
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+        >
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
             }
-          }
-        />
-      </div>
-      <div
-        className="ax-grid__cell"
-        style={
-          Object {
-            "width": undefined,
-          }
-        }
-      >
-        <h3
-          className="ax-heading ax-heading--title ax-space--tiny"
-        />
+          >
+            <div
+              className="ax-color-picker__option ax-color-picker__option--empty"
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderWidth": "0.1875rem",
+                  "height": ".75rem",
+                  "width": ".75rem",
+                }
+              }
+            />
+          </div>
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <h3
+              className="ax-heading ax-heading--title ax-space--tiny"
+            >
+              Placeholder
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`DataPickerHeader renders with headerText 1`] = `
+exports[`DataPickerHeader renders with onClear 1`] = `
 <div
-  className="ax-panel__header"
+  className="ax-panel ax-panel--inactive"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-panel__header"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle"
+      className="ax-data-picker__header"
     >
       <div
-        className="ax-grid__cell"
-        style={
-          Object {
-            "width": undefined,
-          }
-        }
+        className="ax-grid__container ax-space--medium"
       >
         <div
-          className="ax-color-picker__option ax-color-picker__option--empty"
-          onClick={[Function]}
-          style={
-            Object {
-              "borderWidth": "0.1875rem",
-              "height": ".75rem",
-              "width": ".75rem",
-            }
-          }
-        />
-      </div>
-      <div
-        className="ax-grid__cell"
-        style={
-          Object {
-            "width": undefined,
-          }
-        }
-      >
-        <h3
-          className="ax-heading ax-heading--title ax-space--tiny"
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
         >
-          Test
-        </h3>
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <div
+              className="ax-color-picker__option ax-color-picker__option--empty"
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderWidth": "0.1875rem",
+                  "height": ".75rem",
+                  "width": ".75rem",
+                }
+              }
+            />
+          </div>
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <h3
+              className="ax-heading ax-heading--title ax-space--tiny"
+            >
+              Placeholder
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DataPickerHeader renders with value 1`] = `
+<div
+  className="ax-panel"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
+>
+  <div
+    className="ax-panel__header"
+  >
+    <div
+      className="ax-data-picker__header"
+    >
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+        >
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <div
+              className="ax-color-picker__option ax-color-picker__option--empty"
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderWidth": "0.1875rem",
+                  "height": ".75rem",
+                  "width": ".75rem",
+                }
+              }
+            />
+          </div>
+          <div
+            className="ax-grid__cell"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <h3
+              className="ax-heading ax-heading--title ax-space--tiny"
+            >
+              Value
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
