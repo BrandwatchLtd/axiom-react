@@ -64,6 +64,8 @@ export default class DotPlotChart extends Component {
       xAxisLabels,
     } = this.props;
 
+    const responsive = !xAxisLabels || Boolean(xAxisLabels.length % 2);
+    const gridCount = xAxisLabels && xAxisLabels.length;
     const colorOrder = {};
     chartKey.forEach(({ color }, i) => colorOrder[color] = i);
 
@@ -82,8 +84,9 @@ export default class DotPlotChart extends Component {
       <ChartTable
           collapsedVisibleRowCount={ collapsedVisibleRowCount }
           expandButtonSuffix={ expandButtonSuffix }
-          labelColumnWidth={ labelColumnWidth }>
-        <ChartTableGrid>
+          labelColumnWidth={ labelColumnWidth }
+          responsive={ responsive }>
+        <ChartTableGrid count={ gridCount }>
           <ChartTableRows>
             { formattedData.map(({ dotPlotData, label }) =>
               <ChartTableRow key={ label }>
@@ -98,7 +101,9 @@ export default class DotPlotChart extends Component {
             ) }
           </ChartTableRows>
         </ChartTableGrid>
-        <ChartTableAxis labels={ xAxisLabels } title={ axisTitle } />
+        <ChartTableAxis
+            labels={ xAxisLabels }
+            title={ axisTitle } />
         <ChartTableKey>
           <ChartKey>
             { chartKey.map(({ label, color }) =>

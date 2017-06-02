@@ -3607,7 +3607,7 @@ exports[`DotPlotChart renders with basic props 1`] = `
 
 exports[`DotPlotChart renders with custom axis 1`] = `
 <div
-  className="ax-chart-table ax-chart-table--responsive"
+  className="ax-chart-table"
 >
   <div
     className="ax-chart-table__grid-container"
@@ -3646,37 +3646,7 @@ exports[`DotPlotChart renders with custom axis 1`] = `
             preserveAspectRatio="none"
             viewBox="0 0 1 1"
             width="1"
-            x="10%"
-          >
-            <path
-              className="ax-chart-table__grid-line"
-              d="M 0 0 V 1"
-              shapeRendering="crispEdges"
-              strokeDasharray="1, 1"
-              strokeWidth="1"
-            />
-          </svg>
-          <svg
-            className="ax-chart-table__grid-line-svg"
-            preserveAspectRatio="none"
-            viewBox="0 0 1 1"
-            width="1"
             x="20%"
-          >
-            <path
-              className="ax-chart-table__grid-line"
-              d="M 0 0 V 1"
-              shapeRendering="crispEdges"
-              strokeDasharray="1, 1"
-              strokeWidth="1"
-            />
-          </svg>
-          <svg
-            className="ax-chart-table__grid-line-svg"
-            preserveAspectRatio="none"
-            viewBox="0 0 1 1"
-            width="1"
-            x="30%"
           >
             <path
               className="ax-chart-table__grid-line"
@@ -3706,21 +3676,6 @@ exports[`DotPlotChart renders with custom axis 1`] = `
             preserveAspectRatio="none"
             viewBox="0 0 1 1"
             width="1"
-            x="50%"
-          >
-            <path
-              className="ax-chart-table__grid-line"
-              d="M 0 0 V 1"
-              shapeRendering="crispEdges"
-              strokeDasharray="1, 1"
-              strokeWidth="1"
-            />
-          </svg>
-          <svg
-            className="ax-chart-table__grid-line-svg"
-            preserveAspectRatio="none"
-            viewBox="0 0 1 1"
-            width="1"
             x="60%"
           >
             <path
@@ -3736,37 +3691,7 @@ exports[`DotPlotChart renders with custom axis 1`] = `
             preserveAspectRatio="none"
             viewBox="0 0 1 1"
             width="1"
-            x="70%"
-          >
-            <path
-              className="ax-chart-table__grid-line"
-              d="M 0 0 V 1"
-              shapeRendering="crispEdges"
-              strokeDasharray="1, 1"
-              strokeWidth="1"
-            />
-          </svg>
-          <svg
-            className="ax-chart-table__grid-line-svg"
-            preserveAspectRatio="none"
-            viewBox="0 0 1 1"
-            width="1"
             x="80%"
-          >
-            <path
-              className="ax-chart-table__grid-line"
-              d="M 0 0 V 1"
-              shapeRendering="crispEdges"
-              strokeDasharray="1, 1"
-              strokeWidth="1"
-            />
-          </svg>
-          <svg
-            className="ax-chart-table__grid-line-svg"
-            preserveAspectRatio="none"
-            viewBox="0 0 1 1"
-            width="1"
-            x="90%"
           >
             <path
               className="ax-chart-table__grid-line"
