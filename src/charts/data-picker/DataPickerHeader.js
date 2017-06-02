@@ -25,7 +25,8 @@ export default class DataPickerHeader extends Component {
 
   static contextTypes = {
     color: PropTypes.string,
-    colorOptions: PropTypes.array,
+    colorOptions: PropTypes.arrayOf(PropTypes.string),
+    disabledColors: PropTypes.arrayOf(PropTypes.string),
     placeholder: PropTypes.string.isRequired,
     onClear: PropTypes.func,
     onSelectColor: PropTypes.func,
@@ -37,6 +38,7 @@ export default class DataPickerHeader extends Component {
     const {
       color,
       colorOptions,
+      disabledColors,
       placeholder,
       onClear,
       onSelectColor,
@@ -57,6 +59,7 @@ export default class DataPickerHeader extends Component {
               { onSelectColor ? (
                 <ColorPicker
                     colorOptions={ colorOptions }
+                    disabledOptions={ disabledColors }
                     onSelectColor={ onSelectColor }
                     selected={ color } />
               ) : (

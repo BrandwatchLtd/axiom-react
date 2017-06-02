@@ -7,7 +7,8 @@ export default class DataPicker extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     color: PropTypes.string,
-    colorOptions: PropTypes.array,
+    colorOptions: PropTypes.arrayOf(PropTypes.string),
+    disabledColors: PropTypes.arrayOf(PropTypes.string),
     placeholder: PropTypes.string.isRequired,
     value: PropTypes.string,
     onClear: PropTypes.func,
@@ -16,7 +17,8 @@ export default class DataPicker extends Component {
 
   static childContextTypes = {
     color: PropTypes.string,
-    colorOptions: PropTypes.array,
+    colorOptions: PropTypes.arrayOf(PropTypes.string),
+    disabledColors: PropTypes.arrayOf(PropTypes.string),
     placeholder: PropTypes.string.isRequired,
     onClear: PropTypes.func,
     onSelectColor: PropTypes.func,
@@ -27,6 +29,7 @@ export default class DataPicker extends Component {
     const {
       color,
       colorOptions,
+      disabledColors,
       placeholder,
       value,
       onClear,
@@ -36,6 +39,7 @@ export default class DataPicker extends Component {
     return {
       color,
       colorOptions,
+      disabledColors,
       placeholder,
       value,
       onClear,
@@ -48,6 +52,7 @@ export default class DataPicker extends Component {
     const props = omit(rest, [
       'color',
       'colorOptions',
+      'disabledColors',
       'placeholder',
       'value',
       'onClear',
