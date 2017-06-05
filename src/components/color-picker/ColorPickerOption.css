@@ -2,7 +2,12 @@
 @import '../../materials/colors';
 @import '../../materials/sizing';
 
+:root {
+  --cmp-color-picker-border-width: 0.1875rem;
+}
+
 .ax-color-picker__option {
+  border-width: var(--cmp-color-picker-border-width);
   border-radius: 50%;
   transition-property: background-color, border-color;
   transition-duration: var(--transition-time-base);
@@ -27,7 +32,8 @@
 }
 
 .ax-color-picker__option--disabled {
-  opacity: 0.1;
+  border: solid var(--component-border-width-small) var(--color-context-background-subtle);
+  background-color: transparent;
 }
 
 .ax-color-picker__option--clickable {

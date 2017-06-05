@@ -34,7 +34,6 @@ exports[`DataPickerHeader renders with color 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "borderWidth": "0.1875rem",
                   "height": ".75rem",
                   "width": ".75rem",
                 }
@@ -96,7 +95,6 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "borderWidth": "0.1875rem",
                   "height": ".75rem",
                   "width": ".75rem",
                 }
@@ -158,7 +156,6 @@ exports[`DataPickerHeader renders with onClear 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "borderWidth": "0.1875rem",
                   "height": ".75rem",
                   "width": ".75rem",
                 }
@@ -220,7 +217,6 @@ exports[`DataPickerHeader renders with value 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "borderWidth": "0.1875rem",
                   "height": ".75rem",
                   "width": ".75rem",
                 }

@@ -6,7 +6,6 @@ exports[`ColorPickerOption renders with color amber 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -20,7 +19,6 @@ exports[`ColorPickerOption renders with color blue 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -34,7 +32,6 @@ exports[`ColorPickerOption renders with color brown 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -48,7 +45,6 @@ exports[`ColorPickerOption renders with color chartreuse 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -62,7 +58,6 @@ exports[`ColorPickerOption renders with color green 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -76,7 +71,6 @@ exports[`ColorPickerOption renders with color grey 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -90,7 +84,6 @@ exports[`ColorPickerOption renders with color lilac 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -104,7 +97,6 @@ exports[`ColorPickerOption renders with color orange 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -118,7 +110,6 @@ exports[`ColorPickerOption renders with color pink 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -132,7 +123,6 @@ exports[`ColorPickerOption renders with color purple 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -146,7 +136,6 @@ exports[`ColorPickerOption renders with color rose 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -160,7 +149,6 @@ exports[`ColorPickerOption renders with color teal 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -174,7 +162,6 @@ exports[`ColorPickerOption renders with defaultProps 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -188,7 +175,6 @@ exports[`ColorPickerOption renders with disabled 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -202,7 +188,6 @@ exports[`ColorPickerOption renders with onClick 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.1875rem",
       "height": ".75rem",
       "width": ".75rem",
     }
@@ -216,7 +201,6 @@ exports[`ColorPickerOption renders with size 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "borderWidth": "0.25rem",
       "height": "1rem",
       "width": "1rem",
     }
