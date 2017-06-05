@@ -42,6 +42,9 @@ export default class DotPlotChart extends Component {
     })).isRequired,
     chartKeyLineLabel: PropTypes.string.isRequired,
     collapsedVisibleRowCount: PropTypes.number,
+    /**
+     * Where the values keys are brand colors and value is the percentage
+     */
     data: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,

@@ -29,6 +29,13 @@ const PROP_TYPE_MAP = {
   object: 'Object',
   node: 'Node( Number, String, Elements, Array )',
   number: 'Number',
+  shape({ value }) {
+    return JSON.stringify(
+      Object.keys(value).reduce((props, key) => ({ ...props,
+        [key]: resolvePropType(value[key]),
+      }), {})
+    , null, 2);
+  },
   string: 'String',
   union({ value }) {
     return `OneOfType( ${ value.map(resolvePropType).join(', ')} )`;
