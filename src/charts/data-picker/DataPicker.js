@@ -12,6 +12,7 @@ export default class DataPicker extends Component {
     placeholder: PropTypes.string.isRequired,
     value: PropTypes.string,
     onClear: PropTypes.func,
+    onColorPickerOpen: PropTypes.func,
     onSelectColor: PropTypes.func,
   };
 
@@ -21,6 +22,7 @@ export default class DataPicker extends Component {
     disabledColors: PropTypes.arrayOf(PropTypes.string),
     placeholder: PropTypes.string.isRequired,
     onClear: PropTypes.func,
+    onColorPickerOpen: PropTypes.func,
     onSelectColor: PropTypes.func,
     value: PropTypes.string,
   };
@@ -33,6 +35,7 @@ export default class DataPicker extends Component {
       placeholder,
       value,
       onClear,
+      onColorPickerOpen,
       onSelectColor,
     } = this.props;
 
@@ -43,6 +46,7 @@ export default class DataPicker extends Component {
       placeholder,
       value,
       onClear,
+      onColorPickerOpen,
       onSelectColor,
     };
   }
@@ -56,6 +60,7 @@ export default class DataPicker extends Component {
       'placeholder',
       'value',
       'onClear',
+      'onColorPickerOpen',
       'onSelectColor',
     ]);
 

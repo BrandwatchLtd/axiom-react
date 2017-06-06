@@ -30,6 +30,7 @@ export default class ColorPicker extends Component {
       'grey',
     ]),
     width: PropTypes.string,
+    onOpen: PropTypes.func,
     onSelectColor: PropTypes.func.isRequired,
   };
 
@@ -53,11 +54,19 @@ export default class ColorPicker extends Component {
   };
 
   render() {
-    const { disabledOptions, onSelectColor, options, selected, width, ...rest } = this.props;
+    const {
+      disabledOptions,
+      onOpen,
+      onSelectColor,
+      options,
+      selected,
+      width,
+      ...rest
+    } = this.props;
 
     return (
       <Dropdown position="bottom" { ... rest }>
-        <DropdownTarget>
+        <DropdownTarget onClick={ onOpen }>
           <ColorPickerOption color={ selected } />
         </DropdownTarget>
 

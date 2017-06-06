@@ -29,6 +29,7 @@ export default class DataPickerHeader extends Component {
     disabledColors: PropTypes.arrayOf(PropTypes.string),
     placeholder: PropTypes.string.isRequired,
     onClear: PropTypes.func,
+    onColorPickerOpen: PropTypes.func,
     onSelectColor: PropTypes.func,
     value: PropTypes.string,
   };
@@ -41,6 +42,7 @@ export default class DataPickerHeader extends Component {
       disabledColors,
       placeholder,
       onClear,
+      onColorPickerOpen,
       onSelectColor,
       value,
     } = this.context;
@@ -60,6 +62,7 @@ export default class DataPickerHeader extends Component {
                 <ColorPicker
                     colorOptions={ colorOptions }
                     disabledOptions={ disabledColors }
+                    onOpen={ onColorPickerOpen }
                     onSelectColor={ onSelectColor }
                     selected={ color } />
               ) : (
