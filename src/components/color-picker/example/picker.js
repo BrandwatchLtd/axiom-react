@@ -23,6 +23,7 @@ export default class ColorPickerExample extends Component {
       <Example name="Color Picker">
         <Snippet>
           <ColorPicker
+              disabledOptions={ [currentColor] }
               onSelectColor={ this.onSelectColor.bind(this) }
               selected={ currentColor } />
         </Snippet>

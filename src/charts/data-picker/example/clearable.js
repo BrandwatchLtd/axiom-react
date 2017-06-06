@@ -30,6 +30,7 @@ export default class DataPickerExample extends Component {
         <Snippet>
           <DataPicker
               color={ selectedColor || (selected && selected.color) }
+              disabledColors={ [ selectedColor ] }
               onClear={ () => this.setState({ selectedColor: undefined, selectedId: undefined }) }
               onSelectColor={ (color) => this.setState({ selectedColor: color }) }
               placeholder="Please select a value"

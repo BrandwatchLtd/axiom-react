@@ -25,7 +25,7 @@ export default class DisabledColorPickerExample extends Component {
       <Example name="Color Picker (with disabled options)">
         <Snippet>
           <ColorPicker
-              disabledOptions={ this.disabledColors }
+              disabledOptions={ [ ...this.disabledColors, currentColor ] }
               onSelectColor={ this.boundOnSelectColor }
               selected={ currentColor } />
         </Snippet>
