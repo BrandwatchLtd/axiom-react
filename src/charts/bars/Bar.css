@@ -4,7 +4,6 @@
 
 .ax-bars__bar {
   display: flex;
-  flex: 1 1 0%;
 }
 
 .ax-bars__bar--center {
@@ -112,6 +111,13 @@
 .ax-bars--left {
   & .ax-bars__bar-label {
     flex: 0 0 var(--cmp-label-width);
+  }
+}
+
+.ax-bars--up,
+.ax-bars--down {
+  & .ax-bars__bar {
+    flex: 1 1 0%;
   }
 }
 
