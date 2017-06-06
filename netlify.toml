@@ -1,0 +1,4 @@
+# Global settings applied to the whole site.
+[build]
+  publish = "static"
+  command = "yarn build:static"
