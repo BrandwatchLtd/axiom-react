@@ -4,6 +4,7 @@
 .ax-data-picker__header-title {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
 }
 
 .ax-data-picker__header-title-text {
