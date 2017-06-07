@@ -1,14 +1,18 @@
 @import '../../materials/colors';
 @import '../../materials/sizing';
 
+:root {
+  --cmp-list-item-spacing: calc(var(--spacing-grid-size) * 3);
+}
+
 .ax-list--inline {
   padding: 0;
   list-style: none;
 
   & .ax-list__item {
     display: inline-block;
-    margin: 0 calc(var(--spacing-grid-size) * 2) 0 0;
-    padding: 0 calc(var(--spacing-grid-size) * 2) 0 0;
+    margin: 0 var(--cmp-list-item-spacing) 0 0;
+    padding: 0 var(--cmp-list-item-spacing) 0 0;
     border-right: var(--component-border-width) solid var(--color-context-border);
     vertical-align: middle;
 
