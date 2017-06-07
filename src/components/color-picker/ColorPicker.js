@@ -66,8 +66,8 @@ export default class ColorPicker extends Component {
 
     return (
       <Dropdown position="bottom" { ... rest }>
-        <DropdownTarget onClick={ onOpen }>
-          <ColorPickerOption color={ selected } />
+        <DropdownTarget>
+          <ColorPickerOption color={ selected } onClick={ onOpen } />
         </DropdownTarget>
 
         <DropdownContent>
