@@ -4,6 +4,7 @@
 
 .ax-data-points {
   display: block;
+  overflow: visible;
 }
 
 .ax-data-point {
