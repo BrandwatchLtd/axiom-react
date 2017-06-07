@@ -20,7 +20,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__row"
         >
           <td
-            className="ax-chart-table__cell ax-text--color-subtle"
+            className="ax-chart-table__cell"
             style={
               Object {
                 "width": "10rem",

@@ -16,9 +16,7 @@ export default class ChartTableLabel extends Component {
     const { labelColumnWidth } = this.context;
 
     return (
-      <ChartTableCell { ...rest }
-          style={ { width: labelColumnWidth } }
-          textColor="subtle">
+      <ChartTableCell { ...rest } style={ { width: labelColumnWidth } }>
         { children }
       </ChartTableCell>
     );
