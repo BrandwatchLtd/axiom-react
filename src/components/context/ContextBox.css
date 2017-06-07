@@ -34,9 +34,9 @@
 }
 
 .ax-context--dark .ax-context-box::before {
-  border-bottom-color: var(--color-theme-dark-border);
+  border-bottom-color: var(--color-theme-dark-border-subtle);
 }
 
 .ax-context--light .ax-context-box::before {
-  border-bottom-color: var(--color-theme-light-border);
+  border-bottom-color: var(--color-theme-light-border-subtle);
 }
