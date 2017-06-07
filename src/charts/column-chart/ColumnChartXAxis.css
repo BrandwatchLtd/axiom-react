@@ -1,4 +1,7 @@
+@import '../../materials/sizing';
+
 .ax-column-chart__x-axis {
   display: flex;
   flex: 0 0 auto;
+  margin: calc(var(--spacing-grid-size) * 3) 0;
 }

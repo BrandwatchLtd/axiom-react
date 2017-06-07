@@ -4,7 +4,9 @@ import { ColumnChart, ColumnChartXAxis } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ColumnChart yAxisWidth="10rem">
+    <ColumnChart
+        chartKey={ [{}] } data={ [{ label: 'test', values: [] }] }
+        labelColumnWidth="10rem">
       <ColumnChartXAxis { ...props }>
         Lorem
       </ColumnChartXAxis>

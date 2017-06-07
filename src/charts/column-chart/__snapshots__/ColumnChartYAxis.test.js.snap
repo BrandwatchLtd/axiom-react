@@ -10,17 +10,26 @@ exports[`ColumnChartYAxis renders with align bottom 1`] = `
   }
 >
   <div
-    className="ax-column-chart__y-axis ax-column-chart__y-axis--bottom"
-    style={
-      Object {
-        "flexBasis": "10rem",
-      }
-    }
+    className="ax-column-chart__row"
   >
     <div
-      className="ax-column-chart__y-axis-content"
+      className="ax-column-chart__visual"
     >
-      Lorem
+      <div
+        className="ax-column-chart__bars"
+      >
+        <div
+          className="ax-bars ax-bars--up"
+        >
+          <div
+            className="ax-bars__bars-container"
+          >
+            <div
+              className="ax-bars__bars"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -36,17 +45,26 @@ exports[`ColumnChartYAxis renders with align top 1`] = `
   }
 >
   <div
-    className="ax-column-chart__y-axis ax-column-chart__y-axis--top"
-    style={
-      Object {
-        "flexBasis": "10rem",
-      }
-    }
+    className="ax-column-chart__row"
   >
     <div
-      className="ax-column-chart__y-axis-content"
+      className="ax-column-chart__visual"
     >
-      Lorem
+      <div
+        className="ax-column-chart__bars"
+      >
+        <div
+          className="ax-bars ax-bars--up"
+        >
+          <div
+            className="ax-bars__bars-container"
+          >
+            <div
+              className="ax-bars__bars"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -62,17 +80,26 @@ exports[`ColumnChartYAxis renders with defaultProps 1`] = `
   }
 >
   <div
-    className="ax-column-chart__y-axis ax-column-chart__y-axis--bottom"
-    style={
-      Object {
-        "flexBasis": "10rem",
-      }
-    }
+    className="ax-column-chart__row"
   >
     <div
-      className="ax-column-chart__y-axis-content"
+      className="ax-column-chart__visual"
     >
-      Lorem
+      <div
+        className="ax-column-chart__bars"
+      >
+        <div
+          className="ax-bars ax-bars--up"
+        >
+          <div
+            className="ax-bars__bars-container"
+          >
+            <div
+              className="ax-bars__bars"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

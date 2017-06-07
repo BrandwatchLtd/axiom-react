@@ -10,14 +10,27 @@ exports[`ColumnChartXAxis renders with defaultProps 1`] = `
   }
 >
   <div
-    className="ax-column-chart__x-axis"
-    style={
-      Object {
-        "paddingLeft": "10rem",
-      }
-    }
+    className="ax-column-chart__row"
   >
-    Lorem
+    <div
+      className="ax-column-chart__visual"
+    >
+      <div
+        className="ax-column-chart__bars"
+      >
+        <div
+          className="ax-bars ax-bars--up"
+        >
+          <div
+            className="ax-bars__bars-container"
+          >
+            <div
+              className="ax-bars__bars"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

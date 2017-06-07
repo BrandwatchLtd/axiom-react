@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ColumnChartVisual } from 'bw-axiom';
+import ColumnChartVisual from './ColumnChartVisual';
 
 function getComponent(props = {}) {
   return renderer.create(
