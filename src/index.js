@@ -104,8 +104,9 @@ export { default as Underline } from './components/typography/Underline';
 export { default as Weak } from './components/typography/Weak';
 
 // Charts
-export { default as Bars } from './charts/bars/Bars';
 export { default as Bar } from './charts/bars/Bar';
+export { default as BarChart } from './charts/bar-chart/BarChart';
+export { default as Bars } from './charts/bars/Bars';
 export { default as Chart } from './charts/chart/Chart';
 export { default as ChartBody } from './charts/chart/ChartBody';
 export { default as ChartHeader } from './charts/chart/ChartHeader';
@@ -113,14 +114,6 @@ export { default as ChartTitle } from './charts/chart/ChartTitle';
 export { default as ChartHeading } from './charts/chart-heading/ChartHeading';
 export { default as ChartKey } from './charts/chart-key/ChartKey';
 export { default as ChartKeyItem } from './charts/chart-key/ChartKeyItem';
-export { default as ChartTable } from './charts/chart-table/ChartTable';
-export { default as ChartTableAxis } from './charts/chart-table/ChartTableAxis';
-export { default as ChartTableGrid } from './charts/chart-table/ChartTableGrid';
-export { default as ChartTableKey } from './charts/chart-table/ChartTableKey';
-export { default as ChartTableLabel } from './charts/chart-table/ChartTableLabel';
-export { default as ChartTableRow } from './charts/chart-table/ChartTableRow';
-export { default as ChartTableRows } from './charts/chart-table/ChartTableRows';
-export { default as ChartTableVisual } from './charts/chart-table/ChartTableVisual';
 export { default as ColumnChart } from './charts/column-chart/ColumnChart';
 export { default as ColumnChartBars } from './charts/column-chart/ColumnChartBars';
 export { default as ColumnChartRow } from './charts/column-chart/ColumnChartRow';

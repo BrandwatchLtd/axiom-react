@@ -1,12 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {
-  ChartTable,
-  ChartTableRows,
-  ChartTableRow,
-  ChartTableLabel,
-  ChartTableVisual,
-} from 'bw-axiom';
+import ChartTable from './ChartTable';
+import ChartTableRows from './ChartTableRows';
+import ChartTableRow from './ChartTableRow';
+import ChartTableLabel from './ChartTableLabel';
+import ChartTableVisual from './ChartTableVisual';
 
 function createNodeMock() {
   return {

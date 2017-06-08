@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ChartTableGrid } from 'bw-axiom';
+import ChartTableGrid from './ChartTableGrid';
 
 function getComponent(props = {}) {
   return renderer.create(

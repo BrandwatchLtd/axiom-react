@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ChartTable } from 'bw-axiom';
+import ChartTable from './ChartTable';
 
 function getComponent(props = {}) {
   return renderer.create(
