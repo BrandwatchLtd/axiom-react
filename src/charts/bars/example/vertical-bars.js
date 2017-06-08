@@ -12,7 +12,7 @@ export default class BarsExample extends Component {
             { data.map(({ data }, index) =>
               <GridCell key={ index } snippetIgnore={ true }>
                 <div snippetIgnore={ true } style={ { height: '10rem' } }>
-                  <Bars direction="up" snippetSkip={ index !== 0 }>
+                  <Bars direction="up" separated={true} snippetSkip={ index !== 0 }>
                     { data.map((value, index) =>
                       <Bar
                           color={ labels[index].color }
@@ -29,7 +29,7 @@ export default class BarsExample extends Component {
             { data.map(({ data }, index) =>
               <GridCell key={ index } snippetIgnore={ true }>
                 <div snippetIgnore={ true } style={ { height: '10rem' } }>
-                  <Bars direction="down" snippetSkip={ index !== 0 }>
+                  <Bars direction="down" separated={true} snippetSkip={ index !== 0 }>
                     { data.map((value, index) =>
                       <Bar
                           color={ labels[index].color }

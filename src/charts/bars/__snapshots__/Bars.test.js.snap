@@ -234,3 +234,41 @@ exports[`Bars renders with label 1`] = `
   </div>
 </div>
 `;
+
+exports[`Bars renders with separated 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+  separated={true}
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
