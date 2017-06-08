@@ -21,6 +21,20 @@ export function formatData(key, data) {
   }));
 }
 
+export function getHighestValue(data) {
+  let max = 0;
+
+  for (let i = 0; i < data.length; i++) {
+    for (const color in data[i].values) {
+      if (data[i].values[color] > max) {
+        max = data[i].values[color];
+      }
+    }
+  }
+
+  return max;
+}
+
 export function getLines(data, mouseOverRowIndex, mouseOverColors, rowIndex) {
   const visibleDots = rowIndex === mouseOverRowIndex ? data : data.filter(({ colors }) =>
     !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors)
