@@ -1,0 +1,58 @@
+@import '../../materials/animations';
+@import '../../materials/colors';
+@import '../../materials/sizing';
+
+:root {
+  --ax-toggle-height: var(--component-line-height);
+  --ax-toggle-width: calc(2 * var(--component-line-height));
+  --ax-toggle-diameter: calc(var(--ax-toggle-height) - 2 * var(--component-border-width));
+}
+
+.ax-toggle {
+  display: inline-flex;
+  position: relative;
+}
+
+.ax-toggle__input {
+  position: absolute;
+  width: var(--ax-toggle-width);
+  height: var(--ax-toggle-height);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ax-toggle__appearance {
+  width: var(--ax-toggle-width);
+  height: var(--ax-toggle-height);
+  border-radius: var(--ax-toggle-height);
+  background-color: var(--color-context-background-subtle);
+  transition: background-color var(--transition-time-base) var(--transition-function);
+}
+
+.ax-toggle__appearance::after {
+  content: '';
+  position: absolute;
+  top: var(--component-border-width);
+  left: var(--component-border-width);
+  width: var(--ax-toggle-diameter);
+  height: var(--ax-toggle-diameter);
+  border-radius: 50%;
+  box-shadow: 0.1rem 0 0.25rem 0 color(var(--color-ui-dark) alpha(30%));
+  background: var(--color-theme-light-background);
+  transition-property: box-shadow, transform;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  pointer-events: none;
+}
+
+.ax-toggle__input:checked + .ax-toggle__appearance {
+  background-color: var(--color-ui-primary);
+}
+
+.ax-toggle__input:checked + .ax-toggle__appearance::after {
+  transform:
+    translateX(calc(
+      var(--ax-toggle-width) - var(--ax-toggle-diameter) - 2 * var(--component-border-width)
+    ));
+  box-shadow: 0 0 0.25rem 0 color(var(--color-ui-dark) alpha(30%));
+}

@@ -92,7 +92,7 @@ export default (
         <Route
             path="form"
             name="Form & Inputs"
-            apiDocs={ ['CheckBox', 'CheckBoxGroup', 'Form', 'RadioButton', 'RadioButtonGroup', 'TextArea', 'TextInput', 'TextInputIcon'] }
+            apiDocs={ ['CheckBox', 'CheckBoxGroup', 'Form', 'RadioButton', 'RadioButtonGroup', 'TextArea', 'TextInput', 'TextInputIcon', 'Toggle'] }
             examples={ require('../src/components/form/example') }
             component={ Doc } />
         <Route

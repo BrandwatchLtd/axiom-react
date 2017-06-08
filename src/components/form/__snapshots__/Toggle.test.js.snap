@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle renders as not toggled 1`] = `
+<span
+  className="ax-toggle ax-space--tiny"
+>
+  <input
+    checked={false}
+    className="ax-toggle__input"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="ax-toggle__appearance"
+  />
+</span>
+`;
+
+exports[`Toggle renders as toggled 1`] = `
+<span
+  className="ax-toggle ax-space--tiny"
+>
+  <input
+    checked={true}
+    className="ax-toggle__input"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="ax-toggle__appearance"
+  />
+</span>
+`;

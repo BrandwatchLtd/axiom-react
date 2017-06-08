@@ -5,5 +5,6 @@ module.exports = [
   require('./text-inputs-themes').default,
   require('./text-area').default,
   require('./check-boxes').default,
+  require('./toggle').default,
   require('./radio-buttons').default,
 ];
