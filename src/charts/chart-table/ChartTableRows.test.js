@@ -1,33 +1,39 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ChartTable from './ChartTable';
 import ChartTableRows from './ChartTableRows';
 import ChartTableRow from './ChartTableRow';
-import ChartTableLabel from './ChartTableLabel';
-import ChartTableVisual from './ChartTableVisual';
-
-function createNodeMock() {
-  return {
-    addEventListener: () => {},
-  };
-}
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ChartTable>
-      <ChartTableRows { ...props }>
-        <ChartTableRow>
-          <ChartTableLabel>Lorem</ChartTableLabel>
-          <ChartTableVisual>Lorem</ChartTableVisual>
-        </ChartTableRow>
-      </ChartTableRows>
-    </ChartTable>
-  , { createNodeMock });
+    <ChartTableRows { ...props } labelColumnWidth="11rem">
+      <ChartTableRow>Lorem</ChartTableRow>
+      <ChartTableRow>Lorem</ChartTableRow>
+      <ChartTableRow>Lorem</ChartTableRow>
+    </ChartTableRows>
+  );
 }
 
 describe('ChartTableRows', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with collapsedVisibleRowCount more than children count', () => {
+    const component = getComponent({ collapsedVisibleRowCount: 4 });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with expandButtonSuffix', () => {
+    const component = getComponent({ expandButtonSuffix: 'Lorem' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with xAxisLabels', () => {
+    const component = getComponent({ xAxisLabels: ['0%', '50%', '100%'] });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
