@@ -9,7 +9,7 @@ import ChartTableRow from '../chart-table/ChartTableRow';
 import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
 import BarChartContext from './BarChartContext';
-import { formatData } from './utils';
+import { formatData, getHighestValue } from './utils';
 
 export default class BarChart extends Component {
   static propTypes = {
@@ -30,6 +30,7 @@ export default class BarChart extends Component {
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
+    zoom: PropTypes.bool,
   };
 
   render() {
@@ -42,10 +43,13 @@ export default class BarChart extends Component {
       expandButtonSuffix,
       labelColumnWidth,
       xAxisLabels,
+      zoom,
       ...rest
     } = this.props;
 
     const formattedData = formatData(chartKey, data);
+    const highestValue = getHighestValue(data);
+    const zoomValue = zoom ? Math.max(10, Math.min(100, Math.ceil(highestValue / 10) * 10)) : 100;
 
     return (
       <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
@@ -53,7 +57,8 @@ export default class BarChart extends Component {
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
             labelColumnWidth={ labelColumnWidth }
-            xAxisLabels={ xAxisLabels }>
+            xAxisLabels={ xAxisLabels }
+            zoomTo={ zoomValue }>
           { formattedData.map(({ values, label }, index) =>
             <ChartTableRow key={ label }>
               <ChartTableLabel width={ labelColumnWidth }>

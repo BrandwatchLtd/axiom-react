@@ -65,10 +65,10 @@ class ContextDemoComponent extends Component {
   }
 }
 
-export default class DotPlotExample extends Component {
+export default class BarChartExample extends Component {
   render() {
     return (
-      <Example name="DotPlot with Context">
+      <Example name="BarChart with Context">
         <Snippet>
           <BarChart
               ContextComponent={ ContextDemoComponent }

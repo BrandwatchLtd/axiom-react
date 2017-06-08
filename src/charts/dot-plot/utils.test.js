@@ -1,6 +1,7 @@
 import {
   formatData,
   getDotColors,
+  getHighestValue,
   getLines,
   isDotFaded,
   isDotHidden,
@@ -68,6 +69,10 @@ describe('DotPlot (utils)', () => {
         colors: ['lilac'],
       }],
     }]);
+  });
+
+  it('it gets highest value', () => {
+    expect(getHighestValue(data)).toBe(100);
   });
 
   describe('with no mouse over', () => {

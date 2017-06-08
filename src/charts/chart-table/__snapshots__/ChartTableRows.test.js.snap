@@ -6,6 +6,13 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
 >
   <div
     className="ax-chart-table__grid-container"
+    style={
+      Object {
+        "width": "calc(11rem +
+            ((100% - 11rem) / 100) * (100)
+          )",
+      }
+    }
   >
     <div
       className="ax-chart-table__grid"
@@ -299,6 +306,13 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
 >
   <div
     className="ax-chart-table__grid-container"
+    style={
+      Object {
+        "width": "calc(11rem +
+            ((100% - 11rem) / 100) * (100)
+          )",
+      }
+    }
   >
     <div
       className="ax-chart-table__grid"
@@ -592,6 +606,13 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
 >
   <div
     className="ax-chart-table__grid-container"
+    style={
+      Object {
+        "width": "calc(11rem +
+            ((100% - 11rem) / 100) * (100)
+          )",
+      }
+    }
   >
     <div
       className="ax-chart-table__grid"
@@ -885,6 +906,13 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
 >
   <div
     className="ax-chart-table__grid-container"
+    style={
+      Object {
+        "width": "calc(11rem +
+            ((100% - 11rem) / 100) * (100)
+          )",
+      }
+    }
   >
     <div
       className="ax-chart-table__grid"

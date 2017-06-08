@@ -10,7 +10,7 @@ import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
 import DotPlot from './DotPlot';
 import DotPlotLine from './DotPlotLine';
-import { formatData } from './utils';
+import { formatData, getHighestValue } from './utils';
 import './DotPlot.css';
 
 export default class DotPlotChart extends Component {
@@ -34,6 +34,8 @@ export default class DotPlotChart extends Component {
     labelColumnWidth: PropTypes.string.isRequired,
     showKey: PropTypes.bool,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
+    zoom: PropTypes.bool,
+    zoomMax: PropTypes.number,
   };
 
   constructor(props) {
@@ -46,6 +48,7 @@ export default class DotPlotChart extends Component {
 
   static defaultProps = {
     showKey: true,
+    zoomMax: 50,
   };
 
   handleDotMouseEnter(rowIndex, colors) {
@@ -74,11 +77,17 @@ export default class DotPlotChart extends Component {
       labelColumnWidth,
       showKey,
       xAxisLabels,
+      zoom,
+      zoomMax,
       ...rest
     } = this.props;
 
     const { mouseOverColors, mouseOverRowIndex } = this.state;
     const formattedData = formatData(chartKey, data);
+    const highestValue = getHighestValue(data);
+    const zoomValue = zoom
+      ? Math.max(zoomMax, Math.min(100, Math.ceil(highestValue / 10) * 10))
+      : 100;
 
     return (
       <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
@@ -86,7 +95,8 @@ export default class DotPlotChart extends Component {
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
             labelColumnWidth={ labelColumnWidth }
-            xAxisLabels={ xAxisLabels }>
+            xAxisLabels={ xAxisLabels }
+            zoomTo={ zoomValue }>
           { formattedData.map(({ values, label }, index) =>
             <ChartTableRow key={ label }>
               <ChartTableLabel

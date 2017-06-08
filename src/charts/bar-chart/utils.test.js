@@ -1,4 +1,4 @@
-import { formatData } from './utils';
+import { formatData, getHighestValue } from './utils';
 
 
 const chartKey = [
@@ -15,7 +15,7 @@ const data = [
   { label: 'Books', values: { blue: 25, lilac: 50 } },
 ];
 
-describe('DotPlot (utils)', () => {
+describe('BarChart (utils)', () => {
   it('formats data', () => {
     expect(formatData(chartKey, data)).toEqual([{
       label: 'Family',
@@ -69,5 +69,9 @@ describe('DotPlot (utils)', () => {
         color: 'lilac',
       }],
     }]);
+  });
+
+  it('it gets highest value', () => {
+    expect(getHighestValue(data)).toBe(100);
   });
 });
