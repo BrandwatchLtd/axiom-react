@@ -1,24 +1,20 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import ChartTableCell from './ChartTableCell';
+import { Base } from 'bw-axiom';
 
 export default class ChartTableLabel extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-  };
-
-  static contextTypes = {
-    labelColumnWidth: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
   };
 
   render() {
-    const { children, ...rest } = this.props;
-    const { labelColumnWidth } = this.context;
+    const { children, width, ...rest } = this.props;
 
     return (
-      <ChartTableCell { ...rest } style={ { width: labelColumnWidth } }>
+      <Base { ...rest } className="ax-chart-table__label" style={ { width } }>
         { children }
-      </ChartTableCell>
+      </Base>
     );
   }
 }

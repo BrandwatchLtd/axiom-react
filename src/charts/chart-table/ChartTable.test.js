@@ -17,14 +17,14 @@ describe('ChartTable', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with labelColumnWidth', () => {
-    const component = getComponent({ labelColumnWidth: '5rem' });
+  it('renders with even number of xAxisLabels', () => {
+    const component = getComponent({ xAxisLabels: Array(10) });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders without responsive', () => {
-    const component = getComponent({ responsive: false });
+  it('renders with odd number of xAxisLabels', () => {
+    const component = getComponent({ xAxisLabels: Array(11) });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -1,22 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ChartTableGrid from './ChartTableGrid';
+import ChartTableRow from './ChartTableRow';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ChartTableGrid { ...props }  />
+    <ChartTableRow { ...props }>
+      Lorem Ipsum
+    </ChartTableRow>
   );
 }
 
-describe('ChartTableGrid', () => {
+describe('ChartTableRow', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with count', () => {
-    const component = getComponent({ count: 5 });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

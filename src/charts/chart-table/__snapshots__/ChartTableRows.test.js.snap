@@ -1,42 +1,1029 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChartTableRows renders with defaultProps 1`] = `
+exports[`ChartTableRows renders with collapsedVisibleRowCount more than children count 1`] = `
 <div
-  className="ax-chart-table ax-chart-table--responsive"
+  className="ax-chart-table__rows-container"
 >
   <div
-    className="ax-chart-table__rows-container"
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "0%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "10%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            10%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "20%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            20%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "30%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            30%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "40%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            40%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            50%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "60%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            60%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "70%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            70%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "80%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            80%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "90%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            90%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "100%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__collapse"
     style={
       Object {
-        "height": null,
+        "visibility": "hidden",
       }
     }
   >
-    <table
-      className="ax-chart-table__rows"
+    <a
+      className="ax-link ax-link--style-subtle"
+      onClick={[Function]}
     >
-      <tbody>
-        <tr
-          className="ax-chart-table__row"
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
         >
-          <td
-            className="ax-chart-table__cell"
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
             style={
               Object {
-                "width": "10rem",
+                "width": undefined,
               }
             }
           >
-            Lorem
-          </td>
-          <td
-            className="ax-chart-table__cell"
+            <svg
+              className="ax-icon ax-icon--box-expand"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                }
+              }
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "1rem",
+                }
+              }
+              viewBox="0 0 16 16"
+            />
+          </div>
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
           >
-            Lorem
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <strong
+              className="ax-text--strong"
+            >
+              See All 3 Items
+            </strong>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ChartTableRows renders with defaultProps 1`] = `
+<div
+  className="ax-chart-table__rows-container"
+>
+  <div
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "0%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "10%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            10%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "20%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            20%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "30%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            30%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "40%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            40%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            50%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "60%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            60%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "70%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            70%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "80%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            80%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "90%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            90%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "100%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__collapse"
+    style={
+      Object {
+        "visibility": "hidden",
+      }
+    }
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      onClick={[Function]}
+    >
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
+        >
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <svg
+              className="ax-icon ax-icon--box-expand"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                }
+              }
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "1rem",
+                }
+              }
+              viewBox="0 0 16 16"
+            />
+          </div>
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <strong
+              className="ax-text--strong"
+            >
+              See All 3 Items
+            </strong>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
+<div
+  className="ax-chart-table__rows-container"
+>
+  <div
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "0%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "10%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            10%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "20%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            20%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "30%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            30%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "40%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            40%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            50%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "60%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            60%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "70%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            70%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "80%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            80%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "90%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            90%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "100%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__collapse"
+    style={
+      Object {
+        "visibility": "hidden",
+      }
+    }
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      onClick={[Function]}
+    >
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
+        >
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <svg
+              className="ax-icon ax-icon--box-expand"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                }
+              }
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "1rem",
+                }
+              }
+              viewBox="0 0 16 16"
+            />
+          </div>
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <strong
+              className="ax-text--strong"
+            >
+              See All 3 Lorem
+            </strong>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ChartTableRows renders with xAxisLabels 1`] = `
+<div
+  className="ax-chart-table__rows-container"
+>
+  <div
+    className="ax-chart-table__grid-container"
+  >
+    <div
+      className="ax-chart-table__grid"
+      style={
+        Object {
+          "left": "11rem",
+        }
+      }
+    >
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "0%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            0%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            50%
+          </small>
+        </span>
+      </div>
+      <div
+        className="ax-chart-table__grid-line"
+        style={
+          Object {
+            "left": "100%",
+          }
+        }
+      >
+        <span
+          className="ax-chart-table__xAxis-label"
+        >
+          <small
+            className="ax-small ax-text--color-subtle"
+          >
+            100%
+          </small>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-chart-table__row"
+    >
+      Lorem
+    </div>
+  </div>
+  <div
+    className="ax-chart-table__collapse"
+    style={
+      Object {
+        "visibility": "hidden",
+      }
+    }
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      onClick={[Function]}
+    >
+      <div
+        className="ax-grid__container ax-space--medium"
+      >
+        <div
+          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
+        >
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <svg
+              className="ax-icon ax-icon--box-expand"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                }
+              }
+              style={
+                Object {
+                  "height": "1rem",
+                  "width": "1rem",
+                }
+              }
+              viewBox="0 0 16 16"
+            />
+          </div>
+          <div
+            className="ax-grid__cell ax-grid__cell--shrink"
+            style={
+              Object {
+                "width": undefined,
+              }
+            }
+          >
+            <strong
+              className="ax-text--strong"
+            >
+              See All 3 Items
+            </strong>
+          </div>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 `;

@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ChartKey, ChartKeyItem, DataPoint, DataPoints } from 'bw-axiom';
 import ChartTable from '../chart-table/ChartTable';
-import ChartTableAxis from '../chart-table/ChartTableAxis';
-import ChartTableGrid from '../chart-table/ChartTableGrid';
+import ChartTableAxisTitle from '../chart-table/ChartTableAxisTitle';
 import ChartTableKey from '../chart-table/ChartTableKey';
 import ChartTableLabel from '../chart-table/ChartTableLabel';
 import ChartTableRow from '../chart-table/ChartTableRow';
@@ -19,20 +18,7 @@ export default class DotPlotChart extends Component {
     ContextComponent: PropTypes.func,
     axisTitle: PropTypes.string,
     chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.oneOf([
-        'rose',
-        'pink',
-        'purple',
-        'lilac',
-        'blue',
-        'teal',
-        'green',
-        'chartreuse',
-        'amber',
-        'orange',
-        'brown',
-        'grey',
-      ]).isRequired,
+      color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
     chartKeyLineLabel: PropTypes.string.isRequired,
@@ -92,43 +78,44 @@ export default class DotPlotChart extends Component {
     } = this.props;
 
     const { mouseOverColors, mouseOverRowIndex } = this.state;
-    const gridCount = xAxisLabels && xAxisLabels.length;
-    const responsive = !xAxisLabels || Boolean(xAxisLabels.length % 2);
     const formattedData = formatData(chartKey, data);
 
     return (
-      <ChartTable { ...rest }
-          collapsedVisibleRowCount={ collapsedVisibleRowCount }
-          expandButtonSuffix={ expandButtonSuffix }
-          labelColumnWidth={ labelColumnWidth }
-          responsive={ responsive }>
-        <ChartTableGrid count={ gridCount }>
-          <ChartTableRows>
-            { formattedData.map(({ values, label }, index) =>
-              <ChartTableRow key={ label }>
-                <ChartTableLabel
-                    textStrong={ index === mouseOverRowIndex }>
-                  { label }
-                </ChartTableLabel>
-                <ChartTableVisual>
-                  <DotPlot
-                      ContextComponent={ ContextComponent }
-                      data={ values }
-                      label={ label }
-                      mouseOverColors={ mouseOverColors }
-                      mouseOverRowIndex={ mouseOverRowIndex }
-                      onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
-                      onDotMouseLeave={ () => this.handleDotMouseLeave() }
-                      rawData={ data[index] }
-                      rowIndex={ index }  />
-                </ChartTableVisual>
-              </ChartTableRow>
-            ) }
-          </ChartTableRows>
-        </ChartTableGrid>
-        <ChartTableAxis
-            labels={ xAxisLabels }
-            title={ axisTitle } />
+      <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
+        <ChartTableRows
+            collapsedVisibleRowCount={ collapsedVisibleRowCount }
+            expandButtonSuffix={ expandButtonSuffix }
+            labelColumnWidth={ labelColumnWidth }
+            xAxisLabels={ xAxisLabels }>
+          { formattedData.map(({ values, label }, index) =>
+            <ChartTableRow key={ label }>
+              <ChartTableLabel
+                  textStrong={ index === mouseOverRowIndex }
+                  width={ labelColumnWidth }>
+                { label }
+              </ChartTableLabel>
+              <ChartTableVisual>
+                <DotPlot
+                    ContextComponent={ ContextComponent }
+                    data={ values }
+                    label={ label }
+                    mouseOverColors={ mouseOverColors }
+                    mouseOverRowIndex={ mouseOverRowIndex }
+                    onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
+                    onDotMouseLeave={ () => this.handleDotMouseLeave() }
+                    rawData={ data[index] }
+                    rowIndex={ index }  />
+              </ChartTableVisual>
+            </ChartTableRow>
+          ) }
+        </ChartTableRows>
+
+        { axisTitle && (
+          <ChartTableAxisTitle>
+            { axisTitle }
+          </ChartTableAxisTitle>
+        ) }
+
         <ChartTableKey>
           { showKey && <ChartKey>
             { chartKey.map(({ label, color }) =>
