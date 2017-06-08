@@ -9,7 +9,7 @@
 }
 
 .ax-toggle {
-  display: inline-flex;
+  display: flex;
   position: relative;
 }
 
