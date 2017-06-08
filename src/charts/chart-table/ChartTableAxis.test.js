@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ChartTableAxis } from 'bw-axiom';
+import ChartTableAxis from './ChartTableAxis';
 
 function getComponent(props = {}) {
   return renderer.create(

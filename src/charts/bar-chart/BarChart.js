@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ChartKey, ChartKeyItem, DataPoint, DataPoints } from 'bw-axiom';
+import { Bars, ChartKey, ChartKeyItem, DataPoints, DataPoint } from 'bw-axiom';
 import ChartTable from '../chart-table/ChartTable';
 import ChartTableAxis from '../chart-table/ChartTableAxis';
 import ChartTableGrid from '../chart-table/ChartTableGrid';
@@ -9,12 +9,10 @@ import ChartTableLabel from '../chart-table/ChartTableLabel';
 import ChartTableRow from '../chart-table/ChartTableRow';
 import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
-import DotPlot from './DotPlot';
-import DotPlotLine from './DotPlotLine';
+import BarChartContext from './BarChartContext';
 import { formatData } from './utils';
-import './DotPlot.css';
 
-export default class DotPlotChart extends Component {
+export default class BarChart extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
     axisTitle: PropTypes.string,
@@ -35,7 +33,6 @@ export default class DotPlotChart extends Component {
       ]).isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
-    chartKeyLineLabel: PropTypes.string.isRequired,
     collapsedVisibleRowCount: PropTypes.number,
     /**
      * Where the values keys are brand colors and value is the percentage
@@ -49,33 +46,10 @@ export default class DotPlotChart extends Component {
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      mouseOverColors: [],
-      mouseOverRowIndex: -1,
-    };
-  }
-
-  handleDotMouseEnter(rowIndex, colors) {
-    this.setState({
-      mouseOverColors: colors,
-      mouseOverRowIndex: rowIndex,
-    });
-  }
-
-  handleDotMouseLeave() {
-    this.setState({
-      mouseOverColors: [],
-      mouseOverRowIndex: -1,
-    });
-  }
-
   render() {
     const {
       axisTitle,
       chartKey,
-      chartKeyLineLabel,
       collapsedVisibleRowCount,
       ContextComponent,
       data,
@@ -85,7 +59,6 @@ export default class DotPlotChart extends Component {
       ...rest
     } = this.props;
 
-    const { mouseOverColors, mouseOverRowIndex } = this.state;
     const gridCount = xAxisLabels && xAxisLabels.length;
     const responsive = !xAxisLabels || Boolean(xAxisLabels.length % 2);
     const formattedData = formatData(chartKey, data);
@@ -100,21 +73,18 @@ export default class DotPlotChart extends Component {
           <ChartTableRows>
             { formattedData.map(({ values, label }, index) =>
               <ChartTableRow key={ label }>
-                <ChartTableLabel
-                    textStrong={ index === mouseOverRowIndex }>
-                  { label }
-                </ChartTableLabel>
+                <ChartTableLabel>{ label }</ChartTableLabel>
                 <ChartTableVisual>
-                  <DotPlot
-                      ContextComponent={ ContextComponent }
-                      data={ values }
-                      label={ label }
-                      mouseOverColors={ mouseOverColors }
-                      mouseOverRowIndex={ mouseOverRowIndex }
-                      onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
-                      onDotMouseLeave={ () => this.handleDotMouseLeave() }
-                      rawData={ data[index] }
-                      rowIndex={ index }  />
+                  <Bars direction="right">
+                    { values.map(({ color, value }) =>
+                      <BarChartContext
+                          ContextComponent={ ContextComponent }
+                          color={ color }
+                          data={ data[index] }
+                          label={ label }
+                          value={ value } />
+                    ) }
+                  </Bars>
                 </ChartTableVisual>
               </ChartTableRow>
             ) }
@@ -132,9 +102,6 @@ export default class DotPlotChart extends Component {
                 </DataPoints>
               </ChartKeyItem>
             ) }
-            <ChartKeyItem label={ chartKeyLineLabel }>
-              <DotPlotLine width="1rem" />
-            </ChartKeyItem>
           </ChartKey>
         </ChartTableKey>
       </ChartTable>
