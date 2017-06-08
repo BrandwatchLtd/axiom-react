@@ -51,6 +51,7 @@ export default class DotPlotChart extends Component {
     })).isRequired,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
+    showKey: PropTypes.bool,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
   };
 
@@ -61,6 +62,10 @@ export default class DotPlotChart extends Component {
       mouseOverRowIndex: -1,
     };
   }
+
+  static defaultProps = {
+    showKey: true,
+  };
 
   handleDotMouseEnter(rowIndex, colors) {
     this.setState({
@@ -86,6 +91,7 @@ export default class DotPlotChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      showKey,
       xAxisLabels,
     } = this.props;
 
@@ -128,7 +134,7 @@ export default class DotPlotChart extends Component {
             labels={ xAxisLabels }
             title={ axisTitle } />
         <ChartTableKey>
-          <ChartKey>
+          { showKey && <ChartKey>
             { chartKey.map(({ label, color }) =>
               <ChartKeyItem key={ label } label={ label }>
                 <DataPoints size="0.75rem">
@@ -139,7 +145,7 @@ export default class DotPlotChart extends Component {
             <ChartKeyItem label={ chartKeyLineLabel }>
               <DotPlotLine width="1rem" />
             </ChartKeyItem>
-          </ChartKey>
+          </ChartKey> }
         </ChartTableKey>
       </ChartTable>
     );

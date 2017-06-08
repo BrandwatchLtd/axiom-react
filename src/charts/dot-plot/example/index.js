@@ -3,4 +3,5 @@ module.exports = [
   require('./collapsible').default,
   require('./context').default,
   require('./custom-x-labels').default,
+  require('./no-key').default,
 ];
