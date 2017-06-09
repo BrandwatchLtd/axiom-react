@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Children, Component } from 'react';
-import { filterRender } from '../../utils/example-filter';
-import ExampleBox from './ExampleBox';
-import Snippet from './Snippet';
+import React, { Component } from 'react';
+import { Heading } from 'bw-axiom';
+import './Example.css';
 
 export default class Example extends Component {
   static propTypes = {
@@ -17,17 +16,11 @@ export default class Example extends Component {
     const { name, children } = this.props;
 
     return (
-      <ExampleBox name={ name }>
-        { Children.toArray(children).reduce((children, child) => {
-          if (child.type === Snippet && !child.props.renderSkip) {
-            children.push(filterRender(child.props.children));
-          }
+      <div className="dm-example">
+        <Heading space="medium" style="title">{ name }</Heading>
 
-          children.push(child);
-
-          return children;
-        }, []) }
-      </ExampleBox>
+        { children }
+      </div>
     );
   }
 }

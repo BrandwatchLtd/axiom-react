@@ -1,5 +1,4 @@
-import { createElement } from 'react';
-import { v4 } from 'uuid';
+import { createElement, Children } from 'react';
 import omit from 'lodash.omit';
 import uniq from 'lodash.uniq';
 import { isReactElement, isReactElements } from './react-elements';
@@ -12,8 +11,8 @@ export function filterRender(component) {
   }
 
   if (Array.isArray(component)) {
-    return component
-      .map((component) => filterRender(component))
+    return Children
+      .map(component, filterRender)
       .filter((component) => component);
   }
 
@@ -21,14 +20,10 @@ export function filterRender(component) {
     return component;
   }
 
-  const type = component.type;
-  const children = filterRender(component.props.children);
-  const props = {
-    key: v4(),
-    ...omit(component.props, ['snippetIgnore', 'snippetReplace', 'snippetSkip']),
-  };
-
-  return createElement(type, props, children);
+  return createElement(
+    component.type,
+    omit(component.props, ['snippetIgnore', 'snippetReplace', 'snippetSkip']),
+    filterRender(component.props.children));
 }
 
 export function filterSnippet(component, topLevel = true) {
@@ -37,10 +32,9 @@ export function filterSnippet(component, topLevel = true) {
   }
 
   if (Array.isArray(component)) {
-    return uniq(component
-      .map((component) => filterSnippet(component, topLevel))
-      .filter((component) => topLevel ? isReactElements(component) : component)
-    );
+    return uniq(Children
+      .map(component, (component) => filterSnippet(component, topLevel))
+      .filter((component) => topLevel ? isReactElements(component) : component));
   }
 
   if (!isReactElement(component)) {
@@ -59,12 +53,8 @@ export function filterSnippet(component, topLevel = true) {
     return filterSnippet(component.props.children, topLevel);
   }
 
-  const type = component.type;
-  const children = filterSnippet(component.props.children, false);
-  const props = {
-    key: v4(),
-    ...omit(component.props, ['snippetIgnore', 'snippetReplace', 'snippetSkip']),
-  };
-
-  return createElement(type, props, children);
+  return createElement(
+    component.type,
+    omit(component.props, ['snippetIgnore', 'snippetReplace', 'snippetSkip']),
+    filterSnippet(component.props.children, false));
 }
