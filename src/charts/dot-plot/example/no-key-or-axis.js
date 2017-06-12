@@ -6,15 +6,15 @@ import { chartKey, data } from './data';
 export default class DotPlotChartExample extends Component {
   render() {
     return (
-      <Example name="DotPlotChart without chart key or labels">
+      <Example name="DotPlotChart without chart key or axis">
         <Snippet>
           <DotPlotChart
               axisTitle=""
               chartKey={ chartKey }
               data={ data }
               labelColumnWidth="11rem"
-              showKey={ false }
-              xAxisLabels={ [] } />
+              showAxis={ false }
+              showKey={ false } />
         </Snippet>
       </Example>
     );

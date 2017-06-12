@@ -51,6 +51,7 @@ export default class DotPlotChart extends Component {
     })).isRequired,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
+    showAxis: PropTypes.bool,
     showKey: PropTypes.bool,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
   };
@@ -64,6 +65,7 @@ export default class DotPlotChart extends Component {
   }
 
   static defaultProps = {
+    showAxis: true,
     showKey: true,
   };
 
@@ -91,6 +93,7 @@ export default class DotPlotChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      showAxis,
       showKey,
       xAxisLabels,
     } = this.props;
@@ -130,9 +133,9 @@ export default class DotPlotChart extends Component {
             ) }
           </ChartTableRows>
         </ChartTableGrid>
-        <ChartTableAxis
+        { showAxis && <ChartTableAxis
             labels={ xAxisLabels }
-            title={ axisTitle } />
+            title={ axisTitle } /> }
         <ChartTableKey>
           { showKey && <ChartKey>
             { chartKey.map(({ label, color }) =>
