@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { getArcProperties } from './utils';
 import RadialProgress from './RadialProgress';
 import './ProgressInfinite.css';
-import './_filter';
+import renderFilter from './_filter';
 
 export default class ProgressInfinite extends Component {
   static propTypes = {
@@ -19,6 +19,8 @@ export default class ProgressInfinite extends Component {
     color: 'subtle',
     size: 'small',
   }
+
+  componentWillMount = renderFilter
 
   render() {
     const {

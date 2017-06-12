@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import './Candytar.css';
-import './_filter';
+import renderFilter from './_filter';
 
 function defaultPickerFn(colors) {
   return colors[Math.floor(Math.random() * colors.length)];
@@ -46,6 +46,8 @@ export default class Candytar extends Component {
   static defaultProps = {
     picker: defaultPickerFn,
   };
+
+  componentWillMount = renderFilter
 
   render() {
     const { picker, color = picker(colors), size } = this.props;
