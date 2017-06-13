@@ -56,6 +56,12 @@ describe('Bar', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with labelStrong', () => {
+    const component = getComponent({ labelStrong: true, showLabel: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with size', () => {
     ['up', 'down', 'left', 'right'].forEach((direction) => {
       it(direction, () => {
