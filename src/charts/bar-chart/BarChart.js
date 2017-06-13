@@ -33,6 +33,16 @@ export default class BarChart extends Component {
     zoom: PropTypes.bool,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      hoverColor: null,
+      hoverIndex: null,
+    };
+    this.onMouseEnter = (hoverIndex, hoverColor) => this.setState({ hoverColor, hoverIndex });
+    this.onMouseLeave = () => this.setState({ hoverColor: null, hoverIndex: null });
+  }
+
   render() {
     const {
       axisTitle,
@@ -71,8 +81,13 @@ export default class BarChart extends Component {
                         ContextComponent={ ContextComponent }
                         color={ color }
                         data={ data[index] }
+                        dataIndex={ index }
                         key={ color }
                         label={ label }
+                        labelStrong={ index === this.state.hoverIndex }
+                        onMouseEnter={ this.onMouseEnter }
+                        onMouseLeave={ this.onMouseLeave }
+                        showLabel={ color === this.state.hoverColor }
                         value={ value } />
                   ) }
                 </Bars>
