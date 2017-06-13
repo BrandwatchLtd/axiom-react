@@ -1,5 +1,6 @@
 @import '../../materials/animations';
 @import '../../materials/colors';
+@import '../../materials/typography';
 @import '../vars';
 
 .ax-bars__bar {
@@ -12,7 +13,13 @@
 
 .ax-bars__bar-label {
   align-self: center;
+  opacity: 1;
   line-height: var(--cmp-chart-label-line-height);
+  transition: opacity var(--transition-time-base) var(--transition-function);
+}
+
+.ax-bars__bar-label--hidden {
+  opacity: 0;
 }
 
 .ax-bars__bar-rect {
