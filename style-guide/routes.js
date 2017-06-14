@@ -78,6 +78,12 @@ export default (
             examples={ require('../src/components/context/example') }
             component={ Doc } />
         <Route
+            path="data-picker"
+            name="Data Picker"
+            apiDocs={ [] }
+            examples={ require('../src/components/data-picker/example') }
+            component={ Doc } />
+        <Route
             path="dialog"
             name="Dialog"
             apiDocs={ ['Dialog', 'DialogBody', 'DialogFooter', 'DialogHeader'] }
@@ -136,6 +142,18 @@ export default (
             name="Menu"
             apiDocs={ ['Menu', 'MenuItem'] }
             examples={ require('../src/components/menu/example') }
+            component={ Doc } />
+        <Route
+            path="pagination"
+            name="Pagination"
+            apiDocs={ ['Pagination'] }
+            examples={ require('../src/components/pagination/example') }
+            component={ Doc } />
+        <Route
+            path="panel"
+            name="Panel"
+            apiDocs={ ['Panels', 'Panel', 'PanelBody', 'PanelHeader'] }
+            examples={ require('../src/components/panel/example') }
             component={ Doc } />
         <Route
             path="pictogram"
@@ -207,12 +225,6 @@ export default (
             examples={ require('../src/composites/login/example') }
             component={ Doc } />
         <Route
-            path="pagination"
-            name="Pagination"
-            apiDocs={ ['Pagination'] }
-            examples={ require('../src/composites/pagination/example') }
-            component={ Doc } />
-        <Route
             path="usermenu"
             name="User Menu"
             apiDocs={ ['UserMenu'] }
@@ -251,12 +263,6 @@ export default (
             examples={ require('../src/charts/column-chart/example') }
             component={ Doc } />
         <Route
-            path="data-picker"
-            name="Data Picker"
-            apiDocs={ [] }
-            examples={ require('../src/charts/data-picker/example') }
-            component={ Doc } />
-        <Route
             path="data-point"
             name="Data Points"
             apiDocs={ ['DataPoints', 'DataPoint'] }
@@ -267,12 +273,6 @@ export default (
             name="Dot Plot"
             apiDocs={ ['DotPlotChart'] }
             examples={ require('../src/charts/dot-plot/example') }
-            component={ Doc } />
-        <Route
-            path="panel"
-            name="Panel"
-            apiDocs={ ['Panels', 'Panel', 'PanelBody', 'PanelHeader'] }
-            examples={ require('../src/charts/panel/example') }
             component={ Doc } />
         <Route
             path="wordcloud"
