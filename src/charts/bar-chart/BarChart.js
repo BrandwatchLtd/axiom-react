@@ -71,7 +71,9 @@ export default class BarChart extends Component {
             zoomTo={ zoomValue }>
           { formattedData.map(({ values, label }, index) =>
             <ChartTableRow key={ label }>
-              <ChartTableLabel width={ labelColumnWidth }>
+              <ChartTableLabel
+                  textStrong={ index === this.state.hoverIndex }
+                  width={ labelColumnWidth }>
                 { label }
               </ChartTableLabel>
               <ChartTableVisual>
