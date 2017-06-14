@@ -1,8 +1,9 @@
 export function formatData(key, data) {
   const order = key.map(({ color }) => color);
 
-  return data.map(({ label, values }) => ({
+  return data.map(({ label, benchmark, values }) => ({
     label,
+    benchmark,
     values: Object.keys(values)
       .map((color) => ({ color, value: values[color] }))
       .sort((a, b) => a.value - b.value || order.indexOf(a.color) - order.indexOf(b.color))
@@ -35,22 +36,34 @@ export function getHighestValue(data) {
   return max;
 }
 
-export function getLines(data, mouseOverRowIndex, mouseOverColors, rowIndex) {
-  const visibleDots = rowIndex === mouseOverRowIndex ? data : data.filter(({ colors }) =>
-    !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors)
-  );
+export function getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex) {
+  const lines = [];
+  const elements = data
+    .filter(({ colors }) => mouseOverRowIndex === rowIndex ||
+        !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors))
+    .concat(benchmark && [{ colors: [], value: benchmark }])
+    .sort((a, b) => a.value - b.value);
 
-  return visibleDots.slice(0, -1).map(({ colors, value }, index) => ({
-    faded: isLineFaded(mouseOverRowIndex),
-    fromX: value,
-    toX: visibleDots[index + 1].value,
-  }));
+  for (let i = 0; i < elements.length - 1; i++) {
+    lines.push({
+      benchmark: elements[i].colors.length === 0,
+      faded: isLineFaded(mouseOverRowIndex),
+      fromX: elements[i].value,
+      toX: elements[i + 1].value,
+    });
+  }
+
+  return lines;
 }
 
 export function getDotColors(mouseOverRowIndex, mouseOverColors, rowIndex, colors) {
   return mouseOverColors.length && colors.length > 1 && mouseOverRowIndex !== rowIndex
     ? colors.filter((color) => mouseOverColors.indexOf(color) > -1)
     : colors;
+}
+
+export function isBenchmarkFaded(mouseOverRowIndex) {
+  return mouseOverRowIndex !== -1;
 }
 
 export function isLineFaded(mouseOverRowIndex) {

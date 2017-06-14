@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { Base } from 'bw-axiom';
 import DotPlotContext from './DotPlotContext';
-import DotPlotLine from './DotPlotLine';
+import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
+import DotPlotDifferenceLine from './DotPlotDifferenceLine';
 import DotPlotValue from './DotPlotValue';
 import {
   getLines,
   getDotColors,
+  isBenchmarkFaded,
   isDotFaded,
   isDotHidden,
   isValueHidden,
@@ -14,24 +17,18 @@ import {
 } from './utils';
 import './DotPlot.css';
 
+function differenceLineContainerClasses(benchmark) {
+  return classnames('ax-dot-plot__difference-line-container', {
+    'ax-dot-plot__difference-line-container--dot': !benchmark,
+  });
+}
+
 export default class DotPlot extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
+    benchmark: PropTypes.number,
     data: PropTypes.arrayOf(PropTypes.shape({
-      colors: PropTypes.arrayOf(PropTypes.oneOf([
-        'rose',
-        'pink',
-        'purple',
-        'lilac',
-        'blue',
-        'teal',
-        'green',
-        'chartreuse',
-        'amber',
-        'orange',
-        'brown',
-        'grey',
-      ])).isRequired,
+      colors: PropTypes.arrayOf(PropTypes.string).isRequired,
       value: PropTypes.number.isRequired,
     })).isRequired,
     label: PropTypes.string,
@@ -46,6 +43,7 @@ export default class DotPlot extends Component {
   render() {
     const {
       ContextComponent,
+      benchmark,
       data,
       label,
       mouseOverColors,
@@ -59,10 +57,10 @@ export default class DotPlot extends Component {
 
     return (
       <Base { ...rest } className="ax-dot-plot">
-        { getLines(data, mouseOverRowIndex, mouseOverColors, rowIndex)
-          .map(({ faded, fromX, toX }) =>
-            <div className="ax-dot-plot__line-container" key={ fromX }>
-              <DotPlotLine faded={ faded } from={ fromX } to={ toX } />
+        { getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex)
+          .map(({ benchmark, faded, fromX, toX }) =>
+            <div className={ differenceLineContainerClasses(benchmark) } key={ `${fromX}.${toX}` }>
+              <DotPlotDifferenceLine faded={ faded } from={ fromX } to={ toX } />
             </div>
           )
         }
@@ -79,6 +77,14 @@ export default class DotPlot extends Component {
               onMouseEnter={ () => onDotMouseEnter(colors) }
               onMouseLeave={ onDotMouseLeave }
               value={ value } />
+        ) }
+
+        { benchmark && (
+          <div className="ax-dot-plot__benchmark-line-container">
+            <DotPlotBenchmarkLine
+                faded={ isBenchmarkFaded(mouseOverRowIndex, mouseOverColors, rowIndex) }
+                value={ benchmark } />
+          </div>
         ) }
 
         { data.map(({ colors, value }) =>

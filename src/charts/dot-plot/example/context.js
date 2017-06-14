@@ -76,7 +76,8 @@ export default class DotPlotExample extends Component {
               ContextComponent={ ContextDemoComponent }
               axisTitle="% of each something"
               chartKey={ chartKey }
-              chartKeyLineLabel="Size of Difference"
+              chartKeyBenchmarkLabel="Data Benchmark"
+              chartKeyDifferenceLabel="Size of Difference"
               collapsedVisibleRowCount={ 6 }
               data={ data }
               expandButtonSuffix="Categories"
