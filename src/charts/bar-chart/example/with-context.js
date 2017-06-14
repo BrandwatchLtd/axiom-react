@@ -68,14 +68,17 @@ class ContextDemoComponent extends Component {
 export default class BarChartExample extends Component {
   render() {
     return (
-      <Example name="BarChart with Context">
+      <Example name="BarChart with Context and Component Labels">
         <Snippet>
           <BarChart
               ContextComponent={ ContextDemoComponent }
               axisTitle="% of something"
               chartKey={ chartKey }
               collapsedVisibleRowCount={ 6 }
-              data={ data }
+              data={ data.map(datum => ({
+                ...datum,
+                label: <Paragraph>{ datum.label }</Paragraph>,
+              })) }
               expandButtonSuffix="Categories"
               labelColumnWidth="11rem" />
         </Snippet>

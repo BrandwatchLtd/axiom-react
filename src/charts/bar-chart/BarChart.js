@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, isValidElement } from 'react';
 import { Bars, ChartKey, ChartKeyItem, DataPoints, DataPoint } from 'bw-axiom';
 import ChartTable from '../chart-table/ChartTable';
 import ChartTableAxisTitle from '../chart-table/ChartTableAxisTitle';
@@ -81,7 +81,7 @@ export default class BarChart extends Component {
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
           { formattedData.map(({ values, label }, index) =>
-            <ChartTableRow key={ label }>
+            <ChartTableRow key={ isValidElement(label) ? index : label }>
               <ChartTableLabel
                   textStrong={ index === this.state.hoverIndex }
                   width={ labelColumnWidth }>
