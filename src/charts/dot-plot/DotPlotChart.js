@@ -21,7 +21,7 @@ export default class DotPlotChart extends Component {
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
-    chartKeyLineLabel: PropTypes.string.isRequired,
+    chartKeyLineLabel: PropTypes.string,
     collapsedVisibleRowCount: PropTypes.number,
     /**
      * Where the values keys are brand colors and value is the percentage
@@ -136,9 +136,12 @@ export default class DotPlotChart extends Component {
                   </DataPoints>
                 </ChartKeyItem>
               ) }
-              <ChartKeyItem label={ chartKeyLineLabel }>
-                <DotPlotLine width="1rem" />
-              </ChartKeyItem>
+
+              { chartKeyLineLabel && (
+                <ChartKeyItem label={ chartKeyLineLabel }>
+                  <DotPlotLine width="1rem" />
+                </ChartKeyItem>
+              ) }
             </ChartKey>
           </ChartTableKey>
         ) }
