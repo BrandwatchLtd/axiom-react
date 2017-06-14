@@ -126,20 +126,22 @@ export default class DotPlotChart extends Component {
           </ChartTableAxisTitle>
         ) }
 
-        <ChartTableKey>
-          { showKey && <ChartKey>
-            { chartKey.map(({ label, color }) =>
-              <ChartKeyItem key={ label } label={ label }>
-                <DataPoints size="0.75rem">
-                  <DataPoint color={ color } />
-                </DataPoints>
+        { showKey && (
+          <ChartTableKey>
+            <ChartKey>
+              { chartKey.map(({ label, color }) =>
+                <ChartKeyItem key={ label } label={ label }>
+                  <DataPoints size="0.75rem">
+                    <DataPoint color={ color } />
+                  </DataPoints>
+                </ChartKeyItem>
+              ) }
+              <ChartKeyItem label={ chartKeyLineLabel }>
+                <DotPlotLine width="1rem" />
               </ChartKeyItem>
-            ) }
-            <ChartKeyItem label={ chartKeyLineLabel }>
-              <DotPlotLine width="1rem" />
-            </ChartKeyItem>
-          </ChartKey> }
-        </ChartTableKey>
+            </ChartKey>
+          </ChartTableKey>
+        ) }
       </ChartTable>
     );
   }

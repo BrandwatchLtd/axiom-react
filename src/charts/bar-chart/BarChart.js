@@ -29,8 +29,10 @@ export default class BarChart extends Component {
     })).isRequired,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
+    showKey: PropTypes.bool,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
     zoom: PropTypes.bool,
+    zoomMax: PropTypes.number,
   };
 
   constructor(props) {
@@ -43,6 +45,11 @@ export default class BarChart extends Component {
     this.onMouseLeave = () => this.setState({ hoverColor: null, hoverIndex: null });
   }
 
+  static defaultProps = {
+    showKey: true,
+    zoomMax: 50,
+  };
+
   render() {
     const {
       axisTitle,
@@ -52,14 +59,18 @@ export default class BarChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      showKey,
       xAxisLabels,
       zoom,
+      zoomMax,
       ...rest
     } = this.props;
 
     const formattedData = formatData(chartKey, data);
     const highestValue = getHighestValue(data);
-    const zoomValue = zoom ? Math.max(10, Math.min(100, Math.ceil(highestValue / 10) * 10)) : 100;
+    const zoomValue = zoom
+      ? Math.max(zoomMax, Math.min(100, Math.ceil(highestValue / 10) * 10))
+      : 100;
 
     return (
       <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
@@ -102,17 +113,19 @@ export default class BarChart extends Component {
           </ChartTableAxisTitle>
         ) }
 
-        <ChartTableKey>
-          <ChartKey>
-            { chartKey.map(({ label, color }) =>
-              <ChartKeyItem key={ label } label={ label }>
-                <DataPoints size="0.75rem">
-                  <DataPoint color={ color } />
-                </DataPoints>
-              </ChartKeyItem>
-            ) }
-          </ChartKey>
-        </ChartTableKey>
+        { showKey && (
+          <ChartTableKey>
+            <ChartKey>
+              { chartKey.map(({ label, color }) =>
+                <ChartKeyItem key={ label } label={ label }>
+                  <DataPoints size="0.75rem">
+                    <DataPoint color={ color } />
+                  </DataPoints>
+                </ChartKeyItem>
+              ) }
+            </ChartKey>
+          </ChartTableKey>
+        ) }
       </ChartTable>
     );
   }
