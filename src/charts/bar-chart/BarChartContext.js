@@ -13,7 +13,7 @@ export default class BarChartContext extends PureComponent {
     color: PropTypes.string.isRequired,
     data: PropTypes.object.isRequired,
     dataIndex: PropTypes.number.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     labelStrong: PropTypes.bool.isRequired,
     showLabel: PropTypes.bool.isRequired,
     value: PropTypes.number.isRequired,
