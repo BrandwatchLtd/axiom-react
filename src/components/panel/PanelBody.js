@@ -6,7 +6,9 @@ import classnames from 'classnames';
 export default class PanelBody extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    /** Horizontal alignment of content */
     horizontalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
+    /** Vertical alignment of content */
     verticalAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
   };
 

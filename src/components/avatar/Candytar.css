@@ -1,7 +1,7 @@
 @import '../../materials/colors';
 
 .ax-candytar {
-  display: block;
+  display: inline-flex;
 }
 
 .ax-candytar--rose {

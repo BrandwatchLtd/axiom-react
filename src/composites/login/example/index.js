@@ -1,32 +1,43 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Example, Snippet } from 'style-guide';
+import { ExampleConfig } from 'style-guide';
 import { Login } from 'bw-axiom';
 
 class LoginExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      Login: PropTypes.object,
+    }).isRequired,
+  };
 
   handleSubmit({ username, password }) {
     window.alert(`Login attempted with username '${username}' and password '${password}'`);
   }
 
   render() {
-    const containerStyles = {
-      height: '40rem',
+    const { components } = this.props;
+
+    const propTypes = {
+      Login: components.Login,
+    };
+
+    const initialProps = {
+      Login: {
+        application: 'Axiom',
+        backgroundImage: 'assets/axiom-bg.jpg',
+        error: 'Sorry but we don\'t recognise your username and password combination. ' +
+          'Please check your details and try again.',
+        onSubmit: this.handleSubmit.bind(this),
+        theme: 'dark',
+      },
     };
 
     return (
-      <Example name="Login page">
-        <Snippet>
-          <div snippetIgnore={ true } style={ containerStyles }>
-            <Login
-                application="Axiom"
-                backgroundImage="assets/axiom-bg.jpg"
-                error="Sorry but we don't recognise your username and password combination.
-                  Please check your details and try again."
-                onSubmit={ this.handleSubmit.bind(this) }
-                theme="dark" />
-          </div>
-        </Snippet>
-      </Example>
+      <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
+        <div snippetIgnore={ true } style={ { height: '30rem' } }>
+          <Login { ...initialProps.Login } />
+        </div>
+      </ExampleConfig>
     );
   }
 }

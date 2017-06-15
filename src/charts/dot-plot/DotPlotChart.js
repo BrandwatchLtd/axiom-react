@@ -16,27 +16,50 @@ import './DotPlot.css';
 
 export default class DotPlotChart extends Component {
   static propTypes = {
+    /**
+     * Contextual component that appears when click on a dot.
+     * It is provided with the `colors`, `label`, and `value` that has
+     * been clicked on, along with the `data` that was given for that row.
+     */
     ContextComponent: PropTypes.func,
+    /** The title that appears along the xAxis */
     axisTitle: PropTypes.string,
+    /**
+     * The key that is shown along the bottom of the axis. It is also used
+     * to determine the order of stacked dots.
+     */
     chartKey: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
+    /** The description displayed for the benchmarking line in the key */
     chartKeyBenchmarkLabel: PropTypes.string,
+    /** The description displayed for the difference line in the key */
     chartKeyDifferenceLabel: PropTypes.string,
+    /** The number of rows to be visible when collapsed */
     collapsedVisibleRowCount: PropTypes.number,
     /**
-     * Where the values keys are brand colors and value is the percentage
+     * The data used to render the dots. The `label` is used for the yAxis
+     * and `values` for dots
      */
     data: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
     })).isRequired,
+    /** The description given to the expand button */
     expandButtonSuffix: PropTypes.string,
+    /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string.isRequired,
+    /** Control for toggling visibility of the key */
     showKey: PropTypes.bool,
+    /**
+     * Labels to be shown along the xAxis, also used to determine where
+     * grid lines are drawn
+     */
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
+    /** Control for toggling the zoomed view */
     zoom: PropTypes.bool,
+    /** Options for the maximum zoom value */
     zoomMax: PropTypes.number,
   };
 

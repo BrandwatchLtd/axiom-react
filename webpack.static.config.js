@@ -77,6 +77,7 @@ module.exports = {
         '/docs/components/logo',
         '/docs/components/menu',
         '/docs/components/pagination',
+        '/docs/components/panel',
         '/docs/components/pictogram',
         '/docs/components/position',
         '/docs/components/progress',

@@ -9,7 +9,7 @@ export default class Example extends Component {
       PropTypes.node,
       PropTypes.arrayOf(PropTypes.node),
     ]),
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
   };
 
   render() {
@@ -17,7 +17,9 @@ export default class Example extends Component {
 
     return (
       <div className="dm-example">
-        <Heading space="medium" style="title">{ name }</Heading>
+        { name && (
+          <Heading space="medium" style="title">{ name }</Heading>
+        ) }
 
         { children }
       </div>

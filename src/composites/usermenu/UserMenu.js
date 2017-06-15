@@ -27,10 +27,15 @@ function stringToColor(string) {
 export default class UserMenu extends Component {
   static propTypes = {
     children: PropTypes.node,
+    /** User email address */
     email: PropTypes.string.isRequired,
+    /** User first name */
     firstName: PropTypes.string.isRequired,
+    /** User image, if none provided it will default to a Candytar */
     imageSrc: PropTypes.string,
+    /** User last name */
     lastName: PropTypes.string.isRequired,
+    /** Logout handler called when the sign out button is pressed */
     onLogout: PropTypes.func.isRequired,
   };
 

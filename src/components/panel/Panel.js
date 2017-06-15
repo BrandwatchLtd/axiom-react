@@ -7,7 +7,9 @@ import './Panel.css';
 export default class Panel extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    /** Sets inactive styling on the Panel. */
     isInactive: PropTypes.bool,
+    /** Sets a minimum height on the Panel. */
     minimumHeight: PropTypes.string,
   };
 

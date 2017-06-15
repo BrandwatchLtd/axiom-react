@@ -20,18 +20,13 @@ export default class Doc extends Component {
   render() {
     const { pathname } = this.context;
     const { props } = findRoute(pathname);
-    const { examples, name, apiDocs = [] } = props;
-    const components = apiDocs.reduce((docs, componentName) => ({ ...docs,
-      [componentName]: __COMPONENT_PROPS__[componentName],
-    }), {});
+    const { examples, name } = props;
 
     return (
       <div className="dm-doc">
         <div className="dm-doc__header">
           <LayoutContent>
-            <ExampleHeader
-                components={ components }
-                name={ name } />
+            <ExampleHeader name={ name } />
           </LayoutContent>
         </div>
 

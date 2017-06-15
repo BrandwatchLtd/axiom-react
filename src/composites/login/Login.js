@@ -20,10 +20,15 @@ import './Login.css';
 
 export default class Login extends Component {
   static propTypes = {
+    /** Name of the application that appears in the header */
     application: PropTypes.string.isRequired,
+    /** Background image that is behind the login form */
     backgroundImage: PropTypes.string.isRequired,
+    /** An error message that will be placed on the page */
     error: PropTypes.string,
+    /** Controls over the text and input styling for a dark or light background */
     theme: PropTypes.oneOf(['dark', 'light']),
+    /** Submit handler that will be called with the username and password */
     onSubmit: PropTypes.func.isRequired,
   };
 

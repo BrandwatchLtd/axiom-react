@@ -6,6 +6,7 @@ import './Bar.css';
 
 export default class Bar extends Component {
   static propTypes = {
+    /** Background color of the Bar */
     color: PropTypes.oneOf([
       'rose',
       'pink',
@@ -20,11 +21,20 @@ export default class Bar extends Component {
       'brown',
       'grey',
     ]).isRequired,
+    /** Control for applying strong styling to the label */
     labelStrong: PropTypes.bool,
+    /** Minimum thickness of the Bar */
     minSize: PropTypes.string,
+    /**
+     * Percentage value of the Bar, which determines the height and
+     * content for the label
+     */
     percent: PropTypes.number.isRequired,
+    /** Visibility control of the label */
     showLabel: PropTypes.bool,
+    /** Explicit thickness of the Bar */
     size: PropTypes.string,
+    /** onClick handler that activates clickable styling */
     onClick: PropTypes.func,
   };
 

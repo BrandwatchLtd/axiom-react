@@ -5,7 +5,9 @@ import './Word.css';
 
 export default class Word extends Component {
   static propTypes = {
+    /** Delay of appearance animation */
     animationDelay: PropTypes.string,
+    /** Fill color of the word */
     color: PropTypes.oneOf([
       'rose',
       'pink',
@@ -20,16 +22,22 @@ export default class Word extends Component {
       'brown',
       'grey',
     ]),
+    /** Font family of the word */
     font: PropTypes.oneOf(['Roboto, Helvetica, Arial, sans-serif']).isRequired,
+    /** Font size of the word */
     fontSize: PropTypes.string,
+    /** The content of the word */
     text: PropTypes.string,
+    /** Where the word should be horizontal positioned from */
     textAnchor: PropTypes.oneOf([
       'start',
       'middle',
       'end',
       'inherit',
     ]),
+    /** x coordinate of the word */
     x: PropTypes.number.isRequired,
+    /** y coordinate of the word */
     y: PropTypes.number.isRequired,
   };
 

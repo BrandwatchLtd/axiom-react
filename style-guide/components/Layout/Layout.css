@@ -10,7 +10,7 @@
   --sg-sidebar-width: 15rem;
   --sg-sidebar-border-width: 0.0625rem;
 
-  --sg-z-index-layout-header: 1;
+  --sg-z-index-layout-header: 2;
 }
 
 .dm-layout {

@@ -16,19 +16,7 @@ describe('DataPoint', () => {
   });
 
   it('renders with radius', () => {
-    const component = getComponent({ radius: 10 });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with x', () => {
-    const component = getComponent({ x: 10 });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with y', () => {
-    const component = getComponent({ y: 10 });
+    const component = getComponent({ r: 10 });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

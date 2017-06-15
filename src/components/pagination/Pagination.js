@@ -12,9 +12,13 @@ import {
 
 export default class Pagination extends Component {
   static propTypes = {
+    /** Active page number */
     currentPage: PropTypes.number.isRequired,
+    /** The number of page buttons to visible at any time */
     displayRange: PropTypes.number,
+    /** The total number of pages that are available  */
     totalPages: PropTypes.number.isRequired,
+    /** Page change handler that will be called with a page number */
     onPageChange: PropTypes.func.isRequired,
   };
 

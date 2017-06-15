@@ -7,7 +7,9 @@ import './Bars.css';
 export default class Bars extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    /** Direction in which the bars will ascend to */
     direction: PropTypes.oneOf(['up', 'right', 'down', 'left']),
+    /** The label placed at the start of the Bars  */
     label: PropTypes.string,
   };
 

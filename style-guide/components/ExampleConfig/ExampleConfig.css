@@ -1,0 +1,27 @@
+@import '../../../src/materials/colors';
+@import '../../../src/materials/sizing';
+
+.dm-example {
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
+}
+
+.dm-example__visual {
+  position: sticky;
+  top: 0;
+  padding: calc(var(--spacing-grid-size) * 5);
+  box-shadow:
+    0.125rem 0 0.0625rem var(--color-context-background),
+    -1.2rem 0 0.0625rem var(--color-context-background),
+    0 0 0.25rem var(--color-context-text-disabled);
+  background-color: var(--color-context-background);
+  z-index: 1;
+}
+
+.dm-example__prop {
+  padding: calc(var(--spacing-grid-size) * 3);
+}
+
+.dm-example__prop:nth-child(odd) {
+  border-radius: var(--component-border-radius);
+  background-color: var(--color-context-background-active);
+}

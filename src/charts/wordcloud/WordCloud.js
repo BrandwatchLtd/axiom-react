@@ -5,7 +5,15 @@ import { Base } from 'bw-axiom';
 export default class WordCloud extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    /**
+     * Height of the WordCloud view box that the words y
+     * coordinates are plotted against
+     */
     height: PropTypes.number.isRequired,
+    /**
+     * Width of the WordCloud view box that the words x
+     * coordinates are plotted against
+     */
     width: PropTypes.number.isRequired,
   };
 

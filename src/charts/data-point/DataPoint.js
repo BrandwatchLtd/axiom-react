@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import { VB_HEIGHT } from './DataPoints';
 
 export default class DataPoint extends Component {
   static propTypes = {
+    /** Background color of the DataPoint */
     color: PropTypes.oneOf([
       'rose',
       'pink',
@@ -18,21 +20,17 @@ export default class DataPoint extends Component {
       'brown',
       'grey',
     ]).isRequired,
-    radius: PropTypes.number,
-    x: PropTypes.number,
-    y: PropTypes.number,
   };
 
   render() {
-    const { color, radius, x, y, ...rest } = this.props;
+    const { color, ...rest } = this.props;
     const classes = classnames('ax-data-point', `ax-data-point--${color}`);
 
     return (
       <circle { ...rest }
           className={ classes }
-          cx={ x }
-          cy={ y }
-          r={ radius } />
+          cx={ VB_HEIGHT / 2 }
+          cy={ VB_HEIGHT / 2 } />
     );
   }
 }

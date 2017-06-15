@@ -3,143 +3,112 @@
 exports[`DataPoint renders with color amber 1`] = `
 <circle
   className="ax-data-point ax-data-point--amber"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color blue 1`] = `
 <circle
   className="ax-data-point ax-data-point--blue"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color brown 1`] = `
 <circle
   className="ax-data-point ax-data-point--brown"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color chartreuse 1`] = `
 <circle
   className="ax-data-point ax-data-point--chartreuse"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color green 1`] = `
 <circle
   className="ax-data-point ax-data-point--green"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color grey 1`] = `
 <circle
   className="ax-data-point ax-data-point--grey"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color lilac 1`] = `
 <circle
   className="ax-data-point ax-data-point--lilac"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color orange 1`] = `
 <circle
   className="ax-data-point ax-data-point--orange"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color pink 1`] = `
 <circle
   className="ax-data-point ax-data-point--pink"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color purple 1`] = `
 <circle
   className="ax-data-point ax-data-point--purple"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color rose 1`] = `
 <circle
   className="ax-data-point ax-data-point--rose"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with color teal 1`] = `
 <circle
   className="ax-data-point ax-data-point--teal"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with defaultProps 1`] = `
 <circle
   className="ax-data-point ax-data-point--undefined"
-  cx={undefined}
-  cy={undefined}
-  r={undefined}
+  cx={12}
+  cy={12}
 />
 `;
 
 exports[`DataPoint renders with radius 1`] = `
 <circle
   className="ax-data-point ax-data-point--undefined"
-  cx={undefined}
-  cy={undefined}
+  cx={12}
+  cy={12}
   r={10}
-/>
-`;
-
-exports[`DataPoint renders with x 1`] = `
-<circle
-  className="ax-data-point ax-data-point--undefined"
-  cx={10}
-  cy={undefined}
-  r={undefined}
-/>
-`;
-
-exports[`DataPoint renders with y 1`] = `
-<circle
-  className="ax-data-point ax-data-point--undefined"
-  cx={undefined}
-  cy={10}
-  r={undefined}
 />
 `;
