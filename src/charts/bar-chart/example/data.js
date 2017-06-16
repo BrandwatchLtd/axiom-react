@@ -1,7 +1,7 @@
 export const chartKey = [
   { color: 'blue', label: 'Brand A' },
   { color: 'pink', label: 'Brand B' },
-  { color: 'orange', label: 'Brand C' },
+  { color: 'lilac', label: 'Brand C' },
 ];
 
 export const data = [

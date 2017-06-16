@@ -228,6 +228,12 @@ export default (
             examples={ require('../src/charts/bars/example') }
             component={ Doc } />
         <Route
+            path="bar-chart"
+            name="Bar Chart"
+            apiDocs={ ['BarChart'] }
+            examples={ require('../src/charts/bar-chart/example') }
+            component={ Doc } />
+        <Route
             path="chart"
             name="Chart"
             apiDocs={ ['Chart', 'ChartBody', 'ChartHeader', 'ChartTitle'] }
@@ -238,12 +244,6 @@ export default (
             name="Chart Heading"
             apiDocs={ ['ChartHeading'] }
             examples={ require('../src/charts/chart-heading/example') }
-            component={ Doc } />
-        <Route
-            path="chart-table"
-            name="Chart Table"
-            apiDocs={ ['ChartTable', 'ChartTableGrid', 'ChartTableRows', 'ChartTableRow', 'ChartTableLabel', 'ChartTableVisual', 'ChartTableAxis', 'ChartTableKey'] }
-            examples={ require('../src/charts/chart-table/example') }
             component={ Doc } />
         <Route
             path="column-chart"

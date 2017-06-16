@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { DotPlotChart } from 'bw-axiom';
+import { BarChart } from 'bw-axiom';
 import { chartKey, data } from './data';
 
-export default class DotPlotChartExample extends Component {
+export default class BarChartExample extends Component {
   render() {
     return (
-      <Example name="DotPlotChart without chart key or title">
+      <Example name="Basic BarChart">
         <Snippet>
-          <DotPlotChart
+          <BarChart
+              axisTitle="% of something"
               chartKey={ chartKey }
               data={ data }
-              labelColumnWidth="11rem"
-              showKey={ false } />
+              labelColumnWidth="11rem" />
         </Snippet>
       </Example>
     );

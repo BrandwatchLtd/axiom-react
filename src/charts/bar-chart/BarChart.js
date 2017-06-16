@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { ChartKey, ChartKeyItem, DataPoint, DataPoints } from 'bw-axiom';
+import React, { Component, isValidElement } from 'react';
+import { Bars, ChartKey, ChartKeyItem, DataPoints, DataPoint } from 'bw-axiom';
 import ChartTable from '../chart-table/ChartTable';
 import ChartTableAxisTitle from '../chart-table/ChartTableAxisTitle';
 import ChartTableKey from '../chart-table/ChartTableKey';
@@ -8,12 +8,10 @@ import ChartTableLabel from '../chart-table/ChartTableLabel';
 import ChartTableRow from '../chart-table/ChartTableRow';
 import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
-import DotPlot from './DotPlot';
-import DotPlotLine from './DotPlotLine';
+import BarChartContext from './BarChartContext';
 import { formatData, getHighestValue } from './utils';
-import './DotPlot.css';
 
-export default class DotPlotChart extends Component {
+export default class BarChart extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
     axisTitle: PropTypes.string,
@@ -21,7 +19,6 @@ export default class DotPlotChart extends Component {
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
-    chartKeyLineLabel: PropTypes.string,
     collapsedVisibleRowCount: PropTypes.number,
     /**
      * Where the values keys are brand colors and value is the percentage
@@ -41,9 +38,11 @@ export default class DotPlotChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mouseOverColors: [],
-      mouseOverRowIndex: -1,
+      hoverColor: null,
+      hoverIndex: null,
     };
+    this.onMouseEnter = (hoverIndex, hoverColor) => this.setState({ hoverColor, hoverIndex });
+    this.onMouseLeave = () => this.setState({ hoverColor: null, hoverIndex: null });
   }
 
   static defaultProps = {
@@ -51,25 +50,10 @@ export default class DotPlotChart extends Component {
     zoomMax: 50,
   };
 
-  handleDotMouseEnter(rowIndex, colors) {
-    this.setState({
-      mouseOverColors: colors,
-      mouseOverRowIndex: rowIndex,
-    });
-  }
-
-  handleDotMouseLeave() {
-    this.setState({
-      mouseOverColors: [],
-      mouseOverRowIndex: -1,
-    });
-  }
-
   render() {
     const {
       axisTitle,
       chartKey,
-      chartKeyLineLabel,
       collapsedVisibleRowCount,
       ContextComponent,
       data,
@@ -82,7 +66,6 @@ export default class DotPlotChart extends Component {
       ...rest
     } = this.props;
 
-    const { mouseOverColors, mouseOverRowIndex } = this.state;
     const formattedData = formatData(chartKey, data);
     const highestValue = getHighestValue(data);
     const zoomValue = zoom
@@ -98,23 +81,29 @@ export default class DotPlotChart extends Component {
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
           { formattedData.map(({ values, label }, index) =>
-            <ChartTableRow key={ label }>
+            <ChartTableRow key={ isValidElement(label) ? index : label }>
               <ChartTableLabel
-                  textStrong={ index === mouseOverRowIndex }
+                  textStrong={ index === this.state.hoverIndex }
                   width={ labelColumnWidth }>
                 { label }
               </ChartTableLabel>
               <ChartTableVisual>
-                <DotPlot
-                    ContextComponent={ ContextComponent }
-                    data={ values }
-                    label={ label }
-                    mouseOverColors={ mouseOverColors }
-                    mouseOverRowIndex={ mouseOverRowIndex }
-                    onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
-                    onDotMouseLeave={ () => this.handleDotMouseLeave() }
-                    rawData={ data[index] }
-                    rowIndex={ index }  />
+                <Bars direction="right">
+                  { values.map(({ color, value }) =>
+                    <BarChartContext
+                        ContextComponent={ ContextComponent }
+                        color={ color }
+                        data={ data[index] }
+                        dataIndex={ index }
+                        key={ color }
+                        label={ label }
+                        labelStrong={ index === this.state.hoverIndex }
+                        onMouseEnter={ this.onMouseEnter }
+                        onMouseLeave={ this.onMouseLeave }
+                        showLabel={ color === this.state.hoverColor }
+                        value={ value } />
+                  ) }
+                </Bars>
               </ChartTableVisual>
             </ChartTableRow>
           ) }
@@ -134,12 +123,6 @@ export default class DotPlotChart extends Component {
                   <DataPoints size="0.75rem">
                     <DataPoint color={ color } />
                   </DataPoints>
-                </ChartKeyItem>
-              ) }
-
-              { chartKeyLineLabel && (
-                <ChartKeyItem label={ chartKeyLineLabel }>
-                  <DotPlotLine width="1rem" />
                 </ChartKeyItem>
               ) }
             </ChartKey>

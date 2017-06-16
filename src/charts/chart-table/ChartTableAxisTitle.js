@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import { Paragraph, Small } from 'bw-axiom';
 
-export default class ChartTableCell extends Component {
+export default class ChartTableAxisTitle extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -11,11 +11,9 @@ export default class ChartTableCell extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          Component="td"
-          className="ax-chart-table__cell">
-        { children }
-      </Base>
+      <Paragraph { ...rest } textCenter={ true } textColor="subtle">
+        <Small>{ children }</Small>
+      </Paragraph>
     );
   }
 }

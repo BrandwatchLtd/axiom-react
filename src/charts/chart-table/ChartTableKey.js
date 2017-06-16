@@ -11,9 +11,7 @@ export default class ChartTableKey extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          className="ax-chart-table__key"
-          space="tiny">
+      <Base { ...rest } className="ax-chart-table__key" space="tiny">
         { children }
       </Base>
     );

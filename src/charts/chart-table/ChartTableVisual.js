@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import ChartTableCell from './ChartTableCell';
 
 export default class ChartTableVisual extends Component {
   static propTypes = {
@@ -11,9 +10,9 @@ export default class ChartTableVisual extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <ChartTableCell { ...rest }>
+      <div { ...rest } className="ax-chart-table__visual">
         { children }
-      </ChartTableCell>
+      </div>
     );
   }
 }

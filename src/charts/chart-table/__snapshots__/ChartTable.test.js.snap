@@ -8,17 +8,17 @@ exports[`ChartTable renders with defaultProps 1`] = `
 </div>
 `;
 
-exports[`ChartTable renders with labelColumnWidth 1`] = `
+exports[`ChartTable renders with even number of xAxisLabels 1`] = `
 <div
-  className="ax-chart-table ax-chart-table--responsive"
+  className="ax-chart-table"
 >
   Lorem Ipsum
 </div>
 `;
 
-exports[`ChartTable renders without responsive 1`] = `
+exports[`ChartTable renders with odd number of xAxisLabels 1`] = `
 <div
-  className="ax-chart-table"
+  className="ax-chart-table ax-chart-table--responsive"
 >
   Lorem Ipsum
 </div>

@@ -1,14 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ChartTableKey from './ChartTableKey';
+import ChartTableLabel from './ChartTableLabel';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ChartTableKey { ...props }>Lorem</ChartTableKey>
+    <ChartTableLabel { ...props } width="11rem">
+      Lorem Ipsum
+    </ChartTableLabel>
   );
 }
 
-describe('ChartTableKey', () => {
+describe('ChartTableLabel', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();

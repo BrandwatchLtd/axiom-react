@@ -11,9 +11,7 @@ export default class ChartTableRow extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          Component="tr"
-          className="ax-chart-table__row">
+      <Base { ...rest } className="ax-chart-table__row">
         { children }
       </Base>
     );

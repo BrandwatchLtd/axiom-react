@@ -20,6 +20,7 @@ export default class Bar extends Component {
       'brown',
       'grey',
     ]).isRequired,
+    labelStrong: PropTypes.bool,
     minSize: PropTypes.string,
     percent: PropTypes.number.isRequired,
     showLabel: PropTypes.bool,
@@ -28,6 +29,7 @@ export default class Bar extends Component {
   };
 
   static defaultProps = {
+    labelStrong: false,
     minSize: '1rem',
   };
 
@@ -37,11 +39,15 @@ export default class Bar extends Component {
 
   render() {
     const { direction } = this.context;
-    const { color, onClick, minSize, percent, showLabel, size, ...rest } = this.props;
+    const { color, labelStrong, onClick, minSize, percent, showLabel, size, ...rest } = this.props;
     const isVertical = direction === 'up' || direction === 'down';
     const classes = classnames('ax-bars__bar', {
       'ax-bars__bar--center': size,
       'ax-bars__bar--clickable': onClick,
+    });
+
+    const labelClasses = classnames('ax-bars__bar-label', {
+      'ax-bars__bar-label--hidden': !showLabel,
     });
 
     const rectClasses = classnames('ax-bars__bar-rect',
@@ -65,12 +71,9 @@ export default class Bar extends Component {
           onClick={ onClick }
           style={ style }>
         <div className={ rectClasses } style={ rectStyle } />
-
-        { showLabel && (
-          <div className="ax-bars__bar-label">
-            <Small textColor="subtle">{ percent }%</Small>
-          </div>
-        ) }
+        <div className={ labelClasses }>
+          <Small textStrong={ labelStrong }>{ percent }%</Small>
+        </div>
       </Base>
     );
   }
