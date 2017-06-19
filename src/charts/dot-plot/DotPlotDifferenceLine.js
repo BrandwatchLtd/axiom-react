@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-export default class DotPlotLine extends Component {
+export default class DotPlotDifferenceLine extends Component {
   static propTypes = {
     faded: PropTypes.bool,
     from: PropTypes.number,
@@ -32,14 +32,14 @@ export default class DotPlotLine extends Component {
 
     const style = { height, width };
     const lineStyle = { left: `${fromX}%`, right: `${100 - to}%` };
-    const classes = classnames('ax-dot-plot__line', {
-      'ax-dot-plot__line--faded': faded,
-      'ax-dot-plot__line--hidden': hidden,
+    const classes = classnames('ax-dot-plot__difference-line', {
+      'ax-dot-plot__difference-line--faded': faded,
+      'ax-dot-plot__difference-line--hidden': hidden,
     });
 
     return (
       <div { ...rest } className={ classes } style={ style }>
-        <div className="ax-dot-plot__line-path" style={ lineStyle } />
+        <div className="ax-dot-plot__difference-line-path" style={ lineStyle } />
       </div>
     );
   }

@@ -4,7 +4,7 @@
 @import '../vars';
 
 :root {
-  --cmp-dot-plot-line-width: 0.0625rem;
+  --cmp-dot-plot-difference-line-width: 0.0625rem;
 }
 
 .ax-dot-plot {
@@ -37,36 +37,52 @@
   pointer-events: none;
 }
 
-.ax-dot-plot__line-container {
+.ax-dot-plot__benchmark-line-container,
+.ax-dot-plot__difference-line-container {
   position: absolute;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
-.ax-dot-plot__line {
+.ax-dot-plot__benchmark-line-container  {
+  top: 50%;
+}
+
+.ax-dot-plot__benchmark-line,
+.ax-dot-plot__difference-line {
   position: relative;
   transition-property: opacity;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 }
 
-.ax-dot-plot__line-path {
+.ax-dot-plot__benchmark-line-path {
   position: absolute;
   top: 50%;
-  border-top: var(--cmp-dot-plot-line-width) solid var(--color-theme-light-text-disabled);
+  height: var(--cmp-benchmark-line-height);
+  transform: translate(0, -50%);
+  border-right: var(--cmp-benchmark-line-width) solid var(--color-context-text-disabled);
 }
 
-.ax-dot-plot__line-container .ax-dot-plot__line-path {
+.ax-dot-plot__difference-line-path {
+  position: absolute;
+  top: 50%;
+  border-top: var(--cmp-dot-plot-difference-line-width) solid var(--color-context-text-disabled);
+}
+
+.ax-dot-plot__difference-line-container--dot .ax-dot-plot__difference-line-path {
   margin-left: var(--cmp-dot-plot-diameter);
 }
 
 .ax-dot-plot__dots--hidden,
-.ax-dot-plot__line--hidden,
+.ax-dot-plot__difference-line--hidden,
 .ax-dot-plot__value--hidden {
   opacity: 0;
 }
 
-.ax-dot-plot__line--faded,
+.ax-dot-plot__benchmark-line--faded,
+.ax-dot-plot__difference-line--faded,
 .ax-dot-plot__dots--faded {
   opacity: 0.25;
 }

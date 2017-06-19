@@ -17,17 +17,18 @@ const chartKey = [
 ];
 
 const data = [
-  { label: 'Family', values: { blue: 0, lilac: 100, pink: 50 } },
-  { label: 'Games', values: { blue: 40, lilac: 53, pink: 40 } },
-  { label: 'Family & Parenting', values: { blue: 50, lilac: 50, pink: 50 } },
-  { label: 'Technology', values: { blue: 69 } },
-  { label: 'Books', values: { blue: 25, lilac: 50 } },
+  { label: 'Family', benchmark: 33,  values: { blue: 0, lilac: 100, pink: 50 } },
+  { label: 'Games', benchmark: 33, values: { blue: 40, lilac: 53, pink: 40 } },
+  { label: 'Family & Parenting', benchmark: 33, values: { blue: 50, lilac: 50, pink: 50 } },
+  { label: 'Technology', benchmark: 33, values: { blue: 69 } },
+  { label: 'Books', benchmark: 33, values: { blue: 25, lilac: 50 } },
 ];
 
 describe('DotPlot (utils)', () => {
   it('formats data', () => {
     expect(formatData(chartKey, data)).toEqual([{
       label: 'Family',
+      benchmark: 33,
       values: [{
         value: 0,
         colors: ['blue'],
@@ -40,6 +41,7 @@ describe('DotPlot (utils)', () => {
       }],
     }, {
       label: 'Games',
+      benchmark: 33,
       values: [{
         value: 40,
         colors: ['blue', 'pink'],
@@ -49,18 +51,21 @@ describe('DotPlot (utils)', () => {
       }],
     }, {
       label: 'Family & Parenting',
+      benchmark: 33,
       values: [{
         value: 50,
         colors: ['blue', 'pink', 'lilac'],
       }],
     }, {
       label: 'Technology',
+      benchmark: 33,
       values: [{
         value: 69,
         colors: ['blue'],
       }],
     }, {
       label: 'Books',
+      benchmark: 33,
       values: [{
         value: 25,
         colors: ['blue'],
@@ -149,7 +154,12 @@ describe('DotPlot (utils)', () => {
             { colors: ['red'], value: 10 },
             { colors: ['green'], value: 20 },
             { colors: ['blue'], value: 30 },
-          ], 1, ['red'], 2)).toEqual([]);
+          ], 33, 1, ['red'], 2)).toEqual([{
+            benchmark: false,
+            faded: true,
+            fromX: 10,
+            toX: 33,
+          }]);
         });
       });
 
@@ -197,12 +207,12 @@ describe('DotPlot (utils)', () => {
         it('shows faded lines between the remaining visible dots', () => {
           expect(getLines([
             { colors: ['red'], value: 10 },
-            { colors: ['green'], value: 20 },
-            { colors: ['blue'], value: 30 },
-          ], 1, ['green', 'blue'], 2)).toEqual([{
+            { colors: ['green', 'blue'], value: 20 },
+          ], 33, 1, ['green', 'blue'], 2)).toEqual([{
+            benchmark: false,
             faded: true,
             fromX: 20,
-            toX: 30,
+            toX: 33,
           }]);
         });
       });
@@ -216,6 +226,23 @@ describe('DotPlot (utils)', () => {
         it('shows the value of the hovered dot', () => {
           expect(isValueHidden(1, ['red', 'green'], 1, ['red', 'green']))
             .toEqual(false);
+        });
+
+        it('shows faded lines between all the dots', () => {
+          expect(getLines([
+            { colors: ['red'], value: 10 },
+            { colors: ['green', 'blue'], value: 20 },
+          ], 33, 1, ['green', 'blue'], 1)).toEqual([{
+            benchmark: false,
+            faded: true,
+            fromX: 10,
+            toX: 20,
+          }, {
+            benchmark: false,
+            faded: true,
+            fromX: 20,
+            toX: 33,
+          }]);
         });
       });
     });

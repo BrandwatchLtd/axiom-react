@@ -9,7 +9,8 @@ import ChartTableRow from '../chart-table/ChartTableRow';
 import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
 import DotPlot from './DotPlot';
-import DotPlotLine from './DotPlotLine';
+import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
+import DotPlotDifferenceLine from './DotPlotDifferenceLine';
 import { formatData, getHighestValue } from './utils';
 import './DotPlot.css';
 
@@ -21,7 +22,8 @@ export default class DotPlotChart extends Component {
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
-    chartKeyLineLabel: PropTypes.string,
+    chartKeyBenchmarkLabel: PropTypes.string,
+    chartKeyDifferenceLabel: PropTypes.string,
     collapsedVisibleRowCount: PropTypes.number,
     /**
      * Where the values keys are brand colors and value is the percentage
@@ -38,6 +40,11 @@ export default class DotPlotChart extends Component {
     zoomMax: PropTypes.number,
   };
 
+  static defaultProps = {
+    showKey: true,
+    zoomMax: 50,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -45,11 +52,6 @@ export default class DotPlotChart extends Component {
       mouseOverRowIndex: -1,
     };
   }
-
-  static defaultProps = {
-    showKey: true,
-    zoomMax: 50,
-  };
 
   handleDotMouseEnter(rowIndex, colors) {
     this.setState({
@@ -69,7 +71,8 @@ export default class DotPlotChart extends Component {
     const {
       axisTitle,
       chartKey,
-      chartKeyLineLabel,
+      chartKeyBenchmarkLabel,
+      chartKeyDifferenceLabel,
       collapsedVisibleRowCount,
       ContextComponent,
       data,
@@ -97,7 +100,7 @@ export default class DotPlotChart extends Component {
             labelColumnWidth={ labelColumnWidth }
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
-          { formattedData.map(({ values, label }, index) =>
+          { formattedData.map(({ values, benchmark, label }, index) =>
             <ChartTableRow key={ label }>
               <ChartTableLabel
                   textStrong={ index === mouseOverRowIndex }
@@ -107,6 +110,7 @@ export default class DotPlotChart extends Component {
               <ChartTableVisual>
                 <DotPlot
                     ContextComponent={ ContextComponent }
+                    benchmark={ benchmark }
                     data={ values }
                     label={ label }
                     mouseOverColors={ mouseOverColors }
@@ -129,6 +133,12 @@ export default class DotPlotChart extends Component {
         { showKey && (
           <ChartTableKey>
             <ChartKey>
+              { chartKeyBenchmarkLabel && (
+                <ChartKeyItem label={ chartKeyBenchmarkLabel }>
+                  <DotPlotBenchmarkLine width="0.75rem" />
+                </ChartKeyItem>
+              ) }
+
               { chartKey.map(({ label, color }) =>
                 <ChartKeyItem key={ label } label={ label }>
                   <DataPoints size="0.75rem">
@@ -137,9 +147,9 @@ export default class DotPlotChart extends Component {
                 </ChartKeyItem>
               ) }
 
-              { chartKeyLineLabel && (
-                <ChartKeyItem label={ chartKeyLineLabel }>
-                  <DotPlotLine width="1rem" />
+              { chartKeyDifferenceLabel && (
+                <ChartKeyItem label={ chartKeyDifferenceLabel }>
+                  <DotPlotDifferenceLine width="1rem" />
                 </ChartKeyItem>
               ) }
             </ChartKey>

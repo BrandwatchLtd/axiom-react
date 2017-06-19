@@ -11,7 +11,8 @@ export default class DotPlotChartExample extends Component {
           <DotPlotChart
               axisTitle="% of each something"
               chartKey={ chartKey }
-              chartKeyLineLabel="Size of Difference"
+              chartKeyBenchmarkLabel="Data Benchmark"
+              chartKeyDifferenceLabel="Size of Difference"
               collapsedVisibleRowCount={ 6 }
               data={ data }
               expandButtonSuffix="Categories"
