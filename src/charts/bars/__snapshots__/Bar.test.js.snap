@@ -37,8 +37,7 @@ exports[`Bar renders with color amber 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -84,8 +83,7 @@ exports[`Bar renders with color blue 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -131,8 +129,7 @@ exports[`Bar renders with color brown 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -178,8 +175,7 @@ exports[`Bar renders with color chartreuse 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -225,8 +221,7 @@ exports[`Bar renders with color green 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -272,8 +267,7 @@ exports[`Bar renders with color grey 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -319,8 +313,7 @@ exports[`Bar renders with color lilac 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -366,8 +359,7 @@ exports[`Bar renders with color orange 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -413,8 +405,7 @@ exports[`Bar renders with color pink 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -460,8 +451,7 @@ exports[`Bar renders with color purple 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -507,8 +497,7 @@ exports[`Bar renders with color rose 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -554,8 +543,7 @@ exports[`Bar renders with color teal 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -601,8 +589,7 @@ exports[`Bar renders with defaultProps 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -648,8 +635,7 @@ exports[`Bar renders with labelStrong 1`] = `
           <small
             className="ax-small ax-text--strong"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -695,8 +681,7 @@ exports[`Bar renders with minSize down 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -742,8 +727,7 @@ exports[`Bar renders with minSize left 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -789,8 +773,7 @@ exports[`Bar renders with minSize right 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -836,8 +819,7 @@ exports[`Bar renders with minSize up 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -883,8 +865,7 @@ exports[`Bar renders with onClick 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -930,8 +911,7 @@ exports[`Bar renders with showLabel 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -977,8 +957,7 @@ exports[`Bar renders with size and minSize down 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1024,8 +1003,7 @@ exports[`Bar renders with size and minSize left 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1071,8 +1049,7 @@ exports[`Bar renders with size and minSize right 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1118,8 +1095,7 @@ exports[`Bar renders with size and minSize up 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1165,8 +1141,7 @@ exports[`Bar renders with size down 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1212,8 +1187,7 @@ exports[`Bar renders with size left 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1259,8 +1233,7 @@ exports[`Bar renders with size right 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -1306,8 +1279,7 @@ exports[`Bar renders with size up 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>

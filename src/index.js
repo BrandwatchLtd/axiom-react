@@ -115,6 +115,7 @@ export { default as Weak } from './components/typography/Weak';
 export { default as Bar } from './charts/bars/Bar';
 export { default as BarChart } from './charts/bar-chart/BarChart';
 export { default as Bars } from './charts/bars/Bars';
+export { default as BulletChart } from './charts/bullet-chart/BulletChart';
 export { default as Chart } from './charts/chart/Chart';
 export { default as ChartBody } from './charts/chart/ChartBody';
 export { default as ChartHeader } from './charts/chart/ChartHeader';
