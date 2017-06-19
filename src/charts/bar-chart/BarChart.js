@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, isValidElement } from 'react';
 import { Bars, ChartKey, ChartKeyItem, DataPoints, DataPoint } from 'bw-axiom';
 import ChartTable from '../chart-table/ChartTable';
 import ChartTableAxisTitle from '../chart-table/ChartTableAxisTitle';
@@ -30,6 +30,7 @@ export default class BarChart extends Component {
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
     showKey: PropTypes.bool,
+    size: PropTypes.string,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
     zoom: PropTypes.bool,
     zoomMax: PropTypes.number,
@@ -60,6 +61,7 @@ export default class BarChart extends Component {
       expandButtonSuffix,
       labelColumnWidth,
       showKey,
+      size,
       xAxisLabels,
       zoom,
       zoomMax,
@@ -81,7 +83,7 @@ export default class BarChart extends Component {
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
           { formattedData.map(({ values, label }, index) =>
-            <ChartTableRow key={ label }>
+            <ChartTableRow key={ isValidElement(label) ? index : label }>
               <ChartTableLabel
                   textStrong={ index === this.state.hoverIndex }
                   width={ labelColumnWidth }>
@@ -101,6 +103,7 @@ export default class BarChart extends Component {
                         onMouseEnter={ this.onMouseEnter }
                         onMouseLeave={ this.onMouseLeave }
                         showLabel={ color === this.state.hoverColor }
+                        size={ size }
                         value={ value } />
                   ) }
                 </Bars>
