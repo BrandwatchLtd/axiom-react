@@ -15,7 +15,7 @@ export default class BarChartContext extends PureComponent {
     dataIndex: PropTypes.number.isRequired,
     label: PropTypes.node.isRequired,
     labelStrong: PropTypes.bool.isRequired,
-    showLabel: PropTypes.bool.isRequired,
+    showBarLabel: PropTypes.bool.isRequired,
     size: PropTypes.string,
     value: PropTypes.number.isRequired,
     onMouseEnter: PropTypes.func,
@@ -32,7 +32,7 @@ export default class BarChartContext extends PureComponent {
       labelStrong,
       onMouseEnter,
       onMouseLeave,
-      showLabel,
+      showBarLabel,
       size,
       value,
       ...rest
@@ -45,7 +45,7 @@ export default class BarChartContext extends PureComponent {
           onMouseEnter={ onMouseEnter && function() { onMouseEnter(dataIndex, color); } }
           onMouseLeave={ onMouseLeave }
           percent={ value }
-          showLabel={ showLabel }
+          showLabel={ showBarLabel }
           size={ size } />
     );
 

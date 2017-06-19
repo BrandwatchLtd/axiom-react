@@ -27,6 +27,7 @@ export default class ColumnChart extends Component {
     height: PropTypes.string.isRequired,
     label: PropTypes.node,
     labelColumnWidth: PropTypes.string,
+    showBarLabel: PropTypes.bool,
     showSubLabel: PropTypes.bool,
     showXAxisLabels: PropTypes.bool,
   };
@@ -58,6 +59,7 @@ export default class ColumnChart extends Component {
       height,
       label,
       labelColumnWidth,
+      showBarLabel,
       showSubLabel,
       showXAxisLabels,
       ...rest
@@ -88,6 +90,9 @@ export default class ColumnChart extends Component {
                         key={ color }
                         label={ label }
                         labelStrong={ index === this.state.hoverIndex }
+                        onMouseEnter={ showBarLabel ? undefined : this.onMouseEnter }
+                        onMouseLeave={ showBarLabel ? undefined : this.onMouseEnter }
+                        showBarLabel={ showBarLabel || color === this.state.hoverColor }
                         value={ value }/>
                   ) }
                 </Bars>

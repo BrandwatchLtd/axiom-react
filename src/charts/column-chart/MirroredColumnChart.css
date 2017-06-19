@@ -1,0 +1,4 @@
+.ax-mirrored-column-chart {
+  display: flex;
+  flex-direction: column;
+}

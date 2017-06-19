@@ -4,26 +4,13 @@ import { Base } from 'bw-axiom';
 import ColumnChart from './ColumnChart';
 import ColumnChartXAxis from './ColumnChartXAxis';
 import ColumnChartXAxisLabel from './ColumnChartXAxisLabel';
-import './ColumnChart.css';
+import './MirroredColumnChart.css';
 
 export default class MirroredColumnChart extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
     chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.oneOf([
-        'rose',
-        'pink',
-        'purple',
-        'lilac',
-        'blue',
-        'teal',
-        'green',
-        'chartreuse',
-        'amber',
-        'orange',
-        'brown',
-        'grey',
-      ]).isRequired,
+      color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
     data: PropTypes.arrayOf(PropTypes.shape({
@@ -60,15 +47,13 @@ export default class MirroredColumnChart extends Component {
 
     return (
       <Base { ...rest }
-          className="ax-column-chart"
-          style={ { height } }>
+          className="ax-mirrored-column-chart">
         <ColumnChart
-            { ...rest }
             ContextComponent={ ContextComponent }
             chartKey={ chartKey }
             data={ data }
             direction="up"
-            height="20rem"
+            height={ height }
             label={ label }
             labelColumnWidth={ labelColumnWidth }/>
 
@@ -81,12 +66,11 @@ export default class MirroredColumnChart extends Component {
         </ColumnChartXAxis>
 
         <ColumnChart
-            { ...rest }
             ContextComponent={ ContextComponent }
             chartKey={ chartKey }
             data={ reflectionData }
             direction="down"
-            height="20rem"
+            height={ height }
             label={ reflectionLabel }
             labelColumnWidth={ labelColumnWidth }/>
       </Base>

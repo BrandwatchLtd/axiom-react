@@ -15,7 +15,7 @@ export default class ColumnChartExample extends Component {
           <MirroredColumnChart
               chartKey={ chartKey }
               data={ data }
-              height="20rem"
+              height="10rem"
               label={
                 <Heading style="display">
                   <Weak>57%</Weak>

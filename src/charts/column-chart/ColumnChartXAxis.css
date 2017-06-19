@@ -4,4 +4,7 @@
   display: flex;
   flex: 0 0 auto;
   margin: calc(var(--spacing-grid-size) * 3) 0;
+
+  &:first-child { margin-top: 0; }
+  &:last-child  { margin-bottom: 0; }
 }
