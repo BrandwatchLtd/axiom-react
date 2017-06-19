@@ -10,7 +10,8 @@ export default class DotPlotChartExample extends Component {
         <Snippet>
           <DotPlotChart
               chartKey={ chartKey }
-              chartKeyLineLabel="Size of Difference"
+              chartKeyBenchmarkLabel="Data Benchmark"
+              chartKeyDifferenceLabel="Size of Difference"
               data={ data }
               labelColumnWidth="11rem" />
         </Snippet>

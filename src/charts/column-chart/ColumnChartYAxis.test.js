@@ -4,10 +4,10 @@ import { ColumnChart, ColumnChartYAxis } from 'bw-axiom';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <ColumnChart yAxisWidth="10rem">
+    <ColumnChart chartKey={ [{}] } data={ [{ label: 'test', values: [] }] }>
       <ColumnChartYAxis { ...props }>
-        Lorem
-      </ColumnChartYAxis>
+          Lorem
+        </ColumnChartYAxis>
     </ColumnChart>
   );
 }

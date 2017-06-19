@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { getArcProperties } from './utils';
 import RadialProgress from './RadialProgress';
 import './ProgressFinite.css';
-import './_filter';
+import renderFilter from './_filter';
 
 export default class ProgressFinite extends Component {
 
@@ -16,6 +16,8 @@ export default class ProgressFinite extends Component {
     percent: 0,
     size: 'small',
   }
+
+  componentWillMount = renderFilter
 
   render() {
     const {

@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
 import {
+  ColumnChart,
   Context,
   ContextBox,
   DataPoint,
   DataPoints,
-  DotPlotChart,
   Grid,
   GridCell,
   Heading,
@@ -16,17 +16,17 @@ import {
   Small,
   Strong,
 } from 'bw-axiom';
-import { chartKey, data } from './data';
+import { data, chartKey } from './data';
 
 class ContextDemoComponent extends Component {
   static propTypes = {
-    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    color: PropTypes.string.isRequired,
     data: PropTypes.object.isRequired,
     value: PropTypes.number.isRequired,
   };
 
   render() {
-    const { colors, value, ...rest } = this.props;
+    const { color, value, ...rest } = this.props;
 
     return (
       <Context { ...rest } width="17rem">
@@ -36,9 +36,7 @@ class ContextDemoComponent extends Component {
               <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
                 <GridCell shrink={ true }>
                   <DataPoints size="1.5rem">
-                    { colors.map((color) =>
-                      <DataPoint color={ color } key={ color } />
-                    ) }
+                    <DataPoint color={ color } />
                   </DataPoints>
                 </GridCell>
 
@@ -67,21 +65,18 @@ class ContextDemoComponent extends Component {
   }
 }
 
-export default class DotPlotExample extends Component {
+export default class BarChartExample extends Component {
   render() {
     return (
-      <Example name="DotPlot with Context">
+      <Example name="ColumnChart with Context and Labels">
         <Snippet>
-          <DotPlotChart
+          <ColumnChart
               ContextComponent={ ContextDemoComponent }
-              axisTitle="% of each something"
               chartKey={ chartKey }
-              chartKeyBenchmarkLabel="Data Benchmark"
-              chartKeyDifferenceLabel="Size of Difference"
-              collapsedVisibleRowCount={ 6 }
               data={ data }
-              expandButtonSuffix="Categories"
-              labelColumnWidth="11rem" />
+              height="20rem"
+              showBarLabel={ true }
+              showSubLabel={ true }/>
         </Snippet>
       </Example>
     );

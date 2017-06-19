@@ -29,7 +29,9 @@ export default class BarChart extends Component {
     })).isRequired,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
+    showBarLabel: PropTypes.bool,
     showKey: PropTypes.bool,
+    size: PropTypes.string,
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
     zoom: PropTypes.bool,
     zoomMax: PropTypes.number,
@@ -59,7 +61,9 @@ export default class BarChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      showBarLabel,
       showKey,
+      size,
       xAxisLabels,
       zoom,
       zoomMax,
@@ -100,7 +104,8 @@ export default class BarChart extends Component {
                         labelStrong={ index === this.state.hoverIndex }
                         onMouseEnter={ this.onMouseEnter }
                         onMouseLeave={ this.onMouseLeave }
-                        showLabel={ color === this.state.hoverColor }
+                        showBarLabel={ showBarLabel || color === this.state.hoverColor }
+                        size={ size }
                         value={ value } />
                   ) }
                 </Bars>

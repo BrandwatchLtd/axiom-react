@@ -8,19 +8,15 @@ export default class ColumnChartYAxis extends Component {
   static propTypes = {
     align: PropTypes.oneOf(['top', 'bottom']),
     children: PropTypes.node.isRequired,
+    yAxisWidth: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     align: 'bottom',
   };
 
-  static contextTypes = {
-    yAxisWidth: PropTypes.string.isRequired,
-  };
-
   render() {
-    const { align, children, ...rest } = this.props;
-    const { yAxisWidth } = this.context;
+    const { align, children, yAxisWidth, ...rest } = this.props;
     const classes = classnames('ax-column-chart__y-axis',
       `ax-column-chart__y-axis--${align}`);
 

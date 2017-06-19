@@ -16,5 +16,8 @@
   --cmp-dot-plot-diameter: 0.8125rem;
   --cmp-dot-plot-radius: calc(var(--cmp-dot-plot-diameter) / 2);
 
+  --cmp-benchmark-line-width: 0.0625rem;
+  --cmp-benchmark-line-height: var(--cmp-dot-plot-diameter);
+
   --cmp-chart-overflow-space: calc(var(--cmp-chart-label-width) + var(--cmp-dot-plot-radius));
 }

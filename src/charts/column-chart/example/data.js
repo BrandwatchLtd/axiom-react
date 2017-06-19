@@ -1,27 +1,13 @@
-export const labels = [{
-  name: 'Brand A',
-  color: 'blue',
-}, {
-  name: 'Brand B',
-  color: 'pink',
-}];
+export const chartKey =
+  [
+    { color: 'blue', label: 'Brand A' },
+    { color: 'pink', label: 'Brand B' },
+  ];
 
-export const data = [{
-  label: 'Family',
-  data: [50, 100],
-}, {
-  label: 'Games',
-  data: [10, 55],
-}, {
-  label: 'Family & Parenting',
-  data: [80, 20],
-}, {
-  label: 'Technology',
-  data: [53, 70],
-}, {
-  label: 'Books',
-  data: [40, 48],
-}, {
-  label: 'Travel',
-  data: [54, 46],
-}];
+export const data = [
+  { label: 'Family', subLabel:'55%', values: { blue: 10, pink: 50 } },
+  { label: 'Games', subLabel:'55%', values: { blue: 40, pink: 40 } },
+  { label: 'Family & Parenting', subLabel:'55%', values: { blue: 50, pink: 50 } },
+  { label: 'Technology', subLabel:'55%', values: { blue: 69, pink: 50 } },
+  { label: 'Books', subLabel:'55%', values: { blue: 25, pink: 50 } },
+];

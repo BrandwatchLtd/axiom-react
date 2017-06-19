@@ -6,20 +6,16 @@ import './ColumnChartXAxis.css';
 export default class ColumnChartXAxis extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-  };
-
-  static contextTypes = {
-    yAxisWidth: PropTypes.string.isRequired,
+    labelColumnWidth: PropTypes.string.isRequired,
   };
 
   render() {
-    const { yAxisWidth } = this.context;
-    const { children, ...rest } = this.props;
+    const { children, labelColumnWidth, ...rest } = this.props;
 
     return (
       <Base { ...rest }
           className="ax-column-chart__x-axis"
-          style={ { paddingLeft: yAxisWidth } }>
+          style={ { paddingLeft: labelColumnWidth } }>
         { children }
       </Base>
     );
