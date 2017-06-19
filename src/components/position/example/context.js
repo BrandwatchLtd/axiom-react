@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Example, Snippet, Link } from 'style-guide';
+import { CodeSnippet, Example, Snippet, Link } from 'style-guide';
 import {
   Avatar,
   CheckBox,
@@ -138,6 +138,25 @@ export default class PositionExample extends Component {
             </GridCell>
           </Grid>
         </Snippet>
+
+        <Paragraph>
+          The parent node to which the positioned elements are inserted into can
+          be configured via context. This will apply to all uses of internally
+          Positioned elements, for example Dropdowns, ColorPickers and DataPickers.
+        </Paragraph>
+
+        <CodeSnippet language="js">{`
+static childContextTypes = {
+  axiomPositionParentNode: PropTypes.object,
+};
+
+getChildContext() {
+  return {
+    axiomPositionParentNode: document.body.querySelector('#custom-parent'),
+  };
+}
+`}
+        </CodeSnippet>
       </Example>
     );
   }
