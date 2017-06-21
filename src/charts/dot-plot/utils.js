@@ -40,9 +40,13 @@ export function getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, ro
   const lines = [];
   const elements = data
     .filter(({ colors }) => mouseOverRowIndex === rowIndex ||
-        !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors))
-    .concat(benchmark && [{ colors: [], value: benchmark }])
-    .sort((a, b) => a.value - b.value);
+        !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors));
+
+  if (benchmark) {
+    elements.push({ colors: [], value: benchmark });
+  }
+
+  elements.sort((a, b) => a.value - b.value);
 
   for (let i = 0; i < elements.length - 1; i++) {
     lines.push({
