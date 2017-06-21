@@ -10,7 +10,17 @@
 
 .ax-toggle {
   display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ax-toggle__switch {
+  display: flex;
   position: relative;
+}
+
+.ax-toggle__label {
+  margin-right: calc(var(--spacing-grid-size) * 2);
 }
 
 .ax-toggle__input {
@@ -18,7 +28,6 @@
   width: var(--ax-toggle-width);
   height: var(--ax-toggle-height);
   opacity: 0;
-  cursor: pointer;
 }
 
 .ax-toggle__appearance {

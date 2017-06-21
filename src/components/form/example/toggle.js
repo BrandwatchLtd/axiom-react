@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Toggle } from 'bw-axiom';
+import { Strong, Toggle } from 'bw-axiom';
 
 export default class ToggleExample extends Component {
   constructor (props) {
@@ -13,7 +13,11 @@ export default class ToggleExample extends Component {
     return (
       <Example name="Toggle">
         <Snippet>
-          <Toggle onToggle={ this.onToggle } toggled={ this.state.toggled } />
+          <Toggle
+              onToggle={ this.onToggle }
+              toggled={ this.state.toggled }>
+            <Strong>Toggle</Strong>
+          </Toggle>
         </Snippet>
       </Example>
     );
