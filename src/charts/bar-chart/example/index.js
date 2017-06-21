@@ -84,6 +84,7 @@ class BarChartExample extends Component {
         ContextComponent: ContextDemoComponent,
         axisTitle: '% of each something',
         chartKey: chartKey,
+        chartKeyBenchmarkLabel: 'Benchmark',
         collapsedVisibleRowCount: 4,
         data: data,
         expandButtonSuffix: 'Categories',

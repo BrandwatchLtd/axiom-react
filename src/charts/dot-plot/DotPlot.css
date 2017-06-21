@@ -62,7 +62,7 @@
   top: 50%;
   height: var(--cmp-benchmark-line-height);
   transform: translate(0, -50%);
-  border-right: var(--cmp-benchmark-line-width) solid var(--color-context-text-disabled);
+  border-right: var(--cmp-benchmark-line-width) solid var(--cmp-benchmark-line-color);
 }
 
 .ax-dot-plot__difference-line-path {

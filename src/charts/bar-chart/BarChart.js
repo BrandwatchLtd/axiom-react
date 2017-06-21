@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component, isValidElement } from 'react';
-import { Bars, ChartKey, ChartKeyItem, DataPoints, DataPoint } from 'bw-axiom';
+import { ChartKey, ChartKeyItem, DataPoints, DataPoint } from 'bw-axiom';
 import ChartTable from '../chart-table/ChartTable';
 import ChartTableAxisTitle from '../chart-table/ChartTableAxisTitle';
 import ChartTableKey from '../chart-table/ChartTableKey';
@@ -8,8 +8,10 @@ import ChartTableLabel from '../chart-table/ChartTableLabel';
 import ChartTableRow from '../chart-table/ChartTableRow';
 import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
-import BarChartContext from './BarChartContext';
+import BarChartBars from './BarChartBars';
+import BarChartBenchmarkLine from './BarChartBenchmarkLine';
 import { formatData, getHighestValue } from './utils';
+import './BarChart.css';
 
 export default class BarChart extends Component {
   static propTypes = {
@@ -29,6 +31,8 @@ export default class BarChart extends Component {
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
+    /** The description displayed for the benchmarking line in the key */
+    chartKeyBenchmarkLabel: PropTypes.string,
     /** The number of rows to be visible when collapsed */
     collapsedVisibleRowCount: PropTypes.number,
     /**
@@ -79,6 +83,7 @@ export default class BarChart extends Component {
     const {
       axisTitle,
       chartKey,
+      chartKeyBenchmarkLabel,
       collapsedVisibleRowCount,
       ContextComponent,
       data,
@@ -93,6 +98,7 @@ export default class BarChart extends Component {
       ...rest
     } = this.props;
 
+    const { hoverColor, hoverIndex } = this.state;
     const formattedData = formatData(chartKey, data);
     const highestValue = getHighestValue(data);
     const zoomValue = zoom
@@ -107,31 +113,26 @@ export default class BarChart extends Component {
             labelColumnWidth={ labelColumnWidth }
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
-          { formattedData.map(({ values, label }, index) =>
+          { formattedData.map(({ values, label, benchmark }, index) =>
             <ChartTableRow key={ isValidElement(label) ? index : label }>
               <ChartTableLabel
-                  textStrong={ index === this.state.hoverIndex }
+                  textStrong={ index === hoverIndex }
                   width={ labelColumnWidth }>
                 { label }
               </ChartTableLabel>
               <ChartTableVisual>
-                <Bars direction="right">
-                  { values.map(({ color, value }) =>
-                    <BarChartContext
-                        ContextComponent={ ContextComponent }
-                        color={ color }
-                        data={ data[index] }
-                        dataIndex={ index }
-                        key={ color }
-                        label={ label }
-                        labelStrong={ index === this.state.hoverIndex }
-                        onMouseEnter={ this.onMouseEnter }
-                        onMouseLeave={ this.onMouseLeave }
-                        showBarLabel={ showBarLabel || color === this.state.hoverColor }
-                        size={ size }
-                        value={ value } />
-                  ) }
-                </Bars>
+                <BarChartBars
+                    ContextComponent={ ContextComponent }
+                    benchmark={ benchmark }
+                    data={ data[index] }
+                    hoverColor={ hoverColor }
+                    label={ label }
+                    labelStrong={ index === hoverIndex }
+                    onMouseEnter={ (color) => this.onMouseEnter(index, color) }
+                    onMouseLeave={ this.onMouseLeave }
+                    showBarLabel={ showBarLabel }
+                    size={ size }
+                    values={ values } />
               </ChartTableVisual>
             </ChartTableRow>
           ) }
@@ -146,6 +147,12 @@ export default class BarChart extends Component {
         { showKey && (
           <ChartTableKey>
             <ChartKey>
+              { chartKeyBenchmarkLabel && (
+                <ChartKeyItem label={ chartKeyBenchmarkLabel }>
+                  <BarChartBenchmarkLine height="1rem" width="0.75rem" />
+                </ChartKeyItem>
+              ) }
+
               { chartKey.map(({ label, color }) =>
                 <ChartKeyItem key={ label } label={ label }>
                   <DataPoints size="0.75rem">
