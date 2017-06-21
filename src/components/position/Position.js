@@ -20,7 +20,11 @@ export default class Position extends Component {
   static defaultProps = {
     offset: 'middle',
     position: 'top',
-  }
+  };
+
+  static contextTypes = {
+    axiomPositionParentNode: PropTypes.object,
+  };
 
   constructor(props) {
     super(props);
@@ -68,7 +72,8 @@ export default class Position extends Component {
   }
 
   createReactRootNode() {
-    const parentNode = this.props.parentNode || document.body;
+    const parentNode = this.props.parentNode ||
+      this.context.axiomPositionParentNode || document.body;
     this._reactRootNode = document.createElement('div');
     this._reactRootNode.classList.add('AxiomPositionRoot');
 

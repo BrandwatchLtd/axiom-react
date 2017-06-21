@@ -14,4 +14,11 @@ describe('Toggle', () => {
     const tree = renderer.create(<Toggle onToggle={ onToggle } toggled={ false } />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with label children', () => {
+    const tree = renderer.create(
+      <Toggle onToggle={ onToggle } toggled={ false }>Toggle</Toggle>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
