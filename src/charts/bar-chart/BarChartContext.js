@@ -40,7 +40,7 @@ export default class BarChartContext extends PureComponent {
       <Bar { ...rest }
           color={ color }
           labelStrong={ labelStrong }
-          onMouseEnter={ () => onMouseEnter(color) }
+          onMouseEnter={ onMouseEnter && (() => onMouseEnter(color)) }
           onMouseLeave={ onMouseLeave }
           percent={ value }
           showLabel={ showBarLabel }

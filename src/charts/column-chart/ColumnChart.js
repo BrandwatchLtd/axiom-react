@@ -9,8 +9,8 @@ import ColumnChartXAxisLabel  from './ColumnChartXAxisLabel';
 import ColumnChartVisual from './ColumnChartVisual';
 import ColumnChartBars from './ColumnChartBars';
 import ColumnChartYAxis from './ColumnChartYAxis';
-import './ColumnChart.css';
 import { formatData } from './utils';
+import './ColumnChart.css';
 
 export default class ColumnChart extends Component {
   static propTypes = {
@@ -86,11 +86,11 @@ export default class ColumnChart extends Component {
                         ContextComponent={ ContextComponent }
                         color={ color }
                         data={ data[index] }
-                        dataIndex={ index }
                         key={ color }
                         label={ label }
                         labelStrong={ index === this.state.hoverIndex }
-                        onMouseEnter={ showBarLabel ? undefined : this.onMouseEnter }
+                        onMouseEnter={ showBarLabel ? undefined :
+                          () => this.onMouseEnter(index, color) }
                         onMouseLeave={ showBarLabel ? undefined : this.onMouseEnter }
                         showBarLabel={ showBarLabel || color === this.state.hoverColor }
                         value={ value }/>
