@@ -39,3 +39,7 @@ export function longDateWithTime(date){
 export function longDateWithTimezone(date){
   return formatDate(date, `${FORMAT_MAP.long} ${FORMAT_MAP.time} ${FORMAT_MAP.timezone}`);
 }
+
+export function filenameDate(date){
+  return `${formatDate(date, 'YYYY-MM-DD')}_at_${formatDate(date, 'HH.mm.ss')}_UTC`;
+}
