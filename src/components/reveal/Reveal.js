@@ -16,6 +16,7 @@ export default class Reveal extends Component {
     super(props);
     this.state = {
       height: 0,
+      overflow: 'hidden',
     };
   }
 
@@ -47,6 +48,7 @@ export default class Reveal extends Component {
   conceal() {
     this.setState({
       height: this.inner.offsetHeight,
+      overflow: 'hidden',
     });
 
     window.requestAnimationFrame(() => {
@@ -66,14 +68,16 @@ export default class Reveal extends Component {
 
   afterReveal() {
     this.setState({
-      height: 'auto',
+      height: undefined,
+      overflow: undefined,
     });
   }
 
   render() {
-    const { height, opacity } = this.state;
+    const { height, opacity, overflow } = this.state;
     const { children, space, visible, ...rest } = this.props;
-    const style = { height, opacity };
+    const style = { height, opacity, overflow };
+    const innerStyle = { overflow };
     const classes = classnames('ax-reveal', {
       'ax-reveal--visible': visible,
     });
@@ -86,7 +90,8 @@ export default class Reveal extends Component {
           style={ style }>
         <div
             className="ax-reveal__inner"
-            ref={ (el) => this.inner = el }>
+            ref={ (el) => this.inner = el }
+            style={ innerStyle }>
           { children }
         </div>
       </Base>
