@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.1",
+    "date-fns": "^1.0.0",
     "lodash.omit": "^4.5.0",
-    "moment": "^2.14.1",
     "popper.js": "1.0.6",
     "prop-types": "^15.5.8",
     "react-modal": "^1.4.0"
