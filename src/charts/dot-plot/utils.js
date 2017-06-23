@@ -42,7 +42,7 @@ export function getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, ro
     .filter(({ colors }) => mouseOverRowIndex === rowIndex ||
         !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors));
 
-  if (benchmark) {
+  if (benchmark !== undefined) {
     elements.push({ colors: [], value: benchmark });
   }
 

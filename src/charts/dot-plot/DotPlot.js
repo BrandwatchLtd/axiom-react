@@ -79,7 +79,7 @@ export default class DotPlot extends Component {
               value={ value } />
         ) }
 
-        { benchmark && (
+        { benchmark !== undefined && (
           <div className="ax-dot-plot__benchmark-line-container">
             <DotPlotBenchmarkLine
                 faded={ isBenchmarkFaded(mouseOverRowIndex, mouseOverColors, rowIndex) }
