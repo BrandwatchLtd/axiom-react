@@ -1,45 +1,27 @@
-import moment from 'moment';
+import format from 'date-fns/format';
 
 const FORMAT_MAP = {
   short: 'DD MMM',
   medium: 'DD MMM YYYY',
   long: 'ddd, DD MMM YYYY',
-  time: 'HH:kk',
+  time: 'HH:mm',
   timezone: '(UTCZ)',
 };
 
-function formatDate(date, format) {
-  return moment(date).format(format);
-}
+const longDateWithTimezoneFormat = `${FORMAT_MAP.long} ${FORMAT_MAP.time} ${FORMAT_MAP.timezone}`;
 
-export function shortDate(date) {
-  return formatDate(date, FORMAT_MAP.short);
-}
-
-export function mediumDate(date) {
-  return formatDate(date, FORMAT_MAP.medium);
-}
-
-export function longDate(date) {
-  return formatDate(date, FORMAT_MAP.long);
-}
-
-export function shortDateWithTime(date){
-  return formatDate(date, `${FORMAT_MAP.short} ${FORMAT_MAP.time}`);
-}
-
-export function mediumDateWithTime(date){
-  return formatDate(date, `${FORMAT_MAP.medium} ${FORMAT_MAP.time}`);
-}
-
-export function longDateWithTime(date){
-  return formatDate(date, `${FORMAT_MAP.long} ${FORMAT_MAP.time}`);
-}
-
-export function longDateWithTimezone(date){
-  return formatDate(date, `${FORMAT_MAP.long} ${FORMAT_MAP.time} ${FORMAT_MAP.timezone}`);
+function formatDate (formatStr) {
+  return date => format(date, formatStr);
 }
 
 export function filenameDate(date){
-  return `${formatDate(date, 'YYYY-MM-DD')}_at_${formatDate(date, 'HH.mm.ss')}_UTC`;
+  return `${format(date, 'YYYY-MM-DD')}_at_${format(date, 'HH.mm.ss')}_UTC`;
 }
+
+export const shortDate = formatDate(FORMAT_MAP.short);
+export const mediumDate = formatDate(FORMAT_MAP.medium);
+export const longDate = formatDate(FORMAT_MAP.long);
+export const shortDateWithTime = formatDate(`${FORMAT_MAP.short} ${FORMAT_MAP.time}`);
+export const mediumDateWithTime = formatDate(`${FORMAT_MAP.medium} ${FORMAT_MAP.time}`);
+export const longDateWithTime = formatDate(`${FORMAT_MAP.long} ${FORMAT_MAP.time}`);
+export const longDateWithTimezone = formatDate(longDateWithTimezoneFormat);
