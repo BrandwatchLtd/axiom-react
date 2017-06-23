@@ -2,8 +2,13 @@
 @import '../../materials/sizing';
 @import '../vars';
 
+:root {
+  --cmp-benchmark-hang-over: calc(var(--spacing-grid-size) * 2);
+}
+
 .ax-bar-chart__bars {
   position: relative;
+  padding: var(--cmp-benchmark-hang-over) 0;
 }
 
 .ax-bar-chart__benchmark-line-container {
