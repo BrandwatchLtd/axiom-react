@@ -155,7 +155,8 @@ describe('DotPlot (utils)', () => {
             { colors: ['green'], value: 20 },
             { colors: ['blue'], value: 30 },
           ], 33, 1, ['red'], 2)).toEqual([{
-            benchmark: false,
+            fromBenchmark: false,
+            toBenchmark: true,
             faded: true,
             fromX: 10,
             toX: 33,
@@ -209,7 +210,8 @@ describe('DotPlot (utils)', () => {
             { colors: ['red'], value: 10 },
             { colors: ['green', 'blue'], value: 20 },
           ], 33, 1, ['green', 'blue'], 2)).toEqual([{
-            benchmark: false,
+            fromBenchmark: false,
+            toBenchmark: true,
             faded: true,
             fromX: 20,
             toX: 33,
@@ -233,12 +235,14 @@ describe('DotPlot (utils)', () => {
             { colors: ['red'], value: 10 },
             { colors: ['green', 'blue'], value: 20 },
           ], 33, 1, ['green', 'blue'], 1)).toEqual([{
-            benchmark: false,
+            fromBenchmark: false,
+            toBenchmark: false,
             faded: true,
             fromX: 10,
             toX: 20,
           }, {
-            benchmark: false,
+            fromBenchmark: false,
+            toBenchmark: true,
             faded: true,
             fromX: 20,
             toX: 33,

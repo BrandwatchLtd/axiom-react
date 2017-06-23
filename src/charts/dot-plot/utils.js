@@ -50,7 +50,8 @@ export function getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, ro
 
   for (let i = 0; i < elements.length - 1; i++) {
     lines.push({
-      benchmark: elements[i].colors.length === 0,
+      fromBenchmark: elements[i].colors.length === 0,
+      toBenchmark: elements[i + 1] && elements[i + 1].colors.length === 0,
       faded: isLineFaded(mouseOverRowIndex),
       fromX: elements[i].value,
       toX: elements[i + 1].value,

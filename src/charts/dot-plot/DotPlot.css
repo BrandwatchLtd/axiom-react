@@ -12,13 +12,13 @@
   position: relative;
   width: calc(100% - var(--cmp-chart-overflow-space));
   height: var(--cmp-dot-plot-diameter);
-  margin-left: calc(var(--cmp-dot-plot-radius) * -1);
 }
 
 .ax-dot-plot__dots {
   display: flex;
   position: absolute;
   align-items: center;
+  transform: translateX(calc(var(--cmp-dot-plot-radius) * -1));
   transition-property: opacity;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
@@ -45,10 +45,6 @@
   pointer-events: none;
 }
 
-.ax-dot-plot__benchmark-line-container  {
-  top: 50%;
-}
-
 .ax-dot-plot__benchmark-line,
 .ax-dot-plot__difference-line {
   position: relative;
@@ -59,9 +55,7 @@
 
 .ax-dot-plot__benchmark-line-path {
   position: absolute;
-  top: 50%;
   height: var(--cmp-benchmark-line-height);
-  transform: translate(0, -50%);
   border-right: var(--cmp-benchmark-line-width) solid var(--cmp-benchmark-line-color);
 }
 
@@ -71,8 +65,23 @@
   border-top: var(--cmp-dot-plot-difference-line-width) solid var(--color-context-text-disabled);
 }
 
-.ax-dot-plot__difference-line-container--dot .ax-dot-plot__difference-line-path {
-  margin-left: var(--cmp-dot-plot-diameter);
+.ax-dot-plot__difference-line-container {
+  & .ax-dot-plot__difference-line-path {
+    margin-right: var(--cmp-dot-plot-radius);
+    margin-left: var(--cmp-dot-plot-radius);
+  }
+}
+
+.ax-dot-plot__difference-line-container--to-benchmark {
+  & .ax-dot-plot__difference-line-path {
+    margin-right: 0;
+  }
+}
+
+.ax-dot-plot__difference-line-container--from-benchmark {
+  & .ax-dot-plot__difference-line-path {
+    margin-left: 0;
+  }
 }
 
 .ax-dot-plot__dots--hidden,

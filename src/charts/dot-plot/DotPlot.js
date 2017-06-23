@@ -17,9 +17,10 @@ import {
 } from './utils';
 import './DotPlot.css';
 
-function differenceLineContainerClasses(benchmark) {
+function differenceLineContainerClasses(fromBenchmark, toBenchmark) {
   return classnames('ax-dot-plot__difference-line-container', {
-    'ax-dot-plot__difference-line-container--dot': !benchmark,
+    'ax-dot-plot__difference-line-container--from-benchmark': fromBenchmark,
+    'ax-dot-plot__difference-line-container--to-benchmark': toBenchmark,
   });
 }
 
@@ -58,8 +59,10 @@ export default class DotPlot extends Component {
     return (
       <Base { ...rest } className="ax-dot-plot">
         { getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex)
-          .map(({ benchmark, faded, fromX, toX }) =>
-            <div className={ differenceLineContainerClasses(benchmark) } key={ `${fromX}.${toX}` }>
+          .map(({ fromBenchmark, toBenchmark, faded, fromX, toX }) =>
+            <div
+                className={ differenceLineContainerClasses(fromBenchmark, toBenchmark) }
+                key={ `${fromX}.${toX}` }>
               <DotPlotDifferenceLine faded={ faded } from={ fromX } to={ toX } />
             </div>
           )
