@@ -28,6 +28,7 @@
   width: var(--ax-toggle-width);
   height: var(--ax-toggle-height);
   opacity: 0;
+  cursor: inherit;
 }
 
 .ax-toggle__appearance {
@@ -51,7 +52,6 @@
   transition-property: box-shadow, transform;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
-  pointer-events: none;
 }
 
 .ax-toggle__input:checked + .ax-toggle__appearance {
