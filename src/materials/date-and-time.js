@@ -4,7 +4,7 @@ const FORMAT_MAP = {
   short: 'DD MMM',
   medium: 'DD MMM YYYY',
   long: 'ddd, DD MMM YYYY',
-  time: 'HH:kk',
+  time: 'HH:mm',
   timezone: '(UTCZ)',
 };
 
