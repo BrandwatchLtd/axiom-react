@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .ax-chedio-buttox__container--disabled {
