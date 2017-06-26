@@ -146,7 +146,7 @@ exports[`BulletBars renders with the correct label 1`] = `
                 }
               />
               <div
-                className="ax-bars__bar-label"
+                className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
                 <small
                   className="ax-small"

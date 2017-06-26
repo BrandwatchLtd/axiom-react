@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Base, Bar, Bars } from 'bw-axiom';
-import { arrayOfLength } from './utils';
+import { findBarGroupMax, arrayOfLength } from './utils';
 
 export default class BulletBars extends Component {
   static propTypes = {
@@ -19,6 +19,8 @@ export default class BulletBars extends Component {
       values,
       ...rest } = this.props;
 
+    const barGroupMax = values.reduce(findBarGroupMax);
+
     return (
       <Base { ...rest } className="ax-bullet-chart__block">
         <div className="ax-bullet-chart__bars">
@@ -30,7 +32,7 @@ export default class BulletBars extends Component {
                     key={ color }
                     label={ `${barLabel}%` }
                     percent={ value }
-                    showLabel={ showBarLabel }/>
+                    showLabel={ value === barGroupMax && showBarLabel }/>
               </Bars>
             </div>
                 )}
