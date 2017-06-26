@@ -6,6 +6,7 @@ import { findBarGroupMax, arrayOfLength } from './utils';
 export default class BulletBars extends Component {
   static propTypes = {
     barLabel: PropTypes.number,
+    direction: PropTypes.string,
     label: PropTypes.string,
     showBarLabel: PropTypes.bool,
     values: arrayOfLength.bind(null, 2),
@@ -13,6 +14,7 @@ export default class BulletBars extends Component {
 
   render() {
     const {
+      direction,
       label,
       barLabel,
       showBarLabel,
@@ -26,7 +28,7 @@ export default class BulletBars extends Component {
         <div className="ax-bullet-chart__bars">
           { values.map(({ color, value }) =>
             <div className="ax-bullet-chart__bars-bar" key={ `${color}-div` }>
-              <Bars direction="up" label={ label }>
+              <Bars direction={ direction } label={ label }>
                 <Bar
                     color={ color }
                     key={ color }

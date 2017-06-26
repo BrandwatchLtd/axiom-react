@@ -7,6 +7,7 @@ import ColumnChartVisual from '../column-chart/ColumnChartVisual';
 import ColumnChartRow from '../column-chart/ColumnChartRow';
 import ColumnChartXAxis from '../column-chart/ColumnChartXAxis';
 import ColumnChartXAxisLabel from '../column-chart/ColumnChartXAxisLabel';
+import ColumnChartYAxis from '../column-chart/ColumnChartYAxis';
 import './BulletChart.css';
 import { formatData } from './utils';
 
@@ -22,8 +23,12 @@ export default class BulletChart extends Component {
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
     })).isRequired,
+    /** Controls the direction of the bars */
+    direction: PropTypes.string,
     /** Controls the height of the containing element */
     height: PropTypes.string.isRequired,
+    /** Chart Y axis label */
+    label: PropTypes.node,
     /** The offset value of the X-axis labels */
     labelColumnWidth: PropTypes.string,
     /** Controls which data set's bar label shows */
@@ -41,11 +46,17 @@ export default class BulletChart extends Component {
     labelIndex: 0,
   };
 
+  getLabelAlignment() {
+    return this.props.direction === 'down' ? 'top' : 'bottom';
+  }
+
   render() {
     const {
       chartKey,
       data,
+      direction,
       height,
+      label,
       labelColumnWidth,
       labelIndex,
       showBarLabel,
@@ -61,11 +72,17 @@ export default class BulletChart extends Component {
           className="ax-bullet-chart"
           style={ { height } }>
         <ColumnChartRow>
+          { label &&
+          <ColumnChartYAxis align={ this.getLabelAlignment() } yAxisWidth={ labelColumnWidth }>
+            { label }
+          </ColumnChartYAxis>
+          }
           <ColumnChartVisual>
             { formattedData.map(({ values, label, subLabel }, index) =>
               <ColumnChartBars key={ index }>
                 <BulletBars
                     barLabel={ values[labelIndex] && values[labelIndex].valueLabel }
+                    direction= { direction }
                     label={ showSubLabel && subLabel }
                     showBarLabel={ showBarLabel }
                     values={ values }>

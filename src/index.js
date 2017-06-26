@@ -124,6 +124,7 @@ export { default as ChartHeading } from './charts/chart-heading/ChartHeading';
 export { default as ChartKey } from './charts/chart-key/ChartKey';
 export { default as ChartKeyItem } from './charts/chart-key/ChartKeyItem';
 export { default as ColumnChart } from './charts/column-chart/ColumnChart';
+export { default as MirroredBulletChart } from './charts/bullet-chart/MirroredBulletChart';
 export { default as MirroredColumnChart } from './charts/column-chart/MirroredColumnChart';
 export { default as DataPoint } from './charts/data-point/DataPoint';
 export { default as DataPoints } from './charts/data-point/DataPoints';
