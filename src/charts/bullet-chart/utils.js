@@ -1,11 +1,16 @@
 export function formatData(key, data) {
   const order = key.map(({ color }) => color);
+  const highestValue = getHighestValue(data);
 
   return data.map(({ label, subLabel, values }) => ({
     label,
     subLabel,
     values: Object.keys(values)
-      .map((color) => ({ color, value: values[color] }))
+      .map((color) => ({
+        color,
+        valueLabel: values[color],
+        value: Math.floor((values[color] / highestValue) * 100),
+      }))
       .sort((a, b) => order.indexOf(a.color) - order.indexOf(b.color)),
   }));
 }
@@ -24,11 +29,11 @@ export function getHighestValue(data) {
   return max;
 }
 
-export function findBarGroupMax ( acc, cur, index ) {
+export function findBarGroupMax ( acc, cur ) {
   if (cur.value > acc.value) {
-    return { value: cur.value, index: index };
+    return cur.value;
   } else {
-    return { value: acc.value, index: index - 1 };
+    return acc.value;
   }
 }
 

@@ -6,11 +6,6 @@ exports[`BulletBars renders with defaultProps 1`] = `
 >
   <div
     className="ax-bullet-chart__bars"
-    style={
-      Object {
-        "height": "49.504950495049506%",
-      }
-    }
   >
     <div
       className="ax-bullet-chart__bars-bar"
@@ -29,7 +24,7 @@ exports[`BulletBars renders with defaultProps 1`] = `
               onClick={undefined}
               style={
                 Object {
-                  "height": "20%",
+                  "height": "10%",
                   "width": false,
                 }
               }
@@ -76,7 +71,7 @@ exports[`BulletBars renders with defaultProps 1`] = `
               onClick={undefined}
               style={
                 Object {
-                  "height": "100%",
+                  "height": "50%",
                   "width": false,
                 }
               }
@@ -110,17 +105,12 @@ exports[`BulletBars renders with defaultProps 1`] = `
 </div>
 `;
 
-exports[`BulletBars renders with the right height 100 1`] = `
+exports[`BulletBars renders with the correct label 1`] = `
 <div
   className="ax-bullet-chart__block"
 >
   <div
     className="ax-bullet-chart__bars"
-    style={
-      Object {
-        "height": "100%",
-      }
-    }
   >
     <div
       className="ax-bullet-chart__bars-bar"
@@ -139,7 +129,7 @@ exports[`BulletBars renders with the right height 100 1`] = `
               onClick={undefined}
               style={
                 Object {
-                  "height": "20%",
+                  "height": "10%",
                   "width": false,
                 }
               }
@@ -156,12 +146,12 @@ exports[`BulletBars renders with the right height 100 1`] = `
                 }
               />
               <div
-                className="ax-bars__bar-label ax-bars__bar-label--hidden"
+                className="ax-bars__bar-label"
               >
                 <small
                   className="ax-small"
                 >
-                  undefined%
+                  label for highest value%
                 </small>
               </div>
             </div>
@@ -186,7 +176,7 @@ exports[`BulletBars renders with the right height 100 1`] = `
               onClick={undefined}
               style={
                 Object {
-                  "height": "100%",
+                  "height": "50%",
                   "width": false,
                 }
               }
@@ -203,122 +193,12 @@ exports[`BulletBars renders with the right height 100 1`] = `
                 }
               />
               <div
-                className="ax-bars__bar-label ax-bars__bar-label--hidden"
+                className="ax-bars__bar-label"
               >
                 <small
                   className="ax-small"
                 >
-                  undefined%
-                </small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`BulletBars renders with the right height 300 1`] = `
-<div
-  className="ax-bullet-chart__block"
->
-  <div
-    className="ax-bullet-chart__bars"
-    style={
-      Object {
-        "height": "33.33333333333333%",
-      }
-    }
-  >
-    <div
-      className="ax-bullet-chart__bars-bar"
-    >
-      <div
-        className="ax-bars ax-bars--up"
-      >
-        <div
-          className="ax-bars__bars-container"
-        >
-          <div
-            className="ax-bars__bars"
-          >
-            <div
-              className="ax-bars__bar"
-              onClick={undefined}
-              style={
-                Object {
-                  "height": "20%",
-                  "width": false,
-                }
-              }
-            >
-              <div
-                className="ax-bars__bar-rect ax-bars__bar-rect--blue"
-                style={
-                  Object {
-                    "height": false,
-                    "minHeight": false,
-                    "minWidth": "1rem",
-                    "width": undefined,
-                  }
-                }
-              />
-              <div
-                className="ax-bars__bar-label ax-bars__bar-label--hidden"
-              >
-                <small
-                  className="ax-small"
-                >
-                  undefined%
-                </small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="ax-bullet-chart__bars-bar"
-    >
-      <div
-        className="ax-bars ax-bars--up"
-      >
-        <div
-          className="ax-bars__bars-container"
-        >
-          <div
-            className="ax-bars__bars"
-          >
-            <div
-              className="ax-bars__bar"
-              onClick={undefined}
-              style={
-                Object {
-                  "height": "100%",
-                  "width": false,
-                }
-              }
-            >
-              <div
-                className="ax-bars__bar-rect ax-bars__bar-rect--pink"
-                style={
-                  Object {
-                    "height": false,
-                    "minHeight": false,
-                    "minWidth": "1rem",
-                    "width": undefined,
-                  }
-                }
-              />
-              <div
-                className="ax-bars__bar-label ax-bars__bar-label--hidden"
-              >
-                <small
-                  className="ax-small"
-                >
-                  undefined%
+                  label for highest value%
                 </small>
               </div>
             </div>

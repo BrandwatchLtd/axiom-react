@@ -8,7 +8,7 @@ import ColumnChartRow from '../column-chart/ColumnChartRow';
 import ColumnChartXAxis from '../column-chart/ColumnChartXAxis';
 import ColumnChartXAxisLabel from '../column-chart/ColumnChartXAxisLabel';
 import './BulletChart.css';
-import { formatData, getHighestValue } from './utils';
+import { formatData } from './utils';
 
 export default class BulletChart extends Component {
   static propTypes = {
@@ -55,7 +55,6 @@ export default class BulletChart extends Component {
     } = this.props;
 
     const formattedData = formatData(chartKey, data);
-    const dataSetMax = getHighestValue(data);
 
     return (
       <Base { ...rest }
@@ -66,8 +65,7 @@ export default class BulletChart extends Component {
             { formattedData.map(({ values, label, subLabel }, index) =>
               <ColumnChartBars key={ index }>
                 <BulletBars
-                    barLabel={ values[labelIndex] && values[labelIndex].value }
-                    dataSetMax= { dataSetMax }
+                    barLabel={ values[labelIndex] && values[labelIndex].valueLabel }
                     label={ showSubLabel && subLabel }
                     showBarLabel={ showBarLabel }
                     values={ values }>

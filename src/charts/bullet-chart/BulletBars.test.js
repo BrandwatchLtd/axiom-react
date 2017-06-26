@@ -5,7 +5,6 @@ import { formattedData } from './BulletBars.test.fixture';
 
 function getComponent(props = {}) {
   props.values = formattedData;
-  props.dataSetMax = props.dataSetMax || 101;
 
   return renderer.create(
     <BulletBars { ...props }>
@@ -20,13 +19,13 @@ describe('BulletBars', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with the right height', () => {
-    [100, 300].forEach((dataSetMax) => {
-      it(dataSetMax, () => {
-        const component = getComponent({ dataSetMax });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
+  it('renders with the correct label', () => {
+    const props = {
+      barLabel: 'label for highest value',
+      showBarLabel: true,
+    };
+    const component = getComponent(props);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
