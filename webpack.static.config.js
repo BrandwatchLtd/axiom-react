@@ -92,6 +92,7 @@ module.exports = {
         '/docs/composites/usermenu',
         '/docs/charts/bars',
         '/docs/charts/bar-chart',
+        '/docs/charts/bullet-chart',
         '/docs/charts/chart',
         '/docs/charts/chart-heading',
         '/docs/charts/column-chart',

@@ -211,6 +211,11 @@ export default (
             examples={ require('../src/charts/bar-chart/example') }
             component={ Doc } />
         <Route
+            path="bullet-chart"
+            name="Bullet Chart"
+            examples={ require('../src/charts/bullet-chart/example') }
+            component={ Doc } />
+        <Route
             path="chart"
             name="Chart"
             examples={ require('../src/charts/chart/example') }

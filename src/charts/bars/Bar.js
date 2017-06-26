@@ -21,6 +21,8 @@ export default class Bar extends Component {
       'brown',
       'grey',
     ]).isRequired,
+    /** Overwriting label above the bar instead of default percentage */
+    label: PropTypes.string,
     /** Control for applying strong styling to the label */
     labelStrong: PropTypes.bool,
     /** Minimum thickness of the Bar */
@@ -49,7 +51,16 @@ export default class Bar extends Component {
 
   render() {
     const { direction } = this.context;
-    const { color, labelStrong, onClick, minSize, percent, showLabel, size, ...rest } = this.props;
+    const {
+      color,
+      label,
+      labelStrong,
+      onClick,
+      minSize,
+      percent,
+      showLabel,
+      size,
+      ...rest } = this.props;
     const isVertical = direction === 'up' || direction === 'down';
     const classes = classnames('ax-bars__bar', {
       'ax-bars__bar--center': size,
@@ -82,7 +93,7 @@ export default class Bar extends Component {
           style={ style }>
         <div className={ rectClasses } style={ rectStyle } />
         <div className={ labelClasses }>
-          <Small textStrong={ labelStrong }>{ percent }%</Small>
+          <Small textStrong={ labelStrong }>{ label || `${percent}%` }</Small>
         </div>
       </Base>
     );

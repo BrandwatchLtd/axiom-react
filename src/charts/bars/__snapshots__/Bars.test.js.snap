@@ -37,8 +37,7 @@ exports[`Bars renders with defaultProps 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -84,8 +83,7 @@ exports[`Bars renders with direction down 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -131,8 +129,7 @@ exports[`Bars renders with direction left 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -178,8 +175,7 @@ exports[`Bars renders with direction right 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -225,8 +221,7 @@ exports[`Bars renders with direction up 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
@@ -272,8 +267,7 @@ exports[`Bars renders with label 1`] = `
           <small
             className="ax-small"
           >
-            50
-            %
+            50%
           </small>
         </div>
       </div>
