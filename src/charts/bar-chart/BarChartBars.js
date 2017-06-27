@@ -10,7 +10,7 @@ export default class BarChartBars extends Component {
     benchmark: PropTypes.number,
     data: PropTypes.object.isRequired,
     hoverColor: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     labelStrong: PropTypes.bool.isRequired,
     showBarLabel: PropTypes.bool,
     size: PropTypes.string,
