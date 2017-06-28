@@ -22,6 +22,7 @@ export default class MirroredBulletChartExample extends Component {
                 </Heading>
               }
               labelColumnWidth="10rem"
+              labelIndex= { 0 }
               reflectionData={ data }
               reflectionLabel={
                 <Heading style="display">

@@ -8,22 +8,32 @@ import './MirroredBulletChart.css';
 
 export default class MirroredBulletChart extends Component {
   static propTypes = {
+    /** A key for the chart */
     chartKey: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
+    /** The data to build the top half of the chart */
     data: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
     })).isRequired,
+    /** Controls the height of the chart */
     height: PropTypes.string.isRequired,
+    /** Chart y-axis label */
     label: PropTypes.node,
+    /** The offset value of the y-axis labels */
     labelColumnWidth: PropTypes.string,
+    /** Controls which data set's bar label shows */
+    labelIndex: PropTypes.number,
+    /** The data to build the bottom half of the chart */
     reflectionData: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
     })).isRequired,
+    /** Chart y-axis label */
     reflectionLabel: PropTypes.node.isRequired,
+    /** Visibility control of the x-Axis label */
     showBarLabels: PropTypes.bool,
   };
 
@@ -39,6 +49,7 @@ export default class MirroredBulletChart extends Component {
       data,
       height,
       labelColumnWidth,
+      labelIndex,
       reflectionData,
       showBarLabels,
       ...rest
@@ -54,6 +65,7 @@ export default class MirroredBulletChart extends Component {
             height={ height }
             label={ label }
             labelColumnWidth={ labelColumnWidth }
+            labelIndex={ labelIndex }
             showBarLabel={ showBarLabels }/>
 
         <ColumnChartXAxis labelColumnWidth={ labelColumnWidth }>
@@ -71,6 +83,7 @@ export default class MirroredBulletChart extends Component {
             height={ height }
             label={ reflectionLabel }
             labelColumnWidth={ labelColumnWidth }
+            labelIndex={ labelIndex }
             showBarLabel={ showBarLabels }/>
       </Base>
     );
