@@ -45,6 +45,10 @@
   pointer-events: none;
 }
 
+.ax-dot-plot__benchmark-line {
+  height: var(--cmp-benchmark-line-height);
+}
+
 .ax-dot-plot__benchmark-line,
 .ax-dot-plot__difference-line {
   position: relative;
@@ -55,7 +59,8 @@
 
 .ax-dot-plot__benchmark-line-path {
   position: absolute;
-  height: var(--cmp-benchmark-line-height);
+  top: 0;
+  bottom: 0;
   border-right: var(--cmp-benchmark-line-width) solid var(--cmp-benchmark-line-color);
 }
 

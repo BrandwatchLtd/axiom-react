@@ -158,7 +158,7 @@ export default class DotPlotChart extends Component {
             <ChartKey>
               { chartKeyBenchmarkLabel && (
                 <ChartKeyItem label={ chartKeyBenchmarkLabel }>
-                  <DotPlotBenchmarkLine width="0.75rem" />
+                  <DotPlotBenchmarkLine height="1rem" width="0.75rem" />
                 </ChartKeyItem>
               ) }
 
