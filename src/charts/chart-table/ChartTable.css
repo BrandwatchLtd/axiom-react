@@ -74,6 +74,7 @@
   flex: 0 0 auto;
   padding-right: calc(var(--spacing-grid-size) * 2);
   padding-left: calc(var(--spacing-grid-size) * 6);
+  color: var(--color-context-text-subtle);
 }
 
 .ax-chart-table__visual {
