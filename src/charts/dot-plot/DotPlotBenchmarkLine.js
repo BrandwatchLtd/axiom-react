@@ -5,6 +5,7 @@ import classnames from 'classnames';
 export default class DotPlotBenchmarkLine extends Component {
   static propTypes = {
     faded: PropTypes.bool,
+    height: PropTypes.string,
     value: PropTypes.number,
     width: PropTypes.string,
   };
@@ -15,8 +16,8 @@ export default class DotPlotBenchmarkLine extends Component {
   };
 
   render() {
-    const { faded, value, width, ...rest } = this.props;
-    const style = { width };
+    const { faded, height, value, width, ...rest } = this.props;
+    const style = { height, width };
     const lineStyle = { left: `${value}%` };
     const classes = classnames('ax-dot-plot__benchmark-line', {
       'ax-dot-plot__benchmark-line--faded': faded,
