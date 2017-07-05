@@ -24,7 +24,7 @@ const typeColorMap = {
 
 export default class ComponentProp extends Component {
   static propTypes = {
-    PropEditor: PropTypes.func.isRequired,
+    PropEditor: PropTypes.func,
     description: PropTypes.string,
     prop: PropTypes.string.isRequired,
     propOptions: PropTypes.object.isRequired,
@@ -90,16 +90,18 @@ export default class ComponentProp extends Component {
             ) }
           </GridCell>
 
-          <GridCell shrink={ true }>
-            <PropEditor
-                prop={ prop }
-                propOptions={ propOptions[prop] || {} }
-                required={ required }
-                setOptionValue={ setOptionValue }
-                setValue={ setValue }
-                value={ value }
-                values={ values } />
-          </GridCell>
+          { PropEditor && (
+            <GridCell shrink={ true }>
+              <PropEditor
+                  prop={ prop }
+                  propOptions={ propOptions[prop] || {} }
+                  required={ required }
+                  setOptionValue={ setOptionValue }
+                  setValue={ setValue }
+                  value={ value }
+                  values={ values } />
+            </GridCell>
+          ) }
         </Grid>
       </Base>
     );

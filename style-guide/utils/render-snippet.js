@@ -12,9 +12,7 @@ export function htmlRender(snippet) {
   try {
     const html = renderToStaticMarkup(snippet);
     return html.trim() && html !== '<noscript></noscript>' ? html : '';
-  } catch (e) {
-    console.error(e);
-  }
+  } catch (e) { /* */ }
 }
 
 export function jsxRender(snippet) {
