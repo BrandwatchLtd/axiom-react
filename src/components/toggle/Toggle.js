@@ -4,8 +4,11 @@ import './Toggle.css';
 
 export default class Toggle extends Component {
   static propTypes = {
+    /** Label that is inserted next to the toggle switch */
     children: PropTypes.node,
+    /** Toggled/checked state of the switch */
     toggled: PropTypes.bool.isRequired,
+    /** Called when the toggle is toggled/changed */
     onToggle: PropTypes.func.isRequired,
   }
 

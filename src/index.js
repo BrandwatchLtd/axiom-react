@@ -102,7 +102,7 @@ export { default as TableBody } from './components/table/TableBody';
 export { default as TextArea } from './components/form/TextArea';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';
-export { default as Toggle } from './components/form/Toggle';
+export { default as Toggle } from './components/toggle/Toggle';
 export { default as Toolbar } from './components/toolbar/Toolbar';
 export { default as Tool } from './components/toolbar/Tool';
 export { default as Tooltip } from './components/tooltip/Tooltip';
