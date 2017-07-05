@@ -3,16 +3,24 @@
 @import '../../materials/sizing';
 
 :root {
+  --ax-toggle-knob-color: var(--color-theme-light-background);
   --ax-toggle-height: var(--component-line-height);
   --ax-toggle-width: calc(2 * var(--component-line-height));
   --ax-toggle-diameter: calc(var(--ax-toggle-height) - 2 * var(--component-border-width));
+  --ax-toggle-on-position:
+    calc(
+      var(--ax-toggle-width) - var(--ax-toggle-diameter) - 2 * var(--component-border-width)
+    );
 }
 
 .ax-toggle {
   display: flex;
   align-items: center;
-  cursor: pointer;
   user-select: none;
+}
+
+.ax-toggle--enabled {
+  cursor: pointer;
 }
 
 .ax-toggle__switch {
@@ -47,22 +55,34 @@
   left: var(--component-border-width);
   width: var(--ax-toggle-diameter);
   height: var(--ax-toggle-diameter);
+  border: var(--component-border-width) solid var(--ax-toggle-knob-color);
   border-radius: 50%;
   box-shadow: 0.1rem 0 0.25rem 0 color(var(--color-ui-dark) alpha(30%));
-  background: var(--color-theme-light-background);
-  transition-property: box-shadow, transform;
+  background-color: var(--ax-toggle-knob-color);
+  transition-property: background-color, border-color, box-shadow, transform;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 }
 
-.ax-toggle__input:checked + .ax-toggle__appearance {
-  background-color: var(--color-ui-primary);
+.ax-toggle__input:checked {
+  & + .ax-toggle__appearance {
+    background-color: var(--color-ui-primary);
+
+    &::after {
+      transform: translateX(var(--ax-toggle-on-position));
+      box-shadow: 0 0 0.25rem 0 color(var(--color-ui-dark) alpha(30%));
+    }
+  }
 }
 
-.ax-toggle__input:checked + .ax-toggle__appearance::after {
-  transform:
-    translateX(calc(
-      var(--ax-toggle-width) - var(--ax-toggle-diameter) - 2 * var(--component-border-width)
-    ));
-  box-shadow: 0 0 0.25rem 0 color(var(--color-ui-dark) alpha(30%));
+.ax-toggle__input:disabled {
+  & + .ax-toggle__appearance {
+    background-color: var(--color-context-background-subtle);
+
+    &::after {
+      border-color: var(--color-context-border);
+      box-shadow: 0 0 0.25rem 0 color(var(--color-ui-dark) alpha(0%));
+      background-color: transparent;
+    }
+  }
 }

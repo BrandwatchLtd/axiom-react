@@ -170,6 +170,11 @@ export default (
             examples={ require('../src/components/tabset/example') }
             component={ Doc } />
         <Route
+            path="toggle"
+            name="Toggle"
+            examples={ require('../src/components/toggle/example') }
+            component={ Doc } />
+        <Route
             path="toolbar"
             name="Toolbar"
             examples={ require('../src/components/toolbar/example') }
