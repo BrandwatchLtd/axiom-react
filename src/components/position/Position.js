@@ -14,6 +14,11 @@ export default class Position extends Component {
      * only PositionContent and PositionTarget!
      */
     children: PropTypes.array.isRequired,
+    /**
+     * Adds control to conditional enable or disabled the positioning logic.
+     * Must be true for isVisible to take effect.
+     */
+    enabled: PropTypes.bool,
     /** Toggles the visibility of the PositionContent */
     isVisible: PropTypes.bool.isRequired,
     /** Controls the starting offset of the content */
@@ -38,6 +43,7 @@ export default class Position extends Component {
   };
 
   static defaultProps = {
+    enabled: true,
     offset: 'middle',
     position: 'top',
   };
@@ -55,23 +61,24 @@ export default class Position extends Component {
   }
 
   componentDidMount() {
-    const { isVisible } = this.props;
+    const { enabled, isVisible } = this.props;
 
-    if (isVisible) {
+    if (enabled && isVisible) {
       this.init();
     }
   }
 
   componentDidUpdate(prevProps) {
-    const { isVisible, position, offset } = this.props;
+    const { enabled, isVisible, position, offset } = this.props;
+    const shouldShow = enabled && isVisible && (!prevProps.enabled || !prevProps.isVisible);
+    const shouldHide = prevProps.isVisible && prevProps.enabled && (!enabled || !isVisible);
+    const shouldReRender = enabled && isVisible;
 
-    if (isVisible !== prevProps.isVisible) {
-      if (isVisible) {
-        this.init();
-      } else {
-        this.destroy();
-      }
-    } else if (isVisible) {
+    if (shouldShow) {
+      this.init();
+    } else if (shouldHide) {
+      this.destroy();
+    } else if (shouldReRender) {
       this.renderSubtree();
       this._popper.options.placement = positionToPlacement(position, offset);
       this._popper.update();
@@ -79,9 +86,9 @@ export default class Position extends Component {
   }
 
   componentWillUnmount() {
-    const { isVisible } = this.props;
+    const { enabled, isVisible } = this.props;
 
-    if (isVisible) {
+    if (enabled && isVisible) {
       this.destroy();
     }
   }
