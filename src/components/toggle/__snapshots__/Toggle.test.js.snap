@@ -2,7 +2,7 @@
 
 exports[`Toggle renders as not toggled 1`] = `
 <label
-  className="ax-toggle ax-space--tiny"
+  className="ax-toggle ax-toggle--enabled ax-space--tiny"
 >
   <span
     className="ax-toggle__switch"
@@ -10,6 +10,7 @@ exports[`Toggle renders as not toggled 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
+      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -22,7 +23,7 @@ exports[`Toggle renders as not toggled 1`] = `
 
 exports[`Toggle renders as toggled 1`] = `
 <label
-  className="ax-toggle ax-space--tiny"
+  className="ax-toggle ax-toggle--enabled ax-space--tiny"
 >
   <span
     className="ax-toggle__switch"
@@ -30,6 +31,28 @@ exports[`Toggle renders as toggled 1`] = `
     <input
       checked={true}
       className="ax-toggle__input"
+      disabled={undefined}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="ax-toggle__appearance"
+    />
+  </span>
+</label>
+`;
+
+exports[`Toggle renders with disabled 1`] = `
+<label
+  className="ax-toggle ax-space--tiny"
+>
+  <span
+    className="ax-toggle__switch"
+  >
+    <input
+      checked={false}
+      className="ax-toggle__input"
+      disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
@@ -42,7 +65,7 @@ exports[`Toggle renders as toggled 1`] = `
 
 exports[`Toggle renders with label children 1`] = `
 <label
-  className="ax-toggle ax-space--tiny"
+  className="ax-toggle ax-toggle--enabled ax-space--tiny"
 >
   <span
     className="ax-toggle__label"
@@ -55,6 +78,7 @@ exports[`Toggle renders with label children 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
+      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
