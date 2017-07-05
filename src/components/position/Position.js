@@ -9,11 +9,31 @@ import './Position.css';
 /* eslint-disable react/no-find-dom-node */
 export default class Position extends Component {
   static propTypes = {
+    /**
+     * Children inside Position this should contain all of and
+     * only PositionContent and PositionTarget!
+     */
     children: PropTypes.array.isRequired,
+    /** Toggles the visibility of the PositionContent */
     isVisible: PropTypes.bool.isRequired,
+    /** Controls the starting offset of the content */
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
+    /**
+     * An HTML element that holds the dynamically inserted PositionContent children.
+     * By default this will be inserted into an element on the body.
+     */
     parentNode: PropTypes.object,
+    /**
+     * Controls the starting position around PositionTarget in which the
+     * PositionContent will attempt to be placed. If that position is not available
+     * due to collision, it will be placed clockwise from that position until
+     * a valid position is found.
+     */
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    /**
+     * When provided a mask will be placed behind PositionContent, where this
+     * function is called when clicked.
+     */
     onMaskClick: PropTypes.func,
   };
 
