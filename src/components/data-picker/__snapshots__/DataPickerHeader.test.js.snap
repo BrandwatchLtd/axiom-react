@@ -48,11 +48,11 @@ exports[`DataPickerHeader renders with color 1`] = `
               }
             }
           >
-            <h3
+            <h4
               className="ax-heading ax-heading--title ax-space--tiny"
             >
               Placeholder
-            </h3>
+            </h4>
           </div>
         </div>
       </div>
@@ -109,11 +109,11 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
               }
             }
           >
-            <h3
+            <h4
               className="ax-heading ax-heading--title ax-space--tiny"
             >
               Placeholder
-            </h3>
+            </h4>
           </div>
         </div>
       </div>
@@ -170,11 +170,11 @@ exports[`DataPickerHeader renders with onClear 1`] = `
               }
             }
           >
-            <h3
+            <h4
               className="ax-heading ax-heading--title ax-space--tiny"
             >
               Placeholder
-            </h3>
+            </h4>
           </div>
         </div>
       </div>
@@ -231,11 +231,11 @@ exports[`DataPickerHeader renders with value 1`] = `
               }
             }
           >
-            <h3
+            <h4
               className="ax-heading ax-heading--title ax-space--tiny"
             >
               Value
-            </h3>
+            </h4>
           </div>
         </div>
       </div>

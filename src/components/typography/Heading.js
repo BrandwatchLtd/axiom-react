@@ -6,15 +6,16 @@ import './Heading.css';
 
 const TAG_MAP = {
   display: 'h1',
-  headline: 'h2',
-  title: 'h3',
-  large: 'h4',
+  display2: 'h2',
+  headline: 'h3',
+  title: 'h4',
+  large: 'h5',
 };
 
 export default class Heading extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    style: PropTypes.oneOf(['display', 'headline', 'title', 'large']),
+    style: PropTypes.oneOf(['display', 'display2', 'headline', 'title', 'large']),
     underline: PropTypes.bool,
   };
 

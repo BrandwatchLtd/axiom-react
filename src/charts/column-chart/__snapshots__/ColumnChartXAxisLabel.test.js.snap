@@ -4,7 +4,7 @@ exports[`ColumnChartXAxisLabel renders with defaultProps 1`] = `
 <div
   className="ax-column-chart__x-axis-label"
 >
-  <h4
+  <h5
     className="ax-heading ax-heading--large ax-space--tiny"
   >
     <strong
@@ -12,6 +12,6 @@ exports[`ColumnChartXAxisLabel renders with defaultProps 1`] = `
     >
       Lorem
     </strong>
-  </h4>
+  </h5>
 </div>
 `;
