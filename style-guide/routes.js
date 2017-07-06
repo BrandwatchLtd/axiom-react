@@ -55,6 +55,11 @@ export default (
             examples={ require('../src/components/button/example') }
             component={ Doc } />
         <Route
+            path="candytar"
+            name="Candytar"
+            examples={ require('../src/components/candytar/example') }
+            component={ Doc } />
+        <Route
             path="card"
             name="Cards"
             examples={ require('../src/components/card/example') }
