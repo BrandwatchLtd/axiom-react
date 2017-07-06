@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { MirroredColumnChart, Heading, Weak } from 'bw-axiom';
+import { ColumnChart, Heading, Weak } from 'bw-axiom';
 import ContextDemoComponent from './ContextDemoComponent';
 import { data, chartKey } from './data';
 
-export default class MirroredColumnChartExample extends Component {
+export default class ColumnExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      MirroredColumnChart: PropTypes.object,
+      ColumnChart: PropTypes.object,
     }).isRequired,
   };
 
@@ -16,27 +16,21 @@ export default class MirroredColumnChartExample extends Component {
     const { components } = this.props;
 
     const propTypes = {
-      MirroredColumnChart: components.MirroredColumnChart,
+      ColumnChart: components.ColumnChart,
     };
 
     const initialProps = {
-      MirroredColumnChart: {
+      ColumnChart: {
         ContextComponent: ContextDemoComponent,
         chartKey,
         data,
-        height: '10rem',
+        height: '20rem',
         label: (
           <Heading style="display">
             <Weak>57%</Weak>
           </Heading>
         ),
         labelColumnWidth: '10rem',
-        reflectionData: data,
-        reflectionLabel: (
-          <Heading style="display">
-            <Weak>67%</Weak>
-          </Heading>
-        ),
       },
     };
 
@@ -44,7 +38,7 @@ export default class MirroredColumnChartExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <MirroredColumnChart { ...initialProps.MirroredColumnChart }  />
+        <ColumnChart { ...initialProps.ColumnChart }  />
       </ExampleConfig>
     );
   }

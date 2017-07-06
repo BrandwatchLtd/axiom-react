@@ -17,7 +17,7 @@ import './DotPlot.css';
 export default class DotPlotChart extends Component {
   static propTypes = {
     /**
-     * Contextual component that appears when click on a dot.
+     * Contextual component that appears when clicking on a dot.
      * It is provided with the `colors`, `label`, and `value` that has
      * been clicked on, along with the `data` that was given for that row.
      */

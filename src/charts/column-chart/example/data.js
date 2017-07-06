@@ -1,8 +1,7 @@
-export const chartKey =
-  [
-    { color: 'blue', label: 'Brand A' },
-    { color: 'pink', label: 'Brand B' },
-  ];
+export const chartKey = [
+  { color: 'blue', label: 'Brand A' },
+  { color: 'pink', label: 'Brand B' },
+];
 
 export const data = [
   { label: 'Family', subLabel:'55%', values: { blue: 10, pink: 50 } },

@@ -1,5 +1,4 @@
 module.exports = [
-  require('./one-direction').default,
+  require('./column').default,
   require('./mirrored').default,
-  require('./columns-with-context').default,
 ];

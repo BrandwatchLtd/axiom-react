@@ -14,21 +14,41 @@ import './ColumnChart.css';
 
 export default class ColumnChart extends Component {
   static propTypes = {
+    /**
+     * Contextual component that appears when clicking on a bar.
+     * It is provided with the `color`, `label`, and `value` that has
+     * been clicked on, along with the `data` that was given for that row.
+     */
     ContextComponent: PropTypes.func,
+    /**
+     * The key that is shown along the bottom of the axis. It is also used
+     * to determine the order of bars.
+     */
     chartKey: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
     })).isRequired,
+    /**
+     * The data used to render the bars along the top. The `label` is used for
+     * the xAxis and `values` for bars
+     */
     data: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
     })).isRequired,
-    direction: PropTypes.string,
+    /** Direction the bars point */
+    direction: PropTypes.oneOf(['up', 'down']),
+    /** Overall height of the individual column charts */
     height: PropTypes.string.isRequired,
+    /** Label to show on the top yAxis row */
     label: PropTypes.node,
+    /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string,
+    /** Control for showing the percentage labels above the Bars */
     showBarLabel: PropTypes.bool,
+    /** Control for showing the labels below the Bars */
     showSubLabel: PropTypes.bool,
+    /** Control for showing the xAxis labels */
     showXAxisLabels: PropTypes.bool,
   };
 
