@@ -6,7 +6,9 @@ import './Badge.css';
 
 export default class Badge extends Component {
   static propTypes = {
+    /** Content to appear inside the Badge */
     children: PropTypes.node,
+    /** Colour of the Badge */
     color: PropTypes.oneOf([
       'faded',
       'highlight',
@@ -26,14 +28,11 @@ export default class Badge extends Component {
       'grey',
     ]).isRequired,
     /**
-     * A true value will apply full width styling consistently.
-     * Small, medium and large values correspond to the break points and will
-     * be applied below that point.
+     * Controls the full width appearance of the badge either all of the time,
+     * with a value of `true` otherwise at one of the breakpoints specified.
      */
-    full: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** The opacity of the background of the Badge */
     opacity: PropTypes.number,
   };
 
