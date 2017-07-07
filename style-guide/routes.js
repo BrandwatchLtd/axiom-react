@@ -231,11 +231,6 @@ export default (
             examples={ require('../src/charts/chart/example') }
             component={ Doc } />
         <Route
-            path="chart-heading"
-            name="Chart Heading"
-            examples={ require('../src/charts/chart-heading/example') }
-            component={ Doc } />
-        <Route
             path="column-chart"
             name="Column Chart"
             examples={ require('../src/charts/column-chart/example') }

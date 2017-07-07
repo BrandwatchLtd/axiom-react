@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ChartHeading renders with defaultProps 1`] = `
-<span
-  className="ax-chart-heading"
->
-  Lorem Ipsum
-</span>
-`;

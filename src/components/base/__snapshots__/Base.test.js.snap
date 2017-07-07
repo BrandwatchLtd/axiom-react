@@ -244,6 +244,12 @@ exports[`Base renders with textSize headline 1`] = `
 />
 `;
 
+exports[`Base renders with textSize label 1`] = `
+<div
+  className="ax-text--size-label"
+/>
+`;
+
 exports[`Base renders with textSize large 1`] = `
 <div
   className="ax-text--size-large"

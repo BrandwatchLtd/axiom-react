@@ -50,6 +50,14 @@
 
 .ax-text--emphasize { font-style: italic; }
 
+.ax-text--size-label {
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-loose);
+  text-transform: uppercase;
+  line-height: var(--line-height-label);
+}
+
 .ax-text--size-small {
   font-size: var(--font-size-small);
 }
@@ -105,7 +113,11 @@
 .ax-text--underline-display1 { padding-bottom: calc(var(--spacing-grid-size) * 2); }
 .ax-text--underline-display2 { padding-bottom: calc(var(--spacing-grid-size) * 3); }
 
-.ax-text--strong { font-weight: var(--font-weight-bold); }
+.ax-text--strong,
+.ax-text--size-label.ax-text--strong,
+.ax-text--size-label .ax-text--strong {
+  font-weight: var(--font-weight-bold);
+}
 
 .ax-text--size-large,
 .ax-text--size-headtitle {

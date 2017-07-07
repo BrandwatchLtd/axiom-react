@@ -96,7 +96,6 @@ module.exports = {
         '/docs/charts/bar-chart',
         '/docs/charts/bullet-chart',
         '/docs/charts/chart',
-        '/docs/charts/chart-heading',
         '/docs/charts/column-chart',
         '/docs/charts/data-point',
         '/docs/charts/dot-plot',

@@ -65,6 +65,7 @@ export default class Base extends Component {
       'headline',
       'headtitle',
       'large',
+      'label',
       'body',
       'small',
     ]),

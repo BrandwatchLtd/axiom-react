@@ -8,6 +8,7 @@ const TAG_MAP = {
   headline: 'h3',
   headtitle: 'h4',
   large: 'h5',
+  label: 'h6',
 };
 
 export default class Heading extends Component {
@@ -18,6 +19,7 @@ export default class Heading extends Component {
       'headline',
       'headtitle',
       'large',
+      'label',
     ]),
   };
 

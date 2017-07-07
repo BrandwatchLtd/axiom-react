@@ -120,7 +120,6 @@ export { default as Chart } from './charts/chart/Chart';
 export { default as ChartBody } from './charts/chart/ChartBody';
 export { default as ChartHeader } from './charts/chart/ChartHeader';
 export { default as ChartTitle } from './charts/chart/ChartTitle';
-export { default as ChartHeading } from './charts/chart-heading/ChartHeading';
 export { default as ChartKey } from './charts/chart-key/ChartKey';
 export { default as ChartKeyItem } from './charts/chart-key/ChartKeyItem';
 export { default as ColumnChart } from './charts/column-chart/ColumnChart';

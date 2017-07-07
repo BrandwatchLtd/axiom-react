@@ -8,6 +8,7 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
+  --font-size-label: 0.625rem;
   --font-size-small: 0.75rem;
   --font-size-body: 0.8125rem;
   --font-size-large: 0.875rem;
@@ -16,6 +17,7 @@
   --font-size-display1: 2rem;
   --font-size-display2: 2.5rem;
 
+  --line-height-label: 1rem;
   --line-height-body: 1.25rem;
   --line-height-small: var(--line-height-body);
   --line-height-large: var(--line-height-body);
