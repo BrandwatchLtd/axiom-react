@@ -5,13 +5,9 @@ exports[`Stat renders with color amber 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--amber"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -21,13 +17,9 @@ exports[`Stat renders with color blue 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--blue"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -37,13 +29,9 @@ exports[`Stat renders with color brown 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--brown"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -53,13 +41,9 @@ exports[`Stat renders with color chartreuse 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--chartreuse"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -69,13 +53,9 @@ exports[`Stat renders with color green 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--green"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -85,13 +65,9 @@ exports[`Stat renders with color grey 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--grey"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -101,13 +77,9 @@ exports[`Stat renders with color lilac 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--lilac"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -117,13 +89,9 @@ exports[`Stat renders with color orange 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--orange"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -133,13 +101,9 @@ exports[`Stat renders with color pink 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--pink"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -149,13 +113,9 @@ exports[`Stat renders with color purple 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--purple"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -165,13 +125,9 @@ exports[`Stat renders with color rose 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--rose"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -181,13 +137,9 @@ exports[`Stat renders with color teal 1`] = `
   className="ax-stat-cards__stat ax-stat-cards__stat--teal"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;
@@ -197,13 +149,9 @@ exports[`Stat renders with defaultProps 1`] = `
   className="ax-stat-cards__stat"
 >
   <h3
-    className="ax-heading ax-heading--headline ax-space--tiny"
+    className="ax-space--tiny ax-text--size-headline"
   >
-    <span
-      className="ax-text--weak"
-    >
-      Lorem
-    </span>
+    Lorem
   </h3>
 </li>
 `;

@@ -77,7 +77,7 @@ export default class DataPickerHeader extends Component {
                     <Link style="subtle">
                       <div className="ax-data-picker__header-title">
                         <div className="ax-data-picker__header-title-text">
-                          <Heading style="title" textEllipsis={ true } title={ title }>
+                          <Heading textEllipsis={ true } textSize="headtitle" title={ title }>
                             { title }
                           </Heading>
                         </div>
@@ -97,7 +97,7 @@ export default class DataPickerHeader extends Component {
               )}
 
               { !children && (
-                <Heading style="title">{ title }</Heading>
+                <Heading textSize="headtitle">{ title }</Heading>
               )}
             </GridCell>
 

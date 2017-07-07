@@ -44,7 +44,7 @@ exports[`BulletBars renders with defaultProps 1`] = `
                 className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
                 <small
-                  className="ax-small"
+                  className="ax-text--size-small"
                 >
                   undefined%
                 </small>
@@ -91,7 +91,7 @@ exports[`BulletBars renders with defaultProps 1`] = `
                 className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
                 <small
-                  className="ax-small"
+                  className="ax-text--size-small"
                 >
                   undefined%
                 </small>
@@ -149,7 +149,7 @@ exports[`BulletBars renders with the correct label 1`] = `
                 className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
                 <small
-                  className="ax-small"
+                  className="ax-text--size-small"
                 >
                   label for highest value%
                 </small>
@@ -196,7 +196,7 @@ exports[`BulletBars renders with the correct label 1`] = `
                 className="ax-bars__bar-label"
               >
                 <small
-                  className="ax-small"
+                  className="ax-text--size-small"
                 >
                   label for highest value%
                 </small>

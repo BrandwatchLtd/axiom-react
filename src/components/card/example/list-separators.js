@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Card, CardList, Grid, GridCell, Heading } from 'bw-axiom';
+import { Card, CardList, Grid, GridCell, Heading, Strong } from 'bw-axiom';
 import CardContent from './CardContent';
 
 export default class CardExample extends Component {
   render() {
     return (
       <Example name="List of Cards with separators">
-        <Heading space="none" style="headline" underline={ true }>
-          Medium list of cards
+        <Heading space="x0" textSize="headline" textUnderline={ true }>
+          <Strong>Medium list of cards</Strong>
         </Heading>
 
         <Snippet>

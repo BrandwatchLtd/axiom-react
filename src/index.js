@@ -99,6 +99,7 @@ export { default as TableHead } from './components/table/TableHead';
 export { default as TableRow } from './components/table/TableRow';
 export { default as TableCell } from './components/table/TableCell';
 export { default as TableBody } from './components/table/TableBody';
+export { default as Text } from './components/typography/Text';
 export { default as TextArea } from './components/form/TextArea';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';
@@ -109,7 +110,6 @@ export { default as Tooltip } from './components/tooltip/Tooltip';
 export { default as TooltipContent } from './components/tooltip/TooltipContent';
 export { default as TooltipTarget } from './components/tooltip/TooltipTarget';
 export { default as Underline } from './components/typography/Underline';
-export { default as Weak } from './components/typography/Weak';
 
 // Charts
 export { default as Bar } from './charts/bars/Bar';

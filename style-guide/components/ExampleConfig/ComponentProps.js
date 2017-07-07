@@ -43,7 +43,7 @@ export default class ComponentProps extends Component {
 
     return (
       <Base { ...rest }>
-        <Heading style="title">{ `<${component}>` }</Heading>
+        <Heading textSize="headtitle">{ `<${component}>` }</Heading>
         { Object.keys(propTypes).map((prop)  =>
           <ComponentProp
               PropEditor={ TypeMap[propTypes[prop].type.name] }

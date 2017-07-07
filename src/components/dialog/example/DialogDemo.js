@@ -27,7 +27,7 @@ export default class DialogDemo extends Component {
         {
           withTitle && (
             <DialogHeader onRequestClose={ onRequestClose }>
-              <Heading style="title">Dialog Title</Heading>
+              <Heading textSize="headtitle">Dialog Title</Heading>
             </DialogHeader>
           )
         }

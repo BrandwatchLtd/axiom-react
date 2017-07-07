@@ -83,6 +83,16 @@ describe('Base', () => {
     });
   });
 
+  describe('renders with textCenter', () => {
+    [true, 'small', 'medium', 'large'].forEach((textCenter) => {
+      it(textCenter, () => {
+        const component = getComponent({ textCenter });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
   describe('renders with textCase', () => {
     ['upper', 'capital', 'lower'].forEach((textCase) => {
       it(textCase, () => {
@@ -93,15 +103,6 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with textCenter', () => {
-    [true, 'small', 'medium', 'large'].forEach((textCenter) => {
-      it(textCenter, () => {
-        const component = getComponent({ textCenter });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-  });
 
   describe('renders with textColor', () => {
     [
@@ -119,6 +120,18 @@ describe('Base', () => {
         expect(tree).toMatchSnapshot();
       });
     });
+  });
+
+  it('renders textEllipsis', () => {
+    const component = getComponent({ textEllipsis: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders textEmphasize', () => {
+    const component = getComponent({ textEmphasize: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('renders with textLeft', () => {
@@ -141,8 +154,27 @@ describe('Base', () => {
     });
   });
 
-  it('renders textEllipsis', () => {
-    const component = getComponent({ textEllipsis: true });
+  describe('renders with textSize', () => {
+    [
+      'display2',
+      'display1',
+      'headline',
+      'headtitle',
+      'large',
+      'label',
+      'body',
+      'small',
+    ].forEach((textSize) => {
+      it(textSize, () => {
+        const component = getComponent({ textSize });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  it('renders textStrike', () => {
+    const component = getComponent({ textStrike: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -153,8 +185,8 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textWeak', () => {
-    const component = getComponent({ textWeak: true });
+  it('renders textUnderline', () => {
+    const component = getComponent({ textUnderline: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

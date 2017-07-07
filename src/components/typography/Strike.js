@@ -1,19 +1,10 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import { Text } from 'bw-axiom';
 
 export default class Strike extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
   render() {
-    const { children, ...rest } = this.props;
-
     return (
-      <Base { ...rest } Component="del">
-        { children }
-      </Base>
+      <Text { ...this.props } Component="del" textStrike={ true } />
     );
   }
 }

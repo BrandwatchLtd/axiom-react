@@ -35,7 +35,7 @@ exports[`Bar renders with color amber 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -81,7 +81,7 @@ exports[`Bar renders with color blue 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -127,7 +127,7 @@ exports[`Bar renders with color brown 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -173,7 +173,7 @@ exports[`Bar renders with color chartreuse 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -219,7 +219,7 @@ exports[`Bar renders with color green 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -265,7 +265,7 @@ exports[`Bar renders with color grey 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -311,7 +311,7 @@ exports[`Bar renders with color lilac 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -357,7 +357,7 @@ exports[`Bar renders with color orange 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -403,7 +403,7 @@ exports[`Bar renders with color pink 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -449,7 +449,7 @@ exports[`Bar renders with color purple 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -495,7 +495,7 @@ exports[`Bar renders with color rose 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -541,7 +541,7 @@ exports[`Bar renders with color teal 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -587,7 +587,7 @@ exports[`Bar renders with defaultProps 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -633,7 +633,7 @@ exports[`Bar renders with labelStrong 1`] = `
           className="ax-bars__bar-label"
         >
           <small
-            className="ax-small ax-text--strong"
+            className="ax-text--size-small ax-text--strong"
           >
             50%
           </small>
@@ -679,7 +679,7 @@ exports[`Bar renders with minSize down 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -725,7 +725,7 @@ exports[`Bar renders with minSize left 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -771,7 +771,7 @@ exports[`Bar renders with minSize right 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -817,7 +817,7 @@ exports[`Bar renders with minSize up 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -863,7 +863,7 @@ exports[`Bar renders with onClick 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -909,7 +909,7 @@ exports[`Bar renders with showLabel 1`] = `
           className="ax-bars__bar-label"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -955,7 +955,7 @@ exports[`Bar renders with size and minSize down 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1001,7 +1001,7 @@ exports[`Bar renders with size and minSize left 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1047,7 +1047,7 @@ exports[`Bar renders with size and minSize right 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1093,7 +1093,7 @@ exports[`Bar renders with size and minSize up 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1139,7 +1139,7 @@ exports[`Bar renders with size down 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1185,7 +1185,7 @@ exports[`Bar renders with size left 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1231,7 +1231,7 @@ exports[`Bar renders with size right 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -1277,7 +1277,7 @@ exports[`Bar renders with size up 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>

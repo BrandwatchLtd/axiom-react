@@ -71,7 +71,7 @@ export default class TypeArrayOf extends Component {
               size="medium">
             <DialogHeader
                 onRequestClose={ () => this.close() }>
-              <Heading style="title">Editor</Heading>
+              <Heading textSize="headtitle">Editor</Heading>
             </DialogHeader>
 
             <DialogBody>

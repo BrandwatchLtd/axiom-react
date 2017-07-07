@@ -1,5 +1,0 @@
-@import '../../materials/typography';
-
-.ax-text--weak {
-  font-weight: var(--font-weight-light);
-}

@@ -40,7 +40,7 @@ exports[`ChartKey renders with defaultProps 1`] = `
             }
           >
             <strong
-              className="ax-text--strong ax-text--color-subtle"
+              className="ax-text--color-subtle ax-text--strong"
             >
               Ipsum
             </strong>

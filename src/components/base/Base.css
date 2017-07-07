@@ -74,51 +74,6 @@
 }
 /* stylelint-enable */
 
-.ax-text--left   { text-align: left; }
-.ax-text--center { text-align: center; }
-.ax-text--right  { text-align: right; }
-
-@media (--screen-more-than-small) {
-  .ax-text--left--small   { text-align: left; }
-  .ax-text--center--small { text-align: center; }
-  .ax-text--right--small  { text-align: right; }
-}
-
-@media (--screen-more-than-medium) {
-  .ax-text--left--medium   { text-align: left; }
-  .ax-text--center--medium { text-align: center; }
-  .ax-text--right--medium  { text-align: right; }
-}
-
-@media (--screen-more-than-large) {
-  .ax-text--left--large   { text-align: left; }
-  .ax-text--center--large { text-align: center; }
-  .ax-text--right--large  { text-align: right; }
-}
-
-.ax-text--uppercase   { text-transform: uppercase; }
-.ax-text--capitalize  { text-transform: capitalize; }
-.ax-text--lowercase   { text-transform: lowercase; }
-
-.ax-text--break-none { white-space: nowrap; }
-.ax-text--break-all  { white-space: initial; word-break: break-all; }
-.ax-text--break-word { white-space: initial; word-wrap: break-word; }
-
-.ax-text--color-subtle   { color: var(--color-context-text-subtle); }
-.ax-text--color-disabled { color: var(--color-context-text-disabled); }
-.ax-text--color-dark     { color: var(--color-theme-light-text); }
-.ax-text--color-light    { color: var(--color-theme-dark-text); }
-.ax-text--color-success  { color: var(--color-ui-success); }
-.ax-text--color-warning  { color: var(--color-ui-warning); }
-.ax-text--color-error    { color: var(--color-ui-error); }
-
-.ax-text--ellipsis {
-  max-width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .ax-space--none {
   margin-top: 0;
   margin-bottom: 0;

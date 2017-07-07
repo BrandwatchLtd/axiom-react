@@ -7,15 +7,15 @@ export default class TypeExample extends Component {
     return (
       <Example name="Headings with underline">
         <Snippet>
-          <Heading style="display" underline={ true }>
+          <Heading textSize="display1" textUnderline={ true }>
             Display with an underline
           </Heading>
 
-          <Heading style="display2" underline={ true }>
+          <Heading textSize="display2" textUnderline={ true }>
             Display2 with an underline
           </Heading>
 
-          <Heading style="headline" underline={ true }>
+          <Heading textSize="headline" textUnderline={ true }>
             Headline with an underline
           </Heading>
         </Snippet>

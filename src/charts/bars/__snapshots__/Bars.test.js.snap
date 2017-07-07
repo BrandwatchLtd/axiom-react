@@ -35,7 +35,7 @@ exports[`Bars renders with defaultProps 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -81,7 +81,7 @@ exports[`Bars renders with direction down 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -127,7 +127,7 @@ exports[`Bars renders with direction left 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -173,7 +173,7 @@ exports[`Bars renders with direction right 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -219,7 +219,7 @@ exports[`Bars renders with direction up 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -265,7 +265,7 @@ exports[`Bars renders with label 1`] = `
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
           <small
-            className="ax-small"
+            className="ax-text--size-small"
           >
             50%
           </small>
@@ -277,13 +277,9 @@ exports[`Bars renders with label 1`] = `
     className="ax-bars__label"
   >
     <small
-      className="ax-small"
+      className="ax-text--color-subtle ax-text--size-small"
     >
-      <span
-        className="ax-text--weak"
-      >
-        Lorem
-      </span>
+      Lorem
     </small>
   </div>
 </div>

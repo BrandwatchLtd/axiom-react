@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Small, Weak } from 'bw-axiom';
+import { Base, Small } from 'bw-axiom';
 import './Bars.css';
 
 export default class Bars extends Component {
@@ -41,7 +41,7 @@ export default class Bars extends Component {
 
         { label && (
           <div className="ax-bars__label">
-            <Small><Weak>{ label }</Weak></Small>
+            <Small textColor="subtle">{ label }</Small>
           </div>
         ) }
       </Base>

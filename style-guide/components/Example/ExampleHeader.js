@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Heading, Weak } from 'bw-axiom';
+import { Heading } from 'bw-axiom';
 import './ExampleHeader.css';
 
 export default class ExampleHeader extends Component {
@@ -13,9 +13,7 @@ export default class ExampleHeader extends Component {
 
     return (
       <div className="dm-example-header">
-        <Heading style="display" textCase="capital">
-          <Weak>{ name }</Weak>
-        </Heading>
+        <Heading textCase="capital" textSize="display2">{ name }</Heading>
       </div>
     );
   }

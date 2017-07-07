@@ -3,21 +3,38 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import './Base.css';
 
+const underlineTextSizes = new Set(['display2', 'display1', 'headline', 'body']);
+
 export default class Base extends Component {
   static propTypes = {
+    /**
+     * The component that should be rendered with the Base component
+     * functionality. If a string is given then it must be a valid
+     * React registered element tag.
+     */
     Component: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.func,
     ]),
+    /** Class name to be appended to the element */
     className: PropTypes.string,
+    /**
+     * Control over when the element should be hidden until.
+     * Opposite of `visibleUntil`.
+     */
     hiddenUntil: PropTypes.oneOf(['small', 'medium', 'large']),
-    space: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
-    textBreak: PropTypes.oneOf(['none', 'all', 'word']),
-    textCase: PropTypes.oneOf(['upper', 'capital', 'lower']),
-    textCenter: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    /** Vertical margins given to the element */
+    space: PropTypes.oneOf(['large', 'medium', 'none', 'small', 'tiny']),
+    /** Text wrap styling */
+    textBreak: PropTypes.oneOf(['all', 'none', 'word']),
+    /** Text casing styling */
+    textCase: PropTypes.oneOf(['capital', 'lower', 'upper']),
+    /**
+     * Text central alignment either all of the time, with a value of `true`
+     * otherwise at one of the breakpoints specified.
+     */
+    textCenter: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Text color styling */
     textColor: PropTypes.oneOf([
       'dark',
       'disabled',
@@ -27,17 +44,40 @@ export default class Base extends Component {
       'success',
       'warning',
     ]),
+    /** Text ellipsis styling */
     textEllipsis: PropTypes.bool,
-    textLeft: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Text emphasis styling */
+    textEmphasize: PropTypes.bool,
+    /**
+     * Text left alignment either all of the time, with a value of `true`
+     * otherwise at one of the breakpoints specified.
+     */
+    textLeft: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /**
+     * Text right alignment either all of the time, with a value of `true`
+     * otherwise at one of the breakpoints specified.
+     */
+    textRight: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Text size styling */
+    textSize: PropTypes.oneOf([
+      'display2',
+      'display1',
+      'headline',
+      'headtitle',
+      'large',
+      'body',
+      'small',
     ]),
-    textRight: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    /** Text strike styling */
+    textStrike: PropTypes.bool,
+    /** Text bold weight styling */
     textStrong: PropTypes.bool,
-    textWeak: PropTypes.bool,
+    /** Text underlined styling */
+    textUnderline: PropTypes.bool,
+    /**
+     * Control over when the element should be visible until.
+     * Opposite of `hiddenUntil`.
+     */
     visibleUntil: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
@@ -56,40 +96,42 @@ export default class Base extends Component {
       textCenter,
       textColor,
       textEllipsis,
+      textEmphasize,
       textLeft,
+      textSize,
       textRight,
+      textStrike,
       textStrong,
-      textWeak,
+      textUnderline,
       visibleUntil,
       ...rest
     } = this.props;
 
+    const underline = textUnderline &&
+      underlineTextSizes.has(textSize || 'body') && (textSize || 'body');
     const classes = classnames(className, {
-      [`ax-space--${space}`]: space,
-      'ax-text--break-all': textBreak === 'all',
-      'ax-text--break-none': textBreak === 'none',
-      'ax-text--break-word': textBreak === 'word',
-      'ax-text--capitalize': textCase === 'capital',
-      'ax-text--center': textCenter === true,
-      [`ax-text--center--${textCenter}`]: textCenter && textCenter !== true,
-      [`ax-text--color-${textColor}`]: textColor,
-      'ax-text--ellipsis': textEllipsis === true,
       [`ax-hidden-until--${hiddenUntil}`]: hiddenUntil,
-      'ax-text--left': textLeft === true,
-      [`ax-text--left--${textLeft}`]: textLeft && textLeft !== true,
-      'ax-text--lowercase': textCase === 'lower',
-      'ax-text--right': textRight === true,
-      [`ax-text--right--${textRight}`]: textRight && textRight !== true,
-      'ax-text--strong': textStrong === true,
-      'ax-text--uppercase': textCase === 'upper',
-      'ax-text--weak': textWeak === true,
       [`ax-visible-until--${visibleUntil}`]: visibleUntil,
+      [`ax-space--${space}`]: space,
+      [`ax-text--case-${textCase}`]: textCase,
+      'ax-text--align-center': textCenter === true,
+      [`ax-text--align-center--${textCenter}`]: textCenter && textCenter !== true,
+      [`ax-text--break-${textBreak}`]: textBreak,
+      [`ax-text--color-${textColor}`]: textColor,
+      'ax-text--ellipsis': textEllipsis,
+      'ax-text--emphasize': textEmphasize,
+      'ax-text--align-left': textLeft === true,
+      [`ax-text--align-left--${textLeft}`]: textLeft && textLeft !== true,
+      'ax-text--align-right': textRight === true,
+      [`ax-text--align-right--${textRight}`]: textRight && textRight !== true,
+      [`ax-text--size-${textSize}`]: textSize,
+      'ax-text--strike': textStrike,
+      'ax-text--strong': textStrong,
+      [`ax-text--underline-${underline}`]: underline,
     });
 
     return (
-      <Component
-          { ...rest }
-          className={ classes }  />
+      <Component { ...rest } className={ classes } />
     );
   }
 }

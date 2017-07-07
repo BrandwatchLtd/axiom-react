@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { MirroredColumnChart, Heading, Weak } from 'bw-axiom';
+import { Heading, MirroredColumnChart } from 'bw-axiom';
 import ContextDemoComponent from './ContextDemoComponent';
 import { data, chartKey } from './data';
 
@@ -25,18 +25,10 @@ export default class MirroredColumnChartExample extends Component {
         chartKey,
         data,
         height: '10rem',
-        label: (
-          <Heading style="display">
-            <Weak>57%</Weak>
-          </Heading>
-        ),
+        label: <Heading textSize="display2">57%</Heading>,
         labelColumnWidth: '10rem',
         reflectionData: data,
-        reflectionLabel: (
-          <Heading style="display">
-            <Weak>67%</Weak>
-          </Heading>
-        ),
+        reflectionLabel: <Heading textSize="display2">67%</Heading>,
       },
     };
 

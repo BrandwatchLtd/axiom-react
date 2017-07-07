@@ -5,7 +5,7 @@ exports[`ContextTip renders with defaultProps 1`] = `
   className="ax-context-box ax-context-box--padding-small"
 >
   <p
-    className="ax-paragraph ax-space--tiny"
+    className="ax-space--tiny"
   >
     Lorem ipsum
   </p>

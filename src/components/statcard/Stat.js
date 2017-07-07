@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Heading, Weak } from 'bw-axiom';
+import { Base, Heading } from 'bw-axiom';
 import './Stat.css';
 
 export default class Stat extends Component {
@@ -33,9 +33,7 @@ export default class Stat extends Component {
       <Base { ...rest }
           Component="li"
           className={ classes }>
-        <Heading style="headline">
-          <Weak>{ children }</Weak>
-        </Heading>
+        <Heading textSize="headline">{ children }</Heading>
       </Base>
     );
   }

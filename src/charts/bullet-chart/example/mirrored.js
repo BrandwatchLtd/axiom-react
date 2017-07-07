@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Heading, MirroredBulletChart, Weak } from 'bw-axiom';
+import { Heading, MirroredBulletChart } from 'bw-axiom';
 import { data, chartKey } from './data';
 
 export default class MirroredBulletChartExample extends Component {
@@ -23,19 +23,11 @@ export default class MirroredBulletChartExample extends Component {
         chartKey: chartKey,
         data: data,
         height: '10rem',
-        label: (
-          <Heading style="display">
-            <Weak>57%</Weak>
-          </Heading>
-        ),
+        label: <Heading textSize="display2">57%</Heading>,
         labelColumnWidth: '10rem',
         labelIndex: 0,
         reflectionData: data,
-        reflectionLabel: (
-          <Heading style="display">
-            <Weak>67%</Weak>
-          </Heading>
-        ),
+        reflectionLabel: <Heading textSize="display2">67%</Heading>,
         showBarLabels: true,
       },
     };

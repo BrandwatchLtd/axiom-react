@@ -5,7 +5,7 @@ exports[`ColumnChartXAxisLabel renders with defaultProps 1`] = `
   className="ax-column-chart__x-axis-label"
 >
   <h5
-    className="ax-heading ax-heading--large ax-space--tiny"
+    className="ax-space--tiny ax-text--size-large"
   >
     <strong
       className="ax-text--strong"

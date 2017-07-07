@@ -1,36 +1,35 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Base } from 'bw-axiom';
-import './Heading.css';
+import { Text } from 'bw-axiom';
 
 const TAG_MAP = {
-  display: 'h1',
-  display2: 'h2',
+  display2: 'h1',
+  display1: 'h2',
   headline: 'h3',
-  title: 'h4',
+  headtitle: 'h4',
   large: 'h5',
 };
 
 export default class Heading extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
-    style: PropTypes.oneOf(['display', 'display2', 'headline', 'title', 'large']),
-    underline: PropTypes.bool,
+    textSize: PropTypes.oneOf([
+      'display2',
+      'display1',
+      'headline',
+      'headtitle',
+      'large',
+    ]),
   };
 
   static defaultProps = {
-    style: 'large',
+    textSize: 'large',
   };
 
   render() {
-    const { underline, style, ...rest } = this.props;
-    const classes = classnames('ax-heading', `ax-heading--${style}`, {
-      'ax-heading--underline': underline,
-    });
+    const { textSize, ...rest } = this.props;
 
     return (
-      <Base space="tiny" { ...rest } Component={ TAG_MAP[style] } className={ classes } />
+      <Text space="tiny" { ...rest } Component={ TAG_MAP[textSize] } textSize={ textSize } />
     );
   }
 }

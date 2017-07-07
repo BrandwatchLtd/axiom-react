@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Heading, Paragraph, Small, Strong, Weak } from 'bw-axiom';
+import { Heading, Paragraph, Small, Strong } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {
@@ -20,15 +20,6 @@ export default class TypeExample extends Component {
             <Strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris iaculis, est dapibus aliquet tristique, ante orci porta
             ligula, sit amet bibendum diam lectus eu erat.</Strong>
-          </Paragraph>
-        </Snippet>
-
-        <Heading>Weak</Heading>
-        <Snippet>
-          <Paragraph>
-            <Weak>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris iaculis, est dapibus aliquet tristique, ante orci porta ligula,
-            sit amet bibendum diam lectus eu erat.</Weak>
           </Paragraph>
         </Snippet>
 

@@ -14,7 +14,6 @@ import {
   Paragraph,
   Heading,
   Strong,
-  Weak,
 } from 'bw-axiom';
 import atIds from '../../../at_ids';
 import './Login.css';
@@ -82,8 +81,8 @@ export default class Login extends Component {
 
         <div className="ax-login__body">
           <div className="ax-login__form">
-            <Heading space="small" style="display">
-              { application }<Weak>/ Login</Weak>
+            <Heading space="small" textSize="display2">
+              <Strong>{ application }</Strong>/ Login
             </Heading>
 
             <Form onSubmit={ e => this.handleSubmit(e) }>

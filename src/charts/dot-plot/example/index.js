@@ -43,7 +43,7 @@ class ContextDemoComponent extends Component {
                 </GridCell>
 
                 <GridCell shrink={ true }>
-                  <Heading style="headline">{ value }%</Heading>
+                  <Heading textSize="headline">{ value }%</Heading>
                 </GridCell>
               </Grid>
             </ListItem>

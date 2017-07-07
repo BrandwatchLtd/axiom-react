@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import { Example, Snippet } from 'style-guide';
-import { Heading, Strong, Weak } from 'bw-axiom';
+import { Heading, Strong } from 'bw-axiom';
 
 export default class TypeExample extends Component {
   render() {
     return (
       <Example name="Headings">
         <Snippet>
-          <Heading style="display">
-            <Weak>Display Weak</Weak> / Display Standard
+          <Heading textSize="display1">
+            Display1 / <Strong>Display Strong</Strong>
           </Heading>
 
-          <Heading style="display2">
-            <Weak>Display2 Weak</Weak> / Display2 Standard
+          <Heading textSize="display2">
+            Display2 / <Strong>Display2 Strong</Strong>
           </Heading>
 
-          <Heading style="headline">
-            Headline Standard
+          <Heading textSize="headline">
+            Headline Standard/ <Strong>Headline Strong</Strong>
           </Heading>
 
-          <Heading style="title">
-            Title Standard / <Strong>Title Strong</Strong>
+          <Heading textSize="title">
+            Title / <Strong>Title Strong</Strong>
           </Heading>
 
-          <Heading style="large">
-            Large Standard / <Strong>Large Strong</Strong>
+          <Heading textSize="large">
+            Large / <Strong>Large Strong</Strong>
           </Heading>
         </Snippet>
       </Example>

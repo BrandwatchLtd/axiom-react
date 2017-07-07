@@ -2,10 +2,10 @@
 
 exports[`ChartTableAxisTitle renders with defaultProps 1`] = `
 <p
-  className="ax-paragraph ax-space--tiny ax-text--center ax-text--color-subtle"
+  className="ax-space--tiny ax-text--align-center ax-text--color-subtle"
 >
   <small
-    className="ax-small"
+    className="ax-text--size-small"
   >
     Lorem Ipsum
   </small>

@@ -22,15 +22,27 @@ exports[`Base renders textEllipsis 1`] = `
 />
 `;
 
+exports[`Base renders textEmphasize 1`] = `
+<div
+  className="ax-text--emphasize"
+/>
+`;
+
+exports[`Base renders textStrike 1`] = `
+<div
+  className="ax-text--strike"
+/>
+`;
+
 exports[`Base renders textStrong 1`] = `
 <div
   className="ax-text--strong"
 />
 `;
 
-exports[`Base renders textWeak 1`] = `
+exports[`Base renders textUnderline 1`] = `
 <div
-  className="ax-text--weak"
+  className="ax-text--underline-body"
 />
 `;
 
@@ -78,43 +90,43 @@ exports[`Base renders with textBreak word 1`] = `
 
 exports[`Base renders with textCase capital 1`] = `
 <div
-  className="ax-text--capitalize"
+  className="ax-text--case-capital"
 />
 `;
 
 exports[`Base renders with textCase lower 1`] = `
 <div
-  className="ax-text--lowercase"
+  className="ax-text--case-lower"
 />
 `;
 
 exports[`Base renders with textCase upper 1`] = `
 <div
-  className="ax-text--uppercase"
+  className="ax-text--case-upper"
 />
 `;
 
 exports[`Base renders with textCenter large 1`] = `
 <div
-  className="ax-text--center--large"
+  className="ax-text--align-center--large"
 />
 `;
 
 exports[`Base renders with textCenter medium 1`] = `
 <div
-  className="ax-text--center--medium"
+  className="ax-text--align-center--medium"
 />
 `;
 
 exports[`Base renders with textCenter small 1`] = `
 <div
-  className="ax-text--center--small"
+  className="ax-text--align-center--small"
 />
 `;
 
 exports[`Base renders with textCenter true 1`] = `
 <div
-  className="ax-text--center"
+  className="ax-text--align-center"
 />
 `;
 
@@ -162,49 +174,91 @@ exports[`Base renders with textColor warning 1`] = `
 
 exports[`Base renders with textLeft large 1`] = `
 <div
-  className="ax-text--left--large"
+  className="ax-text--align-left--large"
 />
 `;
 
 exports[`Base renders with textLeft medium 1`] = `
 <div
-  className="ax-text--left--medium"
+  className="ax-text--align-left--medium"
 />
 `;
 
 exports[`Base renders with textLeft small 1`] = `
 <div
-  className="ax-text--left--small"
+  className="ax-text--align-left--small"
 />
 `;
 
 exports[`Base renders with textLeft true 1`] = `
 <div
-  className="ax-text--left"
+  className="ax-text--align-left"
 />
 `;
 
 exports[`Base renders with textRight large 1`] = `
 <div
-  className="ax-text--right--large"
+  className="ax-text--align-right--large"
 />
 `;
 
 exports[`Base renders with textRight medium 1`] = `
 <div
-  className="ax-text--right--medium"
+  className="ax-text--align-right--medium"
 />
 `;
 
 exports[`Base renders with textRight small 1`] = `
 <div
-  className="ax-text--right--small"
+  className="ax-text--align-right--small"
 />
 `;
 
 exports[`Base renders with textRight true 1`] = `
 <div
-  className="ax-text--right"
+  className="ax-text--align-right"
+/>
+`;
+
+exports[`Base renders with textSize body 1`] = `
+<div
+  className="ax-text--size-body"
+/>
+`;
+
+exports[`Base renders with textSize display1 1`] = `
+<div
+  className="ax-text--size-display1"
+/>
+`;
+
+exports[`Base renders with textSize display2 1`] = `
+<div
+  className="ax-text--size-display2"
+/>
+`;
+
+exports[`Base renders with textSize headline 1`] = `
+<div
+  className="ax-text--size-headline"
+/>
+`;
+
+exports[`Base renders with textSize large 1`] = `
+<div
+  className="ax-text--size-large"
+/>
+`;
+
+exports[`Base renders with textSize small 1`] = `
+<div
+  className="ax-text--size-small"
+/>
+`;
+
+exports[`Base renders with textSize headtitle 1`] = `
+<div
+  className="ax-text--size-headtitle"
 />
 `;
 

@@ -51,7 +51,7 @@ export default class TableExample extends Component {
               </GridCell>
 
               <GridCell>
-                <Heading style="title">Reveal content below</Heading>
+                <Heading textSize="headtitle">Reveal content below</Heading>
                 <Paragraph>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nunc commodo egestas fringilla. In a arcu erat. Ut vestibulum

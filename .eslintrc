@@ -15,6 +15,7 @@
     "document": true,
     "window": true,
     "Promise": true,
+    "Set": true
   },
   "rules": {
     "comma-dangle": [2, "always-multiline"],

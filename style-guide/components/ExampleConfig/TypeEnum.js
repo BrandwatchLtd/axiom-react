@@ -44,7 +44,7 @@ export default class TypeEnum extends Component {
                   <DropdownMenuItem
                       key={ value }
                       onClick={ () => setValue(value) }>
-                    { value }
+                    { value.toString() }
                   </DropdownMenuItem>
                 ) }
               </DropdownMenu>

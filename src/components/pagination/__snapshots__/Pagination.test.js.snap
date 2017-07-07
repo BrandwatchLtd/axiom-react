@@ -2,7 +2,7 @@
 
 exports[`Composite: Pagination renders with defaultProps 1`] = `
 <div
-  className="ax-inline-group ax-button-group ax-space--medium ax-text--center"
+  className="ax-inline-group ax-button-group ax-space--medium ax-text--align-center"
 >
   <div
     className="ax-inline-group__spacer"
@@ -124,7 +124,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
 
 exports[`Composite: Pagination renders without displayRange 1`] = `
 <div
-  className="ax-inline-group ax-button-group ax-space--medium ax-text--center"
+  className="ax-inline-group ax-button-group ax-space--medium ax-text--align-center"
 >
   <div
     className="ax-inline-group__spacer"
@@ -177,7 +177,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
 
 exports[`Composite: Pagination renders without pages 1`] = `
 <div
-  className="ax-inline-group ax-button-group ax-space--medium ax-text--center"
+  className="ax-inline-group ax-button-group ax-space--medium ax-text--align-center"
 >
   <div
     className="ax-inline-group__spacer"

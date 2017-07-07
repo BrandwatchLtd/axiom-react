@@ -9,7 +9,6 @@ import {
   DropdownMenuItem,
   Heading,
   longNumber,
-  Weak,
 } from 'bw-axiom';
 import { getData } from './data';
 
@@ -72,9 +71,7 @@ class DataPickerExample extends Component {
 
           { selected && (
             <DataPickerBody snippetSkip={ true }>
-              <Heading style="headline">
-                <Weak>{ longNumber(selected.authors) }</Weak>
-              </Heading>
+              <Heading textSize="headline">{ longNumber(selected.authors) }</Heading>
             </DataPickerBody>
           ) }
         </DataPicker>

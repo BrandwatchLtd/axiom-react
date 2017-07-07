@@ -19,7 +19,11 @@ export default class MenuItem extends Component {
     });
 
     return (
-      <Base Component="li" className={ classes }>
+      <Base
+          Component="li"
+          className={ classes }
+          textSize="headline"
+          textStrong={ true }>
         <button { ...rest } className="ax-menu__item-button" disabled={ disabled }>
           { children }
         </button>

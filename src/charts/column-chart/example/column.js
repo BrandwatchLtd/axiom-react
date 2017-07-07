@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ColumnChart, Heading, Weak } from 'bw-axiom';
+import { ColumnChart, Heading } from 'bw-axiom';
 import ContextDemoComponent from './ContextDemoComponent';
 import { data, chartKey } from './data';
 
@@ -25,11 +25,7 @@ export default class ColumnExample extends Component {
         chartKey,
         data,
         height: '20rem',
-        label: (
-          <Heading style="display">
-            <Weak>57%</Weak>
-          </Heading>
-        ),
+        label: <Heading textSize="display2">57%</Heading>,
         labelColumnWidth: '10rem',
       },
     };

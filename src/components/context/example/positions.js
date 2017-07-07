@@ -40,7 +40,7 @@ export default class ContextBoxExample extends Component {
                 <Context position={ position } width="100%">
                   <ContextBox>
                     <div snippetReplace={ true }>
-                      <Heading style="title">Lorem Ipsum</Heading>
+                      <Heading textSize="headtitle">Lorem Ipsum</Heading>
                       <Paragraph>
                         Quisque id hendrerit dolor. In congue vulputate mi, et
                         accumsan magna tristique id.

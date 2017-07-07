@@ -4,9 +4,8 @@
 @import '../../materials/typography';
 
 :root {
-  --cmp-menu-item-height: calc(var(--spacing-grid-size) * 6);
   --cmp-menu-item-space: calc(var(--spacing-grid-size) * 9);
-  --cmp-menu-item-bar-space: calc(var(--spacing-grid-size) * 4);
+  --cmp-menu-item-bar-space: calc(var(--spacing-grid-size) * 3);
 }
 
 .ax-menu__item {
@@ -30,10 +29,6 @@
   border-bottom: var(--spacing-grid-size) solid transparent;
   background: none;
   color: inherit;
-  font-size: var(--font-size-headline);
-  font-weight: var(--font-weight-headline-standard);
-  letter-spacing: var(--letter-spacing-headline);
-  line-height: var(--cmp-menu-item-height);
   transition-property: border-bottom-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);

@@ -34,7 +34,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             0%
           </small>
@@ -52,7 +52,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             10%
           </small>
@@ -70,7 +70,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             20%
           </small>
@@ -88,7 +88,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             30%
           </small>
@@ -106,7 +106,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             40%
           </small>
@@ -124,7 +124,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             50%
           </small>
@@ -142,7 +142,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             60%
           </small>
@@ -160,7 +160,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             70%
           </small>
@@ -178,7 +178,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             80%
           </small>
@@ -196,7 +196,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             90%
           </small>
@@ -214,7 +214,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             100%
           </small>
@@ -334,7 +334,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             0%
           </small>
@@ -352,7 +352,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             10%
           </small>
@@ -370,7 +370,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             20%
           </small>
@@ -388,7 +388,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             30%
           </small>
@@ -406,7 +406,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             40%
           </small>
@@ -424,7 +424,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             50%
           </small>
@@ -442,7 +442,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             60%
           </small>
@@ -460,7 +460,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             70%
           </small>
@@ -478,7 +478,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             80%
           </small>
@@ -496,7 +496,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             90%
           </small>
@@ -514,7 +514,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             100%
           </small>
@@ -634,7 +634,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             0%
           </small>
@@ -652,7 +652,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             10%
           </small>
@@ -670,7 +670,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             20%
           </small>
@@ -688,7 +688,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             30%
           </small>
@@ -706,7 +706,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             40%
           </small>
@@ -724,7 +724,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             50%
           </small>
@@ -742,7 +742,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             60%
           </small>
@@ -760,7 +760,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             70%
           </small>
@@ -778,7 +778,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             80%
           </small>
@@ -796,7 +796,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             90%
           </small>
@@ -814,7 +814,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             100%
           </small>
@@ -934,7 +934,7 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             0%
           </small>
@@ -952,7 +952,7 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             50%
           </small>
@@ -970,7 +970,7 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
           className="ax-chart-table__xAxis-label"
         >
           <small
-            className="ax-small ax-text--color-subtle"
+            className="ax-text--color-subtle ax-text--size-small"
           >
             100%
           </small>

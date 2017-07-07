@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Small, Strong } from 'bw-axiom';
+import { Base } from 'bw-axiom';
 
 export default class Tab extends Component {
   static propTypes = {
@@ -24,12 +24,14 @@ export default class Tab extends Component {
           Component="li"
           className={ classes }
           textCase="upper"
+          textSize="small"
+          textStrong={ true }
           title={ title }>
         <button { ...rest }
             className="ax-tabset__button"
             disabled={ disabled }
             onClick={ onClick }>
-          <Strong><Small>{ title }</Small></Strong>
+          { title }
         </button>
       </Base>
     );
