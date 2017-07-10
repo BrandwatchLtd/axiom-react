@@ -46,7 +46,6 @@ export { default as Form } from './components/form/Form';
 export { default as Grid } from './components/grid/Grid';
 export { default as GridCell } from './components/grid/GridCell';
 export { default as Heading } from './components/typography/Heading';
-export { default as HorizontalRule } from './components/typography/HorizontalRule';
 export { default as Icon } from './components/icon/Icon';
 export { default as IconButton } from './components/icon/IconButton';
 export { default as IconIndicator } from './components/icon/IconIndicator';
