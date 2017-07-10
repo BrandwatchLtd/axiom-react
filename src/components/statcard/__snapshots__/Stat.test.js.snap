@@ -4,7 +4,7 @@ exports[`Stat renders with color amber 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--amber"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -12,7 +12,7 @@ exports[`Stat renders with color amber 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -20,7 +20,7 @@ exports[`Stat renders with color blue 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--blue"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -28,7 +28,7 @@ exports[`Stat renders with color blue 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -36,7 +36,7 @@ exports[`Stat renders with color brown 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--brown"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -44,7 +44,7 @@ exports[`Stat renders with color brown 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -52,7 +52,7 @@ exports[`Stat renders with color chartreuse 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--chartreuse"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -60,7 +60,7 @@ exports[`Stat renders with color chartreuse 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -68,7 +68,7 @@ exports[`Stat renders with color green 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--green"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -76,7 +76,7 @@ exports[`Stat renders with color green 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -84,7 +84,7 @@ exports[`Stat renders with color grey 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--grey"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -92,7 +92,7 @@ exports[`Stat renders with color grey 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -100,7 +100,7 @@ exports[`Stat renders with color lilac 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--lilac"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -108,7 +108,7 @@ exports[`Stat renders with color lilac 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -116,7 +116,7 @@ exports[`Stat renders with color orange 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--orange"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -124,7 +124,7 @@ exports[`Stat renders with color orange 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -132,7 +132,7 @@ exports[`Stat renders with color pink 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--pink"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -140,7 +140,7 @@ exports[`Stat renders with color pink 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -148,7 +148,7 @@ exports[`Stat renders with color purple 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--purple"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -156,7 +156,7 @@ exports[`Stat renders with color purple 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -164,7 +164,7 @@ exports[`Stat renders with color rose 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--rose"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -172,7 +172,7 @@ exports[`Stat renders with color rose 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -180,7 +180,7 @@ exports[`Stat renders with color teal 1`] = `
 <li
   className="ax-stat-cards__stat ax-stat-cards__stat--teal"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -188,7 +188,7 @@ exports[`Stat renders with color teal 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
 
@@ -196,7 +196,7 @@ exports[`Stat renders with defaultProps 1`] = `
 <li
   className="ax-stat-cards__stat"
 >
-  <h2
+  <h3
     className="ax-heading ax-heading--headline ax-space--tiny"
   >
     <span
@@ -204,6 +204,6 @@ exports[`Stat renders with defaultProps 1`] = `
     >
       Lorem
     </span>
-  </h2>
+  </h3>
 </li>
 `;
