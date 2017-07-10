@@ -18,7 +18,7 @@ export default class Example extends Component {
     return (
       <div className="dm-example">
         { name && (
-          <Heading space="medium" textSize="headtitle">{ name }</Heading>
+          <Heading space="x6" textSize="headtitle">{ name }</Heading>
         ) }
 
         { children }

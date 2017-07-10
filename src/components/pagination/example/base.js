@@ -29,7 +29,7 @@ export default class PagiantionExample extends Component {
 
     return (
       <Example name="Pagination">
-        <Grid space="large">
+        <Grid space="x8">
           <GridCell>
             <TextInput
                 label="Current page"

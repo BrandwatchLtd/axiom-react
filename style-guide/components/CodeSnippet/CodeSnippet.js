@@ -15,7 +15,7 @@ export default class CodeSnippet extends Component {
     const { className, code } = prepareSnippet(children, language);
 
     return (
-      <Base Component="pre" className={ className } space="medium">
+      <Base Component="pre" className={ className } space="x6">
         <code
             className={ className }
             dangerouslySetInnerHTML={ { __html: code } } />

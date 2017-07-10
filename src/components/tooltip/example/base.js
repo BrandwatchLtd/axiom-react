@@ -24,7 +24,7 @@ export default class DropdownExample extends Component {
       <Example name="Tooltip">
         <Snippet>
           { positions.map((cols, ri) =>
-            <Grid gutters={ false } key={ ri } snippetIgnore={ true } space="none">
+            <Grid gutters={ false } key={ ri } snippetIgnore={ true } space="x0">
               { cols.map((position, ci) =>
                 <GridCell key={ ci } shrink={ true } snippetIgnore={ true }>
                   <Tooltip position={ position } snippetSkip={ ri + ci !== 0 }>

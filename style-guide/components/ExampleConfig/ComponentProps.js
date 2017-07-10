@@ -86,7 +86,7 @@ export default class ComponentProps extends Component {
               required={ propTypes[prop].required }
               setOptionValue={ (...a) => setPropOptionValue(prop, ...a) }
               setValue={ (...a) => setPropValue(prop, ...a) }
-              space="small"
+              space="x4"
               type={ propTypes[prop].type.name }
               value={ propValues[prop] }
               values={ propTypes[prop].values } />

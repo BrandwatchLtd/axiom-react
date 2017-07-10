@@ -2,7 +2,7 @@
 
 exports[`ButtonGroup renders with defaultProps 1`] = `
 <div
-  className="ax-inline-group ax-button-group ax-space--medium"
+  className="ax-inline-group ax-button-group ax-space--x6"
 >
   <div
     className="ax-inline-group__spacer"

@@ -24,7 +24,7 @@ export default class Base extends Component {
      */
     hiddenUntil: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Vertical margins given to the element */
-    space: PropTypes.oneOf(['large', 'medium', 'none', 'small', 'tiny']),
+    space: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x8']),
     /** Text wrap styling */
     textBreak: PropTypes.oneOf(['all', 'none', 'word']),
     /** Text casing styling */

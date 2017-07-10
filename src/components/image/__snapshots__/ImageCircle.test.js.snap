@@ -14,7 +14,7 @@ exports[`ImageCircle renders with border large 1`] = `
     className="ax-image-circle__image"
   >
     <img
-      className="ax-image ax-space--small"
+      className="ax-image ax-space--x4"
       src="/lorem.jpg"
       style={
         Object {
@@ -40,7 +40,7 @@ exports[`ImageCircle renders with border small 1`] = `
     className="ax-image-circle__image"
   >
     <img
-      className="ax-image ax-space--small"
+      className="ax-image ax-space--x4"
       src="/lorem.jpg"
       style={
         Object {
@@ -66,7 +66,7 @@ exports[`ImageCircle renders with defaultProps 1`] = `
     className="ax-image-circle__image"
   >
     <img
-      className="ax-image ax-space--small"
+      className="ax-image ax-space--x4"
       src="/lorem.jpg"
       style={
         Object {
@@ -92,7 +92,7 @@ exports[`ImageCircle renders with overlay icon 1`] = `
     className="ax-image-circle__image"
   >
     <img
-      className="ax-image ax-space--small"
+      className="ax-image ax-space--x4"
       src="/lorem.jpg"
       style={
         Object {

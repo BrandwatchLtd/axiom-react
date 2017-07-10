@@ -2,7 +2,7 @@
 
 exports[`ChartTableAxisTitle renders with defaultProps 1`] = `
 <p
-  className="ax-space--tiny ax-text--align-center ax-text--color-subtle"
+  className="ax-space--x2 ax-text--align-center ax-text--color-subtle"
 >
   <small
     className="ax-text--size-small"

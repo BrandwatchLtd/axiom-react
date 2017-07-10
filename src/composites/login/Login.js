@@ -81,7 +81,7 @@ export default class Login extends Component {
 
         <div className="ax-login__body">
           <div className="ax-login__form">
-            <Heading space="small" textSize="display2">
+            <Heading space="x4" textSize="display2">
               <Strong>{ application }</Strong>/ Login
             </Heading>
 
@@ -103,7 +103,7 @@ export default class Login extends Component {
                   type="password"
                   value={ password } />
 
-              <Grid space="small" verticalAlign="middle">
+              <Grid space="x4" verticalAlign="middle">
                 <GridCell shrink={ true }>
                   <ButtonGroup>
                     <Button
@@ -124,7 +124,7 @@ export default class Login extends Component {
               </Grid>
             </Form>
 
-            <Paragraph space="small" textColor="error">
+            <Paragraph space="x4" textColor="error">
               <Strong data-ax-at={ atIds.Login.error }>
                 { error }
               </Strong>

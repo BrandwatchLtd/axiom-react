@@ -28,7 +28,7 @@ export default class ChedioButtox extends Component {
     });
 
     return (
-      <Base Component="label" className={ classes } space="tiny">
+      <Base Component="label" className={ classes } space="x2">
         <input { ...rest }
             className={ classnames('ax-chedio-buttox', inputClassName) }
             disabled={ disabled }

@@ -14,7 +14,7 @@ exports[`Avatar renders with custom size 1`] = `
     className="ax-image-circle__image"
   >
     <img
-      className="ax-image ax-space--small"
+      className="ax-image ax-space--x4"
       src="/image/path"
       style={
         Object {

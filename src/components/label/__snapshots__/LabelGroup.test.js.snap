@@ -2,7 +2,7 @@
 
 exports[`LabelGroup renders with defaultProps 1`] = `
 <div
-  className="ax-inline-group ax-label-group ax-space--small"
+  className="ax-inline-group ax-label-group ax-space--x4"
 >
   <div
     className="ax-inline-group__spacer"

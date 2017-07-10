@@ -21,7 +21,7 @@ export default class Image extends Component {
           onLoad={ onLoad }
           src={ src }>
         <Base
-            space="small"
+            space="x4"
             { ...rest }
             Component="img"
             className="ax-image"

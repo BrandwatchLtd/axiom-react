@@ -32,7 +32,7 @@ export default class TableExample extends Component {
 
     return (
       <Example name="Reveal">
-        <ButtonGroup space="none">
+        <ButtonGroup space="x0">
           <Button onClick={ () => this.handleOnClick() } style="secondary">
             Toggle visibility: { visible ? 'OFF' : 'ON' }
           </Button>
@@ -44,7 +44,7 @@ export default class TableExample extends Component {
             <Grid
                 gutters="large"
                 responsive={ false }
-                space={ visible ? 'medium' : 'none' }
+                space={ visible ? 'x6' : 'x0' }
                 verticalAlign="middle">
               <GridCell shrink={ true }>
                 <Candytar color="lilac" size="4.5rem" />
@@ -61,7 +61,7 @@ export default class TableExample extends Component {
               </GridCell>
             </Grid>
 
-            <Reveal space="large" visible={ visible }>
+            <Reveal space="x8" visible={ visible }>
               <Paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis ornare sit amet odio at scelerisque. Vestibulum
@@ -81,7 +81,7 @@ export default class TableExample extends Component {
           </Card>
         </CardList>
 
-        <Snippet renderSkip={ true } space="none">
+        <Snippet renderSkip={ true } space="x0">
           <Reveal visible={ visible }>
             ...
           </Reveal>

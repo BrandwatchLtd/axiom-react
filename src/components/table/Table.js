@@ -27,7 +27,7 @@ export default class Table extends Component {
     });
 
     return (
-      <Base space="medium" { ...rest } Component="table" className={ classes }>
+      <Base space="x6" { ...rest } Component="table" className={ classes }>
         { children }
       </Base>
     );

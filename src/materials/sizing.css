@@ -4,9 +4,14 @@
 
   --spacing-grid-size--x1: var(--spacing-grid-size);
   --spacing-grid-size--x2: calc(var(--spacing-grid-size) * 2);
+  --spacing-grid-size--x3: calc(var(--spacing-grid-size) * 3);
+  --spacing-grid-size--x4: calc(var(--spacing-grid-size) * 4);
+  --spacing-grid-size--x5: calc(var(--spacing-grid-size) * 5);
+  --spacing-grid-size--x6: calc(var(--spacing-grid-size) * 6);
+  --spacing-grid-size--x8: calc(var(--spacing-grid-size) * 8);
 
-  --page-padding-horizontal: calc(var(--spacing-grid-size) * 6);
-  --page-padding-vertical: calc(var(--spacing-grid-size) * 6);
+  --page-padding-horizontal: var(--spacing-grid-size--x6);
+  --page-padding-vertical: var(--spacing-grid-size--x6);
 
   --component-line-height: 1rem;
 
@@ -18,11 +23,6 @@
 
   --component-border-radius: 0.1875rem;
   --component-border-radius-large: 0.375rem;
-
-  --component-margin-vertical-tiny: calc(var(--spacing-grid-size) * 2);
-  --component-margin-vertical-small: calc(var(--spacing-grid-size) * 4);
-  --component-margin-vertical-medium: calc(var(--spacing-grid-size) * 6);
-  --component-margin-vertical-large: calc(var(--spacing-grid-size) * 8);
 
   --component-padding-vertical-small: calc(var(--spacing-grid-size) - var(--component-border-width-small));
   --component-padding-vertical-medium: calc(calc(var(--spacing-grid-size) * 2) - var(--component-border-width-small));

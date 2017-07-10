@@ -14,7 +14,7 @@ export default class StatCards extends Component {
       <Grid { ...rest }
           fill={ true }
           gutters="tiny"
-          space="medium">
+          space="x6">
         { children }
       </Grid>
     );

@@ -4,7 +4,7 @@ import { Text } from 'bw-axiom';
 export default class Paragraph extends Component {
   render() {
     return (
-      <Text space="tiny" { ...this.props }  Component="p" />
+      <Text space="x2" { ...this.props }  Component="p" />
     );
   }
 }

@@ -10,7 +10,7 @@ exports[`ChartKeyItem renders with defaultProps 1`] = `
   }
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--shrink ax-grid--vertical-middle ax-grid--wrap"

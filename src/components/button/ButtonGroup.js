@@ -22,7 +22,7 @@ export default class ButtonGroup extends Component {
     const { children, joined, ...rest } = this.props;
 
     return (
-      <Base space="medium" { ...rest }
+      <Base space="x6" { ...rest }
           Component={ joined ? 'div' : InlineGroup }
           className="ax-button-group">
         { children }

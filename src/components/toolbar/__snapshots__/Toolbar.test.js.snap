@@ -2,7 +2,7 @@
 
 exports[`Toolbar renders 1`] = `
 <ul
-  className="ax-list ax-list--inline ax-space--small"
+  className="ax-list ax-list--inline ax-space--x4"
 >
   <li
     className="ax-list__item"

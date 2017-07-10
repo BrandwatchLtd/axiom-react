@@ -86,7 +86,7 @@ export default class Reveal extends Component {
       <Base { ...rest }
           className={ classes }
           ref={ (el) => this.el = findDOMNode(el) }
-          space={ visible ? space : 'none' }
+          space={ visible ? space : 'x0' }
           style={ style }>
         <div
             className="ax-reveal__inner"

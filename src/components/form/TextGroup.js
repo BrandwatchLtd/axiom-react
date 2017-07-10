@@ -13,7 +13,7 @@ export default class TextGroup extends Component {
     const { children, label, ...rest } = this.props;
 
     return (
-      <Base space="small" { ...rest } Component="label" className="ax-input__group">
+      <Base space="x4" { ...rest } Component="label" className="ax-input__group">
         { label && (
           <div className="ax-input__label">
             <Strong>{ label }</Strong>

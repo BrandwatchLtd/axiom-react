@@ -75,7 +75,7 @@ export default class ExampleConfig extends Component {
                   propValues={ configState[component].props }
                   setPropOptionValue={ (...a) => this.setPropOption(component, ...a) }
                   setPropValue={ (...a) => this.setProp(component, ...a) }
-                  space="large" />
+                  space="x8" />
             ) }
           </Tab>
 

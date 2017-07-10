@@ -5,7 +5,7 @@ exports[`Alert renders with color error 1`] = `
   className="ax-alert ax-alert--error"
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--vertical-middle ax-grid--wrap"
@@ -30,7 +30,7 @@ exports[`Alert renders with color info 1`] = `
   className="ax-alert ax-alert--info"
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--vertical-middle ax-grid--wrap"
@@ -55,7 +55,7 @@ exports[`Alert renders with color success 1`] = `
   className="ax-alert ax-alert--success"
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--vertical-middle ax-grid--wrap"
@@ -80,7 +80,7 @@ exports[`Alert renders with color warning 1`] = `
   className="ax-alert ax-alert--warning"
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--vertical-middle ax-grid--wrap"
@@ -105,7 +105,7 @@ exports[`Alert renders with defaultProps 1`] = `
   className="ax-alert ax-alert--info"
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--vertical-middle ax-grid--wrap"
@@ -130,7 +130,7 @@ exports[`Alert renders with onRemoveClick 1`] = `
   className="ax-alert ax-alert--info"
 >
   <div
-    className="ax-grid__container ax-space--medium"
+    className="ax-grid__container ax-space--x6"
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--small ax-grid--gutters-vertical--small ax-grid--vertical-middle ax-grid--wrap"

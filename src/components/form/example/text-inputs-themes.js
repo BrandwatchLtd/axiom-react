@@ -22,7 +22,7 @@ export default class FormExample extends Component {
       <Example name="Text input themes">
         <Snippet>
           { theme.values.map((theme) =>
-            <Alert key={ theme } space="small">
+            <Alert key={ theme } space="x4">
               <TextInput
                   placeholder={ `${theme} theme input` }
                   theme={ theme } />

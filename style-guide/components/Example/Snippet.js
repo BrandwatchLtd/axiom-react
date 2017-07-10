@@ -20,7 +20,7 @@ export default class Snippet extends Component {
     const htmlSnippet = renderSnippet(filterSnippet(children), htmlRender);
 
     return (
-      <Base space="medium">
+      <Base space="x6">
         { !renderSkip && filterRender(children) }
 
         <CodeTabset>

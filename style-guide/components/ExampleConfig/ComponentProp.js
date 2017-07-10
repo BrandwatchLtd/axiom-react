@@ -58,7 +58,7 @@ export default class ComponentProp extends Component {
             <Grid
                 gutters="small"
                 shrink={ true }
-                space="tiny"
+                space="x2"
                 verticalAlign="middle">
               <GridCell>
                 <Heading>

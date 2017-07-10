@@ -2,7 +2,7 @@
 
 exports[`RadioButton renders with defaultProps 1`] = `
 <label
-  className="ax-chedio-buttox__container ax-space--tiny"
+  className="ax-chedio-buttox__container ax-space--x2"
 >
   <input
     className="ax-chedio-buttox ax-radio"

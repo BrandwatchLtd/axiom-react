@@ -2,7 +2,7 @@
 
 exports[`Image renders with defaultProps 1`] = `
 <img
-  className="ax-image ax-space--small"
+  className="ax-image ax-space--x4"
   src="/image.png"
 />
 `;
@@ -10,7 +10,7 @@ exports[`Image renders with defaultProps 1`] = `
 exports[`Image renders with extra props 1`] = `
 <img
   alt="Lorem"
-  className="ax-image ax-space--small"
+  className="ax-image ax-space--x4"
   src="/image.png"
   title="Lorem"
 />

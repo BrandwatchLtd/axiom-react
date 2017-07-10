@@ -12,7 +12,7 @@ export default class BadgeGroup extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <InlineGroup space="small" { ...rest } className="ax-badge-group">
+      <InlineGroup space="x4" { ...rest } className="ax-badge-group">
         { children }
       </InlineGroup>
     );

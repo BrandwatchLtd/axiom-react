@@ -2,7 +2,7 @@
 
 exports[`ChartTableKey renders with defaultProps 1`] = `
 <div
-  className="ax-chart-table__key ax-space--tiny"
+  className="ax-chart-table__key ax-space--x2"
 >
   Lorem
 </div>

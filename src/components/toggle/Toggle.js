@@ -22,7 +22,7 @@ export default class Toggle extends Component {
     });
 
     return (
-      <Base Component="label" className={ classes } space="tiny">
+      <Base Component="label" className={ classes } space="x2">
         { children && (
           <span className="ax-toggle__label">
             { children }

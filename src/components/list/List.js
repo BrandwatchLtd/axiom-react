@@ -28,7 +28,7 @@ export default class List extends Component {
     );
 
     return (
-      <Base space="small" { ...rest } Component={ tag } className={ classes }>
+      <Base space="x4" { ...rest } Component={ tag } className={ classes }>
         { children }
       </Base>
     );

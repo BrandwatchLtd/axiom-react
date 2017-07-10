@@ -2,7 +2,7 @@
 
 exports[`ChedioButtox renders when disabled 1`] = `
 <label
-  className="ax-chedio-buttox__container ax-chedio-buttox__container--disabled ax-space--tiny"
+  className="ax-chedio-buttox__container ax-chedio-buttox__container--disabled ax-space--x2"
 >
   <input
     className="ax-chedio-buttox ax-ipsum"
@@ -22,7 +22,7 @@ exports[`ChedioButtox renders when disabled 1`] = `
 
 exports[`ChedioButtox renders with defaultProps 1`] = `
 <label
-  className="ax-chedio-buttox__container ax-space--tiny"
+  className="ax-chedio-buttox__container ax-space--x2"
 >
   <input
     className="ax-chedio-buttox ax-ipsum"

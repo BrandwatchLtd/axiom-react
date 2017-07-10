@@ -27,11 +27,11 @@ export default class ColorSwatch extends Component {
               </GridCell>
 
               <GridCell>
-                <Paragraph space="none">
+                <Paragraph space="x0">
                   <Strong>{ color }</Strong>
                 </Paragraph>
 
-                <Paragraph space="none">
+                <Paragraph space="x0">
                   <Italic textColor="subtle">var(--color-{ color })</Italic>
                 </Paragraph>
               </GridCell>

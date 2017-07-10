@@ -2,12 +2,12 @@
 @import '../../materials/sizing';
 
 .ax-chart__header {
-  padding-bottom: calc(var(--spacing-grid-size) * 3 - var(--component-border-width));
+  padding-bottom: calc(var(--spacing-grid-size--x3) - var(--component-border-width));
   border-bottom-width: var(--component-border-width-small);
   border-bottom-style: solid;
   border-bottom-color: var(--color-context-border);
 }
 
 .ax-chart__body {
-  margin-top: var(--component-margin-vertical-medium);
+  margin-top: var(--spacing-grid-size--x6);
 }
