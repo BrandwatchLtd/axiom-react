@@ -1,38 +1,37 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Pagination } from 'bw-axiom';
+import { Base } from 'bw-axiom';
 
-class PagiantionExample extends Component {
+class BaseExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Pagination: PropTypes.object,
+      Base: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
     const propTypes = {
-      Pagination: components.Pagination,
+      Base: components.Base,
     };
 
     const initialProps = {
-      Pagination: {
-        currentPage: 2,
-        displayRange: 5,
-        onPageChange: () => {},
-        totalPages: 100,
-      },
+      Base: { },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Pagination { ...initialProps.Pagination } />
+        <Base { ...initialProps.Base }>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nulla iaculis eleifend turpis, at varius lectus ullamcorper a.
+          Sed cursus scelerisque aliquet. Mauris mollis eros ac erat congue
+          mattis id at nisl. Sed lacus neque, pulvinar eu neque sed, cursus
+          vestibulum nisi.
+        </Base>
       </ExampleConfig>
     );
   }
 }
 
-module.exports = [
-  PagiantionExample,
-];
+module.exports = [ BaseExample ];
