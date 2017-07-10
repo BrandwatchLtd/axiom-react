@@ -1,37 +1,32 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Example, Snippet } from 'style-guide';
-import { Heading, Paragraph, Small, Strong } from 'bw-axiom';
+import { ExampleConfig } from 'style-guide';
+import { Paragraph } from 'bw-axiom';
 
-export default class TypeExample extends Component {
+export default class ParagraphExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      Paragraph: PropTypes.object,
+    }).isRequired,
+  };
+
   render() {
+    const { components } = this.props;
+    const propTypes = {
+      Paragraph: components.Paragraph,
+    };
+
+    const initialProps = {
+      Paragraph: {},
+    };
+
     return (
-      <Example name="Paragraph">
-        <Snippet>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            iaculis, est dapibus aliquet tristique, ante orci porta ligula,
-            sit amet bibendum diam lectus eu erat.
-          </Paragraph>
-        </Snippet>
-
-        <Heading>Strong</Heading>
-        <Snippet>
-          <Paragraph>
-            <Strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris iaculis, est dapibus aliquet tristique, ante orci porta
-            ligula, sit amet bibendum diam lectus eu erat.</Strong>
-          </Paragraph>
-        </Snippet>
-
-        <Heading>Small</Heading>
-        <Snippet>
-          <Paragraph>
-            <Small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris iaculis, est dapibus aliquet tristique, ante orci porta ligula,
-            sit amet bibendum diam lectus eu erat.</Small>
-          </Paragraph>
-        </Snippet>
-      </Example>
+      <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
+        <Paragraph { ...initialProps.Paragraph }>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+          accumsan quam, ut ullamcorper nulla.
+        </Paragraph>
+      </ExampleConfig>
     );
   }
 }

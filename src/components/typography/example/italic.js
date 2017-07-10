@@ -1,32 +1,30 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Paragraph, Link } from 'bw-axiom';
+import { Italic } from 'bw-axiom';
 
-export default class LinkExample extends Component {
+export default class ItalicExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Link: PropTypes.object,
+      Italic: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
     const propTypes = {
-      Link: components.Link,
+      Italic: components.Italic,
     };
 
     const initialProps = {
-      Link: { },
+      Italic: {
+        textSize: 'display1',
+      },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Paragraph>
-          Lorem ipsum dolor sit amet,
-          consectetur <Link { ...initialProps.Link }>Link</Link> elit,
-          sed do eiusmod.
-        </Paragraph>
+        <Italic { ...initialProps.Italic }>Lorem ipsum dolor sit amet</Italic>
       </ExampleConfig>
     );
   }

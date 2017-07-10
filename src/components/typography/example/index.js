@@ -1,9 +1,10 @@
 module.exports = [
-  require('./headings').default,
-  require('./headings-border').default,
-  require('./paragraph').default,
-  require('./decoration').default,
-  require('./case').default,
-  require('./colors').default,
+  require('./heading').default,
   require('./links').default,
+  require('./text').default,
+  require('./icon').default,
+  require('./strong').default,
+  require('./italic').default,
+  require('./underline').default,
+  require('./strike').default,
 ];

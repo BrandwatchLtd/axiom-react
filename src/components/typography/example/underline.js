@@ -1,32 +1,30 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Paragraph, Link } from 'bw-axiom';
+import { Underline } from 'bw-axiom';
 
-export default class LinkExample extends Component {
+export default class UnderlineExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Link: PropTypes.object,
+      Underline: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
     const propTypes = {
-      Link: components.Link,
+      Underline: components.Underline,
     };
 
     const initialProps = {
-      Link: { },
+      Underline: {
+        textSize: 'display1',
+      },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Paragraph>
-          Lorem ipsum dolor sit amet,
-          consectetur <Link { ...initialProps.Link }>Link</Link> elit,
-          sed do eiusmod.
-        </Paragraph>
+        <Underline { ...initialProps.Underline }>Lorem ipsum dolor sit amet</Underline>
       </ExampleConfig>
     );
   }
