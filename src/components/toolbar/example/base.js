@@ -7,7 +7,10 @@ import {
   Context,
   ContextMenu,
   ContextMenuItem,
+  Link,
   Strong,
+  TextIcon,
+  Toggle,
   Toolbar,
   Tool,
 } from 'bw-axiom';
@@ -18,11 +21,16 @@ export default class ToolbarExample extends Component {
       <Example name="Toolbar">
         <Snippet>
           <Toolbar>
-            <Tool icon="cross">Close</Tool>
+            <Tool>
+              <Link style="subtle">Close<TextIcon name="cross" spaceLeft="x2" /></Link>
+            </Tool>
             <Dropdown>
               <DropdownTarget>
-                <Tool icon="chevron-down">
-                  Sort by: <Strong snippetIgnore={ true }>Size of Difference</Strong>
+                <Tool>
+                  <Link style="subtle">
+                    Sort by: <Strong snippetIgnore={ true }>Size of Difference</Strong>
+                    <TextIcon name="chevron-down" spaceLeft="x2" />
+                  </Link>
                 </Tool>
               </DropdownTarget>
               <DropdownContent>
@@ -34,7 +42,12 @@ export default class ToolbarExample extends Component {
                 </Context>
               </DropdownContent>
             </Dropdown>
-            <Tool>Report</Tool>
+            <Tool>
+              <Toggle
+                  disabled={ true }
+                  onToggle={ () => {} }
+                  toggled={ true } >Toggle</Toggle>
+            </Tool>
           </Toolbar>
         </Snippet>
       </Example>

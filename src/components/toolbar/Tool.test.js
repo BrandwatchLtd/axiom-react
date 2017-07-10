@@ -14,10 +14,4 @@ describe('Toolbar', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders with an icon', () => {
-    const component = getComponent({ icon: 'chevron-down' });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });
