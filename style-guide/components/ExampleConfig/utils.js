@@ -50,7 +50,7 @@ export function render(child, propTypes, state) {
   return child;
 }
 
-export function mergeState(propTypes, props, propOptions, state) {
+export function mergeState(propTypes, props, propOptions, state, withDefaults) {
   const merged = {};
 
   for (const component in propTypes) {
@@ -59,9 +59,11 @@ export function mergeState(propTypes, props, propOptions, state) {
       options: {},
     };
 
-    for (const prop in propTypes[component]) {
-      if (propTypes[component][prop].defaultValue) {
-        merged[component].props[prop] = propTypes[component][prop].defaultValue.value;
+    if (withDefaults) {
+      for (const prop in propTypes[component]) {
+        if (propTypes[component][prop].defaultValue) {
+          merged[component].props[prop] = propTypes[component][prop].defaultValue.value;
+        }
       }
     }
   }

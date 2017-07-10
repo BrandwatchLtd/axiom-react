@@ -50,8 +50,9 @@ export default class ExampleConfig extends Component {
 
   render() {
     const { children, initialProps, initialPropOptions, propTypes } = this.props;
-    const state = mergeState(propTypes, initialProps, initialPropOptions, this.state);
-    const example = render(children, propTypes, state);
+    const renderState = mergeState(propTypes, initialProps, initialPropOptions, this.state);
+    const configState = mergeState(propTypes, initialProps, initialPropOptions, this.state, true);
+    const example = render(children, propTypes, renderState);
     const jsxSnippet = renderSnippet(filterSnippet(example), jsxRender);
     const htmlSnippet = renderSnippet(filterSnippet(example), htmlRender);
 
@@ -67,9 +68,9 @@ export default class ExampleConfig extends Component {
               <ComponentProps
                   component={ component }
                   key={ component }
-                  propOptions={ state[component].options }
+                  propOptions={ configState[component].options }
                   propTypes={ propTypes[component] }
-                  propValues={ state[component].props }
+                  propValues={ configState[component].props }
                   setPropOptionValue={ (...a) => this.setPropOption(component, ...a) }
                   setPropValue={ (...a) => this.setProp(component, ...a) }
                   space="large" />
