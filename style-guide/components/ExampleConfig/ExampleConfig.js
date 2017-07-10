@@ -6,7 +6,7 @@ import { filterRender, filterSnippet } from '../../utils/example-filter';
 import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet';
 import CodeSnippet from '../CodeSnippet/CodeSnippet';
 import ComponentProps from './ComponentProps';
-import { mergeState, render } from './utils';
+import { basePropTypes, mergeState, render } from './utils';
 import './ExampleConfig.css';
 
 export default class ExampleConfig extends Component {
@@ -51,6 +51,7 @@ export default class ExampleConfig extends Component {
   render() {
     const { children, initialProps, initialPropOptions, propTypes } = this.props;
     const renderState = mergeState(propTypes, initialProps, initialPropOptions, this.state);
+    const baseState = mergeState(basePropTypes, initialProps, initialPropOptions, this.state, true);
     const configState = mergeState(propTypes, initialProps, initialPropOptions, this.state, true);
     const example = render(children, propTypes, renderState);
     const jsxSnippet = renderSnippet(filterSnippet(example), jsxRender);
@@ -66,6 +67,7 @@ export default class ExampleConfig extends Component {
           <Tab title="Properties">
             { Object.keys(propTypes).map((component) =>
               <ComponentProps
+                  baseState={ baseState.Base }
                   component={ component }
                   key={ component }
                   propOptions={ configState[component].options }

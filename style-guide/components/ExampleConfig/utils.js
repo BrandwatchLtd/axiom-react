@@ -10,6 +10,8 @@ const preparePropMap = {
       : propValue,
 };
 
+export const basePropTypes = { Base: __COMPONENT_PROPS__.Base };
+
 function prepareProps(state, options, propTypes) {
   const props = {};
 
@@ -69,13 +71,17 @@ export function mergeState(propTypes, props, propOptions, state, withDefaults) {
   }
 
   for (const component in props) {
-    for (const prop in props[component]) {
-      merged[component].props[prop] = props[component][prop];
+    if (merged[component]) {
+      for (const prop in props[component]) {
+        merged[component].props[prop] = props[component][prop];
+      }
     }
   }
 
   for (const component in propOptions) {
-    merged[component].options = propOptions[component];
+    if (merged[component]) {
+      merged[component].options = propOptions[component];
+    }
   }
 
   return extend(merged, state);
