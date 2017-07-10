@@ -15,6 +15,12 @@ describe('Icon', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with inline', () => {
+    const component = getComponent({ inline: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders with custom size', () => {
     const component = getComponent({ size: '4rem' });
     const tree = component.toJSON();

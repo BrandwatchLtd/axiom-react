@@ -50,6 +50,7 @@ const ICON_NAME_MAP = {
 
 export default class Icon extends Component {
   static propTypes = {
+    inline: PropTypes.bool,
     name: PropTypes.oneOf([
       'arrow-down',
       'arrow-left',
@@ -94,6 +95,8 @@ export default class Icon extends Component {
       'warning',
     ]),
     size: PropTypes.string,
+    spaceLeft: PropTypes.oneOf(['x1', 'x2']),
+    spaceRight: PropTypes.oneOf(['x1', 'x2']),
   };
 
   static defaultProps = {
@@ -101,9 +104,13 @@ export default class Icon extends Component {
   };
 
   render() {
-    const { name, size, ...rest } = this.props;
+    const { inline, name, size, spaceLeft, spaceRight, ...rest } = this.props;
     const style = { width: size, height: size };
-    const classes = classnames('ax-icon', `ax-icon--${name}`);
+    const classes = classnames('ax-icon', `ax-icon--${name}`, {
+      'ax-icon--inline': inline,
+      [`ax-icon--space-left-${spaceLeft}`]: spaceLeft,
+      [`ax-icon--space-right-${spaceRight}`]: spaceRight,
+    });
 
     if (!ICON_NAME_MAP[name]) {
       return null;

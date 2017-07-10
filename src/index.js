@@ -99,6 +99,7 @@ export { default as TableRow } from './components/table/TableRow';
 export { default as TableCell } from './components/table/TableCell';
 export { default as TableBody } from './components/table/TableBody';
 export { default as Text } from './components/typography/Text';
+export { default as TextIcon } from './components/typography/TextIcon';
 export { default as TextArea } from './components/form/TextArea';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';

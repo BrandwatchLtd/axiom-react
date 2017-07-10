@@ -2,6 +2,9 @@
 :root {
   --spacing-grid-size: 0.25rem;
 
+  --spacing-grid-size--x1: var(--spacing-grid-size);
+  --spacing-grid-size--x2: calc(var(--spacing-grid-size) * 2);
+
   --page-padding-horizontal: calc(var(--spacing-grid-size) * 6);
   --page-padding-vertical: calc(var(--spacing-grid-size) * 6);
 
