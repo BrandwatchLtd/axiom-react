@@ -62,6 +62,7 @@ module.exports = {
         '/docs/components/badge',
         '/docs/components/base',
         '/docs/components/button',
+        '/docs/components/candytar',
         '/docs/components/card',
         '/docs/components/color-picker',
         '/docs/components/context',

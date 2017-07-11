@@ -25,6 +25,7 @@ const colors = [
 
 export default class Candytar extends Component {
   static propTypes = {
+    /** Color of the Candytar */
     color: PropTypes.oneOf([
       'rose',
       'pink',
@@ -39,7 +40,14 @@ export default class Candytar extends Component {
       'brown',
       'grey',
     ]),
+    /**
+     * A function that can be passed to determine the colour of the candytar.
+     * By default if no colour is provided it will randomly picker a colour
+     * from the available options. Given function is called with an array of
+     * the available colors.
+     */
     picker: PropTypes.func,
+    /** Size of the Candytar */
     size: PropTypes.string.isRequired,
   };
 

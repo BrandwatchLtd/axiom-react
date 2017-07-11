@@ -8,18 +8,14 @@ export default class TypeNumber extends Component {
     value: PropTypes.number,
   };
 
-  static defaultProps = {
-    value: 0,
-  };
-
   render() {
     const { value, setValue } = this.props;
 
     return (
       <TextInput
-          onChange={ (e) => setValue(parseInt(e.target.value || 0, 10))  }
+          onChange={ (e) => setValue(e.target.value ? parseFloat(e.target.value)  : undefined) }
           placeholder="Set prop number..."
-          value={ value || '' } />
+          value={ value === undefined ? '' : value } />
     );
   }
 }

@@ -163,7 +163,7 @@ export default class DotPlotChart extends Component {
               ) }
 
               { chartKey.map(({ label, color }) =>
-                <ChartKeyItem key={ label } label={ label }>
+                <ChartKeyItem key={ `${label}.${color}` } label={ label }>
                   <DataPoints size="0.75rem">
                     <DataPoint color={ color } />
                   </DataPoints>

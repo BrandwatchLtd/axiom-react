@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  BulletChart,
-} from 'bw-axiom';
+import { BulletChart } from 'bw-axiom';
 import { data, chartKey } from './data';
 
 export default class BulletExample extends Component {
