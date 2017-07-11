@@ -11,6 +11,10 @@ export default class TypeExample extends Component {
             <Weak>Display Weak</Weak> / Display Standard
           </Heading>
 
+          <Heading style="display2">
+            <Weak>Display2 Weak</Weak> / Display2 Standard
+          </Heading>
+
           <Heading style="headline">
             Headline Standard
           </Heading>

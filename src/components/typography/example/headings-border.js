@@ -11,6 +11,10 @@ export default class TypeExample extends Component {
             Display with an underline
           </Heading>
 
+          <Heading style="display2" underline={ true }>
+            Display2 with an underline
+          </Heading>
+
           <Heading style="headline" underline={ true }>
             Headline with an underline
           </Heading>

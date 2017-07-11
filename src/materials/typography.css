@@ -21,6 +21,7 @@
   --font-size-large: 0.875rem;
   --font-size-title: 1.0625rem;
   --font-size-headline: 1.375rem;
+  --font-size-display2: 2rem;
   --font-size-display: 2.5rem;
 
   --line-height-body: 1.25rem;
@@ -28,6 +29,7 @@
   --line-height-large: var(--line-height-body);
   --line-height-title: var(--line-height-body);
   --line-height-headline: 1.75rem;
+  --line-height-display2: 2.5rem;
   --line-height-display: 3rem;
 
   --letter-spacing-tight: -0.00125rem;

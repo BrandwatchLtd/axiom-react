@@ -4,6 +4,7 @@ import { InlineGroup } from 'bw-axiom';
 
 export default class BadgeGroup extends Component {
   static propTypes = {
+    /** Badges inside the group */
     children: PropTypes.node,
   };
 
