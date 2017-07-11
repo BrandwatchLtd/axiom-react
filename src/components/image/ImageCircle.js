@@ -13,6 +13,7 @@ export default class ImageCircle extends Component {
     size: PropTypes.string.isRequired,
     src: PropTypes.string,
     onError: PropTypes.func,
+    onLoad: PropTypes.func,
   };
 
   render() {
@@ -24,6 +25,7 @@ export default class ImageCircle extends Component {
       size,
       src,
       onError,
+      onLoad,
       ...rest
     } = this.props;
 
@@ -36,6 +38,7 @@ export default class ImageCircle extends Component {
       <ImageFallback
           fallback={ children }
           onError={ onError }
+          onLoad={ onLoad }
           src={ src }>
         <Base className={ classes } style={ style }>
           <div className="ax-image-circle__image">

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Avatar, Candytar } from 'bw-axiom';
+import { Candytar } from 'bw-axiom';
 
-class AvatarExample extends Component {
+class CandytarExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Avatar: PropTypes.object,
+      Candytar: PropTypes.object,
     }).isRequired,
   };
 
@@ -14,25 +14,23 @@ class AvatarExample extends Component {
     const { components } = this.props;
 
     const propTypes = {
-      Avatar: components.Avatar,
+      Candytar: components.Candytar,
     };
 
     const initialProps = {
-      Avatar: {
-        border: 'large',
+      Candytar: {
+        color: 'rose',
+        picker: (colors) => colors[1],
         size: '3rem',
-        src: 'assets/avatar.png',
       },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Avatar { ...initialProps.Avatar }>
-          <Candytar size="2rem" />
-        </Avatar>
+        <Candytar { ...initialProps.Candytar } />
       </ExampleConfig>
     );
   }
 }
 
-module.exports = [ AvatarExample ];
+module.exports = [ CandytarExample ];

@@ -8,15 +8,17 @@ export default class Image extends Component {
     children: PropTypes.node,
     src: PropTypes.string,
     onError: PropTypes.func,
+    onLoad: PropTypes.func,
   };
 
   render() {
-    const { children, onError, src, ...rest } = this.props;
+    const { children, onError, onLoad, src, ...rest } = this.props;
 
     return (
       <ImageFallback
           fallback={ children }
           onError={ onError }
+          onLoad={ onLoad }
           src={ src }>
         <Base
             space="small"
