@@ -16,6 +16,7 @@ import {
   Strong,
   Weak,
 } from 'bw-axiom';
+import atIds from '../../../at_ids';
 import './Login.css';
 
 export default class Login extends Component {
@@ -87,6 +88,7 @@ export default class Login extends Component {
 
             <Form onSubmit={ e => this.handleSubmit(e) }>
               <TextInput
+                  data-ax-at={ atIds.Login.username }
                   onChange={ e => this.handleUsernameChange(e) }
                   placeholder="Username"
                   size="large"
@@ -94,6 +96,7 @@ export default class Login extends Component {
                   value={ username } />
 
               <TextInput
+                  data-ax-at={ atIds.Login.password }
                   onChange={ e => this.handlePasswordChange(e) }
                   placeholder="Password"
                   size="large"
@@ -105,6 +108,7 @@ export default class Login extends Component {
                 <GridCell shrink={ true }>
                   <ButtonGroup>
                     <Button
+                        data-ax-at={ atIds.Login.submit }
                         full="small"
                         size="large"
                         type="submit">Login</Button>
@@ -122,7 +126,9 @@ export default class Login extends Component {
             </Form>
 
             <Paragraph space="small" textColor="error">
-              <Strong>{ error }</Strong>
+              <Strong data-ax-at={ atIds.Login.error }>
+                { error }
+              </Strong>
             </Paragraph>
           </div>
         </div>
