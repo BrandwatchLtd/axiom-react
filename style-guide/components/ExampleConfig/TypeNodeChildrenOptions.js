@@ -12,25 +12,25 @@ import {
   DropdownTarget,
 } from 'bw-axiom';
 
-export default class TypeEnum extends Component {
+export default class TypeNodeChildrenOptions extends Component {
   static propTypes = {
-    required: PropTypes.bool,
-    setValue: PropTypes.func.isRequired,
-    value: PropTypes.any,
-    values: PropTypes.array.isRequired,
+    propOptions: PropTypes.shape({
+      options: PropTypes.array,
+    }).isRequired,
+    setOptionValue: PropTypes.func.isRequired,
   };
 
   render() {
-    const { required, setValue, value, values } = this.props;
+    const { propOptions, setOptionValue } = this.props;
+    const { options } = propOptions;
 
     return (
       <ButtonGroup joined={ true }>
         <Button
-            disabled={ !value || required }
-            onClick={ () => setValue(undefined) }
+            onClick={ () => setOptionValue('selection', undefined) }
             size="small"
             style="secondary">
-          Remove
+          Reset
         </Button>
         <Dropdown>
           <DropdownTarget>
@@ -41,11 +41,11 @@ export default class TypeEnum extends Component {
           <DropdownContent>
             <Context>
               <DropdownMenu>
-                { values.map((value) =>
+                { options.map(({ name }) =>
                   <DropdownMenuItem
-                      key={ value }
-                      onClick={ () => setValue(value) }>
-                    { value.toString() }
+                      key={ name }
+                      onClick={ () => setOptionValue('selection', name) }>
+                    { name }
                   </DropdownMenuItem>
                 ) }
               </DropdownMenu>

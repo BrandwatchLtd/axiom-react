@@ -4,10 +4,20 @@ import extend from 'deep-extend';
 const preparePropMap = {
   func: (propName, propValue, propType, options = {}) =>
     options.included === false ? undefined : propValue,
-  node: (propName, propValue, propType, options = {}) =>
-    propName === 'children' && options.count
-      ? Array.from({ length: options.count }, () => propValue)
-      : propValue,
+  node: (propName, propValue, propType, options = {}) => {
+    if (propName === 'children') {
+      if (options.selection) {
+        return (options.options.find(({ name }) => name === options.selection) || {}).children
+          || propValue;
+      }
+
+      if (options.count) {
+        return Array.from({ length: options.count }, () => propValue);
+      }
+    }
+
+    return propValue;
+  },
 };
 
 export const basePropTypes = { Base: __COMPONENT_PROPS__.Base };
