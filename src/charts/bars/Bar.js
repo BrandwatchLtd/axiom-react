@@ -21,6 +21,10 @@ export default class Bar extends Component {
       'brown',
       'grey',
     ]).isRequired,
+    /** When true the bar is faded */
+    isFaded: PropTypes.bool,
+    /** When true the bar is invisible */
+    isHidden: PropTypes.bool,
     /** Overwriting label above the bar instead of default percentage */
     label: PropTypes.string,
     /** Control for applying strong styling to the label */
@@ -41,6 +45,8 @@ export default class Bar extends Component {
   };
 
   static defaultProps = {
+    isFaded: false,
+    isHidden: false,
     labelStrong: false,
     minSize: '1rem',
   };
@@ -53,6 +59,8 @@ export default class Bar extends Component {
     const { direction } = this.context;
     const {
       color,
+      isFaded,
+      isHidden,
       label,
       labelStrong,
       onClick,
@@ -65,6 +73,8 @@ export default class Bar extends Component {
     const classes = classnames('ax-bars__bar', {
       'ax-bars__bar--center': size,
       'ax-bars__bar--clickable': onClick,
+      'ax-bars__bar--faded': isFaded,
+      'ax-bars__bar--hidden': isHidden,
     });
 
     const labelClasses = classnames('ax-bars__bar-label', {

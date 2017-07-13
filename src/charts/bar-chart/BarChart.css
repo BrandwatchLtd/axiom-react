@@ -1,3 +1,4 @@
+@import '../../materials/animations';
 @import '../../materials/colors';
 @import '../../materials/sizing';
 @import '../vars';
@@ -17,12 +18,17 @@
   width: 100%;
   height: 100%;
   padding-right: var(--cmp-chart-overflow-space);
+  transition: opacity var(--transition-time-base) var(--transition-function);
   pointer-events: none;
 }
 
 .ax-bar-chart__benchmark-line {
   position: relative;
   height: 100%;
+}
+
+.ax-bar-chart__benchmark-line--faded {
+  opacity: var(--cmp-chart-opacity-faded);
 }
 
 .ax-bar-chart__benchmark-line-path {

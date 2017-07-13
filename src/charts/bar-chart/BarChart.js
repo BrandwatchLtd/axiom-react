@@ -125,9 +125,11 @@ export default class BarChart extends Component {
                     ContextComponent={ ContextComponent }
                     benchmark={ benchmark }
                     data={ data[index] }
+                    fadeBenchmarkLine={ hoverIndex !== null }
+                    hideBars={ hoverIndex !== null && hoverIndex !== index }
                     hoverColor={ hoverColor }
+                    isHovered={ index === hoverIndex }
                     label={ label }
-                    labelStrong={ index === hoverIndex }
                     onMouseEnter={ (color) => this.onMouseEnter(index, color) }
                     onMouseLeave={ this.onMouseLeave }
                     showBarLabel={ showBarLabel }

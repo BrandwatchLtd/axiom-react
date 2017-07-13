@@ -9,9 +9,11 @@ export default class BarChartBars extends Component {
     ContextComponent: PropTypes.func,
     benchmark: PropTypes.number,
     data: PropTypes.object.isRequired,
+    fadeBenchmarkLine: PropTypes.bool.isRequired,
+    hideBars: PropTypes.bool.isRequired,
     hoverColor: PropTypes.string,
+    isHovered: PropTypes.bool.isRequired,
     label: PropTypes.node.isRequired,
-    labelStrong: PropTypes.bool.isRequired,
     showBarLabel: PropTypes.bool,
     size: PropTypes.string,
     values: PropTypes.array.isRequired,
@@ -24,9 +26,11 @@ export default class BarChartBars extends Component {
       ContextComponent,
       benchmark,
       data,
+      fadeBenchmarkLine,
+      hideBars,
       hoverColor,
+      isHovered,
       label,
-      labelStrong,
       showBarLabel,
       size,
       values,
@@ -37,25 +41,31 @@ export default class BarChartBars extends Component {
     return (
       <div className="ax-bar-chart__bars">
         <Bars direction="right">
-          { values.map(({ color, value }) =>
-            <BarChartContext
-                ContextComponent={ ContextComponent }
-                color={ color }
-                data={ data }
-                key={ color }
-                label={ label }
-                labelStrong={ labelStrong }
-                onMouseEnter={ onMouseEnter }
-                onMouseLeave={ onMouseLeave }
-                showBarLabel={ showBarLabel || color === hoverColor }
-                size={ size }
-                value={ value } />
-          ) }
+          { values.map(({ color, value }) => {
+            const isFaded = hoverColor && color !== hoverColor;
+
+            return (
+              <BarChartContext
+                  ContextComponent={ ContextComponent }
+                  color={ color }
+                  data={ data }
+                  isFaded={ isFaded }
+                  isHidden={ hideBars && isFaded }
+                  key={ color }
+                  label={ label }
+                  labelStrong={ isHovered }
+                  onMouseEnter={ onMouseEnter }
+                  onMouseLeave={ onMouseLeave }
+                  showBarLabel={ showBarLabel || color === hoverColor }
+                  size={ size }
+                  value={ value } />
+            );
+          }) }
         </Bars>
 
         { benchmark !== undefined && (
           <div className="ax-bar-chart__benchmark-line-container">
-            <BarChartBenchmarkLine value={ benchmark } />
+            <BarChartBenchmarkLine faded={ fadeBenchmarkLine } value={ benchmark } />
           </div>
         ) }
       </div>

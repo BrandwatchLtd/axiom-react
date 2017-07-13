@@ -14,6 +14,8 @@
   --cmp-chart-label-width: calc(2rem + var(--cmp-chart-label-margin));  /* [1] */
   --cmp-chart-label-height: calc(var(--cmp-chart-label-line-height) + var(--cmp-chart-label-margin));
 
+  --cmp-chart-opacity-faded: 0.25;
+
   --cmp-dot-plot-diameter: 0.8125rem;
   --cmp-dot-plot-radius: calc(var(--cmp-dot-plot-diameter) / 2);
 

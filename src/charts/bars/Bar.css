@@ -5,10 +5,19 @@
 
 .ax-bars__bar {
   display: flex;
+  transition: opacity var(--transition-time-base) var(--transition-function);
 }
 
 .ax-bars__bar--center {
   align-items: center;
+}
+
+.ax-bars__bar--faded {
+  opacity: var(--cmp-chart-opacity-faded);
+}
+
+.ax-bars__bar--hidden {
+  opacity: 0;
 }
 
 .ax-bars__bar-label {
