@@ -6,19 +6,23 @@ import './Button.css';
 
 export default class Button extends Component {
   static propTypes = {
+    /** Content inserted into the Button */
     children: PropTypes.node.isRequired,
+    /** Size of circular shape */
     circular: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
     /**
-     * A true value will apply full width styling consistently.
-     * Small, medium and large values correspond to the break points and will
-     * be applied below that point.
+     * Controls the full width appearance of the badge either all of the time,
+     * with a value of `true` otherwise at one of the breakpoints specified.
      */
     full: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['small', 'medium', 'large']),
     ]),
+    /** Size of standard shape */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Size of stadium shape */
     stadium: PropTypes.oneOf(['small']),
+    /** Style of the Button, that affects it's coloring and sizing */
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   };
 

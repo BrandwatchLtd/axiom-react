@@ -4,7 +4,9 @@ import { Base, InlineGroup } from 'bw-axiom';
 
 export default class ButtonGroup extends Component {
   static propTypes = {
+    /** Content inserted into the group, ideally Buttons */
     children: PropTypes.node.isRequired,
+    /** Whether the child Buttons should be joined */
     joined: PropTypes.bool,
   };
 
