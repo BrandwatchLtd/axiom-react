@@ -6,15 +6,9 @@ import './ButtonIcon.css';
 
 export default class ButtonIcon extends Component {
   static propTypes = {
-    /**
-     * Whether the ButtonIcon is at the end of a button. If true,
-     * it will apply spacing from the text.
-     */
+    /** SKIP */
     isEnd: PropTypes.bool,
-    /**
-     * Whether the ButtonIcon is at the start of a button. If true,
-     * it will apply spacing from the text.
-     */
+    /** SKIP */
     isStart: PropTypes.bool,
     /** Name of the Icon */
     name: PropTypes.string.isRequired,

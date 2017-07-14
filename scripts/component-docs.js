@@ -35,13 +35,15 @@ function flattenValues({ name, value }, values = []) {
 }
 
 function extractProps({ props = {} }) {
-  return Object.keys(props).reduce((eProps, prop) => Object.assign({}, eProps, {
-    [prop]: Object.assign(props[prop], {
-      defaultValue: normaliseValue(props[prop].defaultValue),
-      type: normaliseValue(props[prop].type),
-      values: flattenValues(normaliseValue(props[prop].type)),
-    }),
-  }), {});
+  return Object.keys(props)
+    .filter((prop) => props[prop].description !== 'SKIP')
+    .reduce((eProps, prop) => Object.assign({}, eProps, {
+      [prop]: Object.assign(props[prop], {
+        defaultValue: normaliseValue(props[prop].defaultValue),
+        type: normaliseValue(props[prop].type),
+        values: flattenValues(normaliseValue(props[prop].type)),
+      }),
+    }), {});
 }
 
 function readFileProps(file) {
