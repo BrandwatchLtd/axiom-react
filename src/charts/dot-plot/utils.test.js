@@ -17,7 +17,7 @@ const chartKey = [
 ];
 
 const data = [
-  { label: 'Family', benchmark: 33,  values: { blue: 0, lilac: 100, pink: 50 } },
+  { label: 'Family', benchmark: 100,  values: { blue: 0, lilac: 90, pink: 50 } },
   { label: 'Games', benchmark: 33, values: { blue: 40, lilac: 53, pink: 40 } },
   { label: 'Family & Parenting', benchmark: 33, values: { blue: 50, lilac: 50, pink: 50 } },
   { label: 'Technology', benchmark: 33, values: { blue: 69 } },
@@ -28,7 +28,7 @@ describe('DotPlot (utils)', () => {
   it('formats data', () => {
     expect(formatData(chartKey, data)).toEqual([{
       label: 'Family',
-      benchmark: 33,
+      benchmark: 100,
       values: [{
         value: 0,
         colors: ['blue'],
@@ -36,7 +36,7 @@ describe('DotPlot (utils)', () => {
         value: 50,
         colors: ['pink'],
       }, {
-        value: 100,
+        value: 90,
         colors: ['lilac'],
       }],
     }, {
