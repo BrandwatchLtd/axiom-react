@@ -6,8 +6,11 @@ import './ContextMenuItem.css';
 
 export default class ContextMenuItem extends Component {
   static propTypes = {
+    /** Content inserted into the menu item */
     children: PropTypes.node,
+    /** Disabled state, causing it to be unclickable */
     disabled: PropTypes.bool,
+    /** Selected state, resulting in a selected appearance */
     selected: PropTypes.bool,
   };
 

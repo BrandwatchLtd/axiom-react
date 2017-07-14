@@ -6,11 +6,17 @@ import './Context.css';
 
 export default class Context extends Component {
   static propTypes = {
+    /** React reference function for the arrow element */
     arrowRef: PropTypes.func,
+    /** Content to be inserted in the contextual area */
     children: PropTypes.node,
+    /** Maximum height for the content area, exceeding this will make it scrollable */
     maxHeight: PropTypes.string,
+    /** Position of the content area relative to the arrow */
     position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    /** Theme of the content, only works for text color and background */
     theme: PropTypes.oneOf(['dark', 'light']),
+    /** Total width of the component */
     width: PropTypes.string,
   };
 

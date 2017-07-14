@@ -16,13 +16,14 @@ export default class TypeNodeChildrenOptions extends Component {
   static propTypes = {
     propOptions: PropTypes.shape({
       options: PropTypes.array,
+      selection: PropTypes.any,
     }).isRequired,
     setOptionValue: PropTypes.func.isRequired,
   };
 
   render() {
     const { propOptions, setOptionValue } = this.props;
-    const { options } = propOptions;
+    const { options, selection } = propOptions;
 
     return (
       <ButtonGroup joined={ true }>
@@ -44,7 +45,8 @@ export default class TypeNodeChildrenOptions extends Component {
                 { options.map(({ name }) =>
                   <DropdownMenuItem
                       key={ name }
-                      onClick={ () => setOptionValue('selection', name) }>
+                      onClick={ () => setOptionValue('selection', name) }
+                      selected={ selection === name }>
                     { name }
                   </DropdownMenuItem>
                 ) }

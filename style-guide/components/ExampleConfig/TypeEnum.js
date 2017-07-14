@@ -41,11 +41,12 @@ export default class TypeEnum extends Component {
           <DropdownContent>
             <Context>
               <DropdownMenu>
-                { values.map((value) =>
+                { values.map((val) =>
                   <DropdownMenuItem
-                      key={ value }
-                      onClick={ () => setValue(value) }>
-                    { value.toString() }
+                      key={ val }
+                      onClick={ () => setValue(val) }
+                      selected={ value === val }>
+                    { val.toString() }
                   </DropdownMenuItem>
                 ) }
               </DropdownMenu>

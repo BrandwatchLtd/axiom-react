@@ -5,6 +5,7 @@ import './ContextMenu.css';
 
 export default class ContextMenu extends Component {
   static propTypes = {
+    /** Content inserted into the menu, ideally ContextMenuItem */
     children: PropTypes.node,
   };
 

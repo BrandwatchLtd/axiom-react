@@ -6,6 +6,7 @@ import './ContextBox.css';
 
 export default class ContextBox extends Component {
   static propTypes = {
+    /** Padding size applied to the content area */
     padding: PropTypes.oneOf(['none', 'small', 'large']),
   };
 

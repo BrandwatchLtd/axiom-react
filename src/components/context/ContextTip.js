@@ -4,6 +4,7 @@ import { ContextBox } from 'bw-axiom';
 
 export default class ContextTip extends Component {
   static propTypes = {
+    /** Content inserted into the tooltip content area */
     children: PropTypes.node,
   };
 
