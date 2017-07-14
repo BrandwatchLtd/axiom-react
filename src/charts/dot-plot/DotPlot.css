@@ -98,5 +98,5 @@
 .ax-dot-plot__benchmark-line--faded,
 .ax-dot-plot__difference-line--faded,
 .ax-dot-plot__dots--faded {
-  opacity: var(var(--cmp-chart-opacity-faded));
+  opacity: var(--cmp-chart-opacity-faded);
 }
