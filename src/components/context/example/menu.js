@@ -31,11 +31,11 @@ export default class ContextMenuExample extends Component {
                     Nam dignissim bibendum
                   </ContextMenuItem>
 
-                  <ContextMenuItem snippetSkip={ true }>
+                  <ContextMenuItem selected={ true } snippetSkip={ true }>
                     Nam dignissim bibendum
                   </ContextMenuItem>
 
-                  <ContextMenuItem snippetSkip={ true }>
+                  <ContextMenuItem selected={ true } snippetSkip={ true }>
                     Nam dignissim bibendum
                   </ContextMenuItem>
                 </ContextMenu>

@@ -16,4 +16,16 @@ describe('ContextMenuItem', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with disabled', () => {
+    const component = getComponent({ disabled: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with selected', () => {
+    const component = getComponent({ selected: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

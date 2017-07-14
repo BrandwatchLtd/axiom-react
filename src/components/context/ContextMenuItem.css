@@ -7,7 +7,8 @@
 }
 
 .ax-context-menu__item {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: var(--cmp-context-menu-item-padding-vertical) var(--cmp-context-padding-large);
   outline: 0;
@@ -27,5 +28,22 @@
     background-color: var(--color-ui-primary--light);
     color: var(--color-ui-light--light);
     cursor: pointer;
+  }
+}
+
+.ax-context-menu__item-content {
+  flex: 1 1 auto;
+}
+
+.ax-context-menu__item-icon {
+  flex: 0 0 auto;
+  margin-left: var(--spacing-grid-size--x2);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  @nest .ax-context-menu__list-item--selected & {
+    opacity: 1;
   }
 }

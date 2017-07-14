@@ -12,8 +12,13 @@ exports[`ContextMenu renders with defaultProps 1`] = `
     >
       <button
         className="ax-context-menu__item"
+        disabled={undefined}
       >
-        Lorem ipsum
+        <div
+          className="ax-context-menu__item-content"
+        >
+          Lorem ipsum
+        </div>
       </button>
     </li>
   </ul>
