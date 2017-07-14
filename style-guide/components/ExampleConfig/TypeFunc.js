@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Grid, GridCell, Toggle } from 'bw-axiom';
+import { Toggle } from 'bw-axiom';
 
 export default class TypeFunc extends Component {
   static propTypes = {
@@ -23,19 +23,11 @@ export default class TypeFunc extends Component {
     }
 
     return (
-      <Grid
-          gutters="tiny"
-          horizontalAlign="end"
-          responsive={ false }
-          shrink={ true }
-          verticalAlign="middle">
-        <GridCell>Included</GridCell>
-        <GridCell>
-          <Toggle
-              onToggle={ () => setOptionValue('included', !included) }
-              toggled={ included } />
-        </GridCell>
-      </Grid>
+      <Toggle
+          onToggle={ () => setOptionValue('included', !included) }
+          toggled={ included }>
+        Included
+      </Toggle>
     );
   }
 }

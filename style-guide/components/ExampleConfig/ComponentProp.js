@@ -25,6 +25,7 @@ const typeColorMap = {
 export default class ComponentProp extends Component {
   static propTypes = {
     PropEditor: PropTypes.func,
+    defaultValue: PropTypes.any,
     description: PropTypes.string,
     prop: PropTypes.string.isRequired,
     propOptions: PropTypes.object.isRequired,
@@ -39,6 +40,7 @@ export default class ComponentProp extends Component {
   render() {
     const {
       PropEditor,
+      defaultValue,
       description,
       prop,
       propOptions,
@@ -69,15 +71,21 @@ export default class ComponentProp extends Component {
               <GridCell>
                 <BadgeGroup>
                   { required && (
-                    <Badge
-                        color="pink"
-                        textColor="light"><Strong>Required</Strong></Badge>
+                    <Badge color="pink" textColor="light">
+                      <Strong>Required</Strong>
+                    </Badge>
                   ) }
 
                   { type && (
-                    <Badge
-                        color={ typeColorMap[type] }
-                        opacity={ 0.3 }>{ type }</Badge>
+                    <Badge color={ typeColorMap[type] } opacity={ 0.2 }>
+                      { type }
+                    </Badge>
+                  ) }
+
+                  { defaultValue && type !== 'func' && type !== 'arrayOf' && (
+                    <Badge color={ typeColorMap[type] } opacity={ 0.2 }>
+                      <Strong>Default:</Strong> { defaultValue.toString() }
+                    </Badge>
                   ) }
                 </BadgeGroup>
               </GridCell>
