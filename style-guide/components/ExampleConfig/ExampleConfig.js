@@ -23,11 +23,19 @@ export default class ExampleConfig extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = this.getURLState();
+  }
+
+  getURLState() {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(
+        new window.URLSearchParams(window.location.search.substring(1)).get('state')
+      );
+    }
   }
 
   setProp(component, prop, value) {
-    this.setState(extend({}, this.state, {
+    this.updateState(extend({}, this.state, {
       [component]: {
         props: {
           [prop]: value,
@@ -37,7 +45,7 @@ export default class ExampleConfig extends Component {
   }
 
   setPropOption(component, prop, option, value) {
-    this.setState(extend({}, this.state, {
+    this.updateState(extend({}, this.state, {
       [component]: {
         options: {
           [prop]: {
@@ -46,6 +54,13 @@ export default class ExampleConfig extends Component {
         },
       },
     }));
+  }
+
+  updateState(state) {
+    window.history.pushState('', '',
+      `${window.location.pathname}?state=${
+          window.encodeURI(JSON.stringify(state))}`);
+    this.setState(state);
   }
 
   render() {
