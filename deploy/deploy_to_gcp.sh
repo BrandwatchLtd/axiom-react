@@ -20,4 +20,4 @@ gsutil \
   cp -r dist/*.css gs://$STORAGE_BUCKET
 
 # Set public access to bucket
-gsutil acl -r ch -u AllUsers:R gs://$STORAGE_BUCKET
+gsutil -m acl -r ch -u AllUsers:R gs://$STORAGE_BUCKET
