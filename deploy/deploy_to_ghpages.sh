@@ -15,3 +15,6 @@ git config --global user.email "$COMMIT_AUTHOR_EMAIL"
 git config --global user.name "$COMMIT_AUTHOR_NAME"
 
 yarn gh-pages
+
+# Workaround https://github.com/travis-ci/travis-ci/issues/8082
+ssh-agent -k
