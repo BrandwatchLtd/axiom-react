@@ -1,26 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Icon } from 'bw-axiom';
 import './DockItem.css';
 
 export default class DockItem extends Component {
   static propTypes = {
     active: PropTypes.bool,
-    icon: PropTypes.string.isRequired,
+    children: PropTypes.node,
   };
 
   render() {
-    const { icon, active, ...rest } = this.props;
-    const classes = classnames('ax-platform__dock-item', {
-      'ax-platform__dock-item--active': active,
-    });
+    const { children, ...rest } = this.props;
 
     return (
-      <li className={ classes }>
-        <a { ...rest } className="ax-platform__dock-item-link">
-          <Icon name={ icon } size="2rem" />
-        </a>
+      <li className="ax-platform__dock-item">
+        <div { ...rest } className="ax-platform__dock-item-wrapper">
+          { children }
+        </div>
       </li>
     );
   }

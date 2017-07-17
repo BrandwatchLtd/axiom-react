@@ -14,3 +14,13 @@
   list-style: none;
   z-index: var(--z-index-platform);
 }
+
+.ax-platform__dock-list-header,
+.ax-platform__dock-list-footer {
+  margin: 0;
+  padding: 0;
+}
+
+.ax-platform__dock-list-footer {
+  margin-top: auto;
+}

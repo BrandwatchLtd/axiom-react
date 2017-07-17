@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import './Dock.css';
 
-export default class Dock extends Component {
+export default class DockHeader extends Component {
   static propTypes = {
     children: PropTypes.node,
   };
@@ -11,9 +10,9 @@ export default class Dock extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <div { ...rest } className="ax-platform__dock">
+      <ul { ...rest } className="ax-platform__dock-list-header">
         { children }
-      </div>
+      </ul>
     );
   }
 }
