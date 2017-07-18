@@ -1,5 +1,3 @@
-@import '../../materials/sizing';
-
 :root {
   --cmp-inline-spacing: calc(var(--spacing-grid-size) * 2);
 }

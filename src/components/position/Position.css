@@ -1,5 +1,3 @@
-@import '../../materials/layout';
-
 .ax-position {
   z-index: var(--z-index-position);
 }

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Modal } from 'bw-axiom';
+import { Base, Modal } from 'bw-axiom';
 import './Dialog.css';
 
 export default class Dialog extends Component {
@@ -30,9 +30,9 @@ export default class Dialog extends Component {
 
     return (
       <Modal { ...rest }>
-        <div className={ classes }>
+        <Base className={ classes } theme="light">
           { children }
-        </div>
+        </Base>
       </Modal>
     );
   }

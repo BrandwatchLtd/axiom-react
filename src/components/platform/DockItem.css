@@ -1,5 +1,3 @@
-@import './vars';
-
 .ax-platform__dock-item {
   display: flex;
   flex-direction: column;

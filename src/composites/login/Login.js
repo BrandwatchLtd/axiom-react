@@ -26,14 +26,8 @@ export default class Login extends Component {
     backgroundImage: PropTypes.string.isRequired,
     /** An error message that will be placed on the page */
     error: PropTypes.string,
-    /** Controls over the text and input styling for a dark or light background */
-    theme: PropTypes.oneOf(['dark', 'light']),
     /** Submit handler that will be called with the username and password */
     onSubmit: PropTypes.func.isRequired,
-  };
-
-  static defaultProps = {
-    theme: 'light',
   };
 
   componentWillMount() {
@@ -60,19 +54,14 @@ export default class Login extends Component {
   }
 
   render() {
-    const { application, backgroundImage, error, theme, ...rest } = this.props;
+    const { application, backgroundImage, error, ...rest } = this.props;
     const { username, password } = this.state;
     const style = { backgroundImage: `url(${backgroundImage})` };
-    const textColor = {
-      dark: 'light',
-      light: 'dark',
-    }[theme];
 
     return (
       <Base { ...omit(rest, ['onSubmit']) }
           className="ax-login"
-          style={ style }
-          textColor={ textColor }>
+          style={ style }>
         <div className="ax-login__header">
           <div className="ax-login__header-container">
             <LogoTab color="grey" height="7.75rem" />
@@ -91,7 +80,7 @@ export default class Login extends Component {
                   onChange={ e => this.handleUsernameChange(e) }
                   placeholder="Username"
                   size="large"
-                  theme={ theme }
+                  style="overlay"
                   value={ username } />
 
               <TextInput
@@ -99,7 +88,7 @@ export default class Login extends Component {
                   onChange={ e => this.handlePasswordChange(e) }
                   placeholder="Password"
                   size="large"
-                  theme={ theme }
+                  style="overlay"
                   type="password"
                   value={ password } />
 

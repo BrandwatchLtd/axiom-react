@@ -1,6 +1,3 @@
-@import '../../materials/colors';
-@import '../../materials/animations';
-
 .ax-platform__dock-icon-link {
   display: flex;
   align-items: center;

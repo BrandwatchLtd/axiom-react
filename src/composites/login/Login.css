@@ -1,6 +1,3 @@
-@import '../../materials/layout';
-@import '../../materials/sizing';
-
 :root {
   --login-header-height: 7.75rem;
 }
@@ -14,6 +11,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  color: var(--color-context-text);
 }
 
 .ax-login__header {

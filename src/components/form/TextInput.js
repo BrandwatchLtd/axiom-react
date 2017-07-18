@@ -12,7 +12,7 @@ export default class TextInput extends Component {
     invalid: PropTypes.bool,
     label: PropTypes.string,
     size: PropTypes.oneOf(['medium', 'large']),
-    theme: PropTypes.oneOf(['dark', 'light']),
+    style: PropTypes.oneOf(['overlay']),
     valid: PropTypes.bool,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
@@ -40,12 +40,12 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { children, disabled, valid, invalid, label, size, theme, ...rest } = this.props;
+    const { children, disabled, valid, invalid, label, size, style, ...rest } = this.props;
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIcon);
     const iconContainerClasses = classnames('ax-input__container', {
       [`ax-input__container--${size}`]: size,
-      [`ax-input__container--${theme}`]: theme,
+      [`ax-input__container--${style}`]: style,
       'ax-input__container--disabled': disabled,
       'ax-input__container--focused': hasFocus,
       'ax-input__container--valid': valid,

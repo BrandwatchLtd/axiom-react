@@ -15,6 +15,7 @@ import {
   isValueHidden,
   isValueStrong,
 } from './utils';
+import '../vars.css';
 import './DotPlot.css';
 
 function differenceLineContainerClasses(fromBenchmark, toBenchmark) {

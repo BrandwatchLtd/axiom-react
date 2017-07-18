@@ -1,0 +1,14 @@
+.ax-theme--light {
+  --color-context-border: var(--color-theme-light-border);
+  --color-context-border-subtle: var(--color-theme-light-border-subtle);
+
+  --color-context-background: var(--color-theme-light-background);
+  --color-context-background-active: var(--color-theme-light-background-active);
+  --color-context-background-disabled: var(--color-theme-light-background-disabled);
+  --color-context-background-faded: var(--color-theme-light-background-faded);
+  --color-context-background-subtle: var(--color-theme-light-background-subtle);
+
+  --color-context-text: var(--color-theme-light-text);
+  --color-context-text-subtle: var(--color-theme-light-text-subtle);
+  --color-context-text-disabled: var(--color-theme-light-text-disabled);
+}

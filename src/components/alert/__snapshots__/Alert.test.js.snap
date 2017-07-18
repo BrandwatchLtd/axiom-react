@@ -2,7 +2,7 @@
 
 exports[`Alert renders with color error 1`] = `
 <div
-  className="ax-alert ax-alert--error"
+  className="ax-alert ax-alert--error ax-theme--light"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -27,7 +27,7 @@ exports[`Alert renders with color error 1`] = `
 
 exports[`Alert renders with color info 1`] = `
 <div
-  className="ax-alert ax-alert--info"
+  className="ax-alert ax-alert--info ax-theme--light"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -52,7 +52,7 @@ exports[`Alert renders with color info 1`] = `
 
 exports[`Alert renders with color success 1`] = `
 <div
-  className="ax-alert ax-alert--success"
+  className="ax-alert ax-alert--success ax-theme--light"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -77,7 +77,7 @@ exports[`Alert renders with color success 1`] = `
 
 exports[`Alert renders with color warning 1`] = `
 <div
-  className="ax-alert ax-alert--warning"
+  className="ax-alert ax-alert--warning ax-theme--light"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -102,7 +102,7 @@ exports[`Alert renders with color warning 1`] = `
 
 exports[`Alert renders with defaultProps 1`] = `
 <div
-  className="ax-alert ax-alert--info"
+  className="ax-alert ax-alert--info ax-theme--light"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -127,7 +127,7 @@ exports[`Alert renders with defaultProps 1`] = `
 
 exports[`Alert renders with onRemoveClick 1`] = `
 <div
-  className="ax-alert ax-alert--info"
+  className="ax-alert ax-alert--info ax-theme--light"
 >
   <div
     className="ax-grid__container ax-space--x6"

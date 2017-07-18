@@ -1,6 +1,3 @@
-@import '../../materials/colors';
-@import '../../materials/sizing';
-
 .ax-icon-indicator {
   display: flex;
   align-items: center;

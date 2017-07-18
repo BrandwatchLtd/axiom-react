@@ -1,0 +1,7 @@
+@custom-media --screen-less-than-small (max-width: 47.9375rem);
+@custom-media --screen-less-than-medium (max-width: 61.9375rem);
+@custom-media --screen-less-than-large (max-width: 74.9375rem);
+
+@custom-media --screen-more-than-small (min-width: 48rem);
+@custom-media --screen-more-than-medium (min-width: 62rem);
+@custom-media --screen-more-than-large (min-width: 75rem);

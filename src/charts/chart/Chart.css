@@ -1,6 +1,3 @@
-@import '../../materials/colors';
-@import '../../materials/sizing';
-
 .ax-chart__header {
   padding-bottom: calc(var(--spacing-grid-size--x3) - var(--component-border-width));
   border-bottom-width: var(--component-border-width-small);

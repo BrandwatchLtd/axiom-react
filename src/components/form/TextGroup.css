@@ -1,6 +1,3 @@
-@import '../../materials/sizing';
-@import './vars';
-
 .ax-input,
 .ax-textarea {
   width: 100%;

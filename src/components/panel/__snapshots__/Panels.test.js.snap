@@ -2,10 +2,10 @@
 
 exports[`Panels renders with defaultProps 1`] = `
 <div
-  className="ax-panels"
+  className="ax-panels ax-theme--light"
 >
   <div
-    className="ax-panel"
+    className="ax-panel ax-theme--light"
     style={
       Object {
         "minHeight": undefined,
@@ -15,7 +15,7 @@ exports[`Panels renders with defaultProps 1`] = `
     Lorem Ipsum
   </div>
   <div
-    className="ax-panel"
+    className="ax-panel ax-theme--light"
     style={
       Object {
         "minHeight": undefined,

@@ -1,5 +1,0 @@
-@import '../../materials/sizing';
-
-:root {
-  --column-spacing: calc(var(--spacing-grid-size) * 4);
-}

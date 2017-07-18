@@ -1,17 +1,12 @@
-@import '../../materials/animations';
-@import '../../materials/colors';
-@import '../../materials/sizing';
-@import '../../materials/typography';
-@import './vars';
-
 .ax-input__container {
   display: flex;
   position: relative;
   flex: 1 1 auto;
   align-items: center;
-  border: var(--component-border-width) solid var(--cmp-input-border-color);
+  border-width: var(--component-border-width);
   border-style: solid;
   border-radius: var(--component-border-radius);
+  border-color: var(--cmp-input-border-color);
   background-color: var(--cmp-input-background-color);
   transition-property: border-color;
   transition-duration: var(--transition-time-base);
@@ -81,23 +76,12 @@
   }
 }
 
-.ax-input__container--light {
+.ax-input__container--overlay {
   border-color: transparent;
-  background-color: var(--color-theme-light-background-subtle);
-  color: var(--color-theme-light-text);
+  background-color: var(--color-context-background-subtle);
 
   & .ax-input::placeholder {
-    color: var(--color-theme-light-text-subtle);
-  }
-}
-
-.ax-input__container--dark {
-  border-color: transparent;
-  background-color: var(--color-theme-dark-background-subtle);
-  color: var(--color-theme-dark-text);
-
-  & .ax-input::placeholder {
-    color: var(--color-theme-dark-text-subtle);
+    color: var(--color-context-text-subtle);
   }
 }
 

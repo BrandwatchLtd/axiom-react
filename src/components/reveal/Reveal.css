@@ -1,5 +1,3 @@
-@import '../../materials/animations';
-
 .ax-reveal {
   transition-property: height, opacity, margin;
   transition-duration: var(--transition-time-slow);

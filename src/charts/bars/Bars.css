@@ -1,6 +1,3 @@
-@import '../../materials/sizing';
-@import '../vars';
-
 :root {
   --cmp-chart-label-spacing: calc(var(--spacing-grid-size) * 3);
 }

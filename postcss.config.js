@@ -1,19 +1,11 @@
-module.exports = (ctx) => ({
+module.exports = {
   plugins: [
     require('postcss-import')(),
     require('postcss-cssnext')({
-      browsers: [
-        'last 2 versions',
-        'not Explorer <= 10',
-        'not ExplorerMobile <= 10',
-      ],
+      browsers: require('./browsers'),
       features: {
-        customProperties: {
-          variables: Object.assign({},
-            require(`./src/materials/theme-${ctx.theme || 'light'}.json`)
-          ),
-        },
+        customProperties: false,
       },
     }),
   ],
-});
+};

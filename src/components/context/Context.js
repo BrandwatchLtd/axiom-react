@@ -14,8 +14,6 @@ export default class Context extends Component {
     maxHeight: PropTypes.string,
     /** Position of the content area relative to the arrow */
     position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
-    /** Theme of the content, only works for text color and background */
-    theme: PropTypes.oneOf(['dark', 'light']),
     /** Total width of the component */
     width: PropTypes.string,
   };
@@ -23,7 +21,6 @@ export default class Context extends Component {
   static defaultProps = {
     maxHeight: '30rem',
     position: 'top',
-    theme: 'light',
     width: '14.5rem',
   };
 
@@ -33,17 +30,14 @@ export default class Context extends Component {
       children,
       maxHeight,
       position,
-      theme,
       width,
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-context',
-      `ax-context--${position}`,
-      `ax-context--${theme}`);
+    const classes = classnames('ax-context', `ax-context--${position}`);
 
     return (
-      <Base { ...rest } className={ classes } style={ { width } }>
+      <Base theme="light" { ...rest } className={ classes } style={ { width } }>
         <div className="ax-context__content" style={ { maxHeight } }>
           { children }
         </div>

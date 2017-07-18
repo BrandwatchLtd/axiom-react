@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Base } from 'bw-axiom';
+import './Form.css';
 
 export default class Form extends Component {
   static propTypes = {

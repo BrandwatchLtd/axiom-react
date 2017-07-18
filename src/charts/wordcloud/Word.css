@@ -1,6 +1,3 @@
-@import '../../materials/animations';
-@import '../../materials/colors';
-
 @keyframes appear-word {
   from  { opacity: 0; }
   to    { opacity: 1; }

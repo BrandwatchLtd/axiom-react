@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Base } from 'bw-axiom';
-import './ColumnChartRow.css';
 
 export default class ColumnChartRow extends Component {
   static propTypes = {

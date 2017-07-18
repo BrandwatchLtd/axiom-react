@@ -1,7 +1,4 @@
-@import '../../materials/colors';
-@import '../../materials/layout';
-@import '../../materials/sizing';
-@import '../../materials/typography';
+@import '../../materials/breakpoints';
 
 .ax-label {
   display: inline-flex;

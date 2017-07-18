@@ -2,7 +2,7 @@
 
 exports[`DataPicker renders with defaultProps 1`] = `
 <div
-  className="ax-panel ax-panel--inactive"
+  className="ax-panel ax-panel--inactive ax-theme--light"
   style={
     Object {
       "minHeight": undefined,
@@ -15,7 +15,7 @@ exports[`DataPicker renders with defaultProps 1`] = `
 
 exports[`DataPicker renders with value 1`] = `
 <div
-  className="ax-panel"
+  className="ax-panel ax-theme--light"
   style={
     Object {
       "minHeight": undefined,

@@ -24,7 +24,10 @@ export default class Panel extends Component {
     });
 
     return (
-      <Base { ...rest } className={ classes } style={ { minHeight: minimumHeight } }>
+      <Base { ...rest }
+          className={ classes }
+          style={ { minHeight: minimumHeight } }
+          theme="light">
         { children }
       </Base>
     );

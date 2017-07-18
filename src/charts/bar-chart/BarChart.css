@@ -1,8 +1,3 @@
-@import '../../materials/animations';
-@import '../../materials/colors';
-@import '../../materials/sizing';
-@import '../vars';
-
 :root {
   --cmp-benchmark-hang-over: calc(var(--spacing-grid-size) * 2);
 }

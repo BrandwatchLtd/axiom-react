@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Paragraph, Link } from 'bw-axiom';
 
-const THEME_LIGHT = 'dm-theme--light';
-const THEME_DARK = 'dm-theme--dark';
+const THEME_LIGHT = 'ax-theme--light';
+const THEME_DARK = 'ax-theme--dark';
 
 function setTheme(theme) {
-  document.body.classList.remove(THEME_LIGHT);
-  document.body.classList.remove(THEME_DARK);
-  document.body.classList.add(theme);
+  document.documentElement.classList.remove(THEME_LIGHT);
+  document.documentElement.classList.remove(THEME_DARK);
+  document.documentElement.classList.add(theme);
 }
 
 export default class ThemeSwitcher extends Component {

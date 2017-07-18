@@ -1,7 +1,4 @@
-@import '../../../src/materials/animations';
-@import '../../../src/materials/colors';
-@import '../../../src/materials/layout';
-@import '../../../src/materials/sizing';
+@import '../../../src/materials/breakpoints';
 
 :root {
   --sg-header-height-sm: calc(var(--spacing-grid-size) * 12);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html class="ax-theme--light" lang="en-us">
   <head>
     <% if (htmlWebpackPlugin.options.basename) { %>
       <base href="<%= htmlWebpackPlugin.options.basename %>">
@@ -14,7 +14,7 @@
       <link href="<%= htmlWebpackPlugin.options.stylesheet %>" rel="stylesheet">
     <% } %>
   </head>
-  <body class="dm-theme--light">
+  <body>
     <div class="dm-app-container" id="react-root"><% if (htmlWebpackPlugin.options.html) { %><%= htmlWebpackPlugin.options.html %><% } %></div>
 
     <% if (htmlWebpackPlugin.options.script) { %>

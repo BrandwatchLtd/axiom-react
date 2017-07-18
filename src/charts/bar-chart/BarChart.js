@@ -11,6 +11,7 @@ import ChartTableVisual from '../chart-table/ChartTableVisual';
 import BarChartBars from './BarChartBars';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
 import { formatData, getHighestValue } from './utils';
+import '../vars.css';
 import './BarChart.css';
 
 export default class BarChart extends Component {

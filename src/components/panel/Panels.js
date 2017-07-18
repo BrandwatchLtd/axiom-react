@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Base } from 'bw-axiom';
 import './Panels.css';
 
 export default class Panels extends Component {
@@ -11,9 +12,9 @@ export default class Panels extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <div { ...rest } className="ax-panels">
+      <Base { ...rest } className="ax-panels" theme="light">
         { children }
-      </div>
+      </Base>
     );
   }
 }

@@ -1,5 +1,3 @@
-@import '../../src/materials/sizing';
-
 .dm-doc {
   padding: var(--page-padding-vertical) 0 10rem;
 }

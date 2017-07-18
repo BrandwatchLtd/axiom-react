@@ -1,6 +1,3 @@
-@import '../../../src/materials/colors';
-@import '../../../src/materials/sizing';
-
 .dm-nav__link {
   display: block;
   padding: var(--spacing-grid-size) var(--page-padding-horizontal);

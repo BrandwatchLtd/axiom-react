@@ -1,8 +1,4 @@
-@import '../../materials/animations';
-@import '../../materials/colors';
-@import '../../materials/layout';
-@import '../../materials/sizing';
-@import '../../materials/typography';
+@import '../../materials/breakpoints';
 
 .ax-button {
   display: inline-flex;
@@ -81,7 +77,7 @@
 
   /* Pattern obscurity */
   &.ax-button--joined:not(:first-child) {
-    border-left-color: color(var(--color-ui-light) alpha(45%));
+    border-left-color: rgba(var(--rgb-ui-light), 0.45);
   }
 
   &:hover  { background-color: var(--color-ui-primary--light); }

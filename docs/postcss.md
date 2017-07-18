@@ -13,10 +13,14 @@ module.exports = {
   plugins: [
     require('postcss-import')(),
     require('postcss-cssnext')({
+      browsers: [
+        'last 2 Firefox versions',
+        'last 2 Chrome versions',
+        'last 2 Edge versions',
+        'last 2 Safari versions',
+      ],
       features: {
-        customProperties: {
-          variables: require('bw-axiom/lib/materials/theme-light.json'),
-        },
+        customProperties: false,
       },
     }),
   ],
@@ -34,7 +38,7 @@ Example for webpack
     {
       loader: 'style-loader',
     }, {
-      loader: 'css-loader,
+      loader: 'css-loader',
       options: {
         importLoaders: 1,
       },
@@ -47,3 +51,4 @@ Example for webpack
   ],
 }
 ```
+

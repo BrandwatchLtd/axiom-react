@@ -5,13 +5,14 @@ exports[`TextInput render with theme dark 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium ax-input__container--dark"
+    className="ax-input__container ax-input__container--medium"
   >
     <input
       className="ax-input"
       disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
+      theme="dark"
       type="text"
     />
   </div>
@@ -23,13 +24,14 @@ exports[`TextInput render with theme light 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium ax-input__container--light"
+    className="ax-input__container ax-input__container--medium"
   >
     <input
       className="ax-input"
       disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
+      theme="light"
       type="text"
     />
   </div>

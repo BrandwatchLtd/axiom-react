@@ -1,5 +1,3 @@
-@import '../../materials/sizing';
-
 .ax-stat-cards__heading {
   margin-bottom: calc(var(--spacing-grid-size) * 2);
 }

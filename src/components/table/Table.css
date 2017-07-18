@@ -1,6 +1,3 @@
-@import '../../materials/colors';
-@import '../../materials/sizing';
-
 :root {
   --cmp-table-row-padding-small: calc(var(--spacing-grid-size) * 1);
   --cmp-table-row-padding-medium: calc(var(--spacing-grid-size) * 2);

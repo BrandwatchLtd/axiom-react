@@ -1,6 +1,3 @@
-@import '../../materials/sizing';
-@import '../vars';
-
 .ax-bullet-chart {
   display: flex;
   flex-direction: column;

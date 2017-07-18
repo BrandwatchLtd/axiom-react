@@ -1,7 +1,5 @@
 @import './globals';
-@import '../../materials/colors';
-@import '../../materials/layout';
-@import '../../materials/sizing';
+@import '../../materials/breakpoints';
 
 /* Hack: around webkits autofill styling */
 @keyframes inputAutofillFix {

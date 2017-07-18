@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Base } from 'bw-axiom';
-import './ColumnChartYAxis.css';
 
 export default class ColumnChartYAxis extends Component {
   static propTypes = {

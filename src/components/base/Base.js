@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import '../../materials/animations.css';
+import '../../materials/colors.css';
+import '../../materials/layout.css';
+import '../../materials/sizing.css';
+import '../../materials/theme-dark.css';
+import '../../materials/theme-light.css';
+import '../../materials/typography.css';
 import './Base.css';
 
 const underlineTextSizes = new Set(['display2', 'display1', 'headline', 'body']);
@@ -75,6 +82,8 @@ export default class Base extends Component {
     textStrong: PropTypes.bool,
     /** Text underlined styling */
     textUnderline: PropTypes.bool,
+    /** Theme styling modifier */
+    theme: PropTypes.oneOf(['light', 'dark']),
     /**
      * Control over when the element should be visible until.
      * Opposite of `hiddenUntil`.
@@ -104,6 +113,7 @@ export default class Base extends Component {
       textStrike,
       textStrong,
       textUnderline,
+      theme,
       visibleUntil,
       ...rest
     } = this.props;
@@ -129,6 +139,7 @@ export default class Base extends Component {
       'ax-text--strike': textStrike,
       'ax-text--strong': textStrong,
       [`ax-text--underline-${underline}`]: underline,
+      [`ax-theme--${theme}`]: theme,
     });
 
     return (

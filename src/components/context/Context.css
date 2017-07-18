@@ -1,8 +1,8 @@
-@import '../../materials/colors';
-@import '../../materials/sizing';
-
 :root {
   --cmp-context-tip-size: calc(var(--spacing-grid-size) * 3);
+  --cmp-context-tip-space: calc(var(--spacing-grid-size) * 2);
+  --cmp-context-padding-small: calc(var(--spacing-grid-size) * 4);
+  --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
 }
 
 .ax-context {
@@ -14,9 +14,10 @@
 }
 
 .ax-context__content {
-  border-width: var(--component-border-width);
-  border-style: solid;
+  border: var(--component-border-width) solid var(--color-context-border);
   border-radius: var(--component-border-radius);
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
   overflow-y: auto;
   /* stylelint-disable */
   /* ensures rounded corners in Safari */
@@ -33,36 +34,11 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-width: var(--cmp-context-tip-size);
-  border-style: solid;
+  border: var(--cmp-context-tip-size) solid var(--color-context-background);
   pointer-events: none;
 
   @supports (filter: drop-shadow(var(--drop-shadow))) {
     display: block;
-  }
-}
-
-.ax-context--dark {
-  & .ax-context__content {
-    border-color: var(--color-theme-dark-border);
-    background-color: var(--color-theme-dark-background);
-    color: var(--color-theme-dark-text);
-  }
-
-  & .ax-context__arrow {
-    border-color: var(--color-theme-dark-background);
-  }
-}
-
-.ax-context--light {
-  & .ax-context__content {
-    border-color: var(--color-theme-light-border);
-    background-color: var(--color-theme-light-background);
-    color: var(--color-theme-light-text);
-  }
-
-  & .ax-context__arrow {
-    border-color: var(--color-theme-light-background);
   }
 }
 

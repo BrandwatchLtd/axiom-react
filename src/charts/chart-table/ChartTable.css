@@ -1,8 +1,4 @@
-@import '../../materials/animations';
-@import '../../materials/colors';
-@import '../../materials/layout';
-@import '../../materials/sizing';
-@import '../vars';
+@import '../../materials/breakpoints';
 
 :root {
   --cmp-chart-table-row-padding: calc((var(--spacing-grid-size) * 3) / 2);

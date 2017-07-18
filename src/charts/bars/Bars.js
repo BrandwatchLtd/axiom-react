@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Base, Small } from 'bw-axiom';
+import '../vars.css';
 import './Bars.css';
 
 export default class Bars extends Component {

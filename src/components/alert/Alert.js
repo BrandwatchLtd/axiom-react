@@ -20,7 +20,7 @@ export default class Alert extends Component {
     const classes = classnames('ax-alert', `ax-alert--${color}`);
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base { ...rest } className={ classes } theme="light">
         <Grid gutters="small" responsive={ false } verticalAlign="middle">
           <GridCell>
             { children }

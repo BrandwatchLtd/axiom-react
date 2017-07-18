@@ -1,9 +1,0 @@
-@import '../../materials/sizing';
-
-.ax-column-chart__row {
-  display: flex;
-  flex: 1 1 0%;
-
-  &:first-child { margin-top: 0; }
-  &:last-child  { margin-bottom: 0; }
-}

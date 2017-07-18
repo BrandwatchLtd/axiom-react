@@ -1,3 +1,7 @@
+:root {
+  --cmp-platform-dock-size: calc(var(--spacing-grid-size) * 16);
+}
+
 .ax-platform {
   display: flex;
   flex: 1 1 auto;

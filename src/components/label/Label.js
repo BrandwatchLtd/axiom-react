@@ -51,7 +51,7 @@ export default class Label extends Component {
     );
 
     return (
-      <Base { ...rest } Component="span" className={ classes }>
+      <Base { ...rest } Component="span" className={ classes } theme="light">
         { mappedChildren }
       </Base>
     );

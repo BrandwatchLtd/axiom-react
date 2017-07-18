@@ -1,5 +1,3 @@
-@import '../../materials/colors';
-
 .ax-progress-infinite__arc {
   fill: none;
   animation: spin 1s linear infinite;

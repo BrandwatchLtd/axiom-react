@@ -1,5 +1,4 @@
-@import '../../materials/layout';
-@import '../../materials/sizing';
+@import '../../materials/breakpoints';
 
 :root {
   --cmp-grid-gutter-size-tiny: calc(var(--spacing-grid-size) * 2);

@@ -17,7 +17,11 @@ yarn add bw-axiom
 * Components to encapsulate templates, styles and behaviour.
 * Composites for larger reusable multi component solutions.
 * Utilities to apply UX patterns (like date and number formatting).
-* Light and Dark themes at a global level.
+* Light and Dark themes
+
+### [Supported Browsers](./browsers.js)
+
+Need IE Support? [See the the setup guide here]('./docs/internet-explorer.md')
 
 ### Getting Started
 
@@ -31,7 +35,7 @@ The React components provide an abstraction of the templates and CSS, which grea
 The compiled CSS file is stored on the Brandwatch Google Cloud Platform CDN or target individual CSS files from the node_module.
 
 ```
-http://axiom.bwcom.io/axiom-{THEME}.{VERSION}.min.css
+http://axiom.bwcom.io/axiom.{VERSION}.min.css
 ```
 
 **Template and CSS changes are not classed as breaking changes and are not specified in the release notes**

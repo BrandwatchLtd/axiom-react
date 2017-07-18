@@ -7,7 +7,7 @@ export default class FormExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
       TextInput: PropTypes.shape({
-        theme: PropTypes.shape({
+        style: PropTypes.shape({
           values: PropTypes.array.isRequired,
         }).isRequired,
       }).isRequired,
@@ -16,16 +16,16 @@ export default class FormExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { TextInput: { theme } } = components;
+    const { TextInput: { style } } = components;
 
     return (
-      <Example name="Text input themes">
+      <Example name="Text input styles">
         <Snippet>
-          { theme.values.map((theme) =>
-            <Alert key={ theme } space="x4">
+          { style.values.map((style) =>
+            <Alert key={ style } space="x4">
               <TextInput
-                  placeholder={ `${theme} theme input` }
-                  theme={ theme } />
+                  placeholder={ `${style} style input` }
+                  style={ style } />
             </Alert>
           ) }
         </Snippet>

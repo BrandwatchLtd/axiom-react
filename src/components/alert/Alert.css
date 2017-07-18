@@ -1,7 +1,3 @@
-@import '../../materials/colors';
-@import '../../materials/sizing';
-@import '../../materials/typography';
-
 :root {
   --cmp-alert-padding-vertical: calc(var(--spacing-grid-size) * 3);
   --cmp-alert-padding-horizontal: var(--page-padding-horizontal);
