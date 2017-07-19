@@ -22,6 +22,8 @@ export default class Word extends Component {
       'brown',
       'grey',
     ]),
+    /** Disabled state of the word **/
+    disabled: PropTypes.bool,
     /** Font family of the word */
     font: PropTypes.oneOf(['Roboto, Helvetica, Arial, sans-serif']).isRequired,
     /** Font size of the word */
@@ -50,6 +52,7 @@ export default class Word extends Component {
     const {
       animationDelay,
       color,
+      disabled,
       font,
       fontSize,
       text,
@@ -61,6 +64,7 @@ export default class Word extends Component {
 
     const classes = classnames('ax-word', {
       [`ax-word--${color}`]: color,
+      'ax-word--disabled': disabled,
     });
 
     const style = {

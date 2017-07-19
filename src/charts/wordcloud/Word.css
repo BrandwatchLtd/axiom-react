@@ -1,12 +1,15 @@
 @keyframes appear-word {
-  from  { opacity: 0; }
   to    { opacity: 1; }
 }
 
 .ax-word {
   opacity: 0;
   color: inherit;
+  fill-opacity: 1;
   fill: currentColor;
+  transition-property: color, fill-opacity;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
   animation-name: appear-word;
   animation-duration: var(--transition-time-slow);
   animation-fill-mode: forwards;
@@ -25,3 +28,7 @@
 .ax-word--orange { color: var(--color-brand-orange); }
 .ax-word--brown { color: var(--color-brand-brown); }
 .ax-word--grey { color: var(--color-brand-grey); }
+
+.ax-word--disabled {
+  fill-opacity: 0.3;
+}
