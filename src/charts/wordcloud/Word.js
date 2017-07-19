@@ -28,6 +28,8 @@ export default class Word extends Component {
     font: PropTypes.oneOf(['Roboto, Helvetica, Arial, sans-serif']).isRequired,
     /** Font size of the word */
     fontSize: PropTypes.string,
+    /** Hidden state of the word **/
+    hidden: PropTypes.bool,
     /** The content of the word */
     text: PropTypes.string,
     /** Where the word should be horizontal positioned from */
@@ -55,6 +57,7 @@ export default class Word extends Component {
       disabled,
       font,
       fontSize,
+      hidden,
       text,
       textAnchor,
       x,
@@ -64,7 +67,8 @@ export default class Word extends Component {
 
     const classes = classnames('ax-word', {
       [`ax-word--${color}`]: color,
-      'ax-word--disabled': disabled,
+      'ax-word--disabled': !hidden && disabled,
+      'ax-word--hidden': hidden,
     });
 
     const style = {

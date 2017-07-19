@@ -32,3 +32,7 @@
 .ax-word--disabled {
   fill-opacity: 0.3;
 }
+
+.ax-word--hidden {
+  fill-opacity: 0;
+}
