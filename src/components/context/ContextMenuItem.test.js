@@ -28,4 +28,16 @@ describe('ContextMenuItem', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with multiSelect', () => {
+    const component = getComponent({ multiSelect: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with multiSelect and selected', () => {
+    const component = getComponent({ multiSelect: true, selected: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -37,7 +37,9 @@ class ContextExample extends Component {
       Context: {},
       ContextBox: {},
       ContextMenu: {},
-      ContextMenuItem: {},
+      ContextMenuItem: {
+        onClick: () => {},
+      },
       ContextTip: {},
     };
 

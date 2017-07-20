@@ -5,6 +5,7 @@ import { ContextMenuItem } from 'bw-axiom';
 export default class DropdownMenuItem extends Component {
   static propTypes = {
     children: PropTypes.node,
+    multiSelect: PropTypes.bool,
     onClick: PropTypes.func,
   };
 
@@ -14,9 +15,9 @@ export default class DropdownMenuItem extends Component {
 
   handleClick(...args) {
     const { closeDropdown } = this.context;
-    const { onClick } = this.props;
+    const { multiSelect, onClick } = this.props;
 
-    if (closeDropdown) {
+    if (closeDropdown && !multiSelect) {
       closeDropdown();
     }
 

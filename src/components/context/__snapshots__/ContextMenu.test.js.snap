@@ -11,8 +11,9 @@ exports[`ContextMenu renders with defaultProps 1`] = `
       className="ax-context-menu__list-item"
     >
       <button
-        className="ax-context-menu__item"
+        className="ax-context-menu__item-single"
         disabled={undefined}
+        onClick={undefined}
       >
         <div
           className="ax-context-menu__item-content"
