@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>annotate</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="annotate" fill="#000000">
+            <path d="M9.364,12.2929 C9.718,12.6469 9.01,13.3539 8.657,12.9999 C8.447,12.7899 7.054,11.3969 6.182,10.5249 L3,12.9999 L5.475,9.8179 C4.603,8.9459 3.21,7.5539 3,7.3429 C2.646,6.9899 3.354,6.2829 3.707,6.6359 C5.121,8.0499 10.071,4.5149 8.657,3.1009 C8.303,2.7469 9.01,2.0399 9.364,2.3939 C9.779,2.8089 10.558,3.5869 11.132,4.1609 L11.839,4.8679 C12.413,5.4419 13.192,6.2209 13.607,6.6359 C13.96,6.9899 13.253,7.6969 12.9,7.3429 C11.485,5.9289 7.95,10.8789 9.364,12.2929 Z" id="Mask"></path>
+        </g>
+    </g>
+</svg>
