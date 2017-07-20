@@ -13,8 +13,37 @@ import {
 
 export default class ColorPicker extends Component {
   static propTypes = {
-    disabledOptions: PropTypes.arrayOf(PropTypes.string),
-    options: PropTypes.array,
+    /** Colors that should be disabled from selection */
+    disabledOptions: PropTypes.arrayOf(PropTypes.oneOf([
+      'rose',
+      'pink',
+      'purple',
+      'lilac',
+      'blue',
+      'teal',
+      'green',
+      'chartreuse',
+      'amber',
+      'orange',
+      'brown',
+      'grey',
+    ])),
+    /** Colors that should be visible for selection */
+    options: PropTypes.arrayOf(PropTypes.oneOf([
+      'rose',
+      'pink',
+      'purple',
+      'lilac',
+      'blue',
+      'teal',
+      'green',
+      'chartreuse',
+      'amber',
+      'orange',
+      'brown',
+      'grey',
+    ])),
+    /** Color that should appear as selected */
     selected: PropTypes.oneOf([
       'rose',
       'pink',
@@ -29,8 +58,11 @@ export default class ColorPicker extends Component {
       'brown',
       'grey',
     ]),
+    /** Width of the color selection container */
     width: PropTypes.string,
+    /** Callback for when the color picker has been opened */
     onOpen: PropTypes.func,
+    /** Callback for when a color has been selected, provided with the selected color */
     onSelectColor: PropTypes.func.isRequired,
   };
 
