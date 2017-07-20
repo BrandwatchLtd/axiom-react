@@ -32,7 +32,9 @@ export default class ComponentProp extends Component {
     required: PropTypes.bool.isRequired,
     setOptionValue: PropTypes.func.isRequired,
     setValue: PropTypes.func.isRequired,
-    type: PropTypes.string.isRequired,
+    type: PropTypes.shape({
+      name: PropTypes.string,
+    }).isRequired,
     value: PropTypes.any,
     values: PropTypes.array,
   };
@@ -77,12 +79,12 @@ export default class ComponentProp extends Component {
                   ) }
 
                   { type && (
-                    <Badge color={ typeColorMap[type] } opacity={ 0.2 }>
-                      { type }
+                    <Badge color={ typeColorMap[type.name] } opacity={ 0.2 }>
+                      { type.name }
                     </Badge>
                   ) }
 
-                  { defaultValue && type !== 'func' && type !== 'arrayOf' && (
+                  { defaultValue && type && type.name !== 'func' && type.name !== 'arrayOf' && (
                     <Badge color={ typeColorMap[type] } opacity={ 0.2 }>
                       <Strong>Default:</Strong> { defaultValue.toString() }
                     </Badge>
@@ -106,6 +108,7 @@ export default class ComponentProp extends Component {
                   required={ required }
                   setOptionValue={ setOptionValue }
                   setValue={ setValue }
+                  type={ type }
                   value={ value }
                   values={ values } />
             </GridCell>

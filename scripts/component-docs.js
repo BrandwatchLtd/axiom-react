@@ -3,19 +3,16 @@
 const fs = require('fs');
 const path = require('path');
 const reactDocgen = require('react-docgen');
+const isPlainObject = require('lodash.isplainobject');
 
 function castValue(value) {
   if (Array.isArray(value)) {
     return value.map(normaliseValue);
+  } else if (isPlainObject(value)) {
+    return normaliseValue(value);
   }
 
-  const stringRx = /(^["'])(.*)(["']$)/;
-
-  if (!isNaN(+value)) return +value;
-  if (value === 'true' || value === 'false') return JSON.parse(value);
-  if (stringRx.test(value)) return value.replace(stringRx, '$2');
-
-  return value;
+  return eval(value);
 }
 
 function normaliseValue(prop) {
@@ -27,6 +24,8 @@ function normaliseValue(prop) {
 function flattenValues({ name, value }, values = []) {
   if (Array.isArray(value)) {
     value.forEach((value) => flattenValues(value, values));
+  } else if (isPlainObject(value)) {
+    flattenValues(value, values);
   } else if (value) {
     values.push(value);
   }
