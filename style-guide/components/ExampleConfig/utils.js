@@ -7,12 +7,12 @@ const preparePropMap = {
   node: (propName, propValue, propType, options = {}) => {
     if (propName === 'children') {
       if (options.selection) {
-        return (options.options.find(({ name }) => name === options.selection) || {}).children
-          || propValue;
+        const selectedOptions = options.options.filter(({ name }) => name === options.selection)[0];
+        return selectedOptions ? selectedOptions.children : propValue;
       }
 
       if (options.count) {
-        return Array.from({ length: options.count }, () => propValue);
+        return Array.apply(null, { length: options.count }).map(() => propValue);
       }
     }
 

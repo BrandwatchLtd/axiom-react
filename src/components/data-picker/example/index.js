@@ -32,7 +32,7 @@ class DataPickerExample extends Component {
   render() {
     const { components } = this.props;
     const { selectedColor, selectedId } = this.state;
-    const selected = getData().find(({ id }) => id === selectedId);
+    const selected = getData().filter(({ id }) => id === selectedId)[0];
 
     const propTypes = {
       DataPicker: components.DataPicker,

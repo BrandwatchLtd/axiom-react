@@ -13,7 +13,7 @@ import {
 } from 'bw-axiom';
 
 function isSelected(values, val) {
-  return Array.isArray(values) && !!values.find((v) => v == val);
+  return Array.isArray(values) && values.filter((v) => v === val).length > 0;
 }
 
 function withOrWithout(values = [], val) {
