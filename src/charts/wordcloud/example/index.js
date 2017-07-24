@@ -25,6 +25,9 @@ class WordCloudExample extends Component {
         height: 300,
         width: 480,
       },
+      Word: {
+        onClick: () => {},
+      },
     };
 
     return (

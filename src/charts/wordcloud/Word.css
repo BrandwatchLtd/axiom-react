@@ -36,3 +36,21 @@
 .ax-word--hidden {
   fill-opacity: 0;
 }
+
+.ax-word--clickable {
+  cursor: pointer;
+  &:active { color: var(--color-context-text--dark); }
+
+  &.ax-word--rose:active { color: var(--color-brand-rose--dark); }
+  &.ax-word--pink:active { color: var(--color-brand-pink--dark); }
+  &.ax-word--purple:active { color: var(--color-brand-purple--dark); }
+  &.ax-word--lilac:active { color: var(--color-brand-lilac--dark); }
+  &.ax-word--blue:active { color: var(--color-brand-blue--dark); }
+  &.ax-word--teal:active { color: var(--color-brand-teal--dark); }
+  &.ax-word--green:active { color: var(--color-brand-green--dark); }
+  &.ax-word--chartreuse:active { color: var(--color-brand-chartreuse--dark); }
+  &.ax-word--amber:active { color: var(--color-brand-amber--dark); }
+  &.ax-word--orange:active { color: var(--color-brand-orange--dark); }
+  &.ax-word--brown:active { color: var(--color-brand-brown--dark); }
+  &.ax-word--grey:active { color: var(--color-brand-grey--dark); }
+}

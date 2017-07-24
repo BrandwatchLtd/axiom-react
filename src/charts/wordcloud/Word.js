@@ -43,6 +43,8 @@ export default class Word extends Component {
     x: PropTypes.number.isRequired,
     /** y coordinate of the word */
     y: PropTypes.number.isRequired,
+    /** onClick handler */
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {
@@ -58,6 +60,7 @@ export default class Word extends Component {
       font,
       fontSize,
       hidden,
+      onClick,
       text,
       textAnchor,
       x,
@@ -65,8 +68,10 @@ export default class Word extends Component {
       ...rest
     } = this.props;
 
+    const active = !hidden && !disabled;
     const classes = classnames('ax-word', {
       [`ax-word--${color}`]: color,
+      'ax-word--clickable': active && onClick,
       'ax-word--disabled': !hidden && disabled,
       'ax-word--hidden': hidden,
     });
@@ -80,6 +85,7 @@ export default class Word extends Component {
     return (
       <text { ...rest }
           className={ classes }
+          onClick={ active && onClick }
           style={ style }
           textAnchor={ textAnchor }
           transform={ `translate(${x},${y})` }>

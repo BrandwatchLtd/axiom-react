@@ -21,6 +21,27 @@ describe('Word', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with hidden', () => {
+    const component = getComponent({ hidden: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with hidden and disabled', () => {
+    const component = getComponent({
+      disabled: true,
+      hidden: true,
+    });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with onClick', () => {
+    const component = getComponent({ onClick: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with color', () => {
     [
       'rose',

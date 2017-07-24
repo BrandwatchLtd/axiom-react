@@ -3,6 +3,7 @@
 exports[`Word renders with color amber 1`] = `
 <text
   className="ax-word ax-word--amber"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -18,6 +19,7 @@ exports[`Word renders with color amber 1`] = `
 exports[`Word renders with color blue 1`] = `
 <text
   className="ax-word ax-word--blue"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -33,6 +35,7 @@ exports[`Word renders with color blue 1`] = `
 exports[`Word renders with color brown 1`] = `
 <text
   className="ax-word ax-word--brown"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -48,6 +51,7 @@ exports[`Word renders with color brown 1`] = `
 exports[`Word renders with color chartreuse 1`] = `
 <text
   className="ax-word ax-word--chartreuse"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -63,6 +67,7 @@ exports[`Word renders with color chartreuse 1`] = `
 exports[`Word renders with color green 1`] = `
 <text
   className="ax-word ax-word--green"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -78,6 +83,7 @@ exports[`Word renders with color green 1`] = `
 exports[`Word renders with color grey 1`] = `
 <text
   className="ax-word ax-word--grey"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -93,6 +99,7 @@ exports[`Word renders with color grey 1`] = `
 exports[`Word renders with color lilac 1`] = `
 <text
   className="ax-word ax-word--lilac"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -108,6 +115,7 @@ exports[`Word renders with color lilac 1`] = `
 exports[`Word renders with color orange 1`] = `
 <text
   className="ax-word ax-word--orange"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -123,6 +131,7 @@ exports[`Word renders with color orange 1`] = `
 exports[`Word renders with color pink 1`] = `
 <text
   className="ax-word ax-word--pink"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -138,6 +147,7 @@ exports[`Word renders with color pink 1`] = `
 exports[`Word renders with color purple 1`] = `
 <text
   className="ax-word ax-word--purple"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -153,6 +163,7 @@ exports[`Word renders with color purple 1`] = `
 exports[`Word renders with color rose 1`] = `
 <text
   className="ax-word ax-word--rose"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -168,6 +179,7 @@ exports[`Word renders with color rose 1`] = `
 exports[`Word renders with color teal 1`] = `
 <text
   className="ax-word ax-word--teal"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -183,6 +195,7 @@ exports[`Word renders with color teal 1`] = `
 exports[`Word renders with defaultProps 1`] = `
 <text
   className="ax-word"
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -195,6 +208,7 @@ exports[`Word renders with defaultProps 1`] = `
 />
 `;
 
+<<<<<<< HEAD
 exports[`Word renders with disabled 1`] = `
 <text
   className="ax-word ax-word--disabled"
