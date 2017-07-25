@@ -27,7 +27,6 @@
   position: relative;
   width: var(--cmp-input-checkbox-size);
   height: var(--cmp-input-checkbox-size);
-  margin: 0 var(--cmp-chedio-indicator-space) 0 0;
   border: var(--component-border-width) solid var(--cmp-input-border-color);
   background-color: var(--cmp-input-background-color);
   transition-property: background-color, border-color, color;
@@ -40,4 +39,8 @@
   &::before {
     content: '';
   }
+}
+
+.ax-chedio-buttox__label {
+  margin-left: var(--cmp-chedio-indicator-space);
 }

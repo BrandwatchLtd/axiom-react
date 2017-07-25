@@ -6,7 +6,7 @@ import './ChedioButtox.css';
 
 export default class ChedioButtox extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     disabled: PropTypes.bool,
     indicatorClassName: PropTypes.string.isRequired,
     inputClassName: PropTypes.string.isRequired,
@@ -35,7 +35,7 @@ export default class ChedioButtox extends Component {
             type={ inputType } />
 
         <span className={ classnames('ax-chedio-buttox__indicator', indicatorClassName) } />
-        <span className="ax-chedio-buttox__label">{ children }</span>
+        { children  && <span className="ax-chedio-buttox__label">{ children }</span> }
       </Base>
     );
   }
