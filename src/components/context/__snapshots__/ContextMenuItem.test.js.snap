@@ -46,6 +46,7 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
   >
     <label
       className="ax-chedio-buttox__container ax-space--x2"
+      onClick={undefined}
     >
       <input
         checked={undefined}
@@ -77,6 +78,7 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
   >
     <label
       className="ax-chedio-buttox__container ax-space--x2"
+      onClick={undefined}
     >
       <input
         checked={true}
