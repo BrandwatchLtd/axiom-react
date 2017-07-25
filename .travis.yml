@@ -21,3 +21,10 @@ env:
   - COMMIT_AUTHOR_EMAIL: travis@gh-pages
   - COMMIT_AUTHOR_NAME: Travis CI
   - SOURCE_BRANCH: master
+notifications:
+  webhooks:
+    urls:
+      - https://us-central1-dingbot-bd842.cloudfunctions.net/monitor
+    on_success: always
+    on_failure: always
+    on_start: always
