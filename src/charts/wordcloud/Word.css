@@ -41,7 +41,6 @@
 
 .ax-word--clickable {
   cursor: pointer;
-  &:active { color: var(--color-context-text--dark); }
 
   &.ax-word--rose:active { color: var(--color-brand-rose--dark); }
   &.ax-word--pink:active { color: var(--color-brand-pink--dark); }
