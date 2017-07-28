@@ -23,11 +23,11 @@ export default class ExampleConfig extends Component {
 
   constructor(props) {
     super(props);
-    this.state = this.getURLState();
+    this.state = this.getURLState() || {};
   }
 
   getURLState() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.URLSearchParams) {
       return JSON.parse(
         new window.URLSearchParams(window.location.search.substring(1)).get('state')
       );

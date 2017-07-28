@@ -43,10 +43,21 @@ function convert(result) {
 }
 
 function write(filename) {
-  return (variables) => fs
-    .writeFile(path.resolve(__dirname, '../lib/materials', filename), `
+  return (variables) => {
+    const materialsFolder = path.resolve(__dirname, '../lib/materials');
+
+    if (!fs.existsSync(materialsFolder)){
+      fs.mkdirSync(materialsFolder);
+    }
+
+    fs.writeFile(path.resolve(materialsFolder, filename), `
+
 module.exports = ${JSON.stringify(variables, null, 2)}
-`);
+
+    `, (err) => {
+      if (err) throw err;
+    });
+  };
 }
 
 extract([path.resolve(__dirname, '../src/materials/theme-light.css')])
