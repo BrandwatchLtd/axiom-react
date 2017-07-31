@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
-import { findComponent, PositionContent, PositionTarget } from 'bw-axiom';
+import { findComponent, PositionContent, PositionTarget, Subtree } from 'bw-axiom';
 import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
 import './Position.css';
 
@@ -24,11 +24,6 @@ export default class Position extends Component {
     /** Controls the starting offset of the content */
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
     /**
-     * An HTML element that holds the dynamically inserted PositionContent children.
-     * By default this will be inserted into an element on the body.
-     */
-    parentNode: PropTypes.object,
-    /**
      * Controls the starting position around PositionTarget in which the
      * PositionContent will attempt to be placed. If that position is not available
      * due to collision, it will be placed clockwise from that position until
@@ -48,81 +43,40 @@ export default class Position extends Component {
     position: 'top',
   };
 
-  static contextTypes = {
-    axiomPositionParentNode: PropTypes.object,
-  };
-
   constructor(props) {
     super(props);
 
+    this.subtree = this.subtree.bind(this);
+    this.handlePlacementChange = this.handlePlacementChange.bind(this);
+    this.handleSubtreeRender = this.handleSubtreeRender.bind(this);
+    this.handleSubtreeUnrender = this.handleSubtreeUnrender.bind(this);
     this.state = {
       placement: positionToPlacement(props.position, props.offset),
     };
   }
 
-  componentDidMount() {
-    const { enabled, isVisible } = this.props;
+  componentDidUpdate() {
+    const { enabled, isVisible, position, offset } = this.props;
 
     if (enabled && isVisible) {
-      this.init();
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    const { enabled, isVisible, position, offset } = this.props;
-    const shouldShow = enabled && isVisible && (!prevProps.enabled || !prevProps.isVisible);
-    const shouldHide = prevProps.isVisible && prevProps.enabled && (!enabled || !isVisible);
-    const shouldReRender = enabled && isVisible;
-
-    if (shouldShow) {
-      this.init();
-    } else if (shouldHide) {
-      this.destroy();
-    } else if (shouldReRender) {
-      this.renderSubtree();
       this._popper.options.placement = positionToPlacement(position, offset);
       this._popper.update();
     }
   }
 
-  componentWillUnmount() {
-    const { enabled, isVisible } = this.props;
-
-    if (enabled && isVisible) {
-      this.destroy();
-    }
-  }
-
-  init() {
-    this.createReactRootNode();
-    this.createPopper();
-  }
-
-  createReactRootNode() {
-    const parentNode = this.props.parentNode ||
-      this.context.axiomPositionParentNode || document.body;
-    this._reactRootNode = document.createElement('div');
-    this._reactRootNode.classList.add('AxiomPositionRoot');
-
-    parentNode.appendChild(this._reactRootNode);
-
-    this.renderSubtree();
-  }
-
   createPopper() {
-    const { placement: statePlacement } = this.state;
-    const boundHandlePlacementChange = this.handlePlacementChange.bind(this);
+    const { placement } = this.state;
 
-    this._popper = new popperJS(this._target, this._content, {
-      onCreate: boundHandlePlacementChange,
-      onUpdate: boundHandlePlacementChange,
-      placement: statePlacement,
+    return new popperJS(this._target, this._content, {
+      onCreate: this.handlePlacementChange,
+      onUpdate: this.handlePlacementChange,
+      placement: placement,
       modifiers: {
         arrow: {
           element: this._arrow,
         },
         flip: {
-          behavior: getPlacementFlipOrder(statePlacement),
+          behavior: getPlacementFlipOrder(placement),
         },
         inner: { enabled: false },
         offset: { enabled: false },
@@ -130,36 +84,7 @@ export default class Position extends Component {
     });
   }
 
-  handlePlacementChange({ placement }) {
-    const { placement: statePlacement } = this.state;
-
-    if (statePlacement !== placement) {
-      this.setState({ placement });
-    }
-  }
-
-  destroy() {
-    const parentNode = this.props.parentNode || document.body;
-
-    this._popper.destroy();
-    ReactDOM.unmountComponentAtNode(this._reactRootNode);
-
-    parentNode.removeChild(this._reactRootNode);
-
-    delete this._reactRootNode;
-    delete this._content;
-    delete this._popper;
-    delete this._target;
-
-    const placement = positionToPlacement(this.props.position, this.props.offset);
-
-    if (placement !== this.state.placement) {
-      this.setState({ placement });
-    }
-
-  }
-
-  renderContent() {
+  subtree() {
     const { children, onMaskClick } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
@@ -182,22 +107,51 @@ export default class Position extends Component {
     );
   }
 
-  renderSubtree() {
-    ReactDOM.unstable_renderSubtreeIntoContainer(
-      this,
-      this.renderContent(),
-      this._reactRootNode,
-      () => {
-        this._content = this._reactRootNode.firstElementChild.firstElementChild;
-      }
-    );
+  handlePlacementChange({ placement }) {
+    const { placement: statePlacement } = this.state;
+
+    if (statePlacement !== placement) {
+      this.setState({ placement });
+    }
+  }
+
+  handleSubtreeRender(rootNode) {
+    this._content = rootNode.firstElementChild.firstElementChild;
+    this._popper = this._popper || this.createPopper();
+  }
+
+  handleSubtreeUnrender() {
+    this._popper.destroy();
+
+    delete this._popper;
+    delete this._arrow;
+    delete this._content;
+    delete this._target;
+
+    const placement = positionToPlacement(this.props.position, this.props.offset);
+
+    if (placement !== this.state.placement) {
+      this.setState({ placement });
+    }
   }
 
   render() {
-    const { children } = this.props;
+    const { children, enabled, isVisible, ...rest } = this.props;
 
-    return cloneElement(findComponent(children, PositionTarget), {
-      ref: (target) => this._target = ReactDOM.findDOMNode(target),
-    });
+    return (
+      <Subtree { ...rest }
+          isRendered={ enabled && isVisible }
+          onSubtreeRender={ this.handleSubtreeRender }
+          onSubtreeUnrender={ this.handleSubtreeUnrender }
+          subtree={ this.subtree }>
+        {
+          cloneElement(findComponent(children, PositionTarget), {
+            ref: (target) => this._target = ReactDOM.findDOMNode(target),
+          })
+        }
+      </Subtree>
+    );
   }
 }
+
+
