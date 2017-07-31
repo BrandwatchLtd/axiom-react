@@ -29,8 +29,16 @@ export default class ChedioButtox extends Component {
       'ax-chedio-buttox__container--disabled': disabled,
     });
 
+    const handleClick = onClick && (e => {
+      if (e.target.tagName !== 'INPUT') {
+        e.stopPropagation();
+        return;
+      }
+      onClick(e);
+    });
+
     return (
-      <Base Component="label" className={ classes } onClick={ onClick } space="x2">
+      <Base Component="label" className={ classes } onClick={ handleClick } space="x2">
         <input { ...rest }
             className={ classnames('ax-chedio-buttox', inputClassName) }
             disabled={ disabled }
