@@ -32,6 +32,11 @@ export default class Base extends Component {
     hiddenUntil: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Vertical margins given to the element */
     space: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x8']),
+    /**
+     * Distance from the top of the window where the element shall be stuck
+     * to. Utility for "position: sticky;".
+     */
+    sticky: PropTypes.string,
     /** Text wrap styling */
     textBreak: PropTypes.oneOf(['all', 'none', 'word']),
     /** Text casing styling */
@@ -101,6 +106,7 @@ export default class Base extends Component {
       className,
       hiddenUntil,
       space,
+      sticky,
       textBreak,
       textCase,
       textCenter,
@@ -141,6 +147,14 @@ export default class Base extends Component {
       [`ax-text--underline-${underline}`]: underline,
       [`ax-theme--${theme}`]: theme,
     });
+
+    if (sticky) {
+      rest.style = {
+        ...rest.style,
+        position: 'sticky',
+        top: sticky,
+      };
+    }
 
     return (
       <Component { ...rest } className={ classes } />

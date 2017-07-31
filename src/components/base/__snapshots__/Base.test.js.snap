@@ -10,6 +10,31 @@ exports[`Base renders className 1`] = `
 
 exports[`Base renders functional Component 1`] = `<span />`;
 
+exports[`Base renders sticky with style 1`] = `
+<div
+  className=""
+  style={
+    Object {
+      "height": "1rem",
+      "position": "sticky",
+      "top": "1rem",
+    }
+  }
+/>
+`;
+
+exports[`Base renders sticky without style 1`] = `
+<div
+  className=""
+  style={
+    Object {
+      "position": "sticky",
+      "top": "1rem",
+    }
+  }
+/>
+`;
+
 exports[`Base renders string Component 1`] = `
 <span
   className=""
@@ -244,6 +269,12 @@ exports[`Base renders with textSize headline 1`] = `
 />
 `;
 
+exports[`Base renders with textSize headtitle 1`] = `
+<div
+  className="ax-text--size-headtitle"
+/>
+`;
+
 exports[`Base renders with textSize label 1`] = `
 <div
   className="ax-text--size-label"
@@ -259,12 +290,6 @@ exports[`Base renders with textSize large 1`] = `
 exports[`Base renders with textSize small 1`] = `
 <div
   className="ax-text--size-small"
-/>
-`;
-
-exports[`Base renders with textSize headtitle 1`] = `
-<div
-  className="ax-text--size-headtitle"
 />
 `;
 

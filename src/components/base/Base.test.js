@@ -73,6 +73,18 @@ describe('Base', () => {
     });
   });
 
+  it('renders sticky without style', () => {
+    const component = getComponent({ sticky: '1rem' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders sticky with style', () => {
+    const component = getComponent({ sticky: '1rem', style: { height: '1rem' } });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with textBreak', () => {
     ['none', 'all', 'word'].forEach((textBreak) => {
       it(textBreak, () => {
