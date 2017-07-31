@@ -35,6 +35,7 @@ class DialogExample extends Component {
     const initialProps = {
       Dialog: {
         isOpen: false,
+        onRequestClose: () => {},
       },
       DialogBody: {},
       DialogFooter: {},
@@ -44,7 +45,11 @@ class DialogExample extends Component {
     };
 
     const initialPropOptions = {
-      Dialog: {},
+      Dialog: {
+        onRequestClose: {
+          callback: (setProp) => setProp('Dialog', 'isOpen', false),
+        },
+      },
       DialogBody: {},
       DialogFooter: {},
       DialogHeader: {
@@ -56,10 +61,10 @@ class DialogExample extends Component {
 
     return (
       <ExampleConfig
+          hasVisual={ false }
           initialPropOptions={ initialPropOptions }
           initialProps={ initialProps }
-          propTypes={ propTypes }
-          visual={ false }>
+          propTypes={ propTypes }>
         <Dialog { ...initialProps.Dialog }>
           <DialogHeader { ...initialProps.DialogHeader }>
             <Heading snippetReplace={ true } textSize="headtitle">Dialog Title</Heading>

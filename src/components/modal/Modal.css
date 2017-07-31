@@ -1,4 +1,4 @@
-.ax-modal__overlay {
+.ax-modal__container {
   display: flex;
   position: fixed;
   top: 0;
@@ -8,8 +8,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--rgb-ui-dark--light), 0.3);
   z-index: var(--z-index-modal);
+}
+
+.ax-modal__container--overlay {
+  background-color: rgba(var(--rgb-ui-dark--light), 0.3);
 }
 
 .ax-modal {
@@ -18,26 +21,16 @@
   max-width: 100%;
   min-height: 0;
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
-
-  &:focus {
-    outline: none;
-  }
 }
 
-/* stylelint-disable selector-class-pattern */
-.ReactModal__Overlay,
-.ReactModal__Content {
-  animation-duration: var(--transition-time-base);
-  animation-fill-mode: forwards;
-}
-
-.ReactModal__Overlay--after-open   { animation-name: appear-fade; }
-.ReactModal__Overlay--before-close { animation-name: disappear-fade; }
-
-.ReactModal__Content--after-open   { animation-name: appear-standard; }
-.ReactModal__Content--before-close { animation-name: disappear-standard; }
-
-.ReactModal__Body--open {
+.ax-modal__body--open {
   overflow: hidden;
 }
-/* stylelint-enable */
+
+.ax-modal__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
