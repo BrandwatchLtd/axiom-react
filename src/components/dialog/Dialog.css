@@ -35,5 +35,6 @@
 .ax-dialog--large  { width: var(--cmp-dialog-width-large); }
 
 .ax-dialog--fullscreen {
+  width: 100vw;
   height: 100vh;
 }

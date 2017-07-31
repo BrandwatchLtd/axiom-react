@@ -4,6 +4,7 @@ import { Base } from 'bw-axiom';
 
 export default class DialogFooter extends Component {
   static propTypes = {
+    /** Footer content inside the Dialog, a good place for some buttons */
     children: PropTypes.node,
   };
 

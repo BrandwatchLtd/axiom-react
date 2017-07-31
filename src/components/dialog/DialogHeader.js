@@ -4,7 +4,9 @@ import { Base, Grid, GridCell, Icon, Link  } from 'bw-axiom';
 
 export default class DialogHeader extends Component {
   static propTypes = {
+    /** Header content inside the Dialog, a good place for a title */
     children: PropTypes.node,
+    /** Handler attached to the close button inside the header */
     onRequestClose: PropTypes.func.isRequired,
   };
 

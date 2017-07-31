@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import extend from 'deep-extend';
+import classnames from 'classnames';
 import { Base, Tabset, Tab } from 'bw-axiom';
 import { filterRender, filterSnippet } from '../../utils/example-filter';
 import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet';
@@ -12,6 +13,7 @@ import './ExampleConfig.css';
 export default class ExampleConfig extends Component {
   static propTypes = {
     children: PropTypes.node,
+    hasVisual: PropTypes.bool,
     initialPropOptions: PropTypes.object,
     initialProps: PropTypes.object,
     propTypes: PropTypes.object.isRequired,
@@ -19,11 +21,14 @@ export default class ExampleConfig extends Component {
 
   static defaultProps = {
     initialPropOptions: {},
+    hasVisual: true,
   };
 
   constructor(props) {
     super(props);
     this.state = this.getURLState() || {};
+    this.boundSetProp = this.setProp.bind(this);
+    this.boundSetPropOption = this.setPropOption.bind(this);
   }
 
   getURLState() {
@@ -64,13 +69,24 @@ export default class ExampleConfig extends Component {
   }
 
   render() {
-    const { children, initialProps, initialPropOptions, propTypes } = this.props;
+    const { children, hasVisual, initialProps, initialPropOptions, propTypes } = this.props;
     const renderState = mergeState(propTypes, initialProps, initialPropOptions, this.state);
     const baseState = mergeState(basePropTypes, initialProps, initialPropOptions, this.state, true);
     const configState = mergeState(propTypes, initialProps, initialPropOptions, this.state, true);
-    const example = render(children, propTypes, renderState);
+    const example = render(
+      children,
+      propTypes,
+      renderState,
+      this.boundSetProp,
+      this.boundSetPropOption,
+    );
+
     const jsxSnippet = renderSnippet(filterSnippet(example), jsxRender);
     const htmlSnippet = renderSnippet(filterSnippet(example), htmlRender);
+
+    const classes = classnames('dm-example', {
+      'dm-example--hidden': !hasVisual,
+    });
 
     /**
      * Sticky behvaiour needs to be applied to the sibling of the Tabset
@@ -85,7 +101,7 @@ export default class ExampleConfig extends Component {
     }
 
     return (
-      <Base className="dm-example">
+      <Base className={ classes }>
         <Base className="dm-example__visual" sticky={ sticky }>
           { filterRender(example) }
         </Base>

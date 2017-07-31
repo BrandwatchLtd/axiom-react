@@ -6,8 +6,13 @@ import './Dialog.css';
 
 export default class Dialog extends Component {
   static propTypes = {
+    /** Content inside the Dialog */
     children: PropTypes.node,
+    /** Control for the Dialog stretching to the windows size */
     fullscreen: PropTypes.bool,
+    /** Visibility toggle for the Dialog */
+    isOpen: PropTypes.bool.isRequired,
+    /** Maximum size of the Dialog */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
