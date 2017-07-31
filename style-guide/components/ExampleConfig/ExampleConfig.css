@@ -3,8 +3,6 @@
 }
 
 .dm-example__visual {
-  position: sticky;
-  top: 0;
   padding: calc(var(--spacing-grid-size) * 5);
   box-shadow:
     0.125rem 0 0.0625rem var(--color-context-background),

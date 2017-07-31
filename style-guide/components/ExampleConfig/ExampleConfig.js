@@ -72,11 +72,23 @@ export default class ExampleConfig extends Component {
     const jsxSnippet = renderSnippet(filterSnippet(example), jsxRender);
     const htmlSnippet = renderSnippet(filterSnippet(example), htmlRender);
 
+    /**
+     * Sticky behvaiour needs to be applied to the sibling of the Tabset
+     * otherwise it has nothing position itself to.
+     */
+    let sticky = '0rem';
+    for (const component in configState) {
+      if (configState[component].props.sticky) {
+        sticky = configState[component].props.sticky;
+        break;
+      }
+    }
+
     return (
       <Base className="dm-example">
-        <div className="dm-example__visual">
+        <Base className="dm-example__visual" sticky={ sticky }>
           { filterRender(example) }
-        </div>
+        </Base>
 
         <Tabset>
           <Tab title="Properties">
