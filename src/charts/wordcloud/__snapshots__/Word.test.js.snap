@@ -208,7 +208,6 @@ exports[`Word renders with defaultProps 1`] = `
 />
 `;
 
-<<<<<<< HEAD
 exports[`Word renders with disabled 1`] = `
 <text
   className="ax-word ax-word--disabled"
