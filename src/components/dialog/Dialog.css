@@ -21,13 +21,14 @@
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }
 
+.ax-dialog__footer {
+  border-top: 0.0625rem solid var(--color-context-border);
+}
+
 .ax-dialog__body {
   flex: 1 1 auto;
-  padding: 0 var(--page-padding-horizontal);
+  padding: 0 var(--page-padding-horizontal) var(--page-padding-vertical);
   overflow: auto;
-
-  &:first-child { padding-top: var(--page-padding-vertical); }
-  &:last-child  { padding-bottom: var(--page-padding-vertical); }
 }
 
 .ax-dialog--small  { width: var(--cmp-dialog-width-small); }
