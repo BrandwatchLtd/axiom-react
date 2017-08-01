@@ -59,7 +59,7 @@ export default class ExampleConfig extends Component {
   updateState(state) {
     window.history.pushState('', '',
       `${window.location.pathname}?state=${
-          window.encodeURI(JSON.stringify(state))}`);
+          window.encodeURIComponent(JSON.stringify(state))}`);
     this.setState(state);
   }
 
