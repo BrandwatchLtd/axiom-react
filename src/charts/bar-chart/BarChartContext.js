@@ -46,10 +46,10 @@ export default class BarChartContext extends PureComponent {
           isFaded={ isFaded }
           isHidden={ isHidden }
           labelStrong={ labelStrong }
-          onMouseEnter={ value && onMouseEnter && (() => onMouseEnter(color)) }
+          onMouseEnter={ onMouseEnter && (() => onMouseEnter(color)) }
           onMouseLeave={ onMouseLeave }
           percent={ value }
-          showLabel={ value && showBarLabel }
+          showLabel={ showBarLabel }
           size={ size } />
     );
 
