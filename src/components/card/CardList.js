@@ -6,9 +6,13 @@ import './CardList.css';
 
 export default class CardList extends Component {
   static propTypes = {
+    /** Cards to display in the list */
     children: PropTypes.node.isRequired,
+    /** A compact list for smaller areas in an application */
     compact: PropTypes.bool,
+    /** Separators inserted between cards */
     separators: PropTypes.bool,
+    /** Size of the Cards */
     size: PropTypes.oneOf(['medium', 'large']),
   };
 

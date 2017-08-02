@@ -5,8 +5,11 @@ import { Base } from 'bw-axiom';
 
 export default class Card extends Component {
   static propTypes = {
+    /** Applies styling to indicate the Card has been activated */
     active: PropTypes.bool,
+    /** Content inside the card */
     children: PropTypes.node,
+    /** Handler for the onClick action, applies styling to indicate it is clickable */
     onClick: PropTypes.func,
   };
 
