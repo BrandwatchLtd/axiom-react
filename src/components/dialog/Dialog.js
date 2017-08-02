@@ -6,9 +6,16 @@ import './Dialog.css';
 
 export default class Dialog extends Component {
   static propTypes = {
+    /** Content inside the Dialog */
     children: PropTypes.node,
+    /** Control for the Dialog stretching to the windows size */
     fullscreen: PropTypes.bool,
+    /** Visibility toggle for the Dialog */
+    isOpen: PropTypes.bool.isRequired,
+    /** Maximum size of the Dialog */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Callback for closing the Dialog by clicking on the overlay */
+    onRequestClose: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -20,6 +27,7 @@ export default class Dialog extends Component {
       children,
       size,
       fullscreen,
+      onRequestClose,
       ...rest
     } = this.props;
 
@@ -29,7 +37,7 @@ export default class Dialog extends Component {
     });
 
     return (
-      <Modal { ...rest }>
+      <Modal { ...rest } onOverlayClick={ onRequestClose }>
         <Base className={ classes } theme="light">
           { children }
         </Base>

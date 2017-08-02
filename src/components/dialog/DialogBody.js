@@ -4,6 +4,7 @@ import { Base } from 'bw-axiom';
 
 export default class DialogBody extends Component {
   static propTypes = {
+    /** The main content side a Dialog that occupies most of the space */
     children: PropTypes.node,
   };
 

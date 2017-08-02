@@ -94,6 +94,7 @@ export { default as Stats } from './components/statcard/Stats';
 export { default as Stat } from './components/statcard/Stat';
 export { default as Strike } from './components/typography/Strike';
 export { default as Strong } from './components/typography/Strong';
+export { default as Subtree } from './components/subtree/Subtree';
 export { default as Tab } from './components/tabset/Tab';
 export { default as Tabset } from './components/tabset/Tabset';
 export { default as Table } from './components/table/Table';

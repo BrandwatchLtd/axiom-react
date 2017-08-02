@@ -42,6 +42,7 @@ class PositionExample extends Component {
     const initialPropOptions = {
       Position: {
         onMaskClick: {
+          callback: (setProp) => setProp('Position', 'isVisible', false),
           included: false,
         },
       },

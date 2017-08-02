@@ -2,8 +2,17 @@ import { Children, cloneElement, isValidElement } from 'react';
 import extend from 'deep-extend';
 
 const preparePropMap = {
-  func: (propName, propValue, propType, options = {}) =>
-    options.included === false ? undefined : propValue,
+  func: (propName, propValue, propType, options = {}, setProp, setPropOption) => {
+    if (options.included === false) {
+      return undefined;
+    }
+
+    if (typeof options.callback === 'function') {
+      return () => options.callback(setProp, setPropOption);
+    }
+
+    return propValue;
+  },
   node: (propName, propValue, propType, options = {}) => {
     if (propName === 'children') {
       if (options.selection) {
@@ -22,27 +31,27 @@ const preparePropMap = {
 
 export const basePropTypes = { Base: __COMPONENT_PROPS__.Base };
 
-function prepareProps(state, options, propTypes) {
+function prepareProps(state, options, propTypes, setProp, setPropOption) {
   const props = {};
 
   for (const prop in state) {
     props[prop] = propTypes[prop] && preparePropMap[propTypes[prop].type.name]
       ? preparePropMap[propTypes[prop].type.name](
-          prop, state[prop], propTypes[prop], options[prop])
+          prop, state[prop], propTypes[prop], options[prop], setProp, setPropOption)
       : state[prop];
   }
 
   return props;
 }
 
-export function render(child, propTypes, state) {
+export function render(child, propTypes, state, setProp, setPropOption) {
   if (!child) {
     return;
   }
 
   if (Array.isArray(child)) {
     return Children.map(child, (child) =>
-        render(child, propTypes, state)
+        render(child, propTypes, state, setProp, setPropOption)
       );
   }
 
@@ -51,11 +60,13 @@ export function render(child, propTypes, state) {
       ? prepareProps(
           { ...state[child.type.name].props, children: child.props.children },
           state[child.type.name].options,
-          propTypes[child.type.name])
+          propTypes[child.type.name],
+          setProp,
+          setPropOption)
       : child.props;
 
     return cloneElement(
-      child, props, render(props.children, propTypes, state),
+      child, props, render(props.children, propTypes, state, setProp, setPropOption),
     );
   }
 
