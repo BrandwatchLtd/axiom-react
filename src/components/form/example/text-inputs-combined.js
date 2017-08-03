@@ -8,9 +8,16 @@ export default class FormExample extends Component {
       <Example name="Text inputs with additional Components">
         <Snippet>
           <TextInput
-              label="Text input with an Icon"
+              label="Text input with an Icon on the Right"
               placeholder="Icon input...">
             <TextInputIcon name="cross" onClick={ () => window.alert('Deleted something?') } />
+          </TextInput>
+          <TextInput
+              label="Text input with an Icon on the Left"
+              placeholder="Icon input...">
+            <TextInputIcon
+                align="left"
+                name="magnify-glass" />
           </TextInput>
         </Snippet>
       </Example>

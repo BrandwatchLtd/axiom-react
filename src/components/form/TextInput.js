@@ -55,6 +55,7 @@ export default class TextInput extends Component {
     return (
       <TextGroup label={ label }>
         <div className={ iconContainerClasses }>
+          { icon }
           <input
               type="text"
               { ...rest }
@@ -63,7 +64,6 @@ export default class TextInput extends Component {
               onBlur={ () => this.handleOnBlur() }
               onFocus={ () => this.handleOnFocus() }
               ref="input"  />
-          { icon }
         </div>
       </TextGroup>
     );
