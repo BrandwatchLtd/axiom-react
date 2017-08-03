@@ -1,18 +1,3 @@
-.ax-input__container {
-  display: flex;
-  position: relative;
-  flex: 1 1 auto;
-  align-items: center;
-  border-width: var(--component-border-width);
-  border-style: solid;
-  border-radius: var(--component-border-radius);
-  border-color: var(--cmp-input-border-color);
-  background-color: var(--cmp-input-background-color);
-  transition-property: border-color;
-  transition-duration: var(--transition-time-base);
-  transition-timing-function: var(--transition-function);
-}
-
 .ax-input {
   flex: 1 1 auto;
   border: 0;
@@ -30,6 +15,56 @@
     &::placeholder {
       color: transparent;
     }
+  }
+}
+
+.ax-input__icon--align-right {
+  order: 1;
+}
+
+.ax-input__container--medium .ax-input {
+  padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-medium);
+  font-size: var(--font-size-small);
+}
+
+.ax-input__container--large .ax-input {
+  padding: var(--component-padding-vertical-large) var(--component-padding-horizontal-large);
+  font-size: var(--font-size-large);
+}
+
+.ax-input:-webkit-autofill,
+.ax-input:-webkit-autofill:hover,
+.ax-input:-webkit-autofill:focus,
+.ax-input:-webkit-autofill:active {
+  animation-name: inputAutofillFix;
+  animation-fill-mode: forwards;
+}
+
+.ax-input__container {
+  display: flex;
+  position: relative;
+  flex: 1 1 auto;
+  align-items: center;
+  border-width: var(--component-border-width);
+  border-style: solid;
+  border-radius: var(--component-border-radius);
+  border-color: var(--cmp-input-border-color);
+  background-color: var(--cmp-input-background-color);
+  transition-property: border-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  & .ax-input__icon--align-left {
+    padding-left: var(--spacing-grid-size--x2);
+  }
+  & .ax-input__icon--align-right {
+    padding-right: var(--spacing-grid-size--x2);
+  }
+  & .ax-input__icon--align-left + .ax-input {
+    padding-left: var(--spacing-grid-size);
+  }
+  & .ax-input__icon--align-right + .ax-input {
+    padding-right: var(--spacing-grid-size);
   }
 }
 
@@ -54,28 +89,6 @@
   }
 }
 
-.ax-input__container--medium {
-  & .ax-input {
-    padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-medium);
-    font-size: var(--font-size-small);
-  }
-
-  & .ax-input__icon {
-    padding: 0 var(--component-padding-horizontal-medium) 0 0;
-  }
-}
-
-.ax-input__container--large {
-  & .ax-input {
-    padding: var(--component-padding-vertical-large) var(--component-padding-horizontal-large);
-    font-size: var(--font-size-large);
-  }
-
-  & .ax-input__icon {
-    padding: 0 var(--component-padding-horizontal-large) 0 0;
-  }
-}
-
 .ax-input__container--overlay {
   border-color: transparent;
   background-color: var(--color-context-background-subtle);
@@ -90,12 +103,4 @@
   & .ax-input:focus::placeholder {
     color: transparent;
   }
-}
-
-.ax-input:-webkit-autofill,
-.ax-input:-webkit-autofill:hover,
-.ax-input:-webkit-autofill:focus,
-.ax-input:-webkit-autofill:active {
-  animation-name: inputAutofillFix;
-  animation-fill-mode: forwards;
 }
