@@ -6,22 +6,29 @@ import './ContextBox.css';
 
 export default class ContextBox extends Component {
   static propTypes = {
+    /** Determines whether the separator below this context box should cut through the padding */
+    hasFullSeparator: PropTypes.bool,
+    /** Maximum height for the content area, exceeding this will make it scrollable */
+    maxHeight: PropTypes.string,
     /** Padding size applied to the content area */
     padding: PropTypes.oneOf(['none', 'small', 'large']),
   };
 
   static defaultProps = {
+    hasFullSeparator: false,
     padding: 'large',
   };
 
   render() {
-    const { padding, ...rest } = this.props;
-    const classes = classnames('ax-context-box',
+    const { hasFullSeparator, maxHeight, padding, ...rest } = this.props;
+    const classes = classnames(
+      'ax-context-box',
       `ax-context-box--padding-${padding}`,
+      { 'ax-context-box--full-separator': hasFullSeparator }
     );
 
     return (
-      <Base { ...rest } className={ classes } />
+      <Base { ...rest } className={ classes } style={ { maxHeight } } />
     );
   }
 }

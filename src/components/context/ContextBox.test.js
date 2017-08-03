@@ -26,4 +26,20 @@ describe('ContextBox', () => {
       });
     });
   });
+
+  describe('renders with maxHeight', () => {
+    it('inserts an inline maxHeight style attribute', () => {
+      const component = getComponent({ maxHeight: '5rem' });
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
+  describe('renders with hasFullSeparator', () => {
+    it('renders with the full-separator element modifier', () => {
+      const component = getComponent({ hasFullSeparator: true });
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
 });

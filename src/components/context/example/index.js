@@ -7,8 +7,11 @@ import {
   ContextMenu,
   ContextMenuItem,
   ContextTip,
+  DropdownMenu,
+  DropdownMenuItem,
   Heading,
   Paragraph,
+  TextInput,
 } from 'bw-axiom';
 
 class ContextExample extends Component {
@@ -91,6 +94,22 @@ class ContextExample extends Component {
               <ContextBox>
                 <Paragraph>Quisque id hendrerit dolor.</Paragraph>
               </ContextBox>,
+            ],
+          }, {
+            name: 'Multiple with Scroll',
+            children: [
+              <ContextBox>
+                <Heading>Lorem ipsum dolar</Heading>
+                <TextInput value="" />
+              </ContextBox>,
+              <DropdownMenu maxHeight="9rem">
+                <DropdownMenuItem>Lorem ipsum dolar</DropdownMenuItem>
+                <DropdownMenuItem>Lorem ipsum dolar</DropdownMenuItem>
+                <DropdownMenuItem>Lorem ipsum dolar</DropdownMenuItem>
+                <DropdownMenuItem>Lorem ipsum dolar</DropdownMenuItem>
+                <DropdownMenuItem>Lorem ipsum dolar</DropdownMenuItem>
+                <DropdownMenuItem>Lorem ipsum dolar</DropdownMenuItem>
+              </DropdownMenu>,
             ],
           }],
         },

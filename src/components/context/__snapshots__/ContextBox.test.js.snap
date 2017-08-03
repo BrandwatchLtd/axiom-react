@@ -3,6 +3,37 @@
 exports[`ContextBox renders with defaultProps 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-large"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders with hasFullSeparator renders with the full-separator element modifier 1`] = `
+<div
+  className="ax-context-box ax-context-box--padding-large ax-context-box--full-separator"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextBox renders with maxHeight inserts an inline maxHeight style attribute 1`] = `
+<div
+  className="ax-context-box ax-context-box--padding-large"
+  style={
+    Object {
+      "maxHeight": "5rem",
+    }
+  }
 >
   Lorem ipsum
 </div>
@@ -11,6 +42,11 @@ exports[`ContextBox renders with defaultProps 1`] = `
 exports[`ContextBox renders with padding large 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-large"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
 >
   Lorem ipsum
 </div>
@@ -19,6 +55,11 @@ exports[`ContextBox renders with padding large 1`] = `
 exports[`ContextBox renders with padding none 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-none"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
 >
   Lorem ipsum
 </div>
@@ -27,6 +68,11 @@ exports[`ContextBox renders with padding none 1`] = `
 exports[`ContextBox renders with padding small 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-small"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
 >
   Lorem ipsum
 </div>

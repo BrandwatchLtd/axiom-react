@@ -3,6 +3,11 @@
 exports[`ContextMenu renders with defaultProps 1`] = `
 <div
   className="ax-context-box ax-context-box--padding-none"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
 >
   <ul
     className="ax-context-menu"
