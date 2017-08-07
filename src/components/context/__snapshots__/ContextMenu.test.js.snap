@@ -5,6 +5,7 @@ exports[`ContextMenu renders with defaultProps 1`] = `
   className="ax-context-box ax-context-box--padding-none"
   style={
     Object {
+      "height": undefined,
       "maxHeight": undefined,
     }
   }

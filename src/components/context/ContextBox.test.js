@@ -27,6 +27,14 @@ describe('ContextBox', () => {
     });
   });
 
+  describe('renders with height', () => {
+    it('inserts an inline height style attribute', () => {
+      const component = getComponent({ height: '5rem' });
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
   describe('renders with maxHeight', () => {
     it('inserts an inline maxHeight style attribute', () => {
       const component = getComponent({ maxHeight: '5rem' });
