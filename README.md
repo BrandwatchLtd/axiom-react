@@ -25,6 +25,15 @@ Need IE Support? [See the the setup guide here]('./docs/internet-explorer.md')
 
 ### Getting Started
 
+The following styles should be added to the body - or root element to which Axiom styles are being applied - if you wish to make use of the default background and colour styles. These are also needed if you wish to make use of the light/dark theme switching.
+
+```
+body {
+  background-color: var(--color-context-background);
+  color: var(--color-context-text);
+}
+```
+
 * Using create-react-app? [See the setup guide here](./docs/create-react-app.md)
 * Have a custom set up? All you need is to set up postcsss, [see the setup guide here](./docs/postcss.md)
 
