@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
+import omit from 'lodash.omit';
 import { findComponent, PositionContent, PositionTarget, Subtree } from 'bw-axiom';
 import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
 import './Position.css';
@@ -19,6 +20,8 @@ export default class Position extends Component {
      * Must be true for isVisible to take effect.
      */
     enabled: PropTypes.bool,
+    /** Adds control of content flipping fallbacks. */
+    flip: PropTypes.oneOf(['anticlockwise', 'clockwise', 'mirror']),
     /** Toggles the visibility of the PositionContent */
     isVisible: PropTypes.bool.isRequired,
     /** Controls the starting offset of the content */
@@ -44,6 +47,7 @@ export default class Position extends Component {
 
   static defaultProps = {
     enabled: true,
+    flip: 'clockwise',
     offset: 'middle',
     position: 'top',
   };
@@ -71,6 +75,7 @@ export default class Position extends Component {
   }
 
   createPopper() {
+    const { flip } = this.props;
     const { placement } = this.state;
 
     return new popperJS(this._target, this._content, {
@@ -82,7 +87,7 @@ export default class Position extends Component {
           element: this._arrow,
         },
         flip: {
-          behavior: getPlacementFlipOrder(placement),
+          behavior: getPlacementFlipOrder(placement, flip),
         },
         inner: { enabled: false },
         offset: { enabled: false },
@@ -158,9 +163,16 @@ export default class Position extends Component {
 
   render() {
     const { children, enabled, isVisible, ...rest } = this.props;
+    const props = omit(rest, [
+      'flip',
+      'offset',
+      'position',
+      'onMaskClick',
+      'onPositionChange',
+    ]);
 
     return (
-      <Subtree { ...rest }
+      <Subtree { ...props }
           isRendered={ enabled && isVisible }
           onSubtreeRender={ this.handleSubtreeRender }
           onSubtreeUnrender={ this.handleSubtreeUnrender }
