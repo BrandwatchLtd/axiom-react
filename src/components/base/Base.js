@@ -130,6 +130,7 @@ export default class Base extends Component {
       [`ax-hidden-until--${hiddenUntil}`]: hiddenUntil,
       [`ax-visible-until--${visibleUntil}`]: visibleUntil,
       [`ax-space--${space}`]: space,
+      'ax-sticky': sticky,
       [`ax-text--case-${textCase}`]: textCase,
       'ax-text--align-center': textCenter === true,
       [`ax-text--align-center--${textCenter}`]: textCenter && textCenter !== true,
@@ -151,7 +152,6 @@ export default class Base extends Component {
     if (sticky) {
       rest.style = {
         ...rest.style,
-        position: 'sticky',
         top: sticky,
       };
     }

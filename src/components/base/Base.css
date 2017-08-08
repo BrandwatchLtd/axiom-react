@@ -70,6 +70,7 @@
     display: none !important;
   }
 }
+
 /* stylelint-enable */
 .ax-space--x0 {
   margin-top: 0;
@@ -121,4 +122,8 @@
 .ax-space--x8 {
   &:first-child { margin-top: 0; }
   &:last-child  { margin-bottom: 0; }
+}
+
+.ax-sticky {
+  position: sticky;
 }

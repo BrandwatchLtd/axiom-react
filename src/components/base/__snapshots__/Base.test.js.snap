@@ -12,11 +12,10 @@ exports[`Base renders functional Component 1`] = `<span />`;
 
 exports[`Base renders sticky with style 1`] = `
 <div
-  className=""
+  className="ax-sticky"
   style={
     Object {
       "height": "1rem",
-      "position": "sticky",
       "top": "1rem",
     }
   }
@@ -25,10 +24,9 @@ exports[`Base renders sticky with style 1`] = `
 
 exports[`Base renders sticky without style 1`] = `
 <div
-  className=""
+  className="ax-sticky"
   style={
     Object {
-      "position": "sticky",
       "top": "1rem",
     }
   }
