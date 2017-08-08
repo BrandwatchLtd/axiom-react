@@ -38,7 +38,7 @@ The compiled CSS file is stored on the Brandwatch Google Cloud Platform CDN or t
 http://axiom.bwcom.io/axiom.{VERSION}.min.css
 ```
 
-You may also need to set some intial CSS for the `html` and `body` elements, expecially if you want to support theme switching or want to use the dark theme:
+You may also need to set some intial CSS for the `html` and `body` elements, especially if you want to support theme switching or want to use the dark theme:
 
 ```
 html {
