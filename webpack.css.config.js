@@ -34,7 +34,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin({
-      filename: `./dist/axiom-${version}.min.css`,
+      filename: `./dist/axiom.${version}.min.css`,
     }),
     new CompressionPlugin({
       asset: '[path]',
