@@ -5,9 +5,12 @@ import {
   Avatar,
   Context,
   ContextBox,
+  Heading,
+  Paragraph,
   Position,
   PositionContent,
   PositionTarget,
+  Strong,
 } from 'bw-axiom';
 
 class PositionExample extends Component {
@@ -19,8 +22,16 @@ class PositionExample extends Component {
     }).isRequired,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      position: undefined,
+    };
+  }
+
   render() {
     const { components } = this.props;
+    const { position } = this.state;
 
     const propTypes = {
       Position: components.Position,
@@ -31,10 +42,8 @@ class PositionExample extends Component {
     const initialProps = {
       Position: {
         isVisible: true,
-        onMaskClick: () => {
-          window.alert('Masked click!');
-          window.location = window.location;
-        },
+        onMaskClick: () => {},
+        onPositionChange: (position) => this.setState({ position }),
         position: 'bottom',
       },
     };
@@ -61,8 +70,12 @@ class PositionExample extends Component {
           <PositionContent>
             <Context snippetReplace={ true }>
               <ContextBox>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis at velit ut nisl eleifend volutpat.
+                <Heading>
+                  <Strong>Current postition:</Strong> { position }
+                </Heading>
+                <Paragraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </Paragraph>
               </ContextBox>
             </Context>
           </PositionContent>

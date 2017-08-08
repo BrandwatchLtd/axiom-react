@@ -35,6 +35,11 @@ export default class Position extends Component {
      * function is called when clicked.
      */
     onMaskClick: PropTypes.func,
+    /**
+     * Optional handler that is called, with the new position, when PositionContent
+     * has been positioned.
+     */
+    onPositionChange: PropTypes.func,
   };
 
   static defaultProps = {
@@ -47,7 +52,8 @@ export default class Position extends Component {
     super(props);
 
     this.subtree = this.subtree.bind(this);
-    this.handlePlacementChange = this.handlePlacementChange.bind(this);
+    this.handleOnCreate = this.handleOnCreate.bind(this);
+    this.handleOnUpdate = this.handleOnUpdate.bind(this);
     this.handleSubtreeRender = this.handleSubtreeRender.bind(this);
     this.handleSubtreeUnrender = this.handleSubtreeUnrender.bind(this);
     this.state = {
@@ -68,8 +74,8 @@ export default class Position extends Component {
     const { placement } = this.state;
 
     return new popperJS(this._target, this._content, {
-      onCreate: this.handlePlacementChange,
-      onUpdate: this.handlePlacementChange,
+      onCreate: this.handleOnCreate,
+      onUpdate: this.handleOnUpdate,
       placement: placement,
       modifiers: {
         arrow: {
@@ -107,11 +113,26 @@ export default class Position extends Component {
     );
   }
 
-  handlePlacementChange({ placement }) {
+  handleOnCreate(popper) {
+    const { onPositionChange } = this.props;
+
+    this.handleOnUpdate(popper);
+
+    if (onPositionChange) {
+      onPositionChange(popper.placement);
+    }
+  }
+
+  handleOnUpdate({ placement }) {
+    const { onPositionChange } = this.props;
     const { placement: statePlacement } = this.state;
 
     if (statePlacement !== placement) {
       this.setState({ placement });
+
+      if (onPositionChange) {
+        onPositionChange(placement);
+      }
     }
   }
 
