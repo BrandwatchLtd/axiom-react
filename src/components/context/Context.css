@@ -7,6 +7,7 @@
 
 .ax-context {
   position: relative;
+  margin: var(--cmp-context-tip-size);
 
   @supports (filter: drop-shadow(var(--drop-shadow))) {
     filter: drop-shadow(var(--drop-shadow));
@@ -46,6 +47,7 @@
 .ax-context--bottom {
   & .ax-context__arrow {
     left: calc(50% - var(--cmp-context-tip-size));
+    transform: translate3d(calc(var(--cmp-context-tip-size) * -1), 0, 0);
   }
 }
 
@@ -53,12 +55,11 @@
 .ax-context--left {
   & .ax-context__arrow {
     top: calc(50% - var(--cmp-context-tip-size));
+    transform: translate3d(0, calc(var(--cmp-context-tip-size) * -1), 0);
   }
 }
 
 .ax-context--top {
-  margin-bottom: var(--cmp-context-tip-size);
-
   & .ax-context__arrow {
     bottom: calc(var(--cmp-context-tip-size) * -2);
     border-right-color: transparent;
@@ -68,8 +69,6 @@
 }
 
 .ax-context--right {
-  margin-left: var(--cmp-context-tip-size);
-
   & .ax-context__arrow {
     left: calc(var(--cmp-context-tip-size) * -2);
     border-top-color: transparent;
@@ -79,8 +78,6 @@
 }
 
 .ax-context--bottom {
-  margin-top: var(--cmp-context-tip-size);
-
   & .ax-context__arrow {
     top: calc(var(--cmp-context-tip-size) * -2);
     border-top-color: transparent;
@@ -90,8 +87,6 @@
 }
 
 .ax-context--left {
-  margin-right: var(--cmp-context-tip-size);
-
   & .ax-context__arrow {
     right: calc(var(--cmp-context-tip-size) * -2);
     border-top-color: transparent;
@@ -99,3 +94,4 @@
     border-bottom-color: transparent;
   }
 }
+
