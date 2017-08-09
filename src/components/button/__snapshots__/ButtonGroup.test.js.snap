@@ -9,6 +9,7 @@ exports[`ButtonGroup renders with defaultProps 1`] = `
   >
     <button
       className="ax-button ax-button--medium ax-button--primary"
+      disabled={undefined}
     >
       Lorem ipsum
     </button>

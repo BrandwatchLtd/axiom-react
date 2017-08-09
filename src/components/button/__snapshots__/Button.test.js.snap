@@ -3,6 +3,7 @@
 exports[`Button renders with circular huge 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-huge"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -11,6 +12,7 @@ exports[`Button renders with circular huge 1`] = `
 exports[`Button renders with circular large 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-large"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -19,6 +21,7 @@ exports[`Button renders with circular large 1`] = `
 exports[`Button renders with circular medium 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-medium"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -27,6 +30,7 @@ exports[`Button renders with circular medium 1`] = `
 exports[`Button renders with circular small 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -35,6 +39,7 @@ exports[`Button renders with circular small 1`] = `
 exports[`Button renders with defaultProps 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -43,6 +48,7 @@ exports[`Button renders with defaultProps 1`] = `
 exports[`Button renders with full large 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--full--large"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -51,6 +57,7 @@ exports[`Button renders with full large 1`] = `
 exports[`Button renders with full medium 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--full--medium"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -59,6 +66,7 @@ exports[`Button renders with full medium 1`] = `
 exports[`Button renders with full small 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--full--small"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -67,6 +75,7 @@ exports[`Button renders with full small 1`] = `
 exports[`Button renders with full true 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--full"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -75,6 +84,7 @@ exports[`Button renders with full true 1`] = `
 exports[`Button renders with size large 1`] = `
 <button
   className="ax-button ax-button--large ax-button--primary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -83,6 +93,7 @@ exports[`Button renders with size large 1`] = `
 exports[`Button renders with size medium 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -91,6 +102,7 @@ exports[`Button renders with size medium 1`] = `
 exports[`Button renders with size small 1`] = `
 <button
   className="ax-button ax-button--small ax-button--primary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -99,6 +111,7 @@ exports[`Button renders with size small 1`] = `
 exports[`Button renders with stadium small 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--stadium-small"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -107,6 +120,7 @@ exports[`Button renders with stadium small 1`] = `
 exports[`Button renders with style primary 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -115,6 +129,7 @@ exports[`Button renders with style primary 1`] = `
 exports[`Button renders with style quaternary 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--quaternary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -123,6 +138,7 @@ exports[`Button renders with style quaternary 1`] = `
 exports[`Button renders with style secondary 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -131,6 +147,7 @@ exports[`Button renders with style secondary 1`] = `
 exports[`Button renders with style tertiary 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--tertiary"
+  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -139,6 +156,7 @@ exports[`Button renders with style tertiary 1`] = `
 exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
 >
   Lorem ipsum
   <span
@@ -167,6 +185,7 @@ exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
 exports[`Button with ButtonIcon adds space to end if last child 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
 >
   Lorem ipsum
   <span
@@ -194,6 +213,7 @@ exports[`Button with ButtonIcon adds space to end if last child 1`] = `
 exports[`Button with ButtonIcon adds space to start if first child 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
 >
   <span
     className="ax-button__icon ax-button__icon--start"

@@ -30,42 +30,49 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
     </button>
     <button
       className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       1
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       2
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       3
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       4
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       5
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       6
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       7
@@ -93,6 +100,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
     </button>
     <button
       className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      disabled={undefined}
       onClick={[Function]}
     >
       10

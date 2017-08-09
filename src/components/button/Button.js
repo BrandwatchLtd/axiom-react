@@ -10,6 +10,8 @@ export default class Button extends Component {
     children: PropTypes.node.isRequired,
     /** Size of circular shape */
     circular: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
+    /** Disable interaction behaviour */
+    disabled: PropTypes.bool,
     /**
      * Controls the full width appearance of the badge either all of the time,
      * with a value of `true` otherwise at one of the breakpoints specified.
@@ -37,7 +39,7 @@ export default class Button extends Component {
 
   render() {
     const { joined } = this.context;
-    const { children, circular, stadium, style, size, full, ...rest } = this.props;
+    const { children, circular, disabled, stadium, style, size, full, ...rest } = this.props;
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && childrenArray[0].type === ButtonIcon;
     const classes = classnames('ax-button', {
@@ -59,7 +61,9 @@ export default class Button extends Component {
     );
 
     return (
-      <Base Component="button" { ...rest } className={ classes }>
+      <Base Component="button" { ...rest }
+          className={ classes }
+          disabled={ disabled }>
         { mappedChildren }
       </Base>
     );

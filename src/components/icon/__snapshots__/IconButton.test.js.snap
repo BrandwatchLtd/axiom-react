@@ -3,6 +3,7 @@
 exports[`IconButton renders with defaultProps 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary ax-button--circular-medium"
+  disabled={undefined}
 >
   <svg
     className="ax-icon ax-icon--twitter"
@@ -25,6 +26,7 @@ exports[`IconButton renders with defaultProps 1`] = `
 exports[`IconButton renders with size huge 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary ax-button--circular-huge"
+  disabled={undefined}
 >
   <svg
     className="ax-icon ax-icon--twitter"
@@ -47,6 +49,7 @@ exports[`IconButton renders with size huge 1`] = `
 exports[`IconButton renders with size large 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary ax-button--circular-large"
+  disabled={undefined}
 >
   <svg
     className="ax-icon ax-icon--twitter"
@@ -69,6 +72,7 @@ exports[`IconButton renders with size large 1`] = `
 exports[`IconButton renders with size medium 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary ax-button--circular-medium"
+  disabled={undefined}
 >
   <svg
     className="ax-icon ax-icon--twitter"
@@ -91,6 +95,7 @@ exports[`IconButton renders with size medium 1`] = `
 exports[`IconButton renders with size small 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--secondary ax-button--circular-small"
+  disabled={undefined}
 >
   <svg
     className="ax-icon ax-icon--twitter"
