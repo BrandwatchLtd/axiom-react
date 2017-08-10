@@ -1,14 +1,27 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Logo from './Logo';
 
 export default class LogoHorizontal extends Component {
+  static propTypes = {
+    /** Height of the Logo, higher precedence than width */
+    height: PropTypes.string,
+    /** Width of the Logo, lower precedence than height */
+    width: PropTypes.string,
+  };
+
   render() {
+    const { height, width, ...rest }  = this.props;
     const viewBoxWidth = 150;
     const viewBoxHeight = 30;
 
     /* eslint-disable max-len, react/jsx-sort-props */
     return (
-      <Logo { ...this.props } viewBoxHeight={ viewBoxHeight } viewBoxWidth={ viewBoxWidth }>
+      <Logo { ...rest }
+          height={ height }
+          viewBoxHeight={ viewBoxHeight }
+          viewBoxWidth={ viewBoxWidth }
+          width={ width }>
         <svg height="100%" viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` } width="100%" x="0%" y="0%">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g>

@@ -1,23 +1,31 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Example, Snippet } from 'style-guide';
-import { Grid, GridCell, LogoTab } from 'bw-axiom';
+import { ExampleConfig } from 'style-guide';
+import { LogoTab } from 'bw-axiom';
 
-export default class LogoExample extends Component {
+export default class LogoTabExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      LogoTab: PropTypes.object,
+    }).isRequired,
+  };
+
   render() {
-    return (
-      <Example name="Tab">
-        <Snippet>
-          <Grid snippetIgnore={ true }>
-            <GridCell shrink={ true } snippetIgnore={ true }>
-              <LogoTab color="white" height="7.75rem" />
-            </GridCell>
+    const { components } = this.props;
+    const propTypes = {
+      LogoTab: components.LogoTab,
+    };
 
-            <GridCell shrink={ true } snippetIgnore={ true }>
-              <LogoTab color="grey" height="7.75rem" />
-            </GridCell>
-          </Grid>
-        </Snippet>
-      </Example>
+    const initialProps = {
+      LogoTab: {
+        height: '7rem',
+      },
+    };
+
+    return (
+      <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
+        <LogoTab { ...initialProps.LogoTab } />
+      </ExampleConfig>
     );
   }
 }

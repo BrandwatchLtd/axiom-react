@@ -4,8 +4,11 @@ import Logo from './Logo';
 
 export default class LogoTab extends Component {
   static propTypes = {
+    /** Color of the Logo background */
     color: PropTypes.oneOf(['grey', 'white']),
+    /** Height of the Logo, higher precedence than width */
     height: PropTypes.string,
+    /** Width of the Logo, lower precedence than height */
     width: PropTypes.string,
   };
 

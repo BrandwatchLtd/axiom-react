@@ -1,23 +1,31 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Example, Snippet } from 'style-guide';
-import { Grid, GridCell, LogoBox } from 'bw-axiom';
+import { ExampleConfig } from 'style-guide';
+import { LogoBox } from 'bw-axiom';
 
-export default class LogoExample extends Component {
+export default class LogoBoxExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      LogoBox: PropTypes.object,
+    }).isRequired,
+  };
+
   render() {
-    return (
-      <Example name="Box">
-        <Snippet>
-          <Grid snippetIgnore={ true }>
-            <GridCell shrink={ true } snippetIgnore={ true }>
-              <LogoBox color="white" height="7.1875rem" />
-            </GridCell>
+    const { components } = this.props;
+    const propTypes = {
+      LogoBox: components.LogoBox,
+    };
 
-            <GridCell shrink={ true } snippetIgnore={ true }>
-              <LogoBox color="grey" height="7.1875rem" />
-            </GridCell>
-          </Grid>
-        </Snippet>
-      </Example>
+    const initialProps = {
+      LogoBox: {
+        height: '7rem',
+      },
+    };
+
+    return (
+      <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
+        <LogoBox { ...initialProps.LogoBox } />
+      </ExampleConfig>
     );
   }
 }
