@@ -6,38 +6,44 @@ import './Grid.css';
 
 export default class Grid extends Component {
   static propTypes = {
+    /** <GridCells>. */
     children: PropTypes.node,
-    fill: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
-    fit: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
-    full: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
-    gutters: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
-    ]),
+    /**
+     * Applies fill styling for all GridCell children.
+     * See GridCell for fill explanation
+     */
+    fill: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /**
+     * Applies fit styling for all GridCell children.
+     * See GridCell for fit explanation
+     */
+    fit: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /**
+     * Applies full styling for all GridCell children.
+     * See GridCell for full explanation
+     */
+    full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Controls the horizontal and vertical spacing between cells */
+    gutters: PropTypes.oneOf([false, 'tiny', 'small', 'medium', 'large']),
+    /** Controls the horizontal alignment of all cells */
     horizontalAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
-    horizontalGutters: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
-    ]),
+    /** Controls the horizontal spacing between cells */
+    horizontalGutters: PropTypes.oneOf([true, 'tiny', 'small', 'medium', 'large']),
+    /**
+     * Default behaviour of cells is to resize to 100% of the grids space when
+     * on smaller screen sizes. This allows this behaviour to be suppressed.
+     */
     responsive: PropTypes.bool,
-    shrink: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    /**
+     * Applies shrink styling for all GridCell children.
+     * See GridCell for shrink explanation
+     */
+    shrink: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Controls the vertical alignment of all cells */
     verticalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
-    verticalGutters: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
-    ]),
+    /** Controls the vertical spacing between cells */
+    verticalGutters: PropTypes.oneOf([true, 'tiny', 'small', 'medium', 'large']),
+    /** Allows cells to drop to a new line when they require more space */
     wrap: PropTypes.bool,
   };
 

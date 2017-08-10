@@ -1,14 +1,66 @@
-module.exports = [
-  require('./base').default,
-  require('./gutter-suppression').default,
-  require('./gutter-sizing').default,
-  require('./wrapping').default,
-  require('./responsive-suppression').default,
-  require('./flex-widths-grid').default,
-  require('./flex-widths-grid-responsive').default,
-  require('./flex-widths-cell').default,
-  require('./flex-widths-cell-responsive').default,
-  require('./percentage-widths').default,
-  require('./alignment-grid').default,
-  require('./alignment-grid-cell').default,
-];
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { ExampleConfig } from 'style-guide';
+import { Grid, GridCell } from 'bw-axiom';
+import GridBlock from './GridBlock';
+
+class GridExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      Grid: PropTypes.object.isRequired,
+      GridCell: PropTypes.object.isRequired,
+    }).isRequired,
+  };
+
+  render() {
+    const { components } = this.props;
+
+    const propTypes = {
+      Grid: components.Grid,
+      GridCell: components.GridCell,
+    };
+
+    const initialProps = {
+      Grid: {},
+      GridCell: {},
+    };
+
+    const initialPropOptions = {
+      Grid: {
+        children: {
+          count: 1,
+          max: 3,
+          min: 1,
+        },
+      },
+    };
+
+    return (
+      <ExampleConfig
+          initialPropOptions={ initialPropOptions }
+          initialProps={ initialProps }
+          propTypes={ propTypes }>
+        <Grid { ...initialProps.Grid }>
+          <GridCell { ...initialProps.GridCell } data-axiom="GridExample">
+            <GridBlock>
+              Lorem ipsum dolor sit amet.</GridBlock>
+          </GridCell>
+
+          <GridCell { ...initialProps.GridCell } data-axiom="GridExample">
+            <GridBlock>
+              Lorem ipsum dolor sit amet.</GridBlock>
+          </GridCell>
+
+          <GridCell { ...initialProps.GridCell } data-axiom="GridExample">
+            <GridBlock>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              finibus quam felis, in interdum felis cursus non. Aenean at urna
+              aliquet, fermentum justo sit amet, egestas nulla.</GridBlock>
+          </GridCell>
+        </Grid>
+      </ExampleConfig>
+    );
+  }
+}
+
+module.exports = [ GridExample ];
