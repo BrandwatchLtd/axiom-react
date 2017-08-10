@@ -4,7 +4,9 @@ import { Button, Icon } from 'bw-axiom';
 
 export default class IconButton extends Component {
   static propTypes = {
+    /** Name of the icon that will be displayed */
     name: PropTypes.string.isRequired,
+    /** Size of the button and icon */
     size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   };
 

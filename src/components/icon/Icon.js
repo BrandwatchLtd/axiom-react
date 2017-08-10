@@ -76,7 +76,12 @@ const ICON_NAME_MAP = {
 
 export default class Icon extends Component {
   static propTypes = {
+    /**
+     * Inline styling that allows the Icon to placed next to other inline
+     * elements or text.
+     */
     inline: PropTypes.bool,
+    /** Name of the icon that will be displayed */
     name: PropTypes.oneOf([
       'annotate',
       'arrow-down',
@@ -145,9 +150,12 @@ export default class Icon extends Component {
       'unlock',
       'warning',
       'warning-circle',
-    ]),
+    ]).isRequired,
+    /** Size of icon (with unit) */
     size: PropTypes.string,
+    /** Spacing applied to the left of the Icon. Must be used with the inline property */
     spaceLeft: PropTypes.oneOf(['x1', 'x2']),
+    /** Spacing applied to the right of the Icon. Must be used with the inline property */
     spaceRight: PropTypes.oneOf(['x1', 'x2']),
   };
 

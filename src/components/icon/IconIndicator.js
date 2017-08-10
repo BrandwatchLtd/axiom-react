@@ -6,9 +6,13 @@ import './IconIndicator.css';
 
 export default class IconIndicator extends Component {
   static propTypes = {
+    /** Color of the indicator and icon */
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'subtle']),
+    /** Name of the icon that will be displayed */
     name: PropTypes.string.isRequired,
+    /** Size of the indicator and icon */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Style of the indicator */
     style: PropTypes.oneOf(['primary', 'secondary']),
   };
 
