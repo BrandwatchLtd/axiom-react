@@ -7,8 +7,11 @@ import './Reveal.css';
 
 export default class Reveal extends Component {
   static propTypes = {
+    /** Content that will revealed */
     children: PropTypes.node.isRequired,
+    /** SKIP */
     space: PropTypes.string,
+    /** Revealed status, true will expand out the content, false will collapse it. */
     visible: PropTypes.bool.isRequired,
   };
 
