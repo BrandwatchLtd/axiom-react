@@ -43,24 +43,9 @@ class ButtonExample extends Component {
       },
       ButtonGroup: {
         children: {
-          options: [{
-            name: 'Single',
-            children: (
-              <Button { ...initialProps.Button }>
-                Lorem ipsum
-              </Button>
-            ),
-          }, {
-            name: 'Multiple',
-            children: [
-              <Button { ...initialProps.Button }>
-                Lorem ipsum
-              </Button>,
-              <Button { ...initialProps.Button }>
-                <ButtonIcon name="chevron-down" />
-              </Button>,
-            ],
-          }],
+          count: 1,
+          min: 1,
+          max: Infinity,
         },
       },
     };
@@ -71,7 +56,9 @@ class ButtonExample extends Component {
           initialProps={ initialProps }
           propTypes={ propTypes }>
         <ButtonGroup { ...initialProps.ButtonGroup }>
-          { initialPropOptions.ButtonGroup.children.options[0].children }
+          <Button { ...initialProps.Button }>
+            { initialPropOptions.Button.children.options[0].children }
+          </Button>
         </ButtonGroup>
       </ExampleConfig>
     );

@@ -6,17 +6,16 @@ import './Label.css';
 
 export default class Label extends Component {
   static propTypes = {
+    /** Content inserted into the Label */
     children: PropTypes.node,
+    /** Color of the label */
     color: PropTypes.oneOf(['white', 'success', 'error']),
     /**
-     * A true value will apply full width styling consistently.
-     * Small, medium and large values correspond to the break points and will
-     * be applied below that point.
+     * Controls the full width appearance of the badge either all of the time,
+     * with a value of `true` otherwise at one of the breakpoints specified.
      */
-    full: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Size of standard shape */
     size: PropTypes.oneOf(['small', 'medium']),
   };
 

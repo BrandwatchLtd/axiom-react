@@ -6,9 +6,13 @@ import './LabelIcon.css';
 
 export default class LabelIcon extends Component {
   static propTypes = {
+    /** SKIP */
     color: PropTypes.string,
+    /** SKIP */
     isEnd: PropTypes.bool,
+    /** SKIP */
     isStart: PropTypes.bool,
+    /** Name of the icon. See <Icon>. */
     name: PropTypes.string.isRequired,
   };
 

@@ -14,10 +14,7 @@ export default class Button extends Component {
      * Controls the full width appearance of the badge either all of the time,
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
-    full: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.oneOf(['small', 'medium', 'large']),
-    ]),
+    full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
     /** Size of standard shape */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Size of stadium shape */
