@@ -55,6 +55,9 @@ export default class ComponentProp extends Component {
       ...rest
     } = this.props;
 
+    const showDefault = defaultValue !== undefined &&
+      type && type.name !== 'func' && type.name !== 'arrayOf';
+
     return (
       <Base { ...rest } className="dm-example__prop">
         <Grid verticalAlign="middle">
@@ -84,8 +87,8 @@ export default class ComponentProp extends Component {
                     </Badge>
                   ) }
 
-                  { defaultValue && type && type.name !== 'func' && type.name !== 'arrayOf' && (
-                    <Badge color={ typeColorMap[type] } opacity={ 0.2 }>
+                  {  showDefault && (
+                    <Badge>
                       <Strong>Default:</Strong> { defaultValue.toString() }
                     </Badge>
                   ) }
