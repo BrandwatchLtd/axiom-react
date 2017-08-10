@@ -8,7 +8,7 @@ const preparePropMap = {
     }
 
     if (typeof options.callback === 'function') {
-      return () => options.callback(setProp, setPropOption);
+      return (...args) => options.callback(setProp, setPropOption, ...args);
     }
 
     return propValue;
