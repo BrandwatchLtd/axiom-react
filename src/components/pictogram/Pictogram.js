@@ -12,12 +12,14 @@ const PICTOGRAM_NAME_MAP = {
 
 export default class Pictogram extends Component {
   static propTypes = {
+    /** Name of the pictogram that will be displayed */
     name: PropTypes.oneOf([
       'female',
       'individual',
       'male',
       'organisation',
     ]),
+    /** Size of pictogram (with unit) */
     size: PropTypes.string,
   };
 
