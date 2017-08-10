@@ -1,6 +1,8 @@
 .ax-image-circle {
   display: block;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .ax-image-circle__image {
