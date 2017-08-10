@@ -6,8 +6,11 @@ import './MenuItem.css';
 
 export default class MenuItem extends Component {
   static propTypes = {
+    /** Applies styling to indicate it is active */
     active: PropTypes.bool,
+    /** Content inside the MenuItem */
     children: PropTypes.node,
+    /** Applies styling to indicate it is disabled, and blocks interactions */
     disabled: PropTypes.bool,
   };
 

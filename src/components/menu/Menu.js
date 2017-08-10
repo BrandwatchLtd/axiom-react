@@ -5,6 +5,7 @@ import './Menu.css';
 
 export default class Menu extends Component {
   static propTypes = {
+    /** MenuItems */
     children: PropTypes.node,
   };
 
