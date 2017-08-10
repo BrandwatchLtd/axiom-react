@@ -1,22 +1,51 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Example, Snippet } from 'style-guide';
-import { RadioButton, RadioButtonGroup } from 'bw-axiom';
+import { ExampleConfig } from 'style-guide';
+import { RadioButtonGroup, RadioButton } from 'bw-axiom';
 
-export default class FormExample extends Component {
+export default class RadioButtonExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      RadioButton: PropTypes.object.isRequired,
+      RadioButtonGroup: PropTypes.object.isRequired,
+    }).isRequired,
+  };
+
   render() {
+    const { components } = this.props;
+
+    const propTypes = {
+      RadioButton: components.RadioButton,
+      RadioButtonGroup: components.RadioButtonGroup,
+    };
+
+    const initialProps = {
+      RadioButton: {
+        name: 'lorem',
+        children: 'Lorem ipsum',
+      },
+      RadioButtonGroup: {},
+    };
+
+    const initialPropOptions = {
+      RadioButtonGroup: {
+        children: {
+          count: 3,
+          min: 1,
+          max: Infinity,
+        },
+      },
+    };
+
     return (
-      <Example name="RadioButtons">
-        <Snippet>
-          <RadioButtonGroup>
-            <RadioButton name="radio1">Unchecked Radio button</RadioButton>
-            <RadioButton defaultChecked={ true } name="radio1">Checked Radio button</RadioButton>
-            <RadioButton disabled={ true } name="radio1">Disabled Radio button</RadioButton>
-            <RadioButton defaultChecked={ true } disabled={ true } name="radio2">
-              Disabled checked Radio button
-            </RadioButton>
-          </RadioButtonGroup>
-        </Snippet>
-      </Example>
+      <ExampleConfig
+          initialPropOptions={ initialPropOptions }
+          initialProps={ initialProps }
+          propTypes={ propTypes }>
+        <RadioButtonGroup { ...initialProps.RadioButtonGroup }>
+          <RadioButton { ...initialProps.RadioButton } />
+        </RadioButtonGroup>
+      </ExampleConfig>
     );
   }
 }

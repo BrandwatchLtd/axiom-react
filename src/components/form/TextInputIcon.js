@@ -5,8 +5,11 @@ import { Icon, Link } from 'bw-axiom';
 
 export default class TextInputIcon extends Component {
   static propTypes = {
+    /** Alignment inside the input field */
     align: PropTypes.oneOf(['left', 'right']),
+    /** Name of the icon. See <Icon>. */
     name: PropTypes.string.isRequired,
+    /** Click handler, applies styling to indicate it is clickable. */
     onClick: PropTypes.func,
   };
 
@@ -16,7 +19,6 @@ export default class TextInputIcon extends Component {
 
   render () {
     const { align, name, onClick, ...rest } = this.props;
-
     const className = classnames('ax-input__icon', {
       [`ax-input__icon--align-${align}`]: align,
     });

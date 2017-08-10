@@ -7,19 +7,38 @@ import './TextInput.css';
 
 export default class TextInput extends Component {
   static propTypes = {
+    /** Optional TextInputIcon, all other children are ignored */
     children: PropTypes.node,
+    /** Disables interactions and applies styling */
     disabled: PropTypes.bool,
+    /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
+    /** Descriptive label that is placed with the input field */
     label: PropTypes.string,
+    /**
+     * Descriptive placeholder text that is displayed in the input field
+     * when there is no value
+     */
+    placeholder: PropTypes.string,
+    /** Size of the input field */
     size: PropTypes.oneOf(['medium', 'large']),
+    /** Visual style variations of the input field */
     style: PropTypes.oneOf(['overlay']),
+    /** Type of the input field */
+    type: PropTypes.oneOf(['password', 'text']),
+    /** Applies styling to indicate the users input was valid */
     valid: PropTypes.bool,
+    /** Value of the input field */
+    value: PropTypes.any,
+    /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
+    /** Handler for when the input field is focused */
     onFocus: PropTypes.func,
   };
 
   static defaultProps = {
     size: 'medium',
+    type: 'text',
   };
 
   constructor(props) {
@@ -40,7 +59,19 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { children, disabled, valid, invalid, label, size, style, ...rest } = this.props;
+    const {
+      children,
+      disabled,
+      valid,
+      invalid,
+      label,
+      size,
+      style,
+      type,
+      value,
+      ...rest
+    } = this.props;
+
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIcon);
     const iconContainerClasses = classnames('ax-input__container', {
@@ -56,14 +87,14 @@ export default class TextInput extends Component {
       <TextGroup label={ label }>
         <div className={ iconContainerClasses }>
           { icon }
-          <input
-              type="text"
-              { ...rest }
+          <input { ...rest }
               className="ax-input"
               disabled={ disabled }
               onBlur={ () => this.handleOnBlur() }
               onFocus={ () => this.handleOnFocus() }
-              ref="input"  />
+              ref="input"
+              type={ type }
+              value={ value }  />
         </div>
       </TextGroup>
     );

@@ -14,6 +14,7 @@ exports[`TextInput render with theme dark 1`] = `
       onFocus={[Function]}
       theme="dark"
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -33,6 +34,7 @@ exports[`TextInput render with theme light 1`] = `
       onFocus={[Function]}
       theme="light"
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -51,6 +53,7 @@ exports[`TextInput renders when disabled 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -69,6 +72,7 @@ exports[`TextInput renders when invalid 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -87,6 +91,7 @@ exports[`TextInput renders when valid 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -124,6 +129,7 @@ exports[`TextInput renders with TextInputIcon 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -142,6 +148,7 @@ exports[`TextInput renders with defaultProps 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -169,6 +176,7 @@ exports[`TextInput renders with label 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -187,6 +195,7 @@ exports[`TextInput renders with size large 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>
@@ -205,6 +214,7 @@ exports[`TextInput renders with size medium 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
       type="text"
+      value={undefined}
     />
   </div>
 </label>

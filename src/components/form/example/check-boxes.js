@@ -1,22 +1,51 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Example, Snippet } from 'style-guide';
-import { CheckBox, CheckBoxGroup } from 'bw-axiom';
+import { ExampleConfig } from 'style-guide';
+import { CheckBoxGroup, CheckBox } from 'bw-axiom';
 
-export default class FormExample extends Component {
+export default class CheckBoxExample extends Component {
+  static propTypes = {
+    components: PropTypes.shape({
+      CheckBox: PropTypes.object.isRequired,
+      CheckBoxGroup: PropTypes.object.isRequired,
+    }).isRequired,
+  };
+
   render() {
+    const { components } = this.props;
+
+    const propTypes = {
+      CheckBox: components.CheckBox,
+      CheckBoxGroup: components.CheckBoxGroup,
+    };
+
+    const initialProps = {
+      CheckBox: {
+        name: 'lorem',
+        children: 'Lorem ipsum',
+      },
+      CheckBoxGroup: {},
+    };
+
+    const initialPropOptions = {
+      CheckBoxGroup: {
+        children: {
+          count: 3,
+          min: 1,
+          max: Infinity,
+        },
+      },
+    };
+
     return (
-      <Example name="CheckBoxes">
-        <Snippet>
-          <CheckBoxGroup>
-            <CheckBox>Unchecked check box</CheckBox>
-            <CheckBox defaultChecked={ true }>Checked check box</CheckBox>
-            <CheckBox disabled={ true }>Disabled check box</CheckBox>
-            <CheckBox defaultChecked={ true } disabled={ true }>
-              Disabled checked check box
-            </CheckBox>
-          </CheckBoxGroup>
-        </Snippet>
-      </Example>
+      <ExampleConfig
+          initialPropOptions={ initialPropOptions }
+          initialProps={ initialProps }
+          propTypes={ propTypes }>
+        <CheckBoxGroup { ...initialProps.CheckBoxGroup }>
+          <CheckBox { ...initialProps.CheckBox } />
+        </CheckBoxGroup>
+      </ExampleConfig>
     );
   }
 }

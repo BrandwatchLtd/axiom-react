@@ -8,6 +8,7 @@ exports[`RadioButton renders with defaultProps 1`] = `
   <input
     className="ax-chedio-buttox ax-radio"
     disabled={undefined}
+    name={undefined}
     type="radio"
   />
   <span

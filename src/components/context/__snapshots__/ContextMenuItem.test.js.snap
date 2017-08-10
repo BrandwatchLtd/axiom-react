@@ -52,6 +52,7 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
         checked={undefined}
         className="ax-chedio-buttox ax-checkbox"
         disabled={undefined}
+        name={undefined}
         onChange={undefined}
         type="checkbox"
       />
@@ -84,6 +85,7 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
         checked={true}
         className="ax-chedio-buttox ax-checkbox"
         disabled={undefined}
+        name={undefined}
         onChange={undefined}
         type="checkbox"
       />

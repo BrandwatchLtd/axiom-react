@@ -15,11 +15,14 @@ exports[`TextArea renders with a label 1`] = `
   </div>
   <textarea
     className="ax-textarea"
+    disabled={undefined}
+    placeholder={undefined}
     style={
       Object {
         "minHeight": 150,
       }
     }
+    value={undefined}
   />
 </label>
 `;
@@ -30,11 +33,14 @@ exports[`TextArea renders with custom height 1`] = `
 >
   <textarea
     className="ax-textarea"
+    disabled={undefined}
+    placeholder={undefined}
     style={
       Object {
         "minHeight": 300,
       }
     }
+    value={undefined}
   />
 </label>
 `;
@@ -45,11 +51,14 @@ exports[`TextArea renders with defaultProps 1`] = `
 >
   <textarea
     className="ax-textarea"
+    disabled={undefined}
+    placeholder={undefined}
     style={
       Object {
         "minHeight": 150,
       }
     }
+    value={undefined}
   />
 </label>
 `;
