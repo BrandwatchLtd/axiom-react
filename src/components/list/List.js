@@ -6,8 +6,11 @@ import './List.css';
 
 export default class List extends Component {
   static propTypes = {
+    /** ListItems */
     children: PropTypes.node,
+    /** Styling to place ListItems inline to one another */
     inline: PropTypes.bool,
+    /** Switches to a ordered number list */
     ordered: PropTypes.bool,
   };
 
