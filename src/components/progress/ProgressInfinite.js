@@ -8,10 +8,12 @@ import renderFilter from './_filter';
 
 export default class ProgressInfinite extends Component {
   static propTypes = {
+    /** Color of the indicator */
     color: PropTypes.oneOf([
       'subtle',
       'white',
     ]),
+    /** Size of the indicator */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 

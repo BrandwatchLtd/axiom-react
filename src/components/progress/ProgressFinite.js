@@ -6,9 +6,10 @@ import './ProgressFinite.css';
 import renderFilter from './_filter';
 
 export default class ProgressFinite extends Component {
-
   static propTypes = {
+    /** Percentage of progress complete */
     percent: PropTypes.number.isRequired,
+    /** Size of the indicator */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
