@@ -6,13 +6,21 @@ import './ImageCircle.css';
 
 export default class ImageCircle extends Component {
   static propTypes = {
+    /** Border applied around the image */
     border: PropTypes.oneOf(['small', 'large']),
+    /** Fallback content when the image fails to load */
     children: PropTypes.node,
+    /** Name of the icon to be added to the hover overlay */
     overlayIconName: PropTypes.string,
+    /** Size of the icon to be added to the hover overlay */
     overlayIconSize: PropTypes.string,
+    /** Size (with unit) that will be applied to the width and height of the image */
     size: PropTypes.string.isRequired,
+    /** Source of the image */
     src: PropTypes.string,
+    /** SKIP */
     onError: PropTypes.func,
+    /** SKIP */
     onLoad: PropTypes.func,
   };
 
