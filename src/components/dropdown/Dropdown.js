@@ -11,8 +11,18 @@ import {
 
 export default class Dropdown extends Component {
   static propTypes = {
-    children: PropTypes.node,
-    position: PropTypes.string,
+    /**
+     * Children inside Dropdown should contain all of and
+     * only DropdownTarget and DropdownContent!
+     */
+    children: PropTypes.node.isRequired,
+    /**
+     * Controls the starting position around DropdownTarget in which the
+     * DropdownContent will attempt to be placed. If that position is not available
+     * due to collision, it will be placed according to the flip behaviour  until
+     * a valid position is found.
+     */
+    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   };
 
   static childContextTypes = {

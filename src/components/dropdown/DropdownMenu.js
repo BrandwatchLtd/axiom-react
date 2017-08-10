@@ -4,7 +4,7 @@ import { ContextMenu } from 'bw-axiom';
 
 export default class DropdownMenu extends Component {
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
   };
 
   render() {

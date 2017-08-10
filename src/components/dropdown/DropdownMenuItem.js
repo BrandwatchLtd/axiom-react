@@ -5,7 +5,12 @@ import { ContextMenuItem } from 'bw-axiom';
 export default class DropdownMenuItem extends Component {
   static propTypes = {
     children: PropTypes.node,
+    /**
+     * Whether the menu is part of a multi-selection menu. When true, this
+     * will disable automatically closing the DropdownMenu when clicked.
+     */
     multiSelect: PropTypes.bool,
+    /** Click handler  */
     onClick: PropTypes.func,
   };
 

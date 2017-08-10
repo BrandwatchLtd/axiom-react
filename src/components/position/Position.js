@@ -26,7 +26,7 @@ export default class Position extends Component {
     /**
      * Controls the starting position around PositionTarget in which the
      * PositionContent will attempt to be placed. If that position is not available
-     * due to collision, it will be placed clockwise from that position until
+     * due to collision, it will be placed according to the flip behaviour  until
      * a valid position is found.
      */
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
