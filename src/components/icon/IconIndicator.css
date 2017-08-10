@@ -41,7 +41,7 @@
   &.ax-icon-indicator--info { color: var(--color-ui-primary--light); }
 }
 
-.ax-icon-indication--primary,
+.ax-icon-indicator--primary,
 .ax-icon-indicator--secondary {
   &.ax-icon-indicator--subtle {
     background-color: var(--color-context-background-subtle);
