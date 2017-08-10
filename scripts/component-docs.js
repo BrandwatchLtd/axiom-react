@@ -26,7 +26,7 @@ function flattenValues({ name, value }, values = []) {
     value.forEach((value) => flattenValues(value, values));
   } else if (isPlainObject(value)) {
     flattenValues(value, values);
-  } else if (value) {
+  } else if (value !== undefined) {
     values.push(value);
   }
 

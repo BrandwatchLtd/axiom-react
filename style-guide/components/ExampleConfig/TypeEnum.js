@@ -26,7 +26,7 @@ export default class TypeEnum extends Component {
     return (
       <ButtonGroup joined={ true }>
         <Button
-            disabled={ !value || required }
+            disabled={ value === undefined || required }
             onClick={ () => setValue(undefined) }
             size="small"
             style="secondary">
