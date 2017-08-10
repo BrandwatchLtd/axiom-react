@@ -31,10 +31,15 @@ const preparePropMap = {
 
 export const basePropTypes = { Base: __COMPONENT_PROPS__.Base };
 
-function prepareProps(state, options, propTypes, setProp, setPropOption) {
+function prepareProps(state, options, propTypes, setProp, setPropOption, childIndex) {
   const props = {};
 
   for (const prop in state) {
+    if (options[prop] && options[prop].applyToIndex !== undefined &&
+          options[prop].applyToIndex !== childIndex) {
+      continue;
+    }
+
     props[prop] = propTypes[prop] && preparePropMap[propTypes[prop].type.name]
       ? preparePropMap[propTypes[prop].type.name](
           prop, state[prop], propTypes[prop], options[prop], setProp, setPropOption)
@@ -44,14 +49,14 @@ function prepareProps(state, options, propTypes, setProp, setPropOption) {
   return props;
 }
 
-export function render(child, propTypes, state, setProp, setPropOption) {
+export function render(child, propTypes, state, setProp, setPropOption, index = 0) {
   if (!child) {
     return;
   }
 
   if (Array.isArray(child)) {
-    return Children.map(child, (child) =>
-        render(child, propTypes, state, setProp, setPropOption)
+    return Children.map(child, (child, index) =>
+        render(child, propTypes, state, setProp, setPropOption, index)
       );
   }
 
@@ -62,7 +67,8 @@ export function render(child, propTypes, state, setProp, setPropOption) {
           state[child.type.name].options,
           propTypes[child.type.name],
           setProp,
-          setPropOption)
+          setPropOption,
+          index)
       : child.props;
 
     return cloneElement(
