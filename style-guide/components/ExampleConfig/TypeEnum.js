@@ -32,7 +32,7 @@ export default class TypeEnum extends Component {
             style="secondary">
           Remove
         </Button>
-        <Dropdown>
+        <Dropdown flip="mirror">
           <DropdownTarget>
             <Button size="small" style="secondary">
               <ButtonIcon name="chevron-down" />

@@ -33,7 +33,7 @@ export default class TypeNodeChildrenOptions extends Component {
             style="secondary">
           Reset
         </Button>
-        <Dropdown>
+        <Dropdown flip="mirror">
           <DropdownTarget>
             <Button size="small" style="secondary">
               <ButtonIcon name="chevron-down" />

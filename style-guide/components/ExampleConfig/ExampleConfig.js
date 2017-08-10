@@ -94,7 +94,7 @@ export default class ExampleConfig extends Component {
      */
     let sticky = '0rem';
     for (const component in configState) {
-      if (configState[component].props.sticky) {
+      if (configState[component].props && configState[component].props.sticky) {
         sticky = configState[component].props.sticky;
         break;
       }
