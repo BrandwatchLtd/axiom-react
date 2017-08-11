@@ -5,8 +5,13 @@ import { Base } from 'bw-axiom';
 
 export default class Tab extends Component {
   static propTypes = {
+    /** SKIP */
     active: PropTypes.bool,
+    /** Content that is visible when the Tab is active */
+    children: PropTypes.node,
+    /** Applies styling to indicate it is inactive, and prevents it from being clicked */
     disabled: PropTypes.bool,
+    /** Title that is placed with the Tab */
     title: PropTypes.node,
   };
 

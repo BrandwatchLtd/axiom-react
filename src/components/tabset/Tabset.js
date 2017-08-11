@@ -7,8 +7,14 @@ import './Tabset.css';
 
 export default class Tabset extends Component {
   static propTypes = {
+    /**
+     * Initial activated Tab, after initial mount Tabset takes control of
+     * the activated Tabs.
+     */
     activeTabIndex: PropTypes.number,
+    /** Tabs */
     children: PropTypes.node,
+    /** Size control for the Tabs */
     size: PropTypes.oneOf(['medium', 'large']),
   };
 
