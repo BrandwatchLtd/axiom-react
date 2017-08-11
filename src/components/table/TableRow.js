@@ -4,6 +4,7 @@ import { Base } from 'bw-axiom';
 
 export default class TableRow extends Component {
   static propTypes = {
+    /** TableCells */
     children: PropTypes.node,
   };
 

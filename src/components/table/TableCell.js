@@ -5,7 +5,13 @@ import classnames from 'classnames';
 
 export default class TableCell extends Component {
   static propTypes = {
+    /** Tabular data with the cell */
     children: PropTypes.node,
+    /**
+     * Allows the cell to occupy as much room as possible. Other cells
+     * may require fixed widths or text wrapping to be turned off to maintain
+     * visual quality.
+     */
     grow: PropTypes.bool,
   };
 

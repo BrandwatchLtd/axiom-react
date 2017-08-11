@@ -6,9 +6,13 @@ import './Table.css';
 
 export default class Table extends Component {
   static propTypes = {
+    /** Toggle for adding borders between rows */
     borders: PropTypes.bool,
+    /** TableHead and/or TableBody */
     children: PropTypes.node,
+    /** Horizontal padding between columns/cells */
     columnPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+    /** Vertical padding between rows/cells */
     rowPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   };
 

@@ -5,7 +5,9 @@ import { Base } from 'bw-axiom';
 
 export default class TableHead extends Component {
   static propTypes = {
+    /** TableRows */
     children: PropTypes.node,
+    /** Vertical padding between TableRows, can also used to space from TableBody */
     rowPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   };
 
