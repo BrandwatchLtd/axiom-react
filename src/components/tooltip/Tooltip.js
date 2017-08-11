@@ -11,7 +11,17 @@ import {
 
 export default class Tooltip extends Component {
   static propTypes = {
+    /**
+     * Children inside Tooltip should contain all of and
+     * only TooltipTarget and TooltipContent!
+     */
     children: PropTypes.node,
+    /**
+     * Controls the starting position around TooltipTarget in which the
+     * TooltipContent will attempt to be placed. If that position is not available
+     * due to collision, it will be placed according to the flip behaviour  until
+     * a valid position is found.
+     */
     position: PropTypes.string,
   };
 
