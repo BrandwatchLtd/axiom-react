@@ -3,6 +3,7 @@ import { List } from 'bw-axiom';
 
 export default class Toolbar extends Component {
   static propTypes = {
+    /** Tools along the Toolbar */
     children: PropTypes.node.isRequired,
   }
 
