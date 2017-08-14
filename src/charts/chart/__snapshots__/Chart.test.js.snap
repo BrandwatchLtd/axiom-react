@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart renders with defaultProps 1`] = `
+<div
+  className="ax-chart"
+  style={
+    Object {
+      "minHeight": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Chart renders with minimumHeight 1`] = `
+<div
+  className="ax-chart"
+  style={
+    Object {
+      "minHeight": "10rem",
+    }
+  }
+/>
+`;

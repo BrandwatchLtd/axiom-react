@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartBody renders with defaultProps 1`] = `
+<div
+  className="ax-chart__body"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with horizontalAlign end 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--horizontal-end"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with horizontalAlign middle 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--horizontal-middle"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with horizontalAlign start 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--horizontal-start"
+>
+  Lorem Ipsum
+</div>
+`;

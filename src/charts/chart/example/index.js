@@ -7,6 +7,7 @@ import {
   ChartBody,
   ChartTitle,
   DotPlotChart,
+  ProgressInfinite,
   Strong,
 } from 'bw-axiom';
 import { chartKey, data } from '../../dot-plot/example/data';
@@ -31,24 +32,55 @@ class ChartExample extends Component {
       ChartTitle: components.ChartTitle,
     };
 
+    const initialProps = {
+      Chart: {
+        minimumHeight: '15rem',
+      },
+      ChartBody: {
+        horizontalAlign: 'middle',
+        verticalAlign: 'middle',
+      },
+    };
+
+    const initialPropOptions = {
+      ChartBody: {
+        children: {
+          options: [{
+            name: 'With a DotPlot visual',
+            children: (
+              <DotPlotChart
+                  axisTitle="% of each something"
+                  chartKey={ chartKey }
+                  chartKeyDifferenceLabel="Size of Difference"
+                  collapsedVisibleRowCount={ 6 }
+                  data={ data }
+                  expandButtonSuffix="Categories"
+                  labelColumnWidth="11rem"
+                  snippetReplace={ true } />
+            ),
+          }, {
+            name: 'With a ProgressInfinite',
+            children: (
+              <ProgressInfinite size="medium" />
+            ),
+          }],
+        },
+      },
+    };
+
     return (
-      <ExampleConfig propTypes={ propTypes }>
-        <Chart>
+      <ExampleConfig
+          initialPropOptions={ initialPropOptions }
+          initialProps={ initialProps }
+          propTypes={ propTypes }>
+        <Chart { ...initialProps.Chart }>
           <ChartHeader>
             <ChartTitle>
               <Strong snippetReplace={ true }>Lorem Ipsum</Strong> (dolor sit amet)
             </ChartTitle>
           </ChartHeader>
-          <ChartBody>
-            <DotPlotChart
-                axisTitle="% of each something"
-                chartKey={ chartKey }
-                chartKeyDifferenceLabel="Size of Difference"
-                collapsedVisibleRowCount={ 6 }
-                data={ data }
-                expandButtonSuffix="Categories"
-                labelColumnWidth="11rem"
-                snippetReplace={ true } />
+          <ChartBody { ...initialProps.ChartBody }>
+            { initialPropOptions.ChartBody.children.options[0].children }
           </ChartBody>
         </Chart>
       </ExampleConfig>
