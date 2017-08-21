@@ -6,6 +6,7 @@
   justify-content: flex-end;
   padding: 0 calc(var(--component-line-height) / 2);
   border-radius: var(--component-line-height);
+  color: var(--color-context-text);
   font-size: var(--font-size-small);
   line-height: var(--component-line-height);
   white-space: nowrap;
@@ -25,7 +26,7 @@
   left: 0;
 }
 
-.ax-badge--faded .ax-badge__background { background-color: var(--color-context-background-faded); }
+.ax-badge--faded .ax-badge__background { background-color: var(--color-context-text); }
 .ax-badge--highlight .ax-badge__background { background-color: var(--color-ui-highlight); }
 .ax-badge--success .ax-badge__background { background-color: var(--color-ui-success); }
 .ax-badge--error .ax-badge__background { background-color: var(--color-ui-error); }

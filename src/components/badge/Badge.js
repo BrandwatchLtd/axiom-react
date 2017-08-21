@@ -50,7 +50,9 @@ export default class Badge extends Component {
       ...rest
     } = this.props;
 
-    const opacity = Math.max(0, Math.min(1, o));
+    const isFaded = color === 'faded';
+    const textColor = isFaded || o < 1 ? undefined : 'light';
+    const opacity = isFaded || o < 1 ? Math.max(.1, Math.min(isFaded ? .3 : .6, o)) : 1;
     const style = { opacity };
     const classes = classnames('ax-badge', {
       [`ax-badge--${color}`]: color,
@@ -59,7 +61,7 @@ export default class Badge extends Component {
     });
 
     return (
-      <Base { ...rest } Component="span" className={ classes }>
+      <Base { ...rest } Component="span" className={ classes } textColor={ textColor }>
         <span className="ax-badge__background" style={ style } />
         <span className="ax-badge__content">{ children }</span>
       </Base>

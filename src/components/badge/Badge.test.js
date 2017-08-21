@@ -17,23 +17,54 @@ describe('Badge', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders opacity minimum 0', () => {
-    const component = getComponent({ opacity: -1 });
+  it('renders opacity minimum 0.1', () => {
+    const component = getComponent({ opacity: 0, color: 'success' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders opacity maximum 1', () => {
-    const component = getComponent({ opacity: 2 });
+  it('renders opacity maximum 0.6', () => {
+    const component = getComponent({ opacity: 0.7, color: 'success' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders opacity minimum 0.1 with color faded', () => {
+    const component = getComponent({ opacity: 0, color: 'faded' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders opacity maximum 0.3 with color faded', () => {
+    const component = getComponent({ opacity: 0.7, color: 'faded' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders opacity 1', () => {
+    const component = getComponent({ opacity: 1, color: 'success' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('does not render opacity 1 with color faded', () => {
+    const component = getComponent({ opacity: 1, color: 'faded' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders opacity', () => {
-    const component = getComponent({ opacity: 0.5 });
+    const component = getComponent({ opacity: 0.5, color: 'success' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders opacity with color faded', () => {
+    const component = getComponent({ opacity: 0.2, color: 'faded' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
 
   describe('renders with color', () => {
     [

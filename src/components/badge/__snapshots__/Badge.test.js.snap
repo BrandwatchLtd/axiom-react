@@ -1,8 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge renders opacity 1`] = `
+exports[`Badge does not render opacity 1 with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.3,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity 1`] = `
+<span
+  className="ax-badge ax-badge--success"
 >
   <span
     className="ax-badge__background"
@@ -20,9 +40,9 @@ exports[`Badge renders opacity 1`] = `
 </span>
 `;
 
-exports[`Badge renders opacity maximum 1 1`] = `
+exports[`Badge renders opacity 1 1`] = `
 <span
-  className="ax-badge ax-badge--faded"
+  className="ax-badge ax-badge--success ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -40,7 +60,7 @@ exports[`Badge renders opacity maximum 1 1`] = `
 </span>
 `;
 
-exports[`Badge renders opacity minimum 0 1`] = `
+exports[`Badge renders opacity maximum 0.3 with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
 >
@@ -48,7 +68,87 @@ exports[`Badge renders opacity minimum 0 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 0,
+        "opacity": 0.3,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity maximum 0.6 1`] = `
+<span
+  className="ax-badge ax-badge--success"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.6,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity minimum 0.1 1`] = `
+<span
+  className="ax-badge ax-badge--success"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity minimum 0.1 with color faded 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.1,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
+exports[`Badge renders opacity with color faded 1`] = `
+<span
+  className="ax-badge ax-badge--faded"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.2,
       }
     }
   />
@@ -62,7 +162,7 @@ exports[`Badge renders opacity minimum 0 1`] = `
 
 exports[`Badge renders with color amber 1`] = `
 <span
-  className="ax-badge ax-badge--amber"
+  className="ax-badge ax-badge--amber ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -82,7 +182,7 @@ exports[`Badge renders with color amber 1`] = `
 
 exports[`Badge renders with color blue 1`] = `
 <span
-  className="ax-badge ax-badge--blue"
+  className="ax-badge ax-badge--blue ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -102,7 +202,7 @@ exports[`Badge renders with color blue 1`] = `
 
 exports[`Badge renders with color brown 1`] = `
 <span
-  className="ax-badge ax-badge--brown"
+  className="ax-badge ax-badge--brown ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -122,7 +222,7 @@ exports[`Badge renders with color brown 1`] = `
 
 exports[`Badge renders with color chartreuse 1`] = `
 <span
-  className="ax-badge ax-badge--chartreuse"
+  className="ax-badge ax-badge--chartreuse ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -142,7 +242,7 @@ exports[`Badge renders with color chartreuse 1`] = `
 
 exports[`Badge renders with color error 1`] = `
 <span
-  className="ax-badge ax-badge--error"
+  className="ax-badge ax-badge--error ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -168,7 +268,7 @@ exports[`Badge renders with color faded 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0.3,
       }
     }
   />
@@ -182,7 +282,7 @@ exports[`Badge renders with color faded 1`] = `
 
 exports[`Badge renders with color green 1`] = `
 <span
-  className="ax-badge ax-badge--green"
+  className="ax-badge ax-badge--green ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -202,7 +302,7 @@ exports[`Badge renders with color green 1`] = `
 
 exports[`Badge renders with color grey 1`] = `
 <span
-  className="ax-badge ax-badge--grey"
+  className="ax-badge ax-badge--grey ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -222,7 +322,7 @@ exports[`Badge renders with color grey 1`] = `
 
 exports[`Badge renders with color highlight 1`] = `
 <span
-  className="ax-badge ax-badge--highlight"
+  className="ax-badge ax-badge--highlight ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -242,7 +342,7 @@ exports[`Badge renders with color highlight 1`] = `
 
 exports[`Badge renders with color lilac 1`] = `
 <span
-  className="ax-badge ax-badge--lilac"
+  className="ax-badge ax-badge--lilac ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -262,7 +362,7 @@ exports[`Badge renders with color lilac 1`] = `
 
 exports[`Badge renders with color orange 1`] = `
 <span
-  className="ax-badge ax-badge--orange"
+  className="ax-badge ax-badge--orange ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -282,7 +382,7 @@ exports[`Badge renders with color orange 1`] = `
 
 exports[`Badge renders with color pink 1`] = `
 <span
-  className="ax-badge ax-badge--pink"
+  className="ax-badge ax-badge--pink ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -302,7 +402,7 @@ exports[`Badge renders with color pink 1`] = `
 
 exports[`Badge renders with color purple 1`] = `
 <span
-  className="ax-badge ax-badge--purple"
+  className="ax-badge ax-badge--purple ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -322,7 +422,7 @@ exports[`Badge renders with color purple 1`] = `
 
 exports[`Badge renders with color rose 1`] = `
 <span
-  className="ax-badge ax-badge--rose"
+  className="ax-badge ax-badge--rose ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -342,7 +442,7 @@ exports[`Badge renders with color rose 1`] = `
 
 exports[`Badge renders with color success 1`] = `
 <span
-  className="ax-badge ax-badge--success"
+  className="ax-badge ax-badge--success ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -362,7 +462,7 @@ exports[`Badge renders with color success 1`] = `
 
 exports[`Badge renders with color teal 1`] = `
 <span
-  className="ax-badge ax-badge--teal"
+  className="ax-badge ax-badge--teal ax-text--color-light"
 >
   <span
     className="ax-badge__background"
@@ -388,7 +488,7 @@ exports[`Badge renders with defaultProps 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0.3,
       }
     }
   />
@@ -408,7 +508,7 @@ exports[`Badge renders with full large 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0.3,
       }
     }
   />
@@ -428,7 +528,7 @@ exports[`Badge renders with full medium 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0.3,
       }
     }
   />
@@ -448,7 +548,7 @@ exports[`Badge renders with full small 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0.3,
       }
     }
   />
@@ -468,7 +568,7 @@ exports[`Badge renders with full true 1`] = `
     className="ax-badge__background"
     style={
       Object {
-        "opacity": 1,
+        "opacity": 0.3,
       }
     }
   />

@@ -8,14 +8,29 @@ export default class TypeNumber extends Component {
     value: PropTypes.number,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: props.value,
+    };
+  }
+
+  handleOnChange(e) {
+    const { setValue } = this.props;
+
+    if (e.target.value && !isNaN(parseFloat(e.target.value))) {
+      setValue(parseFloat(e.target.value));
+    }
+  }
+
   render() {
-    const { value, setValue } = this.props;
+    const { value } = this.props;
 
     return (
       <TextInput
-          onChange={ (e) => setValue(e.target.value ? parseFloat(e.target.value)  : undefined) }
-          placeholder="Set prop number..."
-          value={ value === undefined ? '' : value } />
+          defaultValue={ value }
+          onChange={ (e) => this.handleOnChange(e) }
+          placeholder="Set prop number..." />
     );
   }
 }

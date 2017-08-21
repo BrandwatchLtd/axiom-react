@@ -14,7 +14,7 @@ exports[`BadgeGroup renders with defaultProps 1`] = `
         className="ax-badge__background"
         style={
           Object {
-            "opacity": 1,
+            "opacity": 0.3,
           }
         }
       />
