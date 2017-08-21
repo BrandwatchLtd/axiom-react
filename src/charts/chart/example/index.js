@@ -37,7 +37,6 @@ class ChartExample extends Component {
         minimumHeight: '15rem',
       },
       ChartBody: {
-        horizontalAlign: 'middle',
         verticalAlign: 'middle',
       },
     };
