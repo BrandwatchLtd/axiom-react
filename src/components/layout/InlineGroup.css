@@ -10,5 +10,9 @@
     margin-right: var(--cmp-inline-spacing);
     margin-bottom: var(--cmp-inline-spacing);
   }
+
+  & > *:last-child {
+    margin-right: 0;
+  }
   /* stylelint-enable */
 }
