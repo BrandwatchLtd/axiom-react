@@ -23,6 +23,7 @@ export default class CheckBoxExample extends Component {
       CheckBox: {
         name: 'lorem',
         children: 'Lorem ipsum',
+        title: 'Lorem ipsum dolor sit amet',
       },
       CheckBoxGroup: {},
     };

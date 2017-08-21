@@ -29,8 +29,23 @@ describe('ContextMenuItem', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with title', () => {
+    const component = getComponent({ title: 'Lorem ipsum dolor sit amet' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders with multiSelect', () => {
     const component = getComponent({ multiSelect: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with multiSelect and title', () => {
+    const component = getComponent({
+      multiSelect: true,
+      title: 'Lorem ipsum dolor sit amet',
+    });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

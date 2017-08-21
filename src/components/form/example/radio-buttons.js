@@ -23,6 +23,7 @@ export default class RadioButtonExample extends Component {
       RadioButton: {
         name: 'lorem',
         children: 'Lorem ipsum',
+        title: 'Lorem ipsum dolor sit amet',
       },
       RadioButtonGroup: {},
     };
