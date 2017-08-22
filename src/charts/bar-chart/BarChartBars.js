@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { Bars } from 'bw-axiom';
 import BarChartContext from './BarChartContext';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
@@ -8,6 +9,7 @@ export default class BarChartBars extends Component {
   static propTypes = {
     ContextComponent: PropTypes.func,
     benchmark: PropTypes.number,
+    benchmarkHeight: PropTypes.oneOf(['x1', 'x2', 'x3']),
     data: PropTypes.object.isRequired,
     fadeBenchmarkLine: PropTypes.bool.isRequired,
     hideBars: PropTypes.bool.isRequired,
@@ -25,6 +27,7 @@ export default class BarChartBars extends Component {
     const {
       ContextComponent,
       benchmark,
+      benchmarkHeight,
       data,
       fadeBenchmarkLine,
       hideBars,
@@ -38,8 +41,12 @@ export default class BarChartBars extends Component {
       onMouseLeave,
     } = this.props;
 
+    const classes = classnames('ax-bar-chart__bars', {
+      [`ax-bar-chart__bars--${benchmarkHeight}`]: benchmarkHeight,
+    });
+
     return (
-      <div className="ax-bar-chart__bars">
+      <div className={ classes }>
         <Bars direction="right">
           { values.map(({ color, value }) => {
             const isFaded = hoverColor && color !== hoverColor;

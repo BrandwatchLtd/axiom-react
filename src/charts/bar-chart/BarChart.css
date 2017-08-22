@@ -1,11 +1,10 @@
-:root {
-  --cmp-benchmark-hang-over: calc(var(--spacing-grid-size) * 2);
-}
-
 .ax-bar-chart__bars {
   position: relative;
-  padding: var(--cmp-benchmark-hang-over) 0;
 }
+
+.ax-bar-chart__bars--x1 { padding: var(--spacing-grid-size--x1) 0; }
+.ax-bar-chart__bars--x2 { padding: var(--spacing-grid-size--x2) 0; }
+.ax-bar-chart__bars--x3 { padding: var(--spacing-grid-size--x3) 0; }
 
 .ax-bar-chart__benchmark-line-container {
   position: absolute;

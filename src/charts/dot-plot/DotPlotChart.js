@@ -121,6 +121,7 @@ export default class DotPlotChart extends Component {
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
             labelColumnWidth={ labelColumnWidth }
+            space="x2"
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
           { formattedData.map(({ values, benchmark, label }, index) =>

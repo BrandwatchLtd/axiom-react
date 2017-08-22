@@ -2,7 +2,7 @@
 
 exports[`ChartTableRows renders with collapsedVisibleRowCount more than children count 1`] = `
 <div
-  className="ax-chart-table__rows-container"
+  className="ax-chart-table__rows-container ax-chart-table__rows-container--space-x2"
 >
   <div
     className="ax-chart-table__grid-container"
@@ -302,7 +302,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
 
 exports[`ChartTableRows renders with defaultProps 1`] = `
 <div
-  className="ax-chart-table__rows-container"
+  className="ax-chart-table__rows-container ax-chart-table__rows-container--space-x2"
 >
   <div
     className="ax-chart-table__grid-container"
@@ -602,7 +602,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
 
 exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
 <div
-  className="ax-chart-table__rows-container"
+  className="ax-chart-table__rows-container ax-chart-table__rows-container--space-x2"
 >
   <div
     className="ax-chart-table__grid-container"
@@ -902,7 +902,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
 
 exports[`ChartTableRows renders with xAxisLabels 1`] = `
 <div
-  className="ax-chart-table__rows-container"
+  className="ax-chart-table__rows-container ax-chart-table__rows-container--space-x2"
 >
   <div
     className="ax-chart-table__grid-container"

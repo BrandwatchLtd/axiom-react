@@ -6,7 +6,7 @@
 
 :root {
   --cmp-chart-label-margin: calc(var(--spacing-grid-size) * 2);
-  --cmp-chart-label-line-height: var(--line-height-body);  /* [1] */
+  --cmp-chart-label-line-height: 1rem;  /* [1] */
   --cmp-chart-label-width: calc(2rem + var(--cmp-chart-label-margin));  /* [1] */
   --cmp-chart-label-height: calc(var(--cmp-chart-label-line-height) + var(--cmp-chart-label-margin));
 

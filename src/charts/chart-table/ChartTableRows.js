@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component, Children } from 'react';
+import classnames from 'classnames';
 import { Grid, GridCell, Icon, Link, Reveal, Small, Strong } from 'bw-axiom';
 
 export default class ChartTableRows extends Component {
@@ -8,12 +9,14 @@ export default class ChartTableRows extends Component {
     collapsedVisibleRowCount: PropTypes.number,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
+    space: PropTypes.oneOf(['x1', 'x2', 'x3']),
     xAxisLabels: PropTypes.arrayOf(PropTypes.string),
     zoomTo: PropTypes.number,
   };
 
   static defaultProps = {
     expandButtonSuffix: 'Items',
+    space: 'x2',
     xAxisLabels: [ '0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
     zoomTo: 100,
   };
@@ -36,6 +39,7 @@ export default class ChartTableRows extends Component {
       collapsedVisibleRowCount,
       expandButtonSuffix,
       labelColumnWidth,
+      space,
       xAxisLabels,
       zoomTo,
       ...rest
@@ -49,8 +53,12 @@ export default class ChartTableRows extends Component {
       ((100% - ${labelColumnWidth}) / 100) * (${100 * (100 / zoomTo)})
     )`;
 
+    const classes = classnames(
+      'ax-chart-table__rows-container',
+      `ax-chart-table__rows-container--space-${space}`);
+
     return (
-      <div { ...rest } className="ax-chart-table__rows-container">
+      <div { ...rest } className={ classes }>
         <div className="ax-chart-table__grid-container" style={ { width: zoomWidth } }>
           <div className="ax-chart-table__grid" style={ { left: labelColumnWidth } }>
             { xAxisLabels.map((label, index) =>

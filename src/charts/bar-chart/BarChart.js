@@ -48,6 +48,8 @@ export default class BarChart extends Component {
     expandButtonSuffix: PropTypes.string,
     /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string.isRequired,
+    /** Spacing applied between Bar groups */
+    rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
     showBarLabel: PropTypes.bool,
     /** Control for toggling visibility of the key */
@@ -76,6 +78,7 @@ export default class BarChart extends Component {
   }
 
   static defaultProps = {
+    rowSpace: 'x2',
     showKey: true,
     zoomMax: 50,
   };
@@ -90,6 +93,7 @@ export default class BarChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      rowSpace,
       showBarLabel,
       showKey,
       size,
@@ -112,6 +116,7 @@ export default class BarChart extends Component {
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
             labelColumnWidth={ labelColumnWidth }
+            space={ rowSpace }
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoomValue }>
           { formattedData.map(({ values, label, benchmark }, index) =>
@@ -125,6 +130,7 @@ export default class BarChart extends Component {
                 <BarChartBars
                     ContextComponent={ ContextComponent }
                     benchmark={ benchmark }
+                    benchmarkHeight={ rowSpace }
                     data={ data[index] }
                     fadeBenchmarkLine={ hoverIndex !== null }
                     hideBars={ hoverIndex !== null && hoverIndex !== index }

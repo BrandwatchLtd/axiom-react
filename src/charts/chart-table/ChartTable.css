@@ -1,7 +1,6 @@
 @import '../../materials/breakpoints';
 
 :root {
-  --cmp-chart-table-row-padding: calc((var(--spacing-grid-size) * 3) / 2);
   --cmp-chart-grid-line-width: 0.0625rem;
 }
 
@@ -26,8 +25,6 @@
   display: flex;
   align-items: center;
   margin-right: calc(var(--cmp-chart-overflow-space) * -1);
-  padding-top: var(--cmp-chart-table-row-padding);
-  padding-bottom: var(--cmp-chart-table-row-padding);
   border-radius: var(--component-border-radius);
   transition-property: background-color;
   transition-duration: var(--transition-time-base);
@@ -43,6 +40,27 @@
   transition-property: width;
   transition-duration: var(--transition-time-slow);
   transition-timing-function: var(--transition-function);
+}
+
+.ax-chart-table__rows-container--space-x1 {
+  & .ax-chart-table__grid-container,
+  & .ax-chart-table__row {
+    padding: var(--spacing-grid-size--x1) 0;
+  }
+}
+
+.ax-chart-table__rows-container--space-x2 {
+  & .ax-chart-table__grid-container,
+  & .ax-chart-table__row {
+    padding: calc(var(--spacing-grid-size--x3) / 2) 0;
+  }
+}
+
+.ax-chart-table__rows-container--space-x3 {
+  & .ax-chart-table__grid-container,
+  & .ax-chart-table__row {
+    padding: var(--spacing-grid-size--x3) 0;
+  }
 }
 
 .ax-chart-table__grid {
