@@ -4,6 +4,7 @@ exports[`ChedioButtox renders when disabled 1`] = `
 <label
   className="ax-chedio-buttox__container ax-chedio-buttox__container--disabled ax-space--x2"
   onClick={undefined}
+  title="Lorem ipsum dolor sit amet"
 >
   <input
     className="ax-chedio-buttox ax-ipsum"
@@ -25,6 +26,7 @@ exports[`ChedioButtox renders with defaultProps 1`] = `
 <label
   className="ax-chedio-buttox__container ax-space--x2"
   onClick={undefined}
+  title="Lorem ipsum dolor sit amet"
 >
   <input
     className="ax-chedio-buttox ax-ipsum"

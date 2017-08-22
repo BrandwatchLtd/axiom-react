@@ -7,6 +7,7 @@ exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
   <label
     className="ax-chedio-buttox__container ax-space--x2"
     onClick={undefined}
+    title={undefined}
   >
     <input
       className="ax-chedio-buttox"
@@ -25,6 +26,7 @@ exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
   <label
     className="ax-chedio-buttox__container ax-space--x2"
     onClick={undefined}
+    title={undefined}
   >
     <input
       className="ax-chedio-buttox"

@@ -6,6 +6,7 @@ const defaultProps = {
   inputType: 'checkbox',
   indicatorClassName: 'ax-lorem',
   inputClassName: 'ax-ipsum',
+  title: 'Lorem ipsum dolor sit amet',
 };
 
 function getComponent(props = {}) {

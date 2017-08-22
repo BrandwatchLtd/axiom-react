@@ -47,6 +47,7 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
     <label
       className="ax-chedio-buttox__container ax-space--x2"
       onClick={undefined}
+      title={undefined}
     >
       <input
         checked={undefined}
@@ -80,9 +81,44 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
     <label
       className="ax-chedio-buttox__container ax-space--x2"
       onClick={undefined}
+      title={undefined}
     >
       <input
         checked={true}
+        className="ax-chedio-buttox ax-checkbox"
+        disabled={undefined}
+        name={undefined}
+        onChange={undefined}
+        type="checkbox"
+      />
+      <span
+        className="ax-chedio-buttox__indicator ax-checkbox__indicator"
+      />
+      <span
+        className="ax-chedio-buttox__label"
+      >
+        Lorem ipsum
+      </span>
+    </label>
+  </div>
+</li>
+`;
+
+exports[`ContextMenuItem renders with multiSelect and title 1`] = `
+<li
+  className="ax-context-menu__list-item"
+>
+  <div
+    className="ax-context-menu__item-multi"
+    disabled={undefined}
+  >
+    <label
+      className="ax-chedio-buttox__container ax-space--x2"
+      onClick={undefined}
+      title="Lorem ipsum dolor sit amet"
+    >
+      <input
+        checked={undefined}
         className="ax-chedio-buttox ax-checkbox"
         disabled={undefined}
         name={undefined}
@@ -134,6 +170,25 @@ exports[`ContextMenuItem renders with selected 1`] = `
         }
         viewBox="0 0 16 16"
       />
+    </div>
+  </button>
+</li>
+`;
+
+exports[`ContextMenuItem renders with title 1`] = `
+<li
+  className="ax-context-menu__list-item"
+>
+  <button
+    className="ax-context-menu__item-single"
+    disabled={undefined}
+    onClick={undefined}
+    title="Lorem ipsum dolor sit amet"
+  >
+    <div
+      className="ax-context-menu__item-content"
+    >
+      Lorem ipsum
     </div>
   </button>
 </li>

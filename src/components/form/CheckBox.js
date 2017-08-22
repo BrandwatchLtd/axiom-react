@@ -11,6 +11,8 @@ export default class CheckBox extends Component {
     disabled: PropTypes.bool,
     /** Name of the group the input belongs to */
     name: PropTypes.string,
+    /** Text that is displayed on hover */
+    title: PropTypes.string,
   };
 
   render() {
