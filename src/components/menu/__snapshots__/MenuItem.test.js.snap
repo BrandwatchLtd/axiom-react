@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem renders with active 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-menu__item--active ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`MenuItem renders with defaultProps 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`MenuItem renders with disabled 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-menu__item--disabled ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={true}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
