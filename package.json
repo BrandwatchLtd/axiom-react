@@ -86,6 +86,7 @@
     "static-site-generator-webpack-plugin": "^3.4.1",
     "style-loader": "^0.13.1",
     "stylelint": "^7.9.0",
+    "stylelint-config-axiom": "^2.0.0",
     "stylelint-order": "^0.4.1",
     "svgo": "^0.7.2",
     "webpack": "^2.3.1",
