@@ -9,15 +9,21 @@ export default class Toggle extends Component {
     children: PropTypes.node,
     /** Disabled control of the switch */
     disabled: PropTypes.bool,
+    /** Size of the toggle */
+    size: PropTypes.oneOf(['small', 'medium']),
     /** Toggled/checked state of the switch */
     toggled: PropTypes.bool.isRequired,
     /** Called when the toggle is toggled/changed */
     onToggle: PropTypes.func.isRequired,
-  }
+  };
+
+  static defaultProps = {
+    size: 'small',
+  };
 
   render () {
-    const { children, disabled, toggled, onToggle, ...rest } = this.props;
-    const classes = classnames('ax-toggle', {
+    const { children, disabled, size, toggled, onToggle, ...rest } = this.props;
+    const classes = classnames('ax-toggle', `ax-toggle--${size}`, {
       'ax-toggle--enabled': !disabled,
     });
 

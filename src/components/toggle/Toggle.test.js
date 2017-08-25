@@ -31,4 +31,16 @@ describe('Toggle', () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with size small', () => {
+    expect(renderer.create(
+      <Toggle onToggle={ onToggle } size="small" toggled={ false } />
+    ).toJSON()).toMatchSnapshot();
+  });
+
+  it('renders with size medium', () => {
+    expect(renderer.create(
+      <Toggle onToggle={ onToggle } size="medium" toggled={ false } />
+    ).toJSON()).toMatchSnapshot();
+  });
 });

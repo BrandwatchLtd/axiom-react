@@ -1,12 +1,10 @@
 :root {
   --ax-toggle-knob-color: var(--color-theme-light-background);
-  --ax-toggle-height: var(--component-line-height);
-  --ax-toggle-width: calc(2 * var(--component-line-height));
-  --ax-toggle-diameter: calc(var(--ax-toggle-height) - 2 * var(--component-border-width));
-  --ax-toggle-on-position:
-    calc(
-      var(--ax-toggle-width) - var(--ax-toggle-diameter) - 2 * var(--component-border-width)
-    );
+  --ax-toggle-border-width: 0.0625rem;
+  --ax-toggle-size--small: var(--spacing-grid-size--x4);
+  --ax-toggle-size--medium: var(--spacing-grid-size--x6);
+  --ax-toggle-diameter--small: calc(var(--ax-toggle-size--small) - (var(--ax-toggle-border-width) * 2));
+  --ax-toggle-diameter--medium: calc(var(--ax-toggle-size--medium) - (var(--ax-toggle-border-width) * 2));
 }
 
 .ax-toggle {
@@ -30,34 +28,55 @@
 
 .ax-toggle__input {
   position: absolute;
-  width: var(--ax-toggle-width);
-  height: var(--ax-toggle-height);
   opacity: 0;
   cursor: inherit;
 }
 
 .ax-toggle__appearance {
-  width: var(--ax-toggle-width);
-  height: var(--ax-toggle-height);
-  border-radius: var(--ax-toggle-height);
   background-color: var(--color-context-background-subtle);
   transition: background-color var(--transition-time-base) var(--transition-function);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: var(--ax-toggle-border-width);
+    left: var(--ax-toggle-border-width);
+    border: var(--ax-toggle-border-width) solid var(--ax-toggle-knob-color);
+    border-radius: 50%;
+    box-shadow: 0.1rem 0 0.25rem 0 rgba(var(--rgb-ui-dark), 0.3);
+    background-color: var(--ax-toggle-knob-color);
+    transition-property: background-color, border-color, box-shadow, transform;
+    transition-duration: var(--transition-time-base);
+    transition-timing-function: var(--transition-function);
+  }
 }
 
-.ax-toggle__appearance::after {
-  content: '';
-  position: absolute;
-  top: var(--component-border-width);
-  left: var(--component-border-width);
-  width: var(--ax-toggle-diameter);
-  height: var(--ax-toggle-diameter);
-  border: var(--component-border-width) solid var(--ax-toggle-knob-color);
-  border-radius: 50%;
-  box-shadow: 0.1rem 0 0.25rem 0 rgba(var(--rgb-ui-dark), 0.3);
-  background-color: var(--ax-toggle-knob-color);
-  transition-property: background-color, border-color, box-shadow, transform;
-  transition-duration: var(--transition-time-base);
-  transition-timing-function: var(--transition-function);
+.ax-toggle--small {
+  & .ax-toggle__input,
+  & .ax-toggle__appearance {
+    width: calc(var(--ax-toggle-size--small) * 2);
+    height: var(--ax-toggle-size--small);
+    border-radius: var(--ax-toggle-size--small);
+  }
+
+  & .ax-toggle__appearance::after {
+    width: var(--ax-toggle-diameter--small);
+    height: var(--ax-toggle-diameter--small);
+  }
+}
+
+.ax-toggle--medium {
+  & .ax-toggle__input,
+  & .ax-toggle__appearance {
+    width: calc(var(--ax-toggle-size--medium) * 2);
+    height: var(--ax-toggle-size--medium);
+    border-radius: var(--ax-toggle-size--medium);
+  }
+
+  & .ax-toggle__appearance::after {
+    width: var(--ax-toggle-diameter--medium);
+    height: var(--ax-toggle-diameter--medium);
+  }
 }
 
 .ax-toggle__input:checked {
@@ -65,7 +84,7 @@
     background-color: var(--color-ui-primary);
 
     &::after {
-      transform: translateX(var(--ax-toggle-on-position));
+      transform: translateX(calc(100% + (var(--ax-toggle-border-width) * 2)));
       box-shadow: 0 0 0.25rem 0 rgba(var(--rgb-ui-dark), 0.3);
     }
   }
