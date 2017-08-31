@@ -69,6 +69,7 @@ module.exports = {
         '/docs/components/color-picker',
         '/docs/components/context',
         '/docs/components/data-picker',
+        '/docs/components/date-picker',
         '/docs/components/dialog',
         '/docs/components/dropdown',
         '/docs/components/form',

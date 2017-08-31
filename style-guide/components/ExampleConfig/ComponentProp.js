@@ -12,14 +12,31 @@ import {
   Strong,
 } from 'bw-axiom';
 
+const colors = [
+  'rose',
+  'pink',
+  'purple',
+  'lilac',
+  'blue',
+  'teal',
+  'green',
+  'chartreuse',
+  'amber',
+  'orange',
+  'brown',
+  'grey',
+];
+
 const typeColorMap = {
-  arrayOf: 'grey',
-  bool: 'blue',
-  enum: 'amber',
-  func: 'orange',
-  node: 'purple',
-  number: 'lilac',
-  string: 'green',
+  arrayOf: colors[0],
+  bool: colors[1],
+  enum: colors[2],
+  func: colors[3],
+  instanceOf: colors[4],
+  node: colors[5],
+  number: colors[6],
+  string: colors[7],
+  union: colors[8],
 };
 
 export default class ComponentProp extends Component {
@@ -76,20 +93,20 @@ export default class ComponentProp extends Component {
               <GridCell>
                 <BadgeGroup>
                   { required && (
-                    <Badge color="pink" textColor="light">
+                    <Badge color="pink">
                       <Strong>Required</Strong>
+                    </Badge>
+                  ) }
+
+                  {  showDefault && (
+                    <Badge color="orange">
+                      <Strong>Default:</Strong> { defaultValue.toString() }
                     </Badge>
                   ) }
 
                   { type && (
                     <Badge color={ typeColorMap[type.name] } opacity={ 0.2 }>
                       { type.name }
-                    </Badge>
-                  ) }
-
-                  {  showDefault && (
-                    <Badge>
-                      <Strong>Default:</Strong> { defaultValue.toString() }
                     </Badge>
                   ) }
                 </BadgeGroup>

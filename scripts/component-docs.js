@@ -12,7 +12,13 @@ function castValue(value) {
     return normaliseValue(value);
   }
 
-  return eval(value);
+  const evaldValue = eval(value);
+
+  if (typeof evaldValue === 'function') {
+    return evaldValue.name;
+  }
+
+  return evaldValue;
 }
 
 function normaliseValue(prop) {

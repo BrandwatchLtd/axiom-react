@@ -3,12 +3,20 @@ import React, { Component } from 'react';
 import extend from 'deep-extend';
 import classnames from 'classnames';
 import { Base, Tabset, Tab } from 'bw-axiom';
+import set from 'lodash.set';
 import { filterRender, filterSnippet } from '../../utils/example-filter';
 import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet';
 import CodeSnippet from '../CodeSnippet/CodeSnippet';
 import ComponentProps from './ComponentProps';
 import { basePropTypes, mergeState, render } from './utils';
 import './ExampleConfig.css';
+
+const paramsToObject = (type, args) => set({},
+  [args[0], type, ...args.slice(1, -1)].join('.'), args[args.length - 1]);
+
+const mergeSetState = (state, type, ...args) => extend({}, state, ...(Array.isArray(args[0])
+  ? args[0].map((args) => paramsToObject(type, args))
+  : [paramsToObject(type, args)]));
 
 export default class ExampleConfig extends Component {
   static propTypes = {
@@ -39,26 +47,12 @@ export default class ExampleConfig extends Component {
     }
   }
 
-  setProp(component, prop, value) {
-    this.updateState(extend({}, this.state, {
-      [component]: {
-        props: {
-          [prop]: value,
-        },
-      },
-    }));
+  setProp(component, ...args) {
+    this.updateState(mergeSetState(this.state, 'props', component, ...args));
   }
 
-  setPropOption(component, prop, option, value) {
-    this.updateState(extend({}, this.state, {
-      [component]: {
-        options: {
-          [prop]: {
-            [option]: value,
-          },
-        },
-      },
-    }));
+  setPropOption(component, ...args) {
+    this.updateState(mergeSetState(this.state, 'options', component, ...args));
   }
 
   updateState(state) {

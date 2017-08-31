@@ -90,6 +90,11 @@ export default (
             examples={ require('../src/components/data-picker/example') }
             component={ Doc } />
         <Route
+            path="date-picker"
+            name="Date Picker"
+            examples={ require('../src/components/date-picker/example') }
+            component={ Doc } />
+        <Route
             path="dialog"
             name="Dialog"
             examples={ require('../src/components/dialog/example') }
