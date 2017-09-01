@@ -40,3 +40,10 @@
 .ax-chedio-buttox__label {
   margin-left: var(--cmp-chedio-indicator-space);
 }
+
+.ax-chedio-buttox__container--invalid {
+  & .ax-chedio-buttox + .ax-chedio-buttox__indicator,
+  & .ax-chedio-buttox:focus + .ax-chedio-buttox__indicator {
+    border-color: var(--cmp-input-border-color-invalid);
+  }
+}

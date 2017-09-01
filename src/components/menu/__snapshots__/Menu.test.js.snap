@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders with defaultProps 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+  <li
+    className="ax-menu__item ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Menu renders with size large 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+  <li
+    className="ax-menu__item ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Menu renders with size medium 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-text--size-headtitle ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+  <li
+    className="ax-menu__item ax-text--size-headtitle ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      disabled={undefined}
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
