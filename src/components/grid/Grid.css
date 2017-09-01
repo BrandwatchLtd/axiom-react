@@ -22,7 +22,7 @@
 .ax-grid--vertical-middle { align-items: center; }
 .ax-grid--vertical-end    { align-items: flex-end; }
 
-.ax-grid--horionztal-start    { justify-content: flex-start; }
+.ax-grid--horizontal-start    { justify-content: flex-start; }
 .ax-grid--horizontal-middle   { justify-content: center; }
 .ax-grid--horizontal-end      { justify-content: flex-end; }
 .ax-grid--horizontal-around   { justify-content: space-around; }
