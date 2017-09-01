@@ -19,3 +19,9 @@
     @nest .ax-radio:disabled:checked + & { background-color: var(--cmp-input-border-color); }
   }
 }
+
+.ax-radio__indicator--invalid {
+  @nest .ax-radio:checked + &::before {
+    background-color: var(--cmp-input-color-invalid);
+  }
+}

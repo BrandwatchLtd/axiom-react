@@ -110,15 +110,15 @@
 .ax-text--underline-display1 { padding-bottom: calc(var(--spacing-grid-size) * 2); }
 .ax-text--underline-display2 { padding-bottom: calc(var(--spacing-grid-size) * 3); }
 
+.ax-text--size-large,
+.ax-text--size-headtitle {
+  font-weight: var(--font-weight-regular);
+}
+
 .ax-text--strong,
 .ax-text--size-label.ax-text--strong,
 .ax-text--size-label .ax-text--strong {
   font-weight: var(--font-weight-bold);
-}
-
-.ax-text--size-large,
-.ax-text--size-headtitle {
-  font-weight: var(--font-weight-regular);
 }
 
 .ax-text--size-display2,

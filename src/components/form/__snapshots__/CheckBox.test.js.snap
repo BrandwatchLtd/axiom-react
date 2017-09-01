@@ -22,3 +22,49 @@ exports[`CheckBox renders with defaultProps 1`] = `
   </span>
 </label>
 `;
+
+exports[`CheckBox renders with disabled 1`] = `
+<label
+  className="ax-chedio-buttox__container ax-chedio-buttox__container--disabled ax-space--x2"
+  onClick={undefined}
+  title={undefined}
+>
+  <input
+    className="ax-chedio-buttox ax-checkbox"
+    disabled={true}
+    name={undefined}
+    type="checkbox"
+  />
+  <span
+    className="ax-chedio-buttox__indicator ax-checkbox__indicator"
+  />
+  <span
+    className="ax-chedio-buttox__label"
+  >
+    Lorem ipsum
+  </span>
+</label>
+`;
+
+exports[`CheckBox renders with invalid 1`] = `
+<label
+  className="ax-chedio-buttox__container ax-chedio-buttox__container--invalid ax-space--x2"
+  onClick={undefined}
+  title={undefined}
+>
+  <input
+    className="ax-chedio-buttox ax-checkbox"
+    disabled={undefined}
+    name={undefined}
+    type="checkbox"
+  />
+  <span
+    className="ax-chedio-buttox__indicator ax-checkbox__indicator ax-checkbox__indicator--invalid"
+  />
+  <span
+    className="ax-chedio-buttox__label"
+  >
+    Lorem ipsum
+  </span>
+</label>
+`;

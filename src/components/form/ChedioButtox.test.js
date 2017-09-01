@@ -26,8 +26,14 @@ describe('ChedioButtox', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders when disabled', () => {
+  it('renders with disabled', () => {
     const component = getComponent({ disabled: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with invalid', () => {
+    const component = getComponent({ invalid: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
