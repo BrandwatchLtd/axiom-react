@@ -11,6 +11,7 @@ export default class ChedioButtox extends Component {
     indicatorClassName: PropTypes.string.isRequired,
     inputClassName: PropTypes.string.isRequired,
     inputType: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
+    invalid: PropTypes.bool,
     title: PropTypes.string,
     onClick: PropTypes.func,
   };
@@ -22,6 +23,7 @@ export default class ChedioButtox extends Component {
       inputClassName,
       inputType,
       indicatorClassName,
+      invalid,
       title,
       onClick,
       ...rest
@@ -29,6 +31,7 @@ export default class ChedioButtox extends Component {
 
     const classes = classnames('ax-chedio-buttox__container', {
       'ax-chedio-buttox__container--disabled': disabled,
+      'ax-chedio-buttox__container--invalid': invalid,
     });
 
     const handleClick = onClick && (e => {

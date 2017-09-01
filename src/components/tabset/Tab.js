@@ -28,7 +28,6 @@ export default class Tab extends Component {
       <Base { ...rest }
           Component="li"
           className={ classes }
-          textCase="upper"
           textSize="small"
           textStrong={ true }
           title={ title }>

@@ -29,3 +29,9 @@
     @nest .ax-checkbox:disabled:checked + & { border-color: var(--cmp-input-border-color); }
   }
 }
+
+.ax-checkbox__indicator--invalid {
+  @nest .ax-checkbox:checked + &::before {
+    border-color: var(--cmp-input-color-invalid);
+  }
+}
