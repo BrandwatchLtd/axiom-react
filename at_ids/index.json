@@ -4,5 +4,13 @@
     "password": "0cafcc604e14",
     "submit": "bd3ea7df70fa",
     "username": "ae998d161520"
+  },
+  "ChangePassword": {
+    "cancel": "390b74acb56b",
+    "error": "da39a3ee5e6b",
+    "confirmPassword": "e3d0ddfc373c",
+    "currentPassword": "80380c87e5bf",
+    "newPassword": "89036ea6ef14",
+    "submit": "aaa045cca84a"
   }
 }

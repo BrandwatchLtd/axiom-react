@@ -93,6 +93,7 @@ module.exports = {
         '/docs/components/toolbar',
         '/docs/components/tooltip',
         '/docs/components/typography',
+        '/docs/composites/change-password',
         '/docs/composites/login',
         '/docs/composites/usermenu',
         '/docs/charts/bars',
