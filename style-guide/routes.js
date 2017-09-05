@@ -213,6 +213,11 @@ export default (
 
       <Route path="composites" name="Composites">
         <Route
+            path="change-password"
+            name="Change Password"
+            examples={ require('../src/composites/change-password/example') }
+            component={ Doc } />
+        <Route
             path="login"
             name="Login Page"
             examples={ require('../src/composites/login/example') }
