@@ -8,27 +8,25 @@ export default class List extends Component {
   static propTypes = {
     /** ListItems */
     children: PropTypes.node,
-    className: PropTypes.string,
-    /** Styling to place ListItems inline to one another */
-    inline: PropTypes.bool,
-    /** Switches to a ordered number list */
-    ordered: PropTypes.bool,
+    /** Style of the list and items */
+    style: PropTypes.oneOf(['none', 'disc', 'ordered', 'inline']),
+  };
+
+  static defaultProps = {
+    style: 'disc',
   };
 
   render() {
     const {
-      className,
       children,
-      ordered,
-      inline,
+      style,
       ...rest
     } = this.props;
 
-    const tag = ordered ? 'ol' : 'ul';
-    const classes = classnames(className,
-      'ax-list', {
-        'ax-list--inline': inline === true,
-      }
+    const tag = style === 'ordered' ? 'ol' : 'ul';
+    const classes = classnames(
+      'ax-list',
+      `ax-list--style-${ style }`,
     );
 
     return (
