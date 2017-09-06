@@ -12,7 +12,7 @@
   border-radius: var(--component-border-radius);
   background-color: var(--color-context-background);
   color: var(--color-context-text);
-  filter: drop-shadow(var(--drop-shadow));
+  filter: drop-shadow(var(--drop-shadow-1)) drop-shadow(var(--drop-shadow-2));
 }
 
 .ax-dialog__header,
