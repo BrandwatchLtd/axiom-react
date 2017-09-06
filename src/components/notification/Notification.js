@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
-import { Base, Grid, GridCell, Icon, Link } from 'bw-axiom';
+import { Base, Icon, Link } from 'bw-axiom';
 import './Notification.css';
 
 const TYPE_ICON_MAP = {
@@ -38,24 +38,22 @@ export default class Notification extends Component {
     const classes = classnames('ax-notification', `ax-notification--${type}`);
 
     return (
-      <Base { ...omit(rest, ['onAppear']) } className={ classes } theme="light">
+      <Base { ...omit(rest, ['onAppear']) } className={ classes } textColor="subtle" theme="light">
         <div className="ax-notification__icon">
           <Icon name={ TYPE_ICON_MAP[type] } size="2rem" />
         </div>
 
-        <div className="ax-notification__content">
-          <Grid gutters="small" responsive={ false }>
-            <GridCell verticalAlign="middle">{ children }</GridCell>
-
-            { onRemoveClick && (
-              <GridCell shrink={ true }>
-                <Link onClick={ () => onRemoveClick() } style="subtle">
-                  <Icon name="cross" />
-                </Link>
-              </GridCell>
-            ) }
-          </Grid>
+        <div className="ax-notification__messsage">
+          { children }
         </div>
+
+        { onRemoveClick && (
+          <div className="ax-notification__remove">
+            <Link onClick={ () => onRemoveClick() } style="subtle">
+              <Icon name="cross" />
+            </Link>
+          </div>
+        ) }
       </Base>
     );
   }
