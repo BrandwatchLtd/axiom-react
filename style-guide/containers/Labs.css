@@ -35,5 +35,5 @@
   max-width: 100%;
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
   background-color: var(--color-context-background);
-  filter: drop-shadow(var(--drop-shadow));
+  filter: drop-shadow(var(--drop-shadow-1)) drop-shadow(var(--drop-shadow-2));
 }

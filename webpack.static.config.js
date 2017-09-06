@@ -77,6 +77,7 @@ module.exports = {
         '/docs/components/list',
         '/docs/components/logo',
         '/docs/components/menu',
+        '/docs/components/notification',
         '/docs/components/pagination',
         '/docs/components/panel',
         '/docs/components/pictogram',

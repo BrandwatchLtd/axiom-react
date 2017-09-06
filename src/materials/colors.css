@@ -84,7 +84,9 @@
   --color-brand-grey: #78909C;
   --color-brand-grey--light: #8A9EA8;
 
-  --drop-shadow: 0 0 0.375rem rgba(var(--rgb-ui-dark), 0.3);
+  --drop-shadow-1: 0 0 0.0625rem rgba(var(--rgb-ui-dark--light), 0.2);
+  --drop-shadow-2: 0 0 1rem rgba(var(--rgb-ui-dark--dark), 0.1);
+  --drop-shadow: var(--drop-shadow-2);
 
   --color-theme-light-border: rgba(var(--rgb-ui-dark--light), 0.2);
   --color-theme-light-border-subtle: rgba(var(--rgb-ui-dark--light), 0.15);

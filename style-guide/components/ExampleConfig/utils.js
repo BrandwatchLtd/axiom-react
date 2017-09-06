@@ -20,7 +20,7 @@ const preparePropMap = {
         return selectedOptions ? selectedOptions.children : propValue;
       }
 
-      if (options.count) {
+      if (options.count !== undefined) {
         return Array.apply(null, { length: options.count }).map(() => propValue);
       }
     }
