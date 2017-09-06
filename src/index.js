@@ -111,6 +111,7 @@ export { default as TableBody } from './components/table/TableBody';
 export { default as Text } from './components/typography/Text';
 export { default as TextIcon } from './components/typography/TextIcon';
 export { default as TextArea } from './components/form/TextArea';
+export { default as TextGroup } from './components/form/TextGroup';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';
 export { default as Toggle } from './components/toggle/Toggle';
