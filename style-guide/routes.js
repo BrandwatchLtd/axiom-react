@@ -130,6 +130,11 @@ export default (
             examples={ require('../src/components/menu/example') }
             component={ Doc } />
         <Route
+            path="notification"
+            name="Notifications"
+            examples={ require('../src/components/notification/example') }
+            component={ Doc } />
+        <Route
             path="pagination"
             name="Pagination"
             examples={ require('../src/components/pagination/example') }

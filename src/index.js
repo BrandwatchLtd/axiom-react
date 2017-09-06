@@ -69,6 +69,8 @@ export { default as LogoTab } from './components/logo/LogoTab';
 export { default as Menu } from './components/menu/Menu';
 export { default as MenuItem } from './components/menu/MenuItem';
 export { default as Modal } from './components/modal/Modal';
+export { default as Notification } from './components/notification/Notification';
+export { default as Notifications } from './components/notification/Notifications';
 export { default as Pagination } from './components/pagination/Pagination';
 export { default as Panel } from './components/panel/Panel';
 export { default as Panels } from './components/panel/Panels';
