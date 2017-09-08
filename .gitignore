@@ -1,4 +1,5 @@
 dist
+esm
 lib
 static
 tmp
