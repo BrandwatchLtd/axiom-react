@@ -59,6 +59,7 @@ module.exports = {
         '/docs/materials/numbers',
         '/docs/components/alert',
         '/docs/components/alert-icon',
+        '/docs/components/alert-dialog',
         '/docs/components/avatar',
         '/docs/components/badge',
         '/docs/components/base',
