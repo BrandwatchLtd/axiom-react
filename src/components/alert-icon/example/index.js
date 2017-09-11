@@ -1,32 +1,34 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { IconIndicator } from 'bw-axiom';
+import { AlertIcon } from 'bw-axiom';
 
-export default class IconExample extends Component {
+class AlertIconExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      IconIndicator: PropTypes.object,
+      AlertIcon: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
     const propTypes = {
-      IconIndicator: components.IconIndicator,
+      AlertIcon: components.AlertIcon,
     };
 
     const initialProps = {
-      IconIndicator: {
-        name: 'annotate',
+      AlertIcon: {
         size: 'medium',
+        type: 'info',
       },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <IconIndicator { ...initialProps.IconIndicator } />
+        <AlertIcon { ...initialProps.AlertIcon } />
       </ExampleConfig>
     );
   }
 }
+
+module.exports = [ AlertIconExample ];

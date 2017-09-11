@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { IconIndicator, ProgressFinite, ProgressInfinite } from 'bw-axiom';
+import { AlertIcon, ProgressFinite, ProgressInfinite } from 'bw-axiom';
 
 export default class Progress extends Component {
-
   static propTypes = {
+    /** Shows a successful completion state */
     complete: PropTypes.bool,
+    /** Shows an error state */
     error: PropTypes.bool,
+    /** Percentage of progress */
     percent: PropTypes.number,
+    /** Size of the indicator */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
@@ -24,11 +27,11 @@ export default class Progress extends Component {
     } = this.props;
 
     if (error) {
-      return <IconIndicator { ...rest } color="error" name="warning" />;
+      return <AlertIcon { ...rest } type="error" />;
     }
 
     if (complete) {
-      return <IconIndicator { ...rest } color="success" name="tick" />;
+      return <AlertIcon { ...rest } type="success" />;
     }
 
     if (!isNaN(parseFloat(percent))) {

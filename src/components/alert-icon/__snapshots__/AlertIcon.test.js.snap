@@ -1,8 +1,175 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AlertIcon renders with a primary or secondary style primary 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
+exports[`AlertIcon renders with a primary or secondary style secondary 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--secondary ax-alert-icon--small ax-alert-icon--info"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
+exports[`AlertIcon renders with color error 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  color="error"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
+exports[`AlertIcon renders with color info 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  color="info"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
+exports[`AlertIcon renders with color subtle 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  color="subtle"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
+exports[`AlertIcon renders with color success 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  color="success"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
+exports[`AlertIcon renders with color warning 1`] = `
+<div
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  color="warning"
+  name="twitter"
+>
+  <svg
+    className="ax-icon ax-icon--information"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</div>
+`;
+
 exports[`AlertIcon renders with defaultProps 1`] = `
 <div
   className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  name="twitter"
 >
   <svg
     className="ax-icon ax-icon--information"
@@ -25,6 +192,7 @@ exports[`AlertIcon renders with defaultProps 1`] = `
 exports[`AlertIcon renders with size large 1`] = `
 <div
   className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--large ax-alert-icon--info"
+  name="twitter"
 >
   <svg
     className="ax-icon ax-icon--information"
@@ -47,6 +215,7 @@ exports[`AlertIcon renders with size large 1`] = `
 exports[`AlertIcon renders with size medium 1`] = `
 <div
   className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--medium ax-alert-icon--info"
+  name="twitter"
 >
   <svg
     className="ax-icon ax-icon--information"
@@ -69,166 +238,13 @@ exports[`AlertIcon renders with size medium 1`] = `
 exports[`AlertIcon renders with size small 1`] = `
 <div
   className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+  name="twitter"
 >
   <svg
     className="ax-icon ax-icon--information"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with style primary 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
->
-  <svg
-    className="ax-icon ax-icon--information"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with style secondary 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--secondary ax-alert-icon--small ax-alert-icon--info"
->
-  <svg
-    className="ax-icon ax-icon--information"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with style subtle 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info"
->
-  <svg
-    className="ax-icon ax-icon--information"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with type error 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--error"
->
-  <svg
-    className="ax-icon ax-icon--warning"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with type info 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
->
-  <svg
-    className="ax-icon ax-icon--information"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with type success 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--success"
->
-  <svg
-    className="ax-icon ax-icon--tick"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M4 7.5l2 2 6-6L13.5 5 6 12.5 2.5 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
-      }
-    }
-    style={
-      Object {
-        "height": "1rem",
-        "width": "1rem",
-      }
-    }
-    viewBox="0 0 16 16"
-  />
-</div>
-`;
-
-exports[`AlertIcon renders with type warning 1`] = `
-<div
-  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--warning"
->
-  <svg
-    className="ax-icon ax-icon--warning"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
       }
     }
     style={

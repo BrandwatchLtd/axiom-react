@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Alert, Grid, GridCell, IconIndicator } from 'bw-axiom';
+import { Alert } from 'bw-axiom';
 import { ExampleConfig } from 'style-guide';
 
 class AlertExample extends Component {
@@ -26,16 +26,8 @@ class AlertExample extends Component {
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
         <Alert { ...initialProps.Alert }>
-          <Grid gutters="small" snippetReplace verticalAlign="middle">
-            <GridCell shrink>
-              <IconIndicator color="subtle" name="warning" />
-            </GridCell>
-
-            <GridCell>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-              accumsan quam, ut ullamcorper nulla.
-            </GridCell>
-          </Grid>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+          accumsan quam, ut ullamcorper nulla.
         </Alert>
       </ExampleConfig>
     );
