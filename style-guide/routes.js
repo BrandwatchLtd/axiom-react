@@ -40,6 +40,11 @@ export default (
             examples={ require('../src/components/alert-icon/example') }
             component={ Doc } />
         <Route
+            path="alert-dialog"
+            name="Alert Dialog"
+            examples={ require('../src/components/alert-dialog/example') }
+            component={ Doc } />
+        <Route
             path="avatar"
             name="Avatar"
             examples={ require('../src/components/avatar/example') }
