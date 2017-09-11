@@ -34,7 +34,7 @@ exports[`Progress renders a finite progress indicator 1`] = `
 
 exports[`Progress renders a success indicator 1`] = `
 <div
-  className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--primary ax-icon-indicator--small"
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--success"
 >
   <svg
     className="ax-icon ax-icon--tick"
@@ -56,7 +56,7 @@ exports[`Progress renders a success indicator 1`] = `
 
 exports[`Progress renders an error indicator 1`] = `
 <div
-  className="ax-icon-indicator ax-icon-indicator--error ax-icon-indicator--primary ax-icon-indicator--small"
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--error"
 >
   <svg
     className="ax-icon ax-icon--warning"

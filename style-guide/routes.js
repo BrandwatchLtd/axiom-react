@@ -35,6 +35,11 @@ export default (
             examples={ require('../src/components/alert/example') }
             component={ Doc } />
         <Route
+            path="alert-icon"
+            name="Alert Icon"
+            examples={ require('../src/components/alert-icon/example') }
+            component={ Doc } />
+        <Route
             path="avatar"
             name="Avatar"
             examples={ require('../src/components/avatar/example') }

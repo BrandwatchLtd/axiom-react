@@ -58,6 +58,7 @@ module.exports = {
         '/docs/materials/date-and-time',
         '/docs/materials/numbers',
         '/docs/components/alert',
+        '/docs/components/alert-icon',
         '/docs/components/avatar',
         '/docs/components/badge',
         '/docs/components/base',
