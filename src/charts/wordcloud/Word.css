@@ -5,8 +5,8 @@
 .ax-word {
   opacity: 0;
   color: inherit;
-  fill-opacity: 1;
   fill: currentColor;
+  fill-opacity: 1;
   cursor: default;
   transition-property: color, fill-opacity;
   transition-duration: var(--transition-time-slow);
