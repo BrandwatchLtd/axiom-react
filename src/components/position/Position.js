@@ -33,6 +33,8 @@ export default class Position extends Component {
      * a valid position is found.
      */
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    /** Toggle that allows the arrow of the Context component to be hidden */
+    showArrow: PropTypes.bool,
     /**
      * When provided a mask will be placed behind PositionContent, where this
      * function is called when clicked.
@@ -50,6 +52,7 @@ export default class Position extends Component {
     flip: 'clockwise',
     offset: 'middle',
     position: 'top',
+    showArrow:  true,
   };
 
   constructor(props) {
@@ -96,7 +99,7 @@ export default class Position extends Component {
   }
 
   subtree() {
-    const { children, onMaskClick } = this.props;
+    const { children, showArrow, onMaskClick } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
 
@@ -105,7 +108,9 @@ export default class Position extends Component {
         <div className="ax-position">
           {
             cloneElement(findComponent(children, PositionContent), {
-              arrowRef: (arrow) => this._arrow = ReactDOM.findDOMNode(arrow),
+              arrowRef: showArrow
+                ? (arrow) => this._arrow = ReactDOM.findDOMNode(arrow)
+                : undefined,
               position,
             })
           }
@@ -167,6 +172,7 @@ export default class Position extends Component {
       'flip',
       'offset',
       'position',
+      'showArrow',
       'onMaskClick',
       'onPositionChange',
     ]);
