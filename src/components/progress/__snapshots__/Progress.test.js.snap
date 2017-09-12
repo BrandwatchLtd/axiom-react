@@ -34,13 +34,13 @@ exports[`Progress renders a finite progress indicator 1`] = `
 
 exports[`Progress renders a success indicator 1`] = `
 <div
-  className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--primary ax-icon-indicator--small"
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--success"
 >
   <svg
     className="ax-icon ax-icon--tick"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<path d=\\"M4 7.5l2 2 6-6L13.5 5 6 12.5 2.5 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+        "__html": "<path d=\\"M3.25 8.25L6 11l6.75-6.75\\" fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"/>",
       }
     }
     style={
@@ -56,7 +56,7 @@ exports[`Progress renders a success indicator 1`] = `
 
 exports[`Progress renders an error indicator 1`] = `
 <div
-  className="ax-icon-indicator ax-icon-indicator--error ax-icon-indicator--primary ax-icon-indicator--small"
+  className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--error"
 >
   <svg
     className="ax-icon ax-icon--warning"

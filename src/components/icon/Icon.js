@@ -76,6 +76,8 @@ const ICON_NAME_MAP = {
 
 export default class Icon extends Component {
   static propTypes = {
+    /** SKIP */
+    className: PropTypes.string,
     /**
      * Inline styling that allows the Icon to placed next to other inline
      * elements or text.
@@ -164,9 +166,9 @@ export default class Icon extends Component {
   };
 
   render() {
-    const { inline, name, size, spaceLeft, spaceRight, ...rest } = this.props;
+    const { className, inline, name, size, spaceLeft, spaceRight, ...rest } = this.props;
     const style = { width: size, height: size };
-    const classes = classnames('ax-icon', `ax-icon--${name}`, {
+    const classes = classnames(className, 'ax-icon', `ax-icon--${name}`, {
       'ax-icon--inline': inline,
       [`ax-icon--space-left-${spaceLeft}`]: spaceLeft,
       [`ax-icon--space-right-${spaceRight}`]: spaceRight,

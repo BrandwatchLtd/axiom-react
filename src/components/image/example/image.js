@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { IconIndicator, Image } from 'bw-axiom';
+import { AlertIcon, Image } from 'bw-axiom';
 
 export default class ImageExample extends Component {
   static propTypes = {
@@ -28,7 +28,7 @@ export default class ImageExample extends Component {
         children: {
           options: [{
             name: 'With fallback',
-            children: <IconIndicator color="error" name="warning" />,
+            children: <AlertIcon type="error" />,
           }, {
             name: 'Without fallback',
             children: undefined,

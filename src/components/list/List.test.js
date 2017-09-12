@@ -16,15 +16,13 @@ describe('List', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with inline', () => {
-    const component = getComponent({ inline: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders with ordered', () => {
-    const component = getComponent({ ordered: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders with style', () => {
+    ['disc', 'inline', 'none', 'ordered'].forEach((style) => {
+      it(style, () => {
+        const component = getComponent({ style });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 });

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { IconIndicator, ImageCircle } from 'bw-axiom';
+import { AlertIcon, ImageCircle } from 'bw-axiom';
 
 export default class ImageCircleExample extends Component {
   static propTypes = {
@@ -29,7 +29,7 @@ export default class ImageCircleExample extends Component {
         children: {
           options: [{
             name: 'With fallback',
-            children: <IconIndicator color="error" name="warning" />,
+            children: <AlertIcon type="error" />,
           }, {
             name: 'Without fallback',
             children: undefined,

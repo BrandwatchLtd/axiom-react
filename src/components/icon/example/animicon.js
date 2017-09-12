@@ -1,40 +1,33 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Alert } from 'bw-axiom';
 import { ExampleConfig } from 'style-guide';
+import { Animicon } from 'bw-axiom';
 
-class AlertExample extends Component {
+export default class AnimiconExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Alert: PropTypes.object.isRequired,
+      Animicon: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
-
     const propTypes = {
-      Alert: components.Alert,
+      Animicon: components.Animicon,
     };
 
     const initialProps = {
-      Alert: {
-        onRemoveClick: () => {},
+      Animicon: {
+        isIn: true,
+        name: 'tick',
+        size: '4rem',
       },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Alert { ...initialProps.Alert }>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-          accumsan quam, ut ullamcorper nulla.
-        </Alert>
+        <Animicon { ...initialProps.Animicon } />
       </ExampleConfig>
     );
   }
 }
-
-
-module.exports = [
-  AlertExample,
-];

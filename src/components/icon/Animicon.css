@@ -1,0 +1,40 @@
+@keyframes ax-animicon-tick {
+  100%{ stroke-dashoffset: 0; }
+}
+
+.ax-animicon--tick {
+  stroke-dasharray: 14;
+  stroke-dashoffset: 14;
+  animation-duration: var(--transition-time-base);
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--transition-function);
+}
+
+.ax-animicon--tick-in {
+  animation-name: ax-animicon-tick;
+}
+
+@keyframes ax-animicon-cross {
+  100%{ stroke-dashoffset: 0; }
+}
+
+.ax-animicon--cross {
+  & .ax-animicon__path-1,
+  & .ax-animicon__path-2 {
+    stroke-dasharray: 14;
+    stroke-dashoffset: 14;
+    animation-duration: var(--transition-time-base);
+    animation-fill-mode: forwards;
+    animation-timing-function: var(--transition-function);
+  }
+
+  & .ax-animicon__path-1 { animation-delay: 0ms; }
+  & .ax-animicon__path-2 { animation-delay: var(--transition-time-fast); }
+}
+
+.ax-animicon--cross-in {
+  & .ax-animicon__path-1,
+  & .ax-animicon__path-2 {
+    animation-name: ax-animicon-cross;
+  }
+}

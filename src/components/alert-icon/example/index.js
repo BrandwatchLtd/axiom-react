@@ -1,40 +1,34 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Alert } from 'bw-axiom';
 import { ExampleConfig } from 'style-guide';
+import { AlertIcon } from 'bw-axiom';
 
-class AlertExample extends Component {
+class AlertIconExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Alert: PropTypes.object.isRequired,
+      AlertIcon: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
-
     const propTypes = {
-      Alert: components.Alert,
+      AlertIcon: components.AlertIcon,
     };
 
     const initialProps = {
-      Alert: {
-        onRemoveClick: () => {},
+      AlertIcon: {
+        size: 'medium',
+        type: 'info',
       },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Alert { ...initialProps.Alert }>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-          accumsan quam, ut ullamcorper nulla.
-        </Alert>
+        <AlertIcon { ...initialProps.AlertIcon } />
       </ExampleConfig>
     );
   }
 }
 
-
-module.exports = [
-  AlertExample,
-];
+module.exports = [ AlertIconExample ];

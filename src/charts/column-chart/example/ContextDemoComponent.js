@@ -28,7 +28,7 @@ export default class ContextDemoComponent extends Component {
     return (
       <Context { ...rest } width="17rem">
         <ContextBox>
-          <List inline textCenter>
+          <List style="inline" textCenter>
             <ListItem>
               <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
                 <GridCell shrink>

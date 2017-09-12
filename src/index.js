@@ -8,6 +8,11 @@ export * from './materials/number';
 // Components
 export { default as Base } from './components/base/Base';
 export { default as Alert } from './components/alert/Alert';
+export { default as AlertIcon } from './components/alert-icon/AlertIcon';
+export { default as AlertDialog } from './components/alert-dialog/AlertDialog';
+export { default as AlertDialogBody } from './components/alert-dialog/AlertDialogBody';
+export { default as AlertDialogHeader } from './components/alert-dialog/AlertDialogHeader';
+export { default as Animicon } from './components/icon/Animicon';
 export { default as Avatar } from './components/avatar/Avatar';
 export { default as Badge } from './components/badge/Badge';
 export { default as BadgeGroup } from './components/badge/BadgeGroup';
@@ -51,7 +56,6 @@ export { default as GridCell } from './components/grid/GridCell';
 export { default as Heading } from './components/typography/Heading';
 export { default as Icon } from './components/icon/Icon';
 export { default as IconButton } from './components/icon/IconButton';
-export { default as IconIndicator } from './components/icon/IconIndicator';
 export { default as Image } from './components/image/Image';
 export { default as ImageCircle } from './components/image/ImageCircle';
 export { default as ImageFallback } from './components/image/ImageFallback';
@@ -107,6 +111,7 @@ export { default as TableBody } from './components/table/TableBody';
 export { default as Text } from './components/typography/Text';
 export { default as TextIcon } from './components/typography/TextIcon';
 export { default as TextArea } from './components/form/TextArea';
+export { default as TextGroup } from './components/form/TextGroup';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';
 export { default as Toggle } from './components/toggle/Toggle';
@@ -138,5 +143,6 @@ export { default as Word } from './charts/wordcloud/Word';
 export { default as WordCloud } from './charts/wordcloud/WordCloud';
 
 // Composites
+export { default as ChangePassword } from './composites/change-password/ChangePassword';
 export { default as Login } from './composites/login/Login';
 export { default as UserMenu } from './composites/usermenu/UserMenu';

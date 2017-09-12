@@ -2,7 +2,7 @@
   --cmp-list-item-spacing: calc(var(--spacing-grid-size) * 3);
 }
 
-.ax-list--inline {
+.ax-list--style-inline {
   padding: 0;
   list-style: none;
 
@@ -19,4 +19,9 @@
       border-right-width: 0;
     }
   }
+}
+
+.ax-list--style-none {
+  padding: 0;
+  list-style: none;
 }

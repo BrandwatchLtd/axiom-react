@@ -5,8 +5,9 @@
     <desc>Created with sketchtool.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="cross" fill-rule="nonzero" fill="#000000">
-            <polygon id="Close" points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8"></polygon>
+        <g id="cross" fill-rule="nonzero" stroke="#000000" stroke-width="2.1">
+            <path d="M3.75,12.25 L12.25,3.75" id="Path" class="ax-animicon__path-1"></path>
+            <path d="M3.75,3.75 L12.25,12.25" id="Path" class="ax-animicon__path-2"></path>
         </g>
     </g>
 </svg>

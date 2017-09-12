@@ -35,6 +35,16 @@ export default (
             examples={ require('../src/components/alert/example') }
             component={ Doc } />
         <Route
+            path="alert-icon"
+            name="Alert Icon"
+            examples={ require('../src/components/alert-icon/example') }
+            component={ Doc } />
+        <Route
+            path="alert-dialog"
+            name="Alert Dialog"
+            examples={ require('../src/components/alert-dialog/example') }
+            component={ Doc } />
+        <Route
             path="avatar"
             name="Avatar"
             examples={ require('../src/components/avatar/example') }
@@ -202,6 +212,11 @@ export default (
       </Route>
 
       <Route path="composites" name="Composites">
+        <Route
+            path="change-password"
+            name="Change Password"
+            examples={ require('../src/composites/change-password/example') }
+            component={ Doc } />
         <Route
             path="login"
             name="Login Page"

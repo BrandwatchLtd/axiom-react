@@ -36,7 +36,7 @@ exports[`DialogHeader renders with defaultProps 1`] = `
             className="ax-icon ax-icon--cross"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M9.5 8L13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5l3.5 3.5 1.5-1.5L9.5 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+                "__html": "<g fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"><path d=\\"M3.75 12.25l8.5-8.5\\" class=\\"ax-animicon__path-1\\"/><path d=\\"M3.75 3.75l8.5 8.5\\" class=\\"ax-animicon__path-2\\"/></g>",
               }
             }
             style={

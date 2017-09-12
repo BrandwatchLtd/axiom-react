@@ -68,9 +68,9 @@ export default class TypeArrayOf extends Component {
           <Dialog
               contentLabel="Editor"
               isOpen={ isOpen }
+              onRequestClose={ () => this.close() }
               size="medium">
-            <DialogHeader
-                onRequestClose={ () => this.close() }>
+            <DialogHeader>
               <Heading textSize="headtitle">Editor</Heading>
             </DialogHeader>
 
