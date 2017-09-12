@@ -37,7 +37,9 @@ class ContextExample extends Component {
     };
 
     const initialProps = {
-      Context: {},
+      Context: {
+        arrowRef: () => {},
+      },
       ContextBox: {},
       ContextMenu: {},
       ContextMenuItem: {
@@ -98,7 +100,7 @@ class ContextExample extends Component {
           }, {
             name: 'Multiple with Scroll',
             children: [
-              <ContextBox key="First">>
+              <ContextBox key="First">
                 <Heading>Lorem ipsum dolar</Heading>
                 <TextInput value="" />
               </ContextBox>,
@@ -121,9 +123,11 @@ class ContextExample extends Component {
           initialPropOptions={ initialPropOptions }
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <Context { ...initialProps.Context }>
-          { initialPropOptions.Context.children.options[0].children }
-        </Context>
+        <div snippetIgnore style={ { position: 'relative', display: 'inline-block' } }>
+          <Context { ...initialProps.Context }>
+            { initialPropOptions.Context.children.options[0].children }
+          </Context>
+        </div>
       </ExampleConfig>
     );
   }

@@ -16,6 +16,12 @@ describe('Context', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with arrowRef', () => {
+    const component = getComponent({ arrowRef: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders custom maxHeight', () => {
     const component = getComponent({ maxHeight: '20rem' });
     const tree = component.toJSON();

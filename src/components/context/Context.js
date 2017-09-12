@@ -38,13 +38,13 @@ export default class Context extends Component {
 
     return (
       <Base theme="light" { ...rest } className={ classes } style={ { width } }>
+        { arrowRef && (
+          <span className="ax-context__arrow" ref={ arrowRef } />
+        ) }
+
         <div className="ax-context__content" style={ { maxHeight } }>
           { children }
         </div>
-
-        <span
-            className="ax-context__arrow"
-            ref={ arrowRef } />
       </Base>
     );
   }

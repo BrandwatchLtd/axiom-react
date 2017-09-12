@@ -19,9 +19,6 @@ exports[`Context renders custom maxHeight 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -44,9 +41,31 @@ exports[`Context renders custom width 1`] = `
   >
     Lorem ipsum
   </div>
+</div>
+`;
+
+exports[`Context renders with arrowRef 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--light"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
   <span
     className="ax-context__arrow"
   />
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
@@ -69,9 +88,6 @@ exports[`Context renders with defaultProps 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -94,9 +110,6 @@ exports[`Context renders with position bottom 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -119,9 +132,6 @@ exports[`Context renders with position left 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -144,9 +154,6 @@ exports[`Context renders with position right 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -169,9 +176,6 @@ exports[`Context renders with position top 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -194,9 +198,6 @@ exports[`Context renders with theme dark 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
 
@@ -219,8 +220,5 @@ exports[`Context renders with theme light 1`] = `
   >
     Lorem ipsum
   </div>
-  <span
-    className="ax-context__arrow"
-  />
 </div>
 `;
