@@ -6,12 +6,15 @@ export default class DialogHeader extends Component {
   static propTypes = {
     /** Header content inside the Dialog, a good place for a title */
     children: PropTypes.node,
-    /** Handler attached to the close button inside the header */
+  };
+
+  static contextTypes = {
     onRequestClose: PropTypes.func.isRequired,
   };
 
   render() {
-    const { children, onRequestClose, ...rest } = this.props;
+    const { onRequestClose } = this.context;
+    const { children, ...rest } = this.props;
 
     return (
       <Base { ...rest } className="ax-dialog__header">
