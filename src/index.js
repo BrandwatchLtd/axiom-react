@@ -12,6 +12,7 @@ export { default as AlertIcon } from './components/alert-icon/AlertIcon';
 export { default as AlertDialog } from './components/alert-dialog/AlertDialog';
 export { default as AlertDialogBody } from './components/alert-dialog/AlertDialogBody';
 export { default as AlertDialogHeader } from './components/alert-dialog/AlertDialogHeader';
+export { default as Animicon } from './components/icon/Animicon';
 export { default as Avatar } from './components/avatar/Avatar';
 export { default as Badge } from './components/badge/Badge';
 export { default as BadgeGroup } from './components/badge/BadgeGroup';

@@ -21,7 +21,7 @@ const svgo = new SVGO({
  */
 const VIEWBOX_REGEX = /viewBox="([^"]*)"/;
 const SVG_REGEX = /(<svg[^>]*>|<\/svg>)/g;
-const FILL_REGEX = /fill="[^"]*"/g;
+const COLOR_REGEX = /(fill|stroke)="([^"]*)"/g;
 
 module.exports = () => ({
   visitor: {
@@ -39,9 +39,11 @@ module.exports = () => ({
 
           svgo.optimize(readFileSync(svgPath, 'utf8'), (result) => {
             const viewBox = VIEWBOX_REGEX.exec(result.data)[1];
-            const finalSource = result.data.replace(FILL_REGEX, (fill) =>
-              fill.includes('#000') ? 'fill="currentColor"' : ''
-            );
+            const finalSource = result.data.replace(COLOR_REGEX, (m, prop, value) => {
+              if (value === 'none') return `${prop}="none"`;
+              if (value.includes('#000')) return `${prop}="currentColor"`;
+              return '';
+            });
 
             svgData = {
               viewBox,
