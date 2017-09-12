@@ -1,12 +1,18 @@
-:root {
-  --cmp-alert-padding-vertical: calc(var(--spacing-grid-size) * 3);
-  --cmp-alert-padding-horizontal: var(--page-padding-horizontal);
-}
-
 .ax-alert {
-  padding: var(--cmp-alert-padding-vertical) var(--cmp-alert-padding-horizontal);
+  padding-right: var(--page-padding-horizontal);
+  padding-left: var(--page-padding-horizontal);
   color: var(--color-ui-light--light);
   font-weight: var(--font-weight-medium);
+}
+
+.ax-alert--small {
+  padding-top: var(--spacing-grid-size--x2);
+  padding-bottom: var(--spacing-grid-size--x2);
+}
+
+.ax-alert--medium {
+  padding-top: var(--spacing-grid-size--x3);
+  padding-bottom: var(--spacing-grid-size--x3);
 }
 
 .ax-alert--success { background-color: var(--color-ui-success); }
