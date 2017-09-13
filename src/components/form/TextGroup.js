@@ -7,13 +7,21 @@ export default class TextGroup extends Component {
   static propTypes = {
     children: PropTypes.node,
     label: PropTypes.string,
+    space: PropTypes.string,
+  };
+
+  static defaultProps = {
+    space: 'x4',
   };
 
   render() {
-    const { children, label, ...rest } = this.props;
+    const { children, label, space, ...rest } = this.props;
 
     return (
-      <Base space="x4" { ...rest } Component="label" className="ax-input__group">
+      <Base { ...rest }
+          Component="label"
+          className="ax-input__group"
+          space={ space }>
         { label && (
           <div className="ax-input__label">
             <Strong>{ label }</Strong>

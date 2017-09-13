@@ -2,7 +2,7 @@
 
 exports[`TextInput render with theme dark 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium"
@@ -22,7 +22,7 @@ exports[`TextInput render with theme dark 1`] = `
 
 exports[`TextInput render with theme light 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium"
@@ -42,7 +42,7 @@ exports[`TextInput render with theme light 1`] = `
 
 exports[`TextInput renders when disabled 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium ax-input__container--disabled"
@@ -61,7 +61,7 @@ exports[`TextInput renders when disabled 1`] = `
 
 exports[`TextInput renders when invalid 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium ax-input__container--invalid"
@@ -80,7 +80,7 @@ exports[`TextInput renders when invalid 1`] = `
 
 exports[`TextInput renders when valid 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium ax-input__container--valid"
@@ -99,7 +99,7 @@ exports[`TextInput renders when valid 1`] = `
 
 exports[`TextInput renders with TextInputIcon 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium"
@@ -137,7 +137,7 @@ exports[`TextInput renders with TextInputIcon 1`] = `
 
 exports[`TextInput renders with defaultProps 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium"
@@ -156,7 +156,7 @@ exports[`TextInput renders with defaultProps 1`] = `
 
 exports[`TextInput renders with label 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__label"
@@ -184,7 +184,7 @@ exports[`TextInput renders with label 1`] = `
 
 exports[`TextInput renders with size large 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--large"
@@ -203,7 +203,7 @@ exports[`TextInput renders with size large 1`] = `
 
 exports[`TextInput renders with size medium 1`] = `
 <label
-  className="ax-input__group"
+  className="ax-input__group ax-space--x4"
 >
   <div
     className="ax-input__container ax-input__container--medium"
