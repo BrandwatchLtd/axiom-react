@@ -1,31 +1,30 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { IconIndicator } from 'bw-axiom';
+import { Progress } from 'bw-axiom';
 
-export default class IconExample extends Component {
+export default class ProgressExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      IconIndicator: PropTypes.object,
+      Progress: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
     const propTypes = {
-      IconIndicator: components.IconIndicator,
+      Progress: components.Progress,
     };
 
     const initialProps = {
-      IconIndicator: {
-        name: 'annotate',
-        size: 'medium',
+      Progress: {
+        percent: 33,
       },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <IconIndicator { ...initialProps.IconIndicator } />
+        <Progress { ...initialProps.Progress } />
       </ExampleConfig>
     );
   }

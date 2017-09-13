@@ -1,0 +1,17 @@
+.ax-alert-dialog {
+  width: 25rem;
+  max-width: 100%;
+  border-radius: var(--component-border-radius);
+  box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
+  background-color: var(--color-context-background);
+}
+
+.ax-alert-dialog__header {
+  border-top-left-radius: var(--component-border-radius);
+  border-top-right-radius: var(--component-border-radius);
+  overflow: hidden;
+}
+
+.ax-alert-dialog__body {
+  padding: var(--spacing-grid-size--x5) var(--spacing-grid-size--x6);
+}

@@ -1,32 +1,47 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Alert } from 'bw-axiom';
+import { AlertIcon } from 'bw-axiom';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Alert children="Lorem ipsum" { ...props } />
+    <AlertIcon { ...props } />
   );
 
-describe('Alert', () => {
+describe('AlertIcon', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with onRemoveClick', () => {
-    const component = getComponent({ onRemoveClick: () => {} });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  describe('renders with color', () => {
-    ['success', 'warning', 'error', 'info'].forEach((color) => {
-      it(color, () => {
-        const component = getComponent({ color });
+  describe('renders with size', () => {
+    ['small', 'medium', 'large'].forEach((size) => {
+      it(size, () => {
+        const component = getComponent({ size });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
     });
   });
+
+  describe('renders with style', () => {
+    ['primary', 'secondary', 'subtle'].forEach((style) => {
+      it(style, () => {
+        const component = getComponent({ style });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('renders with type', () => {
+    ['success', 'warning', 'error', 'info'].forEach((type) => {
+      it(type, () => {
+        const component = getComponent({ type });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
 });

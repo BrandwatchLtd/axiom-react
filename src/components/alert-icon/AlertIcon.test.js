@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { IconIndicator } from 'bw-axiom';
+import { AlertIcon } from 'bw-axiom';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <IconIndicator name="twitter" { ...props } />
+    <AlertIcon name="twitter" { ...props } />
   );
 
-describe('IconIndicator', () => {
+describe('AlertIcon', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();

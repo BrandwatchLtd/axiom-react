@@ -1,27 +1,46 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Grid, GridCell, Icon, Link } from 'bw-axiom';
+import {
+  Base,
+  Grid,
+  GridCell,
+  Icon,
+  AlertIcon,
+  Link,
+} from 'bw-axiom';
 import './Alert.css';
 
 export default class Alert extends Component {
   static propTypes = {
+    /** Content displayed next to the AlertIcon */
     children: PropTypes.node.isRequired,
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    /** Size of the Alert */
+    size: PropTypes.oneOf(['small', 'medium']),
+    /** Type of Alert that affects the coloring and icon */
+    type: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    /** An optional callback that when given adds a removable cross */
     onRemoveClick: PropTypes.func,
   };
 
   static defaultProps = {
-    color: 'info',
+    size: 'small',
+    type: 'info',
   };
 
   render() {
-    const { children, color, onRemoveClick, ...rest } = this.props;
-    const classes = classnames('ax-alert', `ax-alert--${color}`);
+    const { children, size, type, onRemoveClick, ...rest } = this.props;
+    const classes = classnames('ax-alert', `ax-alert--${size}`, `ax-alert--${type}`);
 
     return (
       <Base { ...rest } className={ classes } theme="light">
-        <Grid gutters="small" responsive={ false } verticalAlign="middle">
+        <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
+          <GridCell shrink>
+            <AlertIcon
+                style="subtle"
+                type={ type } />
+          </GridCell>
+
           <GridCell>
             { children }
           </GridCell>

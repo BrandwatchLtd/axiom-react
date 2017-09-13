@@ -12,7 +12,7 @@ export default class Toolbar extends Component {
     const { children } = this.props;
 
     return (
-      <List inline>
+      <List style="inline">
         { children }
       </List>
     );

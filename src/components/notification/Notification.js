@@ -3,14 +3,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
 import { Base, Icon, Link } from 'bw-axiom';
+import { ALERT_ICON_NAME_MAP } from '../alert-icon/AlertIcon';
 import './Notification.css';
-
-const TYPE_ICON_MAP = {
-  error: 'warning',
-  info: 'information',
-  success: 'tick',
-  warning: 'warning',
-};
 
 export default class Notification extends Component {
   static propTypes = {
@@ -40,7 +34,7 @@ export default class Notification extends Component {
     return (
       <Base { ...omit(rest, ['onAppear']) } className={ classes } textColor="subtle" theme="light">
         <div className="ax-notification__icon">
-          <Icon name={ TYPE_ICON_MAP[type] } size="2rem" />
+          <Icon name={ ALERT_ICON_NAME_MAP[type] } size="2rem" />
         </div>
 
         <div className="ax-notification__messsage">

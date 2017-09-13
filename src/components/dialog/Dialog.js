@@ -22,6 +22,16 @@ export default class Dialog extends Component {
     size: 'small',
   };
 
+  static childContextTypes = {
+    onRequestClose: PropTypes.func.isRequired,
+  };
+
+  getChildContext() {
+    return {
+      onRequestClose: this.props.onRequestClose,
+    };
+  }
+
   render() {
     const {
       children,
