@@ -23,6 +23,8 @@ export default class Dropdown extends Component {
      * a valid position is found.
      */
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    /** Toggle that allows the arrow of the Context component to be hidden */
+    showArrow: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -32,6 +34,7 @@ export default class Dropdown extends Component {
 
   static defaultProps = {
     position: 'bottom',
+    showArrow: true,
   };
 
   getChildContext() {

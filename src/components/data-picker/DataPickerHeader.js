@@ -72,7 +72,7 @@ export default class DataPickerHeader extends Component {
 
             <GridCell>
               { children && (
-                <Dropdown>
+                <Dropdown showArrow={ false }>
                   <DropdownTarget>
                     <Link style="subtle">
                       <div className="ax-data-picker__header-title">
