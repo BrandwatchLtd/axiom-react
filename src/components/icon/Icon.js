@@ -6,10 +6,6 @@ import './Icon.css';
 
 const ICON_NAME_MAP = {
   'annotate': require('./svgs/annotate.svg'),
-  'arrow-down': require('./svgs/arrow-down.svg'),
-  'arrow-left': require('./svgs/arrow-left.svg'),
-  'arrow-right': require('./svgs/arrow-right.svg'),
-  'arrow-up': require('./svgs/arrow-up.svg'),
   'bar-chart': require('./svgs/bar-chart.svg'),
   'benchmark': require('./svgs/benchmark.svg'),
   'box-collapse': require('./svgs/box-collapse.svg'),
@@ -70,6 +66,10 @@ const ICON_NAME_MAP = {
   'tag': require('./svgs/tag.svg'),
   'tick': require('./svgs/tick.svg'),
   'trash': require('./svgs/trash.svg'),
+  'triangle-down': require('./svgs/triangle-down.svg'),
+  'triangle-left': require('./svgs/triangle-left.svg'),
+  'triangle-right': require('./svgs/triangle-right.svg'),
+  'triangle-up': require('./svgs/triangle-up.svg'),
   'twitter': require('./svgs/twitter.svg'),
   'unlock': require('./svgs/unlock.svg'),
   'warning': require('./svgs/warning.svg'),
@@ -88,10 +88,6 @@ export default class Icon extends Component {
     /** Name of the icon that will be displayed */
     name: PropTypes.oneOf([
       'annotate',
-      'arrow-down',
-      'arrow-left',
-      'arrow-right',
-      'arrow-up',
       'bar-chart',
       'benchmark',
       'box-collapse',
@@ -152,6 +148,10 @@ export default class Icon extends Component {
       'tag',
       'tick',
       'trash',
+      'triangle-down',
+      'triangle-left',
+      'triangle-right',
+      'triangle-up',
       'twitter',
       'unlock',
       'warning',
