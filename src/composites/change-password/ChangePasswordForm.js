@@ -17,7 +17,6 @@ export default class ChangePasswordForm extends Component {
     confirmPassword: PropTypes.string.isRequired,
     confirmPasswordValid: PropTypes.bool.isRequired,
     currentPassword: PropTypes.string.isRequired,
-    currentPasswordValid: PropTypes.bool.isRequired,
     newPassword: PropTypes.string.isRequired,
     newPasswordValid: PropTypes.bool.isRequired,
     rules: PropTypes.arrayOf(PropTypes.shape({
@@ -31,7 +30,6 @@ export default class ChangePasswordForm extends Component {
   render() {
     const {
       currentPassword,
-      currentPasswordValid,
       newPassword,
       newPasswordValid,
       confirmPassword,
@@ -53,7 +51,6 @@ export default class ChangePasswordForm extends Component {
             onChange={ e => onPasswordChange('currentPassword', e) }
             space="x6"
             type="password"
-            valid={ currentPasswordValid }
             value={ currentPassword } />
 
         <TextInput

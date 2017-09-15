@@ -4,13 +4,11 @@ import {
   Alert,
   Dialog,
   DialogBody,
-  DialogFooter,
   DialogHeader,
   Paragraph,
   Heading,
 } from 'bw-axiom';
 import ChangePasswordForm from './ChangePasswordForm';
-import ChangePasswordControls from './ChangePasswordControls';
 import atIds from '../../../at_ids';
 
 export default class ChangePassword extends Component {
@@ -107,7 +105,6 @@ export default class ChangePassword extends Component {
               confirmPassword={ confirmPassword }
               confirmPasswordValid={ confirmPasswordValid }
               currentPassword={ currentPassword }
-              currentPasswordValid={ currentPasswordValid }
               submitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
               newPassword={ newPassword }
               newPasswordValid={ newPasswordValid }

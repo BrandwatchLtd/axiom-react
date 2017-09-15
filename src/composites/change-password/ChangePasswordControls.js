@@ -21,13 +21,16 @@ export default class ChangePasswordControls extends Component {
       <ButtonGroup textRight>
         <Button
             data-ax-at={ atIds.ChangePassword.cancel }
-            onClick={ () => onCancel() } style="secondary">
+            onClick={ () => onCancel() }
+            style="secondary"
+            type="button">
           Cancel
         </Button>
         <Button
             data-ax-at={ atIds.ChangePassword.submit }
             disabled={ submitDisabled }
-            onClick={ onSubmit }>
+            onClick={ onSubmit }
+            type="submit">
           Change Password
         </Button>
       </ButtonGroup>
