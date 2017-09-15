@@ -20,6 +20,8 @@ export default class ChangePassword extends Component {
     error: PropTypes.string,
     /** Visibility toggle for the Dialog */
     isOpen: PropTypes.bool.isRequired,
+    /** Toggles the disabled property on the submit button */
+    isSubmitting: PropTypes.bool,
     /**
      * List of rules which the password must fulfill, contains a human friendly
      * label and associated pattern.
@@ -35,6 +37,7 @@ export default class ChangePassword extends Component {
   };
 
   static defaultProps = {
+    isSubmitting: false,
     rules: [
       { label: '8 characters', pattern: /^.{8,}$/ },
       { label: '1 numeric character', pattern: /^.*[0-9].*$/ },
@@ -69,7 +72,7 @@ export default class ChangePassword extends Component {
   }
 
   render() {
-    const { onRequestClose, error, rules, ...rest } = this.props;
+    const { onRequestClose, error, isSubmitting, rules, ...rest } = this.props;
     const { currentPassword, newPassword, confirmPassword } = this.state;
 
     const validatedRules = rules.map(rule => ({
@@ -105,18 +108,14 @@ export default class ChangePassword extends Component {
               confirmPasswordValid={ confirmPasswordValid }
               currentPassword={ currentPassword }
               currentPasswordValid={ currentPasswordValid }
+              submitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
               newPassword={ newPassword }
               newPasswordValid={ newPasswordValid }
+              onCancel={ onRequestClose }
               onPasswordChange={ this.handlePasswordChange }
               onSubmit={ this.handleSubmit }
               rules={ validatedRules } />
         </DialogBody>
-        <DialogFooter>
-          <ChangePasswordControls
-              onCancel={ onRequestClose }
-              onSubmit={ this.handleSubmit }
-              submitDisabled={ !confirmPasswordValid || !currentPasswordValid } />
-        </DialogFooter>
       </Dialog>
     );
   }
