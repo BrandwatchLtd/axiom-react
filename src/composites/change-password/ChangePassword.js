@@ -86,7 +86,7 @@ export default class ChangePassword extends Component {
 
     return (
       <Dialog { ...rest } onRequestClose={ onRequestClose } size="medium">
-        <DialogHeader onRequestClose={ onRequestClose }>
+        <DialogHeader>
           <Heading textSize="headtitle">
             Change Password
           </Heading>
