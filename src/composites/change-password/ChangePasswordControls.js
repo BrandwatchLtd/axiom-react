@@ -9,13 +9,13 @@ import atIds from '../../../at_ids';
 export default class ChangePasswordControls extends Component {
 
   static propTypes = {
-    submitDisabled: PropTypes.bool.isRequired,
+    isSubmitDisabled: PropTypes.bool.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
   };
 
   render() {
-    const { onSubmit, onCancel, submitDisabled } = this.props;
+    const { onSubmit, onCancel, isSubmitDisabled } = this.props;
 
     return (
       <ButtonGroup textRight>
@@ -28,7 +28,7 @@ export default class ChangePasswordControls extends Component {
         </Button>
         <Button
             data-ax-at={ atIds.ChangePassword.submit }
-            disabled={ submitDisabled }
+            disabled={ isSubmitDisabled }
             onClick={ onSubmit }
             type="submit">
           Change Password

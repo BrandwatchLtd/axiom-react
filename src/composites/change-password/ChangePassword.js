@@ -105,7 +105,7 @@ export default class ChangePassword extends Component {
               confirmPassword={ confirmPassword }
               confirmPasswordValid={ confirmPasswordValid }
               currentPassword={ currentPassword }
-              submitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
+              isSubmitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
               newPassword={ newPassword }
               newPasswordValid={ newPasswordValid }
               onCancel={ onRequestClose }

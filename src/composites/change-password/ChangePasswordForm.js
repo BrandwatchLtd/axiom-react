@@ -9,6 +9,7 @@ import {
   ListItem,
   TextInput,
 } from 'bw-axiom';
+import ChangePasswordControls from './ChangePasswordControls';
 import atIds from '../../../at_ids';
 
 export default class ChangePasswordForm extends Component {
@@ -17,12 +18,14 @@ export default class ChangePasswordForm extends Component {
     confirmPassword: PropTypes.string.isRequired,
     confirmPasswordValid: PropTypes.bool.isRequired,
     currentPassword: PropTypes.string.isRequired,
+    isSubmitDisabled: PropTypes.bool.isRequired,
     newPassword: PropTypes.string.isRequired,
     newPasswordValid: PropTypes.bool.isRequired,
     rules: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string.isRequired,
       valid: PropTypes.bool.isRequired,
     })),
+    onCancel: PropTypes.func.isRequired,
     onPasswordChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
   };
@@ -34,8 +37,11 @@ export default class ChangePasswordForm extends Component {
       newPasswordValid,
       confirmPassword,
       confirmPasswordValid,
+      onCancel,
       onPasswordChange,
+      onSubmit,
       rules,
+      isSubmitDisabled,
     } = this.props;
 
     const colRules = [
@@ -44,7 +50,7 @@ export default class ChangePasswordForm extends Component {
     ];
 
     return (
-      <Form onSubmit={ e => this.handleSubmit(e) }>
+      <Form onSubmit={ onSubmit }>
         <TextInput
             data-ax-at={ atIds.ChangePassword.currentPassword }
             label="Enter current password"
@@ -91,6 +97,11 @@ export default class ChangePasswordForm extends Component {
             type="password"
             valid={ confirmPasswordValid }
             value={ confirmPassword } />
+
+        <ChangePasswordControls
+            isSubmitDisabled={ isSubmitDisabled }
+            onCancel={ onCancel }
+            onSubmit={ onSubmit } />
       </Form>
     );
   }
