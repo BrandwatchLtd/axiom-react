@@ -44,45 +44,8 @@ export default class ChangePassword extends Component {
     ],
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentPassword: '',
-      newPassword: '',
-      confirmPassword: '',
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-  }
-
-  handlePasswordChange(key, event) {
-    this.setState({ [key]: event.target.value });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    const { onSubmit } = this.props;
-    const { currentPassword, newPassword } = this.state;
-
-    onSubmit({ currentPassword, newPassword });
-  }
-
   render() {
-    const { onRequestClose, error, isSubmitting, rules, ...rest } = this.props;
-    const { currentPassword, newPassword, confirmPassword } = this.state;
-
-    const validatedRules = rules.map(rule => ({
-      ...rule,
-      valid: rule.pattern.test(newPassword),
-    }));
-
-    const allValid = validatedRules.every(({ valid }) => valid === true);
-    const passwordsMatch = currentPassword === newPassword;
-    const currentPasswordValid = currentPassword.length > 0;
-    const newPasswordValid = allValid && !passwordsMatch && newPassword.length > 0;
-    const confirmPasswordValid = newPasswordValid && newPassword === confirmPassword;
+    const { error, isSubmitting, onRequestClose, onSubmit, rules, ...rest } = this.props;
 
     return (
       <Dialog { ...rest } onRequestClose={ onRequestClose } size="medium">
@@ -102,16 +65,11 @@ export default class ChangePassword extends Component {
 
         <DialogBody>
           <ChangePasswordForm
-              confirmPassword={ confirmPassword }
-              confirmPasswordValid={ confirmPasswordValid }
-              currentPassword={ currentPassword }
-              isSubmitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
-              newPassword={ newPassword }
-              newPasswordValid={ newPasswordValid }
+              isSubmitting={ isSubmitting }
               onCancel={ onRequestClose }
-              onPasswordChange={ this.handlePasswordChange }
-              onSubmit={ this.handleSubmit }
-              rules={ validatedRules } />
+              onRequestClose={ onRequestClose }
+              onSubmit={ onSubmit }
+              rules={ rules } />
         </DialogBody>
       </Dialog>
     );
