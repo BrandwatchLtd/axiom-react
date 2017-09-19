@@ -4,13 +4,11 @@ import {
   Alert,
   Dialog,
   DialogBody,
-  DialogFooter,
   DialogHeader,
   Paragraph,
   Heading,
 } from 'bw-axiom';
 import ChangePasswordForm from './ChangePasswordForm';
-import ChangePasswordControls from './ChangePasswordControls';
 import atIds from '../../../at_ids';
 
 export default class ChangePassword extends Component {
@@ -20,6 +18,8 @@ export default class ChangePassword extends Component {
     error: PropTypes.string,
     /** Visibility toggle for the Dialog */
     isOpen: PropTypes.bool.isRequired,
+    /** Toggles the disabled property on the submit button */
+    isSubmitting: PropTypes.bool,
     /**
      * List of rules which the password must fulfill, contains a human friendly
      * label and associated pattern.
@@ -35,6 +35,7 @@ export default class ChangePassword extends Component {
   };
 
   static defaultProps = {
+    isSubmitting: false,
     rules: [
       { label: '8 characters', pattern: /^.{8,}$/ },
       { label: '1 numeric character', pattern: /^.*[0-9].*$/ },
@@ -43,49 +44,12 @@ export default class ChangePassword extends Component {
     ],
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentPassword: '',
-      newPassword: '',
-      confirmPassword: '',
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-  }
-
-  handlePasswordChange(key, event) {
-    this.setState({ [key]: event.target.value });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    const { onSubmit } = this.props;
-    const { currentPassword, newPassword } = this.state;
-
-    onSubmit({ currentPassword, newPassword });
-  }
-
   render() {
-    const { onRequestClose, error, rules, ...rest } = this.props;
-    const { currentPassword, newPassword, confirmPassword } = this.state;
-
-    const validatedRules = rules.map(rule => ({
-      ...rule,
-      valid: rule.pattern.test(newPassword),
-    }));
-
-    const allValid = validatedRules.every(({ valid }) => valid === true);
-    const passwordsMatch = currentPassword === newPassword;
-    const currentPasswordValid = currentPassword.length > 0;
-    const newPasswordValid = allValid && !passwordsMatch && newPassword.length > 0;
-    const confirmPasswordValid = newPasswordValid && newPassword === confirmPassword;
+    const { error, isSubmitting, onRequestClose, onSubmit, rules, ...rest } = this.props;
 
     return (
       <Dialog { ...rest } onRequestClose={ onRequestClose } size="medium">
-        <DialogHeader onRequestClose={ onRequestClose }>
+        <DialogHeader>
           <Heading textSize="headtitle">
             Change Password
           </Heading>
@@ -101,22 +65,12 @@ export default class ChangePassword extends Component {
 
         <DialogBody>
           <ChangePasswordForm
-              confirmPassword={ confirmPassword }
-              confirmPasswordValid={ confirmPasswordValid }
-              currentPassword={ currentPassword }
-              currentPasswordValid={ currentPasswordValid }
-              newPassword={ newPassword }
-              newPasswordValid={ newPasswordValid }
-              onPasswordChange={ this.handlePasswordChange }
-              onSubmit={ this.handleSubmit }
-              rules={ validatedRules } />
-        </DialogBody>
-        <DialogFooter>
-          <ChangePasswordControls
+              isSubmitting={ isSubmitting }
               onCancel={ onRequestClose }
-              onSubmit={ this.handleSubmit }
-              submitDisabled={ !confirmPasswordValid || !currentPasswordValid } />
-        </DialogFooter>
+              onRequestClose={ onRequestClose }
+              onSubmit={ onSubmit }
+              rules={ rules } />
+        </DialogBody>
       </Dialog>
     );
   }

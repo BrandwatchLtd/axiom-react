@@ -9,67 +9,95 @@ import {
   ListItem,
   TextInput,
 } from 'bw-axiom';
+import ChangePasswordControls from './ChangePasswordControls';
 import atIds from '../../../at_ids';
 
 export default class ChangePasswordForm extends Component {
 
   static propTypes = {
-    confirmPassword: PropTypes.string.isRequired,
-    confirmPasswordValid: PropTypes.bool.isRequired,
-    currentPassword: PropTypes.string.isRequired,
-    currentPasswordValid: PropTypes.bool.isRequired,
-    newPassword: PropTypes.string.isRequired,
-    newPasswordValid: PropTypes.bool.isRequired,
+    isSubmitting: PropTypes.bool.isRequired,
     rules: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string.isRequired,
-      valid: PropTypes.bool.isRequired,
+      pattern: PropTypes.object.isRequired,
     })),
-    onPasswordChange: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    onRequestClose: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentPassword: '',
+      newPassword: '',
+      confirmPassword: '',
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+  }
+
+  handlePasswordChange(key, event) {
+    this.setState({ [key]: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const { onSubmit } = this.props;
+    const { currentPassword, newPassword } = this.state;
+
+    onSubmit({ currentPassword, newPassword });
+  }
+
   render() {
     const {
-      currentPassword,
-      currentPasswordValid,
-      newPassword,
-      newPasswordValid,
-      confirmPassword,
-      confirmPasswordValid,
-      onPasswordChange,
+      onRequestClose,
+      onSubmit,
       rules,
+      isSubmitting,
     } = this.props;
+    const { currentPassword, newPassword, confirmPassword } = this.state;
 
+    const validatedRules = rules.map(rule => ({
+      ...rule,
+      valid: rule.pattern.test(newPassword),
+    }));
+
+    const allValid = validatedRules.every(({ valid }) => valid === true);
+    const passwordsMatch = currentPassword === newPassword;
+    const currentPasswordValid = currentPassword.length > 0;
+    const newPasswordValid = allValid && !passwordsMatch && newPassword.length > 0;
+    const confirmPasswordValid = newPasswordValid && newPassword === confirmPassword;
     const colRules = [
-      rules.filter((_, idx) => idx < rules.length / 2),
-      rules.filter((_, idx) => idx >= rules.length / 2),
+      validatedRules.filter((_, idx) => idx < validatedRules.length / 2),
+      validatedRules.filter((_, idx) => idx >= validatedRules.length / 2),
     ];
 
     return (
-      <Form onSubmit={ e => this.handleSubmit(e) }>
+      <Form onSubmit={ onSubmit }>
         <TextInput
             data-ax-at={ atIds.ChangePassword.currentPassword }
             label="Enter current password"
-            onChange={ e => onPasswordChange('currentPassword', e) }
+            onChange={ e => this.handlePasswordChange('currentPassword', e) }
             space="x6"
             type="password"
-            valid={ currentPasswordValid }
             value={ currentPassword } />
 
         <TextInput
             data-ax-at={ atIds.ChangePassword.newPassword }
             label="Create new password"
-            onChange={ e => onPasswordChange('newPassword', e) }
+            onChange={ e => this.handlePasswordChange('newPassword', e) }
             space="x2"
             type="password"
             valid={ newPasswordValid }
             value={ newPassword } />
 
         <Grid horizontalGutters="large" responsive={ false } space="x4" verticalGutters="tiny">
-          { colRules.map((rules, id) => (
+          { colRules.map((validatedRules, id) => (
             <GridCell key={ id } shrink>
               <List style="none" textColor="subtle">
-                { rules.map(({ label, valid }, id) => (
+                { validatedRules.map(({ label, valid }, id) => (
                   <ListItem key={ id } space="x2">
                     { label }
                     <Animicon
@@ -89,11 +117,16 @@ export default class ChangePasswordForm extends Component {
             data-ax-at={ atIds.ChangePassword.confirmPassword }
             id="confirm-password"
             label="Confirm new password"
-            onChange={ e => onPasswordChange('confirmPassword', e) }
+            onChange={ e => this.handlePasswordChange('confirmPassword', e) }
             space="x6"
             type="password"
             valid={ confirmPasswordValid }
             value={ confirmPassword } />
+
+        <ChangePasswordControls
+            isSubmitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
+            onCancel={ onRequestClose }
+            onSubmit={ onSubmit } />
       </Form>
     );
   }
