@@ -21,7 +21,7 @@ export default class TextInput extends Component {
      */
     placeholder: PropTypes.string,
     /** Size of the input field */
-    size: PropTypes.oneOf(['medium', 'large']),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** SKIP */
     space: PropTypes.string,
     /** Visual style variations of the input field */

@@ -4,6 +4,7 @@ import { Base } from 'bw-axiom';
 import './TextGroup.css';
 
 const labelSizeMap = {
+  small: 'small',
   medium: 'body',
   large: 'large',
 };
@@ -12,7 +13,7 @@ export default class TextGroup extends Component {
   static propTypes = {
     children: PropTypes.node,
     label: PropTypes.string,
-    size: PropTypes.oneOf(['medium', 'large']),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
     space: PropTypes.string,
   };
 
