@@ -113,11 +113,13 @@ export default class Login extends Component {
               </Grid>
             </Form>
 
-            <Paragraph space="x4" textColor="error">
-              <Strong data-ax-at={ atIds.Login.error }>
-                { error }
-              </Strong>
-            </Paragraph>
+            { error && (
+              <Paragraph space="x4" textColor="error">
+                <Strong data-ax-at={ atIds.Login.error }>
+                  { error }
+                </Strong>
+              </Paragraph>
+            ) }
           </div>
         </div>
       </Base>
