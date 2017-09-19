@@ -36,6 +36,7 @@ export { default as ContextTip } from './components/context/ContextTip';
 export { default as DataPicker } from './components/data-picker/DataPicker';
 export { default as DataPickerHeader } from './components/data-picker/DataPickerHeader';
 export { default as DataPickerBody } from './components/data-picker/DataPickerBody';
+export { default as DatePicker } from './components/date-picker/DatePicker';
 export { default as Dialog } from './components/dialog/Dialog';
 export { default as DialogBody } from './components/dialog/DialogBody';
 export { default as DialogFooter } from './components/dialog/DialogFooter';

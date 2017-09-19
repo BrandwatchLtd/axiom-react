@@ -13,6 +13,13 @@ const preparePropMap = {
 
     return propValue;
   },
+  instanceOf: (propName, propValue, propType) => {
+    if (propValue && propType.type.value === 'Date') {
+      return new Date(propValue);
+    }
+
+    return propValue;
+  },
   node: (propName, propValue, propType, options = {}) => {
     if (propName === 'children') {
       if (options.selection) {

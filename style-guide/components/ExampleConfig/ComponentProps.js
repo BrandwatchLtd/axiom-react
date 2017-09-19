@@ -6,6 +6,7 @@ import TypeArrayOf from './TypeArrayOf';
 import TypeBool from './TypeBool';
 import TypeEnum from './TypeEnum';
 import TypeFunc from './TypeFunc';
+import TypeInstanceOf from './TypeInstanceOf';
 import TypeNode from './TypeNode';
 import TypeNumber from './TypeNumber';
 import TypeString from './TypeString';
@@ -16,6 +17,7 @@ const TypeMap = {
   bool: TypeBool,
   enum: TypeEnum,
   func: TypeFunc,
+  instanceOf: TypeInstanceOf,
   node: TypeNode,
   number: TypeNumber,
   string: TypeString,

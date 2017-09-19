@@ -69,6 +69,7 @@
     "js-beautify": "^1.6.2",
     "jsdom": "^9.10.0",
     "lodash.isplainobject": "^4.0.6",
+    "lodash.set": "^4.3.2",
     "lodash.uniq": "^4.5.0",
     "postcss-cssnext": "^2.10.0",
     "postcss-import": "^9.1.0",
