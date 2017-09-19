@@ -24,7 +24,3 @@
   position: relative;
   flex-direction: column;
 }
-
-.ax-input__label {
-  margin-bottom: var(--spacing-grid-size);
-}

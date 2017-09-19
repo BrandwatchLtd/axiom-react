@@ -87,7 +87,7 @@ export default class TextInput extends Component {
     });
 
     return (
-      <TextGroup label={ label } space={ space }>
+      <TextGroup label={ label } size={ size } space={ space }>
         <div className={ iconContainerClasses }>
           { icon }
           <input { ...rest }
