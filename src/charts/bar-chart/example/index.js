@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  BarChart,
-  Context,
-  ContextBox,
-  DataPoint,
-  DataPoints,
-  Grid,
-  GridCell,
-  Heading,
-  List,
-  ListItem,
-  Paragraph,
-  Small,
-  Strong,
-} from 'bw-axiom';
+import BarChart from '../BarChart';
+import Context from '../../../components/context/Context';
+import ContextBox from '../../../components/context/ContextBox';
+import DataPoint from '../../data-point/DataPoint';
+import DataPoints from '../../data-point/DataPoints';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
+import Heading from '../../../components/typography/Heading';
+import List from '../../../components/list/List';
+import ListItem from '../../../components/list/ListItem';
+import Paragraph from '../../../components/typography/Paragraph';
+import Small from '../../../components/typography/Small';
+import Strong from '../../../components/typography/Strong';
 import { chartKey, data } from './data';
 
 class ContextDemoComponent extends Component {

@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { LabelGroup, Label } from 'bw-axiom';
+import Label from './Label';
+import LabelGroup from './LabelGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(

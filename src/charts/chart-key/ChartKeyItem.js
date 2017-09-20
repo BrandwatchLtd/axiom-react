@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Grid,
-  GridCell,
-  Strong,
-} from 'bw-axiom';
+import Grid from '../../components/grid/Grid';
+import GridCell from '../../components/grid/GridCell';
+import Strong from '../../components/typography/Strong';
 
 export default class ChartKeyItem extends Component {
   static propTypes = {

@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  ButtonGroup,
-  Button,
-  Dialog,
-  DialogBody,
-  DialogFooter,
-  DialogHeader,
-  Heading,
-  Paragraph,
-} from 'bw-axiom';
+import Button from '../../button/Button';
+import ButtonGroup from '../../button/ButtonGroup';
+import Dialog from '../Dialog';
+import DialogBody from '../DialogBody';
+import DialogFooter from '../DialogFooter';
+import DialogHeader from '../DialogHeader';
+import Heading from '../../typography/Heading';
+import Paragraph from '../../typography/Paragraph';
 
 class DialogExample extends Component {
   static propTypes = {

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { LogoBox } from 'bw-axiom';
+import LogoBox from '../LogoBox';
 
 export default class LogoBoxExample extends Component {
   static propTypes = {

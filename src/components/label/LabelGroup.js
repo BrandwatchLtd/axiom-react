@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { InlineGroup } from 'bw-axiom';
+import InlineGroup from '../layout/InlineGroup';
 
 export default class LabelGroup extends Component {
   static propTypes = {

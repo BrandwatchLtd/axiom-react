@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { InlineGroup } from 'bw-axiom';
+import InlineGroup from './InlineGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(

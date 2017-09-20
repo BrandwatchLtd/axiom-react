@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { RadioButton } from 'bw-axiom';
+import RadioButton from './RadioButton';
 
 const getComponent = (props = {}) =>
   renderer.create(

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, Modal } from 'bw-axiom';
+import Base from '../base/Base';
+import Modal from '../modal/Modal';
 import './AlertDialog.css';
 
 export default class AlertDialog extends Component {

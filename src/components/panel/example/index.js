@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  Panels,
-  Panel,
-  PanelHeader,
-  PanelBody,
-  Paragraph,
-  ProgressInfinite,
-  Strong,
-} from 'bw-axiom';
+import Panel from '../Panel';
+import PanelBody from '../PanelBody';
+import PanelHeader from '../PanelHeader';
+import Panels from '../Panels';
+import Paragraph from '../../typography/Paragraph';
+import ProgressInfinite from '../../progress/ProgressInfinite';
+import Strong from '../../typography/Strong';
 
 class PanelExample extends Component {
   static propTypes = {

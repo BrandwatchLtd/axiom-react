@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { TextInput, TextInputIcon } from 'bw-axiom';
+import TextInput from '../TextInput';
+import TextInputIcon from '../TextInputIcon';
 
 export default class TextInputExample extends Component {
   static propTypes = {

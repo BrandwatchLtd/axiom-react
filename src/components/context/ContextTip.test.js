@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ContextTip, Paragraph } from 'bw-axiom';
+import ContextTip from './ContextTip';
+import Paragraph from '../typography/Paragraph';
 
 const getComponent = (props = {}) =>
   renderer.create(

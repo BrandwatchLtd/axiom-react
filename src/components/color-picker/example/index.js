@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ColorPicker } from 'bw-axiom';
+import ColorPicker from '../ColorPicker';
 
 class ColorPickerExample extends Component {
   static propTypes = {

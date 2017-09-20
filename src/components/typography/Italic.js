@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'bw-axiom';
+import Text from './Text';
 
 export default class Italic extends Component {
   render() {

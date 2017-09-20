@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Button,
-  ButtonGroup,
-} from 'bw-axiom';
+import Button from '../../components/button/Button';
+import ButtonGroup from '../../components/button/ButtonGroup';
 import atIds from '../../../at_ids';
 
 export default class ChangePasswordControls extends Component {

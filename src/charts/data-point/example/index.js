@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { DataPoint, DataPoints, Grid, GridCell } from 'bw-axiom';
+import DataPoint from '../DataPoint';
+import DataPoints from '../DataPoints';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
 
 class DataPointExample extends Component {
   static propTypes = {

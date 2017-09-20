@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  Button,
-  ButtonGroup,
-  ButtonIcon,
-  Context,
-  Dropdown,
-  DropdownContent,
-  DropdownMenu,
-  DropdownMenuItem,
-  DropdownTarget,
-} from 'bw-axiom';
+import Button from '../../button/Button';
+import ButtonGroup from '../../button/ButtonGroup';
+import ButtonIcon from '../../button/ButtonIcon';
+import Context from '../../context/Context';
+import Dropdown from '../Dropdown';
+import DropdownContent from '../DropdownContent';
+import DropdownMenu from '../DropdownMenu';
+import DropdownMenuItem from '../DropdownMenuItem';
+import DropdownTarget from '../DropdownTarget';
 
 class DropdownExample extends Component {
   static propTypes = {

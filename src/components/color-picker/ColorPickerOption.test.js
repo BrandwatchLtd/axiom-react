@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ColorPickerOption } from 'bw-axiom';
+import ColorPickerOption from './ColorPickerOption';
 
 const getComponent = (props = {}) =>
   renderer.create(

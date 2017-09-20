@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Progress } from 'bw-axiom';
+import Progress from './Progress';
 
 const getComponent = (props = {}) =>
   renderer.create(

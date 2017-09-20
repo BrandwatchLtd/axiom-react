@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Pictogram } from 'bw-axiom';
+import Pictogram from '../Pictogram';
 
 class PictogramExample extends Component {
   static propTypes = {

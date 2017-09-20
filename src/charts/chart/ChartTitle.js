@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Heading } from 'bw-axiom';
+import Heading from '../../components/typography/Heading';
 
 export default class ChartTitle extends Component {
   static propTypes = {

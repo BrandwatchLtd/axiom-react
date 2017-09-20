@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { List, ListItem } from 'bw-axiom';
+import List from '../List';
+import ListItem from '../ListItem';
 
 class ListExample extends Component {
   static propTypes = {

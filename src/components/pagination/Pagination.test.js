@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Pagination } from 'bw-axiom';
+import Pagination from './Pagination';
 import { getDisplayRange, getSetStart, isWithinStartRange, isWithinEndRange } from './utils';
 
 const getComponent = (props = {}) =>

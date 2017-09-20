@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Candytar, CardList, Card, Grid, GridCell, Heading, Paragraph } from 'bw-axiom';
+import Candytar from '../../candytar/Candytar';
+import Card from '../Card';
+import CardList from '../CardList';
+import Grid from '../../grid/Grid';
+import GridCell from '../../grid/GridCell';
+import Heading from '../../typography/Heading';
+import Paragraph from '../../typography/Paragraph';
 
 class CardExample extends Component {
   static propTypes = {

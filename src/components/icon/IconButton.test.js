@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { IconButton } from 'bw-axiom';
+import IconButton from './IconButton';
 
 const getComponent = (props = {}) =>
   renderer.create(

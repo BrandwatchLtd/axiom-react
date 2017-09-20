@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TextArea } from 'bw-axiom';
+import TextArea from './TextArea';
 
 const getComponent = (props = {}) =>
   renderer.create(

@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, Heading, Strong } from 'bw-axiom';
+import Base from '../../components/base/Base';
+import Heading from '../../components/typography/Heading';
+import Strong from '../../components/typography/Strong';
 
 export default class ColumnChartXAxisLabel extends Component {
   static propTypes = {

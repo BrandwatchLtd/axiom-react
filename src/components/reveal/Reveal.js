@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import classnames from 'classnames';
-import { Base } from 'bw-axiom';
+import Base from '../base/Base';
 import './Reveal.css';
 
 export default class Reveal extends Component {

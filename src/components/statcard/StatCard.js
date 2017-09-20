@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, GridCell } from 'bw-axiom';
+import Base from '../base/Base';
+import GridCell from '../grid/GridCell';
 import './StatCard.css';
 
 export default class StatCard extends Component {

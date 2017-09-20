@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Paragraph, filenameDate } from 'bw-axiom';
+import Paragraph from '../../../components/typography/Paragraph';
+import { filenameDate } from '../../date-and-time';
 
 export default class FilenameDateExample extends Component {
   render() {

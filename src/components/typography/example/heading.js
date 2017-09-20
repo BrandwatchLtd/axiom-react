@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Heading, Strong } from 'bw-axiom';
+import Heading from '../Heading';
+import Strong from '../Strong';
 
 export default class HeadingExample extends Component {
   static propTypes = {

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, ImageFallback } from 'bw-axiom';
+import Base from '../base/Base';
+import ImageFallback from './ImageFallback';
 import './Image.css';
 
 export default class Image extends Component {

@@ -1,10 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import BulletBars from './BulletBars';
-import { formattedData } from './BulletBars.test.fixture';
 
 function getComponent(props = {}) {
-  props.values = formattedData;
+  props.values = [
+    { 'color':'blue', 'value': 10 },
+    { 'color':'pink', 'value': 50 },
+  ];
 
   return renderer.create(
     <BulletBars { ...props }>

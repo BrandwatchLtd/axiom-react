@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Link, TextIcon, Toggle, Toolbar, Tool } from 'bw-axiom';
+import Link from '../../typography/Link';
+import TextIcon from '../../typography/TextIcon';
+import Toggle from '../../toggle/Toggle';
+import Tool from '../Tool';
+import Toolbar from '../Toolbar';
 
 class ToolbarExample extends Component {
   static propTypes = {

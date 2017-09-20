@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Grid, GridCell, TextInput, Heading, Paragraph, tinyNumber } from 'bw-axiom';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
+import Heading from '../../../components/typography/Heading';
+import Paragraph from '../../../components/typography/Paragraph';
+import TextInput from '../../../components/form/TextInput';
+import { tinyNumber } from '../../number';
 
 export default class TinyNumber extends Component {
   componentWillMount() {
@@ -43,8 +48,6 @@ export default class TinyNumber extends Component {
         </Grid>
 
         <CodeSnippet language="js">{`
-          import { tinyNumber } from 'bw-axiom';
-
           tinyNumber(Number [, Number]);
         `}</CodeSnippet>
       </Example>

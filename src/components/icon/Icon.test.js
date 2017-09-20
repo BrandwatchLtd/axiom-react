@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Icon } from 'bw-axiom';
+import Icon from './Icon';
 
 const getComponent = (props = {}) =>
   renderer.create(

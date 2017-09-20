@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Animicon } from 'bw-axiom';
+import Animicon from '../Animicon';
 
 export default class AnimiconExample extends Component {
   static propTypes = {

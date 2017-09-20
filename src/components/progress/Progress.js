@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { AlertIcon, ProgressFinite, ProgressInfinite } from 'bw-axiom';
+import AlertIcon from '../alert-icon/AlertIcon';
+import ProgressFinite from './ProgressFinite';
+import ProgressInfinite from './ProgressInfinite';
 
 export default class Progress extends Component {
   static propTypes = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DialogFooter } from 'bw-axiom';
+import DialogFooter from './DialogFooter';
 
 const getComponent = (props = {}) =>
   renderer.create(

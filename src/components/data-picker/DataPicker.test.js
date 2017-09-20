@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DataPicker } from 'bw-axiom';
+import DataPicker from './DataPicker';
 
 const getComponent = (props = {}) =>
   renderer.create(

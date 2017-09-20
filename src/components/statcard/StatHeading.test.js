@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StatHeading } from 'bw-axiom';
+import StatHeading from './StatHeading';
 
 const getComponent = (props = {}) =>
   renderer.create(
