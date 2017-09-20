@@ -15,20 +15,27 @@
   color: var(--color-context-text);
 }
 
-.ax-dialog__header,
-.ax-dialog__footer {
-  flex: 0 1 auto;
+.ax-dialog__body,
+.ax-dialog__header {
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }
 
-.ax-dialog__footer {
-  border-top: 0.0625rem solid var(--color-context-border);
+.ax-dialog__header {
+  border-bottom: 0.0625rem solid var(--color-context-border);
 }
 
 .ax-dialog__body {
   flex: 1 1 auto;
-  padding: 0 var(--page-padding-horizontal) var(--page-padding-vertical);
   overflow: auto;
+}
+
+.ax-dialog__footer {
+  padding: 0 var(--page-padding-vertical) var(--page-padding-horizontal);
+}
+
+.ax-dialog__header,
+.ax-dialog__footer {
+  flex: 0 1 auto;
 }
 
 .ax-dialog--small  { width: var(--cmp-dialog-width-small); }

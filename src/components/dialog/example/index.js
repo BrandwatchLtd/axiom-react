@@ -101,9 +101,9 @@ class DialogExample extends Component {
           </DialogBody>
 
           <DialogFooter { ...initialProps.DialogFooter }>
-            <ButtonGroup snippetReplace>
-              <Button style="primary">Primary</Button>
+            <ButtonGroup snippetReplace textRight>
               <Button style="secondary">Secondary</Button>
+              <Button style="primary">Primary</Button>
             </ButtonGroup>
           </DialogFooter>
         </Dialog>

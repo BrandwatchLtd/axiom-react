@@ -18,14 +18,14 @@ export default class DialogHeader extends Component {
 
     return (
       <Base { ...rest } className="ax-dialog__header">
-        <Grid responsive={ false }>
+        <Grid responsive={ false } verticalAlign="middle">
           <GridCell>
             { children }
           </GridCell>
 
           <GridCell shrink>
             <Link onClick={ onRequestClose } style="subtle">
-              <Icon name="cross" />
+              <Icon name="cross" size="1.5rem" />
             </Link>
           </GridCell>
         </Grid>

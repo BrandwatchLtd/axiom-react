@@ -8,7 +8,7 @@ exports[`DialogHeader renders with defaultProps 1`] = `
     className="ax-grid__container ax-space--x6"
   >
     <div
-      className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap"
+      className="ax-grid ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--vertical-middle ax-grid--wrap"
     >
       <div
         className="ax-grid__cell"
@@ -41,8 +41,8 @@ exports[`DialogHeader renders with defaultProps 1`] = `
             }
             style={
               Object {
-                "height": "1rem",
-                "width": "1rem",
+                "height": "1.5rem",
+                "width": "1.5rem",
               }
             }
             viewBox="0 0 16 16"
