@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Grid, GridCell, ButtonIcon, Button, Paragraph } from 'bw-axiom';
+import Button from '../button/Button';
+import ButtonIcon from '../button/ButtonIcon';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
+import Paragraph from '../typography/Paragraph';
 import { getMonthName, getYearNumber, isSameOrAfterMonth, isSameOrBeforeMonth } from './utils';
 
 export default class DatePickerHeaderControl extends Component {

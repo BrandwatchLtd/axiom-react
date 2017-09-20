@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Word, WordCloud } from 'bw-axiom';
+import Word from '../Word';
+import WordCloud from '../WordCloud';
 import { wordArray } from './data';
 
 class WordCloudExample extends Component {

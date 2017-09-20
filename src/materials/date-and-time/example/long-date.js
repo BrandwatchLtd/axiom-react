@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Paragraph, Strong, longDate, longDateWithTime, longDateWithTimezone } from 'bw-axiom';
+import Paragraph from '../../../components/typography/Paragraph';
+import Strong from '../../../components/typography/Strong';
+import longDate from '../longDate';
+import longDateWithTime from '../longDateWithTime';
+import longDateWithTimezone from '../longDateWithTimezone';
 
 export default class DateExample extends Component {
   render() {

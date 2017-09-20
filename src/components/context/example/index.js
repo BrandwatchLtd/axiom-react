@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  Context,
-  ContextBox,
-  ContextMenu,
-  ContextMenuItem,
-  ContextTip,
-  DropdownMenu,
-  DropdownMenuItem,
-  Heading,
-  Paragraph,
-  TextInput,
-} from 'bw-axiom';
+import Context from '../Context';
+import ContextBox from '../ContextBox';
+import ContextMenu from '../ContextMenu';
+import ContextMenuItem from '../ContextMenuItem';
+import ContextTip from '../ContextTip';
+import DropdownMenu from '../../dropdown/DropdownMenu';
+import DropdownMenuItem from '../../dropdown/DropdownMenuItem';
+import Heading from '../../typography/Heading';
+import Paragraph from '../../typography/Paragraph';
+import TextInput from '../../form/TextInput';
 
 class ContextExample extends Component {
   static propTypes = {

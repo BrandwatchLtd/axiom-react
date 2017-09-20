@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ProgressInfinite } from 'bw-axiom';
+import ProgressInfinite from '../ProgressInfinite';
 
 export default class ProgressInfiniteExample extends Component {
   static propTypes = {

@@ -1,4 +1,4 @@
-import { svgDefineOnce } from 'bw-axiom';
+import svgDefineOnce from '../../utils/svgDefineOnce';
 
 export default () => svgDefineOnce(`
   <filter id="ax-candytar__filter">

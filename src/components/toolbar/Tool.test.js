@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tool } from 'bw-axiom';
+import Tool from './Tool';
 
 const getComponent = (props = {}) =>
   renderer.create(

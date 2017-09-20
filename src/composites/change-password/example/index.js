@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ChangePassword } from 'bw-axiom';
+import ChangePassword from '../ChangePassword';
 
 class ChangePasswordExample extends Component {
   static propTypes = {

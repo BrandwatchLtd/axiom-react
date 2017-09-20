@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ContextBox } from 'bw-axiom';
+import ContextBox from './ContextBox';
 
 const getComponent = (props = {}) =>
   renderer.create(

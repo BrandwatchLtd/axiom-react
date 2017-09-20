@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Form,
-  Grid,
-  GridCell,
-  Animicon,
-  List,
-  ListItem,
-  TextInput,
-} from 'bw-axiom';
-import { translate as t } from '../../utils/locales';
+import t from '../../utils/locales';
+import Animicon from '../../components/icon/Animicon';
+import Form from '../../components/form/Form';
+import Grid from '../../components/grid/Grid';
+import GridCell from '../../components/grid/GridCell';
+import List from '../../components/list/List';
+import ListItem from '../../components/list/ListItem';
+import TextInput from '../../components/form/TextInput';
 import ChangePasswordControls from './ChangePasswordControls';
 import atIds from '../../../at_ids';
 

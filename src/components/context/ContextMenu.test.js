@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ContextMenu, ContextMenuItem } from 'bw-axiom';
+import ContextMenu from './ContextMenu';
+import ContextMenuItem from './ContextMenuItem';
 
 const getComponent = (props = {}) =>
   renderer.create(

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ProgressFinite } from 'bw-axiom';
+import ProgressFinite from './ProgressFinite';
 
 const getComponent = (props = {}) =>
   renderer.create(

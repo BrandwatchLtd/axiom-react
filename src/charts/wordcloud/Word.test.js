@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Word } from 'bw-axiom';
+import Word from './Word';
 
 const getComponent = (props = { x: 0, y: 0 }) =>
   renderer.create(

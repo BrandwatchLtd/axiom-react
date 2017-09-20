@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Login } from 'bw-axiom';
+import Login from '../Login';
 
 class LoginExample extends Component {
 

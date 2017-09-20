@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Strike } from 'bw-axiom';
+import Strike from '../Strike';
 
 export default class StrikeExample extends Component {
   static propTypes = {

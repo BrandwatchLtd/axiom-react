@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Heading, MirroredBulletChart } from 'bw-axiom';
+import Heading from '../../../components/typography/Heading';
+import MirroredBulletChart from '../MirroredBulletChart';
 import { data, chartKey } from './data';
 
 export default class MirroredBulletChartExample extends Component {

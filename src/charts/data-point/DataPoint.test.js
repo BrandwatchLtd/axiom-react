@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DataPoint } from 'bw-axiom';
+import DataPoint from './DataPoint';
 
 const getComponent = (props = {}) =>
   renderer.create(

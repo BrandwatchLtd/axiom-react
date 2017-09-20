@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Paragraph, Strong, mediumDate, mediumDateWithTime } from 'bw-axiom';
+import Paragraph from '../../../components/typography/Paragraph';
+import Strong from '../../../components/typography/Strong';
+import mediumDate from '../mediumDate';
+import mediumDateWithTime from '../mediumDateWithTime';
 
 export default class DateExample extends Component {
   render() {

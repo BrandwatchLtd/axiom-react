@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Table, TableBody, TableCell, TableHead, TableRow } from 'bw-axiom';
+import Table from '../Table';
+import TableBody from '../TableBody';
+import TableCell from '../TableCell';
+import TableHead from '../TableHead';
+import TableRow from '../TableRow';
 
 class TableExample extends Component {
   static propTypes = {

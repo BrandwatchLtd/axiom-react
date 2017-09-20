@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Position,
-  PositionTarget,
-  PositionContent,
-  TooltipContent,
-  TooltipTarget,
-  findComponent,
-} from 'bw-axiom';
+import Position from '../position/Position';
+import PositionContent from '../position/PositionContent';
+import PositionTarget from '../position/PositionTarget';
+import TooltipContent from './TooltipContent';
+import TooltipTarget from './TooltipTarget';
+import findComponent from '../../utils/findComponent';
 
 export default class Tooltip extends Component {
   static propTypes = {

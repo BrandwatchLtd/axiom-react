@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DialogBody } from 'bw-axiom';
+import DialogBody from './DialogBody';
 
 const getComponent = (props = {}) =>
   renderer.create(

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, Small } from 'bw-axiom';
 import classnames from 'classnames';
+import Base from '../../components/base/Base';
+import Small from '../../components/typography/Small';
 import './Bar.css';
 
 export default class Bar extends Component {

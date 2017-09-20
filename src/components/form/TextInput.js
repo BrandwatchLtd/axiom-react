@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { TextInputIcon, findComponent } from 'bw-axiom';
+import TextInputIcon from './TextInputIcon';
 import TextGroup from './TextGroup';
+import findComponent from '../../utils/findComponent';
 import './TextInput.css';
 
 export default class TextInput extends Component {

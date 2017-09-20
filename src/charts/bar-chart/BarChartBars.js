@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Bars } from 'bw-axiom';
-import BarChartContext from './BarChartContext';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
+import BarChartContext from './BarChartContext';
+import Bars from '../bars/Bars';
 
 export default class BarChartBars extends Component {
   static propTypes = {

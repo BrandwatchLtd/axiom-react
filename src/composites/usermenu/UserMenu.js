@@ -1,22 +1,20 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Avatar,
-  Button,
-  ButtonGroup,
-  Context,
-  ContextBox,
-  Candytar,
-  Dropdown,
-  DropdownTarget,
-  DropdownContent,
-  Grid,
-  GridCell,
-  Heading,
-  Link,
-  Paragraph,
-} from 'bw-axiom';
-import { translate as t } from '../../utils/locales';
+import t from '../../utils/locales';
+import Avatar from '../../components/avatar/Avatar';
+import Button from '../../components/button/Button';
+import ButtonGroup from '../../components/button/ButtonGroup';
+import Candytar from '../../components/candytar/Candytar';
+import Context from '../../components/context/Context';
+import ContextBox from '../../components/context/ContextBox';
+import Dropdown from '../../components/dropdown/Dropdown';
+import DropdownContent from '../../components/dropdown/DropdownContent';
+import DropdownTarget from '../../components/dropdown/DropdownTarget';
+import Grid from '../../components/grid/Grid';
+import GridCell from '../../components/grid/GridCell';
+import Heading from '../../components/typography/Heading';
+import Link from '../../components/typography/Link';
+import Paragraph from '../../components/typography/Paragraph';
 
 const stringToColor = (string) => (colors) =>  colors[
   string.split('').reduce((acc, val) =>acc + val.charCodeAt(), 0) % (colors.length - 1)

@@ -1,7 +1,6 @@
 .babelrc
 deploy
 scripts
-src
 static
 style-guide
 test

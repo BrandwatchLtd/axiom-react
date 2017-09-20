@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Text } from 'bw-axiom';
+import Text from './Text';
 
 const TAG_MAP = {
   display2: 'h1',

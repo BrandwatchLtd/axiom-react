@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  Avatar,
-  Context,
-  ContextBox,
-  Heading,
-  Paragraph,
-  Position,
-  PositionContent,
-  PositionTarget,
-  Strong,
-} from 'bw-axiom';
+import Avatar from '../../avatar/Avatar';
+import Context from '../../context/Context';
+import ContextBox from '../../context/ContextBox';
+import Heading from '../../typography/Heading';
+import Paragraph from '../../typography/Paragraph';
+import Position from '../Position';
+import PositionContent from '../PositionContent';
+import PositionTarget from '../PositionTarget';
+import Strong from '../../typography/Strong';
 
 class PositionExample extends Component {
   static propTypes = {

@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Label, LabelGroup, LabelIcon } from 'bw-axiom';
+import Label from '../Label';
+import LabelGroup from '../LabelGroup';
+import LabelIcon from '../LabelIcon';
 
 class LabelExample extends Component {
   static propTypes = {

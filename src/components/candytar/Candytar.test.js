@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Candytar } from 'bw-axiom';
+import Candytar from './Candytar';
 
 const getComponent = (props = {}) =>
   renderer.create(

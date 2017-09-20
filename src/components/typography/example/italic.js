@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Italic } from 'bw-axiom';
+import Italic from '../Italic';
 
 export default class ItalicExample extends Component {
   static propTypes = {

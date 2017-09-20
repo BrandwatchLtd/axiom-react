@@ -1,9 +1,20 @@
 // Utils
-export * from './utils';
+export { default as findComponent } from './utils/findComponent';
+export { default as getCSSVar } from './utils/getCSSVar';
+export { default as svgDefineOnce } from './utils/svgDefineOnce';
 
 // Materials
-export * from './materials/date-and-time';
-export * from './materials/number';
+export { default as longDate } from './materials/date-and-time/longDate';
+export { default as longDateWithTime } from './materials/date-and-time/longDateWithTime';
+export { default as longDateWithTimezone } from './materials/date-and-time/longDateWithTimezone';
+export { default as mediumDate } from './materials/date-and-time/mediumDate';
+export { default as mediumDateWithTime } from './materials/date-and-time/mediumDateWithTime';
+export { default as shortDate } from './materials/date-and-time/shortDate';
+export { default as shortDateWithTime } from './materials/date-and-time/shortDateWithTime';
+
+export { default as longNumber } from './materials/number/longNumber';
+export { default as shortNumber } from './materials/number/shortNumber';
+export { default as tinyNumber } from './materials/number/tinyNumber';
 
 // Components
 export { default as Base } from './components/base/Base';

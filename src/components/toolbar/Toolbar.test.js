@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Toolbar, Tool } from 'bw-axiom';
+import Tool from './Tool';
+import Toolbar from './Toolbar';
 
 const getComponent = () =>
   renderer.create(

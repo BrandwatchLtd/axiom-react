@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
-import { Context, ContextBox, Grid, GridCell } from 'bw-axiom';
+import Context from '../context/Context';
+import ContextBox from '../context/ContextBox';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
 import DatePickerControls from './DatePickerControls';
 import DatePickerHeaderControl from './DatePickerHeaderControl';
 import DatePickerViewMonth from './DatePickerViewMonth';

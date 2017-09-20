@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Form } from 'bw-axiom';
+import Form from './Form';
 
 const getComponent = (props = {}) =>
   renderer.create(

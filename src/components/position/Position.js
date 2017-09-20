@@ -3,7 +3,10 @@ import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
 import omit from 'lodash.omit';
-import { findComponent, PositionContent, PositionTarget, Subtree } from 'bw-axiom';
+import findComponent from '../../utils/findComponent';
+import PositionContent from './PositionContent';
+import PositionTarget from './PositionTarget';
+import Subtree from '../subtree/Subtree';
 import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
 import './Position.css';
 

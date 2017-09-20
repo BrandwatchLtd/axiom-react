@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Icon, Image, ImageFallback } from 'bw-axiom';
+import Base from '../base/Base';
+import Icon from '../icon/Icon';
+import Image from './Image';
+import ImageFallback from './ImageFallback';
 import './ImageCircle.css';
 
 export default class ImageCircle extends Component {

@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
-import Bars from '../bars/Bars';
 import BarChartContext from '../bar-chart/BarChartContext';
+import Bars from '../bars/Bars';
+import Base from '../../components/base/Base';
+import ColumnChartBars from './ColumnChartBars';
 import ColumnChartRow  from './ColumnChartRow';
+import ColumnChartVisual from './ColumnChartVisual';
 import ColumnChartXAxis  from './ColumnChartXAxis';
 import ColumnChartXAxisLabel  from './ColumnChartXAxisLabel';
-import ColumnChartVisual from './ColumnChartVisual';
-import ColumnChartBars from './ColumnChartBars';
 import ColumnChartYAxis from './ColumnChartYAxis';
 import { formatData } from './utils';
 import './ColumnChart.css';

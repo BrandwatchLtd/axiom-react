@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { CheckBoxGroup, CheckBox } from 'bw-axiom';
+import CheckBox from '../CheckBox';
+import CheckBoxGroup from '../CheckBoxGroup';
 
 export default class CheckBoxExample extends Component {
   static propTypes = {
