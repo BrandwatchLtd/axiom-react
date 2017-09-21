@@ -159,13 +159,9 @@ exports[`TextInput renders with label 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__label"
+    className="ax-space--x3 ax-text--size-body"
   >
-    <strong
-      className="ax-text--strong"
-    >
-      Lorem ipsum
-    </strong>
+    Lorem ipsum
   </div>
   <div
     className="ax-input__container ax-input__container--medium"

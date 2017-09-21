@@ -22,6 +22,11 @@
   order: 1;
 }
 
+.ax-input__container--small .ax-input {
+  padding: var(--component-padding-vertical-small) var(--component-padding-horizontal-small);
+  font-size: var(--font-size-small);
+}
+
 .ax-input__container--medium .ax-input {
   padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-medium);
   font-size: var(--font-size-small);

@@ -47,7 +47,7 @@ describe('TextInput', () => {
   });
 
   describe('renders with size', () => {
-    ['medium', 'large'].forEach((size) => {
+    ['small', 'medium', 'large'].forEach((size) => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();
