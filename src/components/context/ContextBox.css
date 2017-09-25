@@ -23,6 +23,7 @@
   left: var(--cmp-context-padding-small);
 }
 
+.ax-context-box--padding-none::after,
 .ax-context-box--padding-large::after {
   right: var(--cmp-context-padding-large);
   left: var(--cmp-context-padding-large);
