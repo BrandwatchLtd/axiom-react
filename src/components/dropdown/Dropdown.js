@@ -17,6 +17,10 @@ export default class Dropdown extends Component {
      */
     children: PropTypes.node.isRequired,
     /**
+     * Adds control to enable or disable showing the DropdownContent
+     */
+    enabled: PropTypes.bool,
+    /**
      * Controls the starting position around DropdownTarget in which the
      * DropdownContent will attempt to be placed. If that position is not available
      * due to collision, it will be placed according to the flip behaviour  until
@@ -33,6 +37,7 @@ export default class Dropdown extends Component {
   };
 
   static defaultProps = {
+    enabled: true,
     position: 'bottom',
     showArrow: true,
   };
@@ -51,7 +56,11 @@ export default class Dropdown extends Component {
   }
 
   open() {
-    this.setState({ isVisible: true });
+    const { enabled } = this.props;
+
+    if (enabled) {
+      this.setState({ isVisible: true });
+    }
   }
 
   close() {

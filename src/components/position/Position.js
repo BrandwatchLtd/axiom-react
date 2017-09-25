@@ -16,7 +16,7 @@ export default class Position extends Component {
      */
     children: PropTypes.array.isRequired,
     /**
-     * Adds control to conditional enable or disabled the positioning logic.
+     * Adds control to conditionally enable or disable the positioning logic.
      * Must be true for isVisible to take effect.
      */
     enabled: PropTypes.bool,

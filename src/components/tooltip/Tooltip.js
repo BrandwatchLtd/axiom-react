@@ -17,12 +17,16 @@ export default class Tooltip extends Component {
      */
     children: PropTypes.node,
     /**
+     * Adds control to enable or disable showing the TooltipContent
+     */
+    enabled: PropTypes.bool,
+    /**
      * Controls the starting position around TooltipTarget in which the
      * TooltipContent will attempt to be placed. If that position is not available
      * due to collision, it will be placed according to the flip behaviour  until
      * a valid position is found.
      */
-    position: PropTypes.string,
+    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   };
 
   static childContextTypes = {
@@ -31,6 +35,7 @@ export default class Tooltip extends Component {
   };
 
   static defaultProps = {
+    enabled: true,
     position: 'top',
   };
 
@@ -48,9 +53,10 @@ export default class Tooltip extends Component {
   }
 
   show() {
+    const { enabled } = this.props;
     const { isVisible } = this.state;
 
-    if (!isVisible) {
+    if (enabled && !isVisible) {
       this.setState({ isVisible: true });
     }
   }
