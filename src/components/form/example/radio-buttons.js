@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { RadioButtonGroup, RadioButton } from 'bw-axiom';
+import RadioButton from '../RadioButton';
+import RadioButtonGroup from '../RadioButtonGroup';
 
 export default class RadioButtonExample extends Component {
   static propTypes = {

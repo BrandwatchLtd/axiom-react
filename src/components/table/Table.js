@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base } from 'bw-axiom';
+import Base from '../base/Base';
 import './Table.css';
 
 export default class Table extends Component {

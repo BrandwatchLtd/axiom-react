@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Icon, Link } from 'bw-axiom';
+import Icon from '../icon/Icon';
+import Link from '../typography/Link';
 import './LabelIcon.css';
 
 export default class LabelIcon extends Component {

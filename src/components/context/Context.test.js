@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Context } from 'bw-axiom';
+import Context from './Context';
 
 const getComponent = (props = {}) =>
   renderer.create(

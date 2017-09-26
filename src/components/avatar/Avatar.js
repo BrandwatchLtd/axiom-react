@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ImageCircle } from 'bw-axiom';
+import ImageCircle from '../image/ImageCircle';
 
 export default class Avatar extends Component {
   static propTypes = {

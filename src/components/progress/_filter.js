@@ -1,4 +1,4 @@
-import { svgDefineOnce } from 'bw-axiom';
+import { svgDefineOnce } from '../../utils';
 
 export default () => {
   ['subtle', 'white'].forEach(color => {

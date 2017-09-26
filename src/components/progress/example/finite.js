@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ProgressFinite } from 'bw-axiom';
+import ProgressFinite from '../ProgressFinite';
 
 export default class ProgressFiniteExample extends Component {
   static propTypes = {

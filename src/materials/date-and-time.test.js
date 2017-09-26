@@ -7,7 +7,7 @@ import {
   mediumDateWithTime,
   shortDate,
   shortDateWithTime,
-} from 'bw-axiom';
+} from './date-and-time';
 
 describe('date and time', () => {
   describe('filenameDate', () => {

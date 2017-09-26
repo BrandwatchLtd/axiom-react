@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ProgressInfinite } from 'bw-axiom';
+import ProgressInfinite from './ProgressInfinite';
 
 const getComponent = (props = {}) =>
   renderer.create(

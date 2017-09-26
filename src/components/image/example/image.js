@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { AlertIcon, Image } from 'bw-axiom';
+import AlertIcon from '../../alert-icon/AlertIcon';
+import Image from '../Image';
 
 export default class ImageExample extends Component {
   static propTypes = {

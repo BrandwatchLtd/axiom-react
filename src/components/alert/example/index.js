@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Alert } from 'bw-axiom';
+import Alert from '../Alert';
 import { ExampleConfig } from 'style-guide';
 
 class AlertExample extends Component {

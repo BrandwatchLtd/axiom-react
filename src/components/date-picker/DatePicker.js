@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Dropdown, DropdownContent, DropdownTarget } from 'bw-axiom';
+import Dropdown from '../dropdown/Dropdown';
+import DropdownContent from '../dropdown/DropdownContent';
+import DropdownTarget from '../dropdown/DropdownTarget';
 import DatePickerContext from './DatePickerContext';
 
 export default class DatePicker extends Component  {

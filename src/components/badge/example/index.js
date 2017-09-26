@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Badge, BadgeGroup, Strong } from 'bw-axiom';
+import Badge from '../Badge';
+import BadgeGroup from '../BadgeGroup';
+import Strong from '../../typography/Strong';
 
 class BadgeExample extends Component {
   static propTypes = {

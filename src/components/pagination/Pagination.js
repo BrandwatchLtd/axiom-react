@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Icon } from 'bw-axiom';
+import Icon from '../icon/Icon';
 import PaginationButtonGroup from './PaginationButtonGroup';
 import PaginationButton from './PaginationButton';
 import {

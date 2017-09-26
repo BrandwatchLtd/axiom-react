@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Grid } from 'bw-axiom';
+import Grid from '../grid/Grid';
 
 export default class StatCards extends Component {
   static propTypes = {

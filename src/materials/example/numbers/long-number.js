@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Grid, GridCell, TextInput, Heading, Paragraph, longNumber } from 'bw-axiom';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
+import Heading from '../../../components/typography/Heading';
+import Paragraph from '../../../components/typography/Paragraph';
+import TextInput from '../../../components/form/TextInput';
+import { longNumber } from '../../number';
 
 export default class LongNumber extends Component {
   componentWillMount() {
@@ -43,8 +48,6 @@ export default class LongNumber extends Component {
         </Grid>
 
         <CodeSnippet language="js">{`
-          import { longNumber } from 'bw-axiom';
-
           longNumber(Number [, Number]);
         `}</CodeSnippet>
       </Example>

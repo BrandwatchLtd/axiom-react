@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
-import { Base, Icon, Link } from 'bw-axiom';
+import Base from '../base/Base';
+import Icon from '../icon/Icon';
+import Link from '../typography/Link';
 import { ALERT_ICON_NAME_MAP } from '../alert-icon/AlertIcon';
 import './Notification.css';
 

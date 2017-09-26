@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Alert, Strong } from 'bw-axiom';
+import Alert from '../alert/Alert';
+import Strong from '../typography/Strong';
 
 export default class AlertDialogHeader extends Component {
   static propTypes = {

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Button } from 'bw-axiom';
+import Button from '../button/Button';
 
 export default class PaginationButton extends Component {
   static propTypes = {

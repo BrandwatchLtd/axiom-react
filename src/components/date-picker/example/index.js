@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ButtonGroup, Button, ButtonIcon, DatePicker } from 'bw-axiom';
+import Button from '../../button/Button';
+import ButtonGroup from '../../button/ButtonGroup';
+import ButtonIcon from '../../button/ButtonIcon';
+import DatePicker from '../DatePicker';
 
 class DatePickerExample extends Component {
   static propTypes = {

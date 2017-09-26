@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import Base from '../base/Base';
 import './Stats.css';
 
 export default class Stats extends Component {

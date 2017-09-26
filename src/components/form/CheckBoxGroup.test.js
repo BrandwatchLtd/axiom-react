@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { CheckBox, CheckBoxGroup } from 'bw-axiom';
+import CheckBox from './CheckBox';
+import CheckBoxGroup from './CheckBoxGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(

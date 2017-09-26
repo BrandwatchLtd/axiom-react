@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import Base from '../base/Base';
 import './Pictogram.css';
 
 const PICTOGRAM_NAME_MAP = {

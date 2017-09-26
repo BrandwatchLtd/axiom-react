@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Bars, Bar } from 'bw-axiom';
+import Bar from './Bar';
+import Bars from './Bars';
 
 const getComponent = (props = {}, direction = 'up') =>
   renderer.create(

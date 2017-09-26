@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ColumnChart, ColumnChartYAxis } from 'bw-axiom';
+import ColumnChart from './ColumnChart';
+import ColumnChartYAxis from './ColumnChartYAxis';
 
 const getComponent = (props = {}) =>
   renderer.create(

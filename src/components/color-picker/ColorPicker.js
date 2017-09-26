@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  ColorPickerOption,
-  Context,
-  ContextBox,
-  Dropdown,
-  DropdownTarget,
-  DropdownContent,
-  Grid,
-  GridCell,
-} from 'bw-axiom';
+import ColorPickerOption from './ColorPickerOption';
+import Context from '../context/Context';
+import ContextBox from '../context/ContextBox';
+import Dropdown from '../dropdown/Dropdown';
+import DropdownContent from '../dropdown/DropdownContent';
+import DropdownTarget from '../dropdown/DropdownTarget';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
 
 export default class ColorPicker extends Component {
   static propTypes = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ImageCircle } from 'bw-axiom';
+import ImageCircle from './ImageCircle';
 
 const getComponent = (props = {}) =>
   renderer.create(

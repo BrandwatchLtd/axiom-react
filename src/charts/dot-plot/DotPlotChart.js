@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ChartKey, ChartKeyItem, DataPoint, DataPoints } from 'bw-axiom';
+import ChartKey from '../chart-key/ChartKey';
+import ChartKeyItem from '../chart-key/ChartKeyItem';
 import ChartTable from '../chart-table/ChartTable';
 import ChartTableAxisTitle from '../chart-table/ChartTableAxisTitle';
 import ChartTableKey from '../chart-table/ChartTableKey';
@@ -8,6 +9,8 @@ import ChartTableLabel from '../chart-table/ChartTableLabel';
 import ChartTableRow from '../chart-table/ChartTableRow';
 import ChartTableRows from '../chart-table/ChartTableRows';
 import ChartTableVisual from '../chart-table/ChartTableVisual';
+import DataPoint from '../data-point/DataPoint';
+import DataPoints from '../data-point/DataPoints';
 import DotPlot from './DotPlot';
 import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
 import DotPlotDifferenceLine from './DotPlotDifferenceLine';

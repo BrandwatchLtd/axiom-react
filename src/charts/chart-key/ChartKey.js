@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Grid } from 'bw-axiom';
+import Grid from '../../components/grid/Grid';
 
 export default class ChartKey extends Component {
   static propTypes = {

@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, Grid, GridCell } from 'bw-axiom';
+import Base from '../base/Base';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
 import DatePickerDay from './DatePickerDay';
 import {
   buildMonthGrid,

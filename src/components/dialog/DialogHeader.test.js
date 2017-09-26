@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DialogHeader } from 'bw-axiom';
+import DialogHeader from './DialogHeader';
 
 const getComponent = (props = {}) =>
   renderer.create(

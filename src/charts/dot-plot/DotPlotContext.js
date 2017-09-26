@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Dropdown, DropdownContent, DropdownTarget } from 'bw-axiom';
 import DotPlotDots from './DotPlotDots';
+import Dropdown from '../../components/dropdown/Dropdown';
+import DropdownContent from '../../components/dropdown/DropdownContent';
+import DropdownTarget from '../../components/dropdown/DropdownTarget';
 
 export default class DotPlotContext extends Component {
   static propTypes = {

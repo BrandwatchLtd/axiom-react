@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { DataPoints, DataPoint } from 'bw-axiom';
+import DataPoint from '../data-point/DataPoint';
+import DataPoints from '../data-point/DataPoints';
 
 const DOT_PLOT_DIAMETER = 0.8125;
 

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Small } from 'bw-axiom';
+import Base from '../../components/base/Base';
+import Small from '../../components/typography/Small';
 import '../vars.css';
 import './Bars.css';
 

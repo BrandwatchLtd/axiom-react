@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Candytar } from 'bw-axiom';
+import Candytar from '../Candytar';
 
 class CandytarExample extends Component {
   static propTypes = {

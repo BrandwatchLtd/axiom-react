@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Icon, DockItem } from 'bw-axiom';
+import DockItem from './DockItem';
+import Icon from '../icon/Icon';
 import './DockIconLink.css';
 
 export default class DockIconLink extends Component {

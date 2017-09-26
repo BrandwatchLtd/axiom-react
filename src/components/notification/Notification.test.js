@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Notification } from 'bw-axiom';
+import Notification from './Notification';
 
 function getComponent(props = {}) {
   return renderer.create(

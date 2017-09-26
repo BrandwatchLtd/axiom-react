@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  Chart,
-  ChartHeader,
-  ChartBody,
-  ChartTitle,
-  DotPlotChart,
-  ProgressInfinite,
-  Strong,
-} from 'bw-axiom';
+import Chart from '../Chart';
+import ChartBody from '../ChartBody';
+import ChartHeader from '../ChartHeader';
+import ChartTitle from '../ChartTitle';
+import DotPlotChart from '../../dot-plot/DotPlotChart';
+import ProgressInfinite from '../../../components/progress/ProgressInfinite';
+import Strong from '../../../components/typography/Strong';
 import { chartKey, data } from '../../dot-plot/example/data';
 
 class ChartExample extends Component {

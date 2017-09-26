@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Grid, GridCell } from 'bw-axiom';
+import Grid from '../Grid';
+import GridCell from '../GridCell';
 import GridBlock from './GridBlock';
 
 class GridExample extends Component {

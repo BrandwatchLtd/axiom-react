@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
-import { Panel } from 'bw-axiom';
+import Panel from '../panel/Panel';
 
 export default class DataPicker extends Component {
   static propTypes = {
