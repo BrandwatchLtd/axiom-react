@@ -109,5 +109,7 @@
   --color-theme-dark-text: var(--color-ui-light--light);
   --color-theme-dark-text-subtle: rgba(var(--rgb-ui-light--light), 0.75);
   --color-theme-dark-text-disabled: rgba(var(--rgb-ui-light--light), 0.3);
+
+  --color-twitter-blue: #1DA1F2;
 }
 /* stylelint-enable */
