@@ -12,14 +12,14 @@ export default class App extends Component {
   };
 
   static childContextTypes = {
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']).isRequired,
     pathname: PropTypes.string.isRequired,
-    lng: PropTypes.string.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      lng: 'en',
+      axiomLanguage: 'en',
     };
 
     this.handleSwitchLanguage = this.handleSwitchLanguage.bind(this);
@@ -27,13 +27,13 @@ export default class App extends Component {
 
   getChildContext() {
     return {
-      lng: this.state.lng,
+      axiomLanguage: this.state.axiomLanguage,
       pathname: this.props.location.pathname,
     };
   }
 
-  handleSwitchLanguage(lng) {
-    this.setState({ lng });
+  handleSwitchLanguage(axiomLanguage) {
+    this.setState({ axiomLanguage });
   }
 
   render() {
@@ -45,7 +45,7 @@ export default class App extends Component {
           Axiom
         </LayoutHeader>
 
-        <LayoutSidebar handleSwitchLanguage={ this.handleSwitchLanguage }>
+        <LayoutSidebar onSwitchLanguage={ this.handleSwitchLanguage }>
           <Navigation />
         </LayoutSidebar>
 

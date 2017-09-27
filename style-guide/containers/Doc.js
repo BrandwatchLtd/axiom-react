@@ -7,15 +7,15 @@ import './Doc.css';
 
 export default class Doc extends Component {
   static contextTypes = {
-    lng: PropTypes.string.isRequired,
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']).isRequired,
     pathname: PropTypes.string.isRequired,
   };
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    const { lng, pathname } = this.context;
-    const { lng: nextLng, pathname: nextPathname } = nextContext;
+    const { axiomLanguage, pathname } = this.context;
+    const { axiomLanguage: nextAxiomLanguage, pathname: nextPathname } = nextContext;
 
-    return nextPathname !== pathname || lng !== nextLng;
+    return nextPathname !== pathname || axiomLanguage !== nextAxiomLanguage;
   }
 
   render() {
