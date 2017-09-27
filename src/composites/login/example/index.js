@@ -4,6 +4,7 @@ import { ExampleConfig } from 'style-guide';
 import { Login } from 'bw-axiom';
 
 class LoginExample extends Component {
+
   static propTypes = {
     components: PropTypes.shape({
       Login: PropTypes.object,
@@ -16,7 +17,6 @@ class LoginExample extends Component {
 
   render() {
     const { components } = this.props;
-
     const propTypes = {
       Login: components.Login,
     };
@@ -25,8 +25,7 @@ class LoginExample extends Component {
       Login: {
         application: 'Axiom',
         backgroundImage: 'assets/axiom-bg.jpg',
-        error: 'Sorry but we don\'t recognise your username and password combination. ' +
-          'Please check your details and try again.',
+        error: 'Sorry but we don\'t recognise your username and password combination. Please check your details and try again.',
         onSubmit: this.handleSubmit.bind(this),
         theme: 'dark',
       },

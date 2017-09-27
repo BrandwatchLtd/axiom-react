@@ -17,8 +17,13 @@ import {
 } from 'bw-axiom';
 import atIds from '../../../at_ids';
 import './Login.css';
+import { translate as t } from '../../utils/locales';
 
 export default class Login extends Component {
+  static contextTypes = {
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+  };
+
   static propTypes = {
     /** Name of the application that appears in the header */
     application: PropTypes.string.isRequired,
@@ -56,6 +61,7 @@ export default class Login extends Component {
   render() {
     const { application, backgroundImage, error, ...rest } = this.props;
     const { username, password } = this.state;
+    const { axiomLanguage } = this.context;
     const style = { backgroundImage: `url(${backgroundImage})` };
 
     return (
@@ -71,14 +77,14 @@ export default class Login extends Component {
         <div className="ax-login__body">
           <div className="ax-login__form">
             <Heading space="x4" textSize="display2">
-              <Strong>{ application }</Strong>/ Login
+              <Strong>{ application }</Strong>/ { t(axiomLanguage, 'login-title') }
             </Heading>
 
             <Form onSubmit={ e => this.handleSubmit(e) }>
               <TextInput
                   data-ax-at={ atIds.Login.username }
                   onChange={ e => this.handleUsernameChange(e) }
-                  placeholder="Username"
+                  placeholder={ t(axiomLanguage, 'username') }
                   size="large"
                   style="overlay"
                   value={ username } />
@@ -86,7 +92,7 @@ export default class Login extends Component {
               <TextInput
                   data-ax-at={ atIds.Login.password }
                   onChange={ e => this.handlePasswordChange(e) }
-                  placeholder="Password"
+                  placeholder={ t(axiomLanguage, 'password') }
                   size="large"
                   style="overlay"
                   type="password"
@@ -99,14 +105,14 @@ export default class Login extends Component {
                         data-ax-at={ atIds.Login.submit }
                         full="small"
                         size="large"
-                        type="submit">Login</Button>
+                        type="submit">{ t(axiomLanguage, 'login-button') }</Button>
                   </ButtonGroup>
                 </GridCell>
 
                 <GridCell>
                   <Paragraph textCenter textRight="small">
                     <Link href="https://app.brandwatch.com/login" target="_blank">
-                      <Strong>Forgot login details?</Strong>
+                      <Strong>{ t(axiomLanguage, 'forgot-login') }</Strong>
                     </Link>
                   </Paragraph>
                 </GridCell>
