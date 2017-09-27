@@ -4,9 +4,13 @@ import {
   Button,
   ButtonGroup,
 } from 'bw-axiom';
+import { translate as t } from '../../utils/locales';
 import atIds from '../../../at_ids';
 
 export default class ChangePasswordControls extends Component {
+  static contextTypes = {
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+  };
 
   static propTypes = {
     isSubmitDisabled: PropTypes.bool.isRequired,
@@ -16,6 +20,7 @@ export default class ChangePasswordControls extends Component {
 
   render() {
     const { onSubmit, onCancel, isSubmitDisabled } = this.props;
+    const { axiomLanguage } = this.context;
 
     return (
       <ButtonGroup textRight>
@@ -24,14 +29,14 @@ export default class ChangePasswordControls extends Component {
             onClick={ () => onCancel() }
             style="secondary"
             type="button">
-          Cancel
+          { t(axiomLanguage, 'cancel-button') }
         </Button>
         <Button
             data-ax-at={ atIds.ChangePassword.submit }
             disabled={ isSubmitDisabled }
             onClick={ onSubmit }
             type="submit">
-          Change Password
+          { t(axiomLanguage, 'change-password-button') }
         </Button>
       </ButtonGroup>
     );

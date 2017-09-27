@@ -10,8 +10,12 @@ import {
 } from 'bw-axiom';
 import ChangePasswordForm from './ChangePasswordForm';
 import atIds from '../../../at_ids';
+import { translate as t } from '../../utils/locales';
 
 export default class ChangePassword extends Component {
+  static contextTypes = {
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+  };
 
   static propTypes = {
     /** An error message that will be placed on the page */
@@ -37,21 +41,22 @@ export default class ChangePassword extends Component {
   static defaultProps = {
     isSubmitting: false,
     rules: [
-      { label: '8 characters', pattern: /^.{8,}$/ },
-      { label: '1 numeric character', pattern: /^.*[0-9].*$/ },
-      { label: '1 uppercase character', pattern: /^.*[A-Z].*$/ },
-      { label: '1 non-alphanumeric character (e.g. !#%,+-/)', pattern: /^.*[^a-zA-Z\d:].*$/ },
+      { label: '8-characters', pattern: /^.{8,}$/ },
+      { label: '1-numeric-character', pattern: /^.*[0-9].*$/ },
+      { label: '1-uppercase-character', pattern: /^.*[A-Z].*$/ },
+      { label: '1-non-alphanumeric-character', pattern: /^.*[^a-zA-Z\d:].*$/ },
     ],
   };
 
   render() {
     const { error, isSubmitting, onRequestClose, onSubmit, rules, ...rest } = this.props;
+    const { axiomLanguage } = this.context;
 
     return (
       <Dialog { ...rest } onRequestClose={ onRequestClose } size="medium">
         <DialogHeader>
           <Heading textSize="headtitle">
-            Change Password
+            { t(axiomLanguage, 'change-password-title') }
           </Heading>
         </DialogHeader>
 

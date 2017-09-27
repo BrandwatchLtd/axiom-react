@@ -9,10 +9,14 @@ import {
   ListItem,
   TextInput,
 } from 'bw-axiom';
+import { translate as t } from '../../utils/locales';
 import ChangePasswordControls from './ChangePasswordControls';
 import atIds from '../../../at_ids';
 
 export default class ChangePasswordForm extends Component {
+  static contextTypes = {
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+  };
 
   static propTypes = {
     isSubmitting: PropTypes.bool.isRequired,
@@ -57,6 +61,7 @@ export default class ChangePasswordForm extends Component {
       rules,
       isSubmitting,
     } = this.props;
+    const { axiomLanguage } = this.context;
     const { currentPassword, newPassword, confirmPassword } = this.state;
 
     const validatedRules = rules.map(rule => ({
@@ -78,7 +83,7 @@ export default class ChangePasswordForm extends Component {
       <Form onSubmit={ onSubmit }>
         <TextInput
             data-ax-at={ atIds.ChangePassword.currentPassword }
-            label="Enter current password"
+            label={ t(axiomLanguage, 'enter-current-password') }
             onChange={ e => this.handlePasswordChange('currentPassword', e) }
             space="x6"
             type="password"
@@ -86,7 +91,7 @@ export default class ChangePasswordForm extends Component {
 
         <TextInput
             data-ax-at={ atIds.ChangePassword.newPassword }
-            label="Create new password"
+            label={ t(axiomLanguage, 'create-new-password') }
             onChange={ e => this.handlePasswordChange('newPassword', e) }
             space="x2"
             type="password"
@@ -99,7 +104,7 @@ export default class ChangePasswordForm extends Component {
               <List style="none" textColor="subtle">
                 { validatedRules.map(({ label, valid }, id) => (
                   <ListItem key={ id } space="x2">
-                    { label }
+                    { t(axiomLanguage, label) }
                     <Animicon
                         inline
                         isIn={ valid }
@@ -116,7 +121,7 @@ export default class ChangePasswordForm extends Component {
         <TextInput
             data-ax-at={ atIds.ChangePassword.confirmPassword }
             id="confirm-password"
-            label="Confirm new password"
+            label={ t(axiomLanguage, 'confirm-new-password') }
             onChange={ e => this.handlePasswordChange('confirmPassword', e) }
             space="x6"
             type="password"
