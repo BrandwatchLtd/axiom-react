@@ -215,3 +215,22 @@ exports[`TextInput renders with size medium 1`] = `
   </div>
 </label>
 `;
+
+exports[`TextInput renders with size small 1`] = `
+<label
+  className="ax-input__group ax-space--x4"
+>
+  <div
+    className="ax-input__container ax-input__container--small"
+  >
+    <input
+      className="ax-input"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="text"
+      value={undefined}
+    />
+  </div>
+</label>
+`;
