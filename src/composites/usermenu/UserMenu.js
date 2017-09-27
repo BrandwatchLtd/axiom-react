@@ -16,12 +16,17 @@ import {
   Link,
   Paragraph,
 } from 'bw-axiom';
+import { translate as t } from '../../utils/locales';
 
 const stringToColor = (string) => (colors) =>  colors[
   string.split('').reduce((acc, val) =>acc + val.charCodeAt(), 0) % (colors.length - 1)
 ];
 
 export default class UserMenu extends Component {
+  static contextTypes = {
+    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+  };
+
   static propTypes = {
     children: PropTypes.node,
     /** User email address */
@@ -39,6 +44,7 @@ export default class UserMenu extends Component {
   render() {
     const { children, firstName, lastName, email, imageSrc, onLogout } = this.props;
     const userColorPicker = stringToColor(email);
+    const { axiomLanguage } = this.context;
 
     return (
       <Dropdown position="bottom">
@@ -58,7 +64,7 @@ export default class UserMenu extends Component {
                   <Heading space="x0" textSize="headtitle">{ firstName } { lastName }</Heading>
                   <Paragraph space="x0" textColor="subtle">{ email }</Paragraph>
                   <ButtonGroup space="x4">
-                    <Button data-tid="logout" onClick={ onLogout }>Sign Out</Button>
+                    <Button data-tid="logout" onClick={ onLogout }>{ t(axiomLanguage, 'sign-out') }</Button>
                   </ButtonGroup>
                 </GridCell>
 
