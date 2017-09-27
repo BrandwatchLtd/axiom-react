@@ -17,6 +17,7 @@ import {
   Strong,
 } from 'bw-axiom';
 import './DataPickerHeader.css';
+import { translate as t } from '../../utils/locales';
 
 export default class DataPickerHeader extends Component {
   static propTypes = {
@@ -27,6 +28,7 @@ export default class DataPickerHeader extends Component {
     color: PropTypes.string,
     colorOptions: PropTypes.arrayOf(PropTypes.string),
     disabledColors: PropTypes.arrayOf(PropTypes.string),
+    axiomLanguage: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     onClear: PropTypes.func,
     onColorPickerOpen: PropTypes.func,
@@ -40,6 +42,7 @@ export default class DataPickerHeader extends Component {
       color,
       colorOptions,
       disabledColors,
+      axiomLanguage,
       placeholder,
       onClear,
       onColorPickerOpen,
@@ -105,7 +108,7 @@ export default class DataPickerHeader extends Component {
               <GridCell shrink>
                 <span className="ax-data-picker__header-link">
                   <Link onClick={ onClear }>
-                    <Strong><Small textCase="upper">Clear</Small></Strong>
+                    <Strong><Small textCase="upper">{ t(axiomLanguage, 'clear') }</Small></Strong>
                   </Link>
                 </span>
               </GridCell>
