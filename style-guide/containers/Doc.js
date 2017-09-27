@@ -7,14 +7,15 @@ import './Doc.css';
 
 export default class Doc extends Component {
   static contextTypes = {
+    lng: PropTypes.string.isRequired,
     pathname: PropTypes.string.isRequired,
   };
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    const { pathname } = this.context;
-    const { pathname: nextPathname } = nextContext;
+    const { lng, pathname } = this.context;
+    const { lng: nextLng, pathname: nextPathname } = nextContext;
 
-    return nextPathname !== pathname;
+    return nextPathname !== pathname || lng !== nextLng;
   }
 
   render() {

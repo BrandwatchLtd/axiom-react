@@ -1,0 +1,21 @@
+{
+  "change-password-title": "Cambiar Contraseña",
+  "enter-current-password": "Ingresar contraseña actual",
+  "create-new-password": "Crear nueva contraseña",
+  "confirm-new-password": "Confirmar nueva contraseña",
+  "cancel-button": "Cancelar",
+  "change-password-button": "Cambiar contraseña",
+  "8-characters": "8 caracteres",
+  "1-numeric-character": "1 caracter numérico",
+  "1-uppercase-character": "1 caracter en mayúscula",
+  "1-non-alphanumeric-character": "1 caracter no alfanumérico (ej. !#%,+-/)",
+  "settings": "Ajustes",
+  "help": "Ayuda!",
+  "sign-out": "Cerrar Sesión",
+  "login-title": "Iniciar Sesión",
+  "username": "Nombre de usuario",
+  "password": "Contraseña",
+  "forgot-login": "¿Olvidé mis detalles de inicio de sesión?",
+  "login-button": "Inicio de sesión",
+  "clear": "Borrar"
+}

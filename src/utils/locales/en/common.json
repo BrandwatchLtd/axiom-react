@@ -1,0 +1,21 @@
+{
+  "change-password-title": "Change Password",
+  "enter-current-password": "Enter current password",
+  "create-new-password": "Create new password",
+  "confirm-new-password": "Confirm new password",
+  "cancel-button": "Cancel",
+  "change-password-button": "Change Password",
+  "8-characters": "8 characters",
+  "1-numeric-character": "1 numeric character",
+  "1-uppercase-character": "1 uppercase character",
+  "1-non-alphanumeric-character": "1 non-alphanumeric character (e.g. !#%,+-/)",
+  "settings": "Settings",
+  "help": "Help!",
+  "sign-out": "Sign out",
+  "login-title": "Login",
+  "username": "Username",
+  "password": "Password",
+  "forgot-login": "Forgot login details?",
+  "login-button": "Login",
+  "clear": "Clear"
+}
