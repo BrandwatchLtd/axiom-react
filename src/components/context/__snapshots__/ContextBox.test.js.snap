@@ -44,7 +44,7 @@ exports[`ContextBox renders with height inserts an inline height style attribute
 
 exports[`ContextBox renders with maxHeight inserts an inline maxHeight style attribute 1`] = `
 <div
-  className="ax-context-box ax-context-box--padding-large"
+  className="ax-context-box ax-context-box--padding-large ax-context-box--scrollable"
   style={
     Object {
       "height": undefined,

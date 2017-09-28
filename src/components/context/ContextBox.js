@@ -26,7 +26,10 @@ export default class ContextBox extends Component {
     const classes = classnames(
       'ax-context-box',
       `ax-context-box--padding-${padding}`,
-      { 'ax-context-box--full-separator': hasFullSeparator }
+      {
+        'ax-context-box--full-separator': hasFullSeparator,
+        'ax-context-box--scrollable': maxHeight,
+      }
     );
 
     return (

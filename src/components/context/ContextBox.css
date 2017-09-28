@@ -1,6 +1,5 @@
 .ax-context-box {
   position: relative;
-  overflow-y: auto;
 }
 
 .ax-context-box--padding-small {
@@ -32,4 +31,8 @@
 .ax-context-box--full-separator::after {
   right: 0;
   left: 0;
+}
+
+.ax-context-box--scrollable {
+  overflow-y: auto;
 }
