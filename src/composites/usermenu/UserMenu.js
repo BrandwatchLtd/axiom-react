@@ -22,7 +22,7 @@ const stringToColor = (string) => (colors) =>  colors[
 
 export default class UserMenu extends Component {
   static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+    axiomLanguage: PropTypes.string,
   };
 
   static propTypes = {

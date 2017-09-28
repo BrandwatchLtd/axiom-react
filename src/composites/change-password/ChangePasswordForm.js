@@ -13,7 +13,7 @@ import atIds from '../../../at_ids';
 
 export default class ChangePasswordForm extends Component {
   static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+    axiomLanguage: PropTypes.string,
   };
 
   static propTypes = {

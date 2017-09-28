@@ -12,7 +12,7 @@ import t from '../../utils/locales';
 
 export default class ChangePassword extends Component {
   static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+    axiomLanguage: PropTypes.string,
   };
 
   static propTypes = {

@@ -15,5 +15,10 @@ export default (axiomLanguage = 'en', textId) => {
   if (!languageFileMap[axiomLanguage]) {
     axiomLanguage = axiomLanguage.split(/[^A-Za-z]/)[0];
   }
+
+  if (!languageFileMap[axiomLanguage]) {
+    axiomLanguage = 'en';
+  }
+
   return languageFileMap[axiomLanguage][textId] || textId;
 };

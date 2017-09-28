@@ -7,7 +7,7 @@ import atIds from '../../../at_ids';
 
 export default class ChangePasswordControls extends Component {
   static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+    axiomLanguage: PropTypes.string,
   };
 
   static propTypes = {

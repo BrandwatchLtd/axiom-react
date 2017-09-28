@@ -19,7 +19,7 @@ import './Login.css';
 
 export default class Login extends Component {
   static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+    axiomLanguage: PropTypes.string,
   };
 
   static propTypes = {

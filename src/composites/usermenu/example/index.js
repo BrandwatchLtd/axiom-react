@@ -8,7 +8,7 @@ import UserMenu from '../UserMenu';
 
 class UserMenuExample extends Component {
   static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
+    axiomLanguage: PropTypes.oneOf(['en', 'en-US', 'en-AU', 'en-BZ', 'en-CA', 'en-CB', 'en-GB', 'en-IN', 'en-IE', 'en-JM', 'en-NZ', 'en-PH', 'en-ZA', 'en-TT', 'de', 'de-DE', 'de-AT', 'de-LI', 'de-LU', 'de-CH', 'es-ES', 'es-AR', 'es-BO', 'es-CL', 'es-CO', 'es-CR', 'es-DO', 'es-EC', 'es-SV', 'es-GT', 'es-HN', 'es-MX', 'es-NI', 'es-PA', 'es-PY', 'es-PE', 'es-PR', 'es-UY', 'es-VE', 'fr', 'fr-FR', 'fr-BE', 'fr-CA', 'fr-LU', 'fr-CH']),
   };
 
   static propTypes = {

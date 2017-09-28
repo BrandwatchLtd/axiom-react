@@ -12,7 +12,7 @@ export default class App extends Component {
   };
 
   static childContextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']).isRequired,
+    axiomLanguage: PropTypes.string.isRequired,
     pathname: PropTypes.string.isRequired,
   };
 
