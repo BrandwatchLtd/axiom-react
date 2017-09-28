@@ -131,7 +131,7 @@ export default class ChangePasswordForm extends Component {
         <ChangePasswordControls
             isSubmitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
             onCancel={ onRequestClose }
-            onSubmit={ onSubmit } />
+            onSubmit={ this.handleSubmit } />
       </Form>
     );
   }
