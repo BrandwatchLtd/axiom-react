@@ -12,5 +12,8 @@ const languageFileMap = {
 
 
 export default (axiomLanguage = 'en', textId) => {
+  if (!languageFileMap[axiomLanguage]) {
+    axiomLanguage = axiomLanguage.split(/[^A-Za-z]/)[0];
+  }
   return languageFileMap[axiomLanguage][textId] || textId;
 };
