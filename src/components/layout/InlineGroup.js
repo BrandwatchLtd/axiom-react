@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base } from 'bw-axiom';
+import Base from '../base/Base';
 import './InlineGroup.css';
 
 export default class InlineGroup extends Component {

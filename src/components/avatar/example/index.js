@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Avatar, Candytar } from 'bw-axiom';
+import Avatar from '../Avatar';
+import Candytar from '../../candytar/Candytar';
 
 class AvatarExample extends Component {
   static propTypes = {

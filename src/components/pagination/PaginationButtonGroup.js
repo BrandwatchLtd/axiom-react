@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ButtonGroup } from 'bw-axiom';
+import ButtonGroup from '../button/ButtonGroup';
 
 export default class PaginationButtonGroup extends Component {
   render() {

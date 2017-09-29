@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { GridCell } from 'bw-axiom';
+import GridCell from './GridCell';
 
 const getComponent = (props = {}) =>
   renderer.create(

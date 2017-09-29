@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { PanelBody } from 'bw-axiom';
+import PanelBody from './PanelBody';
 
 const getComponent = (props = {}) =>
   renderer.create(

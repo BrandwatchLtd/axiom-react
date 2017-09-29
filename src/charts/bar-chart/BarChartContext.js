@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import {
-  Bar,
-  Dropdown,
-  DropdownContent,
-  DropdownTarget,
-} from 'bw-axiom';
+import Bar from '../bars/Bar';
+import Dropdown from '../../components/dropdown/Dropdown';
+import DropdownContent from '../../components/dropdown/DropdownContent';
+import DropdownTarget from '../../components/dropdown/DropdownTarget';
 
 export default class BarChartContext extends PureComponent {
   static propTypes = {

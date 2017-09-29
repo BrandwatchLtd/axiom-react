@@ -62,7 +62,7 @@ function readFileProps(file) {
 
 module.exports = function generate() {
   const components = {};
-  const componentExportRegex = /^export\s+{\s*default\s+as\s+(\w+)\s*}\s+from\s+'(.*)';$/gm;
+  const componentExportRegex = /^export\s+{\s*default\s+as\s+([A-Z]\w+)\s*}\s+from\s+'(.*)';$/gm;
   const srcDir = path.resolve(__dirname, '../src');
   const fileContent = fs.readFileSync(path.resolve(srcDir, 'index.js'), 'utf8');
   let match;

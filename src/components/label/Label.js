@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Children, Component, cloneElement } from 'react';
 import classnames from 'classnames';
-import { Base, LabelIcon } from 'bw-axiom';
+import Base from '../base/Base';
+import LabelIcon from './LabelIcon';
 import './Label.css';
 
 export default class Label extends Component {

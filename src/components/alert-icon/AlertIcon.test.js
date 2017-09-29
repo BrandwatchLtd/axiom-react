@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { AlertIcon } from 'bw-axiom';
+import AlertIcon from './AlertIcon';
 
 const getComponent = (props = {}) =>
   renderer.create(

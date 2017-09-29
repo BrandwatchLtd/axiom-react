@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { CardList, Card } from 'bw-axiom';
+import Card from './Card';
+import CardList from './CardList';
 
 const getComponent = (props = {}) =>
   renderer.create(

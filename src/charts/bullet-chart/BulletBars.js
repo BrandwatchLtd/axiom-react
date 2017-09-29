@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, Bar, Bars } from 'bw-axiom';
+import Bar from '../bars/Bar';
+import Bars from '../bars/Bars';
+import Base from '../../components/base/Base';
 import { findBarGroupMax, arrayOfLength } from './utils';
 
 export default class BulletBars extends Component {

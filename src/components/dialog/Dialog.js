@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Modal } from 'bw-axiom';
+import Base from '../base/Base';
+import Modal from '../modal/Modal';
 import './Dialog.css';
 
 export default class Dialog extends Component {

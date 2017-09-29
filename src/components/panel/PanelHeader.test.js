@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { PanelHeader } from 'bw-axiom';
+import PanelHeader from './PanelHeader';
 
 const getComponent = (props = {}) =>
   renderer.create(

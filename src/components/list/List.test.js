@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { List, ListItem } from 'bw-axiom';
+import List from './List';
+import ListItem from './ListItem';
 
 const getComponent = (props = {}) =>
   renderer.create(

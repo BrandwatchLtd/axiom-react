@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Alert,
-  Dialog,
-  DialogBody,
-  DialogHeader,
-  Paragraph,
-  Heading,
-} from 'bw-axiom';
+import Alert from '../../components/alert/Alert';
+import Dialog from '../../components/dialog/Dialog';
+import DialogBody from '../../components/dialog/DialogBody';
+import DialogHeader from '../../components/dialog/DialogHeader';
+import Heading from '../../components/typography/Heading';
+import Paragraph from '../../components/typography/Paragraph';
 import ChangePasswordForm from './ChangePasswordForm';
 import atIds from '../../../at_ids';
-import { translate as t } from '../../utils/locales';
+import t from '../../utils/locales';
 
 export default class ChangePassword extends Component {
   static contextTypes = {

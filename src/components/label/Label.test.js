@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Label, LabelIcon } from 'bw-axiom';
+import Label from './Label';
+import LabelIcon from './LabelIcon';
 
 const getComponent = (props = {}) =>
   renderer.create(

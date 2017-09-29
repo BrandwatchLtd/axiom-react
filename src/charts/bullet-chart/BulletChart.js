@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import Base from '../../components/base/Base';
 import BulletBars from './BulletBars';
 import ColumnChartBars from '../column-chart/ColumnChartBars';
-import ColumnChartVisual from '../column-chart/ColumnChartVisual';
 import ColumnChartRow from '../column-chart/ColumnChartRow';
+import ColumnChartVisual from '../column-chart/ColumnChartVisual';
 import ColumnChartXAxis from '../column-chart/ColumnChartXAxis';
 import ColumnChartXAxisLabel from '../column-chart/ColumnChartXAxisLabel';
 import ColumnChartYAxis from '../column-chart/ColumnChartYAxis';
-import './BulletChart.css';
 import { formatData } from './utils';
+import './BulletChart.css';
 
 export default class BulletChart extends Component {
   static propTypes = {

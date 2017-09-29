@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import Base from '../../components/base/Base';
 import BulletChart from './BulletChart';
 import ColumnChartXAxis from '../column-chart/ColumnChartXAxis';
 import ColumnChartXAxisLabel from '../column-chart/ColumnChartXAxisLabel';

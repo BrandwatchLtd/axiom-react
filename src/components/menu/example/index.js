@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Menu, MenuItem } from 'bw-axiom';
+import Menu from '../Menu';
+import MenuItem from '../MenuItem';
 
 class MenuExample extends Component {
   static propTypes = {

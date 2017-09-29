@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Image } from 'bw-axiom';
+import Image from './Image';
 
 const getComponent = (props = {}) =>
   renderer.create(

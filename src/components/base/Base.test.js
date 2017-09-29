@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
-import { Base } from 'bw-axiom';
+import Base from './Base';
 
 const getComponent = (props = {}) =>
   renderer.create(

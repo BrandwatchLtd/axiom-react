@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { LogoTab } from 'bw-axiom';
+import LogoTab from '../LogoTab';
 
 export default class LogoTabExample extends Component {
   static propTypes = {

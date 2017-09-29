@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ContextBox } from 'bw-axiom';
+import ContextBox from './ContextBox';
 import './ContextMenu.css';
 
 export default class ContextMenu extends Component {

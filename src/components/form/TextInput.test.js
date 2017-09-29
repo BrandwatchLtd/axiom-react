@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TextInput, TextInputIcon } from 'bw-axiom';
+import TextInput from './TextInput';
+import TextInputIcon from './TextInputIcon';
 
 const getComponent = (props = {}, children = 'Lorem ipsum') =>
   renderer.create(

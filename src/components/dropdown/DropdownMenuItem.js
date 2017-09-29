@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ContextMenuItem } from 'bw-axiom';
+import ContextMenuItem from '../context/ContextMenuItem';
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {

@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  DataPicker,
-  DataPickerBody,
-  DataPickerHeader,
-  DropdownMenu,
-  DropdownMenuItem,
-  Heading,
-  longNumber,
-} from 'bw-axiom';
+import DataPicker from '../DataPicker';
+import DataPickerBody from '../DataPickerBody';
+import DataPickerHeader from '../DataPickerHeader';
+import DropdownMenu from '../../dropdown/DropdownMenu';
+import DropdownMenuItem from '../../dropdown/DropdownMenuItem';
+import Heading from '../../typography/Heading';
+import longNumber from '../../../materials/number/longNumber';
 import { getData } from './data';
 
 class DataPickerExample extends Component {

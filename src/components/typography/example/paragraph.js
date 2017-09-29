@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Paragraph } from 'bw-axiom';
+import Paragraph from '../Paragraph';
 
 export default class ParagraphExample extends Component {
   static propTypes = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ChartKey, ChartKeyItem } from 'bw-axiom';
+import ChartKey from './ChartKey';
+import ChartKeyItem from './ChartKeyItem';
 
 const getComponent = () =>
   renderer.create(

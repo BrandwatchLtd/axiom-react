@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Notifications, Notification, Paragraph } from 'bw-axiom';
+import Notification from '../Notification';
+import Notifications from '../Notifications';
+import Paragraph from '../../typography/Paragraph';
 
 class NotificationExample extends Component {
   static propTypes = {

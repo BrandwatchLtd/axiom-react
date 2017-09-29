@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Badge } from 'bw-axiom';
+import Badge from './Badge';
 
 const getComponent = (props = {}) =>
   renderer.create(

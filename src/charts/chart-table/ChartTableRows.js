@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component, Children } from 'react';
 import classnames from 'classnames';
-import { Grid, GridCell, Icon, Link, Reveal, Small, Strong } from 'bw-axiom';
+import Grid from '../../components/grid/Grid';
+import GridCell from '../../components/grid/GridCell';
+import Icon from '../../components/icon/Icon';
+import Link from '../../components/typography/Link';
+import Reveal from '../../components/reveal/Reveal';
+import Small from '../../components/typography/Small';
+import Strong from '../../components/typography/Strong';
 
 export default class ChartTableRows extends Component {
   static propTypes = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Chart } from 'bw-axiom';
+import Chart from './Chart';
 
 const getComponent = (props = {}) =>
   renderer.create(

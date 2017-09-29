@@ -1,23 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
-import {
-  Base,
-  Button,
-  ButtonGroup,
-  Form,
-  Grid,
-  GridCell,
-  TextInput,
-  Link,
-  LogoTab,
-  Paragraph,
-  Heading,
-  Strong,
-} from 'bw-axiom';
+import Base from '../../components/base/Base';
+import Button from '../../components/button/Button';
+import ButtonGroup from '../../components/button/ButtonGroup';
+import Form from '../../components/form/Form';
+import Grid from '../../components/grid/Grid';
+import GridCell from '../../components/grid/GridCell';
+import Heading from '../../components/typography/Heading';
+import Link from '../../components/typography/Link';
+import LogoTab from '../../components/logo/LogoTab';
+import Paragraph from '../../components/typography/Paragraph';
+import Strong from '../../components/typography/Strong';
+import TextInput from '../../components/form/TextInput';
 import atIds from '../../../at_ids';
+import t from '../../utils/locales';
 import './Login.css';
-import { translate as t } from '../../utils/locales';
 
 export default class Login extends Component {
   static contextTypes = {

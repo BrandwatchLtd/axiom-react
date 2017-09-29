@@ -11,6 +11,6 @@ const languageFileMap = {
 };
 
 
-export const translate = (axiomLanguage = 'en', textId) => {
+export default (axiomLanguage = 'en', textId) => {
   return languageFileMap[axiomLanguage][textId] || textId;
 };

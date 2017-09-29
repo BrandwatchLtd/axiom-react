@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Base } from 'bw-axiom';
+import Base from '../Base';
 
 class BaseExample extends Component {
   static propTypes = {

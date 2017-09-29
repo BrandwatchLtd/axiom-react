@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { CheckBox } from 'bw-axiom';
+import CheckBox from '../form/CheckBox';
 
 export default class ContextMenuItemMulti extends Component {
   static propTypes = {
