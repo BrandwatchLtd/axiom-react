@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Base } from '../base/Base';
 import './Canvas.css';
 
 export default class Canvas extends Component {
@@ -21,9 +22,9 @@ export default class Canvas extends Component {
     };
 
     return (
-      <div { ...rest } className="ax-platform__canvas" style={ style }>
+      <Base { ...rest } className="ax-platform__canvas" style={ style }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
