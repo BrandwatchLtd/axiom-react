@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Grid, GridCell, TextInput, Heading, Paragraph, tinyNumber } from 'bw-axiom';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
+import Heading from '../../../components/typography/Heading';
+import Paragraph from '../../../components/typography/Paragraph';
+import TextInput from '../../../components/form/TextInput';
+import longNumber from '../longNumber';
 
-export default class TinyNumber extends Component {
+export default class LongNumber extends Component {
   componentWillMount() {
     this.setState({
       number: 123456789,
@@ -22,7 +27,7 @@ export default class TinyNumber extends Component {
     const { number, precision } = this.state;
 
     return (
-      <Example name="Tiny number">
+      <Example name="Long number">
         <Grid>
           <GridCell>
             <TextInput
@@ -38,14 +43,12 @@ export default class TinyNumber extends Component {
 
           <GridCell>
             <Heading>Formatted number</Heading>
-            <Paragraph>{ tinyNumber(number, precision) }</Paragraph>
+            <Paragraph>{ longNumber(number, precision) }</Paragraph>
           </GridCell>
         </Grid>
 
         <CodeSnippet language="js">{`
-          import { tinyNumber } from 'bw-axiom';
-
-          tinyNumber(Number [, Number]);
+          longNumber(Number [, Number]);
         `}</CodeSnippet>
       </Example>
     );

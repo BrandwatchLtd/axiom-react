@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import {
-  Avatar,
-  Context,
-  ContextTip,
-  Paragraph,
-  Tooltip,
-  TooltipContent,
-  TooltipTarget,
-} from 'bw-axiom';
+import Avatar from '../../avatar/Avatar';
+import Context from '../../context/Context';
+import ContextTip from '../../context/ContextTip';
+import Paragraph from '../../typography/Paragraph';
+import Tooltip from '../Tooltip';
+import TooltipContent from '../TooltipContent';
+import TooltipTarget from '../TooltipTarget';
 
 class TooltipExample extends Component {
   static propTypes = {

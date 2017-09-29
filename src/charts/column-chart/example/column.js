@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { ColumnChart, Heading } from 'bw-axiom';
+import ColumnChart from '../ColumnChart';
 import ContextDemoComponent from './ContextDemoComponent';
+import Heading from '../../../components/typography/Heading';
 import { data, chartKey } from './data';
 
 export default class ColumnExample extends Component {

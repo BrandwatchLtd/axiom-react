@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Tabset, Tab } from 'bw-axiom';
+import Tab from '../Tab';
+import Tabset from '../Tabset';
 
 class TabsetExample extends Component {
   static propTypes = {

@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Grid, GridCell, Italic, Paragraph, Strong } from 'bw-axiom';
+import Grid from '../../components/grid/Grid';
+import GridCell from '../../components/grid/GridCell';
+import Italic from '../../components/typography/Italic';
+import Paragraph from '../../components/typography/Paragraph';
+import Strong from '../../components/typography/Strong';
 import './ColorSwatch.css';
 
 export default class ColorSwatch extends Component {

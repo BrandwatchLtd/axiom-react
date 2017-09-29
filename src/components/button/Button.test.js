@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Button, ButtonIcon } from 'bw-axiom';
+import Button from './Button';
+import ButtonIcon from './ButtonIcon';
 
 const getComponent = (props = {}, children = 'Lorem Ipsum') =>
   renderer.create(

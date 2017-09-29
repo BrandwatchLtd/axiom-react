@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Paragraph, Small } from 'bw-axiom';
+import Paragraph from '../../components/typography/Paragraph';
+import Small from '../../components/typography/Small';
 
 export default class ChartTableAxisTitle extends Component {
   static propTypes = {

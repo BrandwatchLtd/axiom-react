@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon } from 'bw-axiom';
+import Icon from '../icon/Icon';
 
 export default class TextIcon extends Component {
   render() {

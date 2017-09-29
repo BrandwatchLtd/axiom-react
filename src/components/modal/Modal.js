@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Subtree } from 'bw-axiom';
+import Subtree from '../subtree/Subtree';
 import './Modal.css';
 
 const bodyOpenClassName = 'ax-modal__body--open';

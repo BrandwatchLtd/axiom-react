@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Progress } from 'bw-axiom';
+import Progress from '../Progress';
 
 export default class ProgressExample extends Component {
   static propTypes = {

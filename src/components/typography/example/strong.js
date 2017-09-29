@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Strong } from 'bw-axiom';
+import Strong from '../Strong';
 
 export default class StrongExample extends Component {
   static propTypes = {

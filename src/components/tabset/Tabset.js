@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
-import { Base, Tab } from 'bw-axiom';
+import Base from '../base/Base';
+import Tab from './Tab';
 import './Tabset.css';
 
 export default class Tabset extends Component {

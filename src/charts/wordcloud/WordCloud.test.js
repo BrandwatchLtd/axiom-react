@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { WordCloud } from 'bw-axiom';
+import WordCloud from './WordCloud';
 
 const getComponent = () =>
   renderer.create(

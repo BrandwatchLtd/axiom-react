@@ -1,15 +1,13 @@
-import {
-  filenameDate,
-  longDate,
-  longDateWithTime,
-  longDateWithTimezone,
-  mediumDate,
-  mediumDateWithTime,
-  shortDate,
-  shortDateWithTime,
-} from 'bw-axiom';
+import filenameDate from './filenameDate';
+import longDate from './longDate';
+import longDateWithTime from './longDateWithTime';
+import longDateWithTimezone from './longDateWithTimezone';
+import mediumDate from './mediumDate';
+import mediumDateWithTime from './mediumDateWithTime';
+import shortDate from './shortDate';
+import shortDateWithTime from './shortDateWithTime';
 
-describe('date and time', () => {
+describe('formatDate', () => {
   describe('filenameDate', () => {
     it('formats dates correctly', () => {
       expect(filenameDate(new Date(0))).toBe('1970-01-01_at_00.00.00_UTC');

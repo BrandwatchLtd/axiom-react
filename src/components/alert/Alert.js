@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import {
-  Base,
-  Grid,
-  GridCell,
-  Icon,
-  AlertIcon,
-  Link,
-} from 'bw-axiom';
+import AlertIcon from '../alert-icon/AlertIcon';
+import Base from '../base/Base';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
+import Icon from '../icon/Icon';
+import Link from '../typography/Link';
 import './Alert.css';
 
 export default class Alert extends Component {

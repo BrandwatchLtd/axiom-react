@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  PanelBody,
-} from 'bw-axiom';
+import PanelBody from '../panel/PanelBody';
 
 export default class DataPickerBody extends Component {
   static propTypes = {

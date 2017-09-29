@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  AlertDialog,
-  AlertDialogBody,
-  AlertDialogHeader,
-} from 'bw-axiom';
+import AlertDialog from '../AlertDialog';
+import AlertDialogBody from '../AlertDialogBody';
+import AlertDialogHeader from '../AlertDialogHeader';
 import { ExampleConfig } from 'style-guide';
 
 class AlertDialogExample extends Component {

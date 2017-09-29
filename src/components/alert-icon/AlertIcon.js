@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Icon } from 'bw-axiom';
+import Base from '../base/Base';
+import Icon from '../icon/Icon';
 import './AlertIcon.css';
 
 export const ALERT_ICON_NAME_MAP = {

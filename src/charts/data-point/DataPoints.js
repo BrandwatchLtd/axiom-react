@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Children, Component, cloneElement } from 'react';
-import { Base } from 'bw-axiom';
+import Base from '../../components/base/Base';
 import './DataPoints.css';
 
 export const VB_HEIGHT = 24;

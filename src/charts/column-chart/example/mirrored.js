@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Heading, MirroredColumnChart } from 'bw-axiom';
+import Heading from '../../../components/typography/Heading';
+import MirroredColumnChart from '../MirroredColumnChart';
 import ContextDemoComponent from './ContextDemoComponent';
 import { data, chartKey } from './data';
 

@@ -1,4 +1,6 @@
-import { NUMBER_SEPARATOR, shortNumber, longNumber, tinyNumber } from 'bw-axiom';
+import longNumber, { NUMBER_SEPARATOR } from './longNumber';
+import shortNumber from './shortNumber';
+import tinyNumber from './tinyNumber';
 
 const NS = NUMBER_SEPARATOR;
 

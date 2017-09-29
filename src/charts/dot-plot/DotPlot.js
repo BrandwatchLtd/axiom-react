@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base } from 'bw-axiom';
-import DotPlotContext from './DotPlotContext';
+import Base from '../../components/base/Base';
 import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
+import DotPlotContext from './DotPlotContext';
 import DotPlotDifferenceLine from './DotPlotDifferenceLine';
 import DotPlotValue from './DotPlotValue';
 import {

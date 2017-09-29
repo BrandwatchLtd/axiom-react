@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Table, TableBody } from 'bw-axiom';
+import Table from './Table';
+import TableBody from './TableBody';
 
 const getComponent = (props = {}) =>
   renderer.create(

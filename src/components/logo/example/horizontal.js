@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { LogoHorizontal } from 'bw-axiom';
+import LogoHorizontal from '../LogoHorizontal';
 
 export default class LogoHorizontalExample extends Component {
   static propTypes = {

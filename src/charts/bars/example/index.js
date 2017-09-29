@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Bars, Bar } from 'bw-axiom';
+import Bar from '../Bar';
+import Bars from '../Bars';
 
 class BarsExample extends Component {
   static propTypes = {

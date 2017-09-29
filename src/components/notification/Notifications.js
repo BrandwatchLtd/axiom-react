@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component, Children } from 'react';
-import { Base, Subtree  } from 'bw-axiom';
+import Base from '../base/Base';
+import Subtree from '../subtree/Subtree';
 
 export default class Notifications extends Component {
   static propTypes = {

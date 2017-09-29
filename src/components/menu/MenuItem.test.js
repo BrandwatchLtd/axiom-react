@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Menu, MenuItem } from 'bw-axiom';
+import Menu from './Menu';
+import MenuItem from './MenuItem';
 
 const getComponent = (props = {}) =>
   renderer.create(

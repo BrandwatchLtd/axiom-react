@@ -1,23 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Context,
-  ColorPicker,
-  ColorPickerOption,
-  Dropdown,
-  DropdownContent,
-  DropdownTarget,
-  Grid,
-  GridCell,
-  Heading,
-  Icon,
-  Link,
-  PanelHeader,
-  Small,
-  Strong,
-} from 'bw-axiom';
+import ColorPicker from '../color-picker/ColorPicker';
+import ColorPickerOption from '../color-picker/ColorPickerOption';
+import Context from '../context/Context';
+import Dropdown from '../dropdown/Dropdown';
+import DropdownContent from '../dropdown/DropdownContent';
+import DropdownTarget from '../dropdown/DropdownTarget';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
+import Heading from '../typography/Heading';
+import Icon from '../icon/Icon';
+import Link from '../typography/Link';
+import PanelHeader from '../panel/PanelHeader';
+import Small from '../typography/Small';
+import Strong from '../typography/Strong';
+import t from '../../utils/locales';
 import './DataPickerHeader.css';
-import { translate as t } from '../../utils/locales';
 
 export default class DataPickerHeader extends Component {
   static propTypes = {

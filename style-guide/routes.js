@@ -14,17 +14,17 @@ export default (
         <Route
             path="colors"
             name="Colors"
-            examples={ require('../src/materials/example/colors') }
+            examples={ require('../src/materials/colors') }
             component={ Doc } />
         <Route
             path="date-and-time"
             name="Date and Time"
-            examples={ require('../src/materials/example/date-and-time') }
+            examples={ require('../src/materials/date-and-time/example') }
             component={ Doc } />
         <Route
             path="numbers"
             name="Numbers"
-            examples={ require('../src/materials/example/numbers') }
+            examples={ require('../src/materials/number/example') }
             component={ Doc } />
       </Route>
 

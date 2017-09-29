@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Base } from 'bw-axiom';
+import Base from '../base/Base';
 import './Text.css';
 
 export default class Text extends Component {

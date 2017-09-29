@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { TextArea } from 'bw-axiom';
+import TextArea from '../TextArea';
 
 export default class TextAreaExample extends Component {
   static propTypes = {

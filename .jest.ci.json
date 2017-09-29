@@ -1,7 +1,6 @@
 {
   "moduleNameMapper": {
-    "^.+\\.css$": "<rootDir>/test/__mocks__/styleMock.js",
-    "^bw-axiom$": "<rootDir>/tmp/index.js"
+    "^.+\\.css$": "<rootDir>/test/__mocks__/styleMock.js"
   },
   "transform": {}
 }

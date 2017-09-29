@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { AlertIcon, ImageCircle } from 'bw-axiom';
+import AlertIcon from '../../alert-icon/AlertIcon';
+import ImageCircle from '../ImageCircle';
 
 export default class ImageCircleExample extends Component {
   static propTypes = {

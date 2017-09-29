@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Reveal } from 'bw-axiom';
+import Reveal from '../Reveal';
 
 class RevealExample extends Component {
   static propTypes = {

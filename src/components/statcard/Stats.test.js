@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Stats } from 'bw-axiom';
+import Stats from './Stats';
 
 const getComponent = (props = {}) =>
   renderer.create(

@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ButtonGroup, Button } from 'bw-axiom';
+import Button from './Button';
+import ButtonGroup from './ButtonGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(

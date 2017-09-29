@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { DropdownMenu, DropdownMenuItem, UserMenu } from 'bw-axiom';
-import { translate as t } from '../../../utils/locales';
+import t from '../../../utils/locales';
+import DropdownMenu from '../../../components/dropdown/DropdownMenu';
+import DropdownMenuItem from '../../../components/dropdown/DropdownMenuItem';
+import UserMenu from '../UserMenu';
 
 class UserMenuExample extends Component {
   static contextTypes = {

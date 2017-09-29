@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Small } from 'bw-axiom';
+import Small from '../../typography/Small';
 import './GridBlock.css';
 
 export default class DemoBox extends Component {

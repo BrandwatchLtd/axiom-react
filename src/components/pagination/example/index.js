@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Pagination } from 'bw-axiom';
+import Pagination from '../Pagination';
 
 class PagiantionExample extends Component {
   static propTypes = {

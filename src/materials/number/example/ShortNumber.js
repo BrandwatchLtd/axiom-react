@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import { Grid, GridCell, TextInput, Heading, Paragraph, shortNumber } from 'bw-axiom';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
+import Heading from '../../../components/typography/Heading';
+import Paragraph from '../../../components/typography/Paragraph';
+import TextInput from '../../../components/form/TextInput';
+import shortNumber from '../shortNumber';
 
 export default class ShortNumber extends Component {
   componentWillMount() {
@@ -43,8 +48,6 @@ export default class ShortNumber extends Component {
         </Grid>
 
         <CodeSnippet language="js">{`
-          import { shortNumber } from 'bw-axiom';
-
           shortNumber(Number [, Number]);
         `}</CodeSnippet>
       </Example>

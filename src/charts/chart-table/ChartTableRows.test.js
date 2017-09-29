@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ChartTableRows from './ChartTableRows';
 import ChartTableRow from './ChartTableRow';
+import ChartTableRows from './ChartTableRows';
 
 const getComponent = (props = {}) =>
   renderer.create(

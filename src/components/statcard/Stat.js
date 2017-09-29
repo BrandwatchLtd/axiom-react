@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Base, Heading } from 'bw-axiom';
+import Base from '../base/Base';
+import Heading from '../typography/Heading';
 import './Stat.css';
 
 export default class Stat extends Component {

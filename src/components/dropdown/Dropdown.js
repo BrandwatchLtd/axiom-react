@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  DropdownTarget,
-  DropdownContent,
-  Position,
-  PositionTarget,
-  PositionContent,
-  findComponent,
-} from 'bw-axiom';
+import DropdownContent from './DropdownContent';
+import DropdownTarget from './DropdownTarget';
+import Position from '../position/Position';
+import PositionContent from '../position/PositionContent';
+import PositionTarget from '../position/PositionTarget';
+import findComponent from '../../utils/findComponent';
 
 export default class Dropdown extends Component {
   static propTypes = {

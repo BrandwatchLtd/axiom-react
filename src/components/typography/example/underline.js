@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Underline } from 'bw-axiom';
+import Underline from '../Underline';
 
 export default class UnderlineExample extends Component {
   static propTypes = {

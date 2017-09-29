@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { Paragraph, Link } from 'bw-axiom';
+import Link from '../Link';
+import Paragraph from '../Paragraph';
 
 export default class LinkExample extends Component {
   static propTypes = {

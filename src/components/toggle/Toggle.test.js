@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Toggle } from 'bw-axiom';
+import Toggle from './Toggle';
 
 const onToggle = () => {};
 

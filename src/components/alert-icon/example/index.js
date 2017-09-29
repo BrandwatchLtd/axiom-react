@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import { AlertIcon } from 'bw-axiom';
+import AlertIcon from '../AlertIcon';
 
 class AlertIconExample extends Component {
   static propTypes = {
