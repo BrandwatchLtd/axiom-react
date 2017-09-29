@@ -101,7 +101,7 @@
 
   --color-theme-dark-border: rgba(var(--rgb-ui-light--light), 0.2);
   --color-theme-dark-border-subtle: rgba(var(--rgb-ui-light--light), 0.15);
-  --color-theme-dark-background: var(--color-ui-dark--light);
+  --color-theme-dark-background: var(--color-ui-dark--dark);
   --color-theme-dark-background-active: var(--color-ui-dark);
   --color-theme-dark-background-disabled: rgba(var(--rgb-ui-light--light), 0.05);
   --color-theme-dark-background-faded: rgba(var(--rgb-ui-light--light), 0.1);

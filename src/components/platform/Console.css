@@ -4,9 +4,9 @@
   bottom: 0;
   left: 0;
   transform: translateX(-100%);
-  border-right: var(--component-border-width) solid var(--color-ui-light--dark);
-  background-color: var(--color-ui-light--light);
-  color: var(--color-ui-dark--light);
+  border-right: var(--component-border-width) solid var(--color-context-border);
+  background-color: var(--color-context-background-active);
+  color: var(--color-content-text);
   overflow: auto;
   z-index: calc(var(--z-index-platform) - 1);
   transition-property: transform;
