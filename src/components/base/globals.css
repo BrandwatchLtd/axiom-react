@@ -1,11 +1,11 @@
-/* stylelint-disable property-no-vendor-prefix, selector-no-type */
-/* stylelint-disable selector-no-universal */
+/* stylelint-disable property-no-vendor-prefix, selector-max-type */
+/* stylelint-disable selector-max-universal */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-/* stylelint-enable selector-no-universal */
+/* stylelint-enable selector-max-universal */
 
 html,
 body {

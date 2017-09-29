@@ -5,7 +5,7 @@
 .ax-inline-group__spacer {
   margin-bottom: calc(var(--cmp-inline-spacing) * -1);
 
-  /* stylelint-disable selector-no-universal */
+  /* stylelint-disable selector-max-universal */
   & > * {
     margin-right: var(--cmp-inline-spacing);
     margin-bottom: var(--cmp-inline-spacing);
