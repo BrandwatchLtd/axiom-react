@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Base } from '../base/Base';
 import classnames from 'classnames';
 import './Console.css';
 
@@ -22,9 +23,9 @@ export default class Console extends Component {
     });
 
     return (
-      <div { ...rest } className={ classes } style={ style }>
+      <Base { ...rest } className={ classes } style={ style }>
         { children }
-      </div>
+      </Base>
     );
   }
 }
