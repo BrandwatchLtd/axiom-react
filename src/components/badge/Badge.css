@@ -6,7 +6,6 @@
   justify-content: flex-end;
   padding: 0 calc(var(--component-line-height) / 2);
   border-radius: var(--component-line-height);
-  color: var(--color-context-text);
   font-size: var(--font-size-small);
   line-height: var(--component-line-height);
   white-space: nowrap;
