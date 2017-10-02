@@ -57,6 +57,7 @@
 .ax-grid__cell--full    { flex: 1 1 100%; }
 .ax-grid__cell--shrink  { flex: 0 1 auto; }
 .ax-grid__cell--percent { flex: none; }
+.ax-grid__cell--sub-grid { display: flex; }
 
 .ax-grid--fill > .ax-grid__cell   { flex: 1 1 auto; }
 .ax-grid--fit > .ax-grid__cell    { flex: 1 1 0%; }

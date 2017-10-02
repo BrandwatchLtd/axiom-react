@@ -42,6 +42,10 @@ export default class GridCell extends Component {
      */
     shrink: PropTypes.oneOf([true, 'small', 'medium', 'large']),
     /**
+     * Allows a grid cell function as a flex container itself.
+     */
+    subGrid: PropTypes.bool,
+    /**
      * Vertically aligns itself relative to other cells within a grid.
      */
     verticalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
@@ -57,6 +61,7 @@ export default class GridCell extends Component {
       full,
       width,
       shrink,
+      subGrid,
       verticalAlign,
       ...rest
     } = this.props;
@@ -72,6 +77,7 @@ export default class GridCell extends Component {
       [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
       [`ax-grid__cell--full--${full}`]: full && full !== true,
       [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
+      'ax-grid__cell--sub-grid': subGrid,
     });
 
     const styles = {

@@ -221,6 +221,32 @@ exports[`GridCell renders with shrink true 1`] = `
 </div>
 `;
 
+exports[`GridCell renders with sub grid  1`] = `
+<div
+  className="ax-grid__cell"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with sub grid true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--sub-grid"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
 exports[`GridCell renders with verticalAlign end 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--end"

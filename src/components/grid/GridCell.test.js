@@ -65,4 +65,15 @@ describe('GridCell', () => {
       });
     });
   });
+
+
+  describe('renders with sub grid', () => {
+    [true, false].forEach((subGrid) => {
+      it(subGrid, () => {
+        const component = getComponent({ subGrid });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
 });
