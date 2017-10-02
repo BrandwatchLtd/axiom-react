@@ -158,4 +158,5 @@ export { default as WordCloud } from './charts/wordcloud/WordCloud';
 // Composites
 export { default as ChangePassword } from './composites/change-password/ChangePassword';
 export { default as Login } from './composites/login/Login';
+export { default as LogoPage } from './composites/logo-page/LogoPage';
 export { default as UserMenu } from './composites/usermenu/UserMenu';
