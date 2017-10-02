@@ -97,6 +97,7 @@ module.exports = {
         '/docs/composites/change-password',
         '/docs/composites/login',
         '/docs/composites/logo-page',
+        '/docs/composites/status-pages',
         '/docs/composites/usermenu',
         '/docs/charts/bars',
         '/docs/charts/bar-chart',

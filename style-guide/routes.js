@@ -233,6 +233,11 @@ export default (
             examples={ require('../src/composites/logo-page/example') }
             component={ Doc } />
         <Route
+            path="status-pages"
+            name="Status Pages"
+            examples={ require('../src/composites/status-pages/example') }
+            component={ Doc } />
+        <Route
             path="usermenu"
             name="User Menu"
             examples={ require('../src/composites/usermenu/example') }
