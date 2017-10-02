@@ -4,6 +4,7 @@ export { default as getCSSVar } from './utils/getCSSVar';
 export { default as svgDefineOnce } from './utils/svgDefineOnce';
 
 // Materials
+export { default as filenameDate } from './materials/date-and-time/filenameDate';
 export { default as longDate } from './materials/date-and-time/longDate';
 export { default as longDateWithTime } from './materials/date-and-time/longDateWithTime';
 export { default as longDateWithTimezone } from './materials/date-and-time/longDateWithTimezone';
