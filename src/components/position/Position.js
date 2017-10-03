@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
 import omit from 'lodash.omit';
 import findComponent from '../../utils/findComponent';
-import PositionContent from './PositionContent';
-import PositionTarget from './PositionTarget';
+import { PositionContentRef } from './PositionContent';
+import { PositionTargetRef } from './PositionTarget';
 import Subtree from '../subtree/Subtree';
 import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
 import './Position.css';
@@ -111,7 +111,7 @@ export default class Position extends Component {
       <div>
         <div className="ax-position">
           {
-            cloneElement(findComponent(children, PositionContent), {
+            cloneElement(findComponent(children, PositionContentRef), {
               arrowRef: showArrow
                 ? (arrow) => this._arrow = ReactDOM.findDOMNode(arrow)
                 : undefined,
@@ -188,7 +188,7 @@ export default class Position extends Component {
           onSubtreeUnrender={ this.handleSubtreeUnrender }
           subtree={ this.subtree }>
         {
-          cloneElement(findComponent(children, PositionTarget), {
+          cloneElement(findComponent(children, PositionTargetRef), {
             ref: (target) => this._target = ReactDOM.findDOMNode(target),
           })
         }

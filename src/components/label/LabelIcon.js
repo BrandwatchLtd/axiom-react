@@ -5,6 +5,8 @@ import Icon from '../icon/Icon';
 import Link from '../typography/Link';
 import './LabelIcon.css';
 
+export const LabelIconRef = 'LabelIcon';
+
 export default class LabelIcon extends Component {
   static propTypes = {
     /** SKIP */
@@ -16,6 +18,8 @@ export default class LabelIcon extends Component {
     /** Name of the icon. See <Icon>. */
     name: PropTypes.string.isRequired,
   };
+
+  static typeRef = LabelIconRef;
 
   render () {
     const { color, isEnd, isStart, name, ...rest } = this.props;

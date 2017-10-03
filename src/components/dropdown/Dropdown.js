@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import DropdownContent from './DropdownContent';
-import DropdownTarget from './DropdownTarget';
+import { DropdownContentRef } from './DropdownContent';
+import { DropdownTargetRef } from './DropdownTarget';
 import Position from '../position/Position';
 import PositionContent from '../position/PositionContent';
 import PositionTarget from '../position/PositionTarget';
@@ -75,8 +75,8 @@ export default class Dropdown extends Component {
           isVisible={ isVisible }
           onMaskClick={ () => this.close() }
           position={ position }>
-        <PositionTarget>{ findComponent(children, DropdownTarget) }</PositionTarget>
-        <PositionContent>{ findComponent(children, DropdownContent) }</PositionContent>
+        <PositionTarget>{ findComponent(children, DropdownTargetRef) }</PositionTarget>
+        <PositionContent>{ findComponent(children, DropdownContentRef) }</PositionContent>
       </Position>
     );
   }

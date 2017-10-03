@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { Component, cloneElement } from 'react';
 
+export const TooltipTargetRef = 'TooltipTarget';
+
 export default class TooltipTarget extends Component {
   static propTypes = {
     children: PropTypes.node,
@@ -10,6 +12,8 @@ export default class TooltipTarget extends Component {
     hideTooltip: PropTypes.func.isRequired,
     showTooltip: PropTypes.func.isRequired,
   };
+
+  static typeRef = TooltipTargetRef;
 
   handleMouseMove(...args) {
     const { children } = this.props;

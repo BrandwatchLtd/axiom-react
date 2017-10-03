@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Position from '../position/Position';
 import PositionContent from '../position/PositionContent';
 import PositionTarget from '../position/PositionTarget';
-import TooltipContent from './TooltipContent';
-import TooltipTarget from './TooltipTarget';
+import { TooltipContentRef } from './TooltipContent';
+import { TooltipTargetRef } from './TooltipTarget';
 import findComponent from '../../utils/findComponent';
 
 export default class Tooltip extends Component {
@@ -69,8 +69,8 @@ export default class Tooltip extends Component {
 
     return (
       <Position { ...rest } isVisible={ isVisible } position={ position }>
-        <PositionTarget>{ findComponent(children, TooltipTarget) }</PositionTarget>
-        <PositionContent>{ findComponent(children, TooltipContent) }</PositionContent>
+        <PositionTarget>{ findComponent(children, TooltipTargetRef) }</PositionTarget>
+        <PositionContent>{ findComponent(children, TooltipContentRef) }</PositionContent>
       </Position>
     );
   }

@@ -3,7 +3,8 @@ import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
 import Base from '../base/Base';
-import Tab from './Tab';
+import { TabRef } from './Tab';
+import isComponent from '../../utils/isComponent';
 import './Tabset.css';
 
 export default class Tabset extends Component {
@@ -53,7 +54,7 @@ export default class Tabset extends Component {
       : null;
 
     const tabs = arrayChildren
-      .filter(({ type }) => type === Tab)
+      .filter((child) => isComponent(child, TabRef))
       .map((child, index) => cloneElement(child, {
         active: index === activeTabIndex,
         onClick: () => this.activateTab(index),

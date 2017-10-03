@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import Base from '../base/Base';
 
+export const TabRef = 'Tab';
+
 export default class Tab extends Component {
   static propTypes = {
     /** SKIP */
@@ -14,6 +16,8 @@ export default class Tab extends Component {
     /** Title that is placed with the Tab */
     title: PropTypes.node,
   };
+
+  static typeRef = TabRef;
 
   render() {
     /* eslint-disable react/prop-types */

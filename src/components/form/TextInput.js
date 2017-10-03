@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import TextInputIcon from './TextInputIcon';
+import { TextInputIconRef } from './TextInputIcon';
 import TextGroup from './TextGroup';
 import findComponent from '../../utils/findComponent';
 import './TextInput.css';
@@ -77,7 +77,7 @@ export default class TextInput extends Component {
     } = this.props;
 
     const { hasFocus } = this.state;
-    const icon = findComponent(children, TextInputIcon);
+    const icon = findComponent(children, TextInputIconRef);
     const iconContainerClasses = classnames('ax-input__container', {
       [`ax-input__container--${size}`]: size,
       [`ax-input__container--${style}`]: style,

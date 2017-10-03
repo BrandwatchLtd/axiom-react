@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import Base from '../base/Base';
-import ButtonIcon from './ButtonIcon';
+import { ButtonIconRef } from './ButtonIcon';
+import isComponent from '../../utils/isComponent';
 import './Button.css';
 
 export default class Button extends Component {
@@ -39,7 +40,7 @@ export default class Button extends Component {
     const { joined } = this.context;
     const { children, circular, disabled, stadium, style, size, full, ...rest } = this.props;
     const childrenArray = Children.toArray(children);
-    const iconOnly = childrenArray.length === 1 && childrenArray[0].type === ButtonIcon;
+    const iconOnly = childrenArray.length === 1 && isComponent(childrenArray[0], ButtonIconRef);
     const classes = classnames('ax-button', {
       [`ax-button--${size}`]: size,
       [`ax-button--${style}`]: style,
@@ -52,7 +53,7 @@ export default class Button extends Component {
     });
 
     const mappedChildren = childrenArray.map((child, index, array) =>
-      child.type !== ButtonIcon ? child : cloneElement(child, {
+      !isComponent(child, ButtonIconRef) ? child : cloneElement(child, {
         isEnd: index === array.length - 1,
         isStart: index === 0,
       })

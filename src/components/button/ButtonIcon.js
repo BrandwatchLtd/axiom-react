@@ -4,6 +4,8 @@ import classnames from 'classnames';
 import Icon from '../icon/Icon';
 import './ButtonIcon.css';
 
+export const ButtonIconRef = 'ButtonIcon';
+
 export default class ButtonIcon extends Component {
   static propTypes = {
     /** SKIP */
@@ -13,6 +15,8 @@ export default class ButtonIcon extends Component {
     /** Name of the Icon */
     name: PropTypes.string.isRequired,
   };
+
+  static typeRef = ButtonIconRef;
 
   render () {
     const { isEnd, isStart, name, ...rest } = this.props;

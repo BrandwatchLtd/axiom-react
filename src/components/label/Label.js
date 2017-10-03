@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Children, Component, cloneElement } from 'react';
 import classnames from 'classnames';
 import Base from '../base/Base';
-import LabelIcon from './LabelIcon';
+import { LabelIconRef } from './LabelIcon';
+import isComponent from '../../utils/isComponent';
 import './Label.css';
 
 export default class Label extends Component {
@@ -42,7 +43,7 @@ export default class Label extends Component {
     });
 
     const mappedChildren = Children.toArray(children).map((child, index, array) =>
-      child.type !== LabelIcon ? child : cloneElement(child, {
+      !isComponent(child, LabelIconRef) ? child : cloneElement(child, {
         isEnd: index === array.length - 1,
         isStart: index === 0,
         color,

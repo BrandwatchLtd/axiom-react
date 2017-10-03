@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import Icon from '../icon/Icon';
 import Link from '../typography/Link';
 
+export const TextInputIconRef = 'TextInputIcon';
+
 export default class TextInputIcon extends Component {
   static propTypes = {
     /** Alignment inside the input field */
@@ -16,7 +18,9 @@ export default class TextInputIcon extends Component {
 
   static defaultProps = {
     align: 'right',
-  }
+  };
+
+  static typeRef = TextInputIconRef;
 
   render () {
     const { align, name, onClick, ...rest } = this.props;
