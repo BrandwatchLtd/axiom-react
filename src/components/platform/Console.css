@@ -6,7 +6,7 @@
   transform: translateX(-100%);
   border-right: var(--component-border-width) solid var(--color-context-border);
   background-color: var(--color-context-background-active);
-  color: var(--color-content-text);
+  color: var(--color-context-text);
   overflow: auto;
   z-index: calc(var(--z-index-platform) - 1);
   transition-property: transform;
