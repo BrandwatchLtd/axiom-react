@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import Subtree from '../subtree/Subtree';
+import Portal from '../portal/Portal';
 import './Modal.css';
 
 const bodyOpenClassName = 'ax-modal__body--open';
@@ -26,39 +26,42 @@ export default class Modal extends Component {
     withOverlay: true,
   };
 
-  constructor(props) {
-    super(props);
-    this.subtree = this.subtree.bind(this);
+  componentDidMount() {
+    if (this.props.isOpen) {
+      disableScrolling();
+    }
   }
 
-  subtree() {
-    const { children, withOverlay, onOverlayClick } = this.props;
+  componentWillUnmount() {
+    enableScrolling();
+  }
+
+  componentDidUpdate() {
+    if (this.props.isOpen) {
+      disableScrolling();
+    } else {
+      enableScrolling();
+    }
+  }
+
+  render() {
+    const { children, isOpen, withOverlay, onOverlayClick } = this.props;
     const classes = classnames('ax-modal__container', {
       'ax-modal__container--overlay': withOverlay,
     });
 
-    return (
-      <div className={ classes }>
-        { onOverlayClick && (
-          <div className="ax-modal__mask" onClick={ onOverlayClick } />
-        ) }
+    return isOpen ? (
+      <Portal>
+        <div className={ classes }>
+          { onOverlayClick && (
+            <div className="ax-modal__mask" onClick={ onOverlayClick } />
+          ) }
 
-        <div className="ax-modal">
-          { children }
+          <div className="ax-modal">
+            { children }
+          </div>
         </div>
-      </div>
-    );
-  }
-
-  render() {
-    const { isOpen } = this.props;
-
-    return (
-      <Subtree
-          isRendered={ isOpen }
-          onSubtreeRender={ disableScrolling }
-          onSubtreeUnrender={ enableScrolling }
-          subtree={ this.subtree } />
-    );
+      </Portal>
+    ) : null;
   }
 }

@@ -1,42 +1,33 @@
 import PropTypes from 'prop-types';
 import React, { Component, Children } from 'react';
 import Base from '../base/Base';
-import Subtree from '../subtree/Subtree';
+import Portal from '../portal/Portal';
 
 export default class Notifications extends Component {
   static propTypes = {
     children: PropTypes.node,
   };
 
-  constructor(props) {
-    super(props);
-    this.subtree = this.subtree.bind(this);
-  }
-
-  subtree() {
-    const { children, ...rest } = this.props;
-
-    return (
-      <Base { ...rest } className="ax-notifications">
-        { Children.map(children, (child) =>
-          <div className="ax-notifications__notification">
-            { child }
-          </div>
-        ) }
-      </Base>
-    );
-  }
-
   render() {
-    const { children } = this.props;
+    const { children, ...rest } = this.props;
     const isRendered = Boolean(Array.isArray(children)
       ? children.length
       : children);
 
+    if (!isRendered) {
+      return null;
+    }
+
     return (
-      <Subtree
-          isRendered={ isRendered }
-          subtree={ this.subtree } />
+      <Portal>
+        <Base { ...rest } className="ax-notifications">
+          { Children.map(children, (child) =>
+            <div className="ax-notifications__notification">
+              { child }
+            </div>
+          ) }
+        </Base>
+      </Portal>
     );
   }
 }

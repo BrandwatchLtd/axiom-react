@@ -41,7 +41,6 @@ export default class DatePicker extends Component  {
     rangeSelect: false,
   };
 
-
   render() {
     const { children, ...rest } = this.props;
 

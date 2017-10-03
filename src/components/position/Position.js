@@ -6,7 +6,7 @@ import omit from 'lodash.omit';
 import findComponent from '../../utils/findComponent';
 import { PositionContentRef } from './PositionContent';
 import { PositionTargetRef } from './PositionTarget';
-import Subtree from '../subtree/Subtree';
+import Portal from '../portal/Portal';
 import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
 import './Position.css';
 
@@ -60,24 +60,36 @@ export default class Position extends Component {
 
   constructor(props) {
     super(props);
-
-    this.subtree = this.subtree.bind(this);
     this.handleOnCreate = this.handleOnCreate.bind(this);
     this.handleOnUpdate = this.handleOnUpdate.bind(this);
-    this.handleSubtreeRender = this.handleSubtreeRender.bind(this);
-    this.handleSubtreeUnrender = this.handleSubtreeUnrender.bind(this);
     this.state = {
       placement: positionToPlacement(props.position, props.offset),
     };
+  }
+
+  componentDidMount() {
+    if (this._content) {
+      this._popper = this.createPopper();
+    }
   }
 
   componentDidUpdate() {
     const { enabled, isVisible, position, offset } = this.props;
 
     if (enabled && isVisible) {
-      this._popper.options.placement = positionToPlacement(position, offset);
-      this._popper.update();
+      if (!this._popper) {
+        this._popper = this.createPopper();
+      } else {
+        this._popper.options.placement = positionToPlacement(position, offset);
+        this._popper.update();
+      }
+    } else if (this._popper) {
+      this.destroyPopper();
     }
+  }
+
+  componentWillUnmount() {
+    this.destroyPopper();
   }
 
   createPopper() {
@@ -102,29 +114,19 @@ export default class Position extends Component {
     });
   }
 
-  subtree() {
-    const { children, showArrow, onMaskClick } = this.props;
-    const { placement } = this.state;
-    const [ position ] = placementToPosition(placement);
+  destroyPopper() {
+    if (this._popper) {
+      this._popper.destroy();
+    }
 
-    return (
-      <div>
-        <div className="ax-position">
-          {
-            cloneElement(findComponent(children, PositionContentRef), {
-              arrowRef: showArrow
-                ? (arrow) => this._arrow = ReactDOM.findDOMNode(arrow)
-                : undefined,
-              position,
-            })
-          }
-        </div>
+    delete this._popper;
+    delete this._arrow;
+    delete this._content;
 
-        { onMaskClick && (
-          <div className="ax-position__mask" onClick={ onMaskClick } />
-        ) }
-      </div>
-    );
+    const placement = positionToPlacement(this.props.position, this.props.offset);
+    if (placement !== this.state.placement) {
+      this.setState({ placement });
+    }
   }
 
   handleOnCreate(popper) {
@@ -150,50 +152,42 @@ export default class Position extends Component {
     }
   }
 
-  handleSubtreeRender(rootNode) {
-    this._content = rootNode.firstElementChild.firstElementChild;
-    this._popper = this._popper || this.createPopper();
-  }
-
-  handleSubtreeUnrender() {
-    this._popper.destroy();
-
-    delete this._popper;
-    delete this._arrow;
-    delete this._content;
-    delete this._target;
-
-    const placement = positionToPlacement(this.props.position, this.props.offset);
-
-    if (placement !== this.state.placement) {
-      this.setState({ placement });
-    }
-  }
-
   render() {
-    const { children, enabled, isVisible, ...rest } = this.props;
+    const { children, enabled, isVisible, onMaskClick, showArrow, ...rest } = this.props;
+    const { placement } = this.state;
+    const [ position ] = placementToPosition(placement);
     const props = omit(rest, [
       'flip',
       'offset',
       'position',
-      'showArrow',
-      'onMaskClick',
       'onPositionChange',
     ]);
 
-    return (
-      <Subtree { ...props }
-          isRendered={ enabled && isVisible }
-          onSubtreeRender={ this.handleSubtreeRender }
-          onSubtreeUnrender={ this.handleSubtreeUnrender }
-          subtree={ this.subtree }>
-        {
-          cloneElement(findComponent(children, PositionTargetRef), {
-            ref: (target) => this._target = ReactDOM.findDOMNode(target),
-          })
-        }
-      </Subtree>
-    );
+    return [
+      cloneElement(findComponent(children, PositionTargetRef), {
+        ref: (target) => this._target = ReactDOM.findDOMNode(target),
+      }),
+      enabled && isVisible ? (
+        <Portal { ...props } key="portal">
+          <div>
+            <div className="ax-position" ref={ (el) => this._content = el }>
+              {
+                cloneElement(findComponent(children, PositionContentRef), {
+                  arrowRef: showArrow
+                    ? (arrow) => this._arrow = ReactDOM.findDOMNode(arrow)
+                    : undefined,
+                  position,
+                })
+              }
+            </div>
+
+            { onMaskClick && (
+              <div className="ax-position__mask" onClick={ onMaskClick } />
+            ) }
+          </div>
+        </Portal>
+      ) : null,
+    ];
   }
 }
 
