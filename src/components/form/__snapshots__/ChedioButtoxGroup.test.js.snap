@@ -10,31 +10,12 @@ exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
     title={undefined}
   >
     <input
-      className="ax-chedio-buttox"
+      className="ax-chedio-buttox ipsum"
       disabled={undefined}
-      type={undefined}
+      type="checkbox"
     />
     <span
-      className="ax-chedio-buttox__indicator"
-    />
-    <span
-      className="ax-chedio-buttox__label"
-    >
-      Lorem ipsum
-    </span>
-  </label>
-  <label
-    className="ax-chedio-buttox__container ax-space--x2"
-    onClick={undefined}
-    title={undefined}
-  >
-    <input
-      className="ax-chedio-buttox"
-      disabled={undefined}
-      type={undefined}
-    />
-    <span
-      className="ax-chedio-buttox__indicator"
+      className="ax-chedio-buttox__indicator lorem"
     />
     <span
       className="ax-chedio-buttox__label"

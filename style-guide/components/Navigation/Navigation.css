@@ -1,0 +1,29 @@
+.dm-navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.dm-navigation__list {
+  margin: 0;
+  padding: 0;
+}
+
+.dm-navigation__list-item {
+  list-style: none;
+}
+
+.dm-navigation__link {
+  display: block;
+  padding: var(--spacing-grid-size) var(--page-padding-horizontal);
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+
+  @nest .dm-navigation__list-item--active & {
+    color: var(--color-ui-primary);
+  }
+}
+
+.dm-navigation__list-item .dm-navigation__list-item .dm-navigation__link {
+  padding-left: calc(var(--page-padding-horizontal) + calc(var(--spacing-grid-size) * 3));
+}

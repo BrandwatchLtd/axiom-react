@@ -41,4 +41,4 @@ class LoginExample extends Component {
   }
 }
 
-module.exports = [ LoginExample ];
+export default [ LoginExample ];

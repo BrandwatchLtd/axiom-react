@@ -46,6 +46,6 @@ class BarsExample extends Component {
   }
 }
 
-module.exports = [
+export default [
   BarsExample,
 ];

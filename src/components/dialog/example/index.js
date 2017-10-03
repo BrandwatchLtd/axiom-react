@@ -35,22 +35,10 @@ class DialogExample extends Component {
         isOpen: false,
         onRequestClose: () => {},
       },
-      DialogBody: {},
-      DialogFooter: {},
-      DialogHeader: {
-        onRequestClose: () => {},
-      },
     };
 
     const initialPropOptions = {
       Dialog: {
-        onRequestClose: {
-          callback: (setProp) => setProp('Dialog', 'isOpen', false),
-        },
-      },
-      DialogBody: {},
-      DialogFooter: {},
-      DialogHeader: {
         onRequestClose: {
           callback: (setProp) => setProp('Dialog', 'isOpen', false),
         },
@@ -110,4 +98,4 @@ class DialogExample extends Component {
   }
 }
 
-module.exports = [ DialogExample ];
+export default [ DialogExample ];

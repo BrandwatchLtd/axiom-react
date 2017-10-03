@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   require('./heading').default,
   require('./links').default,
   require('./text').default,

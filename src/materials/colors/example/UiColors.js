@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Example } from 'style-guide';
-import Grid from '../../components/grid/Grid';
-import GridCell from '../../components/grid/GridCell';
+import Grid from '../../../components/grid/Grid';
+import GridCell from '../../../components/grid/GridCell';
 import ColorSwatch from './ColorSwatch';
 
 export default class ColorsExample extends Component {

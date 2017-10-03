@@ -1,28 +1,31 @@
 {
   "plugins": [
     "./scripts/babel-plugin-inline-svg-import.js",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ],
+  "presets": [
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 Firefox versions",
+          "last 2 Chrome versions",
+          "last 2 Edge versions",
+          "last 2 Safari versions"
+        ]
+      }
+    }]
   ],
   "env": {
     "development": {
-      "presets": [
-        "es2015",
-        "stage-2",
-        "react",
-        "react-hmre",
+      "plugins": [
+        "react-hot-loader/babel"
       ]
     },
-    "production": {
-      "presets": [
-        "es2015",
-        "stage-2",
-        "react",
-      ]
-    },
-    "production-esm": {
-      "presets": [
-        ["es2015", {"modules": false}],
-        "stage-2",
-        "react",
+    "static": {
+      "plugins": [
+        "transform-react-remove-prop-types"
       ]
     }
   }

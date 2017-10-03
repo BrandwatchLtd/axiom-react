@@ -75,9 +75,9 @@ export default class ExampleConfig extends Component {
       this.boundSetPropOption,
     );
 
-    const jsxSnippet = renderSnippet(filterSnippet(example), jsxRender);
-    const htmlSnippet = renderSnippet(filterSnippet(example), htmlRender);
-
+    const filteredSnippet = filterSnippet(example);
+    const jsxSnippet = renderSnippet(filteredSnippet, jsxRender);
+    const htmlSnippet = renderSnippet(filteredSnippet, htmlRender);
     const classes = classnames('dm-example', {
       'dm-example--hidden': !hasVisual,
     });

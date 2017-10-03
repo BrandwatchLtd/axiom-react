@@ -1,4 +1,3 @@
-const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -44,9 +43,4 @@ module.exports = {
       minRatio: 0.8,
     }),
   ],
-  resolve: {
-    alias: {
-      'bw-axiom': path.resolve(__dirname, 'src'),
-    },
-  },
 };

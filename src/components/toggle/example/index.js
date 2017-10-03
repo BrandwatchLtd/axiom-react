@@ -33,4 +33,4 @@ class ToggleExample extends Component {
   }
 }
 
-module.exports = [ ToggleExample ];
+export default [ ToggleExample ];

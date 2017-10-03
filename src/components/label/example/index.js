@@ -70,4 +70,4 @@ class LabelExample extends Component {
   }
 }
 
-module.exports = [ LabelExample ];
+export default [ LabelExample ];

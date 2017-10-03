@@ -49,4 +49,4 @@ class ListExample extends Component {
   }
 }
 
-module.exports = [ ListExample ];
+export default [ ListExample ];

@@ -7,12 +7,12 @@ exports[`Word renders with color amber 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -23,12 +23,12 @@ exports[`Word renders with color blue 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -39,12 +39,12 @@ exports[`Word renders with color brown 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -55,12 +55,12 @@ exports[`Word renders with color chartreuse 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -71,12 +71,12 @@ exports[`Word renders with color green 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -87,12 +87,12 @@ exports[`Word renders with color grey 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -103,12 +103,12 @@ exports[`Word renders with color lilac 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -119,12 +119,12 @@ exports[`Word renders with color orange 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -135,12 +135,12 @@ exports[`Word renders with color pink 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -151,12 +151,12 @@ exports[`Word renders with color purple 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -167,12 +167,12 @@ exports[`Word renders with color rose 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -183,12 +183,12 @@ exports[`Word renders with color teal 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -199,7 +199,7 @@ exports[`Word renders with defaultProps 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
@@ -211,48 +211,48 @@ exports[`Word renders with defaultProps 1`] = `
 exports[`Word renders with disabled 1`] = `
 <text
   className="ax-word ax-word--disabled"
-  onClick={false}
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
 exports[`Word renders with hidden 1`] = `
 <text
   className="ax-word ax-word--hidden"
-  onClick={false}
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
 exports[`Word renders with hidden and disabled 1`] = `
 <text
   className="ax-word ax-word--hidden"
-  onClick={false}
+  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;
 
@@ -263,11 +263,11 @@ exports[`Word renders with onClick 1`] = `
   style={
     Object {
       "animationDelay": "0",
-      "fontFamily": undefined,
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
       "fontSize": undefined,
     }
   }
   textAnchor="middle"
-  transform="translate(undefined,undefined)"
+  transform="translate(0,0)"
 />
 `;

@@ -5,7 +5,9 @@ exports[`Composite: PaginationButton renders with active state 1`] = `
   className="ax-button ax-button--medium ax-button--primary"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;
 
 exports[`Composite: PaginationButton renders with circular 1`] = `
@@ -13,7 +15,9 @@ exports[`Composite: PaginationButton renders with circular 1`] = `
   className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;
 
 exports[`Composite: PaginationButton renders with defaultProps 1`] = `
@@ -21,7 +25,9 @@ exports[`Composite: PaginationButton renders with defaultProps 1`] = `
   className="ax-button ax-button--medium ax-button--quaternary"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;
 
 exports[`Composite: PaginationButton renders with onClick 1`] = `
@@ -29,7 +35,9 @@ exports[`Composite: PaginationButton renders with onClick 1`] = `
   className="ax-button ax-button--medium ax-button--quaternary"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;
 
 exports[`Composite: PaginationButton renders with page in double digits 1`] = `
@@ -37,7 +45,9 @@ exports[`Composite: PaginationButton renders with page in double digits 1`] = `
   className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;
 
 exports[`Composite: PaginationButton renders with page in single digits 1`] = `
@@ -45,7 +55,9 @@ exports[`Composite: PaginationButton renders with page in single digits 1`] = `
   className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;
 
 exports[`Composite: PaginationButton renders with page in treble digits 1`] = `
@@ -53,5 +65,7 @@ exports[`Composite: PaginationButton renders with page in treble digits 1`] = `
   className="ax-button ax-button--medium ax-button--quaternary ax-button--stadium-small"
   disabled={undefined}
   onClick={[Function]}
-/>
+>
+  1
+</button>
 `;

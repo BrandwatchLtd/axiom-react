@@ -61,4 +61,4 @@ class NotificationExample extends Component {
   }
 }
 
-module.exports = [ NotificationExample ];
+export default [ NotificationExample ];

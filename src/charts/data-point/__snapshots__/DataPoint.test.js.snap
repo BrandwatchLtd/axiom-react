@@ -98,7 +98,7 @@ exports[`DataPoint renders with color teal 1`] = `
 
 exports[`DataPoint renders with defaultProps 1`] = `
 <circle
-  className="ax-data-point ax-data-point--undefined"
+  className="ax-data-point ax-data-point--rose"
   cx={12}
   cy={12}
 />
@@ -106,7 +106,7 @@ exports[`DataPoint renders with defaultProps 1`] = `
 
 exports[`DataPoint renders with radius 1`] = `
 <circle
-  className="ax-data-point ax-data-point--undefined"
+  className="ax-data-point ax-data-point--rose"
   cx={12}
   cy={12}
   r={10}

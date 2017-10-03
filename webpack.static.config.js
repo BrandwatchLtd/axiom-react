@@ -4,20 +4,23 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const generateComponentProps = require('./scripts/component-docs');
-
-const modulesToTranspile = [
-  'get-own-enumerable-property-symbols',
-  'stringify-object',
-];
+const { getRoutes } = require('./style-guide/utils/documentation-routes');
+const baseName = process.env.BASENAME_ENV || '';
 
 module.exports = {
   entry: './style-guide/static.js',
   module: {
     rules: [{
       test: /\.js$/,
-      exclude: new RegExp(`node_modules/(?!(${modulesToTranspile.join('|')}))`),
       use: ['babel-loader'],
+      include: [
+        /src/,
+        /style-guide/,
+        /node_modules\/get-own-enumerable-property-symbols/,
+        /node_modules\/stringify-object/,
+      ],
     }, {
       test: /\.ejs$/,
       use: ['ejs-loader'],
@@ -52,74 +55,19 @@ module.exports = {
       to: './assets',
     }]),
     new StaticSiteGeneratorPlugin({
-      paths: [
-        '/',
-        '/docs/materials/colors',
-        '/docs/materials/date-and-time',
-        '/docs/materials/numbers',
-        '/docs/components/alert',
-        '/docs/components/alert-icon',
-        '/docs/components/alert-dialog',
-        '/docs/components/avatar',
-        '/docs/components/badge',
-        '/docs/components/base',
-        '/docs/components/button',
-        '/docs/components/candytar',
-        '/docs/components/card',
-        '/docs/components/color-picker',
-        '/docs/components/context',
-        '/docs/components/data-picker',
-        '/docs/components/date-picker',
-        '/docs/components/dialog',
-        '/docs/components/dropdown',
-        '/docs/components/form',
-        '/docs/components/grid',
-        '/docs/components/icon',
-        '/docs/components/image',
-        '/docs/components/label',
-        '/docs/components/list',
-        '/docs/components/logo',
-        '/docs/components/menu',
-        '/docs/components/notification',
-        '/docs/components/pagination',
-        '/docs/components/panel',
-        '/docs/components/pictogram',
-        '/docs/components/position',
-        '/docs/components/progress',
-        '/docs/components/reveal',
-        '/docs/components/statcard',
-        '/docs/components/table',
-        '/docs/components/tabset',
-        '/docs/components/toggle',
-        '/docs/components/toolbar',
-        '/docs/components/tooltip',
-        '/docs/components/typography',
-        '/docs/composites/change-password',
-        '/docs/composites/login',
-        '/docs/composites/logo-page',
-        '/docs/composites/status-pages',
-        '/docs/composites/usermenu',
-        '/docs/charts/bars',
-        '/docs/charts/bar-chart',
-        '/docs/charts/bullet-chart',
-        '/docs/charts/chart',
-        '/docs/charts/column-chart',
-        '/docs/charts/data-point',
-        '/docs/charts/dot-plot',
-        '/docs/charts/wordcloud',
-      ],
+      paths: ['/'].concat(getRoutes(baseName).map(({ path }) => path)),
     }),
-    new webpack.DefinePlugin({
-      __BASENAME__: process.env.BASENAME_ENV || '"/"',
-      __COMPONENT_PROPS__: JSON.stringify(generateComponentProps()),
-      __DEVELOPMENT__: false,
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
+    new webpack.EnvironmentPlugin({
+      BASENAME: baseName,
+      COMPONENT_PROPS: JSON.stringify(generateComponentProps()),
+      NODE_ENV: 'production',
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      mangle: {
-        keep_fnames: true,
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        ecma: 6,
+        mangle: {
+          keep_fnames: true,
+        },
       },
     }),
   ],

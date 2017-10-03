@@ -4,7 +4,7 @@ import Chart from './Chart';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Chart { ...props } />
+    <Chart { ...props }>Lorem</Chart>
   );
 
 describe('Chart', () => {

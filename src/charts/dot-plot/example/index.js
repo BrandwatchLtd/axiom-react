@@ -103,6 +103,6 @@ class DotPlotExample extends Component {
   }
 }
 
-module.exports = [
+export default [
   DotPlotExample,
 ];

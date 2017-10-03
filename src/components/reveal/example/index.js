@@ -36,4 +36,4 @@ class RevealExample extends Component {
   }
 }
 
-module.exports = [ RevealExample ];
+export default [ RevealExample ];

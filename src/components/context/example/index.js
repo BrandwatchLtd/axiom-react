@@ -131,4 +131,4 @@ class ContextExample extends Component {
   }
 }
 
-module.exports = [ ContextExample ];
+export default [ ContextExample ];

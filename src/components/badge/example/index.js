@@ -55,4 +55,4 @@ class BadgeExample extends Component {
   }
 }
 
-module.exports = [ BadgeExample ];
+export default [ BadgeExample ];

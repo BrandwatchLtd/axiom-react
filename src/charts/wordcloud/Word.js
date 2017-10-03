@@ -85,7 +85,7 @@ export default class Word extends Component {
     return (
       <text { ...rest }
           className={ classes }
-          onClick={ active && onClick }
+          onClick={ active ? onClick : undefined }
           style={ style }
           textAnchor={ textAnchor }
           transform={ `translate(${x},${y})` }>

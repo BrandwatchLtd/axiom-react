@@ -2,9 +2,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Word from './Word';
 
-const getComponent = (props = { x: 0, y: 0 }) =>
+const getComponent = (props = {}) =>
   renderer.create(
-    <Word { ...props } />
+    <Word
+        font="Roboto, Helvetica, Arial, sans-serif"
+        x={ 0 }
+        y={ 0 }
+        { ...props } />
   );
 
 describe('Word', () => {

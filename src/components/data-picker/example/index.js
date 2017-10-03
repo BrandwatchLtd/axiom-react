@@ -78,6 +78,6 @@ class DataPickerExample extends Component {
   }
 }
 
-module.exports = [
+export default [
   DataPickerExample,
 ];

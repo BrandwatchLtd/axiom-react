@@ -43,4 +43,4 @@ class ColorPickerExample extends Component {
   }
 }
 
-module.exports = [ ColorPickerExample ];
+export default [ ColorPickerExample ];

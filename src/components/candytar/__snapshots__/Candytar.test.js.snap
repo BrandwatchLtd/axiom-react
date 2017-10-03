@@ -5,8 +5,8 @@ exports[`Candytar renders with color amber 1`] = `
   className="ax-candytar ax-candytar--amber"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -30,8 +30,8 @@ exports[`Candytar renders with color blue 1`] = `
   className="ax-candytar ax-candytar--blue"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -55,8 +55,8 @@ exports[`Candytar renders with color brown 1`] = `
   className="ax-candytar ax-candytar--brown"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -80,8 +80,8 @@ exports[`Candytar renders with color chartreuse 1`] = `
   className="ax-candytar ax-candytar--chartreuse"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -105,8 +105,8 @@ exports[`Candytar renders with color green 1`] = `
   className="ax-candytar ax-candytar--green"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -130,8 +130,8 @@ exports[`Candytar renders with color grey 1`] = `
   className="ax-candytar ax-candytar--grey"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -155,8 +155,8 @@ exports[`Candytar renders with color lilac 1`] = `
   className="ax-candytar ax-candytar--lilac"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -180,8 +180,8 @@ exports[`Candytar renders with color orange 1`] = `
   className="ax-candytar ax-candytar--orange"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -205,8 +205,8 @@ exports[`Candytar renders with color pink 1`] = `
   className="ax-candytar ax-candytar--pink"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -230,8 +230,8 @@ exports[`Candytar renders with color purple 1`] = `
   className="ax-candytar ax-candytar--purple"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -255,8 +255,8 @@ exports[`Candytar renders with color rose 1`] = `
   className="ax-candytar ax-candytar--rose"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"
@@ -280,8 +280,8 @@ exports[`Candytar renders with color teal 1`] = `
   className="ax-candytar ax-candytar--teal"
   style={
     Object {
-      "height": undefined,
-      "width": undefined,
+      "height": "2rem",
+      "width": "2rem",
     }
   }
   viewBox="0 0 32 32"

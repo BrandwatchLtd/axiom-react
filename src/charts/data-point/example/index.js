@@ -64,6 +64,6 @@ class DataPointExample extends Component {
 }
 
 
-module.exports = [
+export default [
   DataPointExample,
 ];

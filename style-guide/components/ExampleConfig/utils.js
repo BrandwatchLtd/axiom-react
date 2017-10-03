@@ -1,6 +1,8 @@
 import { Children, cloneElement, isValidElement } from 'react';
 import extend from 'deep-extend';
 
+const baseProps = JSON.parse(process.env.COMPONENT_PROPS).Base;
+
 const preparePropMap = {
   func: (propName, propValue, propType, options = {}, setProp, setPropOption) => {
     if (options.included === false) {
@@ -36,7 +38,7 @@ const preparePropMap = {
   },
 };
 
-export const basePropTypes = { Base: __COMPONENT_PROPS__.Base };
+export const basePropTypes = { Base: baseProps };
 
 function prepareProps(state, options, propTypes, setProp, setPropOption, childIndex) {
   const props = {};

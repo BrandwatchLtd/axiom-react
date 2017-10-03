@@ -34,4 +34,4 @@ class BaseExample extends Component {
   }
 }
 
-module.exports = [ BaseExample ];
+export default [ BaseExample ];

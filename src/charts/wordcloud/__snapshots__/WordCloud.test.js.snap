@@ -7,5 +7,19 @@ exports[`WordCloud renders with defaultProps 1`] = `
   version="1.1"
   viewBox="0 0 256 256"
   width="100%"
-/>
+>
+  <text
+    className="ax-word"
+    onClick={undefined}
+    style={
+      Object {
+        "animationDelay": "200ms",
+        "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+        "fontSize": undefined,
+      }
+    }
+    textAnchor="middle"
+    transform="translate(0,0)"
+  />
+</svg>
 `;

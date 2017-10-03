@@ -84,4 +84,4 @@ class PositionExample extends Component {
 }
 
 
-module.exports = [ PositionExample ];
+export default [ PositionExample ];

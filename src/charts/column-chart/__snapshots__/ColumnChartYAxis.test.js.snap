@@ -5,7 +5,7 @@ exports[`ColumnChartYAxis renders with align bottom 1`] = `
   className="ax-column-chart"
   style={
     Object {
-      "height": undefined,
+      "height": "10rem",
     }
   }
 >
@@ -40,7 +40,7 @@ exports[`ColumnChartYAxis renders with align top 1`] = `
   className="ax-column-chart"
   style={
     Object {
-      "height": undefined,
+      "height": "10rem",
     }
   }
 >
@@ -75,7 +75,7 @@ exports[`ColumnChartYAxis renders with defaultProps 1`] = `
   className="ax-column-chart"
   style={
     Object {
-      "height": undefined,
+      "height": "10rem",
     }
   }
 >

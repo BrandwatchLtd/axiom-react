@@ -33,4 +33,4 @@ class CandytarExample extends Component {
   }
 }
 
-module.exports = [ CandytarExample ];
+export default [ CandytarExample ];

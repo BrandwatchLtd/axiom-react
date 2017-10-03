@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Link as RouterLink } from 'react-router';
-import { Strong } from 'bw-axiom';
-import NavList from './NavList';
-import './NavListItem.css';
+import { Link as RouterLink } from 'react-router-dom';
+import { Reveal, Strong } from 'bw-axiom';
+import NavigationList from './NavigationList';
 
-export default class NavListItem extends Component {
+export default class NavigationListItem extends Component {
   static propTypes = {
     className: PropTypes.string,
     item: PropTypes.shape({
@@ -35,30 +34,30 @@ export default class NavListItem extends Component {
 
     const hasChildren = Array.isArray(children) && children.length > 0;
     const classes = classnames(className,
-      'dm-nav__list-item', {
-        'dm-nav__list-item--open': hasChildren && isOpen,
-        'dm-nav__list-item--active': isActive,
-        'dm-nav__list-item--has-submenu': hasChildren,
+      'dm-navigation__list-item', {
+        'dm-navigation__list-item--active': isActive,
+        'dm-navigation__list-item--has-submenu': hasChildren,
       }
     );
 
     return (
       <li className={ classes }>
         { !hasChildren ? (
-          <RouterLink className="dm-nav__link" to={ to }>
+          <RouterLink className="dm-navigation__link" to={ to }>
             <Strong>{ name }</Strong>
           </RouterLink>
         ) : (
-          <a className="dm-nav__link" onClick={ () => onClick(item) }>
+          <a className="dm-navigation__link" onClick={ () => onClick(item) }>
             <Strong>{ name }</Strong>
           </a>
         ) }
 
         { hasChildren && (
-          <NavList
-              isOpen={ isOpen }
-              items={ children }
-              onItemClick={ onClick } />
+          <Reveal visible={ isOpen }>
+            <NavigationList
+                items={ children }
+                onItemClick={ onClick } />
+          </Reveal>
         ) }
       </li>
     );

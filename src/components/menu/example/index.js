@@ -60,4 +60,4 @@ class MenuExample extends Component {
   }
 }
 
-module.exports = [ MenuExample ];
+export default [ MenuExample ];

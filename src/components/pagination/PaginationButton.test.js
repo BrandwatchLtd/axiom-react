@@ -4,7 +4,7 @@ import PaginationButton from './PaginationButton';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <PaginationButton { ...props } />
+    <PaginationButton { ...props }>1</PaginationButton>
   );
 
 describe('Composite: PaginationButton', () => {

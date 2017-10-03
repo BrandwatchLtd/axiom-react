@@ -36,4 +36,4 @@ class AvatarExample extends Component {
   }
 }
 
-module.exports = [ AvatarExample ];
+export default [ AvatarExample ];

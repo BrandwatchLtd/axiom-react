@@ -4,7 +4,7 @@ import DataPoint from './DataPoint';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <DataPoint { ...props } />
+    <DataPoint color="rose" { ...props } />
   );
 
 describe('DataPoint', () => {

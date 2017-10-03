@@ -5,8 +5,11 @@ import ColumnChartYAxis from './ColumnChartYAxis';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <ColumnChart chartKey={ [{}] } data={ [{ label: 'test', values: [] }] }>
-      <ColumnChartYAxis { ...props }>
+    <ColumnChart
+        chartKey={ [{ label: 'Lorem', color: 'rose' }] }
+        data={ [{ label: 'test', values: {} }] }
+        height="10rem">
+      <ColumnChartYAxis yAxisWidth="1rem" { ...props }>
           Lorem
         </ColumnChartYAxis>
     </ColumnChart>

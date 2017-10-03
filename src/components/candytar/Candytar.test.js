@@ -4,7 +4,7 @@ import Candytar from './Candytar';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Candytar src="/image/path" { ...props } />
+    <Candytar size="2rem" src="/image/path" { ...props } />
   );
 
 describe('Candytar', () => {

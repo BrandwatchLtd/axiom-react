@@ -23,7 +23,7 @@ describe('BulletBars', () => {
 
   it('renders with the correct label', () => {
     const props = {
-      barLabel: 'label for highest value',
+      barLabel: 1,
       showBarLabel: true,
     };
     const component = getComponent(props);

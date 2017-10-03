@@ -4,7 +4,9 @@ import RadialProgress from './RadialProgress';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <RadialProgress diameter={ 75 } size="small" { ...props } />
+    <RadialProgress className="lorem" diameter={ 75 } size="small" { ...props }>
+      <svg />
+    </RadialProgress>
   );
 
 describe('RadialProgress', () => {

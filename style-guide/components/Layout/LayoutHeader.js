@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Grid, GridCell, Icon, Link, Heading  } from 'bw-axiom/';
+import { Grid, GridCell, Icon, Link, Heading  } from 'bw-axiom';
 
 export default class LayoutHeader extends Component {
   static propTypes = {

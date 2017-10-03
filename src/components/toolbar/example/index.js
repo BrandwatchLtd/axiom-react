@@ -61,4 +61,4 @@ class ToolbarExample extends Component {
   }
 }
 
-module.exports = [ ToolbarExample ];
+export default [ ToolbarExample ];

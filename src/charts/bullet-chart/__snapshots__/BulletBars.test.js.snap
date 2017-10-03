@@ -151,7 +151,7 @@ exports[`BulletBars renders with the correct label 1`] = `
                 <small
                   className="ax-text--size-small"
                 >
-                  label for highest value%
+                  1%
                 </small>
               </div>
             </div>
@@ -198,7 +198,7 @@ exports[`BulletBars renders with the correct label 1`] = `
                 <small
                   className="ax-text--size-small"
                 >
-                  label for highest value%
+                  1%
                 </small>
               </div>
             </div>

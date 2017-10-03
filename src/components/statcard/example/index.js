@@ -72,4 +72,4 @@ class StatCardsExample extends Component {
   }
 }
 
-module.exports = [ StatCardsExample ];
+export default [ StatCardsExample ];

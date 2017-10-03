@@ -59,4 +59,4 @@ class DatePickerExample extends Component {
   }
 }
 
-module.exports = [ DatePickerExample ];
+export default [ DatePickerExample ];

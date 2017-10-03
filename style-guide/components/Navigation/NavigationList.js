@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import NavListItem from './NavListItem';
-import './NavList.css';
+import NavigationListItem from './NavigationListItem';
 
-export default class NavList extends Component {
+export default class NavigationList extends Component {
   static propTypes = {
     className: PropTypes.string,
     isActive: PropTypes.bool,
@@ -23,15 +22,15 @@ export default class NavList extends Component {
     } = this.props;
 
     const classes = classnames(className,
-      'dm-nav__list', {
-        'dm-nav__list--open': isOpen || isActive,
+      'dm-navigation__list', {
+        'dm-navigation__list--open': isOpen || isActive,
       }
     );
 
     return (
       <ul className={ classes }>
         { items.map((item, index) =>
-          <NavListItem item={ item } key={ index } onClick={ onItemClick } />
+          <NavigationListItem item={ item } key={ index } onClick={ onItemClick } />
         ) }
       </ul>
     );

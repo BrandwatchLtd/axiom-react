@@ -5,7 +5,7 @@ exports[`ColumnChartXAxis renders with defaultProps 1`] = `
   className="ax-column-chart"
   style={
     Object {
-      "height": undefined,
+      "height": "10rem",
     }
   }
 >

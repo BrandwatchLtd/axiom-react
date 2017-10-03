@@ -62,4 +62,4 @@ class TooltipExample extends Component {
   }
 }
 
-module.exports = [ TooltipExample ];
+export default [ TooltipExample ];

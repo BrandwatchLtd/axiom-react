@@ -83,4 +83,4 @@ class DropdownExample extends Component {
   }
 }
 
-module.exports = [ DropdownExample ];
+export default [ DropdownExample ];

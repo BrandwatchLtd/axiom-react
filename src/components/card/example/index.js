@@ -71,4 +71,4 @@ class CardExample extends Component {
   }
 }
 
-module.exports = [ CardExample ];
+export default [ CardExample ];

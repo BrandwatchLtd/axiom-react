@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { } from 'bw-axiom';
 import './Labs.css';
 
 export default class Labs extends Component {

@@ -44,4 +44,4 @@ class PagiantionExample extends Component {
   }
 }
 
-module.exports = [ PagiantionExample ];
+export default [ PagiantionExample ];

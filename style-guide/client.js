@@ -1,14 +1,21 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { useRouterHistory, Router } from 'react-router';
-import { createHistory } from 'history';
-import routes from './routes';
-import './client.css';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { AppContainer } from 'react-hot-loader';
+import Application from './components/Application';
 
-const browserHistory = useRouterHistory(createHistory)({
-  basename: __BASENAME__,
-});
+const render = (Application) => {
+  ReactDOM.render((
+    <AppContainer>
+      <BrowserRouter basename={ process.env.BASENAME }>
+        <Application />
+      </BrowserRouter>
+    </AppContainer>
+  ), document.getElementById('react-root'));
+};
 
-render((
-  <Router history={ browserHistory } routes={ routes } />
-), document.getElementById('react-root'));
+render(Application);
+
+if (module.hot) {
+  module.hot.accept('./components/Application', () => render(Application));
+}

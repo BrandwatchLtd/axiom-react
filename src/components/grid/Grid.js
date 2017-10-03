@@ -28,7 +28,7 @@ export default class Grid extends Component {
     /** Controls the horizontal alignment of all cells */
     horizontalAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
     /** Controls the horizontal spacing between cells */
-    horizontalGutters: PropTypes.oneOf([true, 'tiny', 'small', 'medium', 'large']),
+    horizontalGutters: PropTypes.oneOf([false, 'tiny', 'small', 'medium', 'large']),
     /**
      * Default behaviour of cells is to resize to 100% of the grids space when
      * on smaller screen sizes. This allows this behaviour to be suppressed.
@@ -42,7 +42,7 @@ export default class Grid extends Component {
     /** Controls the vertical alignment of all cells */
     verticalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
     /** Controls the vertical spacing between cells */
-    verticalGutters: PropTypes.oneOf([true, 'tiny', 'small', 'medium', 'large']),
+    verticalGutters: PropTypes.oneOf([false, 'tiny', 'small', 'medium', 'large']),
     /** Allows cells to drop to a new line when they require more space */
     wrap: PropTypes.bool,
   };

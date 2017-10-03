@@ -6,8 +6,10 @@ import ChedioButtoxGroup from './ChedioButtoxGroup';
 const getComponent = (props = {}) =>
   renderer.create(
     <ChedioButtoxGroup { ...props }>
-      <ChedioButtox>Lorem ipsum</ChedioButtox>
-      <ChedioButtox>Lorem ipsum</ChedioButtox>
+      <ChedioButtox
+          indicatorClassName="lorem"
+          inputClassName="ipsum"
+          inputType="checkbox">Lorem ipsum</ChedioButtox>
     </ChedioButtoxGroup>
   );
 

@@ -85,7 +85,7 @@ class ChartExample extends Component {
   }
 }
 
-module.exports = [
+export default [
   ChartExample,
 ];
 

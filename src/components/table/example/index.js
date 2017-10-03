@@ -81,4 +81,4 @@ class TableExample extends Component {
   }
 }
 
-module.exports = [ TableExample ];
+export default [ TableExample ];

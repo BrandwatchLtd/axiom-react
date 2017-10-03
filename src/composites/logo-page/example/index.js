@@ -36,4 +36,4 @@ class LogoPageExample extends Component {
   }
 }
 
-module.exports = [ LogoPageExample ];
+export default [ LogoPageExample ];

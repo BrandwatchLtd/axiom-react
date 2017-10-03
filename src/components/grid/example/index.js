@@ -64,4 +64,4 @@ class GridExample extends Component {
   }
 }
 
-module.exports = [ GridExample ];
+export default [ GridExample ];

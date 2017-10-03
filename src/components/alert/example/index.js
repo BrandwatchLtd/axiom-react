@@ -35,6 +35,6 @@ class AlertExample extends Component {
 }
 
 
-module.exports = [
+export default [
   AlertExample,
 ];

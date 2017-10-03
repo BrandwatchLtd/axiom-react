@@ -46,4 +46,4 @@ class ChangePasswordExample extends Component {
 }
 
 
-module.exports = [ ChangePasswordExample ];
+export default [ ChangePasswordExample ];

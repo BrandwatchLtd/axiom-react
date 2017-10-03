@@ -64,6 +64,6 @@ class AlertDialogExample extends Component {
 }
 
 
-module.exports = [
+export default [
   AlertDialogExample,
 ];

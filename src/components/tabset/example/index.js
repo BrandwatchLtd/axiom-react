@@ -60,4 +60,4 @@ class TabsetExample extends Component {
   }
 }
 
-module.exports = [ TabsetExample ];
+export default [ TabsetExample ];

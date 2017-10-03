@@ -31,4 +31,4 @@ class AlertIconExample extends Component {
   }
 }
 
-module.exports = [ AlertIconExample ];
+export default [ AlertIconExample ];

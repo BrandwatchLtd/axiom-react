@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   require('./column').default,
   require('./mirrored').default,
 ];

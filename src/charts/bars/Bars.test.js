@@ -6,7 +6,7 @@ import Bars from './Bars';
 function getComponent(props = {}) {
   return renderer.create(
     <Bars { ...props }>
-      <Bar percent={ 50 } />
+      <Bar color="rose" percent={ 50 } />
     </Bars>
   );
 }

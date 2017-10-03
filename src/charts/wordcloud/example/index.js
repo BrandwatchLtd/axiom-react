@@ -44,6 +44,6 @@ class WordCloudExample extends Component {
 }
 
 
-module.exports = [
+export default [
   WordCloudExample,
 ];

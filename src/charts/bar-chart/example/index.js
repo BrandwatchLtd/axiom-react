@@ -100,6 +100,6 @@ class BarChartExample extends Component {
   }
 }
 
-module.exports = [
+export default [
   BarChartExample,
 ];

@@ -67,4 +67,4 @@ class ButtonExample extends Component {
   }
 }
 
-module.exports = [ ButtonExample ];
+export default [ ButtonExample ];

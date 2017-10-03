@@ -30,4 +30,4 @@ class PictogramExample extends Component {
   }
 }
 
-module.exports = [ PictogramExample ];
+export default [ PictogramExample ];

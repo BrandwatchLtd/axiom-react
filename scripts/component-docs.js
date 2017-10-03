@@ -27,7 +27,7 @@ function normaliseValue(prop) {
   });
 }
 
-function flattenValues({ name, value }, values = []) {
+function flattenValues({ value }, values = []) {
   if (Array.isArray(value)) {
     value.forEach((value) => flattenValues(value, values));
   } else if (isPlainObject(value)) {

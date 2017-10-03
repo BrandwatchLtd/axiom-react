@@ -76,6 +76,6 @@ class PanelExample extends Component {
   }
 }
 
-module.exports = [
+export default [
   PanelExample,
 ];
