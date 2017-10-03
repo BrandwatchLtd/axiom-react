@@ -2,6 +2,7 @@
   "plugins": [
     "./scripts/babel-plugin-inline-svg-import.js",
     "transform-class-properties",
+    "transform-es2015-classes",
     "transform-object-rest-spread"
   ],
   "presets": [
