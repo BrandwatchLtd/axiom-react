@@ -3,7 +3,6 @@
   "description": "Axiom - Brandwatch Pattern Library",
   "version": "0.0.0-development",
   "main": "./lib",
-  "module": "./esm",
   "license": "MIT",
   "homepage": "https://BrandwatchLtd.github.io/axiom",
   "bugs": {
