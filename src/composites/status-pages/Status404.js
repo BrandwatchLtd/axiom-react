@@ -6,6 +6,7 @@ import LogoPage from '../logo-page/LogoPage';
 import Paragraph from '../../components/typography/Paragraph';
 import StatusMessage from './StatusMessage';
 import Strong from '../../components/typography/Strong';
+import atIds from '../../../at_ids';
 import t from '../../utils/locales';
 
 export default class Status404 extends Component {
@@ -32,7 +33,7 @@ export default class Status404 extends Component {
     return (
       <LogoPage { ...rest }>
         <StatusMessage>
-          <Heading space="x4" textSize="display1">
+          <Heading data-ax-at={ atIds.Status404.oops } space="x4" textSize="display1">
             <Strong>{ tl('ooops') }</Strong>
           </Heading>
           <Heading space="x4" textSize="headline">

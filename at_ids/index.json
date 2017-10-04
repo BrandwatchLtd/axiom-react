@@ -16,5 +16,8 @@
   "UserMenu": {
     "activate": "4e36744de551",
     "logout": "19c1782af588"
+  },
+  "Status404": {
+    "oops": "358887d23601"
   }
 }
