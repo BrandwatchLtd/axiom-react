@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import t from '../../utils/locales';
+import atIds from '../../../at_ids';
 import Avatar from '../../components/avatar/Avatar';
 import Button from '../../components/button/Button';
 import ButtonGroup from '../../components/button/ButtonGroup';
@@ -47,7 +48,7 @@ export default class UserMenu extends Component {
     return (
       <Dropdown position="bottom">
         <DropdownTarget>
-          <Link>
+          <Link data-ax-at={ atIds.UserMenu.activate }>
             <Avatar size="2rem" src={ imageSrc }>
               <Candytar picker={ userColorPicker } size="2rem" />
             </Avatar>
@@ -62,7 +63,9 @@ export default class UserMenu extends Component {
                   <Heading space="x0" textSize="headtitle">{ firstName } { lastName }</Heading>
                   <Paragraph space="x0" textColor="subtle">{ email }</Paragraph>
                   <ButtonGroup space="x4">
-                    <Button data-tid="logout" onClick={ onLogout }>{ t(axiomLanguage, 'sign-out') }</Button>
+                    <Button data-ax-at={ atIds.UserMenu.logout } onClick={ onLogout }>
+                      { t(axiomLanguage, 'sign-out') }
+                    </Button>
                   </ButtonGroup>
                 </GridCell>
 

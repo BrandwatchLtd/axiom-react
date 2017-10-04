@@ -12,5 +12,9 @@
     "currentPassword": "80380c87e5bf",
     "newPassword": "89036ea6ef14",
     "submit": "aaa045cca84a"
+  },
+  "UserMenu": {
+    "activate": "4e36744de551",
+    "logout": "19c1782af588"
   }
 }
