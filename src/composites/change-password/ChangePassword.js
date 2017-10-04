@@ -46,8 +46,27 @@ export default class ChangePassword extends Component {
     ],
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      internalError: false,
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit({ currentPassword, newPassword, error }) {
+    if (error) {
+      return this.setState({ internalError: error });
+    }
+
+    this.setState({ internalError: false });
+    return this.props.onSubmit({ currentPassword, newPassword });
+  }
+
   render() {
-    const { error, isSubmitting, onRequestClose, onSubmit, rules, ...rest } = this.props;
+    const { error, isSubmitting, onRequestClose, rules, ...rest } = this.props;
+    const { internalError } = this.state;
     const { axiomLanguage } = this.context;
 
     return (
@@ -58,10 +77,10 @@ export default class ChangePassword extends Component {
           </Heading>
         </DialogHeader>
 
-        { error && (
-          <Alert space="x4" type="error" >
+        { (internalError || error) && (
+          <Alert type="error">
             <Paragraph data-ax-at={ atIds.ChangePassword.error }>
-              { error }
+              { internalError || error }
             </Paragraph>
           </Alert>
         ) }
@@ -71,7 +90,7 @@ export default class ChangePassword extends Component {
               isSubmitting={ isSubmitting }
               onCancel={ onRequestClose }
               onRequestClose={ onRequestClose }
-              onSubmit={ onSubmit }
+              onSubmit={ this.handleSubmit }
               rules={ rules } />
         </DialogBody>
       </Dialog>

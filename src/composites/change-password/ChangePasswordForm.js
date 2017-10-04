@@ -47,8 +47,37 @@ export default class ChangePasswordForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { onSubmit } = this.props;
-    const { currentPassword, newPassword } = this.state;
+    const { confirmPassword, currentPassword, newPassword } = this.state;
 
+    const passwordsMatch = confirmPassword === newPassword;
+    const passwordChanged = currentPassword !== newPassword;
+    const isFormFilledOut = confirmPassword.length && currentPassword.length && newPassword.length;
+    const invalidRules = this.props.rules.map(rule => ({
+      ...rule,
+      valid: rule.pattern.test(newPassword),
+    })).filter(rule => !rule.valid);
+
+    if (!isFormFilledOut) {
+      return  onSubmit({ error: 'Sorry, you need to complete all the password fields' });
+    }
+
+    if (!passwordsMatch) {
+      return  onSubmit({ error: 'Sorry, your password confirmation doesn\'t match' });
+    }
+
+    if (!passwordChanged) {
+      return onSubmit({ error: 'Sorry But your new password must be different from your old password' });
+    }
+
+    if (invalidRules.length > 0) {
+      return onSubmit({
+        error: invalidRules.reduce((acc, { label }, index, arr) => {
+          if (arr.length === 1) return `${acc} ${label}`;
+          if (index === arr.length - 1) return `${acc.slice(0, -1)} and ${label}`;
+          return ` ${acc} ${label},`;
+        }, 'Sorry your new password must include'),
+      });
+    }
     onSubmit({ currentPassword, newPassword });
   }
 
@@ -127,7 +156,7 @@ export default class ChangePasswordForm extends Component {
             value={ confirmPassword } />
 
         <ChangePasswordControls
-            isSubmitDisabled={ !confirmPasswordValid || !currentPasswordValid || isSubmitting }
+            isSubmitDisabled={ isSubmitting }
             onCancel={ onRequestClose }
             onSubmit={ this.handleSubmit } />
       </Form>
