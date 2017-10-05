@@ -81,7 +81,7 @@ export default class Position extends Component {
   }
 
   createPopper() {
-    const { flip } = this.props;
+    const { flip, showArrow } = this.props;
     const { placement } = this.state;
 
     return new popperJS(this._target, this._content, {
@@ -90,6 +90,7 @@ export default class Position extends Component {
       placement: placement,
       modifiers: {
         arrow: {
+          enabled: showArrow,
           element: this._arrow,
         },
         flip: {
