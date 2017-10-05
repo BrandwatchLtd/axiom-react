@@ -1,4 +1,5 @@
 .ax-position {
+  margin: calc(var(--cmp-context-tip-edge-to-edge) * 0.5);
   z-index: var(--z-index-position);
 }
 

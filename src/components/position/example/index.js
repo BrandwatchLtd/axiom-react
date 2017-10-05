@@ -62,7 +62,7 @@ class PositionExample extends Component {
           propTypes={ propTypes }>
         <Position { ...initialProps.Position }>
           <PositionTarget>
-            <Avatar size="4rem" snippetReplace src="assets/avatar.png" />
+            <Avatar size="2rem" snippetReplace src="assets/avatar.png" />
           </PositionTarget>
 
           <PositionContent>
