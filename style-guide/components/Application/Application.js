@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Status404 } from 'bw-axiom';
-import { getRoutes } from '../../utils/documentation-routes';
+import { getRoutes, normalisePath } from '../../utils/documentation-routes';
 import { Layout, LayoutHeader, LayoutSidebar, LayoutMain } from '../Layout';
 import Documentation from '../Documentation';
 import mapExamples from '../../map-examples';
@@ -39,6 +39,7 @@ export default class Application extends Component {
 
   render() {
     const { location } = this.props;
+    const { pathname } = location;
     const routes = getRoutes();
     const firstRoutPath = routes[0].path;
 
@@ -53,7 +54,7 @@ export default class Application extends Component {
         </LayoutSidebar>
 
         <LayoutMain>
-          <Switch location={ location }>
+          <Switch location={ { pathname: normalisePath(pathname) } }>
             <Route exact path="/" render={ () =>
               <Redirect to={ firstRoutPath }/>
             } />

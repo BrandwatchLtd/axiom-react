@@ -20,7 +20,7 @@
     "build:css-vars": "node -e \"require('./scripts/extract-css-vars')\"",
     "build:static": "NODE_ENV=production BABEL_ENV=static webpack --config webpack.static.config.js",
     "build:local": ". ./deploy/travis_setup.sh && yarn prepublish",
-    "ci:build:static": "BASENAME_ENV=\"'/axiom'\" yarn build:static",
+    "ci:build:static": "BASENAME_ENV=axiom/ yarn build:static",
     "ci:test": "jest --testPathPattern ./tmp --config .jest.ci.json",
     "gh-pages": "gh-pages -d ./static --repo git@github.com:BrandwatchLtd/axiom.git",
     "lint": "yarn run lint:js && yarn run lint:css",

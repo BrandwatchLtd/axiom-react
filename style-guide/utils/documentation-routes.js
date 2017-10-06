@@ -1,7 +1,7 @@
 const mapDocumenation = require('../map-documentation');
 
 const normalisePath = (path) =>
-  `/${path.replace(new RegExp(`^(/+(?:${process.env.BASENAME})?)`), '')}`;
+  `/${path.replace(new RegExp(`^(/+(?:${process.env.BASENAME}/)?)`), '')}`;
 
 const trailToPath = (...trail) => normalisePath(trail.join('/'));
 

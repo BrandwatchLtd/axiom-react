@@ -27,7 +27,7 @@ export default ({ path, webpackStats }) => {
         script: `assets/bundle.${hash}.min.js`,
         html: renderToString(
           <StaticRouter
-              basename={ `/${process.env.BASENAME}/` }
+              basename={ `/${process.env.BASENAME}` }
               context={ context }
               location={ normalisePath(path) }>
             <Application />
