@@ -5,3 +5,7 @@
   transition-duration: var(--transition-time-slow);
   transition-timing-function: var(--transition-function);
 }
+
+.ax-platform__canvas--no-dock {
+  margin-left: initial;
+}
