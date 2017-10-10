@@ -57,45 +57,45 @@ export default class TypeArrayOf extends Component {
   render() {
     const { content, isOpen } = this.state;
 
-    return (
-      <ButtonGroup>
+    return [
+      <ButtonGroup key="button">
         <Button
             onClick={ () => this.open() }
             size="small"
             style="secondary">
           Open Editor
-
-          <Dialog
-              contentLabel="Editor"
-              isOpen={ isOpen }
-              onRequestClose={ () => this.close() }
-              size="medium">
-            <DialogHeader>
-              <Heading textSize="headtitle">Editor</Heading>
-            </DialogHeader>
-
-            <DialogBody>
-              <Editor
-                  initialValue={ content }
-                  onChange={ ({ content }) => this.setState({ content }) } />
-            </DialogBody>
-
-            <DialogFooter>
-              <ButtonGroup textRight>
-                <Button
-                    onClick={ () => this.close() }
-                    style="secondary">
-                  Cancel
-                </Button>
-
-                <Button onClick={ () => this.update() }>
-                  Update
-                </Button>
-              </ButtonGroup>
-            </DialogFooter>
-          </Dialog>
         </Button>
-      </ButtonGroup>
-    );
+      </ButtonGroup>,
+      <Dialog
+          contentLabel="Editor"
+          isOpen={ isOpen }
+          key="dialog"
+          onRequestClose={ () => this.close() }
+          size="medium">
+        <DialogHeader>
+          <Heading textSize="headtitle">Editor</Heading>
+        </DialogHeader>
+
+        <DialogBody>
+          <Editor
+              initialValue={ content }
+              onChange={ ({ content }) => this.setState({ content }) } />
+        </DialogBody>
+
+        <DialogFooter>
+          <ButtonGroup textRight>
+            <Button
+                onClick={ () => this.close() }
+                style="secondary">
+              Cancel
+            </Button>
+
+            <Button onClick={ () => this.update() }>
+              Update
+            </Button>
+          </ButtonGroup>
+        </DialogFooter>
+      </Dialog>,
+    ];
   }
 }
