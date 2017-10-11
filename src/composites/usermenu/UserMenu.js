@@ -16,10 +16,7 @@ import GridCell from '../../components/grid/GridCell';
 import Heading from '../../components/typography/Heading';
 import Link from '../../components/typography/Link';
 import Paragraph from '../../components/typography/Paragraph';
-
-const stringToColor = (string) => (colors) =>  colors[
-  string.split('').reduce((acc, val) =>acc + val.charCodeAt(), 0) % (colors.length - 1)
-];
+import stringToColor from '../../materials/colors/stringToColor';
 
 export default class UserMenu extends Component {
   static contextTypes = {
@@ -42,7 +39,7 @@ export default class UserMenu extends Component {
 
   render() {
     const { children, firstName, lastName, email, imageSrc, onLogout } = this.props;
-    const userColorPicker = stringToColor(email);
+    const color = stringToColor(email);
     const { axiomLanguage } = this.context;
 
     return (
@@ -50,7 +47,7 @@ export default class UserMenu extends Component {
         <DropdownTarget>
           <Link data-ax-at={ atIds.UserMenu.activate }>
             <Avatar size="2rem" src={ imageSrc }>
-              <Candytar picker={ userColorPicker } size="2rem" />
+              <Candytar color={ color } size="2rem" />
             </Avatar>
           </Link>
         </DropdownTarget>
@@ -71,7 +68,7 @@ export default class UserMenu extends Component {
 
                 <GridCell shrink>
                   <Avatar size="4.5rem" src={ imageSrc }>
-                    <Candytar picker={ userColorPicker } size="4.5rem" />
+                    <Candytar color={ color } size="4.5rem" />
                   </Avatar>
                 </GridCell>
               </Grid>

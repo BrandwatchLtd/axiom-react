@@ -6,6 +6,8 @@ export { default as listToSentence } from './utils/listToSentence';
 export { default as svgDefineOnce } from './utils/svgDefineOnce';
 
 // Materials
+export { default as stringToColor } from './materials/colors/stringToColor';
+
 export { default as filenameDate } from './materials/date-and-time/filenameDate';
 export { default as longDate } from './materials/date-and-time/longDate';
 export { default as longDateWithTime } from './materials/date-and-time/longDateWithTime';
