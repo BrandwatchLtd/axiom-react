@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
 import { Example } from 'style-guide';
 import ColorSwatch from './ColorSwatch';
+import brandColors from '../brandColors';
 
 export default class ColorsExample extends Component {
   render() {
-    const brandColors = [
-      'brand-rose',
-      'brand-pink',
-      'brand-purple',
-      'brand-lilac',
-      'brand-blue',
-      'brand-teal',
-      'brand-green',
-      'brand-chartreuse',
-      'brand-amber',
-      'brand-orange',
-      'brand-brown',
-      'brand-grey',
-    ];
+    const colors = brandColors.map(color => `brand-${color}`);
 
     return (
       <Example name="Branding">
-        { brandColors.map((brandColor) =>
+        { colors.map((brandColor) =>
           <ColorSwatch colors={ [
             `${brandColor}--dark`,
             `${brandColor}`,

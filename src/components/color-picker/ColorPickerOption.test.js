@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ColorPickerOption from './ColorPickerOption';
+import brandColors from '../../materials/colors/brandColors';
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -15,20 +16,7 @@ describe('ColorPickerOption', () => {
   });
 
   describe('renders with color', () => {
-    [
-      'rose',
-      'pink',
-      'purple',
-      'lilac',
-      'blue',
-      'teal',
-      'green',
-      'chartreuse',
-      'amber',
-      'orange',
-      'brown',
-      'grey',
-    ].forEach((color) => {
+    brandColors.forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

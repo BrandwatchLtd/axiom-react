@@ -1,18 +1,5 @@
-const colors = [
-  'rose',
-  'pink',
-  'purple',
-  'lilac',
-  'blue',
-  'teal',
-  'green',
-  'chartreuse',
-  'amber',
-  'orange',
-  'brown',
-  'grey',
-];
+import brandColors from './brandColors';
 
-export default string => colors[
-  string.split('').reduce((acc, val) => acc + val.charCodeAt(), 0) % (colors.length - 1)
+export default string => brandColors[
+  string.split('').reduce((acc, val) => acc + val.charCodeAt(), 0) % (brandColors.length - 1)
 ];

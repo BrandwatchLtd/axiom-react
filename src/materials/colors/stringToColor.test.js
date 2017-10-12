@@ -1,19 +1,5 @@
 import stringToColor from './stringToColor';
-
-const colors = [
-  'rose',
-  'pink',
-  'purple',
-  'lilac',
-  'blue',
-  'teal',
-  'green',
-  'chartreuse',
-  'amber',
-  'orange',
-  'brown',
-  'grey',
-];
+import brandColors from './brandColors';
 
 const randomString = () => Math.random().toString(36).substring(7);
 
@@ -23,7 +9,7 @@ describe('stringToColor', () => {
   });
 
   it('maps a string to a brand color', () => {
-    expect(colors).toContain(stringToColor(randomString()));
+    expect(brandColors).toContain(stringToColor(randomString()));
   });
 
   it('maps a string to a color deterministically', () => {
