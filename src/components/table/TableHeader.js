@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Base from '../base/Base';
-import './Table.css';
 
-export default class Table extends Component {
+export default class TableHeader extends Component {
   static propTypes = {
-    /** TableHead and/or TableBody */
+    /** TableHeaderLabels */
     children: PropTypes.node,
   };
 
@@ -13,8 +12,8 @@ export default class Table extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base space="x6" { ...rest } Component="table" className="ax-table">
-        { children }
+      <Base { ...rest } Component="thead">
+        <tr>{ children }</tr>
       </Base>
     );
   }

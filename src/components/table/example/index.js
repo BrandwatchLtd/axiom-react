@@ -4,7 +4,8 @@ import { ExampleConfig } from 'style-guide';
 import Table from '../Table';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
-import TableHead from '../TableHead';
+import TableHeader from '../TableHeader';
+import TableHeaderLabel from '../TableHeaderLabel';
 import TableRow from '../TableRow';
 
 class TableExample extends Component {
@@ -13,7 +14,8 @@ class TableExample extends Component {
       Table: PropTypes.object.isRequired,
       TableBody: PropTypes.object.isRequired,
       TableCell: PropTypes.object.isRequired,
-      TableHead: PropTypes.object.isRequired,
+      TableHeader: PropTypes.object.isRequired,
+      TableHeaderLabel: PropTypes.object.isRequired,
       TableRow: PropTypes.object.isRequired,
     }).isRequired,
   };
@@ -24,7 +26,8 @@ class TableExample extends Component {
       Table: components.Table,
       TableBody: components.TableBody,
       TableCell: components.TableCell,
-      TableHead: components.TableHead,
+      TableHeader: components.TableHeader,
+      TableHeaderLabel: components.TableHeaderLabel,
       TableRow: components.TableRow,
     };
 
@@ -32,7 +35,10 @@ class TableExample extends Component {
       Table: {},
       TableBody: {},
       TableCell: {},
-      TableHead: {},
+      TableHeader: {},
+      TableHeaderLabel: {
+        onClick: () => console.log('TableHeaderLabel click'), // eslint-disable-line no-console
+      },
       TableRow: {},
     };
 
@@ -44,6 +50,11 @@ class TableExample extends Component {
           max: 5,
         },
       },
+      TableCell: {
+        isSelected: {
+          applyToIndex: 2,
+        },
+      },
       TableRow: {
         children: {
           count: 4,
@@ -51,8 +62,17 @@ class TableExample extends Component {
           max: 8,
         },
       },
-      TableCell: {
+      TableHeaderLabel: {
         grow: {
+          applyToIndex: 2,
+        },
+        isSelected: {
+          applyToIndex: 2,
+        },
+        onClick: {
+          included: false,
+        },
+        shrink: {
           applyToIndex: 2,
         },
       },
@@ -64,12 +84,12 @@ class TableExample extends Component {
           initialProps={ initialProps }
           propTypes={ propTypes }>
         <Table { ...initialProps.Table }>
-          <TableHead { ...initialProps.TableHead }>
-            <TableRow { ...initialProps.TableRow }>
-              <TableCell { ...initialProps.TableCell }>Lorem ipsum</TableCell>
-            </TableRow>
-          </TableHead>
-
+          <TableHeader { ...initialProps.TableHeader }>
+            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column A</TableHeaderLabel>
+            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column B</TableHeaderLabel>
+            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column C</TableHeaderLabel>
+            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column D</TableHeaderLabel>
+          </TableHeader>
           <TableBody { ...initialProps.TableBody }>
             <TableRow { ...initialProps.TableRow }>
               <TableCell { ...initialProps.TableCell }>Lorem ipsum dolar amor</TableCell>

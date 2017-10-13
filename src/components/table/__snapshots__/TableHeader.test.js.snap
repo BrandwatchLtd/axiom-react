@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeader renders 1`] = `
+<thead
+  className=""
+>
+  <tr>
+    <th
+      className="ax-table__header-label ax-table__header-label--align-left"
+    >
+      Test
+    </th>
+  </tr>
+</thead>
+`;

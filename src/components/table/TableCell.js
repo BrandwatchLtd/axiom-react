@@ -1,33 +1,39 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Base from '../base/Base';
-import classnames from 'classnames';
 
 export default class TableCell extends Component {
   static propTypes = {
-    /** Tabular data with the cell */
+    /** Tabular data for this cell */
     children: PropTypes.node,
-    /**
-     * Allows the cell to occupy as much room as possible. Other cells
-     * may require fixed widths or text wrapping to be turned off to maintain
-     * visual quality.
-     */
-    grow: PropTypes.bool,
+    /** Marks cell as selected */
+    isSelected: PropTypes.bool,
+    /** Set text-align */
+    textAlign: PropTypes.oneOf(['left', 'right']),
   };
+
+  static defaultProps = {
+    isSelected: false,
+    textAlign: 'left',
+  }
 
   render() {
     const {
       children,
-      grow,
+      isSelected,
+      textAlign,
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-table__cell', {
-      'ax-table__cell--grow': grow,
-    });
+    const className = classnames(
+      'ax-table__cell',
+      `ax-table__cell--align-${textAlign}`,
+      { 'ax-table__cell--selected': isSelected }
+    );
 
     return (
-      <Base { ...rest } Component="td" className={ classes }>
+      <Base { ...rest } Component="td" className={ className }>
         { children }
       </Base>
     );

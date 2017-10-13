@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeaderLabel renders 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+>
+  Test
+</th>
+`;
+
+exports[`TableHeaderLabel renders with grow 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--grow"
+>
+  Test
+</th>
+`;
+
+exports[`TableHeaderLabel renders with isSelected 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
+>
+  Test
+</th>
+`;
+
+exports[`TableHeaderLabel renders with shrink 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
+>
+  Test
+</th>
+`;
+
+exports[`TableHeaderLabel renders with textAlign 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-right"
+>
+  Test
+</th>
+`;

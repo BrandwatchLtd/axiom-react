@@ -1,11 +1,5 @@
 :root {
-  --cmp-table-row-padding-small: calc(var(--spacing-grid-size) * 1);
-  --cmp-table-row-padding-medium: calc(var(--spacing-grid-size) * 2);
-  --cmp-table-row-padding-large: calc(var(--spacing-grid-size) * 4);
-
-  --cmp-table-column-padding-small: calc(var(--spacing-grid-size) * 1);
-  --cmp-table-column-padding-medium: calc(var(--spacing-grid-size) * 2);
-  --cmp-table-column-padding-large: calc(var(--spacing-grid-size) * 4);
+  --cmp-table-column-padding: var(--spacing-grid-size--x4);
 }
 
 .ax-table {
@@ -13,81 +7,87 @@
   border-spacing: 0;
 }
 
-.ax-table--column-padding-small {
-  & .ax-table__cell {
-    padding-right: var(--cmp-table-column-padding-small);
-    padding-left: var(--cmp-table-column-padding-small);
-  }
+.ax-table__cell {
+  padding: var(--spacing-grid-size--x2) var(--cmp-table-column-padding);
+  border-bottom: var(--component-border-width-medium) solid var(--color-ui-light);
+  color: var(--color-context-text-subtle);
+  transition: color var(--transition-time-base) var(--transition-function);
 }
 
-.ax-table--column-padding-medium {
-  & .ax-table__cell {
-    padding-right: var(--cmp-table-column-padding-medium);
-    padding-left: var(--cmp-table-column-padding-medium);
-  }
+.ax-table__cell--align-left {
+  text-align: left;
 }
 
-.ax-table--column-padding-large {
-  & .ax-table__cell {
-    padding-right: var(--cmp-table-column-padding-large);
-    padding-left: var(--cmp-table-column-padding-large);
-  }
+.ax-table__cell--align-right {
+  text-align: right;
 }
 
-.ax-table--column-padding-none {
-  & .ax-table__cell {
-    padding-right: 0;
-    padding-left: 0;
-  }
+.ax-table__cell--selected {
+  color: var(--color-context-text);
 }
 
-.ax-table__cell:first-child { padding-left: 0; }
-.ax-table__cell:last-child  { padding-right: 0; }
-
-.ax-table--row-padding-small,
-.ax-table__head--row-padding-small {
-  & .ax-table__cell {
-    padding-top: var(--cmp-table-row-padding-small);
-    padding-bottom: var(--cmp-table-row-padding-small);
-  }
+.ax-table__header-button {
+  padding: 0;
+  outline: 0;
+  border: none;
+  background: none;
+  color: var(--color-context-text-subtle);
+  cursor: pointer;
 }
 
-.ax-table--row-padding-medium,
-.ax-table__head--row-padding-medium {
-  & .ax-table__cell {
-    padding-top: var(--cmp-table-row-padding-medium);
-    padding-bottom: var(--cmp-table-row-padding-medium);
-  }
+.ax-table__header-label {
+  position: relative;
+  padding: var(--spacing-grid-size--x2) var(--cmp-table-column-padding);
+  border-bottom: var(--component-border-width-medium) solid var(--color-ui-light);
+  color: var(--color-context-text-subtle);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  transition: color var(--transition-time-base) var(--transition-function);
 }
 
-.ax-table--row-padding-large,
-.ax-table__head--row-padding-large {
-  & .ax-table__cell {
-    padding-top: var(--cmp-table-row-padding-large);
-    padding-bottom: var(--cmp-table-row-padding-large);
-  }
+.ax-table__header-label--align-left {
+  text-align: left;
 }
 
-.ax-table--row-padding-none,
-.ax-table__head--row-padding-none {
-  & .ax-table__cell {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+.ax-table__header-label--align-right {
+  text-align: right;
 }
 
-.ax-table--borders {
-  & .ax-table__cell {
-    border-bottom: var(--component-border-width-medium) solid var(--color-context-border);
-  }
-}
-
-.ax-table__head {
-  & .ax-table__row {
-    line-height: 1;
-  }
-}
-
-.ax-table__cell--grow {
+.ax-table__header-label--grow {
   width: 100%;
+}
+
+.ax-table__header-label--selected {
+  color: var(--color-context-text);
+}
+
+.ax-table__header-label--selected .ax-table__header-button {
+  color: var(--color-context-text);
+}
+
+.ax-table__header-label--shrink {
+  width: 1%;
+}
+
+.ax-table__header-label::after {
+  content: '';
+  position: absolute;
+  right: var(--cmp-table-column-padding);
+  bottom: 0;
+  left: var(--cmp-table-column-padding);
+  transform: scaleX(0);
+  border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-primary);
+  transition: transform var(--transition-time-base) var(--transition-function);
+}
+
+.ax-table__header-label--selected::after {
+  transform: scaleX(1);
+}
+
+.ax-table__row {
+  transition: background-color var(--transition-time-base) var(--transition-function);
+}
+
+.ax-table__row:hover {
+  background-color: var(--color-ui-light);
 }

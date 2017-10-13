@@ -5,7 +5,7 @@ exports[`TableHead renders with defaultProps 1`] = `
   className="ax-table__row"
 >
   <td
-    className="ax-table__cell"
+    className="ax-table__cell ax-table__cell--align-left"
   >
     123456
   </td>
