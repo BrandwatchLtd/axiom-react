@@ -7,13 +7,13 @@ export default class DatePickerDay extends Component {
   static propTypes = {
     date: PropTypes.instanceOf(Date),
     disabled: PropTypes.bool.isRequired,
+    onSelect: PropTypes.func.isRequired,
     selected: PropTypes.bool.isRequired,
     selectedEnd: PropTypes.bool.isRequired,
     selectedStart: PropTypes.bool.isRequired,
     selection: PropTypes.bool.isRequired,
     weekEnd: PropTypes.bool.isRequired,
     weekStart: PropTypes.bool.isRequired,
-    onSelect: PropTypes.func.isRequired,
   };
 
   render() {

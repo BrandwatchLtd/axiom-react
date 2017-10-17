@@ -11,14 +11,14 @@ import './Notification.css';
 export default class Notification extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    onAppear: PropTypes.func,
+    onRemoveClick: PropTypes.func,
     type: PropTypes.oneOf([
       'error',
       'info',
       'success',
       'warning',
     ]).isRequired,
-    onAppear: PropTypes.func,
-    onRemoveClick: PropTypes.func,
   };
 
   componentDidMount() {

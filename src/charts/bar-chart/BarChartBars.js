@@ -16,11 +16,11 @@ export default class BarChartBars extends Component {
     hoverColor: PropTypes.string,
     isHovered: PropTypes.bool.isRequired,
     label: PropTypes.node.isRequired,
+    onMouseEnter: PropTypes.func.isRequired,
+    onMouseLeave: PropTypes.func.isRequired,
     showBarLabel: PropTypes.bool,
     size: PropTypes.string,
     values: PropTypes.array.isRequired,
-    onMouseEnter: PropTypes.func.isRequired,
-    onMouseLeave: PropTypes.func.isRequired,
   };
 
   render() {

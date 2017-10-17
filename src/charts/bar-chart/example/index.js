@@ -81,10 +81,10 @@ class BarChartExample extends Component {
       BarChart: {
         ContextComponent: ContextDemoComponent,
         axisTitle: '% of each something',
-        chartKey: chartKey,
+        chartKey,
         chartKeyBenchmarkLabel: 'Benchmark',
         collapsedVisibleRowCount: 4,
-        data: data,
+        data,
         expandButtonSuffix: 'Categories',
         labelColumnWidth: '11rem',
       },
@@ -94,7 +94,7 @@ class BarChartExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <BarChart { ...initialProps.BarChart }  />
+        <BarChart { ...initialProps.BarChart } />
       </ExampleConfig>
     );
   }

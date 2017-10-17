@@ -13,12 +13,12 @@ export default class Alert extends Component {
   static propTypes = {
     /** Content displayed next to the AlertIcon */
     children: PropTypes.node.isRequired,
+    /** An optional callback that when given adds a removable cross */
+    onRemoveClick: PropTypes.func,
     /** Size of the Alert */
     size: PropTypes.oneOf(['small', 'medium']),
     /** Type of Alert that affects the coloring and icon */
     type: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
-    /** An optional callback that when given adds a removable cross */
-    onRemoveClick: PropTypes.func,
   };
 
   static defaultProps = {

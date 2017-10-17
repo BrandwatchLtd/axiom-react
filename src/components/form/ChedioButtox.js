@@ -12,8 +12,8 @@ export default class ChedioButtox extends Component {
     inputClassName: PropTypes.string.isRequired,
     inputType: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
     invalid: PropTypes.bool,
-    title: PropTypes.string,
     onClick: PropTypes.func,
+    title: PropTypes.string,
   };
 
   render() {
@@ -55,7 +55,7 @@ export default class ChedioButtox extends Component {
             type={ inputType } />
 
         <span className={ classnames('ax-chedio-buttox__indicator', indicatorClassName) } />
-        { children  && <span className="ax-chedio-buttox__label">{ children }</span> }
+        { children && <span className="ax-chedio-buttox__label">{ children }</span> }
       </Base>
     );
   }

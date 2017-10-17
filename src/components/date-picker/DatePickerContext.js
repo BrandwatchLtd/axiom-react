@@ -18,19 +18,19 @@ import {
 } from './utils';
 import './DatePicker.css';
 
-export default class DatePickerContext extends Component  {
+export default class DatePickerContext extends Component {
   static propTypes = {
     earliestSelectableDate: PropTypes.instanceOf(Date),
     initialDate: PropTypes.instanceOf(Date),
     latestSelectableDate: PropTypes.instanceOf(Date),
+    onApply: PropTypes.func,
+    onCancel: PropTypes.func,
+    onSelect: PropTypes.func.isRequired,
     rangeSelect: PropTypes.bool,
     selectedDate: PropTypes.instanceOf(Date),
     selectedEndDate: PropTypes.instanceOf(Date),
     selectedStartDate: PropTypes.instanceOf(Date),
     view: PropTypes.string,
-    onApply: PropTypes.func,
-    onCancel: PropTypes.func,
-    onSelect: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -48,7 +48,7 @@ export default class DatePickerContext extends Component  {
       initialDate
     );
 
-    const activeEndDate =  rangeSelect && selectedEndDate
+    const activeEndDate = rangeSelect && selectedEndDate
       ? (isSameMonth(selectedEndDate, selectedStartDate)
         ? addMonths(selectedEndDate, 1)
         : selectedEndDate)
@@ -135,7 +135,7 @@ export default class DatePickerContext extends Component  {
     ]);
 
     return (
-      <Context  { ...props } maxHeight="auto" width="auto">
+      <Context { ...props } maxHeight="auto" width="auto">
         <ContextBox hasFullSeparator>
           <Grid responsive={ false } shrink>
             <GridCell>

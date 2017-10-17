@@ -11,7 +11,7 @@ export default class LogoHorizontal extends Component {
   };
 
   render() {
-    const { height, width, ...rest }  = this.props;
+    const { height, width, ...rest } = this.props;
     const viewBoxWidth = 150;
     const viewBoxHeight = 30;
 

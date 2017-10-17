@@ -32,6 +32,8 @@ export default class Bar extends Component {
     labelStrong: PropTypes.bool,
     /** Minimum thickness of the Bar */
     minSize: PropTypes.string,
+    /** onClick handler that activates clickable styling */
+    onClick: PropTypes.func,
     /**
      * Percentage value of the Bar, which determines the height and
      * content for the label
@@ -41,8 +43,6 @@ export default class Bar extends Component {
     showLabel: PropTypes.bool,
     /** Explicit thickness of the Bar */
     size: PropTypes.string,
-    /** onClick handler that activates clickable styling */
-    onClick: PropTypes.func,
   };
 
   static defaultProps = {

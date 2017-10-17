@@ -18,7 +18,7 @@ export default class ButtonIcon extends Component {
 
   static typeRef = ButtonIconRef;
 
-  render () {
+  render() {
     const { isEnd, isStart, name, ...rest } = this.props;
     const classes = classnames('ax-button__icon', {
       'ax-button__icon--start': isStart,

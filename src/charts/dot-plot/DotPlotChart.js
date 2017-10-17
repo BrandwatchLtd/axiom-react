@@ -145,7 +145,7 @@ export default class DotPlotChart extends Component {
                     onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
                     onDotMouseLeave={ () => this.handleDotMouseLeave() }
                     rawData={ data[index] }
-                    rowIndex={ index }  />
+                    rowIndex={ index } />
               </ChartTableVisual>
             </ChartTableRow>
           ) }

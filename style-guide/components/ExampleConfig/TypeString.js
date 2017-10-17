@@ -17,7 +17,7 @@ export default class TypeString extends Component {
 
     return (
       <TextInput
-          onChange={ (e) => setValue(e.target.value)  }
+          onChange={ (e) => setValue(e.target.value) }
           placeholder="Set prop text..."
           value={ value } />
     );

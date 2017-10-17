@@ -26,6 +26,10 @@ export default class ColorPicker extends Component {
       'brown',
       'grey',
     ])),
+    /** Callback for when the color picker has been opened */
+    onOpen: PropTypes.func,
+    /** Callback for when a color has been selected, provided with the selected color */
+    onSelectColor: PropTypes.func.isRequired,
     /** Colors that should be visible for selection */
     options: PropTypes.arrayOf(PropTypes.oneOf([
       'rose',
@@ -58,10 +62,6 @@ export default class ColorPicker extends Component {
     ]),
     /** Width of the color selection container */
     width: PropTypes.string,
-    /** Callback for when the color picker has been opened */
-    onOpen: PropTypes.func,
-    /** Callback for when a color has been selected, provided with the selected color */
-    onSelectColor: PropTypes.func.isRequired,
   };
 
   static defaultProps = {

@@ -9,10 +9,10 @@ export const VB_HEIGHT = 24;
 export default class DataPoints extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    /** Size of the DataPoints */
-    size: PropTypes.string.isRequired,
     /** onClick handler that activates clickable styling */
     onClick: PropTypes.func,
+    /** Size of the DataPoints */
+    size: PropTypes.string.isRequired,
   };
 
   render() {

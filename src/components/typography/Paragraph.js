@@ -4,7 +4,7 @@ import Text from './Text';
 export default class Paragraph extends Component {
   render() {
     return (
-      <Text space="x2" { ...this.props }  Component="p" />
+      <Text space="x2" { ...this.props } Component="p" />
     );
   }
 }

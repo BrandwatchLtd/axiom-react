@@ -13,10 +13,10 @@ export default class ContextMenuItem extends Component {
     disabled: PropTypes.bool,
     /** Whether the menu is part of a multi-selection menu */
     multiSelect: PropTypes.bool,
-    /** Selected state, resulting in a selected appearance */
-    selected: PropTypes.bool,
     /** Click handler */
     onClick: PropTypes.func,
+    /** Selected state, resulting in a selected appearance */
+    selected: PropTypes.bool,
   };
 
   render() {

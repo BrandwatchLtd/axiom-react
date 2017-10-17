@@ -16,6 +16,10 @@ export default class TextInput extends Component {
     invalid: PropTypes.bool,
     /** Descriptive label that is placed with the input field */
     label: PropTypes.string,
+    /** Handler for when the input field is blurred */
+    onBlur: PropTypes.func,
+    /** Handler for when the input field is focused */
+    onFocus: PropTypes.func,
     /**
      * Descriptive placeholder text that is displayed in the input field
      * when there is no value
@@ -33,10 +37,6 @@ export default class TextInput extends Component {
     valid: PropTypes.bool,
     /** Value of the input field */
     value: PropTypes.any,
-    /** Handler for when the input field is blurred */
-    onBlur: PropTypes.func,
-    /** Handler for when the input field is focused */
-    onFocus: PropTypes.func,
   };
 
   static defaultProps = {
@@ -98,7 +98,7 @@ export default class TextInput extends Component {
               onFocus={ () => this.handleOnFocus() }
               ref="input"
               type={ type }
-              value={ value }  />
+              value={ value } />
         </div>
       </TextGroup>
     );

@@ -83,11 +83,11 @@ class DotPlotExample extends Component {
       DotPlotChart: {
         ContextComponent: ContextDemoComponent,
         axisTitle: '% of each something',
-        chartKey: chartKey,
+        chartKey,
         chartKeyBenchmarkLabel: 'Benchmark',
         chartKeyDifferenceLabel: 'Size of Difference',
         collapsedVisibleRowCount: 6,
-        data: data,
+        data,
         expandButtonSuffix: 'Categories',
         labelColumnWidth: '11rem',
       },
@@ -97,7 +97,7 @@ class DotPlotExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <DotPlotChart { ...initialProps.DotPlotChart }  />
+        <DotPlotChart { ...initialProps.DotPlotChart } />
       </ExampleConfig>
     );
   }

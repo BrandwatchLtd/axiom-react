@@ -6,15 +6,15 @@ import ButtonGroup from '../button/ButtonGroup';
 import Grid from '../grid/Grid';
 import GridCell from '../grid/GridCell';
 
-export default class DatePickerControls extends Component  {
+export default class DatePickerControls extends Component {
   static propTypes = {
+    onApply: PropTypes.func,
+    onCancel: PropTypes.func,
     rangeSelect: PropTypes.bool,
     selectedDate: PropTypes.instanceOf(Date),
     selectedEndDate: PropTypes.instanceOf(Date),
     selectedStartDate: PropTypes.instanceOf(Date),
     view: PropTypes.string.isRequired,
-    onApply: PropTypes.func,
-    onCancel: PropTypes.func,
   };
 
   static contextTypes = {

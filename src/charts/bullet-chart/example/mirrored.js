@@ -21,8 +21,8 @@ export default class MirroredBulletChartExample extends Component {
 
     const initialProps = {
       MirroredBulletChart: {
-        chartKey: chartKey,
-        data: data,
+        chartKey,
+        data,
         height: '10rem',
         label: <Heading textSize="display2">57%</Heading>,
         labelColumnWidth: '10rem',
@@ -37,7 +37,7 @@ export default class MirroredBulletChartExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <MirroredBulletChart { ...initialProps.MirroredBulletChart }  />
+        <MirroredBulletChart { ...initialProps.MirroredBulletChart } />
       </ExampleConfig>
     );
   }

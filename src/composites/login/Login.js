@@ -24,10 +24,10 @@ export default class Login extends Component {
     backgroundImage: PropTypes.string.isRequired,
     /** An error message that will be placed on the page */
     error: PropTypes.string,
-    /** Overall theme for the page, needs to be set when using a background image */
-    theme: PropTypes.oneOf(['dark', 'light']).isRequired,
     /** Submit handler that will be called with the username and password */
     onSubmit: PropTypes.func.isRequired,
+    /** Overall theme for the page, needs to be set when using a background image */
+    theme: PropTypes.oneOf(['dark', 'light']).isRequired,
   };
 
   static contextTypes = {

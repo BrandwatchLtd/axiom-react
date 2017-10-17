@@ -21,7 +21,7 @@ export default class LabelIcon extends Component {
 
   static typeRef = LabelIconRef;
 
-  render () {
+  render() {
     const { color, isEnd, isStart, name, ...rest } = this.props;
     const classes = classnames('ax-label__icon', {
       'ax-label__icon--start': isStart,

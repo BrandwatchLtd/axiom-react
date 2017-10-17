@@ -5,7 +5,7 @@ import DropdownContent from '../dropdown/DropdownContent';
 import DropdownTarget from '../dropdown/DropdownTarget';
 import DatePickerContext from './DatePickerContext';
 
-export default class DatePicker extends Component  {
+export default class DatePicker extends Component {
   static propTypes = {
     /** The element to position the DatePicker around */
     children: PropTypes.node.isRequired,
@@ -18,6 +18,12 @@ export default class DatePicker extends Component  {
     initialDate: PropTypes.instanceOf(Date),
     /** An upper limit to the latest date that can be selected */
     latestSelectableDate: PropTypes.instanceOf(Date),
+    /** Callback for when the apply button has been clicked */
+    onApply: PropTypes.func,
+    /** Callback for when the cancel button has been clicked */
+    onCancel: PropTypes.func,
+    /** Callback for when a date or range has been selected */
+    onSelect: PropTypes.func.isRequired,
     /** Whether a date range can be selected */
     rangeSelect: PropTypes.bool,
     /** A single date that appears selected */
@@ -28,12 +34,6 @@ export default class DatePicker extends Component  {
     selectedStartDate: PropTypes.instanceOf(Date),
     /** Configuration for a single date picker view or two pickers side by side */
     view: PropTypes.oneOf(['single', 'double']),
-    /** Callback for when the apply button has been clicked */
-    onApply: PropTypes.func,
-    /** Callback for when the cancel button has been clicked */
-    onCancel: PropTypes.func,
-    /** Callback for when a date or range has been selected */
-    onSelect: PropTypes.func.isRequired,
   };
 
   static defaultProps = {

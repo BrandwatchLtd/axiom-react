@@ -6,8 +6,8 @@ export default class PaginationButton extends Component {
   static propTypes = {
     active: PropTypes.bool,
     circular: PropTypes.string,
-    page: PropTypes.number,
     onClick: PropTypes.func,
+    page: PropTypes.number,
   };
 
   render() {

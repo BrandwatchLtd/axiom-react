@@ -35,7 +35,7 @@ export default class ColumnExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <ColumnChart { ...initialProps.ColumnChart }  />
+        <ColumnChart { ...initialProps.ColumnChart } />
       </ExampleConfig>
     );
   }

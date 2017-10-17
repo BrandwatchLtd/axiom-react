@@ -9,10 +9,10 @@ export default class AlertDialog extends Component {
     children: PropTypes.node.isRequired,
     /** Visibility toggle for the AlertDialog */
     isOpen: PropTypes.bool.isRequired,
-    /** Alert type */
-    type: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,
     /** Callback for closing the AlertDialog by clicking on the overlay */
     onRequestClose: PropTypes.func.isRequired,
+    /** Alert type */
+    type: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,
   };
 
   static childContextTypes = {

@@ -29,10 +29,10 @@ export const getHighestValue = (data) => {
   return max;
 };
 
-export const findBarGroupMax =  (acc, cur) =>
+export const findBarGroupMax = (acc, cur) =>
   cur.value > acc.value ? cur.value : acc.value;
 
-export const arrayOfLength =  (expectedLength, props, propName, componentName) => {
+export const arrayOfLength = (expectedLength, props, propName, componentName) => {
   const arrayPropLength = props[propName].length;
 
   if (arrayPropLength !== expectedLength) {

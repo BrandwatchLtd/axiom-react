@@ -20,8 +20,8 @@ export default class BulletExample extends Component {
 
     const initialProps = {
       BulletChart: {
-        chartKey: chartKey,
-        data: data,
+        chartKey,
+        data,
         height: '20rem',
         labelIndex: 1,
         showBarLabel: true,
@@ -34,7 +34,7 @@ export default class BulletExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <BulletChart { ...initialProps.BulletChart }  />
+        <BulletChart { ...initialProps.BulletChart } />
       </ExampleConfig>
     );
   }

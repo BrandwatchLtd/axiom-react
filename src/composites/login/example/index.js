@@ -25,7 +25,8 @@ class LoginExample extends Component {
       Login: {
         application: 'Axiom',
         backgroundImage: 'assets/axiom-bg.jpg',
-        error: 'Sorry but we don\'t recognise your username and password combination. Please check your details and try again.',
+        error: 'Sorry but we don\'t recognise your username and password combination. \
+          Please check your details and try again.',
         onSubmit: this.handleSubmit.bind(this),
         theme: 'dark',
       },

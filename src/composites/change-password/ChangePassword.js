@@ -25,6 +25,10 @@ export default class ChangePassword extends Component {
     isOpen: PropTypes.bool.isRequired,
     /** Toggles the disabled property on the submit button */
     isSubmitting: PropTypes.bool,
+    /** Callback for closing the Dialog by clicking on the overlay */
+    onRequestClose: PropTypes.func.isRequired,
+    /** Submit handler that will be called with old and new password */
+    onSubmit: PropTypes.func.isRequired,
     /**
      * List of rules which the password must fulfill, contains a human friendly
      * label and associated pattern.
@@ -33,10 +37,6 @@ export default class ChangePassword extends Component {
       label: PropTypes.string.isRequired,
       pattern: PropTypes.object.isRequired,
     })),
-    /** Callback for closing the Dialog by clicking on the overlay */
-    onRequestClose: PropTypes.func.isRequired,
-    /** Submit handler that will be called with old and new password */
-    onSubmit: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -86,7 +86,14 @@ export default class ChangePassword extends Component {
   }
 
   render() {
-    const { error, isCurrentPasswordInvalid, isSubmitting, onRequestClose, rules, ...rest } = this.props;
+    const {
+      error,
+      isCurrentPasswordInvalid,
+      isSubmitting,
+      onRequestClose,
+      rules,
+      ...rest
+    } = this.props;
     const { internalError } = this.state;
     const { axiomLanguage } = this.context;
 

@@ -19,9 +19,9 @@ export default class ImageFallback extends Component {
   static propTypes = {
     children: PropTypes.node,
     fallback: PropTypes.node,
-    src: PropTypes.string,
     onError: PropTypes.func,
     onLoad: PropTypes.func,
+    src: PropTypes.string,
   };
 
   constructor(props) {

@@ -30,15 +30,6 @@ export default class Position extends Component {
     /** Controls the starting offset of the content */
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
     /**
-     * Controls the starting position around PositionTarget in which the
-     * PositionContent will attempt to be placed. If that position is not available
-     * due to collision, it will be placed according to the flip behaviour  until
-     * a valid position is found.
-     */
-    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
-    /** Toggle that allows the arrow of the Context component to be hidden */
-    showArrow: PropTypes.bool,
-    /**
      * When provided a mask will be placed behind PositionContent, where this
      * function is called when clicked.
      */
@@ -48,6 +39,15 @@ export default class Position extends Component {
      * has been positioned.
      */
     onPositionChange: PropTypes.func,
+    /**
+     * Controls the starting position around PositionTarget in which the
+     * PositionContent will attempt to be placed. If that position is not available
+     * due to collision, it will be placed according to the flip behaviour  until
+     * a valid position is found.
+     */
+    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    /** Toggle that allows the arrow of the Context component to be hidden */
+    showArrow: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -99,7 +99,7 @@ export default class Position extends Component {
     return new popperJS(this._target, this._content, {
       onCreate: this.handleOnCreate,
       onUpdate: this.handleOnUpdate,
-      placement: placement,
+      placement,
       modifiers: {
         arrow: {
           enabled: showArrow,

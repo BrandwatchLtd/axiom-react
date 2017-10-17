@@ -25,16 +25,16 @@ export default class DataPicker extends Component {
     colorOptions: PropTypes.arrayOf(PropTypes.string),
     /** List of disabled colors that become unpickable */
     disabledColors: PropTypes.arrayOf(PropTypes.string),
-    /** Placeholder text that will be displayed when no value is provided */
-    placeholder: PropTypes.string.isRequired,
-    /** Value that will be displayed in the header. */
-    value: PropTypes.string,
     /** Handler that is called when the "clear" link is clicked */
     onClear: PropTypes.func,
     /** Handler that is called when the color picker is opened */
     onColorPickerOpen: PropTypes.func,
     /** Handler that is called when a color is selected */
     onSelectColor: PropTypes.func,
+    /** Placeholder text that will be displayed when no value is provided */
+    placeholder: PropTypes.string.isRequired,
+    /** Value that will be displayed in the header. */
+    value: PropTypes.string,
   };
 
   static childContextTypes = {

@@ -20,14 +20,13 @@ export default class ChangePasswordForm extends Component {
   static propTypes = {
     isCurrentPasswordInvalid: PropTypes.bool.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
+    onError: PropTypes.func.isRequired,
+    onRequestClose: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
     rules: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string.isRequired,
       pattern: PropTypes.object.isRequired,
     })),
-    onCancel: PropTypes.func.isRequired,
-    onError: PropTypes.func.isRequired,
-    onRequestClose: PropTypes.func.isRequired,
-    onSubmit: PropTypes.func.isRequired,
   };
 
   constructor(props) {

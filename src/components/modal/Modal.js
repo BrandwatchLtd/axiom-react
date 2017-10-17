@@ -18,8 +18,8 @@ export default class Modal extends Component {
   static propTypes = {
     children: PropTypes.node,
     isOpen: PropTypes.bool.isRequired,
-    withOverlay: PropTypes.bool,
     onOverlayClick: PropTypes.func,
+    withOverlay: PropTypes.bool,
   };
 
   static defaultProps = {

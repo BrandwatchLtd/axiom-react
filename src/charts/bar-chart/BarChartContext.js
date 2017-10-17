@@ -14,11 +14,11 @@ export default class BarChartContext extends PureComponent {
     isHidden: PropTypes.bool,
     label: PropTypes.node.isRequired,
     labelStrong: PropTypes.bool.isRequired,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     showBarLabel: PropTypes.bool.isRequired,
     size: PropTypes.string,
     value: PropTypes.number.isRequired,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func,
   };
 
   render() {

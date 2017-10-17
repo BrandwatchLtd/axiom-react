@@ -36,7 +36,10 @@ class ButtonExample extends Component {
         children: {
           options: [
             { name: 'Text', children: 'Lorem ipsum' },
-            { name: 'Text + Icon', children: ['Dolar amet', <ButtonIcon  key="ButtonIcon" name="chevron-down" />] },
+            { name: 'Text + Icon', children: [
+              'Dolar amet',
+              <ButtonIcon key="ButtonIcon" name="chevron-down" />,
+            ] },
             { name: 'Icon', children: <ButtonIcon name="chevron-down" /> },
             { name: 'Number (2 digit)', children: '10' },
             { name: 'Number (3 digit)', children: '100' },

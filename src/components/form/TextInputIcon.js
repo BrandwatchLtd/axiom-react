@@ -22,7 +22,7 @@ export default class TextInputIcon extends Component {
 
   static typeRef = TextInputIconRef;
 
-  render () {
+  render() {
     const { align, name, onClick, ...rest } = this.props;
     const className = classnames('ax-input__icon', {
       [`ax-input__icon--align-${align}`]: align,

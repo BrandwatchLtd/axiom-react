@@ -13,10 +13,10 @@ export default class Dialog extends Component {
     fullscreen: PropTypes.bool,
     /** Visibility toggle for the Dialog */
     isOpen: PropTypes.bool.isRequired,
-    /** Maximum size of the Dialog */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Callback for closing the Dialog by clicking on the overlay */
     onRequestClose: PropTypes.func.isRequired,
+    /** Maximum size of the Dialog */
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
   static defaultProps = {

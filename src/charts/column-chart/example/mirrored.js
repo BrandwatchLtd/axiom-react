@@ -37,7 +37,7 @@ export default class MirroredColumnChartExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <MirroredColumnChart { ...initialProps.MirroredColumnChart }  />
+        <MirroredColumnChart { ...initialProps.MirroredColumnChart } />
       </ExampleConfig>
     );
   }

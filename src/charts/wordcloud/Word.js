@@ -30,6 +30,8 @@ export default class Word extends Component {
     fontSize: PropTypes.string,
     /** Hidden state of the word **/
     hidden: PropTypes.bool,
+    /** onClick handler */
+    onClick: PropTypes.func,
     /** The content of the word */
     text: PropTypes.string,
     /** Where the word should be horizontal positioned from */
@@ -43,8 +45,6 @@ export default class Word extends Component {
     x: PropTypes.number.isRequired,
     /** y coordinate of the word */
     y: PropTypes.number.isRequired,
-    /** onClick handler */
-    onClick: PropTypes.func,
   };
 
   static defaultProps = {

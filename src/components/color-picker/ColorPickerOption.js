@@ -21,8 +21,8 @@ export default class ColorPickerOption extends Component {
       'grey',
     ]),
     disabled: PropTypes.bool,
-    size: PropTypes.string,
     onClick: PropTypes.func,
+    size: PropTypes.string,
   };
 
   constructor(props) {

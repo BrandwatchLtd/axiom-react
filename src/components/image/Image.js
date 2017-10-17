@@ -8,12 +8,12 @@ export default class Image extends Component {
   static propTypes = {
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
-    /** Source of the image */
-    src: PropTypes.string,
     /** SKIP */
     onError: PropTypes.func,
     /** SKIP */
     onLoad: PropTypes.func,
+    /** Source of the image */
+    src: PropTypes.string,
   };
 
   render() {

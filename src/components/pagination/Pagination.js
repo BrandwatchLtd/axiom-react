@@ -16,10 +16,10 @@ export default class Pagination extends Component {
     currentPage: PropTypes.number.isRequired,
     /** The number of page buttons to visible at any time */
     displayRange: PropTypes.number,
-    /** The total number of pages that are available  */
-    totalPages: PropTypes.number.isRequired,
     /** Page change handler that will be called with a page number */
     onPageChange: PropTypes.func.isRequired,
+    /** The total number of pages that are available  */
+    totalPages: PropTypes.number.isRequired,
   };
 
   static defaultProps = {

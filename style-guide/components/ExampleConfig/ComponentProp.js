@@ -98,7 +98,7 @@ export default class ComponentProp extends Component {
                     </Badge>
                   ) }
 
-                  {  showDefault && (
+                  { showDefault && (
                     <Badge color="orange">
                       <Strong>Default:</Strong> { defaultValue.toString() }
                     </Badge>

@@ -18,11 +18,11 @@ export default class DatePickerViewMonth extends Component {
     date: PropTypes.instanceOf(Date).isRequired,
     earliestSelectableDate: PropTypes.instanceOf(Date),
     latestSelectableDate: PropTypes.instanceOf(Date),
+    onSelect: PropTypes.func.isRequired,
     rangeSelect: PropTypes.bool,
     selectedDate:PropTypes.instanceOf(Date),
     selectedEndDate:PropTypes.instanceOf(Date),
     selectedStartDate:PropTypes.instanceOf(Date),
-    onSelect: PropTypes.func.isRequired,
   };
 
   render() {

@@ -35,10 +35,10 @@ export default class DotPlot extends Component {
     label: PropTypes.string,
     mouseOverColors: PropTypes.arrayOf(PropTypes.string),
     mouseOverRowIndex: PropTypes.number,
-    rawData: PropTypes.object.isRequired,
-    rowIndex: PropTypes.number.isRequired,
     onDotMouseEnter: PropTypes.func.isRequired,
     onDotMouseLeave: PropTypes.func.isRequired,
+    rawData: PropTypes.object.isRequired,
+    rowIndex: PropTypes.number.isRequired,
   };
 
   render() {

@@ -78,7 +78,7 @@ export default class ComponentProps extends Component {
           </Paragraph>
         ) }
 
-        { Object.keys(propTypes).map((prop)  =>
+        { Object.keys(propTypes).map((prop) =>
           <ComponentProp
               PropEditor={ TypeMap[propTypes[prop].type.name] }
               defaultValue={ propTypes[prop].defaultValue && propTypes[prop].defaultValue.value }
