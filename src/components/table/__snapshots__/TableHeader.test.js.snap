@@ -8,7 +8,11 @@ exports[`TableHeader renders 1`] = `
     <th
       className="ax-table__header-label ax-table__header-label--align-left"
     >
-      Test
+      <div
+        className="ax-table__header-label-underline"
+      >
+        Test
+      </div>
     </th>
   </tr>
 </thead>

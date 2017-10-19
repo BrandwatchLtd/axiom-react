@@ -4,7 +4,11 @@ exports[`TableHeaderLabel renders 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left"
 >
-  Test
+  <div
+    className="ax-table__header-label-underline"
+  >
+    Test
+  </div>
 </th>
 `;
 
@@ -12,7 +16,11 @@ exports[`TableHeaderLabel renders with grow 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--grow"
 >
-  Test
+  <div
+    className="ax-table__header-label-underline"
+  >
+    Test
+  </div>
 </th>
 `;
 
@@ -20,7 +28,11 @@ exports[`TableHeaderLabel renders with isSelected 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
 >
-  Test
+  <div
+    className="ax-table__header-label-underline ax-table__header-label-underline--selected"
+  >
+    Test
+  </div>
 </th>
 `;
 
@@ -28,7 +40,11 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
 >
-  Test
+  <div
+    className="ax-table__header-label-underline"
+  >
+    Test
+  </div>
 </th>
 `;
 
@@ -36,6 +52,10 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-right"
 >
-  Test
+  <div
+    className="ax-table__header-label-underline"
+  >
+    Test
+  </div>
 </th>
 `;

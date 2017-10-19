@@ -1,14 +1,10 @@
-:root {
-  --cmp-table-column-padding: var(--spacing-grid-size--x4);
-}
-
 .ax-table {
   width: 100%;
   border-spacing: 0;
 }
 
 .ax-table__cell {
-  padding: var(--spacing-grid-size--x2) var(--cmp-table-column-padding);
+  padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
   border-bottom: var(--component-border-width-medium) solid var(--color-ui-light);
   color: var(--color-context-text-subtle);
   transition: color var(--transition-time-base) var(--transition-function);
@@ -36,8 +32,7 @@
 }
 
 .ax-table__header-label {
-  position: relative;
-  padding: var(--spacing-grid-size--x2) var(--cmp-table-column-padding);
+  padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
   border-bottom: var(--component-border-width-medium) solid var(--color-ui-light);
   color: var(--color-context-text-subtle);
   font-weight: var(--font-weight-bold);
@@ -69,19 +64,24 @@
   width: 1%;
 }
 
-.ax-table__header-label::after {
+.ax-table__header-label-underline {
+  display: inline-block;
+  position: relative;
+}
+
+.ax-table__header-label-underline::after {
   content: '';
   position: absolute;
-  right: var(--cmp-table-column-padding);
+  right: 0;
   bottom: 0;
-  left: var(--cmp-table-column-padding);
-  transform: scaleX(0);
+  left: 0;
+  transform: scaleX(0) translateY(var(--spacing-grid-size--x2));
   border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-primary);
   transition: transform var(--transition-time-base) var(--transition-function);
 }
 
-.ax-table__header-label--selected::after {
-  transform: scaleX(1);
+.ax-table__header-label-underline--selected::after {
+  transform: scaleX(1) translateY(var(--spacing-grid-size--x2));
 }
 
 .ax-table__row {

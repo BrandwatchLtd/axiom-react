@@ -46,6 +46,10 @@ export default class TableHeaderLabel extends Component {
       }
     );
 
+    const underlineClassName = classnames('ax-table__header-label-underline', {
+      'ax-table__header-label-underline--selected': isSelected,
+    });
+
     const order = xs => textAlign === 'left' ? xs : xs.reverse();
 
     const textIconProps = {
@@ -53,14 +57,15 @@ export default class TableHeaderLabel extends Component {
     };
 
     return (
-      <Base { ...rest } Component="th" className={ className }>{
-        onClick ? <button className="ax-table__header-button" onClick={ onClick }>{order([
-          children,
-          <TextIcon key="icon" name="triangle-down" { ...textIconProps } />,
-        ])}</button> : (
-          children
-        )
-      }
+      <Base { ...rest } Component="th" className={ className }>
+        <div className={ underlineClassName }>{
+          onClick ? <button className="ax-table__header-button" onClick={ onClick }>{order([
+            children,
+            <TextIcon key="icon" name="triangle-down" { ...textIconProps } />,
+          ])}</button> : (
+            children
+          )
+        }</div>
       </Base>
     );
   }
