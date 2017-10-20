@@ -29,7 +29,7 @@ function formatJs(js) {
 function formatJsx(jsx) {
   return beautifyHtml(jsx, {
     indent_size: 2,
-    preserve_newlines: false,
+    preserve_newlines: true,
     unformatted: [],
   });
 }

@@ -49,6 +49,7 @@ module.exports = {
           'toolbar': { name: 'Toolbar' },
           'tooltip': { name: 'Tooltip' },
           'typography': { name: 'Typography' },
+          'validation': { name: 'Validation' },
         },
       },
       'composites': {

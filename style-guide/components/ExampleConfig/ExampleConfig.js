@@ -21,6 +21,7 @@ const mergeSetState = (state, type, ...args) => extend({}, state, ...(Array.isAr
 export default class ExampleConfig extends Component {
   static propTypes = {
     children: PropTypes.node,
+    hasCode: PropTypes.bool,
     hasVisual: PropTypes.bool,
     initialPropOptions: PropTypes.object,
     initialProps: PropTypes.object,
@@ -29,6 +30,7 @@ export default class ExampleConfig extends Component {
 
   static defaultProps = {
     initialPropOptions: {},
+    hasCode: true,
     hasVisual: true,
   };
 
@@ -63,7 +65,14 @@ export default class ExampleConfig extends Component {
   }
 
   render() {
-    const { children, hasVisual, initialProps, initialPropOptions, propTypes } = this.props;
+    const {
+      children,
+      hasCode,
+      hasVisual,
+      initialProps,
+      initialPropOptions,
+      propTypes,
+    } = this.props;
     const renderState = mergeState(propTypes, initialProps, initialPropOptions, this.state);
     const baseState = mergeState(basePropTypes, initialProps, initialPropOptions, this.state, true);
     const configState = mergeState(propTypes, initialProps, initialPropOptions, this.state, true);
@@ -76,8 +85,8 @@ export default class ExampleConfig extends Component {
     );
 
     const filteredSnippet = filterSnippet(example);
-    const jsxSnippet = renderSnippet(filteredSnippet, jsxRender);
-    const htmlSnippet = renderSnippet(filteredSnippet, htmlRender);
+    const jsxSnippet = hasCode && renderSnippet(filteredSnippet, jsxRender);
+    const htmlSnippet = hasCode && renderSnippet(filteredSnippet, htmlRender);
     const classes = classnames('dm-example', {
       'dm-example--hidden': !hasVisual,
     });

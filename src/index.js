@@ -139,6 +139,8 @@ export { default as Tooltip } from './components/tooltip/Tooltip';
 export { default as TooltipContent } from './components/tooltip/TooltipContent';
 export { default as TooltipTarget } from './components/tooltip/TooltipTarget';
 export { default as Underline } from './components/typography/Underline';
+export { default as Validate } from './components/validation/Validate';
+export { default as Validation } from './components/validation/Validation';
 
 // Charts
 export { default as Bar } from './charts/bars/Bar';
@@ -162,6 +164,9 @@ export { default as WordCloud } from './charts/wordcloud/WordCloud';
 
 // Composites
 export { default as ChangePassword } from './composites/change-password/ChangePassword';
+export { default as ConfirmPasswordInput } from './composites/form-inputs/ConfirmPasswordInput';
+export { default as CurrentPasswordInput } from './composites/form-inputs/CurrentPasswordInput';
+export { default as NewPasswordInput } from './composites/form-inputs/NewPasswordInput';
 export { default as Login } from './composites/login/Login';
 export { default as LogoPage } from './composites/logo-page/LogoPage';
 export { default as Status404 } from './composites/status-pages/Status404';

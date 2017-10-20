@@ -2,5 +2,8 @@
   "moduleNameMapper": {
     "^.+\\.css$": "<rootDir>/test/__mocks__/styleMock.js"
   },
+  "setupFiles": [
+    "./enzyme.js"
+  ],
   "transform": {}
 }
