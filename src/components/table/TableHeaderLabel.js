@@ -10,18 +10,17 @@ export default class TableHeaderLabel extends Component {
     children: PropTypes.node,
     /** Expands table column */
     grow: PropTypes.bool,
-    /** Marks label as selected */
-    isSelected: PropTypes.bool,
     /** Makes label clickable */
     onClick: PropTypes.func,
     /** Shrinks table column */
     shrink: PropTypes.bool,
+    /** Selects the column and sets the sort direction */
+    sortDirection: PropTypes.oneOf(['ascending', 'descending']),
     /** Set text-align */
     textAlign: PropTypes.oneOf(['left', 'right']),
   };
 
   static defaultProps = {
-    isSelected: false,
     textAlign: 'left',
   }
 
@@ -29,12 +28,14 @@ export default class TableHeaderLabel extends Component {
     const {
       children,
       grow,
-      isSelected,
       onClick,
       shrink,
+      sortDirection,
       textAlign,
       ...rest
     } = this.props;
+
+    const isSelected = Boolean(sortDirection);
 
     const className = classnames(
       'ax-table__header-label',
@@ -50,22 +51,47 @@ export default class TableHeaderLabel extends Component {
       'ax-table__header-label-underline--selected': isSelected,
     });
 
-    const order = xs => textAlign === 'left' ? xs : xs.reverse();
-
     const textIconProps = {
       [textAlign === 'left' ? 'spaceLeft' : 'spaceRight']: 'x2',
     };
 
+    const iconName = sortDirection === 'descending' ? 'triangle-down' : 'triangle-up';
+
+    let reactEl;
+
+    if (onClick) {
+      if (isSelected) {
+        reactEl = (
+          <button className="ax-table__header-button" onClick={ onClick }>
+            { [
+              children,
+              <TextIcon key="icon" name={ iconName } { ...textIconProps } />,
+            ] }
+          </button>
+        );
+      } else {
+        reactEl = (
+          <button className="ax-table__header-button" onClick={ onClick }>
+            {children}
+          </button>
+        );
+      }
+    } else {
+      if (isSelected) {
+        reactEl = [
+          children,
+          <TextIcon key="icon" name={ iconName } { ...textIconProps } />,
+        ];
+      } else {
+        reactEl = children;
+      }
+    }
+
     return (
       <Base { ...rest } Component="th" className={ className }>
-        <div className={ underlineClassName }>{
-          onClick ? <button className="ax-table__header-button" onClick={ onClick }>{order([
-            children,
-            <TextIcon key="icon" name="triangle-down" { ...textIconProps } />,
-          ])}</button> : (
-            children
-          )
-        }</div>
+        <div className={ underlineClassName }>
+          { reactEl }
+        </div>
       </Base>
     );
   }

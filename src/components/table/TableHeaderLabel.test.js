@@ -19,8 +19,8 @@ describe('TableHeaderLabel', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with isSelected', () => {
-    const component = getComponent({ isSelected: true });
+  it('renders with sortDirection', () => {
+    const component = getComponent({ sortDirection: 'ascending' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

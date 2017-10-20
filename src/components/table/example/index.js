@@ -66,9 +66,6 @@ class TableExample extends Component {
         grow: {
           applyToIndex: 2,
         },
-        isSelected: {
-          applyToIndex: 2,
-        },
         onClick: {
           included: false,
         },

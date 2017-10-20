@@ -24,18 +24,6 @@ exports[`TableHeaderLabel renders with grow 1`] = `
 </th>
 `;
 
-exports[`TableHeaderLabel renders with isSelected 1`] = `
-<th
-  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
->
-  <div
-    className="ax-table__header-label-underline ax-table__header-label-underline--selected"
-  >
-    Test
-  </div>
-</th>
-`;
-
 exports[`TableHeaderLabel renders with shrink 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
@@ -44,6 +32,33 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
     className="ax-table__header-label-underline"
   >
     Test
+  </div>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with sortDirection 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
+>
+  <div
+    className="ax-table__header-label-underline ax-table__header-label-underline--selected"
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
   </div>
 </th>
 `;
