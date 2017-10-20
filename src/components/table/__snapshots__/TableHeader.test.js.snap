@@ -8,11 +8,36 @@ exports[`TableHeader renders 1`] = `
     <th
       className="ax-table__header-label ax-table__header-label--align-left"
     >
-      <div
-        className="ax-table__header-label-underline"
+      <button
+        className="ax-table__header-button"
+        disabled={true}
+        onClick={undefined}
       >
         Test
-      </div>
+        <span
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+        >
+          <svg
+            className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </span>
+      </button>
     </th>
   </tr>
 </thead>

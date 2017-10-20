@@ -4,11 +4,36 @@ exports[`TableHeaderLabel renders 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left"
 >
-  <div
-    className="ax-table__header-label-underline"
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+    onClick={undefined}
   >
     Test
-  </div>
+    <span
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <svg
+        className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </span>
+  </button>
 </th>
 `;
 
@@ -16,11 +41,36 @@ exports[`TableHeaderLabel renders with grow 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--grow"
 >
-  <div
-    className="ax-table__header-label-underline"
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+    onClick={undefined}
   >
     Test
-  </div>
+    <span
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <svg
+        className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </span>
+  </button>
 </th>
 `;
 
@@ -28,11 +78,36 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
 >
-  <div
-    className="ax-table__header-label-underline"
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+    onClick={undefined}
   >
     Test
-  </div>
+    <span
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <svg
+        className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </span>
+  </button>
 </th>
 `;
 
@@ -40,26 +115,36 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
 >
-  <div
-    className="ax-table__header-label-underline"
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+    onClick={undefined}
   >
     Test
-    <svg
-      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-        }
-      }
+    <span
       style={
         Object {
-          "height": "1rem",
-          "width": "1rem",
+          "opacity": 1,
         }
       }
-      viewBox="0 0 16 16"
-    />
-  </div>
+    >
+      <svg
+        className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </span>
+  </button>
 </th>
 `;
 
@@ -67,10 +152,35 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-right"
 >
-  <div
-    className="ax-table__header-label-underline"
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+    onClick={undefined}
   >
     Test
-  </div>
+    <span
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <svg
+        className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-right-x2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </span>
+  </button>
 </th>
 `;

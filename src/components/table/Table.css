@@ -18,18 +18,9 @@
   text-align: right;
 }
 
-.ax-table__header-label-underline {
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-}
-
-.ax-table__header-label--align-right .ax-table__header-label-underline {
-  flex-direction: row-reverse;
-}
-
 .ax-table__header-button {
   display: inline-flex;
+  position: relative;
   align-items: center;
   padding: 0;
   outline: 0;
@@ -40,15 +31,38 @@
   transition: color var(--transition-time-base) var(--transition-function);
 }
 
-.ax-table__header-label--align-right .ax-table__header-button {
-  flex-direction: row-reverse;
-}
-
 .ax-table__cell--selected {
   color: var(--color-context-text);
 }
 
-.ax-table__header-button:hover {
+.ax-table__header-button:disabled {
+  cursor: auto;
+}
+
+.ax-table__header-label--align-right .ax-table__header-button {
+  flex-direction: row-reverse;
+}
+
+.ax-table__header-label--selected .ax-table__header-button {
+  color: var(--color-context-text);
+}
+
+.ax-table__header-button::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0) translateY(var(--spacing-grid-size--x2));
+  border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-primary);
+  transition: transform var(--transition-time-base) var(--transition-function);
+}
+
+.ax-table__header-label--selected .ax-table__header-button::after {
+  transform: scaleX(1) translateY(var(--spacing-grid-size--x2));
+}
+
+.ax-table__header-button:hover:not(:disabled) {
   color: var(--color-ui-primary--light);
 }
 
@@ -77,31 +91,8 @@
   color: var(--color-context-text);
 }
 
-.ax-table__header-label--selected .ax-table__header-button {
-  color: var(--color-context-text);
-}
-
-.ax-table__header-label--selected .ax-table__header-button:hover {
-  color: var(--color-ui-primary--light);
-}
-
 .ax-table__header-label--shrink {
   width: 1%;
-}
-
-.ax-table__header-label-underline::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0) translateY(var(--spacing-grid-size--x2));
-  border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-primary);
-  transition: transform var(--transition-time-base) var(--transition-function);
-}
-
-.ax-table__header-label--selected .ax-table__header-label-underline::after {
-  transform: scaleX(1) translateY(var(--spacing-grid-size--x2));
 }
 
 .ax-table__row {

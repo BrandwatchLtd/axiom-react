@@ -47,47 +47,20 @@ export default class TableHeaderLabel extends Component {
       }
     );
 
-    const textIconProps = {
-      [textAlign === 'left' ? 'spaceLeft' : 'spaceRight']: 'x2',
-    };
-
-    const iconName = sortDirection === 'descending' ? 'triangle-down' : 'triangle-up';
-
-    let reactEl;
-
-    if (onClick) {
-      if (isSelected) {
-        reactEl = (
-          <button className="ax-table__header-button" onClick={ onClick }>
-            { [
-              children,
-              <TextIcon key="icon" name={ iconName } { ...textIconProps } />,
-            ] }
-          </button>
-        );
-      } else {
-        reactEl = (
-          <button className="ax-table__header-button" onClick={ onClick }>
-            {children}
-          </button>
-        );
-      }
-    } else {
-      if (isSelected) {
-        reactEl = [
-          children,
-          <TextIcon key="icon" name={ iconName } { ...textIconProps } />,
-        ];
-      } else {
-        reactEl = children;
-      }
-    }
-
     return (
       <Base { ...rest } Component="th" className={ className }>
-        <div className="ax-table__header-label-underline">
-          { reactEl }
-        </div>
+        <button
+            className="ax-table__header-button"
+            disabled={ !onClick }
+            onClick={ onClick }>
+          {children}
+          <span style={ { opacity: Number(Boolean(sortDirection)) } }>
+            <TextIcon
+                name={ sortDirection === 'descending' ? 'triangle-down' : 'triangle-up' }
+                spaceLeft={ textAlign === 'left' ? 'x2' : undefined }
+                spaceRight={ textAlign === 'right' ? 'x2' : undefined } />
+          </span>
+        </button>
       </Base>
     );
   }
