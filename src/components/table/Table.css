@@ -100,7 +100,7 @@
   transition: transform var(--transition-time-base) var(--transition-function);
 }
 
-.ax-table__header-label-underline--selected::after {
+.ax-table__header-label--selected .ax-table__header-label-underline::after {
   transform: scaleX(1) translateY(var(--spacing-grid-size--x2));
 }
 

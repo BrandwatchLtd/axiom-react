@@ -41,7 +41,7 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
 >
   <div
-    className="ax-table__header-label-underline ax-table__header-label-underline--selected"
+    className="ax-table__header-label-underline"
   >
     Test
     <svg

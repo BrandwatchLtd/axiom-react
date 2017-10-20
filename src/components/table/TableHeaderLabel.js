@@ -47,10 +47,6 @@ export default class TableHeaderLabel extends Component {
       }
     );
 
-    const underlineClassName = classnames('ax-table__header-label-underline', {
-      'ax-table__header-label-underline--selected': isSelected,
-    });
-
     const textIconProps = {
       [textAlign === 'left' ? 'spaceLeft' : 'spaceRight']: 'x2',
     };
@@ -89,7 +85,7 @@ export default class TableHeaderLabel extends Component {
 
     return (
       <Base { ...rest } Component="th" className={ className }>
-        <div className={ underlineClassName }>
+        <div className="ax-table__header-label-underline">
           { reactEl }
         </div>
       </Base>
