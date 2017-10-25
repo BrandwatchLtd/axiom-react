@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
+import Form from '../Form';
 import TextInput from '../TextInput';
 import TextInputIcon from '../TextInputIcon';
 
@@ -52,9 +53,11 @@ export default class TextInputExample extends Component {
           initialPropOptions={ initialPropOptions }
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <TextInput { ...initialProps.TextInput }>
-          { initialPropOptions.TextInput.children.options[0].children }
-        </TextInput>
+        <Form onSubmit={ (e) => e.preventDefault() }>
+          <TextInput { ...initialProps.TextInput }>
+            { initialPropOptions.TextInput.children.options[0].children }
+          </TextInput>
+        </Form>
       </ExampleConfig>
     );
   }

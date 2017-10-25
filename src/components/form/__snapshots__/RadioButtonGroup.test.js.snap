@@ -10,6 +10,7 @@ exports[`RadioButton renders with defaultProps 1`] = `
     title={undefined}
   >
     <input
+      checked={undefined}
       className="ax-chedio-buttox ax-radio"
       disabled={undefined}
       name={undefined}

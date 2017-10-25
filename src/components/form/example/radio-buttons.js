@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
+import Form from '../Form';
 import RadioButton from '../RadioButton';
 import RadioButtonGroup from '../RadioButtonGroup';
 
@@ -44,9 +45,11 @@ export default class RadioButtonExample extends Component {
           initialPropOptions={ initialPropOptions }
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <RadioButtonGroup { ...initialProps.RadioButtonGroup }>
-          <RadioButton { ...initialProps.RadioButton } />
-        </RadioButtonGroup>
+        <Form onSubmit={ (e) => e.preventDefault() }>
+          <RadioButtonGroup { ...initialProps.RadioButtonGroup }>
+            <RadioButton { ...initialProps.RadioButton } />
+          </RadioButtonGroup>
+        </Form>
       </ExampleConfig>
     );
   }

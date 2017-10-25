@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
 import CheckBox from '../CheckBox';
 import CheckBoxGroup from '../CheckBoxGroup';
+import Form from '../Form';
 
 export default class CheckBoxExample extends Component {
   static propTypes = {
@@ -44,9 +45,11 @@ export default class CheckBoxExample extends Component {
           initialPropOptions={ initialPropOptions }
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <CheckBoxGroup { ...initialProps.CheckBoxGroup }>
-          <CheckBox { ...initialProps.CheckBox } />
-        </CheckBoxGroup>
+        <Form onSubmit={ (e) => e.preventDefault() }>
+          <CheckBoxGroup { ...initialProps.CheckBoxGroup }>
+            <CheckBox { ...initialProps.CheckBox } />
+          </CheckBoxGroup>
+        </Form>
       </ExampleConfig>
     );
   }

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
+import Form from '../Form';
 import TextArea from '../TextArea';
 
 export default class TextAreaExample extends Component {
@@ -28,7 +29,9 @@ export default class TextAreaExample extends Component {
       <ExampleConfig
           initialProps={ initialProps }
           propTypes={ propTypes }>
-        <TextArea { ...initialProps.TextArea } />
+        <Form onSubmit={ (e) => e.preventDefault() }>
+          <TextArea { ...initialProps.TextArea } />
+        </Form>
       </ExampleConfig>
     );
   }

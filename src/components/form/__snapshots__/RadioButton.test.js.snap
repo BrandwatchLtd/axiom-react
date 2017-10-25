@@ -7,6 +7,7 @@ exports[`RadioButton renders with defaultProps 1`] = `
   title={undefined}
 >
   <input
+    checked={undefined}
     className="ax-chedio-buttox ax-radio"
     disabled={undefined}
     name={undefined}
@@ -30,6 +31,7 @@ exports[`RadioButton renders with disabled 1`] = `
   title={undefined}
 >
   <input
+    checked={undefined}
     className="ax-chedio-buttox ax-radio"
     disabled={true}
     name={undefined}
@@ -53,6 +55,7 @@ exports[`RadioButton renders with invalid 1`] = `
   title={undefined}
 >
   <input
+    checked={undefined}
     className="ax-chedio-buttox ax-radio"
     disabled={undefined}
     name={undefined}

@@ -3,6 +3,7 @@
 exports[`Form renders with defaultProps 1`] = `
 <form
   className="ax-form"
+  onSubmit={[Function]}
 >
   Lorem ipsum
 </form>

@@ -10,6 +10,7 @@ exports[`CheckBox renders with defaultProps 1`] = `
     title={undefined}
   >
     <input
+      checked={undefined}
       className="ax-chedio-buttox ax-checkbox"
       disabled={undefined}
       name={undefined}
