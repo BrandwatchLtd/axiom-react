@@ -126,4 +126,5 @@
 
 .ax-sticky {
   position: sticky;
+  z-index: var(--z-index-sticky);
 }
