@@ -34,7 +34,10 @@ class DropdownExample extends Component {
     };
 
     const initialProps = {
-      Dropdown: {},
+      Dropdown: {
+        onRequestOpen: () => console.log('open'), // eslint-disable-line no-console
+        onRequestClose: () => console.log('close'), // eslint-disable-line no-console
+      },
       DropdownContent: {},
       DropdownMenu: {},
       DropdownMenuItem: {},

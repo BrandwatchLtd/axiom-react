@@ -19,6 +19,14 @@ export default class Dropdown extends Component {
      */
     enabled: PropTypes.bool,
     /**
+     * Invoked when the Dropdown is closed.
+     */
+    onRequestClose: PropTypes.func,
+    /**
+     * Invoked when the Dropdown is opened.
+     */
+    onRequestOpen: PropTypes.func,
+    /**
      * Controls the starting position around DropdownTarget in which the
      * DropdownContent will attempt to be placed. If that position is not available
      * due to collision, it will be placed according to the flip behaviour  until
@@ -40,6 +48,12 @@ export default class Dropdown extends Component {
     showArrow: true,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = { isVisible: false };
+  }
+
   getChildContext() {
     return {
       closeDropdown: () => this.close(),
@@ -47,22 +61,22 @@ export default class Dropdown extends Component {
     };
   }
 
-  constructor(props) {
-    super(props);
-
-    this.state = { isVisible: false };
-  }
-
   open() {
-    const { enabled } = this.props;
+    const { enabled, onRequestOpen } = this.props;
 
     if (enabled) {
       this.setState({ isVisible: true });
     }
+
+    if (onRequestOpen) onRequestOpen();
   }
 
   close() {
+    const { onRequestClose } = this.props;
+
     this.setState({ isVisible: false });
+
+    if (onRequestClose) onRequestClose();
   }
 
   render() {
