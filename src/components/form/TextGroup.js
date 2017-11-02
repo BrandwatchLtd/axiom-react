@@ -31,9 +31,7 @@ export default class TextGroup extends Component {
           className="ax-input__group"
           space={ space }>
         { label && (
-          <Base
-              space="x3"
-              textSize={ labelSizeMap[size] }>
+          <Base space="x2" textSize={ labelSizeMap[size] }>
             { label }
           </Base>
         ) }

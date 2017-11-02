@@ -5,7 +5,7 @@ exports[`TextArea renders with a label 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-space--x3 ax-text--size-body"
+    className="ax-space--x2 ax-text--size-body"
   >
     Lorem ipsum
   </div>
