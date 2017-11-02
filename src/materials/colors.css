@@ -1,7 +1,7 @@
 /* stylelint-disable color-no-hex */
 :root {
   --rgb-ui-dark--dark: 48, 45, 53;
-  --rgb-ui-dark: 62, 60, 67;
+  --rgb-ui-dark: 57, 55, 62;
   --rgb-ui-dark--light: 72, 70, 77;
 
   --rgb-ui-primary--dark: 22, 145, 207;
@@ -9,7 +9,7 @@
   --rgb-ui-primary--light: 48, 171, 232;
 
   --rgb-ui-light--dark: 227, 225, 232;
-  --rgb-ui-light: 242, 240, 247;
+  --rgb-ui-light: 237, 235, 242;
   --rgb-ui-light--light: 247, 245, 252;
 
   --rgb-ui-success: 0, 190, 150;
