@@ -23,7 +23,7 @@ export default class ConfirmPasswordInput extends Component {
           label={ t(axiomLanguage, 'confirm-new-password') }
           patterns={ [(value) => value === passwordValue] }
           required
-          space="x6"
+          space="x8"
           type="password"
           value={ value } />
     );

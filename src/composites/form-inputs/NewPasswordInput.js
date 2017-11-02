@@ -63,7 +63,6 @@ export default class NewPasswordInput extends Component {
               invalid={ !valid }
               key="input"
               label={ t(axiomLanguage, 'create-new-password') }
-              space="x2"
               type="password"
               value={ value } />,
 
@@ -71,7 +70,7 @@ export default class NewPasswordInput extends Component {
               horizontalGutters="large"
               key="hints"
               responsive={ false }
-              space="x4"
+              space="x3"
               verticalGutters="tiny">
             { validationsColumns.map((validations, index) =>
               <GridCell key={ index } shrink>

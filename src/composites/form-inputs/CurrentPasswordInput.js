@@ -22,7 +22,7 @@ export default class CurrentPasswordInput extends Component {
           invalid={ invalid }
           label={ t(axiomLanguage, 'enter-current-password') }
           required
-          space="x6"
+          space="x8"
           type="password"
           value={ value } />
     );
