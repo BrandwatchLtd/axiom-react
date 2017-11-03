@@ -26,7 +26,7 @@ export default class Button extends Component {
     /** Size of stadium shape */
     stadium: PropTypes.oneOf(['small']),
     /** Style of the Button, that affects it's coloring and sizing */
-    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'caution']),
   };
 
   static contextTypes = {

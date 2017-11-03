@@ -154,6 +154,19 @@
   }
 }
 
+.ax-button--caution {
+  background-color: var(--color-ui-error);
+  color: var(--color-ui-light--light);
+
+  &:hover  { background-color: var(--color-ui-error--light); }
+  &:active { background-color: var(--color-ui-error--dark); }
+
+  &:disabled {
+    background-color: var(--color-context-background-disabled);
+    color: var(--color-context-text-disabled);
+  }
+}
+
 .ax-button--small {
   padding: var(--component-padding-vertical-small) var(--component-padding-horizontal-small);
   font-size: var(--font-size-small);
