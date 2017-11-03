@@ -14,6 +14,8 @@ export default class Progress extends Component {
     percent: PropTypes.number,
     /** Size of the indicator */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Size in REM units */
+    sizeRem: PropTypes.string,
   };
 
   static defaultProps = {

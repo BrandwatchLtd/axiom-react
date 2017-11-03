@@ -15,6 +15,8 @@ export default class ProgressInfinite extends Component {
     ]),
     /** Size of the indicator */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Size in REM units */
+    sizeRem: PropTypes.string,
   };
 
   static defaultProps = {

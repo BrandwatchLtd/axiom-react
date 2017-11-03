@@ -11,6 +11,8 @@ export default class ProgressFinite extends Component {
     percent: PropTypes.number.isRequired,
     /** Size of the indicator */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Size in REM units */
+    sizeRem: PropTypes.string,
   };
 
   static defaultProps = {

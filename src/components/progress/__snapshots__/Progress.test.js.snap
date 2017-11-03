@@ -2,7 +2,8 @@
 
 exports[`Progress renders a finite progress indicator 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  className="ax-progress-finite ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g
@@ -78,7 +79,8 @@ exports[`Progress renders an error indicator 1`] = `
 
 exports[`Progress renders with defaultProps 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  className="ax-progress-infinite ax-progress-infinite--subtle ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g
