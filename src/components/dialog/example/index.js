@@ -3,11 +3,20 @@ import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
 import Button from '../../button/Button';
 import ButtonGroup from '../../button/ButtonGroup';
+import ButtonIcon from '../../button/ButtonIcon';
+import Context from '../../context/Context';
 import Dialog from '../Dialog';
 import DialogBody from '../DialogBody';
 import DialogFooter from '../DialogFooter';
 import DialogHeader from '../DialogHeader';
+import Dropdown from '../../dropdown/Dropdown';
+import DropdownContent from '../../dropdown/DropdownContent';
+import DropdownMenu from '../../dropdown/DropdownMenu';
+import DropdownMenuItem from '../../dropdown/DropdownMenuItem';
+import DropdownTarget from '../../dropdown/DropdownTarget';
 import Heading from '../../typography/Heading';
+import List from '../../list/List';
+import ListItem from '../../list/ListItem';
 import Paragraph from '../../typography/Paragraph';
 
 class DialogExample extends Component {
@@ -34,6 +43,7 @@ class DialogExample extends Component {
       Dialog: {
         isOpen: false,
         onRequestClose: () => {},
+        size: 'medium',
       },
     };
 
@@ -57,40 +67,55 @@ class DialogExample extends Component {
           </DialogHeader>
 
           <DialogBody { ...initialProps.DialogBody }>
-            <Paragraph snippetReplace>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
-              arcu tellus. In hac habitasse platea dictumst. Maecenas ac molestie
-              arcu. Donec auctor eros quis ex congue, sit amet vehicula sem
-              dapibus. Nam lobortis, nibh vel placerat sagittis, risus est
-              faucibus massa, at sodales ligula lacus quis diam. Integer venenatis
-              viverra euismod. Phasellus eleifend tempor augue, eget molestie
-              diam efficitur at. Vivamus sagittis porta venenatis. Praesent
-              elementum dolor in lectus maximus euismod. Praesent sed cursus
-              sem, non molestie ex. Nulla facilisi. Pellentesque aliquam massa
-              et ligula porta ornare et nec turpis. Curabitur vel lacus imperdiet,
-              pulvinar risus in, scelerisque velit. Praesent nec lorem lobortis,
-              tempor neque quis, ultricies ipsum. Aenean vitae magna justo. Donec
-              aliquam, diam id interdum finibus, orci nunc pretium sem, vel pretium
-              libero ante eu diam.
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              accumsan imperdiet leo, eget fringilla tellus. Praesent turpis
+              libero, maximus lobortis ex vel, feugiat feugiat sapien. Nam in
+              velit orci. Donec dignissim rutrum tellus, vitae fermentum augue
+              blandit vitae. Vestibulum egestas sapien a tortor placerat, ut
+              blandit sapien rhoncus. Aliquam eleifend maximus velit, at euismod
+              erat efficitur id. Sed mattis vehicula scelerisque. Ut justo nibh,
+              dignissim id lacinia sit amet, fermentum a massa. Phasellus
+              ullamcorper augue dolor, eu dapibus enim interdum non. Curabitur
+              porttitor nibh a gravida aliquet. Maecenas eros nisi, pretium vel
+              dui in, dictum convallis enim.
             </Paragraph>
 
-            <Paragraph snippetReplace>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              convallis, diam dapibus lacinia condimentum, arcu leo blandit arcu,
-              vitae convallis diam risus ac ligula. Praesent rhoncus semper odio,
-              in congue turpis maximus condimentum. Sed placerat, ipsum a
-              vulputate tincidunt, augue massa iaculis nisl, a semper est mauris
-              fringilla libero. Fusce a posuere lectus. Suspendisse potenti.
-              Donec a consectetur est. Mauris aliquet leo sed enim dignissim,
-              quis consectetur risus imperdiet.
-            </Paragraph>
+            <ButtonGroup>
+              <Dropdown>
+                <DropdownTarget>
+                  <Button style="secondary">
+                    Dropdown
+                    <ButtonIcon key="ButtonIcon" name="chevron-down" />
+                  </Button>
+                </DropdownTarget>
+                <DropdownContent>
+                  <Context>
+                    <DropdownMenu>
+                      <DropdownMenuItem>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem>Lorem ipsum</DropdownMenuItem>
+                    </DropdownMenu>
+                  </Context>
+                </DropdownContent>
+              </Dropdown>
+            </ButtonGroup>
           </DialogBody>
 
-          <DialogFooter { ...initialProps.DialogFooter }>
-            <ButtonGroup snippetReplace textRight>
-              <Button style="secondary">Secondary</Button>
-              <Button style="primary">Primary</Button>
-            </ButtonGroup>
+          <DialogFooter { ...initialProps.DialogFooter } textRight>
+            <List style="inline">
+              <ListItem>
+                <Button style="secondary">Secondary 1</Button>
+              </ListItem>
+
+              <ListItem>
+                <ButtonGroup snippetReplace textRight>
+                  <Button style="secondary">Secondary 2</Button>
+                  <Button style="primary">Primary</Button>
+                </ButtonGroup>
+              </ListItem>
+            </List>
           </DialogFooter>
         </Dialog>
       </ExampleConfig>
