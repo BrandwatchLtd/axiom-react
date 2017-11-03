@@ -170,6 +170,10 @@ export default class Position extends Component {
       enabled && isVisible ? (
         <Portal { ...props } key="portal">
           <div>
+            { onMaskClick && (
+              <div className="ax-position__mask" onClick={ onMaskClick } />
+            ) }
+
             <div className="ax-position" ref={ (el) => this._content = el }>
               {
                 cloneElement(findComponent(children, PositionContentRef), {
@@ -180,10 +184,6 @@ export default class Position extends Component {
                 })
               }
             </div>
-
-            { onMaskClick && (
-              <div className="ax-position__mask" onClick={ onMaskClick } />
-            ) }
           </div>
         </Portal>
       ) : null,
