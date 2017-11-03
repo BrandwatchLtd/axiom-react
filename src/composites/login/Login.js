@@ -100,7 +100,10 @@ export default class Login extends Component {
 
               <GridCell>
                 <Paragraph textCenter textRight="small">
-                  <Link href="https://app.brandwatch.com/login" target="_blank">
+                  <Link
+                      data-ax-at={ atIds.Login.forgot }
+                      href="https://app.brandwatch.com/login"
+                      target="_blank">
                     <Strong>{ t(axiomLanguage, 'forgot-login') }</Strong>
                   </Link>
                 </Paragraph>
