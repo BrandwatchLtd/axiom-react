@@ -15,6 +15,12 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with active', () => {
+    const component = getComponent({ active: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with full', () => {
     [true, 'small', 'medium', 'large'].forEach((full) => {
       it(full, () => {

@@ -80,12 +80,19 @@
     border-left-color: rgba(var(--rgb-ui-light), 0.45);
   }
 
-  &:hover  { background-color: var(--color-ui-primary--light); }
-  &:active { background-color: var(--color-ui-primary--dark); }
+  &:hover  {
+    background-color: var(--color-ui-primary--light);
+  }
 
   &:disabled {
     background-color: var(--color-context-background-disabled);
     color: var(--color-context-text-disabled);
+  }
+
+  &:active,
+  &.ax-button--active {
+    background-color: var(--color-ui-primary--dark);
+    color: var(--color-ui-light--light);
   }
 }
 
@@ -93,36 +100,58 @@
   border-color: var(--color-context-border);
   color: var(--color-ui-primary);
 
-  &:hover,
-  &:active {
+  &:hover {
     border-color: transparent;
     background-color: var(--color-context-background-subtle);
+    color: var(--color-ui-primary--light);
   }
-
-  &:hover  { color: var(--color-ui-primary--light); }
-  &:active { color: var(--color-ui-primary--dark); }
 
   &:disabled {
     border-color: var(--color-context-border);
     background-color: transparent;
     color: var(--color-context-text-disabled);
   }
+
+  &:active,
+  &.ax-button--active {
+    border-color: transparent;
+    background-color: var(--color-context-background-subtle);
+    color: var(--color-ui-primary--dark);
+  }
 }
 
 .ax-button--tertiary {
   color: var(--color-ui-primary);
 
-  &:hover    { color: var(--color-ui-primary--light); }
-  &:active   { color: var(--color-ui-primary--dark); }
-  &:disabled { color: var(--color-context-text-disabled); }
+  &:hover {
+    color: var(--color-ui-primary--light);
+  }
+
+  &:disabled {
+    color: var(--color-context-text-disabled);
+  }
+
+  &:active,
+  &.ax-button--active {
+    color: var(--color-ui-primary--dark);
+  }
 }
 
 .ax-button--quaternary {
   color: var(--color-context-text-subtle);
 
-  &:hover    { color: var(--color-ui-primary--light); }
-  &:active   { color: var(--color-ui-primary--dark); }
-  &:disabled { color: var(--color-context-text-disabled); }
+  &:hover {
+    color: var(--color-ui-primary--light);
+  }
+
+  &:disabled {
+    color: var(--color-context-text-disabled);
+  }
+
+  &:active,
+  &.ax-button--active {
+    color: var(--color-ui-primary--dark);
+  }
 }
 
 .ax-button--small {
