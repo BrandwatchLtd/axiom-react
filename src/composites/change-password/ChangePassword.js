@@ -13,6 +13,7 @@ import Form from '../../components/form/Form';
 import Heading from '../../components/typography/Heading';
 import NewPasswordInput from '../form-inputs/NewPasswordInput';
 import Paragraph from '../../components/typography/Paragraph';
+import ProgressButton from '../../components/progress/ProgressButton';
 import atIds from '../../../at_ids';
 import t from '../../utils/locales';
 
@@ -128,12 +129,13 @@ export default class ChangePassword extends Component {
                   type="button">
                 { t(axiomLanguage, 'cancel-button') }
               </Button>
-              <Button
+              <ProgressButton
                   data-ax-at={ atIds.ChangePassword.submit }
                   disabled={ isSubmitting }
+                  isInProgress={ isSubmitting }
                   type="submit">
                 { t(axiomLanguage, 'change-password-button') }
-              </Button>
+              </ProgressButton>
             </ButtonGroup>
           </DialogBody>
         </Form>

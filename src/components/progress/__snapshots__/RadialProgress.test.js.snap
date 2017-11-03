@@ -2,7 +2,8 @@
 
 exports[`RadialProgress renders with defaultProps 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small lorem"
+  className="lorem ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 75 75"
 >
   <g
@@ -15,7 +16,8 @@ exports[`RadialProgress renders with defaultProps 1`] = `
 
 exports[`RadialProgress renders with size large 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--large lorem"
+  className="lorem ax-radial-progress ax-radial-progress--large"
+  style={Object {}}
   viewBox="0 0 75 75"
 >
   <g
@@ -28,7 +30,8 @@ exports[`RadialProgress renders with size large 1`] = `
 
 exports[`RadialProgress renders with size medium 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--medium lorem"
+  className="lorem ax-radial-progress ax-radial-progress--medium"
+  style={Object {}}
   viewBox="0 0 75 75"
 >
   <g
@@ -41,7 +44,8 @@ exports[`RadialProgress renders with size medium 1`] = `
 
 exports[`RadialProgress renders with size small 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small lorem"
+  className="lorem ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 75 75"
 >
   <g

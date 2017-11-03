@@ -8,6 +8,8 @@ import './Button.css';
 
 export default class Button extends Component {
   static propTypes = {
+    /** Apply active styling */
+    active: PropTypes.bool,
     /** Content inserted into the Button */
     children: PropTypes.node.isRequired,
     /** Size of circular shape */
@@ -38,7 +40,18 @@ export default class Button extends Component {
 
   render() {
     const { joined } = this.context;
-    const { children, circular, disabled, stadium, style, size, full, ...rest } = this.props;
+    const {
+      active,
+      children,
+      circular,
+      disabled,
+      stadium,
+      style,
+      size,
+      full,
+      ...rest
+    } = this.props;
+
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && isComponent(childrenArray[0], ButtonIconRef);
     const classes = classnames('ax-button', {
@@ -46,6 +59,7 @@ export default class Button extends Component {
       [`ax-button--${style}`]: style,
       [`ax-button--circular-${circular}`]: circular,
       [`ax-button--stadium-${stadium}`]: stadium,
+      'ax-button--active': active,
       'ax-button--joined': joined,
       'ax-button--icon-only': !circular && iconOnly,
       'ax-button--full': full === true,

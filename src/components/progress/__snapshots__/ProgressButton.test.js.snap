@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressButton renders with defaultProps 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
+>
+  <div
+    className="ax-progress-button"
+  >
+    <div
+      className="ax-progress-button__content"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-progress-button__indicator"
+    >
+      <svg
+        className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
+        style={
+          Object {
+            "height": "1.25rem",
+            "width": "1.25rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          transform="translate(12, 12) rotate(-90)"
+        >
+          <circle
+            className="ax-progress-infinite__arc"
+            r={10}
+            style={
+              Object {
+                "stroke": "url(#ax-progress-infinite__filter--white)",
+                "strokeDasharray": 62.83185307179586,
+                "strokeDashoffset": 15.707963267948966,
+                "strokeWidth": 4,
+              }
+            }
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`ProgressButton renders with isInProgress 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--active"
+  disabled={undefined}
+>
+  <div
+    className="ax-progress-button ax-progress-button--in-progress"
+  >
+    <div
+      className="ax-progress-button__content"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-progress-button__indicator"
+    >
+      <svg
+        className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
+        style={
+          Object {
+            "height": "1.25rem",
+            "width": "1.25rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          transform="translate(12, 12) rotate(-90)"
+        >
+          <circle
+            className="ax-progress-infinite__arc"
+            r={10}
+            style={
+              Object {
+                "stroke": "url(#ax-progress-infinite__filter--white)",
+                "strokeDasharray": 62.83185307179586,
+                "strokeDashoffset": 15.707963267948966,
+                "strokeWidth": 4,
+              }
+            }
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`ProgressButton renders with size large 1`] = `
+<button
+  className="ax-button ax-button--large ax-button--primary"
+  disabled={undefined}
+>
+  <div
+    className="ax-progress-button"
+  >
+    <div
+      className="ax-progress-button__content"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-progress-button__indicator"
+    >
+      <svg
+        className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
+        style={
+          Object {
+            "height": "1.5rem",
+            "width": "1.5rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          transform="translate(12, 12) rotate(-90)"
+        >
+          <circle
+            className="ax-progress-infinite__arc"
+            r={10}
+            style={
+              Object {
+                "stroke": "url(#ax-progress-infinite__filter--white)",
+                "strokeDasharray": 62.83185307179586,
+                "strokeDashoffset": 15.707963267948966,
+                "strokeWidth": 4,
+              }
+            }
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`ProgressButton renders with size medium 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary"
+  disabled={undefined}
+>
+  <div
+    className="ax-progress-button"
+  >
+    <div
+      className="ax-progress-button__content"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-progress-button__indicator"
+    >
+      <svg
+        className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
+        style={
+          Object {
+            "height": "1.25rem",
+            "width": "1.25rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          transform="translate(12, 12) rotate(-90)"
+        >
+          <circle
+            className="ax-progress-infinite__arc"
+            r={10}
+            style={
+              Object {
+                "stroke": "url(#ax-progress-infinite__filter--white)",
+                "strokeDasharray": 62.83185307179586,
+                "strokeDashoffset": 15.707963267948966,
+                "strokeWidth": 4,
+              }
+            }
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`ProgressButton renders with size small 1`] = `
+<button
+  className="ax-button ax-button--small ax-button--primary"
+  disabled={undefined}
+>
+  <div
+    className="ax-progress-button"
+  >
+    <div
+      className="ax-progress-button__content"
+    >
+      Lorem
+    </div>
+    <div
+      className="ax-progress-button__indicator"
+    >
+      <svg
+        className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          transform="translate(12, 12) rotate(-90)"
+        >
+          <circle
+            className="ax-progress-infinite__arc"
+            r={10}
+            style={
+              Object {
+                "stroke": "url(#ax-progress-infinite__filter--white)",
+                "strokeDasharray": 62.83185307179586,
+                "strokeDashoffset": 15.707963267948966,
+                "strokeWidth": 4,
+              }
+            }
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</button>
+`;

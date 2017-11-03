@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button renders with active 1`] = `
+<button
+  className="ax-button ax-button--medium ax-button--primary ax-button--active"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
 exports[`Button renders with circular huge 1`] = `
 <button
   className="ax-button ax-button--medium ax-button--primary ax-button--circular-huge"

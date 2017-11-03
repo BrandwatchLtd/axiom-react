@@ -2,7 +2,8 @@
 
 exports[`ProgressFinite renders with defaultProps 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  className="ax-progress-finite ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g
@@ -34,7 +35,8 @@ exports[`ProgressFinite renders with defaultProps 1`] = `
 
 exports[`ProgressFinite renders with percent props 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  className="ax-progress-finite ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g

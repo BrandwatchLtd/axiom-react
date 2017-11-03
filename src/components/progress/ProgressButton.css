@@ -1,0 +1,33 @@
+.ax-progress-button {
+  position: relative;
+}
+
+.ax-progress-button__content {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-progress-button__indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-progress-button--in-progress {
+  & .ax-progress-button__content {
+    opacity: 0;
+  }
+
+  & .ax-progress-button__indicator {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

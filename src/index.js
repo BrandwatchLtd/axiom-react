@@ -105,6 +105,7 @@ export { default as Position } from './components/position/Position';
 export { default as PositionContent } from './components/position/PositionContent';
 export { default as PositionTarget } from './components/position/PositionTarget';
 export { default as Progress } from './components/progress/Progress';
+export { default as ProgressButton } from './components/progress/ProgressButton';
 export { default as ProgressFinite } from './components/progress/ProgressFinite';
 export { default as ProgressInfinite } from './components/progress/ProgressInfinite';
 export { default as RadioButton } from './components/form/RadioButton';

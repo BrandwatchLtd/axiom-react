@@ -2,7 +2,8 @@
 
 exports[`ProgressInfinite renders with color subtle 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  className="ax-progress-infinite ax-progress-infinite--subtle ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g
@@ -26,7 +27,8 @@ exports[`ProgressInfinite renders with color subtle 1`] = `
 
 exports[`ProgressInfinite renders with color white 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--white"
+  className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g
@@ -50,7 +52,8 @@ exports[`ProgressInfinite renders with color white 1`] = `
 
 exports[`ProgressInfinite renders with defaultProps 1`] = `
 <svg
-  className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  className="ax-progress-infinite ax-progress-infinite--subtle ax-radial-progress ax-radial-progress--small"
+  style={Object {}}
   viewBox="0 0 24 24"
 >
   <g
