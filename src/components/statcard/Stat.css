@@ -1,5 +1,5 @@
 :root {
-  --cmp-stat-vertical-padding: calc(var(--spacing-grid-size) / 2);
+  --cmp-stat-vertical-padding: calc(var(--spacing-grid-size) * 0.5);
   --cmp-stat-spacing: calc(var(--spacing-grid-size) * 2);
 }
 
@@ -8,7 +8,7 @@
   padding-bottom: var(--cmp-stat-vertical-padding);
   list-style: none;
 
-  & + & {
+  & + .ax-stat-cards__stat {
     margin-left: var(--cmp-stat-spacing);
     padding-left: var(--cmp-stat-spacing);
     border-left: var(--component-border-width) solid var(--color-context-border);

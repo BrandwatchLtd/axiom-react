@@ -3,10 +3,10 @@
 
   &::before {
     position: absolute;
-    top: calc(var(--cmp-input-checkbox-size) / 4);
-    right: calc(var(--cmp-input-checkbox-size) / 4);
-    bottom: calc(var(--cmp-input-checkbox-size) / 4);
-    left: calc(var(--cmp-input-checkbox-size) / 4);
+    top: calc(var(--cmp-input-checkbox-size) * 0.25);
+    right: calc(var(--cmp-input-checkbox-size) * 0.25);
+    bottom: calc(var(--cmp-input-checkbox-size) * 0.25);
+    left: calc(var(--cmp-input-checkbox-size) * 0.25);
     border-radius: 50%;
     transition-property: background-color;
     transition-duration: var(--transition-time-base);

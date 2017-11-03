@@ -13,7 +13,7 @@
   --cmp-chart-opacity-faded: 0.25;
 
   --cmp-dot-plot-diameter: 0.8125rem;
-  --cmp-dot-plot-radius: calc(var(--cmp-dot-plot-diameter) / 2);
+  --cmp-dot-plot-radius: calc(var(--cmp-dot-plot-diameter) * 0.5);
 
   --cmp-benchmark-line-width: 0.0625rem;
   --cmp-benchmark-line-height: var(--cmp-dot-plot-diameter);

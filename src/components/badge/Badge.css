@@ -4,7 +4,7 @@
   display: inline-flex;
   position: relative;
   justify-content: flex-end;
-  padding: 0 calc(var(--component-line-height) / 2);
+  padding: 0 calc(var(--component-line-height) * 0.5);
   border-radius: var(--component-line-height);
   font-size: var(--font-size-small);
   line-height: var(--component-line-height);

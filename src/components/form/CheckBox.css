@@ -1,5 +1,5 @@
 :root {
-  --cmp-checkbox-thickness: calc(var(--cmp-input-checkbox-size) / 8);
+  --cmp-checkbox-thickness: calc(var(--cmp-input-checkbox-size) * 0.125);
 
   --cmp-checkbox-padding-top: calc(var(--cmp-input-checkbox-size) * 0.25);
   --cmp-checkbox-padding-bottom: calc(var(--cmp-input-checkbox-size) * 0.375);

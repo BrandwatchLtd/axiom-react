@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import Grid from '../../../components/grid/Grid';
 import GridCell from '../../../components/grid/GridCell';
 import Italic from '../../../components/typography/Italic';
@@ -27,7 +26,9 @@ export default class ColorSwatch extends Component {
                 verticalAlign="middle"
                 verticalGutters="tiny">
               <GridCell>
-                <div className={ classnames('dm-color-swatch', `dm-color-swatch--${color}`) } />
+                <div
+                    className="dm-color-swatch"
+                    style={ { backgroundColor: `var(--color-${color})` } } />
               </GridCell>
 
               <GridCell>
