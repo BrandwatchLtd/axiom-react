@@ -5,7 +5,7 @@
 
 .ax-table__cell {
   padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
-  border-bottom: var(--component-border-width-medium) solid var(--color-ui-light);
+  border-top: var(--component-border-width-medium) solid var(--color-ui-light--dark);
   color: var(--color-context-text-subtle);
   transition: color var(--transition-time-base) var(--transition-function);
 }
@@ -68,7 +68,6 @@
 
 .ax-table__header-label {
   padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
-  border-bottom: var(--component-border-width-medium) solid var(--color-ui-light);
   color: var(--color-context-text-subtle);
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
@@ -99,6 +98,18 @@
   transition: background-color var(--transition-time-base) var(--transition-function);
 }
 
+.ax-table__row:last-child .ax-table__cell {
+  border-bottom: var(--component-border-width-medium) solid var(--color-ui-light--dark);
+}
+
 .ax-table__row:hover {
   background-color: var(--color-ui-light);
+}
+
+.ax-table__row:hover .ax-table__cell {
+  border-color: var(--color-ui-light);
+}
+
+.ax-table__row:hover + .ax-table__row .ax-table__cell {
+  border-top-color: var(--color-ui-light);
 }
