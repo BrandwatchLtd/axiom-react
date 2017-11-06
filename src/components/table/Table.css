@@ -102,14 +102,15 @@
   border-bottom: var(--component-border-width-medium) solid var(--color-ui-light--dark);
 }
 
+.ax-table__row.ax-table__row--hover,
 .ax-table__row:hover {
   background-color: var(--color-ui-light);
-}
 
-.ax-table__row:hover .ax-table__cell {
-  border-color: var(--color-ui-light);
-}
+  & .ax-table__cell {
+    border-color: var(--color-ui-light);
+  }
 
-.ax-table__row:hover + .ax-table__row .ax-table__cell {
-  border-top-color: var(--color-ui-light);
+  & + .ax-table__row .ax-table__cell {
+    border-top-color: var(--color-ui-light);
+  }
 }

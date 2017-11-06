@@ -61,6 +61,9 @@ class TableExample extends Component {
           min: 1,
           max: 8,
         },
+        hover: {
+          applyToIndex: 4,
+        },
       },
       TableHeaderLabel: {
         grow: {
