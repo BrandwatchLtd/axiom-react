@@ -6,6 +6,7 @@
   --color-context-background-active: var(--color-theme-dark-background-active);
   --color-context-background-disabled: var(--color-theme-dark-background-disabled);
   --color-context-background-faded: var(--color-theme-dark-background-faded);
+  --color-context-background-hover: var(--color-theme-dark-background-hover);
   --color-context-background-subtle: var(--color-theme-dark-background-subtle);
 
   --color-context-text: var(--color-theme-dark-text);

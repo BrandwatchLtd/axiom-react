@@ -94,6 +94,7 @@
   --color-theme-light-background-active: var(--color-ui-light--light);
   --color-theme-light-background-disabled: rgba(var(--rgb-ui-dark--light), 0.05);
   --color-theme-light-background-faded: rgba(var(--rgb-ui-dark--light), 0.1);
+  --color-theme-light-background-hover: var(--color-ui-light);
   --color-theme-light-background-subtle: rgba(var(--rgb-ui-dark--light), 0.15);
   --color-theme-light-text: var(--color-ui-dark--light);
   --color-theme-light-text-subtle: rgba(var(--rgb-ui-dark--light), 0.75);
@@ -105,6 +106,7 @@
   --color-theme-dark-background-active: var(--color-ui-dark);
   --color-theme-dark-background-disabled: rgba(var(--rgb-ui-light--light), 0.05);
   --color-theme-dark-background-faded: rgba(var(--rgb-ui-light--light), 0.1);
+  --color-theme-dark-background-hover: var(--color-ui-dark);
   --color-theme-dark-background-subtle: rgba(var(--rgb-ui-light--light), 0.15);
   --color-theme-dark-text: var(--color-ui-light--light);
   --color-theme-dark-text-subtle: rgba(var(--rgb-ui-light--light), 0.75);
