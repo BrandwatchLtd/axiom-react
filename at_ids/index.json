@@ -14,6 +14,12 @@
     "newPassword": "89036ea6ef14",
     "submit": "aaa045cca84a"
   },
+  "Pagination": {
+    "first": "082c8123b0e6",
+    "last": "fdb0ab990230",
+    "next": "e43741906502",
+    "previous": "108487691436"
+  },
   "UserMenu": {
     "activate": "4e36744de551",
     "logout": "19c1782af588"

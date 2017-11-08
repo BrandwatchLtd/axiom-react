@@ -9,6 +9,7 @@ import {
   isWithinEndRange,
   getDisplayRange,
 } from './utils';
+import atIds from '../../../at_ids';
 
 export default class Pagination extends Component {
   static propTypes = {
@@ -44,6 +45,7 @@ export default class Pagination extends Component {
       <PaginationButtonGroup { ...rest }>
         <PaginationButton
             circular="small"
+            data-ax-at={ atIds.Pagination.previous }
             disabled={ currentPage === 1 }
             onClick={ onPageChange }
             page={ currentPage - 1 }>
@@ -52,6 +54,7 @@ export default class Pagination extends Component {
 
         { showPrevious && [
           <PaginationButton
+              data-ax-at={ atIds.Pagination.first }
               key="page-first"
               onClick={ onPageChange }
               page={ 1 }>
@@ -85,6 +88,7 @@ export default class Pagination extends Component {
             <Icon name="ellipsis" />
           </PaginationButton>,
           <PaginationButton
+              data-ax-at={ atIds.Pagination.last }
               key="page-last"
               onClick={ onPageChange }
               page={ totalPages }>
@@ -94,6 +98,7 @@ export default class Pagination extends Component {
 
         <PaginationButton
             circular="small"
+            data-ax-at={ atIds.Pagination.next }
             disabled={ currentPage === totalPages }
             onClick={ onPageChange }
             page={ currentPage + 1 }>
