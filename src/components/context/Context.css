@@ -32,6 +32,7 @@
   position: absolute;
   width: var(--cmp-context-tip-size);
   height: var(--cmp-context-tip-size);
+  margin: var(--cmp-context-tip-size);
   transform: rotate(45deg);
   box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
   background-color: var(--color-context-background);
@@ -43,12 +44,18 @@
   @nest .ax-context--left & { right: calc(var(--cmp-context-tip-size) * -0.5); }
 }
 
-.ax-context--top .ax-context__arrow,
-.ax-context--bottom .ax-context__arrow {
-  margin: 0 var(--cmp-context-tip-size);
+.ax-context--top .ax-context__arrow {
+  transform: translateY(var(--cmp-context-tip-size)) rotate(45deg);
 }
 
-.ax-context--left .ax-context__arrow,
 .ax-context--right .ax-context__arrow {
-  margin: var(--cmp-context-tip-size) 0;
+  transform: translateX(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
+}
+
+.ax-context--bottom .ax-context__arrow {
+  transform: translateY(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
+}
+
+.ax-context--left .ax-context__arrow {
+  transform: translateX(var(--cmp-context-tip-size)) rotate(45deg);
 }
