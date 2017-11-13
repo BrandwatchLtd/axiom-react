@@ -12,9 +12,17 @@
   --rgb-ui-light: 237, 235, 242;
   --rgb-ui-light--light: 247, 245, 252;
 
+  --rgb-ui-success--light: 10, 204, 162;
   --rgb-ui-success: 0, 190, 150;
+  --rgb-ui-success--dark: 0, 166, 130;
+
+  --rgb-ui-warning--light: 237, 195, 97;
   --rgb-ui-warning: 224, 182, 81;
+  --rgb-ui-warning--dark: 212, 168, 66;
+
+  --rgb-ui-error--light: 255, 99, 133;
   --rgb-ui-error: 252, 72, 112;
+  --rgb-ui-error--dark: 240, 58, 97;
 
   --color-ui-dark--dark: rgb(var(--rgb-ui-dark--dark));
   --color-ui-dark: rgb(var(--rgb-ui-dark));
@@ -28,11 +36,19 @@
   --color-ui-light: rgb(var(--rgb-ui-light));
   --color-ui-light--light: rgb(var(--rgb-ui-light--light));
 
-  --color-ui-white: #FFFFFF;
-
+  --color-ui-success--light: rgb(var(--rgb-ui-success--light));
   --color-ui-success: rgb(var(--rgb-ui-success));
+  --color-ui-success--dark: rgb(var(--rgb-ui-success--dark));
+
+  --color-ui-warning--light: rgb(var(--rgb-ui-warning--light));
   --color-ui-warning: rgb(var(--rgb-ui-warning));
+  --color-ui-warning--dark: rgb(var(--rgb-ui-warning--dark));
+
+  --color-ui-error--light: rgb(var(--rgb-ui-error--light));
   --color-ui-error: rgb(var(--rgb-ui-error));
+  --color-ui-error--dark: rgb(var(--rgb-ui-error--dark));
+
+  --color-ui-white: #FFFFFF;
 
   --color-ui-highlight: #D7FF00;
 
