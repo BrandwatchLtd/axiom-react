@@ -48,6 +48,7 @@ textarea {
 /* normalise button styles */
 button {
   margin: 0;
+  border-radius: 0;
   font: inherit;
 
   /* Remove the inner border and padding in Firefox. */
