@@ -20,6 +20,7 @@ export default {
   '/docs/components/dropdown': require('../src/components/dropdown/example').default,
   '/docs/components/form': require('../src/components/form/example').default,
   '/docs/components/grid': require('../src/components/grid/example').default,
+  '/docs/components/horizontal-rule': require('../src/components/horizontal-rule/example').default,
   '/docs/components/icon': require('../src/components/icon/example').default,
   '/docs/components/image': require('../src/components/image/example').default,
   '/docs/components/label': require('../src/components/label/example').default,

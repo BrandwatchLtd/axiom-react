@@ -30,6 +30,7 @@ module.exports = {
           'dropdown': { name: 'Dropdown' },
           'form': { name: 'Form & Inputs' },
           'grid': { name: 'Grid' },
+          'horizontal-rule': { name: 'Horizontal Rule' },
           'icon': { name: 'Icons' },
           'image': { name: 'Image' },
           'label': { name: 'Labels' },
