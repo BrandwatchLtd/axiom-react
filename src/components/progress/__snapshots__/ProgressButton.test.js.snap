@@ -14,7 +14,7 @@ exports[`ProgressButton renders with defaultProps 1`] = `
       Lorem
     </div>
     <div
-      className="ax-progress-button__indicator"
+      className="ax-progress-button__indicator ax-cloak"
     >
       <svg
         className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
@@ -57,12 +57,12 @@ exports[`ProgressButton renders with isInProgress 1`] = `
     className="ax-progress-button ax-progress-button--in-progress"
   >
     <div
-      className="ax-progress-button__content"
+      className="ax-progress-button__content ax-cloak"
     >
       Lorem
     </div>
     <div
-      className="ax-progress-button__indicator"
+      className="ax-progress-button__indicator ax-cloak ax-cloak--visible"
     >
       <svg
         className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
@@ -110,7 +110,7 @@ exports[`ProgressButton renders with size large 1`] = `
       Lorem
     </div>
     <div
-      className="ax-progress-button__indicator"
+      className="ax-progress-button__indicator ax-cloak"
     >
       <svg
         className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
@@ -158,7 +158,7 @@ exports[`ProgressButton renders with size medium 1`] = `
       Lorem
     </div>
     <div
-      className="ax-progress-button__indicator"
+      className="ax-progress-button__indicator ax-cloak"
     >
       <svg
         className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"
@@ -206,7 +206,7 @@ exports[`ProgressButton renders with size small 1`] = `
       Lorem
     </div>
     <div
-      className="ax-progress-button__indicator"
+      className="ax-progress-button__indicator ax-cloak"
     >
       <svg
         className="ax-progress-infinite ax-progress-infinite--white ax-radial-progress ax-radial-progress--small"

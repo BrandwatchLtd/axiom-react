@@ -8,6 +8,30 @@ exports[`Base renders className 1`] = `
 />
 `;
 
+exports[`Base renders cloak  1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Base renders cloak  2`] = `
+<div
+  className="ax-cloak ax-cloak--visible"
+/>
+`;
+
+exports[`Base renders cloak true 1`] = `
+<div
+  className="ax-cloak"
+/>
+`;
+
+exports[`Base renders cloakContainer 1`] = `
+<div
+  className="ax-cloak__container"
+/>
+`;
+
 exports[`Base renders functional Component 1`] = `<span />`;
 
 exports[`Base renders sticky with style 1`] = `

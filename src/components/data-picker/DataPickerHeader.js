@@ -51,7 +51,7 @@ export default class DataPickerHeader extends Component {
     const title = value || placeholder;
 
     return (
-      <PanelHeader { ...rest }>
+      <PanelHeader { ...rest } cloakContainer>
         <div className="ax-data-picker__header">
           <Grid
               gutters="tiny"
@@ -103,12 +103,10 @@ export default class DataPickerHeader extends Component {
             </GridCell>
 
             { onClear && value && (
-              <GridCell shrink>
-                <span className="ax-data-picker__header-link">
-                  <Link onClick={ onClear }>
-                    <Strong><Small textCase="upper">{ t(axiomLanguage, 'clear') }</Small></Strong>
-                  </Link>
-                </span>
+              <GridCell cloak shrink>
+                <Link onClick={ onClear }>
+                  <Strong><Small textCase="upper">{ t(axiomLanguage, 'clear') }</Small></Strong>
+                </Link>
               </GridCell>
             ) }
           </Grid>

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cloak renders invisible false 1`] = `
+<div
+  className="ax-cloak ax-cloak--visible"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`Cloak renders invisible true 1`] = `
+<div
+  className="ax-cloak"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`Cloak renders with defaultProps 1`] = `
+<div
+  className=""
+>
+  Lorem Ipsum
+</div>
+`;

@@ -25,6 +25,10 @@ export default class Base extends Component {
     ]),
     /** Class name to be appended to the element */
     className: PropTypes.string,
+    /** Adds ability to make an element invisible */
+    cloak: PropTypes.bool,
+    /** Adds the ability control the visibility of a child cloaked element */
+    cloakContainer: PropTypes.bool,
     /**
      * Control over when the element should be hidden until.
      * Opposite of `visibleUntil`.
@@ -104,6 +108,8 @@ export default class Base extends Component {
     const {
       Component,
       className,
+      cloak,
+      cloakContainer,
       hiddenUntil,
       space,
       sticky,
@@ -127,6 +133,9 @@ export default class Base extends Component {
     const underline = textUnderline &&
       underlineTextSizes.has(textSize || 'body') && (textSize || 'body');
     const classes = classnames(className, {
+      'ax-cloak': cloak !== undefined,
+      'ax-cloak--visible': cloak === false,
+      'ax-cloak__container': cloakContainer,
       [`ax-hidden-until--${hiddenUntil}`]: hiddenUntil,
       [`ax-visible-until--${visibleUntil}`]: visibleUntil,
       [`ax-space--${space}`]: space,

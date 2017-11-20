@@ -41,6 +41,8 @@ export { default as Card } from './components/card/Card';
 export { default as CardList } from './components/card/CardList';
 export { default as CheckBox } from './components/form/CheckBox';
 export { default as CheckBoxGroup } from './components/form/CheckBoxGroup';
+export { default as Cloak } from './components/cloak/Cloak';
+export { default as CloakContainer } from './components/cloak/CloakContainer';
 export { default as ColorPicker } from './components/color-picker/ColorPicker';
 export { default as ColorPickerOption } from './components/color-picker/ColorPickerOption';
 export { default as Console } from './components/platform/Console';

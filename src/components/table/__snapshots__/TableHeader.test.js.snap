@@ -14,29 +14,21 @@ exports[`TableHeader renders 1`] = `
         onClick={undefined}
       >
         Test
-        <span
-          style={
+        <svg
+          className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+          dangerouslySetInnerHTML={
             Object {
-              "opacity": 0,
+              "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
             }
           }
-        >
-          <svg
-            className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
-              }
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
             }
-            style={
-              Object {
-                "height": "1rem",
-                "width": "1rem",
-              }
-            }
-            viewBox="0 0 16 16"
-          />
-        </span>
+          }
+          viewBox="0 0 16 16"
+        />
       </button>
     </th>
   </tr>

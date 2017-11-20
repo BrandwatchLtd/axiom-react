@@ -21,6 +21,7 @@ module.exports = {
           'button': { name: 'Buttons' },
           'candytar': { name: 'Candytar' },
           'card': { name: 'Cards' },
+          'cloak': { name: 'Cloak' },
           'color-picker': { name: 'Color Picker' },
           'context': { name: 'Context' },
           'data-picker': { name: 'Data Picker' },

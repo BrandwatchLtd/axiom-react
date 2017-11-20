@@ -35,14 +35,12 @@ export default class TableHeaderLabel extends Component {
       ...rest
     } = this.props;
 
-    const isSelected = Boolean(sortDirection);
-
     const className = classnames(
       'ax-table__header-label',
       `ax-table__header-label--align-${textAlign}`,
       {
         'ax-table__header-label--grow': grow,
-        'ax-table__header-label--selected': isSelected,
+        'ax-table__header-label--selected': sortDirection !== undefined,
         'ax-table__header-label--shrink': shrink,
       }
     );
@@ -53,13 +51,14 @@ export default class TableHeaderLabel extends Component {
             className="ax-table__header-button"
             disabled={ !onClick }
             onClick={ onClick }>
-          {children}
-          <span style={ { opacity: Number(Boolean(sortDirection)) } }>
-            <TextIcon
-                name={ sortDirection === 'descending' ? 'triangle-down' : 'triangle-up' }
-                spaceLeft={ textAlign === 'left' ? 'x2' : undefined }
-                spaceRight={ textAlign === 'right' ? 'x2' : undefined } />
-          </span>
+
+          { children }
+
+          <TextIcon
+              cloak={ sortDirection === undefined }
+              name={ sortDirection === 'descending' ? 'triangle-down' : 'triangle-up' }
+              spaceLeft={ textAlign === 'left' ? 'x2' : undefined }
+              spaceRight={ textAlign === 'right' ? 'x2' : undefined } />
         </button>
       </Base>
     );

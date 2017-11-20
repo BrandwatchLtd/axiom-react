@@ -11,6 +11,7 @@ export default {
   '/docs/components/button': require('../src/components/button/example').default,
   '/docs/components/candytar': require('../src/components/candytar/example').default,
   '/docs/components/card': require('../src/components/card/example').default,
+  '/docs/components/cloak': require('../src/components/cloak/example').default,
   '/docs/components/color-picker': require('../src/components/color-picker/example').default,
   '/docs/components/context': require('../src/components/context/example').default,
   '/docs/components/data-picker': require('../src/components/data-picker/example').default,

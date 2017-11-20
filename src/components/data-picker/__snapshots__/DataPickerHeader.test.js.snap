@@ -10,7 +10,7 @@ exports[`DataPickerHeader renders with color 1`] = `
   }
 >
   <div
-    className="ax-panel__header"
+    className="ax-panel__header ax-cloak__container"
   >
     <div
       className="ax-data-picker__header"
@@ -71,7 +71,7 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
   }
 >
   <div
-    className="ax-panel__header"
+    className="ax-panel__header ax-cloak__container"
   >
     <div
       className="ax-data-picker__header"
@@ -132,7 +132,7 @@ exports[`DataPickerHeader renders with onClear 1`] = `
   }
 >
   <div
-    className="ax-panel__header"
+    className="ax-panel__header ax-cloak__container"
   >
     <div
       className="ax-data-picker__header"
@@ -193,7 +193,7 @@ exports[`DataPickerHeader renders with value 1`] = `
   }
 >
   <div
-    className="ax-panel__header"
+    className="ax-panel__header ax-cloak__container"
   >
     <div
       className="ax-data-picker__header"

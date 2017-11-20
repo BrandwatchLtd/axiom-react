@@ -47,6 +47,22 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  describe('renders cloak', () =>
+    [undefined, true, false].forEach((cloak) =>
+      it(cloak, () => {
+        const component = getComponent({ cloak });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      })
+    )
+  );
+
+  it('renders cloakContainer', () => {
+    const component = getComponent({ cloakContainer: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with hiddenUntil', () => {
     ['small', 'medium', 'large'].forEach((hiddenUntil) => {
       it(hiddenUntil, () => {

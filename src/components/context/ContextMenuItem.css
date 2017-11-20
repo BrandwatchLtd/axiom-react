@@ -41,12 +41,4 @@
 .ax-context-menu__item-icon {
   flex: 0 0 auto;
   margin-left: var(--spacing-grid-size--x2);
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: var(--transition-time-base);
-  transition-timing-function: var(--transition-function);
-
-  @nest .ax-context-menu__item-single--selected & {
-    opacity: 1;
-  }
 }

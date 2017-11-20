@@ -13,14 +13,3 @@
   flex: 0 0 auto;
   margin-left: calc(var(--spacing-grid-size) * 2);
 }
-
-.ax-data-picker__header-link {
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: var(--transition-time-base);
-  transition-timing-function: var(--transition-function);
-
-  @nest .ax-data-picker__header:hover & {
-    opacity: 1;
-  }
-}

@@ -23,7 +23,7 @@ export default class ContextMenuItemSingle extends Component {
 
         { selected !== undefined && (
           <div className="ax-context-menu__item-icon">
-            <Icon name="tick" />
+            <Icon cloak={ !selected } name="tick" />
           </div>
         ) }
       </button>

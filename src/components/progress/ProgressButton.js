@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Button from '../button/Button';
+import Cloak from '../cloak/Cloak';
 import ProgressInfinite from './ProgressInfinite';
 import './ProgressButton.css';
 
@@ -39,15 +40,19 @@ export default class ProgressButton extends Component {
           size={ size }
           style="primary">
         <div className={ classes }>
-          <div className="ax-progress-button__content">
+          <Cloak
+              className="ax-progress-button__content"
+              invisible={ isInProgress }>
             { children }
-          </div>
+          </Cloak>
 
-          <div className="ax-progress-button__indicator">
+          <Cloak
+              className="ax-progress-button__indicator"
+              invisible={ !isInProgress }>
             <ProgressInfinite
                 color="white"
                 sizeRem={ progressSizeMap[size] } />
-          </div>
+          </Cloak>
         </div>
       </Button>
     );

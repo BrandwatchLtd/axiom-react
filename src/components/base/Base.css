@@ -128,3 +128,17 @@
   position: sticky;
   z-index: var(--z-index-sticky);
 }
+
+.ax-cloak {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  pointer-events: none;
+
+  @nest .ax-cloak__container:hover &,
+  &.ax-cloak--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
