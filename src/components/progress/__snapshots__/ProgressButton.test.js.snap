@@ -2,7 +2,7 @@
 
 exports[`ProgressButton renders with defaultProps 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   <div
@@ -50,7 +50,7 @@ exports[`ProgressButton renders with defaultProps 1`] = `
 
 exports[`ProgressButton renders with isInProgress 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--active"
+  className="ax-button ax-button--primary ax-button--rectangle-medium ax-button--active"
   disabled={undefined}
 >
   <div
@@ -98,7 +98,7 @@ exports[`ProgressButton renders with isInProgress 1`] = `
 
 exports[`ProgressButton renders with size large 1`] = `
 <button
-  className="ax-button ax-button--large ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-large"
   disabled={undefined}
 >
   <div
@@ -146,7 +146,7 @@ exports[`ProgressButton renders with size large 1`] = `
 
 exports[`ProgressButton renders with size medium 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   <div
@@ -194,7 +194,7 @@ exports[`ProgressButton renders with size medium 1`] = `
 
 exports[`ProgressButton renders with size small 1`] = `
 <button
-  className="ax-button ax-button--small ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-small"
   disabled={undefined}
 >
   <div

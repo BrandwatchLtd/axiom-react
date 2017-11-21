@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 import Button from '../button/Button';
 import Icon from './Icon';
 
+const sizeMap = {
+  'small': '1rem',
+  'medium': '2rem',
+  'large': '3rem',
+  'huge': '5rem',
+};
+
 export default class IconButton extends Component {
   static propTypes = {
     /** Name of the icon that will be displayed */
@@ -17,15 +24,9 @@ export default class IconButton extends Component {
 
   render() {
     const { name, size, ...rest } = this.props;
-    const sizeMap = {
-      'small': '1rem',
-      'medium': '2rem',
-      'large': '3rem',
-      'huge': '5rem',
-    };
 
     return (
-      <Button style="secondary" { ...rest } circular={ size }>
+      <Button style="secondary" { ...rest } shape="circle" size={ size }>
         <Icon name={ name } size={ sizeMap[size] } />
       </Button>
     );

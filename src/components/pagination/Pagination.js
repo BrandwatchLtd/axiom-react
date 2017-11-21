@@ -44,11 +44,11 @@ export default class Pagination extends Component {
     return (
       <PaginationButtonGroup { ...rest }>
         <PaginationButton
-            circular="small"
             data-ax-at={ atIds.Pagination.previous }
             disabled={ currentPage === 1 }
             onClick={ onPageChange }
-            page={ currentPage - 1 }>
+            page={ currentPage - 1 }
+            shape="circle">
           <Icon name="chevron-left" />
         </PaginationButton>
 
@@ -61,9 +61,9 @@ export default class Pagination extends Component {
             1
           </PaginationButton>,
           <PaginationButton
-              circular="small"
               disabled
-              key="page-first-ellipsis">
+              key="page-first-ellipsis"
+              shape="circle">
             <Icon name="ellipsis" />
           </PaginationButton>,
         ] }
@@ -82,9 +82,9 @@ export default class Pagination extends Component {
 
         { showNext && [
           <PaginationButton
-              circular="small"
               disabled
-              key="page-last-ellipsis">
+              key="page-last-ellipsis"
+              shape="circle">
             <Icon name="ellipsis" />
           </PaginationButton>,
           <PaginationButton
@@ -97,11 +97,11 @@ export default class Pagination extends Component {
         ] }
 
         <PaginationButton
-            circular="small"
             data-ax-at={ atIds.Pagination.next }
             disabled={ currentPage === totalPages }
             onClick={ onPageChange }
-            page={ currentPage + 1 }>
+            page={ currentPage + 1 }
+            shape="circle">
           <Icon name="chevron-right" />
         </PaginationButton>
       </PaginationButtonGroup>

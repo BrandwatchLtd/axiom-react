@@ -8,7 +8,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
     className="ax-inline-group__spacer"
   >
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="108487691436"
       disabled={true}
       onClick={[Function]}
@@ -30,56 +30,56 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
       />
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
+      className="ax-button ax-button--primary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       1
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       2
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       3
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       4
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       5
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       6
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={undefined}
       onClick={[Function]}
     >
       7
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       disabled={true}
       onClick={[Function]}
     >
@@ -100,7 +100,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
       />
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="fdb0ab990230"
       disabled={undefined}
       onClick={[Function]}
@@ -108,7 +108,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
       10
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="e43741906502"
       disabled={false}
       onClick={[Function]}
@@ -141,7 +141,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
     className="ax-inline-group__spacer"
   >
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="108487691436"
       disabled={true}
       onClick={[Function]}
@@ -163,7 +163,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
       />
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="e43741906502"
       disabled={false}
       onClick={[Function]}
@@ -196,7 +196,7 @@ exports[`Composite: Pagination renders without pages 1`] = `
     className="ax-inline-group__spacer"
   >
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="108487691436"
       disabled={true}
       onClick={[Function]}
@@ -218,7 +218,7 @@ exports[`Composite: Pagination renders without pages 1`] = `
       />
     </button>
     <button
-      className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+      className="ax-button ax-button--quaternary ax-button--circle-small"
       data-ax-at="e43741906502"
       disabled={false}
       onClick={[Function]}

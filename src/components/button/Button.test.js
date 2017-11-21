@@ -31,18 +31,8 @@ describe('Button', () => {
     });
   });
 
-  describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach((size) => {
-      it(size, () => {
-        const component = getComponent({ size });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-  });
-
   describe('renders with style', () => {
-    ['primary', 'secondary', 'tertiary', 'quaternary'].forEach((style) => {
+    ['primary', 'secondary', 'tertiary', 'quaternary', 'caution'].forEach((style) => {
       it(style, () => {
         const component = getComponent({ style });
         const tree = component.toJSON();
@@ -51,26 +41,19 @@ describe('Button', () => {
     });
   });
 
-  describe('renders with circular', () => {
-    ['small', 'medium', 'large', 'huge'].forEach((circular) => {
-      it(circular, () => {
-        const component = getComponent({ circular });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-  });
-
-  describe('renders with stadium', () => {
-    ['small'].forEach((stadium) => {
-      it(stadium, () => {
-        const component = getComponent({ stadium });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-  });
-
+  describe('renders with shape', () =>
+    ['circle', 'rectangle', 'stadium'].forEach((shape) =>
+      describe('with size', () =>
+        ['small', 'medium', 'large', 'huge'].forEach((size) =>
+          it(`${shape} with ${size}`, () => {
+            const component = getComponent({ shape, size });
+            const tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+          })
+        )
+      )
+    )
+  );
 
   describe('with ButtonIcon', () => {
     it('adds space to start if first child', () => {
