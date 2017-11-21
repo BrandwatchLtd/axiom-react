@@ -2,7 +2,7 @@
 
 exports[`TableHeader renders 1`] = `
 <thead
-  className=""
+  className="ax-table__header"
 >
   <tr>
     <th

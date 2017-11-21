@@ -74,6 +74,10 @@
   transition: color var(--transition-time-base) var(--transition-function);
 }
 
+.ax-table__header:only-child .ax-table__header-label {
+  border-bottom: var(--component-border-width-medium) solid var(--color-context-border);
+}
+
 .ax-table__header-label--align-left {
   text-align: left;
 }

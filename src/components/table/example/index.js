@@ -43,6 +43,52 @@ class TableExample extends Component {
     };
 
     const initialPropOptions = {
+      Table: {
+        children: {
+          options: [{
+            name: 'Header',
+            children: (
+              <TableHeader { ...initialProps.TableHeader }>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column A
+              </TableHeaderLabel>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column B
+              </TableHeaderLabel>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column C
+              </TableHeaderLabel>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column D
+              </TableHeaderLabel>
+              </TableHeader>
+            ),
+          }, {
+            name: 'Header + Body',
+            children: [
+              <TableHeader { ...initialProps.TableHeader } key="header">
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column A
+              </TableHeaderLabel>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column B
+              </TableHeaderLabel>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column C
+              </TableHeaderLabel>
+                <TableHeaderLabel { ...initialProps.TableHeaderLabel }>
+              Column D
+              </TableHeaderLabel>
+              </TableHeader>,
+              <TableBody { ...initialProps.TableBody } key="body">
+                <TableRow { ...initialProps.TableRow }>
+                  <TableCell { ...initialProps.TableCell }>Lorem ipsum dolar amor</TableCell>
+                </TableRow>
+              </TableBody>,
+            ],
+          }],
+        },
+      },
       TableBody: {
         children: {
           count: 5,
@@ -84,17 +130,7 @@ class TableExample extends Component {
           initialProps={ initialProps }
           propTypes={ propTypes }>
         <Table { ...initialProps.Table }>
-          <TableHeader { ...initialProps.TableHeader }>
-            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column A</TableHeaderLabel>
-            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column B</TableHeaderLabel>
-            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column C</TableHeaderLabel>
-            <TableHeaderLabel { ...initialProps.TableHeaderLabel }>Column D</TableHeaderLabel>
-          </TableHeader>
-          <TableBody { ...initialProps.TableBody }>
-            <TableRow { ...initialProps.TableRow }>
-              <TableCell { ...initialProps.TableCell }>Lorem ipsum dolar amor</TableCell>
-            </TableRow>
-          </TableBody>
+          { initialPropOptions.Table.children.options[0].children }
         </Table>
       </ExampleConfig>
     );

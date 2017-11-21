@@ -12,7 +12,7 @@ export default class TableHeader extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } Component="thead">
+      <Base { ...rest } Component="thead" className="ax-table__header">
         <tr>{ children }</tr>
       </Base>
     );
