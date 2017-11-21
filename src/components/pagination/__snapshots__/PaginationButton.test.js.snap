@@ -2,17 +2,7 @@
 
 exports[`Composite: PaginationButton renders with active state 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
-  disabled={undefined}
-  onClick={[Function]}
->
-  1
-</button>
-`;
-
-exports[`Composite: PaginationButton renders with circular 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+  className="ax-button ax-button--primary ax-button--stadium-small"
   disabled={undefined}
   onClick={[Function]}
 >
@@ -22,7 +12,7 @@ exports[`Composite: PaginationButton renders with circular 1`] = `
 
 exports[`Composite: PaginationButton renders with defaultProps 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--quaternary"
+  className="ax-button ax-button--quaternary ax-button--stadium-small"
   disabled={undefined}
   onClick={[Function]}
 >
@@ -32,7 +22,7 @@ exports[`Composite: PaginationButton renders with defaultProps 1`] = `
 
 exports[`Composite: PaginationButton renders with onClick 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--quaternary"
+  className="ax-button ax-button--quaternary ax-button--stadium-small"
   disabled={undefined}
   onClick={[Function]}
 >
@@ -42,7 +32,7 @@ exports[`Composite: PaginationButton renders with onClick 1`] = `
 
 exports[`Composite: PaginationButton renders with page in double digits 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+  className="ax-button ax-button--quaternary ax-button--circle-small"
   disabled={undefined}
   onClick={[Function]}
 >
@@ -52,7 +42,7 @@ exports[`Composite: PaginationButton renders with page in double digits 1`] = `
 
 exports[`Composite: PaginationButton renders with page in single digits 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--quaternary ax-button--circular-small"
+  className="ax-button ax-button--quaternary ax-button--circle-small"
   disabled={undefined}
   onClick={[Function]}
 >
@@ -62,7 +52,17 @@ exports[`Composite: PaginationButton renders with page in single digits 1`] = `
 
 exports[`Composite: PaginationButton renders with page in treble digits 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--quaternary ax-button--stadium-small"
+  className="ax-button ax-button--quaternary ax-button--stadium-small"
+  disabled={undefined}
+  onClick={[Function]}
+>
+  1
+</button>
+`;
+
+exports[`Composite: PaginationButton renders with shape 1`] = `
+<button
+  className="ax-button ax-button--quaternary ax-button--circle-small"
   disabled={undefined}
   onClick={[Function]}
 >
