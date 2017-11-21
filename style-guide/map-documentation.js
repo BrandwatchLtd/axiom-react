@@ -12,7 +12,7 @@ module.exports = {
       'components': {
         name: 'Components',
         children: {
-          'alert': { name: 'Alerts' },
+          'alert-bar': { name: 'Alert Bar' },
           'alert-icon': { name: 'Alert Icon' },
           'alert-dialog': { name: 'Alert Dialog' },
           'avatar': { name: 'Avatar' },

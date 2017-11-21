@@ -23,7 +23,7 @@ export { default as tinyNumber } from './materials/number/tinyNumber';
 
 // Components
 export { default as Base } from './components/base/Base';
-export { default as Alert } from './components/alert/Alert';
+export { default as AlertBar } from './components/alert-bar/AlertBar';
 export { default as AlertIcon } from './components/alert-icon/AlertIcon';
 export { default as AlertDialog } from './components/alert-dialog/AlertDialog';
 export { default as AlertDialogBody } from './components/alert-dialog/AlertDialogBody';
