@@ -2,43 +2,7 @@
 
 exports[`Button renders with active 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--active"
-  disabled={undefined}
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders with circular huge 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--circular-huge"
-  disabled={undefined}
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders with circular large 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--circular-large"
-  disabled={undefined}
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders with circular medium 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--circular-medium"
-  disabled={undefined}
->
-  Lorem Ipsum
-</button>
-`;
-
-exports[`Button renders with circular small 1`] = `
-<button
-  className="ax-button ax-button--medium ax-button--primary ax-button--circular-small"
+  className="ax-button ax-button--primary ax-button--rectangle-medium ax-button--active"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -47,7 +11,7 @@ exports[`Button renders with circular small 1`] = `
 
 exports[`Button renders with defaultProps 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -56,7 +20,7 @@ exports[`Button renders with defaultProps 1`] = `
 
 exports[`Button renders with full large 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full--large"
+  className="ax-button ax-button--primary ax-button--rectangle-medium ax-button--full--large"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -65,7 +29,7 @@ exports[`Button renders with full large 1`] = `
 
 exports[`Button renders with full medium 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full--medium"
+  className="ax-button ax-button--primary ax-button--rectangle-medium ax-button--full--medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -74,7 +38,7 @@ exports[`Button renders with full medium 1`] = `
 
 exports[`Button renders with full small 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full--small"
+  className="ax-button ax-button--primary ax-button--rectangle-medium ax-button--full--small"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -83,43 +47,124 @@ exports[`Button renders with full small 1`] = `
 
 exports[`Button renders with full true 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--full"
+  className="ax-button ax-button--primary ax-button--rectangle-medium ax-button--full"
   disabled={undefined}
 >
   Lorem Ipsum
 </button>
 `;
 
-exports[`Button renders with size large 1`] = `
+exports[`Button renders with shape with size circle with huge 1`] = `
 <button
-  className="ax-button ax-button--large ax-button--primary"
+  className="ax-button ax-button--primary ax-button--circle-huge"
   disabled={undefined}
 >
   Lorem Ipsum
 </button>
 `;
 
-exports[`Button renders with size medium 1`] = `
+exports[`Button renders with shape with size circle with large 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--circle-large"
   disabled={undefined}
 >
   Lorem Ipsum
 </button>
 `;
 
-exports[`Button renders with size small 1`] = `
+exports[`Button renders with shape with size circle with medium 1`] = `
 <button
-  className="ax-button ax-button--small ax-button--primary"
+  className="ax-button ax-button--primary ax-button--circle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
 </button>
 `;
 
-exports[`Button renders with stadium small 1`] = `
+exports[`Button renders with shape with size circle with small 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary ax-button--stadium-small"
+  className="ax-button ax-button--primary ax-button--circle-small"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with huge 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--rectangle-huge"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with large 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--rectangle-large"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with medium 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with small 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--rectangle-small"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with huge 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--stadium-huge"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with large 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--stadium-large"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with medium 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--stadium-medium"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with small 1`] = `
+<button
+  className="ax-button ax-button--primary ax-button--stadium-small"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style caution 1`] = `
+<button
+  className="ax-button ax-button--caution ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -128,7 +173,7 @@ exports[`Button renders with stadium small 1`] = `
 
 exports[`Button renders with style primary 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -137,7 +182,7 @@ exports[`Button renders with style primary 1`] = `
 
 exports[`Button renders with style quaternary 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--quaternary"
+  className="ax-button ax-button--quaternary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -146,7 +191,7 @@ exports[`Button renders with style quaternary 1`] = `
 
 exports[`Button renders with style secondary 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--secondary"
+  className="ax-button ax-button--secondary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -155,7 +200,7 @@ exports[`Button renders with style secondary 1`] = `
 
 exports[`Button renders with style tertiary 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--tertiary"
+  className="ax-button ax-button--tertiary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem Ipsum
@@ -164,7 +209,7 @@ exports[`Button renders with style tertiary 1`] = `
 
 exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem ipsum
@@ -193,7 +238,7 @@ exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
 
 exports[`Button with ButtonIcon adds space to end if last child 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   Lorem ipsum
@@ -221,7 +266,7 @@ exports[`Button with ButtonIcon adds space to end if last child 1`] = `
 
 exports[`Button with ButtonIcon adds space to start if first child 1`] = `
 <button
-  className="ax-button ax-button--medium ax-button--primary"
+  className="ax-button ax-button--primary ax-button--rectangle-medium"
   disabled={undefined}
 >
   <span

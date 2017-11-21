@@ -5,25 +5,25 @@ import Button from '../button/Button';
 export default class PaginationButton extends Component {
   static propTypes = {
     active: PropTypes.bool,
-    circular: PropTypes.string,
     onClick: PropTypes.func,
     page: PropTypes.number,
+    shape: PropTypes.string,
   };
 
   render() {
     const {
       active,
-      circular,
       onClick,
       page,
+      shape,
       ...rest
     } = this.props;
 
     return (
       <Button { ...rest }
-          circular={ circular || page <= 99 ? 'small' : undefined }
           onClick={ () => onClick(page) }
-          stadium={ !circular && page > 99 ? 'small' : undefined }
+          shape={ shape || page <= 99 ? 'circle' : 'stadium' }
+          size="small"
           style={ active ? 'primary' : 'quaternary' } />
     );
   }

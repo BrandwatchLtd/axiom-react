@@ -12,8 +12,6 @@ export default class Button extends Component {
     active: PropTypes.bool,
     /** Content inserted into the Button */
     children: PropTypes.node.isRequired,
-    /** Size of circular shape */
-    circular: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
     /** Disable interaction behaviour */
     disabled: PropTypes.bool,
     /**
@@ -25,10 +23,10 @@ export default class Button extends Component {
     joinedLeft: PropTypes.bool,
     /** Forces button to loose it's rounded styling on the right side */
     joinedRight: PropTypes.bool,
+    /** Shape of the button */
+    shape: PropTypes.oneOf(['circle', 'rectangle', 'stadium']),
     /** Size of standard shape */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
-    /** Size of stadium shape */
-    stadium: PropTypes.oneOf(['small']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
     /** Style of the Button, that affects it's coloring and sizing */
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'caution']),
   };
@@ -38,8 +36,9 @@ export default class Button extends Component {
   };
 
   static defaultProps = {
-    style: 'primary',
+    shape: 'rectangle',
     size: 'medium',
+    style: 'primary',
   };
 
   render() {
@@ -47,11 +46,10 @@ export default class Button extends Component {
     const {
       active,
       children,
-      circular,
       disabled,
       joinedLeft,
       joinedRight,
-      stadium,
+      shape,
       style,
       size,
       full,
@@ -60,19 +58,18 @@ export default class Button extends Component {
 
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && isComponent(childrenArray[0], ButtonIconRef);
-    const classes = classnames('ax-button', {
-      [`ax-button--${size}`]: size,
-      [`ax-button--${style}`]: style,
-      [`ax-button--circular-${circular}`]: circular,
-      [`ax-button--stadium-${stadium}`]: stadium,
-      'ax-button--active': active,
-      'ax-button--joined': joined,
-      'ax-button--joined-left': joinedLeft,
-      'ax-button--joined-right': joinedRight,
-      'ax-button--icon-only': !circular && iconOnly,
-      'ax-button--full': full === true,
-      [`ax-button--full--${full}`]: typeof full === 'string',
-    });
+    const classes = classnames('ax-button',
+      `ax-button--${style}`,
+      `ax-button--${shape}-${size}`, {
+        'ax-button--active': active,
+        'ax-button--joined': joined,
+        'ax-button--joined-left': joinedLeft,
+        'ax-button--joined-right': joinedRight,
+        'ax-button--icon-only': shape === 'rectangle' && iconOnly,
+        'ax-button--full': full === true,
+        [`ax-button--full--${full}`]: typeof full === 'string',
+      }
+    );
 
     const mappedChildren = childrenArray.map((child, index, array) =>
       !isComponent(child, ButtonIconRef) ? child : cloneElement(child, {

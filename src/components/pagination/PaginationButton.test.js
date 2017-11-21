@@ -32,8 +32,8 @@ describe('Composite: PaginationButton', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with circular', () => {
-    const component = getComponent({ circular: 'small', page: 100 });
+  it('renders with shape', () => {
+    const component = getComponent({ shape: 'circle', page: 100 });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

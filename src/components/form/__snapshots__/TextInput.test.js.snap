@@ -140,7 +140,7 @@ exports[`TextInput renders with TextInputButton 1`] = `
       className="ax-input__button"
     >
       <button
-        className="ax-button ax-button--medium ax-button--primary ax-button--joined-left"
+        className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--joined-left"
         disabled={undefined}
       >
         Test

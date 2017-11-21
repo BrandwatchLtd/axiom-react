@@ -8,7 +8,7 @@ exports[`ButtonGroup renders with defaultProps 1`] = `
     className="ax-inline-group__spacer"
   >
     <button
-      className="ax-button ax-button--medium ax-button--primary"
+      className="ax-button ax-button--primary ax-button--rectangle-medium"
       disabled={undefined}
     >
       Lorem ipsum
