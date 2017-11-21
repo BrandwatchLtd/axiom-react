@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Alert from '../alert/Alert';
+import AlertBar from '../alert-bar/AlertBar';
 import Strong from '../typography/Strong';
 
 export default class AlertDialogHeader extends Component {
@@ -20,12 +20,12 @@ export default class AlertDialogHeader extends Component {
 
     return (
       <div className="ax-alert-dialog__header">
-        <Alert { ...rest }
+        <AlertBar { ...rest }
             onRemoveClick={ onRequestClose }
             size="medium"
             type={ type }>
           <Strong>{ children }</Strong>
-        </Alert>
+        </AlertBar>
       </div>
     );
   }

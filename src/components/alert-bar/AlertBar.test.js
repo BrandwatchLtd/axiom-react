@@ -1,33 +1,29 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import AlertIcon from '../alert-icon/AlertIcon';
+import AlertBar from './AlertBar';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <AlertIcon { ...props } />
+    <AlertBar { ...props }>Lorem</AlertBar>
   );
 
-describe('AlertIcon', () => {
+describe('AlertBar', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach((size) => {
-      it(size, () => {
-        const component = getComponent({ size });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
+  it('renders with onRemoveClick', () => {
+    const component = getComponent({ onRemoveClick: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with style', () => {
-    ['primary', 'secondary', 'subtle'].forEach((style) => {
-      it(style, () => {
-        const component = getComponent({ style });
+  describe('renders with size', () => {
+    ['small', 'medium'].forEach((size) => {
+      it(size, () => {
+        const component = getComponent({ size });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });

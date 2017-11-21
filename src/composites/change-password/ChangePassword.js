@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
-import Alert from '../../components/alert/Alert';
+import AlertBar from '../../components/alert-bar/AlertBar';
 import Button from '../../components/button/Button';
 import ButtonGroup from '../../components/button/ButtonGroup';
 import ConfirmPasswordInput from '../form-inputs/ConfirmPasswordInput';
@@ -96,11 +96,11 @@ export default class ChangePassword extends Component {
             requiredError={ t(axiomLanguage, 'complete-all-fields') }>
 
           { (validationError || error) && (
-            <Alert type="error">
+            <AlertBar type="error">
               <Paragraph data-ax-at={ atIds.ChangePassword.error }>
                 { validationError || error }
               </Paragraph>
-            </Alert>
+            </AlertBar>
           ) }
 
           <DialogBody>
