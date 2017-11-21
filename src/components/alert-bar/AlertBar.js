@@ -7,17 +7,17 @@ import Grid from '../grid/Grid';
 import GridCell from '../grid/GridCell';
 import Icon from '../icon/Icon';
 import Link from '../typography/Link';
-import './Alert.css';
+import './AlertBar.css';
 
-export default class Alert extends Component {
+export default class AlertBar extends Component {
   static propTypes = {
     /** Content displayed next to the AlertIcon */
     children: PropTypes.node.isRequired,
     /** An optional callback that when given adds a removable cross */
     onRemoveClick: PropTypes.func,
-    /** Size of the Alert */
+    /** Size of the AlertBar */
     size: PropTypes.oneOf(['small', 'medium']),
-    /** Type of Alert that affects the coloring and icon */
+    /** Type of AlertBar that affects the coloring and icon */
     type: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
   };
 
@@ -28,7 +28,7 @@ export default class Alert extends Component {
 
   render() {
     const { children, size, type, onRemoveClick, ...rest } = this.props;
-    const classes = classnames('ax-alert', `ax-alert--${size}`, `ax-alert--${type}`);
+    const classes = classnames('ax-alert-bar', `ax-alert-bar--${size}`, `ax-alert-bar--${type}`);
 
     return (
       <Base { ...rest } className={ classes } theme="day">

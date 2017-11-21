@@ -2,7 +2,7 @@ export default {
   '/docs/materials/colors': require('../src/materials/colors/example').default,
   '/docs/materials/date-and-time': require('../src/materials/date-and-time/example').default,
   '/docs/materials/numbers': require('../src/materials/number/example').default,
-  '/docs/components/alert': require('../src/components/alert/example').default,
+  '/docs/components/alert-bar': require('../src/components/alert-bar/example').default,
   '/docs/components/alert-icon': require('../src/components/alert-icon/example').default,
   '/docs/components/alert-dialog': require('../src/components/alert-dialog/example').default,
   '/docs/components/avatar': require('../src/components/avatar/example').default,

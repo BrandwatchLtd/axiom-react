@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Alert from '../Alert';
+import AlertBar from '../AlertBar';
 import { ExampleConfig } from 'style-guide';
 
-class AlertExample extends Component {
+class AlertBarExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Alert: PropTypes.object.isRequired,
+      AlertBar: PropTypes.object.isRequired,
     }).isRequired,
   };
 
@@ -14,21 +14,21 @@ class AlertExample extends Component {
     const { components } = this.props;
 
     const propTypes = {
-      Alert: components.Alert,
+      AlertBar: components.AlertBar,
     };
 
     const initialProps = {
-      Alert: {
+      AlertBar: {
         onRemoveClick: () => {},
       },
     };
 
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
-        <Alert { ...initialProps.Alert }>
+        <AlertBar { ...initialProps.AlertBar }>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
           accumsan quam, ut ullamcorper nulla.
-        </Alert>
+        </AlertBar>
       </ExampleConfig>
     );
   }
@@ -36,5 +36,5 @@ class AlertExample extends Component {
 
 
 export default [
-  AlertExample,
+  AlertBarExample,
 ];
