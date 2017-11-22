@@ -29,7 +29,7 @@
 }
 
 .ax-date-picker__day--selection {
-  color: var(--color-ui-primary--dark);
+  color: var(--color-ui-accent--active);
 
   &::before {
     content: '';
@@ -53,7 +53,7 @@
 }
 
 .ax-date-picker__day--selected {
-  color: var(--color-ui-light--light);
+  color: var(--color-ui-white-noise);
 
   &::before {
     content: '';
@@ -63,7 +63,7 @@
   }
 
   & .ax-date-picker__day-inner {
-    background-color: var(--color-ui-primary--dark);
+    background-color: var(--color-ui-accent--active);
   }
 }
 

@@ -32,8 +32,8 @@
 
 .ax-text--color-subtle   { color: var(--color-context-text-subtle); }
 .ax-text--color-disabled { color: var(--color-context-text-disabled); }
-.ax-text--color-dark     { color: var(--color-theme-light-text); }
-.ax-text--color-light    { color: var(--color-theme-dark-text); }
+.ax-text--color-carbon { color: var(--color-theme-light-text); }
+.ax-text--color-white-noise    { color: var(--color-theme-dark-text); }
 .ax-text--color-success  { color: var(--color-ui-success); }
 .ax-text--color-warning  { color: var(--color-ui-warning); }
 .ax-text--color-error    { color: var(--color-ui-error); }

@@ -54,7 +54,7 @@
   bottom: 0;
   left: 0;
   transform: scaleX(0) translateY(var(--spacing-grid-size--x2));
-  border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-primary);
+  border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-accent);
   transition: transform var(--transition-time-base) var(--transition-function);
 }
 
@@ -63,7 +63,7 @@
 }
 
 .ax-table__header-button:hover:not(:disabled) {
-  color: var(--color-ui-primary--light);
+  color: var(--color-ui-accent--hover);
 }
 
 .ax-table__header-label {

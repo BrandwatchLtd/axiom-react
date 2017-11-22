@@ -1,7 +1,7 @@
 .ax-alert {
   padding-right: var(--page-padding-horizontal);
   padding-left: var(--page-padding-horizontal);
-  color: var(--color-ui-light--light);
+  color: var(--color-ui-white-noise);
   font-weight: var(--font-weight-medium);
 }
 
@@ -18,4 +18,4 @@
 .ax-alert--success { background-color: var(--color-ui-success); }
 .ax-alert--warning { background-color: var(--color-ui-warning); }
 .ax-alert--error   { background-color: var(--color-ui-error); }
-.ax-alert--info    { background-color: var(--color-ui-primary--light); }
+.ax-alert--info    { background-color: var(--color-ui-accent--hover); }

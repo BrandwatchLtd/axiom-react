@@ -52,10 +52,10 @@ export default class Base extends Component {
     textCenter: PropTypes.oneOf([true, 'small', 'medium', 'large']),
     /** Text color styling */
     textColor: PropTypes.oneOf([
-      'dark',
+      'white-noise',
+      'carbon',
       'disabled',
       'error',
-      'light',
       'subtle',
       'success',
       'warning',

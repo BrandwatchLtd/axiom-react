@@ -5,7 +5,7 @@
     flex: 1 1 0%;
 
     &:not(:first-child) {
-      border-left: var(--component-border-width) solid var(--color-ui-light--dark);
+      border-left: var(--component-border-width) solid var(--color-ui-white-noise--darker);
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }

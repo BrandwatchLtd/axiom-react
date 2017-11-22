@@ -5,7 +5,7 @@
 
 .ax-progress-finite__arc {
   fill: none;
-  stroke: var(--color-ui-primary--light);
+  stroke: var(--color-ui-accent--hover);
   transition-property: stroke-dashoffset;
   transition-duration: var(--transition-time-slow);
   transition-timing-function: var(--transition-function);
