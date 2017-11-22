@@ -20,7 +20,7 @@
   cursor: pointer;
 
   @nest .dm-navigation__list-item--active & {
-    color: var(--color-ui-primary);
+    color: var(--color-ui-accent);
   }
 }
 

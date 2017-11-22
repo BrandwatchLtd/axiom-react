@@ -13,7 +13,7 @@ export default class DemoBox extends Component {
 
     return (
       <div className="dm-grid-block">
-        <Small textCase="capital" textColor="light">{ children }</Small>
+        <Small textCase="capital" textColor="white-noise">{ children }</Small>
       </div>
     );
   }

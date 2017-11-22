@@ -51,7 +51,7 @@ export default class Badge extends Component {
     } = this.props;
 
     const isFaded = color === 'faded';
-    const textColor = isFaded || o < 1 ? undefined : 'light';
+    const textColor = isFaded || o < 1 ? undefined : 'white-noise';
     const opacity = isFaded || o < 1 ? Math.max(.1, Math.min(isFaded ? .3 : .6, o)) : 1;
     const style = { opacity };
     const classes = classnames('ax-badge', {

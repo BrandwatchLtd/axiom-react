@@ -76,16 +76,16 @@
 
 .ax-button--primary {
   border-color: transparent;
-  background-color: var(--color-ui-primary);
-  color: var(--color-ui-light--light);
+  background-color: var(--color-ui-accent);
+  color: var(--color-ui-white-noise);
 
   /* Pattern obscurity */
   &.ax-button--joined:not(:first-child) {
-    border-left-color: rgba(var(--rgb-ui-light), 0.45);
+    border-left-color: rgba(var(--rgb-ui-white-noise--dark), 0.45);
   }
 
   &:hover  {
-    background-color: var(--color-ui-primary--light);
+    background-color: var(--color-ui-accent--hover);
   }
 
   &:disabled {
@@ -95,19 +95,19 @@
 
   &:active,
   &.ax-button--active {
-    background-color: var(--color-ui-primary--dark);
-    color: var(--color-ui-light--light);
+    background-color: var(--color-ui-accent--active);
+    color: var(--color-ui-white-noise);
   }
 }
 
 .ax-button--secondary {
   border-color: var(--color-context-border);
-  color: var(--color-ui-primary);
+  color: var(--color-ui-accent);
 
   &:hover {
     border-color: transparent;
     background-color: var(--color-context-background-subtle);
-    color: var(--color-ui-primary--light);
+    color: var(--color-ui-accent--hover);
   }
 
   &:disabled {
@@ -120,15 +120,15 @@
   &.ax-button--active {
     border-color: transparent;
     background-color: var(--color-context-background-subtle);
-    color: var(--color-ui-primary--dark);
+    color: var(--color-ui-accent--active);
   }
 }
 
 .ax-button--tertiary {
-  color: var(--color-ui-primary);
+  color: var(--color-ui-accent);
 
   &:hover {
-    color: var(--color-ui-primary--light);
+    color: var(--color-ui-accent--hover);
   }
 
   &:disabled {
@@ -137,7 +137,7 @@
 
   &:active,
   &.ax-button--active {
-    color: var(--color-ui-primary--dark);
+    color: var(--color-ui-accent--active);
   }
 }
 
@@ -145,7 +145,7 @@
   color: var(--color-context-text-subtle);
 
   &:hover {
-    color: var(--color-ui-primary--light);
+    color: var(--color-ui-accent--hover);
   }
 
   &:disabled {
@@ -154,16 +154,16 @@
 
   &:active,
   &.ax-button--active {
-    color: var(--color-ui-primary--dark);
+    color: var(--color-ui-accent--active);
   }
 }
 
 .ax-button--caution {
   background-color: var(--color-ui-error);
-  color: var(--color-ui-light--light);
+  color: var(--color-ui-white-noise);
 
-  &:hover  { background-color: var(--color-ui-error--light); }
-  &:active { background-color: var(--color-ui-error--dark); }
+  &:hover  { background-color: var(--color-ui-error--hover); }
+  &:active { background-color: var(--color-ui-error--active); }
 
   &:disabled {
     background-color: var(--color-context-background-disabled);

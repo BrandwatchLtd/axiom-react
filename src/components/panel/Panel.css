@@ -7,12 +7,12 @@
   display: flex;
   flex-direction: column;
   border-radius: var(--component-border-radius-large);
-  background-color: var(--color-ui-light);
+  background-color: var(--color-ui-white-noise--dark);
   color: var(--color-context-text);
 }
 
 .ax-panel--inactive {
-  background-color: var(--color-ui-light--light);
+  background-color: var(--color-ui-white-noise);
 }
 
 .ax-panel__header,
@@ -23,7 +23,7 @@
 .ax-panel__body {
   position: relative;
   flex: 1 1 auto;
-  border-top: var(--component-border-width) solid var(--color-ui-light--dark);
+  border-top: var(--component-border-width) solid var(--color-ui-white-noise--darker);
 }
 
 .ax-panel__body--vertical-start,

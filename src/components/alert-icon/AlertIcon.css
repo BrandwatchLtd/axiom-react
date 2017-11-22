@@ -24,12 +24,12 @@
 }
 
 .ax-alert-icon--primary {
-  color: var(--color-ui-light--light);
+  color: var(--color-ui-white-noise);
 
   &.ax-alert-icon--success { background-color: var(--color-ui-success); }
   &.ax-alert-icon--warning { background-color: var(--color-ui-warning); }
   &.ax-alert-icon--error { background-color: var(--color-ui-error); }
-  &.ax-alert-icon--info { background-color: var(--color-ui-primary--light); }
+  &.ax-alert-icon--info { background-color: var(--color-ui-accent--hover); }
 }
 
 .ax-alert-icon--secondary {
@@ -38,10 +38,10 @@
   &.ax-alert-icon--success { color: var(--color-ui-success); }
   &.ax-alert-icon--warning { color: var(--color-ui-warning); }
   &.ax-alert-icon--error { color: var(--color-ui-error); }
-  &.ax-alert-icon--info { color: var(--color-ui-primary--light); }
+  &.ax-alert-icon--info { color: var(--color-ui-accent--hover); }
 }
 
 .ax-alert-icon--subtle {
   background-color: var(--color-context-text-disabled);
-  color: var(--color-ui-light--light);
+  color: var(--color-ui-white-noise);
 }

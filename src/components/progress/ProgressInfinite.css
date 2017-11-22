@@ -8,7 +8,7 @@
 }
 
 .ax-progress-infinite__arc-gradient-stop--white {
-  stop-color: var(--color-ui-light);
+  stop-color: var(--color-ui-white-noise--dark);
 }
 
 .ax-progress-infinite__arc-gradient-stop--subtle:last-of-type,

@@ -35,13 +35,13 @@
 
 /* stylelint-disable no-descending-specificity */
 .ax-menu__item:hover .ax-menu__item-button {
-  color: var(--color-ui-primary--light);
+  color: var(--color-ui-accent--hover);
   cursor: pointer;
 }
 
 .ax-menu__item--active .ax-menu__item-button,
 .ax-menu__item--active:hover .ax-menu__item-button {
-  border-bottom-color: var(--color-ui-primary--dark);
+  border-bottom-color: var(--color-ui-accent--active);
   color: inherit;
 }
 

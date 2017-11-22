@@ -128,10 +128,10 @@ describe('Base', () => {
 
   describe('renders with textColor', () => {
     [
-      'dark',
+      'white-noise',
+      'carbon',
       'disabled',
       'error',
-      'light',
       'subtle',
       'success',
       'warning',
