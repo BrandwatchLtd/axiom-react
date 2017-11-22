@@ -12,6 +12,8 @@ export default class Button extends Component {
     active: PropTypes.bool,
     /** Content inserted into the Button */
     children: PropTypes.node.isRequired,
+    /** Color of the button */
+    color: PropTypes.oneOf(['accent', 'negative']),
     /** Disable interaction behaviour */
     disabled: PropTypes.bool,
     /**
@@ -28,7 +30,7 @@ export default class Button extends Component {
     /** Size of standard shape */
     size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
     /** Style of the Button, that affects it's coloring and sizing */
-    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'caution']),
+    style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   };
 
   static contextTypes = {
@@ -36,6 +38,7 @@ export default class Button extends Component {
   };
 
   static defaultProps = {
+    color: 'accent',
     shape: 'rectangle',
     size: 'medium',
     style: 'primary',
@@ -46,6 +49,7 @@ export default class Button extends Component {
     const {
       active,
       children,
+      color,
       disabled,
       joinedLeft,
       joinedRight,
@@ -59,6 +63,7 @@ export default class Button extends Component {
     const childrenArray = Children.toArray(children);
     const iconOnly = childrenArray.length === 1 && isComponent(childrenArray[0], ButtonIconRef);
     const classes = classnames('ax-button',
+      `ax-button--${color}`,
       `ax-button--${style}`,
       `ax-button--${shape}-${size}`, {
         'ax-button--active': active,

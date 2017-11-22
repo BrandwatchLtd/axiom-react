@@ -21,6 +21,16 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  describe('renders with color', () => {
+    ['accent', 'negative'].forEach((color) => {
+      it(color, () => {
+        const component = getComponent({ color });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
   describe('renders with full', () => {
     [true, 'small', 'medium', 'large'].forEach((full) => {
       it(full, () => {
@@ -32,7 +42,7 @@ describe('Button', () => {
   });
 
   describe('renders with style', () => {
-    ['primary', 'secondary', 'tertiary', 'quaternary', 'caution'].forEach((style) => {
+    ['primary', 'secondary', 'tertiary', 'quaternary'].forEach((style) => {
       it(style, () => {
         const component = getComponent({ style });
         const tree = component.toJSON();
