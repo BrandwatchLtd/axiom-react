@@ -12,7 +12,7 @@
 }
 
 .ax-modal__container--overlay {
-  background-color: rgba(var(--rgb-ui-dark--light), 0.3);
+  background-color: rgba(var(--rgb-ui-carbon), 0.3);
 }
 
 .ax-modal {

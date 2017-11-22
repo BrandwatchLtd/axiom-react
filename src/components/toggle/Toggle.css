@@ -43,7 +43,7 @@
     left: var(--ax-toggle-border-width);
     border: var(--ax-toggle-border-width) solid var(--ax-toggle-knob-color);
     border-radius: 50%;
-    box-shadow: 0.1rem 0 0.25rem 0 rgba(var(--rgb-ui-dark), 0.3);
+    box-shadow: 0.1rem 0 0.25rem 0 rgba(var(--rgb-ui-carbon--dark), 0.3);
     background-color: var(--ax-toggle-knob-color);
     transition-property: background-color, border-color, box-shadow, transform;
     transition-duration: var(--transition-time-base);
@@ -81,11 +81,11 @@
 
 .ax-toggle__input:checked {
   & + .ax-toggle__appearance {
-    background-color: var(--color-ui-primary);
+    background-color: var(--color-ui-accent);
 
     &::after {
       transform: translateX(calc(100% + (var(--ax-toggle-border-width) * 2)));
-      box-shadow: 0 0 0.25rem 0 rgba(var(--rgb-ui-dark), 0.3);
+      box-shadow: 0 0 0.25rem 0 rgba(var(--rgb-ui-carbon--dark), 0.3);
     }
   }
 }
@@ -96,7 +96,7 @@
 
     &::after {
       border-color: var(--color-context-border);
-      box-shadow: 0 0 0.25rem 0 rgba(var(--rgb-ui-dark), 0);
+      box-shadow: 0 0 0.25rem 0 rgba(var(--rgb-ui-carbon--dark), 0);
       background-color: transparent;
     }
   }

@@ -42,7 +42,7 @@ exports[`Badge renders opacity 1`] = `
 
 exports[`Badge renders opacity 1 1`] = `
 <span
-  className="ax-badge ax-badge--success ax-text--color-light"
+  className="ax-badge ax-badge--success ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -162,7 +162,7 @@ exports[`Badge renders opacity with color faded 1`] = `
 
 exports[`Badge renders with color amber 1`] = `
 <span
-  className="ax-badge ax-badge--amber ax-text--color-light"
+  className="ax-badge ax-badge--amber ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -182,7 +182,7 @@ exports[`Badge renders with color amber 1`] = `
 
 exports[`Badge renders with color blue 1`] = `
 <span
-  className="ax-badge ax-badge--blue ax-text--color-light"
+  className="ax-badge ax-badge--blue ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -202,7 +202,7 @@ exports[`Badge renders with color blue 1`] = `
 
 exports[`Badge renders with color brown 1`] = `
 <span
-  className="ax-badge ax-badge--brown ax-text--color-light"
+  className="ax-badge ax-badge--brown ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -222,7 +222,7 @@ exports[`Badge renders with color brown 1`] = `
 
 exports[`Badge renders with color chartreuse 1`] = `
 <span
-  className="ax-badge ax-badge--chartreuse ax-text--color-light"
+  className="ax-badge ax-badge--chartreuse ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -242,7 +242,7 @@ exports[`Badge renders with color chartreuse 1`] = `
 
 exports[`Badge renders with color error 1`] = `
 <span
-  className="ax-badge ax-badge--error ax-text--color-light"
+  className="ax-badge ax-badge--error ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -282,7 +282,7 @@ exports[`Badge renders with color faded 1`] = `
 
 exports[`Badge renders with color green 1`] = `
 <span
-  className="ax-badge ax-badge--green ax-text--color-light"
+  className="ax-badge ax-badge--green ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -302,7 +302,7 @@ exports[`Badge renders with color green 1`] = `
 
 exports[`Badge renders with color grey 1`] = `
 <span
-  className="ax-badge ax-badge--grey ax-text--color-light"
+  className="ax-badge ax-badge--grey ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -322,7 +322,7 @@ exports[`Badge renders with color grey 1`] = `
 
 exports[`Badge renders with color highlight 1`] = `
 <span
-  className="ax-badge ax-badge--highlight ax-text--color-light"
+  className="ax-badge ax-badge--highlight ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -342,7 +342,7 @@ exports[`Badge renders with color highlight 1`] = `
 
 exports[`Badge renders with color lilac 1`] = `
 <span
-  className="ax-badge ax-badge--lilac ax-text--color-light"
+  className="ax-badge ax-badge--lilac ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -362,7 +362,7 @@ exports[`Badge renders with color lilac 1`] = `
 
 exports[`Badge renders with color orange 1`] = `
 <span
-  className="ax-badge ax-badge--orange ax-text--color-light"
+  className="ax-badge ax-badge--orange ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -382,7 +382,7 @@ exports[`Badge renders with color orange 1`] = `
 
 exports[`Badge renders with color pink 1`] = `
 <span
-  className="ax-badge ax-badge--pink ax-text--color-light"
+  className="ax-badge ax-badge--pink ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -402,7 +402,7 @@ exports[`Badge renders with color pink 1`] = `
 
 exports[`Badge renders with color purple 1`] = `
 <span
-  className="ax-badge ax-badge--purple ax-text--color-light"
+  className="ax-badge ax-badge--purple ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -422,7 +422,7 @@ exports[`Badge renders with color purple 1`] = `
 
 exports[`Badge renders with color rose 1`] = `
 <span
-  className="ax-badge ax-badge--rose ax-text--color-light"
+  className="ax-badge ax-badge--rose ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -442,7 +442,7 @@ exports[`Badge renders with color rose 1`] = `
 
 exports[`Badge renders with color success 1`] = `
 <span
-  className="ax-badge ax-badge--success ax-text--color-light"
+  className="ax-badge ax-badge--success ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"
@@ -462,7 +462,7 @@ exports[`Badge renders with color success 1`] = `
 
 exports[`Badge renders with color teal 1`] = `
 <span
-  className="ax-badge ax-badge--teal ax-text--color-light"
+  className="ax-badge ax-badge--teal ax-text--color-white-noise"
 >
   <span
     className="ax-badge__background"

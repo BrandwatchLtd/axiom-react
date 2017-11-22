@@ -15,17 +15,17 @@
 }
 
 .ax-link--style-normal {
-  color: var(--color-ui-primary);
+  color: var(--color-ui-accent);
 
-  &:hover  { color: var(--color-ui-primary--light); }
-  &:active { color: var(--color-ui-primary--dark); }
+  &:hover  { color: var(--color-ui-accent--hover); }
+  &:active { color: var(--color-ui-accent--active); }
 }
 
 .ax-link--style-subtle {
   color: var(--color-context-text);
 
-  &:hover  { color: var(--color-ui-primary--light); }
-  &:active { color: var(--color-ui-primary--dark); }
+  &:hover  { color: var(--color-ui-accent--hover); }
+  &:active { color: var(--color-ui-accent--active); }
 }
 
 .ax-link--style-light {

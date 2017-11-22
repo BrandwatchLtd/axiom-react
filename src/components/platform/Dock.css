@@ -7,7 +7,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: var(--color-ui-dark--light);
+  background-color: var(--color-ui-carbon);
   list-style: none;
   z-index: var(--z-index-platform);
 }
