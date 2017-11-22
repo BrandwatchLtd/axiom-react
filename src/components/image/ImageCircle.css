@@ -24,8 +24,8 @@
   justify-content: center;
   opacity: 0;
   border-radius: 50%;
-  background-color: rgba(var(--rgb-ui-light--light), 0.8);
-  color: var(--color-ui-primary);
+  background-color: rgba(var(--rgb-ui-white-noise), 0.8);
+  color: var(--color-ui-accent);
   transition-property: opacity, background-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
@@ -59,7 +59,7 @@
 
 .ax-image-circle:active {
   & .ax-image-circle__icon {
-    background-color: rgba(var(--rgb-ui-primary), 0.8);
-    color: var(--color-ui-light--light);
+    background-color: rgba(var(--rgb-ui-accent), 0.8);
+    color: var(--color-ui-white-noise);
   }
 }

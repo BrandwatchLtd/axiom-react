@@ -32,7 +32,7 @@
   border-right: 0.0625rem solid var(--color-context-border);
 
   @nest .ax-notification--error & { color: var(--color-ui-error); }
-  @nest .ax-notification--info & { color: var(--color-ui-primary--light); }
+  @nest .ax-notification--info & { color: var(--color-ui-accent--hover); }
   @nest .ax-notification--success & { color: var(--color-ui-success); }
   @nest .ax-notification--warning & { color: var(--color-ui-warning); }
 }

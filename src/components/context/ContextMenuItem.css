@@ -21,8 +21,8 @@
   transition-timing-function: var(--transition-function);
 
   &:hover {
-    background-color: var(--color-ui-primary--light);
-    color: var(--color-ui-light--light);
+    background-color: var(--color-ui-accent--hover);
+    color: var(--color-ui-white-noise);
     cursor: pointer;
   }
 }

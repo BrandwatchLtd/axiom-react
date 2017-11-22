@@ -52,7 +52,7 @@ code[class*='language-'] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: var(--color-ui-primary--light);
+  color: var(--color-ui-accent--hover);
 }
 
 .token.function {

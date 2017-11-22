@@ -177,9 +177,15 @@ exports[`Base renders with textCenter true 1`] = `
 />
 `;
 
-exports[`Base renders with textColor dark 1`] = `
+exports[`Base renders with textColor white-noise 1`] = `
 <div
-  className="ax-text--color-dark"
+  className="ax-text--color-white-noise"
+/>
+`;
+
+exports[`Base renders with textColor carbon 1`] = `
+<div
+  className="ax-text--color-carbon"
 />
 `;
 
@@ -192,12 +198,6 @@ exports[`Base renders with textColor disabled 1`] = `
 exports[`Base renders with textColor error 1`] = `
 <div
   className="ax-text--color-error"
-/>
-`;
-
-exports[`Base renders with textColor light 1`] = `
-<div
-  className="ax-text--color-light"
 />
 `;
 
