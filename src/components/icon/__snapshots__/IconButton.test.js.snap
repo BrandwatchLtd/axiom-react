@@ -2,7 +2,7 @@
 
 exports[`IconButton renders with defaultProps 1`] = `
 <button
-  className="ax-button ax-button--secondary ax-button--circle-medium"
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-medium"
   disabled={undefined}
 >
   <svg
@@ -25,7 +25,7 @@ exports[`IconButton renders with defaultProps 1`] = `
 
 exports[`IconButton renders with size huge 1`] = `
 <button
-  className="ax-button ax-button--secondary ax-button--circle-huge"
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-huge"
   disabled={undefined}
 >
   <svg
@@ -48,7 +48,7 @@ exports[`IconButton renders with size huge 1`] = `
 
 exports[`IconButton renders with size large 1`] = `
 <button
-  className="ax-button ax-button--secondary ax-button--circle-large"
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-large"
   disabled={undefined}
 >
   <svg
@@ -71,7 +71,7 @@ exports[`IconButton renders with size large 1`] = `
 
 exports[`IconButton renders with size medium 1`] = `
 <button
-  className="ax-button ax-button--secondary ax-button--circle-medium"
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-medium"
   disabled={undefined}
 >
   <svg
@@ -94,7 +94,7 @@ exports[`IconButton renders with size medium 1`] = `
 
 exports[`IconButton renders with size small 1`] = `
 <button
-  className="ax-button ax-button--secondary ax-button--circle-small"
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-small"
   disabled={undefined}
 >
   <svg
