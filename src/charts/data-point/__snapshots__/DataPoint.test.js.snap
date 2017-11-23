@@ -1,96 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataPoint renders with color amber 1`] = `
+exports[`DataPoint renders with color new-horizon 1`] = `
 <circle
-  className="ax-data-point ax-data-point--amber"
+  className="ax-data-point ax-data-point--new-horizon"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color blue 1`] = `
+exports[`DataPoint renders with color giant-leap 1`] = `
 <circle
-  className="ax-data-point ax-data-point--blue"
+  className="ax-data-point ax-data-point--giant-leap"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color brown 1`] = `
+exports[`DataPoint renders with color ground-control 1`] = `
 <circle
-  className="ax-data-point ax-data-point--brown"
+  className="ax-data-point ax-data-point--ground-control"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color chartreuse 1`] = `
+exports[`DataPoint renders with color primeval-soup 1`] = `
 <circle
-  className="ax-data-point ax-data-point--chartreuse"
+  className="ax-data-point ax-data-point--primeval-soup"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color green 1`] = `
+exports[`DataPoint renders with color terra-form 1`] = `
 <circle
-  className="ax-data-point ax-data-point--green"
+  className="ax-data-point ax-data-point--terra-form"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color grey 1`] = `
+exports[`DataPoint renders with color luna-dust 1`] = `
 <circle
-  className="ax-data-point ax-data-point--grey"
+  className="ax-data-point ax-data-point--luna-dust"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color lilac 1`] = `
+exports[`DataPoint renders with color serene-sea 1`] = `
 <circle
-  className="ax-data-point ax-data-point--lilac"
+  className="ax-data-point ax-data-point--serene-sea"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color orange 1`] = `
+exports[`DataPoint renders with color blast-off 1`] = `
 <circle
-  className="ax-data-point ax-data-point--orange"
+  className="ax-data-point ax-data-point--blast-off"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color pink 1`] = `
+exports[`DataPoint renders with color critical-mass 1`] = `
 <circle
-  className="ax-data-point ax-data-point--pink"
+  className="ax-data-point ax-data-point--critical-mass"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color purple 1`] = `
+exports[`DataPoint renders with color paradise-lost 1`] = `
 <circle
-  className="ax-data-point ax-data-point--purple"
+  className="ax-data-point ax-data-point--paradise-lost"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color rose 1`] = `
+exports[`DataPoint renders with color tiny-clanger 1`] = `
 <circle
-  className="ax-data-point ax-data-point--rose"
+  className="ax-data-point ax-data-point--tiny-clanger"
   cx={12}
   cy={12}
 />
 `;
 
-exports[`DataPoint renders with color teal 1`] = `
+exports[`DataPoint renders with color moon-lagoon 1`] = `
 <circle
-  className="ax-data-point ax-data-point--teal"
+  className="ax-data-point ax-data-point--moon-lagoon"
   cx={12}
   cy={12}
 />
@@ -98,7 +98,7 @@ exports[`DataPoint renders with color teal 1`] = `
 
 exports[`DataPoint renders with defaultProps 1`] = `
 <circle
-  className="ax-data-point ax-data-point--rose"
+  className="ax-data-point ax-data-point--tiny-clanger"
   cx={12}
   cy={12}
 />
@@ -106,7 +106,7 @@ exports[`DataPoint renders with defaultProps 1`] = `
 
 exports[`DataPoint renders with radius 1`] = `
 <circle
-  className="ax-data-point ax-data-point--rose"
+  className="ax-data-point ax-data-point--tiny-clanger"
   cx={12}
   cy={12}
   r={10}

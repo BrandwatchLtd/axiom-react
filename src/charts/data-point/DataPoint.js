@@ -7,18 +7,18 @@ export default class DataPoint extends Component {
   static propTypes = {
     /** Background color of the DataPoint */
     color: PropTypes.oneOf([
-      'rose',
-      'pink',
-      'purple',
-      'lilac',
-      'blue',
-      'teal',
-      'green',
-      'chartreuse',
-      'amber',
-      'orange',
-      'brown',
-      'grey',
+      'tiny-clanger',
+      'critical-mass',
+      'paradise-lost',
+      'serene-sea',
+      'giant-leap',
+      'moon-lagoon',
+      'terra-form',
+      'primeval-soup',
+      'new-horizon',
+      'blast-off',
+      'ground-control',
+      'luna-dust',
     ]).isRequired,
   };
 

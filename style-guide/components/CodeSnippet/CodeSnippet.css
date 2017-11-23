@@ -56,13 +56,13 @@ code[class*='language-'] {
 }
 
 .token.function {
-  color: var(--color-brand-pink);
+  color: var(--color-product-critical-mass);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: var(--color-brand-amber);
+  color: var(--color-product-new-horizon);
 }
 
 .token.important,

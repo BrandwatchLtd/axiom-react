@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Word from './Word';
-import brandColors from '../../materials/colors/brandColors';
+import productColors from '../../materials/colors/productColors';
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -47,7 +47,7 @@ describe('Word', () => {
   });
 
   describe('renders with color', () => {
-    brandColors.forEach((color) => {
+    productColors.forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
