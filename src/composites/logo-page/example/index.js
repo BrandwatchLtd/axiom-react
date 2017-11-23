@@ -20,7 +20,7 @@ class LogoPageExample extends Component {
 
     const initialProps = {
       LogoPage: {
-        theme: 'light',
+        theme: 'day',
       },
     };
 

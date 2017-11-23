@@ -7,8 +7,8 @@ import './LogoPage.css';
 
 const LOGO_HEIGHT = '7.75rem';
 const LOGO_COLOR_MAP = {
-  dark: 'grey',
-  light: 'white',
+  night: 'grey',
+  day: 'white',
 };
 
 export default class LogoPage extends Component {
@@ -18,7 +18,7 @@ export default class LogoPage extends Component {
     /** Content to be placed under the Logo */
     children: PropTypes.node.isRequired,
     /** Overall theme for the page, needs to be set when using a background image */
-    theme: PropTypes.oneOf(['dark', 'light']).isRequired,
+    theme: PropTypes.oneOf(['night', 'day']).isRequired,
   };
 
   render() {

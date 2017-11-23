@@ -6,13 +6,44 @@ const chartKey = [
   { color: 'serene-sea', label: 'Brand C' },
 ];
 
-const data = [
-  { label: 'Family', benchmark: 100, values: { giant-leap: 0, serene-sea: 90, critical-mass: 50 } },
-  { label: 'Games', benchmark: 33, values: { giant-leap: 40, serene-sea: 53, critical-mass: 40 } },
-  { label: 'Family & Parenting', benchmark: 33, values: { giant-leap: 50, serene-sea: 50, critical-mass: 50 } },
-  { label: 'Technology', benchmark: 33, values: { giant-leap: 69 } },
-  { label: 'Books', benchmark: 33, values: { giant-leap: 25, serene-sea: 50 } },
-];
+const data = [{
+  label: 'Family',
+  benchmark: 100,
+  values: {
+    'giant-leap': 0,
+    'serene-sea': 90,
+    'critical-mass': 50,
+  },
+}, {
+  label: 'Games',
+  benchmark: 33,
+  values: {
+    'giant-leap': 40,
+    'serene-sea': 53,
+    'critical-mass': 40,
+  },
+}, {
+  label: 'Family & Parenting',
+  benchmark: 33,
+  values: {
+    'giant-leap': 50,
+    'serene-sea': 50,
+    'critical-mass': 50,
+  },
+}, {
+  label: 'Technology',
+  benchmark: 33,
+  values: {
+    'giant-leap': 69,
+  },
+}, {
+  label: 'Books',
+  benchmark: 33,
+  values: {
+    'giant-leap': 25,
+    'serene-sea': 50,
+  },
+}];
 
 describe('BarChart (utils)', () => {
   it('formats data', () => {

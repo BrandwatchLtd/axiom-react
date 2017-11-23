@@ -10,8 +10,8 @@
   color: var(--color-theme-text);
 }
 
-.ax-logo-page--dark { background-color: var(--color-ui-carbon--dark); }
-.ax-logo-page--light { background-color: var(--color-ui-white-noise); }
+.ax-logo-page--night { background-color: var(--color-ui-carbon--dark); }
+.ax-logo-page--day { background-color: var(--color-ui-white-noise); }
 
 .ax-logo-page__header {
   flex: 0 0 auto;

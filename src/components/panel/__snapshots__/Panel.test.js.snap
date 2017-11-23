@@ -2,7 +2,7 @@
 
 exports[`Panel renders with defaultProps 1`] = `
 <div
-  className="ax-panel ax-theme--light"
+  className="ax-panel ax-theme--day"
   style={
     Object {
       "minHeight": undefined,
@@ -24,7 +24,7 @@ exports[`Panel renders with defaultProps 1`] = `
 
 exports[`Panel renders with minHeight 1`] = `
 <div
-  className="ax-panel ax-theme--light"
+  className="ax-panel ax-theme--day"
   style={
     Object {
       "minHeight": "10rem",

@@ -27,7 +27,7 @@ export default class Login extends Component {
     /** Submit handler that will be called with the username and password */
     onSubmit: PropTypes.func.isRequired,
     /** Overall theme for the page, needs to be set when using a background image */
-    theme: PropTypes.oneOf(['dark', 'light']).isRequired,
+    theme: PropTypes.oneOf(['night', 'day']).isRequired,
   };
 
   static contextTypes = {

@@ -18,12 +18,12 @@ module.exports = {
           warnings: false,
           /**
            * Add the provided variables to be preprocessed. The example below
-           * uses the light theme, although the dark theme can be used
+           * uses the day theme, although the dark theme can be used
            * (cssvars-theme-dark). One theme MUST be provided.
            */
           variables: Object.assign({},
             require('bw-axiom/lib/cssvars-all'),
-            require('bw-axiom/lib/cssvars-theme-light'),
+            require('bw-axiom/lib/cssvars-theme-day'),
           ),
         },
       },

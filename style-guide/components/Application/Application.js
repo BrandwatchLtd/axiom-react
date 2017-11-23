@@ -75,7 +75,7 @@ export default class Application extends Component {
               <Status404
                   contactUsLocation="https://www.brandwatch.com/"
                   homeLocation="/"
-                  theme="light" />
+                  theme="day" />
             ) } />
           </Switch>
         </LayoutMain>
