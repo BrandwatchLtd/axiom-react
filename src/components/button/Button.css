@@ -89,8 +89,8 @@
   }
 
   &:disabled {
-    background-color: var(--color-context-background-disabled);
-    color: var(--color-context-text-disabled);
+    background-color: var(--color-theme-background--disabled);
+    color: var(--color-theme-text--disabled);
   }
 
   &:active,
@@ -101,25 +101,25 @@
 }
 
 .ax-button--secondary {
-  border-color: var(--color-context-border);
+  border-color: var(--color-theme-border);
   color: var(--color-ui-accent);
 
   &:hover {
     border-color: transparent;
-    background-color: var(--color-context-background-subtle);
+    background-color: var(--color-theme-background--subtle);
     color: var(--color-ui-accent--hover);
   }
 
   &:disabled {
-    border-color: var(--color-context-border);
+    border-color: var(--color-theme-border);
     background-color: transparent;
-    color: var(--color-context-text-disabled);
+    color: var(--color-theme-text--disabled);
   }
 
   &:active,
   &.ax-button--active {
     border-color: transparent;
-    background-color: var(--color-context-background-subtle);
+    background-color: var(--color-theme-background--subtle);
     color: var(--color-ui-accent--active);
   }
 }
@@ -132,7 +132,7 @@
   }
 
   &:disabled {
-    color: var(--color-context-text-disabled);
+    color: var(--color-theme-text--disabled);
   }
 
   &:active,
@@ -142,14 +142,14 @@
 }
 
 .ax-button--quaternary {
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
 
   &:hover {
     color: var(--color-ui-accent--hover);
   }
 
   &:disabled {
-    color: var(--color-context-text-disabled);
+    color: var(--color-theme-text--disabled);
   }
 
   &:active,
@@ -166,8 +166,8 @@
   &:active { background-color: var(--color-ui-error--active); }
 
   &:disabled {
-    background-color: var(--color-context-background-disabled);
-    color: var(--color-context-text-disabled);
+    background-color: var(--color-theme-background--disabled);
+    color: var(--color-theme-text--disabled);
   }
 }
 

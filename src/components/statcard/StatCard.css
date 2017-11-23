@@ -6,5 +6,5 @@
 .ax-stat-cards__card {
   padding: var(--cmp-stat-card-vertical-padding) var(--cmp-stat-card-horizontal-padding);
   border-radius: var(--component-border-radius-large);
-  background-color: var(--color-context-background-active);
+  background-color: var(--color-theme-background--active);
 }

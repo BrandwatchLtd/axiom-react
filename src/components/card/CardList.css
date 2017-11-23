@@ -37,7 +37,7 @@
   padding-bottom: 0;
 
   & .ax-card {
-    border-bottom: var(--component-border-width) solid var(--color-context-border-subtle);
+    border-bottom: var(--component-border-width) solid var(--color-theme-border);
   }
 }
 
@@ -52,6 +52,6 @@
 
   &:hover,
   &.ax-card--active {
-    background-color: var(--color-context-background-active);
+    background-color: var(--color-theme-background--hover);
   }
 }

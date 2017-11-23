@@ -11,8 +11,8 @@
   max-height: 100%;
   border-radius: var(--component-border-radius);
   box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
-  background-color: var(--color-context-background);
-  color: var(--color-context-text);
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
 }
 
 .ax-dialog__body,
@@ -21,7 +21,7 @@
 }
 
 .ax-dialog__header {
-  border-bottom: 0.0625rem solid var(--color-context-border);
+  border-bottom: 0.0625rem solid var(--color-theme-border);
 }
 
 .ax-dialog__body {

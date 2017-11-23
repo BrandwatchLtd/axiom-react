@@ -1,6 +1,6 @@
 pre[class*='language-'] {
   padding: calc(var(--spacing-grid-size) * 3);
-  background-color: var(--color-context-background-disabled);
+  background-color: var(--color-theme-background--disabled);
   overflow: auto;
 }
 
@@ -23,11 +23,11 @@ code[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--color-context-text-disabled);
+  color: var(--color-theme-text--disabled);
 }
 
 .token.punctuation {
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
 }
 
 .token.property,

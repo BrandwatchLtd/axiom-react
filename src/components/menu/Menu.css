@@ -2,7 +2,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  border-bottom: 0.0625rem solid var(--color-context-border);
+  border-bottom: 0.0625rem solid var(--color-theme-border);
   white-space: nowrap;
   overflow: auto;
 }
@@ -48,7 +48,7 @@
 .ax-menu__item--disabled .ax-menu__item-button,
 .ax-menu__item--disabled:hover .ax-menu__item-button {
   border-bottom-color: transparent;
-  color: var(--color-context-text-disabled);
+  color: var(--color-theme-text--disabled);
   cursor: default;
 }
 /* stylelint-enable */

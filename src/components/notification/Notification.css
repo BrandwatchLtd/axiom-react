@@ -20,8 +20,8 @@
   max-width: var(--layout-width-tiny);
   border-radius: var(--component-border-radius);
   box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
-  background-color: var(--color-context-background);
-  color: var(--color-context-text);
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
 }
 
 .ax-notification__icon {
@@ -29,7 +29,7 @@
   flex: 0 0 auto;
   align-items: center;
   padding: var(--spacing-grid-size--x4) var(--spacing-grid-size--x4);
-  border-right: 0.0625rem solid var(--color-context-border);
+  border-right: 0.0625rem solid var(--color-theme-border);
 
   @nest .ax-notification--error & { color: var(--color-ui-error); }
   @nest .ax-notification--info & { color: var(--color-ui-accent--hover); }

@@ -4,7 +4,7 @@
 }
 
 .ax-progress-infinite__arc-gradient-stop--subtle {
-  stop-color: var(--color-context-background-subtle);
+  stop-color: var(--color-theme-background--subtle);
 }
 
 .ax-progress-infinite__arc-gradient-stop--white {

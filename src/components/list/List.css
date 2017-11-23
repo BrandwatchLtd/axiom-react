@@ -10,7 +10,7 @@
     display: inline-block;
     margin: 0 var(--cmp-list-item-spacing) 0 0;
     padding: 0 var(--cmp-list-item-spacing) 0 0;
-    border-right: var(--component-border-width) solid var(--color-context-border);
+    border-right: var(--component-border-width) solid var(--color-theme-border);
     vertical-align: middle;
 
     &:last-child  {

@@ -88,10 +88,10 @@
 
 .ax-input__icon-container--overlay {
   border-color: transparent;
-  background-color: var(--color-context-background-subtle);
+  background-color: var(--color-theme-background--subtle);
 
   & .ax-input::placeholder {
-    color: var(--color-context-text-subtle);
+    color: var(--color-theme-text--subtle);
   }
 }
 

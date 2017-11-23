@@ -6,7 +6,7 @@
   &::after {
     content: '';
     flex: 1 1 auto;
-    border-bottom: var(--component-border-width) solid var(--color-context-border);
+    border-bottom: var(--component-border-width) solid var(--color-theme-border);
   }
 }
 
@@ -15,7 +15,7 @@
   margin: 0 var(--component-padding-vertical-medium) 0 0;
   border: var(--component-border-width) solid transparent;
   border-radius: var(--component-border-radius) var(--component-border-radius) 0 0;
-  background-color: var(--color-context-background-subtle);
+  background-color: var(--color-theme-background--subtle);
   list-style: none;
   transition-property: background-color, border-color, color;
   transition-duration: var(--transition-time-base);
@@ -28,21 +28,21 @@
     bottom: calc(var(--component-border-width) * -1);
     width: var(--component-padding-vertical-medium);
     transform: translateX(100%);
-    border-bottom: var(--component-border-width) solid var(--color-context-border);
+    border-bottom: var(--component-border-width) solid var(--color-theme-border);
   }
 }
 
 .ax-tabset__list-item--active {
   padding-bottom: var(--component-border-width);
-  border-color: var(--color-context-border);
+  border-color: var(--color-theme-border);
   border-bottom-color: transparent;
-  background-color: var(--color-context-background);
+  background-color: var(--color-theme-background);
   color: var(--color-ui-accent--active);
 }
 
 .ax-tabset__list-item--disabled {
-  border-bottom-color: var(--color-context-border);
-  background-color: var(--color-context-background-disabled);
+  border-bottom-color: var(--color-theme-border);
+  background-color: var(--color-theme-background--disabled);
 }
 
 .ax-tabset__button {
@@ -62,7 +62,7 @@
   }
 
   &:disabled {
-    color: var(--color-context-text-disabled);
+    color: var(--color-theme-text--disabled);
     cursor: default;
   }
 }

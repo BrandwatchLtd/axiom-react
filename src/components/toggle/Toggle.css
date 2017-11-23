@@ -33,7 +33,7 @@
 }
 
 .ax-toggle__appearance {
-  background-color: var(--color-context-background-subtle);
+  background-color: var(--color-theme-background--subtle);
   transition: background-color var(--transition-time-base) var(--transition-function);
 
   &::after {
@@ -92,10 +92,10 @@
 
 .ax-toggle__input:disabled {
   & + .ax-toggle__appearance {
-    background-color: var(--color-context-background-subtle);
+    background-color: var(--color-theme-background--subtle);
 
     &::after {
-      border-color: var(--color-context-border);
+      border-color: var(--color-theme-border);
       box-shadow: 0 0 0.25rem 0 rgba(var(--rgb-ui-carbon--dark), 0);
       background-color: transparent;
     }

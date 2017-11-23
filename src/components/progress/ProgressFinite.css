@@ -1,6 +1,6 @@
 .ax-progress-finite__background {
   fill: none;
-  stroke: var(--color-context-background-subtle);
+  stroke: var(--color-theme-background--subtle);
 }
 
 .ax-progress-finite__arc {

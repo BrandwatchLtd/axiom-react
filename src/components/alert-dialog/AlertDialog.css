@@ -3,7 +3,7 @@
   max-width: 100%;
   border-radius: var(--component-border-radius);
   box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
-  background-color: var(--color-context-background);
+  background-color: var(--color-theme-background);
 }
 
 .ax-alert-dialog__header {
