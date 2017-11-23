@@ -1,17 +1,17 @@
 import { formatData, getHighestValue } from './utils';
 
 const chartKey = [
-  { color: 'blue', label: 'Brand A' },
-  { color: 'pink', label: 'Brand B' },
-  { color: 'lilac', label: 'Brand C' },
+  { color: 'giant-leap', label: 'Brand A' },
+  { color: 'critical-mass', label: 'Brand B' },
+  { color: 'serene-sea', label: 'Brand C' },
 ];
 
 const data = [
-  { label: 'Family', benchmark: 100, values: { blue: 0, lilac: 90, pink: 50 } },
-  { label: 'Games', benchmark: 33, values: { blue: 40, lilac: 53, pink: 40 } },
-  { label: 'Family & Parenting', benchmark: 33, values: { blue: 50, lilac: 50, pink: 50 } },
-  { label: 'Technology', benchmark: 33, values: { blue: 69 } },
-  { label: 'Books', benchmark: 33, values: { blue: 25, lilac: 50 } },
+  { label: 'Family', benchmark: 100, values: { giant-leap: 0, serene-sea: 90, critical-mass: 50 } },
+  { label: 'Games', benchmark: 33, values: { giant-leap: 40, serene-sea: 53, critical-mass: 40 } },
+  { label: 'Family & Parenting', benchmark: 33, values: { giant-leap: 50, serene-sea: 50, critical-mass: 50 } },
+  { label: 'Technology', benchmark: 33, values: { giant-leap: 69 } },
+  { label: 'Books', benchmark: 33, values: { giant-leap: 25, serene-sea: 50 } },
 ];
 
 describe('BarChart (utils)', () => {
@@ -21,56 +21,56 @@ describe('BarChart (utils)', () => {
       benchmark: 100,
       values: [{
         value: 0,
-        color: 'blue',
+        color: 'giant-leap',
       }, {
         value: 50,
-        color: 'pink',
+        color: 'critical-mass',
       }, {
         value: 90,
-        color: 'lilac',
+        color: 'serene-sea',
       }],
     }, {
       label: 'Games',
       benchmark: 33,
       values: [{
         value: 40,
-        color: 'blue',
+        color: 'giant-leap',
       }, {
         value: 40,
-        color: 'pink',
+        color: 'critical-mass',
       }, {
         value: 53,
-        color: 'lilac',
+        color: 'serene-sea',
       }],
     }, {
       label: 'Family & Parenting',
       benchmark: 33,
       values: [{
         value: 50,
-        color: 'blue',
+        color: 'giant-leap',
       }, {
         value: 50,
-        color: 'pink',
+        color: 'critical-mass',
       }, {
         value: 50,
-        color: 'lilac',
+        color: 'serene-sea',
       }],
     }, {
       label: 'Technology',
       benchmark: 33,
       values: [{
         value: 69,
-        color: 'blue',
+        color: 'giant-leap',
       }],
     }, {
       label: 'Books',
       benchmark: 33,
       values: [{
         value: 25,
-        color: 'blue',
+        color: 'giant-leap',
       }, {
         value: 50,
-        color: 'lilac',
+        color: 'serene-sea',
       }],
     }]);
   });

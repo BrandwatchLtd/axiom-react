@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import './Candytar.css';
 import renderFilter from './_filter';
-import brandColors from '../../materials/colors/brandColors';
+import productColors from '../../materials/colors/productColors';
 
 const defaultPickerFn = (colors) =>
   colors[Math.floor(Math.random() * colors.length)];
@@ -12,18 +12,18 @@ export default class Candytar extends Component {
   static propTypes = {
     /** Color of the Candytar */
     color: PropTypes.oneOf([
-      'rose',
-      'pink',
-      'purple',
-      'lilac',
-      'blue',
-      'teal',
-      'green',
-      'chartreuse',
-      'amber',
-      'orange',
-      'brown',
-      'grey',
+      'tiny-clanger',
+      'critical-mass',
+      'paradise-lost',
+      'serene-sea',
+      'giant-leap',
+      'moon-lagoon',
+      'terra-form',
+      'primeval-soup',
+      'new-horizon',
+      'blast-off',
+      'ground-control',
+      'luna-dust',
     ]),
     /**
      * A function that can be passed to determine the colour of the candytar.
@@ -43,7 +43,7 @@ export default class Candytar extends Component {
   componentWillMount = renderFilter
 
   render() {
-    const { picker, color = picker(brandColors), size } = this.props;
+    const { picker, color = picker(productColors), size } = this.props;
     const style = { height: size, width: size };
     const classes = classnames('ax-candytar', `ax-candytar--${color}`);
 

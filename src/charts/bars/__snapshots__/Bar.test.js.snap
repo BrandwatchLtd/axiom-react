@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bar renders with color amber 1`] = `
+exports[`Bar renders with color new-horizon 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -21,7 +21,7 @@ exports[`Bar renders with color amber 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--amber"
+          className="ax-bars__bar-rect ax-bars__bar-rect--new-horizon"
           style={
             Object {
               "height": false,
@@ -46,7 +46,7 @@ exports[`Bar renders with color amber 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color blue 1`] = `
+exports[`Bar renders with color giant-leap 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -67,7 +67,7 @@ exports[`Bar renders with color blue 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--blue"
+          className="ax-bars__bar-rect ax-bars__bar-rect--giant-leap"
           style={
             Object {
               "height": false,
@@ -92,7 +92,7 @@ exports[`Bar renders with color blue 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color brown 1`] = `
+exports[`Bar renders with color ground-control 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -113,7 +113,7 @@ exports[`Bar renders with color brown 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--brown"
+          className="ax-bars__bar-rect ax-bars__bar-rect--ground-control"
           style={
             Object {
               "height": false,
@@ -138,7 +138,7 @@ exports[`Bar renders with color brown 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color chartreuse 1`] = `
+exports[`Bar renders with color primeval-soup 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -159,7 +159,7 @@ exports[`Bar renders with color chartreuse 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--chartreuse"
+          className="ax-bars__bar-rect ax-bars__bar-rect--primeval-soup"
           style={
             Object {
               "height": false,
@@ -184,7 +184,7 @@ exports[`Bar renders with color chartreuse 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color green 1`] = `
+exports[`Bar renders with color terra-form 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -205,7 +205,7 @@ exports[`Bar renders with color green 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--green"
+          className="ax-bars__bar-rect ax-bars__bar-rect--terra-form"
           style={
             Object {
               "height": false,
@@ -230,7 +230,7 @@ exports[`Bar renders with color green 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color grey 1`] = `
+exports[`Bar renders with color luna-dust 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -251,7 +251,7 @@ exports[`Bar renders with color grey 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--grey"
+          className="ax-bars__bar-rect ax-bars__bar-rect--luna-dust"
           style={
             Object {
               "height": false,
@@ -276,7 +276,7 @@ exports[`Bar renders with color grey 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color lilac 1`] = `
+exports[`Bar renders with color serene-sea 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -297,7 +297,7 @@ exports[`Bar renders with color lilac 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--lilac"
+          className="ax-bars__bar-rect ax-bars__bar-rect--serene-sea"
           style={
             Object {
               "height": false,
@@ -322,7 +322,7 @@ exports[`Bar renders with color lilac 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color orange 1`] = `
+exports[`Bar renders with color blast-off 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -343,7 +343,7 @@ exports[`Bar renders with color orange 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--orange"
+          className="ax-bars__bar-rect ax-bars__bar-rect--blast-off"
           style={
             Object {
               "height": false,
@@ -368,7 +368,7 @@ exports[`Bar renders with color orange 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color pink 1`] = `
+exports[`Bar renders with color critical-mass 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -389,7 +389,7 @@ exports[`Bar renders with color pink 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--pink"
+          className="ax-bars__bar-rect ax-bars__bar-rect--critical-mass"
           style={
             Object {
               "height": false,
@@ -414,7 +414,7 @@ exports[`Bar renders with color pink 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color purple 1`] = `
+exports[`Bar renders with color paradise-lost 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -435,7 +435,7 @@ exports[`Bar renders with color purple 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--purple"
+          className="ax-bars__bar-rect ax-bars__bar-rect--paradise-lost"
           style={
             Object {
               "height": false,
@@ -460,7 +460,7 @@ exports[`Bar renders with color purple 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color rose 1`] = `
+exports[`Bar renders with color tiny-clanger 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -481,7 +481,7 @@ exports[`Bar renders with color rose 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -506,7 +506,7 @@ exports[`Bar renders with color rose 1`] = `
 </div>
 `;
 
-exports[`Bar renders with color teal 1`] = `
+exports[`Bar renders with color moon-lagoon 1`] = `
 <div
   className="ax-bars ax-bars--up"
 >
@@ -527,7 +527,7 @@ exports[`Bar renders with color teal 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--teal"
+          className="ax-bars__bar-rect ax-bars__bar-rect--moon-lagoon"
           style={
             Object {
               "height": false,
@@ -573,7 +573,7 @@ exports[`Bar renders with defaultProps 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -619,7 +619,7 @@ exports[`Bar renders with labelStrong 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -665,7 +665,7 @@ exports[`Bar renders with minSize down 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -711,7 +711,7 @@ exports[`Bar renders with minSize left 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": undefined,
@@ -757,7 +757,7 @@ exports[`Bar renders with minSize right 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": undefined,
@@ -803,7 +803,7 @@ exports[`Bar renders with minSize up 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -849,7 +849,7 @@ exports[`Bar renders with onClick 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -895,7 +895,7 @@ exports[`Bar renders with showLabel 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -941,7 +941,7 @@ exports[`Bar renders with size and minSize down 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -987,7 +987,7 @@ exports[`Bar renders with size and minSize left 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": "2rem",
@@ -1033,7 +1033,7 @@ exports[`Bar renders with size and minSize right 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": "2rem",
@@ -1079,7 +1079,7 @@ exports[`Bar renders with size and minSize up 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -1125,7 +1125,7 @@ exports[`Bar renders with size down 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,
@@ -1171,7 +1171,7 @@ exports[`Bar renders with size left 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": "2rem",
@@ -1217,7 +1217,7 @@ exports[`Bar renders with size right 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": "2rem",
@@ -1263,7 +1263,7 @@ exports[`Bar renders with size up 1`] = `
         }
       >
         <div
-          className="ax-bars__bar-rect ax-bars__bar-rect--rose"
+          className="ax-bars__bar-rect ax-bars__bar-rect--tiny-clanger"
           style={
             Object {
               "height": false,

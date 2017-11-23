@@ -11,17 +11,17 @@ import {
 } from './utils';
 
 const chartKey = [
-  { color: 'blue', label: 'Brand A' },
-  { color: 'pink', label: 'Brand B' },
-  { color: 'lilac', label: 'Brand C' },
+  { color: 'giant-leap', label: 'Brand A' },
+  { color: 'critical-mass', label: 'Brand B' },
+  { color: 'serene-sea', label: 'Brand C' },
 ];
 
 const data = [
-  { label: 'Family', benchmark: 100, values: { blue: 0, lilac: 90, pink: 50 } },
-  { label: 'Games', benchmark: 33, values: { blue: 40, lilac: 53, pink: 40 } },
-  { label: 'Family & Parenting', benchmark: 33, values: { blue: 50, lilac: 50, pink: 50 } },
-  { label: 'Technology', benchmark: 33, values: { blue: 69 } },
-  { label: 'Books', benchmark: 33, values: { blue: 25, lilac: 50 } },
+  { label: 'Family', benchmark: 100, values: { giant-leap: 0, serene-sea: 90, critical-mass: 50 } },
+  { label: 'Games', benchmark: 33, values: { giant-leap: 40, serene-sea: 53, critical-mass: 40 } },
+  { label: 'Family & Parenting', benchmark: 33, values: { giant-leap: 50, serene-sea: 50, critical-mass: 50 } },
+  { label: 'Technology', benchmark: 33, values: { giant-leap: 69 } },
+  { label: 'Books', benchmark: 33, values: { giant-leap: 25, serene-sea: 50 } },
 ];
 
 describe('DotPlot (utils)', () => {
@@ -31,47 +31,47 @@ describe('DotPlot (utils)', () => {
       benchmark: 100,
       values: [{
         value: 0,
-        colors: ['blue'],
+        colors: ['giant-leap'],
       }, {
         value: 50,
-        colors: ['pink'],
+        colors: ['critical-mass'],
       }, {
         value: 90,
-        colors: ['lilac'],
+        colors: ['serene-sea'],
       }],
     }, {
       label: 'Games',
       benchmark: 33,
       values: [{
         value: 40,
-        colors: ['blue', 'pink'],
+        colors: ['giant-leap', 'critical-mass'],
       }, {
         value: 53,
-        colors: ['lilac'],
+        colors: ['serene-sea'],
       }],
     }, {
       label: 'Family & Parenting',
       benchmark: 33,
       values: [{
         value: 50,
-        colors: ['blue', 'pink', 'lilac'],
+        colors: ['giant-leap', 'critical-mass', 'serene-sea'],
       }],
     }, {
       label: 'Technology',
       benchmark: 33,
       values: [{
         value: 69,
-        colors: ['blue'],
+        colors: ['giant-leap'],
       }],
     }, {
       label: 'Books',
       benchmark: 33,
       values: [{
         value: 25,
-        colors: ['blue'],
+        colors: ['giant-leap'],
       }, {
         value: 50,
-        colors: ['lilac'],
+        colors: ['serene-sea'],
       }],
     }]);
   });
@@ -82,24 +82,24 @@ describe('DotPlot (utils)', () => {
 
   describe('with no mouse over', () => {
     it('does not filter colors', () => {
-      expect(getDotColors(-1, [], 0, ['red', 'green']))
-        .toEqual(['red', 'green']);
+      expect(getDotColors(-1, [], 0, ['red', 'terra-form']))
+        .toEqual(['red', 'terra-form']);
     });
 
     it('hides values', () => {
-      expect(isValueHidden(-1, [], 0, ['red', 'green']))
+      expect(isValueHidden(-1, [], 0, ['red', 'terra-form']))
         .toEqual(true);
     });
 
     it('does not fade the lines', () => {
-      expect(isLineFaded(-1, [], 0, ['red', 'green']))
+      expect(isLineFaded(-1, [], 0, ['red', 'terra-form']))
         .toEqual(false);
     });
   });
 
   describe('with mouse over', () => {
     it('fades the lines', () => {
-      expect(isLineFaded(0, [], 0, ['red', 'green']))
+      expect(isLineFaded(0, [], 0, ['red', 'terra-form']))
         .toEqual(true);
     });
 
@@ -120,7 +120,7 @@ describe('DotPlot (utils)', () => {
     describe('on a single data point', () => {
       describe('on other rows', () => {
         it('hides dots of different colors', () => {
-          expect(isDotHidden(1, ['red'], 2, ['green']))
+          expect(isDotHidden(1, ['red'], 2, ['terra-form']))
             .toEqual(true);
         });
 
@@ -130,12 +130,12 @@ describe('DotPlot (utils)', () => {
         });
 
         it('filters stacked dots to the hovered color', () => {
-          expect(getDotColors(1, ['red'], 2, ['red', 'green', 'blue']))
+          expect(getDotColors(1, ['red'], 2, ['red', 'terra-form', 'giant-leap']))
             .toEqual(['red']);
         });
 
         it('does not filter single dots of different colors', () => {
-          expect(getDotColors(1, ['blue'], 2, ['red']))
+          expect(getDotColors(1, ['giant-leap'], 2, ['red']))
             .toEqual(['red']);
         });
 
@@ -145,15 +145,15 @@ describe('DotPlot (utils)', () => {
         });
 
         it('shows values of the same color for stacked dots', () => {
-          expect(isValueHidden(1, ['red'], 2, ['red', 'blue']))
+          expect(isValueHidden(1, ['red'], 2, ['red', 'giant-leap']))
             .toEqual(false);
         });
 
         it('hides all lines', () => {
           expect(getLines([
             { colors: ['red'], value: 10 },
-            { colors: ['green'], value: 20 },
-            { colors: ['blue'], value: 30 },
+            { colors: ['terra-form'], value: 20 },
+            { colors: ['giant-leap'], value: 30 },
           ], 33, 1, ['red'], 2)).toEqual([{
             fromBenchmark: false,
             toBenchmark: true,
@@ -166,7 +166,7 @@ describe('DotPlot (utils)', () => {
 
       describe('on the target row', () => {
         it('fades other dots', () => {
-          expect(isDotFaded(1, ['blue'], 1, ['red']))
+          expect(isDotFaded(1, ['giant-leap'], 1, ['red']))
             .toEqual(true);
         });
 
@@ -176,7 +176,7 @@ describe('DotPlot (utils)', () => {
         });
 
         it('hides the values for the other dots', () => {
-          expect(isValueHidden(1, ['red'], 1, ['blue']))
+          expect(isValueHidden(1, ['red'], 1, ['giant-leap']))
             .toEqual(true);
         });
       });
@@ -185,31 +185,31 @@ describe('DotPlot (utils)', () => {
     describe('on a stacked data point', () => {
       describe('on other rows', () => {
         it('filters stacked dots to the hovered color', () => {
-          expect(getDotColors(1, ['red', 'green'], 2, ['red', 'green', 'blue']))
-            .toEqual(['red', 'green']);
+          expect(getDotColors(1, ['red', 'terra-form'], 2, ['red', 'terra-form', 'giant-leap']))
+            .toEqual(['red', 'terra-form']);
         });
 
         it('hides dots of different colors', () => {
-          expect(isDotHidden(1, ['red', 'blue'], 2, ['green']))
+          expect(isDotHidden(1, ['red', 'giant-leap'], 2, ['terra-form']))
             .toEqual(true);
         });
 
         it('hides values of the same color for single dots', () => {
-          expect(isValueHidden(1, ['red', 'green'], 2, ['red']))
+          expect(isValueHidden(1, ['red', 'terra-form'], 2, ['red']))
             .toEqual(true);
         });
 
 
         it('hides values of the same color for stacked dots', () => {
-          expect(isValueHidden(1, ['red', 'green'], 2, ['red', 'green']))
+          expect(isValueHidden(1, ['red', 'terra-form'], 2, ['red', 'terra-form']))
             .toEqual(true);
         });
 
         it('shows faded lines between the remaining visible dots', () => {
           expect(getLines([
             { colors: ['red'], value: 10 },
-            { colors: ['green', 'blue'], value: 20 },
-          ], 33, 1, ['green', 'blue'], 2)).toEqual([{
+            { colors: ['terra-form', 'giant-leap'], value: 20 },
+          ], 33, 1, ['terra-form', 'giant-leap'], 2)).toEqual([{
             fromBenchmark: false,
             toBenchmark: true,
             faded: true,
@@ -221,20 +221,20 @@ describe('DotPlot (utils)', () => {
 
       describe('on the target row', () => {
         it('fades other dots', () => {
-          expect(isDotFaded(1, ['blue', 'green'], 1, ['red']))
+          expect(isDotFaded(1, ['giant-leap', 'terra-form'], 1, ['red']))
             .toEqual(true);
         });
 
         it('shows the value of the hovered dot', () => {
-          expect(isValueHidden(1, ['red', 'green'], 1, ['red', 'green']))
+          expect(isValueHidden(1, ['red', 'terra-form'], 1, ['red', 'terra-form']))
             .toEqual(false);
         });
 
         it('shows faded lines between all the dots', () => {
           expect(getLines([
             { colors: ['red'], value: 10 },
-            { colors: ['green', 'blue'], value: 20 },
-          ], 33, 1, ['green', 'blue'], 1)).toEqual([{
+            { colors: ['terra-form', 'giant-leap'], value: 20 },
+          ], 33, 1, ['terra-form', 'giant-leap'], 1)).toEqual([{
             fromBenchmark: false,
             toBenchmark: false,
             faded: true,

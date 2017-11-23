@@ -51,7 +51,7 @@ class CardExample extends Component {
           <Card { ...initialProps.Card }>
             <Grid responsive={ false } snippetReplace verticalAlign="middle">
               <GridCell shrink>
-                <Candytar color="lilac" size="4.5rem" />
+                <Candytar color="serene-sea" size="4.5rem" />
               </GridCell>
 
               <GridCell>

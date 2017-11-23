@@ -14,19 +14,19 @@ exports[`DataPoints renders with defaultProps 1`] = `
   viewBox="0 0 24 24"
 >
   <circle
-    className="ax-data-point ax-data-point--blue"
+    className="ax-data-point ax-data-point--giant-leap"
     cx={12}
     cy={12}
     r={12}
   />
   <circle
-    className="ax-data-point ax-data-point--pink"
+    className="ax-data-point ax-data-point--critical-mass"
     cx={12}
     cy={12}
     r={8}
   />
   <circle
-    className="ax-data-point ax-data-point--amber"
+    className="ax-data-point ax-data-point--new-horizon"
     cx={12}
     cy={12}
     r={4}
@@ -48,19 +48,19 @@ exports[`DataPoints renders with onClick 1`] = `
   viewBox="0 0 24 24"
 >
   <circle
-    className="ax-data-point ax-data-point--blue"
+    className="ax-data-point ax-data-point--giant-leap"
     cx={12}
     cy={12}
     r={12}
   />
   <circle
-    className="ax-data-point ax-data-point--pink"
+    className="ax-data-point ax-data-point--critical-mass"
     cx={12}
     cy={12}
     r={8}
   />
   <circle
-    className="ax-data-point ax-data-point--amber"
+    className="ax-data-point ax-data-point--new-horizon"
     cx={12}
     cy={12}
     r={4}

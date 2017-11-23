@@ -6,7 +6,7 @@ import ColumnChartXAxis from './ColumnChartXAxis';
 const getComponent = (props = {}) =>
   renderer.create(
     <ColumnChart
-        chartKey={ [{ label: 'Lorem', color: 'rose' }] }
+        chartKey={ [{ label: 'Lorem', color: 'tiny-clanger' }] }
         data={ [{ label: 'test', values: {} }] }
         height="10rem">
       <ColumnChartXAxis labelColumnWidth="1rem" { ...props }>

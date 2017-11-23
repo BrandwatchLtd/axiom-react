@@ -1,5 +1,5 @@
-import brandColors from './brandColors';
+import productColors from './productColors';
 
-export default string => brandColors[
-  string.split('').reduce((acc, val) => acc + val.charCodeAt(), 0) % (brandColors.length - 1)
+export default string => productColors[
+  string.split('').reduce((acc, val) => acc + val.charCodeAt(), 0) % (productColors.length - 1)
 ];

@@ -18,18 +18,18 @@
   user-select: none;
 }
 
-.ax-word--rose { color: var(--color-brand-rose); }
-.ax-word--pink { color: var(--color-brand-pink); }
-.ax-word--purple { color: var(--color-brand-purple); }
-.ax-word--lilac { color: var(--color-brand-lilac); }
-.ax-word--blue { color: var(--color-brand-blue); }
-.ax-word--teal { color: var(--color-brand-teal); }
-.ax-word--green { color: var(--color-brand-green); }
-.ax-word--chartreuse { color: var(--color-brand-chartreuse); }
-.ax-word--amber { color: var(--color-brand-amber); }
-.ax-word--orange { color: var(--color-brand-orange); }
-.ax-word--brown { color: var(--color-brand-brown); }
-.ax-word--grey { color: var(--color-brand-grey); }
+.ax-word--tiny-clanger { color: var(--color-product-tiny-clanger); }
+.ax-word--critical-mass { color: var(--color-product-critical-mass); }
+.ax-word--paradise-lost { color: var(--color-product-paradise-lost); }
+.ax-word--serene-sea { color: var(--color-product-serene-sea); }
+.ax-word--giant-leap { color: var(--color-product-giant-leap); }
+.ax-word--moon-lagoon { color: var(--color-product-moon-lagoon); }
+.ax-word--terra-form { color: var(--color-product-terra-form); }
+.ax-word--primeval-soup { color: var(--color-product-primeval-soup); }
+.ax-word--new-horizon { color: var(--color-product-new-horizon); }
+.ax-word--blast-off { color: var(--color-product-blast-off); }
+.ax-word--ground-control { color: var(--color-product-ground-control); }
+.ax-word--luna-dust { color: var(--color-product-luna-dust); }
 
 .ax-word--disabled {
   fill-opacity: 0.3;
@@ -42,16 +42,16 @@
 .ax-word--clickable {
   cursor: pointer;
 
-  &.ax-word--rose:active { color: var(--color-brand-rose--dark); }
-  &.ax-word--pink:active { color: var(--color-brand-pink--dark); }
-  &.ax-word--purple:active { color: var(--color-brand-purple--dark); }
-  &.ax-word--lilac:active { color: var(--color-brand-lilac--dark); }
-  &.ax-word--blue:active { color: var(--color-brand-blue--dark); }
-  &.ax-word--teal:active { color: var(--color-brand-teal--dark); }
-  &.ax-word--green:active { color: var(--color-brand-green--dark); }
-  &.ax-word--chartreuse:active { color: var(--color-brand-chartreuse--dark); }
-  &.ax-word--amber:active { color: var(--color-brand-amber--dark); }
-  &.ax-word--orange:active { color: var(--color-brand-orange--dark); }
-  &.ax-word--brown:active { color: var(--color-brand-brown--dark); }
-  &.ax-word--grey:active { color: var(--color-brand-grey--dark); }
+  &.ax-word--tiny-clanger:active { color: var(--color-product-tiny-clanger--active); }
+  &.ax-word--critical-mass:active { color: var(--color-product-critical-mass--active); }
+  &.ax-word--paradise-lost:active { color: var(--color-product-paradise-lost--active); }
+  &.ax-word--serene-sea:active { color: var(--color-product-serene-sea--active); }
+  &.ax-word--giant-leap:active { color: var(--color-product-giant-leap--active); }
+  &.ax-word--moon-lagoon:active { color: var(--color-product-moon-lagoon--active); }
+  &.ax-word--terra-form:active { color: var(--color-product-terra-form--active); }
+  &.ax-word--primeval-soup:active { color: var(--color-product-primeval-soup--active); }
+  &.ax-word--new-horizon:active { color: var(--color-product-new-horizon--active); }
+  &.ax-word--blast-off:active { color: var(--color-product-blast-off--active); }
+  &.ax-word--ground-control:active { color: var(--color-product-ground-control--active); }
+  &.ax-word--luna-dust:active { color: var(--color-product-luna-dust--active); }
 }

@@ -19,7 +19,7 @@ class CandytarExample extends Component {
 
     const initialProps = {
       Candytar: {
-        color: 'rose',
+        color: 'tiny-clanger',
         picker: (colors) => colors[1],
         size: '3rem',
       },
