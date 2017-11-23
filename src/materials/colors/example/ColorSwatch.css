@@ -1,5 +1,7 @@
 .dm-color-swatch {
+  width: calc(var(--spacing-grid-size) * 16);
   height: calc(var(--spacing-grid-size) * 16);
-  border-top: 0.0625rem solid var(--color-context-border);
-  border-bottom: 0.0625rem solid var(--color-context-border);
+  margin-bottom: var(--spacing-grid-size--x2);
+  border-radius: 50%;
+  box-shadow: inset var(--drop-shadow-1);
 }
