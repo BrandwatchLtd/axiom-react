@@ -8,7 +8,7 @@
   flex-direction: column;
   border-radius: var(--component-border-radius-large);
   background-color: var(--color-ui-white-noise--dark);
-  color: var(--color-context-text);
+  color: var(--color-theme-text);
 }
 
 .ax-panel--inactive {

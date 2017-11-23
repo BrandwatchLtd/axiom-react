@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  border-right: var(--component-border-width) solid var(--color-context-border);
-  background-color: var(--color-context-background-active);
-  color: var(--color-context-text);
+  border-right: var(--component-border-width) solid var(--color-theme-border);
+  background-color: var(--color-theme-background--active);
+  color: var(--color-theme-text);
   overflow: auto;
   transition-property: transform;
   transition-duration: var(--transition-time-slow);

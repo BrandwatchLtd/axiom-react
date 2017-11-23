@@ -5,8 +5,8 @@
 }
 
 .ace-dm .ace_gutter {
-  background: var(--color-context-background-disabled);
-  color: var(--color-context-text-subtle);
+  background: var(--color-theme-background--disabled);
+  color: var(--color-theme-text--subtle);
 }
 
 .ace-dm {
@@ -15,11 +15,11 @@
 }
 
 .ace-dm .ace_cursor {
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
 }
 
 .ace-dm .ace_marker-layer .ace_selection {
-  background: var(--color-context-background-disabled);
+  background: var(--color-theme-background--disabled);
 }
 
 .ace-dm.ace_multiselect .ace_selection.ace_start {
@@ -43,7 +43,7 @@
 
 .ace-dm .ace_punctuation,
 .ace-dm .ace_punctuation.ace_tag {
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
 }
 
 .ace-dm .ace_constant.ace_character,
@@ -82,5 +82,5 @@
 }
 
 .ace-dm .ace_comment {
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
 }

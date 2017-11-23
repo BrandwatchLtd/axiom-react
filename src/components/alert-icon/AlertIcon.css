@@ -33,7 +33,7 @@
 }
 
 .ax-alert-icon--secondary {
-  background-color: var(--color-context-background-active);
+  background-color: var(--color-theme-background--active);
 
   &.ax-alert-icon--success { color: var(--color-ui-success); }
   &.ax-alert-icon--warning { color: var(--color-ui-warning); }
@@ -42,6 +42,6 @@
 }
 
 .ax-alert-icon--subtle {
-  background-color: var(--color-context-text-disabled);
+  background-color: var(--color-theme-text--disabled);
   color: var(--color-ui-white-noise);
 }

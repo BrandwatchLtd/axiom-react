@@ -9,7 +9,7 @@
   border-width: 0;
   border-style: solid;
   border-radius: 50%;
-  border-color: var(--color-context-border);
+  border-color: var(--color-theme-border);
   overflow: hidden;
 }
 

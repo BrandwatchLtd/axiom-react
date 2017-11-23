@@ -6,7 +6,7 @@
   justify-content: center;
   min-height: calc(var(--spacing-grid-size) * 12);
   padding: calc(var(--spacing-grid-size) * 2);
-  border: 0.0625rem solid var(--color-context-border);
-  background-color: var(--color-context-background-disabled);
-  color: var(--color-context-text-subtle);
+  border: 0.0625rem solid var(--color-theme-border);
+  background-color: var(--color-theme-background--disabled);
+  color: var(--color-theme-text--subtle);
 }

@@ -17,7 +17,7 @@
 
   --cmp-benchmark-line-width: 0.0625rem;
   --cmp-benchmark-line-height: var(--cmp-dot-plot-diameter);
-  --cmp-benchmark-line-color: var(--color-context-text-subtle);
+  --cmp-benchmark-line-color: var(--color-theme-text--subtle);
 
   --cmp-chart-overflow-space: calc(var(--cmp-chart-label-width) + var(--cmp-dot-plot-radius));
 }

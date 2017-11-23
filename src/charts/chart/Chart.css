@@ -7,7 +7,7 @@
   padding-bottom: calc(var(--spacing-grid-size--x3) - var(--component-border-width));
   border-bottom-width: var(--component-border-width-small);
   border-bottom-style: solid;
-  border-bottom-color: var(--color-context-border);
+  border-bottom-color: var(--color-theme-border);
 }
 
 .ax-chart__body {

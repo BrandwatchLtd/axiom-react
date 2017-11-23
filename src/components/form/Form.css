@@ -1,15 +1,15 @@
 :root {
   --cmp-input-checkbox-size: calc(var(--spacing-grid-size) * 4);
 
-  --cmp-input-border-color: var(--color-context-border);
+  --cmp-input-border-color: var(--color-theme-border);
   --cmp-input-border-color-focused: rgba(var(--rgb-ui-accent), 0.5);
   --cmp-input-border-color-valid: rgba(var(--rgb-ui-success), 0.4);
   --cmp-input-border-color-invalid: rgba(var(--rgb-ui-error), 0.25);
 
-  --cmp-input-background-color: var(--color-context-background);
-  --cmp-input-background-color-disabled: var(--color-context-background-disabled);
+  --cmp-input-background-color: var(--color-theme-background);
+  --cmp-input-background-color-disabled: var(--color-theme-background--disabled);
 
-  --cmp-input-color-placeholder: var(--color-context-text-disabled);
+  --cmp-input-color-placeholder: var(--color-theme-text--disabled);
   --cmp-input-color-checked: var(--color-ui-accent);
   --cmp-input-color-invalid: var(--color-ui-error);
 }

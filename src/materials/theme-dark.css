@@ -1,15 +1,17 @@
 .ax-theme--dark {
-  --color-context-border: var(--color-theme-dark-border);
-  --color-context-border-subtle: var(--color-theme-dark-border-subtle);
+  --color-theme-main: var(--color-theme-dark-main);
+  --color-theme-main--dark: var(--color-theme-dark-main--dark);
+  --color-theme-main--darker: var(--color-theme-dark-main--darker);
 
-  --color-context-background: var(--color-theme-dark-background);
-  --color-context-background-active: var(--color-theme-dark-background-active);
-  --color-context-background-disabled: var(--color-theme-dark-background-disabled);
-  --color-context-background-faded: var(--color-theme-dark-background-faded);
-  --color-context-background-hover: var(--color-theme-dark-background-hover);
-  --color-context-background-subtle: var(--color-theme-dark-background-subtle);
+  --color-theme-text: var(--color-theme-dark-text);
+  --color-theme-text--subtle: var(--color-theme-dark-text--subtle);
+  --color-theme-text--disabled: var(--color-theme-dark-text--disabled);
 
-  --color-context-text: var(--color-theme-dark-text);
-  --color-context-text-subtle: var(--color-theme-dark-text-subtle);
-  --color-context-text-disabled: var(--color-theme-dark-text-disabled);
+  --color-theme-background--active: var(--color-theme-dark-background--active);
+  --color-theme-background: var(--color-theme-dark-background);
+  --color-theme-background--hover: var(--color-theme-dark-background--hover);
+  --color-theme-background--subtle: var(--color-theme-dark-background--subtle);
+  --color-theme-background--disabled: var(--color-theme-dark-background--disabled);
+
+  --color-theme-border: var(--color-theme-dark-border);
 }

@@ -62,7 +62,7 @@
 .ax-dot-plot__difference-line-path {
   position: absolute;
   top: 50%;
-  border-top: var(--cmp-dot-plot-difference-line-width) solid var(--color-context-text-disabled);
+  border-top: var(--cmp-dot-plot-difference-line-width) solid var(--color-theme-text--disabled);
 }
 
 .ax-dot-plot__difference-line-container {

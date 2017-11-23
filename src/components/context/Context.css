@@ -19,8 +19,8 @@
 .ax-context__content {
   position: relative;
   border-radius: var(--component-border-radius);
-  background-color: var(--color-context-background);
-  color: var(--color-context-text);
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
   overflow-y: auto;
   /* stylelint-disable */
   /* ensures rounded corners in Safari */
@@ -35,7 +35,7 @@
   margin: var(--cmp-context-tip-size);
   transform: rotate(45deg);
   box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
-  background-color: var(--color-context-background);
+  background-color: var(--color-theme-background);
   pointer-events: none;
 
   @nest .ax-context--top & { bottom: calc(var(--cmp-context-tip-size) * -0.5); }
