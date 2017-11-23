@@ -12,7 +12,7 @@ export default class Panels extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-panels" theme="light">
+      <Base { ...rest } className="ax-panels" theme="day">
         { children }
       </Base>
     );

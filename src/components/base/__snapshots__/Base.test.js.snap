@@ -177,15 +177,15 @@ exports[`Base renders with textCenter true 1`] = `
 />
 `;
 
-exports[`Base renders with textColor white-noise 1`] = `
+exports[`Base renders with textColor night 1`] = `
 <div
-  className="ax-text--color-white-noise"
+  className="ax-text--color-night"
 />
 `;
 
-exports[`Base renders with textColor carbon 1`] = `
+exports[`Base renders with textColor day 1`] = `
 <div
-  className="ax-text--color-carbon"
+  className="ax-text--color-day"
 />
 `;
 

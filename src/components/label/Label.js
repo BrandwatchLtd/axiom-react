@@ -52,7 +52,7 @@ export default class Label extends Component {
     );
 
     return (
-      <Base { ...rest } Component="span" className={ classes } theme="light">
+      <Base { ...rest } Component="span" className={ classes } theme="day">
         { mappedChildren }
       </Base>
     );

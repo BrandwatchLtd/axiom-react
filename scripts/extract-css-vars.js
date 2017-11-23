@@ -60,15 +60,15 @@ module.exports = ${JSON.stringify(variables, null, 2)}
   };
 }
 
-extract([path.resolve(__dirname, '../src/materials/theme-light.css')])
+extract([path.resolve(__dirname, '../src/materials/theme-day.css')])
   .then(resolve)
   .then(convert)
-  .then(write('cssvars-theme-light.js'));
+  .then(write('cssvars-theme-day.js'));
 
-extract([path.resolve(__dirname, '../src/materials/theme-dark.css')])
+extract([path.resolve(__dirname, '../src/materials/theme-night.css')])
   .then(resolve)
   .then(convert)
-  .then(write('cssvars-theme-dark.js'));
+  .then(write('cssvars-theme-night.js'));
 
 glob(path.resolve(__dirname, '../src/**/*.css'), (err, files) => {
   if (err) throw err;
