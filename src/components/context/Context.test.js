@@ -45,7 +45,7 @@ describe('Context', () => {
   });
 
   describe('renders with theme', () => {
-    ['dark', 'light'].forEach((theme) => {
+    ['day', 'night'].forEach((theme) => {
       it(theme, () => {
         const component = getComponent({ theme });
         const tree = component.toJSON();

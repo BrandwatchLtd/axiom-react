@@ -8,7 +8,7 @@ exports[`LabelGroup renders with defaultProps 1`] = `
     className="ax-inline-group__spacer"
   >
     <span
-      className="ax-label ax-label--white ax-label--medium ax-theme--light"
+      className="ax-label ax-label--white ax-label--medium ax-theme--day"
     >
       Lorem ipsum
     </span>

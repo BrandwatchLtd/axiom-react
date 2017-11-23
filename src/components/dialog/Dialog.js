@@ -49,7 +49,7 @@ export default class Dialog extends Component {
 
     return (
       <Modal { ...rest } onOverlayClick={ onRequestClose }>
-        <Base className={ classes } theme="light">
+        <Base className={ classes } theme="day">
           { children }
         </Base>
       </Modal>

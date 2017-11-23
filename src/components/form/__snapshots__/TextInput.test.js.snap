@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput render with theme dark 1`] = `
+exports[`TextInput render with theme night 1`] = `
 <label
   className="ax-input__group ax-space--x4"
 >
@@ -12,7 +12,7 @@ exports[`TextInput render with theme dark 1`] = `
       disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
-      theme="dark"
+      theme="night"
       type="text"
       value={undefined}
     />
@@ -20,7 +20,7 @@ exports[`TextInput render with theme dark 1`] = `
 </label>
 `;
 
-exports[`TextInput render with theme light 1`] = `
+exports[`TextInput render with theme day 1`] = `
 <label
   className="ax-input__group ax-space--x4"
 >
@@ -32,7 +32,7 @@ exports[`TextInput render with theme light 1`] = `
       disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
-      theme="light"
+      theme="day"
       type="text"
       value={undefined}
     />

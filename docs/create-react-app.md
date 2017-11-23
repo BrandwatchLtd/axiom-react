@@ -32,7 +32,7 @@ module.exports = {
     require('postcss-cssnext')({
       features: {
         customProperties: {
-          variables: require('[path-to-bw-axiom]/lib/materials/cssvars-theme-light'),
+          variables: require('[path-to-bw-axiom]/lib/materials/cssvars-theme-day'),
         },
       },
     }),

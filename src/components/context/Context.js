@@ -37,7 +37,7 @@ export default class Context extends Component {
     const classes = classnames('ax-context', `ax-context--${position}`);
 
     return (
-      <Base theme="light" { ...rest } className={ classes } style={ { width } }>
+      <Base theme="day" { ...rest } className={ classes } style={ { width } }>
         { arrowRef && (
           <span className="ax-context__arrow" ref={ arrowRef } />
         ) }
