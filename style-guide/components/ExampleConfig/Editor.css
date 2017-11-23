@@ -38,7 +38,7 @@
 .ace-dm .ace_keyword,
 .ace-dm .ace_meta.ace_tag,
 .ace-dm .ace_storage {
-  color: var(--color-brand-pink);
+  color: var(--color-product-critical-mass);
 }
 
 .ace-dm .ace_punctuation,
@@ -50,18 +50,18 @@
 .ace-dm .ace_constant.ace_language,
 .ace-dm .ace_constant.ace_numeric,
 .ace-dm .ace_constant.ace_other {
-  color: var(--color-brand-lilac);
+  color: var(--color-product-serene-sea);
 }
 
 .ace-dm .ace_support.ace_constant,
 .ace-dm .ace_support.ace_function {
-  color: var(--color-brand-blue);
+  color: var(--color-product-giant-leap);
 }
 
 .ace-dm .ace_storage.ace_type,
 .ace-dm .ace_support.ace_class,
 .ace-dm .ace_support.ace_type {
-  color: var(--color-brand-teal);
+  color: var(--color-product-moon-lagoon);
   font-style: italic;
 }
 
@@ -69,16 +69,16 @@
 .ace-dm .ace_entity.ace_other,
 .ace-dm .ace_entity.ace_other.ace_attribute-name,
 .ace-dm .ace_variable {
-  color: var(--color-brand-green);
+  color: var(--color-product-terra-form);
 }
 
 .ace-dm .ace_variable.ace_parameter {
-  color: var(--color-brand-orange);
+  color: var(--color-product-blast-off);
   font-style: italic;
 }
 
 .ace-dm .ace_string {
-  color: var(--color-brand-amber--dark);
+  color: var(--color-product-new-horizon--active);
 }
 
 .ace-dm .ace_comment {

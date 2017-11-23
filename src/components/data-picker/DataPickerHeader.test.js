@@ -18,7 +18,7 @@ describe('DataPickerHeader', () => {
   });
 
   it('renders with color', () => {
-    const component = getComponent({ color: 'blue' });
+    const component = getComponent({ color: 'giant-leap' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

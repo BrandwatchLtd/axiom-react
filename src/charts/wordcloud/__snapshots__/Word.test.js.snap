@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Word renders with color amber 1`] = `
+exports[`Word renders with color new-horizon 1`] = `
 <text
-  className="ax-word ax-word--amber"
+  className="ax-word ax-word--new-horizon"
   onClick={undefined}
   style={
     Object {
@@ -16,9 +16,9 @@ exports[`Word renders with color amber 1`] = `
 />
 `;
 
-exports[`Word renders with color blue 1`] = `
+exports[`Word renders with color giant-leap 1`] = `
 <text
-  className="ax-word ax-word--blue"
+  className="ax-word ax-word--giant-leap"
   onClick={undefined}
   style={
     Object {
@@ -32,9 +32,9 @@ exports[`Word renders with color blue 1`] = `
 />
 `;
 
-exports[`Word renders with color brown 1`] = `
+exports[`Word renders with color ground-control 1`] = `
 <text
-  className="ax-word ax-word--brown"
+  className="ax-word ax-word--ground-control"
   onClick={undefined}
   style={
     Object {
@@ -48,9 +48,9 @@ exports[`Word renders with color brown 1`] = `
 />
 `;
 
-exports[`Word renders with color chartreuse 1`] = `
+exports[`Word renders with color primeval-soup 1`] = `
 <text
-  className="ax-word ax-word--chartreuse"
+  className="ax-word ax-word--primeval-soup"
   onClick={undefined}
   style={
     Object {
@@ -64,9 +64,9 @@ exports[`Word renders with color chartreuse 1`] = `
 />
 `;
 
-exports[`Word renders with color green 1`] = `
+exports[`Word renders with color terra-form 1`] = `
 <text
-  className="ax-word ax-word--green"
+  className="ax-word ax-word--terra-form"
   onClick={undefined}
   style={
     Object {
@@ -80,9 +80,9 @@ exports[`Word renders with color green 1`] = `
 />
 `;
 
-exports[`Word renders with color grey 1`] = `
+exports[`Word renders with color luna-dust 1`] = `
 <text
-  className="ax-word ax-word--grey"
+  className="ax-word ax-word--luna-dust"
   onClick={undefined}
   style={
     Object {
@@ -96,9 +96,9 @@ exports[`Word renders with color grey 1`] = `
 />
 `;
 
-exports[`Word renders with color lilac 1`] = `
+exports[`Word renders with color serene-sea 1`] = `
 <text
-  className="ax-word ax-word--lilac"
+  className="ax-word ax-word--serene-sea"
   onClick={undefined}
   style={
     Object {
@@ -112,9 +112,9 @@ exports[`Word renders with color lilac 1`] = `
 />
 `;
 
-exports[`Word renders with color orange 1`] = `
+exports[`Word renders with color blast-off 1`] = `
 <text
-  className="ax-word ax-word--orange"
+  className="ax-word ax-word--blast-off"
   onClick={undefined}
   style={
     Object {
@@ -128,9 +128,9 @@ exports[`Word renders with color orange 1`] = `
 />
 `;
 
-exports[`Word renders with color pink 1`] = `
+exports[`Word renders with color critical-mass 1`] = `
 <text
-  className="ax-word ax-word--pink"
+  className="ax-word ax-word--critical-mass"
   onClick={undefined}
   style={
     Object {
@@ -144,9 +144,9 @@ exports[`Word renders with color pink 1`] = `
 />
 `;
 
-exports[`Word renders with color purple 1`] = `
+exports[`Word renders with color paradise-lost 1`] = `
 <text
-  className="ax-word ax-word--purple"
+  className="ax-word ax-word--paradise-lost"
   onClick={undefined}
   style={
     Object {
@@ -160,9 +160,9 @@ exports[`Word renders with color purple 1`] = `
 />
 `;
 
-exports[`Word renders with color rose 1`] = `
+exports[`Word renders with color tiny-clanger 1`] = `
 <text
-  className="ax-word ax-word--rose"
+  className="ax-word ax-word--tiny-clanger"
   onClick={undefined}
   style={
     Object {
@@ -176,9 +176,9 @@ exports[`Word renders with color rose 1`] = `
 />
 `;
 
-exports[`Word renders with color teal 1`] = `
+exports[`Word renders with color moon-lagoon 1`] = `
 <text
-  className="ax-word ax-word--teal"
+  className="ax-word ax-word--moon-lagoon"
   onClick={undefined}
   style={
     Object {

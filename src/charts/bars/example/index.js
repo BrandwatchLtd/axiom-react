@@ -24,7 +24,7 @@ class BarsExample extends Component {
         direction: 'up',
       },
       Bar: {
-        color: 'pink',
+        color: 'critical-mass',
         showLabel: true,
         onClick: () => {},
       },

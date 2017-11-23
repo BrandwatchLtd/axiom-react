@@ -13,18 +13,18 @@ import {
 } from 'bw-axiom';
 
 const colors = [
-  'rose',
-  'pink',
-  'purple',
-  'lilac',
-  'blue',
-  'teal',
-  'green',
-  'chartreuse',
-  'amber',
-  'orange',
-  'brown',
-  'grey',
+  'tiny-clanger',
+  'critical-mass',
+  'paradise-lost',
+  'serene-sea',
+  'giant-leap',
+  'moon-lagoon',
+  'terra-form',
+  'primeval-soup',
+  'new-horizon',
+  'blast-off',
+  'ground-control',
+  'luna-dust',
 ];
 
 const typeColorMap = {
@@ -93,13 +93,13 @@ export default class ComponentProp extends Component {
               <GridCell>
                 <BadgeGroup>
                   { required && (
-                    <Badge color="pink">
+                    <Badge color="critical-mass">
                       <Strong>Required</Strong>
                     </Badge>
                   ) }
 
                   { showDefault && (
-                    <Badge color="orange">
+                    <Badge color="blast-off">
                       <Strong>Default:</Strong> { defaultValue.toString() }
                     </Badge>
                   ) }

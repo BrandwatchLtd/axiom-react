@@ -23,7 +23,7 @@ class BadgeExample extends Component {
 
     const initialProps = {
       Badge: {
-        color: 'rose',
+        color: 'tiny-clanger',
       },
       BadgeGroup: {
 

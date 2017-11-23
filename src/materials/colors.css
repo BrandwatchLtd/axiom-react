@@ -60,53 +60,53 @@
 
   --color-ui-highlight: #D7FF00;
 
-  --color-brand-rose--dark: #E884A6;
-  --color-brand-rose: #F498B7;
-  --color-brand-rose--light: #FFABC7;
+  --color-product-tiny-clanger--active: #E884A6;
+  --color-product-tiny-clanger: #F498B7;
+  --color-product-tiny-clanger--hover: #FFABC7;
 
-  --color-brand-pink--dark: #E1455D;
-  --color-brand-pink: #ED556D;
-  --color-brand-pink--light: #FA667D;
+  --color-product-critical-mass--active: #E1455D;
+  --color-product-critical-mass: #ED556D;
+  --color-product-critical-mass--hover: #FA667D;
 
-  --color-brand-purple--dark: #8F63A6;
-  --color-brand-purple: #9C73B2;
-  --color-brand-purple--light: #AB86BF;
+  --color-product-paradise-lost--active: #8F63A6;
+  --color-product-paradise-lost: #9C73B2;
+  --color-product-paradise-lost--hover: #AB86BF;
 
-  --color-brand-lilac--dark: #7D8FCA;
-  --color-brand-lilac: #90A0D6;
-  --color-brand-lilac--light: #A4B2E3;
+  --color-product-serene-sea--active: #7D8FCA;
+  --color-product-serene-sea: #90A0D6;
+  --color-product-serene-sea--hover: #A4B2E3;
 
-  --color-brand-blue--dark: #4EB4D9;
-  --color-brand-blue: #5FC3E6;
-  --color-brand-blue--light: #6FD0F3;
+  --color-product-giant-leap--active: #4EB4D9;
+  --color-product-giant-leap: #5FC3E6;
+  --color-product-giant-leap--hover: #6FD0F3;
 
-  --color-brand-teal--dark: #259BA3;
-  --color-brand-teal: #31A6AF;
-  --color-brand-teal--light: #3EB4BD;
+  --color-product-moon-lagoon--active: #259BA3;
+  --color-product-moon-lagoon: #31A6AF;
+  --color-product-moon-lagoon--hover: #3EB4BD;
 
-  --color-brand-green--dark: #6AA626;
-  --color-brand-green: #77B232;
-  --color-brand-green--light: #83BF3F;
+  --color-product-terra-form--active: #6AA626;
+  --color-product-terra-form: #77B232;
+  --color-product-terra-form--hover: #83BF3F;
 
-  --color-brand-chartreuse--dark: #B5AD0A;
-  --color-brand-chartreuse: #C1B816;
-  --color-brand-chartreuse--light: #CFC621;
+  --color-product-primeval-soup--active: #B5AD0A;
+  --color-product-primeval-soup: #C1B816;
+  --color-product-primeval-soup--hover: #CFC621;
 
-  --color-brand-amber--dark: #EEAE00;
-  --color-brand-amber: #F9B800;
-  --color-brand-amber--light: #FFBF0C;
+  --color-product-new-horizon--active: #EEAE00;
+  --color-product-new-horizon: #F9B800;
+  --color-product-new-horizon--hover: #FFBF0C;
 
-  --color-brand-orange--dark: #E67E00;
-  --color-brand-orange: #F38700;
-  --color-brand-orange--light: #FF920C;
+  --color-product-blast-off--active: #E67E00;
+  --color-product-blast-off: #F38700;
+  --color-product-blast-off--hover: #FF920C;
 
-  --color-brand-brown--dark: #9E5524;
-  --color-brand-brown: #AA6130;
-  --color-brand-brown--light: #B86E3C;
+  --color-product-ground-control--active: #9E5524;
+  --color-product-ground-control: #AA6130;
+  --color-product-ground-control--hover: #B86E3C;
 
-  --color-brand-grey--dark: #67818F;
-  --color-brand-grey: #78909C;
-  --color-brand-grey--light: #8A9EA8;
+  --color-product-luna-dust--active: #67818F;
+  --color-product-luna-dust: #78909C;
+  --color-product-luna-dust--hover: #8A9EA8;
 
   --color-external-twitter-blue: #1DA1F2;
 

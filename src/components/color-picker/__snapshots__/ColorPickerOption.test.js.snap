@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColorPickerOption renders with color amber 1`] = `
+exports[`ColorPickerOption renders with color new-horizon 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--amber"
+  className="ax-color-picker__option ax-color-picker__option--new-horizon"
   onClick={[Function]}
   style={
     Object {
@@ -13,9 +13,9 @@ exports[`ColorPickerOption renders with color amber 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color blue 1`] = `
+exports[`ColorPickerOption renders with color giant-leap 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--blue"
+  className="ax-color-picker__option ax-color-picker__option--giant-leap"
   onClick={[Function]}
   style={
     Object {
@@ -26,9 +26,9 @@ exports[`ColorPickerOption renders with color blue 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color brown 1`] = `
+exports[`ColorPickerOption renders with color ground-control 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--brown"
+  className="ax-color-picker__option ax-color-picker__option--ground-control"
   onClick={[Function]}
   style={
     Object {
@@ -39,9 +39,9 @@ exports[`ColorPickerOption renders with color brown 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color chartreuse 1`] = `
+exports[`ColorPickerOption renders with color primeval-soup 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--chartreuse"
+  className="ax-color-picker__option ax-color-picker__option--primeval-soup"
   onClick={[Function]}
   style={
     Object {
@@ -52,9 +52,9 @@ exports[`ColorPickerOption renders with color chartreuse 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color green 1`] = `
+exports[`ColorPickerOption renders with color terra-form 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--green"
+  className="ax-color-picker__option ax-color-picker__option--terra-form"
   onClick={[Function]}
   style={
     Object {
@@ -65,9 +65,9 @@ exports[`ColorPickerOption renders with color green 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color grey 1`] = `
+exports[`ColorPickerOption renders with color luna-dust 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--grey"
+  className="ax-color-picker__option ax-color-picker__option--luna-dust"
   onClick={[Function]}
   style={
     Object {
@@ -78,9 +78,9 @@ exports[`ColorPickerOption renders with color grey 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color lilac 1`] = `
+exports[`ColorPickerOption renders with color serene-sea 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--lilac"
+  className="ax-color-picker__option ax-color-picker__option--serene-sea"
   onClick={[Function]}
   style={
     Object {
@@ -91,9 +91,9 @@ exports[`ColorPickerOption renders with color lilac 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color orange 1`] = `
+exports[`ColorPickerOption renders with color blast-off 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--orange"
+  className="ax-color-picker__option ax-color-picker__option--blast-off"
   onClick={[Function]}
   style={
     Object {
@@ -104,9 +104,9 @@ exports[`ColorPickerOption renders with color orange 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color pink 1`] = `
+exports[`ColorPickerOption renders with color critical-mass 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--pink"
+  className="ax-color-picker__option ax-color-picker__option--critical-mass"
   onClick={[Function]}
   style={
     Object {
@@ -117,9 +117,9 @@ exports[`ColorPickerOption renders with color pink 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color purple 1`] = `
+exports[`ColorPickerOption renders with color paradise-lost 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--purple"
+  className="ax-color-picker__option ax-color-picker__option--paradise-lost"
   onClick={[Function]}
   style={
     Object {
@@ -130,9 +130,9 @@ exports[`ColorPickerOption renders with color purple 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color rose 1`] = `
+exports[`ColorPickerOption renders with color tiny-clanger 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--rose"
+  className="ax-color-picker__option ax-color-picker__option--tiny-clanger"
   onClick={[Function]}
   style={
     Object {
@@ -143,9 +143,9 @@ exports[`ColorPickerOption renders with color rose 1`] = `
 />
 `;
 
-exports[`ColorPickerOption renders with color teal 1`] = `
+exports[`ColorPickerOption renders with color moon-lagoon 1`] = `
 <div
-  className="ax-color-picker__option ax-color-picker__option--teal"
+  className="ax-color-picker__option ax-color-picker__option--moon-lagoon"
   onClick={[Function]}
   style={
     Object {

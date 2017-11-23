@@ -30,7 +30,7 @@ exports[`DataPickerHeader renders with color 1`] = `
             }
           >
             <div
-              className="ax-color-picker__option ax-color-picker__option--blue"
+              className="ax-color-picker__option ax-color-picker__option--giant-leap"
               onClick={[Function]}
               style={
                 Object {

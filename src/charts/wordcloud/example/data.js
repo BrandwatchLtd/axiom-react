@@ -13,7 +13,7 @@ export const wordArray = [{
   text: 'words',
   textAnchor: 'middle',
 }, {
-  color: 'teal',
+  color: 'moon-lagoon',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   fontSize: '43px',
   x: 126.5,
@@ -91,7 +91,7 @@ export const wordArray = [{
   x: 296.5,
   y: 111.5,
 }, {
-  color: 'pink',
+  color: 'critical-mass',
   fontSize: '26px',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
@@ -113,7 +113,7 @@ export const wordArray = [{
   x: 119.5,
   y: 153.5,
 }, {
-  color: 'teal',
+  color: 'moon-lagoon',
   fontSize: '18.5px',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
@@ -275,7 +275,7 @@ export const wordArray = [{
   x: 85.5,
   y: 233.5,
 }, {
-  color: 'pink',
+  color: 'critical-mass',
   fontSize: '18.5px',
   font: 'Roboto, Helvetica, Arial, sans-serif',
   textAnchor: 'middle',
