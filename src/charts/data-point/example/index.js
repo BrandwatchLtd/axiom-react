@@ -39,22 +39,22 @@ class DataPointExample extends Component {
         <Grid shrink snippetIgnore>
           <GridCell snippetIgnore>
             <DataPoints { ...initialProps.DataPoints }>
-              <DataPoint { ...initialProps.DataPoint } color="blue" />
+              <DataPoint { ...initialProps.DataPoint } color="giant-leap" />
             </DataPoints>
           </GridCell>
 
           <GridCell snippetIgnore>
             <DataPoints { ...initialProps.DataPoints }>
-              <DataPoint { ...initialProps.DataPoint } color="blue" />
-              <DataPoint { ...initialProps.DataPoint } color="pink" />
+              <DataPoint { ...initialProps.DataPoint } color="giant-leap" />
+              <DataPoint { ...initialProps.DataPoint } color="critical-mass" />
             </DataPoints>
           </GridCell>
 
           <GridCell snippetIgnore>
             <DataPoints { ...initialProps.DataPoints }>
-              <DataPoint { ...initialProps.DataPoint } color="blue" />
-              <DataPoint { ...initialProps.DataPoint } color="pink" />
-              <DataPoint { ...initialProps.DataPoint } color="amber" />
+              <DataPoint { ...initialProps.DataPoint } color="giant-leap" />
+              <DataPoint { ...initialProps.DataPoint } color="critical-mass" />
+              <DataPoint { ...initialProps.DataPoint } color="new-horizon" />
             </DataPoints>
           </GridCell>
         </Grid>

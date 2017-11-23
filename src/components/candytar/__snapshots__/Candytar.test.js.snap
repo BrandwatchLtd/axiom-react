@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Candytar renders with color amber 1`] = `
+exports[`Candytar renders with color new-horizon 1`] = `
 <svg
-  className="ax-candytar ax-candytar--amber"
+  className="ax-candytar ax-candytar--new-horizon"
   style={
     Object {
       "height": "2rem",
@@ -25,9 +25,9 @@ exports[`Candytar renders with color amber 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color blue 1`] = `
+exports[`Candytar renders with color giant-leap 1`] = `
 <svg
-  className="ax-candytar ax-candytar--blue"
+  className="ax-candytar ax-candytar--giant-leap"
   style={
     Object {
       "height": "2rem",
@@ -50,9 +50,9 @@ exports[`Candytar renders with color blue 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color brown 1`] = `
+exports[`Candytar renders with color ground-control 1`] = `
 <svg
-  className="ax-candytar ax-candytar--brown"
+  className="ax-candytar ax-candytar--ground-control"
   style={
     Object {
       "height": "2rem",
@@ -75,9 +75,9 @@ exports[`Candytar renders with color brown 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color chartreuse 1`] = `
+exports[`Candytar renders with color primeval-soup 1`] = `
 <svg
-  className="ax-candytar ax-candytar--chartreuse"
+  className="ax-candytar ax-candytar--primeval-soup"
   style={
     Object {
       "height": "2rem",
@@ -100,9 +100,9 @@ exports[`Candytar renders with color chartreuse 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color green 1`] = `
+exports[`Candytar renders with color terra-form 1`] = `
 <svg
-  className="ax-candytar ax-candytar--green"
+  className="ax-candytar ax-candytar--terra-form"
   style={
     Object {
       "height": "2rem",
@@ -125,9 +125,9 @@ exports[`Candytar renders with color green 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color grey 1`] = `
+exports[`Candytar renders with color luna-dust 1`] = `
 <svg
-  className="ax-candytar ax-candytar--grey"
+  className="ax-candytar ax-candytar--luna-dust"
   style={
     Object {
       "height": "2rem",
@@ -150,9 +150,9 @@ exports[`Candytar renders with color grey 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color lilac 1`] = `
+exports[`Candytar renders with color serene-sea 1`] = `
 <svg
-  className="ax-candytar ax-candytar--lilac"
+  className="ax-candytar ax-candytar--serene-sea"
   style={
     Object {
       "height": "2rem",
@@ -175,9 +175,9 @@ exports[`Candytar renders with color lilac 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color orange 1`] = `
+exports[`Candytar renders with color blast-off 1`] = `
 <svg
-  className="ax-candytar ax-candytar--orange"
+  className="ax-candytar ax-candytar--blast-off"
   style={
     Object {
       "height": "2rem",
@@ -200,9 +200,9 @@ exports[`Candytar renders with color orange 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color pink 1`] = `
+exports[`Candytar renders with color critical-mass 1`] = `
 <svg
-  className="ax-candytar ax-candytar--pink"
+  className="ax-candytar ax-candytar--critical-mass"
   style={
     Object {
       "height": "2rem",
@@ -225,9 +225,9 @@ exports[`Candytar renders with color pink 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color purple 1`] = `
+exports[`Candytar renders with color paradise-lost 1`] = `
 <svg
-  className="ax-candytar ax-candytar--purple"
+  className="ax-candytar ax-candytar--paradise-lost"
   style={
     Object {
       "height": "2rem",
@@ -250,9 +250,9 @@ exports[`Candytar renders with color purple 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color rose 1`] = `
+exports[`Candytar renders with color tiny-clanger 1`] = `
 <svg
-  className="ax-candytar ax-candytar--rose"
+  className="ax-candytar ax-candytar--tiny-clanger"
   style={
     Object {
       "height": "2rem",
@@ -275,9 +275,9 @@ exports[`Candytar renders with color rose 1`] = `
 </svg>
 `;
 
-exports[`Candytar renders with color teal 1`] = `
+exports[`Candytar renders with color moon-lagoon 1`] = `
 <svg
-  className="ax-candytar ax-candytar--teal"
+  className="ax-candytar ax-candytar--moon-lagoon"
   style={
     Object {
       "height": "2rem",
@@ -302,7 +302,7 @@ exports[`Candytar renders with color teal 1`] = `
 
 exports[`Candytar renders with custom size 1`] = `
 <svg
-  className="ax-candytar ax-candytar--rose"
+  className="ax-candytar ax-candytar--tiny-clanger"
   style={
     Object {
       "height": "4rem",

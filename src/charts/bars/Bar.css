@@ -29,18 +29,18 @@
 .ax-bars__bar-rect {
   flex: 1 1 0%;
 
-  &.ax-bars__bar-rect--rose { background-color: var(--color-brand-rose); }
-  &.ax-bars__bar-rect--pink { background-color: var(--color-brand-pink); }
-  &.ax-bars__bar-rect--purple { background-color: var(--color-brand-purple); }
-  &.ax-bars__bar-rect--lilac { background-color: var(--color-brand-lilac); }
-  &.ax-bars__bar-rect--blue { background-color: var(--color-brand-blue); }
-  &.ax-bars__bar-rect--teal { background-color: var(--color-brand-teal); }
-  &.ax-bars__bar-rect--green { background-color: var(--color-brand-green); }
-  &.ax-bars__bar-rect--chartreuse { background-color: var(--color-brand-chartreuse); }
-  &.ax-bars__bar-rect--amber { background-color: var(--color-brand-amber); }
-  &.ax-bars__bar-rect--orange { background-color: var(--color-brand-orange); }
-  &.ax-bars__bar-rect--brown { background-color: var(--color-brand-brown); }
-  &.ax-bars__bar-rect--grey { background-color: var(--color-brand-grey); }
+  &.ax-bars__bar-rect--tiny-clanger { background-color: var(--color-product-tiny-clanger); }
+  &.ax-bars__bar-rect--critical-mass { background-color: var(--color-product-critical-mass); }
+  &.ax-bars__bar-rect--paradise-lost { background-color: var(--color-product-paradise-lost); }
+  &.ax-bars__bar-rect--serene-sea { background-color: var(--color-product-serene-sea); }
+  &.ax-bars__bar-rect--giant-leap { background-color: var(--color-product-giant-leap); }
+  &.ax-bars__bar-rect--moon-lagoon { background-color: var(--color-product-moon-lagoon); }
+  &.ax-bars__bar-rect--terra-form { background-color: var(--color-product-terra-form); }
+  &.ax-bars__bar-rect--primeval-soup { background-color: var(--color-product-primeval-soup); }
+  &.ax-bars__bar-rect--new-horizon { background-color: var(--color-product-new-horizon); }
+  &.ax-bars__bar-rect--blast-off { background-color: var(--color-product-blast-off); }
+  &.ax-bars__bar-rect--ground-control { background-color: var(--color-product-ground-control); }
+  &.ax-bars__bar-rect--luna-dust { background-color: var(--color-product-luna-dust); }
 }
 
 .ax-bars__bar--clickable {
@@ -51,64 +51,64 @@
     transition-duration: var(--transition-time-base);
     transition-timing-function: var(--transition-function);
 
-    &.ax-bars__bar-rect--rose {
-      &:hover { background-color: var(--color-brand-rose--light); }
-      &:active { background-color: var(--color-brand-rose--dark); }
+    &.ax-bars__bar-rect--tiny-clanger {
+      &:hover { background-color: var(--color-product-tiny-clanger--hover); }
+      &:active { background-color: var(--color-product-tiny-clanger--active); }
     }
 
-    &.ax-bars__bar-rect--pink {
-      &:hover { background-color: var(--color-brand-pink--light); }
-      &:active { background-color: var(--color-brand-pink--dark); }
+    &.ax-bars__bar-rect--critical-mass {
+      &:hover { background-color: var(--color-product-critical-mass--hover); }
+      &:active { background-color: var(--color-product-critical-mass--active); }
     }
 
-    &.ax-bars__bar-rect--purple {
-      &:hover { background-color: var(--color-brand-purple--light); }
-      &:active { background-color: var(--color-brand-purple--dark); }
+    &.ax-bars__bar-rect--paradise-lost {
+      &:hover { background-color: var(--color-product-paradise-lost--hover); }
+      &:active { background-color: var(--color-product-paradise-lost--active); }
     }
 
-    &.ax-bars__bar-rect--lilac {
-      &:hover { background-color: var(--color-brand-lilac--light); }
-      &:active { background-color: var(--color-brand-lilac--dark); }
+    &.ax-bars__bar-rect--serene-sea {
+      &:hover { background-color: var(--color-product-serene-sea--hover); }
+      &:active { background-color: var(--color-product-serene-sea--active); }
     }
 
-    &.ax-bars__bar-rect--blue {
-      &:hover { background-color: var(--color-brand-blue--light); }
-      &:active { background-color: var(--color-brand-blue--dark); }
+    &.ax-bars__bar-rect--giant-leap {
+      &:hover { background-color: var(--color-product-giant-leap--hover); }
+      &:active { background-color: var(--color-product-giant-leap--active); }
     }
 
-    &.ax-bars__bar-rect--teal {
-      &:hover { background-color: var(--color-brand-teal--light); }
-      &:active { background-color: var(--color-brand-teal--dark); }
+    &.ax-bars__bar-rect--moon-lagoon {
+      &:hover { background-color: var(--color-product-moon-lagoon--hover); }
+      &:active { background-color: var(--color-product-moon-lagoon--active); }
     }
 
-    &.ax-bars__bar-rect--green {
-      &:hover { background-color: var(--color-brand-green--light); }
-      &:active { background-color: var(--color-brand-green--dark); }
+    &.ax-bars__bar-rect--terra-form {
+      &:hover { background-color: var(--color-product-terra-form--hover); }
+      &:active { background-color: var(--color-product-terra-form--active); }
     }
 
-    &.ax-bars__bar-rect--chartreuse {
-      &:hover { background-color: var(--color-brand-chartreuse--light); }
-      &:active { background-color: var(--color-brand-chartreuse--dark); }
+    &.ax-bars__bar-rect--primeval-soup {
+      &:hover { background-color: var(--color-product-primeval-soup--hover); }
+      &:active { background-color: var(--color-product-primeval-soup--active); }
     }
 
-    &.ax-bars__bar-rect--amber {
-      &:hover { background-color: var(--color-brand-amber--light); }
-      &:active { background-color: var(--color-brand-amber--dark); }
+    &.ax-bars__bar-rect--new-horizon {
+      &:hover { background-color: var(--color-product-new-horizon--hover); }
+      &:active { background-color: var(--color-product-new-horizon--active); }
     }
 
-    &.ax-bars__bar-rect--orange {
-      &:hover { background-color: var(--color-brand-orange--light); }
-      &:active { background-color: var(--color-brand-orange--dark); }
+    &.ax-bars__bar-rect--blast-off {
+      &:hover { background-color: var(--color-product-blast-off--hover); }
+      &:active { background-color: var(--color-product-blast-off--active); }
     }
 
-    &.ax-bars__bar-rect--brown {
-      &:hover { background-color: var(--color-brand-brown--light); }
-      &:active { background-color: var(--color-brand-brown--dark); }
+    &.ax-bars__bar-rect--ground-control {
+      &:hover { background-color: var(--color-product-ground-control--hover); }
+      &:active { background-color: var(--color-product-ground-control--active); }
     }
 
-    &.ax-bars__bar-rect--grey {
-      &:hover { background-color: var(--color-brand-grey--light); }
-      &:active { background-color: var(--color-brand-grey--dark); }
+    &.ax-bars__bar-rect--luna-dust {
+      &:hover { background-color: var(--color-product-luna-dust--hover); }
+      &:active { background-color: var(--color-product-luna-dust--active); }
     }
   }
 }

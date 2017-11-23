@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Candytar from './Candytar';
-import brandColors from '../../materials/colors/brandColors';
+import productColors from '../../materials/colors/productColors';
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -10,13 +10,13 @@ const getComponent = (props = {}) =>
 
 describe('Candytar', () => {
   it('renders with custom size', () => {
-    const component = getComponent({ color: 'rose', size: '4rem' });
+    const component = getComponent({ color: 'tiny-clanger', size: '4rem' });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   describe('renders with color', () => {
-    brandColors.forEach((color) => {
+    productColors.forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

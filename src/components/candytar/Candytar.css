@@ -2,86 +2,86 @@
   display: block;
 }
 
-.ax-candytar--rose {
+.ax-candytar--tiny-clanger {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-rose);
+    fill: var(--color-product-tiny-clanger);
   }
 }
 
-.ax-candytar--pink {
+.ax-candytar--critical-mass {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-pink);
+    fill: var(--color-product-critical-mass);
   }
 }
 
-.ax-candytar--purple {
+.ax-candytar--paradise-lost {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-purple);
+    fill: var(--color-product-paradise-lost);
   }
 }
 
-.ax-candytar--lilac {
+.ax-candytar--serene-sea {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-lilac);
+    fill: var(--color-product-serene-sea);
   }
 }
 
-.ax-candytar--blue {
+.ax-candytar--giant-leap {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-blue);
+    fill: var(--color-product-giant-leap);
   }
 }
 
-.ax-candytar--teal {
+.ax-candytar--moon-lagoon {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-teal);
+    fill: var(--color-product-moon-lagoon);
   }
 }
 
-.ax-candytar--green {
+.ax-candytar--terra-form {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-green);
+    fill: var(--color-product-terra-form);
   }
 }
 
-.ax-candytar--chartreuse {
+.ax-candytar--primeval-soup {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-chartreuse);
+    fill: var(--color-product-primeval-soup);
   }
 }
 
-.ax-candytar--amber {
+.ax-candytar--new-horizon {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-amber);
+    fill: var(--color-product-new-horizon);
   }
 }
 
-.ax-candytar--orange {
+.ax-candytar--blast-off {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-orange);
+    fill: var(--color-product-blast-off);
   }
 }
 
-.ax-candytar--brown {
+.ax-candytar--ground-control {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-brown);
+    fill: var(--color-product-ground-control);
   }
 }
 
-.ax-candytar--grey {
+.ax-candytar--luna-dust {
   & .ax-candytar__body,
   & .ax-candytar__background {
-    fill: var(--color-brand-grey);
+    fill: var(--color-product-luna-dust);
   }
 }

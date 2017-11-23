@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stat renders with color amber 1`] = `
+exports[`Stat renders with color new-horizon 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--amber"
+  className="ax-stat-cards__stat ax-stat-cards__stat--new-horizon"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -12,9 +12,9 @@ exports[`Stat renders with color amber 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color blue 1`] = `
+exports[`Stat renders with color giant-leap 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--blue"
+  className="ax-stat-cards__stat ax-stat-cards__stat--giant-leap"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -24,9 +24,9 @@ exports[`Stat renders with color blue 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color brown 1`] = `
+exports[`Stat renders with color ground-control 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--brown"
+  className="ax-stat-cards__stat ax-stat-cards__stat--ground-control"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -36,9 +36,9 @@ exports[`Stat renders with color brown 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color chartreuse 1`] = `
+exports[`Stat renders with color primeval-soup 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--chartreuse"
+  className="ax-stat-cards__stat ax-stat-cards__stat--primeval-soup"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -48,9 +48,9 @@ exports[`Stat renders with color chartreuse 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color green 1`] = `
+exports[`Stat renders with color terra-form 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--green"
+  className="ax-stat-cards__stat ax-stat-cards__stat--terra-form"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -60,9 +60,9 @@ exports[`Stat renders with color green 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color grey 1`] = `
+exports[`Stat renders with color luna-dust 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--grey"
+  className="ax-stat-cards__stat ax-stat-cards__stat--luna-dust"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -72,9 +72,9 @@ exports[`Stat renders with color grey 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color lilac 1`] = `
+exports[`Stat renders with color serene-sea 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--lilac"
+  className="ax-stat-cards__stat ax-stat-cards__stat--serene-sea"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -84,9 +84,9 @@ exports[`Stat renders with color lilac 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color orange 1`] = `
+exports[`Stat renders with color blast-off 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--orange"
+  className="ax-stat-cards__stat ax-stat-cards__stat--blast-off"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -96,9 +96,9 @@ exports[`Stat renders with color orange 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color pink 1`] = `
+exports[`Stat renders with color critical-mass 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--pink"
+  className="ax-stat-cards__stat ax-stat-cards__stat--critical-mass"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -108,9 +108,9 @@ exports[`Stat renders with color pink 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color purple 1`] = `
+exports[`Stat renders with color paradise-lost 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--purple"
+  className="ax-stat-cards__stat ax-stat-cards__stat--paradise-lost"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -120,9 +120,9 @@ exports[`Stat renders with color purple 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color rose 1`] = `
+exports[`Stat renders with color tiny-clanger 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--rose"
+  className="ax-stat-cards__stat ax-stat-cards__stat--tiny-clanger"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"
@@ -132,9 +132,9 @@ exports[`Stat renders with color rose 1`] = `
 </li>
 `;
 
-exports[`Stat renders with color teal 1`] = `
+exports[`Stat renders with color moon-lagoon 1`] = `
 <li
-  className="ax-stat-cards__stat ax-stat-cards__stat--teal"
+  className="ax-stat-cards__stat ax-stat-cards__stat--moon-lagoon"
 >
   <h3
     className="ax-space--x2 ax-text--size-headline"

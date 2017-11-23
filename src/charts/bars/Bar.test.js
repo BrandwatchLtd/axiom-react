@@ -2,12 +2,12 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Bar from './Bar';
 import Bars from './Bars';
-import brandColors from '../../materials/colors/brandColors';
+import productColors from '../../materials/colors/productColors';
 
 const getComponent = (props = {}, direction = 'up') =>
   renderer.create(
     <Bars direction={ direction }>
-      <Bar color="rose" percent={ 50 } { ...props } />
+      <Bar color="tiny-clanger" percent={ 50 } { ...props } />
     </Bars>
   );
 
@@ -19,7 +19,7 @@ describe('Bar', () => {
   });
 
   describe('renders with color', () => {
-    brandColors.forEach((color) => {
+    productColors.forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

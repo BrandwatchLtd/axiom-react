@@ -6,9 +6,9 @@ import DataPoints from './DataPoints';
 const getComponent = (props = {}) =>
   renderer.create(
     <DataPoints size="1rem" { ...props }>
-      <DataPoint color="blue" />
-      <DataPoint color="pink" />
-      <DataPoint color="amber" />
+      <DataPoint color="giant-leap" />
+      <DataPoint color="critical-mass" />
+      <DataPoint color="new-horizon" />
     </DataPoints>
   );
 

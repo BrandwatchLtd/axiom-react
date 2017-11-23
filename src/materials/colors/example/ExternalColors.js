@@ -7,7 +7,7 @@ export default class ColorsExample extends Component {
     return (
       <Example name="External Colors">
         <ColorSwatch colors={ [
-          { name: 'Twitter', variable: 'external-twitter-blue' },
+          { name: 'Twitter', variable: 'external-twitter-giant-leap' },
         ] } name="Companies" />
       </Example>
     );

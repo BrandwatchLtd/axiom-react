@@ -62,7 +62,7 @@ class StatCardsExample extends Component {
               Lorem Ipsum
             </StatHeading>
             <Stats { ...initialProps.Stats }>
-              <Stat color="blue" { ...initialProps.Stat }>{ randomStatNumber() }</Stat>
+              <Stat color="giant-leap" { ...initialProps.Stat }>{ randomStatNumber() }</Stat>
               <Stat { ...initialProps.Stat }>{ randomStatNumber() }</Stat>
             </Stats>
           </StatCard>
