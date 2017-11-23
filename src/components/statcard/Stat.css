@@ -11,7 +11,7 @@
   & + .ax-stat-cards__stat {
     margin-left: var(--cmp-stat-spacing);
     padding-left: var(--cmp-stat-spacing);
-    border-left: var(--component-border-width) solid var(--color-context-border);
+    border-left: var(--component-border-width) solid var(--color-theme-border);
   }
 }
 

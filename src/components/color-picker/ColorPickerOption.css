@@ -24,11 +24,11 @@
 .ax-color-picker__option--grey { background-color: var(--color-brand-grey); }
 
 .ax-color-picker__option--empty {
-  border: solid var(--color-context-background-subtle);
+  border: solid var(--color-theme-background--subtle);
 }
 
 .ax-color-picker__option--disabled {
-  border: solid var(--component-border-width-small) var(--color-context-background-subtle);
+  border: solid var(--component-border-width-small) var(--color-theme-background--subtle);
   background-color: transparent;
 }
 
@@ -96,7 +96,7 @@
   }
 
   &.ax-color-picker__option--empty {
-    &:hover  { border-color: var(--color-context-background-faded); }
-    &:active { border-color: var(--color-context-background-disabled); }
+    &:hover  { border-color: var(--color-theme-background--hover); }
+    &:active { border-color: var(--color-theme-background--disabled); }
   }
 }

@@ -30,8 +30,8 @@
 .ax-text--case-capital { text-transform: capitalize; }
 .ax-text--case-lower   { text-transform: lowercase; }
 
-.ax-text--color-subtle   { color: var(--color-context-text-subtle); }
-.ax-text--color-disabled { color: var(--color-context-text-disabled); }
+.ax-text--color-subtle   { color: var(--color-theme-text--subtle); }
+.ax-text--color-disabled { color: var(--color-theme-text--disabled); }
 .ax-text--color-carbon { color: var(--color-theme-light-text); }
 .ax-text--color-white-noise    { color: var(--color-theme-dark-text); }
 .ax-text--color-success  { color: var(--color-ui-success); }
@@ -103,7 +103,7 @@
 .ax-text--underline-display2,
 .ax-text--underline-display1,
 .ax-text--underline-headline {
-  border-bottom: var(--component-border-width) solid var(--color-context-border);
+  border-bottom: var(--component-border-width) solid var(--color-theme-border);
 }
 
 .ax-text--underline-headline { padding-bottom: calc(var(--spacing-grid-size) * 2); }

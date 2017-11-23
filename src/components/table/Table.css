@@ -5,8 +5,8 @@
 
 .ax-table__cell {
   padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
-  border-top: var(--component-border-width-medium) solid var(--color-context-border);
-  color: var(--color-context-text-subtle);
+  border-top: var(--component-border-width-medium) solid var(--color-theme-border);
+  color: var(--color-theme-text--subtle);
   transition: color var(--transition-time-base) var(--transition-function);
 }
 
@@ -26,13 +26,13 @@
   outline: 0;
   border: none;
   background: none;
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
   cursor: pointer;
   transition: color var(--transition-time-base) var(--transition-function);
 }
 
 .ax-table__cell--selected {
-  color: var(--color-context-text);
+  color: var(--color-theme-text);
 }
 
 .ax-table__header-button:disabled {
@@ -44,7 +44,7 @@
 }
 
 .ax-table__header-label--selected .ax-table__header-button {
-  color: var(--color-context-text);
+  color: var(--color-theme-text);
 }
 
 .ax-table__header-button::after {
@@ -68,14 +68,14 @@
 
 .ax-table__header-label {
   padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
   transition: color var(--transition-time-base) var(--transition-function);
 }
 
 .ax-table__header:only-child .ax-table__header-label {
-  border-bottom: var(--component-border-width-medium) solid var(--color-context-border);
+  border-bottom: var(--component-border-width-medium) solid var(--color-theme-border);
 }
 
 .ax-table__header-label--align-left {
@@ -91,7 +91,7 @@
 }
 
 .ax-table__header-label--selected {
-  color: var(--color-context-text);
+  color: var(--color-theme-text);
 }
 
 .ax-table__header-label--shrink {
@@ -105,18 +105,18 @@
 }
 
 .ax-table__row:last-child .ax-table__cell {
-  border-bottom: var(--component-border-width-medium) solid var(--color-context-border);
+  border-bottom: var(--component-border-width-medium) solid var(--color-theme-border);
 }
 
 .ax-table__row.ax-table__row--hover,
 .ax-table__row:hover {
-  background-color: var(--color-context-background-hover);
+  background-color: var(--color-theme-background--hover);
 
   & .ax-table__cell {
-    border-color: var(--color-context-background-hover);
+    border-color: var(--color-theme-background--hover);
   }
 
   & + .ax-table__row .ax-table__cell {
-    border-top-color: var(--color-context-background-hover);
+    border-top-color: var(--color-theme-background--hover);
   }
 }
