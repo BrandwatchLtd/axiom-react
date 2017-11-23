@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  background-color: var(--color-context-background);
-  color: var(--color-context-text);
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
 }
 
 body,

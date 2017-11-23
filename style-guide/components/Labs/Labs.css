@@ -19,14 +19,14 @@
       0deg,
       transparent,
       transparent var(--sg-labs-square-size),
-      var(--color-context-border) var(--sg-labs-border-width),
+      var(--color-theme-border) var(--sg-labs-border-width),
       transparent calc(var(--sg-labs-square-size) + var(--sg-labs-border-width))
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent var(--sg-labs-square-size),
-      var(--color-context-border) var(--sg-labs-border-width),
+      var(--color-theme-border) var(--sg-labs-border-width),
       transparent calc(var(--sg-labs-square-size) + var(--sg-labs-border-width))
     );
 }
@@ -35,5 +35,5 @@
   max-width: 100%;
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
   box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
-  background-color: var(--color-context-background);
+  background-color: var(--color-theme-background);
 }

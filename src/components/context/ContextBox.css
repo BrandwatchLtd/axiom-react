@@ -14,7 +14,7 @@
   content: '';
   position: absolute;
   bottom: 0;
-  border-bottom: var(--component-border-width) solid var(--color-context-border-subtle);
+  border-bottom: var(--component-border-width) solid var(--color-theme-border);
 }
 
 .ax-context-box--padding-small::after {

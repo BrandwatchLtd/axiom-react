@@ -2,5 +2,5 @@
   width: 100%;
   border-width: var(--component-border-width-small) 0 0 0;
   border-style: solid;
-  border-color: var(--color-context-border);
+  border-color: var(--color-theme-border);
 }

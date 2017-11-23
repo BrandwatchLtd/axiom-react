@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  color: var(--color-context-text);
+  color: var(--color-theme-text);
 }
 
 .ax-logo-page--dark { background-color: var(--color-ui-carbon--dark); }

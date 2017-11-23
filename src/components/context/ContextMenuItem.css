@@ -13,8 +13,8 @@
 .ax-context-menu__item-single {
   outline: 0;
   border: 0;
-  background-color: var(--color-context-background);
-  color: var(--color-context-text);
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
   text-align: left;
   transition-property: background-color, color;
   transition-duration: var(--transition-time-base);
@@ -30,7 +30,7 @@
 .ax-context-menu__item-single:disabled,
 .ax-context-menu__item-multi--disabled {
   background-color: transparent;
-  color: var(--color-context-text-disabled);
+  color: var(--color-theme-text--disabled);
   cursor: default;
 }
 

@@ -5,10 +5,10 @@
 .dm-example__visual {
   padding: calc(var(--spacing-grid-size) * 5);
   box-shadow:
-    0.125rem 0 0.0625rem var(--color-context-background),
-    -1.2rem 0 0.0625rem var(--color-context-background),
-    0 0 0.25rem var(--color-context-text-disabled);
-  background-color: var(--color-context-background);
+    0.125rem 0 0.0625rem var(--color-theme-background),
+    -1.2rem 0 0.0625rem var(--color-theme-background),
+    0 0 0.25rem var(--color-theme-text--disabled);
+  background-color: var(--color-theme-background);
   z-index: 1;
 
   @nest .dm-example--hidden & {
@@ -22,5 +22,5 @@
 
 .dm-example__prop:nth-child(odd) {
   border-radius: var(--component-border-radius);
-  background-color: var(--color-context-background-active);
+  background-color: var(--color-theme-background--hover);
 }

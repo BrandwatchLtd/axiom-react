@@ -5,11 +5,11 @@
   outline: 0;
   border: 0;
   background-color: transparent;
-  color: var(--color-context-text-subtle);
+  color: var(--color-theme-text--subtle);
   cursor: pointer;
 
   &:disabled {
-    color: var(--color-context-text-disabled);
+    color: var(--color-theme-text--disabled);
     cursor: default;
   }
 }
@@ -38,7 +38,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--color-context-background-subtle);
+    background-color: var(--color-theme-background--subtle);
 
     @nest .ax-date-picker__day--first& {
       border-top-left-radius: var(--component-round-size-small);
@@ -70,11 +70,11 @@
 .ax-date-picker__day--selected-end:not(.ax-date-picker__day--first)::before {
   right: 50%;
   left: 0;
-  background-color: var(--color-context-background-subtle);
+  background-color: var(--color-theme-background--subtle);
 }
 
 .ax-date-picker__day--selected-start:not(.ax-date-picker__day--last)::before {
   right: 0;
   left: 50%;
-  background-color: var(--color-context-background-subtle);
+  background-color: var(--color-theme-background--subtle);
 }

@@ -25,7 +25,7 @@
   left: 0;
 }
 
-.ax-badge--faded .ax-badge__background { background-color: var(--color-context-text); }
+.ax-badge--faded .ax-badge__background { background-color: var(--color-theme-text); }
 .ax-badge--highlight .ax-badge__background { background-color: var(--color-ui-highlight); }
 .ax-badge--success .ax-badge__background { background-color: var(--color-ui-success); }
 .ax-badge--error .ax-badge__background { background-color: var(--color-ui-error); }
