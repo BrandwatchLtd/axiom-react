@@ -28,7 +28,7 @@ class LoginExample extends Component {
         error: 'Sorry but we don\'t recognise your username and password combination. \
           Please check your details and try again.',
         onSubmit: this.handleSubmit.bind(this),
-        theme: 'dark',
+        theme: 'night',
       },
     };
 

@@ -2,7 +2,7 @@
 
 exports[`DataPickerHeader renders with color 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--light"
+  className="ax-panel ax-panel--inactive ax-theme--day"
   style={
     Object {
       "minHeight": undefined,
@@ -63,7 +63,7 @@ exports[`DataPickerHeader renders with color 1`] = `
 
 exports[`DataPickerHeader renders with defaultProps 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--light"
+  className="ax-panel ax-panel--inactive ax-theme--day"
   style={
     Object {
       "minHeight": undefined,
@@ -124,7 +124,7 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
 
 exports[`DataPickerHeader renders with onClear 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--light"
+  className="ax-panel ax-panel--inactive ax-theme--day"
   style={
     Object {
       "minHeight": undefined,
@@ -185,7 +185,7 @@ exports[`DataPickerHeader renders with onClear 1`] = `
 
 exports[`DataPickerHeader renders with value 1`] = `
 <div
-  className="ax-panel ax-theme--light"
+  className="ax-panel ax-theme--day"
   style={
     Object {
       "minHeight": undefined,

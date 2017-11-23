@@ -1,5 +1,5 @@
 :root {
-  --ax-toggle-knob-color: var(--color-theme-light-background);
+  --ax-toggle-knob-color: var(--color-theme-day-background);
   --ax-toggle-border-width: 0.0625rem;
   --ax-toggle-size--small: var(--spacing-grid-size--x4);
   --ax-toggle-size--medium: var(--spacing-grid-size--x6);

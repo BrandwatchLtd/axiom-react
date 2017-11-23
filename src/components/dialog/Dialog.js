@@ -18,12 +18,12 @@ export default class Dialog extends Component {
     /** Maximum size of the Dialog */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Theme of the dialog */
-    theme: PropTypes.oneOf(['dark', 'light']),
+    theme: PropTypes.oneOf(['day', 'night']),
   };
 
   static defaultProps = {
     size: 'small',
-    theme: 'light',
+    theme: 'day',
   };
 
   static childContextTypes = {

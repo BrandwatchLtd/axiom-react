@@ -5,8 +5,8 @@ import '../../materials/animations.css';
 import '../../materials/colors.css';
 import '../../materials/layout.css';
 import '../../materials/sizing.css';
-import '../../materials/theme-dark.css';
-import '../../materials/theme-light.css';
+import '../../materials/theme-day.css';
+import '../../materials/theme-night.css';
 import '../../materials/typography.css';
 import './Base.css';
 
@@ -52,10 +52,10 @@ export default class Base extends Component {
     textCenter: PropTypes.oneOf([true, 'small', 'medium', 'large']),
     /** Text color styling */
     textColor: PropTypes.oneOf([
-      'white-noise',
-      'carbon',
+      'day',
       'disabled',
       'error',
+      'night',
       'subtle',
       'success',
       'warning',
@@ -92,7 +92,7 @@ export default class Base extends Component {
     /** Text underlined styling */
     textUnderline: PropTypes.bool,
     /** Theme styling modifier */
-    theme: PropTypes.oneOf(['light', 'dark']),
+    theme: PropTypes.oneOf(['day', 'night']),
     /**
      * Control over when the element should be visible until.
      * Opposite of `hiddenUntil`.

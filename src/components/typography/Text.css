@@ -30,13 +30,13 @@
 .ax-text--case-capital { text-transform: capitalize; }
 .ax-text--case-lower   { text-transform: lowercase; }
 
-.ax-text--color-subtle   { color: var(--color-theme-text--subtle); }
+.ax-text--color-subtle { color: var(--color-theme-text--subtle); }
 .ax-text--color-disabled { color: var(--color-theme-text--disabled); }
-.ax-text--color-carbon { color: var(--color-theme-light-text); }
-.ax-text--color-white-noise    { color: var(--color-theme-dark-text); }
-.ax-text--color-success  { color: var(--color-ui-success); }
-.ax-text--color-warning  { color: var(--color-ui-warning); }
-.ax-text--color-error    { color: var(--color-ui-error); }
+.ax-text--color-day { color: var(--color-theme-day-text); }
+.ax-text--color-night { color: var(--color-theme-night-text); }
+.ax-text--color-success { color: var(--color-ui-success); }
+.ax-text--color-warning { color: var(--color-ui-warning); }
+.ax-text--color-error { color: var(--color-ui-error); }
 
 .ax-text--ellipsis {
   max-width: 100%;

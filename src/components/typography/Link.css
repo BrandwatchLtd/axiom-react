@@ -29,10 +29,10 @@
 }
 
 .ax-link--style-light {
-  color: var(--color-theme-dark-text--subtle);
+  color: var(--color-theme-night-text--subtle);
 
   &:hover,
   &:active {
-    color: var(--color-theme-dark-text);
+    color: var(--color-theme-night-text);
   }
 }

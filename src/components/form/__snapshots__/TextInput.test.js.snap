@@ -1,29 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput render with theme day 1`] = `
-<label
-  className="ax-input__group ax-space--x4"
->
-  <div
-    className="ax-input__button-container"
-  >
-    <div
-      className="ax-input__icon-container ax-input__icon-container--medium"
-    >
-      <input
-        className="ax-input"
-        disabled={undefined}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        theme="day"
-        type="text"
-        value={undefined}
-      />
-    </div>
-  </div>
-</label>
-`;
-
 exports[`TextInput render with theme night 1`] = `
 <label
   className="ax-input__group ax-space--x4"
@@ -40,6 +16,30 @@ exports[`TextInput render with theme night 1`] = `
         onBlur={[Function]}
         onFocus={[Function]}
         theme="night"
+        type="text"
+        value={undefined}
+      />
+    </div>
+  </div>
+</label>
+`;
+
+exports[`TextInput render with theme day 1`] = `
+<label
+  className="ax-input__group ax-space--x4"
+>
+  <div
+    className="ax-input__button-container"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        theme="day"
         type="text"
         value={undefined}
       />

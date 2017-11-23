@@ -31,7 +31,7 @@ export default class Alert extends Component {
     const classes = classnames('ax-alert', `ax-alert--${size}`, `ax-alert--${type}`);
 
     return (
-      <Base { ...rest } className={ classes } theme="light">
+      <Base { ...rest } className={ classes } theme="day">
         <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
           <GridCell shrink>
             <AlertIcon
