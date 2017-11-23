@@ -1,56 +1,44 @@
 import React, { Component } from 'react';
 import { Example } from 'style-guide';
+import ColorSwatch from './ColorSwatch';
 import Grid from '../../../components/grid/Grid';
 import GridCell from '../../../components/grid/GridCell';
-import ColorSwatch from './ColorSwatch';
 
 export default class ColorsExample extends Component {
   render() {
-    const darkGreys = [
-      'ui-dark--dark',
-      'ui-dark',
-      'ui-dark--light',
-    ];
-
-    const lightGreys = [
-      'ui-light--dark',
-      'ui-light',
-      'ui-light--light',
-    ];
-
-    const white = [
-      'ui-white',
-    ];
-
-    const primaries = [
-      'ui-primary--dark',
-      'ui-primary',
-      'ui-primary--light',
-    ];
-
-    const validities = [
-      'ui-success',
-      'ui-warning',
-      'ui-error',
-    ];
-
-    const attention = [
-      'ui-highlight',
-    ];
-
     return (
       <Example name="UI Colors">
-        <Grid>
+        <Grid gutters="large" shrink>
           <GridCell>
-            <ColorSwatch colors={ darkGreys } />
-            <ColorSwatch colors={ lightGreys } />
-            <ColorSwatch colors={ white } />
+            <ColorSwatch colors={ [
+              { name: 'Darker', variable: 'ui-carbon--darker' },
+              { name: 'Dark', variable: 'ui-carbon--dark' },
+              { name: 'Default', variable: 'ui-carbon' },
+            ] } name="Carbon" />
           </GridCell>
 
           <GridCell>
-            <ColorSwatch colors={ primaries } />
-            <ColorSwatch colors={ validities } />
-            <ColorSwatch colors={ attention } />
+            <ColorSwatch colors={ [
+              { name: 'Active', variable: 'ui-accent--active' },
+              { name: 'Default', variable: 'ui-accent' },
+              { name: 'Hover', variable: 'ui-accent--hover' },
+            ] } name="Accent" />
+          </GridCell>
+
+          <GridCell>
+            <ColorSwatch colors={ [
+              { name: 'Darker', variable: 'ui-white-noise--darker' },
+              { name: 'Dark', variable: 'ui-white-noise--dark' },
+              { name: 'Default', variable: 'ui-white-noise' },
+            ] } name="White Noise" />
+          </GridCell>
+        </Grid>
+
+        <Grid gutters="large" shrink>
+          <GridCell>
+            <ColorSwatch colors={ [
+              { name: 'Default', variable: 'ui-white' },
+            ] } name="White" />
           </GridCell>
         </Grid>
       </Example>
