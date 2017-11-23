@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { CodeSnippet, Example } from 'style-guide';
-import Grid from '../../../components/grid/Grid';
-import GridCell from '../../../components/grid/GridCell';
-import Heading from '../../../components/typography/Heading';
 import Paragraph from '../../../components/typography/Paragraph';
 import TextInput from '../../../components/form/TextInput';
 import stringToColor from '../stringToColor';
@@ -30,20 +27,14 @@ export default class StringToColor extends Component {
         <Paragraph>
           Takes a string and deterministically returns a random brand color.
         </Paragraph>
-        <Grid>
-          <GridCell>
-            <TextInput
-                defaultValue={ string }
-                label="String"
-                onChange={ this.handleStringChange } />
-          </GridCell>
-          <GridCell>
-            <Heading>Color</Heading>
-            <Paragraph>{ stringToColor(string) }</Paragraph>
-          </GridCell>
-        </Grid>
+
+        <TextInput
+            defaultValue={ string }
+            label="String"
+            onChange={ this.handleStringChange } />
+
         <CodeSnippet language="js">{`
-          stringToColor('${string}');
+          stringToColor('${string}'); // ${ stringToColor(string) }
         `}</CodeSnippet>
       </Example>
     );
