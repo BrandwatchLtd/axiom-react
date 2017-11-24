@@ -26,18 +26,18 @@ Create `config/postcss.config.js`, doesn't have to be in config directory but th
 // so these configs might require some merging to make it
 // work with its current setup.
 
-{
+module.exports = {
   plugins: [
     require('postcss-import')(),
     require('postcss-cssnext')({
       features: {
         customProperties: {
-          variables: require('bw-axiom/lib/materials/theme-light.json'),
+          variables: require('[path-to-bw-axiom]/lib/materials/cssvars-theme-light'),
         },
       },
     }),
   ],
-}
+};
 ```
 
 Inside `config/webpack.config.dev.js` replace the css rule for
