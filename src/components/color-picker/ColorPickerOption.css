@@ -97,6 +97,6 @@
 
   &.ax-color-picker__option--empty {
     &:hover  { border-color: var(--color-theme-background--hover); }
-    &:active { border-color: var(--color-theme-background--disabled); }
+    &:active { border-color: var(--color-theme-background--active); }
   }
 }
