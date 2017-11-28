@@ -18,4 +18,4 @@
 .ax-alert--success { background-color: var(--color-ui-success); }
 .ax-alert--warning { background-color: var(--color-ui-warning); }
 .ax-alert--error   { background-color: var(--color-ui-error); }
-.ax-alert--info    { background-color: var(--color-ui-accent--hover); }
+.ax-alert--info    { background-color: var(--color-ui-info); }
