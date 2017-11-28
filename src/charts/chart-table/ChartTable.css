@@ -31,7 +31,7 @@
   transition-timing-function: var(--transition-function);
 
   &:hover {
-    background: var(--color-theme-background--disabled);
+    background: var(--color-theme-background--hover);
   }
 }
 
