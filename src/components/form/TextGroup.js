@@ -35,7 +35,6 @@ export default class TextGroup extends Component {
             { label }
           </Base>
         ) }
-
         { children }
       </Base>
     );

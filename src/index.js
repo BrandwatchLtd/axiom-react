@@ -136,6 +136,7 @@ export { default as TextArea } from './components/form/TextArea';
 export { default as TextGroup } from './components/form/TextGroup';
 export { default as TextInput } from './components/form/TextInput';
 export { default as TextInputIcon } from './components/form/TextInputIcon';
+export { default as TextInputButton } from './components/form/TextInputButton';
 export { default as Toggle } from './components/toggle/Toggle';
 export { default as Toolbar } from './components/toolbar/Toolbar';
 export { default as Tool } from './components/toolbar/Tool';

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputButton renders with defaultProps 1`] = `
+<span
+  className="ax-input__button"
+>
+  <button
+    className="ax-button ax-button--medium ax-button--primary ax-button--joined-left"
+    disabled={undefined}
+  >
+    Test
+  </button>
+</span>
+`;

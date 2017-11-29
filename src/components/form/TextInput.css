@@ -22,17 +22,17 @@
   order: 1;
 }
 
-.ax-input__container--small .ax-input {
+.ax-input__icon-container--small .ax-input {
   padding: var(--component-padding-vertical-small) var(--component-padding-horizontal-small);
   font-size: var(--font-size-small);
 }
 
-.ax-input__container--medium .ax-input {
+.ax-input__icon-container--medium .ax-input {
   padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-medium);
   font-size: var(--font-size-small);
 }
 
-.ax-input__container--large .ax-input {
+.ax-input__icon-container--large .ax-input {
   padding: var(--component-padding-vertical-large) var(--component-padding-horizontal-large);
   font-size: var(--font-size-large);
 }
@@ -45,7 +45,7 @@
   animation-fill-mode: forwards;
 }
 
-.ax-input__container {
+.ax-input__icon-container {
   display: flex;
   position: relative;
   flex: 1 1 auto;
@@ -71,17 +71,22 @@
   & .ax-input__icon--align-right + .ax-input {
     padding-right: var(--spacing-grid-size);
   }
+
+  &:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
-.ax-input__container--disabled {
+.ax-input__icon-container--disabled {
   background-color: var(--cmp-input-background-color-disabled);
 }
 
-.ax-input__container--focused {
+.ax-input__icon-container--focused {
   border-color: var(--cmp-input-border-color-focused);
 }
 
-.ax-input__container--overlay {
+.ax-input__icon-container--overlay {
   border-color: transparent;
   background-color: var(--color-context-background-subtle);
 
@@ -90,11 +95,11 @@
   }
 }
 
-.ax-input__container--valid:not(.ax-input__container--focused) {
+.ax-input__icon-container--valid:not(.ax-input__icon-container--focused) {
   border-color: var(--cmp-input-border-color-valid);
 }
 
-.ax-input__container--invalid:not(.ax-input__container--focused) {
+.ax-input__icon-container--invalid:not(.ax-input__icon-container--focused) {
   border-color: var(--cmp-input-border-color-invalid);
   color: var(--cmp-input-color-invalid);
 
@@ -103,9 +108,13 @@
   }
 }
 
-.ax-input__container--light,
-.ax-input__container--dark {
+.ax-input__icon-container--light,
+.ax-input__icon-container--dark {
   & .ax-input:focus::placeholder {
     color: transparent;
   }
+}
+
+.ax-input__button-container {
+  display: flex;
 }

@@ -4,6 +4,7 @@ import { ExampleConfig } from 'style-guide';
 import Form from '../Form';
 import TextInput from '../TextInput';
 import TextInputIcon from '../TextInputIcon';
+import TextInputButton from '../TextInputButton';
 
 export default class TextInputExample extends Component {
   static propTypes = {
@@ -18,17 +19,23 @@ export default class TextInputExample extends Component {
     const propTypes = {
       TextInput: components.TextInput,
       TextInputIcon: components.TextInputIcon,
+      TextInputButton: components.TextInputButton,
     };
 
     const initialProps = {
       TextInput: {
         label: 'Lorem ipsum',
         placeholder: 'Write in me',
+        size: 'medium',
       },
       TextInputIcon: {
         align: 'right',
         onClick: () => {},
         name: 'magnify-glass',
+      },
+      TextInputButton: {
+        onClick: () => {},
+        style: 'secondary',
       },
     };
 
@@ -43,6 +50,26 @@ export default class TextInputExample extends Component {
             children: (
               <TextInputIcon { ...initialProps.TextInputIcon } />
             ),
+          }, {
+            name: 'With TextInputButton',
+            children: (
+              <TextInputButton
+                  { ...initialProps.TextInputButton }
+                  style={ initialProps.TextInputButton.style }>
+                Test
+              </TextInputButton>
+            ),
+          }, {
+            name: 'With TextInputIcon + TextInputButton',
+            children: [
+              <TextInputIcon { ...initialProps.TextInputIcon } key="icon" />,
+              <TextInputButton
+                  { ...initialProps.TextInputButton }
+                  key="button">
+                Test
+              </TextInputButton>,
+
+            ],
           }],
         },
       },

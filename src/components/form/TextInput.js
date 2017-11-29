@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { TextInputIconRef } from './TextInputIcon';
+import { TextInputButtonRef } from './TextInputButton';
 import TextGroup from './TextGroup';
 import Validate from '../validation/Validate';
 import findComponent from '../../utils/findComponent';
@@ -9,7 +10,7 @@ import './TextInput.css';
 
 export default class TextInput extends Component {
   static propTypes = {
-    /** Optional TextInputIcon, all other children are ignored */
+    /** Optional TextInputIcon or TextInputButton all other children are ignored */
     children: PropTypes.node,
     /** Disables interactions and applies styling */
     disabled: PropTypes.bool,
@@ -46,6 +47,10 @@ export default class TextInput extends Component {
     value: PropTypes.any,
   };
 
+  static childContextTypes ={
+    size: PropTypes.string,
+  };
+
   static defaultProps = {
     size: 'medium',
     type: 'text',
@@ -54,6 +59,12 @@ export default class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = { hasFocus: false };
+  }
+
+  getChildContext() {
+    return {
+      size: this.props.size,
+    };
   }
 
   handleOnBlur() {
@@ -88,13 +99,14 @@ export default class TextInput extends Component {
 
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIconRef);
-    const classes = (isValid) => classnames('ax-input__container', {
-      [`ax-input__container--${size}`]: size,
-      [`ax-input__container--${style}`]: style,
-      'ax-input__container--disabled': disabled,
-      'ax-input__container--focused': hasFocus,
-      'ax-input__container--valid': valid,
-      'ax-input__container--invalid': invalid || isValid === false,
+    const button = findComponent(children, TextInputButtonRef);
+    const classes = (isValid) => classnames('ax-input__icon-container', {
+      [`ax-input__icon-container--${size}`]: size,
+      [`ax-input__icon-container--${style}`]: style,
+      'ax-input__icon-container--disabled': disabled,
+      'ax-input__icon-container--focused': hasFocus,
+      'ax-input__icon-container--valid': valid,
+      'ax-input__icon-container--invalid': invalid || isValid === false,
     });
 
     return (
@@ -105,15 +117,18 @@ export default class TextInput extends Component {
           value={ value }>
         { (isValid) =>
           <TextGroup label={ label } size={ size } space={ space }>
-            <div className={ classes(isValid) }>
-              { icon }
-              <input { ...rest }
-                  className="ax-input"
-                  disabled={ disabled }
-                  onBlur={ () => this.handleOnBlur() }
-                  onFocus={ () => this.handleOnFocus() }
-                  type={ type }
-                  value={ value } />
+            <div className="ax-input__button-container">
+              <div className={ classes(isValid) }>
+                { icon }
+                <input { ...rest }
+                    className="ax-input"
+                    disabled={ disabled }
+                    onBlur={ () => this.handleOnBlur() }
+                    onFocus={ () => this.handleOnFocus() }
+                    type={ type }
+                    value={ value } />
+              </div>
+              { button }
             </div>
           </TextGroup>
         }

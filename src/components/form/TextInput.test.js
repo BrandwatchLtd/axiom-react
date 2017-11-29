@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import TextInput from './TextInput';
 import TextInputIcon from './TextInputIcon';
+import TextInputButton from './TextInputButton';
 
 const getComponent = (props = {}, children = 'Lorem ipsum') =>
   renderer.create(
@@ -42,6 +43,14 @@ describe('TextInput', () => {
   it('renders with TextInputIcon', () => {
     const component = getComponent({},
       <TextInputIcon name="twitter" />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with TextInputButton', () => {
+    const component = getComponent({},
+      <TextInputButton>Test</TextInputButton>
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

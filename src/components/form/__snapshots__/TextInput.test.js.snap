@@ -5,17 +5,21 @@ exports[`TextInput render with theme dark 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      theme="dark"
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        theme="dark"
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -25,17 +29,21 @@ exports[`TextInput render with theme light 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      theme="light"
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        theme="light"
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -45,16 +53,20 @@ exports[`TextInput renders when disabled 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium ax-input__container--disabled"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={true}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium ax-input__icon-container--disabled"
+    >
+      <input
+        className="ax-input"
+        disabled={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -64,16 +76,20 @@ exports[`TextInput renders when invalid 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium ax-input__container--invalid"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium ax-input__icon-container--invalid"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -83,16 +99,53 @@ exports[`TextInput renders when valid 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium ax-input__container--valid"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium ax-input__icon-container--valid"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
+  </div>
+</label>
+`;
+
+exports[`TextInput renders with TextInputButton 1`] = `
+<label
+  className="ax-input__group ax-space--x4"
+>
+  <div
+    className="ax-input__button-container"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
+    <span
+      className="ax-input__button"
+    >
+      <button
+        className="ax-button ax-button--medium ax-button--primary ax-button--joined-left"
+        disabled={undefined}
+      >
+        Test
+      </button>
+    </span>
   </div>
 </label>
 `;
@@ -102,35 +155,39 @@ exports[`TextInput renders with TextInputIcon 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium"
+    className="ax-input__button-container"
   >
-    <span
-      className="ax-input__icon ax-input__icon--align-right"
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
     >
-      <svg
-        className="ax-icon ax-icon--twitter"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<path d=\\"M1 12.087a5.762 5.762 0 0 0 4.252-1.19 2.874 2.874 0 0 1-2.683-1.995c.176.034.356.052.541.052.262 0 .606-.035.847-.101-1.314-.264-2.214-1.424-2.214-2.816 0 .179.74.308 1.211.323-.771-.515-1.323-1.394-1.323-2.391 0-.526.119-1.02.366-1.444a8.128 8.128 0 0 0 5.909 3.001 2.877 2.877 0 0 1-.08-.654 2.87 2.87 0 0 1 4.965-1.965 5.735 5.735 0 0 0 1.823-.698 2.886 2.886 0 0 1-1.263 1.59A5.739 5.739 0 0 0 15 3.346a5.84 5.84 0 0 1-1.433 1.487c.006.123.008.247.008.372 0 3.795-2.889 8.172-8.172 8.172A8.138 8.138 0 0 1 1 12.087z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <svg
+          className="ax-icon ax-icon--twitter"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<path d=\\"M1 12.087a5.762 5.762 0 0 0 4.252-1.19 2.874 2.874 0 0 1-2.683-1.995c.176.034.356.052.541.052.262 0 .606-.035.847-.101-1.314-.264-2.214-1.424-2.214-2.816 0 .179.74.308 1.211.323-.771-.515-1.323-1.394-1.323-2.391 0-.526.119-1.02.366-1.444a8.128 8.128 0 0 0 5.909 3.001 2.877 2.877 0 0 1-.08-.654 2.87 2.87 0 0 1 4.965-1.965 5.735 5.735 0 0 0 1.823-.698 2.886 2.886 0 0 1-1.263 1.59A5.739 5.739 0 0 0 15 3.346a5.84 5.84 0 0 1-1.433 1.487c.006.123.008.247.008.372 0 3.795-2.889 8.172-8.172 8.172A8.138 8.138 0 0 1 1 12.087z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+            }
           }
-        }
-        style={
-          Object {
-            "height": "1rem",
-            "width": "1rem",
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
           }
-        }
-        viewBox="0 0 16 16"
+          viewBox="0 0 16 16"
+        />
+      </span>
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
       />
-    </span>
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    </div>
   </div>
 </label>
 `;
@@ -140,16 +197,20 @@ exports[`TextInput renders with defaultProps 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -164,16 +225,20 @@ exports[`TextInput renders with label 1`] = `
     Lorem ipsum
   </div>
   <div
-    className="ax-input__container ax-input__container--medium"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -183,16 +248,20 @@ exports[`TextInput renders with size large 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--large"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--large"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -202,16 +271,20 @@ exports[`TextInput renders with size medium 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--medium"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
@@ -221,16 +294,20 @@ exports[`TextInput renders with size small 1`] = `
   className="ax-input__group ax-space--x4"
 >
   <div
-    className="ax-input__container ax-input__container--small"
+    className="ax-input__button-container"
   >
-    <input
-      className="ax-input"
-      disabled={undefined}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value={undefined}
-    />
+    <div
+      className="ax-input__icon-container ax-input__icon-container--small"
+    >
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </div>
   </div>
 </label>
 `;
