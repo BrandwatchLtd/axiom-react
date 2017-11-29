@@ -37,6 +37,7 @@
 .ax-text--color-success { color: var(--color-ui-success); }
 .ax-text--color-warning { color: var(--color-ui-warning); }
 .ax-text--color-error { color: var(--color-ui-error); }
+.ax-text--color-twitter-blue { color: var(--color-external-twitter-blue); }
 
 .ax-text--ellipsis {
   max-width: 100%;
