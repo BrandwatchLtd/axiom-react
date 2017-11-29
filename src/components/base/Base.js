@@ -58,6 +58,7 @@ export default class Base extends Component {
       'night',
       'subtle',
       'success',
+      'twitter-blue',
       'warning',
     ]),
     /** Text ellipsis styling */
