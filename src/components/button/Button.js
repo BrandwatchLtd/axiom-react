@@ -21,6 +21,10 @@ export default class Button extends Component {
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
     full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Forces button to loose it's rounded styling on the left side */
+    joinedLeft: PropTypes.bool,
+    /** Forces button to loose it's rounded styling on the right side */
+    joinedRight: PropTypes.bool,
     /** Size of standard shape */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Size of stadium shape */
@@ -45,6 +49,8 @@ export default class Button extends Component {
       children,
       circular,
       disabled,
+      joinedLeft,
+      joinedRight,
       stadium,
       style,
       size,
@@ -61,6 +67,8 @@ export default class Button extends Component {
       [`ax-button--stadium-${stadium}`]: stadium,
       'ax-button--active': active,
       'ax-button--joined': joined,
+      'ax-button--joined-left': joinedLeft,
+      'ax-button--joined-right': joinedRight,
       'ax-button--icon-only': !circular && iconOnly,
       'ax-button--full': full === true,
       [`ax-button--full--${full}`]: typeof full === 'string',
