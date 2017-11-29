@@ -22,7 +22,7 @@ describe('Button', () => {
   });
 
   describe('renders with color', () => {
-    ['accent', 'negative'].forEach((color) => {
+    ['accent', 'negative', 'positive'].forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
