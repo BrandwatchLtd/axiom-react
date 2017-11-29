@@ -13,7 +13,7 @@ export default class Button extends Component {
     /** Content inserted into the Button */
     children: PropTypes.node.isRequired,
     /** Color of the button */
-    color: PropTypes.oneOf(['accent', 'negative']),
+    color: PropTypes.oneOf(['accent', 'negative', 'positive']),
     /** Disable interaction behaviour */
     disabled: PropTypes.bool,
     /**
