@@ -27,6 +27,15 @@ exports[`Button renders with color negative 1`] = `
 </button>
 `;
 
+exports[`Button renders with color positive 1`] = `
+<button
+  className="ax-button ax-button--positive ax-button--primary ax-button--rectangle-medium"
+  disabled={undefined}
+>
+  Lorem Ipsum
+</button>
+`;
+
 exports[`Button renders with defaultProps 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"

@@ -277,3 +277,36 @@
     }
   }
 }
+
+.ax-button--positive:not(:disabled) {
+  &.ax-button--primary {
+    background-color: var(--color-ui-success);
+
+    &:hover  {
+      background-color: var(--color-ui-success--hover);
+    }
+
+    &:active,
+    &.ax-button--active {
+      background-color: var(--color-ui-success--active);
+    }
+  }
+
+  &.ax-button--secondary,
+  &.ax-button--tertiary {
+    color: var(--color-ui-success);
+  }
+
+  &.ax-button--secondary,
+  &.ax-button--tertiary,
+  &.ax-button--quaternary {
+    &:hover {
+      color: var(--color-ui-success--hover);
+    }
+
+    &:active,
+    &.ax-button--active {
+      color: var(--color-ui-success--active);
+    }
+  }
+}
