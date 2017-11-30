@@ -49,15 +49,11 @@ export default class Reveal extends Component {
   }
 
   conceal() {
-    this.setState({
-      height: this.inner.offsetHeight,
-      overflow: 'hidden',
-    });
-
+    this.setState({ overflow: 'hidden' });
     window.requestAnimationFrame(() => {
-      this.setState({
-        height: 0,
-        opacity: 0,
+      this.setState({ height: this.inner.offsetHeight });
+      window.requestAnimationFrame(() => {
+        this.setState({ height: 0, opacity: 0 });
       });
     });
   }
