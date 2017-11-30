@@ -34,6 +34,6 @@
 .dm-labs__canvas {
   max-width: 100%;
   padding: var(--page-padding-vertical) var(--page-padding-horizontal);
-  box-shadow: var(--drop-shadow-1), var(--drop-shadow-2);
+  box-shadow: var(--drop-shadow-border), var(--drop-shadow-elevation--x2);
   background-color: var(--color-theme-background);
 }
