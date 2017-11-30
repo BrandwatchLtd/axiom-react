@@ -1,5 +1,7 @@
 .ax-candytar {
   display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .ax-candytar--tiny-clanger {
