@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import extend from 'deep-extend';
-import classnames from 'classnames';
 import { Base, Tabset, Tab } from 'bw-axiom';
 import set from 'lodash.set';
 import { filterRender, filterSnippet } from '../../utils/example-filter';
@@ -9,7 +8,6 @@ import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet
 import CodeSnippet from '../CodeSnippet/CodeSnippet';
 import ComponentProps from './ComponentProps';
 import { basePropTypes, mergeState, render } from './utils';
-import './ExampleConfig.css';
 
 const paramsToObject = (type, args) => set({},
   [args[0], type, ...args.slice(1, -1)].join('.'), args[args.length - 1]);
@@ -68,7 +66,6 @@ export default class ExampleConfig extends Component {
     const {
       children,
       hasCode,
-      hasVisual,
       initialProps,
       initialPropOptions,
       propTypes,
@@ -85,29 +82,13 @@ export default class ExampleConfig extends Component {
     );
 
     const filteredSnippet = filterSnippet(example);
+    const renderedSnippet = filterRender(example);
     const jsxSnippet = hasCode && renderSnippet(filteredSnippet, jsxRender);
     const htmlSnippet = hasCode && renderSnippet(filteredSnippet, htmlRender);
-    const classes = classnames('dm-example', {
-      'dm-example--hidden': !hasVisual,
-    });
-
-    /**
-     * Sticky behvaiour needs to be applied to the sibling of the Tabset
-     * otherwise it has nothing position itself to.
-     */
-    let sticky = '0rem';
-    for (const component in configState) {
-      if (configState[component].props && configState[component].props.sticky) {
-        sticky = configState[component].props.sticky;
-        break;
-      }
-    }
 
     return (
-      <Base className={ classes }>
-        <Base className="dm-example__visual" sticky={ sticky }>
-          { filterRender(example) }
-        </Base>
+      <Base space="x8">
+        { renderedSnippet }
 
         <Tabset>
           <Tab title="Properties">

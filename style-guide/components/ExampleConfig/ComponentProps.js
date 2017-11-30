@@ -1,6 +1,17 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Base, Grid, GridCell, Heading, Link, Paragraph, Reveal } from 'bw-axiom';
+import {
+  Base,
+  Card,
+  CardContent,
+  CardList,
+  Grid,
+  GridCell,
+  Heading,
+  Link,
+  Paragraph,
+  Reveal,
+} from 'bw-axiom';
 import ComponentProp from './ComponentProp';
 import TypeArrayOf from './TypeArrayOf';
 import TypeBool from './TypeBool';
@@ -78,25 +89,37 @@ export default class ComponentProps extends Component {
           </Paragraph>
         ) }
 
-        { Object.keys(propTypes).map((prop) =>
-          <ComponentProp
-              PropEditor={ TypeMap[propTypes[prop].type.name] }
-              defaultValue={ propTypes[prop].defaultValue && propTypes[prop].defaultValue.value }
-              description={ propTypes[prop].description }
-              key={ prop }
-              prop={ prop }
-              propOptions={ propOptions }
-              required={ propTypes[prop].required }
-              setOptionValue={ (...a) => setPropOptionValue(prop, ...a) }
-              setValue={ (...a) => setPropValue(prop, ...a) }
-              space="x4"
-              type={ propTypes[prop].type }
-              value={ propValues[prop] }
-              values={ propTypes[prop].values } />
-        ) }
+        <CardList>
+          { Object.keys(propTypes).map((prop) =>
+            <Card key={ prop }>
+              <CardContent>
+                <ComponentProp
+                    PropEditor={ TypeMap[propTypes[prop].type.name] }
+                    defaultValue={ propTypes[prop].defaultValue &&
+                        propTypes[prop].defaultValue.value }
+                    description={ propTypes[prop].description }
+                    prop={ prop }
+                    propOptions={ propOptions }
+                    required={ propTypes[prop].required }
+                    setOptionValue={ (...a) => setPropOptionValue(prop, ...a) }
+                    setValue={ (...a) => setPropValue(prop, ...a) }
+                    space="x4"
+                    type={ propTypes[prop].type }
+                    value={ propValues[prop] }
+                    values={ propTypes[prop].values } />
+              </CardContent>
+            </Card>
+          ) }
+        </CardList>
 
         { baseState && (
-          <Reveal visible={ isBasePropsVisible }>
+          <Reveal space="x6" visible={ isBasePropsVisible }>
+            <Heading
+                space="x6"
+                textCenter
+                textColor="subtle"
+                textSize="headtitle">Base Props</Heading>
+
             <ComponentProps
                 propOptions={ propOptions }
                 propTypes={ basePropTypes.Base }

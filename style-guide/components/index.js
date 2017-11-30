@@ -1,5 +1,4 @@
-export { CodeSnippet } from './CodeSnippet';
-export { Example } from './Example';
+export { default as CodeSnippet } from './CodeSnippet/CodeSnippet';
+export { default as Example } from './Example/Example';
 export { default as ExampleConfig } from './ExampleConfig/ExampleConfig';
-export { Snippet } from './Example';
-export { Link } from './Link';
+export { default as Link } from './Link/Link';
