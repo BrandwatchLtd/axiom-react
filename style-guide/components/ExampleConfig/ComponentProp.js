@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {
   BadgeGroup,
   Badge,
-  Base,
   Grid,
   GridCell,
   Heading,
@@ -76,65 +75,63 @@ export default class ComponentProp extends Component {
       type && type.name !== 'func' && type.name !== 'arrayOf';
 
     return (
-      <Base { ...rest } className="dm-example__prop">
-        <Grid verticalAlign="middle">
-          <GridCell>
-            <Grid
-                gutters="small"
-                shrink
-                space="x2"
-                verticalAlign="middle">
-              <GridCell>
-                <Heading>
-                  { prop }
-                </Heading>
-              </GridCell>
-
-              <GridCell>
-                <BadgeGroup>
-                  { required && (
-                    <Badge color="critical-mass">
-                      <Strong>Required</Strong>
-                    </Badge>
-                  ) }
-
-                  { showDefault && (
-                    <Badge color="blast-off">
-                      <Strong>Default:</Strong> { defaultValue.toString() }
-                    </Badge>
-                  ) }
-
-                  { type && (
-                    <Badge color={ typeColorMap[type.name] } opacity={ 0.2 }>
-                      { type.name }
-                    </Badge>
-                  ) }
-                </BadgeGroup>
-              </GridCell>
-            </Grid>
-
-            { description && (
-              <Paragraph textColor="subtle">
-                <Italic>{ description }</Italic>
-              </Paragraph>
-            ) }
-          </GridCell>
-
-          { PropEditor && (
-            <GridCell shrink>
-              <PropEditor
-                  prop={ prop }
-                  propOptions={ propOptions[prop] || {} }
-                  required={ required }
-                  setOptionValue={ setOptionValue }
-                  setValue={ setValue }
-                  type={ type }
-                  value={ value }
-                  values={ values } />
+      <Grid { ...rest } verticalAlign="middle">
+        <GridCell>
+          <Grid
+              gutters="small"
+              shrink
+              space="x2"
+              verticalAlign="middle">
+            <GridCell>
+              <Heading>
+                { prop }
+              </Heading>
             </GridCell>
+
+            <GridCell>
+              <BadgeGroup>
+                { required && (
+                  <Badge color="critical-mass">
+                    <Strong>Required</Strong>
+                  </Badge>
+                ) }
+
+                { showDefault && (
+                  <Badge color="blast-off">
+                    <Strong>Default:</Strong> { defaultValue.toString() }
+                  </Badge>
+                ) }
+
+                { type && (
+                  <Badge color={ typeColorMap[type.name] } opacity={ 0.2 }>
+                    { type.name }
+                  </Badge>
+                ) }
+              </BadgeGroup>
+            </GridCell>
+          </Grid>
+
+          { description && (
+            <Paragraph textColor="subtle">
+              <Italic>{ description }</Italic>
+            </Paragraph>
           ) }
-        </Grid>
-      </Base>
+        </GridCell>
+
+        { PropEditor && (
+          <GridCell shrink>
+            <PropEditor
+                prop={ prop }
+                propOptions={ propOptions[prop] || {} }
+                required={ required }
+                setOptionValue={ setOptionValue }
+                setValue={ setValue }
+                type={ type }
+                value={ value }
+                values={ values } />
+          </GridCell>
+        ) }
+      </Grid>
     );
   }
 }

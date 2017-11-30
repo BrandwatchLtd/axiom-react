@@ -69,6 +69,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }
 
 @media (--screen-more-than-small) {

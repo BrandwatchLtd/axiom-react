@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Heading } from 'bw-axiom';
-import './Example.css';
+import { Card, CardContent, Heading } from 'bw-axiom';
 
 export default class Example extends Component {
   static propTypes = {
@@ -16,13 +15,15 @@ export default class Example extends Component {
     const { name, children } = this.props;
 
     return (
-      <div className="dm-example">
-        { name && (
-          <Heading space="x6" textSize="headtitle">{ name }</Heading>
-        ) }
+      <Card>
+        <CardContent>
+          { name && (
+            <Heading space="x6" textSize="headtitle">{ name }</Heading>
+          ) }
 
-        { children }
-      </div>
+          { children }
+        </CardContent>
+      </Card>
     );
   }
 }

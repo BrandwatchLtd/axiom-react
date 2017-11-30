@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Heading } from 'bw-axiom';
 import { LayoutContent } from '../Layout';
-import { ExampleHeader } from '../Example';
 import './Documentation.css';
 
 const components = JSON.parse(process.env.COMPONENT_PROPS);
@@ -32,7 +32,7 @@ export default class Documentation extends Component {
     return (
       <div className="dm-documentation">
         <LayoutContent>
-          <ExampleHeader name={ name } />
+          <Heading textCase="capital" textSize="display1">{ name }</Heading>
         </LayoutContent>
 
         <LayoutContent>
