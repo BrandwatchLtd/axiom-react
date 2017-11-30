@@ -110,9 +110,9 @@
 
   --color-external-twitter-blue: #1DA1F2;
 
-  --drop-shadow-border: 0 0 0 0.0625rem rgba(var(--rgb-ui-carbon), 0.2);
-  --drop-shadow-elevation--x1: 0 0.0625rem 0.01875rem 0 rgba(var(--rgb-ui-carbon--darker), 0.1);
-  --drop-shadow-elevation--x2: 0 0.125rem 1rem 0 rgba(var(--rgb-ui-carbon--darker), 0.1);
+  --drop-shadow-border: 0 0 0 0.0625rem rgba(var(--color-theme-shadow--border), 0.2);
+  --drop-shadow-elevation--x1: 0 0.0625rem 0.01875rem 0 rgba(var(--color-theme-shadow), 0.1);
+  --drop-shadow-elevation--x2: 0 0.125rem 1rem 0 rgba(var(--color-theme-shadow), 0.1);
 
   /** Theme opacities */
   --opacity-text--subtle: 0.75;

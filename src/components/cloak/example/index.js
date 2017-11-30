@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
 import Candytar from '../../candytar/Candytar';
 import Card from '../../card/Card';
+import CardContent from '../../card/CardContent';
 import CardList from '../../card/CardList';
 import Cloak from '../Cloak';
 import Context from '../../context/Context';
@@ -53,44 +54,46 @@ class CloakExample extends Component {
           initialProps={ initialProps }
           propTypes={ propTypes }>
         <CardList cloakContainer>
-          <Card active={ isOpen } cloakContainer onClick={ () => {} }>
-            <Grid responsive={ false } snippetReplace verticalAlign="middle">
-              <GridCell shrink>
-                <Candytar color="serene-sea" size="4.5rem" />
-              </GridCell>
+          <Card cloakContainer hover={ isOpen } onClick={ () => {} }>
+            <CardContent size="large">
+              <Grid responsive={ false } snippetReplace verticalAlign="middle">
+                <GridCell shrink>
+                  <Candytar color="serene-sea" size="4.5rem" />
+                </GridCell>
 
-              <GridCell>
-                <Heading textSize="headtitle">Lorem Ipsum</Heading>
-                <Paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc commodo egestas fringilla. In a arcu erat. Ut vestibulum
-                  sollicitudin orci, ut blandit ante. Vestibulum tempus rhoncus
-                  vehicula.
-                </Paragraph>
-              </GridCell>
+                <GridCell>
+                  <Heading textSize="headtitle">Lorem Ipsum</Heading>
+                  <Paragraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc commodo egestas fringilla. In a arcu erat. Ut vestibulum
+                    sollicitudin orci, ut blandit ante. Vestibulum tempus rhoncus
+                    vehicula.
+                  </Paragraph>
+                </GridCell>
 
-              <GridCell shrink>
-                <Dropdown
-                    onRequestClose={ () => this.setState({ isOpen: false }) }
-                    onRequestOpen={ () => this.setState({ isOpen: true }) }>
-                  <DropdownTarget>
-                    <Cloak { ...initialProps.Cloak }>
-                      <IconButton name="ellipsis" />
-                    </Cloak>
-                  </DropdownTarget>
+                <GridCell shrink>
+                  <Dropdown
+                      onRequestClose={ () => this.setState({ isOpen: false }) }
+                      onRequestOpen={ () => this.setState({ isOpen: true }) }>
+                    <DropdownTarget>
+                      <Cloak { ...initialProps.Cloak }>
+                        <IconButton name="ellipsis" />
+                      </Cloak>
+                    </DropdownTarget>
 
-                  <DropdownContent { ...initialProps.DropdownContent }>
-                    <Context>
-                      <DropdownMenu { ...initialProps.DropdownMenu }>
-                        <DropdownMenuItem { ...initialProps.DropdownMenuItem }>
-                          Lorem ipsum
-                        </DropdownMenuItem>
-                      </DropdownMenu>
-                    </Context>
-                  </DropdownContent>
-                </Dropdown>
-              </GridCell>
-            </Grid>
+                    <DropdownContent { ...initialProps.DropdownContent }>
+                      <Context>
+                        <DropdownMenu { ...initialProps.DropdownMenu }>
+                          <DropdownMenuItem { ...initialProps.DropdownMenuItem }>
+                            Lorem ipsum
+                          </DropdownMenuItem>
+                        </DropdownMenu>
+                      </Context>
+                    </DropdownContent>
+                  </Dropdown>
+                </GridCell>
+              </Grid>
+            </CardContent>
           </Card>
         </CardList>
       </ExampleConfig>
