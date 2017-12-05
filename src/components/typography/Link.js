@@ -11,7 +11,15 @@ export default class Link extends Component {
       PropTypes.func,
     ]),
     children: PropTypes.node,
-    style: PropTypes.oneOf(['inherit', 'normal', 'subtle', 'light']),
+    style: PropTypes.oneOf([
+      'body',
+      'day',
+      'inherit',
+      'mono',
+      'night',
+      'normal',
+      'subtle',
+    ]),
   };
 
   static defaultProps = {
