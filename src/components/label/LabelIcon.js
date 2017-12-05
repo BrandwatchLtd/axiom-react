@@ -30,8 +30,8 @@ export default class LabelIcon extends Component {
 
     const linkStyle = {
       white: 'subtle',
-      success: 'light',
-      error: 'light',
+      success: 'night',
+      error: 'night',
     }[color];
 
     return (

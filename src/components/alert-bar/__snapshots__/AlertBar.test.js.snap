@@ -2,7 +2,7 @@
 
 exports[`AlertBar renders with defaultProps 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -19,7 +19,7 @@ exports[`AlertBar renders with defaultProps 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--information"
@@ -39,7 +39,7 @@ exports[`AlertBar renders with defaultProps 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -55,7 +55,7 @@ exports[`AlertBar renders with defaultProps 1`] = `
 
 exports[`AlertBar renders with onRemoveClick 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -72,7 +72,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--information"
@@ -92,7 +92,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -110,7 +110,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
         }
       >
         <a
-          className="ax-link ax-link--style-light"
+          className="ax-link ax-link--style-mono"
           onClick={[Function]}
         >
           <svg
@@ -137,7 +137,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
 
 exports[`AlertBar renders with size medium 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--medium ax-alert-bar--info ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--medium ax-alert-bar--info ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -154,7 +154,7 @@ exports[`AlertBar renders with size medium 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--information"
@@ -174,7 +174,7 @@ exports[`AlertBar renders with size medium 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -190,7 +190,7 @@ exports[`AlertBar renders with size medium 1`] = `
 
 exports[`AlertBar renders with size small 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -207,7 +207,7 @@ exports[`AlertBar renders with size small 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--information"
@@ -227,7 +227,7 @@ exports[`AlertBar renders with size small 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -243,7 +243,7 @@ exports[`AlertBar renders with size small 1`] = `
 
 exports[`AlertBar renders with type error 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--error ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--error ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -260,7 +260,7 @@ exports[`AlertBar renders with type error 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--error"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--error ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--warning"
@@ -280,7 +280,7 @@ exports[`AlertBar renders with type error 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -296,7 +296,7 @@ exports[`AlertBar renders with type error 1`] = `
 
 exports[`AlertBar renders with type info 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -313,7 +313,7 @@ exports[`AlertBar renders with type info 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--info ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--information"
@@ -333,7 +333,7 @@ exports[`AlertBar renders with type info 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -349,7 +349,7 @@ exports[`AlertBar renders with type info 1`] = `
 
 exports[`AlertBar renders with type success 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--success ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--success ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -366,7 +366,7 @@ exports[`AlertBar renders with type success 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--success"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--success ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--tick"
@@ -386,7 +386,7 @@ exports[`AlertBar renders with type success 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -402,7 +402,7 @@ exports[`AlertBar renders with type success 1`] = `
 
 exports[`AlertBar renders with type warning 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--warning ax-theme--day"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--warning ax-theme--night"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -419,7 +419,7 @@ exports[`AlertBar renders with type warning 1`] = `
         }
       >
         <div
-          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--warning"
+          className="ax-alert-icon ax-alert-icon--subtle ax-alert-icon--small ax-alert-icon--warning ax-theme--day"
         >
           <svg
             className="ax-icon ax-icon--warning"
@@ -439,7 +439,7 @@ exports[`AlertBar renders with type warning 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell"
+        className="ax-grid__cell ax-text--strong"
         style={
           Object {
             "width": undefined,

@@ -75,7 +75,7 @@ export default class DataPickerHeader extends Component {
               { children && (
                 <Dropdown showArrow={ false }>
                   <DropdownTarget>
-                    <Link style="subtle">
+                    <Link style="body">
                       <div className="ax-data-picker__header-title">
                         <div className="ax-data-picker__header-title-text">
                           <Heading textEllipsis textSize="headtitle" title={ title }>
