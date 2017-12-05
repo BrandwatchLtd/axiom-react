@@ -5,7 +5,7 @@ exports[`LabelIcon renders with color error 1`] = `
   className="ax-label__icon"
 >
   <a
-    className="ax-link ax-link--style-light"
+    className="ax-link ax-link--style-night"
   >
     <svg
       className="ax-icon ax-icon--twitter"
@@ -31,7 +31,7 @@ exports[`LabelIcon renders with color success 1`] = `
   className="ax-label__icon"
 >
   <a
-    className="ax-link ax-link--style-light"
+    className="ax-link ax-link--style-night"
   >
     <svg
       className="ax-icon ax-icon--twitter"
