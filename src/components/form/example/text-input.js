@@ -25,6 +25,8 @@ export default class TextInputExample extends Component {
     const initialProps = {
       TextInput: {
         label: 'Lorem ipsum',
+        onChange: () => {},
+        onClear: () => {},
         placeholder: 'Write in me',
         size: 'medium',
       },
@@ -71,6 +73,9 @@ export default class TextInputExample extends Component {
 
             ],
           }],
+        },
+        onClear: {
+          included: false,
         },
       },
     };

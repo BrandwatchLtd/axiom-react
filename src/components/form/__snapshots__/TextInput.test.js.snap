@@ -243,6 +243,53 @@ exports[`TextInput renders with label 1`] = `
 </label>
 `;
 
+exports[`TextInput renders with onClear and value 1`] = `
+<label
+  className="ax-input__group ax-space--x4"
+>
+  <div
+    className="ax-input__button-container"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <a
+          className="ax-link ax-link--style-subtle"
+          onClick={[Function]}
+        >
+          <svg
+            className="ax-icon ax-icon--cross"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<g fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"><path d=\\"M3.75 12.25l8.5-8.5\\" class=\\"ax-animicon__path-1\\"/><path d=\\"M3.75 3.75l8.5 8.5\\" class=\\"ax-animicon__path-2\\"/></g>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </a>
+      </span>
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Lorem"
+      />
+    </div>
+  </div>
+</label>
+`;
+
 exports[`TextInput renders with size large 1`] = `
 <label
   className="ax-input__group ax-space--x4"

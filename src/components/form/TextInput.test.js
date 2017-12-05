@@ -22,6 +22,12 @@ describe('TextInput', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with onClear and value', () => {
+    const component = getComponent({ onClear: () => {}, value: 'Lorem' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders when invalid', () => {
     const component = getComponent({ invalid: true });
     const tree = component.toJSON();

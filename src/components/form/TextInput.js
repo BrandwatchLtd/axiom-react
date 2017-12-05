@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { TextInputIconRef } from './TextInputIcon';
+import TextInputIcon, { TextInputIconRef } from './TextInputIcon';
 import { TextInputButtonRef } from './TextInputButton';
 import TextGroup from './TextGroup';
 import Validate from '../validation/Validate';
@@ -22,6 +22,8 @@ export default class TextInput extends Component {
     label: PropTypes.string,
     /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
+    /** Handler for requesting to clear the input field */
+    onClear: PropTypes.func,
     /** Handler for when the input field is focused */
     onFocus: PropTypes.func,
     /** See Validate[patterns] */
@@ -44,7 +46,7 @@ export default class TextInput extends Component {
     /** Applies styling to indicate the users input was valid */
     valid: PropTypes.bool,
     /** Value of the input field */
-    value: PropTypes.any,
+    value: PropTypes.string,
   };
 
   static childContextTypes ={
@@ -87,6 +89,7 @@ export default class TextInput extends Component {
       valid,
       invalid,
       label,
+      onClear,
       patterns,
       required,
       size,
@@ -119,7 +122,14 @@ export default class TextInput extends Component {
           <TextGroup label={ label } size={ size } space={ space }>
             <div className="ax-input__button-container">
               <div className={ classes(isValid) }>
-                { icon }
+                { onClear && value ? (
+                  <TextInputIcon
+                      align="right"
+                      name="cross"
+                      onClick={ onClear } />
+                  ) : icon
+                }
+
                 <input { ...rest }
                     className="ax-input"
                     disabled={ disabled }
