@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`PanelHeader renders with defaultProps 1`] = `
-<div
-  className="ax-panel__header"
->
-  Lorem Ipsum
-</div>
-`;

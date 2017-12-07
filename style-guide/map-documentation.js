@@ -39,7 +39,6 @@ module.exports = {
           'menu': { name: 'Menu' },
           'notification': { name: 'Notifications' },
           'pagination': { name: 'Pagination' },
-          'panel': { name: 'Panel' },
           'pictogram': { name: 'Pictogram' },
           'position': { name: 'Position' },
           'progress': { name: 'Progress' },

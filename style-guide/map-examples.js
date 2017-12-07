@@ -29,7 +29,6 @@ export default {
   '/docs/components/menu': require('../src/components/menu/example').default,
   '/docs/components/notification': require('../src/components/notification/example').default,
   '/docs/components/pagination': require('../src/components/pagination/example').default,
-  '/docs/components/panel': require('../src/components/panel/example').default,
   '/docs/components/pictogram': require('../src/components/pictogram/example').default,
   '/docs/components/position': require('../src/components/position/example').default,
   '/docs/components/progress': require('../src/components/progress/example').default,
