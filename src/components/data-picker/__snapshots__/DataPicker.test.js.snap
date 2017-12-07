@@ -2,12 +2,8 @@
 
 exports[`DataPicker renders with defaultProps 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--day"
-  style={
-    Object {
-      "minHeight": undefined,
-    }
-  }
+  className="ax-card ax-card--elevation-x0 ax-card--size-medium ax-card--color-dark"
+  onClick={undefined}
 >
   Lorem Ipsum
 </div>
@@ -15,12 +11,8 @@ exports[`DataPicker renders with defaultProps 1`] = `
 
 exports[`DataPicker renders with value 1`] = `
 <div
-  className="ax-panel ax-theme--day"
-  style={
-    Object {
-      "minHeight": undefined,
-    }
-  }
+  className="ax-card ax-card--elevation-x0 ax-card--size-medium ax-card--color-darker"
+  onClick={undefined}
 >
   Lorem Ipsum
 </div>

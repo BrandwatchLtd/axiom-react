@@ -2,58 +2,50 @@
 
 exports[`DataPickerHeader renders with color 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--day"
-  style={
-    Object {
-      "minHeight": undefined,
-    }
-  }
+  className="ax-card ax-card--elevation-x0 ax-card--size-medium ax-card--color-dark"
+  onClick={undefined}
 >
   <div
-    className="ax-panel__header ax-cloak__container"
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-small ax-cloak__container"
   >
     <div
-      className="ax-data-picker__header"
+      className="ax-grid__container ax-space--x6"
     >
       <div
-        className="ax-grid__container ax-space--x6"
+        className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
       >
         <div
-          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+          className="ax-grid__cell ax-grid__cell--shrink"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
         >
           <div
-            className="ax-grid__cell ax-grid__cell--shrink"
+            className="ax-color-picker__option ax-color-picker__option--giant-leap"
+            onClick={[Function]}
             style={
               Object {
-                "width": undefined,
+                "height": ".75rem",
+                "width": ".75rem",
               }
             }
-          >
-            <div
-              className="ax-color-picker__option ax-color-picker__option--giant-leap"
-              onClick={[Function]}
-              style={
-                Object {
-                  "height": ".75rem",
-                  "width": ".75rem",
-                }
-              }
-            />
-          </div>
-          <div
-            className="ax-grid__cell"
-            style={
-              Object {
-                "width": undefined,
-              }
+          />
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
             }
+          }
+        >
+          <h4
+            className="ax-space--x2 ax-text--size-headtitle"
           >
-            <h4
-              className="ax-space--x2 ax-text--size-headtitle"
-            >
-              Placeholder
-            </h4>
-          </div>
+            Placeholder
+          </h4>
         </div>
       </div>
     </div>
@@ -63,58 +55,50 @@ exports[`DataPickerHeader renders with color 1`] = `
 
 exports[`DataPickerHeader renders with defaultProps 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--day"
-  style={
-    Object {
-      "minHeight": undefined,
-    }
-  }
+  className="ax-card ax-card--elevation-x0 ax-card--size-medium ax-card--color-dark"
+  onClick={undefined}
 >
   <div
-    className="ax-panel__header ax-cloak__container"
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-small ax-cloak__container"
   >
     <div
-      className="ax-data-picker__header"
+      className="ax-grid__container ax-space--x6"
     >
       <div
-        className="ax-grid__container ax-space--x6"
+        className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
       >
         <div
-          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+          className="ax-grid__cell ax-grid__cell--shrink"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
         >
           <div
-            className="ax-grid__cell ax-grid__cell--shrink"
+            className="ax-color-picker__option ax-color-picker__option--empty"
+            onClick={[Function]}
             style={
               Object {
-                "width": undefined,
+                "height": ".75rem",
+                "width": ".75rem",
               }
             }
-          >
-            <div
-              className="ax-color-picker__option ax-color-picker__option--empty"
-              onClick={[Function]}
-              style={
-                Object {
-                  "height": ".75rem",
-                  "width": ".75rem",
-                }
-              }
-            />
-          </div>
-          <div
-            className="ax-grid__cell"
-            style={
-              Object {
-                "width": undefined,
-              }
+          />
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
             }
+          }
+        >
+          <h4
+            className="ax-space--x2 ax-text--size-headtitle"
           >
-            <h4
-              className="ax-space--x2 ax-text--size-headtitle"
-            >
-              Placeholder
-            </h4>
-          </div>
+            Placeholder
+          </h4>
         </div>
       </div>
     </div>
@@ -124,58 +108,50 @@ exports[`DataPickerHeader renders with defaultProps 1`] = `
 
 exports[`DataPickerHeader renders with onClear 1`] = `
 <div
-  className="ax-panel ax-panel--inactive ax-theme--day"
-  style={
-    Object {
-      "minHeight": undefined,
-    }
-  }
+  className="ax-card ax-card--elevation-x0 ax-card--size-medium ax-card--color-dark"
+  onClick={undefined}
 >
   <div
-    className="ax-panel__header ax-cloak__container"
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-small ax-cloak__container"
   >
     <div
-      className="ax-data-picker__header"
+      className="ax-grid__container ax-space--x6"
     >
       <div
-        className="ax-grid__container ax-space--x6"
+        className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
       >
         <div
-          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+          className="ax-grid__cell ax-grid__cell--shrink"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
         >
           <div
-            className="ax-grid__cell ax-grid__cell--shrink"
+            className="ax-color-picker__option ax-color-picker__option--empty"
+            onClick={[Function]}
             style={
               Object {
-                "width": undefined,
+                "height": ".75rem",
+                "width": ".75rem",
               }
             }
-          >
-            <div
-              className="ax-color-picker__option ax-color-picker__option--empty"
-              onClick={[Function]}
-              style={
-                Object {
-                  "height": ".75rem",
-                  "width": ".75rem",
-                }
-              }
-            />
-          </div>
-          <div
-            className="ax-grid__cell"
-            style={
-              Object {
-                "width": undefined,
-              }
+          />
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
             }
+          }
+        >
+          <h4
+            className="ax-space--x2 ax-text--size-headtitle"
           >
-            <h4
-              className="ax-space--x2 ax-text--size-headtitle"
-            >
-              Placeholder
-            </h4>
-          </div>
+            Placeholder
+          </h4>
         </div>
       </div>
     </div>
@@ -185,58 +161,50 @@ exports[`DataPickerHeader renders with onClear 1`] = `
 
 exports[`DataPickerHeader renders with value 1`] = `
 <div
-  className="ax-panel ax-theme--day"
-  style={
-    Object {
-      "minHeight": undefined,
-    }
-  }
+  className="ax-card ax-card--elevation-x0 ax-card--size-medium ax-card--color-darker"
+  onClick={undefined}
 >
   <div
-    className="ax-panel__header ax-cloak__container"
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-small ax-cloak__container"
   >
     <div
-      className="ax-data-picker__header"
+      className="ax-grid__container ax-space--x6"
     >
       <div
-        className="ax-grid__container ax-space--x6"
+        className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
       >
         <div
-          className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle"
+          className="ax-grid__cell ax-grid__cell--shrink"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
         >
           <div
-            className="ax-grid__cell ax-grid__cell--shrink"
+            className="ax-color-picker__option ax-color-picker__option--empty"
+            onClick={[Function]}
             style={
               Object {
-                "width": undefined,
+                "height": ".75rem",
+                "width": ".75rem",
               }
             }
-          >
-            <div
-              className="ax-color-picker__option ax-color-picker__option--empty"
-              onClick={[Function]}
-              style={
-                Object {
-                  "height": ".75rem",
-                  "width": ".75rem",
-                }
-              }
-            />
-          </div>
-          <div
-            className="ax-grid__cell"
-            style={
-              Object {
-                "width": undefined,
-              }
+          />
+        </div>
+        <div
+          className="ax-grid__cell"
+          style={
+            Object {
+              "width": undefined,
             }
+          }
+        >
+          <h4
+            className="ax-space--x2 ax-text--size-headtitle"
           >
-            <h4
-              className="ax-space--x2 ax-text--size-headtitle"
-            >
-              Value
-            </h4>
-          </div>
+            Value
+          </h4>
         </div>
       </div>
     </div>

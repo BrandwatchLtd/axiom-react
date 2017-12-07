@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import PanelBody from '../panel/PanelBody';
+import CardContent from '../card/CardContent';
 
 export default class DataPickerBody extends Component {
   static propTypes = {
@@ -10,9 +10,9 @@ export default class DataPickerBody extends Component {
   render() {
     const { children, ...rest } = this.props;
     return (
-      <PanelBody { ...rest }>
+      <CardContent { ...rest }>
         { children }
-      </PanelBody>
+      </CardContent>
     );
   }
 }
