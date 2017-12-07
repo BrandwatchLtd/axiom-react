@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
-import Panel from '../panel/Panel';
+import Card from '../card/Card';
 
 export default class DataPicker extends Component {
   static propTypes = {
@@ -86,9 +86,9 @@ export default class DataPicker extends Component {
     ]);
 
     return (
-      <Panel { ...props } isInactive={ !value }>
+      <Card { ...props } color={ value ? 'darker' : 'dark' }>
         { children }
-      </Panel>
+      </Card>
     );
   }
 }

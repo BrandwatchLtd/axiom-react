@@ -25,9 +25,9 @@ export default class CardContent extends Component {
   render() {
     const { children, color, separatorIndented, separatorStyle, size, ...rest } = this.props;
     const classes = classnames('ax-card__content',
-      `ax-card__content--color-${color}`,
       `ax-card__content--separator-${separatorStyle}`,
       `ax-card__content--size-${size}`, {
+        [`ax-card__content--color-${color}`]: color,
         'ax-card__content--separator-indented': separatorIndented,
       }
     );
