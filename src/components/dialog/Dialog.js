@@ -17,10 +17,13 @@ export default class Dialog extends Component {
     onRequestClose: PropTypes.func.isRequired,
     /** Maximum size of the Dialog */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Theme of the dialog */
+    theme: PropTypes.oneOf(['dark', 'light']),
   };
 
   static defaultProps = {
     size: 'small',
+    theme: 'light',
   };
 
   static childContextTypes = {
@@ -39,6 +42,7 @@ export default class Dialog extends Component {
       size,
       fullscreen,
       onRequestClose,
+      theme,
       ...rest
     } = this.props;
 
@@ -49,7 +53,7 @@ export default class Dialog extends Component {
 
     return (
       <Modal { ...rest } onOverlayClick={ onRequestClose }>
-        <Base className={ classes } theme="light">
+        <Base className={ classes } theme={ theme }>
           { children }
         </Base>
       </Modal>
