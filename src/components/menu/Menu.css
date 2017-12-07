@@ -2,7 +2,6 @@
   display: flex;
   margin: 0;
   padding: 0;
-  border-bottom: 0.0625rem solid var(--color-theme-border);
   white-space: nowrap;
   overflow: auto;
 }
