@@ -1,7 +1,22 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import omit from 'lodash.omit';
+import { DataPickerDropdownRef } from './DataPickerDropdown';
+import { DataPickerMetaRef } from './DataPickerMeta';
 import Card from '../card/Card';
+import CardContent from '../card/CardContent';
+import ColorPicker from '../color-picker/ColorPicker';
+import ColorPickerOption from '../color-picker/ColorPickerOption';
+import Context from '../context/Context';
+import Dropdown from '../dropdown/Dropdown';
+import DropdownContent from '../dropdown/DropdownContent';
+import DropdownTarget from '../dropdown/DropdownTarget';
+import Grid from '../grid/Grid';
+import GridCell from '../grid/GridCell';
+import Heading from '../typography/Heading';
+import Icon from '../icon/Icon';
+import Link from '../typography/Link';
+import findComponent from '../../utils/findComponent';
+import './DataPicker.css';
 
 export default class DataPicker extends Component {
   static propTypes = {
@@ -25,8 +40,6 @@ export default class DataPicker extends Component {
     colorOptions: PropTypes.arrayOf(PropTypes.string),
     /** List of disabled colors that become unpickable */
     disabledColors: PropTypes.arrayOf(PropTypes.string),
-    /** Handler that is called when the "clear" link is clicked */
-    onClear: PropTypes.func,
     /** Handler that is called when the color picker is opened */
     onColorPickerOpen: PropTypes.func,
     /** Handler that is called when a color is selected */
@@ -37,57 +50,96 @@ export default class DataPicker extends Component {
     value: PropTypes.string,
   };
 
-  static childContextTypes = {
-    color: PropTypes.string,
-    colorOptions: PropTypes.arrayOf(PropTypes.string),
-    disabledColors: PropTypes.arrayOf(PropTypes.string),
-    placeholder: PropTypes.string.isRequired,
-    onClear: PropTypes.func,
-    onColorPickerOpen: PropTypes.func,
-    onSelectColor: PropTypes.func,
-    value: PropTypes.string,
-  };
-
-  getChildContext() {
+  render() {
     const {
+      children,
       color,
       colorOptions,
       disabledColors,
-      placeholder,
-      value,
-      onClear,
       onColorPickerOpen,
       onSelectColor,
+      placeholder,
+      value,
+      ...rest
     } = this.props;
 
-    return {
-      color,
-      colorOptions,
-      disabledColors,
-      placeholder,
-      value,
-      onClear,
-      onColorPickerOpen,
-      onSelectColor,
-    };
-  }
-
-  render() {
-    const { children, value, ...rest } = this.props;
-    const props = omit(rest, [
-      'color',
-      'colorOptions',
-      'disabledColors',
-      'placeholder',
-      'value',
-      'onClear',
-      'onColorPickerOpen',
-      'onSelectColor',
-    ]);
+    const dropdownMenu = findComponent(children, DataPickerDropdownRef);
+    const metaData = findComponent(children, DataPickerMetaRef);
+    const title = value || placeholder;
 
     return (
-      <Card { ...props } color={ value ? 'darker' : 'dark' }>
-        { children }
+      <Card { ...rest }
+          border={ Boolean(dropdownMenu) }
+          color={ dropdownMenu ? 'default' : 'darker' }
+          size="medium">
+        <div className="ax-data-picker">
+          <div className="ax-data-picker__dropdown">
+            <CardContent size="small">
+              <Grid
+                  gutters="tiny"
+                  responsive={ false }
+                  verticalAlign="middle"
+                  wrap={ false }>
+                <GridCell shrink>
+                  { onSelectColor ? (
+                    <ColorPicker
+                        colorOptions={ colorOptions }
+                        disabledOptions={ disabledColors }
+                        onOpen={ onColorPickerOpen }
+                        onSelectColor={ onSelectColor }
+                        selected={ color } />
+                  ) : (
+                    <ColorPickerOption color={ color } />
+                  ) }
+                </GridCell>
+
+                <GridCell>
+                  { dropdownMenu && (
+                    <Dropdown showArrow={ false }>
+                      <DropdownTarget>
+                        <div className="ax-data-picker__link">
+                          <Link style="body">
+                            <Grid responsive={ false } verticalAlign="middle">
+                              <GridCell>
+                                <Heading textEllipsis title={ title }>
+                                  { title }
+                                </Heading>
+                              </GridCell>
+
+                              <GridCell shrink>
+                                <Icon name="chevron-down"/>
+                              </GridCell>
+                            </Grid>
+                          </Link>
+                        </div>
+                      </DropdownTarget>
+
+                      <DropdownContent>
+                        <Context>
+                          { dropdownMenu }
+                        </Context>
+                      </DropdownContent>
+                    </Dropdown>
+                  )}
+
+                  { !dropdownMenu && (
+                    <Heading textEllipsis title={ title }>
+                      { title }
+                    </Heading>
+                  )}
+                </GridCell>
+              </Grid>
+            </CardContent>
+          </div>
+
+          { metaData && (
+            <div className="ax-data-picker__meta">
+              <CardContent size="small">
+                { metaData }
+              </CardContent>
+            </div>
+          ) }
+        </div>
       </Card>
     );
   }

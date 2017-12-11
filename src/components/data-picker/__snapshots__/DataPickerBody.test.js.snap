@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`DataPickerBody renders with defaultProps 1`] = `
-<div
-  className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
->
-  Lorem Ipsum
-</div>
-`;
