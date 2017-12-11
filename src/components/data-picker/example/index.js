@@ -2,76 +2,112 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
 import DataPicker from '../DataPicker';
-import DataPickerBody from '../DataPickerBody';
-import DataPickerHeader from '../DataPickerHeader';
+import DataPickerDropdown from '../DataPickerDropdown';
+import DataPickerMeta from '../DataPickerMeta';
 import DropdownMenu from '../../dropdown/DropdownMenu';
 import DropdownMenuItem from '../../dropdown/DropdownMenuItem';
-import Heading from '../../typography/Heading';
-import longNumber from '../../../materials/number/longNumber';
-import { getData } from './data';
+import Grid from '../../grid/Grid';
+import GridCell from '../../grid/GridCell';
+import Icon from '../../icon/Icon';
+import Small from '../../typography/Small';
 
 class DataPickerExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
       DataPicker: PropTypes.object.isRequired,
-      DataPickerBody: PropTypes.object.isRequired,
-      DataPickerHeader: PropTypes.object.isRequired,
+      DataPickerDropdown: PropTypes.object.isRequired,
+      DataPickerMeta: PropTypes.object.isRequired,
     }).isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedColor: undefined,
-      selectedId: undefined,
-    };
-  }
-
   render() {
     const { components } = this.props;
-    const { selectedColor, selectedId } = this.state;
-    const selected = getData().filter(({ id }) => id === selectedId)[0];
+
+    const withDropdown = (
+      <DataPickerDropdown key="dropdown">
+        <DropdownMenu>
+          <DropdownMenuItem disabled>
+            Clear Selection
+          </DropdownMenuItem>
+        </DropdownMenu>
+
+        <DropdownMenu>
+          <DropdownMenuItem onClick={ () => {} }>
+            Consectetur adipiscing elit
+          </DropdownMenuItem>
+
+          <DropdownMenuItem onClick={ () => {} } selected>
+            Lorem ipsum dolar sit amet
+          </DropdownMenuItem>
+
+          <DropdownMenuItem onClick={ () => {} }>
+            Etiam eget diam faucibus
+          </DropdownMenuItem>
+        </DropdownMenu>
+      </DataPickerDropdown>
+    );
+
+    const withMeta = (
+      <DataPickerMeta key="meta">
+        <Grid gutters="tiny" responsive={ false } textColor="subtle" verticalAlign="middle">
+          <GridCell shrink>
+            <Icon name="followers" />
+          </GridCell>
+
+          <GridCell>
+            <Small textStrong>4.1k</Small>
+          </GridCell>
+        </Grid>
+      </DataPickerMeta>
+    );
+
+
+    const withDropdownAndMeta = [
+      withDropdown,
+      withMeta,
+    ];
 
     const propTypes = {
       DataPicker: components.DataPicker,
-      DataPickerBody: components.DataPickerBody,
-      DataPickerHeader: components.DataPickerHeader,
+      DataPickerDropdown: components.DataPickerDropdown,
+      DataPickerMeta: components.DataPickerMeta,
     };
 
     const initialProps = {
       DataPicker: {
-        color: selectedColor || (selected && selected.color),
-        disabledColors: [ selectedColor ],
-        onClear: () => this.setState({ selectedColor: undefined, selectedId: undefined }),
+        color: 'new-horizon',
+        disabledColors: ['new-horizon'],
         onColorPickerOpen: () => {},
-        onSelectColor: (color) => this.setState({ selectedColor: color }),
+        onSelectColor: () => {},
         placeholder: 'Please select a value',
-        value: selected && selected.name,
+        value: 'Lorem ipsum dolar sit amet',
+      },
+    };
+
+    const initialPropOptions = {
+      DataPicker: {
+        children: {
+          options: [{
+            name: 'With dropdown',
+            children: withDropdown,
+          }, {
+            name: 'With meta (no dropdown)',
+            children: withMeta,
+          }, {
+            name: 'With dropdown and meta',
+            children: withDropdownAndMeta,
+          }],
+        },
       },
     };
 
     return (
       <ExampleConfig
+          initialPropOptions={ initialPropOptions }
           initialProps={ initialProps }
           propTypes={ propTypes }>
         <DataPicker { ...initialProps.DataPicker }>
-          <DataPickerHeader>
-            <DropdownMenu snippetReplace>
-              { getData().map(({ id, name }) => (
-                <DropdownMenuItem
-                    key={ id }
-                    onClick={ () => this.setState({ selectedId: id }) }>
-                  { name }
-                </DropdownMenuItem>
-              ) ) }
-            </DropdownMenu>
-          </DataPickerHeader>
-
-          { selected && (
-            <DataPickerBody snippetSkip>
-              <Heading textSize="headline">{ longNumber(selected.authors) }</Heading>
-            </DataPickerBody>
-          ) }
+          { withDropdownAndMeta }
         </DataPicker>
       </ExampleConfig>
     );

@@ -1,0 +1,16 @@
+.ax-data-picker {
+  display: flex;
+}
+
+.ax-data-picker__dropdown {
+  flex: 1 1 0%;
+}
+
+.ax-data-picker__link {
+  overflow: hidden;
+}
+
+.ax-data-picker__meta {
+  flex: 0 0 auto;
+  border-left: 0.0625rem solid var(--color-theme-border);
+}
