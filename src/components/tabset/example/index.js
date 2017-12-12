@@ -7,23 +7,26 @@ import Tabset from '../Tabset';
 class TabsetExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
-      Tabset: PropTypes.object,
       Tab: PropTypes.object,
+      Tabs: PropTypes.object,
+      Tabset: PropTypes.object,
     }).isRequired,
   };
 
   render() {
     const { components } = this.props;
     const propTypes = {
-      Tabset: components.Tabset,
       Tab: components.Tab,
+      Tabs: components.Tabs,
+      Tabset: components.Tabset,
     };
 
     const initialProps = {
-      Tabset: { },
       Tab: {
         title: 'Lorem ipsum',
       },
+      Tabs: { },
+      Tabset: { },
     };
 
     const initialPropOptions = {

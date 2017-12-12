@@ -7,7 +7,7 @@ export const TabRef = 'Tab';
 
 export default class Tab extends Component {
   static propTypes = {
-    /** SKIP */
+    /** Applies active state to the tab, this will be controlled by Tabset when used together */
     active: PropTypes.bool,
     /** Content that is visible when the Tab is active */
     children: PropTypes.node,

@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component, Children, cloneElement } from 'react';
-import classnames from 'classnames';
 import omit from 'lodash.omit';
 import Base from '../base/Base';
+import Tabs from './Tabs';
 import { TabRef } from './Tab';
 import isComponent from '../../utils/isComponent';
-import './Tabset.css';
 
 export default class Tabset extends Component {
   static propTypes = {
@@ -47,8 +46,6 @@ export default class Tabset extends Component {
     const { children, size, ...rest } = this.props;
     const { activeTabIndex } = this.state;
     const arrayChildren = Children.toArray(children);
-    const classes = classnames('ax-tabset', `ax-tabset--${size}`);
-
     const activeTabContent = arrayChildren[activeTabIndex]
       ? arrayChildren[activeTabIndex].props.children
       : null;
@@ -61,14 +58,11 @@ export default class Tabset extends Component {
       }));
 
     return (
-      <Base space="x6" { ...omit(rest, ['activeTabIndex']) } className={ classes }>
-        <ul className="ax-tabset__list">
-          { tabs }
-        </ul>
-
-        <div className="ax-tabset__content">
+      <Base space="x6" { ...omit(rest, ['activeTabIndex']) }>
+        <Tabs size={ size }>{ tabs }</Tabs>
+        <Base space="x6">
           { activeTabContent }
-        </div>
+        </Base>
       </Base>
     );
   }

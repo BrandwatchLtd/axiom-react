@@ -123,6 +123,7 @@ export { default as Stat } from './components/statcard/Stat';
 export { default as Strike } from './components/typography/Strike';
 export { default as Strong } from './components/typography/Strong';
 export { default as Tab } from './components/tabset/Tab';
+export { default as Tabs } from './components/tabset/Tabs';
 export { default as Tabset } from './components/tabset/Tabset';
 export { default as Table } from './components/table/Table';
 export { default as TableHeader } from './components/table/TableHeader';

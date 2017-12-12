@@ -1,11 +1,6 @@
-:root {
-  --cmp-tabset-list-space: calc(var(--spacing-grid-size) * 6);
-}
-
 .ax-tabset__list {
   display: flex;
   align-items: flex-end;
-  margin: 0 0 var(--cmp-tabset-list-space);
   padding: 0;
 
   &::after {
@@ -72,14 +67,14 @@
   }
 }
 
-.ax-tabset--medium .ax-tabset__button {
+.ax-tabset__list--medium .ax-tabset__button {
   padding:
     calc(var(--component-padding-vertical-medium) - var(--component-border-width))
     var(--component-padding-horizontal-medium)
     var(--component-padding-vertical-medium);
 }
 
-.ax-tabset--large .ax-tabset__button {
+.ax-tabset__list--large .ax-tabset__button {
   padding:
     calc(var(--component-padding-vertical-large) - var(--component-border-width))
     var(--component-padding-horizontal-large)
