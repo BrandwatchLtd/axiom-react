@@ -21,7 +21,7 @@ yarn add bw-axiom
 
 ### [Supported Browsers](./browsers.js)
 
-Need IE Support? [See the the setup guide here]('./docs/internet-explorer.md')
+Need IE support? [See the the setup guide here](./docs/internet-explorer.md)
 
 ### Getting Started
 
