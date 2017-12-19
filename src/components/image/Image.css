@@ -3,4 +3,12 @@
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
+  border: 0 solid var(--color-theme-border);
 }
+
+.ax-image--circle  { border-radius: 50%; }
+.ax-image--rounded { border-radius: var(--component-border-radius); }
+.ax-image--square  { border-radius: 0; }
+
+.ax-image--border-small { border-width: var(--component-border-width-small); }
+.ax-image--border-large { border-width: var(--component-border-width-large); }

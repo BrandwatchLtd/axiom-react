@@ -1,23 +1,55 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import Base from '../base/Base';
 import ImageFallback from './ImageFallback';
 import './Image.css';
 
 export default class Image extends Component {
   static propTypes = {
+    /** Border applied around the image */
+    border: PropTypes.oneOf(['small', 'large']),
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
+    /* Height of the image. When shape is circle this will be ignored and width will be applied. */
+    height: PropTypes.string,
     /** SKIP */
     onError: PropTypes.func,
     /** SKIP */
     onLoad: PropTypes.func,
+    /** Shape of the image */
+    shape: PropTypes.oneOf(['circle', 'rounded', 'square']),
     /** Source of the image */
     src: PropTypes.string,
+    /** Width of the image. When shape is circle this will also be used for height. */
+    width: PropTypes.string,
+  };
+
+  static defaultProps = {
+    shape: 'square',
   };
 
   render() {
-    const { children, onError, onLoad, src, ...rest } = this.props;
+    const {
+      border,
+      children,
+      height,
+      onError,
+      onLoad,
+      shape,
+      src,
+      width,
+      ...rest
+    } = this.props;
+
+    const style = {
+      width: shape === 'circle' ? (width || height) : width,
+      height: shape === 'circle' ? (width || height) : height,
+    };
+
+    const classes = classnames('ax-image', `ax-image--${shape}`, {
+      [`ax-image--border-${border}`]: border,
+    });
 
     return (
       <ImageFallback
@@ -29,8 +61,9 @@ export default class Image extends Component {
             space="x4"
             { ...rest }
             Component="img"
-            className="ax-image"
-            src={ src } />
+            className={ classes }
+            src={ src }
+            style={ style } />
       </ImageFallback>
     );
   }
