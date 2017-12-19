@@ -10,7 +10,7 @@ export default class DockHeader extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <ul { ...rest } className="ax-platform__dock-list-header">
+      <ul { ...rest } className="ax-dock__list-header">
         { children }
       </ul>
     );

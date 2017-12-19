@@ -1,31 +1,40 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
+import Base from '../base/Base';
 import './Platform.css';
 
 export default class Platform extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    consoleWidth: PropTypes.string.isRequired,
+    onConsoleClose: PropTypes.func,
+    openConsolePosition: PropTypes.oneOf(['left', 'right']),
+    openConsoleWidth: PropTypes.string,
   };
 
   static childContextTypes = {
-    consoleWidth: PropTypes.string.isRequired,
+    onConsoleClose: PropTypes.func,
+    openConsoleWidth: PropTypes.string,
+    openConsolePosition: PropTypes.string,
   };
 
   getChildContext() {
     return {
-      consoleWidth: this.props.consoleWidth,
+      onConsoleClose: this.props.onConsoleClose,
+      openConsolePosition: this.props.openConsolePosition,
+      openConsoleWidth: this.props.openConsoleWidth,
     };
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const props = omit(this.props, [
+      'onConsoleClose',
+      'openConsolePosition',
+      'openConsoleWidth',
+    ]);
 
     return (
-      <div { ...omit(rest, ['consoleWidth']) } className="ax-platform">
-        { children }
-      </div>
+      <Base { ...props } className="ax-platform" />
     );
   }
 }

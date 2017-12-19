@@ -1,37 +1,39 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Base from '../base/Base';
 import classnames from 'classnames';
-import './Console.css';
+import Base from '../base/Base';
 
 export default class Console extends Component {
   static propTypes = {
     children: PropTypes.node,
-    hasDock: PropTypes.bool,
-    isVisible: PropTypes.bool,
-    position: PropTypes.oneOf(['left', 'right']),
+    position: PropTypes.oneOf(['left', 'right']).isRequired,
+    width: PropTypes.string.isRequired,
   };
-
-  static defaultProps = {
-    hasDock: true,
-    position: 'left',
-  }
 
   static contextTypes = {
-    consoleWidth: PropTypes.string.isRequired,
+    openConsolePosition: PropTypes.string,
   };
 
+  static childContextTypes = {
+    consolePosition: PropTypes.string,
+  };
+
+  getChildContext() {
+    return {
+      consolePosition: this.props.position,
+    };
+  }
+
   render() {
-    const { children, hasDock, isVisible, position, ...rest } = this.props;
-    const { consoleWidth } = this.context;
-    const style = { width: consoleWidth };
-    const classes = classnames('ax-platform__console', {
-      'ax-platform__console--visible-left': isVisible && hasDock && position === 'left',
-      'ax-platform__console--visible-right': isVisible && hasDock && position === 'right',
-      'ax-platform__console--visible-without-dock': !hasDock && isVisible,
-      'ax-platform__console--right': position === 'right',
-      'ax-platform__console--left': position === 'left',
-    });
+    const { children, position, width, ...rest } = this.props;
+    const { openConsolePosition } = this.context;
+    const style = { width };
+    const classes = classnames(
+      'ax-platform__console',
+      `ax-platform__console--${position}`, {
+        'ax-platform__console--open': openConsolePosition === position,
+      }
+    );
 
     return (
       <Base { ...rest } className={ classes } style={ style }>

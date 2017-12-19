@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import Base from '../base/Base';
 import DockItem from './DockItem';
 import Icon from '../icon/Icon';
-import './DockIconLink.css';
 
 export default class DockIconLink extends Component {
   static propTypes = {
@@ -14,8 +13,8 @@ export default class DockIconLink extends Component {
 
   render() {
     const { icon, active, ...rest } = this.props;
-    const classes = classnames('ax-platform__dock-icon-link', {
-      'ax-platform__dock-icon-link--active': active,
+    const classes = classnames('ax-dock__icon-link', {
+      'ax-dock__icon-link--active': active,
     });
 
     return (

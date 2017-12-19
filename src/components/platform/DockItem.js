@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import './DockItem.css';
 
 export default class DockItem extends Component {
   static propTypes = {
@@ -12,8 +11,8 @@ export default class DockItem extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <li className="ax-platform__dock-item">
-        <div { ...rest } className="ax-platform__dock-item-wrapper">
+      <li className="ax-dock__item">
+        <div { ...rest } className="ax-dock__item-wrapper">
           { children }
         </div>
       </li>
