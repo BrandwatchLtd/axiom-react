@@ -118,8 +118,8 @@
   --opacity-text--subtle: 0.75;
   --opacity-text--disabled: 0.3;
 
-  --opacity-backgorund--subtle: 0.15;
-  --opacity-backgorund--disabled: 0.05;
+  --opacity-background--subtle: 0.15;
+  --opacity-background--disabled: 0.05;
 
   --opacity-border: 0.2;
 
@@ -139,8 +139,8 @@
   --color-theme-day-background--active: var(--color-ui-white-noise--dark);
   --color-theme-day-background: var(--color-ui-white);
   --color-theme-day-background--hover: var(--color-ui-white-noise);
-  --color-theme-day-background--subtle: rgba(var(--rgb-theme-day-main), var(--opacity-backgorund--subtle));
-  --color-theme-day-background--disabled: rgba(var(--rgb-theme-day-main), var(--opacity-backgorund--disabled));
+  --color-theme-day-background--subtle: rgba(var(--rgb-theme-day-main), var(--opacity-background--subtle));
+  --color-theme-day-background--disabled: rgba(var(--rgb-theme-day-main), var(--opacity-background--disabled));
 
   --color-theme-day-border: rgba(var(--rgb-theme-day-main), var(--opacity-border));
 
@@ -160,8 +160,8 @@
   --color-theme-night-background--active: var(--color-ui-carbon--darker);
   --color-theme-night-background: var(--color-ui-carbon--dark);
   --color-theme-night-background--hover: var(--color-ui-carbon);
-  --color-theme-night-background--subtle: rgba(var(--rgb-theme-night-main), var(--opacity-backgorund--subtle));
-  --color-theme-night-background--disabled: rgba(var(--rgb-theme-night-main), var(--opacity-backgorund--disabled));
+  --color-theme-night-background--subtle: rgba(var(--rgb-theme-night-main), var(--opacity-background--subtle));
+  --color-theme-night-background--disabled: rgba(var(--rgb-theme-night-main), var(--opacity-background--disabled));
 
   --color-theme-night-border: rgba(var(--rgb-theme-night-main), var(--opacity-border));
 }
