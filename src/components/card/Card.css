@@ -2,7 +2,7 @@
   border-radius: var(--component-border-radius);
   color: var(--color-theme-text);
   overflow: hidden;
-  transition-property: background-color, box-shadow, transform;
+  transition-property: background-color, box-shadow;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
@@ -131,6 +131,7 @@
 
   &.ax-card--hover:not(:active),
   &:hover:not(:active) {
+    transform: translateZ(0); /* New stacking context for box-shadow */
     box-shadow: var(--drop-shadow-elevation--x2);
 
     &.ax-card--border {
