@@ -2,7 +2,7 @@
   width: 25rem;
   max-width: 100%;
   border-radius: var(--component-border-radius);
-  box-shadow: var(--drop-shadow-border), var(--drop-shadow-elevation--x2);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
   background-color: var(--color-theme-background);
 }
 

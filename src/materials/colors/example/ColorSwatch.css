@@ -3,5 +3,5 @@
   height: calc(var(--spacing-grid-size) * 16);
   margin-bottom: var(--spacing-grid-size--x2);
   border-radius: 50%;
-  box-shadow: inset var(--drop-shadow-border);
+  box-shadow: inset var(--drop-shadow-theme-border);
 }

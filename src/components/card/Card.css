@@ -113,13 +113,25 @@
   }
 }
 
-.ax-card--elevation-x1 { box-shadow: var(--drop-shadow-elevation--x1); }
-.ax-card--elevation-x2 { box-shadow: var(--drop-shadow-elevation--x2); }
+.ax-card--elevation-x1 { box-shadow: var(--drop-shadow-theme-elevation--x1); }
+.ax-card--elevation-x2 { box-shadow: var(--drop-shadow-theme-elevation--x2); }
 
 .ax-card--border {
-  &.ax-card--elevation-x0 { box-shadow: var(--drop-shadow-border); }
-  &.ax-card--elevation-x1 { box-shadow: var(--drop-shadow-border), var(--drop-shadow-elevation--x1); }
-  &.ax-card--elevation-x2 { box-shadow: var(--drop-shadow-border), var(--drop-shadow-elevation--x2); }
+  &.ax-card--elevation-x0 {
+    box-shadow: var(--drop-shadow-theme-border);
+  }
+
+  &.ax-card--elevation-x1 {
+    box-shadow:
+      var(--drop-shadow-theme-border),
+      var(--drop-shadow-theme-elevation--x1);
+  }
+
+  &.ax-card--elevation-x2 {
+    box-shadow:
+      var(--drop-shadow-theme-border),
+      var(--drop-shadow-theme-elevation--x2);
+  }
 }
 
 .ax-card--clickable {
@@ -128,10 +140,12 @@
   &.ax-card--hover:not(:active),
   &:hover:not(:active) {
     transform: translateZ(0); /* New stacking context for box-shadow */
-    box-shadow: var(--drop-shadow-elevation--x2);
+    box-shadow: var(--drop-shadow-theme-elevation--x2);
 
     &.ax-card--border {
-      box-shadow: var(--drop-shadow-border), var(--drop-shadow-elevation--x2);
+      box-shadow:
+        var(--drop-shadow-theme-border),
+        var(--drop-shadow-theme-elevation--x2);
     }
   }
 }
