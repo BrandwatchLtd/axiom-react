@@ -20,7 +20,6 @@ class AvatarExample extends Component {
 
     const initialProps = {
       Avatar: {
-        border: 'large',
         size: '3rem',
         src: 'assets/avatar.png',
       },
@@ -29,7 +28,7 @@ class AvatarExample extends Component {
     return (
       <ExampleConfig initialProps={ initialProps } propTypes={ propTypes }>
         <Avatar { ...initialProps.Avatar }>
-          <Candytar size="2rem" />
+          <Candytar size={ initialProps.Avatar.size } />
         </Avatar>
       </ExampleConfig>
     );

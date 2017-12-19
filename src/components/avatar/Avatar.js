@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import ImageCircle from '../image/ImageCircle';
+import Image from '../image/Image';
 
 export default class Avatar extends Component {
   static propTypes = {
@@ -8,22 +8,34 @@ export default class Avatar extends Component {
     border: PropTypes.oneOf(['small', 'large']),
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
-    /** Overall size of the image, including any border that is given */
+    /** Size of the Avatar */
     size: PropTypes.string.isRequired,
     /** Source of the image */
     src: PropTypes.string,
   };
 
+  static defaultProps = {
+    border: 'small',
+  };
+
   render() {
-    const { border, children, size, src, ...rest } = this.props;
+    const {
+      border,
+      children,
+      size,
+      src,
+      ...rest
+    } = this.props;
 
     return (
-      <ImageCircle { ...rest }
+      <Image { ...rest }
           border={ border }
-          size={ size }
-          src={ src }>
+          height={ size }
+          shape="circle"
+          src={ src }
+          width={ size }>
         { children }
-      </ImageCircle>
+      </Image>
     );
   }
 }
