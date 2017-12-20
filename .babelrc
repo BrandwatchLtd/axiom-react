@@ -8,6 +8,7 @@
   "presets": [
     "react",
     ["env", {
+      "modules": false,
       "targets": {
         "browsers": [
           "last 2 Firefox versions",
@@ -29,6 +30,9 @@
       "plugins": [
         "transform-react-remove-prop-types"
       ]
+    },
+    "production": {
+      plugins: ["transform-es2015-modules-commonjs"],
     }
   }
 }
