@@ -7,7 +7,9 @@
   padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
   border-top: var(--component-border-width-medium) solid var(--color-theme-border);
   color: var(--color-theme-text--subtle);
-  transition: color var(--transition-time-base) var(--transition-function);
+  transition-property: color, border-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
 }
 
 .ax-table__cell--align-left {
@@ -99,7 +101,7 @@
 }
 
 .ax-table__row {
-  transition-property: background-color, border-color;
+  transition-property: background-color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 }
