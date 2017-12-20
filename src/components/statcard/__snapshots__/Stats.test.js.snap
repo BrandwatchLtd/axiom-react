@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Stats renders with defaultProps 1`] = `
-<ul
-  className="ax-stat-cards__stats"
->
-  Lorem
-</ul>
-`;
