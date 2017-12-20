@@ -130,7 +130,7 @@ class TableExample extends Component {
           initialProps={ initialProps }
           propTypes={ propTypes }>
         <Table { ...initialProps.Table }>
-          { initialPropOptions.Table.children.options[0].children }
+          { initialPropOptions.Table.children.options[1].children }
         </Table>
       </ExampleConfig>
     );
