@@ -23,10 +23,10 @@
     transition-timing-function: var(--transition-function);
 
     @nest .ax-checkbox + &                  { border-color: transparent; }
-    @nest .ax-checkbox:hover + &            { border-color: var(--cmp-input-border-color); }
+    @nest .ax-checkbox:hover + &            { border-color: var(--color-theme-border); }
     @nest .ax-checkbox:checked + &          { border-color: var(--cmp-input-color-checked); }
     @nest .ax-checkbox:disabled + &         { border-color: transparent; }
-    @nest .ax-checkbox:disabled:checked + & { border-color: var(--cmp-input-border-color); }
+    @nest .ax-checkbox:disabled:checked + & { border-color: var(--color-theme-border); }
   }
 }
 

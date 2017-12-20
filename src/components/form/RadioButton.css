@@ -13,10 +13,10 @@
     transition-timing-function: var(--transition-function);
 
     @nest .ax-radio + &                  { background-color: transparent; }
-    @nest .ax-radio:hover + &            { background-color: var(--cmp-input-border-color); }
+    @nest .ax-radio:hover + &            { background-color: var(--color-theme-border); }
     @nest .ax-radio:checked + &          { background-color: var(--cmp-input-color-checked); }
     @nest .ax-radio:disabled + &         { background-color: transparent; }
-    @nest .ax-radio:disabled:checked + & { background-color: var(--cmp-input-border-color); }
+    @nest .ax-radio:disabled:checked + & { background-color: var(--color-theme-border); }
   }
 }
 

@@ -56,7 +56,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  border-right: var(--cmp-benchmark-line-width) solid var(--cmp-benchmark-line-color);
+  border-right: var(--cmp-benchmark-line-width) solid var(--color-theme-text--subtle);
 }
 
 .ax-dot-plot__difference-line-path {

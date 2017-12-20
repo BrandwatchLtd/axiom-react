@@ -6,7 +6,7 @@
   line-height: var(--component-line-height);
 
   &::placeholder {
-    color: var(--cmp-input-color-placeholder);
+    color: var(--color-theme-text--disabled);
   }
 
   &:focus {
@@ -53,8 +53,8 @@
   border-width: var(--component-border-width);
   border-style: solid;
   border-radius: var(--component-border-radius);
-  border-color: var(--cmp-input-border-color);
-  background-color: var(--cmp-input-background-color);
+  border-color: var(--color-theme-border);
+  background-color: var(--color-theme-background);
   transition-property: border-color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
@@ -79,7 +79,7 @@
 }
 
 .ax-input__icon-container--disabled {
-  background-color: var(--cmp-input-background-color-disabled);
+  background-color: var(--color-theme-background--disabled);
 }
 
 .ax-input__icon-container--focused {
