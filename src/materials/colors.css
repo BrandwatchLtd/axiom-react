@@ -157,8 +157,8 @@
   --color-theme-night-text--subtle: rgba(var(--rgb-theme-night-main), var(--opacity-text--subtle));
   --color-theme-night-text--disabled: rgba(var(--rgb-theme-night-main), var(--opacity-text--disabled));
 
-  --color-theme-night-background--active: var(--color-ui-carbon--darker);
-  --color-theme-night-background: var(--color-ui-carbon--dark);
+  --color-theme-night-background--active: var(--color-ui-carbon--dark);
+  --color-theme-night-background: var(--color-ui-carbon--darker);
   --color-theme-night-background--hover: var(--color-ui-carbon);
   --color-theme-night-background--subtle: rgba(var(--rgb-theme-night-main), var(--opacity-background--subtle));
   --color-theme-night-background--disabled: rgba(var(--rgb-theme-night-main), var(--opacity-background--disabled));
