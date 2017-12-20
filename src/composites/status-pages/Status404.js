@@ -17,7 +17,7 @@ export default class Status404 extends Component {
     /** Location of where the home link takes the user */
     homeLocation: PropTypes.string.isRequired,
     /** Overall theme for the page, needs to be set when using a background image */
-    theme: PropTypes.oneOf(['dark', 'light']).isRequired,
+    theme: PropTypes.oneOf(['day', 'night']).isRequired,
   };
 
   static contextTypes = {
