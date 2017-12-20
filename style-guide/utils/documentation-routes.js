@@ -25,19 +25,5 @@ const flatDocumentationMap =
 const getRoutes = () => flatDocumentationMap()
   .filter(({ isParent }) => !isParent);
 
-const getNavigationItems =
-  (activePath, openPath, map = mapDocumenation.docs.children, trail = ['docs']) =>
-    Object.keys(map).map((key) => ({
-      name: map[key].name,
-      isActive: activePath === trailToPath(...trail, key),
-      isOpen: openPath.indexOf(trailToPath(...trail, key)) !== -1,
-      to: trailToPath(...trail, key),
-      children: map[key].children
-        ? getNavigationItems(activePath, openPath, map[key].children, [...trail, key])
-        : null,
-    }));
-
-
 module.exports.normalisePath = normalisePath;
 module.exports.getRoutes = getRoutes;
-module.exports.getNavigationItems = getNavigationItems;

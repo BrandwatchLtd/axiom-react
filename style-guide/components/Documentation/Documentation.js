@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Heading } from 'bw-axiom';
-import { LayoutContent } from '../Layout';
+import { Base } from 'bw-axiom';
 import './Documentation.css';
 
 const components = JSON.parse(process.env.COMPONENT_PROPS);
@@ -12,7 +11,6 @@ export default class Documentation extends Component {
     location: PropTypes.shape({
       pathname: PropTypes.string.isRequired,
     }).isRequired,
-    name: PropTypes.string.isRequired,
   };
 
   static contextTypes = {
@@ -27,22 +25,16 @@ export default class Documentation extends Component {
   }
 
   render() {
-    const { examples, name } = this.props;
+    const { examples } = this.props;
 
     return (
-      <div className="dm-documentation">
-        <LayoutContent>
-          <Heading textCase="capital" textSize="display1">{ name }</Heading>
-        </LayoutContent>
-
-        <LayoutContent>
-          { examples.map((Example, index) =>
-            <Example
-                components={ components }
-                key={ index } />
-          ) }
-        </LayoutContent>
-      </div>
+      <Base className="dm-documentation">
+        { examples.map((Example, index) =>
+          <Example
+              components={ components }
+              key={ index } />
+        ) }
+      </Base>
     );
   }
 }

@@ -1,13 +1,28 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { Status404 } from 'bw-axiom';
-import { getRoutes, normalisePath } from '../../utils/documentation-routes';
-import { Layout, LayoutHeader, LayoutSidebar, LayoutMain } from '../Layout';
+import {
+  Base,
+  Dock,
+  DockFooter,
+  DockItem,
+  Canvas,
+  CanvasHeader,
+  Cloak,
+  Console,
+  ConsoleHeader,
+  Platform,
+  PlatformTitle,
+} from 'bw-axiom';
+import ApplicationNavigation from './ApplicationNavigation';
+import ApplicationTools from './ApplicationTools';
 import Documentation from '../Documentation';
+import GithubLink from '../GithubLink/GithubLink';
 import mapExamples from '../../map-examples';
-import Navigation from '../Navigation';
+import { getRoutes, normalisePath } from '../../utils/documentation-routes';
 import './Application.css';
+
+const leftConsole = { position: 'left', width: '17.5rem' };
 
 export default class Application extends Component {
   static childContextTypes = {
@@ -15,16 +30,20 @@ export default class Application extends Component {
   };
 
   static propTypes = {
+    history: PropTypes.shape({
+      push: PropTypes.func.isRequired,
+    }).isRequired,
     location: PropTypes.object.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
+      axiomTheme: 'day',
       axiomLanguage: 'en',
+      openConsolePosition: leftConsole.position,
+      openConsoleWidth: leftConsole.width,
     };
-
-    this.handleSwitchLanguage = this.handleSwitchLanguage.bind(this);
   }
 
   getChildContext() {
@@ -33,53 +52,85 @@ export default class Application extends Component {
     };
   }
 
-  handleSwitchLanguage(axiomLanguage) {
-    this.setState({ axiomLanguage });
+  openConsole({ position, width }) {
+    this.setState({
+      openConsolePosition: position,
+      openConsoleWidth: width,
+    });
   }
 
   render() {
-    const { location } = this.props;
+    const {
+      axiomLanguage,
+      axiomTheme,
+      openConsolePosition,
+      openConsoleWidth,
+    } = this.state;
+    const { history, location } = this.props;
     const { pathname } = location;
     const routes = getRoutes();
     const firstRoutPath = routes[0].path;
 
     return (
-      <Layout>
-        <LayoutHeader>
-          Axiom
-        </LayoutHeader>
+      <Platform
+          onConsoleClose={ () => this.setState({ openConsolePosition: undefined }) }
+          openConsolePosition={ openConsolePosition }
+          openConsoleWidth={ openConsoleWidth }
+          theme={ axiomTheme }>
+        <Dock>
+          <DockFooter>
+            <DockItem>
+              <GithubLink />
+            </DockItem>
+          </DockFooter>
+        </Dock>
 
-        <LayoutSidebar onSwitchLanguage={ this.handleSwitchLanguage }>
-          <Navigation />
-        </LayoutSidebar>
+        <Console position={ leftConsole.position } width={ leftConsole.width }>
+          <ConsoleHeader sticky="0">
+            <PlatformTitle>API Docs</PlatformTitle>
+          </ConsoleHeader>
 
-        <LayoutMain>
+          <ApplicationNavigation history={ history } />
+        </Console>
+
+        <Canvas>
+          <Base sticky="0">
+            <CanvasHeader>
+              <PlatformTitle textStrong>
+                { (routes.filter(({ path }) => path === pathname)[0] || {}).name }
+              </PlatformTitle>
+            </CanvasHeader>
+
+            <Cloak invisible={ false }>
+              <CanvasHeader size="small">
+                <ApplicationTools
+                    activeLanguage={ axiomLanguage }
+                    activeTheme={ axiomTheme }
+                    isConsoleOpen={ !!openConsolePosition }
+                    onLanguageChange={ (axiomLanguage) => this.setState({ axiomLanguage }) }
+                    onOpenConsole={ () => this.openConsole(leftConsole) }
+                    onThemeChange={ (axiomTheme) => this.setState({ axiomTheme }) } />
+              </CanvasHeader>
+            </Cloak>
+          </Base>
+
           <Switch location={ { pathname: normalisePath(pathname) } }>
             <Route exact path="/" render={ () =>
               <Redirect to={ firstRoutPath }/>
             } />
 
-            { routes.map(({ name, path }) =>
+            { Object.keys(mapExamples).map((path) =>
               <Route
                   key={ path }
                   path={ path }
                   render={ (props) => (
-                    <Documentation { ...props }
-                        examples={ mapExamples[path] }
-                        name={ name } />
+                    <Documentation { ...props } examples={ mapExamples[path] } />
                   ) }
                   strict={ false } />
             ) }
-
-            <Route render={ () => (
-              <Status404
-                  contactUsLocation="https://www.brandwatch.com/"
-                  homeLocation="/"
-                  theme="day" />
-            ) } />
           </Switch>
-        </LayoutMain>
-      </Layout>
+        </Canvas>
+      </Platform>
     );
   }
 }

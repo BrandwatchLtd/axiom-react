@@ -15,7 +15,7 @@ export default class Example extends Component {
     const { name, children } = this.props;
 
     return (
-      <Card>
+      <Card space="x8">
         <CardContent>
           { name && (
             <Heading space="x6" textSize="headtitle">{ name }</Heading>

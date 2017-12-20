@@ -20,7 +20,7 @@ export default class Status404Example extends Component {
       Status404: {
         contactUsLocation: '/',
         homeLocation: '/',
-        theme: 'light',
+        theme: 'day',
       },
     };
 
