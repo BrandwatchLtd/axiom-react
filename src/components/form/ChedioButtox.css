@@ -23,14 +23,14 @@
   position: relative;
   width: var(--cmp-input-checkbox-size);
   height: var(--cmp-input-checkbox-size);
-  border: var(--component-border-width) solid var(--cmp-input-border-color);
-  background-color: var(--cmp-input-background-color);
+  border: var(--component-border-width) solid var(--color-theme-border);
+  background-color: var(--color-theme-background);
   transition-property: background-color, border-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
   @nest .ax-chedio-buttox:focus + &    { border-color: var(--cmp-input-border-color-focused); }
-  @nest .ax-chedio-buttox:disabled + & { background-color: var(--cmp-input-background-color-disabled); }
+  @nest .ax-chedio-buttox:disabled + & { background-color: var(--color-theme-background--disabled); }
 
   &::before {
     content: '';

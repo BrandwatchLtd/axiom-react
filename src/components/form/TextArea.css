@@ -1,15 +1,15 @@
 .ax-textarea {
   padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-small);
-  border: var(--component-border-width) solid var(--cmp-input-border-color);
+  border: var(--component-border-width) solid var(--color-theme-border);
   border-radius: var(--component-border-radius);
-  background-color: var(--cmp-input-background-color);
+  background-color: var(--color-theme-background);
   resize: none;
   transition-property: border-color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
   &:focus { border-color: var(--cmp-input-border-color-focused); }
-  &:disabled { background-color: var(--cmp-input-background-color-disabled); }
+  &:disabled { background-color: var(--color-theme-background--disabled); }
 }
 
 .ax-textarea--valid:not(:focus)  {

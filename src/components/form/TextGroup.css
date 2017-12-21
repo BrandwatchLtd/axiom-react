@@ -7,7 +7,7 @@
 
   &::placeholder {
     opacity: 1;
-    color: var(--cmp-input-color-placeholder);
+    color: var(--color-theme-text--disabled);
   }
 
   &:focus {
