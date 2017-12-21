@@ -4,9 +4,10 @@
   --layout-width-medium: 62rem;
   --layout-width-large: 75rem;
 
-  --z-index-platform: 1;
-  --z-index-sticky: 2;
-  --z-index-position: 3;
-  --z-index-modal: 3;
-  --z-index-notifications: 4;
+  --z-index-sticky: 1;
+  --z-index-platform-console: 2;
+  --z-index-platform-dock: 3;
+  --z-index-position: 4;
+  --z-index-modal: 4;
+  --z-index-notifications: 5;
 }
