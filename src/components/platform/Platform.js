@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import omit from 'lodash.omit';
 import Base from '../base/Base';
 import './Platform.css';
@@ -10,6 +11,7 @@ export default class Platform extends Component {
     onConsoleClose: PropTypes.func,
     openConsolePosition: PropTypes.oneOf(['left', 'right']),
     openConsoleWidth: PropTypes.string,
+    responsive: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -27,14 +29,19 @@ export default class Platform extends Component {
   }
 
   render() {
-    const props = omit(this.props, [
+    const { responsive, ...rest } = this.props;
+    const props = omit(rest, [
       'onConsoleClose',
       'openConsolePosition',
       'openConsoleWidth',
     ]);
 
+    const classes = classnames('ax-platform', {
+      'ax-platform--responsive': responsive,
+    });
+
     return (
-      <Base { ...props } className="ax-platform" />
+      <Base { ...props } className={ classes } />
     );
   }
 }

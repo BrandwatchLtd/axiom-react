@@ -76,6 +76,7 @@ export default class Application extends Component {
           onConsoleClose={ () => this.setState({ openConsolePosition: undefined }) }
           openConsolePosition={ openConsolePosition }
           openConsoleWidth={ openConsoleWidth }
+          responsive
           theme={ axiomTheme }>
         <Dock>
           <DockFooter>

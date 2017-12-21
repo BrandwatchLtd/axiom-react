@@ -105,7 +105,7 @@
  * in Javascript.
  */
 @media (--screen-less-than-large) {
-  .ax-platform__canvas {
+  .ax-platform--responsive .ax-platform__canvas {
     /* stylelint-disable declaration-no-important */
     margin-right: initial !important;
     margin-left: initial !important;

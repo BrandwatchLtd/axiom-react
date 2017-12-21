@@ -14,7 +14,7 @@ export default class ConsoleHeader extends Component {
   };
 
   static contextTypes = {
-    onConsoleClose: PropTypes.func.isRequired,
+    onConsoleClose: PropTypes.func,
     consolePosition: PropTypes.string.isRequired,
   };
 
