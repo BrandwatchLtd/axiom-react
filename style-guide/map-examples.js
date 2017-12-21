@@ -41,7 +41,6 @@ export default {
   '/docs/components/typography': require('../src/components/typography/example').default,
   '/docs/components/validation': require('../src/components/validation/example').default,
   '/docs/composites/change-password': require('../src/composites/change-password/example').default,
-  '/docs/composites/login': require('../src/composites/login/example').default,
   '/docs/composites/logo-page': require('../src/composites/logo-page/example').default,
   '/docs/composites/status-pages': require('../src/composites/status-pages/example').default,
   '/docs/composites/usermenu': require('../src/composites/usermenu/example').default,

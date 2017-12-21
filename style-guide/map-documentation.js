@@ -56,7 +56,6 @@ module.exports = {
         name: 'Composites',
         children: {
           'change-password': { name: 'Change Password' },
-          'login': { name: 'Login Page' },
           'logo-page': { name: 'Logo Page' },
           'status-pages': { name: 'Status Pages' },
           'usermenu': { name: 'User Menu' },
