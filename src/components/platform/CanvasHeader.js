@@ -5,6 +5,7 @@ import Base from '../base/Base';
 
 export default class CanvasHeader extends Component {
   static propTypes = {
+    separator: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'large']),
   };
 
@@ -13,10 +14,13 @@ export default class CanvasHeader extends Component {
   };
 
   render() {
-    const { size, ...rest } = this.props;
+    const { separator, size, ...rest } = this.props;
     const classes = classnames(
       'ax-platform__canvas-header',
-      `ax-platform__canvas-header--${size}`);
+      `ax-platform__canvas-header--${size}`, {
+        'ax-platform__canvas-header--separator': separator,
+      },
+    );
 
     return (
       <Base { ...rest } className={ classes } />

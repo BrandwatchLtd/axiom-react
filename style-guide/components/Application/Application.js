@@ -87,7 +87,7 @@ export default class Application extends Component {
         </Dock>
 
         <Console position={ leftConsole.position } width={ leftConsole.width }>
-          <ConsoleHeader sticky="0">
+          <ConsoleHeader separator sticky="0">
             <PlatformTitle>API Docs</PlatformTitle>
           </ConsoleHeader>
 
@@ -96,14 +96,14 @@ export default class Application extends Component {
 
         <Canvas>
           <Base sticky="0">
-            <CanvasHeader>
+            <CanvasHeader separator>
               <PlatformTitle textStrong>
                 { (routes.filter(({ path }) => path === pathname)[0] || {}).name }
               </PlatformTitle>
             </CanvasHeader>
 
             <Cloak invisible={ false }>
-              <CanvasHeader size="small">
+              <CanvasHeader separator size="small">
                 <ApplicationTools
                     activeLanguage={ axiomLanguage }
                     activeTheme={ axiomTheme }
