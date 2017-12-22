@@ -11,7 +11,7 @@ const cardListStyleProps = {
     space: 'x0',
   },
   seamless: {
-    boder: false,
+    border: false,
     elevation: 'x0',
     space: 'x0',
   },
