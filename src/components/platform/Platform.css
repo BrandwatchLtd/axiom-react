@@ -12,6 +12,16 @@
   min-height: 100vh;
 }
 
+.ax-platform__mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-index-platform-mask);
+}
+
 .ax-platform__dock {
   display: flex;
   position: fixed;
@@ -105,11 +115,17 @@
  * in Javascript.
  */
 @media (--screen-less-than-large) {
-  .ax-platform--responsive .ax-platform__canvas {
-    /* stylelint-disable declaration-no-important */
-    margin-right: initial !important;
-    margin-left: initial !important;
-    transform: initial !important;
-    /* stylelint-enable declaration-no-important */
+  .ax-platform--responsive {
+    &.ax-platform--console-open .ax-platform__mask {
+      display: block;
+    }
+
+    & .ax-platform__canvas {
+      /* stylelint-disable declaration-no-important */
+      margin-right: initial !important;
+      margin-left: initial !important;
+      transform: initial !important;
+      /* stylelint-enable declaration-no-important */
+    }
   }
 }

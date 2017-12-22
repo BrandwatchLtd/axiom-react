@@ -29,19 +29,30 @@ export default class Platform extends Component {
   }
 
   render() {
-    const { responsive, ...rest } = this.props;
+    const {
+      children,
+      onConsoleClose,
+      openConsolePosition,
+      responsive,
+      ...rest
+    } = this.props;
+
     const props = omit(rest, [
-      'onConsoleClose',
-      'openConsolePosition',
       'openConsoleWidth',
     ]);
 
     const classes = classnames('ax-platform', {
       'ax-platform--responsive': responsive,
+      'ax-platform--console-open': openConsolePosition,
     });
 
     return (
-      <Base { ...props } className={ classes } />
+      <Base { ...props } className={ classes }>
+        { children }
+        <div
+            className="ax-platform__mask"
+            onClick={ () => onConsoleClose() } />
+      </Base>
     );
   }
 }
