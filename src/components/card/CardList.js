@@ -8,7 +8,7 @@ export default class CardList extends Component {
     /** Cards to be inserted in the CardList */
     children: PropTypes.node.isRequired,
     /** Style of the list */
-    style: PropTypes.oneOf(['seamless', 'separate']),
+    style: PropTypes.oneOf(['divided', 'seamless', 'separate']),
   };
 
   static defaultProps = {

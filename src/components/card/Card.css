@@ -6,7 +6,7 @@
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
-  @nest .ax-card-list--seamless & {
+  @nest .ax-card-list--divided & {
     border-bottom: 0.0625rem solid var(--color-theme-border);
     border-radius: 0;
   }
@@ -137,9 +137,24 @@
 .ax-card--clickable {
   cursor: pointer;
 
+  &:hover,
+  &:active,
+  &.ax-card--hover {
+    transform: translateZ(0); /* New stacking context for box-shadow */
+  }
+
+  &:active {
+    box-shadow: var(--drop-shadow-theme-elevation--x1);
+
+    &.ax-card--border {
+      box-shadow:
+        var(--drop-shadow-theme-border),
+        var(--drop-shadow-theme-elevation--x1);
+    }
+  }
+
   &.ax-card--hover:not(:active),
   &:hover:not(:active) {
-    transform: translateZ(0); /* New stacking context for box-shadow */
     box-shadow: var(--drop-shadow-theme-elevation--x2);
 
     &.ax-card--border {
