@@ -49,7 +49,7 @@ export default class Card extends Component {
   };
 
   static contextTypes = {
-    cardListStyle: PropTypes.oneOf(['seamless', 'separate']),
+    cardListStyle: PropTypes.oneOf(['divided', 'seamless', 'separate']),
   };
 
   render() {
