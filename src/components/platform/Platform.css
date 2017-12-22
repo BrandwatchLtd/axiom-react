@@ -60,6 +60,12 @@
 }
 
 .ax-platform__console,
+.ax-platform__canvas {
+  display: flex;
+  flex-direction: column;
+}
+
+.ax-platform__console,
 .ax-platform__console-header {
   background-color: var(--color-theme-background--active);
   color: var(--color-theme-text);
@@ -75,6 +81,7 @@
 .ax-platform__console-header,
 .ax-platform__canvas-header {
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
   justify-content: center;
   padding: 0 var(--page-padding-horizontal);
