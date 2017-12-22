@@ -5,8 +5,13 @@ import Base from '../base/Base';
 import './Card.css';
 
 const cardListStyleProps = {
-  seamless: {
+  divided: {
     border: false,
+    elevation: 'x0',
+    space: 'x0',
+  },
+  seamless: {
+    boder: false,
     elevation: 'x0',
     space: 'x0',
   },
