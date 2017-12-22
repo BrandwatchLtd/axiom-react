@@ -10,6 +10,7 @@ import GridCell from '../grid/GridCell';
 export default class ConsoleHeader extends Component {
   static propTypes = {
     children: PropTypes.node,
+    separator: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'large']),
   };
 
@@ -24,10 +25,13 @@ export default class ConsoleHeader extends Component {
 
   render() {
     const { onConsoleClose, consolePosition } = this.context;
-    const { children, size, ...rest } = this.props;
+    const { children, separator, size, ...rest } = this.props;
     const classes = classnames(
       'ax-platform__console-header',
-      `ax-platform__console-header--${size}`);
+      `ax-platform__console-header--${size}`, {
+        'ax-platform__console-header--separator': separator,
+      },
+    );
 
     return (
       <Base { ...rest } className={ classes }>

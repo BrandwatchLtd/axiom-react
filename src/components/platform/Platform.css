@@ -78,6 +78,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 var(--page-padding-horizontal);
+}
+
+.ax-platform__console-header--separator,
+.ax-platform__canvas-header--separator {
   border-bottom: 0.0625rem solid var(--color-theme-border);
 }
 
