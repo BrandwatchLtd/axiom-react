@@ -36,5 +36,9 @@
   --component-round-size-medium: calc(var(--spacing-grid-size) * 12);
   --component-round-size-large: calc(var(--spacing-grid-size) * 18);
   --component-round-size-huge: calc(var(--spacing-grid-size) * 30);
+
+  --drop-shadow-border: 0 0 0 0.0625rem;
+  --drop-shadow-elevation--x1: 0 0.0625rem 0.01875rem 0;
+  --drop-shadow-elevation--x2: 0 0.125rem 1rem 0;
 }
 /* stylelint-enable */

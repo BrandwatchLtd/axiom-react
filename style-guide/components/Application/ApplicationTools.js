@@ -54,8 +54,8 @@ export default class ApplicationTools extends Component {
           responsive={ false }
           shrink>
         { onOpenConsole && (
-          <Cloak invisible={ isConsoleOpen }>
-            <GridCell>
+          <GridCell>
+            <Cloak invisible={ isConsoleOpen }>
               <ButtonGroup>
                 <Button
                     onClick={ () => onOpenConsole() }
@@ -65,8 +65,8 @@ export default class ApplicationTools extends Component {
                   <ButtonIcon name="chevron-right" />
                 </Button>
               </ButtonGroup>
-            </GridCell>
-          </Cloak>
+            </Cloak>
+          </GridCell>
         ) }
 
         <GridCell>
