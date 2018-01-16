@@ -1,13 +1,28 @@
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import React, { Component } from 'react';
-import './HorizontalRule.css';
 import Base from '../base/Base';
+import './HorizontalRule.css';
 
 export default class HorizontalRule extends Component {
+  static propTypes = {
+    borderStyle: PropTypes.oneOf(['solid', 'dotted']),
+  };
+
+  static defaultProps = {
+    borderStyle: 'solid',
+  };
+
   render() {
-    const { ...rest } = this.props;
+    const { borderStyle, ...rest } = this.props;
+    const classes = classnames('ax-horizontal-rule', `ax-horizontal-rule--${borderStyle}`);
 
     return (
-      <Base space="x0" { ...rest } Component="hr" className="ax-horizontal-rule" />
+      <Base
+          space="x0"
+          { ...rest }
+          Component="hr"
+          className={ classes } />
     );
   }
 }

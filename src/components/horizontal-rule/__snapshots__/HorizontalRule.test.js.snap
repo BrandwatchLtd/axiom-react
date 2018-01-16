@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalRule renders with defaultProps 1`] = `
+<hr
+  className="ax-horizontal-rule ax-horizontal-rule--solid ax-space--x0"
+/>
+`;
+
+exports[`HorizontalRule renders with style dotted 1`] = `
+<hr
+  className="ax-horizontal-rule ax-horizontal-rule--dotted ax-space--x0"
+/>
+`;
+
+exports[`HorizontalRule renders with style solid 1`] = `
+<hr
+  className="ax-horizontal-rule ax-horizontal-rule--solid ax-space--x0"
+/>
+`;
