@@ -47,4 +47,18 @@ describe('Image', () => {
       expect(tree).toMatchSnapshot();
     });
   });
+
+  describe('with maximum or minimum widths', () => {
+    it('uses applies the maximum width style when given', () => {
+      const component = getComponent({ maxWidth: '3rem' });
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    it('uses minimum width style when given', () => {
+      const component = getComponent({ minWidth: '3rem' });
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
 });

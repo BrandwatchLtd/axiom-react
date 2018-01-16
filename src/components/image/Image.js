@@ -13,6 +13,10 @@ export default class Image extends Component {
     children: PropTypes.node,
     /* Height of the image. When shape is circle this will be ignored and width will be applied. */
     height: PropTypes.string,
+    /**  Maximum width of the image */
+    maxWidth: PropTypes.string,
+    /** Minimum width of the image */
+    minWidth: PropTypes.string,
     /** SKIP */
     onError: PropTypes.func,
     /** SKIP */
@@ -34,6 +38,8 @@ export default class Image extends Component {
       border,
       children,
       height,
+      maxWidth,
+      minWidth,
       onError,
       onLoad,
       shape,
@@ -43,6 +49,8 @@ export default class Image extends Component {
     } = this.props;
 
     const style = {
+      maxWidth,
+      minWidth,
       width: shape === 'circle' ? (width || height) : width,
       height: shape === 'circle' ? (width || height) : height,
     };
