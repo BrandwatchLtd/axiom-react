@@ -7,6 +7,8 @@ exports[`Image renders with border large 1`] = `
   style={
     Object {
       "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": undefined,
     }
   }
@@ -20,6 +22,8 @@ exports[`Image renders with border small 1`] = `
   style={
     Object {
       "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": undefined,
     }
   }
@@ -33,6 +37,8 @@ exports[`Image renders with defaultProps 1`] = `
   style={
     Object {
       "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": undefined,
     }
   }
@@ -46,6 +52,8 @@ exports[`Image renders with shape circle 1`] = `
   style={
     Object {
       "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": undefined,
     }
   }
@@ -59,6 +67,8 @@ exports[`Image renders with shape rounded 1`] = `
   style={
     Object {
       "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": undefined,
     }
   }
@@ -72,6 +82,38 @@ exports[`Image renders with shape square 1`] = `
   style={
     Object {
       "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": undefined,
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image with maximum or minimum widths uses applies the maximum width style when given 1`] = `
+<img
+  className="ax-image ax-image--square ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "3rem",
+      "minWidth": undefined,
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image with maximum or minimum widths uses minimum width style when given 1`] = `
+<img
+  className="ax-image ax-image--square ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": undefined,
+      "minWidth": "3rem",
       "width": undefined,
     }
   }
@@ -85,6 +127,8 @@ exports[`Image with shape circle uses height for both width and height when give
   style={
     Object {
       "height": "3rem",
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": "3rem",
     }
   }
@@ -98,6 +142,8 @@ exports[`Image with shape circle uses width for both width and height when given
   style={
     Object {
       "height": "3rem",
+      "maxWidth": undefined,
+      "minWidth": undefined,
       "width": "3rem",
     }
   }
