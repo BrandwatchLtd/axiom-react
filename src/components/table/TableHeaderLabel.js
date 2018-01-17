@@ -16,12 +16,16 @@ export default class TableHeaderLabel extends Component {
     shrink: PropTypes.bool,
     /** Selects the column and sets the sort direction */
     sortDirection: PropTypes.oneOf(['ascending', 'descending']),
+    /** Indicates the column is sortable if false it will remove the cloaked icon
+    indicating sort direction */
+    sortable: PropTypes.bool,
     /** Set text-align */
     textAlign: PropTypes.oneOf(['left', 'right']),
   };
 
   static defaultProps = {
     textAlign: 'left',
+    sortable: true,
   }
 
   render() {
@@ -32,6 +36,7 @@ export default class TableHeaderLabel extends Component {
       shrink,
       sortDirection,
       textAlign,
+      sortable,
       ...rest
     } = this.props;
 
@@ -54,11 +59,12 @@ export default class TableHeaderLabel extends Component {
 
           { children }
 
-          <TextIcon
+          { sortable && ( <TextIcon
               cloak={ sortDirection === undefined }
               name={ sortDirection === 'descending' ? 'triangle-down' : 'triangle-up' }
               spaceLeft={ textAlign === 'left' ? 'x2' : undefined }
               spaceRight={ textAlign === 'right' ? 'x2' : undefined } />
+          ) }
         </button>
       </Base>
     );

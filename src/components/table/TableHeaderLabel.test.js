@@ -36,4 +36,10 @@ describe('TableHeaderLabel', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with sortable', () => {
+    const component = getComponent({ sortable: false });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
