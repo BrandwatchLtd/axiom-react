@@ -19,12 +19,13 @@
   transition-property: background-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
+}
 
-  &:hover {
-    background-color: var(--color-ui-accent--hover);
-    color: var(--color-ui-white-noise);
-    cursor: pointer;
-  }
+.ax-context-menu__item-single:hover,
+.ax-context-menu__item-single--focused {
+  background-color: var(--color-ui-accent--hover);
+  color: var(--color-ui-white-noise);
+  cursor: pointer;
 }
 
 .ax-context-menu__item-single:disabled,
