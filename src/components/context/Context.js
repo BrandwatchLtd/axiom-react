@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Children, cloneElement, Component, isValidElement } from 'react';
 import classnames from 'classnames';
 import Base from '../base/Base';
 import './Context.css';
@@ -43,7 +43,9 @@ export default class Context extends Component {
         ) }
 
         <div className="ax-context__content" style={ { maxHeight } }>
-          { children }
+          { Children.map(children, (child, index) =>
+            isValidElement(child) ? cloneElement(child, { index: index.toString() } ) : child,
+          ) }
         </div>
       </Base>
     );
