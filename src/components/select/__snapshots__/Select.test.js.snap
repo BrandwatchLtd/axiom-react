@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders with a selected value 1`] = `
+<label
+  className="ax-input__group ax-space--x4"
+>
+  <div
+    className="ax-input__button-container"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <svg
+          className="ax-icon ax-icon--chevron-down"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<path d=\\"M4 5L2.5 6.5 8 12l5.5-5.5L12 5 8 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            }
+          }
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+        />
+      </span>
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Select renders with defaultProps 1`] = `
+<label
+  className="ax-input__group ax-space--x4"
+>
+  <div
+    className="ax-input__button-container"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <svg
+          className="ax-icon ax-icon--chevron-down"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<path d=\\"M4 5L2.5 6.5 8 12l5.5-5.5L12 5 8 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            }
+          }
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+        />
+      </span>
+      <input
+        className="ax-input"
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</label>
+`;

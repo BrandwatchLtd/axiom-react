@@ -34,6 +34,7 @@ export default {
   '/docs/components/position': require('../src/components/position/example').default,
   '/docs/components/progress': require('../src/components/progress/example').default,
   '/docs/components/reveal': require('../src/components/reveal/example').default,
+  '/docs/components/select': require('../src/components/select/example').default,
   '/docs/components/table': require('../src/components/table/example').default,
   '/docs/components/tabset': require('../src/components/tabset/example').default,
   '/docs/components/toggle': require('../src/components/toggle/example').default,
