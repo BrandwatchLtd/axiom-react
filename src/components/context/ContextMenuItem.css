@@ -21,6 +21,8 @@
   transition-timing-function: var(--transition-function);
 }
 
+.ax-context-menu__item-multi:hover,
+.ax-context-menu__item-multi--focused,
 .ax-context-menu__item-single:hover,
 .ax-context-menu__item-single--focused {
   background-color: var(--color-ui-accent--hover);
