@@ -4,6 +4,7 @@
 
 .ax-data-picker__dropdown {
   flex: 1 1 0%;
+  min-width: 0;
 }
 
 .ax-data-picker__link {
