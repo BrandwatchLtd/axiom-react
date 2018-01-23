@@ -18,6 +18,7 @@ export default {
   '/docs/components/date-picker': require('../src/components/date-picker/example').default,
   '/docs/components/dialog': require('../src/components/dialog/example').default,
   '/docs/components/dropdown': require('../src/components/dropdown/example').default,
+  '/docs/components/editable': require('../src/components/editable/example').default,
   '/docs/components/form': require('../src/components/form/example').default,
   '/docs/components/grid': require('../src/components/grid/example').default,
   '/docs/components/horizontal-rule': require('../src/components/horizontal-rule/example').default,

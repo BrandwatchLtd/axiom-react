@@ -28,6 +28,7 @@ module.exports = {
           'date-picker': { name: 'Date Picker' },
           'dialog': { name: 'Dialog' },
           'dropdown': { name: 'Dropdown' },
+          'editable': { name: 'Editable' },
           'form': { name: 'Form & Inputs' },
           'grid': { name: 'Grid' },
           'horizontal-rule': { name: 'Horizontal Rule' },

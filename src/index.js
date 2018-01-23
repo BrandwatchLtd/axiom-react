@@ -78,6 +78,8 @@ export { default as DropdownContent } from './components/dropdown/DropdownConten
 export { default as DropdownMenu } from './components/dropdown/DropdownMenu';
 export { default as DropdownMenuItem } from './components/dropdown/DropdownMenuItem';
 export { default as DropdownTarget } from './components/dropdown/DropdownTarget';
+export { default as EditableLine } from './components/editable/EditableLine';
+export { default as EditableTitle } from './components/editable/EditableTitle';
 export { default as Form } from './components/form/Form';
 export { default as Grid } from './components/grid/Grid';
 export { default as GridCell } from './components/grid/GridCell';

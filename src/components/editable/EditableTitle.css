@@ -1,0 +1,16 @@
+.ax-editable-title {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ax-editable-title__input {
+  flex: 0 1 100%;
+  min-width: 0;
+}
+
+.ax-editable-title__icon {
+  flex: 0 0 auto;
+  margin-left: var(--spacing-grid-size);
+}
