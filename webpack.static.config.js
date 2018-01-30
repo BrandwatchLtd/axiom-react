@@ -3,20 +3,22 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const generateComponentProps = require('./scripts/component-docs');
-const { getRoutes } = require('./style-guide/utils/documentation-routes');
-const baseName = process.env.BASENAME_ENV || '';
 
 module.exports = {
-  entry: './style-guide/static.js',
+  entry: [
+    'babel-polyfill',
+    './site/static.js',
+  ],
   module: {
     rules: [{
       test: /\.js$/,
       use: ['babel-loader'],
       include: [
-        /src/,
+        /packages/,
+        /site/,
         /style-guide/,
         /node_modules\/get-own-enumerable-property-symbols/,
         /node_modules\/stringify-object/,
@@ -41,40 +43,43 @@ module.exports = {
   },
   output: {
     filename: './assets/bundle.[hash].min.js',
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, 'public'),
     publicPath: '/',
     libraryTarget: 'umd',
   },
   plugins: [
-    new CleanWebpackPlugin(['static']),
+    new CleanWebpackPlugin(['public']),
     new ExtractTextPlugin({
       filename: './assets/bundle.[hash].min.css',
     }),
     new CopyWebpackPlugin([{
-      from: './style-guide/assets',
+      from: './site/assets',
       to: './assets',
     }]),
     new StaticSiteGeneratorPlugin({
-      paths: ['/'].concat(getRoutes(baseName).map(({ path }) => path)),
+      crawl: true,
+      paths: ['/', '/docs/packages'],
     }),
-    new webpack.EnvironmentPlugin({
-      BASENAME: baseName,
-      COMPONENT_PROPS: JSON.stringify(generateComponentProps()),
-      NODE_ENV: 'production',
-    }),
+    new webpack.EnvironmentPlugin({ NODE_ENV: 'production' }),
     new UglifyJSPlugin({
       uglifyOptions: {
         ecma: 6,
         mangle: {
+          keep_classnames: true,
           keep_fnames: true,
         },
       },
     }),
+    new CompressionPlugin({
+      asset: '[path]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$|\.svg$|\.png$|\.jpg$/,
+    }),
   ],
-  resolve: {
-    alias: {
-      'bw-axiom': path.resolve(__dirname, 'src'),
-      'style-guide': path.resolve(__dirname, 'style-guide/components'),
-    },
+  resolveLoader: {
+    modules: [
+      'node_modules',
+      'packages',
+    ],
   },
 };

@@ -1,8 +1,11 @@
 {
   "moduleNameMapper": {
-    "^.+\\.css$": "<rootDir>/test/__mocks__/styleMock.js"
+    "^.+\\.css$": "identity-obj-proxy"
   },
   "setupFiles": [
     "./enzyme.js"
+  ],
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!@brandwatch)"
   ]
 }

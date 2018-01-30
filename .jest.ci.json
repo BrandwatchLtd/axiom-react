@@ -1,6 +1,6 @@
 {
   "moduleNameMapper": {
-    "^.+\\.css$": "<rootDir>/test/__mocks__/styleMock.js"
+    "^.+\\.css$": "identity-obj-proxy"
   },
   "setupFiles": [
     "./enzyme.js"

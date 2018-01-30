@@ -4,27 +4,18 @@ cache:
   directories:
   - "~/bin"
   - "~/opt"
-before_install:
-- mkdir tmp
 before_script:
-- bash ./deploy/travis_setup.sh
+- yarn global add lerna
+- yarn global add babel-cli
+- yarn ci:setup
 script:
-- yarn lint
 - yarn ci:test
-- yarn ci:build:static
+- yarn lint
+- yarn build:packages
 after_success:
-- bash ./deploy/publish_to_npm.sh
-- bash ./deploy/deploy_to_ghpages.sh
-- bash ./deploy/deploy_to_gcp.sh
+- yarn publish:packages
+- yarn publish:site
 env:
   global:
-  - COMMIT_AUTHOR_EMAIL: travis@gh-pages
-  - COMMIT_AUTHOR_NAME: Travis CI
   - SOURCE_BRANCH: master
-notifications:
-  webhooks:
-    urls:
-      - https://us-central1-dingbot-bd842.cloudfunctions.net/monitor
-    on_success: always
-    on_failure: always
-    on_start: always
+  - STORAGE_BUCKET: axiom.platform-prod.gcp0.bwcom.net

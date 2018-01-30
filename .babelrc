@@ -1,6 +1,6 @@
 {
   "plugins": [
-    "./scripts/babel-plugin-inline-svg-import.js",
+    "@brandwatch/babel-plugin-transform-svg-axiom",
     "transform-class-properties",
     "transform-es2015-classes",
     "transform-object-rest-spread"

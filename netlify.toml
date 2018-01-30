@@ -1,4 +1,4 @@
 # Global settings applied to the whole site.
 [build]
-  publish = "static"
-  command = "yarn build:static"
+  publish = "public"
+  command = "yarn build:packages && yarn build:site"
