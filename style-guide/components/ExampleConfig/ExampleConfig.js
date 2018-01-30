@@ -4,7 +4,7 @@ import extend from 'deep-extend';
 import { Base, Tabset, Tab } from 'bw-axiom';
 import set from 'lodash.set';
 import { filterRender, filterSnippet } from '../../utils/example-filter';
-import renderSnippet, { jsxRender, htmlRender } from '../../utils/render-snippet';
+import renderSnippet, { jsxRender/*, htmlRender*/ } from '../../utils/render-snippet';
 import CodeSnippet from '../CodeSnippet/CodeSnippet';
 import ComponentProps from './ComponentProps';
 import { basePropTypes, mergeState, render } from './utils';
@@ -84,7 +84,9 @@ export default class ExampleConfig extends Component {
     const filteredSnippet = filterSnippet(example);
     const renderedSnippet = filterRender(example);
     const jsxSnippet = hasCode && renderSnippet(filteredSnippet, jsxRender);
-    const htmlSnippet = hasCode && renderSnippet(filteredSnippet, htmlRender);
+
+    // https://github.com/facebook/react/issues/11692
+    const htmlSnippet = null; // hasCode && renderSnippet(filteredSnippet, htmlRender);
 
     return (
       <Base space="x8">
