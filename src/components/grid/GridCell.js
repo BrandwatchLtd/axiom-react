@@ -34,6 +34,14 @@ export default class GridCell extends Component {
      */
     full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
     /**
+     * Sizes itself according to the size of its contents, similar to `shrink` it
+     * will no increase to any available space but also will not decrease below
+     * it's own content size.
+     *
+     * This can be configured to be all of the time or at specific breakpoints.
+     */
+    none: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /**
      * Sizes itself according to the size of its contents, but does not increase
      * to any available width within a grid. This allows all other siblings to
      * consume the available space.
@@ -59,6 +67,7 @@ export default class GridCell extends Component {
       fill,
       fit,
       full,
+      none,
       width,
       shrink,
       subGrid,
@@ -71,11 +80,12 @@ export default class GridCell extends Component {
       'ax-grid__cell--fill': fill === true,
       'ax-grid__cell--fit': fit === true,
       'ax-grid__cell--full': full === true,
-      'ax-grid__cell--percent': width,
+      'ax-grid__cell--none': none === true || width,
       'ax-grid__cell--shrink': shrink === true,
       [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
       [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
       [`ax-grid__cell--full--${full}`]: full && full !== true,
+      [`ax-grid__cell--none--${none}`]: none && none !== true,
       [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
       'ax-grid__cell--sub-grid': subGrid,
     });

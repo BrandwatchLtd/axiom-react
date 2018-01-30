@@ -30,6 +30,11 @@ export default class Grid extends Component {
     /** Controls the horizontal spacing between cells */
     horizontalGutters: PropTypes.oneOf([false, 'tiny', 'small', 'medium', 'large']),
     /**
+     * Applies none styling for all GridCell children.
+     * See GridCell for none explanation
+     */
+    none: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /**
      * Default behaviour of cells is to resize to 100% of the grids space when
      * on smaller screen sizes. This allows this behaviour to be suppressed.
      */
@@ -62,6 +67,7 @@ export default class Grid extends Component {
       gutters,
       horizontalAlign,
       horizontalGutters = gutters,
+      none,
       responsive,
       shrink,
       verticalAlign,
@@ -80,6 +86,8 @@ export default class Grid extends Component {
       [`ax-grid--fit--${fit}`]: fit && fit !== true,
       'ax-grid--full': full === true,
       [`ax-grid--full--${full}`]: full && full !== true,
+      'ax-grid--none': none === true,
+      [`ax-grid--none--${none}`]: none && none !== true,
       'ax-grid--shrink': shrink === true,
       [`ax-grid--shrink--${shrink}`]: shrink && shrink !== true,
       [`ax-grid--vertical-${verticalAlign}`]: verticalAlign,

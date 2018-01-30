@@ -169,6 +169,58 @@ exports[`GridCell renders with full true 1`] = `
 </div>
 `;
 
+exports[`GridCell renders with none large 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--none--large"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with none medium 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--none--medium"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with none small 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--none--small"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
+exports[`GridCell renders with none true 1`] = `
+<div
+  className="ax-grid__cell ax-grid__cell--none"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
 exports[`GridCell renders with shrink large 1`] = `
 <div
   className="ax-grid__cell ax-grid__cell--shrink--large"
