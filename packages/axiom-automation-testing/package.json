@@ -1,0 +1,10 @@
+{
+  "name": "@brandwatch/axiom-automation-testing",
+  "version": "0.0.0",
+  "description": "Brandwatch Axiom - Automation testing",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}
