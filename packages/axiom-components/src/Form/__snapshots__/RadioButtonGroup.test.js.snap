@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton renders with defaultProps 1`] = `
+<div
+  className="ax-chedio-buttox-group"
+>
+  <label
+    className="ax-radio ax-space--x2"
+    onClick={undefined}
+    title={undefined}
+  >
+    <input
+      checked={undefined}
+      className="ax-radio__input"
+      disabled={undefined}
+      name={undefined}
+      type="radio"
+    />
+    <span
+      className="ax-radio__indicator"
+    />
+    <span
+      className="ax-radio__label"
+    >
+      Lorem ipsum
+    </span>
+  </label>
+</div>
+`;

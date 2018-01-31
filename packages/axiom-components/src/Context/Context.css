@@ -1,0 +1,152 @@
+:root {
+  /**
+   * The designs of the tip is 1.5rem from corner to corner. To calculate
+   * the pre-rotated square we use `Math.sqrt((1.5rem**2)/2)`
+   */
+  --cmp-context-tip-size: 1.0606601717798212rem;
+  --cmp-context-tip-edge-to-edge: 1.5rem;
+  --cmp-context-tip-space: calc(var(--spacing-grid-size) * 2);
+  --cmp-context-padding-small: calc(var(--spacing-grid-size) * 4);
+  --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
+  --cmp-context-menu-item-padding-vertical: calc(var(--spacing-grid-size) * 3);
+}
+
+.ax-context {
+  position: relative;
+  border-radius: var(--component-border-radius);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+}
+
+.ax-context__content {
+  position: relative;
+  border-radius: var(--component-border-radius);
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  /* stylelint-disable */
+  /* ensures rounded corners in Safari */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /* stylelint-enable */
+}
+
+.ax-context__arrow {
+  position: absolute;
+  width: var(--cmp-context-tip-size);
+  height: var(--cmp-context-tip-size);
+  margin: var(--cmp-context-tip-size);
+  transform: rotate(45deg);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+  background-color: var(--color-theme-background);
+  pointer-events: none;
+
+  @nest .ax-context--top & { bottom: calc(var(--cmp-context-tip-size) * -0.5); }
+  @nest .ax-context--right & { left: calc(var(--cmp-context-tip-size) * -0.5); }
+  @nest .ax-context--bottom & { top: calc(var(--cmp-context-tip-size) * -0.5); }
+  @nest .ax-context--left & { right: calc(var(--cmp-context-tip-size) * -0.5); }
+}
+
+.ax-context--top .ax-context__arrow {
+  transform: translateY(var(--cmp-context-tip-size)) rotate(45deg);
+}
+
+.ax-context--right .ax-context__arrow {
+  transform: translateX(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
+}
+
+.ax-context--bottom .ax-context__arrow {
+  transform: translateY(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
+}
+
+.ax-context--left .ax-context__arrow {
+  transform: translateX(var(--cmp-context-tip-size)) rotate(45deg);
+}
+
+.ax-context-content {
+  position: relative;
+}
+
+.ax-context-content--padding-small {
+  padding: var(--cmp-context-padding-small);
+}
+
+.ax-context-content--padding-large {
+  padding: var(--cmp-context-padding-large);
+}
+
+.ax-context-content:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-bottom: var(--component-border-width) solid var(--color-theme-border);
+}
+
+.ax-context-content--padding-small::after {
+  right: var(--cmp-context-padding-small);
+  left: var(--cmp-context-padding-small);
+}
+
+.ax-context-content--padding-none::after,
+.ax-context-content--padding-large::after {
+  right: var(--cmp-context-padding-large);
+  left: var(--cmp-context-padding-large);
+}
+
+.ax-context-content--full-separator::after {
+  right: 0;
+  left: 0;
+}
+
+.ax-context-content--scrollable {
+  overflow-y: auto;
+}
+
+.ax-context-menu {
+  margin: 0;
+  padding: var(--cmp-context-tip-space) 0;
+  list-style: none;
+}
+
+.ax-context-menu__item-single,
+.ax-context-menu__item-multi {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--cmp-context-menu-item-padding-vertical) var(--cmp-context-padding-large);
+}
+
+.ax-context-menu__item-single {
+  outline: 0;
+  border: 0;
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
+  text-align: left;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-context-menu__item-multi:hover,
+.ax-context-menu__item-multi--focused,
+.ax-context-menu__item-single:hover,
+.ax-context-menu__item-single--focused {
+  background-color: var(--color-ui-accent--hover);
+  color: var(--color-ui-white-noise);
+  cursor: pointer;
+}
+
+.ax-context-menu__item-single:disabled,
+.ax-context-menu__item-multi--disabled {
+  background-color: transparent;
+  color: var(--color-theme-text--disabled);
+  cursor: default;
+}
+
+.ax-context-menu__item-content {
+  flex: 1 1 auto;
+}
+
+.ax-context-menu__item-icon {
+  flex: 0 0 auto;
+  margin-left: var(--spacing-grid-size--x2);
+}

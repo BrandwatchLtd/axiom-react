@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContextContent renders with defaultProps 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-large"
+  style={
+    Object {
+      "height": undefined,
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextContent renders with hasFullSeparator renders with the full-separator element modifier 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-large ax-context-content--full-separator"
+  style={
+    Object {
+      "height": undefined,
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextContent renders with height inserts an inline height style attribute 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-large"
+  style={
+    Object {
+      "height": "5rem",
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextContent renders with maxHeight inserts an inline maxHeight style attribute 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-large ax-context-content--scrollable"
+  style={
+    Object {
+      "height": undefined,
+      "maxHeight": "5rem",
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextContent renders with padding large 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-large"
+  style={
+    Object {
+      "height": undefined,
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextContent renders with padding none 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-none"
+  style={
+    Object {
+      "height": undefined,
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`ContextContent renders with padding small 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-small"
+  style={
+    Object {
+      "height": undefined,
+      "maxHeight": undefined,
+    }
+  }
+>
+  Lorem ipsum
+</div>
+`;

@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders with border large 1`] = `
+<img
+  className="ax-image ax-image--square ax-image--border-large ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "100%",
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image renders with border small 1`] = `
+<img
+  className="ax-image ax-image--square ax-image--border-small ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "100%",
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image renders with defaultProps 1`] = `
+<img
+  className="ax-image ax-image--square ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "100%",
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image renders with shape circle 1`] = `
+<img
+  className="ax-image ax-image--circle ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "100%",
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image renders with shape rounded 1`] = `
+<img
+  className="ax-image ax-image--rounded ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "100%",
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image renders with shape square 1`] = `
+<img
+  className="ax-image ax-image--square ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": undefined,
+      "maxWidth": "100%",
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Image with shape circle uses height for both width and height when given 1`] = `
+<img
+  className="ax-image ax-image--circle ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": "3rem",
+      "maxWidth": "100%",
+      "width": "3rem",
+    }
+  }
+/>
+`;
+
+exports[`Image with shape circle uses width for both width and height when given 1`] = `
+<img
+  className="ax-image ax-image--circle ax-space--x4"
+  src="/image.png"
+  style={
+    Object {
+      "height": "3rem",
+      "maxWidth": "100%",
+      "width": "3rem",
+    }
+  }
+/>
+`;

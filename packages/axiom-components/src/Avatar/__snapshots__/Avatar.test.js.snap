@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders with custom size 1`] = `
+<img
+  className="ax-image ax-image--circle ax-image--border-small ax-space--x4"
+  src="/image/path"
+  style={
+    Object {
+      "height": "4rem",
+      "maxWidth": "100%",
+      "width": "4rem",
+    }
+  }
+/>
+`;

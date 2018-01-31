@@ -1,0 +1,140 @@
+:root {
+  --cmp-platform-dock-size: calc(var(--spacing-grid-size) * 16);
+}
+
+.ax-platform {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.ax-platform__mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-index-platform-mask);
+}
+
+.ax-platform__dock {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-ui-carbon);
+  color: var(--color-theme-night-text);
+  list-style: none;
+  z-index: var(--z-index-platform-dock);
+}
+
+.ax-platform__console {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: var(--z-index-platform-console);
+  transition-property: transform;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-platform__console--left {
+  left: 0;
+  transform: translate(-100%);
+}
+
+.ax-platform__console--right {
+  right: 0;
+  transform: translate(100%);
+}
+
+.ax-platform__console--open {
+  transform: translate(0);
+}
+
+.ax-platform__canvas {
+  min-height: 100vh;
+  transition-property: transform;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-platform__console,
+.ax-platform__canvas {
+  display: flex;
+  flex-direction: column;
+}
+
+.ax-platform__console,
+.ax-platform__console-header {
+  background-color: var(--color-theme-background--active);
+  color: var(--color-theme-text);
+}
+
+.ax-platform,
+.ax-platform__canvas,
+.ax-platform__canvas-header {
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
+}
+
+.ax-platform__console-header,
+.ax-platform__canvas-header {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--page-padding-horizontal);
+}
+
+.ax-platform__console-header--separator,
+.ax-platform__canvas-header--separator {
+  border-bottom: 0.0625rem solid var(--color-theme-border);
+}
+
+.ax-platform__console-header--small,
+.ax-platform__canvas-header--small {
+  min-height: 2.5rem;
+}
+
+.ax-platform__console-header--large,
+.ax-platform__canvas-header--large {
+  min-height: var(--cmp-platform-dock-size);
+}
+
+.ax-platform__dock ~ .ax-platform__console {
+  margin-left: var(--cmp-platform-dock-size);
+}
+
+.ax-platform__dock ~ .ax-platform__canvas {
+  padding-left: var(--cmp-platform-dock-size);
+}
+
+/**
+ * The !important statements below are to remove the dynamic
+ * shifting of the canvas from the console widths
+ * in Javascript.
+ */
+@media (max-width: 74.9375rem) {
+  .ax-platform--responsive {
+    &.ax-platform--console-open .ax-platform__mask {
+      display: block;
+    }
+
+    & .ax-platform__canvas {
+      /* stylelint-disable declaration-no-important */
+      margin-right: initial !important;
+      margin-left: initial !important;
+      transform: initial !important;
+      /* stylelint-enable declaration-no-important */
+    }
+  }
+}
