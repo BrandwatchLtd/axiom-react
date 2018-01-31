@@ -1,0 +1,13 @@
+{
+  "name": "@brandwatch/axiom-formatting",
+  "version": "0.0.0",
+  "description": "Brandwatch Axiom - Formatting",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "date-fns": "^1.0.0"
+  }
+}
