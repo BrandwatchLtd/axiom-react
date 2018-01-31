@@ -40,5 +40,27 @@
   --drop-shadow-border: 0 0 0 0.0625rem;
   --drop-shadow-elevation--x1: 0 0.0625rem 0.01875rem 0;
   --drop-shadow-elevation--x2: 0 0.125rem 1rem 0;
+
+  /**
+   * Chart variables.
+   *
+   *  [1] Needed to normalise bar widths. However
+   *      this is not in relation to anything so
+   *      will need adjusting if text widths change :sob:
+   */
+  --cmp-chart-label-margin: var(--spacing-grid-size--x2);
+  --cmp-chart-label-line-height: 1rem;  /* [1] */
+  --cmp-chart-label-width: calc(2rem + var(--cmp-chart-label-margin));  /* [1] */
+  --cmp-chart-label-height: calc(var(--cmp-chart-label-line-height) + var(--cmp-chart-label-margin));
+
+  --cmp-chart-opacity-faded: 0.25;
+
+  --cmp-dot-plot-diameter: 0.8125rem;
+  --cmp-dot-plot-radius: calc(var(--cmp-dot-plot-diameter) * 0.5);
+
+  --cmp-benchmark-line-width: 0.0625rem;
+  --cmp-benchmark-line-height: var(--cmp-dot-plot-diameter);
+
+  --cmp-chart-overflow-space: calc(var(--cmp-chart-label-width) + var(--cmp-dot-plot-radius));
 }
 /* stylelint-enable */

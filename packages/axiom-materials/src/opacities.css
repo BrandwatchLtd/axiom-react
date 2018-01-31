@@ -1,0 +1,15 @@
+:root {
+  --opacity-text--subtle: 0.75;
+  --opacity-text--disabled: 0.3;
+
+  --opacity-background--subtle: 0.15;
+  --opacity-background--disabled: 0.05;
+
+  --opacity-border: 0.2;
+
+  --opacity-shadow: 0.1;
+
+  --opacity-input-border--focused: 0.5;
+  --opacity-input-border--valid: 0.4;
+  --opacity-input-border--invalid: 0.25;
+}

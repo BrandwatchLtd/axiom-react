@@ -1,0 +1,113 @@
+/* stylelint-disable max-line-length */
+:root {
+  --rgb-ui-carbon--darker: 48, 45, 53;
+  --rgb-ui-carbon--dark: 57, 55, 62;
+  --rgb-ui-carbon: 72, 70, 77;
+
+  --rgb-ui-white-noise--darker: 227, 225, 232;
+  --rgb-ui-white-noise--dark: 237, 235, 242;
+  --rgb-ui-white-noise: 247, 245, 252;
+
+  --rgb-ui-accent--hover: 48, 171, 232;
+  --rgb-ui-accent: 35, 158, 219;
+  --rgb-ui-accent--active: 22, 145, 207;
+
+  --rgb-ui-success--hover: 10, 204, 162;
+  --rgb-ui-success: 0, 190, 150;
+  --rgb-ui-success--active: 0, 166, 130;
+
+  --rgb-ui-warning--hover: 237, 195, 97;
+  --rgb-ui-warning: 224, 182, 81;
+  --rgb-ui-warning--active: 212, 168, 66;
+
+  --rgb-ui-error--hover: 255, 99, 133;
+  --rgb-ui-error: 252, 72, 112;
+  --rgb-ui-error--active: 240, 58, 97;
+
+  --rgb-ui-info--hover: var(--rgb-ui-accent--hover);
+  --rgb-ui-info: var(--rgb-ui-accent);
+  --rgb-ui-info--active: var(--rgb-ui-accent--active);
+
+  --color-ui-carbon--darker: rgb(var(--rgb-ui-carbon--darker));
+  --color-ui-carbon--dark: rgb(var(--rgb-ui-carbon--dark));
+  --color-ui-carbon: rgb(var(--rgb-ui-carbon));
+
+  --color-ui-white-noise--darker: rgb(var(--rgb-ui-white-noise--darker));
+  --color-ui-white-noise--dark: rgb(var(--rgb-ui-white-noise--dark));
+  --color-ui-white-noise: rgb(var(--rgb-ui-white-noise));
+
+  --color-ui-accent--active: rgb(var(--rgb-ui-accent--active));
+  --color-ui-accent: rgb(var(--rgb-ui-accent));
+  --color-ui-accent--hover: rgb(var(--rgb-ui-accent--hover));
+
+  --color-ui-success--hover: rgb(var(--rgb-ui-success--hover));
+  --color-ui-success: rgb(var(--rgb-ui-success));
+  --color-ui-success--active: rgb(var(--rgb-ui-success--active));
+
+  --color-ui-warning--hover: rgb(var(--rgb-ui-warning--hover));
+  --color-ui-warning: rgb(var(--rgb-ui-warning));
+  --color-ui-warning--active: rgb(var(--rgb-ui-warning--active));
+
+  --color-ui-error--hover: rgb(var(--rgb-ui-error--hover));
+  --color-ui-error: rgb(var(--rgb-ui-error));
+  --color-ui-error--active: rgb(var(--rgb-ui-error--active));
+
+  --color-ui-info--hover: rgb(var(--rgb-ui-info--hover));
+  --color-ui-info: rgb(var(--rgb-ui-info));
+  --color-ui-info--active: rgb(var(--rgb-ui-info--active));
+
+  --color-ui-white: rgb(255, 255, 255);
+
+  --color-ui-highlight: rgb(215, 255, 0);
+
+  --color-product-tiny-clanger--active: rgb(232, 132, 166);
+  --color-product-tiny-clanger: rgb(244, 152, 183);
+  --color-product-tiny-clanger--hover: rgb(255, 171, 199);
+
+  --color-product-critical-mass--active: rgb(225, 69, 93);
+  --color-product-critical-mass: rgb(237, 85, 109);
+  --color-product-critical-mass--hover: rgb(250, 102, 125);
+
+  --color-product-paradise-lost--active: rgb(143, 99, 166);
+  --color-product-paradise-lost: rgb(156, 115, 178);
+  --color-product-paradise-lost--hover: rgb(171, 134, 191);
+
+  --color-product-serene-sea--active: rgb(125, 143, 202);
+  --color-product-serene-sea: rgb(144, 160, 214);
+  --color-product-serene-sea--hover: rgb(164, 178, 227);
+
+  --color-product-giant-leap--active: rgb(78, 180, 217);
+  --color-product-giant-leap: rgb(95, 195, 230);
+  --color-product-giant-leap--hover: rgb(111, 208, 243);
+
+  --color-product-moon-lagoon--active: rgb(37, 155, 163);
+  --color-product-moon-lagoon: rgb(49, 166, 175);
+  --color-product-moon-lagoon--hover: rgb(62, 180, 189);
+
+  --color-product-terra-form--active: rgb(106, 166, 38);
+  --color-product-terra-form: rgb(119, 178, 50);
+  --color-product-terra-form--hover: rgb(131, 191, 63);
+
+  --color-product-primeval-soup--active: rgb(181, 173, 10);
+  --color-product-primeval-soup: rgb(193, 184, 22);
+  --color-product-primeval-soup--hover: rgb(207, 198, 33);
+
+  --color-product-new-horizon--active: rgb(238, 174, 0);
+  --color-product-new-horizon: rgb(249, 184, 0);
+  --color-product-new-horizon--hover: rgb(255, 191, 12);
+
+  --color-product-blast-off--active: rgb(230, 126, 0);
+  --color-product-blast-off: rgb(243, 135, 0);
+  --color-product-blast-off--hover: rgb(255, 146, 12);
+
+  --color-product-ground-control--active: rgb(158, 85, 36);
+  --color-product-ground-control: rgb(170, 97, 48);
+  --color-product-ground-control--hover: rgb(184, 110, 60);
+
+  --color-product-luna-dust--active: rgb(103, 129, 143);
+  --color-product-luna-dust: rgb(120, 144, 156);
+  --color-product-luna-dust--hover: rgb(138, 158, 168);
+
+  --color-external-twitter-blue: rgb(29, 161, 242);
+}
+/* stylelint-enable */
