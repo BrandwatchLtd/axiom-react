@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Base from '../../components/base/Base';
+import { Base } from '@brandwatch/axiom-components';
 import './StatusMessage.css';
 
 export default class StatusMessage extends Component {

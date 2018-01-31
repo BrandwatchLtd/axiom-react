@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import Base from '../../components/base/Base';
-import LogoTab from '../../components/logo/LogoTab';
+import { Base, LogoTab } from '@brandwatch/axiom-components';
 import './LogoPage.css';
 
 const LOGO_HEIGHT = '7.75rem';

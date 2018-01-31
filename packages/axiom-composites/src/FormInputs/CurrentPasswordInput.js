@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import TextInput from '../../components/form/TextInput';
-import t from '../../utils/locales';
+import { TextInput } from '@brandwatch/axiom-components';
+import { translate } from '@brandwatch/axiom-localization';
+
+const t = translate({
+  'Enter current password': {
+    de: 'Bisheriges Passwort eingeben',
+    es: 'Ingresar contraseña actual',
+    fr: 'Entrez votre mot de passe',
+  },
+});
 
 export default class CurrentPasswordInput extends Component {
   static contextTypes = {
@@ -20,7 +28,7 @@ export default class CurrentPasswordInput extends Component {
     return (
       <TextInput { ...rest }
           invalid={ invalid }
-          label={ t(axiomLanguage, 'enter-current-password') }
+          label={ t('Enter current password', axiomLanguage) }
           required
           space="x8"
           type="password"

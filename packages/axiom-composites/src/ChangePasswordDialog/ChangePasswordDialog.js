@@ -1,23 +1,43 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
-import AlertBar from '../../components/alert-bar/AlertBar';
-import Button from '../../components/button/Button';
-import ButtonGroup from '../../components/button/ButtonGroup';
-import ConfirmPasswordInput from '../form-inputs/ConfirmPasswordInput';
-import CurrentPasswordInput from '../form-inputs/CurrentPasswordInput';
-import Dialog from '../../components/dialog/Dialog';
-import DialogBody from '../../components/dialog/DialogBody';
-import DialogHeader from '../../components/dialog/DialogHeader';
-import Form from '../../components/form/Form';
-import Heading from '../../components/typography/Heading';
-import NewPasswordInput from '../form-inputs/NewPasswordInput';
-import Paragraph from '../../components/typography/Paragraph';
-import ProgressButton from '../../components/progress/ProgressButton';
-import atIds from '../../../at_ids';
-import t from '../../utils/locales';
+import atIds from '@brandwatch/axiom-automation-testing/ids';
+import {
+  AlertBar,
+  Button,
+  ButtonGroup,
+  Dialog,
+  DialogBody,
+  DialogHeader,
+  Form,
+  Heading,
+  ProgressButton,
+  Paragraph,
+} from '@brandwatch/axiom-components';
+import { translate } from '@brandwatch/axiom-localization';
+import ConfirmPasswordInput from '../FormInputs/ConfirmPasswordInput';
+import CurrentPasswordInput from '../FormInputs/CurrentPasswordInput';
+import NewPasswordInput from '../FormInputs/NewPasswordInput';
 
-export default class ChangePassword extends Component {
+const t = translate({
+  'Change Password': {
+    de: 'Passwort ändern',
+    es: 'Cambiar Contraseña',
+    fr: 'Changement de votre mot de passe',
+  },
+  'Please complete all the password fields': {
+    de: 'Es tut uns leid, Sie müssen alle Passwortfelder ausfüllen',
+    es: 'Lo sentimos, debe completar todos los campos de contraseña',
+    fr: 'Désolé, vous devez compléter tous les champs de mot de passe',
+  },
+  'Cancel': {
+    de: 'Abbrechen',
+    es: 'Cancelar',
+    fr: 'Effacer',
+  },
+});
+
+export default class ChangePasswordDialog extends Component {
   static contextTypes = {
     axiomLanguage: PropTypes.string,
   };
@@ -87,13 +107,13 @@ export default class ChangePassword extends Component {
           size="medium">
         <DialogHeader>
           <Heading textSize="headtitle">
-            { t(axiomLanguage, 'change-password-title') }
+            { t('Change Password', axiomLanguage) }
           </Heading>
         </DialogHeader>
 
         <Form
             onSubmit={ this.handleSubmit }
-            requiredError={ t(axiomLanguage, 'complete-all-fields') }>
+            requiredError={ t('Please complete all the password fields', ) }>
 
           { (validationError || error) && (
             <AlertBar type="error">
@@ -127,14 +147,14 @@ export default class ChangePassword extends Component {
                   onClick={ onRequestClose }
                   style="secondary"
                   type="button">
-                { t(axiomLanguage, 'cancel-button') }
+                { t('Cancel', axiomLanguage) }
               </Button>
               <ProgressButton
                   data-ax-at={ atIds.ChangePassword.submit }
                   disabled={ isSubmitting }
                   isInProgress={ isSubmitting }
                   type="submit">
-                { t(axiomLanguage, 'change-password-button') }
+                { t('Change Password', axiomLanguage) }
               </ProgressButton>
             </ButtonGroup>
           </DialogBody>

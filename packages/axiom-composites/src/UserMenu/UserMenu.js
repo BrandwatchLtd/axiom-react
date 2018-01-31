@@ -1,22 +1,32 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import t from '../../utils/locales';
-import atIds from '../../../at_ids';
-import Avatar from '../../components/avatar/Avatar';
-import Button from '../../components/button/Button';
-import ButtonGroup from '../../components/button/ButtonGroup';
-import Candytar from '../../components/candytar/Candytar';
-import Context from '../../components/context/Context';
-import ContextBox from '../../components/context/ContextBox';
-import Dropdown from '../../components/dropdown/Dropdown';
-import DropdownContent from '../../components/dropdown/DropdownContent';
-import DropdownTarget from '../../components/dropdown/DropdownTarget';
-import Grid from '../../components/grid/Grid';
-import GridCell from '../../components/grid/GridCell';
-import Heading from '../../components/typography/Heading';
-import Link from '../../components/typography/Link';
-import Paragraph from '../../components/typography/Paragraph';
-import stringToColor from '../../materials/colors/stringToColor';
+import atIds from '@brandwatch/axiom-automation-testing/ids';
+import {
+  Avatar,
+  Button,
+  ButtonGroup,
+  Candytar,
+  Dropdown,
+  DropdownContent,
+  DropdownContext,
+  DropdownSource,
+  DropdownTarget,
+  Grid,
+  GridCell,
+  Heading,
+  Link,
+  Paragraph,
+} from '@brandwatch/axiom-components';
+import { translate } from '@brandwatch/axiom-localization';
+import { stringToColor } from '@brandwatch/axiom-utils';
+
+const t = translate({
+  'Sign out': {
+    de: 'Abmelden',
+    es: 'Cerrar Sesión',
+    fr: 'Se déconnecter',
+  },
+});
 
 export default class UserMenu extends Component {
   static contextTypes = {
@@ -52,16 +62,16 @@ export default class UserMenu extends Component {
           </Link>
         </DropdownTarget>
 
-        <DropdownContent>
-          <Context width="auto">
-            <ContextBox>
+        <DropdownSource>
+          <DropdownContext width="auto">
+            <DropdownContent>
               <Grid gutters="large" responsive={ false } verticalAlign="middle">
                 <GridCell fill>
                   <Heading space="x0" textSize="headtitle">{ firstName } { lastName }</Heading>
                   <Paragraph space="x0" textColor="subtle">{ email }</Paragraph>
                   <ButtonGroup space="x4">
                     <Button data-ax-at={ atIds.UserMenu.logout } onClick={ onLogout }>
-                      { t(axiomLanguage, 'sign-out') }
+                      { t('Sign out', axiomLanguage) }
                     </Button>
                   </ButtonGroup>
                 </GridCell>
@@ -72,11 +82,11 @@ export default class UserMenu extends Component {
                   </Avatar>
                 </GridCell>
               </Grid>
-            </ContextBox>
+            </DropdownContent>
 
             { children }
-          </Context>
-        </DropdownContent>
+          </DropdownContext>
+        </DropdownSource>
       </Dropdown>
     );
   }
