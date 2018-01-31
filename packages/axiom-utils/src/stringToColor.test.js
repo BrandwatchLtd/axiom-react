@@ -1,5 +1,5 @@
+import { colors } from '@brandwatch/axiom-materials';
 import stringToColor from './stringToColor';
-import productColors from './productColors';
 
 const randomString = () => Math.random().toString(36).substring(7);
 
@@ -9,7 +9,7 @@ describe('stringToColor', () => {
   });
 
   it('maps a string to a brand color', () => {
-    expect(productColors).toContain(stringToColor(randomString()));
+    expect(Object.keys(colors.productColorNames)).toContain(stringToColor(randomString()));
   });
 
   it('maps a string to a color deterministically', () => {
