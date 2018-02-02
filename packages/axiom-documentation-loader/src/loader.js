@@ -58,6 +58,7 @@ module.exports = function(source) {
   try {
     value = extractProps(reactDocgen.parse(source));
   } catch (error) {
+    /* eslint-disable no-console */
     console.error(error);
   }
 

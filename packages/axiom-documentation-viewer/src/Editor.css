@@ -1,0 +1,86 @@
+/* stylelint-disable selector-class-pattern */
+.dm-editor {
+  width: 100%;
+  height: 75vh;
+}
+
+.ace-dm .ace_gutter {
+  background: var(--color-theme-background--disabled);
+  color: var(--color-theme-text--subtle);
+}
+
+.ace-dm {
+  background-color: inherit;
+  color: inherit;
+}
+
+.ace-dm .ace_cursor {
+  color: var(--color-theme-text--subtle);
+}
+
+.ace-dm .ace_marker-layer .ace_selection {
+  background: var(--color-theme-background--disabled);
+}
+
+.ace-dm.ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 0.1875rem 0 var(--color-ui-accent--hover);
+}
+
+.ace-dm .ace_gutter-active-line {
+  background-color: transparent;
+}
+
+.ace-dm .ace_marker-layer .ace_selected-word {
+  border: 0;
+}
+
+.ace-dm .ace_entity.ace_name.ace_tag,
+.ace-dm .ace_keyword,
+.ace-dm .ace_meta.ace_tag,
+.ace-dm .ace_storage {
+  color: var(--color-product-critical-mass);
+}
+
+.ace-dm .ace_punctuation,
+.ace-dm .ace_punctuation.ace_tag {
+  color: var(--color-theme-text--subtle);
+}
+
+.ace-dm .ace_constant.ace_character,
+.ace-dm .ace_constant.ace_language,
+.ace-dm .ace_constant.ace_numeric,
+.ace-dm .ace_constant.ace_other {
+  color: var(--color-product-serene-sea);
+}
+
+.ace-dm .ace_support.ace_constant,
+.ace-dm .ace_support.ace_function {
+  color: var(--color-product-giant-leap);
+}
+
+.ace-dm .ace_storage.ace_type,
+.ace-dm .ace_support.ace_class,
+.ace-dm .ace_support.ace_type {
+  color: var(--color-product-moon-lagoon);
+  font-style: italic;
+}
+
+.ace-dm .ace_entity.ace_name.ace_function,
+.ace-dm .ace_entity.ace_other,
+.ace-dm .ace_entity.ace_other.ace_attribute-name,
+.ace-dm .ace_variable {
+  color: var(--color-product-terra-form);
+}
+
+.ace-dm .ace_variable.ace_parameter {
+  color: var(--color-product-blast-off);
+  font-style: italic;
+}
+
+.ace-dm .ace_string {
+  color: var(--color-product-new-horizon--active);
+}
+
+.ace-dm .ace_comment {
+  color: var(--color-theme-text--subtle);
+}
