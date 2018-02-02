@@ -1,0 +1,22 @@
+.si-site__page {
+  position: relative;
+  width: 100%;
+  max-width: var(--layout-width-medium);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.si-site__page--h {
+  padding-right: var(--page-padding-horizontal);
+  padding-left: var(--page-padding-horizontal);
+}
+
+.si-site__page--v {
+  padding-top: var(--page-padding-vertical);
+  padding-bottom: var(--page-padding-vertical);
+}
+
+.si-site__footer {
+  background-color: var(--color-theme-background);
+  color: var(--color-theme-text);
+}

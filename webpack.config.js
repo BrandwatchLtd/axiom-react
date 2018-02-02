@@ -1,7 +1,5 @@
-const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const generateComponentProps = require('./scripts/component-docs');
 
 module.exports = {
   devtool: 'source-map',
@@ -10,15 +8,15 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:4000',
     'webpack/hot/only-dev-server',
-    './style-guide/client.js',
+    './site/index.js',
   ],
   module: {
     rules: [{
       test: /\.js$/,
       use: ['babel-loader'],
       include: [
-        /src/,
-        /style-guide/,
+        /packages/,
+        /site/,
         /node_modules\/get-own-enumerable-property-symbols/,
         /node_modules\/stringify-object/,
       ],
@@ -35,23 +33,21 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template: './style-guide/index.ejs',
+      template: './site/index.ejs',
       basename: '/',
     }),
     new webpack.EnvironmentPlugin({
-      BASENAME: '/',
-      COMPONENT_PROPS: JSON.stringify(generateComponentProps()),
       NODE_ENV: 'development',
     }),
   ],
-  resolve: {
-    alias: {
-      'bw-axiom': path.resolve(__dirname, 'src'),
-      'style-guide': path.resolve(__dirname, 'style-guide/components'),
-    },
+  resolveLoader: {
+    modules: [
+      'node_modules',
+      'packages',
+    ],
   },
   devServer: {
-    contentBase: './style-guide',
+    contentBase: './site',
     historyApiFallback: true,
     hot: true,
     inline: true,
