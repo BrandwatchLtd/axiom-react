@@ -1,0 +1,14 @@
+{
+  "name": "@brandwatch/axiom-documentation-loader",
+  "version": "0.0.0",
+  "description": "Brandwatch Axiom - Documentation webpack loader",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6",
+    "react-docgen": "^2.20.0"
+  }
+}
