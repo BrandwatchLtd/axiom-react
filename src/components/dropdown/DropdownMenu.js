@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Children, Component, cloneElement } from 'react';
+import React, { Children, Component, cloneElement, isValidElement } from 'react';
 import ContextMenu from '../context/ContextMenu';
 
 export default class DropdownMenu extends Component {
@@ -17,11 +17,14 @@ export default class DropdownMenu extends Component {
 
     return (
       <ContextMenu { ...rest }>
-        { Children.map(children, (child, index) =>
-          cloneElement(child, {
-            index: `${ this.props.index }${ index }`,
-          })
-        ) }
+        { Children
+            .toArray(children)
+            .map((child, index) =>
+              isValidElement(child) ? cloneElement(child, {
+                index: `${ this.props.index }${ index }`,
+              }) : child
+          )
+        }
       </ContextMenu>
     );
   }
