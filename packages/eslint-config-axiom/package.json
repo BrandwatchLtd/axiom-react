@@ -1,0 +1,15 @@
+{
+  "name": "@brandwatch/eslint-config-axiom",
+  "version": "0.0.0",
+  "description": "Brandwatch Axiom - eslint config",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.5.0",
+    "eslint-plugin-react": "^7.3.0"
+  }
+}

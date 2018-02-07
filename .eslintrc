@@ -1,6 +1,10 @@
 {
-  "extends": ["eslint-config-axiom"],
+  "extends": ["@brandwatch/eslint-config-axiom"],
   "globals": {
-    "Set": true
+    "Set": true,
+    "Promise": true
+  },
+  "rules": {
+    "max-len": [0]
   }
 }
