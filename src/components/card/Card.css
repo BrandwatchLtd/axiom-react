@@ -71,7 +71,7 @@
   padding-top: var(--spacing-grid-size--x2);
   padding-bottom: var(--spacing-grid-size--x2);
   background-color: var(--color-theme-day-text--subtle);
-  color: var(--color-theme-text);
+  color: var(--color-theme-night-text);
 }
 
 .ax-card--size-small {

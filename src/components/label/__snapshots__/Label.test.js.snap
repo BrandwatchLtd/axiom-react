@@ -2,7 +2,7 @@
 
 exports[`Label render with size medium 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium"
 >
   Lorem Ipsum
 </span>
@@ -10,7 +10,7 @@ exports[`Label render with size medium 1`] = `
 
 exports[`Label render with size small 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--small ax-theme--day"
+  className="ax-label ax-label--white ax-label--small"
 >
   Lorem Ipsum
 </span>
@@ -18,7 +18,7 @@ exports[`Label render with size small 1`] = `
 
 exports[`Label renders with color error 1`] = `
 <span
-  className="ax-label ax-label--error ax-label--medium ax-theme--day"
+  className="ax-label ax-label--error ax-label--medium"
 >
   Lorem Ipsum
 </span>
@@ -26,7 +26,7 @@ exports[`Label renders with color error 1`] = `
 
 exports[`Label renders with color success 1`] = `
 <span
-  className="ax-label ax-label--success ax-label--medium ax-theme--day"
+  className="ax-label ax-label--success ax-label--medium"
 >
   Lorem Ipsum
 </span>
@@ -34,7 +34,7 @@ exports[`Label renders with color success 1`] = `
 
 exports[`Label renders with color white 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium"
 >
   Lorem Ipsum
 </span>
@@ -42,7 +42,7 @@ exports[`Label renders with color white 1`] = `
 
 exports[`Label renders with defaultProps 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium"
 >
   Lorem Ipsum
 </span>
@@ -50,7 +50,7 @@ exports[`Label renders with defaultProps 1`] = `
 
 exports[`Label renders with full large 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-label--full--large ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium ax-label--full--large"
 >
   Lorem Ipsum
 </span>
@@ -58,7 +58,7 @@ exports[`Label renders with full large 1`] = `
 
 exports[`Label renders with full medium 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-label--full--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium ax-label--full--medium"
 >
   Lorem Ipsum
 </span>
@@ -66,7 +66,7 @@ exports[`Label renders with full medium 1`] = `
 
 exports[`Label renders with full small 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-label--full--small ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium ax-label--full--small"
 >
   Lorem Ipsum
 </span>
@@ -74,7 +74,7 @@ exports[`Label renders with full small 1`] = `
 
 exports[`Label renders with full true 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-label--full ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium ax-label--full"
 >
   Lorem Ipsum
 </span>
@@ -82,7 +82,7 @@ exports[`Label renders with full true 1`] = `
 
 exports[`Label with LabelIcon adds space all around if middle children 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium"
 >
   Lorem ipsum
   <span
@@ -115,7 +115,7 @@ exports[`Label with LabelIcon adds space all around if middle children 1`] = `
 
 exports[`Label with LabelIcon adds space to end if last child 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium"
 >
   Lorem ipsum
   <span
@@ -147,7 +147,7 @@ exports[`Label with LabelIcon adds space to end if last child 1`] = `
 
 exports[`Label with LabelIcon adds space to start if first child 1`] = `
 <span
-  className="ax-label ax-label--white ax-label--medium ax-theme--day"
+  className="ax-label ax-label--white ax-label--medium"
 >
   <span
     className="ax-label__icon ax-label__icon--start"

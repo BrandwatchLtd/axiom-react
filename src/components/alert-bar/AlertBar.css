@@ -1,7 +1,6 @@
 .ax-alert-bar {
   padding-right: var(--page-padding-horizontal);
   padding-left: var(--page-padding-horizontal);
-  color: var(--color-theme-text);
 }
 
 .ax-alert-bar--small {

@@ -12,7 +12,7 @@ export default class CardCaption extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-card__caption" theme="night">
+      <Base { ...rest } className="ax-card__caption">
         { children }
       </Base>
     );
