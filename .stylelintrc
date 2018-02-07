@@ -1,3 +1,3 @@
 {
-  "extends": "stylelint-config-axiom"
+  "extends": "@brandwatch/stylelint-config-axiom"
 }

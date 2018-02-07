@@ -1,0 +1,14 @@
+{
+  "name": "@brandwatch/stylelint-config-axiom",
+  "version": "0.0.0",
+  "description": "Brandwatch Axiom - stylelint config",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.9.0",
+    "stylelint-order": "^0.6.0"
+  }
+}
