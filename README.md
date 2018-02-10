@@ -1,63 +1,53 @@
-## Axiom - Pattern Library
+<p align="center">
+  <a href="https://axiom.brandwatch.com/">
+    <img alt="axiom" src="./site/assets/axiom-text.png" height="50" width="177">
+  </a>
+</p>
 
-[![Build Status](https://travis-ci.org/BrandwatchLtd/axiom.svg?branch=master)](https://travis-ci.org/BrandwatchLtd/axiom)
-[![npm version](https://badge.fury.io/js/bw-axiom.svg)](https://badge.fury.io/js/bw-axiom)
+<p align="center">
+  Brandwatch design system and React pattern library
+</p>
 
-A consumable library of Brandwatch UI & UX patterns.
+<p align="center">
+  <a href="https://travis-ci.org/BrandwatchLtd/axiom"><img alt="Travis Status" src="https://img.shields.io/travis/BrandwatchLtd/axiom.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/@brandwatch/axiom-materials"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@brandwatch/axiom-materials.svg?style=flat-square"></a>
+</p>
 
-### Installation
+### Packages
 
-```
-yarn add bw-axiom
-```
+This is the monorepo for Axiom packages.
 
-### Features
 
-* Materials (colors, sizing) to create custom components while following patterns.
-* Components to encapsulate templates, styles and behaviour.
-* Composites for larger reusable multi component solutions.
-* Utilities to apply UX patterns (like date and number formatting).
-* Light and Dark themes
+| package | description |     version     |
+| --- | --- |:---:|
+| [axiom-automation-testing](./packages/axiom-automation-testing) | Provides IDs and selectors for targeting Axiom internal elements for Automation testing | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-automation-testing.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-automation-testing) |
+| [axiom-charts](./packages/axiom-charts) | Provides Axiom charting and data visualisation React components | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-charts.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-charts) |
+| [axiom-components](./packages/axiom-components) | Provides core Axiom components for building Brandwatch UIs | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-components.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-components) |
+| [axiom-composites](./packages/axiom-composites) | Provides Brandwatch contexutal components, comprising of Axiom components and materials. | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-composites.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-composites) |
+| [axiom-documentation-loader](./packages/axiom-documentation-loader) | Webpack loader for extracting React component prop types and descriptions. | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-documentation-loader.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-documentation-loader) |
+| [axiom-documentation-viewer](./packages/axiom-documentation-viewer) | Provides React components for displaying, testing and viewing React components in configurable states. | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-documentation-viewer.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-documentation-viewer) |
+| [axiom-formatting](./packages/axiom-formatting) | Axiom resources for formatting dates and numbers | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-formatting.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-formatting) |
+| [axiom-localization](./packages/axiom-localization) | Resources for helping out with localizations | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-localization.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-localization) |
+| [axiom-materials](./packages/axiom-materials) | Low level resources, like colours and sizing variables to help build components | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-materials.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-materials) |
+| [axiom-utils](./packages/axiom-utils) | Helpful javascript utilities | [![npm](https://img.shields.io/npm/v/@brandwatch/axiom-utils.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/axiom-utils) |
+| [babel-plugin-transform-svg-axiom](./packages/axiom-babel-plugin-transform-svg-axiom) | A babel plugin that recolours, optimises and inlines SVG files | [![npm](https://img.shields.io/npm/v/@brandwatch/babel-plugin-transform-svg-axiom.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/babel-plugin-transform-svg-axiom) |
+| [eslint-config-axiom](./packages/eslint-config-axiom) | eslint configurations used by Axiom and some other Brandwatch applications | [![npm](https://img.shields.io/npm/v/@brandwatch/eslint-config-axiom.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/eslint-config-axiom) |
+| [stylelint-config-axiom](./packages/stylelint-config-axiom) | stylelint configurations used by Axiom and some other Brandwatch applications | [![npm](https://img.shields.io/npm/v/@brandwatch/stylelint-config-axiom.svg?style=flat-square)](https://www.npmjs.com/package/@brandwatch/stylelint-config-axiom) |
 
-### [Supported Browsers](./browsers.js)
+### Developing
 
-Need IE support? [See the the setup guide here](./docs/internet-explorer.md)
-
-### Getting Started
-
-The following styles should be added to the body - or root element to which Axiom styles are being applied - if you wish to make use of the default background and colour styles. These are also needed if you wish to make use of the light/dark theme switching.
-
-```
-body {
-  background-color: var(--color-context-background);
-  color: var(--color-context-text);
-}
-```
-
-* Using create-react-app? [See the setup guide here](./docs/create-react-app.md)
-* Have a custom set up? All you need is to set up postcsss, [see the setup guide here](./docs/postcss.md)
-
-### Using just the CSS
-
-The React components provide an abstraction of the templates and CSS, which greatly reduces any needed maintenance when CSS classes or the HTML structure to a component changes. They also encapsulate the behaviour of more interactive components, so components that do require Javascript will not work and will require you to plumb it all together.
-
-The compiled CSS file is stored on the Brandwatch Google Cloud Platform CDN or target individual CSS files from the node_module.
+Axiom uses lerna and yarn workspaces to manage the various packages. To get up and running developing locally, you need the lerna cli.
 
 ```
-http://axiom.bwcom.io/axiom.{VERSION}.min.css
-```
-
-**Template and CSS changes are not classed as breaking changes and are not specified in the release notes**
-
-### Developing in the Style Guide
-
-```
+yarn global add lerna
 git clone git@github.com:BrandwatchLtd/axiom.git
 cd axiom
-yarn install
+lerna bootstrap
 yarn start
 ```
 
-### Testing within an application
+### Contributing
 
-Npm/yarn link won't work out of the box as the `main` directory specified in `package.json` is `lib`. To populate this directory with your local changes, run `yarn build:local`. You can then run `npm link` as normal, and then `npm link bw-axiom` from your application directory.
+Please checkout the [CONTRIBUTING.md](./CONTRIBUTING.md) but basically we use the conventional commit format (google it) to handle automatic publishing, check tests and add them where appropriate and check linting.
+
+Styleguide driven development is crucial. Most changes should be visble and replicable through the style guide and, where appropriate, through design review.
