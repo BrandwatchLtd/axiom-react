@@ -13,6 +13,11 @@ export default class Select extends Component {
      * Children inside Select should contain all of and
      * only SelectOption and SelectOptionGroup!
      */
+    /** Element to use as the boundaries of the select overlay */
+    boundariesElement: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]),
     children: PropTypes.node,
     /** Event that is fired when the input field is cleared */
     onClear: PropTypes.func,
@@ -57,10 +62,11 @@ export default class Select extends Component {
   }
 
   render() {
-    const { children, ...props } = this.props;
+    const { boundariesElement, children, ...props } = this.props;
 
     return (
       <Dropdown
+          boundariesElement={ boundariesElement }
           enabled={ Children.count(children) > 0 }
           flip="mirror"
           position="bottom"

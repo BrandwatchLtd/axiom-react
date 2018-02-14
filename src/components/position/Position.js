@@ -17,6 +17,11 @@ export default class Position extends Component {
      * Children inside Position this should contain all of and
      * only PositionContent and PositionTarget!
      */
+    /** Element to use as the boundaries of the overlay */
+    boundariesElement: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]),
     children: PropTypes.array.isRequired,
     /**
      * Adds control to conditionally enable or disable the positioning logic.
@@ -56,6 +61,7 @@ export default class Position extends Component {
     offset: 'middle',
     position: 'top',
     showArrow:  true,
+    boundariesElement: 'scrollParent',
   };
 
   constructor(props) {
@@ -93,7 +99,8 @@ export default class Position extends Component {
   }
 
   createPopper() {
-    const { flip, showArrow } = this.props;
+    const { boundariesElement, flip, showArrow } = this.props;
+
     const { placement } = this.state;
 
     return new popperJS(this._target, this._content, {
@@ -110,6 +117,9 @@ export default class Position extends Component {
         },
         inner: { enabled: false },
         offset: { enabled: false },
+        preventOverflow: {
+          boundariesElement,
+        },
       },
     });
   }
@@ -161,6 +171,7 @@ export default class Position extends Component {
       'offset',
       'position',
       'onPositionChange',
+      'boundariesElement',
     ]);
 
     return [
