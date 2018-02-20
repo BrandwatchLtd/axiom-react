@@ -22,6 +22,7 @@
   background-color: var(--color-theme-background);
   color: var(--color-theme-text);
   overflow-y: auto;
+  scroll-behavior: smooth;
   /* stylelint-disable */
   /* ensures rounded corners in Safari */
   -webkit-mask-image: -webkit-radial-gradient(white, black);

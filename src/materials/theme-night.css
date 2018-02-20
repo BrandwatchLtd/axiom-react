@@ -15,12 +15,12 @@
 
   --color-theme-border: var(--color-theme-night-border);
 
-  --color-theme-shadow: rgba(var(--rgb-theme-night-main--dark), 0.1);
-  --color-theme-shadow--border: rgba(var(--rgb-theme-night-main), 0.2);
+  --color-theme-shadow: var(--color-theme-night-shadow);
+  --color-theme-shadow--border: var(--color-theme-night-shadow--border);
 
-  --drop-shadow-theme-border: var(--drop-shadow-border) var(--color-theme-shadow--border);
-  --drop-shadow-theme-elevation--x1: var(--drop-shadow-elevation--x1) var(--color-theme-shadow);
-  --drop-shadow-theme-elevation--x2: var(--drop-shadow-elevation--x2) var(--color-theme-shadow);
+  --drop-shadow-theme-border: var(--drop-shadow-theme-night-border);
+  --drop-shadow-theme-elevation--x1: var(--drop-shadow-theme-night-elevation--x1);
+  --drop-shadow-theme-elevation--x2: var(--drop-shadow-theme-night-elevation--x2);
 
   --color-theme-card-background: var(--color-ui-carbon);
   --color-theme-card-background--active: var(--color-ui-carbon--dark);

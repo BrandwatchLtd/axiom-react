@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Base from '../base/Base';
 import TextInputIcon, { TextInputIconRef } from './TextInputIcon';
 import { TextInputButtonRef } from './TextInputButton';
 import TextGroup from './TextGroup';
@@ -130,7 +131,8 @@ export default class TextInput extends Component {
                   ) : icon
                 }
 
-                <input { ...rest }
+                <Base { ...rest }
+                    Component="input"
                     className="ax-input"
                     disabled={ disabled }
                     onBlur={ () => this.handleOnBlur() }

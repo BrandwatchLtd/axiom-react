@@ -75,6 +75,7 @@
     "js-beautify": "^1.7.4",
     "jsdom": "^9.10.0",
     "lodash.chunk": "^4.2.0",
+    "lodash.flatten": "^4.4.0",
     "lodash.isplainobject": "^4.0.6",
     "lodash.set": "^4.3.2",
     "lodash.uniq": "^4.5.0",

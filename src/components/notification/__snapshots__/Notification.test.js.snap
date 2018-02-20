@@ -2,7 +2,7 @@
 
 exports[`Notification renders with defaultProps 1`] = `
 <div
-  className="ax-notification ax-notification--info ax-text--color-subtle ax-theme--day"
+  className="ax-notification ax-notification--info ax-text--color-subtle"
 >
   <div
     className="ax-notification__icon"
@@ -33,7 +33,7 @@ exports[`Notification renders with defaultProps 1`] = `
 
 exports[`Notification renders with onRemoveClick 1`] = `
 <div
-  className="ax-notification ax-notification--info ax-text--color-subtle ax-theme--day"
+  className="ax-notification ax-notification--info ax-text--color-subtle"
 >
   <div
     className="ax-notification__icon"
@@ -88,7 +88,7 @@ exports[`Notification renders with onRemoveClick 1`] = `
 
 exports[`Notification renders with type error 1`] = `
 <div
-  className="ax-notification ax-notification--error ax-text--color-subtle ax-theme--day"
+  className="ax-notification ax-notification--error ax-text--color-subtle"
 >
   <div
     className="ax-notification__icon"
@@ -119,7 +119,7 @@ exports[`Notification renders with type error 1`] = `
 
 exports[`Notification renders with type info 1`] = `
 <div
-  className="ax-notification ax-notification--info ax-text--color-subtle ax-theme--day"
+  className="ax-notification ax-notification--info ax-text--color-subtle"
 >
   <div
     className="ax-notification__icon"
@@ -150,7 +150,7 @@ exports[`Notification renders with type info 1`] = `
 
 exports[`Notification renders with type success 1`] = `
 <div
-  className="ax-notification ax-notification--success ax-text--color-subtle ax-theme--day"
+  className="ax-notification ax-notification--success ax-text--color-subtle"
 >
   <div
     className="ax-notification__icon"
@@ -181,7 +181,7 @@ exports[`Notification renders with type success 1`] = `
 
 exports[`Notification renders with type warning 1`] = `
 <div
-  className="ax-notification ax-notification--warning ax-text--color-subtle ax-theme--day"
+  className="ax-notification ax-notification--warning ax-text--color-subtle"
 >
   <div
     className="ax-notification__icon"

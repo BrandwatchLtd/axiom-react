@@ -2,7 +2,7 @@
 
 exports[`AlertBar renders with defaultProps 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -39,7 +39,7 @@ exports[`AlertBar renders with defaultProps 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -55,7 +55,7 @@ exports[`AlertBar renders with defaultProps 1`] = `
 
 exports[`AlertBar renders with onRemoveClick 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -92,7 +92,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -110,7 +110,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
         }
       >
         <a
-          className="ax-link ax-link--style-mono"
+          className="ax-link ax-link--style-night"
           onClick={[Function]}
         >
           <svg
@@ -137,7 +137,7 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
 
 exports[`AlertBar renders with size medium 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--medium ax-alert-bar--info ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--medium ax-alert-bar--info"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -174,7 +174,7 @@ exports[`AlertBar renders with size medium 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -190,7 +190,7 @@ exports[`AlertBar renders with size medium 1`] = `
 
 exports[`AlertBar renders with size small 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -227,7 +227,7 @@ exports[`AlertBar renders with size small 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -243,7 +243,7 @@ exports[`AlertBar renders with size small 1`] = `
 
 exports[`AlertBar renders with type error 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--error ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--error"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -280,7 +280,7 @@ exports[`AlertBar renders with type error 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -296,7 +296,7 @@ exports[`AlertBar renders with type error 1`] = `
 
 exports[`AlertBar renders with type info 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--info"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -333,7 +333,7 @@ exports[`AlertBar renders with type info 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -349,7 +349,7 @@ exports[`AlertBar renders with type info 1`] = `
 
 exports[`AlertBar renders with type success 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--success ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--success"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -386,7 +386,7 @@ exports[`AlertBar renders with type success 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,
@@ -402,7 +402,7 @@ exports[`AlertBar renders with type success 1`] = `
 
 exports[`AlertBar renders with type warning 1`] = `
 <div
-  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--warning ax-theme--night"
+  className="ax-alert-bar ax-alert-bar--small ax-alert-bar--warning"
 >
   <div
     className="ax-grid__container ax-space--x6"
@@ -439,7 +439,7 @@ exports[`AlertBar renders with type warning 1`] = `
         </div>
       </div>
       <div
-        className="ax-grid__cell ax-text--strong"
+        className="ax-grid__cell ax-text--color-night ax-text--strong"
         style={
           Object {
             "width": undefined,

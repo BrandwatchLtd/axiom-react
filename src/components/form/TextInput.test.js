@@ -71,14 +71,4 @@ describe('TextInput', () => {
       });
     });
   });
-
-  describe('render with theme', () => {
-    ['day', 'night'].forEach((theme) => {
-      it(theme, () => {
-        const component = getComponent({ theme });
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-  });
 });

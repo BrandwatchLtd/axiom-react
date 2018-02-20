@@ -116,6 +116,20 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
 </th>
 `;
 
+exports[`TableHeaderLabel renders with sortable 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+    onClick={undefined}
+  >
+    Test
+  </button>
+</th>
+`;
+
 exports[`TableHeaderLabel renders with textAlign 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-right"

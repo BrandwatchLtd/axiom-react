@@ -7,13 +7,15 @@ export default class ContextMenuItemMulti extends Component {
   static propTypes = {
     children: PropTypes.node,
     disabled: PropTypes.bool,
+    focused: PropTypes.bool,
     selected: PropTypes.bool,
   };
 
   render() {
-    const { children, disabled, selected, ...rest } = this.props;
+    const { children, disabled, focused, selected, ...rest } = this.props;
     const classes = classnames('ax-context-menu__item-multi', {
       'ax-context-menu__item-multi--disabled': disabled,
+      'ax-context-menu__item-multi--focused': focused,
     });
 
     return (

@@ -6,13 +6,15 @@ import Icon from '../icon/Icon';
 export default class ContextMenuItemSingle extends Component {
   static propTypes = {
     children: PropTypes.node,
+    focused: PropTypes.bool,
     selected: PropTypes.bool,
   };
 
   render() {
-    const { children, selected, ...rest } = this.props;
+    const { children, focused, selected, ...rest } = this.props;
     const classes = classnames('ax-context-menu__item-single', {
       'ax-context-menu__item-single--selected': selected,
+      'ax-context-menu__item-single--focused': focused,
     });
 
     return (

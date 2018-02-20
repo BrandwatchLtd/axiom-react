@@ -78,6 +78,8 @@ export { default as DropdownContent } from './components/dropdown/DropdownConten
 export { default as DropdownMenu } from './components/dropdown/DropdownMenu';
 export { default as DropdownMenuItem } from './components/dropdown/DropdownMenuItem';
 export { default as DropdownTarget } from './components/dropdown/DropdownTarget';
+export { default as EditableLine } from './components/editable/EditableLine';
+export { default as EditableTitle } from './components/editable/EditableTitle';
 export { default as Form } from './components/form/Form';
 export { default as Grid } from './components/grid/Grid';
 export { default as GridCell } from './components/grid/GridCell';
@@ -103,6 +105,8 @@ export { default as MenuItem } from './components/menu/MenuItem';
 export { default as Modal } from './components/modal/Modal';
 export { default as Notification } from './components/notification/Notification';
 export { default as Notifications } from './components/notification/Notifications';
+export { default as SelectOption } from './components/select/SelectOption';
+export { default as SelectOptionGroup } from './components/select/SelectOptionGroup';
 export { default as Pagination } from './components/pagination/Pagination';
 export { default as Paragraph } from './components/typography/Paragraph';
 export { default as Pictogram } from './components/pictogram/Pictogram';
@@ -119,6 +123,7 @@ export { default as ProgressInfinite } from './components/progress/ProgressInfin
 export { default as RadioButton } from './components/form/RadioButton';
 export { default as RadioButtonGroup } from './components/form/RadioButtonGroup';
 export { default as Reveal } from './components/reveal/Reveal';
+export { default as Select } from './components/select/Select';
 export { default as Small } from './components/typography/Small';
 export { default as Strike } from './components/typography/Strike';
 export { default as Strong } from './components/typography/Strong';

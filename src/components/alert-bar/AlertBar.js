@@ -31,7 +31,7 @@ export default class AlertBar extends Component {
     const classes = classnames('ax-alert-bar', `ax-alert-bar--${size}`, `ax-alert-bar--${type}`);
 
     return (
-      <Base { ...rest } className={ classes } theme="night">
+      <Base { ...rest } className={ classes }>
         <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
           <GridCell shrink>
             <AlertIcon
@@ -40,13 +40,13 @@ export default class AlertBar extends Component {
                 type={ type } />
           </GridCell>
 
-          <GridCell textStrong>
+          <GridCell textColor="night" textStrong>
             { children }
           </GridCell>
 
           { onRemoveClick && (
             <GridCell shrink>
-              <Link onClick={ onRemoveClick } style="mono">
+              <Link onClick={ onRemoveClick } style="night">
                 <Icon name="cross" />
               </Link>
             </GridCell>

@@ -34,7 +34,7 @@ export default class Notification extends Component {
     const classes = classnames('ax-notification', `ax-notification--${type}`);
 
     return (
-      <Base { ...omit(rest, ['onAppear']) } className={ classes } textColor="subtle" theme="day">
+      <Base { ...omit(rest, ['onAppear']) } className={ classes } textColor="subtle">
         <div className="ax-notification__icon">
           <Icon name={ ALERT_ICON_NAME_MAP[type] } size="2rem" />
         </div>

@@ -46,6 +46,16 @@ describe('GridCell', () => {
     });
   });
 
+  describe('renders with none', () => {
+    [true, 'small', 'medium', 'large'].forEach((none) => {
+      it(none, () => {
+        const component = getComponent({ none });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
   describe('renders with shrink', () => {
     [true, 'small', 'medium', 'large'].forEach((shrink) => {
       it(shrink, () => {

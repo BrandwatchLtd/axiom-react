@@ -140,6 +140,13 @@
 
   --color-theme-day-border: rgba(var(--rgb-theme-day-main), var(--opacity-border));
 
+  --color-theme-day-shadow: rgba(var(--rgb-theme-day-main--dark), 0.1);
+  --color-theme-day-shadow--border: rgba(var(--rgb-theme-day-main), 0.2);
+
+  --drop-shadow-theme-day-border: var(--drop-shadow-border) var(--color-theme-day-shadow--border);
+  --drop-shadow-theme-day-elevation--x1: var(--drop-shadow-elevation--x1) var(--color-theme-day-shadow);
+  --drop-shadow-theme-day-elevation--x2: var(--drop-shadow-elevation--x2) var(--color-theme-day-shadow);
+
   /** Dark theme colours */
   --rgb-theme-night-main: var(--rgb-ui-white-noise);
   --rgb-theme-night-main--dark: var(--rgb-ui-white-noise--dark);
@@ -160,5 +167,12 @@
   --color-theme-night-background--disabled: rgba(var(--rgb-theme-night-main), var(--opacity-background--disabled));
 
   --color-theme-night-border: rgba(var(--rgb-theme-night-main), var(--opacity-border));
+
+  --color-theme-night-shadow: rgba(var(--rgb-theme-night-main--dark), 0.1);
+  --color-theme-night-shadow--border: rgba(var(--rgb-theme-night-main), 0.2);
+
+  --drop-shadow-theme-night-border: var(--drop-shadow-border) var(--color-theme-night-shadow--border);
+  --drop-shadow-theme-night-elevation--x1: var(--drop-shadow-elevation--x1) var(--color-theme-night-shadow);
+  --drop-shadow-theme-night-elevation--x2: var(--drop-shadow-elevation--x2) var(--color-theme-night-shadow);
 }
 /* stylelint-enable */

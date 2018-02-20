@@ -19,8 +19,9 @@
   width: 100%;
   max-width: var(--layout-width-tiny);
   border-radius: var(--component-border-radius);
-  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
-  background-color: var(--color-theme-background);
+  box-shadow: var(--drop-shadow-theme-day-border), var(--drop-shadow-theme-day-elevation--x2);
+  background-color: var(--color-theme-day-background);
+  color: var(--color-theme-day-text);
 }
 
 .ax-notification__icon {
@@ -28,7 +29,7 @@
   flex: 0 0 auto;
   align-items: center;
   padding: var(--spacing-grid-size--x4) var(--spacing-grid-size--x4);
-  border-right: 0.0625rem solid var(--color-theme-border);
+  border-right: 0.0625rem solid var(--color-theme-day-border);
 
   @nest .ax-notification--error & { color: var(--color-ui-error); }
   @nest .ax-notification--info & { color: var(--color-ui-info); }
