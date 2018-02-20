@@ -75,8 +75,8 @@ export default class Validation extends Component {
     const gIndex = this._getters.indexOf(getter);
     const sIndex = this._setters.indexOf(setter);
 
-    this._getters.slice(0, gIndex).concat(this._getters.slice(gIndex + 1));
-    this._setters.slice(0, sIndex).concat(this._setters.slice(sIndex + 1 ));
+    this._getters.splice(gIndex, 1);
+    this._setters.splice(sIndex, 1);
 
     this.updateIndexes();
   }
