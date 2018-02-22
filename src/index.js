@@ -67,6 +67,7 @@ export { default as DatePicker } from './components/date-picker/DatePicker';
 export { default as Dialog } from './components/dialog/Dialog';
 export { default as DialogBody } from './components/dialog/DialogBody';
 export { default as DialogFooter } from './components/dialog/DialogFooter';
+export { default as DialogFooterImage } from './components/dialog/DialogFooterImage';
 export { default as DialogHeader } from './components/dialog/DialogHeader';
 export { default as Dock } from './components/platform/Dock';
 export { default as DockItem } from './components/platform/DockItem';

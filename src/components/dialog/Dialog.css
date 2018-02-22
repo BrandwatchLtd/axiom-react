@@ -33,6 +33,10 @@
   padding: 0 var(--page-padding-vertical) var(--page-padding-horizontal);
 }
 
+.ax-dialog__footer-image {
+  padding: 0 var(--page-padding-horizontal) 0 var(--page-padding-horizontal);
+}
+
 .ax-dialog__header,
 .ax-dialog__footer {
   flex: 0 1 auto;
