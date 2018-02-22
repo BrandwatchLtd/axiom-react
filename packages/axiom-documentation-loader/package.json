@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-documentation-loader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Brandwatch Axiom - Documentation webpack loader",
   "main": "dist/index.js",
   "license": "UNLICENSED",

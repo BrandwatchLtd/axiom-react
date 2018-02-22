@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-localization",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Brandwatch Axiom - Localization",
   "main": "dist/index.js",
   "license": "UNLICENSED",
