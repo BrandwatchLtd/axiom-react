@@ -14,6 +14,7 @@ export { default as DataPoint } from './DataPoint/DataPoint';
 export { default as DataPoints } from './DataPoint/DataPoints';
 export { default as DotPlotChart } from './DotPlotChart/DotPlotChart';
 export { default as Line } from './Line/Line';
+export { default as LineChart } from './LineChart/LineChart';
 export { default as LinePoint } from './Line/LinePoint';
 export { default as MirroredColumnChart } from './ColumnChart/MirroredColumnChart';
 export { default as SparkLine } from './SparkLine/SparkLine';

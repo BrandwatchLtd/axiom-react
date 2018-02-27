@@ -1,0 +1,29 @@
+.ax-chart-grid,
+.ax-chart-grid__chart {
+  position: relative;
+}
+
+.ax-chart-grid__lines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.ax-chart-grid__line {
+  position: absolute;
+}
+
+.ax-chart-grid--y .ax-chart-grid__line {
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem dotted var(--color-theme-border);
+}
+
+.ax-chart-grid--x .ax-chart-grid__line {
+  top: 0;
+  bottom: 0;
+  border-left: 0.0625rem dotted var(--color-theme-border);
+}

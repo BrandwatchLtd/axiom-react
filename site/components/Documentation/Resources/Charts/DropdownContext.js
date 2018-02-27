@@ -13,10 +13,11 @@ import {
   Small,
 } from '@brandwatch/axiom-components';
 
-export default class ChartNLP extends Component {
+export default class DropdownContextExample extends Component {
   static propTypes = {
     color: PropTypes.string,
     colors: PropTypes.arrayOf(PropTypes.string),
+    label: PropTypes.string,
     style: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.number,
@@ -25,7 +26,7 @@ export default class ChartNLP extends Component {
   };
 
   render() {
-    const { color, colors = [color], value, style, ...rest } = this.props;
+    const { color, colors = [color], label, value, style, ...rest } = this.props;
 
     return (
       <DropdownContext { ...rest } width="17rem">
@@ -45,14 +46,14 @@ export default class ChartNLP extends Component {
                 </GridCell>
 
                 <GridCell shrink>
-                  <Heading textSize="headline">{ value }%</Heading>
+                  <Heading textSize="headline">{ value }</Heading>
                 </GridCell>
               </Grid>
             </ListItem>
 
             <ListItem>
               <Paragraph textCase="upper" textColor="subtle">
-                <Small>Lorem ipsum</Small>
+                <Small>{ label }</Small>
               </Paragraph>
             </ListItem>
           </List>
