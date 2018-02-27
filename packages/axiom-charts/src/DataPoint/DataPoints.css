@@ -5,10 +5,18 @@
 
 .ax-data-point {
   color: inherit;
-  fill: currentColor;
   transition-property: color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
+}
+
+.ax-data-point--hollow {
+  fill: var(--color-theme-background);
+  stroke: currentColor;
+}
+
+.ax-data-point--solid {
+  fill: currentColor;
 }
 
 .ax-data-point--tiny-clanger { color: var(--color-product-tiny-clanger); }

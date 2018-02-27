@@ -1,114 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataPoint renders with color new-horizon 1`] = `
-<circle
-  className="ax-data-point ax-data-point--new-horizon"
-  cx={12}
-  cy={12}
-/>
-`;
-
-exports[`DataPoint renders with color giant-leap 1`] = `
-<circle
-  className="ax-data-point ax-data-point--giant-leap"
-  cx={12}
-  cy={12}
-/>
-`;
-
-exports[`DataPoint renders with color ground-control 1`] = `
-<circle
-  className="ax-data-point ax-data-point--ground-control"
-  cx={12}
-  cy={12}
-/>
-`;
-
-exports[`DataPoint renders with color primeval-soup 1`] = `
-<circle
-  className="ax-data-point ax-data-point--primeval-soup"
-  cx={12}
-  cy={12}
-/>
-`;
-
-exports[`DataPoint renders with color terra-form 1`] = `
-<circle
-  className="ax-data-point ax-data-point--terra-form"
-  cx={12}
-  cy={12}
-/>
-`;
-
-exports[`DataPoint renders with color luna-dust 1`] = `
-<circle
-  className="ax-data-point ax-data-point--luna-dust"
-  cx={12}
-  cy={12}
-/>
-`;
-
-exports[`DataPoint renders with color serene-sea 1`] = `
-<circle
-  className="ax-data-point ax-data-point--serene-sea"
-  cx={12}
-  cy={12}
-/>
-`;
-
 exports[`DataPoint renders with color blast-off 1`] = `
 <circle
-  className="ax-data-point ax-data-point--blast-off"
+  className="ax-data-point ax-data-point--blast-off ax-data-point--solid"
   cx={12}
   cy={12}
+  r={undefined}
+  strokeWidth={4}
 />
 `;
 
 exports[`DataPoint renders with color critical-mass 1`] = `
 <circle
-  className="ax-data-point ax-data-point--critical-mass"
+  className="ax-data-point ax-data-point--critical-mass ax-data-point--solid"
   cx={12}
   cy={12}
+  r={undefined}
+  strokeWidth={4}
 />
 `;
 
-exports[`DataPoint renders with color paradise-lost 1`] = `
+exports[`DataPoint renders with color giant-leap 1`] = `
 <circle
-  className="ax-data-point ax-data-point--paradise-lost"
+  className="ax-data-point ax-data-point--giant-leap ax-data-point--solid"
   cx={12}
   cy={12}
+  r={undefined}
+  strokeWidth={4}
 />
 `;
 
-exports[`DataPoint renders with color tiny-clanger 1`] = `
+exports[`DataPoint renders with color ground-control 1`] = `
 <circle
-  className="ax-data-point ax-data-point--tiny-clanger"
+  className="ax-data-point ax-data-point--ground-control ax-data-point--solid"
   cx={12}
   cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color luna-dust 1`] = `
+<circle
+  className="ax-data-point ax-data-point--luna-dust ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
 />
 `;
 
 exports[`DataPoint renders with color moon-lagoon 1`] = `
 <circle
-  className="ax-data-point ax-data-point--moon-lagoon"
+  className="ax-data-point ax-data-point--moon-lagoon ax-data-point--solid"
   cx={12}
   cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color new-horizon 1`] = `
+<circle
+  className="ax-data-point ax-data-point--new-horizon ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color paradise-lost 1`] = `
+<circle
+  className="ax-data-point ax-data-point--paradise-lost ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color primeval-soup 1`] = `
+<circle
+  className="ax-data-point ax-data-point--primeval-soup ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color serene-sea 1`] = `
+<circle
+  className="ax-data-point ax-data-point--serene-sea ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color terra-form 1`] = `
+<circle
+  className="ax-data-point ax-data-point--terra-form ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color tiny-clanger 1`] = `
+<circle
+  className="ax-data-point ax-data-point--tiny-clanger ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
 />
 `;
 
 exports[`DataPoint renders with defaultProps 1`] = `
 <circle
-  className="ax-data-point ax-data-point--tiny-clanger"
+  className="ax-data-point ax-data-point--tiny-clanger ax-data-point--solid"
   cx={12}
   cy={12}
+  r={undefined}
+  strokeWidth={4}
 />
 `;
 
 exports[`DataPoint renders with radius 1`] = `
 <circle
-  className="ax-data-point ax-data-point--tiny-clanger"
+  className="ax-data-point ax-data-point--tiny-clanger ax-data-point--solid"
   cx={12}
   cy={12}
   r={10}
+  strokeWidth={4}
 />
 `;
