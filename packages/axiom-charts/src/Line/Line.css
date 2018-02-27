@@ -1,0 +1,125 @@
+.ax-line {
+  position: relative;
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  pointer-events: none;
+}
+
+.ax-line--faded {
+  opacity: var(--cmp-chart-opacity-faded);
+}
+
+.ax-line__svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.ax-line__path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition-property: color, stroke;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  vector-effect: non-scaling-stroke;
+}
+
+.ax-line__point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+}
+
+.ax-line__point--hoverable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  opacity: var(--opacity-background--subtle);
+  border-radius: 50%;
+  background-color: currentColor;
+  z-index: -1;
+  transition-property: transform;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-line__point--hover::before,
+.ax-line__point--hoverable:hover::before {
+  transform: scale(2.5);
+}
+
+.ax-line--subtle .ax-line__path {
+  color: var(--color-theme-background--subtle);
+}
+
+.ax-line--overlay-light .ax-line__path {
+  color: var(--color-theme-background--overlay-light);
+}
+
+.ax-line--tiny-clanger .ax-line__path,
+.ax-line--tiny-clanger .ax-line__point {
+  color: var(--color-product-tiny-clanger);
+}
+
+.ax-line--critical-mass .ax-line__path,
+.ax-line--critical-mass .ax-line__point {
+  color: var(--color-product-critical-mass);
+}
+
+.ax-line--paradise-lost .ax-line__path,
+.ax-line--paradise-lost .ax-line__point {
+  color: var(--color-product-paradise-lost);
+}
+
+.ax-line--serene-sea .ax-line__path,
+.ax-line--serene-sea .ax-line__point {
+  color: var(--color-product-serene-sea);
+}
+
+.ax-line--giant-leap .ax-line__path,
+.ax-line--giant-leap .ax-line__point {
+  color: var(--color-product-giant-leap);
+}
+
+.ax-line--moon-lagoon .ax-line__path,
+.ax-line--moon-lagoon .ax-line__point {
+  color: var(--color-product-moon-lagoon);
+}
+
+.ax-line--terra-form .ax-line__path,
+.ax-line--terra-form .ax-line__point {
+  color: var(--color-product-terra-form);
+}
+
+.ax-line--primeval-soup .ax-line__path,
+.ax-line--primeval-soup .ax-line__point {
+  color: var(--color-product-primeval-soup);
+}
+
+.ax-line--new-horizon .ax-line__path,
+.ax-line--new-horizon .ax-line__point {
+  color: var(--color-product-new-horizon);
+}
+
+.ax-line--blast-off .ax-line__path,
+.ax-line--blast-off .ax-line__point {
+  color: var(--color-product-blast-off);
+}
+
+.ax-line--ground-control .ax-line__path,
+.ax-line--ground-control .ax-line__point {
+  color: var(--color-product-ground-control);
+}
+
+.ax-line--luna-dust .ax-line__path,
+.ax-line--luna-dust .ax-line__point {
+  color: var(--color-product-luna-dust);
+}
+

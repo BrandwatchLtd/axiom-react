@@ -17,6 +17,7 @@ export default class ChartNLP extends Component {
   static propTypes = {
     color: PropTypes.string,
     colors: PropTypes.arrayOf(PropTypes.string),
+    style: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,
@@ -24,7 +25,7 @@ export default class ChartNLP extends Component {
   };
 
   render() {
-    const { color, colors = [color], value, ...rest } = this.props;
+    const { color, colors = [color], value, style, ...rest } = this.props;
 
     return (
       <DropdownContext { ...rest } width="17rem">
@@ -35,7 +36,10 @@ export default class ChartNLP extends Component {
                 <GridCell shrink>
                   <DataPoints size="1.5rem">
                     { colors.map((color) =>
-                      <DataPoint color={ color } key={ color } />
+                      <DataPoint
+                          color={ color }
+                          key={ color }
+                          style={ style } />
                     ) }
                   </DataPoints>
                 </GridCell>

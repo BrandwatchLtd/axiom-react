@@ -174,6 +174,24 @@ export const dotPlotData = [{
   },
 }];
 
+export const lineChartKey = [{
+  color: 'new-horizon',
+  label: 'Forum',
+  style: 'solid',
+}, {
+  color: 'giant-leap',
+  label: 'Blog',
+  style: 'dashed',
+}];
+
+export const lineChartData = [{
+  label: 'Forum',
+  values: [14, 18, 15, 14, 13, 12, 21, 17, 23, 18, 17, 9, 16, 7, 2, 8, 12, 11, 15, 9, 6, 7, 8, 7, 14, 7, 7],
+}, {
+  label: 'Blog',
+  values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
+}];
+
 export const wordCloudDataText = [
   'Manager Brandwatch',
   'Marketing Brandwatch',

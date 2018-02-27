@@ -18,6 +18,8 @@ export default class Tooltip extends Component {
      * Adds control to enable or disable showing the TooltipSource
      */
     enabled: PropTypes.bool,
+    /** SKIP */
+    onClick: PropTypes.func,
     /**
      * Controls the starting position around TooltipTarget in which the
      * TooltipSource will attempt to be placed. If that position is not available
@@ -64,12 +66,12 @@ export default class Tooltip extends Component {
   }
 
   render() {
-    const { children, position, ...rest } = this.props;
+    const { children, onClick, position, ...rest } = this.props;
     const { isVisible } = this.state;
 
     return (
       <Position { ...rest } isVisible={ isVisible } position={ position }>
-        <PositionTarget>{ findComponent(children, TooltipTargetRef) }</PositionTarget>
+        <PositionTarget onClick={ onClick }>{ findComponent(children, TooltipTargetRef) }</PositionTarget>
         <PositionSource>{ findComponent(children, TooltipSourceRef) }</PositionSource>
       </Position>
     );

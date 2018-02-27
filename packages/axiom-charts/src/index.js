@@ -13,6 +13,8 @@ export { default as ColumnChart } from './ColumnChart/ColumnChart';
 export { default as DataPoint } from './DataPoint/DataPoint';
 export { default as DataPoints } from './DataPoint/DataPoints';
 export { default as DotPlotChart } from './DotPlotChart/DotPlotChart';
+export { default as Line } from './Line/Line';
+export { default as LinePoint } from './Line/LinePoint';
 export { default as MirroredColumnChart } from './ColumnChart/MirroredColumnChart';
 export { default as Word } from './WordCloud/Word';
 export { default as WordCloud } from './WordCloud/WordCloud';

@@ -5,6 +5,7 @@ import BarChart from './Charts/BarChart';
 import Chart from './Charts/Chart';
 import DataPoint from './Charts/DataPoint';
 import DotPlotChart from './Charts/DotPlotChart';
+import Line from './Charts/Line';
 import WordCloud from './Charts/WordCloud';
 
 export default class Documentation extends Component {
@@ -31,6 +32,10 @@ export default class Documentation extends Component {
             id: 'dot-plot-chart',
             name: 'Dot Plot Chart',
             Component: DotPlotChart,
+          }, {
+            id: 'line',
+            name: 'Line',
+            Component: Line,
           }, {
             id: 'word-cloud',
             name: 'Word Cloud',

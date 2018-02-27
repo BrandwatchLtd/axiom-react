@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Component } from 'react';
+import { Component, cloneElement } from 'react';
 
 export const PositionTargetRef = 'PositionTarget';
 
@@ -11,6 +11,7 @@ export default class PositionTarget extends Component {
   static typeRef = PositionTargetRef;
 
   render() {
-    return this.props.children;
+    const { children, ...rest } = this.props;
+    return cloneElement(children, rest);
   }
 }
