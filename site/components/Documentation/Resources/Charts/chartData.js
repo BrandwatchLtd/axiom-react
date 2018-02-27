@@ -192,6 +192,14 @@ export const lineChartData = [{
   values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
 }];
 
+export const sparkLineBenchmark = 10;
+
+export const sparkLineData = [{
+  lineColor: 'overlay-light',
+  pointColor: 'giant-leap',
+  values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
+}];
+
 export const wordCloudDataText = [
   'Manager Brandwatch',
   'Marketing Brandwatch',
