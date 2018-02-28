@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Bar from '../Bar/Bar';
 import Bars from '../Bar/Bars';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
-import BarChartContext from './BarChartContext';
+import ChartContext from '../ChartContext/ChartContext';
 
 export default class BarChartBars extends Component {
   static propTypes = {
@@ -18,6 +19,8 @@ export default class BarChartBars extends Component {
     isHovered: PropTypes.bool.isRequired,
     label: PropTypes.node.isRequired,
     lower: PropTypes.number,
+    onDropdownClose: PropTypes.func.isRequired,
+    onDropdownOpen: PropTypes.func.isRequired,
     onMouseEnter: PropTypes.func.isRequired,
     onMouseLeave: PropTypes.func.isRequired,
     showBarLabel: PropTypes.bool,
@@ -43,6 +46,8 @@ export default class BarChartBars extends Component {
       size,
       upper,
       values,
+      onDropdownClose,
+      onDropdownOpen,
       onMouseEnter,
       onMouseLeave,
     } = this.props;
@@ -52,7 +57,7 @@ export default class BarChartBars extends Component {
     });
 
     let benchmarkValue;
-    if (benchmark) {
+    if (benchmark !== undefined) {
       benchmarkValue = ((benchmark - lower) / (upper - lower)) * 100;
     }
 
@@ -63,28 +68,32 @@ export default class BarChartBars extends Component {
             const isFaded = hoverColor && color !== hoverColor;
 
             return (
-              <BarChartContext
+              <ChartContext
                   DropdownContext={ DropdownContext }
-                  barLabel={ barLabel }
                   color={ color }
                   data={ data }
-                  isFaded={ isFaded }
-                  isHidden={ hideBars && isFaded }
                   key={ color }
                   label={ label }
-                  labelStrong={ isHovered }
-                  lower={ lower }
-                  onMouseEnter={ onMouseEnter }
-                  onMouseLeave={ onMouseLeave }
-                  showBarLabel={ showBarLabel || color === hoverColor }
-                  size={ size }
-                  upper={ upper }
-                  value={ value } />
+                  onDropdownClose={ onDropdownClose }
+                  onDropdownOpen={ () => onDropdownOpen(color) }
+                  value={ value }>
+                <Bar
+                    color={ color }
+                    isFaded={ isFaded }
+                    isHidden={ hideBars && isFaded }
+                    label={ barLabel ? barLabel({ value, data, color, label }) : value }
+                    labelStrong={ isHovered }
+                    onMouseEnter={ () => onMouseEnter(color) }
+                    onMouseLeave={ onMouseLeave }
+                    percent={ ((value - lower) / (upper - lower)) * 100 }
+                    showLabel={ showBarLabel || color === hoverColor }
+                    size={ size } />
+              </ChartContext>
             );
           }) }
         </Bars>
 
-        { benchmark !== undefined && (
+        { benchmarkValue !== undefined && (
           <div className="ax-bar-chart__benchmark-line-container">
             <BarChartBenchmarkLine faded={ fadeBenchmarkLine } value={ benchmarkValue } />
           </div>

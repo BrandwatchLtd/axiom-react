@@ -75,20 +75,49 @@ export default class BarChart extends Component {
     zoomMax: PropTypes.number,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      hoverColor: null,
-      hoverIndex: null,
-    };
-    this.onMouseEnter = (hoverIndex, hoverColor) => this.setState({ hoverColor, hoverIndex });
-    this.onMouseLeave = () => this.setState({ hoverColor: null, hoverIndex: null });
-  }
-
   static defaultProps = {
     rowSpace: 'x2',
     showKey: true,
   };
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedColor: null,
+      selectedIndex: null,
+    };
+  }
+
+  handleDropdonOpen(selectedIndex, selectedColor) {
+    this.setState({
+      isDropdownOpen: true,
+      selectedColor,
+      selectedIndex,
+    });
+  }
+
+  handleDropdonClose() {
+    this.setState({
+      isDropdownOpen: false,
+      selectedColor: null,
+      selectedIndex: null,
+    });
+  }
+
+  handleMouseEnter(selectedIndex, selectedColor) {
+    this.setState({
+      selectedColor,
+      selectedIndex,
+    });
+  }
+
+  handleMouseLeave() {
+    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
+      selectedColor: null,
+      selectedIndex: null,
+    }));
+  }
 
   render() {
     const flatValues = flattenValues(this.props.data);
@@ -118,7 +147,7 @@ export default class BarChart extends Component {
       ...rest
     } = this.props;
 
-    const { hoverColor, hoverIndex } = this.state;
+    const { selectedColor, selectedIndex } = this.state;
     const formattedData = formatData(chartKey, data);
 
     const finalLower = Math.min(lower, dataLower);
@@ -139,9 +168,11 @@ export default class BarChart extends Component {
             zoom={ zoom }
             zoomTo={ zoom ? zoomTo : undefined }>
           { formattedData.map(({ values, label, benchmark }, index) =>
-            <ChartTableRow key={ isValidElement(label) ? index : label }>
+            <ChartTableRow
+                hover={ index === selectedIndex }
+                key={ isValidElement(label) ? index : label }>
               <ChartTableLabel
-                  textStrong={ index === hoverIndex }
+                  textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
                 { label }
               </ChartTableLabel>
@@ -152,14 +183,16 @@ export default class BarChart extends Component {
                     benchmark={ benchmark }
                     benchmarkHeight={ rowSpace }
                     data={ data[index] }
-                    fadeBenchmarkLine={ hoverIndex !== null }
-                    hideBars={ hoverIndex !== null && hoverIndex !== index }
-                    hoverColor={ hoverColor }
-                    isHovered={ index === hoverIndex }
+                    fadeBenchmarkLine={ selectedIndex !== null }
+                    hideBars={ selectedIndex !== null && selectedIndex !== index }
+                    hoverColor={ selectedColor }
+                    isHovered={ index === selectedIndex }
                     label={ label }
                     lower={ finalLower }
-                    onMouseEnter={ (color) => this.onMouseEnter(index, color) }
-                    onMouseLeave={ this.onMouseLeave }
+                    onDropdownClose={ () => this.handleDropdonClose() }
+                    onDropdownOpen={ (color) => this.handleDropdonOpen(index, color) }
+                    onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
+                    onMouseLeave={ () => this.handleMouseLeave() }
                     showBarLabel={ showBarLabel }
                     size={ size }
                     upper={ finalUpper }

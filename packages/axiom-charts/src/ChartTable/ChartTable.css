@@ -29,8 +29,7 @@
   transition-timing-function: var(--transition-function);
 }
 
-.ax-chart-table__row--hover,
-.ax-chart-table__row:hover {
+.ax-chart-table__row--hover {
   background: var(--color-theme-background--hover);
 }
 
