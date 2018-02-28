@@ -80,23 +80,40 @@ export default class DotPlotChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mouseOverColors: [],
-      mouseOverRowIndex: -1,
+      isDropdownOpen: false,
+      selectedColors: [],
+      selectedIndex: null,
     };
   }
 
-  handleDotMouseEnter(rowIndex, colors) {
+  handleDropdownOpen(selectedIndex, selectedColors) {
     this.setState({
-      mouseOverColors: colors,
-      mouseOverRowIndex: rowIndex,
+      isDropdownOpen: true,
+      selectedColors,
+      selectedIndex,
+    });
+  }
+
+  handleDropdownClose() {
+    this.setState({
+      isDropdownOpen: false,
+      selectedColors: [],
+      selectedIndex: null,
+    });
+  }
+
+  handleDotMouseEnter(selectedIndex, selectedColors) {
+    this.setState({
+      selectedColors,
+      selectedIndex,
     });
   }
 
   handleDotMouseLeave() {
-    this.setState({
-      mouseOverColors: [],
-      mouseOverRowIndex: -1,
-    });
+    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
+      selectedColors: [],
+      selectedIndex: null,
+    }));
   }
 
   render() {
@@ -125,7 +142,7 @@ export default class DotPlotChart extends Component {
       ...rest
     } = this.props;
 
-    const { mouseOverColors, mouseOverRowIndex } = this.state;
+    const { selectedColors, selectedIndex } = this.state;
     const formattedData = formatData(chartKey, data);
 
     const finalLower = Math.min(lower, dataLower);
@@ -143,9 +160,11 @@ export default class DotPlotChart extends Component {
             xAxisLabels={ xAxisLabels }
             zoomTo={ zoom ? zoomTo : undefined }>
           { formattedData.map(({ values, benchmark, label }, index) =>
-            <ChartTableRow key={ label }>
+            <ChartTableRow
+                hover={ index === selectedIndex }
+                key={ label }>
               <ChartTableLabel
-                  textStrong={ index === mouseOverRowIndex }
+                  textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
                 { label }
               </ChartTableLabel>
@@ -157,10 +176,12 @@ export default class DotPlotChart extends Component {
                     dotPlotLabel={ dotPlotLabel }
                     label={ label }
                     lower={ finalLower }
-                    mouseOverColors={ mouseOverColors }
-                    mouseOverRowIndex={ mouseOverRowIndex }
+                    mouseOverColors={ selectedColors }
+                    mouseOverRowIndex={ selectedIndex }
                     onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
                     onDotMouseLeave={ () => this.handleDotMouseLeave() }
+                    onDropdownClose={ () => this.handleDropdownClose() }
+                    onDropdownOpen={ (colors) => this.handleDropdownOpen(index, colors) }
                     rawData={ data[index] }
                     rowIndex={ index }
                     upper={ finalUpper } />

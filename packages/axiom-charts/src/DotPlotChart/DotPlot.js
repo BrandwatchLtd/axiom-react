@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Base } from '@brandwatch/axiom-components';
+import ChartContext from '../ChartContext/ChartContext';
 import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
-import DotPlotContext from './DotPlotContext';
+import DotPlotDots from './DotPlotDots';
 import DotPlotDifferenceLine from './DotPlotDifferenceLine';
 import DotPlotValue from './DotPlotValue';
 import {
@@ -38,6 +39,8 @@ export default class DotPlot extends Component {
     mouseOverRowIndex: PropTypes.number,
     onDotMouseEnter: PropTypes.func.isRequired,
     onDotMouseLeave: PropTypes.func.isRequired,
+    onDropdownClose: PropTypes.func.isRequired,
+    onDropdownOpen: PropTypes.func.isRequired,
     rawData: PropTypes.object.isRequired,
     rowIndex: PropTypes.number.isRequired,
     upper: PropTypes.number,
@@ -53,6 +56,8 @@ export default class DotPlot extends Component {
       lower,
       mouseOverColors,
       mouseOverRowIndex,
+      onDropdownClose,
+      onDropdownOpen,
       onDotMouseEnter,
       onDotMouseLeave,
       rawData,
@@ -61,8 +66,9 @@ export default class DotPlot extends Component {
       ...rest
     } = this.props;
 
+    const dotPlotsArgs = [mouseOverRowIndex, mouseOverColors, rowIndex];
     let benchmarkValue;
-    if (benchmark) {
+    if (benchmark !== undefined) {
       benchmarkValue = ((benchmark - lower) / (upper - lower)) * 100;
     }
 
@@ -79,25 +85,31 @@ export default class DotPlot extends Component {
         }
 
         { data.map(({ colors, value }) =>
-          <DotPlotContext
+          <ChartContext
               DropdownContext={ DropdownContext }
-              colors={ getDotColors(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              colors={ getDotColors(...dotPlotsArgs, colors) }
               data={ rawData }
-              faded={ isDotFaded(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
-              hidden={ isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
               key={ value }
               label={ label }
               lower={ lower }
-              onMouseEnter={ () => onDotMouseEnter(colors) }
-              onMouseLeave={ onDotMouseLeave }
+              onDropdownClose={ onDropdownClose }
+              onDropdownOpen={ () => onDropdownOpen(getDotColors(...dotPlotsArgs, colors) ) }
               upper={ upper }
-              value={ value } />
+              value={ value }>
+            <DotPlotDots
+                colors={ getDotColors(...dotPlotsArgs, colors) }
+                faded={ isDotFaded(...dotPlotsArgs, colors) }
+                hidden={ isDotHidden(...dotPlotsArgs, colors) }
+                onMouseEnter={ () => onDotMouseEnter(colors) }
+                onMouseLeave={ onDotMouseLeave }
+                value={ ((value - lower) / (upper - lower)) * 100 } />
+          </ChartContext>
         ) }
 
         { benchmarkValue !== undefined && (
           <div className="ax-dot-plot__benchmark-line-container">
             <DotPlotBenchmarkLine
-                faded={ isBenchmarkFaded(mouseOverRowIndex, mouseOverColors, rowIndex) }
+                faded={ isBenchmarkFaded(...dotPlotsArgs) }
                 value={ benchmarkValue } />
           </div>
         ) }
@@ -105,9 +117,9 @@ export default class DotPlot extends Component {
         { data.map(({ colors, value }) =>
           <DotPlotValue
               dotPlotLabel={ dotPlotLabel }
-              hidden={ isValueHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              hidden={ isValueHidden(...dotPlotsArgs, colors) }
               key={ value }
-              textStrong={ isValueStrong(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
+              textStrong={ isValueStrong(...dotPlotsArgs, colors) }
               value={ value }
               x={ ((value - lower) / (upper - lower)) * 100 } />
         ) }

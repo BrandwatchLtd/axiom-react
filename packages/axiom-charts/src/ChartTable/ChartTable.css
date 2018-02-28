@@ -27,10 +27,11 @@
   transition-property: background-color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
+}
 
-  &:hover {
-    background: var(--color-theme-background--hover);
-  }
+.ax-chart-table__row--hover,
+.ax-chart-table__row:hover {
+  background: var(--color-theme-background--hover);
 }
 
 .ax-chart-table__grid-container {
