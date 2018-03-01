@@ -19,6 +19,8 @@ import './BarChart.css';
 
 export default class BarChart extends Component {
   static propTypes = {
+    /** The label that appears next to the bar */
+    BarChartLabelComponent: PropTypes.func,
     /**
      * Contextual component that appears when click on a dot.
      * It is provided with the `colors`, `label`, and `value` that has
@@ -93,6 +95,7 @@ export default class BarChart extends Component {
       chartKeyBenchmarkLabel,
       collapsedVisibleRowCount,
       ContextComponent,
+      BarChartLabelComponent,
       data,
       expandButtonSuffix,
       labelColumnWidth,
@@ -131,6 +134,7 @@ export default class BarChart extends Component {
               </ChartTableLabel>
               <ChartTableVisual>
                 <BarChartBars
+                    BarChartLabelComponent={ BarChartLabelComponent }
                     ContextComponent={ ContextComponent }
                     benchmark={ benchmark }
                     benchmarkHeight={ rowSpace }

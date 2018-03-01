@@ -15,6 +15,7 @@ import Paragraph from '../../../components/typography/Paragraph';
 import Small from '../../../components/typography/Small';
 import Strong from '../../../components/typography/Strong';
 import { chartKey, data } from './data';
+import Italic from '../../../components/typography/Italic';
 
 class ContextDemoComponent extends Component {
   static propTypes = {
@@ -63,6 +64,22 @@ class ContextDemoComponent extends Component {
   }
 }
 
+class BarChartDemoLabelComponent extends Component {
+  static propTypes = {
+    value: PropTypes.number.isRequired,
+  };
+
+  render() {
+    const { value } = this.props;
+
+    return (
+      <Italic>
+        {value}%
+      </Italic>
+    );
+  }
+}
+
 class BarChartExample extends Component {
   static propTypes = {
     components: PropTypes.shape({
@@ -79,6 +96,7 @@ class BarChartExample extends Component {
 
     const initialProps = {
       BarChart: {
+        BarChartLabelComponent: BarChartDemoLabelComponent,
         ContextComponent: ContextDemoComponent,
         axisTitle: '% of each something',
         chartKey,
