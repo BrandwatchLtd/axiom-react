@@ -7,6 +7,7 @@ import Bars from '../bars/Bars';
 
 export default class BarChartBars extends Component {
   static propTypes = {
+    BarChartLabelComponent: PropTypes.func,
     ContextComponent: PropTypes.func,
     benchmark: PropTypes.number,
     benchmarkHeight: PropTypes.oneOf(['x1', 'x2', 'x3']),
@@ -25,6 +26,7 @@ export default class BarChartBars extends Component {
 
   render() {
     const {
+      BarChartLabelComponent,
       ContextComponent,
       benchmark,
       benchmarkHeight,
@@ -53,6 +55,7 @@ export default class BarChartBars extends Component {
 
             return (
               <BarChartContext
+                  BarChartLabelComponent={ BarChartLabelComponent }
                   ContextComponent={ ContextComponent }
                   color={ color }
                   data={ data }
