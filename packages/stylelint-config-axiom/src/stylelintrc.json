@@ -189,6 +189,7 @@
       "stroke-dasharray",
       "stroke-dashoffset",
       "stroke-linecap",
+      "stroke-linejoin",
       "stroke-width",
 
       "font",
