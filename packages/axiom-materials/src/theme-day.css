@@ -15,6 +15,8 @@
   --color-theme-day-background--active: var(--color-ui-white-noise--dark);
   --color-theme-day-background: var(--color-ui-white);
   --color-theme-day-background--hover: var(--color-ui-white-noise);
+  --color-theme-day-background--overlay-heavy: rgba(var(--rgb-theme-day-main), var(--opacity-background--overlay-heavy));
+  --color-theme-day-background--overlay-light: rgba(var(--rgb-theme-day-main), var(--opacity-background--overlay-light));
   --color-theme-day-background--subtle: rgba(var(--rgb-theme-day-main), var(--opacity-background--subtle));
   --color-theme-day-background--disabled: rgba(var(--rgb-theme-day-main), var(--opacity-background--disabled));
 
@@ -49,6 +51,8 @@
   --color-theme-background--active: var(--color-theme-day-background--active);
   --color-theme-background: var(--color-theme-day-background);
   --color-theme-background--hover: var(--color-theme-day-background--hover);
+  --color-theme-background--overlay-heavy: var(--color-theme-day-background--overlay-heavy);
+  --color-theme-background--overlay-light: var(--color-theme-day-background--overlay-light);
   --color-theme-background--subtle: var(--color-theme-day-background--subtle);
   --color-theme-background--disabled: var(--color-theme-day-background--disabled);
 

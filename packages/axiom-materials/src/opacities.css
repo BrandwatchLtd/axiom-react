@@ -2,6 +2,8 @@
   --opacity-text--subtle: 0.75;
   --opacity-text--disabled: 0.3;
 
+  --opacity-background--overlay-heavy: 0.75;
+  --opacity-background--overlay-light: 0.3;
   --opacity-background--subtle: 0.15;
   --opacity-background--disabled: 0.05;
 

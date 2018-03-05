@@ -1,6 +1,8 @@
 export default {
   opacityTextSubtle: 0.75,
   opacityTextDisabled: 0.3,
+  opacityBackgroundOverlayHeavy: 0.75,
+  opacityBackgroundOverlayLight: 0.3,
   opacityBackgroundSubtle: 0.15,
   opacityBackgroundDisabled: 0.05,
   opacityBorder: 0.2,
