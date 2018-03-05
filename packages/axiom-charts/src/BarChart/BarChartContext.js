@@ -12,10 +12,12 @@ export default class BarChartContext extends PureComponent {
     isHidden: PropTypes.bool,
     label: PropTypes.node.isRequired,
     labelStrong: PropTypes.bool.isRequired,
+    lower: PropTypes.number,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     showBarLabel: PropTypes.bool.isRequired,
     size: PropTypes.string,
+    upper: PropTypes.number,
     value: PropTypes.number.isRequired,
   };
 
@@ -28,23 +30,28 @@ export default class BarChartContext extends PureComponent {
       isHidden,
       label,
       labelStrong,
+      lower,
       onMouseEnter,
       onMouseLeave,
       showBarLabel,
       size,
+      upper,
       value,
       ...rest
     } = this.props;
+
+    const dValue = ((value - lower) / (upper - lower)) * 100;
 
     const bar = (
       <Bar { ...rest }
           color={ color }
           isFaded={ isFaded }
           isHidden={ isHidden }
+          label={ `${value}` }
           labelStrong={ labelStrong }
           onMouseEnter={ onMouseEnter && (() => onMouseEnter(color)) }
           onMouseLeave={ onMouseLeave }
-          percent={ value }
+          percent={ dValue }
           showLabel={ showBarLabel }
           size={ size } />
     );

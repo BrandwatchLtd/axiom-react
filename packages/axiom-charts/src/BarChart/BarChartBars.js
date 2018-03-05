@@ -16,10 +16,12 @@ export default class BarChartBars extends Component {
     hoverColor: PropTypes.string,
     isHovered: PropTypes.bool.isRequired,
     label: PropTypes.node.isRequired,
+    lower: PropTypes.number,
     onMouseEnter: PropTypes.func.isRequired,
     onMouseLeave: PropTypes.func.isRequired,
     showBarLabel: PropTypes.bool,
     size: PropTypes.string,
+    upper: PropTypes.number,
     values: PropTypes.array.isRequired,
   };
 
@@ -34,8 +36,10 @@ export default class BarChartBars extends Component {
       hoverColor,
       isHovered,
       label,
+      lower,
       showBarLabel,
       size,
+      upper,
       values,
       onMouseEnter,
       onMouseLeave,
@@ -44,6 +48,11 @@ export default class BarChartBars extends Component {
     const classes = classnames('ax-bar-chart__bars', {
       [`ax-bar-chart__bars--${benchmarkHeight}`]: benchmarkHeight,
     });
+
+    let benchmarkValue;
+    if (benchmark) {
+      benchmarkValue = ((benchmark - lower) / (upper - lower)) * 100;
+    }
 
     return (
       <div className={ classes }>
@@ -61,10 +70,12 @@ export default class BarChartBars extends Component {
                   key={ color }
                   label={ label }
                   labelStrong={ isHovered }
+                  lower={ lower }
                   onMouseEnter={ onMouseEnter }
                   onMouseLeave={ onMouseLeave }
                   showBarLabel={ showBarLabel || color === hoverColor }
                   size={ size }
+                  upper={ upper }
                   value={ value } />
             );
           }) }
@@ -72,7 +83,7 @@ export default class BarChartBars extends Component {
 
         { benchmark !== undefined && (
           <div className="ax-bar-chart__benchmark-line-container">
-            <BarChartBenchmarkLine faded={ fadeBenchmarkLine } value={ benchmark } />
+            <BarChartBenchmarkLine faded={ fadeBenchmarkLine } value={ benchmarkValue } />
           </div>
         ) }
       </div>

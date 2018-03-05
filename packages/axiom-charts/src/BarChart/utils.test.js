@@ -1,4 +1,4 @@
-import { formatData, getHighestValue } from './utils';
+import { formatData, flattenValues } from './utils';
 
 const chartKey = [
   { color: 'giant-leap', label: 'Brand A' },
@@ -106,7 +106,7 @@ describe('BarChart (utils)', () => {
     }]);
   });
 
-  it('it gets highest value', () => {
-    expect(getHighestValue(data)).toBe(100);
+  it('it gets a flatt list of all values', () => {
+    expect(flattenValues(data)).toMatchSnapshot();
   });
 });

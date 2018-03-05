@@ -13,7 +13,7 @@ import ChartTableRows from '../ChartTable/ChartTableRows';
 import ChartTableVisual from '../ChartTable/ChartTableVisual';
 import DataPoint from '../DataPoint/DataPoint';
 import DataPoints from '../DataPoint/DataPoints';
-import { formatData, getHighestValue } from './utils';
+import { formatData, flattenValues } from './utils';
 import './BarChart.css';
 
 export default class BarChart extends Component {
@@ -50,6 +50,8 @@ export default class BarChart extends Component {
     expandButtonSuffix: PropTypes.string,
     /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string.isRequired,
+    /** Lower value of the data displayed on the chart */
+    lower: PropTypes.number,
     /** Spacing applied between Bar groups */
     rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
@@ -58,6 +60,8 @@ export default class BarChart extends Component {
     showKey: PropTypes.bool,
     /** Thickness of the bars */
     size: PropTypes.string,
+    /** Upper value of the data displayed on the chart */
+    upper: PropTypes.number,
     /**
      * Labels to be shown along the xAxis, also used to determine where
      * grid lines are drawn
@@ -82,10 +86,14 @@ export default class BarChart extends Component {
   static defaultProps = {
     rowSpace: 'x2',
     showKey: true,
-    zoomMax: 50,
   };
 
   render() {
+    const flatValues = flattenValues(this.props.data);
+
+    const dataLower = Math.min(...flatValues);
+    const dataUpper = Math.max(...flatValues);
+
     const {
       axisTitle,
       chartKey,
@@ -95,10 +103,12 @@ export default class BarChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      lower = dataLower,
       rowSpace,
       showBarLabel,
       showKey,
       size,
+      upper = dataUpper,
       xAxisLabels,
       zoom,
       zoomMax,
@@ -107,10 +117,11 @@ export default class BarChart extends Component {
 
     const { hoverColor, hoverIndex } = this.state;
     const formattedData = formatData(chartKey, data);
-    const highestValue = getHighestValue(data);
-    const zoomValue = zoom
-      ? Math.max(zoomMax, Math.min(100, Math.ceil(highestValue / 10) * 10))
-      : 100;
+
+    const finalLower = Math.min(lower, dataLower);
+    const finalUpper = Math.max(upper, dataUpper);
+    const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
+    const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
 
     return (
       <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
@@ -118,9 +129,12 @@ export default class BarChart extends Component {
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
             labelColumnWidth={ labelColumnWidth }
+            lower={ dataUpper }
             space={ rowSpace }
+            upper={ finalUpper }
             xAxisLabels={ xAxisLabels }
-            zoomTo={ zoomValue }>
+            zoom={ zoom }
+            zoomTo={ zoom ? zoomTo : undefined }>
           { formattedData.map(({ values, label, benchmark }, index) =>
             <ChartTableRow key={ isValidElement(label) ? index : label }>
               <ChartTableLabel
@@ -139,10 +153,12 @@ export default class BarChart extends Component {
                     hoverColor={ hoverColor }
                     isHovered={ index === hoverIndex }
                     label={ label }
+                    lower={ finalLower }
                     onMouseEnter={ (color) => this.onMouseEnter(index, color) }
                     onMouseLeave={ this.onMouseLeave }
                     showBarLabel={ showBarLabel }
                     size={ size }
+                    upper={ finalUpper }
                     values={ values } />
               </ChartTableVisual>
             </ChartTableRow>
