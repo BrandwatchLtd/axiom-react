@@ -73,7 +73,7 @@ module.exports = {
     new CompressionPlugin({
       asset: '[path]',
       algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$|\.svg$|\.png$|\.jpg$/,
+      test: /\.js$|\.css$|\.html$/,
     }),
   ],
   resolveLoader: {
