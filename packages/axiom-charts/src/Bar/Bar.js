@@ -26,7 +26,7 @@ export default class Bar extends Component {
     /** When true the bar is invisible */
     isHidden: PropTypes.bool,
     /** Overwriting label above the bar instead of default percentage */
-    label: PropTypes.string,
+    label: PropTypes.node,
     /** Control for applying strong styling to the label */
     labelStrong: PropTypes.bool,
     /** Minimum thickness of the Bar */

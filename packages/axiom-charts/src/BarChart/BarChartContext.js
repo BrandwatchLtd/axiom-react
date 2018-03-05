@@ -6,6 +6,7 @@ import Bar from '../Bar/Bar';
 export default class BarChartContext extends PureComponent {
   static propTypes = {
     DropdownContext: PropTypes.func,
+    barLabel: PropTypes.func,
     color: PropTypes.string.isRequired,
     data: PropTypes.object.isRequired,
     isFaded: PropTypes.bool,
@@ -24,6 +25,7 @@ export default class BarChartContext extends PureComponent {
   render() {
     const {
       DropdownContext,
+      barLabel,
       color,
       data,
       isFaded,
@@ -42,12 +44,20 @@ export default class BarChartContext extends PureComponent {
 
     const dValue = ((value - lower) / (upper - lower)) * 100;
 
+    const getLabel = () => {
+      if (!barLabel) {
+        return value;
+      }
+
+      return barLabel({ value, data, color, label });
+    };
+
     const bar = (
       <Bar { ...rest }
           color={ color }
           isFaded={ isFaded }
           isHidden={ isHidden }
-          label={ `${value}` }
+          label={ getLabel() }
           labelStrong={ labelStrong }
           onMouseEnter={ onMouseEnter && (() => onMouseEnter(color)) }
           onMouseLeave={ onMouseLeave }

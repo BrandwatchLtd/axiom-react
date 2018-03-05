@@ -1,5 +1,6 @@
 .ax-bars__bar {
   display: flex;
+  position: relative;
   transition: opacity var(--transition-time-base) var(--transition-function);
 }
 
@@ -121,7 +122,23 @@
 .ax-bars--right,
 .ax-bars--left {
   & .ax-bars__bar-label {
-    flex: 0 0 var(--cmp-chart-label-width);
+    position: absolute;
+  }
+}
+
+.ax-bars--right {
+  & .ax-bars__bar-label {
+    left: 100%;
+    margin-right: calc(var(--cmp-chart-label-width) * -1);
+    padding-left: var(--cmp-chart-label-margin);
+  }
+}
+
+.ax-bars--left {
+  & .ax-bars__bar-label {
+    right: 100%;
+    margin-left: calc(var(--cmp-chart-label-width) * -1);
+    padding-right: var(--cmp-chart-label-margin);
   }
 }
 
@@ -143,19 +160,5 @@
   & .ax-bars__bar-label {
     margin-bottom: calc(var(--cmp-chart-label-height) * -1);
     padding-top: var(--cmp-chart-label-margin);
-  }
-}
-
-.ax-bars--right {
-  & .ax-bars__bar-label {
-    margin-right: calc(var(--cmp-chart-label-width) * -1);
-    padding-left: var(--cmp-chart-label-margin);
-  }
-}
-
-.ax-bars--left {
-  & .ax-bars__bar-label {
-    margin-left: calc(var(--cmp-chart-label-width) * -1);
-    padding-right: var(--cmp-chart-label-margin);
   }
 }

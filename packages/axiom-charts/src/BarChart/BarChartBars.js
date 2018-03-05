@@ -8,6 +8,7 @@ import BarChartContext from './BarChartContext';
 export default class BarChartBars extends Component {
   static propTypes = {
     DropdownContext: PropTypes.func,
+    barLabel: PropTypes.func,
     benchmark: PropTypes.number,
     benchmarkHeight: PropTypes.oneOf(['x1', 'x2', 'x3']),
     data: PropTypes.object.isRequired,
@@ -28,6 +29,7 @@ export default class BarChartBars extends Component {
   render() {
     const {
       DropdownContext,
+      barLabel,
       benchmark,
       benchmarkHeight,
       data,
@@ -63,6 +65,7 @@ export default class BarChartBars extends Component {
             return (
               <BarChartContext
                   DropdownContext={ DropdownContext }
+                  barLabel={ barLabel }
                   color={ color }
                   data={ data }
                   isFaded={ isFaded }

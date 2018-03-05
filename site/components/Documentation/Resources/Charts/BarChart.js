@@ -23,6 +23,7 @@ export default class Documentation extends Component {
               expandButtonSuffix="Categories"
               labelColumnWidth="11rem"
               lower={ 0 }
+              showBarLabel={ true }
               upper={ 100 } />
         </DocumentationShowCase>
 

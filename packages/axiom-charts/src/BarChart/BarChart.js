@@ -26,6 +26,8 @@ export default class BarChart extends Component {
     DropdownContext: PropTypes.func,
     /** The title that appears along the xAxis */
     axisTitle: PropTypes.string,
+    /** Control the appearance of the bar label */
+    barLabel: PropTypes.func,
     /**
      * The key that is shown along the bottom of the axis. It is also used
      * to determine the order of stacked dots.
@@ -96,6 +98,7 @@ export default class BarChart extends Component {
 
     const {
       axisTitle,
+      barLabel,
       chartKey,
       chartKeyBenchmarkLabel,
       collapsedVisibleRowCount,
@@ -145,6 +148,7 @@ export default class BarChart extends Component {
               <ChartTableVisual>
                 <BarChartBars
                     DropdownContext={ DropdownContext }
+                    barLabel={ barLabel }
                     benchmark={ benchmark }
                     benchmarkHeight={ rowSpace }
                     data={ data[index] }
