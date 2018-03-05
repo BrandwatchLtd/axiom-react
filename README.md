@@ -36,7 +36,7 @@ This is the monorepo for Axiom packages.
 
 ### Developing
 
-Axiom uses lerna and yarn workspaces to manage the various packages. To get up and running developing locally, you need the lerna cli.
+Axiom uses lerna and yarn workspaces to manage the various packages. To get up and running developing locally, you need the lerna cli. We're using the [latest stable](nodejs.org/en/download/current) Node.js release.
 
 ```
 yarn global add lerna
