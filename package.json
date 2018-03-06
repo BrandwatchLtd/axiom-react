@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build:packages": "bash ./scripts/build_packages.sh",
+    "build:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_packages.sh",
     "build:site": "NODE_ENV=production BABEL_ENV=static webpack --config webpack.static.config.js",
-    "ci:setup": "bash ./scripts/ci_setup.sh",
+    "ci:setup": "NODE_ENV=production BABEL_ENV=production bash ./scripts/ci_setup.sh",
     "ci:test": "jest ./packages/**/dist --config .jest.ci.json",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint 'packages/**/*.css' 'site/**/*.css'",
