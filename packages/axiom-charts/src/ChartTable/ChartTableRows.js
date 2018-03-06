@@ -10,14 +10,13 @@ export default class ChartTableRows extends Component {
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
     space: PropTypes.oneOf(['x1', 'x2', 'x3']),
-    xAxisLabels: PropTypes.arrayOf(PropTypes.string),
+    xAxisLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
     zoomTo: PropTypes.number,
   };
 
   static defaultProps = {
     expandButtonSuffix: 'Items',
     space: 'x2',
-    xAxisLabels: [ '0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
     zoomTo: 100,
   };
 

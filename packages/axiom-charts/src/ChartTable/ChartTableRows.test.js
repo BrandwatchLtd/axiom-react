@@ -3,14 +3,20 @@ import renderer from 'react-test-renderer';
 import ChartTableRow from './ChartTableRow';
 import ChartTableRows from './ChartTableRows';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <ChartTableRows { ...props } labelColumnWidth="11rem">
+const getComponent = (props = {}) => {
+  const defaults = {
+    labelColumnWidth: '11rem',
+    xAxisLabels: [ '0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
+  };
+
+  return renderer.create(
+    <ChartTableRows { ...Object.assign({}, defaults, props) } >
       <ChartTableRow>Lorem</ChartTableRow>
       <ChartTableRow>Lorem</ChartTableRow>
       <ChartTableRow>Lorem</ChartTableRow>
     </ChartTableRows>
   );
+};
 
 describe('ChartTableRows', () => {
   it('renders with defaultProps', () => {

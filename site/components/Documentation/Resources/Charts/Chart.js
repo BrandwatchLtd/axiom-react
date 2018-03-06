@@ -87,7 +87,8 @@ export default class Documentation extends Component {
                   collapsedVisibleRowCount={ 6 }
                   data={ dotPlotData }
                   expandButtonSuffix="Categories"
-                  labelColumnWidth="11rem" />
+                  labelColumnWidth="11rem"
+                  xAxisLabels={ [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
             </ChartBody>
           </Chart>
         </DocumentationShowCase>
