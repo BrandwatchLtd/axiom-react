@@ -49,6 +49,8 @@ export default class DotPlotChart extends Component {
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
     })).isRequired,
+    /** Control the appearance of the value */
+    dotPlotLabel: PropTypes.func,
     /** The description given to the expand button */
     expandButtonSuffix: PropTypes.string,
     /** The width of the yAxis labels columns */
@@ -111,6 +113,7 @@ export default class DotPlotChart extends Component {
       collapsedVisibleRowCount,
       DropdownContext,
       data,
+      dotPlotLabel,
       expandButtonSuffix,
       labelColumnWidth,
       lower = dataLower,
@@ -151,6 +154,7 @@ export default class DotPlotChart extends Component {
                     DropdownContext={ DropdownContext }
                     benchmark={ benchmark }
                     data={ values }
+                    dotPlotLabel={ dotPlotLabel }
                     label={ label }
                     lower={ finalLower }
                     mouseOverColors={ mouseOverColors }

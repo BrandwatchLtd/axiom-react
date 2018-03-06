@@ -31,6 +31,7 @@ export default class DotPlot extends Component {
       colors: PropTypes.arrayOf(PropTypes.string).isRequired,
       value: PropTypes.number.isRequired,
     })).isRequired,
+    dotPlotLabel: PropTypes.func,
     label: PropTypes.string,
     lower: PropTypes.number,
     mouseOverColors: PropTypes.arrayOf(PropTypes.string),
@@ -47,6 +48,7 @@ export default class DotPlot extends Component {
       DropdownContext,
       benchmark,
       data,
+      dotPlotLabel,
       label,
       lower,
       mouseOverColors,
@@ -102,6 +104,7 @@ export default class DotPlot extends Component {
 
         { data.map(({ colors, value }) =>
           <DotPlotValue
+              dotPlotLabel={ dotPlotLabel }
               hidden={ isValueHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
               key={ value }
               textStrong={ isValueStrong(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
