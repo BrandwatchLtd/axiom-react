@@ -22,7 +22,9 @@ export default class Documentation extends Component {
               collapsedVisibleRowCount={ 6 }
               data={ dotPlotData }
               expandButtonSuffix="Categories"
-              labelColumnWidth="11rem" />
+              labelColumnWidth="11rem"
+              lower={ 0 }
+              upper={ 100 } />
         </DocumentationShowCase>
 
         <DocumentationApi components={ [

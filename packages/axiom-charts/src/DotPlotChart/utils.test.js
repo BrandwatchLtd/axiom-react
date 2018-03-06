@@ -1,7 +1,7 @@
 import {
   formatData,
   getDotColors,
-  getHighestValue,
+  flattenValues,
   getLines,
   isDotFaded,
   isDotHidden,
@@ -107,8 +107,8 @@ describe('DotPlot (utils)', () => {
     }]);
   });
 
-  it('it gets highest value', () => {
-    expect(getHighestValue(data)).toBe(100);
+  it('it gets a flatt list of all values', () => {
+    expect(flattenValues(data)).toMatchSnapshot();
   });
 
   describe('with no mouse over', () => {
@@ -185,7 +185,7 @@ describe('DotPlot (utils)', () => {
             { colors: ['red'], value: 10 },
             { colors: ['terra-form'], value: 20 },
             { colors: ['giant-leap'], value: 30 },
-          ], 33, 1, ['red'], 2)).toEqual([{
+          ], 33, 1, ['red'], 2, 0, 100)).toEqual([{
             fromBenchmark: false,
             toBenchmark: true,
             faded: true,
@@ -240,7 +240,7 @@ describe('DotPlot (utils)', () => {
           expect(getLines([
             { colors: ['red'], value: 10 },
             { colors: ['terra-form', 'giant-leap'], value: 20 },
-          ], 33, 1, ['terra-form', 'giant-leap'], 2)).toEqual([{
+          ], 33, 1, ['terra-form', 'giant-leap'], 2, 0, 100)).toEqual([{
             fromBenchmark: false,
             toBenchmark: true,
             faded: true,
@@ -265,7 +265,7 @@ describe('DotPlot (utils)', () => {
           expect(getLines([
             { colors: ['red'], value: 10 },
             { colors: ['terra-form', 'giant-leap'], value: 20 },
-          ], 33, 1, ['terra-form', 'giant-leap'], 1)).toEqual([{
+          ], 33, 1, ['terra-form', 'giant-leap'], 1, 0, 100)).toEqual([{
             fromBenchmark: false,
             toBenchmark: false,
             faded: true,

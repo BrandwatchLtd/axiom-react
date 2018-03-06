@@ -14,7 +14,7 @@ import DataPoints from '../DataPoint/DataPoints';
 import DotPlot from './DotPlot';
 import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
 import DotPlotDifferenceLine from './DotPlotDifferenceLine';
-import { formatData, getHighestValue } from './utils';
+import { formatData, flattenValues } from './utils';
 import './DotPlot.css';
 
 export default class DotPlotChart extends Component {
@@ -53,8 +53,12 @@ export default class DotPlotChart extends Component {
     expandButtonSuffix: PropTypes.string,
     /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string.isRequired,
+    /** Lower value of the data displayed on the chart */
+    lower: PropTypes.number,
     /** Control for toggling visibility of the key */
     showKey: PropTypes.bool,
+    /** Upper value of the data displayed on the chart */
+    upper: PropTypes.number,
     /**
      * Labels to be shown along the xAxis, also used to determine where
      * grid lines are drawn
@@ -94,6 +98,11 @@ export default class DotPlotChart extends Component {
   }
 
   render() {
+    const flatValues = flattenValues(this.props.data);
+
+    const dataLower = Math.min(...flatValues);
+    const dataUpper = Math.max(...flatValues);
+
     const {
       axisTitle,
       chartKey,
@@ -104,7 +113,9 @@ export default class DotPlotChart extends Component {
       data,
       expandButtonSuffix,
       labelColumnWidth,
+      lower = dataLower,
       showKey,
+      upper = dataUpper,
       xAxisLabels,
       zoom,
       zoomMax,
@@ -113,10 +124,11 @@ export default class DotPlotChart extends Component {
 
     const { mouseOverColors, mouseOverRowIndex } = this.state;
     const formattedData = formatData(chartKey, data);
-    const highestValue = getHighestValue(data);
-    const zoomValue = zoom
-      ? Math.max(zoomMax, Math.min(100, Math.ceil(highestValue / 10) * 10))
-      : 100;
+
+    const finalLower = Math.min(lower, dataLower);
+    const finalUpper = Math.max(upper, dataUpper);
+    const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
+    const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
 
     return (
       <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
@@ -126,7 +138,7 @@ export default class DotPlotChart extends Component {
             labelColumnWidth={ labelColumnWidth }
             space="x2"
             xAxisLabels={ xAxisLabels }
-            zoomTo={ zoomValue }>
+            zoomTo={ zoom ? zoomTo : undefined }>
           { formattedData.map(({ values, benchmark, label }, index) =>
             <ChartTableRow key={ label }>
               <ChartTableLabel
@@ -140,12 +152,14 @@ export default class DotPlotChart extends Component {
                     benchmark={ benchmark }
                     data={ values }
                     label={ label }
+                    lower={ finalLower }
                     mouseOverColors={ mouseOverColors }
                     mouseOverRowIndex={ mouseOverRowIndex }
                     onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
                     onDotMouseLeave={ () => this.handleDotMouseLeave() }
                     rawData={ data[index] }
-                    rowIndex={ index } />
+                    rowIndex={ index }
+                    upper={ finalUpper } />
               </ChartTableVisual>
             </ChartTableRow>
           ) }

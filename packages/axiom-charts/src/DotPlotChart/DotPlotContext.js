@@ -9,6 +9,8 @@ export default class DotPlotContext extends Component {
     colors: PropTypes.arrayOf(PropTypes.string).isRequired,
     data: PropTypes.object.isRequired,
     label: PropTypes.string.isRequired,
+    lower: PropTypes.number,
+    upper: PropTypes.number,
     value: PropTypes.number.isRequired,
   };
 
@@ -18,9 +20,13 @@ export default class DotPlotContext extends Component {
       colors,
       data,
       label,
+      lower,
+      upper,
       value,
       ...rest
     } = this.props;
+
+    const dValue = ((value - lower) / (upper - lower)) * 100;
 
     if (DropdownContext) {
       return (
@@ -28,7 +34,7 @@ export default class DotPlotContext extends Component {
           <DropdownTarget>
             <DotPlotDots { ...rest }
                 colors={ colors }
-                value={ value } />
+                value={ dValue } />
           </DropdownTarget>
 
           <DropdownSource>
@@ -45,7 +51,7 @@ export default class DotPlotContext extends Component {
     return (
       <DotPlotDots { ...rest }
           colors={ colors }
-          value={ value } />
+          value={ dValue } />
     );
   }
 }

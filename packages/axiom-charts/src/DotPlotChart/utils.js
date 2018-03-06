@@ -22,25 +22,18 @@ export const formatData = (key, data) => {
   }));
 };
 
-export const getHighestValue = (data) => {
-  let max = 0;
-
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].benchmark !== undefined && data[i].benchmark > max) {
-      max = data[i].benchmark;
+export const flattenValues = (data) => {
+  return data.reduce((memo, { benchmark, values }) => {
+    if (benchmark) {
+      memo.push(benchmark);
     }
 
-    for (const color in data[i].values) {
-      if (data[i].values[color] > max) {
-        max = data[i].values[color];
-      }
-    }
-  }
-
-  return max;
+    memo = memo.concat(...Object.values(values));
+    return memo;
+  }, []);
 };
 
-export const getLines = (data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex) => {
+export const getLines = (data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex, lower, upper) => {
   const lines = [];
   const elements = data
     .filter(({ colors }) => mouseOverRowIndex === rowIndex ||
@@ -57,8 +50,8 @@ export const getLines = (data, benchmark, mouseOverRowIndex, mouseOverColors, ro
       fromBenchmark: elements[i].colors.length === 0,
       toBenchmark: elements[i + 1] && elements[i + 1].colors.length === 0,
       faded: isLineFaded(mouseOverRowIndex),
-      fromX: elements[i].value,
-      toX: elements[i + 1].value,
+      fromX: ((elements[i].value - lower) / (upper - lower)) * 100,
+      toX: ((elements[i + 1].value - lower) / (upper - lower)) * 100,
     });
   }
 

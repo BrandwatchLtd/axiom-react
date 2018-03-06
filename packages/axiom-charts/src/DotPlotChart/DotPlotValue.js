@@ -7,10 +7,11 @@ export default class DotPlotValue extends Component {
   static propTypes = {
     hidden: PropTypes.bool,
     value: PropTypes.number.isRequired,
+    x: PropTypes.number.isRequired,
   };
 
   render() {
-    const { hidden, value, ...rest } = this.props;
+    const { hidden, value, x, ...rest } = this.props;
     const classes = classnames('ax-dot-plot__value', {
       'ax-dot-plot__value--hidden': hidden,
     });
@@ -18,7 +19,7 @@ export default class DotPlotValue extends Component {
     return (
       <Base { ...rest }
           className={ classes }
-          style={ { left: `${value}%` } }>
+          style={ { left: `${x}%` } }>
         <Small>{ value }%</Small>
       </Base>
     );

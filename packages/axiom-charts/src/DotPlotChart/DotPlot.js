@@ -32,12 +32,14 @@ export default class DotPlot extends Component {
       value: PropTypes.number.isRequired,
     })).isRequired,
     label: PropTypes.string,
+    lower: PropTypes.number,
     mouseOverColors: PropTypes.arrayOf(PropTypes.string),
     mouseOverRowIndex: PropTypes.number,
     onDotMouseEnter: PropTypes.func.isRequired,
     onDotMouseLeave: PropTypes.func.isRequired,
     rawData: PropTypes.object.isRequired,
     rowIndex: PropTypes.number.isRequired,
+    upper: PropTypes.number,
   };
 
   render() {
@@ -46,18 +48,25 @@ export default class DotPlot extends Component {
       benchmark,
       data,
       label,
+      lower,
       mouseOverColors,
       mouseOverRowIndex,
       onDotMouseEnter,
       onDotMouseLeave,
       rawData,
       rowIndex,
+      upper,
       ...rest
     } = this.props;
 
+    let benchmarkValue;
+    if (benchmark) {
+      benchmarkValue = ((benchmark - lower) / (upper - lower)) * 100;
+    }
+
     return (
       <Base { ...rest } className="ax-dot-plot">
-        { getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex)
+        { getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex, lower, upper)
           .map(({ fromBenchmark, toBenchmark, faded, fromX, toX }) =>
             <div
                 className={ differenceLineContainerClasses(fromBenchmark, toBenchmark) }
@@ -76,16 +85,18 @@ export default class DotPlot extends Component {
               hidden={ isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
               key={ value }
               label={ label }
+              lower={ lower }
               onMouseEnter={ () => onDotMouseEnter(colors) }
               onMouseLeave={ onDotMouseLeave }
+              upper={ upper }
               value={ value } />
         ) }
 
-        { benchmark !== undefined && (
+        { benchmarkValue !== undefined && (
           <div className="ax-dot-plot__benchmark-line-container">
             <DotPlotBenchmarkLine
                 faded={ isBenchmarkFaded(mouseOverRowIndex, mouseOverColors, rowIndex) }
-                value={ benchmark } />
+                value={ benchmarkValue } />
           </div>
         ) }
 
@@ -94,7 +105,8 @@ export default class DotPlot extends Component {
               hidden={ isValueHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
               key={ value }
               textStrong={ isValueStrong(mouseOverRowIndex, mouseOverColors, rowIndex, colors) }
-              value={ value } />
+              value={ value }
+              x={ ((value - lower) / (upper - lower)) * 100 } />
         ) }
       </Base>
     );
