@@ -8,6 +8,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@brandwatch/axiom-automation-testing": "^0.0.3",
     "@brandwatch/axiom-formatting": "^0.0.3",
     "@brandwatch/axiom-materials": "^0.2.0",
     "@brandwatch/axiom-utils": "^0.0.5",
