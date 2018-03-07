@@ -8,6 +8,8 @@ fi
 curl ci-utils.bwcom.io/gcloud/install | bash
 curl ci-utils.bwcom.io/gcloud/auth | bash
 
+export COMPRESSION_PLUGIN=true
+
 yarn build:site
 
 cd public;

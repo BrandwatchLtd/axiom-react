@@ -70,11 +70,11 @@ module.exports = {
         },
       },
     }),
-    new CompressionPlugin({
+    ...(process.env.COMPRESSION_PLUGIN ? [new CompressionPlugin({
       asset: '[path]',
       algorithm: 'gzip',
       test: /\.js$|\.css$|\.html$/,
-    }),
+    })] : []),
   ],
   resolveLoader: {
     modules: [
