@@ -6,7 +6,7 @@ import Base from '../Base/Base';
 import Validate from '../Validation/Validate';
 import TextInputIcon, { TextInputIconRef } from './TextInputIcon';
 import { TextInputButtonRef } from './TextInputButton';
-import TextGroup from './TextGroup';
+import InputWrapper from './InputWrapper';
 import './TextInput.css';
 
 export default class TextInput extends Component {
@@ -120,7 +120,7 @@ export default class TextInput extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <TextGroup label={ label } size={ size } space={ space }>
+          <InputWrapper label={ label } size={ size } space={ space }>
             <div className="ax-input__button-container">
               <div className={ classes(isValid) }>
                 { onClear && value ? (
@@ -142,7 +142,7 @@ export default class TextInput extends Component {
               </div>
               { button }
             </div>
-          </TextGroup>
+          </InputWrapper>
         }
       </Validate>
     );

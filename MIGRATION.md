@@ -96,6 +96,7 @@ Trying to resolve some confusion around a mix of Dropdown and Context components
 
 ```jsx
 <DropdownContent> is now <DropdownSource>
+<PositionContent> is now <PositionSource>
 <TooltipContent> is now <TooltipSource>
 
 <Context> when used inside Dropdown should now be <DropdownContext>
@@ -106,6 +107,8 @@ Trying to resolve some confusion around a mix of Dropdown and Context components
 <ContextBox> has been renamed to <ContextContent>
 
 <ChangePassword> has been renamed to <ChangePasswordDialog>
+
+<TextGroup> has been renamed to <InputWrapper>
 ```
 
 The `ContextComponent` prop on `BarChart`, `ColumnChart` and `DotPlotChart` has been renamed to `DropdownContext`, as this will make way for `TooltipContext` to also be used for hover functionality.

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
 import Validate from '../Validation/Validate';
-import TextGroup from './TextGroup';
+import InputWrapper from './InputWrapper';
 import './TextArea.css';
 
 export default class TextArea extends Component {
@@ -64,7 +64,7 @@ export default class TextArea extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <TextGroup label={ label }>
+          <InputWrapper label={ label }>
             <Base { ...rest }
                 Component="textarea"
                 className={ classes(isValid) }
@@ -72,7 +72,7 @@ export default class TextArea extends Component {
                 placeholder={ placeholder }
                 style={ style }
                 value={ value } />
-          </TextGroup>
+          </InputWrapper>
         }
       </Validate>
     );

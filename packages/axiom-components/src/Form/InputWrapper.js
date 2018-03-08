@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Base from '../Base/Base';
-import './TextGroup.css';
+import './InputWrapper.css';
 
 const labelSizeMap = {
   small: 'small',
@@ -9,7 +9,7 @@ const labelSizeMap = {
   large: 'large',
 };
 
-export default class TextGroup extends Component {
+export default class InputWrapper extends Component {
   static propTypes = {
     children: PropTypes.node,
     label: PropTypes.string,
@@ -28,7 +28,7 @@ export default class TextGroup extends Component {
     return (
       <Base { ...rest }
           Component="label"
-          className="ax-input__group"
+          className="ax-input__wrapper"
           space={ space }>
         { label && (
           <Base space="x2" textSize={ labelSizeMap[size] }>

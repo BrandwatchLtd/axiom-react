@@ -2,7 +2,7 @@
 
 exports[`TextArea renders with a label 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-space--x2 ax-text--size-body"
@@ -25,7 +25,7 @@ exports[`TextArea renders with a label 1`] = `
 
 exports[`TextArea renders with custom height 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <textarea
     className="ax-textarea"
@@ -43,7 +43,7 @@ exports[`TextArea renders with custom height 1`] = `
 
 exports[`TextArea renders with defaultProps 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <textarea
     className="ax-textarea"
