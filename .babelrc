@@ -28,6 +28,7 @@
     },
     "static": {
       "plugins": [
+        "@brandwatch/babel-plugin-axiom-imports",
         "transform-react-remove-prop-types"
       ]
     },

@@ -4,7 +4,7 @@
 
 #### 1) babel-plugin-axiom
 
-The babel plugin is no longer needed/works and should be removed.
+The babel plugin has been updated to `@brandwatch/babel-plugin-axiom-imports`
 
 ##### .babelrc
 
@@ -12,6 +12,7 @@ The babel plugin is no longer needed/works and should be removed.
 {
   "plugins": [
 -    "axiom"
++    "@brandwatch/babel-plugin-axiom-imports"
   ]
 }
 ```
