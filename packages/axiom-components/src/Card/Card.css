@@ -61,6 +61,7 @@
 
 .ax-card__image {
   position: relative;
+  border-bottom: 0.0625rem dotted var(--color-theme-border);
 }
 
 .ax-card__caption {
