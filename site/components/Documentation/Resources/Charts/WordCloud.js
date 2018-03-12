@@ -13,7 +13,7 @@ import {
 import { DocumentationApi, DocumentationContent, DocumentationShowCase } from '@brandwatch/axiom-documentation-viewer';
 import { colors } from '@brandwatch/axiom-materials';
 import { stringToColor } from '@brandwatch/axiom-utils';
-import ChartNLP from './ChartNLP';
+import DropdownContext from './DropdownContext';
 import { wordCloudData, wordCloudDataEmoji, wordCloudDataText } from './chartData';
 
 const productColors = Object.keys(colors.productColorNames);
@@ -154,7 +154,7 @@ export default class Documentation extends Component {
                   </DropdownTarget>
 
                   <DropdownSource>
-                    <ChartNLP
+                    <DropdownContext
                         color={ color }
                         value={ fontSize } />
                   </DropdownSource>

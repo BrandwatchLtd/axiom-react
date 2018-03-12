@@ -2,7 +2,7 @@
 
 exports[`TextInput renders when disabled 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -25,7 +25,7 @@ exports[`TextInput renders when disabled 1`] = `
 
 exports[`TextInput renders when invalid 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -48,7 +48,7 @@ exports[`TextInput renders when invalid 1`] = `
 
 exports[`TextInput renders when valid 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -71,7 +71,7 @@ exports[`TextInput renders when valid 1`] = `
 
 exports[`TextInput renders with TextInputButton 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -104,7 +104,7 @@ exports[`TextInput renders with TextInputButton 1`] = `
 
 exports[`TextInput renders with TextInputIcon 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -146,7 +146,7 @@ exports[`TextInput renders with TextInputIcon 1`] = `
 
 exports[`TextInput renders with defaultProps 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -169,7 +169,7 @@ exports[`TextInput renders with defaultProps 1`] = `
 
 exports[`TextInput renders with label 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-space--x2 ax-text--size-body"
@@ -197,7 +197,7 @@ exports[`TextInput renders with label 1`] = `
 
 exports[`TextInput renders with onClear and value 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -244,7 +244,7 @@ exports[`TextInput renders with onClear and value 1`] = `
 
 exports[`TextInput renders with size large 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -267,7 +267,7 @@ exports[`TextInput renders with size large 1`] = `
 
 exports[`TextInput renders with size medium 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"
@@ -290,7 +290,7 @@ exports[`TextInput renders with size medium 1`] = `
 
 exports[`TextInput renders with size small 1`] = `
 <label
-  className="ax-input__group ax-space--x4"
+  className="ax-input__wrapper ax-space--x4"
 >
   <div
     className="ax-input__button-container"

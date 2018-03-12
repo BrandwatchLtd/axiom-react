@@ -1,0 +1,70 @@
+.ax-chart-layout {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+}
+
+.ax-chart-layout__y-title {
+  padding-left: var(--spacing-grid-size--x4);
+  transform: rotate(180deg);
+  grid-row-start: 1;
+  grid-column-start: 1;
+  writing-mode: tb;
+  writing-mode: vertical-lr;
+}
+
+.ax-chart-layout__y-labels {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  margin-right: var(--spacing-grid-size--x6);
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.ax-chart-layout__visual {
+  grid-row-start: 1;
+  grid-column-start: 3;
+}
+
+.ax-chart-layout__x-labels {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--spacing-grid-size--x3);
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+
+.ax-chart-layout__x-title,
+.ax-chart-layout__key {
+  margin-top: var(--spacing-grid-size--x3);
+  grid-column-end: 4;
+
+  /* The only property no handled by autoprefixer for IE11 */
+  /* stylelint-disable property-no-vendor-prefix */
+  -ms-grid-column-span: 3;
+  /* stylelint-enable property-no-vendor-prefix */
+}
+
+.ax-chart-layout__x-title {
+  grid-row-start: 3;
+}
+
+.ax-chart-layout__key {
+  grid-row-start: 4;
+}
+
+.ax-chart-layout__labels--precise {
+  position: relative;
+}
+
+.ax-chart-layout__label {
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.ax-chart-layout__x-labels .ax-chart-layout__label { top: 0; }
+.ax-chart-layout__y-labels .ax-chart-layout__label { right: 0; }
+
+.ax-chart-layout__label--hidden {
+  visibility: hidden;
+}

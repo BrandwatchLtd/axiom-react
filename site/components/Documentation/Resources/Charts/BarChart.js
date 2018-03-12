@@ -6,7 +6,7 @@ import {
   DocumentationShowCase,
 } from '@brandwatch/axiom-documentation-viewer';
 import { dotPlotKey, dotPlotData } from './chartData';
-import ChartNLP from './ChartNLP';
+import DropdownContext from './DropdownContext';
 
 export default class Documentation extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase>
           <BarChart
-              DropdownContext={ ChartNLP }
+              DropdownContext={ DropdownContext }
               axisTitle="% of each something"
               chartKey={ dotPlotKey }
               chartKeyBenchmarkLabel="Benchmark"

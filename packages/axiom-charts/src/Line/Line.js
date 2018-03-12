@@ -9,10 +9,12 @@ const hasVectorEffectSupport = typeof window !== 'undefined' &&
   CSS.supports('vector-effect', 'non-scaling-stroke');
 
 const createPath = (data, upper) =>
-  data.reduce((path, n, i, { length: l }) =>
-    path += (i === 0
+  data.reduce((path, n, i, { length: l }) => {
+    if (isNaN(n) || n === null) return path;
+    return `${path}${i === 0
       ? `M 0,${upper - n}`
-      : ` L ${((i + 1) / l) * 100},${upper - n}`)
+      : ` L ${((i + 1) / l) * 100},${upper - n}`}`;
+  }
   , '');
 
 export default class Line extends Component {
@@ -74,8 +76,9 @@ export default class Line extends Component {
   };
 
   render() {
-    const dataLower = Math.min(...this.props.data);
-    const dataUpper = Math.max(...this.props.data);
+    const fData = this.props.data.filter((n) => !isNaN(n) && n !== null);
+    const dataLower = Math.min(...fData);
+    const dataUpper = Math.max(...fData);
     const {
       color,
       children,
@@ -115,14 +118,16 @@ export default class Line extends Component {
               style={ { strokeDasharray, strokeWidth } } />
         </svg>
 
-        { children && children.map((c, i) => c &&
+        { children && children.map((c, i) =>
+          (!c || isNaN(data[i]) || data[i] === null) ? null :
             cloneElement(c, {
               style: strokeDasharray ? 'hollow' : 'solid',
               value: data[i],
               x: i && ((i + 1) / data.length) * 100,
               y: ((data[i] - finalLower) / (finalUpper - finalLower)) * 100,
             })
-        ) }
+          )
+        }
       </div>
     );
   }

@@ -19,7 +19,7 @@
   }
 }
 
-.ax-input__group {
+.ax-input__wrapper {
   display: flex;
   position: relative;
   flex-direction: column;

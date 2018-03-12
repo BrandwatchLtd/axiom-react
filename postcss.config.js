@@ -8,6 +8,9 @@ module.exports = {
         'IE 11',
       ],
       features: {
+        autoprefixer: {
+          grid: true,
+        },
         customProperties: {
           preserve: true,
           warnings: false,
