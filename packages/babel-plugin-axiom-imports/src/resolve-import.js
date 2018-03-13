@@ -15,18 +15,28 @@ const supportedAxiomPackages = [
 ];
 
 const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
-  const exportList = fs.readFileSync(path.join(path.dirname(
-    Module._resolveFilename(packageName, Object.assign({}, new Module, {
-      'paths': Module._nodeModulePaths(process.cwd()),
-    }))
-  ), '../src/index.js'), 'utf8');
+  let exportList;
 
-  memo[packageName] = parse(exportList, { sourceType: 'module' }).program.body
-    .reduce((exprts, exprt) => Object.assign({}, exprts,
-      exprt.specifiers.reduce((specs, spec) => Object.assign({}, specs, {
-        [spec.exported.name]: path.join(`${packageName}/dist`, exprt.source.value),
-      }), {}),
-    ), {});
+  try {
+    exportList = fs.readFileSync(path.join(path.dirname(
+      Module._resolveFilename(packageName, Object.assign({}, new Module, {
+        'paths': Module._nodeModulePaths(process.cwd()),
+      }))
+    ), '../src/index.js'), 'utf8');
+  } catch (error) {
+    if (error.code !== 'MODULE_NOT_FOUND') {
+      throw error;
+    }
+  }
+
+  if (exportList) {
+    memo[packageName] = parse(exportList, { sourceType: 'module' }).program.body
+      .reduce((exprts, exprt) => Object.assign({}, exprts,
+        exprt.specifiers.reduce((specs, spec) => Object.assign({}, specs, {
+          [spec.exported.name]: path.join(`${packageName}/dist`, exprt.source.value),
+        }), {}),
+      ), {});
+  }
 
   return memo;
 }, {});
