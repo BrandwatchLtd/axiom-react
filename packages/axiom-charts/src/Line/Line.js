@@ -13,7 +13,7 @@ const createPath = (data, upper) =>
     if (isNaN(n) || n === null) return path;
     return `${path}${i === 0
       ? `M 0,${upper - n}`
-      : ` L ${((i + 1) / l) * 100},${upper - n}`}`;
+      : ` L ${(i / (l - 1)) * 100},${upper - n}`}`;
   }
   , '');
 
@@ -123,7 +123,7 @@ export default class Line extends Component {
             cloneElement(c, {
               style: strokeDasharray ? 'hollow' : 'solid',
               value: data[i],
-              x: i && ((i + 1) / data.length) * 100,
+              x: (i / (data.length - 1)) * 100,
               y: ((data[i] - finalLower) / (finalUpper - finalLower)) * 100,
             })
           )
