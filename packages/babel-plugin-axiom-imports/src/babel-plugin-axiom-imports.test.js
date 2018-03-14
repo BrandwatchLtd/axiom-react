@@ -9,6 +9,24 @@ describe('babelPluginAxiom', () => {
     }).code).toMatchSnapshot();
   });
 
+  test('all imports', () => {
+    expect(transformFileSync(path.resolve(__dirname, '../test/all.js'), {
+      plugins: [babelPluginAxiom],
+    }).code).toMatchSnapshot();
+  });
+
+  test('default imports', () => {
+    expect(transformFileSync(path.resolve(__dirname, '../test/default.js'), {
+      plugins: [babelPluginAxiom],
+    }).code).toMatchSnapshot();
+  });
+
+  test('direct import', () => {
+    expect(transformFileSync(path.resolve(__dirname, '../test/direct.js'), {
+      plugins: [babelPluginAxiom],
+    }).code).toMatchSnapshot();
+  });
+
   test('destructured imports', () => {
     expect(transformFileSync(path.resolve(__dirname, '../test/destructure.js'), {
       plugins: [babelPluginAxiom],

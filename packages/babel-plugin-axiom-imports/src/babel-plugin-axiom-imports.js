@@ -1,7 +1,6 @@
 const resolveImport = require('./resolve-import');
 
 module.exports = ({ types }) => {
-  let axioms;
   let specified;
   let selectedAxioms;
 
@@ -15,15 +14,11 @@ module.exports = ({ types }) => {
 
   const isSpecialTypes = (node) =>
     types.isMemberExpression(node) ||
-    types.isProperty(node);
+    types.isProperty(node) ||
+    types.isVariableDeclarator(node);
 
   const hasBindingOfType = (scope, name, type) => scope.hasBinding(name) &&
     scope.getBinding(name).path.type === type;
-
-  const matchesAxiom = (path, name) => axioms[name] && (
-      hasBindingOfType(path.scope, name, 'ImportDefaultSpecified') ||
-      hasBindingOfType(path.scope, name, 'ImportNamespaceSpecifier')
-    );
 
   const matchesAxiomExport = (path, name) => specified[name] &&
     hasBindingOfType(path.scope, name, 'ImportSpecifier');
@@ -32,7 +27,6 @@ module.exports = ({ types }) => {
     visitor: {
       Program: {
         enter() {
-          axioms = Object.create(null);
           specified = Object.create(null);
           selectedAxioms = Object.create(null);
         },
@@ -40,18 +34,21 @@ module.exports = ({ types }) => {
 
       ImportDeclaration(path) {
         if (resolveImport.packages[path.node.source.value]) {
+          let remove;
+
           path.node.specifiers.forEach((spec) => {
             if (types.isImportSpecifier(spec)) {
+              remove = true;
               specified[spec.local.name] = {
                 pkg: path.node.source.value,
                 name: spec.imported.name,
               };
-            } else {
-              axioms[spec.local.name] = true;
             }
           });
 
-          path.remove();
+          if (remove) {
+            path.remove();
+          }
         }
       },
 
@@ -92,11 +89,9 @@ module.exports = ({ types }) => {
       },
 
       Identifier(path) {
-        if (matchesAxiomExport(path, path.node.name) && !isSpecialTypes(types, path.parent)) {
+        if (matchesAxiomExport(path, path.node.name) && !isSpecialTypes(path.parent)) {
           const { type, name } = importAxiom(specified[path.node.name], path.hub.file);
           path.replaceWith({ type, name });
-        } else if (matchesAxiom(path, path.node.name)) {
-          path.replaceWith(types.nullLiteral());
         }
       },
     },

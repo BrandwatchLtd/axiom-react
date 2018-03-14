@@ -46,6 +46,38 @@ console.log(_DotPlotChart2.default);
 console.log(_findComponent2.default);"
 `;
 
+exports[`babelPluginAxiom all imports 1`] = `
+"'use strict';
+
+var _axiomMaterials = require('@brandwatch/axiom-materials');
+
+var materials = _interopRequireWildcard(_axiomMaterials);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+console.log(materials.colors); /* eslint-disable no-console */"
+`;
+
+exports[`babelPluginAxiom default imports 1`] = `
+"'use strict';
+
+var _colors = require('@brandwatch/axiom-materials/dist/colors');
+
+var _colors2 = _interopRequireDefault(_colors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var productColors = Object.keys(_colors2.default.productColorNames); /* eslint-disable no-console */
+
+var fn = function fn() {
+  var colors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : productColors;
+
+  console.log(colors);
+};
+
+fn();"
+`;
+
 exports[`babelPluginAxiom destructured imports 1`] = `
 "'use strict';
 
@@ -84,6 +116,18 @@ console.log(_findComponent2.default);
 console.log(_colors2.default.productColorNames);"
 `;
 
+exports[`babelPluginAxiom direct import 1`] = `
+"'use strict';
+
+var _axiomMaterials = require('@brandwatch/axiom-materials');
+
+var _axiomMaterials2 = _interopRequireDefault(_axiomMaterials);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+console.log(_axiomMaterials2.default.colors); /* eslint-disable no-console */"
+`;
+
 exports[`babelPluginAxiom scoped imports 1`] = `
 "'use strict';
 
@@ -97,5 +141,10 @@ var foo = function foo(findComponent) {
   return findComponent();
 }; /* eslint-disable no-console */
 
-foo(_findComponent2.default);"
+var bar = function bar() {
+  return (0, _findComponent2.default)();
+};
+
+foo(_findComponent2.default);
+bar();"
 `;
