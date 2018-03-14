@@ -33,7 +33,10 @@
       ]
     },
     "production": {
-      plugins: ["transform-es2015-modules-commonjs"]
+      plugins: [
+        "@brandwatch/babel-plugin-axiom-imports",
+        "transform-es2015-modules-commonjs"
+      ]
     },
     "test": {
       plugins: ["transform-es2015-modules-commonjs"]
