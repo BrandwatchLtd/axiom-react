@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import atIds from '@brandwatch/axiom-automation-testing/ids';
 import Bar from '../Bar/Bar';
 import Bars from '../Bar/Bars';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
@@ -79,6 +80,7 @@ export default class BarChartBars extends Component {
                   value={ value }>
                 <Bar
                     color={ color }
+                    data-ax-at={ atIds.BarChart.bar }
                     isFaded={ isFaded }
                     isHidden={ hideBars && isFaded }
                     label={ barLabel ? barLabel({ value, data, color, label }) : value }

@@ -6,6 +6,9 @@
     "submit": "bd3ea7df70fa",
     "username": "ae998d161520"
   },
+  "BarChart": {
+    "bar": "d4cd4144e769"
+  },
   "ChangePassword": {
     "cancel": "390b74acb56b",
     "error": "da39a3ee5e6b",
@@ -13,6 +16,16 @@
     "currentPassword": "80380c87e5bf",
     "newPassword": "89036ea6ef14",
     "submit": "aaa045cca84a"
+  },
+  "ColorPicker": {
+    "dropdown": "98df24c31c96",
+    "option": "7c784a88658c"
+  },
+  "DataPicker": {
+    "dropdown": "9c4d25dadaa7"
+  },
+  "DotPlotChart": {
+    "dot": "2bc5918bb738"
   },
   "Pagination": {
     "first": "082c8123b0e6",

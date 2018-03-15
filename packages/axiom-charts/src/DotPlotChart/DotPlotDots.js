@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import atIds from '@brandwatch/axiom-automation-testing/ids';
 import DataPoint from '../DataPoint/DataPoint';
 import DataPoints from '../DataPoint/DataPoints';
 
@@ -25,7 +26,9 @@ export default class DotPlotDots extends Component {
 
     return (
       <div className={ classes } style={ style }>
-        <DataPoints { ...rest } size={ size }>
+        <DataPoints { ...rest }
+            data-ax-at={ atIds.DotPlotChart.dot }
+            size={ size }>
           { colors.map((color, index) =>
             <DataPoint color={ color } key={ index } />
           ) }

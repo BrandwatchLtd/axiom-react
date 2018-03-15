@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { findComponent } from '@brandwatch/axiom-utils';
+import atIds from '@brandwatch/axiom-automation-testing/ids';
 import Card from '../Card/Card';
 import CardContent from '../Card/CardContent';
 import ColorPicker from '../ColorPicker/ColorPicker';
@@ -97,7 +98,9 @@ export default class DataPicker extends Component {
                   { dropdownMenu && (
                     <Dropdown showArrow={ false }>
                       <DropdownTarget>
-                        <div className="ax-data-picker__link">
+                        <div
+                            className="ax-data-picker__link"
+                            data-ax-at={ atIds.DataPicker.dropdown }>
                           <Link style="body">
                             <Grid responsive={ false } verticalAlign="middle" wrap={ false }>
                               <GridCell>
