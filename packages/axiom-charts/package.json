@@ -8,6 +8,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@brandwatch/axiom-automation-testing": "^0.0.3",
     "@brandwatch/axiom-components": "^0.2.3",
     "classnames": "^2.2.1",
     "prop-types": "^15.6.0",
