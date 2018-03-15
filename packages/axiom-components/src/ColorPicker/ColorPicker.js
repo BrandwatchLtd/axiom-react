@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import atIds from '@brandwatch/axiom-automation-testing/ids';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownContent from '../Dropdown/DropdownContent';
 import DropdownContext from '../Dropdown/DropdownContext';
@@ -97,7 +98,10 @@ export default class ColorPicker extends Component {
     return (
       <Dropdown position="bottom" { ... rest }>
         <DropdownTarget>
-          <ColorPickerOption color={ selected } onClick={ onOpen } />
+          <ColorPickerOption
+              color={ selected }
+              data-ax-at={ atIds.ColorPicker.dropdown }
+              onClick={ onOpen } />
         </DropdownTarget>
 
         <DropdownSource>
@@ -113,6 +117,7 @@ export default class ColorPicker extends Component {
                     <GridCell key={ color } shrink>
                       <ColorPickerOption
                           color={ color }
+                          data-ax-at={ atIds.ColorPicker.option }
                           disabled={ isColorDisabled }
                           onClick={ () => isColorDisabled || onSelectColor(color) } />
                     </GridCell>
