@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.4"></a>
+## [0.2.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.3...@brandwatch/axiom-components@0.2.4) (2018-03-15)
+
+
+### Bug Fixes
+
+* **ColorPicker:** Added automation test ids for targeting color picker trigger and options ([e71630c](https://github.com/HHogg/axiom/commit/e71630c))
+* **DataPicker:** Added automation test ids for targeting dropdown trigger ([a9f0815](https://github.com/HHogg/axiom/commit/a9f0815))
+
+
+
+
 <a name="0.2.3"></a>
 ## [0.2.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.2...@brandwatch/axiom-components@0.2.3) (2018-03-12)
 

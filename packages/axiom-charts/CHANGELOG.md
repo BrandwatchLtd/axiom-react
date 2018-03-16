@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.1.1...@brandwatch/axiom-charts@1.1.2) (2018-03-15)
+
+
+### Bug Fixes
+
+* **BarChart:** Added automation testing ids for targeting bars ([061b24d](https://github.com/HHogg/axiom/commit/061b24d))
+* **DotPlotChart:** Added automation testing ids for targeting dots ([58b7514](https://github.com/HHogg/axiom/commit/58b7514))
+* **Line:** Unevenly distributed ([ee39124](https://github.com/HHogg/axiom/commit/ee39124))
+
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.1.0...@brandwatch/axiom-charts@1.1.1) (2018-03-12)
 

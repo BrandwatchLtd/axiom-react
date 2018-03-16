@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -8,7 +8,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@brandwatch/axiom-automation-testing": "^0.0.3",
+    "@brandwatch/axiom-automation-testing": "^0.0.4",
     "@brandwatch/axiom-formatting": "^0.0.3",
     "@brandwatch/axiom-materials": "^0.3.0",
     "@brandwatch/axiom-utils": "^0.0.6",
