@@ -22,4 +22,5 @@ console.log(longDate);
 console.log(Base);
 console.log(DotPlotChart);
 console.log(findComponent);
+console.log(colors);
 console.log(colors.productColorNames);

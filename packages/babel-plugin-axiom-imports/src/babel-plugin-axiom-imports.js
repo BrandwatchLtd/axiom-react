@@ -6,7 +6,7 @@ module.exports = ({ types }) => {
 
   const importAxiom = ({ pkg, name }, file) => {
     if (!selectedAxioms[name]) {
-      selectedAxioms[name] = file.addImport(resolveImport(pkg, name), 'default');
+      selectedAxioms[name] = file.addImport(...resolveImport(pkg, name));
     }
 
     return types.clone(selectedAxioms[name]);

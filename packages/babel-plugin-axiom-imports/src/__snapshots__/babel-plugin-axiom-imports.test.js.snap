@@ -58,32 +58,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 console.log(materials.colors); /* eslint-disable no-console */"
 `;
 
-exports[`babelPluginAxiom default imports 1`] = `
-"'use strict';
-
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
-
-var _colors2 = _interopRequireDefault(_colors);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var productColors = Object.keys(_colors2.default.productColorNames); /* eslint-disable no-console */
-
-var fn = function fn() {
-  var colors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : productColors;
-
-  console.log(colors);
-};
-
-fn();"
-`;
-
 exports[`babelPluginAxiom destructured imports 1`] = `
 "'use strict';
 
 var _colors = require('@brandwatch/axiom-materials/dist/colors');
 
-var _colors2 = _interopRequireDefault(_colors);
+var _ = _interopRequireWildcard(_colors);
 
 var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
 
@@ -107,13 +87,16 @@ var _shortDate2 = _interopRequireDefault(_shortDate);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 console.log(_shortDate2.default); /* eslint-disable no-console */
 
 console.log(_longDate2.default);
 console.log(_Base2.default);
 console.log(_DotPlotChart2.default);
 console.log(_findComponent2.default);
-console.log(_colors2.default.productColorNames);"
+console.log(_);
+console.log(_.productColorNames);"
 `;
 
 exports[`babelPluginAxiom direct import 1`] = `
@@ -147,4 +130,24 @@ var bar = function bar() {
 
 foo(_findComponent2.default);
 bar();"
+`;
+
+exports[`babelPluginAxiom used as defaults 1`] = `
+"'use strict';
+
+var _colors = require('@brandwatch/axiom-materials/dist/colors');
+
+var _ = _interopRequireWildcard(_colors);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var productColors = Object.keys(_.productColorNames); /* eslint-disable no-console */
+
+var fn = function fn() {
+  var colors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : productColors;
+
+  console.log(colors);
+};
+
+fn();"
 `;

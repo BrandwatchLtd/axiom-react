@@ -15,6 +15,7 @@ const supportedAxiomPackages = [
 ];
 
 const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
+  const importList = {};
   let exportList;
 
   try {
@@ -30,12 +31,21 @@ const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
   }
 
   if (exportList) {
-    memo[packageName] = parse(exportList, { sourceType: 'module' }).program.body
-      .reduce((exprts, exprt) => Object.assign({}, exprts,
-        exprt.specifiers.reduce((specs, spec) => Object.assign({}, specs, {
-          [spec.exported.name]: path.join(`${packageName}/dist`, exprt.source.value),
-        }), {}),
-      ), {});
+    memo[packageName] = {};
+    parse(exportList, { sourceType: 'module' }).program.body.forEach((node) => {
+      node.specifiers.forEach((spec) => {
+        switch (spec.type) {
+        case 'ImportNamespaceSpecifier':
+          return importList[spec.local.name] = node.source.value;
+        case 'ExportSpecifier':
+          if (spec.local.name === spec.exported.name && importList[spec.local.name]) {
+            memo[packageName][spec.local.name] = [path.join(`${packageName}/dist`, importList[spec.local.name]), '*'];
+          } else {
+            memo[packageName][spec.exported.name] = [path.join(`${packageName}/dist`, node.source.value), 'default'];
+          }
+        }
+      });
+    });
   }
 
   return memo;

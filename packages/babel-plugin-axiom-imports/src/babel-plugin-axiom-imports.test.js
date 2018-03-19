@@ -15,7 +15,7 @@ describe('babelPluginAxiom', () => {
     }).code).toMatchSnapshot();
   });
 
-  test('default imports', () => {
+  test('used as defaults', () => {
     expect(transformFileSync(path.resolve(__dirname, '../test/default.js'), {
       plugins: [babelPluginAxiom],
     }).code).toMatchSnapshot();
