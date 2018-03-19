@@ -56,58 +56,106 @@
   --color-ui-info: rgb(var(--rgb-ui-info));
   --color-ui-info--active: rgb(var(--rgb-ui-info--active));
 
+  --color-ui-black: rgb(33, 33, 33);
   --color-ui-white: rgb(255, 255, 255);
 
   --color-ui-highlight: rgb(215, 255, 0);
+
+  --color-sentiment-positive-active: rgb(62, 148, 76);
+  --color-sentiment-positive: rgb(76, 161, 90);
+  --color-sentiment-positive-hover: rgb(90, 173, 104);
+  --color-sentiment-negative-active: rgb(201, 58, 58);
+  --color-sentiment-negative: rgb(215, 74, 74);
+  --color-sentiment-negative-hover: rgb(227, 89, 89);
 
   --color-product-tiny-clanger--active: rgb(232, 132, 166);
   --color-product-tiny-clanger: rgb(244, 152, 183);
   --color-product-tiny-clanger--hover: rgb(255, 171, 199);
 
-  --color-product-critical-mass--active: rgb(225, 69, 93);
-  --color-product-critical-mass: rgb(237, 85, 109);
-  --color-product-critical-mass--hover: rgb(250, 102, 125);
+  --color-product-critical-mass--active: rgb(214, 75, 107);
+  --color-product-critical-mass: rgb(227, 90, 122);
+  --color-product-critical-mass--hover: rgb(240, 108, 139);
+
+  --color-product-fantastic-voyage--active: rgb(156, 36, 82);
+  --color-product-fantastic-voyage: rgb(167, 46, 94);
+  --color-product-fantastic-voyage--hover: rgb(181, 60, 106);
 
   --color-product-paradise-lost--active: rgb(143, 99, 166);
   --color-product-paradise-lost: rgb(156, 115, 178);
   --color-product-paradise-lost--hover: rgb(171, 134, 191);
 
-  --color-product-serene-sea--active: rgb(125, 143, 202);
+  --color-product-serene-sea--active: rgb(125, 143, 201);
   --color-product-serene-sea: rgb(144, 160, 214);
-  --color-product-serene-sea--hover: rgb(164, 178, 227);
+  --color-product-serene-sea--hover: rgb(163, 178, 227);
 
-  --color-product-giant-leap--active: rgb(78, 180, 217);
-  --color-product-giant-leap: rgb(95, 195, 230);
-  --color-product-giant-leap--hover: rgb(111, 208, 243);
+  --color-product-electric-dreams--active: rgb(46, 104, 171);
+  --color-product-electric-dreams: rgb(59, 116, 183);
+  --color-product-electric-dreams--hover: rgb(73, 130, 196);
 
-  --color-product-moon-lagoon--active: rgb(37, 155, 163);
-  --color-product-moon-lagoon: rgb(49, 166, 175);
-  --color-product-moon-lagoon--hover: rgb(62, 180, 189);
+  --color-product-giant-leap--active: rgb(74, 189, 207);
+  --color-product-giant-leap: rgb(90, 203, 220);
+  --color-product-giant-leap--hover: rgb(107, 215, 232);
 
-  --color-product-terra-form--active: rgb(106, 166, 38);
-  --color-product-terra-form: rgb(119, 178, 50);
-  --color-product-terra-form--hover: rgb(131, 191, 63);
+  --color-product-moon-lagoon--active: rgb(29, 163, 181);
+  --color-product-moon-lagoon: rgb(40, 176, 194);
+  --color-product-moon-lagoon--hover: rgb(54, 189, 207);
 
-  --color-product-primeval-soup--active: rgb(181, 173, 10);
-  --color-product-primeval-soup: rgb(193, 184, 22);
-  --color-product-primeval-soup--hover: rgb(207, 198, 33);
+  --color-product-space-invader--active: rgb(36, 133, 99);
+  --color-product-space-invader: rgb(46, 145, 111);
+  --color-product-space-invader--hover: rgb(58, 158, 123);
+
+  --color-product-terra-form--active: rgb(115, 179, 62);
+  --color-product-terra-form: rgb(128, 190, 76);
+  --color-product-terra-form--hover: rgb(142, 204, 92);
+
+  --color-product-primeval-soup--active: rgb(186, 186, 15);
+  --color-product-primeval-soup: rgb(200, 200, 25);
+  --color-product-primeval-soup--hover: rgb(212, 212, 38);
+
+  --color-product-sun-maker--active: rgb(233, 195, 3);
+  --color-product-sun-maker: rgb(250, 208, 0);
+  --color-product-sun-maker--hover: rgb(255, 218, 35);
 
   --color-product-new-horizon--active: rgb(238, 174, 0);
   --color-product-new-horizon: rgb(249, 184, 0);
-  --color-product-new-horizon--hover: rgb(255, 191, 12);
+  --color-product-new-horizon--hover: rgb(255, 190, 13);
 
-  --color-product-blast-off--active: rgb(230, 126, 0);
-  --color-product-blast-off: rgb(243, 135, 0);
-  --color-product-blast-off--hover: rgb(255, 146, 12);
+  --color-product-blast-off--active: rgb(237, 124, 43);
+  --color-product-blast-off: rgb(249, 138, 57);
+  --color-product-blast-off--hover: rgb(255, 148, 71);
 
-  --color-product-ground-control--active: rgb(158, 85, 36);
-  --color-product-ground-control: rgb(170, 97, 48);
-  --color-product-ground-control--hover: rgb(184, 110, 60);
+  --color-product-crash-course--active: rgb(242, 83, 58);
+  --color-product-crash-course: rgb(255, 99, 74);
+  --color-product-crash-course--hover: rgb(255, 114, 92);
+
+  --color-product-ground-control--active: rgb(150, 97, 50);
+  --color-product-ground-control: rgb(162, 109, 62);
+  --color-product-ground-control--hover: rgb(176, 122, 76);
+
+  --color-product-space-oddity--active: rgb(181, 148, 72);
+  --color-product-space-oddity: rgb(193, 160, 87);
+  --color-product-space-oddity--hover: rgb(207, 176, 103);
+
+  --color-product-deep-thought--active: rgb(167, 162, 179);
+  --color-product-deep-thought: rgb(187, 185, 192);
+  --color-product-deep-thought--hover: rgb(204, 204, 204);
 
   --color-product-luna-dust--active: rgb(103, 129, 143);
   --color-product-luna-dust: rgb(120, 144, 156);
   --color-product-luna-dust--hover: rgb(138, 158, 168);
 
-  --color-external-twitter-blue: rgb(29, 161, 242);
+  --color-sentiment-neagtive--active: rgb(201, 58, 58);
+  --color-sentiment-neagtive: rgb(215, 74, 74);
+  --color-sentiment-neagtive--hover: rgb(227, 89, 89);
+
+  --color-sentiment-positive--active: rgb(62, 148, 76);
+  --color-sentiment-positive: rgb(76, 161, 90);
+  --color-sentiment-positive--hover: rgb(90, 173, 104);
+
+  --color-social-twitter: rgb(29, 161, 242);
+  --color-social-facebook: rgb(59, 89, 152);
+  --color-social-instagram: rgb(183, 71, 146);
+
+  --color-external-twitter-blue: var(--color-social-twitter);
 }
 /* stylelint-enable */

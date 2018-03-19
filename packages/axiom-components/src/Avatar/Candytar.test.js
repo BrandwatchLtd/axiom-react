@@ -16,7 +16,7 @@ describe('Candytar', () => {
   });
 
   describe('renders with color', () => {
-    Object.keys(colors.productColorNames).forEach((color) => {
+    Object.keys(colors.userDefinedGraphColors).forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

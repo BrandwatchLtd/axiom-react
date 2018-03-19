@@ -37,7 +37,7 @@ export default class Documentation extends Component {
               <CardContent key="body" size="large">
                 <Paragraph space="x0" textStrong>Name Surname</Paragraph>
                 <Paragraph space="x0" textColor="subtle">
-                  <TextIcon name="twitter" spaceRight="x1" textColor="twitter-blue" />
+                  <TextIcon name="twitter" spaceRight="x1" textColor="twitter" />
                   @TwitterHandle • 6hrs
                 </Paragraph>
                 <Paragraph space="x2" textColor="subtle" textSize="small">
