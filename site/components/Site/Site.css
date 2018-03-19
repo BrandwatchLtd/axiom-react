@@ -15,8 +15,3 @@
   padding-top: var(--page-padding-vertical);
   padding-bottom: var(--page-padding-vertical);
 }
-
-.si-site__footer {
-  background-color: var(--color-theme-background);
-  color: var(--color-theme-text);
-}

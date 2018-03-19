@@ -19,7 +19,8 @@ export default class Resources extends Component {
           <PackagesTable>
             <PackageRow
                 description="Low level design resources that are used to make up Axiom components and composites (animations, colors, sizes etc...)."
-                name="axiom-materials" />
+                name="axiom-materials"
+                to="/docs/packages/axiom-materials" />
 
             <PackageRow
                 description="Core Axiom components package, includes the main components that make up a Brandwatch application."

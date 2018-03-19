@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { withRouter, Switch, Route } from 'react-router';
 import Documentation from '../Documentation/Documentation';
-import Landing from '../Landing/Landing';
-import SiteFooter from './SiteFooter';
 import './Site.css';
 
 class Site extends Component {
@@ -19,14 +17,9 @@ class Site extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Switch>
-          <Route component={ Landing } exact path="/" />
-          <Route component={ Documentation } path="/docs" />
-        </Switch>
-
-        <SiteFooter />
-      </Fragment>
+      <Switch>
+        <Route component={ Documentation } path="/" />
+      </Switch>
     );
   }
 }

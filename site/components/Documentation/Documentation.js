@@ -62,15 +62,11 @@ export default class Documentation extends Component {
 
         <div className="si-documentation__body">
           <Switch>
-            <Route path="/docs/packages" render={ () => (
-              <Switch>
-                <Route component={ Resources } exact path="/docs/packages/" />
-                <Route component={ Charts } path="/docs/packages/axiom-charts" />
-                <Route component={ Components } path="/docs/packages/axiom-components" />
-                <Route component={ Composites } path="/docs/packages/axiom-composites" />
-                <Route component={ Materials } path="/docs/packages/axiom-materials" />
-              </Switch>
-            ) } />
+            <Route component={ Charts } path="/docs/packages/axiom-charts" />
+            <Route component={ Components } path="/docs/packages/axiom-components" />
+            <Route component={ Composites } path="/docs/packages/axiom-composites" />
+            <Route component={ Materials } path="/docs/packages/axiom-materials" />
+            <Route component={ Resources } />
           </Switch>
         </div>
       </div>

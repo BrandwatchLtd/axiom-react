@@ -1,0 +1,16 @@
+:root {
+  --si-color-dot-size: 4.5rem;
+}
+
+.si-color-dot {
+  width: var(--si-color-dot-size);
+  height: var(--si-color-dot-size);
+  margin: 0 auto;
+  border: 0.0625rem solid var(--color-theme-border);
+  border-radius: 50%;
+}
+
+.si-color-letter {
+  font-size: var(--si-color-dot-size);
+  line-height: var(--si-color-dot-size);
+}
