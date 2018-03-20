@@ -28,14 +28,36 @@
 .ax-text--case-capital { text-transform: capitalize; }
 .ax-text--case-lower   { text-transform: lowercase; }
 
-.ax-text--color-subtle { color: var(--color-theme-text--subtle); }
-.ax-text--color-disabled { color: var(--color-theme-text--disabled); }
 .ax-text--color-day { color: var(--color-theme-day-text); }
 .ax-text--color-night { color: var(--color-theme-night-text); }
+.ax-text--color-error { color: var(--color-ui-error); }
 .ax-text--color-success { color: var(--color-ui-success); }
 .ax-text--color-warning { color: var(--color-ui-warning); }
-.ax-text--color-error { color: var(--color-ui-error); }
+.ax-text--color-disabled { color: var(--color-theme-text--disabled); }
+.ax-text--color-subtle { color: var(--color-theme-text--subtle); }
 .ax-text--color-twitter { color: var(--color-social-twitter); }
+.ax-text--color-twitter-blue { color: var(--color-social-twitter); }
+.ax-text--color-facebook { color: var(--color-social-facebook); }
+.ax-text--color-instagram { color: var(--color-social-instagram); }
+.ax-text--color-tiny-clanger { color: var(--color-product-tiny-clanger); }
+.ax-text--color-critical-mass { color: var(--color-product-critical-mass); }
+.ax-text--color-fantastic-voyage { color: var(--color-product-fantastic-voyage); }
+.ax-text--color-paradise-lost { color: var(--color-product-paradise-lost); }
+.ax-text--color-serene-sea { color: var(--color-product-serene-sea); }
+.ax-text--color-electric-dreams { color: var(--color-product-electric-dreams); }
+.ax-text--color-giant-leap { color: var(--color-product-giant-leap); }
+.ax-text--color-moon-lagoon { color: var(--color-product-moon-lagoon); }
+.ax-text--color-space-invader { color: var(--color-product-space-invader); }
+.ax-text--color-terra-form { color: var(--color-product-terra-form); }
+.ax-text--color-primeval-soup { color: var(--color-product-primeval-soup); }
+.ax-text--color-sun-maker { color: var(--color-product-sun-maker); }
+.ax-text--color-new-horizon { color: var(--color-product-new-horizon); }
+.ax-text--color-blast-off { color: var(--color-product-blast-off); }
+.ax-text--color-crash-course { color: var(--color-product-crash-course); }
+.ax-text--color-ground-control { color: var(--color-product-ground-control); }
+.ax-text--color-space-oddity { color: var(--color-product-space-oddity); }
+.ax-text--color-deep-thought { color: var(--color-product-deep-thought); }
+.ax-text--color-luna-dust { color: var(--color-product-luna-dust); }
 
 .ax-text--ellipsis {
   max-width: 100%;
