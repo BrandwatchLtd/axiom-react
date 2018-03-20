@@ -32,15 +32,22 @@
 
   &.ax-bars__bar-rect--tiny-clanger { background-color: var(--color-product-tiny-clanger); }
   &.ax-bars__bar-rect--critical-mass { background-color: var(--color-product-critical-mass); }
+  &.ax-bars__bar-rect--fantastic-voyage { background-color: var(--color-product-fantastic-voyage); }
   &.ax-bars__bar-rect--paradise-lost { background-color: var(--color-product-paradise-lost); }
   &.ax-bars__bar-rect--serene-sea { background-color: var(--color-product-serene-sea); }
+  &.ax-bars__bar-rect--electric-dreams { background-color: var(--color-product-electric-dreams); }
   &.ax-bars__bar-rect--giant-leap { background-color: var(--color-product-giant-leap); }
   &.ax-bars__bar-rect--moon-lagoon { background-color: var(--color-product-moon-lagoon); }
+  &.ax-bars__bar-rect--space-invader { background-color: var(--color-product-space-invader); }
   &.ax-bars__bar-rect--terra-form { background-color: var(--color-product-terra-form); }
   &.ax-bars__bar-rect--primeval-soup { background-color: var(--color-product-primeval-soup); }
+  &.ax-bars__bar-rect--sun-maker { background-color: var(--color-product-sun-maker); }
   &.ax-bars__bar-rect--new-horizon { background-color: var(--color-product-new-horizon); }
   &.ax-bars__bar-rect--blast-off { background-color: var(--color-product-blast-off); }
+  &.ax-bars__bar-rect--crash-course { background-color: var(--color-product-crash-course); }
   &.ax-bars__bar-rect--ground-control { background-color: var(--color-product-ground-control); }
+  &.ax-bars__bar-rect--space-oddity { background-color: var(--color-product-space-oddity); }
+  &.ax-bars__bar-rect--deep-thought { background-color: var(--color-product-deep-thought); }
   &.ax-bars__bar-rect--luna-dust { background-color: var(--color-product-luna-dust); }
 }
 
@@ -62,6 +69,11 @@
       &:active { background-color: var(--color-product-critical-mass--active); }
     }
 
+    &.ax-bars__bar-rect--fantastic-voyage {
+      &:hover { background-color: var(--color-product-fantastic-voyage--hover); }
+      &:active { background-color: var(--color-product-fantastic-voyage--active); }
+    }
+
     &.ax-bars__bar-rect--paradise-lost {
       &:hover { background-color: var(--color-product-paradise-lost--hover); }
       &:active { background-color: var(--color-product-paradise-lost--active); }
@@ -70,6 +82,11 @@
     &.ax-bars__bar-rect--serene-sea {
       &:hover { background-color: var(--color-product-serene-sea--hover); }
       &:active { background-color: var(--color-product-serene-sea--active); }
+    }
+
+    &.ax-bars__bar-rect--electric-dreams {
+      &:hover { background-color: var(--color-product-electric-dreams--hover); }
+      &:active { background-color: var(--color-product-electric-dreams--active); }
     }
 
     &.ax-bars__bar-rect--giant-leap {
@@ -82,6 +99,11 @@
       &:active { background-color: var(--color-product-moon-lagoon--active); }
     }
 
+    &.ax-bars__bar-rect--space-invader {
+      &:hover { background-color: var(--color-product-space-invader--hover); }
+      &:active { background-color: var(--color-product-space-invader--active); }
+    }
+
     &.ax-bars__bar-rect--terra-form {
       &:hover { background-color: var(--color-product-terra-form--hover); }
       &:active { background-color: var(--color-product-terra-form--active); }
@@ -90,6 +112,11 @@
     &.ax-bars__bar-rect--primeval-soup {
       &:hover { background-color: var(--color-product-primeval-soup--hover); }
       &:active { background-color: var(--color-product-primeval-soup--active); }
+    }
+
+    &.ax-bars__bar-rect--sun-maker {
+      &:hover { background-color: var(--color-product-sun-maker--hover); }
+      &:active { background-color: var(--color-product-sun-maker--active); }
     }
 
     &.ax-bars__bar-rect--new-horizon {
@@ -102,9 +129,24 @@
       &:active { background-color: var(--color-product-blast-off--active); }
     }
 
+    &.ax-bars__bar-rect--crash-course {
+      &:hover { background-color: var(--color-product-crash-course--hover); }
+      &:active { background-color: var(--color-product-crash-course--active); }
+    }
+
     &.ax-bars__bar-rect--ground-control {
       &:hover { background-color: var(--color-product-ground-control--hover); }
       &:active { background-color: var(--color-product-ground-control--active); }
+    }
+
+    &.ax-bars__bar-rect--space-oddity {
+      &:hover { background-color: var(--color-product-space-oddity--hover); }
+      &:active { background-color: var(--color-product-space-oddity--active); }
+    }
+
+    &.ax-bars__bar-rect--deep-thought {
+      &:hover { background-color: var(--color-product-deep-thought--hover); }
+      &:active { background-color: var(--color-product-deep-thought--active); }
     }
 
     &.ax-bars__bar-rect--luna-dust {
