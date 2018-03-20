@@ -63,8 +63,8 @@ export const getDotColors = (mouseOverRowIndex, mouseOverColors, rowIndex, color
     ? colors.filter((color) => mouseOverColors.indexOf(color) > -1)
     : colors;
 
-export const isBenchmarkFaded = (mouseOverRowIndex) => mouseOverRowIndex !== -1;
-export const isLineFaded = (mouseOverRowIndex) => mouseOverRowIndex !== -1;
+export const isBenchmarkFaded = (mouseOverRowIndex) => mouseOverRowIndex !== null;
+export const isLineFaded = (mouseOverRowIndex) => mouseOverRowIndex !== null;
 
 export const isDotFaded = (mouseOverRowIndex, mouseOverColors, rowIndex, colors) =>
   isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) &&

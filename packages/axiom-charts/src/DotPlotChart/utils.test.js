@@ -113,17 +113,17 @@ describe('DotPlot (utils)', () => {
 
   describe('with no mouse over', () => {
     it('does not filter colors', () => {
-      expect(getDotColors(-1, [], 0, ['red', 'terra-form']))
+      expect(getDotColors(null, [], 0, ['red', 'terra-form']))
         .toEqual(['red', 'terra-form']);
     });
 
     it('hides values', () => {
-      expect(isValueHidden(-1, [], 0, ['red', 'terra-form']))
+      expect(isValueHidden(null, [], 0, ['red', 'terra-form']))
         .toEqual(true);
     });
 
     it('does not fade the lines', () => {
-      expect(isLineFaded(-1, [], 0, ['red', 'terra-form']))
+      expect(isLineFaded(null, [], 0, ['red', 'terra-form']))
         .toEqual(false);
     });
   });
