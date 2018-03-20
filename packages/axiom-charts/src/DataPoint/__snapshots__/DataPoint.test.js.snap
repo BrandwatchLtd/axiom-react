@@ -10,9 +10,49 @@ exports[`DataPoint renders with color blast-off 1`] = `
 />
 `;
 
+exports[`DataPoint renders with color crash-course 1`] = `
+<circle
+  className="ax-data-point ax-data-point--crash-course ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
 exports[`DataPoint renders with color critical-mass 1`] = `
 <circle
   className="ax-data-point ax-data-point--critical-mass ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color deep-thought 1`] = `
+<circle
+  className="ax-data-point ax-data-point--deep-thought ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color electric-dreams 1`] = `
+<circle
+  className="ax-data-point ax-data-point--electric-dreams ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color fantastic-voyage 1`] = `
+<circle
+  className="ax-data-point ax-data-point--fantastic-voyage ax-data-point--solid"
   cx={12}
   cy={12}
   r={undefined}
@@ -93,6 +133,36 @@ exports[`DataPoint renders with color primeval-soup 1`] = `
 exports[`DataPoint renders with color serene-sea 1`] = `
 <circle
   className="ax-data-point ax-data-point--serene-sea ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color space-invader 1`] = `
+<circle
+  className="ax-data-point ax-data-point--space-invader ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color space-oddity 1`] = `
+<circle
+  className="ax-data-point ax-data-point--space-oddity ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color sun-maker 1`] = `
+<circle
+  className="ax-data-point ax-data-point--sun-maker ax-data-point--solid"
   cx={12}
   cy={12}
   r={undefined}
