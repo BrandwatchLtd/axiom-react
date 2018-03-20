@@ -12,15 +12,22 @@
 
 .ax-color-picker__option--tiny-clanger { background-color: var(--color-product-tiny-clanger); }
 .ax-color-picker__option--critical-mass { background-color: var(--color-product-critical-mass); }
+.ax-color-picker__option--fantastic-voyage { background-color: var(--color-product-fantastic-voyage); }
 .ax-color-picker__option--paradise-lost { background-color: var(--color-product-paradise-lost); }
 .ax-color-picker__option--serene-sea { background-color: var(--color-product-serene-sea); }
+.ax-color-picker__option--electric-dreams { background-color: var(--color-product-electric-dreams); }
 .ax-color-picker__option--giant-leap { background-color: var(--color-product-giant-leap); }
 .ax-color-picker__option--moon-lagoon { background-color: var(--color-product-moon-lagoon); }
+.ax-color-picker__option--space-invader { background-color: var(--color-product-space-invader); }
 .ax-color-picker__option--terra-form { background-color: var(--color-product-terra-form); }
 .ax-color-picker__option--primeval-soup { background-color: var(--color-product-primeval-soup); }
+.ax-color-picker__option--sun-maker { background-color: var(--color-product-sun-maker); }
 .ax-color-picker__option--new-horizon { background-color: var(--color-product-new-horizon); }
 .ax-color-picker__option--blast-off { background-color: var(--color-product-blast-off); }
+.ax-color-picker__option--crash-course { background-color: var(--color-product-crash-course); }
 .ax-color-picker__option--ground-control { background-color: var(--color-product-ground-control); }
+.ax-color-picker__option--space-oddity { background-color: var(--color-product-space-oddity); }
+.ax-color-picker__option--deep-thought { background-color: var(--color-product-deep-thought); }
 .ax-color-picker__option--luna-dust { background-color: var(--color-product-luna-dust); }
 
 .ax-color-picker__option--empty {
@@ -45,6 +52,11 @@
     &:active { background-color: var(--color-product-critical-mass--active); }
   }
 
+  &.ax-color-picker__option--fantastic-voyage {
+    &:hover  { background-color: var(--color-product-fantastic-voyage--hover); }
+    &:active { background-color: var(--color-product-fantastic-voyage--active); }
+  }
+
   &.ax-color-picker__option--paradise-lost {
     &:hover  { background-color: var(--color-product-paradise-lost--hover); }
     &:active { background-color: var(--color-product-paradise-lost--active); }
@@ -53,6 +65,11 @@
   &.ax-color-picker__option--serene-sea {
     &:hover  { background-color: var(--color-product-serene-sea--hover); }
     &:active { background-color: var(--color-product-serene-sea--active); }
+  }
+
+  &.ax-color-picker__option--electric-dreams {
+    &:hover  { background-color: var(--color-product-electric-dreams--hover); }
+    &:active { background-color: var(--color-product-electric-dreams--active); }
   }
 
   &.ax-color-picker__option--giant-leap {
@@ -65,6 +82,11 @@
     &:active { background-color: var(--color-product-moon-lagoon--active); }
   }
 
+  &.ax-color-picker__option--space-invader {
+    &:hover  { background-color: var(--color-product-space-invader--hover); }
+    &:active { background-color: var(--color-product-space-invader--active); }
+  }
+
   &.ax-color-picker__option--terra-form {
     &:hover  { background-color: var(--color-product-terra-form--hover); }
     &:active { background-color: var(--color-product-terra-form--active); }
@@ -73,6 +95,11 @@
   &.ax-color-picker__option--primeval-soup {
     &:hover  { background-color: var(--color-product-primeval-soup--hover); }
     &:active { background-color: var(--color-product-primeval-soup--active); }
+  }
+
+  &.ax-color-picker__option--sun-maker {
+    &:hover  { background-color: var(--color-product-sun-maker--hover); }
+    &:active { background-color: var(--color-product-sun-maker--active); }
   }
 
   &.ax-color-picker__option--new-horizon {
@@ -85,9 +112,24 @@
     &:active { background-color: var(--color-product-blast-off--active); }
   }
 
+  &.ax-color-picker__option--crash-course {
+    &:hover  { background-color: var(--color-product-crash-course--hover); }
+    &:active { background-color: var(--color-product-crash-course--active); }
+  }
+
   &.ax-color-picker__option--ground-control {
     &:hover  { background-color: var(--color-product-ground-control--hover); }
     &:active { background-color: var(--color-product-ground-control--active); }
+  }
+
+  &.ax-color-picker__option--space-oddity {
+    &:hover  { background-color: var(--color-product-space-oddity--hover); }
+    &:active { background-color: var(--color-product-space-oddity--active); }
+  }
+
+  &.ax-color-picker__option--deep-thought {
+    &:hover  { background-color: var(--color-product-deep-thought--hover); }
+    &:active { background-color: var(--color-product-deep-thought--active); }
   }
 
   &.ax-color-picker__option--luna-dust {
