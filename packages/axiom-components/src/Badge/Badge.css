@@ -29,15 +29,22 @@
 .ax-badge--error .ax-badge__background { background-color: var(--color-ui-error); }
 .ax-badge--tiny-clanger .ax-badge__background { background-color: var(--color-product-tiny-clanger); }
 .ax-badge--critical-mass .ax-badge__background { background-color: var(--color-product-critical-mass); }
+.ax-badge--fantastic-voyage .ax-badge__background { background-color: var(--color-product-fantastic-voyage); }
 .ax-badge--paradise-lost .ax-badge__background { background-color: var(--color-product-paradise-lost); }
 .ax-badge--serene-sea .ax-badge__background { background-color: var(--color-product-serene-sea); }
+.ax-badge--electric-dreams .ax-badge__background { background-color: var(--color-product-electric-dreams); }
 .ax-badge--giant-leap .ax-badge__background { background-color: var(--color-product-giant-leap); }
 .ax-badge--moon-lagoon .ax-badge__background { background-color: var(--color-product-moon-lagoon); }
+.ax-badge--space-invader .ax-badge__background { background-color: var(--color-product-space-invader); }
 .ax-badge--terra-form .ax-badge__background { background-color: var(--color-product-terra-form); }
 .ax-badge--primeval-soup .ax-badge__background { background-color: var(--color-product-primeval-soup); }
+.ax-badge--sun-maker .ax-badge__background { background-color: var(--color-product-sun-maker); }
 .ax-badge--new-horizon .ax-badge__background { background-color: var(--color-product-new-horizon); }
 .ax-badge--blast-off .ax-badge__background { background-color: var(--color-product-blast-off); }
+.ax-badge--crash-course .ax-badge__background { background-color: var(--color-product-crash-course); }
 .ax-badge--ground-control .ax-badge__background { background-color: var(--color-product-ground-control); }
+.ax-badge--space-oddity .ax-badge__background { background-color: var(--color-product-space-oddity); }
+.ax-badge--deep-thought .ax-badge__background { background-color: var(--color-product-deep-thought); }
 .ax-badge--luna-dust .ax-badge__background { background-color: var(--color-product-luna-dust); }
 
 .ax-badge--full {
