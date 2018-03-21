@@ -56,7 +56,7 @@ export default class DocumentationShowCase extends Component {
     super(props);
     this.state = {
       isCodeVisisble: false,
-      theme: 'day',
+      theme: undefined,
     };
   }
 
@@ -141,8 +141,22 @@ export default class DocumentationShowCase extends Component {
           <CardContent size="small">
             <Grid responsive={ false } verticalAlign="middle">
               <GridCell>
-                { (onRefresh || configurations || hasCustomPropertySupport) && (
+                { (onRefresh || configurations || (!hidePreview && hasCustomPropertySupport)) && (
                   <List style="inline">
+                    { (!hidePreview && hasCustomPropertySupport) && (
+                      <ListItem>
+                        <Link
+                            onClick={ () => this.setState({ theme: 'day' }) }
+                            style={ theme === 'day' ? 'normal' : 'subtle' }>
+                          <Icon inline name="sun" />
+                        </Link> / <Link
+                            onClick={ () => this.setState({ theme: 'night' }) }
+                            style={ theme === 'night' ? 'normal' : 'subtle' }>
+                          <Icon inline name="moon" />
+                        </Link>
+                      </ListItem>
+                    ) }
+
                     { configurations && (
                       <ListItem>
                         <Dropdown flip="mirror">
@@ -173,20 +187,6 @@ export default class DocumentationShowCase extends Component {
                       <ListItem>
                         <Link onClick={ onRefresh } style="subtle">
                           <Icon name="retweet" />
-                        </Link>
-                      </ListItem>
-                    ) }
-
-                    { hasCustomPropertySupport && (
-                      <ListItem>
-                        <Link
-                            onClick={ () => this.setState({ theme: 'day' }) }
-                            style={ theme === 'day' ? 'normal' : 'subtle' }>
-                          <Icon inline name="sun" />
-                        </Link> / <Link
-                            onClick={ () => this.setState({ theme: 'night' }) }
-                            style={ theme === 'night' ? 'normal' : 'subtle' }>
-                          <Icon inline name="moon" />
                         </Link>
                       </ListItem>
                     ) }
