@@ -24,9 +24,14 @@
   transition-timing-function: var(--transition-function);
 }
 
-.ax-console-menu__item:hover,
-.ax-console-menu__item--active {
-  background-color: var(--color-theme-background--subtle);
+.ax-console-menu__item:hover {
+  background-color: var(--color-theme-background--hover);
+}
+
+.ax-console-menu__item:active,
+.ax-console-menu__item--active,
+.ax-console-menu__item--active:hover {
+  background-color: var(--color-theme-background--active);
 }
 
 .ax-console-menu__item--disabed,

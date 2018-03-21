@@ -1,12 +1,15 @@
 /* stylelint-disable max-line-length */
 :root {
-  --rgb-ui-carbon--darker: 48, 45, 53;
-  --rgb-ui-carbon--dark: 57, 55, 62;
-  --rgb-ui-carbon: 72, 70, 77;
+  --rgb-ui-carbon--darker: 43, 43, 43;
+  --rgb-ui-carbon--dark: 53, 53, 53;
+  --rgb-ui-carbon: 63, 63, 63;
 
-  --rgb-ui-white-noise--darker: 227, 225, 232;
-  --rgb-ui-white-noise--dark: 237, 235, 242;
-  --rgb-ui-white-noise: 247, 245, 252;
+  --rgb-ui-white-noise--darker: 228, 228, 228;
+  --rgb-ui-white-noise--dark: 238, 238, 238;
+  --rgb-ui-white-noise: 248, 248, 248;
+
+  --rgb-ui-white: 255, 255, 255;
+  --rgb-ui-black: 33, 33, 33;
 
   --rgb-ui-accent--hover: 48, 171, 232;
   --rgb-ui-accent: 35, 158, 219;
@@ -36,6 +39,9 @@
   --color-ui-white-noise--dark: rgb(var(--rgb-ui-white-noise--dark));
   --color-ui-white-noise: rgb(var(--rgb-ui-white-noise));
 
+  --color-ui-black: rgb(var(--rgb-ui-black));
+  --color-ui-white: rgb(var(--rgb-ui-white));
+
   --color-ui-accent--active: rgb(var(--rgb-ui-accent--active));
   --color-ui-accent: rgb(var(--rgb-ui-accent));
   --color-ui-accent--hover: rgb(var(--rgb-ui-accent--hover));
@@ -55,9 +61,6 @@
   --color-ui-info--hover: rgb(var(--rgb-ui-info--hover));
   --color-ui-info: rgb(var(--rgb-ui-info));
   --color-ui-info--active: rgb(var(--rgb-ui-info--active));
-
-  --color-ui-black: rgb(33, 33, 33);
-  --color-ui-white: rgb(255, 255, 255);
 
   --color-ui-highlight: rgb(215, 255, 0);
 

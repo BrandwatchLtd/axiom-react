@@ -11,13 +11,14 @@
   transition-timing-function: var(--transition-function);
 
   &:hover {
-    color: var(--color-ui-accent--hover);
+    background-color: var(--color-theme-background--hover);
   }
 }
 
-.ax-documentation-viewer__menu-item--active {
+.ax-documentation-viewer__menu-item--active,
+.ax-documentation-viewer__menu-item--active:hover {
   border-right-color: var(--color-ui-accent--active);
-  background-color: var(--color-theme-background--disabled);
+  background-color: var(--color-theme-background--active);
   color: var(--color-ui-accent--hover);
 }
 

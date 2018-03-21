@@ -78,7 +78,7 @@ export default class DataPicker extends Component {
     return (
       <Card { ...rest }
           border={ Boolean(dropdownMenu) }
-          color={ dropdownMenu ? 'default' : 'darker' }
+          shade={ dropdownMenu ? 'shade-1' : 'shade-3' }
           size="medium">
         <div className="ax-data-picker">
           <div className="ax-data-picker__dropdown">

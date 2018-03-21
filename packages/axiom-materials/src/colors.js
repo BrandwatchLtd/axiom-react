@@ -1,3 +1,15 @@
+import {
+  opacityTextSubtle,
+  opacityTextDisabled,
+  opacityBackgroundOverlayHeavy,
+  opacityBackgroundOverlayLight,
+  opacityBackgroundSubtle,
+  opacityBackgroundActive,
+  opacityBackgroundDisabled,
+  opacityBackgroundHover,
+  opacityBorder,
+} from './opacities';
+
 export const uiCarbon = { r: 72, g: 70, b: 77 };
 export const uiCarbonDark = { r: 57, g: 55, b: 62 };
 export const uiCarbonDarker = { r: 48, g: 45, b: 53 };
@@ -120,6 +132,40 @@ export const socialFacebook = { r: 59, g: 89, b: 152 };
 export const socialInstagram = { r: 183, g: 71, b: 146 };
 
 export const externalTwiiterBlue = socialTwitter;
+
+export const themeDayMain = uiCarbon;
+export const themeDayMainDark = uiCarbonDark;
+export const themeDayMainDarker = uiCarbonDarker;
+
+export const themeDayText = themeDayMain;
+export const themeDayTextSubtle = { ...themeDayMain, a: opacityTextSubtle };
+export const themeDayTextDisabled = { ...themeDayMain, a: opacityTextDisabled };
+
+export const themeDayBackgroundOverlayHeavy = { ...themeDayMain, a: opacityBackgroundOverlayHeavy };
+export const themeDayBackgroundOverlayLight = { ...themeDayMain, a: opacityBackgroundOverlayLight };
+export const themeDayBackgroundSubtle = { ...themeDayMain, a: opacityBackgroundSubtle };
+export const themeDayBackgroundActive = { ...themeDayMain, a: opacityBackgroundActive };
+export const themeDayBackgroundDisabled = { ...themeDayMain, a: opacityBackgroundDisabled };
+export const themeDayBackgroundHover = { ...themeDayMain, a: opacityBackgroundHover };
+
+export const themeDayBorder = { ...themeDayMain, a: opacityBorder };
+
+export const themeNightMain = uiWhiteNoise;
+export const themeNightMainDark = uiWhiteNoiseDark;
+export const themeNightMainDarker = uiWhiteNoiseDarker;
+
+export const themeNightText = themeNightMain;
+export const themeNightTextSubtle = { ...themeNightMain, a: opacityTextSubtle };
+export const themeNightTextDisabled = { ...themeNightMain, a: opacityTextDisabled };
+
+export const themeNightBackgroundOverlayHeavy = { ...themeNightMain, a: opacityBackgroundOverlayHeavy };
+export const themeNightBackgroundOverlayLight = { ...themeNightMain, a: opacityBackgroundOverlayLight };
+export const themeNightBackgroundSubtle = { ...themeNightMain, a: opacityBackgroundSubtle };
+export const themeNightBackgroundActive = { ...themeNightMain, a: opacityBackgroundActive };
+export const themeNightBackgroundDisabled = { ...themeNightMain, a: opacityBackgroundDisabled };
+export const themeNightBackgroundHover = { ...themeNightMain, a: opacityBackgroundHover };
+
+export const themeNightBorder = { ...themeNightMain, a: opacityBorder };
 
 export const productColorNames = {
   'tiny-clanger': 'Tiny Clanger',

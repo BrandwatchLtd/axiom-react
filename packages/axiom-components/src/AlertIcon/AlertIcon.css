@@ -41,6 +41,6 @@
 }
 
 .ax-alert-icon--subtle {
-  background-color: var(--color-theme-text--disabled);
+  background-color: var(--color-theme-background--overlay-light);
   color: var(--color-ui-white-noise);
 }

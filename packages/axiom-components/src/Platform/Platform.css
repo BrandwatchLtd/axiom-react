@@ -75,7 +75,7 @@
 
 .ax-platform__console,
 .ax-platform__console-header {
-  background-color: var(--color-theme-background--active);
+  background-color: var(--color-theme-background--shade-3);
   color: var(--color-theme-text);
 }
 

@@ -71,7 +71,7 @@
   left: 0;
   padding-top: var(--spacing-grid-size--x2);
   padding-bottom: var(--spacing-grid-size--x2);
-  background-color: var(--color-theme-day-text--subtle);
+  background-color: var(--color-theme-day-background--overlay-heavy);
   color: var(--color-theme-night-text);
 }
 
