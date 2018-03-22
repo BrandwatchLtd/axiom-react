@@ -101,7 +101,7 @@ export default class DocumentationShowCase extends Component {
     }
 
     return (
-      <Card border elevation="x2" space="x8" theme={ theme }>
+      <Card border space="x8" theme={ theme }>
         <CardContent separatorStyle="dotted" size="large">
           <Base cloak={ hidePreview || isCodeVisisble }>
             { (!centeredHorizontal && !centeredVertical) ? (

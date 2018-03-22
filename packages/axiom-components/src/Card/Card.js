@@ -7,17 +7,17 @@ import './Card.css';
 const cardListStyleProps = {
   divided: {
     border: false,
-    elevation: 'x0',
+    shadow: false,
     space: 'x0',
   },
   seamless: {
     border: false,
-    elevation: 'x0',
+    shadow: false,
     space: 'x0',
   },
   separate: {
     border: true,
-    elevation: 'x1',
+    shadow: false,
     space: 'x2',
   },
 };
@@ -30,21 +30,20 @@ export default class Card extends Component {
     border: PropTypes.bool,
     /** Content to be inserted inside the Card */
     children: PropTypes.node.isRequired,
-    /** Color variation */
-    color: PropTypes.oneOf(['default', 'dark', 'darker']),
-    /** Applies styling to give the Card an elevated feel from the page */
-    elevation: PropTypes.oneOf(['x0', 'x1', 'x2']),
     /** Applies styling to indicate the Card is in an hovered state */
     hover: PropTypes.bool,
     /** When provided, applies styling to indicate the Card is clickable */
     onClick: PropTypes.func,
+    /** Shade of the background color */
+    shade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
+    /** Applies a shadow to the card */
+    shadow: PropTypes.bool,
     /** Increases/decreases the size of the card */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
   static defaultProps = {
-    color: 'default',
-    elevation: 'x0',
+    shade: 'shade-1',
     size: 'medium',
   };
 
@@ -63,22 +62,22 @@ export default class Card extends Component {
       active,
       border,
       children,
-      color,
-      elevation,
       hover,
       onClick,
+      shade,
+      shadow,
       size,
       ...rest
     } = props;
 
     const classes = classnames('ax-card',
-      `ax-card--elevation-${elevation}`,
       `ax-card--size-${size}`, {
         'ax-card--active': active,
         'ax-card--border': border,
-        [`ax-card--color-${color}`]: color,
         'ax-card--clickable': onClick,
         'ax-card--hover': hover,
+        [`ax-card--${shade}`]: shade,
+        'ax-card--shadow': shadow,
       }
     );
 

@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 .ax-card {
   border-radius: var(--component-border-radius);
   color: var(--color-theme-text);
@@ -7,13 +9,55 @@
   transition-timing-function: var(--transition-function);
 
   @nest .ax-card-list--divided & {
-    border-bottom: 0.0625rem solid var(--color-theme-border);
+    border-bottom: 0.0625rem dotted var(--color-theme-border);
     border-radius: 0;
   }
 }
 
+.ax-card--border {
+  box-shadow: var(--drop-shadow-theme-border);
+}
+
+.ax-card--hover.ax-card--shadow,
+.ax-card--clickable:hover.ax-card--shadow {
+  box-shadow: var(--drop-shadow-theme-elevation--x2);
+}
+
+.ax-card--hover.ax-card--border.ax-card--shadow,
+.ax-card--clickable:hover.ax-card--border.ax-card--shadow {
+  box-shadow:
+    var(--drop-shadow-theme-border),
+    var(--drop-shadow-theme-elevation--x2);
+}
+
+.ax-card--shadow,
+.ax-card--active.ax-card--shadow,
+.ax-card--clickable:active.ax-card--shadow {
+  box-shadow: var(--drop-shadow-theme-elevation--x1);
+}
+
+.ax-card--border.ax-card--shadow,
+.ax-card--active.ax-card--border.ax-card--shadow,
+.ax-card--clickable:active.ax-card--border.ax-card--shadow {
+  box-shadow:
+    var(--drop-shadow-theme-border),
+    var(--drop-shadow-theme-elevation--x1);
+}
+
+.ax-card--shade-1 { background-color: var(--color-theme-background--shade-1); }
+.ax-card--shade-2 { background-color: var(--color-theme-background--shade-2); }
+.ax-card--shade-3 { background-color: var(--color-theme-background--shade-3); }
+.ax-card--shade-4 { background-color: var(--color-theme-background--shade-4); }
+
+.ax-card--clickable {
+  cursor: pointer;
+}
+
 .ax-card__content {
   position: relative;
+  transition-property: background-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
 }
 
 .ax-card__content--size-small {
@@ -31,6 +75,16 @@
   padding-bottom: var(--spacing-grid-size--x6);
 }
 
+.ax-card--hover:not(.ax-card--shadow) .ax-card__content,
+.ax-card--clickable:not(.ax-card--shadow):hover .ax-card__content {
+  background-color: var(--color-theme-background--hover);
+}
+
+.ax-card--active:not(.ax-card--shadow) .ax-card__content,
+.ax-card--clickable:not(.ax-card--shadow):active .ax-card__content {
+  background-color: var(--color-theme-background--active);
+}
+
 .ax-card__content:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -43,21 +97,6 @@
 
 .ax-card__content--separator-dotted::after { border-bottom-style: dotted; }
 .ax-card__content--separator-solid::after { border-bottom-style: solid; }
-
-.ax-card--color-default,
-.ax-card__content--color-default {
-  background-color: var(--color-theme-card-background);
-}
-
-.ax-card--color-dark,
-.ax-card__content--color-dark {
-  background-color: var(--color-theme-card-background--dark);
-}
-
-.ax-card--color-darker,
-.ax-card__content--color-darker {
-  background-color: var(--color-theme-card-background--darker);
-}
 
 .ax-card__image {
   position: relative;
@@ -112,60 +151,4 @@
     right: var(--spacing-grid-size--x6);
     left: var(--spacing-grid-size--x6);
   }
-}
-
-.ax-card--elevation-x1 { box-shadow: var(--drop-shadow-theme-elevation--x1); }
-.ax-card--elevation-x2 { box-shadow: var(--drop-shadow-theme-elevation--x2); }
-
-.ax-card--border {
-  &.ax-card--elevation-x0 {
-    box-shadow: var(--drop-shadow-theme-border);
-  }
-
-  &.ax-card--elevation-x1 {
-    box-shadow:
-      var(--drop-shadow-theme-border),
-      var(--drop-shadow-theme-elevation--x1);
-  }
-
-  &.ax-card--elevation-x2 {
-    box-shadow:
-      var(--drop-shadow-theme-border),
-      var(--drop-shadow-theme-elevation--x2);
-  }
-}
-
-.ax-card--clickable {
-  cursor: pointer;
-
-  &:hover,
-  &:active,
-  &.ax-card--hover {
-    transform: translateZ(0); /* New stacking context for box-shadow */
-  }
-
-  &:active {
-    box-shadow: var(--drop-shadow-theme-elevation--x1);
-
-    &.ax-card--border {
-      box-shadow:
-        var(--drop-shadow-theme-border),
-        var(--drop-shadow-theme-elevation--x1);
-    }
-  }
-
-  &.ax-card--hover:not(:active),
-  &:hover:not(:active) {
-    box-shadow: var(--drop-shadow-theme-elevation--x2);
-
-    &.ax-card--border {
-      box-shadow:
-        var(--drop-shadow-theme-border),
-        var(--drop-shadow-theme-elevation--x2);
-    }
-  }
-}
-
-.ax-card--active .ax-card__content {
-  background-color: var(--color-theme-card-background--active);
 }
