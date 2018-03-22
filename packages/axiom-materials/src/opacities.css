@@ -12,7 +12,8 @@
 
   --opacity-border: 0.2;
 
-  --opacity-shadow: 0.1;
+  --opacity-shadow--light: 0.14;
+  --opacity-shadow--heavy: 0.15;
 
   --opacity-input-border--focused: 0.5;
   --opacity-input-border--valid: 0.4;

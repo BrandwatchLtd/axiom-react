@@ -32,17 +32,17 @@
 
   --color-theme-night-border: rgba(var(--rgb-theme-night-main), var(--opacity-border));
 
-  --color-theme-night-shadow: rgba(var(--rgb-ui-black), var(--opacity-shadow));
   --color-theme-night-shadow--border: rgba(var(--rgb-theme-night-main), var(--opacity-border));
+  --color-theme-night-shadow--light: rgba(var(--rgb-ui-black), var(--opacity-shadow--light));
+  --color-theme-night-shadow--heavy: rgba(var(--rgb-ui-black), var(--opacity-shadow--heavy));
 
   --drop-shadow-theme-night-border: var(--drop-shadow-border) var(--color-theme-night-shadow--border);
-  --drop-shadow-theme-night-elevation--x1: var(--drop-shadow-elevation--x1) var(--color-theme-night-shadow);
-  --drop-shadow-theme-night-elevation--x2: var(--drop-shadow-elevation--x2) var(--color-theme-night-shadow);
-
-  --color-theme-night-card-background: var(--color-ui-carbon);
-  --color-theme-night-card-background--active: var(--color-ui-carbon--dark);
-  --color-theme-night-card-background--dark: var(--color-ui-carbon--dark);
-  --color-theme-night-card-background--darker: var(--color-ui-carbon--darker);
+  --drop-shadow-theme-night-elevation--x1:
+    var(--drop-shadow-elevation--x1) var(--color-theme-night-shadow--light),
+    var(--drop-shadow-definition) var(--color-theme-night-shadow--heavy);
+  --drop-shadow-theme-night-elevation--x2:
+    var(--drop-shadow-elevation--x2) var(--color-theme-night-shadow--light),
+    var(--drop-shadow-definition) var(--color-theme-night-shadow--heavy);
 }
 
 .ax-theme--night {
@@ -78,15 +78,11 @@
 
   --color-theme-border: var(--color-theme-night-border);
 
-  --color-theme-shadow: var(--color-theme-night-shadow);
   --color-theme-shadow--border: var(--color-theme-night-shadow--border);
+  --color-theme-shadow--light: var(--color-theme-night-shadow--heavy);
+  --color-theme-shadow--heavy: var(--color-theme-night-shadow--light);
 
   --drop-shadow-theme-border: var(--drop-shadow-theme-night-border);
   --drop-shadow-theme-elevation--x1: var(--drop-shadow-theme-night-elevation--x1);
   --drop-shadow-theme-elevation--x2: var(--drop-shadow-theme-night-elevation--x2);
-
-  --color-theme-card-background: var(--color-theme-night-card-background);
-  --color-theme-card-background--active: var(--color-theme-night-card-background--active);
-  --color-theme-card-background--dark: var(--color-theme-night-card-background--dark);
-  --color-theme-card-background--darker: var(--color-theme-night-card-background--darker);
 }
