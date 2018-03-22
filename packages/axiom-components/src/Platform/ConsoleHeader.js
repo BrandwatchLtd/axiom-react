@@ -11,6 +11,7 @@ export default class ConsoleHeader extends Component {
   static propTypes = {
     children: PropTypes.node,
     separator: PropTypes.bool,
+    shade: PropTypes.oneOf(['shade-4']),
     size: PropTypes.oneOf(['small', 'large']),
   };
 
@@ -25,11 +26,12 @@ export default class ConsoleHeader extends Component {
 
   render() {
     const { onConsoleClose, consolePosition } = this.context;
-    const { children, separator, size, ...rest } = this.props;
+    const { children, separator, shade, size, ...rest } = this.props;
     const classes = classnames(
       'ax-platform__console-header',
       `ax-platform__console-header--${size}`, {
         'ax-platform__console-header--separator': separator,
+        [`ax-platform__console-header--${shade}`]: shade,
       },
     );
 

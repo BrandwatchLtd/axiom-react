@@ -12,6 +12,11 @@ export default class Platform extends Component {
     openConsolePosition: PropTypes.oneOf(['left', 'right']),
     openConsoleWidth: PropTypes.string,
     responsive: PropTypes.bool,
+    shade: PropTypes.oneOf(['shade-1', 'shade-2']),
+  };
+
+  static defaultProps = {
+    shade: 'shade-1',
   };
 
   static childContextTypes = {
@@ -34,6 +39,7 @@ export default class Platform extends Component {
       onConsoleClose,
       openConsolePosition,
       responsive,
+      shade,
       ...rest
     } = this.props;
 
@@ -41,7 +47,7 @@ export default class Platform extends Component {
       'openConsoleWidth',
     ]);
 
-    const classes = classnames('ax-platform', {
+    const classes = classnames('ax-platform', `ax-platform--${shade}`, {
       'ax-platform--responsive': responsive,
       'ax-platform--console-open': openConsolePosition,
     });

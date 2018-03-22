@@ -79,10 +79,13 @@
   color: var(--color-theme-text);
 }
 
+.ax-platform__console-header--shade-4 {
+  background-color: var(--color-theme-background--shade-4);
+}
+
 .ax-platform,
 .ax-platform__canvas,
 .ax-platform__canvas-header {
-  background-color: var(--color-theme-background);
   color: var(--color-theme-text);
 }
 
@@ -93,6 +96,18 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 var(--page-padding-horizontal);
+}
+
+.ax-platform--shade-1.ax-platform,
+.ax-platform--shade-1 .ax-platform__canvas,
+.ax-platform--shade-1 .ax-platform__canvas-header {
+  background-color: var(--color-theme-background--shade-1);
+}
+
+.ax-platform--shade-2.ax-platform,
+.ax-platform--shade-2 .ax-platform__canvas,
+.ax-platform--shade-2 .ax-platform__canvas-header {
+  background-color: var(--color-theme-background--shade-2);
 }
 
 .ax-platform__console-header--separator,
