@@ -43,6 +43,11 @@
   @nest .ax-context--right & { left: calc(var(--cmp-context-tip-size) * -0.5); }
   @nest .ax-context--bottom & { top: calc(var(--cmp-context-tip-size) * -0.5); }
   @nest .ax-context--left & { right: calc(var(--cmp-context-tip-size) * -0.5); }
+
+  @nest .ax-context--success & { background-color: var(--color-ui-success); }
+  @nest .ax-context--warning & { background-color: var(--color-ui-warning); }
+  @nest .ax-context--error & { background-color: var(--color-ui-error); }
+  @nest .ax-context--info & { background-color: var(--color-ui-info); }
 }
 
 .ax-context--top .ax-context__arrow {
