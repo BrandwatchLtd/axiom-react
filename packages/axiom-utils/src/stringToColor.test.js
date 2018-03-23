@@ -18,7 +18,7 @@ describe('stringToColor', () => {
   });
 
   it('maps different strings to different colors', () => {
-    expect(stringToColor('a')).toBe('moon-lagoon');
-    expect(stringToColor('b')).toBe('space-invader');
+    expect(stringToColor('a')).toBe('blast-off');
+    expect(stringToColor('b')).toBe('ground-control');
   });
 });

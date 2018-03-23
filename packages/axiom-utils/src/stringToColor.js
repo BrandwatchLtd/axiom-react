@@ -1,6 +1,6 @@
 import { colors } from '@brandwatch/axiom-materials';
 
-const productColors = Object.keys(colors.productColorNames);
+const productColors = Object.keys(colors.userDefinedGraphColors);
 
 export default (string, colors = productColors) =>
   colors[
