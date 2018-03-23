@@ -1,0 +1,23 @@
+/* TomGrid */
+.ax-tom-grid {
+  display: grid;
+}
+
+.ax-tom-grid--row-gap--tiny { grid-row-gap: var(--cmp-grid-gutter-size-tiny); }
+.ax-tom-grid--row-gap--small { grid-row-gap: var(--cmp-grid-gutter-size-small); }
+.ax-tom-grid--row-gap--medium { grid-row-gap: var(--cmp-grid-gutter-size-medium); }
+.ax-tom-grid--row-gap--large { grid-row-gap: var(--cmp-grid-gutter-size-large); }
+
+.ax-tom-grid--column-gap--tiny { grid-column-gap: var(--cmp-grid-gutter-size-tiny); }
+.ax-tom-grid--column-gap--small { grid-column-gap: var(--cmp-grid-gutter-size-small); }
+.ax-tom-grid--column-gap--medium { grid-column-gap: var(--cmp-grid-gutter-size-medium); }
+.ax-tom-grid--column-gap--large { grid-column-gap: var(--cmp-grid-gutter-size-large); }
+
+.ax-tom-grid--auto-flow--row { grid-auto-flow: row; }
+.ax-tom-grid--auto-flow--column { grid-auto-flow: column; }
+.ax-tom-grid--auto-flow--dense { grid-auto-flow: dense; }
+
+/* TomGridItem */
+.ax-tom-grid-item--full {
+    grid-column: 1 / -1;
+}
