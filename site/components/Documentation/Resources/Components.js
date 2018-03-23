@@ -17,6 +17,7 @@ import Dropdown from './Components/Dropdown';
 import Editable from './Components/Editable';
 import Form from './Components/Form';
 import Grid from './Components/Grid';
+import TomGrid from './Components/TomGrid';
 import HorizontalRule from './Components/HorizontalRule';
 import Icon from './Components/Icon';
 import Image from './Components/Image';
@@ -111,6 +112,10 @@ export default class Documentation extends Component {
             id: 'grid',
             name: 'Grid',
             Component: Grid,
+          }, {
+            id: 'tom-grid',
+            name: 'TomGrid',
+            Component: TomGrid,
           }, {
             id: 'horizontal-rule',
             name: 'Horizontal Rule',
