@@ -15,6 +15,15 @@ export default class Dialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     /** Callback for closing the Dialog by clicking on the overlay */
     onRequestClose: PropTypes.func.isRequired,
+    /** Overlay shade */
+    overlayShade: PropTypes.oneOf([
+      'shade-1',
+      'shade-2',
+      'shade-3',
+      'shade-4',
+    ]),
+    /** Theme applied to the overlay */
+    overlayTheme: PropTypes.oneOf(['day', 'night']),
     /** Maximum size of the Dialog */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Theme of the dialog */
@@ -42,6 +51,8 @@ export default class Dialog extends Component {
       size,
       fullscreen,
       onRequestClose,
+      overlayShade,
+      overlayTheme,
       theme,
       ...rest
     } = this.props;
@@ -52,7 +63,10 @@ export default class Dialog extends Component {
     });
 
     return (
-      <Modal { ...rest } onOverlayClick={ onRequestClose }>
+      <Modal { ...rest }
+          onOverlayClick={ onRequestClose }
+          overlayShade={ overlayShade }
+          overlayTheme={ overlayTheme }>
         <Base className={ classes } theme={ theme }>
           { children }
         </Base>

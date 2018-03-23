@@ -37,7 +37,7 @@ export default class AlertDialog extends Component {
     return (
       <Modal { ...rest }
           onOverlayClick={ onRequestClose }
-          withOverlay={ false }>
+          overlayShade={ null }>
         <Base className="ax-alert-dialog">
           { children }
         </Base>

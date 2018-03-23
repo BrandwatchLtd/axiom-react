@@ -11,8 +11,20 @@
   z-index: var(--z-index-modal);
 }
 
-.ax-modal__container--overlay {
-  background-color: rgba(var(--rgb-ui-carbon), 0.3);
+.ax-modal__container--overlay-shade-1 {
+  background-color: rgba(var(--rgb-theme-background--shade-1), var(--opacity-background--overlay-modal));
+}
+
+.ax-modal__container--overlay-shade-2 {
+  background-color: rgba(var(--rgb-theme-background--shade-2), var(--opacity-background--overlay-modal));
+}
+
+.ax-modal__container--overlay-shade-3 {
+  background-color: rgba(var(--rgb-theme-background--shade-3), var(--opacity-background--overlay-modal));
+}
+
+.ax-modal__container--overlay-shade-4 {
+  background-color: rgba(var(--rgb-theme-background--shade-4), var(--opacity-background--overlay-modal));
 }
 
 .ax-modal {

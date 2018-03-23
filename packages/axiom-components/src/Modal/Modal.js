@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Base from '../Base/Base';
 import Portal from '../Portal/Portal';
 import './Modal.css';
 
@@ -19,11 +20,17 @@ export default class Modal extends Component {
     children: PropTypes.node,
     isOpen: PropTypes.bool.isRequired,
     onOverlayClick: PropTypes.func,
-    withOverlay: PropTypes.bool,
+    overlayShade: PropTypes.oneOf([
+      'shade-1',
+      'shade-2',
+      'shade-3',
+      'shade-4',
+    ]),
+    overlayTheme: PropTypes.oneOf(['day', 'night']),
   };
 
   static defaultProps = {
-    withOverlay: true,
+    overlayShade: 'shade-2',
   };
 
   componentDidMount() {
@@ -45,14 +52,21 @@ export default class Modal extends Component {
   }
 
   render() {
-    const { children, isOpen, withOverlay, onOverlayClick } = this.props;
+    const {
+      children,
+      isOpen,
+      overlayShade,
+      overlayTheme,
+      onOverlayClick,
+    } = this.props;
+
     const classes = classnames('ax-modal__container', {
-      'ax-modal__container--overlay': withOverlay,
+      [`ax-modal__container--overlay-${overlayShade}`]: overlayShade,
     });
 
     return isOpen ? (
       <Portal>
-        <div className={ classes }>
+        <Base className={ classes } theme={ overlayTheme }>
           { onOverlayClick && (
             <div className="ax-modal__mask" onClick={ onOverlayClick } />
           ) }
@@ -60,7 +74,7 @@ export default class Modal extends Component {
           <div className="ax-modal">
             { children }
           </div>
-        </div>
+        </Base>
       </Portal>
     ) : null;
   }
