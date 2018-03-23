@@ -20,10 +20,12 @@ export default class SparkLine extends Component {
     })).isRequired,
     /** Height of the line area */
     height: PropTypes.string.isRequired,
+    /** Width of the line area */
+    width: PropTypes.string,
   };
 
   render() {
-    const { benchmark, data, height } = this.props;
+    const { benchmark, data, height, width } = this.props;
     const flatValues = [].concat(...data.map(({ values }) => values));
 
     if (benchmark !== undefined) {
@@ -34,7 +36,7 @@ export default class SparkLine extends Component {
     const upper = Math.max(...flatValues);
 
     return (
-      <Base className="ax-spark-line" style={ { height } }>
+      <Base className="ax-spark-line" style={ { height, width } }>
         { benchmark !== undefined && (
           <div className="ax-spark-line__line">
             <Line

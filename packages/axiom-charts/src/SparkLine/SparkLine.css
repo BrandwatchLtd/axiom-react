@@ -1,5 +1,6 @@
 .ax-spark-line {
   position: relative;
+  max-width: 100%;
 }
 
 .ax-spark-line__line {
