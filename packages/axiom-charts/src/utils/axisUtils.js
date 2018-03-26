@@ -23,12 +23,13 @@ function getOrder(value) {
     return 0;
   }
 
-  return Math.ceil(Math.log10(value));
+  return Math.floor(Math.log10(value));
 }
 
 export function getAxisUpper(values) {
   const max = Math.max.apply(null, values);
-  return Math.pow(10, getOrder(max));
+  const mag = Math.pow(10, getOrder(max));
+  return Math.ceil(max / mag) * mag;
 }
 
 export default {
