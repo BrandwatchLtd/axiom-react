@@ -66,7 +66,7 @@ export default class ChartTableRows extends Component {
                   key={ label }
                   style={ { left: `${index * (100 / (xAxisLabels.length - 1))}%` } }>
                 <span className="ax-chart-table__xAxis-label">
-                  <Small textColor="subtle">{ label }</Small>
+                  <Small textBreak="none" textColor="subtle">{ label }</Small>
                 </span>
               </div>
             ) }

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.5...@brandwatch/axiom-components@0.3.0) (2018-03-27)
+
+
+### Bug Fixes
+
+* **TableRow:** Design fix for a dotted separator between table rows. ([7693d81](https://github.com/HHogg/axiom/commit/7693d81))
+
+
+### Features
+
+* **Badge:** Added new product colour options ([ea69b6c](https://github.com/HHogg/axiom/commit/ea69b6c))
+* **ColorPicker:** Added new product colour options ([48902c1](https://github.com/HHogg/axiom/commit/48902c1))
+* **Colors:** Added and updated UI, Product, Sentiment and Social colours. ([1049a10](https://github.com/HHogg/axiom/commit/1049a10))
+* **Text:** Added new social and product colour options ([920e4f0](https://github.com/HHogg/axiom/commit/920e4f0))
+
+
+
+
 <a name="0.2.5"></a>
 ## [0.2.5](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.2.4...@brandwatch/axiom-components@0.2.5) (2018-03-21)
 

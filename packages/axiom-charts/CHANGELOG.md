@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.2.0...@brandwatch/axiom-charts@1.3.0) (2018-03-27)
+
+
+### Bug Fixes
+
+* **DotPlot:** Incorrectly faded Benchmarking and Difference lines ([2688fdc](https://github.com/HHogg/axiom/commit/2688fdc))
+* **BarChart:** Do not break labels with (thin)spaces
+* **axisUtils.getAxisUpper:** rounds to same order of magnitude instead of next
+
+### Features
+
+* **Bar:** Added new product colour options ([fbd8a8a](https://github.com/HHogg/axiom/commit/fbd8a8a))
+* **DataPoint:** Added new product colour options ([d101fda](https://github.com/HHogg/axiom/commit/d101fda))
+* **Line:** Added new product colour options ([60d8363](https://github.com/HHogg/axiom/commit/60d8363))
+* **WordCloud:** Added new product colour options ([67228c6](https://github.com/HHogg/axiom/commit/67228c6))
+
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.1.2...@brandwatch/axiom-charts@1.2.0) (2018-03-21)
 
