@@ -26,7 +26,6 @@ export default class Select extends Component {
 
   static defaultProps = {
     value: '',
-    onClear: () => {},
     onSelect: () => {},
   };
 
@@ -38,7 +37,6 @@ export default class Select extends Component {
   constructor(props) {
     super(props);
     this.handleSelectOption = this.handleSelectOption.bind(this);
-    this.handleClear = this.handleClear.bind(this);
   }
 
   getChildContext() {
@@ -46,10 +44,6 @@ export default class Select extends Component {
       handleSelectOption: this.handleSelectOption,
       selectedOptionValue: this.props.selectedValue,
     };
-  }
-
-  handleClear() {
-    this.props.onClear();
   }
 
   handleSelectOption(value) {
