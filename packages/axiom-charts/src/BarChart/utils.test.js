@@ -1,4 +1,4 @@
-import { formatData, flattenValues } from './utils';
+import { formatData, flattenValues, hasMultipleValues } from './utils';
 
 const chartKey = [
   { color: 'giant-leap', label: 'Brand A' },
@@ -108,5 +108,29 @@ describe('BarChart (utils)', () => {
 
   it('it gets a flatt list of all values', () => {
     expect(flattenValues(data)).toMatchSnapshot();
+  });
+
+  describe('hasMultipleValues', () => {
+    it('returns true when data has multiple values', () => {
+      expect(hasMultipleValues(data)).toEqual(true);
+    });
+
+    it('returns false when data has just single values', () => {
+      const data = [
+        {
+          label: 'Technology',
+          values: {
+            'giant-leep': 20,
+          },
+        },
+        {
+          label: 'Books',
+          values: {
+            'serene-sea': 15,
+          },
+        },
+      ];
+      expect(hasMultipleValues(data)).toEqual(false);
+    });
   });
 });

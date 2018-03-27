@@ -20,3 +20,6 @@ export const flattenValues = (data) => {
     return memo;
   }, []);
 };
+
+export const hasMultipleValues = (data) =>
+  data.some(({ values }) => Object.keys(values).length > 1);

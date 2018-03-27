@@ -13,7 +13,7 @@ import ChartTableRows from '../ChartTable/ChartTableRows';
 import ChartTableVisual from '../ChartTable/ChartTableVisual';
 import DataPoint from '../DataPoint/DataPoint';
 import DataPoints from '../DataPoint/DataPoints';
-import { formatData, flattenValues } from './utils';
+import { formatData, flattenValues, hasMultipleValues } from './utils';
 import './BarChart.css';
 
 export default class BarChart extends Component {
@@ -149,6 +149,7 @@ export default class BarChart extends Component {
 
     const { selectedColor, selectedIndex } = this.state;
     const formattedData = formatData(chartKey, data);
+    const isMultipleValuesData = hasMultipleValues(data);
 
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
@@ -184,9 +185,9 @@ export default class BarChart extends Component {
                     benchmarkHeight={ rowSpace }
                     data={ data[index] }
                     fadeBenchmarkLine={ selectedIndex !== null }
-                    hideBars={ selectedIndex !== null && selectedIndex !== index }
+                    hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
                     hoverColor={ selectedColor }
-                    isHovered={ index === selectedIndex }
+                    isHovered={ isMultipleValuesData && index === selectedIndex }
                     label={ label }
                     lower={ finalLower }
                     onDropdownClose={ () => this.handleDropdonClose() }
