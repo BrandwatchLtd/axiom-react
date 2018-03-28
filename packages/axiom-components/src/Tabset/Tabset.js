@@ -36,10 +36,14 @@ export default class Tabset extends Component {
     }
   }
 
-  activateTab(index = 0) {
+  activateTab(index = 0, onClick, ...args) {
     this.setState({
       activeTabIndex: index,
     });
+
+    if (onClick) {
+      onClick(...args);
+    }
   }
 
   render() {
@@ -54,7 +58,7 @@ export default class Tabset extends Component {
       .filter((child) => isComponent(child, TabRef))
       .map((child, index) => cloneElement(child, {
         active: index === activeTabIndex,
-        onClick: () => this.activateTab(index),
+        onClick: (...args) => this.activateTab(index, child.props.onClick, ...args),
       }));
 
     return (
