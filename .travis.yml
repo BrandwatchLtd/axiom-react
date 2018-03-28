@@ -10,6 +10,7 @@ branches:
 before_script:
 - yarn ci:setup
 script:
+- yarn lint:commits
 - yarn lint
 - yarn ci:test
 after_success:

@@ -8,6 +8,7 @@
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint 'packages/**/*.css' 'site/**/*.css'",
     "lint:js": "eslint --config .eslintrc packages site",
+    "lint:commits": "./scripts/validate_commit_messages.sh",
     "publish:packages": "bash ./scripts/publish_packages.sh",
     "publish:site": "bash ./scripts/publish_site.sh",
     "start": "bash ./scripts/start_development.sh",
@@ -65,6 +66,7 @@
     "stylelint": "^7.9.0",
     "stylelint-order": "^0.6.0",
     "uglifyjs-webpack-plugin": "v1.0.0-beta.2",
+    "validate-commit": "^3.4.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   }
