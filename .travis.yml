@@ -9,6 +9,7 @@ branches:
     - master
 before_script:
 - yarn ci:setup
+- git diff --exit-code # make sure that yarn.lock didn't change
 script:
 - yarn lint:commits
 - yarn lint
