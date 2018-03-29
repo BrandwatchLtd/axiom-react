@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-composites",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Brandwatch Axiom - Composites",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@brandwatch/axiom-automation-testing": "^0.0.4",
-    "@brandwatch/axiom-components": "^1.0.2",
+    "@brandwatch/axiom-components": "^1.1.0",
     "@brandwatch/axiom-localization": "^0.0.3",
-    "@brandwatch/axiom-utils": "^0.1.1",
+    "@brandwatch/axiom-utils": "^0.1.2",
     "lodash.omit": "^4.5.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0"

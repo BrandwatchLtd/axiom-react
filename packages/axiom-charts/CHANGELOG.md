@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.3.3...@brandwatch/axiom-charts@1.4.0) (2018-03-29)
+
+
+### Features
+
+* **charts:** add support for sentiment colors ([83809ab](https://github.com/HHogg/axiom/commit/83809ab))
+
+
+
+
 <a name="1.3.3"></a>
 ## [1.3.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.3.2...@brandwatch/axiom-charts@1.3.3) (2018-03-28)
 
