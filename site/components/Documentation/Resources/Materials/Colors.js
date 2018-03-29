@@ -94,6 +94,12 @@ export default class Documentation extends Component {
             <ColorDot name="Default" rgb={ colors.sentimentNegative } />
             <ColorDot name="Hover" rgb={ colors.sentimentNegativeHover } />
           </ColorSet>
+
+          <ColorSet name="Neutral">
+            <ColorDot name="Active" rgb={ colors.sentimentNeutralActive } />
+            <ColorDot name="Default" rgb={ colors.sentimentNeutral } />
+            <ColorDot name="Hover" rgb={ colors.sentimentNeutralHover } />
+          </ColorSet>
         </ColorGrid>
 
         <ColorGrid name="Product Colours">

@@ -38,6 +38,9 @@
 .ax-data-point--space-oddity { color: var(--color-product-space-oddity); }
 .ax-data-point--deep-thought { color: var(--color-product-deep-thought); }
 .ax-data-point--luna-dust { color: var(--color-product-luna-dust); }
+.ax-data-point--sentiment-positive { color: var(--color-sentiment-positive); }
+.ax-data-point--sentiment-negative { color: var(--color-sentiment-negative); }
+.ax-data-point--sentiment-neutral { color: var(--color-sentiment-neutral); }
 
 .ax-data-points--clickable {
   cursor: pointer;
@@ -62,6 +65,9 @@
     & .ax-data-point--space-oddity { color: var(--color-product-space-oddity--hover); }
     & .ax-data-point--deep-thought { color: var(--color-product-deep-thought--hover); }
     & .ax-data-point--luna-dust { color: var(--color-product-luna-dust--hover); }
+    & .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive--hover); }
+    & .ax-data-point--sentiment-negative { color: var(--color-sentiment-negative--hover); }
+    & .ax-data-point--sentiment-neutral { color: var(--color-sentiment-neutral--hover); }
   }
 
   &:active {
@@ -84,5 +90,8 @@
     & .ax-data-point--space-oddity { color: var(--color-product-space-oddity--active); }
     & .ax-data-point--deep-thought { color: var(--color-product-deep-thought--active); }
     & .ax-data-point--luna-dust { color: var(--color-product-luna-dust--active); }
+    & .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive--active); }
+    & .ax-data-point--sentiment-negative { color: var(--color-sentiment-negative--active); }
+    & .ax-data-point--sentiment-neutral { color: var(--color-sentiment-neutral--active); }
   }
 }
