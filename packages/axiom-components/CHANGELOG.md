@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="1.0.2"></a>
+      <a name="1.1.0"></a>
+# [1.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.2...@brandwatch/axiom-components@1.1.0) (2018-03-29)
+
+
+### Features
+
+* **Base:** Add container property to Base component for relative positioning ([bfc3eee](https://github.com/HHogg/axiom/commit/bfc3eee))
+
+
+
+
+      <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.1...@brandwatch/axiom-components@1.0.2) (2018-03-28)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.0.1"></a>
+  <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.0...@brandwatch/axiom-components@1.0.1) (2018-03-27)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.0.0"></a>
+<a name="1.0.0"></a>
 # [1.0.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@0.3.0...@brandwatch/axiom-components@1.0.0) (2018-03-27)
 
 

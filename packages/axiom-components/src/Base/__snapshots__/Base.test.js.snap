@@ -32,6 +32,12 @@ exports[`Base renders cloakContainer 1`] = `
 />
 `;
 
+exports[`Base renders container 1`] = `
+<div
+  className="ax-container"
+/>
+`;
+
 exports[`Base renders functional Component 1`] = `<span />`;
 
 exports[`Base renders sticky with style 1`] = `
@@ -177,12 +183,6 @@ exports[`Base renders with textCenter true 1`] = `
 />
 `;
 
-exports[`Base renders with textColor night 1`] = `
-<div
-  className="ax-text--color-night"
-/>
-`;
-
 exports[`Base renders with textColor day 1`] = `
 <div
   className="ax-text--color-day"
@@ -198,6 +198,12 @@ exports[`Base renders with textColor disabled 1`] = `
 exports[`Base renders with textColor error 1`] = `
 <div
   className="ax-text--color-error"
+/>
+`;
+
+exports[`Base renders with textColor night 1`] = `
+<div
+  className="ax-text--color-night"
 />
 `;
 

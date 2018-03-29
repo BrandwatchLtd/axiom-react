@@ -49,6 +49,9 @@
   &.ax-bars__bar-rect--space-oddity { background-color: var(--color-product-space-oddity); }
   &.ax-bars__bar-rect--deep-thought { background-color: var(--color-product-deep-thought); }
   &.ax-bars__bar-rect--luna-dust { background-color: var(--color-product-luna-dust); }
+  &.ax-bars__bar-rect--sentiment-positive { background-color: var(--color-sentiment-positive); }
+  &.ax-bars__bar-rect--sentiment-negative { background-color: var(--color-sentiment-negative); }
+  &.ax-bars__bar-rect--sentiment-neutral { background-color: var(--color-sentiment-neutral); }
 }
 
 .ax-bars__bar--clickable {
@@ -152,6 +155,21 @@
     &.ax-bars__bar-rect--luna-dust {
       &:hover { background-color: var(--color-product-luna-dust--hover); }
       &:active { background-color: var(--color-product-luna-dust--active); }
+    }
+
+    &.ax-bars__bar-rect--sentiment-positive {
+      &:hover { background-color: var(--color-sentiment-positive--hover); }
+      &:active { background-color: var(--color-sentiment-positive--active); }
+    }
+
+    &.ax-bars__bar-rect--sentiment-negative {
+      &:hover { background-color: var(--color-sentiment-negative--hover); }
+      &:active { background-color: var(--color-sentiment-negative--active); }
+    }
+
+    &.ax-bars__bar-rect--sentiment-neutral {
+      &:hover { background-color: var(--color-sentiment-neutral--hover); }
+      &:active { background-color: var(--color-sentiment-neutral--active); }
     }
   }
 }

@@ -19,20 +19,30 @@ export default class LinePoint extends Component {
      * been hovered over.
      */
     TooltipContext: PropTypes.func,
-    /** Color of the DatPoint */
+    /** Color of the DataPoint */
     color: PropTypes.oneOf([
       'tiny-clanger',
       'critical-mass',
+      'fantastic-voyage',
       'paradise-lost',
       'serene-sea',
+      'electric-dreams',
       'giant-leap',
       'moon-lagoon',
+      'space-invader',
       'terra-form',
       'primeval-soup',
+      'sun-maker',
       'new-horizon',
       'blast-off',
+      'crash-course',
       'ground-control',
+      'space-oddity',
+      'deep-thought',
       'luna-dust',
+      'sentiment-positive',
+      'sentiment-negative',
+      'sentiment-neutral',
     ]).isRequired,
     /** Applies hover state, useful to retain hover styling. */
     hover: PropTypes.bool,

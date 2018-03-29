@@ -126,6 +126,10 @@
   z-index: var(--z-index-sticky);
 }
 
+.ax-container {
+  position: relative;
+}
+
 .ax-cloak {
   opacity: 0;
   transition-property: opacity;
