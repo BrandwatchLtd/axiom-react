@@ -28,6 +28,9 @@ export default class DataPoint extends Component {
       'space-oddity',
       'deep-thought',
       'luna-dust',
+      'sentiment-positive',
+      'sentiment-negative',
+      'sentiment-neutral',
     ]).isRequired,
     /** SKIP */
     r: PropTypes.number,

@@ -43,14 +43,6 @@ export const uiWhite = { r: 255, g: 255, b: 255 };
 
 export const uiHighlight = { r: 215, g: 255, b: 0 };
 
-export const sentimentPositiveActive = { r: 62, g: 148, b: 76 };
-export const sentimentPositive = { r: 76, g: 161, b: 90 };
-export const sentimentPositiveHover = { r: 90, g: 173, b: 104 };
-
-export const sentimentNegativeActive = { r: 201, g: 58, b: 58 };
-export const sentimentNegative = { r: 215, g: 74, b: 74 };
-export const sentimentNegativeHover = { r: 227, g: 89, b: 89 };
-
 export const productTinyClangerActive = { r: 232, g: 132, b: 166 };
 export const productTinyClanger = { r: 244, g: 152, b: 183 };
 export const productTinyClangerHover = { r: 255, g: 171, b: 199 };
@@ -126,6 +118,19 @@ export const productDeepThoughtHover = { r: 204, g: 204, b: 204 };
 export const productLunaDustActive = { r: 103, g: 129, b: 143 };
 export const productLunaDust = { r: 120, g: 144, b: 156 };
 export const productLunaDustHover = { r: 138, g: 158, b: 168 };
+
+export const sentimentPositiveActive = { r: 62, g: 148, b: 76 };
+export const sentimentPositive = { r: 76, g: 161, b: 90 };
+export const sentimentPositiveHover = { r: 90, g: 173, b: 104 };
+
+export const sentimentNegativeActive = { r: 201, g: 58, b: 58 };
+export const sentimentNegative = { r: 215, g: 74, b: 74 };
+export const sentimentNegativeHover = { r: 227, g: 89, b: 89 };
+
+export const sentimentNeutralActive = productDeepThoughtActive;
+export const sentimentNeutral = productDeepThought;
+export const sentimentNeutralHover = productDeepThoughtHover;
+
 
 export const socialTwitter = { r: 29, g: 161, b: 242 };
 export const socialFacebook = { r: 59, g: 89, b: 152 };

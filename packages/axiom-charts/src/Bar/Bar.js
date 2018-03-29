@@ -27,6 +27,9 @@ export default class Bar extends Component {
       'space-oddity',
       'deep-thought',
       'luna-dust',
+      'sentiment-positive',
+      'sentiment-negative',
+      'sentiment-neutral',
     ]).isRequired,
     /** When true the bar is faded */
     isFaded: PropTypes.bool,

@@ -147,13 +147,17 @@
   --color-product-luna-dust: rgb(120, 144, 156);
   --color-product-luna-dust--hover: rgb(138, 158, 168);
 
-  --color-sentiment-neagtive--active: rgb(201, 58, 58);
-  --color-sentiment-neagtive: rgb(215, 74, 74);
-  --color-sentiment-neagtive--hover: rgb(227, 89, 89);
+  --color-sentiment-negative--active: rgb(201, 58, 58);
+  --color-sentiment-negative: rgb(215, 74, 74);
+  --color-sentiment-negative--hover: rgb(227, 89, 89);
 
   --color-sentiment-positive--active: rgb(62, 148, 76);
   --color-sentiment-positive: rgb(76, 161, 90);
   --color-sentiment-positive--hover: rgb(90, 173, 104);
+
+  --color-sentiment-neutral--active: var(--color-product-deep-thought--active);
+  --color-sentiment-neutral: var(--color-product-deep-thought);
+  --color-sentiment-neutral--hover: var(--color-product-deep-thought--hover);
 
   --color-social-twitter: rgb(29, 161, 242);
   --color-social-facebook: rgb(59, 89, 152);

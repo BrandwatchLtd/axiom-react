@@ -44,6 +44,9 @@ export default class Line extends Component {
       'space-oddity',
       'deep-thought',
       'luna-dust',
+      'sentiment-positive',
+      'sentiment-negative',
+      'sentiment-neutral',
     ]).isRequired,
     /** Dash length */
     dasharray: PropTypes.string,

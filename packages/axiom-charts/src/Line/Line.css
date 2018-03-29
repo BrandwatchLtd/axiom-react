@@ -77,3 +77,6 @@
 .ax-line--space-oddity { color: var(--color-product-space-oddity); }
 .ax-line--deep-thought { color: var(--color-product-deep-thought); }
 .ax-line--luna-dust { color: var(--color-product-luna-dust); }
+.ax-line--sentiment-positive { color: var(--color-sentiment-positive); }
+.ax-line--sentiment-negative { color: var(--color-sentiment-negative); }
+.ax-line--sentiment-neutral { color: var(--color-sentiment-neutral); }

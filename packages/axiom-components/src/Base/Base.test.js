@@ -95,6 +95,12 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders container', () => {
+    const component = getComponent({ container: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with textBreak', () => {
     ['none', 'all', 'word'].forEach((textBreak) => {
       it(textBreak, () => {
