@@ -26,6 +26,10 @@ export default class Base extends Component {
     /** Adds the ability control the visibility of a child cloaked element */
     cloakContainer: PropTypes.bool,
     /**
+     * Controls if a component should be rendered with `position: relative;`
+     */
+    container: PropTypes.bool,
+    /**
      * Control over when the element should be hidden until.
      * Opposite of `visibleUntil`.
      */
@@ -128,6 +132,7 @@ export default class Base extends Component {
       className,
       cloak,
       cloakContainer,
+      container,
       hiddenUntil,
       space,
       sticky,
@@ -154,6 +159,7 @@ export default class Base extends Component {
       'ax-cloak': cloak !== undefined,
       'ax-cloak--visible': cloak === false,
       'ax-cloak__container': cloakContainer,
+      'ax-container': container,
       [`ax-hidden-until--${hiddenUntil}`]: hiddenUntil,
       [`ax-visible-until--${visibleUntil}`]: visibleUntil,
       [`ax-space--${space}`]: space,
