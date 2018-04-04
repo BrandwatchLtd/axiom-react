@@ -43,7 +43,7 @@
   --drop-shadow-elevation--x2: 0 0.25rem 0.5625rem 0;
 
   /**
-   * Chart variables.
+   * Shared chart variables.
    *
    *  [1] Needed to normalise bar widths. However
    *      this is not in relation to anything so
@@ -63,5 +63,10 @@
   --cmp-benchmark-line-height: var(--cmp-dot-plot-diameter);
 
   --cmp-chart-overflow-space: calc(var(--cmp-chart-label-width) + var(--cmp-dot-plot-radius));
+
+  /**
+   * Shared component variables.
+   */
+  --cmp-context-tip-edge-to-edge: 1.5rem;
 }
 /* stylelint-enable */
