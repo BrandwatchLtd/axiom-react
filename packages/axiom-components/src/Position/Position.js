@@ -3,6 +3,7 @@ import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import popperJS from 'popper.js';
 import omit from 'lodash.omit';
+import classnames from 'classnames';
 import { findComponent } from '@brandwatch/axiom-utils';
 import Portal from '../Portal/Portal';
 import { PositionSourceRef } from './PositionSource';
@@ -156,6 +157,11 @@ export default class Position extends Component {
     const { children, enabled, isVisible, onMaskClick, showArrow, ...rest } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
+
+    const classes = classnames('ax-position', {
+      'ax-position--arrow': showArrow,
+    });
+
     const props = omit(rest, [
       'flip',
       'offset',
@@ -174,7 +180,7 @@ export default class Position extends Component {
               <div className="ax-position__mask" onClick={ onMaskClick } />
             ) }
 
-            <div className="ax-position" ref={ (el) => this._content = el }>
+            <div className={ classes } ref={ (el) => this._content = el }>
               {
                 cloneElement(findComponent(children, PositionSourceRef), {
                   arrowRef: showArrow

@@ -1,6 +1,10 @@
 .ax-position {
-  margin: calc(var(--cmp-context-tip-edge-to-edge) * 0.5);
+  margin: calc(var(--spacing-grid-size--x1) * 0.5);
   z-index: var(--z-index-position);
+}
+
+.ax-position--arrow {
+  margin: calc((var(--cmp-context-tip-edge-to-edge) * 0.5) + var(--spacing-grid-size--x1));
 }
 
 .ax-position__mask {
