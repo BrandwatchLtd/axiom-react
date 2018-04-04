@@ -18,6 +18,8 @@ export default class Dropdown extends Component {
      * Adds control to enable or disable showing the DropdownSource
      */
     enabled: PropTypes.bool,
+    /** Controls the starting offset of the content */
+    offset: PropTypes.oneOf(['start', 'middle', 'end']),
     /**
      * Invoked when the Dropdown is closed.
      */
@@ -80,13 +82,14 @@ export default class Dropdown extends Component {
   }
 
   render() {
-    const { children, position, ...rest } = this.props;
+    const { children, offset, position, ...rest } = this.props;
     const { isVisible } = this.state;
 
     return (
       <Position
           { ...rest }
           isVisible={ isVisible }
+          offset={ offset }
           onMaskClick={ () => this.close() }
           position={ position }>
         <PositionTarget>{ findComponent(children, DropdownTargetRef) }</PositionTarget>
