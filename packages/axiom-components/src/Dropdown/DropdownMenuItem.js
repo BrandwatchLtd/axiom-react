@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import omit from 'lodash.omit';
 import ContextMenuItem from '../Context/ContextMenuItem';
 
 export default class DropdownMenuItem extends Component {
@@ -9,6 +10,10 @@ export default class DropdownMenuItem extends Component {
     disabled: PropTypes.bool,
     /** SKIP */
     index: PropTypes.string.isRequired,
+    /**
+    * Whether the menu should stay open after being clicked.
+    */
+    keepOpen: PropTypes.bool,
      /**
      * Whether the menu is part of a multi-selection menu. When true, this
      * will disable automatically closing the DropdownMenu when clicked.
@@ -78,9 +83,9 @@ export default class DropdownMenuItem extends Component {
 
   handleClick(event) {
     const { closeDropdown } = this.context;
-    const { multiSelect, onClick } = this.props;
+    const { multiSelect, keepOpen, onClick } = this.props;
 
-    if (closeDropdown && !multiSelect) closeDropdown();
+    if (closeDropdown && !multiSelect && !keepOpen) closeDropdown();
 
     if (onClick) onClick(event);
   }
@@ -109,7 +114,7 @@ export default class DropdownMenuItem extends Component {
 
     return (
       <ContextMenuItem
-          { ...rest }
+          { ...omit(rest, ['keepOpen']) }
           focused={ this.context.focusedIndex === index }
           onClick={ this.handleClick }
           onMouseOver={ this.handleMouseOver }>

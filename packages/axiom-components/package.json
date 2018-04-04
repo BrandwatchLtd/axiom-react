@@ -14,6 +14,7 @@
     "@brandwatch/axiom-utils": "^0.1.2",
     "classnames": "^2.2.1",
     "date-fns": "^1.0.0",
+    "enzyme-to-json": "^3.3.3",
     "lodash.omit": "^4.5.0",
     "popper.js": "^1.12.5",
     "prop-types": "^15.6.0",
