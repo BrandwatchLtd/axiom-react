@@ -51,6 +51,7 @@ exports[`DataPicker renders with defaultProps 1`] = `
                 className="ax-data-picker__link"
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
+                onFocus={[Function]}
               >
                 <a
                   className="ax-link ax-link--style-body"
@@ -171,6 +172,7 @@ exports[`DataPicker renders with just DataPickerDropdown 1`] = `
                 className="ax-data-picker__link"
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
+                onFocus={[Function]}
               >
                 <a
                   className="ax-link ax-link--style-body"
@@ -334,6 +336,7 @@ exports[`DataPicker renders with onSelectColor 1`] = `
                 className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--clickable"
                 data-ax-at="98df24c31c96"
                 onClick={[Function]}
+                onFocus={[Function]}
                 style={
                   Object {
                     "height": ".75rem",
@@ -354,6 +357,7 @@ exports[`DataPicker renders with onSelectColor 1`] = `
                 className="ax-data-picker__link"
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
+                onFocus={[Function]}
               >
                 <a
                   className="ax-link ax-link--style-body"
@@ -474,6 +478,7 @@ exports[`DataPicker renders with value 1`] = `
                 className="ax-data-picker__link"
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
+                onFocus={[Function]}
               >
                 <a
                   className="ax-link ax-link--style-body"

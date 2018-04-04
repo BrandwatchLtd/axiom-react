@@ -6,7 +6,7 @@ export const DropdownSourceRef = 'DropdownSource';
 
 export default class DropdownSource extends Component {
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     /**
      * Adds focus state to the first item in the dropdown
      */
@@ -117,6 +117,7 @@ export default class DropdownSource extends Component {
 
     switch (key) {
     case 'Escape':
+    case 'Tab':
       closeDropdown();
       break;
     case 'ArrowDown':

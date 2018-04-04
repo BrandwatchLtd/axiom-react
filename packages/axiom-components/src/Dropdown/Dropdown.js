@@ -62,11 +62,9 @@ export default class Dropdown extends Component {
   }
 
   open() {
-    const { enabled, onRequestOpen } = this.props;
+    const { onRequestOpen } = this.props;
 
-    if (enabled) {
-      this.setState({ isVisible: true });
-    }
+    this.setState({ isVisible: true });
 
     if (onRequestOpen) onRequestOpen();
   }
