@@ -70,15 +70,21 @@ export default class Documentation extends Component {
 
         <ColorGrid name="Social Colours">
           <ColorSet name="Twitter">
-            <ColorDot rgb={ colors.socialTwitter } />
+            <ColorDot name="Active" rgb={ colors.socialTwitterActive } />
+            <ColorDot name="Default" rgb={ colors.socialTwitter } />
+            <ColorDot name="Hover" rgb={ colors.socialTwitterHover } />
           </ColorSet>
 
           <ColorSet name="Facebook">
-            <ColorDot rgb={ colors.socialFacebook } />
+            <ColorDot name="Active" rgb={ colors.socialFacebookActive } />
+            <ColorDot name="Default" rgb={ colors.socialFacebook } />
+            <ColorDot name="Hover" rgb={ colors.socialFacebookHover } />
           </ColorSet>
 
           <ColorSet name="Instagram">
-            <ColorDot rgb={ colors.socialInstagram } />
+            <ColorDot name="Active" rgb={ colors.socialInstagramActive } />
+            <ColorDot name="Default" rgb={ colors.socialInstagram } />
+            <ColorDot name="Hover" rgb={ colors.socialInstagramHover } />
           </ColorSet>
         </ColorGrid>
 
