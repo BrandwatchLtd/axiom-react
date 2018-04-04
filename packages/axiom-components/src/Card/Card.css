@@ -8,6 +8,10 @@
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
+  &:focus {
+    outline: none;
+  }
+
   @nest .ax-card-list--divided & {
     border-bottom: 0.0625rem dotted var(--color-theme-border);
     border-radius: 0;
@@ -19,11 +23,13 @@
 }
 
 .ax-card--hover.ax-card--shadow,
+.ax-card--clickable:focus.ax-card--shadow,
 .ax-card--clickable:hover.ax-card--shadow {
   box-shadow: var(--drop-shadow-theme-elevation--x2);
 }
 
 .ax-card--hover.ax-card--border.ax-card--shadow,
+.ax-card--clickable:focus.ax-card--border.ax-card--shadow,
 .ax-card--clickable:hover.ax-card--border.ax-card--shadow {
   box-shadow:
     var(--drop-shadow-theme-border),
@@ -76,6 +82,7 @@
 }
 
 .ax-card--hover:not(.ax-card--shadow) .ax-card__content,
+.ax-card--clickable:not(.ax-card--shadow):focus .ax-card__content,
 .ax-card--clickable:not(.ax-card--shadow):hover .ax-card__content {
   background-color: var(--color-theme-background--hover);
 }
