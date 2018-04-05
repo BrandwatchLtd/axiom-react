@@ -131,10 +131,17 @@ export const sentimentNeutralActive = productDeepThoughtActive;
 export const sentimentNeutral = productDeepThought;
 export const sentimentNeutralHover = productDeepThoughtHover;
 
-
+export const socialTwitterActive = { r: 16, g: 148, b: 230 };
 export const socialTwitter = { r: 29, g: 161, b: 242 };
+export const socialTwitterHover = { r: 43, g: 174, b: 255 };
+
+export const socialFacebookActive = { r: 48, g: 77, b: 140 };
 export const socialFacebook = { r: 59, g: 89, b: 152 };
+export const socialFacebookHover = { r: 73, g: 102, b: 166 };
+
+export const socialInstagramActive = { r: 171, g: 58, b: 133 };
 export const socialInstagram = { r: 183, g: 71, b: 146 };
+export const socialInstagramHover = { r: 196, g: 86, b: 160 };
 
 export const externalTwiiterBlue = socialTwitter;
 

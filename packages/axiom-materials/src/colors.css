@@ -159,8 +159,16 @@
   --color-sentiment-neutral: var(--color-product-deep-thought);
   --color-sentiment-neutral--hover: var(--color-product-deep-thought--hover);
 
+  --color-social-twitter--active: rgb(16, 148, 230);
   --color-social-twitter: rgb(29, 161, 242);
+  --color-social-twitter--hover: rgb(43, 174, 255);
+
+  --color-social-facebook--active: rgb(48, 77, 140);
   --color-social-facebook: rgb(59, 89, 152);
+  --color-social-facebook--hover: rgb(73, 102, 166);
+
+  --color-social-instagram--active: rgb(171, 58, 133);
   --color-social-instagram: rgb(183, 71, 146);
+  --color-social-instagram--hover: rgb(196, 86, 160);
 }
 /* stylelint-enable */
