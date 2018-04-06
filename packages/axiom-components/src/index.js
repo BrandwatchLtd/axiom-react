@@ -123,6 +123,8 @@ export { default as TextInputButton } from './Form/TextInputButton';
 export { default as TextInputIcon } from './Form/TextInputIcon';
 export { default as Toggle } from './Toggle/Toggle';
 export { default as Tool } from './Toolbar/Tool';
+export { default as TomGrid } from './TomGrid/TomGrid';
+export { default as TomGridItem } from './TomGrid/TomGridItem';
 export { default as Toolbar } from './Toolbar/Toolbar';
 export { default as Tooltip } from './Tooltip/Tooltip';
 export { default as TooltipContent } from './Tooltip/TooltipContent';
