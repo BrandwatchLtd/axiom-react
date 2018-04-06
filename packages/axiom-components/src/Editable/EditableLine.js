@@ -24,9 +24,7 @@ export default class EditableLine extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.value !== nextProps.value) {
-      this.setState({ value: nextProps.value });
-    }
+    this.setState({ value: nextProps.value });
   }
 
   handleOnBlur(event) {

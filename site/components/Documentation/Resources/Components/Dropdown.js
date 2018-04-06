@@ -40,7 +40,7 @@ export default class Documentation extends Component {
             <DocumentationShowCase centered>
               <Dropdown flip="mirror" showArrow={ false }>
                 <DropdownTarget>
-                  <Link>
+                  <Link tabIndex="0">
                     { selected } <TextIcon name="chevron-down" />
                   </Link>
                 </DropdownTarget>

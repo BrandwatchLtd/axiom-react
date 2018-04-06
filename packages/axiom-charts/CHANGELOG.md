@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.2"></a>
+## [1.4.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.4.1...@brandwatch/axiom-charts@1.4.2) (2018-04-05)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="1.4.1"></a>
+## [1.4.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.4.0...@brandwatch/axiom-charts@1.4.1) (2018-04-05)
+
+
+### Bug Fixes
+
+* **axisUtils:** when upper and lower are equal return no labels ([e5b56e4](https://github.com/HHogg/axiom/commit/e5b56e4))
+
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.3.3...@brandwatch/axiom-charts@1.4.0) (2018-03-29)
 

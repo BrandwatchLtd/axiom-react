@@ -3,7 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="1.1.0"></a>
+    <a name="1.2.1"></a>
+## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.0...@brandwatch/axiom-components@1.2.1) (2018-04-05)
+
+
+### Bug Fixes
+
+* **Editable:** Fixes issue where given prop is the same as it was before ([6e8f563](https://github.com/HHogg/axiom/commit/6e8f563))
+
+
+
+
+    <a name="1.2.0"></a>
+# [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.1.0...@brandwatch/axiom-components@1.2.0) (2018-04-05)
+
+
+### Features
+
+* **DropdownMenuItem:** Adds keepOpen property ([9255902](https://github.com/HHogg/axiom/commit/9255902))
+
+
+
+
+  <a name="1.1.0"></a>
 # [1.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.2...@brandwatch/axiom-components@1.1.0) (2018-03-29)
 
 
@@ -14,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.0.2"></a>
+<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.1...@brandwatch/axiom-components@1.0.2) (2018-03-28)
 
 
@@ -25,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.0.1"></a>
+<a name="1.0.1"></a>
 ## [1.0.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.0.0...@brandwatch/axiom-components@1.0.1) (2018-03-27)
 
 

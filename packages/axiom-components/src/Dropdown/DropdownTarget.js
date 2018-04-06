@@ -5,7 +5,7 @@ export const DropdownTargetRef = 'DropdownTarget';
 
 export default class DropdownTarget extends Component {
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
   };
 
   static contextTypes = {
@@ -14,13 +14,10 @@ export default class DropdownTarget extends Component {
 
   static typeRef = DropdownTargetRef;
 
-  handleClick(...args) {
-    const { children } = this.props;
+  handleOpen(cb, ...args) {
     const { openDropdown } = this.context;
-    const { onClick = () => {} } = children.props;
-
     openDropdown();
-    onClick(...args);
+    if (cb) cb(...args);
   }
 
   render() {
@@ -28,7 +25,8 @@ export default class DropdownTarget extends Component {
 
     return cloneElement(children, {
       ...rest,
-      onClick: this.handleClick.bind(this),
+      onClick: this.handleOpen.bind(this, children.props.onClick),
+      onFocus: this.handleOpen.bind(this, children.props.onFocus),
     });
   }
 }

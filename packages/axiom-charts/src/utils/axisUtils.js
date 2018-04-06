@@ -7,6 +7,11 @@ export function getEquallyDistributedAxisLabels({
     tickCount = DEFAULT_TICK_COUNT,
     labelFormatter = v => v,
 }) {
+
+  if (lower === upper) {
+    return [];
+  }
+
   const finalTickCount = Math.max(MIN_TICK_COUNT, tickCount);
   const tickSize = (upper - lower) / (finalTickCount - 1);
   const ticks = [];
