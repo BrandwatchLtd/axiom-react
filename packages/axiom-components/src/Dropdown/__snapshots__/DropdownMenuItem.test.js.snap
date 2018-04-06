@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownMenuItem Snapshots renders with defaultProps 1`] = `
+<ContextMenuItem
+  focused={true}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;
+
+exports[`DropdownMenuItem Snapshots renders with disabled 1`] = `
+<ContextMenuItem
+  disabled={true}
+  focused={true}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;
+
+exports[`DropdownMenuItem Snapshots renders with index 1`] = `
+<ContextMenuItem
+  focused={false}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;
+
+exports[`DropdownMenuItem Snapshots renders with keepOpen 1`] = `
+<ContextMenuItem
+  focused={true}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;
+
+exports[`DropdownMenuItem Snapshots renders with multiSelect 1`] = `
+<ContextMenuItem
+  focused={true}
+  multiSelect={true}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;
+
+exports[`DropdownMenuItem Snapshots renders with onClick 1`] = `
+<ContextMenuItem
+  focused={true}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;
+
+exports[`DropdownMenuItem Snapshots renders with onMouseOver 1`] = `
+<ContextMenuItem
+  focused={true}
+  onClick={[Function]}
+  onMouseOver={[Function]}
+>
+  Test
+</ContextMenuItem>
+`;

@@ -18,6 +18,23 @@ describe('getEquallyDistributedAxisLabels', () => {
     expect(xAxisLabels).toMatchSnapshot();
   });
 
+  it('returns no labels when lower and upper are equal', () => {
+    expect(getEquallyDistributedAxisLabels({
+      lower: 0,
+      upper: 0,
+    })).toEqual([]);
+
+    expect(getEquallyDistributedAxisLabels({
+      lower: 1,
+      upper: 1,
+    })).toEqual([]);
+
+    expect(getEquallyDistributedAxisLabels({
+      lower: -100,
+      upper: -100,
+    })).toEqual([]);
+  });
+
   it('creates equal labels when lower 0, upper 10k, tickCount 6', () => {
     const xAxisLabels = getEquallyDistributedAxisLabels({
       lower: 0,
