@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-utils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Brandwatch Axiom - Utils",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -8,7 +8,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@brandwatch/axiom-materials": "^1.1.0",
+    "@brandwatch/axiom-materials": "^1.2.0",
     "react": "^16.0.0"
   }
 }
