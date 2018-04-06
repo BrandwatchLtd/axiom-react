@@ -12,12 +12,15 @@
     text-decoration: inherit;
     cursor: pointer;
   }
+
+  &:focus { outline: none; }
 }
 
 .ax-link--style-normal {
   color: var(--color-ui-accent);
 
-  &:hover  { color: var(--color-ui-accent--hover); }
+  &:hover,
+  &:focus { color: var(--color-ui-accent--hover); }
   &:active { color: var(--color-ui-accent--active); }
 }
 
@@ -26,7 +29,8 @@
 
 .ax-link--style-body,
 .ax-link--style-subtle {
-  &:hover  { color: var(--color-ui-accent--hover); }
+  &:hover,
+  &:focus { color: var(--color-ui-accent--hover); }
   &:active { color: var(--color-ui-accent--active); }
 }
 
@@ -34,6 +38,7 @@
   color: var(--color-theme-day-text--subtle);
 
   &:hover,
+  &:focus,
   &:active { color: var(--color-theme-day-text); }
 }
 
@@ -41,6 +46,7 @@
   color: var(--color-theme-night-text--subtle);
 
   &:hover,
+  &:focus,
   &:active { color: var(--color-theme-night-text); }
 }
 
@@ -48,5 +54,6 @@
   color: var(--color-theme-text--subtle);
 
   &:hover,
+  &:focus,
   &:active { color: var(--color-theme-text); }
 }
