@@ -5,7 +5,7 @@ import { colors } from '@brandwatch/axiom-materials';
 import renderFilter from './_filter';
 import './Candytar.css';
 
-const productColors = Object.keys(colors.productColorNames);
+const availableColors = Object.keys(colors.userDefinedGraphColors);
 const defaultPickerFn = (colors) =>
   colors[Math.floor(Math.random() * colors.length)];
 
@@ -44,7 +44,7 @@ export default class Candytar extends Component {
   componentWillMount = renderFilter
 
   render() {
-    const { picker, color = picker(productColors), size } = this.props;
+    const { picker, color = picker(availableColors), size } = this.props;
     const style = { height: size, width: size };
     const classes = classnames('ax-candytar', `ax-candytar--${color}`);
 
