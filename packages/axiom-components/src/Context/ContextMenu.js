@@ -13,9 +13,9 @@ export default class ContextMenu extends Component {
 
     return (
       <ContextContent { ...rest } padding="none">
-        <ul className="ax-context-menu">
+        <div className="ax-context-menu">
           { children }
-        </ul>
+        </div>
       </ContextContent>
     );
   }

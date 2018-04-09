@@ -101,20 +101,14 @@
 }
 
 .ax-context-menu {
-  margin: 0;
   padding: var(--cmp-context-tip-space) 0;
-  list-style: none;
 }
 
-.ax-context-menu__item-single,
-.ax-context-menu__item-multi {
+.ax-context-menu__item {
   display: flex;
   align-items: center;
   width: 100%;
   padding: var(--cmp-context-menu-item-padding-vertical) var(--cmp-context-padding-large);
-}
-
-.ax-context-menu__item-single {
   outline: 0;
   border: 0;
   background-color: var(--color-theme-background);
@@ -125,17 +119,18 @@
   transition-timing-function: var(--transition-function);
 }
 
-.ax-context-menu__item-multi:hover,
-.ax-context-menu__item-multi--focused,
-.ax-context-menu__item-single:hover,
-.ax-context-menu__item-single--focused {
+.ax-context-menu__item:focus {
+  outline: 0;
+}
+
+.ax-context-menu__item:hover,
+.ax-context-menu__item:focus {
   background-color: var(--color-ui-accent--hover);
   color: var(--color-ui-white-noise);
   cursor: pointer;
 }
 
-.ax-context-menu__item-single:disabled,
-.ax-context-menu__item-multi--disabled {
+.ax-context-menu__item:disabled {
   background-color: transparent;
   color: var(--color-theme-text--disabled);
   cursor: default;
@@ -143,6 +138,11 @@
 
 .ax-context-menu__item-content {
   flex: 1 1 auto;
+}
+
+.ax-context-menu__item-checkbox {
+  flex: 0 0 auto;
+  margin-right: var(--spacing-grid-size--x2);
 }
 
 .ax-context-menu__item-icon {
