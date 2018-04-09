@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Children, Component, cloneElement, isValidElement } from 'react';
+import React, { Children, Component } from 'react';
 import omit from 'lodash.omit';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownContext from '../Dropdown/DropdownContext';
@@ -66,12 +66,7 @@ export default class Select extends Component {
 
         <DropdownSource focusOnOpen>
           <DropdownContext>
-            { Children
-                .toArray(children)
-                .map((child, index) =>
-                  isValidElement(child) ? cloneElement(child, {
-                    index: index.toString(),
-                  }) : child) }
+            { children }
           </DropdownContext>
         </DropdownSource>
       </Dropdown>

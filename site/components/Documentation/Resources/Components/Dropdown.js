@@ -27,11 +27,20 @@ export default class Documentation extends Component {
     super(props);
     this.state = {
       selected: 'Option 1',
+      multiSelection: ['Option 1'],
     };
   }
 
+  handleMultiSelection(value) {
+    this.setState(({ multiSelection }) => ({
+      multiSelection: multiSelection.indexOf(value) >= 0
+        ? multiSelection.filter((v) => v !== value)
+        : [...multiSelection, value],
+    }));
+  }
+
   render() {
-    const { selected } = this.state;
+    const { selected, multiSelection } = this.state;
 
     return (
       <DocumentationContent>
@@ -111,7 +120,7 @@ export default class Documentation extends Component {
               <TextInput
                   onChange={ () => {} }
                   readOnly
-                  value={ selected }>
+                  value={ multiSelection.join(', ') }>
                 <TextInputIcon name="chevron-down" />
               </TextInput>
             </DropdownTarget>
@@ -120,15 +129,34 @@ export default class Documentation extends Component {
               <DropdownContext>
                 <DropdownMenu>
                   <DropdownMenuItem
-                      onClick={ () => this.setState({ selected: 'Option 1' }) }
-                      selected={ selected === 'Option 1' }>
+                      multiSelect
+                      onClick={ () => this.handleMultiSelection('Option 1') }
+                      selected={ multiSelection.indexOf('Option 1') >= 0 }>
                     Option 1
                   </DropdownMenuItem>
 
                   <DropdownMenuItem
-                      onClick={ () => this.setState({ selected: 'Option 2' }) }
-                      selected={ selected === 'Option 2' }>
+                      multiSelect
+                      onClick={ () => this.handleMultiSelection('Option 2') }
+                      selected={ multiSelection.indexOf('Option 2') >= 0 }>
                     Option 2
+                  </DropdownMenuItem>
+                </DropdownMenu>
+
+                <DropdownMenu>
+                  <DropdownMenuItem
+                      disabled
+                      multiSelect
+                      onClick={ () => this.handleMultiSelection('Option 3') }
+                      selected={ multiSelection.indexOf('Option 3') >= 0 }>
+                    Option 3
+                  </DropdownMenuItem>
+
+                  <DropdownMenuItem
+                      multiSelect
+                      onClick={ () => this.handleMultiSelection('Option 4') }
+                      selected={ multiSelection.indexOf('Option 4') >= 0 }>
+                    Option 4
                   </DropdownMenuItem>
                 </DropdownMenu>
               </DropdownContext>

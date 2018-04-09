@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import flatten from 'lodash.flatten';
 import {
-  DropdownContent,
-  ButtonGroup,
-  Button,
   Select,
   SelectOption,
   SelectOptionGroup,
@@ -51,29 +48,26 @@ export default class Documentation extends Component {
 
     this.setState({
       value: target.value,
-      selectedValue: (selectedOption) ? selectedOption.value : null,
+      selectedValue: (selectedOption) ? selectedOption.value : '',
     });
   }
 
   handleClear() {
     this.setState({
       value: '',
-      selectedValue: null,
+      selectedValue: '',
     });
   }
 
   handleSelect(setValue, getValue, selectedValue) {
-    const selectedOption = flatten(options).filter(o => o.value === selectedValue)[0];
-
     this.setState({
-      value: (selectedOption) ? selectedOption.label : '',
+      value: flatten(options).filter(o => o.value === selectedValue)[0].label,
       selectedValue,
     });
   }
 
   render() {
     const { selectedValue, value } = this.state;
-    const optionFilter = ({ label }) => label.toLowerCase().indexOf(value.toLowerCase()) === 0;
 
     return (
       <DocumentationContent>
@@ -86,25 +80,16 @@ export default class Documentation extends Component {
               selectedValue={ selectedValue }
               value={ value }>
             { options
-                .filter(group => group.filter(optionFilter).length > 0 )
                 .map((group, index) => (
                   <SelectOptionGroup key={ index }>
-                    { group
-                      .filter(optionFilter)
-                      .map(({ label, ...props }) => (
-                        <SelectOption key={ props.value } multiSelect { ...props }>
-                          { label }
-                        </SelectOption>
-                      ))
+                    { group.map(({ label, ...props }) => (
+                      <SelectOption key={ props.value } { ...props }>
+                        { label }
+                      </SelectOption>
+                    ))
                     }
                   </SelectOptionGroup>
             ) ) }
-
-            <DropdownContent hasFullSeparator>
-              <ButtonGroup>
-                <Button>Lorem ipsum</Button>
-              </ButtonGroup>
-            </DropdownContent>
           </Select>
         </DocumentationShowCase>
 
