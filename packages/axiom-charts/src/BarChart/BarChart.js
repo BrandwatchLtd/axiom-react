@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component, isValidElement } from 'react';
+import React, { Component } from 'react';
 import BarChartBars from './BarChartBars';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
 import ChartKey from '../Chart/ChartKey';
@@ -171,7 +171,7 @@ export default class BarChart extends Component {
           { formattedData.map(({ values, label, benchmark }, index) =>
             <ChartTableRow
                 hover={ index === selectedIndex }
-                key={ isValidElement(label) ? index : label }>
+                key={ index }>
               <ChartTableLabel
                   textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
