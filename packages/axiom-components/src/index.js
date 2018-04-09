@@ -1,4 +1,5 @@
 export { default as AlertBar } from './AlertBar/AlertBar';
+export { default as AlertCard } from './AlertCard/AlertCard';
 export { default as AlertDialog } from './AlertDialog/AlertDialog';
 export { default as AlertDialogBody } from './AlertDialog/AlertDialogBody';
 export { default as AlertDialogHeader } from './AlertDialog/AlertDialogHeader';

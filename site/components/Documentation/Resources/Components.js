@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DocumentationViewer } from '@brandwatch/axiom-documentation-viewer';
 import AlertBar from './Components/AlertBar';
+import AlertCard from './Components/AlertCard';
 import AlertDialog from './Components/AlertDialog';
 import AlertIcon from './Components/AlertIcon';
 import Avatar from './Components/Avatar';
@@ -45,15 +46,19 @@ export default class Documentation extends Component {
       <DocumentationViewer
           config={ [{
             id: 'alert-bar',
-            name: 'Alert Bar',
+            name: 'AlertBar',
             Component: AlertBar,
           }, {
+            id: 'alert-card',
+            name: 'AlertCard',
+            Component: AlertCard,
+          }, {
             id: 'alert-dialog',
-            name: 'Alert Dialog',
+            name: 'AlertDialog',
             Component: AlertDialog,
           }, {
             id: 'alert-icon',
-            name: 'Alert Icon',
+            name: 'AlertIcon',
             Component: AlertIcon,
           }, {
             id: 'avatar',
@@ -113,7 +118,7 @@ export default class Documentation extends Component {
             Component: Grid,
           }, {
             id: 'horizontal-rule',
-            name: 'Horizontal Rule',
+            name: 'HorizontalRule',
             Component: HorizontalRule,
           }, {
             id: 'icon',
