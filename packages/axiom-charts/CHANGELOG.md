@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.2"></a>
+## [1.6.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.6.1...@brandwatch/axiom-charts@1.6.2) (2018-04-09)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.6.0...@brandwatch/axiom-charts@1.6.1) (2018-04-09)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.5.0...@brandwatch/axiom-charts@1.6.0) (2018-04-09)
+
+
+### Bug Fixes
+
+* **BarChart:** fix stale label when using duplicate labels ([18917ee](https://github.com/HHogg/axiom/commit/18917ee))
+
+
+### Features
+
+* **LineChart:** pass index of data to tooltip callback of the linechart ([4dc03aa](https://github.com/HHogg/axiom/commit/4dc03aa))
+
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@1.4.4...@brandwatch/axiom-charts@1.5.0) (2018-04-09)
 

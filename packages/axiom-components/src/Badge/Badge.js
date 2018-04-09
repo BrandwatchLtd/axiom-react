@@ -39,6 +39,8 @@ export default class Badge extends Component {
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
     full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** Click handler that applied clickable styling */
+    onClick: PropTypes.func,
     /** The opacity of the background of the Badge */
     opacity: PropTypes.number,
   };
@@ -53,6 +55,7 @@ export default class Badge extends Component {
       children,
       color,
       full,
+      onClick,
       opacity: o,
       ...rest
     } = this.props;
@@ -63,6 +66,7 @@ export default class Badge extends Component {
     const style = { opacity };
     const classes = classnames('ax-badge', {
       [`ax-badge--${color}`]: color,
+      'ax-badge--clickable': onClick,
       'ax-badge--full': full === true,
       [`ax-badge--full--${full}`]: typeof full === 'string',
     });

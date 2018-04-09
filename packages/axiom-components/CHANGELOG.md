@@ -3,7 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="1.2.3"></a>
+      <a name="1.4.0"></a>
+# [1.4.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.3.0...@brandwatch/axiom-components@1.4.0) (2018-04-09)
+
+
+### Features
+
+* **Console:** Added further shading possibilities ([76356c4](https://github.com/HHogg/axiom/commit/76356c4))
+
+
+
+
+      <a name="1.3.0"></a>
+# [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.3...@brandwatch/axiom-components@1.3.0) (2018-04-09)
+
+
+### Bug Fixes
+
+* **Badge:** Adds interactive styling when onClick is given ([b4b7982](https://github.com/HHogg/axiom/commit/b4b7982))
+
+
+### Features
+
+* **AlertCard:** Added new AlertCard component ([ad77587](https://github.com/HHogg/axiom/commit/ad77587))
+
+
+
+
+  <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.2...@brandwatch/axiom-components@1.2.3) (2018-04-06)
 
 
@@ -14,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.2.2"></a>
+<a name="1.2.2"></a>
 ## [1.2.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.1...@brandwatch/axiom-components@1.2.2) (2018-04-06)
 
 
@@ -29,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.2.1"></a>
+<a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@1.2.0...@brandwatch/axiom-components@1.2.1) (2018-04-05)
 
 

@@ -11,6 +11,26 @@
   overflow: hidden;
 }
 
+.ax-badge--full {
+  width: 100%;
+}
+
+@media (max-width: 47.9375rem) {
+  .ax-badge--full--small { width: 100%; }
+}
+
+@media (max-width: 61.9375rem) {
+  .ax-badge--full--medium { width: 100%; }
+}
+
+@media (max-width: 74.9375rem) {
+  .ax-badge--full--large { width: 100%; }
+}
+
+.ax-badge--clickable {
+  cursor: pointer;
+}
+
 .ax-badge__content {
   position: relative;
 }
@@ -21,6 +41,9 @@
   right: 0;
   bottom: 0;
   left: 0;
+  transition-property: background-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
 }
 
 .ax-badge--faded .ax-badge__background { background-color: var(--color-theme-text); }
@@ -47,18 +70,107 @@
 .ax-badge--deep-thought .ax-badge__background { background-color: var(--color-product-deep-thought); }
 .ax-badge--luna-dust .ax-badge__background { background-color: var(--color-product-luna-dust); }
 
-.ax-badge--full {
-  width: 100%;
+.ax-badge--success.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-ui-success--hover); }
+  &:active .ax-badge__background { background-color: var(--color-ui-success--active); }
 }
 
-@media (max-width: 47.9375rem) {
-  .ax-badge--full--small { width: 100%; }
+.ax-badge--error.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-ui-error--hover); }
+  &:active .ax-badge__background { background-color: var(--color-ui-error--active); }
 }
 
-@media (max-width: 61.9375rem) {
-  .ax-badge--full--medium { width: 100%; }
+.ax-badge--tiny-clanger.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-tiny-clanger--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-tiny-clanger--active); }
 }
 
-@media (max-width: 74.9375rem) {
-  .ax-badge--full--large { width: 100%; }
+.ax-badge--critical-mass.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-critical-mass--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-critical-mass--active); }
+}
+
+.ax-badge--fantastic-voyage.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-fantastic-voyage--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-fantastic-voyage--active); }
+}
+
+.ax-badge--paradise-lost.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-paradise-lost--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-paradise-lost--active); }
+}
+
+.ax-badge--serene-sea.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-serene-sea--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-serene-sea--active); }
+}
+
+.ax-badge--electric-dreams.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-electric-dreams--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-electric-dreams--active); }
+}
+
+.ax-badge--giant-leap.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-giant-leap--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-giant-leap--active); }
+}
+
+.ax-badge--moon-lagoon.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-moon-lagoon--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-moon-lagoon--active); }
+}
+
+.ax-badge--space-invader.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-space-invader--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-space-invader--active); }
+}
+
+.ax-badge--terra-form.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-terra-form--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-terra-form--active); }
+}
+
+.ax-badge--primeval-soup.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-primeval-soup--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-primeval-soup--active); }
+}
+
+.ax-badge--sun-maker.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-sun-maker--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-sun-maker--active); }
+}
+
+.ax-badge--new-horizon.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-new-horizon--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-new-horizon--active); }
+}
+
+.ax-badge--blast-off.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-blast-off--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-blast-off--active); }
+}
+
+.ax-badge--crash-course.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-crash-course--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-crash-course--active); }
+}
+
+.ax-badge--ground-control.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-ground-control--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-ground-control--active); }
+}
+
+.ax-badge--space-oddity.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-space-oddity--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-space-oddity--active); }
+}
+
+.ax-badge--deep-thought.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-deep-thought--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-deep-thought--active); }
+}
+
+.ax-badge--luna-dust.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-luna-dust--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-luna-dust--active); }
 }

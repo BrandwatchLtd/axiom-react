@@ -18,13 +18,13 @@ export default class LineChart extends Component {
   static propTypes = {
     /**
      * Contextual component that appears when clicking on a data point.
-     * It is provided with the `color`, `label`, and `value` that has
+     * It is provided with the `color`, `label`, `index`, and `value` that has
      * been clicked on.
      */
     DropdownContext: PropTypes.func,
     /**
      * Contextual component that appears when hovering on a data point.
-     * It is provided with the `color`, `label`, and `value` that has
+     * It is provided with the `color`, `label`, `index`, and `value` that has
      * been hovered over.
      */
     TooltipContext: PropTypes.func,
@@ -170,6 +170,7 @@ export default class LineChart extends Component {
                           TooltipContext={ TooltipContext }
                           color={ labelMap[label].color }
                           hover={ selectedIndex === index && selectedLabel === label }
+                          index={ index }
                           key={ index }
                           label={ label }
                           onDropdownClose={ () => this.handleDropdownClose() }

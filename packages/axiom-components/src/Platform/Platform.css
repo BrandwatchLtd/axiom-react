@@ -75,10 +75,20 @@
 
 .ax-platform__console,
 .ax-platform__console-header {
-  background-color: var(--color-theme-background--shade-3);
   color: var(--color-theme-text);
 }
 
+.ax-platform__console--shade-2,
+.ax-platform__console-header--shade-2 {
+  background-color: var(--color-theme-background--shade-2);
+}
+
+.ax-platform__console--shade-3,
+.ax-platform__console-header--shade-3 {
+  background-color: var(--color-theme-background--shade-3);
+}
+
+.ax-platform__console--shade-4,
 .ax-platform__console-header--shade-4 {
   background-color: var(--color-theme-background--shade-4);
 }

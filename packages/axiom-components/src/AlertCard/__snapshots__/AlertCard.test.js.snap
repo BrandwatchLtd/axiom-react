@@ -1,0 +1,597 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertCard renders with defaultProps 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with onRemoveClick 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+      <div
+        className="ax-alert-card__remove"
+      >
+        <a
+          className="ax-link ax-link--style-subtle"
+          onClick={[Function]}
+        >
+          <svg
+            className="ax-icon ax-icon--cross"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<g fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"><path d=\\"M3.75 12.25l8.5-8.5\\" class=\\"ax-animicon__path-1\\"/><path d=\\"M3.75 3.75l8.5 8.5\\" class=\\"ax-animicon__path-2\\"/></g>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with shade shade-1 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with shade shade-2 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-2"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with shade shade-3 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-3"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with shade shade-4 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-4"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with size large 1`] = `
+<div
+  className="ax-card ax-card--size-large ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-large"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--large"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with size medium 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with size small 1`] = `
+<div
+  className="ax-card ax-card--size-small ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-small"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--small"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with type error 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--error"
+        >
+          <svg
+            className="ax-icon ax-icon--warning"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with type info 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--info"
+        >
+          <svg
+            className="ax-icon ax-icon--information"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with type success 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--success"
+        >
+          <svg
+            className="ax-icon ax-icon--tick"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M3.25 8.25L6 11l6.75-6.75\\" fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AlertCard renders with type warning 1`] = `
+<div
+  className="ax-card ax-card--size-medium ax-card--shade-1"
+  onClick={undefined}
+>
+  <div
+    className="ax-card__content ax-card__content--separator-solid ax-card__content--size-medium"
+  >
+    <div
+      className="ax-alert-card ax-alert-card--medium"
+    >
+      <div
+        className="ax-alert-card__icon"
+      >
+        <div
+          className="ax-alert-icon ax-alert-icon--primary ax-alert-icon--small ax-alert-icon--warning"
+        >
+          <svg
+            className="ax-icon ax-icon--warning"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </div>
+      </div>
+      <div
+        className="ax-alert-card__content"
+      >
+        Lorem
+      </div>
+    </div>
+  </div>
+</div>
+`;

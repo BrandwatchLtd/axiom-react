@@ -49,6 +49,8 @@ export default class LinePoint extends Component {
     ]).isRequired,
     /** Applies hover state, useful to retain hover styling. */
     hover: PropTypes.bool,
+    /** Index of the Line point in the data set */
+    index: PropTypes.number,
     /** Label for the Line point data set */
     label: PropTypes.string,
     /** Call back for when a given Context component closes */
@@ -75,6 +77,7 @@ export default class LinePoint extends Component {
       TooltipContext,
       color,
       hover,
+      index,
       label,
       onMouseEnter,
       onDropdownClose,
@@ -106,6 +109,7 @@ export default class LinePoint extends Component {
             DropdownContext={ DropdownContext }
             TooltipContext={ TooltipContext }
             color={ color }
+            index={ index }
             label={ label }
             onDropdownClose={ onDropdownClose }
             onDropdownOpen={ onDropdownOpen }

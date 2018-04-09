@@ -52,6 +52,12 @@ describe('Badge', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders onClick', () => {
+    const component = getComponent({ onClick: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders opacity', () => {
     const component = getComponent({ opacity: 0.5, color: 'success' });
     const tree = component.toJSON();

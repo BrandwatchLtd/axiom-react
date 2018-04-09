@@ -20,6 +20,26 @@ exports[`Badge does not render opacity 1 with color faded 1`] = `
 </span>
 `;
 
+exports[`Badge renders onClick 1`] = `
+<span
+  className="ax-badge ax-badge--faded ax-badge--clickable"
+>
+  <span
+    className="ax-badge__background"
+    style={
+      Object {
+        "opacity": 0.3,
+      }
+    }
+  />
+  <span
+    className="ax-badge__content"
+  >
+    Lorem Ipsum
+  </span>
+</span>
+`;
+
 exports[`Badge renders opacity 1`] = `
 <span
   className="ax-badge ax-badge--success"
