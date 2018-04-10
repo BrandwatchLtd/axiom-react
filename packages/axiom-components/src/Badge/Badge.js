@@ -72,7 +72,7 @@ export default class Badge extends Component {
     });
 
     return (
-      <Base { ...rest } Component="span" className={ classes } textColor={ textColor }>
+      <Base { ...rest } Component="span" className={ classes } onClick={ onClick } textColor={ textColor }>
         <span className="ax-badge__background" style={ style } />
         <span className="ax-badge__content">{ children }</span>
       </Base>

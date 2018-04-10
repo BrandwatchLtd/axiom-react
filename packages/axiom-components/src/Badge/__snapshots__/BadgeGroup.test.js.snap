@@ -9,6 +9,7 @@ exports[`BadgeGroup renders with defaultProps 1`] = `
   >
     <span
       className="ax-badge ax-badge--faded"
+      onClick={undefined}
     >
       <span
         className="ax-badge__background"
