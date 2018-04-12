@@ -1,0 +1,50 @@
+.ax-transition__wrapper  {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.ax-transition__item {
+  position: absolute;
+  width: 100%;
+  animation-fill-mode: forwards;
+}
+
+.ax-animate-next-enter-active {
+  animation-name: moveFromRight;
+}
+
+.ax-animate-next-exit-active {
+  animation-name: moveToLeft;
+}
+
+.ax-animate-previous-enter-active {
+  animation-name: moveFromLeft;
+}
+
+.ax-animate-previous-exit-active {
+  animation-name: moveToRight;
+}
+
+@keyframes moveToLeft {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveToRight {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveFromRight {
+  from {
+    transform: translateX(100%);
+  }
+}
