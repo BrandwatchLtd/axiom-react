@@ -1,5 +1,10 @@
 {
   "lerna": "2.8.0",
+  "command": {
+    "publish": {
+      "message": "chore(release): Updated release notes and package versions."
+    }
+  },
   "npmClient": "yarn",
   "packages": [
     "packages/*"
