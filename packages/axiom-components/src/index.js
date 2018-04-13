@@ -83,6 +83,7 @@ export { default as LogoTab } from './Logo/LogoTab';
 export { default as Menu } from './Menu/Menu';
 export { default as MenuItem } from './Menu/MenuItem';
 export { default as Modal } from './Modal/Modal';
+export { default as navigationUtils } from './utils/navigationUtils';
 export { default as Notification } from './Notification/Notification';
 export { default as Notifications } from './Notification/Notifications';
 export { default as Pagination } from './Pagination/Pagination';
