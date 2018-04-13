@@ -53,6 +53,8 @@ export default class LinePoint extends Component {
     index: PropTypes.number,
     /** Label for the Line point data set */
     label: PropTypes.string,
+    /** Call back for when a point is clicked */
+    onClick: PropTypes.func,
     /** Call back for when a given Context component closes */
     onDropdownClose: PropTypes.func,
     /** Call back for when a given Context component opens */
@@ -87,6 +89,7 @@ export default class LinePoint extends Component {
       value,
       x,
       y,
+      onClick,
       ...rest
     } = this.props;
 
@@ -115,7 +118,7 @@ export default class LinePoint extends Component {
             onDropdownOpen={ onDropdownOpen }
             style={ style }
             value={ value }>
-          <DataPoints { ...rest } size={ size }>
+          <DataPoints { ...rest } onClick={ onClick && (() => onClick({ color, index, label, value })) } size={ size }>
             <DataPoint color={ color } style={ style } />
           </DataPoints>
         </ChartContext>

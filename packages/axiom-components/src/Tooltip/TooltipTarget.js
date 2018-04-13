@@ -6,6 +6,7 @@ export const TooltipTargetRef = 'TooltipTarget';
 export default class TooltipTarget extends Component {
   static propTypes = {
     children: PropTypes.node,
+    onClick: PropTypes.func,
   };
 
   static contextTypes = {
@@ -33,6 +34,19 @@ export default class TooltipTarget extends Component {
     onMouseLeave(...args);
   }
 
+  handleClick(...args) {
+    const childClick = this.props.children.props.onClick;
+    const { onClick } = this.props;
+
+    if (childClick) {
+      childClick(...args);
+    }
+
+    if (onClick) {
+      onClick(...args);
+    }
+  }
+
   render() {
     const { children, ...rest } = this.props;
 
@@ -40,6 +54,7 @@ export default class TooltipTarget extends Component {
       ...rest,
       onMouseMove: this.handleMouseMove.bind(this),
       onMouseLeave: this.handleMouseLeave.bind(this),
+      onClick: this.handleClick.bind(this),
     });
   }
 }

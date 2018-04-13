@@ -49,6 +49,8 @@ export default class LineChart extends Component {
     height: PropTypes.string.isRequired,
     /** Lower value of the data displayed on the chart */
     lower: PropTypes.number,
+    /** Call back for when a point is clicked */
+    onPointClick: PropTypes.func,
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
@@ -120,6 +122,7 @@ export default class LineChart extends Component {
       data,
       height,
       lower = dataLower,
+      onPointClick,
       upper = dataUpper,
       xAxisLabels,
       xAxisTitle,
@@ -173,6 +176,7 @@ export default class LineChart extends Component {
                           index={ index }
                           key={ index }
                           label={ label }
+                          onClick={ onPointClick }
                           onDropdownClose={ () => this.handleDropdownClose() }
                           onDropdownOpen={ () => this.handleDropdownOpen(index, label) }
                           onMouseEnter={ () => this.handleMouseEnter(index, label) }
