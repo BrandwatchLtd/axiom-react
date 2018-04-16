@@ -11,6 +11,8 @@ export default class Context extends Component {
     arrowRef: PropTypes.func,
     /** Content to be inserted in the contextual area */
     children: PropTypes.node,
+    /** Color of the Context */
+    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
     /** Maximum height for the content area, exceeding this will make it scrollable */
     maxHeight: PropTypes.string,
     /** Position of the content area relative to the arrow */
@@ -32,15 +34,19 @@ export default class Context extends Component {
       maxHeight,
       position,
       width,
+      color,
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-context', `ax-context--${position}`);
+    const classes = classnames('ax-context', `ax-context--${position}`, {
+      [`ax-context--${color}`]: color,
+    });
+    const arrowClasses = classnames('ax-context__arrow');
 
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>
         { arrowRef && (
-          <span className="ax-context__arrow" ref={ arrowRef } />
+          <span className={ arrowClasses } ref={ arrowRef } />
         ) }
 
         <div className="ax-context__content" style={ { maxHeight } }>

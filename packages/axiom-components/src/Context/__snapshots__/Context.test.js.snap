@@ -44,6 +44,98 @@ exports[`Context renders custom width 1`] = `
 </div>
 `;
 
+exports[`Context renders with "type" context error 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="error"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context info 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="info"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context success 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="success"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context warning 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="warning"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
 exports[`Context renders with arrowRef 1`] = `
 <div
   className="ax-context ax-context--top ax-theme--day"
