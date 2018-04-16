@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Context from './Context';
 
-const getComponent = (props = {}) =>
+const getComponent = (props = {}, context = {}) =>
   renderer.create(
-    <Context { ...props }>
+    <Context { ...props } { ...context }>
       Lorem ipsum
     </Context>
   );
@@ -48,6 +48,16 @@ describe('Context', () => {
     ['day', 'night'].forEach((theme) => {
       it(theme, () => {
         const component = getComponent({ theme });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('renders with "type" context', () => {
+    ['success', 'warning', 'error', 'info'].forEach(type => {
+      it(type, () => {
+        const component = getComponent({}, { type });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
