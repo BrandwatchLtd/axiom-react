@@ -16,6 +16,10 @@ export default class Select extends Component {
     children: PropTypes.node,
     /** Event that is fired when the input field is cleared */
     onClear: PropTypes.func,
+    /** Invoked when the SelectMenu is closed. */
+    onRequestClose: PropTypes.func,
+    /** Invoked when the SelectMenu is opened. */
+    onRequestOpen: PropTypes.func,
     /** Event that is fired when an option is selected */
     onSelect: PropTypes.func,
     /** The value of the selected option  */
@@ -51,12 +55,14 @@ export default class Select extends Component {
   }
 
   render() {
-    const { children, ...props } = this.props;
+    const { children, onRequestClose, onRequestOpen, ...props } = this.props;
 
     return (
       <Dropdown
           enabled={ Children.count(children) > 0 }
           flip="mirror"
+          onRequestClose={ onRequestClose }
+          onRequestOpen={ onRequestOpen }
           position="bottom"
           showArrow={ false }>
         <DropdownTarget>
