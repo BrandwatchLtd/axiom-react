@@ -27,7 +27,7 @@ gsutil -m web set -m index.html -e index.html gs://$STORAGE_BUCKET
 gsutil -m acl -r ch -u AllUsers:R gs://$STORAGE_BUCKET
 
 # Headers on everything in the bucket
-gsutil -m setmeta -h "Cache-Control:max-age=31536000" gs://$STORAGE_BUCKET/**
+gsutil -m setmeta -h "Cache-Control:max-age=31536000" gs://$STORAGE_BUCKET/assets/**
 
 # GZIP Headers
 gsutil -m setmeta -h "Content-Encoding:gzip" gs://$STORAGE_BUCKET/**.js
@@ -37,6 +37,6 @@ gsutil -m setmeta -h "Content-Encoding:gzip" gs://$STORAGE_BUCKET/**.html
 # Override headers for html files
 gsutil -m setmeta \
   -h "Content-Type:text/html" \
-  -h "Cache-Control:no-cache" \
+  -h "Cache-Control:no-cache, max-age=0" \
   gs://$STORAGE_BUCKET/**.html
 
