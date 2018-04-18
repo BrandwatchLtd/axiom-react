@@ -4,8 +4,8 @@ import ContextMenu from '../Context/ContextMenu';
 
 export default class DropdownMenu extends Component {
   static propTypes = {
+    /** DropdownMenuItems */
     children: PropTypes.node.isRequired,
-    index: PropTypes.string,
   };
 
   render() {

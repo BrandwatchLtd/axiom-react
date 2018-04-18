@@ -11,6 +11,27 @@ const isFocusableMenuItem = (element) =>
 
 /* eslint-disable react/no-find-dom-node */
 export default class DropdownContext extends Component {
+  static propTypes = {
+    /** React reference function for the arrow element */
+    arrowRef: PropTypes.func,
+    /** Content to be inserted in the contextual area */
+    children: PropTypes.node,
+    /** Color of the Context */
+    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    /** Maximum height for the content area, exceeding this will make it scrollable */
+    maxHeight: PropTypes.string,
+    /** Position of the content area relative to the arrow */
+    position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    /** Total width of the component */
+    width: PropTypes.string,
+  };
+
+  static defaultProps = {
+    maxHeight: '30rem',
+    position: 'top',
+    width: '14.5rem',
+  };
+
   static contextTypes = {
     closeDropdown: PropTypes.func.isRequired,
   };

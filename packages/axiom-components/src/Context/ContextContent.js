@@ -5,13 +5,10 @@ import Base from '../Base/Base';
 
 export default class ContextContent extends Component {
   static propTypes = {
-    /** Determines whether the separator below this context box should cut through the padding */
+    children: PropTypes.node,
     hasFullSeparator: PropTypes.bool,
-    /** Set height for the content area, box will remain at this height */
     height: PropTypes.string,
-    /** Maximum height for the content area, exceeding this will make it scrollable */
     maxHeight: PropTypes.string,
-    /** Padding size applied to the content area */
     padding: PropTypes.oneOf(['none', 'small', 'large']),
     paddingHorizontal: PropTypes.oneOf(['none', 'small', 'large']),
     paddingVertical: PropTypes.oneOf(['none', 'small', 'large']),
