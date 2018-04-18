@@ -7,11 +7,16 @@ import {
   GridCell,
   Dropdown,
   DropdownContext,
+  DropdownFooter,
+  DropdownHeader,
   DropdownMenu,
   DropdownMenuItem,
   DropdownSource,
   DropdownTarget,
+  Icon,
+  IconButton,
   Link,
+  Paragraph,
   TextIcon,
   TextInput,
   TextInputIcon,
@@ -114,59 +119,141 @@ export default class Documentation extends Component {
           </GridCell>
         </Grid>
 
-        <DocumentationShowCase centered>
-          <Dropdown flip="mirror" showArrow={ false }>
-            <DropdownTarget>
-              <TextInput
-                  onChange={ () => {} }
-                  readOnly
-                  value={ multiSelection.join(', ') }>
-                <TextInputIcon name="chevron-down" />
-              </TextInput>
-            </DropdownTarget>
+        <Grid>
+          <GridCell>
+            <DocumentationShowCase centered>
+              <Dropdown flip="mirror" showArrow={ false }>
+                <DropdownTarget>
+                  <TextInput
+                      onChange={ () => {} }
+                      readOnly
+                      value={ multiSelection.join(', ') }>
+                    <TextInputIcon name="chevron-down" />
+                  </TextInput>
+                </DropdownTarget>
 
-            <DropdownSource>
-              <DropdownContext>
-                <DropdownMenu>
-                  <DropdownMenuItem
-                      multiSelect
-                      onClick={ () => this.handleMultiSelection('Option 1') }
-                      selected={ multiSelection.indexOf('Option 1') >= 0 }>
-                    Option 1
-                  </DropdownMenuItem>
+                <DropdownSource>
+                  <DropdownContext>
+                    <DropdownMenu>
+                      <DropdownMenuItem
+                          multiSelect
+                          onClick={ () => this.handleMultiSelection('Option 1') }
+                          selected={ multiSelection.indexOf('Option 1') >= 0 }>
+                        Option 1
+                      </DropdownMenuItem>
 
-                  <DropdownMenuItem
-                      multiSelect
-                      onClick={ () => this.handleMultiSelection('Option 2') }
-                      selected={ multiSelection.indexOf('Option 2') >= 0 }>
-                    Option 2
-                  </DropdownMenuItem>
-                </DropdownMenu>
+                      <DropdownMenuItem
+                          multiSelect
+                          onClick={ () => this.handleMultiSelection('Option 2') }
+                          selected={ multiSelection.indexOf('Option 2') >= 0 }>
+                        Option 2
+                      </DropdownMenuItem>
+                    </DropdownMenu>
 
-                <DropdownMenu>
-                  <DropdownMenuItem
-                      disabled
-                      multiSelect
-                      onClick={ () => this.handleMultiSelection('Option 3') }
-                      selected={ multiSelection.indexOf('Option 3') >= 0 }>
-                    Option 3
-                  </DropdownMenuItem>
+                    <DropdownMenu>
+                      <DropdownMenuItem
+                          disabled
+                          multiSelect
+                          onClick={ () => this.handleMultiSelection('Option 3') }
+                          selected={ multiSelection.indexOf('Option 3') >= 0 }>
+                        Option 3
+                      </DropdownMenuItem>
 
-                  <DropdownMenuItem
-                      multiSelect
-                      onClick={ () => this.handleMultiSelection('Option 4') }
-                      selected={ multiSelection.indexOf('Option 4') >= 0 }>
-                    Option 4
-                  </DropdownMenuItem>
-                </DropdownMenu>
-              </DropdownContext>
-            </DropdownSource>
-          </Dropdown>
-        </DocumentationShowCase>
+                      <DropdownMenuItem
+                          multiSelect
+                          onClick={ () => this.handleMultiSelection('Option 4') }
+                          selected={ multiSelection.indexOf('Option 4') >= 0 }>
+                        Option 4
+                      </DropdownMenuItem>
+                    </DropdownMenu>
+                  </DropdownContext>
+                </DropdownSource>
+              </Dropdown>
+            </DocumentationShowCase>
+          </GridCell>
+
+          <GridCell>
+            <DocumentationShowCase centered>
+              <Dropdown flip="mirror">
+                <DropdownTarget>
+                  <IconButton name="ellipsis" />
+                </DropdownTarget>
+
+                <DropdownSource>
+                  <DropdownContext width="16rem">
+                    <DropdownHeader>
+                      <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
+                        <GridCell none>
+                          <Link style="body">
+                            <Icon name="chevron-left" />
+                          </Link>
+                        </GridCell>
+
+                        <GridCell>
+                          <Paragraph
+                              textCase="upper"
+                              textCenter
+                              textColor="subtle"
+                              textEllipsis
+                              textSize="small">
+                            Lorem Ipsum
+                          </Paragraph>
+                        </GridCell>
+
+                        <GridCell cloak none>
+                          <Link style="body">
+                            <Icon name="chevron-left" />
+                          </Link>
+                        </GridCell>
+                      </Grid>
+                    </DropdownHeader>
+
+                    <DropdownHeader>
+                      <TextInput placeholder="Text Input">
+                        <TextInputIcon
+                            align="left"
+                            name="magnify-glass" />
+                      </TextInput>
+                    </DropdownHeader>
+
+                    <DropdownMenu hasFullSeparator maxHeight="15rem">
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                      <DropdownMenuItem multiSelect>Lorem ipsum</DropdownMenuItem>
+                    </DropdownMenu>
+
+                    <DropdownFooter>
+                      <ButtonGroup textRight>
+                        <Button size="small" style="secondary">Cancel</Button>
+                        <Button size="small">Confirm</Button>
+                      </ButtonGroup>
+                    </DropdownFooter>
+                  </DropdownContext>
+                </DropdownSource>
+              </Dropdown>
+            </DocumentationShowCase>
+          </GridCell>
+        </Grid>
 
         <DocumentationApi components={ [
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/Dropdown'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownContent'),
+          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownContext'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownMenu'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownMenuItem'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownSource'),
