@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import HorizontalRule from './HorizontalRule';
+import Separator from './Separator';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <HorizontalRule { ...props } />
+    <Separator { ...props } />
   );
 
-describe('HorizontalRule', () => {
+describe('Separator', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();
     const tree = component.toJSON();
@@ -18,6 +18,16 @@ describe('HorizontalRule', () => {
     ['solid', 'dotted'].forEach((borderStyle) => {
       it(borderStyle, () => {
         const component = getComponent({ borderStyle });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('renders with direction', () => {
+    ['horizontal', 'vertical'].forEach((direction) => {
+      it(direction, () => {
+        const component = getComponent({ direction });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
