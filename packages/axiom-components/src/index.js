@@ -59,6 +59,8 @@ export { default as DockItem } from './Platform/DockItem';
 export { default as Dropdown } from './Dropdown/Dropdown';
 export { default as DropdownContent } from './Dropdown/DropdownContent';
 export { default as DropdownContext } from './Dropdown/DropdownContext';
+export { default as DropdownFooter } from './Dropdown/DropdownFooter';
+export { default as DropdownHeader } from './Dropdown/DropdownHeader';
 export { default as DropdownMenu } from './Dropdown/DropdownMenu';
 export { default as DropdownMenuItem } from './Dropdown/DropdownMenuItem';
 export { default as DropdownSource } from './Dropdown/DropdownSource';
