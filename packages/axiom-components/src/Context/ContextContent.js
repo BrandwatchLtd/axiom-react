@@ -13,6 +13,8 @@ export default class ContextContent extends Component {
     maxHeight: PropTypes.string,
     /** Padding size applied to the content area */
     padding: PropTypes.oneOf(['none', 'small', 'large']),
+    paddingHorizontal: PropTypes.oneOf(['none', 'small', 'large']),
+    paddingVertical: PropTypes.oneOf(['none', 'small', 'large']),
   };
 
   static defaultProps = {
@@ -21,10 +23,20 @@ export default class ContextContent extends Component {
   };
 
   render() {
-    const { hasFullSeparator, height, maxHeight, padding, ...rest } = this.props;
+    const {
+      hasFullSeparator,
+      height,
+      maxHeight,
+      padding,
+      paddingHorizontal = padding,
+      paddingVertical = padding,
+      ...rest
+    } = this.props;
+
     const classes = classnames(
       'ax-context-content',
-      `ax-context-content--padding-${padding}`,
+      `ax-context-content--padding-horizontal-${paddingHorizontal}`,
+      `ax-context-content--padding-vertical-${paddingVertical}`,
       {
         'ax-context-content--full-separator': hasFullSeparator,
         'ax-context-content--scrollable': maxHeight,

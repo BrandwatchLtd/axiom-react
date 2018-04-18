@@ -70,12 +70,24 @@
   position: relative;
 }
 
-.ax-context-content--padding-small {
-  padding: var(--cmp-context-padding-small);
+.ax-context-content--padding-horizontal-small {
+  padding-right: var(--cmp-context-padding-small);
+  padding-left: var(--cmp-context-padding-small);
 }
 
-.ax-context-content--padding-large {
-  padding: var(--cmp-context-padding-large);
+.ax-context-content--padding-horizontal-large {
+  padding-right: var(--cmp-context-padding-large);
+  padding-left: var(--cmp-context-padding-large);
+}
+
+.ax-context-content--padding-vertical-small {
+  padding-top: var(--cmp-context-padding-small);
+  padding-bottom: var(--cmp-context-padding-small);
+}
+
+.ax-context-content--padding-vertical-large {
+  padding-top: var(--cmp-context-padding-large);
+  padding-bottom: var(--cmp-context-padding-large);
 }
 
 .ax-context-content:not(:last-child)::after {
@@ -85,13 +97,13 @@
   border-bottom: var(--component-border-width) solid var(--color-theme-border);
 }
 
-.ax-context-content--padding-small::after {
+.ax-context-content--padding-horizontal-small::after {
   right: var(--cmp-context-padding-small);
   left: var(--cmp-context-padding-small);
 }
 
-.ax-context-content--padding-none::after,
-.ax-context-content--padding-large::after {
+.ax-context-content--padding-horizontal-none::after,
+.ax-context-content--padding-horizontal-large::after {
   right: var(--cmp-context-padding-large);
   left: var(--cmp-context-padding-large);
 }
