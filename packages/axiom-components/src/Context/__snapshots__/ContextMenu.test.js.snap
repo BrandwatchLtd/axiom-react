@@ -2,29 +2,33 @@
 
 exports[`ContextMenu renders with defaultProps 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-none"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-none ax-context-content--padding-vertical-none"
 >
   <div
-    className="ax-context-menu"
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
   >
-    <button
-      className="ax-context-menu__item"
-      data-ax-context-menu-item={true}
-      disabled={undefined}
-      onClick={undefined}
+    <div
+      className="ax-context-menu"
     >
-      <div
-        className="ax-context-menu__item-content"
+      <button
+        className="ax-context-menu__item"
+        data-ax-context-menu-item={true}
+        disabled={undefined}
+        onClick={undefined}
       >
-        Lorem ipsum
-      </div>
-    </button>
+        <div
+          className="ax-context-menu__item-content"
+        >
+          Lorem ipsum
+        </div>
+      </button>
+    </div>
   </div>
 </div>
 `;

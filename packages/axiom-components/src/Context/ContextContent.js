@@ -21,6 +21,7 @@ export default class ContextContent extends Component {
 
   render() {
     const {
+      children,
       hasFullSeparator,
       height,
       maxHeight,
@@ -36,12 +37,16 @@ export default class ContextContent extends Component {
       `ax-context-content--padding-vertical-${paddingVertical}`,
       {
         'ax-context-content--full-separator': hasFullSeparator,
-        'ax-context-content--scrollable': maxHeight,
+        'ax-context-content--scrollable': height || maxHeight,
       }
     );
 
     return (
-      <Base { ...rest } className={ classes } style={ { height, maxHeight } } />
+      <Base { ...rest } className={ classes }>
+        <div className="ax-context-content__scroll" style={ { height, maxHeight } }>
+          { children }
+        </div>
+      </Base>
     );
   }
 }

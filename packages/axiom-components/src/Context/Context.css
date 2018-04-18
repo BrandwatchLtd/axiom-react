@@ -113,7 +113,7 @@
   left: 0;
 }
 
-.ax-context-content--scrollable {
+.ax-context-content--scrollable .ax-context-content__scroll {
   overflow-y: auto;
 }
 
