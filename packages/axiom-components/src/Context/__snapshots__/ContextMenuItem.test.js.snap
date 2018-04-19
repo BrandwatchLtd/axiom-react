@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ContextMenuItem renders with custom icon 1`] = `
+<button
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
+  disabled={undefined}
+  onClick={undefined}
+>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Lorem ipsum
+  </div>
+  <div
+    className="ax-context-menu__item-icon"
+  >
+    <svg
+      className="ax-icon ax-icon--heart"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<path d=\\"M10.802 3c-1.172 0-2.271.989-2.8 1.547C7.473 3.989 6.374 3 5.202 3 3.199 3 2 4.253 2 6.351 2 8.07 3.474 9.51 3.528 9.56c0 0 4.367 4.44 4.474 4.44.108 0 4.468-4.426 4.468-4.426.061-.064 1.534-1.504 1.534-3.223C14.004 4.253 12.805 3 10.802 3\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+</button>
+`;
+
 exports[`ContextMenuItem renders with defaultProps 1`] = `
 <button
   className="ax-context-menu__item"
