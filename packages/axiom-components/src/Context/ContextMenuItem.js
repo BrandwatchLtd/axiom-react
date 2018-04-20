@@ -11,6 +11,7 @@ export default class ContextMenuItem extends Component {
   static propTypes = {
     children: PropTypes.node,
     disabled: PropTypes.bool,
+    icon: PropTypes.string,
     multiSelect: PropTypes.bool,
     onClick: PropTypes.func,
     selected: PropTypes.bool,
@@ -20,6 +21,7 @@ export default class ContextMenuItem extends Component {
     const {
       children,
       disabled,
+      icon,
       onClick,
       multiSelect,
       selected,
@@ -50,6 +52,12 @@ export default class ContextMenuItem extends Component {
         { !multiSelect && selected !== undefined && (
           <div className="ax-context-menu__item-icon">
             <Icon cloak={ !selected } name="tick" />
+          </div>
+        ) }
+
+        { icon !== undefined && (
+          <div className="ax-context-menu__item-icon">
+            <Icon name={ icon } />
           </div>
         ) }
       </Base>
