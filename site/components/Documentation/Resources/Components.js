@@ -19,7 +19,6 @@ import Dropdown from './Components/Dropdown';
 import Editable from './Components/Editable';
 import Form from './Components/Form';
 import Grid from './Components/Grid';
-import HorizontalRule from './Components/HorizontalRule';
 import Icon from './Components/Icon';
 import Image from './Components/Image';
 import Label from './Components/Label';
@@ -33,6 +32,7 @@ import Position from './Components/Position';
 import Progress from './Components/Progress';
 import Reveal from './Components/Reveal';
 import Select from './Components/Select';
+import Separator from './Components/Separator';
 import Table from './Components/Table';
 import Tabset from './Components/Tabset';
 import Toggle from './Components/Toggle';
@@ -123,10 +123,6 @@ export default class Documentation extends Component {
             name: 'Grid',
             Component: Grid,
           }, {
-            id: 'horizontal-rule',
-            name: 'HorizontalRule',
-            Component: HorizontalRule,
-          }, {
             id: 'icon',
             name: 'Icon',
             Component: Icon,
@@ -178,6 +174,10 @@ export default class Documentation extends Component {
             id: 'select',
             name: 'Select',
             Component: Select,
+          }, {
+            id: 'separator',
+            name: 'Separator',
+            Component: Separator,
           }, {
             id: 'table',
             name: 'Table',

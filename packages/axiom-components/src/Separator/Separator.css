@@ -1,0 +1,22 @@
+.ax-separator {
+  width: 100%;
+  border-color: var(--color-theme-border);
+}
+
+.ax-separator--solid {
+  border-style: solid;
+}
+
+.ax-separator--dotted {
+  border-style: dotted;
+}
+
+.ax-separator--horizontal {
+  border-width: var(--component-border-width-small) 0 0 0;
+}
+
+.ax-separator--vertical {
+  width: 0;
+  height: 100%;
+  border-width: 0 var(--component-border-width-small) 0 0;
+}

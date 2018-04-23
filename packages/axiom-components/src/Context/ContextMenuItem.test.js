@@ -54,4 +54,10 @@ describe('ContextMenuItem', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with custom icon', () => {
+    const component = getComponent({ icon: 'heart' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

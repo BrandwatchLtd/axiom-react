@@ -13,8 +13,15 @@ export default class Transition extends Component {
     width: PropTypes.string.isRequired,
   };
 
-  componentDidUpdate(prevProps) {
-    this.previousIndex = prevProps.activeIndex;
+  constructor(props) {
+    super(props);
+    this.previousIndex = props.activeIndex;
+  }
+
+  componentWillUpdate(nextProps) {
+    if (nextProps.activeIndex !== this.props.activeIndex) {
+      this.previousIndex = this.props.activeIndex;
+    }
   }
 
   render() {

@@ -5,8 +5,11 @@ import ContextMenuItem from '../Context/ContextMenuItem';
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {
+    /** SKIP */
     children: PropTypes.node,
-    /**
+    /** Disabled interactions and applies styling */
+    disabled: PropTypes.bool,
+   /**
     * Whether the menu should stay open after being clicked.
     */
     keepOpen: PropTypes.bool,
@@ -17,6 +20,8 @@ export default class DropdownMenuItem extends Component {
     multiSelect: PropTypes.bool,
     /** Click handler  */
     onClick: PropTypes.func,
+    /** Provides indication that the menu item is selected */
+    selected: PropTypes.bool,
   };
 
   static contextTypes = {

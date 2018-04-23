@@ -2,98 +2,126 @@
 
 exports[`ContextContent renders with defaultProps 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-large"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-large ax-context-content--padding-vertical-large"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
 exports[`ContextContent renders with hasFullSeparator renders with the full-separator element modifier 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-large ax-context-content--full-separator"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-large ax-context-content--padding-vertical-large ax-context-content--full-separator"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
 exports[`ContextContent renders with height inserts an inline height style attribute 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-large"
-  style={
-    Object {
-      "height": "5rem",
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-large ax-context-content--padding-vertical-large ax-context-content--scrollable"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": "5rem",
+        "maxHeight": undefined,
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
 exports[`ContextContent renders with maxHeight inserts an inline maxHeight style attribute 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-large ax-context-content--scrollable"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": "5rem",
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-large ax-context-content--padding-vertical-large ax-context-content--scrollable"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": "5rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
 exports[`ContextContent renders with padding large 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-large"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-large ax-context-content--padding-vertical-large"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
 exports[`ContextContent renders with padding none 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-none"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-none ax-context-content--padding-vertical-none"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;
 
 exports[`ContextContent renders with padding small 1`] = `
 <div
-  className="ax-context-content ax-context-content--padding-small"
-  style={
-    Object {
-      "height": undefined,
-      "maxHeight": undefined,
-    }
-  }
+  className="ax-context-content ax-context-content--padding-horizontal-small ax-context-content--padding-vertical-small"
 >
-  Lorem ipsum
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
 </div>
 `;

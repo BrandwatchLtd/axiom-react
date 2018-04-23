@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Separator renders with defaultProps 1`] = `
+<hr
+  className="ax-separator ax-separator--solid ax-separator--horizontal ax-space--x0"
+/>
+`;
+
+exports[`Separator renders with direction horizontal 1`] = `
+<hr
+  className="ax-separator ax-separator--solid ax-separator--horizontal ax-space--x0"
+/>
+`;
+
+exports[`Separator renders with direction vertical 1`] = `
+<hr
+  className="ax-separator ax-separator--solid ax-separator--vertical ax-space--x0"
+/>
+`;
+
+exports[`Separator renders with style dotted 1`] = `
+<hr
+  className="ax-separator ax-separator--dotted ax-separator--horizontal ax-space--x0"
+/>
+`;
+
+exports[`Separator renders with style solid 1`] = `
+<hr
+  className="ax-separator ax-separator--solid ax-separator--horizontal ax-space--x0"
+/>
+`;
