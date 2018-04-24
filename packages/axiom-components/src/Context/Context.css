@@ -68,6 +68,7 @@
 
 .ax-context-content {
   position: relative;
+  overflow: hidden;
 }
 
 .ax-context-content--padding-horizontal-small {
