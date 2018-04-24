@@ -8,11 +8,18 @@ export default class DropdownSource extends Component {
     children: PropTypes.node.isRequired,
   };
 
+  static contextTypes = {
+    closeDropdown: PropTypes.func.isRequired,
+  }
+
   static typeRef = DropdownSourceRef;
 
   render() {
     const { children, ...rest } = this.props;
 
-    return cloneElement(children, rest);
+    return cloneElement(children, {
+      ...rest,
+      onRequestCloseDropdown: this.context.closeDropdown,
+    });
   }
 }
