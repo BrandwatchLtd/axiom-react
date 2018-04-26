@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Transition passes props onto child 1`] = `
+<div
+  className="ax-transition__wrapper"
+  foo="bar"
+  style={
+    Object {
+      "height": "4rem",
+      "width": "4rem",
+    }
+  }
+>
+  <div
+    className="ax-transition__item"
+    style={
+      Object {
+        "animationDuration": "400ms",
+      }
+    }
+  >
+    <div
+      className="second"
+      foo="bar"
+    />
+  </div>
+</div>
+`;
+
 exports[`Transition renders first child 1`] = `
 <div
   className="ax-transition__wrapper"

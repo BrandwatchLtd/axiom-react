@@ -58,7 +58,7 @@ export default class Transition extends Component {
           { ...rest }>
         <CSSTransition classNames={ className } key={ activeIndex } timeout={ duration }>
           <div className="ax-transition__item" style={ style }>
-            { children[activeIndex] }
+            { React.cloneElement(children[activeIndex], rest) }
           </div>
         </CSSTransition>
       </TransitionGroup>
