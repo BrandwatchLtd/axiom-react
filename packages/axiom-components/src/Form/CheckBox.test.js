@@ -25,4 +25,16 @@ describe('CheckBox', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with indeterminate', () => {
+    const component = getComponent({ indeterminate: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with indeterminate and checked', () => {
+    const component = getComponent({ indeterminate: true, checked: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

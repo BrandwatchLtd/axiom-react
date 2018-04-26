@@ -13,6 +13,8 @@ export default class CheckBox extends Component {
     disabled: PropTypes.bool,
     /** See Validate[error] */
     error: PropTypes.func,
+    /** Partially checked state of the input */
+    indeterminate: PropTypes.bool,
     /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
     /** Name of the group the input belongs to */
@@ -33,6 +35,7 @@ export default class CheckBox extends Component {
       error,
       invalid,
       name,
+      indeterminate,
       patterns,
       required,
       ...rest
@@ -47,9 +50,10 @@ export default class CheckBox extends Component {
         { (isValid) =>
           <ChedioButtox
               { ...rest }
-              checked={ checked }
+              checked={ checked || indeterminate }
               className="ax-checkbox"
               disabled={ disabled }
+              indeterminate={ indeterminate && !checked }
               inputType="checkbox"
               invalid={ invalid || isValid === false }
               name={ name }>

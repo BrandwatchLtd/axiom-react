@@ -5,6 +5,11 @@
   --cmp-checkbox-padding-top: calc(var(--cmp-input-checkbox-size) * 0.25);
   --cmp-checkbox-padding-bottom: calc(var(--cmp-input-checkbox-size) * 0.375);
   --cmp-checkbox-padding-horizontal: calc(var(--cmp-input-checkbox-size) * 0.25);
+  --cmp-checkbox-indeterminate-top:
+    calc(
+      var(--cmp-input-checkbox-size) * 0.5 - var(--cmp-checkbox-thickness)
+    );
+  --cmp-checkbox-indeterminate-horizontal: calc(var(--cmp-input-checkbox-size) * 0.2);
 }
 
 .ax-checkbox,
@@ -128,5 +133,12 @@
   @nest .ax-checkbox__input:disabled:checked + & { border-color: var(--color-theme-border); }
   @nest .ax-checkbox--invalid .ax-checkbox__input:checked + & {
     border-color: var(--color-ui-error);
+  }
+  @nest .ax-checkbox--indeterminate & {
+    top: var(--cmp-checkbox-indeterminate-top);
+    right: var(--cmp-checkbox-indeterminate-horizontal);
+    left: var(--cmp-checkbox-indeterminate-horizontal);
+    transform: rotate(0deg);
+    border-left: 0;
   }
 }

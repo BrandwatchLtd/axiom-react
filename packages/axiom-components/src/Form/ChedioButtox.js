@@ -9,6 +9,7 @@ export default class ChedioButtox extends Component {
     children: PropTypes.node,
     className: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
+    indeterminate: PropTypes.bool,
     inputType: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
     invalid: PropTypes.bool,
     onClick: PropTypes.func,
@@ -24,12 +25,14 @@ export default class ChedioButtox extends Component {
       invalid,
       title,
       onClick,
+      indeterminate,
       ...rest
     } = this.props;
 
     const classes = classnames(className, {
       [`${className}--disabled`]: disabled,
       [`${className}--invalid`]: invalid,
+      [`${className}--indeterminate`]: indeterminate,
     });
 
     const handleClick = onClick && (e => {
