@@ -22,4 +22,10 @@ describe('Transition', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('passes props onto child', () => {
+    const component = getComponent({ activeIndex: 1, foo: 'bar' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

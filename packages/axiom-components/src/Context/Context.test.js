@@ -34,6 +34,16 @@ describe('Context', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('passes props onto child', () => {
+    const component = renderer.create(
+      <Context foo="bar">
+        <div>Lorem ipsum</div>
+      </Context>
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with position', () => {
     ['top', 'bottom', 'right', 'left'].forEach((position) => {
       it(position, () => {
