@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Context passes props onto child 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  foo="bar"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    <div
+      foo="bar"
+    >
+      Lorem ipsum
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Context renders custom maxHeight 1`] = `
 <div
   className="ax-context ax-context--top ax-theme--day"
