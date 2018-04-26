@@ -69,6 +69,11 @@
 .ax-context-content {
   position: relative;
   overflow: hidden;
+
+  @nest .ax-context--success & { background-color: var(--color-ui-success); }
+  @nest .ax-context--warning & { background-color: var(--color-ui-warning); }
+  @nest .ax-context--error & { background-color: var(--color-ui-error); }
+  @nest .ax-context--info & { background-color: var(--color-ui-info); }
 }
 
 .ax-context-content--padding-horizontal-small {

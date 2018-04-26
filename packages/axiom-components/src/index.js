@@ -76,6 +76,7 @@ export { default as IconButton } from './Icon/IconButton';
 export { default as Image } from './Image/Image';
 export { default as ImageFallback } from './Image/ImageFallback';
 export { default as InlineGroup } from './InlineGroup/InlineGroup';
+export { default as InlineValidation } from './Validation/InlineValidation';
 export { default as InputWrapper } from './Form/InputWrapper';
 export { default as Italic } from './Typography/Italic';
 export { default as Label } from './Label/Label';

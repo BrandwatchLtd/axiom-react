@@ -10,6 +10,7 @@ import {
   TextInput,
   TextInputButton,
   TextInputIcon,
+  InlineValidation,
 } from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
@@ -43,6 +44,21 @@ export default class Documentation extends Component {
             </DocumentationShowCase>
           </GridCell>
         </Grid>
+
+        <Grid>
+          <GridCell>
+            <DocumentationShowCase centered>
+              <InlineValidation message="There seems to be something wrong with your input">
+                <TextInput
+                    invalid
+                    onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
+                    placeholder="Write in me"
+                    size="medium" />
+              </InlineValidation>
+            </DocumentationShowCase>
+          </GridCell>
+        </Grid>
+
 
         <DocumentationApi components={ [
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInput'),
