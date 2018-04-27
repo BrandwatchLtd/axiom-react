@@ -12,6 +12,7 @@ export default class ContextMenuItem extends Component {
     children: PropTypes.node,
     disabled: PropTypes.bool,
     icon: PropTypes.string,
+    indeterminate: PropTypes.bool,
     multiSelect: PropTypes.bool,
     onClick: PropTypes.func,
     selected: PropTypes.bool,
@@ -22,6 +23,7 @@ export default class ContextMenuItem extends Component {
       children,
       disabled,
       icon,
+      indeterminate,
       onClick,
       multiSelect,
       selected,
@@ -41,7 +43,7 @@ export default class ContextMenuItem extends Component {
           textStrong={ selected }>
         { multiSelect && (
           <div className="ax-context-menu__item-checkbox">
-            <CheckBox checked={ selected } disabled={ disabled } onChange={ onClick } />
+            <CheckBox checked={ selected } disabled={ disabled } indeterminate={ indeterminate } onChange={ onClick } />
           </div>
         ) }
 
