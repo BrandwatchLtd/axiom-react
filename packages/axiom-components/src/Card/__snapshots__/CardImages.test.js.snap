@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardImages renders with 1 src 1`] = `
+<div
+  className="ax-card__images ax-card__images--1"
+>
+  <div
+    className="ax-card__image"
+  >
+    <img
+      className="ax-image ax-image--square ax-space--x0"
+      src="image.png"
+      style={
+        Object {
+          "height": undefined,
+          "maxWidth": "100%",
+          "width": undefined,
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`CardImages renders with 2 src 1`] = `
+<div
+  className="ax-card__images ax-card__images--2"
+>
+  <div
+    className="ax-card__images-grid"
+  >
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`CardImages renders with 3 src 1`] = `
+<div
+  className="ax-card__images ax-card__images--3"
+>
+  <div
+    className="ax-card__images-grid"
+  >
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`CardImages renders with 4 src 1`] = `
+<div
+  className="ax-card__images ax-card__images--4"
+>
+  <div
+    className="ax-card__images-grid"
+  >
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+    <div
+      className="ax-card__images-grid-item"
+      style={
+        Object {
+          "backgroundImage": "url(image.png)",
+        }
+      }
+    />
+  </div>
+</div>
+`;

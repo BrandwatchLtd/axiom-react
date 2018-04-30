@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   Badge,
   Candytar,
@@ -6,6 +6,7 @@ import {
   CardCaption,
   CardContent,
   CardImage,
+  CardImages,
   CardList,
   Grid,
   GridCell,
@@ -21,6 +22,60 @@ import {
   DocumentationContent,
   DocumentationShowCase,
 } from '@brandwatch/axiom-documentation-viewer';
+
+class CardExampleContainer extends Component {
+  render() {
+    return (
+      <div { ...this.props }
+          style={ { margin: 'auto', maxWidth: '16.375rem' } } />
+    );
+  }
+}
+
+class CardExampleContent extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Paragraph space="x0" textStrong>Name Surname</Paragraph>
+        <Paragraph space="x0" textColor="subtle">
+          <TextIcon name="twitter" spaceRight="x1" textColor="twitter" />
+          @TwitterHandle • 6hrs
+        </Paragraph>
+        <Paragraph space="x2" textColor="subtle" textSize="small">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore: <Link href="https://goo.gl/4oWkDa">https://goo.gl/4oWkDa</Link>
+          <Link href="https://goo.gl/4oWkDa"> #HashTag</Link>
+        </Paragraph>
+        <Grid
+            gutters="small"
+            responsive={ false }
+            space="x0"
+            textColor="subtle"
+            textSize="small"
+            textStrong
+            verticalAlign="middle">
+          <GridCell shrink>
+            <Link style="subtle"><TextIcon name="retweet" /> 1</Link>
+          </GridCell>
+
+          <GridCell shrink>
+            <Link style="subtle"><TextIcon name="heart" /> 6</Link>
+          </GridCell>
+
+          <GridCell>
+            <Link style="subtle"><TextIcon name="reply" /> 0</Link>
+          </GridCell>
+
+          <GridCell shrink>
+            <Badge color="success">
+              <TextIcon name="preview" /> 44%
+            </Badge>
+          </GridCell>
+        </Grid>
+      </Fragment>
+    );
+  }
+}
 
 export default class Documentation extends Component {
   render() {
@@ -61,7 +116,7 @@ export default class Documentation extends Component {
         </DocumentationShowCase>
 
         <DocumentationShowCase>
-          <div style={ { margin: 'auto', maxWidth: '16.375rem' } }>
+          <CardExampleContainer>
             <Card onClick={ () => {} } shadow>
               <CardImage src="/assets/card.jpg">
                 <CardCaption textStrong>
@@ -71,46 +126,12 @@ export default class Documentation extends Component {
                   </List>
                 </CardCaption>
               </CardImage>
-              <CardContent key="body" size="large">
-                <Paragraph space="x0" textStrong>Name Surname</Paragraph>
-                <Paragraph space="x0" textColor="subtle">
-                  <TextIcon name="twitter" spaceRight="x1" textColor="twitter" />
-                  @TwitterHandle • 6hrs
-                </Paragraph>
-                <Paragraph space="x2" textColor="subtle" textSize="small">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore: <Link href="https://goo.gl/4oWkDa">https://goo.gl/4oWkDa</Link>
-                  <Link href="https://goo.gl/4oWkDa"> #HashTag</Link>
-                </Paragraph>
-                <Grid
-                    gutters="small"
-                    responsive={ false }
-                    space="x0"
-                    textColor="subtle"
-                    textSize="small"
-                    textStrong
-                    verticalAlign="middle">
-                  <GridCell shrink>
-                    <Link style="subtle"><TextIcon name="retweet" /> 1</Link>
-                  </GridCell>
 
-                  <GridCell shrink>
-                    <Link style="subtle"><TextIcon name="heart" /> 6</Link>
-                  </GridCell>
-
-                  <GridCell>
-                    <Link style="subtle"><TextIcon name="reply" /> 0</Link>
-                  </GridCell>
-
-                  <GridCell shrink>
-                    <Badge color="success">
-                      <TextIcon name="preview" /> 44%
-                    </Badge>
-                  </GridCell>
-                </Grid>
+              <CardContent size="large">
+                <CardExampleContent />
               </CardContent>
             </Card>
-          </div>
+          </CardExampleContainer>
         </DocumentationShowCase>
 
         <DocumentationApi components={ [
@@ -118,6 +139,64 @@ export default class Documentation extends Component {
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardContent'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImage'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardCaption'),
+        ] } />
+
+        <DocumentationShowCase>
+          <Grid gutters="small" horizontalAlign="middle">
+            <GridCell none>
+              <CardExampleContainer>
+                <Card shadow space="x4">
+                  <CardImages srcs={ [
+                    '/assets/card-1.jpeg',
+                  ] } />
+                  <CardContent size="large">
+                    <CardExampleContent />
+                  </CardContent>
+                </Card>
+
+                <Card shadow space="x4">
+                  <CardImages srcs={ [
+                    '/assets/card-1.jpeg',
+                    '/assets/card-2.jpeg',
+                  ] } />
+                  <CardContent size="large">
+                    <CardExampleContent />
+                  </CardContent>
+                </Card>
+              </CardExampleContainer>
+            </GridCell>
+
+            <GridCell none>
+              <CardExampleContainer>
+                <Card shadow space="x4">
+                  <CardImages srcs={ [
+                    '/assets/card-1.jpeg',
+                    '/assets/card-2.jpeg',
+                    '/assets/card-3.jpeg',
+                  ] } />
+                  <CardContent size="large">
+                    <CardExampleContent />
+                  </CardContent>
+                </Card>
+
+                <Card shadow space="x4">
+                  <CardImages srcs={ [
+                    '/assets/card-1.jpeg',
+                    '/assets/card-2.jpeg',
+                    '/assets/card-3.jpeg',
+                    '/assets/card-4.jpeg',
+                  ] } />
+                  <CardContent size="large">
+                    <CardExampleContent />
+                  </CardContent>
+                </Card>
+              </CardExampleContainer>
+            </GridCell>
+          </Grid>
+        </DocumentationShowCase>
+
+        <DocumentationApi components={ [
+          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImages'),
         ] } />
 
         <DocumentationShowCase>

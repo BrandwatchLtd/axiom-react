@@ -25,6 +25,7 @@ export { default as Card } from './Card/Card';
 export { default as CardCaption } from './Card/CardCaption';
 export { default as CardContent } from './Card/CardContent';
 export { default as CardImage } from './Card/CardImage';
+export { default as CardImages } from './Card/CardImages';
 export { default as CardList } from './Card/CardList';
 export { default as CheckBox } from './Form/CheckBox';
 export { default as CheckBoxGroup } from './Form/CheckBoxGroup';
