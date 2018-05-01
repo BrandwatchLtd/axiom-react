@@ -5,6 +5,8 @@ import Base from '../Base/Base';
 
 export default class TableRow extends Component {
   static propTypes = {
+    /** Specifies whether or not the row should have borders */
+    borderless: PropTypes.bool,
     /** TableCells */
     children: PropTypes.node,
     /** Apply hover styling */
@@ -14,12 +16,14 @@ export default class TableRow extends Component {
   render() {
     const {
       children,
+      borderless,
       hover,
       ...rest
     } = this.props;
 
     const className = classnames('ax-table__row', {
       'ax-table__row--hover': hover,
+      'ax-table__row--borderless': borderless,
     });
 
     return (

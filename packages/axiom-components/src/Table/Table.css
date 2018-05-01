@@ -12,7 +12,12 @@
   transition-timing-function: var(--transition-function);
 }
 
+.ax-table__row--borderless .ax-table__cell {
+  border-top-width: 0;
+}
+
 .ax-table__row:first-child .ax-table__cell {
+  border-top-width: var(--component-border-width-medium);
   border-top-style: solid;
 }
 
