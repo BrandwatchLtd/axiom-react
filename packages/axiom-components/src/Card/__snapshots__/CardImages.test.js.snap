@@ -3,6 +3,11 @@
 exports[`CardImages renders with 1 src 1`] = `
 <div
   className="ax-card__images ax-card__images--1"
+  style={
+    Object {
+      "paddingBottom": null,
+    }
+  }
 >
   <div
     className="ax-card__image"
@@ -24,7 +29,12 @@ exports[`CardImages renders with 1 src 1`] = `
 
 exports[`CardImages renders with 2 src 1`] = `
 <div
-  className="ax-card__images ax-card__images--2"
+  className="ax-card__images ax-card__images--2 ax-card__images--ratio"
+  style={
+    Object {
+      "paddingBottom": "50%",
+    }
+  }
 >
   <div
     className="ax-card__images-grid"
@@ -51,7 +61,12 @@ exports[`CardImages renders with 2 src 1`] = `
 
 exports[`CardImages renders with 3 src 1`] = `
 <div
-  className="ax-card__images ax-card__images--3"
+  className="ax-card__images ax-card__images--3 ax-card__images--ratio"
+  style={
+    Object {
+      "paddingBottom": "75%",
+    }
+  }
 >
   <div
     className="ax-card__images-grid"
@@ -86,7 +101,12 @@ exports[`CardImages renders with 3 src 1`] = `
 
 exports[`CardImages renders with 4 src 1`] = `
 <div
-  className="ax-card__images ax-card__images--4"
+  className="ax-card__images ax-card__images--4 ax-card__images--ratio"
+  style={
+    Object {
+      "paddingBottom": "100%",
+    }
+  }
 >
   <div
     className="ax-card__images-grid"

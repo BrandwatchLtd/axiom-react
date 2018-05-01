@@ -6,19 +6,30 @@ import CardImage from './CardImage';
 
 export default class CardImages extends Component {
   static propTypes = {
+    /**
+     * Aspect ratios for the height of the container depending on how many
+     * images should be shown
+     */
+    ratios: PropTypes.array.isRequired,
     /** The multiple image sources to be used inside the image grid */
     srcs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
+  static defaultProps = {
+    ratios: [null, '50%', '75%', '100%'],
+  };
+
   render() {
-    const { srcs, ...rest } = this.props;
-    const classes = classnames('ax-card__images', `ax-card__images--${srcs.length}`);
+    const { ratios, srcs, ...rest } = this.props;
+    const ratio = ratios[srcs.length - 1];
+    const style = { paddingBottom: ratio };
+    const classes = classnames('ax-card__images', `ax-card__images--${srcs.length}`, {
+      'ax-card__images--ratio': ratio,
+    });
 
     return (
-      <Base { ...rest } className={ classes }>
-        { srcs.length === 1 ? (
-          <CardImage src={ srcs[0] } />
-        ) : (
+      <Base { ...rest } className={ classes } style={ style }>
+        { ratio ? (
           <div className="ax-card__images-grid">
             { srcs.map((src, index) => (
               <div
@@ -27,6 +38,8 @@ export default class CardImages extends Component {
                   style={ { backgroundImage: `url(${src})` } } />
             )) }
           </div>
+        ) : (
+          <CardImage src={ srcs[0] } />
         ) }
       </Base>
     );

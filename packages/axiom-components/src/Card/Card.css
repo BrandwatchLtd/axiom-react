@@ -111,15 +111,9 @@
   border-bottom: 0.0625rem dotted var(--color-theme-border);
 }
 
-.ax-card__images--2,
-.ax-card__images--3,
-.ax-card__images--4 {
+.ax-card__images--ratio {
   height: 0;
 }
-
-.ax-card__images--2 { padding-bottom: 50%; }
-.ax-card__images--3 { padding-bottom: 75%; }
-.ax-card__images--4 { padding-bottom: 100%; }
 
 .ax-card__images-grid {
   display: grid;
