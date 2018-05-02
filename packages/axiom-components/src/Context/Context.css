@@ -96,25 +96,25 @@
   padding-bottom: var(--cmp-context-padding-large);
 }
 
-.ax-context-content:not(:last-child)::after {
+.ax-context-content + .ax-context-content::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  border-bottom: var(--component-border-width) solid var(--color-theme-border);
+  top: 0;
+  border-top: var(--component-border-width) solid var(--color-theme-border);
 }
 
-.ax-context-content--padding-horizontal-small::after {
+.ax-context-content--padding-horizontal-small::before {
   right: var(--cmp-context-padding-small);
   left: var(--cmp-context-padding-small);
 }
 
-.ax-context-content--padding-horizontal-none::after,
-.ax-context-content--padding-horizontal-large::after {
+.ax-context-content--padding-horizontal-none::before,
+.ax-context-content--padding-horizontal-large::before {
   right: var(--cmp-context-padding-large);
   left: var(--cmp-context-padding-large);
 }
 
-.ax-context-content--full-separator::after {
+.ax-context-content--full-separator::before {
   right: 0;
   left: 0;
 }
