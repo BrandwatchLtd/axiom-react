@@ -1,8 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TableHead renders with defaultProps 1`] = `
+exports[`TableRow renders with defaultProps 1`] = `
 <tr
   className="ax-table__row"
+>
+  <td
+    className="ax-table__cell ax-table__cell--align-left"
+  >
+    123456
+  </td>
+</tr>
+`;
+
+exports[`TableRow renders without borders 1`] = `
+<tr
+  className="ax-table__row ax-table__row--borderless"
 >
   <td
     className="ax-table__cell ax-table__cell--align-left"
