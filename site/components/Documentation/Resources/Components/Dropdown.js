@@ -162,9 +162,7 @@ export default class Documentation extends Component {
                           Option 2.2
                         </DropdownMenuItem>
                       </DropdownMenu>
-                    </DropdownMenu>
 
-                    <DropdownMenu>
                       <DropdownMenuItem
                           disabled
                           multiSelect
