@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import atIds from '@brandwatch/axiom-automation-testing/ids';
+import { Small } from '@brandwatch/axiom-components';
 import Bar from '../Bar/Bar';
 import Bars from '../Bar/Bars';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
@@ -67,30 +68,41 @@ export default class BarChartBars extends Component {
         <Bars direction="right">
           { values.map(({ color, value }) => {
             const isFaded = hoverColor && color !== hoverColor;
+            const percent = ((value - lower) / (upper - lower)) * 100;
+            const labelClasses = classnames('ax-bar-chart__bar-label', {
+              'ax-bar-chart__bar-label--hidden': !(showBarLabel || color === hoverColor),
+            });
+
+            const labelStyle = {
+              left: `${percent}%`,
+            };
 
             return (
-              <ChartContext
-                  DropdownContext={ DropdownContext }
-                  color={ color }
-                  data={ data }
-                  key={ color }
-                  label={ label }
-                  onDropdownClose={ onDropdownClose }
-                  onDropdownOpen={ () => onDropdownOpen(color) }
-                  value={ value }>
-                <Bar
+              <div className="ax-bar-chart__bar-container" key={ color }>
+                <ChartContext
+                    DropdownContext={ DropdownContext }
                     color={ color }
-                    data-ax-at={ atIds.BarChart.bar }
-                    isFaded={ isFaded }
-                    isHidden={ hideBars && isFaded }
-                    label={ barLabel ? barLabel({ value, data, color, label }) : value }
-                    labelStrong={ isHovered }
-                    onMouseEnter={ () => onMouseEnter(color) }
-                    onMouseLeave={ onMouseLeave }
-                    percent={ ((value - lower) / (upper - lower)) * 100 }
-                    showLabel={ showBarLabel || color === hoverColor }
-                    size={ size } />
-              </ChartContext>
+                    data={ data }
+                    label={ label }
+                    onDropdownClose={ onDropdownClose }
+                    onDropdownOpen={ () => onDropdownOpen(color) }
+                    value={ value }>
+                  <Bar
+                      color={ color }
+                      data-ax-at={ atIds.BarChart.bar }
+                      isFaded={ isFaded }
+                      isHidden={ hideBars && isFaded }
+                      onMouseEnter={ () => onMouseEnter(color) }
+                      onMouseLeave={ onMouseLeave }
+                      percent={ percent }
+                      showLabel={ false }
+                      size={ size } />
+                </ChartContext>
+
+                <div className={ labelClasses } style={ labelStyle }>
+                  <Small textStrong={ isHovered }>{ barLabel ? barLabel({ value, data, color, label }) : value }</Small>
+                </div>
+              </div>
             );
           }) }
         </Bars>

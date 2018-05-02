@@ -31,3 +31,22 @@
   bottom: 0;
   border-right: var(--cmp-benchmark-line-width) solid var(--color-theme-text--subtle);
 }
+
+.ax-bar-chart__bar-container {
+  position: relative;
+  width: 100%;
+}
+
+.ax-bar-chart__bar-container .ax-bar-chart__bar-label {
+  position: absolute;
+  top: 0;
+  align-self: center;
+  margin-right: calc(var(--cmp-chart-label-width) * -1);
+  padding-left: var(--cmp-chart-label-margin);
+  line-height: var(--cmp-chart-label-line-height);
+  transition: opacity var(--transition-time-base) var(--transition-function);
+}
+
+.ax-bar-chart__bar-label--hidden {
+  opacity: 0;
+}
