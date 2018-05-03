@@ -50,6 +50,16 @@ describe('Bar', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  describe('renders with fillMode', () => {
+    ['solid', 'semistriped', 'striped'].forEach((fillMode) => {
+      it(fillMode, () => {
+        const component = getComponent({ fillMode });
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+  });
+
   describe('renders with size', () => {
     ['up', 'down', 'left', 'right'].forEach((direction) => {
       it(direction, () => {

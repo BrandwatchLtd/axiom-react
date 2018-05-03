@@ -30,7 +30,11 @@ exports[`Bars renders with defaultProps 1`] = `
               "width": undefined,
             }
           }
-        />
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
         <div
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
@@ -76,7 +80,11 @@ exports[`Bars renders with direction down 1`] = `
               "width": undefined,
             }
           }
-        />
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
         <div
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
@@ -122,7 +130,11 @@ exports[`Bars renders with direction left 1`] = `
               "width": false,
             }
           }
-        />
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
         <div
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
@@ -168,7 +180,11 @@ exports[`Bars renders with direction right 1`] = `
               "width": false,
             }
           }
-        />
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
         <div
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
@@ -214,7 +230,11 @@ exports[`Bars renders with direction up 1`] = `
               "width": undefined,
             }
           }
-        />
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
         <div
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >
@@ -260,7 +280,11 @@ exports[`Bars renders with label 1`] = `
               "width": undefined,
             }
           }
-        />
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
         <div
           className="ax-bars__bar-label ax-bars__bar-label--hidden"
         >

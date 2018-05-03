@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import { Base, Small } from '@brandwatch/axiom-components';
 import './Bar.css';
 
+const FILL_MODE_SOLID = 'solid';
+const FILL_MODE_SEMISTRIPED = 'semistriped';
+const FILL_MODE_STRIPED = 'striped';
+
 export default class Bar extends Component {
   static propTypes = {
     /** Background color of the Bar */
@@ -34,6 +38,12 @@ export default class Bar extends Component {
       'social-facebook',
       'social-instagram',
     ]).isRequired,
+    /** Texture of the Bar */
+    fillMode: PropTypes.oneOf([
+      FILL_MODE_SOLID,
+      FILL_MODE_SEMISTRIPED,
+      FILL_MODE_STRIPED,
+    ]),
     /** When true the bar is faded */
     isFaded: PropTypes.bool,
     /** When true the bar is invisible */
@@ -62,6 +72,7 @@ export default class Bar extends Component {
     isHidden: false,
     labelStrong: false,
     minSize: '1rem',
+    fillMode: FILL_MODE_SOLID,
   };
 
   static contextTypes = {
@@ -72,6 +83,7 @@ export default class Bar extends Component {
     const { direction } = this.context;
     const {
       color,
+      fillMode,
       isFaded,
       isHidden,
       label,
@@ -97,6 +109,11 @@ export default class Bar extends Component {
     const rectClasses = classnames('ax-bars__bar-rect',
       `ax-bars__bar-rect--${color}`);
 
+    const stripClasses = classnames({
+      'ax-bars__bar--semistriped': fillMode !== FILL_MODE_STRIPED,
+      'ax-bars__bar--striped': fillMode === FILL_MODE_STRIPED,
+    });
+
     const style = {
       height: isVertical && `${percent}%`,
       width: !isVertical && `${percent}%`,
@@ -114,7 +131,10 @@ export default class Bar extends Component {
           className={ classes }
           onClick={ onClick }
           style={ style }>
-        <div className={ rectClasses } style={ rectStyle } />
+        <div className={ rectClasses } style={ rectStyle }>
+          { fillMode !== FILL_MODE_STRIPED && (<div className="ax-bars__bar--solid" />) }
+          { fillMode !== FILL_MODE_SOLID && (<div className={ stripClasses } />) }
+        </div>
         <div className={ labelClasses }>
           <Small textStrong={ labelStrong }>{ label || `${percent}%` }</Small>
         </div>

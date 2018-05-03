@@ -39,7 +39,11 @@ exports[`BulletBars renders with defaultProps 1`] = `
                     "width": undefined,
                   }
                 }
-              />
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
               <div
                 className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
@@ -86,7 +90,11 @@ exports[`BulletBars renders with defaultProps 1`] = `
                     "width": undefined,
                   }
                 }
-              />
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
               <div
                 className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
@@ -144,7 +152,11 @@ exports[`BulletBars renders with the correct label 1`] = `
                     "width": undefined,
                   }
                 }
-              />
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
               <div
                 className="ax-bars__bar-label ax-bars__bar-label--hidden"
               >
@@ -191,7 +203,11 @@ exports[`BulletBars renders with the correct label 1`] = `
                     "width": undefined,
                   }
                 }
-              />
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
               <div
                 className="ax-bars__bar-label"
               >

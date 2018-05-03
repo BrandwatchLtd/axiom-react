@@ -28,166 +28,223 @@
 }
 
 .ax-bars__bar-rect {
+  position: relative;
   flex: 1 1 0%;
 
-  &.ax-bars__bar-rect--tiny-clanger { background-color: var(--color-product-tiny-clanger); }
-  &.ax-bars__bar-rect--critical-mass { background-color: var(--color-product-critical-mass); }
-  &.ax-bars__bar-rect--fantastic-voyage { background-color: var(--color-product-fantastic-voyage); }
-  &.ax-bars__bar-rect--paradise-lost { background-color: var(--color-product-paradise-lost); }
-  &.ax-bars__bar-rect--serene-sea { background-color: var(--color-product-serene-sea); }
-  &.ax-bars__bar-rect--electric-dreams { background-color: var(--color-product-electric-dreams); }
-  &.ax-bars__bar-rect--giant-leap { background-color: var(--color-product-giant-leap); }
-  &.ax-bars__bar-rect--moon-lagoon { background-color: var(--color-product-moon-lagoon); }
-  &.ax-bars__bar-rect--space-invader { background-color: var(--color-product-space-invader); }
-  &.ax-bars__bar-rect--terra-form { background-color: var(--color-product-terra-form); }
-  &.ax-bars__bar-rect--primeval-soup { background-color: var(--color-product-primeval-soup); }
-  &.ax-bars__bar-rect--sun-maker { background-color: var(--color-product-sun-maker); }
-  &.ax-bars__bar-rect--new-horizon { background-color: var(--color-product-new-horizon); }
-  &.ax-bars__bar-rect--blast-off { background-color: var(--color-product-blast-off); }
-  &.ax-bars__bar-rect--crash-course { background-color: var(--color-product-crash-course); }
-  &.ax-bars__bar-rect--ground-control { background-color: var(--color-product-ground-control); }
-  &.ax-bars__bar-rect--space-oddity { background-color: var(--color-product-space-oddity); }
-  &.ax-bars__bar-rect--deep-thought { background-color: var(--color-product-deep-thought); }
-  &.ax-bars__bar-rect--luna-dust { background-color: var(--color-product-luna-dust); }
-  &.ax-bars__bar-rect--sentiment-positive { background-color: var(--color-sentiment-positive); }
-  &.ax-bars__bar-rect--sentiment-negative { background-color: var(--color-sentiment-negative); }
-  &.ax-bars__bar-rect--sentiment-neutral { background-color: var(--color-sentiment-neutral); }
-  &.ax-bars__bar-rect--social-twitter { background-color: var(--color-social-twitter); }
-  &.ax-bars__bar-rect--social-facebook { background-color: var(--color-social-facebook); }
-  &.ax-bars__bar-rect--social-instagram { background-color: var(--color-social-instagram); }
+  & .ax-bars__bar--solid,
+  & .ax-bars__bar--striped,
+  & .ax-bars__bar--semistriped {
+    width: 100%;
+    height: 100%;
+  }
+
+  & .ax-bars__bar--solid {
+    background-color: currentColor;
+  }
+
+  & .ax-bars__bar-striped,
+  & .ax-bars__bar--semistriped {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  & .ax-bars__bar--semistriped {
+    opacity: 0.3;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        rgb(var(--rgb-ui-white)),
+        rgb(var(--rgb-ui-white)) var(--spacing-grid-size--x1),
+        currentColor var(--spacing-grid-size--x1),
+        currentColor calc(var(--spacing-grid-size--x1) * 2)
+      );
+  }
+
+  & .ax-bars__bar--striped {
+    opacity: 0.4;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent var(--spacing-grid-size--x1),
+        currentColor var(--spacing-grid-size--x1),
+        currentColor calc(var(--spacing-grid-size--x1) * 2)
+      );
+  }
+
+  &.ax-bars__bar-rect--tiny-clanger { color: var(--color-product-tiny-clanger); }
+  &.ax-bars__bar-rect--critical-mass { color: var(--color-product-critical-mass); }
+  &.ax-bars__bar-rect--fantastic-voyage { color: var(--color-product-fantastic-voyage); }
+  &.ax-bars__bar-rect--paradise-lost { color: var(--color-product-paradise-lost); }
+  &.ax-bars__bar-rect--serene-sea { color: var(--color-product-serene-sea); }
+  &.ax-bars__bar-rect--electric-dreams { color: var(--color-product-electric-dreams); }
+  &.ax-bars__bar-rect--giant-leap { color: var(--color-product-giant-leap); }
+  &.ax-bars__bar-rect--moon-lagoon { color: var(--color-product-moon-lagoon); }
+  &.ax-bars__bar-rect--space-invader { color: var(--color-product-space-invader); }
+  &.ax-bars__bar-rect--terra-form { color: var(--color-product-terra-form); }
+  &.ax-bars__bar-rect--primeval-soup { color: var(--color-product-primeval-soup); }
+  &.ax-bars__bar-rect--sun-maker { color: var(--color-product-sun-maker); }
+  &.ax-bars__bar-rect--new-horizon { color: var(--color-product-new-horizon); }
+  &.ax-bars__bar-rect--blast-off { color: var(--color-product-blast-off); }
+  &.ax-bars__bar-rect--crash-course { color: var(--color-product-crash-course); }
+  &.ax-bars__bar-rect--ground-control { color: var(--color-product-ground-control); }
+  &.ax-bars__bar-rect--space-oddity { color: var(--color-product-space-oddity); }
+  &.ax-bars__bar-rect--deep-thought { color: var(--color-product-deep-thought); }
+  &.ax-bars__bar-rect--luna-dust { color: var(--color-product-luna-dust); }
+  &.ax-bars__bar-rect--sentiment-positive { color: var(--color-sentiment-positive); }
+  &.ax-bars__bar-rect--sentiment-negative { color: var(--color-sentiment-negative); }
+  &.ax-bars__bar-rect--sentiment-neutral { color: var(--color-sentiment-neutral); }
+  &.ax-bars__bar-rect--social-twitter { color: var(--color-social-twitter); }
+  &.ax-bars__bar-rect--social-facebook { color: var(--color-social-facebook); }
+  &.ax-bars__bar-rect--social-instagram { color: var(--color-social-instagram); }
 }
 
 .ax-bars__bar--clickable {
   cursor: pointer;
 
   & .ax-bars__bar-rect {
-    transition-property: background-color;
-    transition-duration: var(--transition-time-base);
-    transition-timing-function: var(--transition-function);
+    & .ax-bars__bar--solid {
+      transition-property: color;
+      transition-duration: var(--transition-time-base);
+      transition-timing-function: var(--transition-function);
+    }
+
+    & .ax-bars__bar--striped,
+    & .ax-bars__bar--semistriped {
+      transition-property: opacity;
+      transition-duration: var(--transition-time-base);
+      transition-timing-function: var(--transition-function);
+    }
+
+    & .ax-bars__bar--striped:hover,
+    & .ax-bars__bar--semistriped:hover {
+      opacity: 0.25;
+    }
 
     &.ax-bars__bar-rect--tiny-clanger {
-      &:hover { background-color: var(--color-product-tiny-clanger--hover); }
-      &:active { background-color: var(--color-product-tiny-clanger--active); }
+      &:hover { color: var(--color-product-tiny-clanger--hover); }
+      &:active { color: var(--color-product-tiny-clanger--active); }
     }
 
     &.ax-bars__bar-rect--critical-mass {
-      &:hover { background-color: var(--color-product-critical-mass--hover); }
-      &:active { background-color: var(--color-product-critical-mass--active); }
+      &:hover { color: var(--color-product-critical-mass--hover); }
+      &:active { color: var(--color-product-critical-mass--active); }
     }
 
     &.ax-bars__bar-rect--fantastic-voyage {
-      &:hover { background-color: var(--color-product-fantastic-voyage--hover); }
-      &:active { background-color: var(--color-product-fantastic-voyage--active); }
+      &:hover { color: var(--color-product-fantastic-voyage--hover); }
+      &:active { color: var(--color-product-fantastic-voyage--active); }
     }
 
     &.ax-bars__bar-rect--paradise-lost {
-      &:hover { background-color: var(--color-product-paradise-lost--hover); }
-      &:active { background-color: var(--color-product-paradise-lost--active); }
+      &:hover { color: var(--color-product-paradise-lost--hover); }
+      &:active { color: var(--color-product-paradise-lost--active); }
     }
 
     &.ax-bars__bar-rect--serene-sea {
-      &:hover { background-color: var(--color-product-serene-sea--hover); }
-      &:active { background-color: var(--color-product-serene-sea--active); }
+      &:hover { color: var(--color-product-serene-sea--hover); }
+      &:active { color: var(--color-product-serene-sea--active); }
     }
 
     &.ax-bars__bar-rect--electric-dreams {
-      &:hover { background-color: var(--color-product-electric-dreams--hover); }
-      &:active { background-color: var(--color-product-electric-dreams--active); }
+      &:hover { color: var(--color-product-electric-dreams--hover); }
+      &:active { color: var(--color-product-electric-dreams--active); }
     }
 
     &.ax-bars__bar-rect--giant-leap {
-      &:hover { background-color: var(--color-product-giant-leap--hover); }
-      &:active { background-color: var(--color-product-giant-leap--active); }
+      &:hover { color: var(--color-product-giant-leap--hover); }
+      &:active { color: var(--color-product-giant-leap--active); }
     }
 
     &.ax-bars__bar-rect--moon-lagoon {
-      &:hover { background-color: var(--color-product-moon-lagoon--hover); }
-      &:active { background-color: var(--color-product-moon-lagoon--active); }
+      &:hover { color: var(--color-product-moon-lagoon--hover); }
+      &:active { color: var(--color-product-moon-lagoon--active); }
     }
 
     &.ax-bars__bar-rect--space-invader {
-      &:hover { background-color: var(--color-product-space-invader--hover); }
-      &:active { background-color: var(--color-product-space-invader--active); }
+      &:hover { color: var(--color-product-space-invader--hover); }
+      &:active { color: var(--color-product-space-invader--active); }
     }
 
     &.ax-bars__bar-rect--terra-form {
-      &:hover { background-color: var(--color-product-terra-form--hover); }
-      &:active { background-color: var(--color-product-terra-form--active); }
+      &:hover { color: var(--color-product-terra-form--hover); }
+      &:active { color: var(--color-product-terra-form--active); }
     }
 
     &.ax-bars__bar-rect--primeval-soup {
-      &:hover { background-color: var(--color-product-primeval-soup--hover); }
-      &:active { background-color: var(--color-product-primeval-soup--active); }
+      &:hover { color: var(--color-product-primeval-soup--hover); }
+      &:active { color: var(--color-product-primeval-soup--active); }
     }
 
     &.ax-bars__bar-rect--sun-maker {
-      &:hover { background-color: var(--color-product-sun-maker--hover); }
-      &:active { background-color: var(--color-product-sun-maker--active); }
+      &:hover { color: var(--color-product-sun-maker--hover); }
+      &:active { color: var(--color-product-sun-maker--active); }
     }
 
     &.ax-bars__bar-rect--new-horizon {
-      &:hover { background-color: var(--color-product-new-horizon--hover); }
-      &:active { background-color: var(--color-product-new-horizon--active); }
+      &:hover { color: var(--color-product-new-horizon--hover); }
+      &:active { color: var(--color-product-new-horizon--active); }
     }
 
     &.ax-bars__bar-rect--blast-off {
-      &:hover { background-color: var(--color-product-blast-off--hover); }
-      &:active { background-color: var(--color-product-blast-off--active); }
+      &:hover { color: var(--color-product-blast-off--hover); }
+      &:active { color: var(--color-product-blast-off--active); }
     }
 
     &.ax-bars__bar-rect--crash-course {
-      &:hover { background-color: var(--color-product-crash-course--hover); }
-      &:active { background-color: var(--color-product-crash-course--active); }
+      &:hover { color: var(--color-product-crash-course--hover); }
+      &:active { color: var(--color-product-crash-course--active); }
     }
 
     &.ax-bars__bar-rect--ground-control {
-      &:hover { background-color: var(--color-product-ground-control--hover); }
-      &:active { background-color: var(--color-product-ground-control--active); }
+      &:hover { color: var(--color-product-ground-control--hover); }
+      &:active { color: var(--color-product-ground-control--active); }
     }
 
     &.ax-bars__bar-rect--space-oddity {
-      &:hover { background-color: var(--color-product-space-oddity--hover); }
-      &:active { background-color: var(--color-product-space-oddity--active); }
+      &:hover { color: var(--color-product-space-oddity--hover); }
+      &:active { color: var(--color-product-space-oddity--active); }
     }
 
     &.ax-bars__bar-rect--deep-thought {
-      &:hover { background-color: var(--color-product-deep-thought--hover); }
-      &:active { background-color: var(--color-product-deep-thought--active); }
+      &:hover { color: var(--color-product-deep-thought--hover); }
+      &:active { color: var(--color-product-deep-thought--active); }
     }
 
     &.ax-bars__bar-rect--luna-dust {
-      &:hover { background-color: var(--color-product-luna-dust--hover); }
-      &:active { background-color: var(--color-product-luna-dust--active); }
+      &:hover { color: var(--color-product-luna-dust--hover); }
+      &:active { color: var(--color-product-luna-dust--active); }
     }
 
     &.ax-bars__bar-rect--sentiment-positive {
-      &:hover { background-color: var(--color-sentiment-positive--hover); }
-      &:active { background-color: var(--color-sentiment-positive--active); }
+      &:hover { color: var(--color-sentiment-positive--hover); }
+      &:active { color: var(--color-sentiment-positive--active); }
     }
 
     &.ax-bars__bar-rect--sentiment-negative {
-      &:hover { background-color: var(--color-sentiment-negative--hover); }
-      &:active { background-color: var(--color-sentiment-negative--active); }
+      &:hover { color: var(--color-sentiment-negative--hover); }
+      &:active { color: var(--color-sentiment-negative--active); }
     }
 
     &.ax-bars__bar-rect--sentiment-neutral {
-      &:hover { background-color: var(--color-sentiment-neutral--hover); }
-      &:active { background-color: var(--color-sentiment-neutral--active); }
+      &:hover { color: var(--color-sentiment-neutral--hover); }
+      &:active { color: var(--color-sentiment-neutral--active); }
     }
 
     &.ax-bars__bar-rect--social-twitter {
-      &:hover { background-color: var(--color-social-twitter--hover); }
-      &:active { background-color: var(--color-social-twitter--active); }
+      &:hover { color: var(--color-social-twitter--hover); }
+      &:active { color: var(--color-social-twitter--active); }
     }
 
     &.ax-bars__bar-rect--social-facebook {
-      &:hover { background-color: var(--color-social-facebook--hover); }
-      &:active { background-color: var(--color-social-facebook--active); }
+      &:hover { color: var(--color-social-facebook--hover); }
+      &:active { color: var(--color-social-facebook--active); }
     }
 
     &.ax-bars__bar-rect--social-instagram {
-      &:hover { background-color: var(--color-social-instagram--hover); }
-      &:active { background-color: var(--color-social-instagram--active); }
+      &:hover { color: var(--color-social-instagram--hover); }
+      &:active { color: var(--color-social-instagram--active); }
     }
   }
 }
