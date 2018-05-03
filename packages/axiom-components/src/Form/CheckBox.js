@@ -50,7 +50,7 @@ export default class CheckBox extends Component {
         { (isValid) =>
           <ChedioButtox
               { ...rest }
-              checked={ checked || indeterminate }
+              checked={ !!(checked || indeterminate) }
               className="ax-checkbox"
               disabled={ disabled }
               indeterminate={ indeterminate && !checked }
