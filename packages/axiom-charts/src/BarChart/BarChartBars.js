@@ -11,7 +11,9 @@ import ChartContext from '../ChartContext/ChartContext';
 
 export default class BarChartBars extends Component {
   static propTypes = {
+    BenchmarkTooltipContext: PropTypes.func,
     DropdownContext: PropTypes.func,
+    TooltipContext: PropTypes.func,
     barLabel: PropTypes.func,
     benchmark: PropTypes.number,
     benchmarkHeight: PropTypes.oneOf(['x1', 'x2', 'x3']),
@@ -38,7 +40,9 @@ export default class BarChartBars extends Component {
 
   render() {
     const {
+      BenchmarkTooltipContext,
       DropdownContext,
+      TooltipContext,
       barLabel,
       benchmark,
       benchmarkHeight,
@@ -97,6 +101,7 @@ export default class BarChartBars extends Component {
               <div className="ax-bar-chart__bar-container" key={ color }>
                 <ChartContext
                     DropdownContext={ DropdownContext }
+                    TooltipContext={ TooltipContext }
                     color={ color }
                     data={ data }
                     label={ label }
@@ -126,7 +131,13 @@ export default class BarChartBars extends Component {
 
         { benchmarkValue !== undefined && (
           <div className="ax-bar-chart__benchmark-line-container">
-            <BarChartBenchmarkLine faded={ fadeBenchmarkLine } value={ benchmarkValue } />
+            <BarChartBenchmarkLine
+                BenchmarkTooltipContext={ BenchmarkTooltipContext }
+                benchmark={ benchmark }
+                data={ data }
+                faded={ fadeBenchmarkLine }
+                label={ label }
+                value={ benchmarkValue } />
           </div>
         ) }
       </div>

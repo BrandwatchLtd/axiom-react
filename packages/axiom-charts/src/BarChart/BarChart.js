@@ -19,11 +19,23 @@ import './BarChart.css';
 export default class BarChart extends Component {
   static propTypes = {
     /**
+     * Contextual component that appears when hovering on a bar.
+     * It is provided with the `label`, and `value` that has
+     * been clicked on, along with the `data` that was given for that row.
+     */
+    BenchmarkTooltipContext: PropTypes.func,
+    /**
      * Contextual component that appears when click on a dot.
      * It is provided with the `colors`, `label`, and `value` that has
      * been clicked on, along with the `data` that was given for that row.
      */
     DropdownContext: PropTypes.func,
+    /**
+     * Contextual component that appears when hovering on a bar.
+     * It is provided with the `colors`, `label`, and `value` that has
+     * been clicked on, along with the `data` that was given for that row.
+     */
+    TooltipContext: PropTypes.func,
     /** The title that appears along the xAxis */
     axisTitle: PropTypes.string,
     /** Control the appearance of the bar label */
@@ -136,7 +148,9 @@ export default class BarChart extends Component {
       chartKey,
       chartKeyBenchmarkLabel,
       collapsedVisibleRowCount,
+      BenchmarkTooltipContext,
       DropdownContext,
+      TooltipContext,
       data,
       expandButtonSuffix,
       labelColumnWidth,
@@ -186,7 +200,9 @@ export default class BarChart extends Component {
               </ChartTableLabel>
               <ChartTableVisual>
                 <BarChartBars
+                    BenchmarkTooltipContext={ BenchmarkTooltipContext }
                     DropdownContext={ DropdownContext }
+                    TooltipContext={ TooltipContext }
                     barLabel={ barLabel }
                     benchmark={ benchmark }
                     benchmarkHeight={ rowSpace }

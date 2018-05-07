@@ -29,7 +29,25 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  border-right: var(--cmp-benchmark-line-width) solid var(--color-theme-text--subtle);
+  padding: calc(var(--spacing-grid-size--x1) / 2);
+  transform: translateX(calc(var(--spacing-grid-size--x1) / -2));
+  transition: background-color var(--transition-time-base) var(--transition-function);
+
+  &::after {
+    content: '';
+    display: block;
+    width: calc(var(--cmp-benchmark-line-width) * 2);
+    height: 100%;
+    background-color: var(--color-theme-text--subtle);
+  }
+}
+
+.ax-bar-chart__benchmark-line-path--interactive {
+  pointer-events: auto;
+
+  &:hover {
+    background-color: var(--color-theme-shadow--border);
+  }
 }
 
 .ax-bar-chart__bar-container {

@@ -2,10 +2,16 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
+import ChartContext from '../ChartContext/ChartContext';
+
 export default class BarChartBenchmarkLine extends Component {
   static propTypes = {
+    BenchmarkTooltipContext: PropTypes.func,
+    benchmark: PropTypes.number,
+    data: PropTypes.object,
     faded: PropTypes.bool,
     height: PropTypes.string,
+    label: PropTypes.string,
     value: PropTypes.number,
     width: PropTypes.string,
   };
@@ -15,7 +21,16 @@ export default class BarChartBenchmarkLine extends Component {
   };
 
   render() {
-    const { faded, height, value, width } = this.props;
+    const {
+      BenchmarkTooltipContext,
+      benchmark,
+      data,
+      faded,
+      height,
+      label,
+      value,
+      width,
+    } = this.props;
     const style = { height, width };
     const lineStyle = { left: `${value}%` };
 
@@ -23,9 +38,19 @@ export default class BarChartBenchmarkLine extends Component {
       'ax-bar-chart__benchmark-line--faded': faded,
     });
 
+    const pathClasses = classnames('ax-bar-chart__benchmark-line-path', {
+      'ax-bar-chart__benchmark-line-path--interactive': BenchmarkTooltipContext,
+    });
+
     return (
       <div className={ classes } style={ style }>
-        <div className="ax-bar-chart__benchmark-line-path" style={ lineStyle } />
+        <ChartContext
+            TooltipContext={ BenchmarkTooltipContext }
+            data={ data }
+            label={ label }
+            value={ benchmark }>
+          <div className={ pathClasses } style={ lineStyle } />
+        </ChartContext>
       </div>
     );
   }

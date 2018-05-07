@@ -14,7 +14,9 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase>
           <BarChart
+              BenchmarkTooltipContext={ DropdownContext }
               DropdownContext={ DropdownContext }
+              TooltipContext={ DropdownContext }
               axisTitle="% of each something"
               chartKey={ dotPlotKey }
               chartKeyBenchmarkLabel="Benchmark"

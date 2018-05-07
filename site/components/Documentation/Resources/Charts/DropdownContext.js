@@ -25,6 +25,10 @@ export default class DropdownContextExample extends Component {
     ]).isRequired,
   };
 
+  static defaultProps = {
+    color: 'deep-thought',
+  }
+
   render() {
     const { color, colors = [color], label, value, style, ...rest } = this.props;
 
