@@ -60,6 +60,8 @@ export default class BarChart extends Component {
     showBarLabel: PropTypes.bool,
     /** Control for toggling visibility of the key */
     showKey: PropTypes.bool,
+    /** If set to true each color will be handled individually when hovering */
+    singleSelect: PropTypes.bool,
     /** Thickness of the bars */
     size: PropTypes.string,
     /** Upper value of the data displayed on the chart */
@@ -139,6 +141,7 @@ export default class BarChart extends Component {
       rowSpace,
       showBarLabel,
       showKey,
+      singleSelect,
       size,
       upper = dataUpper,
       xAxisLabels,
@@ -187,6 +190,8 @@ export default class BarChart extends Component {
                     fadeBenchmarkLine={ selectedIndex !== null }
                     hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
                     hoverColor={ selectedColor }
+                    hoverIndex={ selectedIndex }
+                    index={ index }
                     isHovered={ isMultipleValuesData && index === selectedIndex }
                     label={ label }
                     lower={ finalLower }
@@ -195,6 +200,7 @@ export default class BarChart extends Component {
                     onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
                     onMouseLeave={ () => this.handleMouseLeave() }
                     showBarLabel={ showBarLabel }
+                    singleSelect={ singleSelect }
                     size={ size }
                     upper={ finalUpper }
                     values={ values } />
