@@ -168,36 +168,39 @@ export default class BarChart extends Component {
             xAxisLabels={ xAxisLabels }
             zoom={ zoom }
             zoomTo={ zoom ? zoomTo : undefined }>
-          { formattedData.map(({ values, label, benchmark }, index) =>
+          { formattedData.map(({ values, label, benchmark, isFaded }, index) =>
             <ChartTableRow
                 hover={ index === selectedIndex }
                 key={ index }>
               <ChartTableLabel
+                  isFaded={ isFaded }
                   textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
                 { label }
               </ChartTableLabel>
               <ChartTableVisual>
-                <BarChartBars
-                    DropdownContext={ DropdownContext }
-                    barLabel={ barLabel }
-                    benchmark={ benchmark }
-                    benchmarkHeight={ rowSpace }
-                    data={ data[index] }
-                    fadeBenchmarkLine={ selectedIndex !== null }
-                    hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
-                    hoverColor={ selectedColor }
-                    isHovered={ isMultipleValuesData && index === selectedIndex }
-                    label={ label }
-                    lower={ finalLower }
-                    onDropdownClose={ () => this.handleDropdonClose() }
-                    onDropdownOpen={ (color) => this.handleDropdonOpen(index, color) }
-                    onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
-                    onMouseLeave={ () => this.handleMouseLeave() }
-                    showBarLabel={ showBarLabel }
-                    size={ size }
-                    upper={ finalUpper }
-                    values={ values } />
+                { !isFaded &&
+                  <BarChartBars
+                      DropdownContext={ DropdownContext }
+                      barLabel={ barLabel }
+                      benchmark={ benchmark }
+                      benchmarkHeight={ rowSpace }
+                      data={ data[index] }
+                      fadeBenchmarkLine={ selectedIndex !== null }
+                      hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
+                      hoverColor={ selectedColor }
+                      isHovered={ isMultipleValuesData && index === selectedIndex }
+                      label={ label }
+                      lower={ finalLower }
+                      onDropdownClose={ () => this.handleDropdonClose() }
+                      onDropdownOpen={ (color) => this.handleDropdonOpen(index, color) }
+                      onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
+                      onMouseLeave={ () => this.handleMouseLeave() }
+                      showBarLabel={ showBarLabel }
+                      size={ size }
+                      upper={ finalUpper }
+                      values={ values } />
+                }
               </ChartTableVisual>
             </ChartTableRow>
           ) }

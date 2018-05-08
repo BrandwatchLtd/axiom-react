@@ -89,6 +89,10 @@
   color: var(--color-theme-text--subtle);
 }
 
+.ax-chart-table__label--faded {
+  opacity: var(--cmp-chart-opacity-faded);
+}
+
 .ax-chart-table__visual {
   flex: 1 1 0%;
 }

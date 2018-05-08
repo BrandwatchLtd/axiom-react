@@ -7,6 +7,7 @@ export const dotPlotKey = [
 export const dotPlotData = [{
   label: 'Family & Parenting',
   benchmark: 14,
+  isFaded: true,
   values: {
     'giant-leap': 17,
     'critical-mass': 15,

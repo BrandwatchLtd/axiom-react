@@ -15,4 +15,10 @@ describe('ChartTableLabel', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with isFaded property', () => {
+    const component = getComponent({ isFaded: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

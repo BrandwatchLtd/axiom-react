@@ -50,6 +50,7 @@ describe('BarChart (utils)', () => {
     expect(formatData(chartKey, data)).toEqual([{
       label: 'Family',
       benchmark: 100,
+      isFaded: false,
       values: [{
         value: 0,
         color: 'giant-leap',
@@ -63,6 +64,7 @@ describe('BarChart (utils)', () => {
     }, {
       label: 'Games',
       benchmark: 33,
+      isFaded: false,
       values: [{
         value: 40,
         color: 'giant-leap',
@@ -76,6 +78,7 @@ describe('BarChart (utils)', () => {
     }, {
       label: 'Family & Parenting',
       benchmark: 33,
+      isFaded: false,
       values: [{
         value: 50,
         color: 'giant-leap',
@@ -89,6 +92,7 @@ describe('BarChart (utils)', () => {
     }, {
       label: 'Technology',
       benchmark: 33,
+      isFaded: false,
       values: [{
         value: 69,
         color: 'giant-leap',
@@ -96,6 +100,7 @@ describe('BarChart (utils)', () => {
     }, {
       label: 'Books',
       benchmark: 33,
+      isFaded: false,
       values: [{
         value: 25,
         color: 'giant-leap',
