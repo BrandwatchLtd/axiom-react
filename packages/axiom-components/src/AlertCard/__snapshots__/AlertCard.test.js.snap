@@ -2,7 +2,7 @@
 
 exports[`AlertCard renders with defaultProps 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -46,7 +46,7 @@ exports[`AlertCard renders with defaultProps 1`] = `
 
 exports[`AlertCard renders with onRemoveClick 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -114,7 +114,7 @@ exports[`AlertCard renders with onRemoveClick 1`] = `
 
 exports[`AlertCard renders with shade shade-1 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -158,7 +158,7 @@ exports[`AlertCard renders with shade shade-1 1`] = `
 
 exports[`AlertCard renders with shade shade-2 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-2"
+  className="ax-card ax-card--size-medium ax-card--shade-2 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -202,7 +202,7 @@ exports[`AlertCard renders with shade shade-2 1`] = `
 
 exports[`AlertCard renders with shade shade-3 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-3"
+  className="ax-card ax-card--size-medium ax-card--shade-3 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -246,7 +246,7 @@ exports[`AlertCard renders with shade shade-3 1`] = `
 
 exports[`AlertCard renders with shade shade-4 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-4"
+  className="ax-card ax-card--size-medium ax-card--shade-4 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -290,7 +290,7 @@ exports[`AlertCard renders with shade shade-4 1`] = `
 
 exports[`AlertCard renders with size large 1`] = `
 <div
-  className="ax-card ax-card--size-large ax-card--shade-1"
+  className="ax-card ax-card--size-large ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -334,7 +334,7 @@ exports[`AlertCard renders with size large 1`] = `
 
 exports[`AlertCard renders with size medium 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -378,7 +378,7 @@ exports[`AlertCard renders with size medium 1`] = `
 
 exports[`AlertCard renders with size small 1`] = `
 <div
-  className="ax-card ax-card--size-small ax-card--shade-1"
+  className="ax-card ax-card--size-small ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -422,7 +422,7 @@ exports[`AlertCard renders with size small 1`] = `
 
 exports[`AlertCard renders with type error 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -466,7 +466,7 @@ exports[`AlertCard renders with type error 1`] = `
 
 exports[`AlertCard renders with type info 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -510,7 +510,7 @@ exports[`AlertCard renders with type info 1`] = `
 
 exports[`AlertCard renders with type success 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -554,7 +554,7 @@ exports[`AlertCard renders with type success 1`] = `
 
 exports[`AlertCard renders with type warning 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div

@@ -2,7 +2,7 @@
 
 exports[`DataPicker renders with defaultProps 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -123,7 +123,7 @@ exports[`DataPicker renders with defaultProps 1`] = `
 
 exports[`DataPicker renders with just DataPickerDropdown 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -237,7 +237,7 @@ exports[`DataPicker renders with just DataPickerDropdown 1`] = `
 
 exports[`DataPicker renders with just DataPickerMeta 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--shade-3"
+  className="ax-card ax-card--size-medium ax-card--shade-3 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -306,7 +306,7 @@ exports[`DataPicker renders with just DataPickerMeta 1`] = `
 
 exports[`DataPicker renders with onSelectColor 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div
@@ -429,7 +429,7 @@ exports[`DataPicker renders with onSelectColor 1`] = `
 
 exports[`DataPicker renders with value 1`] = `
 <div
-  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1"
+  className="ax-card ax-card--size-medium ax-card--border ax-card--shade-1 ax-card--border-radius-small"
   onClick={undefined}
 >
   <div

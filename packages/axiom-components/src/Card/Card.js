@@ -28,6 +28,8 @@ export default class Card extends Component {
     active: PropTypes.bool,
     /** Applies border styling */
     border: PropTypes.bool,
+    /** Applies border radius */
+    borderRadius: PropTypes.oneOf(['small', 'large']),
     /** Content to be inserted inside the Card */
     children: PropTypes.node.isRequired,
     /** Applies styling to indicate the Card is in an hovered state */
@@ -43,6 +45,7 @@ export default class Card extends Component {
   };
 
   static defaultProps = {
+    borderRadius: 'small',
     shade: 'shade-1',
     size: 'medium',
   };
@@ -61,6 +64,7 @@ export default class Card extends Component {
     const {
       active,
       border,
+      borderRadius,
       children,
       hover,
       onClick,
@@ -77,6 +81,7 @@ export default class Card extends Component {
         'ax-card--clickable': onClick,
         'ax-card--hover': hover,
         [`ax-card--${shade}`]: shade,
+        [`ax-card--border-radius-${borderRadius}`]: borderRadius,
         'ax-card--shadow': shadow,
       }
     );

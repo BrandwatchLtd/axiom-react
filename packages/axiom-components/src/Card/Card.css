@@ -1,7 +1,5 @@
 /* stylelint-disable no-descending-specificity */
-
 .ax-card {
-  border-radius: var(--component-border-radius);
   color: var(--color-theme-text);
   overflow: hidden;
   transition-property: background-color, box-shadow;
@@ -20,6 +18,14 @@
 
 .ax-card--border {
   box-shadow: var(--drop-shadow-theme-border);
+}
+
+.ax-card--border-radius-small {
+  border-radius: var(--component-border-radius);
+}
+
+.ax-card--border-radius-large {
+  border-radius: var(--component-border-radius-large);
 }
 
 .ax-card--hover.ax-card--shadow,

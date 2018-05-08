@@ -22,7 +22,7 @@
   --component-border-width: var(--component-border-width-small);
 
   --component-border-radius: 0.1875rem;
-  --component-border-radius-large: 0.375rem;
+  --component-border-radius-large: 0.5rem;
 
   --component-padding-vertical-small: calc(var(--spacing-grid-size) - var(--component-border-width-small));
   --component-padding-vertical-medium: calc(calc(var(--spacing-grid-size) * 2) - var(--component-border-width-small));
