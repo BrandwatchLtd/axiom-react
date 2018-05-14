@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CombinedBar renders a single bar when benchmark value is less than current value 1`] = `
+<div
+  className="ax-bars__bar"
+  onClick={undefined}
+  style={
+    Object {
+      "height": false,
+      "width": "50%",
+    }
+  }
+>
+  <div
+    className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+    style={
+      Object {
+        "height": undefined,
+        "minHeight": "1rem",
+        "minWidth": false,
+        "width": false,
+      }
+    }
+  >
+    <div
+      className="ax-bars__bar--solid"
+    />
+  </div>
+  <div
+    className="ax-bars__bar-label ax-bars__bar-label--hidden"
+  >
+    <small
+      className="ax-text--size-small"
+    >
+      50%
+    </small>
+  </div>
+</div>
+`;
+
+exports[`CombinedBar renders an additional striped bar when benchmark value is grather than current value 1`] = `
+Array [
+  <div
+    className="ax-bars__bar"
+    onClick={undefined}
+    style={
+        Object {
+            "height": false,
+            "width": "10%",
+          }
+    }
+>
+    <div
+        className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+        style={
+            Object {
+                "height": undefined,
+                "minHeight": "1rem",
+                "minWidth": false,
+                "width": false,
+              }
+        }
+    >
+        <div
+            className="ax-bars__bar--solid"
+        />
+    </div>
+    <div
+        className="ax-bars__bar-label ax-bars__bar-label--hidden"
+    >
+        <small
+            className="ax-text--size-small"
+        >
+            10%
+        </small>
+    </div>
+</div>,
+  <div
+    className="ax-bar-chart__combined-bar_diff"
+    style={
+        Object {
+            "left": "10%",
+          }
+    }
+>
+    <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+            Object {
+                "height": false,
+                "width": "40%",
+              }
+        }
+    >
+        <div
+            className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+            style={
+                Object {
+                    "height": undefined,
+                    "minHeight": "1rem",
+                    "minWidth": false,
+                    "width": false,
+                  }
+            }
+        >
+            <div
+                className="ax-bars__bar--striped"
+            />
+        </div>
+        <div
+            className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+            <small
+                className="ax-text--size-small"
+            >
+                40%
+            </small>
+        </div>
+    </div>
+</div>,
+]
+`;

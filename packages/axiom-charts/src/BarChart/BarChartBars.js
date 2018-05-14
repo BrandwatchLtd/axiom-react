@@ -5,6 +5,7 @@ import atIds from '@brandwatch/axiom-automation-testing/ids';
 import { Small } from '@brandwatch/axiom-components';
 import Bar from '../Bar/Bar';
 import Bars from '../Bar/Bars';
+import CombinedBar from './CombinedBar';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
 import ChartContext from '../ChartContext/ChartContext';
 
@@ -30,8 +31,13 @@ export default class BarChartBars extends Component {
     showBarLabel: PropTypes.bool,
     singleSelect: PropTypes.bool,
     size: PropTypes.string,
+    stretch: PropTypes.bool,
     upper: PropTypes.number,
     values: PropTypes.array.isRequired,
+  };
+
+  static defaultProps = {
+    stretch: false,
   };
 
   render() {
@@ -52,6 +58,7 @@ export default class BarChartBars extends Component {
       showBarLabel,
       singleSelect,
       size,
+      stretch,
       upper,
       values,
       onDropdownClose,
@@ -82,9 +89,36 @@ export default class BarChartBars extends Component {
               'ax-bar-chart__bar-label--hidden': !(showBarLabel || color === hoverColor),
             });
 
+            const isStretched = benchmarkValue > percent;
+
             const labelStyle = {
-              left: `${percent}%`,
+              left: `${stretch && isStretched ? benchmarkValue : percent}%`,
             };
+
+            const bar = (<Bar
+                color={ color }
+                data-ax-at={ atIds.BarChart.bar }
+                isFaded={ isFaded }
+                isHidden={ hideBars && isFaded }
+                onMouseEnter={ () => onMouseEnter(color) }
+                onMouseLeave={ onMouseLeave }
+                percent={ percent }
+                showLabel={ false }
+                size={ size } />);
+
+            const combineBar = stretch && (
+              <CombinedBar
+                  benchmarkValue={ benchmarkValue }
+                  color={ color }
+                  data-ax-at={ atIds.BarChart.bar }
+                  isFaded={ isFaded }
+                  isHidden={ hideBars && isFaded }
+                  onMouseEnter={ () => onMouseEnter(color) }
+                  onMouseLeave={ onMouseLeave }
+                  percent={ percent }
+                  showLabel={ false }
+                  size={ size } />
+              );
 
             return (
               <div className="ax-bar-chart__bar-container" key={ color }>
@@ -96,16 +130,7 @@ export default class BarChartBars extends Component {
                     onDropdownClose={ onDropdownClose }
                     onDropdownOpen={ () => onDropdownOpen(color) }
                     value={ value }>
-                  <Bar
-                      color={ color }
-                      data-ax-at={ atIds.BarChart.bar }
-                      isFaded={ isFaded }
-                      isHidden={ hideBars && isFaded }
-                      onMouseEnter={ () => onMouseEnter(color) }
-                      onMouseLeave={ onMouseLeave }
-                      percent={ percent }
-                      showLabel={ false }
-                      size={ size } />
+                  { combineBar || bar }
                 </ChartContext>
 
                 <div className={ labelClasses } style={ labelStyle }>

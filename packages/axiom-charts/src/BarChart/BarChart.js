@@ -64,6 +64,8 @@ export default class BarChart extends Component {
     singleSelect: PropTypes.bool,
     /** Thickness of the bars */
     size: PropTypes.string,
+    /**  Control the appearance of the bar */
+    stretch: PropTypes.bool,
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
@@ -80,6 +82,7 @@ export default class BarChart extends Component {
   static defaultProps = {
     rowSpace: 'x2',
     showKey: true,
+    stretch: false,
   };
 
 
@@ -143,6 +146,7 @@ export default class BarChart extends Component {
       showKey,
       singleSelect,
       size,
+      stretch,
       upper = dataUpper,
       xAxisLabels,
       zoom,
@@ -202,6 +206,7 @@ export default class BarChart extends Component {
                     showBarLabel={ showBarLabel }
                     singleSelect={ singleSelect }
                     size={ size }
+                    stretch={ stretch }
                     upper={ finalUpper }
                     values={ values } />
               </ChartTableVisual>
