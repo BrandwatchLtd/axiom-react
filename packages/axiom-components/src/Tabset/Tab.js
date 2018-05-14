@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { isValidElement, Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
 
@@ -34,7 +34,7 @@ export default class Tab extends Component {
           className={ classes }
           textSize="small"
           textStrong
-          title={ title }>
+          title={ isValidElement(title) ? null : title }>
         <button { ...rest }
             className="ax-tabset__button"
             disabled={ disabled }
