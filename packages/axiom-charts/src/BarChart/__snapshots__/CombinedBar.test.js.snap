@@ -76,7 +76,7 @@ Array [
     </div>
 </div>,
   <div
-    className="ax-bar-chart__combined-bar_diff"
+    className="ax-bar-chart__combined-bar-diff"
     style={
         Object {
             "left": "10%",

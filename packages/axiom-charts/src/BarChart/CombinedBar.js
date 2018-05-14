@@ -29,7 +29,7 @@ export default class CombinedBar extends Component {
             percent={ percent }
             { ...rest } />
 
-        { isStretched && (<div className="ax-bar-chart__combined-bar_diff" style={ stripedBarStyle }>
+        { isStretched && (<div className="ax-bar-chart__combined-bar-diff" style={ stripedBarStyle }>
           <Bar
               fillMode="striped"
               percent={ stripedBarWidth }

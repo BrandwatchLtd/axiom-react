@@ -29,15 +29,11 @@ export default class BarChartBars extends Component {
     onMouseEnter: PropTypes.func.isRequired,
     onMouseLeave: PropTypes.func.isRequired,
     showBarLabel: PropTypes.bool,
+    showDifferenceArea: PropTypes.bool,
     singleSelect: PropTypes.bool,
     size: PropTypes.string,
-    stretch: PropTypes.bool,
     upper: PropTypes.number,
     values: PropTypes.array.isRequired,
-  };
-
-  static defaultProps = {
-    stretch: false,
   };
 
   render() {
@@ -56,9 +52,9 @@ export default class BarChartBars extends Component {
       label,
       lower,
       showBarLabel,
+      showDifferenceArea,
       singleSelect,
       size,
-      stretch,
       upper,
       values,
       onDropdownClose,
@@ -92,33 +88,10 @@ export default class BarChartBars extends Component {
             const isStretched = benchmarkValue > percent;
 
             const labelStyle = {
-              left: `${stretch && isStretched ? benchmarkValue : percent}%`,
+              left: `${showDifferenceArea && isStretched ? benchmarkValue : percent}%`,
             };
 
-            const bar = (<Bar
-                color={ color }
-                data-ax-at={ atIds.BarChart.bar }
-                isFaded={ isFaded }
-                isHidden={ hideBars && isFaded }
-                onMouseEnter={ () => onMouseEnter(color) }
-                onMouseLeave={ onMouseLeave }
-                percent={ percent }
-                showLabel={ false }
-                size={ size } />);
-
-            const combineBar = stretch && (
-              <CombinedBar
-                  benchmarkValue={ benchmarkValue }
-                  color={ color }
-                  data-ax-at={ atIds.BarChart.bar }
-                  isFaded={ isFaded }
-                  isHidden={ hideBars && isFaded }
-                  onMouseEnter={ () => onMouseEnter(color) }
-                  onMouseLeave={ onMouseLeave }
-                  percent={ percent }
-                  showLabel={ false }
-                  size={ size } />
-              );
+            const FinalBar = showDifferenceArea ? CombinedBar : Bar;
 
             return (
               <div className="ax-bar-chart__bar-container" key={ color }>
@@ -130,7 +103,17 @@ export default class BarChartBars extends Component {
                     onDropdownClose={ onDropdownClose }
                     onDropdownOpen={ () => onDropdownOpen(color) }
                     value={ value }>
-                  { combineBar || bar }
+                  <FinalBar
+                      benchmarkValue={ showDifferenceArea ? benchmarkValue : null }
+                      color={ color }
+                      data-ax-at={ atIds.BarChart.bar }
+                      isFaded={ isFaded }
+                      isHidden={ hideBars && isFaded }
+                      onMouseEnter={ () => onMouseEnter(color) }
+                      onMouseLeave={ onMouseLeave }
+                      percent={ percent }
+                      showLabel={ false }
+                      size={ size } />
                 </ChartContext>
 
                 <div className={ labelClasses } style={ labelStyle }>

@@ -58,14 +58,14 @@ export default class BarChart extends Component {
     rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
     showBarLabel: PropTypes.bool,
+    /**  Control the appearance of the bar */
+    showDifferenceArea: PropTypes.bool,
     /** Control for toggling visibility of the key */
     showKey: PropTypes.bool,
     /** If set to true each color will be handled individually when hovering */
     singleSelect: PropTypes.bool,
     /** Thickness of the bars */
     size: PropTypes.string,
-    /**  Control the appearance of the bar */
-    stretch: PropTypes.bool,
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
@@ -82,7 +82,7 @@ export default class BarChart extends Component {
   static defaultProps = {
     rowSpace: 'x2',
     showKey: true,
-    stretch: false,
+    showDifferenceArea: false,
   };
 
 
@@ -146,7 +146,7 @@ export default class BarChart extends Component {
       showKey,
       singleSelect,
       size,
-      stretch,
+      showDifferenceArea,
       upper = dataUpper,
       xAxisLabels,
       zoom,
@@ -204,9 +204,9 @@ export default class BarChart extends Component {
                     onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
                     onMouseLeave={ () => this.handleMouseLeave() }
                     showBarLabel={ showBarLabel }
+                    showDifferenceArea={ showDifferenceArea }
                     singleSelect={ singleSelect }
                     size={ size }
-                    stretch={ stretch }
                     upper={ finalUpper }
                     values={ values } />
               </ChartTableVisual>
