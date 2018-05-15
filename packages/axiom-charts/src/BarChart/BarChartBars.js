@@ -5,6 +5,7 @@ import atIds from '@brandwatch/axiom-automation-testing/ids';
 import { Small } from '@brandwatch/axiom-components';
 import Bar from '../Bar/Bar';
 import Bars from '../Bar/Bars';
+import CombinedBar from './CombinedBar';
 import BarChartBenchmarkLine from './BarChartBenchmarkLine';
 import ChartContext from '../ChartContext/ChartContext';
 
@@ -28,6 +29,7 @@ export default class BarChartBars extends Component {
     onMouseEnter: PropTypes.func.isRequired,
     onMouseLeave: PropTypes.func.isRequired,
     showBarLabel: PropTypes.bool,
+    showDifferenceArea: PropTypes.bool,
     singleSelect: PropTypes.bool,
     size: PropTypes.string,
     upper: PropTypes.number,
@@ -50,6 +52,7 @@ export default class BarChartBars extends Component {
       label,
       lower,
       showBarLabel,
+      showDifferenceArea,
       singleSelect,
       size,
       upper,
@@ -82,9 +85,13 @@ export default class BarChartBars extends Component {
               'ax-bar-chart__bar-label--hidden': !(showBarLabel || color === hoverColor),
             });
 
+            const isStretched = benchmarkValue > percent;
+
             const labelStyle = {
-              left: `${percent}%`,
+              left: `${showDifferenceArea && isStretched ? benchmarkValue : percent}%`,
             };
+
+            const FinalBar = showDifferenceArea ? CombinedBar : Bar;
 
             return (
               <div className="ax-bar-chart__bar-container" key={ color }>
@@ -96,7 +103,8 @@ export default class BarChartBars extends Component {
                     onDropdownClose={ onDropdownClose }
                     onDropdownOpen={ () => onDropdownOpen(color) }
                     value={ value }>
-                  <Bar
+                  <FinalBar
+                      benchmarkValue={ showDifferenceArea ? benchmarkValue : null }
                       color={ color }
                       data-ax-at={ atIds.BarChart.bar }
                       isFaded={ isFaded }

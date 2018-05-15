@@ -58,6 +58,8 @@ export default class BarChart extends Component {
     rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
     showBarLabel: PropTypes.bool,
+    /**  Control the appearance of the bar */
+    showDifferenceArea: PropTypes.bool,
     /** Control for toggling visibility of the key */
     showKey: PropTypes.bool,
     /** If set to true each color will be handled individually when hovering */
@@ -80,6 +82,7 @@ export default class BarChart extends Component {
   static defaultProps = {
     rowSpace: 'x2',
     showKey: true,
+    showDifferenceArea: false,
   };
 
 
@@ -143,6 +146,7 @@ export default class BarChart extends Component {
       showKey,
       singleSelect,
       size,
+      showDifferenceArea,
       upper = dataUpper,
       xAxisLabels,
       zoom,
@@ -200,6 +204,7 @@ export default class BarChart extends Component {
                     onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
                     onMouseLeave={ () => this.handleMouseLeave() }
                     showBarLabel={ showBarLabel }
+                    showDifferenceArea={ showDifferenceArea }
                     singleSelect={ singleSelect }
                     size={ size }
                     upper={ finalUpper }
