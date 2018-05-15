@@ -15,4 +15,13 @@ describe('ChartTableLabel', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with onToggleRowVisibility and disabled', () => {
+    const component = getComponent({
+      disabled: true,
+      onToggleRowVisibility: () => {},
+    });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

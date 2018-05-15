@@ -3,6 +3,7 @@
 exports[`CombinedBar renders a single bar when benchmark value is less than current value 1`] = `
 <div
   className="ax-bars__bar"
+  direction="right"
   onClick={undefined}
   style={
     Object {
@@ -12,7 +13,7 @@ exports[`CombinedBar renders a single bar when benchmark value is less than curr
   }
 >
   <div
-    className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+    className="ax-bars__bar-rect ax-bars__bar-rect--giant-leap"
     style={
       Object {
         "height": undefined,
@@ -42,6 +43,7 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
 Array [
   <div
     className="ax-bars__bar"
+    direction="right"
     onClick={undefined}
     style={
         Object {
@@ -51,7 +53,7 @@ Array [
     }
 >
     <div
-        className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+        className="ax-bars__bar-rect ax-bars__bar-rect--giant-leap"
         style={
             Object {
                 "height": undefined,
@@ -85,6 +87,7 @@ Array [
 >
     <div
         className="ax-bars__bar"
+        direction="right"
         onClick={undefined}
         style={
             Object {
@@ -94,7 +97,7 @@ Array [
         }
     >
         <div
-            className="ax-bars__bar-rect ax-bars__bar-rect--undefined"
+            className="ax-bars__bar-rect ax-bars__bar-rect--giant-leap"
             style={
                 Object {
                     "height": undefined,

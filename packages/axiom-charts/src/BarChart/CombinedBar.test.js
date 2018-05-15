@@ -4,7 +4,9 @@ import CombinedBar from './CombinedBar';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <CombinedBar { ...props } />
+    <CombinedBar { ...props }
+        color="giant-leap"
+        direction="right" />
   );
 }
 

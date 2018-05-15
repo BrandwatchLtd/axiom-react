@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import atIds from '@brandwatch/axiom-automation-testing/ids';
-import { Small } from '@brandwatch/axiom-components';
+import { Base, Small } from '@brandwatch/axiom-components';
 import Bar from '../Bar/Bar';
 import Bars from '../Bar/Bars';
 import CombinedBar from './CombinedBar';
@@ -23,6 +23,7 @@ export default class BarChartBars extends Component {
     hoverColor: PropTypes.string,
     hoverIndex: PropTypes.number,
     index: PropTypes.number,
+    isHidden: PropTypes.bool,
     isHovered: PropTypes.bool.isRequired,
     label: PropTypes.node.isRequired,
     lower: PropTypes.number,
@@ -51,6 +52,7 @@ export default class BarChartBars extends Component {
       hideBars,
       hoverColor,
       hoverIndex,
+      isHidden,
       isHovered,
       index,
       label,
@@ -77,7 +79,7 @@ export default class BarChartBars extends Component {
     }
 
     return (
-      <div className={ classes }>
+      <Base className={ classes } cloak={ isHidden }>
         <Bars direction="right">
           { values.map(({ color, value }) => {
             const isFaded = singleSelect
@@ -140,7 +142,7 @@ export default class BarChartBars extends Component {
                 value={ benchmarkValue } />
           </div>
         ) }
-      </div>
+      </Base>
     );
   }
 }

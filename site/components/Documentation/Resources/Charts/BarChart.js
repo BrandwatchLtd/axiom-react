@@ -9,7 +9,27 @@ import { dotPlotKey, dotPlotData } from './chartData';
 import DropdownContext from './DropdownContext';
 
 export default class Documentation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hiddenRows: {},
+    };
+  }
+
+  handleToggleRowVisibility(index) {
+    const { hiddenRows } = this.state;
+
+    this.setState({
+      hiddenRows: {
+        ...hiddenRows,
+        [index]: !hiddenRows[index],
+      },
+    });
+  }
+
   render() {
+    const { hiddenRows } = this.state;
+
     return (
       <DocumentationContent>
         <DocumentationShowCase>
@@ -21,10 +41,11 @@ export default class Documentation extends Component {
               chartKey={ dotPlotKey }
               chartKeyBenchmarkLabel="Benchmark"
               collapsedVisibleRowCount={ 4 }
-              data={ dotPlotData }
+              data={ dotPlotData.map((_, i) => ({ ..._, hidden: hiddenRows[i] })) }
               expandButtonSuffix="Categories"
               labelColumnWidth="11rem"
               lower={ 0 }
+              onToggleRowVisibility={ (a, b, data, i) => this.handleToggleRowVisibility(i) }
               upper={ 100 }
               xAxisLabels={ () => [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
         </DocumentationShowCase>

@@ -59,6 +59,7 @@ export default class BarChart extends Component {
     data: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.node.isRequired,
       values: PropTypes.object.isRequired,
+      hidden: PropTypes.bool,
     })).isRequired,
     /** The description given to the expand button */
     expandButtonSuffix: PropTypes.string,
@@ -68,6 +69,12 @@ export default class BarChart extends Component {
     labelColumnWidth: PropTypes.string.isRequired,
     /** Lower value of the data displayed on the chart */
     lower: PropTypes.number,
+    /**
+     * If a function is given, rows will have a button to hide them.
+     * If this button is pressed, the passed in function will be called.
+     * In addition, rows with a property `hidden` set to true will be hidden.
+     */
+    onToggleRowVisibility: PropTypes.func,
     /** Spacing applied between Bar groups */
     rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
@@ -94,6 +101,7 @@ export default class BarChart extends Component {
 
   static defaultProps = {
     isBenchmarkLineFadable: true,
+    onToggleRowVisibility: undefined,
     rowSpace: 'x2',
     showKey: true,
     showDifferenceArea: false,
@@ -140,8 +148,7 @@ export default class BarChart extends Component {
   }
 
   render() {
-    const flatValues = flattenValues(this.props.data);
-
+    const flatValues = flattenValues(this.props.data.filter(({ hidden }) => !hidden));
     const dataLower = Math.min(...flatValues);
     const dataUpper = Math.max(...flatValues);
 
@@ -159,6 +166,7 @@ export default class BarChart extends Component {
       isBenchmarkLineFadable,
       labelColumnWidth,
       lower = dataLower,
+      onToggleRowVisibility,
       rowSpace,
       showBarLabel,
       showKey,
@@ -195,11 +203,14 @@ export default class BarChart extends Component {
             xAxisLabels={ finalXAxisLabels }
             zoom={ zoom }
             zoomTo={ zoom ? zoomTo : undefined }>
-          { formattedData.map(({ values, label, benchmark }, index) =>
+          { formattedData.map(({ values, label, benchmark, hidden }, index) =>
             <ChartTableRow
+                cloakContainer={ !hidden }
                 hover={ index === selectedIndex }
                 key={ index }>
               <ChartTableLabel
+                  disabled={ hidden }
+                  onToggleRowVisibility={ () => onToggleRowVisibility(data[index], index) }
                   textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
                 { label }
@@ -218,6 +229,7 @@ export default class BarChart extends Component {
                     hoverColor={ selectedColor }
                     hoverIndex={ selectedIndex }
                     index={ index }
+                    isHidden={ onToggleRowVisibility ? hidden : false }
                     isHovered={ index === selectedIndex }
                     label={ label }
                     lower={ finalLower }
