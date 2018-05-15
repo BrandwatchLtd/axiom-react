@@ -18,6 +18,8 @@ export default class BarChartBars extends Component {
     fadeBenchmarkLine: PropTypes.bool.isRequired,
     hideBars: PropTypes.bool.isRequired,
     hoverColor: PropTypes.string,
+    hoverIndex: PropTypes.number,
+    index: PropTypes.number,
     isHovered: PropTypes.bool.isRequired,
     label: PropTypes.node.isRequired,
     lower: PropTypes.number,
@@ -26,6 +28,7 @@ export default class BarChartBars extends Component {
     onMouseEnter: PropTypes.func.isRequired,
     onMouseLeave: PropTypes.func.isRequired,
     showBarLabel: PropTypes.bool,
+    singleSelect: PropTypes.bool,
     size: PropTypes.string,
     upper: PropTypes.number,
     values: PropTypes.array.isRequired,
@@ -41,10 +44,13 @@ export default class BarChartBars extends Component {
       fadeBenchmarkLine,
       hideBars,
       hoverColor,
+      hoverIndex,
       isHovered,
+      index,
       label,
       lower,
       showBarLabel,
+      singleSelect,
       size,
       upper,
       values,
@@ -67,7 +73,10 @@ export default class BarChartBars extends Component {
       <div className={ classes }>
         <Bars direction="right">
           { values.map(({ color, value }) => {
-            const isFaded = hoverColor && color !== hoverColor;
+            const isFaded = singleSelect
+              ? Number.isInteger(hoverIndex) && hoverIndex !== index
+              : hoverColor && color !== hoverColor;
+
             const percent = ((value - lower) / (upper - lower)) * 100;
             const labelClasses = classnames('ax-bar-chart__bar-label', {
               'ax-bar-chart__bar-label--hidden': !(showBarLabel || color === hoverColor),
