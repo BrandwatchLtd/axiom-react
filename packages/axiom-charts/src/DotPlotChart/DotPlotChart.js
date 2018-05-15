@@ -62,10 +62,9 @@ export default class DotPlotChart extends Component {
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
-     * Labels to be shown along the xAxis, also used to determine where
-     * grid lines are drawn
+     * Method which returns the labels to be shown along the xAxis, also used to determine where grid lines are drawn
      */
-    xAxisLabels: PropTypes.arrayOf(PropTypes.string),
+    xAxisLabels: PropTypes.func,
     /** Control for toggling the zoomed view */
     zoom: PropTypes.bool,
     /** Options for the maximum zoom value */
@@ -75,6 +74,7 @@ export default class DotPlotChart extends Component {
   static defaultProps = {
     showKey: true,
     zoomMax: 50,
+    xAxisLabels: () => [],
   };
 
   constructor(props) {
@@ -149,15 +149,16 @@ export default class DotPlotChart extends Component {
     const finalUpper = Math.max(upper, dataUpper);
     const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
     const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
+    const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
 
     return (
-      <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
+      <ChartTable { ...rest } xAxisLabels={ finalXAxisLabels }>
         <ChartTableRows
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
             labelColumnWidth={ labelColumnWidth }
             space="x2"
-            xAxisLabels={ xAxisLabels }
+            xAxisLabels={ finalXAxisLabels }
             zoomTo={ zoom ? zoomTo : undefined }>
           { formattedData.map(({ values, benchmark, label }, index) =>
             <ChartTableRow

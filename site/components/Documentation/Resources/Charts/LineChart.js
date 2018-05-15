@@ -22,7 +22,7 @@ export default class Documentation extends Component {
               height="12rem"
               lower={ 0 }
               upper={ 30 }
-              xAxisLabels={ [
+              xAxisLabels={ () => [
                 'Dec 1',
                 'Dec 3',
                 'Dec 5',

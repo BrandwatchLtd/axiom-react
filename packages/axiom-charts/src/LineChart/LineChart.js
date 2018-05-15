@@ -54,10 +54,9 @@ export default class LineChart extends Component {
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
-     * Labels to be shown along the xAxis, also used to determine where
-     * grid lines are drawn
+     * Method which returns the labels to be shown along the xAxis, also used to determine where grid lines are drawn
      */
-    xAxisLabels: PropTypes.arrayOf(PropTypes.node),
+    xAxisLabels: PropTypes.func,
     /** The title that appears along the xAxis */
     xAxisTitle: PropTypes.node,
     /**
@@ -70,6 +69,10 @@ export default class LineChart extends Component {
     })),
     /** The title that appears along the yAxis */
     yAxisTitle: PropTypes.node,
+  };
+
+  static defaultProps = {
+    xAxisLabels: () => [],
   };
 
   constructor(props) {
@@ -135,12 +138,13 @@ export default class LineChart extends Component {
     const finalUpper = Math.max(upper, dataUpper);
     const labelMap = chartKey.reduce((map, { color, label, style }) =>
       ({ ...map, [label]: { color, style } }), {});
+    const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
 
     return (
       <ChartLayout { ...rest }>
         { xAxisTitle && <ChartLayoutTitle axis="x">{ xAxisTitle }</ChartLayoutTitle> }
         { yAxisTitle && <ChartLayoutTitle axis="y">{ yAxisTitle }</ChartLayoutTitle> }
-        { xAxisLabels && <ChartLayoutLabels axis="x" labels={ xAxisLabels } /> }
+        { finalXAxisLabels.length > 0 && <ChartLayoutLabels axis="x" labels={ finalXAxisLabels } /> }
         { yAxisLabels && (
           <ChartLayoutLabels
               axis="y"

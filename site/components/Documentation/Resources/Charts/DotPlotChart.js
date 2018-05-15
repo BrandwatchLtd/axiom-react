@@ -25,7 +25,7 @@ export default class Documentation extends Component {
               labelColumnWidth="11rem"
               lower={ 0 }
               upper={ 100 }
-              xAxisLabels={ [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
+              xAxisLabels={ () => [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
         </DocumentationShowCase>
 
         <DocumentationApi components={ [
