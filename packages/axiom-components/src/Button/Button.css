@@ -160,8 +160,8 @@
     color: var(--color-theme-text--disabled);
   }
 
-  &:active,
-  &.ax-button--active {
+  &:not(:disabled):active,
+  &:not(:disabled).ax-button--active {
     color: var(--color-ui-white-noise);
   }
 }
@@ -180,8 +180,8 @@
     color: var(--color-theme-text--disabled);
   }
 
-  &:active,
-  &.ax-button--active {
+  &:not(:disabled):active,
+  &:not(:disabled).ax-button--active {
     border-color: transparent;
     background-color: var(--color-theme-background--subtle);
   }
@@ -204,8 +204,8 @@
     color: var(--color-theme-text--disabled);
   }
 
-  &:active,
-  &.ax-button--active {
+  &:not(:disabled):active,
+  &:not(:disabled).ax-button--active {
     color: var(--color-ui-accent--active);
   }
 }
