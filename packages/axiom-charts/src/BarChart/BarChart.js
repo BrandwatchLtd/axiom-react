@@ -214,7 +214,7 @@ export default class BarChart extends Component {
                     hoverColor={ selectedColor }
                     hoverIndex={ selectedIndex }
                     index={ index }
-                    isHovered={ isMultipleValuesData && index === selectedIndex }
+                    isHovered={ index === selectedIndex }
                     label={ label }
                     lower={ finalLower }
                     onDropdownClose={ () => this.handleDropdonClose() }
