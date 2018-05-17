@@ -135,8 +135,8 @@ export default class TextInput extends Component {
                     Component="input"
                     className="ax-input"
                     disabled={ disabled }
-                    onBlur={ () => this.handleOnBlur() }
-                    onFocus={ () => this.handleOnFocus() }
+                    onBlur={ this.handleOnBlur.bind(this) }
+                    onFocus={ this.handleOnFocus.bind(this) }
                     type={ type }
                     value={ value } />
               </div>
