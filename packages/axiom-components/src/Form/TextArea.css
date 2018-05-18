@@ -8,7 +8,7 @@
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
 
-  &:focus { border-color: var(--cmp-input-border-color-focused); }
+  &:focus { border-color: rgba(var(--rgb-ui-accent), var(--opacity-input-border--focused)); }
   &:disabled { background-color: var(--color-theme-background--disabled); }
 }
 
