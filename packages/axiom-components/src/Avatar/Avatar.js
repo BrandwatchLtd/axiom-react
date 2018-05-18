@@ -4,8 +4,34 @@ import Image from '../Image/Image';
 
 export default class Avatar extends Component {
   static propTypes = {
-    /** Border around the avatar */
+    /** Border size around the avatar */
     border: PropTypes.oneOf(['small', 'large']),
+    /** Border colour around the avatar */
+    borderColor: PropTypes.oneOf([
+      'highlight',
+      'success',
+      'error',
+      'tiny-clanger',
+      'critical-mass',
+      'fantastic-voyage',
+      'paradise-lost',
+      'serene-sea',
+      'electric-dreams',
+      'giant-leap',
+      'moon-lagoon',
+      'space-invader',
+      'terra-form',
+      'primeval-soup',
+      'sun-maker',
+      'new-horizon',
+      'blast-off',
+      'crash-course',
+      'ground-control',
+      'space-oddity',
+      'deep-thought',
+      'luna-dust',
+      'carbon',
+    ]),
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
     /** Size of the Avatar */
@@ -21,6 +47,7 @@ export default class Avatar extends Component {
   render() {
     const {
       border,
+      borderColor,
       children,
       size,
       src,
@@ -30,6 +57,7 @@ export default class Avatar extends Component {
     return (
       <Image { ...rest }
           border={ border }
+          borderColor={ borderColor }
           height={ size }
           shape="circle"
           src={ src }

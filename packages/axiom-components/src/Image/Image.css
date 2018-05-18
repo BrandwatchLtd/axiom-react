@@ -11,3 +11,27 @@
 
 .ax-image--border-small { border-width: var(--component-border-width-small); }
 .ax-image--border-large { border-width: var(--component-border-width-large); }
+
+.ax-image--border-color-highlight { border-color: var(--color-ui-highlight); }
+.ax-image--border-color-success { border-color: var(--color-ui-success); }
+.ax-image--border-color-error { border-color: var(--color-ui-error); }
+.ax-image--border-color-tiny-clanger { border-color: var(--color-product-tiny-clanger); }
+.ax-image--border-color-critical-mass { border-color: var(--color-product-critical-mass); }
+.ax-image--border-color-fantastic-voyage { border-color: var(--color-product-fantastic-voyage); }
+.ax-image--border-color-paradise-lost { border-color: var(--color-product-paradise-lost); }
+.ax-image--border-color-serene-sea { border-color: var(--color-product-serene-sea); }
+.ax-image--border-color-electric-dreams { border-color: var(--color-product-electric-dreams); }
+.ax-image--border-color-giant-leap { border-color: var(--color-product-giant-leap); }
+.ax-image--border-color-moon-lagoon { border-color: var(--color-product-moon-lagoon); }
+.ax-image--border-color-space-invader { border-color: var(--color-product-space-invader); }
+.ax-image--border-color-terra-form { border-color: var(--color-product-terra-form); }
+.ax-image--border-color-primeval-soup { border-color: var(--color-product-primeval-soup); }
+.ax-image--border-color-sun-maker { border-color: var(--color-product-sun-maker); }
+.ax-image--border-color-new-horizon { border-color: var(--color-product-new-horizon); }
+.ax-image--border-color-blast-off { border-color: var(--color-product-blast-off); }
+.ax-image--border-color-crash-course { border-color: var(--color-product-crash-course); }
+.ax-image--border-color-ground-control { border-color: var(--color-product-ground-control); }
+.ax-image--border-color-space-oddity { border-color: var(--color-product-space-oddity); }
+.ax-image--border-color-deep-thought { border-color: var(--color-product-deep-thought); }
+.ax-image--border-color-luna-dust { border-color: var(--color-product-luna-dust); }
+.ax-image--border-color-rgb-ui-carbon { border-color: var(--rgb-ui-carbon); }
