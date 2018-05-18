@@ -62,6 +62,8 @@ export default class BarChart extends Component {
     })).isRequired,
     /** The description given to the expand button */
     expandButtonSuffix: PropTypes.string,
+    /** If set to false the benachmark line will not fade out on hover */
+    isBenchmarkLineFadable: PropTypes.bool,
     /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string.isRequired,
     /** Lower value of the data displayed on the chart */
@@ -91,6 +93,7 @@ export default class BarChart extends Component {
   };
 
   static defaultProps = {
+    isBenchmarkLineFadable: true,
     rowSpace: 'x2',
     showKey: true,
     showDifferenceArea: false,
@@ -153,6 +156,7 @@ export default class BarChart extends Component {
       TooltipContext,
       data,
       expandButtonSuffix,
+      isBenchmarkLineFadable,
       labelColumnWidth,
       lower = dataLower,
       rowSpace,
@@ -209,7 +213,7 @@ export default class BarChart extends Component {
                     benchmark={ benchmark }
                     benchmarkHeight={ rowSpace }
                     data={ data[index] }
-                    fadeBenchmarkLine={ selectedIndex !== null }
+                    fadeBenchmarkLine={ isBenchmarkLineFadable && selectedIndex !== null }
                     hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
                     hoverColor={ selectedColor }
                     hoverIndex={ selectedIndex }
