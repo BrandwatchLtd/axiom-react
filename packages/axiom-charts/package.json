@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-charts",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Brandwatch Axiom - Charting components",
   "main": "dist/index.js",
   "license": "UNLICENSED",
