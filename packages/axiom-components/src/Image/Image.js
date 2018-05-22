@@ -7,8 +7,34 @@ import './Image.css';
 
 export default class Image extends Component {
   static propTypes = {
-    /** Border applied around the image */
+    /** Border size around the image */
     border: PropTypes.oneOf(['small', 'large']),
+    /** Border colour around the image */
+    borderColor: PropTypes.oneOf([
+      'highlight',
+      'success',
+      'error',
+      'tiny-clanger',
+      'critical-mass',
+      'fantastic-voyage',
+      'paradise-lost',
+      'serene-sea',
+      'electric-dreams',
+      'giant-leap',
+      'moon-lagoon',
+      'space-invader',
+      'terra-form',
+      'primeval-soup',
+      'sun-maker',
+      'new-horizon',
+      'blast-off',
+      'crash-course',
+      'ground-control',
+      'space-oddity',
+      'deep-thought',
+      'luna-dust',
+      'carbon',
+    ]),
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
     /** Height of the image. When shape is circle this will be ignored and width will be applied. */
@@ -35,6 +61,7 @@ export default class Image extends Component {
   render() {
     const {
       border,
+      borderColor,
       children,
       height,
       maxWidth,
@@ -54,6 +81,7 @@ export default class Image extends Component {
 
     const classes = classnames('ax-image', `ax-image--${shape}`, {
       [`ax-image--border-${border}`]: border,
+      [`ax-image--border-color-${borderColor}`]: borderColor,
     });
 
     return (
