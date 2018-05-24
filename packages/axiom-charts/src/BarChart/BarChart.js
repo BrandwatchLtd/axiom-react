@@ -13,7 +13,7 @@ import ChartTableRows from '../ChartTable/ChartTableRows';
 import ChartTableVisual from '../ChartTable/ChartTableVisual';
 import DataPoint from '../DataPoint/DataPoint';
 import DataPoints from '../DataPoint/DataPoints';
-import { formatData, flattenValues, hasMultipleValues } from './utils';
+import { formatData, flattenValues, hasMultipleValues, calculateZoom } from './utils';
 import './BarChart.css';
 
 export default class BarChart extends Component {
@@ -67,7 +67,19 @@ export default class BarChart extends Component {
     /** The width of the yAxis labels columns */
     labelColumnWidth: PropTypes.string.isRequired,
     /** Lower value of the data displayed on the chart */
-    lower: PropTypes.number,
+    lower(props, propName, componentName) {
+      if (!props.lower) {
+        return;
+      }
+
+      if (typeof props.lower !== 'number') {
+        return new Error('Invalid prop `lower` supplied to ' + componentName + '. Validation failed.');
+      }
+
+      if (props.upper && props.upper < props.lower) {
+        return new Error('Invalid prop `lower` supplied to ' + componentName + '. `lower` needs to be smaller than `upper`');
+      }
+    },
     /** Spacing applied between Bar groups */
     rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
@@ -178,8 +190,9 @@ export default class BarChart extends Component {
 
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
-    const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
-    const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
+    const zoomTo = calculateZoom({
+      zoomMax, dataUpper, finalUpper, finalLower,
+    });
 
     const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
 

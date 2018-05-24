@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarChart adds a title for the x-axis when setting the "axisTitle" property 1`] = `
+<ChartTableAxisTitle>
+  X Axis Title
+</ChartTableAxisTitle>
+`;
+
+exports[`BarChart renders a BarChart with the default configuration 1`] = `
+<ChartTable
+  xAxisLabels={
+    Array [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40",
+      "50",
+      "60",
+      "70",
+      "80",
+      "90",
+      "100",
+    ]
+  }
+>
+  <ChartTableRows
+    expandButtonSuffix="Items"
+    labelColumnWidth="13rem"
+    lower={30}
+    space="x2"
+    upper={30}
+    xAxisLabels={
+      Array [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+      ]
+    }
+    zoomTo={100}
+  >
+    <ChartTableRow
+      hover={false}
+      key="0"
+    >
+      <ChartTableLabel
+        textStrong={false}
+        width="13rem"
+      >
+        Family & Parenting
+      </ChartTableLabel>
+      <ChartTableVisual>
+        <BarChartBars
+          benchmark={14}
+          benchmarkHeight="x2"
+          data={
+            Object {
+              "benchmark": 14,
+              "label": "Family & Parenting",
+              "values": Object {
+                "blast-off": 30,
+                "critical-mass": 15,
+                "giant-leap": 17,
+              },
+            }
+          }
+          fadeBenchmarkLine={false}
+          hideBars={false}
+          hoverColor={null}
+          isHovered={false}
+          label="Family & Parenting"
+          lower={5}
+          onDropdownClose={[Function]}
+          onDropdownOpen={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          upper={30}
+          values={
+            Array [
+              Object {
+                "color": "giant-leap",
+                "value": 17,
+              },
+              Object {
+                "color": "critical-mass",
+                "value": 15,
+              },
+              Object {
+                "color": "blast-off",
+                "value": 30,
+              },
+            ]
+          }
+        />
+      </ChartTableVisual>
+    </ChartTableRow>
+    <ChartTableRow
+      hover={false}
+      key="1"
+    >
+      <ChartTableLabel
+        textStrong={false}
+        width="13rem"
+      >
+        Food & Drinks
+      </ChartTableLabel>
+      <ChartTableVisual>
+        <BarChartBars
+          benchmark={7}
+          benchmarkHeight="x2"
+          data={
+            Object {
+              "benchmark": 7,
+              "label": "Food & Drinks",
+              "values": Object {
+                "blast-off": 22,
+                "critical-mass": 11,
+                "giant-leap": 10,
+              },
+            }
+          }
+          fadeBenchmarkLine={false}
+          hideBars={false}
+          hoverColor={null}
+          isHovered={false}
+          label="Food & Drinks"
+          lower={5}
+          onDropdownClose={[Function]}
+          onDropdownOpen={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          upper={30}
+          values={
+            Array [
+              Object {
+                "color": "giant-leap",
+                "value": 10,
+              },
+              Object {
+                "color": "critical-mass",
+                "value": 11,
+              },
+              Object {
+                "color": "blast-off",
+                "value": 22,
+              },
+            ]
+          }
+        />
+      </ChartTableVisual>
+    </ChartTableRow>
+    <ChartTableRow
+      hover={false}
+      key="2"
+    >
+      <ChartTableLabel
+        textStrong={false}
+        width="13rem"
+      >
+        Music
+      </ChartTableLabel>
+      <ChartTableVisual>
+        <BarChartBars
+          benchmark={13}
+          benchmarkHeight="x2"
+          data={
+            Object {
+              "benchmark": 13,
+              "label": "Music",
+              "values": Object {
+                "blast-off": 15,
+                "critical-mass": 26,
+                "giant-leap": 27,
+              },
+            }
+          }
+          fadeBenchmarkLine={false}
+          hideBars={false}
+          hoverColor={null}
+          isHovered={false}
+          label="Music"
+          lower={5}
+          onDropdownClose={[Function]}
+          onDropdownOpen={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          upper={30}
+          values={
+            Array [
+              Object {
+                "color": "giant-leap",
+                "value": 27,
+              },
+              Object {
+                "color": "critical-mass",
+                "value": 26,
+              },
+              Object {
+                "color": "blast-off",
+                "value": 15,
+              },
+            ]
+          }
+        />
+      </ChartTableVisual>
+    </ChartTableRow>
+    <ChartTableRow
+      hover={false}
+      key="3"
+    >
+      <ChartTableLabel
+        textStrong={false}
+        width="13rem"
+      >
+        Animals & Pets
+      </ChartTableLabel>
+      <ChartTableVisual>
+        <BarChartBars
+          benchmark={9}
+          benchmarkHeight="x2"
+          data={
+            Object {
+              "benchmark": 9,
+              "label": "Animals & Pets",
+              "values": Object {
+                "blast-off": 11,
+                "critical-mass": 5,
+                "giant-leap": 5,
+              },
+            }
+          }
+          fadeBenchmarkLine={false}
+          hideBars={false}
+          hoverColor={null}
+          isHovered={false}
+          label="Animals & Pets"
+          lower={5}
+          onDropdownClose={[Function]}
+          onDropdownOpen={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          upper={30}
+          values={
+            Array [
+              Object {
+                "color": "giant-leap",
+                "value": 5,
+              },
+              Object {
+                "color": "critical-mass",
+                "value": 5,
+              },
+              Object {
+                "color": "blast-off",
+                "value": 11,
+              },
+            ]
+          }
+        />
+      </ChartTableVisual>
+    </ChartTableRow>
+    <ChartTableRow
+      hover={false}
+      key="4"
+    >
+      <ChartTableLabel
+        textStrong={false}
+        width="13rem"
+      >
+        Beauty/Health & Fitness
+      </ChartTableLabel>
+      <ChartTableVisual>
+        <BarChartBars
+          benchmark={6}
+          benchmarkHeight="x2"
+          data={
+            Object {
+              "benchmark": 6,
+              "label": "Beauty/Health & Fitness",
+              "values": Object {
+                "blast-off": 11,
+                "critical-mass": 5,
+                "giant-leap": 5,
+              },
+            }
+          }
+          fadeBenchmarkLine={false}
+          hideBars={false}
+          hoverColor={null}
+          isHovered={false}
+          label="Beauty/Health & Fitness"
+          lower={5}
+          onDropdownClose={[Function]}
+          onDropdownOpen={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          upper={30}
+          values={
+            Array [
+              Object {
+                "color": "giant-leap",
+                "value": 5,
+              },
+              Object {
+                "color": "critical-mass",
+                "value": 5,
+              },
+              Object {
+                "color": "blast-off",
+                "value": 11,
+              },
+            ]
+          }
+        />
+      </ChartTableVisual>
+    </ChartTableRow>
+    <ChartTableRow
+      hover={false}
+      key="5"
+    >
+      <ChartTableLabel
+        textStrong={false}
+        width="13rem"
+      >
+        Games
+      </ChartTableLabel>
+      <ChartTableVisual>
+        <BarChartBars
+          benchmark={5}
+          benchmarkHeight="x2"
+          data={
+            Object {
+              "benchmark": 5,
+              "label": "Games",
+              "values": Object {
+                "blast-off": 5,
+                "critical-mass": 8,
+                "giant-leap": 10,
+              },
+            }
+          }
+          fadeBenchmarkLine={false}
+          hideBars={false}
+          hoverColor={null}
+          isHovered={false}
+          label="Games"
+          lower={5}
+          onDropdownClose={[Function]}
+          onDropdownOpen={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          upper={30}
+          values={
+            Array [
+              Object {
+                "color": "giant-leap",
+                "value": 10,
+              },
+              Object {
+                "color": "critical-mass",
+                "value": 8,
+              },
+              Object {
+                "color": "blast-off",
+                "value": 5,
+              },
+            ]
+          }
+        />
+      </ChartTableVisual>
+    </ChartTableRow>
+  </ChartTableRows>
+  <ChartTableKey>
+    <ChartKey>
+      <ChartKeyItem
+        key="Brand A.giant-leap"
+        label="Brand A"
+      >
+        <DataPoints
+          size="0.75rem"
+        >
+          <DataPoint
+            color="giant-leap"
+            style="solid"
+          />
+        </DataPoints>
+      </ChartKeyItem>
+      <ChartKeyItem
+        key="Brand B.critical-mass"
+        label="Brand B"
+      >
+        <DataPoints
+          size="0.75rem"
+        >
+          <DataPoint
+            color="critical-mass"
+            style="solid"
+          />
+        </DataPoints>
+      </ChartKeyItem>
+      <ChartKeyItem
+        key="Brand C.blast-off"
+        label="Brand C"
+      >
+        <DataPoints
+          size="0.75rem"
+        >
+          <DataPoint
+            color="blast-off"
+            style="solid"
+          />
+        </DataPoints>
+      </ChartKeyItem>
+    </ChartKey>
+  </ChartTableKey>
+</ChartTable>
+`;
+
+exports[`BarChart sets the label for the Benchmark in the keys to the value of the "chartKeyBenchmarkLabel" property 1`] = `
+<ChartKeyItem
+  label="Benchmark Label"
+/>
+`;

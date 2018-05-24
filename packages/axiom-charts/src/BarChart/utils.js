@@ -23,3 +23,10 @@ export const flattenValues = (data) => {
 
 export const hasMultipleValues = (data) =>
   data.some(({ values }) => Object.keys(values).length > 1);
+
+export const calculateZoom = ({ zoomMax, dataUpper, finalUpper, finalLower }) => {
+  const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
+  const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
+
+  return zoomTo;
+};
