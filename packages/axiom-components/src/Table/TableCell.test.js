@@ -27,4 +27,13 @@ describe('TableBody', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders without horizontal and vertical padding', () => {
+    const component = getComponent({
+      verticalPadding: 'none',
+      horizontalPadding: 'none',
+    });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

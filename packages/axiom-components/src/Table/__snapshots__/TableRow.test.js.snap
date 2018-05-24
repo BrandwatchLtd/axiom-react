@@ -1,12 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TableRow renders with clickable styling 1`] = `
+<tr
+  className="ax-table__row ax-table__row--clickable"
+  onClick={[Function]}
+>
+  <td
+    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
+  >
+    123456
+  </td>
+</tr>
+`;
+
 exports[`TableRow renders with defaultProps 1`] = `
 <tr
   className="ax-table__row"
   onClick={undefined}
 >
   <td
-    className="ax-table__cell ax-table__cell--align-left"
+    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
   >
     123456
   </td>
@@ -16,9 +29,10 @@ exports[`TableRow renders with defaultProps 1`] = `
 exports[`TableRow renders without borders 1`] = `
 <tr
   className="ax-table__row ax-table__row--borderless"
+  onClick={undefined}
 >
   <td
-    className="ax-table__cell ax-table__cell--align-left"
+    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
   >
     123456
   </td>

@@ -2,7 +2,7 @@
 
 exports[`TableBody renders 1`] = `
 <td
-  className="ax-table__cell ax-table__cell--align-left"
+  className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
 >
   123456
 </td>
@@ -10,7 +10,7 @@ exports[`TableBody renders 1`] = `
 
 exports[`TableBody renders with isSelected 1`] = `
 <td
-  className="ax-table__cell ax-table__cell--align-left ax-table__cell--selected"
+  className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium ax-table__cell--selected"
 >
   123456
 </td>
@@ -18,7 +18,15 @@ exports[`TableBody renders with isSelected 1`] = `
 
 exports[`TableBody renders with textAlign 1`] = `
 <td
-  className="ax-table__cell ax-table__cell--align-right"
+  className="ax-table__cell ax-table__cell--align-right ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
+>
+  123456
+</td>
+`;
+
+exports[`TableBody renders without horizontal and vertical padding 1`] = `
+<td
+  className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-none ax-table__cell--vertical-padding-none"
 >
   123456
 </td>

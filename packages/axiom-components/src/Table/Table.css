@@ -37,6 +37,22 @@
   text-align: right;
 }
 
+.ax-table__cell--horizontal-padding-none {
+  padding-bottom: 0;
+}
+
+.ax-table__cell--horizontal-padding-medium {
+  padding-bottom: var(--spacing-grid-size--x4);
+}
+
+.ax-table__cell--vertical-padding-none {
+  padding-bottom: 0;
+}
+
+.ax-table__cell--vertical-padding-medium {
+  padding-bottom: var(--spacing-grid-size--x2);
+}
+
 .ax-table__header-button {
   display: inline-flex;
   position: relative;
