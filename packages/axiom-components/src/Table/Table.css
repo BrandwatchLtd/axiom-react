@@ -12,6 +12,10 @@
   transition-timing-function: var(--transition-function);
 }
 
+.ax-table__row--clickable {
+  cursor: pointer;
+}
+
 .ax-table__row--borderless .ax-table__cell {
   border-top-width: 0;
 }

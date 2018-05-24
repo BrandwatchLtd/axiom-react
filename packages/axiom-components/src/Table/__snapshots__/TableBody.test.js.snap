@@ -6,6 +6,7 @@ exports[`TableBody renders 1`] = `
 >
   <tr
     className="ax-table__row"
+    onClick={undefined}
   />
 </tbody>
 `;

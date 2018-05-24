@@ -11,6 +11,8 @@ export default class TableRow extends Component {
     children: PropTypes.node,
     /** Apply hover styling */
     hover: PropTypes.bool,
+    /** When pCardrovided, applies styling to indicate the TableRow is clickable */
+    onClick: PropTypes.func,
   };
 
   render() {
@@ -18,16 +20,18 @@ export default class TableRow extends Component {
       children,
       borderless,
       hover,
+      onClick,
       ...rest
     } = this.props;
 
     const className = classnames('ax-table__row', {
       'ax-table__row--hover': hover,
+      'ax-table__row--clickable': onClick,
       'ax-table__row--borderless': borderless,
     });
 
     return (
-      <Base { ...rest } Component="tr" className={ className }>
+      <Base { ...rest } Component="tr" className={ className } onClick={ onClick }>
         { children }
       </Base>
     );

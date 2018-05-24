@@ -24,4 +24,10 @@ describe('TableRow', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with clickable styling', () => {
+    const component = getComponent({ onClick: () => {} });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -3,6 +3,7 @@
 exports[`TableRow renders with defaultProps 1`] = `
 <tr
   className="ax-table__row"
+  onClick={undefined}
 >
   <td
     className="ax-table__cell ax-table__cell--align-left"
