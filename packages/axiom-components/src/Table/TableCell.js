@@ -8,13 +8,13 @@ export default class TableCell extends Component {
     /** Tabular data for this cell */
     children: PropTypes.node,
     /** Sets the horizontal padding around the cell's content */
-    horizontalPadding: PropTypes.oneOf.apply(['none', 'medium']),
+    horizontalPadding: PropTypes.oneOf(['none', 'medium']),
     /** Marks cell as selected */
     isSelected: PropTypes.bool,
     /** Set text-align */
     textAlign: PropTypes.oneOf(['left', 'right']),
     /** Sets the vertical padding around the cell's content */
-    verticalPadding: PropTypes.oneOf.apply(['none', 'medium']),
+    verticalPadding: PropTypes.oneOf(['none', 'medium']),
   };
 
   static defaultProps = {
