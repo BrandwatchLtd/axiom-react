@@ -5,6 +5,7 @@ import CombinedBar from './CombinedBar';
 
 function getComponent(newProps = {}) {
   const props = {
+    DifferenceAreaTooltipContext: jest.fn(),
     DropdownContext: jest.fn(),
     TooltipContext: jest.fn(),
     onClick: jest.fn(),
@@ -36,6 +37,7 @@ describe('CombinedBar', () => {
 
   it('renders an additional striped bar when benchmark value is grather than current value', () => {
     const component = getComponent({
+      benchmark: 50,
       benchmarkValue: 50,
       percent: 10,
     });

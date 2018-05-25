@@ -59,16 +59,24 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
       }
     }
   >
-    <Bar
+    <ChartContext
+      TooltipContext={[Function]}
       color="giant-leap"
-      direction="right"
-      fillMode="striped"
-      isFaded={false}
-      isHidden={false}
-      labelStrong={false}
-      minSize="1rem"
-      percent={40}
-    />
+      data={Array []}
+      label="Possitve"
+      value={-4271}
+    >
+      <Bar
+        color="giant-leap"
+        direction="right"
+        fillMode="striped"
+        isFaded={false}
+        isHidden={false}
+        labelStrong={false}
+        minSize="1rem"
+        percent={40}
+      />
+    </ChartContext>
   </div>
 </React.Fragment>
 `;

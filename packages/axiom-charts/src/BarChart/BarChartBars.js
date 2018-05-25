@@ -10,6 +10,7 @@ import BarChartBenchmarkLine from './BarChartBenchmarkLine';
 export default class BarChartBars extends Component {
   static propTypes = {
     BenchmarkTooltipContext: PropTypes.func,
+    DifferenceAreaTooltipContext: PropTypes.func,
     DropdownContext: PropTypes.func,
     TooltipContext: PropTypes.func,
     barLabel: PropTypes.func,
@@ -40,6 +41,7 @@ export default class BarChartBars extends Component {
   render() {
     const {
       BenchmarkTooltipContext,
+      DifferenceAreaTooltipContext,
       DropdownContext,
       TooltipContext,
       barLabel,
@@ -98,8 +100,10 @@ export default class BarChartBars extends Component {
             return (
               <div className="ax-bar-chart__bar-container" key={ color }>
                 <CombinedBar
+                    DifferenceAreaTooltipContext={ DifferenceAreaTooltipContext }
                     DropdownContext={ DropdownContext }
                     TooltipContext={ TooltipContext }
+                    benchmark={ benchmark }
                     benchmarkValue={ showDifferenceArea ? benchmarkValue : null }
                     color={ color }
                     data={ data }

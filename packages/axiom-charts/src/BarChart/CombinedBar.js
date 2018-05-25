@@ -7,11 +7,13 @@ import './CombinedBar.css';
 
 export default class CombinedBar extends Component {
   static propTypes = {
+    DifferenceAreaTooltipContext: PropTypes.func,
     DropdownContext: PropTypes.func,
     TooltipContext: PropTypes.func,
+    benchmark: PropTypes.number,
     benchmarkValue: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
-    data: PropTypes.object.isRequired,
+    data: PropTypes.array.isRequired,
     label: PropTypes.node.isRequired,
     onDropdownClose: PropTypes.func.isRequired,
     onDropdownOpen: PropTypes.func.isRequired,
@@ -21,8 +23,10 @@ export default class CombinedBar extends Component {
 
   render() {
     const {
+      DifferenceAreaTooltipContext,
       DropdownContext,
       TooltipContext,
+      benchmark,
       benchmarkValue,
       color,
       data,
@@ -62,11 +66,18 @@ export default class CombinedBar extends Component {
         </ChartContext>
 
         { isStretched && (<div className="ax-bar-chart__combined-bar-diff" style={ stripedBarStyle }>
-          <Bar
+          <ChartContext
+              TooltipContext={ DifferenceAreaTooltipContext }
               color={ color }
-              fillMode="striped"
-              percent={ stripedBarWidth }
-              { ...stripedBarProps } />
+              data={ data }
+              label={ label }
+              value={ benchmark - value }>
+            <Bar
+                color={ color }
+                fillMode="striped"
+                percent={ stripedBarWidth }
+                { ...stripedBarProps } />
+          </ChartContext>
         </div>) }
       </React.Fragment>
     );

@@ -35,6 +35,7 @@ export default class Documentation extends Component {
         <DocumentationShowCase>
           <BarChart
               BenchmarkTooltipContext={ DropdownContext }
+              DifferenceAreaTooltipContext={ DropdownContext }
               DropdownContext={ DropdownContext }
               TooltipContext={ DropdownContext }
               axisTitle="% of each something"
