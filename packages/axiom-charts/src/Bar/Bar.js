@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import omit from 'lodash.omit';
 import { Base, Small } from '@brandwatch/axiom-components';
 import './Bar.css';
 
@@ -93,7 +94,8 @@ export default class Bar extends Component {
       percent,
       showLabel,
       size,
-      ...rest } = this.props;
+      ...rest
+    } = this.props;
     const isVertical = direction === 'up' || direction === 'down';
     const classes = classnames('ax-bars__bar', {
       'ax-bars__bar--center': size,
@@ -127,7 +129,7 @@ export default class Bar extends Component {
     };
 
     return (
-      <Base { ...rest }
+      <Base { ...omit(rest, ['benchmarkValue']) }
           className={ classes }
           onClick={ onClick }
           style={ style }>
