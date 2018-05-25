@@ -1,11 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import toJSON from 'enzyme-to-json';
 import CombinedBar from './CombinedBar';
 
 function getComponent(newProps = {}) {
   const props = {
     DropdownContext: jest.fn(),
     TooltipContext: jest.fn(),
+    onClick: jest.fn(),
     onDropdownClose: jest.fn(),
     onDropdownOpen: jest.fn(),
     data: [],
@@ -15,7 +17,7 @@ function getComponent(newProps = {}) {
     ...newProps,
   };
 
-  return renderer.create(
+  return shallow(
     <CombinedBar { ...props }
         color="giant-leap"
         direction="right" />
@@ -28,8 +30,8 @@ describe('CombinedBar', () => {
       benchmarkValue: 10,
       percent: 50,
     });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+
+    expect(toJSON(component)).toMatchSnapshot();
   });
 
   it('renders an additional striped bar when benchmark value is grather than current value', () => {
@@ -37,7 +39,7 @@ describe('CombinedBar', () => {
       benchmarkValue: 50,
       percent: 10,
     });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+
+    expect(toJSON(component)).toMatchSnapshot();
   });
 });
