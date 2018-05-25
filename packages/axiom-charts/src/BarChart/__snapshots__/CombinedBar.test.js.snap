@@ -2,9 +2,11 @@
 
 exports[`CombinedBar renders a single bar when benchmark value is less than current value 1`] = `
 <div
-  className="ax-bars__bar"
+  className="ax-bars__bar ax-bars__bar--clickable"
   direction="right"
-  onClick={undefined}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
   style={
     Object {
       "height": false,
@@ -42,9 +44,11 @@ exports[`CombinedBar renders a single bar when benchmark value is less than curr
 exports[`CombinedBar renders an additional striped bar when benchmark value is grather than current value 1`] = `
 Array [
   <div
-    className="ax-bars__bar"
+    className="ax-bars__bar ax-bars__bar--clickable"
     direction="right"
-    onClick={undefined}
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+    onMouseMove={[Function]}
     style={
         Object {
             "height": false,
