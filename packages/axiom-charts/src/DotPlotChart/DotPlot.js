@@ -67,9 +67,9 @@ export default class DotPlot extends Component {
     } = this.props;
 
     const dotPlotsArgs = [mouseOverRowIndex, mouseOverColors, rowIndex];
-    let benchmarkValue;
+    let benchmarkPercent;
     if (benchmark !== undefined) {
-      benchmarkValue = ((benchmark - lower) / (upper - lower)) * 100;
+      benchmarkPercent = ((benchmark - lower) / (upper - lower)) * 100;
     }
 
     return (
@@ -106,11 +106,11 @@ export default class DotPlot extends Component {
           </ChartContext>
         ) }
 
-        { benchmarkValue !== undefined && (
+        { benchmarkPercent !== undefined && (
           <div className="ax-dot-plot__benchmark-line-container">
             <DotPlotBenchmarkLine
                 faded={ isBenchmarkFaded(...dotPlotsArgs) }
-                value={ benchmarkValue } />
+                value={ benchmarkPercent } />
           </div>
         ) }
 

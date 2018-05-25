@@ -11,7 +11,7 @@ export default class CombinedBar extends Component {
     DropdownContext: PropTypes.func,
     TooltipContext: PropTypes.func,
     benchmark: PropTypes.number,
-    benchmarkValue: PropTypes.number.isRequired,
+    benchmarkPercent: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     label: PropTypes.node.isRequired,
@@ -27,7 +27,7 @@ export default class CombinedBar extends Component {
       DropdownContext,
       TooltipContext,
       benchmark,
-      benchmarkValue,
+      benchmarkPercent,
       color,
       data,
       label,
@@ -37,11 +37,11 @@ export default class CombinedBar extends Component {
       value,
       ...rest
     } = this.props;
-    const isStretched = benchmarkValue > percent;
+    const isStretched = benchmarkPercent > percent;
 
-    const stripedBarWidth = isStretched ? benchmarkValue - percent : percent - benchmarkValue;
+    const stripedBarWidth = isStretched ? benchmarkPercent - percent : percent - benchmarkPercent;
     const stripedBarStyle = {
-      left: isStretched ? `${percent}%` : `${benchmarkValue}%`,
+      left: isStretched ? `${percent}%` : `${benchmarkPercent}%`,
     };
 
     const stripedBarProps = omit(rest, [

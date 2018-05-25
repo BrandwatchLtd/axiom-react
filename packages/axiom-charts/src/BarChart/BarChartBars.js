@@ -73,9 +73,9 @@ export default class BarChartBars extends Component {
       [`ax-bar-chart__bars--${benchmarkHeight}`]: benchmarkHeight,
     });
 
-    let benchmarkValue;
+    let benchmarkPercent;
     if (benchmark !== undefined) {
-      benchmarkValue = ((benchmark - lower) / (upper - lower)) * 100;
+      benchmarkPercent = ((benchmark - lower) / (upper - lower)) * 100;
     }
 
     return (
@@ -91,10 +91,10 @@ export default class BarChartBars extends Component {
               'ax-bar-chart__bar-label--hidden': !(showBarLabel || color === hoverColor),
             });
 
-            const isStretched = benchmarkValue > percent;
+            const isStretched = benchmarkPercent > percent;
 
             const labelStyle = {
-              left: `${showDifferenceArea && isStretched ? benchmarkValue : percent}%`,
+              left: `${showDifferenceArea && isStretched ? benchmarkPercent : percent}%`,
             };
 
             return (
@@ -104,7 +104,7 @@ export default class BarChartBars extends Component {
                     DropdownContext={ DropdownContext }
                     TooltipContext={ TooltipContext }
                     benchmark={ benchmark }
-                    benchmarkValue={ showDifferenceArea ? benchmarkValue : null }
+                    benchmarkPercent={ showDifferenceArea ? benchmarkPercent : null }
                     color={ color }
                     data={ data }
                     data-ax-at={ atIds.BarChart.bar }
@@ -128,7 +128,7 @@ export default class BarChartBars extends Component {
           }) }
         </Bars>
 
-        { benchmarkValue !== undefined && (
+        { benchmarkPercent !== undefined && (
           <div className="ax-bar-chart__benchmark-line-container">
             <BarChartBenchmarkLine
                 BenchmarkTooltipContext={ BenchmarkTooltipContext }
@@ -136,7 +136,7 @@ export default class BarChartBars extends Component {
                 data={ data }
                 faded={ fadeBenchmarkLine }
                 label={ label }
-                value={ benchmarkValue } />
+                value={ benchmarkPercent } />
           </div>
         ) }
       </Base>

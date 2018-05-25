@@ -28,7 +28,7 @@ function getComponent(newProps = {}) {
 describe('CombinedBar', () => {
   it('renders a single bar when benchmark value is less than current value', () => {
     const component = getComponent({
-      benchmarkValue: 10,
+      benchmarkPercent: 10,
       percent: 50,
     });
 
@@ -38,7 +38,7 @@ describe('CombinedBar', () => {
   it('renders an additional striped bar when benchmark value is grather than current value', () => {
     const component = getComponent({
       benchmark: 50,
-      benchmarkValue: 50,
+      benchmarkPercent: 50,
       percent: 10,
     });
 
