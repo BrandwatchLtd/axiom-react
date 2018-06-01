@@ -6,7 +6,6 @@
 .ax-table__cell {
   padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
   border-top: var(--component-border-width-medium) dotted var(--color-theme-border);
-  color: var(--color-theme-text--subtle);
   transition-property: color, border-color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);

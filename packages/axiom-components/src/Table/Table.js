@@ -13,7 +13,7 @@ export default class Table extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base space="x6" { ...rest } Component="table" className="ax-table">
+      <Base space="x6" textColor="subtle" { ...rest } Component="table" className="ax-table">
         { children }
       </Base>
     );
