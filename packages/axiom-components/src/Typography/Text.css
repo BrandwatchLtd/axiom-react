@@ -28,6 +28,7 @@
 .ax-text--case-capital { text-transform: capitalize; }
 .ax-text--case-lower   { text-transform: lowercase; }
 
+.ax-text--color-body { color: var(--color-theme-text); }
 .ax-text--color-day { color: var(--color-theme-day-text); }
 .ax-text--color-night { color: var(--color-theme-night-text); }
 .ax-text--color-error { color: var(--color-ui-error); }

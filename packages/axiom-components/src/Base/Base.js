@@ -52,6 +52,7 @@ export default class Base extends Component {
     textCenter: PropTypes.oneOf([true, 'small', 'medium', 'large']),
     /** Text color styling */
     textColor: PropTypes.oneOf([
+      'body',
       'day',
       'night',
       'error',
