@@ -14,7 +14,7 @@ export default class TableCell extends Component {
     /** Set text-align */
     textAlign: PropTypes.oneOf(['left', 'right']),
     /** Sets the vertical padding around the cell's content */
-    verticalPadding: PropTypes.oneOf(['none', 'medium']),
+    verticalPadding: PropTypes.oneOf(['none', 'medium', 'large']),
   };
 
   static defaultProps = {

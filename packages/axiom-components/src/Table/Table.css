@@ -57,6 +57,11 @@
   padding-bottom: var(--spacing-grid-size--x2);
 }
 
+.ax-table__cell--vertical-padding-large {
+  padding-top: var(--spacing-grid-size--x4);
+  padding-bottom: var(--spacing-grid-size--x4);
+}
+
 .ax-table__header-button {
   display: inline-flex;
   position: relative;
