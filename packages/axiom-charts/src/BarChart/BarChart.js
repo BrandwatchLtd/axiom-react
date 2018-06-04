@@ -107,7 +107,6 @@ export default class BarChart extends Component {
 
   static defaultProps = {
     isBenchmarkLineFadable: true,
-    onToggleRowVisibility: undefined,
     rowSpace: 'x2',
     showKey: true,
     showDifferenceArea: false,
@@ -217,7 +216,7 @@ export default class BarChart extends Component {
                 key={ index }>
               <ChartTableLabel
                   disabled={ hidden }
-                  onToggleRowVisibility={ () => onToggleRowVisibility(data[index], index) }
+                  onToggleRowVisibility={ onToggleRowVisibility && (() => onToggleRowVisibility(data[index], index)) }
                   textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
                 { label }

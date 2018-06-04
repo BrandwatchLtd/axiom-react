@@ -32,7 +32,7 @@ export default class ChartTableLabel extends Component {
           style={ { width } }>
         <Grid
             gutters="tiny"
-            onClick={ onToggleRowVisibility && (() => onToggleRowVisibility()) }
+            onClick={ onToggleRowVisibility }
             responsive={ false }
             verticalAlign="middle">
           <GridCell>
