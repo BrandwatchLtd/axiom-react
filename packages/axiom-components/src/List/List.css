@@ -3,15 +3,17 @@
 }
 
 .ax-list--style-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 0;
   list-style: none;
 
   & .ax-list__item {
-    display: inline-block;
+    flex: 0 0 auto;
     margin: 0 var(--cmp-list-item-spacing) 0 0;
     padding: 0 var(--cmp-list-item-spacing) 0 0;
     border-right: var(--component-border-width) solid var(--color-theme-border);
-    vertical-align: middle;
 
     &:last-child  {
       margin-right: 0;
