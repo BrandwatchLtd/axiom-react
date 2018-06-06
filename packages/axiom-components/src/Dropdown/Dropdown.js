@@ -88,9 +88,12 @@ export default class Dropdown extends Component {
           { ...rest }
           isVisible={ isVisible }
           offset={ offset }
-          onMaskClick={ () => this.close() }
           position={ position }>
-        <PositionTarget>{ findComponent(children, DropdownTargetRef) }</PositionTarget>
+        <PositionTarget>
+          { React.cloneElement(findComponent(children, DropdownTargetRef), {
+            pointerEventsDisabled: isVisible,
+          } ) }
+        </PositionTarget>
         <PositionSource>{ findComponent(children, DropdownSourceRef) }</PositionSource>
       </Position>
     );

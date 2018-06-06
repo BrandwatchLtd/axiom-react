@@ -34,6 +34,8 @@ export default class Base extends Component {
      * Opposite of `visibleUntil`.
      */
     hiddenUntil: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** disables pointer events */
+    pointerEventsDisabled: PropTypes.bool,
     /** Vertical margins given to the element */
     space: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x8']),
     /**
@@ -135,6 +137,7 @@ export default class Base extends Component {
       cloakContainer,
       container,
       hiddenUntil,
+      pointerEventsDisabled,
       space,
       sticky,
       textBreak,
@@ -181,6 +184,7 @@ export default class Base extends Component {
       'ax-text--strong': textStrong,
       [`ax-text--underline-${underline}`]: underline,
       [`ax-theme--${theme}`]: theme,
+      'ax-pointer--disabled': pointerEventsDisabled,
     });
 
     if (sticky) {

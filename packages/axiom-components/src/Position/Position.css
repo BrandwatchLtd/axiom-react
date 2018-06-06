@@ -6,12 +6,3 @@
 .ax-position--arrow {
   margin: calc((var(--cmp-context-tip-edge-to-edge) * 0.5) + var(--spacing-grid-size--x1));
 }
-
-.ax-position__mask {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: var(--z-index-position);
-}

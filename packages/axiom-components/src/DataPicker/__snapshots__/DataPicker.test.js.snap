@@ -52,6 +52,7 @@ exports[`DataPicker renders with defaultProps 1`] = `
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
                 onFocus={[Function]}
+                pointerEventsDisabled={false}
               >
                 <a
                   className="ax-link ax-link--style-body"
@@ -173,6 +174,7 @@ exports[`DataPicker renders with just DataPickerDropdown 1`] = `
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
                 onFocus={[Function]}
+                pointerEventsDisabled={false}
               >
                 <a
                   className="ax-link ax-link--style-body"
@@ -358,6 +360,7 @@ exports[`DataPicker renders with onSelectColor 1`] = `
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
                 onFocus={[Function]}
+                pointerEventsDisabled={false}
               >
                 <a
                   className="ax-link ax-link--style-body"
@@ -479,6 +482,7 @@ exports[`DataPicker renders with value 1`] = `
                 data-ax-at="9c4d25dadaa7"
                 onClick={[Function]}
                 onFocus={[Function]}
+                pointerEventsDisabled={false}
               >
                 <a
                   className="ax-link ax-link--style-body"

@@ -39,6 +39,7 @@ export default class DropdownContext extends Component {
   constructor(props) {
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillMount() {
@@ -47,6 +48,17 @@ export default class DropdownContext extends Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('mousedown', this.handleClick);
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClick);
+  }
+
+  handleClick() {
+    if (!this.el.contains(event.target)) {
+      return this.context.closeDropdown();
+    }
   }
 
   getFocusedMenuItem() {

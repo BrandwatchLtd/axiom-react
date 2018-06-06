@@ -85,9 +85,10 @@ class AlertDropdown extends Component {
       <Position
           { ...rest }
           isVisible={ isVisible }
-          onMaskClick={ () => this.close() }
           position="bottom">
-        <PositionTarget>{ findComponent(children, AlertDropdownTargetRef) }</PositionTarget>
+        <PositionTarget>
+          { findComponent(children, AlertDropdownTargetRef) }
+        </PositionTarget>
         <PositionSource>{ findComponent(children, AlertDropdownSourceRef) }</PositionSource>
       </Position>
     );
