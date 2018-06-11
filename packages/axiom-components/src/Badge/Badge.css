@@ -50,23 +50,30 @@
 .ax-badge--highlight .ax-badge__background { background-color: var(--color-ui-highlight); }
 .ax-badge--success .ax-badge__background { background-color: var(--color-ui-success); }
 .ax-badge--error .ax-badge__background { background-color: var(--color-ui-error); }
+.ax-badge--forbidden-planet .ax-badge__background { background-color: var(--color-product-forbidden-planet); }
 .ax-badge--tiny-clanger .ax-badge__background { background-color: var(--color-product-tiny-clanger); }
 .ax-badge--critical-mass .ax-badge__background { background-color: var(--color-product-critical-mass); }
 .ax-badge--fantastic-voyage .ax-badge__background { background-color: var(--color-product-fantastic-voyage); }
 .ax-badge--paradise-lost .ax-badge__background { background-color: var(--color-product-paradise-lost); }
 .ax-badge--serene-sea .ax-badge__background { background-color: var(--color-product-serene-sea); }
+.ax-badge--event-horizon .ax-badge__background { background-color: var(--color-product-event-horizon); }
 .ax-badge--electric-dreams .ax-badge__background { background-color: var(--color-product-electric-dreams); }
+.ax-badge--outer-limits .ax-badge__background { background-color: var(--color-product-outer-limits); }
 .ax-badge--giant-leap .ax-badge__background { background-color: var(--color-product-giant-leap); }
 .ax-badge--moon-lagoon .ax-badge__background { background-color: var(--color-product-moon-lagoon); }
 .ax-badge--space-invader .ax-badge__background { background-color: var(--color-product-space-invader); }
+.ax-badge--extraterrestrial .ax-badge__background { background-color: var(--color-product-extraterrestrial); }
 .ax-badge--terra-form .ax-badge__background { background-color: var(--color-product-terra-form); }
 .ax-badge--primeval-soup .ax-badge__background { background-color: var(--color-product-primeval-soup); }
+.ax-badge--future-shock .ax-badge__background { background-color: var(--color-product-future-shock); }
 .ax-badge--sun-maker .ax-badge__background { background-color: var(--color-product-sun-maker); }
 .ax-badge--new-horizon .ax-badge__background { background-color: var(--color-product-new-horizon); }
 .ax-badge--blast-off .ax-badge__background { background-color: var(--color-product-blast-off); }
 .ax-badge--crash-course .ax-badge__background { background-color: var(--color-product-crash-course); }
+.ax-badge--solar-rust .ax-badge__background { background-color: var(--color-product-solar-rust); }
 .ax-badge--ground-control .ax-badge__background { background-color: var(--color-product-ground-control); }
 .ax-badge--space-oddity .ax-badge__background { background-color: var(--color-product-space-oddity); }
+.ax-badge--rocky-planet .ax-badge__background { background-color: var(--color-product-rocky-planet); }
 .ax-badge--deep-thought .ax-badge__background { background-color: var(--color-product-deep-thought); }
 .ax-badge--luna-dust .ax-badge__background { background-color: var(--color-product-luna-dust); }
 
@@ -78,6 +85,11 @@
 .ax-badge--error.ax-badge--clickable {
   &:hover .ax-badge__background { background-color: var(--color-ui-error--hover); }
   &:active .ax-badge__background { background-color: var(--color-ui-error--active); }
+}
+
+.ax-badge--forbidden-planet.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-forbidden-planet--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-forbidden-planet--active); }
 }
 
 .ax-badge--tiny-clanger.ax-badge--clickable {
@@ -105,9 +117,19 @@
   &:active .ax-badge__background { background-color: var(--color-product-serene-sea--active); }
 }
 
+.ax-badge--event-horizon.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-event-horizon--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-event-horizon--active); }
+}
+
 .ax-badge--electric-dreams.ax-badge--clickable {
   &:hover .ax-badge__background { background-color: var(--color-product-electric-dreams--hover); }
   &:active .ax-badge__background { background-color: var(--color-product-electric-dreams--active); }
+}
+
+.ax-badge--outer-limits.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-outer-limits--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-outer-limits--active); }
 }
 
 .ax-badge--giant-leap.ax-badge--clickable {
@@ -125,6 +147,11 @@
   &:active .ax-badge__background { background-color: var(--color-product-space-invader--active); }
 }
 
+.ax-badge--extraterrestrial.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-extraterrestrial--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-extraterrestrial--active); }
+}
+
 .ax-badge--terra-form.ax-badge--clickable {
   &:hover .ax-badge__background { background-color: var(--color-product-terra-form--hover); }
   &:active .ax-badge__background { background-color: var(--color-product-terra-form--active); }
@@ -133,6 +160,11 @@
 .ax-badge--primeval-soup.ax-badge--clickable {
   &:hover .ax-badge__background { background-color: var(--color-product-primeval-soup--hover); }
   &:active .ax-badge__background { background-color: var(--color-product-primeval-soup--active); }
+}
+
+.ax-badge--future-shock.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-future-shock--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-future-shock--active); }
 }
 
 .ax-badge--sun-maker.ax-badge--clickable {
@@ -155,6 +187,11 @@
   &:active .ax-badge__background { background-color: var(--color-product-crash-course--active); }
 }
 
+.ax-badge--solar-rust.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-solar-rust--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-solar-rust--active); }
+}
+
 .ax-badge--ground-control.ax-badge--clickable {
   &:hover .ax-badge__background { background-color: var(--color-product-ground-control--hover); }
   &:active .ax-badge__background { background-color: var(--color-product-ground-control--active); }
@@ -163,6 +200,11 @@
 .ax-badge--space-oddity.ax-badge--clickable {
   &:hover .ax-badge__background { background-color: var(--color-product-space-oddity--hover); }
   &:active .ax-badge__background { background-color: var(--color-product-space-oddity--active); }
+}
+
+.ax-badge--rocky-planet.ax-badge--clickable {
+  &:hover .ax-badge__background { background-color: var(--color-product-rocky-planet--hover); }
+  &:active .ax-badge__background { background-color: var(--color-product-rocky-planet--active); }
 }
 
 .ax-badge--deep-thought.ax-badge--clickable {

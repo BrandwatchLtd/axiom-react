@@ -50,9 +50,49 @@ exports[`DataPoint renders with color electric-dreams 1`] = `
 />
 `;
 
+exports[`DataPoint renders with color event-horizon 1`] = `
+<circle
+  className="ax-data-point ax-data-point--event-horizon ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color extraterrestrial 1`] = `
+<circle
+  className="ax-data-point ax-data-point--extraterrestrial ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
 exports[`DataPoint renders with color fantastic-voyage 1`] = `
 <circle
   className="ax-data-point ax-data-point--fantastic-voyage ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color forbidden-planet 1`] = `
+<circle
+  className="ax-data-point ax-data-point--forbidden-planet ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color future-shock 1`] = `
+<circle
+  className="ax-data-point ax-data-point--future-shock ax-data-point--solid"
   cx={12}
   cy={12}
   r={undefined}
@@ -110,6 +150,16 @@ exports[`DataPoint renders with color new-horizon 1`] = `
 />
 `;
 
+exports[`DataPoint renders with color outer-limits 1`] = `
+<circle
+  className="ax-data-point ax-data-point--outer-limits ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
 exports[`DataPoint renders with color paradise-lost 1`] = `
 <circle
   className="ax-data-point ax-data-point--paradise-lost ax-data-point--solid"
@@ -130,9 +180,29 @@ exports[`DataPoint renders with color primeval-soup 1`] = `
 />
 `;
 
+exports[`DataPoint renders with color rocky-planet 1`] = `
+<circle
+  className="ax-data-point ax-data-point--rocky-planet ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
 exports[`DataPoint renders with color serene-sea 1`] = `
 <circle
   className="ax-data-point ax-data-point--serene-sea ax-data-point--solid"
+  cx={12}
+  cy={12}
+  r={undefined}
+  strokeWidth={4}
+/>
+`;
+
+exports[`DataPoint renders with color solar-rust 1`] = `
+<circle
+  className="ax-data-point ax-data-point--solar-rust ax-data-point--solid"
   cx={12}
   cy={12}
   r={undefined}

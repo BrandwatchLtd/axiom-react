@@ -19,23 +19,30 @@
   fill: currentColor;
 }
 
+.ax-data-point--forbidden-planet { color: var(--color-product-forbidden-planet); }
 .ax-data-point--tiny-clanger { color: var(--color-product-tiny-clanger); }
 .ax-data-point--critical-mass { color: var(--color-product-critical-mass); }
 .ax-data-point--fantastic-voyage { color: var(--color-product-fantastic-voyage); }
 .ax-data-point--paradise-lost { color: var(--color-product-paradise-lost); }
 .ax-data-point--serene-sea { color: var(--color-product-serene-sea); }
+.ax-data-point--event-horizon { color: var(--color-product-event-horizon); }
 .ax-data-point--electric-dreams { color: var(--color-product-electric-dreams); }
+.ax-data-point--outer-limits { color: var(--color-product-outer-limits); }
 .ax-data-point--giant-leap { color: var(--color-product-giant-leap); }
 .ax-data-point--moon-lagoon { color: var(--color-product-moon-lagoon); }
 .ax-data-point--space-invader { color: var(--color-product-space-invader); }
+.ax-data-point--extraterrestrial { color: var(--color-product-extraterrestrial); }
 .ax-data-point--terra-form { color: var(--color-product-terra-form); }
 .ax-data-point--primeval-soup { color: var(--color-product-primeval-soup); }
+.ax-data-point--future-shock { color: var(--color-product-future-shock); }
 .ax-data-point--sun-maker { color: var(--color-product-sun-maker); }
 .ax-data-point--new-horizon { color: var(--color-product-new-horizon); }
 .ax-data-point--blast-off { color: var(--color-product-blast-off); }
 .ax-data-point--crash-course { color: var(--color-product-crash-course); }
+.ax-data-point--solar-rust { color: var(--color-product-solar-rust); }
 .ax-data-point--ground-control { color: var(--color-product-ground-control); }
 .ax-data-point--space-oddity { color: var(--color-product-space-oddity); }
+.ax-data-point--rocky-planet { color: var(--color-product-rocky-planet); }
 .ax-data-point--deep-thought { color: var(--color-product-deep-thought); }
 .ax-data-point--luna-dust { color: var(--color-product-luna-dust); }
 .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive); }
@@ -49,23 +56,30 @@
   cursor: pointer;
 
   &:hover {
+    & .ax-data-point--forbidden-planet { color: var(--color-product-forbidden-planet--hover); }
     & .ax-data-point--tiny-clanger { color: var(--color-product-tiny-clanger--hover); }
     & .ax-data-point--critical-mass { color: var(--color-product-critical-mass--hover); }
     & .ax-data-point--fantastic-voyage { color: var(--color-product-fantastic-voyage--hover); }
     & .ax-data-point--paradise-lost { color: var(--color-product-paradise-lost--hover); }
     & .ax-data-point--serene-sea { color: var(--color-product-serene-sea--hover); }
+    & .ax-data-point--event-horizon { color: var(--color-product-event-horizon--hover); }
     & .ax-data-point--electric-dreams { color: var(--color-product-electric-dreams--hover); }
+    & .ax-data-point--outer-limits { color: var(--color-product-outer-limits--hover); }
     & .ax-data-point--giant-leap { color: var(--color-product-giant-leap--hover); }
     & .ax-data-point--moon-lagoon { color: var(--color-product-moon-lagoon--hover); }
     & .ax-data-point--space-invader { color: var(--color-product-space-invader--hover); }
+    & .ax-data-point--extraterrestrial { color: var(--color-product-extraterrestrial--hover); }
     & .ax-data-point--terra-form { color: var(--color-product-terra-form--hover); }
     & .ax-data-point--primeval-soup { color: var(--color-product-primeval-soup--hover); }
+    & .ax-data-point--future-shock { color: var(--color-product-future-shock--hover); }
     & .ax-data-point--sun-maker { color: var(--color-product-sun-maker--hover); }
     & .ax-data-point--new-horizon { color: var(--color-product-new-horizon--hover); }
     & .ax-data-point--blast-off { color: var(--color-product-blast-off--hover); }
     & .ax-data-point--crash-course { color: var(--color-product-crash-course--hover); }
+    & .ax-data-point--solar-rust { color: var(--color-product-solar-rust--hover); }
     & .ax-data-point--ground-control { color: var(--color-product-ground-control--hover); }
     & .ax-data-point--space-oddity { color: var(--color-product-space-oddity--hover); }
+    & .ax-data-point--rocky-planet { color: var(--color-product-rocky-planet--hover); }
     & .ax-data-point--deep-thought { color: var(--color-product-deep-thought--hover); }
     & .ax-data-point--luna-dust { color: var(--color-product-luna-dust--hover); }
     & .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive--hover); }
@@ -77,23 +91,30 @@
   }
 
   &:active {
+    & .ax-data-point--forbidden-planet { color: var(--color-product-forbidden-planet--active); }
     & .ax-data-point--tiny-clanger { color: var(--color-product-tiny-clanger--active); }
     & .ax-data-point--critical-mass { color: var(--color-product-critical-mass--active); }
     & .ax-data-point--fantastic-voyage { color: var(--color-product-fantastic-voyage--active); }
     & .ax-data-point--paradise-lost { color: var(--color-product-paradise-lost--active); }
     & .ax-data-point--serene-sea { color: var(--color-product-serene-sea--active); }
+    & .ax-data-point--event-horizon { color: var(--color-product-event-horizon--active); }
     & .ax-data-point--electric-dreams { color: var(--color-product-electric-dreams--active); }
+    & .ax-data-point--outer-limits { color: var(--color-product-outer-limits--active); }
     & .ax-data-point--giant-leap { color: var(--color-product-giant-leap--active); }
     & .ax-data-point--moon-lagoon { color: var(--color-product-moon-lagoon--active); }
     & .ax-data-point--space-invader { color: var(--color-product-space-invader--active); }
+    & .ax-data-point--extraterrestrial { color: var(--color-product-extraterrestrial--active); }
     & .ax-data-point--terra-form { color: var(--color-product-terra-form--active); }
     & .ax-data-point--primeval-soup { color: var(--color-product-primeval-soup--active); }
+    & .ax-data-point--future-shock { color: var(--color-product-future-shock--active); }
     & .ax-data-point--sun-maker { color: var(--color-product-sun-maker--active); }
     & .ax-data-point--new-horizon { color: var(--color-product-new-horizon--active); }
     & .ax-data-point--blast-off { color: var(--color-product-blast-off--active); }
     & .ax-data-point--crash-course { color: var(--color-product-crash-course--active); }
+    & .ax-data-point--solar-rust { color: var(--color-product-solar-rust--active); }
     & .ax-data-point--ground-control { color: var(--color-product-ground-control--active); }
     & .ax-data-point--space-oddity { color: var(--color-product-space-oddity--active); }
+    & .ax-data-point--rocky-planet { color: var(--color-product-rocky-planet--active); }
     & .ax-data-point--deep-thought { color: var(--color-product-deep-thought--active); }
     & .ax-data-point--luna-dust { color: var(--color-product-luna-dust--active); }
     & .ax-data-point--sentiment-positive { color: var(--color-sentiment-positive--active); }

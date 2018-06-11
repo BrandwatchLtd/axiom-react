@@ -80,9 +80,73 @@ exports[`Word renders with color electric-dreams 1`] = `
 />
 `;
 
+exports[`Word renders with color event-horizon 1`] = `
+<text
+  className="ax-word ax-word--event-horizon"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color extraterrestrial 1`] = `
+<text
+  className="ax-word ax-word--extraterrestrial"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
 exports[`Word renders with color fantastic-voyage 1`] = `
 <text
   className="ax-word ax-word--fantastic-voyage"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color forbidden-planet 1`] = `
+<text
+  className="ax-word ax-word--forbidden-planet"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color future-shock 1`] = `
+<text
+  className="ax-word ax-word--future-shock"
   onClick={undefined}
   style={
     Object {
@@ -176,6 +240,22 @@ exports[`Word renders with color new-horizon 1`] = `
 />
 `;
 
+exports[`Word renders with color outer-limits 1`] = `
+<text
+  className="ax-word ax-word--outer-limits"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
 exports[`Word renders with color paradise-lost 1`] = `
 <text
   className="ax-word ax-word--paradise-lost"
@@ -208,9 +288,41 @@ exports[`Word renders with color primeval-soup 1`] = `
 />
 `;
 
+exports[`Word renders with color rocky-planet 1`] = `
+<text
+  className="ax-word ax-word--rocky-planet"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
 exports[`Word renders with color serene-sea 1`] = `
 <text
   className="ax-word ax-word--serene-sea"
+  onClick={undefined}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color solar-rust 1`] = `
+<text
+  className="ax-word ax-word--solar-rust"
   onClick={undefined}
   style={
     Object {

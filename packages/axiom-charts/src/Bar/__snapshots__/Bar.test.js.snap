@@ -250,6 +250,106 @@ exports[`Bar renders with color electric-dreams 1`] = `
 </div>
 `;
 
+exports[`Bar renders with color event-horizon 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--event-horizon"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color extraterrestrial 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--extraterrestrial"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Bar renders with color fantastic-voyage 1`] = `
 <div
   className="ax-bars ax-bars--up"
@@ -272,6 +372,106 @@ exports[`Bar renders with color fantastic-voyage 1`] = `
       >
         <div
           className="ax-bars__bar-rect ax-bars__bar-rect--fantastic-voyage"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color forbidden-planet 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--forbidden-planet"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color future-shock 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--future-shock"
           style={
             Object {
               "height": false,
@@ -550,6 +750,56 @@ exports[`Bar renders with color new-horizon 1`] = `
 </div>
 `;
 
+exports[`Bar renders with color outer-limits 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--outer-limits"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Bar renders with color paradise-lost 1`] = `
 <div
   className="ax-bars ax-bars--up"
@@ -650,6 +900,56 @@ exports[`Bar renders with color primeval-soup 1`] = `
 </div>
 `;
 
+exports[`Bar renders with color rocky-planet 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--rocky-planet"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Bar renders with color serene-sea 1`] = `
 <div
   className="ax-bars ax-bars--up"
@@ -672,6 +972,56 @@ exports[`Bar renders with color serene-sea 1`] = `
       >
         <div
           className="ax-bars__bar-rect ax-bars__bar-rect--serene-sea"
+          style={
+            Object {
+              "height": false,
+              "minHeight": false,
+              "minWidth": "1rem",
+              "width": undefined,
+            }
+          }
+        >
+          <div
+            className="ax-bars__bar--solid"
+          />
+        </div>
+        <div
+          className="ax-bars__bar-label ax-bars__bar-label--hidden"
+        >
+          <small
+            className="ax-text--size-small"
+          >
+            50%
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Bar renders with color solar-rust 1`] = `
+<div
+  className="ax-bars ax-bars--up"
+>
+  <div
+    className="ax-bars__bars-container"
+  >
+    <div
+      className="ax-bars__bars"
+    >
+      <div
+        className="ax-bars__bar"
+        onClick={undefined}
+        style={
+          Object {
+            "height": "50%",
+            "width": false,
+          }
+        }
+      >
+        <div
+          className="ax-bars__bar-rect ax-bars__bar-rect--solar-rust"
           style={
             Object {
               "height": false,

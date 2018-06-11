@@ -18,23 +18,30 @@
   user-select: none;
 }
 
+.ax-word--forbidden-planet { color: var(--color-product-forbidden-planet); }
 .ax-word--tiny-clanger { color: var(--color-product-tiny-clanger); }
 .ax-word--critical-mass { color: var(--color-product-critical-mass); }
 .ax-word--fantastic-voyage { color: var(--color-product-fantastic-voyage); }
 .ax-word--paradise-lost { color: var(--color-product-paradise-lost); }
 .ax-word--serene-sea { color: var(--color-product-serene-sea); }
+.ax-word--event-horizon { color: var(--color-product-event-horizon); }
 .ax-word--electric-dreams { color: var(--color-product-electric-dreams); }
+.ax-word--outer-limits { color: var(--color-product-outer-limits); }
 .ax-word--giant-leap { color: var(--color-product-giant-leap); }
 .ax-word--moon-lagoon { color: var(--color-product-moon-lagoon); }
 .ax-word--space-invader { color: var(--color-product-space-invader); }
+.ax-word--extraterrestrial { color: var(--color-product-extraterrestrial); }
 .ax-word--terra-form { color: var(--color-product-terra-form); }
 .ax-word--primeval-soup { color: var(--color-product-primeval-soup); }
+.ax-word--future-shock { color: var(--color-product-future-shock); }
 .ax-word--sun-maker { color: var(--color-product-sun-maker); }
 .ax-word--new-horizon { color: var(--color-product-new-horizon); }
 .ax-word--blast-off { color: var(--color-product-blast-off); }
 .ax-word--crash-course { color: var(--color-product-crash-course); }
+.ax-word--solar-rust { color: var(--color-product-solar-rust); }
 .ax-word--ground-control { color: var(--color-product-ground-control); }
 .ax-word--space-oddity { color: var(--color-product-space-oddity); }
+.ax-word--rocky-planet { color: var(--color-product-rocky-planet); }
 .ax-word--deep-thought { color: var(--color-product-deep-thought); }
 .ax-word--luna-dust { color: var(--color-product-luna-dust); }
 
@@ -49,16 +56,30 @@
 .ax-word--clickable {
   cursor: pointer;
 
+  &.ax-word--forbidden-planet:active { color: var(--color-product-forbidden-planet--active); }
   &.ax-word--tiny-clanger:active { color: var(--color-product-tiny-clanger--active); }
   &.ax-word--critical-mass:active { color: var(--color-product-critical-mass--active); }
+  &.ax-word--fantastic-voyage:active { color: var(--color-product-fantastic-voyage--active); }
   &.ax-word--paradise-lost:active { color: var(--color-product-paradise-lost--active); }
   &.ax-word--serene-sea:active { color: var(--color-product-serene-sea--active); }
+  &.ax-word--event-horizon:active { color: var(--color-product-event-horizon--active); }
+  &.ax-word--electric-dreams:active { color: var(--color-product-electric-dreams--active); }
+  &.ax-word--outer-limits:active { color: var(--color-product-outer-limits--active); }
   &.ax-word--giant-leap:active { color: var(--color-product-giant-leap--active); }
   &.ax-word--moon-lagoon:active { color: var(--color-product-moon-lagoon--active); }
+  &.ax-word--space-invader:active { color: var(--color-product-space-invader--active); }
+  &.ax-word--extraterrestrial:active { color: var(--color-product-extraterrestrial--active); }
   &.ax-word--terra-form:active { color: var(--color-product-terra-form--active); }
   &.ax-word--primeval-soup:active { color: var(--color-product-primeval-soup--active); }
+  &.ax-word--future-shock:active { color: var(--color-product-future-shock--active); }
+  &.ax-word--sun-maker:active { color: var(--color-product-sun-maker--active); }
   &.ax-word--new-horizon:active { color: var(--color-product-new-horizon--active); }
   &.ax-word--blast-off:active { color: var(--color-product-blast-off--active); }
+  &.ax-word--crash-course:active { color: var(--color-product-crash-course--active); }
+  &.ax-word--solar-rust:active { color: var(--color-product-solar-rust--active); }
   &.ax-word--ground-control:active { color: var(--color-product-ground-control--active); }
+  &.ax-word--space-oddity:active { color: var(--color-product-space-oddity--active); }
+  &.ax-word--rocky-planet:active { color: var(--color-product-rocky-planet--active); }
+  &.ax-word--deep-thought:active { color: var(--color-product-deep-thought--active); }
   &.ax-word--luna-dust:active { color: var(--color-product-luna-dust--active); }
 }

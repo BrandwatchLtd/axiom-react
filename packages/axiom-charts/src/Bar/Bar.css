@@ -73,23 +73,30 @@
       );
   }
 
+  &.ax-bars__bar-rect--forbidden-planet { color: var(--color-product-forbidden-planet); }
   &.ax-bars__bar-rect--tiny-clanger { color: var(--color-product-tiny-clanger); }
   &.ax-bars__bar-rect--critical-mass { color: var(--color-product-critical-mass); }
   &.ax-bars__bar-rect--fantastic-voyage { color: var(--color-product-fantastic-voyage); }
   &.ax-bars__bar-rect--paradise-lost { color: var(--color-product-paradise-lost); }
   &.ax-bars__bar-rect--serene-sea { color: var(--color-product-serene-sea); }
+  &.ax-bars__bar-rect--event-horizon { color: var(--color-product-event-horizon); }
   &.ax-bars__bar-rect--electric-dreams { color: var(--color-product-electric-dreams); }
+  &.ax-bars__bar-rect--outer-limits { color: var(--color-product-outer-limits); }
   &.ax-bars__bar-rect--giant-leap { color: var(--color-product-giant-leap); }
   &.ax-bars__bar-rect--moon-lagoon { color: var(--color-product-moon-lagoon); }
   &.ax-bars__bar-rect--space-invader { color: var(--color-product-space-invader); }
+  &.ax-bars__bar-rect--extraterrestrial { color: var(--color-product-extraterrestrial); }
   &.ax-bars__bar-rect--terra-form { color: var(--color-product-terra-form); }
   &.ax-bars__bar-rect--primeval-soup { color: var(--color-product-primeval-soup); }
+  &.ax-bars__bar-rect--future-shock { color: var(--color-product-future-shock); }
   &.ax-bars__bar-rect--sun-maker { color: var(--color-product-sun-maker); }
   &.ax-bars__bar-rect--new-horizon { color: var(--color-product-new-horizon); }
   &.ax-bars__bar-rect--blast-off { color: var(--color-product-blast-off); }
   &.ax-bars__bar-rect--crash-course { color: var(--color-product-crash-course); }
+  &.ax-bars__bar-rect--solar-rust { color: var(--color-product-solar-rust); }
   &.ax-bars__bar-rect--ground-control { color: var(--color-product-ground-control); }
   &.ax-bars__bar-rect--space-oddity { color: var(--color-product-space-oddity); }
+  &.ax-bars__bar-rect--rocky-planet { color: var(--color-product-rocky-planet); }
   &.ax-bars__bar-rect--deep-thought { color: var(--color-product-deep-thought); }
   &.ax-bars__bar-rect--luna-dust { color: var(--color-product-luna-dust); }
   &.ax-bars__bar-rect--sentiment-positive { color: var(--color-sentiment-positive); }
@@ -122,6 +129,11 @@
       opacity: 0.25;
     }
 
+    &.ax-bars__bar-rect--forbidden-planet {
+      &:hover { color: var(--color-product-forbidden-planet--hover); }
+      &:active { color: var(--color-product-forbidden-planet--active); }
+    }
+
     &.ax-bars__bar-rect--tiny-clanger {
       &:hover { color: var(--color-product-tiny-clanger--hover); }
       &:active { color: var(--color-product-tiny-clanger--active); }
@@ -147,9 +159,19 @@
       &:active { color: var(--color-product-serene-sea--active); }
     }
 
+    &.ax-bars__bar-rect--event-horizon {
+      &:hover { color: var(--color-product-event-horizon--hover); }
+      &:active { color: var(--color-product-event-horizon--active); }
+    }
+
     &.ax-bars__bar-rect--electric-dreams {
       &:hover { color: var(--color-product-electric-dreams--hover); }
       &:active { color: var(--color-product-electric-dreams--active); }
+    }
+
+    &.ax-bars__bar-rect--outer-limits {
+      &:hover { color: var(--color-product-outer-limits--hover); }
+      &:active { color: var(--color-product-outer-limits--active); }
     }
 
     &.ax-bars__bar-rect--giant-leap {
@@ -167,6 +189,11 @@
       &:active { color: var(--color-product-space-invader--active); }
     }
 
+    &.ax-bars__bar-rect--extraterrestrial {
+      &:hover { color: var(--color-product-extraterrestrial--hover); }
+      &:active { color: var(--color-product-extraterrestrial--active); }
+    }
+
     &.ax-bars__bar-rect--terra-form {
       &:hover { color: var(--color-product-terra-form--hover); }
       &:active { color: var(--color-product-terra-form--active); }
@@ -175,6 +202,11 @@
     &.ax-bars__bar-rect--primeval-soup {
       &:hover { color: var(--color-product-primeval-soup--hover); }
       &:active { color: var(--color-product-primeval-soup--active); }
+    }
+
+    &.ax-bars__bar-rect--future-shock {
+      &:hover { color: var(--color-product-future-shock--hover); }
+      &:active { color: var(--color-product-future-shock--active); }
     }
 
     &.ax-bars__bar-rect--sun-maker {
@@ -197,6 +229,11 @@
       &:active { color: var(--color-product-crash-course--active); }
     }
 
+    &.ax-bars__bar-rect--solar-rust {
+      &:hover { color: var(--color-product-solar-rust--hover); }
+      &:active { color: var(--color-product-solar-rust--active); }
+    }
+
     &.ax-bars__bar-rect--ground-control {
       &:hover { color: var(--color-product-ground-control--hover); }
       &:active { color: var(--color-product-ground-control--active); }
@@ -205,6 +242,11 @@
     &.ax-bars__bar-rect--space-oddity {
       &:hover { color: var(--color-product-space-oddity--hover); }
       &:active { color: var(--color-product-space-oddity--active); }
+    }
+
+    &.ax-bars__bar-rect--rocky-planet {
+      &:hover { color: var(--color-product-rocky-planet--hover); }
+      &:active { color: var(--color-product-rocky-planet--active); }
     }
 
     &.ax-bars__bar-rect--deep-thought {
