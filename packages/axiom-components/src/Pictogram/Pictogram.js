@@ -59,7 +59,7 @@ export default class Pictogram extends Component {
       'stream-graph',
       'table',
       'tree-map',
-      'twitter-verfied',
+      'twitter-verified',
       'video',
       'weather',
       'web-url',
