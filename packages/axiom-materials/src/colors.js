@@ -43,6 +43,10 @@ export const uiWhite = { r: 255, g: 255, b: 255 };
 
 export const uiHighlight = { r: 215, g: 255, b: 0 };
 
+export const productForbiddenPlanetActive = { r: 242, g: 173, b: 141 };
+export const productForbiddenPlanet = { r: 255, g: 190, b: 161 };
+export const productForbiddenPlanetHover = { r: 250, g: 207, b: 188 };
+
 export const productTinyClangerActive = { r: 232, g: 132, b: 166 };
 export const productTinyClanger = { r: 244, g: 152, b: 183 };
 export const productTinyClangerHover = { r: 255, g: 171, b: 199 };
@@ -63,9 +67,17 @@ export const productSereneSeaActive = { r: 125, g: 143, b: 201 };
 export const productSereneSea = { r: 144, g: 160, b: 214 };
 export const productSereneSeaHover = { r: 163, g: 178, b: 227 };
 
+export const productEventHorizonActive = { r: 81, g: 85, b: 148 };
+export const productEventHorizon = { r: 96, g: 99, b: 161 };
+export const productEventHorizonHover = { r: 113, g: 116, b: 173 };
+
 export const productElectricDreamsActive = { r: 46, g: 104, b: 171 };
 export const productElectricDreams = { r: 59, g: 116, b: 183 };
 export const productElectricDreamsHover = { r: 73, g: 130, b: 196 };
+
+export const productOuterLimitsActive = { r: 108, g: 199, b: 235 };
+export const productOuterLimits = { r: 127, g: 214, b: 248 };
+export const productOuterLimitsHover = { r: 147, g: 222, b: 252 };
 
 export const productGiantLeapActive = { r: 74, g: 189, b: 207 };
 export const productGiantLeap = { r: 90, g: 203, b: 220 };
@@ -79,6 +91,10 @@ export const productSpaceInvaderActive = { r: 36, g: 133, b: 99 };
 export const productSpaceInvader = { r: 46, g: 145, b: 111 };
 export const productSpaceInvaderHover = { r: 58, g: 158, b: 123 };
 
+export const productExtraterrestrialActive = { r: 108, g: 194, b: 97 };
+export const productExtraterrestrial = { r: 124, g: 207, b: 113 };
+export const productExtraterrestrialHover = { r: 142, g: 219, b: 132 };
+
 export const productTerraFormActive = { r: 115, g: 179, b: 62 };
 export const productTerraForm = { r: 128, g: 190, b: 76 };
 export const productTerraFormHover = { r: 142, g: 204, b: 92 };
@@ -86,6 +102,10 @@ export const productTerraFormHover = { r: 142, g: 204, b: 92 };
 export const productPrimevalSoupActive = { r: 186, g: 186, b: 15 };
 export const productPrimevalSoup = { r: 200, g: 200, b: 25 };
 export const productPrimevalSoupHover = { r: 212, g: 212, b: 38 };
+
+export const productFutureShockActive = { r: 227, g: 223, b: 16 };
+export const productFutureShock = { r: 240, g: 236, b: 29 };
+export const productFutureShockHover = { r: 252, g: 249, b: 43 };
 
 export const productSunMakerActive = { r: 233, g: 195, b: 3 };
 export const productSunMaker = { r: 250, g: 208, b: 0 };
@@ -103,6 +123,10 @@ export const productCrashCourseActive = { r: 242, g: 83, b: 58 };
 export const productCrashCourse = { r: 255, g: 99, b: 74 };
 export const productCrashCourseHover = { r: 255, g: 114, b: 92 };
 
+export const productSolarRustActive = { r: 191, g: 118, b: 15 };
+export const productSolarRust = { r: 205, g: 129, b: 26 };
+export const productSolarRustHover = { r: 217, g: 143, b: 39 };
+
 export const productGroundControlActive = { r: 150, g: 97, b: 50 };
 export const productGroundControl = { r: 162, g: 109, b: 62 };
 export const productGroundControlHover = { r: 176, g: 122, b: 76 };
@@ -110,6 +134,10 @@ export const productGroundControlHover = { r: 176, g: 122, b: 76 };
 export const productSpaceOddityActive = { r: 181, g: 148, b: 72 };
 export const productSpaceOddity = { r: 193, g: 160, b: 87 };
 export const productSpaceOddityHover = { r: 207, g: 176, b: 103 };
+
+export const productRockyPlanetActive = { r: 145, g: 128, b: 100 };
+export const productRockyPlanet = { r: 158, g: 142, b: 117 };
+export const productRockyPlanetHover = { r: 171, g: 157, b: 135 };
 
 export const productDeepThoughtActive = { r: 167, g: 162, b: 179 };
 export const productDeepThought = { r: 187, g: 185, b: 192 };
@@ -180,89 +208,117 @@ export const themeNightBackgroundHover = { ...themeNightMain, a: opacityBackgrou
 export const themeNightBorder = { ...themeNightMain, a: opacityBorder };
 
 export const productColorNames = {
+  'forbidden-planet': 'Forbidden Planet',
   'tiny-clanger': 'Tiny Clanger',
   'critical-mass': 'Critical Mass',
   'fantastic-voyage': 'Fantasitc Voyage',
   'paradise-lost': 'Paradise Lost',
   'serene-sea': 'Serene Sea',
+  'event-horizon': 'Event Horizon',
   'electric-dreams': 'Electric Dreams',
+  'outer-limits': 'Outer Limits',
   'giant-leap': 'Giant Leap',
   'moon-lagoon': 'Moon Lagoon',
   'space-invader': 'Space Invader',
+  'extraterrestrial': 'Extraterrestrial',
   'terra-form': 'Terra Form',
   'primeval-soup': 'Primeval Soup',
+  'future-shock': 'Future Shock',
   'sun-maker': 'Sun Maker',
   'new-horizon': 'New Horizon',
   'blast-off': 'Blast Off',
   'crash-course': 'Crash Course',
+  'solar-rust': 'Solar Rust',
   'ground-control': 'Ground Control',
   'space-oddity': 'Space Oddity',
+  'rocky-planet': 'Rocky Planet',
   'deep-thought': 'Deep Thought',
   'luna-dust': 'Luna Dust',
 };
 
 export const productColors = {
+  'forbidden-planet': productForbiddenPlanet,
   'tiny-clanger': productTinyClanger,
   'critical-mass': productCriticalMass,
   'fantastic-voyage': productFantasticVoyage,
   'paradise-lost': productParadiseLost,
   'serene-sea': productSereneSea,
+  'event-horizon': productEventHorizon,
   'electric-dreams': productElectricDreams,
+  'outer-limits': productOuterLimits,
   'giant-leap': productGiantLeap,
   'moon-lagoon': productMoonLagoon,
   'space-invader': productSpaceInvader,
+  'extraterrestrial': productExtraterrestrial,
   'terra-form': productTerraForm,
   'primeval-soup': productPrimevalSoup,
+  'future-shock': productFutureShock,
   'sun-maker': productSunMaker,
   'new-horizon': productNewHorizon,
-  'crash-course': productCrashCourse,
   'blast-off': productBlastOff,
+  'crash-course': productCrashCourse,
+  'solar-rust': productSolarRust,
   'ground-control': productGroundControl,
   'space-oddity': productSpaceOddity,
+  'rocky-planet': productRockyPlanet,
   'deep-thought': productDeepThought,
   'luna-dust': productLunaDust,
 };
 
 export const productActiveColors = {
+  'forbidden-planet': productForbiddenPlanetActive,
   'tiny-clanger': productTinyClangerActive,
   'critical-mass': productCriticalMassActive,
   'fantastic-voyage': productFantasticVoyageActive,
   'paradise-lost': productParadiseLostActive,
   'serene-sea': productSereneSeaActive,
+  'event-horizon': productEventHorizonActive,
   'electric-dreams': productElectricDreamsActive,
+  'outer-limits': productOuterLimitsActive,
   'giant-leap': productGiantLeapActive,
   'moon-lagoon': productMoonLagoonActive,
   'space-invader': productSpaceInvaderActive,
+  'extraterrestrial': productExtraterrestrialActive,
   'terra-form': productTerraFormActive,
   'primeval-soup': productPrimevalSoupActive,
+  'future-shock': productFutureShockActive,
   'sun-maker': productSunMakerActive,
   'new-horizon': productNewHorizonActive,
-  'crash-course': productCrashCourseActive,
   'blast-off': productBlastOffActive,
+  'crash-course': productCrashCourseActive,
+  'solar-rust': productSolarRustActive,
   'ground-control': productGroundControlActive,
   'space-oddity': productSpaceOddityActive,
+  'rocky-planet': productRockyPlanetActive,
   'deep-thought': productDeepThoughtActive,
   'luna-dust': productLunaDustActive,
 };
 
 export const productHoverColors = {
+  'forbidden-planet': productForbiddenPlanetHover,
   'tiny-clanger': productTinyClangerHover,
   'critical-mass': productCriticalMassHover,
   'fantastic-voyage': productFantasticVoyageHover,
   'paradise-lost': productParadiseLostHover,
   'serene-sea': productSereneSeaHover,
+  'event-horizon': productEventHorizonHover,
   'electric-dreams': productElectricDreamsHover,
+  'outer-limits': productOuterLimitsHover,
   'giant-leap': productGiantLeapHover,
   'moon-lagoon': productMoonLagoonHover,
   'space-invader': productSpaceInvaderHover,
+  'extraterrestrial': productExtraterrestrialHover,
   'terra-form': productTerraFormHover,
   'primeval-soup': productPrimevalSoupHover,
+  'future-shock': productFutureShockHover,
   'sun-maker': productSunMakerHover,
   'new-horizon': productNewHorizonHover,
-  'crash-course': productCrashCourseHover,
   'blast-off': productBlastOffHover,
+  'crash-course': productCrashCourseHover,
+  'solar-rust': productSolarRustHover,
   'ground-control': productGroundControlHover,
   'space-oddity': productSpaceOddityHover,
+  'rocky-planet': productRockyPlanetHover,
   'deep-thought': productDeepThoughtHover,
   'luna-dust': productLunaDustHover,
 };

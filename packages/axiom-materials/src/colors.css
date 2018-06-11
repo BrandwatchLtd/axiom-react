@@ -71,6 +71,10 @@
   --color-sentiment-negative: rgb(215, 74, 74);
   --color-sentiment-negative-hover: rgb(227, 89, 89);
 
+  --color-product-forbidden-planet--active: rgb(242, 173, 141);
+  --color-product-forbidden-planet: rgb(255, 190, 161);
+  --color-product-forbidden-planet--hover: rgb(250, 207, 188);
+
   --color-product-tiny-clanger--active: rgb(232, 132, 166);
   --color-product-tiny-clanger: rgb(244, 152, 183);
   --color-product-tiny-clanger--hover: rgb(255, 171, 199);
@@ -91,9 +95,17 @@
   --color-product-serene-sea: rgb(144, 160, 214);
   --color-product-serene-sea--hover: rgb(163, 178, 227);
 
+  --color-product-event-horizon--active: rgb(81, 85, 148);
+  --color-product-event-horizon: rgb(96, 99, 161);
+  --color-product-event-horizon--hover: rgb(113, 116, 173);
+
   --color-product-electric-dreams--active: rgb(46, 104, 171);
   --color-product-electric-dreams: rgb(59, 116, 183);
   --color-product-electric-dreams--hover: rgb(73, 130, 196);
+
+  --color-product-outer-limits--active: rgb(108, 199, 235);
+  --color-product-outer-limits: rgb(127, 214, 248);
+  --color-product-outer-limits--hover: rgb(147, 222, 252);
 
   --color-product-giant-leap--active: rgb(74, 189, 207);
   --color-product-giant-leap: rgb(90, 203, 220);
@@ -107,6 +119,10 @@
   --color-product-space-invader: rgb(46, 145, 111);
   --color-product-space-invader--hover: rgb(58, 158, 123);
 
+  --color-product-extraterrestrial--active: rgb(108, 194, 97);
+  --color-product-extraterrestrial: rgb(124, 207, 113);
+  --color-product-extraterrestrial--hover: rgb(142, 219, 132);
+
   --color-product-terra-form--active: rgb(115, 179, 62);
   --color-product-terra-form: rgb(128, 190, 76);
   --color-product-terra-form--hover: rgb(142, 204, 92);
@@ -114,6 +130,10 @@
   --color-product-primeval-soup--active: rgb(186, 186, 15);
   --color-product-primeval-soup: rgb(200, 200, 25);
   --color-product-primeval-soup--hover: rgb(212, 212, 38);
+
+  --color-product-future-shock--active: rgb(227, 223, 16);
+  --color-product-future-shock: rgb(240, 236, 29);
+  --color-product-future-shock--hover: rgb(252, 249, 43);
 
   --color-product-sun-maker--active: rgb(233, 195, 3);
   --color-product-sun-maker: rgb(250, 208, 0);
@@ -131,6 +151,10 @@
   --color-product-crash-course: rgb(255, 99, 74);
   --color-product-crash-course--hover: rgb(255, 114, 92);
 
+  --color-product-solar-rust--active: rgb(191, 118, 15);
+  --color-product-solar-rust: rgb(205, 129, 26);
+  --color-product-solar-rust--hover: rgb(217, 143, 39);
+
   --color-product-ground-control--active: rgb(150, 97, 50);
   --color-product-ground-control: rgb(162, 109, 62);
   --color-product-ground-control--hover: rgb(176, 122, 76);
@@ -138,6 +162,10 @@
   --color-product-space-oddity--active: rgb(181, 148, 72);
   --color-product-space-oddity: rgb(193, 160, 87);
   --color-product-space-oddity--hover: rgb(207, 176, 103);
+
+  --color-product-rocky-planet--active: rgb(145, 128, 100);
+  --color-product-rocky-planet: rgb(158, 142, 117);
+  --color-product-rocky-planet--hover: rgb(171, 157, 135);
 
   --color-product-deep-thought--active: rgb(167, 162, 179);
   --color-product-deep-thought: rgb(187, 185, 192);
