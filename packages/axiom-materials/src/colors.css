@@ -99,25 +99,25 @@
   --color-product-event-horizon: rgb(96, 99, 161);
   --color-product-event-horizon--hover: rgb(113, 116, 173);
 
-  --color-product-electric-dreams--active: rgb(46, 104, 171);
-  --color-product-electric-dreams: rgb(59, 116, 183);
-  --color-product-electric-dreams--hover: rgb(73, 130, 196);
+  --color-product-electric-dreams--active: rgb(46, 109, 191);
+  --color-product-electric-dreams: rgb(59, 121, 204);
+  --color-product-electric-dreams--hover: rgb(74, 136, 217);
 
   --color-product-outer-limits--active: rgb(108, 199, 235);
   --color-product-outer-limits: rgb(127, 214, 248);
   --color-product-outer-limits--hover: rgb(147, 222, 252);
 
-  --color-product-giant-leap--active: rgb(74, 189, 207);
-  --color-product-giant-leap: rgb(90, 203, 220);
-  --color-product-giant-leap--hover: rgb(107, 215, 232);
+  --color-product-giant-leap--active: rgb(20, 192, 204);
+  --color-product-giant-leap: rgb(33, 206, 217);
+  --color-product-giant-leap--hover: rgb(46, 217, 230);
 
-  --color-product-moon-lagoon--active: rgb(29, 163, 181);
-  --color-product-moon-lagoon: rgb(40, 176, 194);
-  --color-product-moon-lagoon--hover: rgb(54, 189, 207);
+  --color-product-moon-lagoon--active: rgb(25, 161, 176);
+  --color-product-moon-lagoon: rgb(36, 173, 189);
+  --color-product-moon-lagoon--hover: rgb(48, 186, 201);
 
-  --color-product-space-invader--active: rgb(36, 133, 99);
-  --color-product-space-invader: rgb(46, 145, 111);
-  --color-product-space-invader--hover: rgb(58, 158, 123);
+  --color-product-space-invader--active: rgb(36, 133, 100);
+  --color-product-space-invader: rgb(47, 145, 112);
+  --color-product-space-invader--hover: rgb(58, 158, 125);
 
   --color-product-extraterrestrial--active: rgb(108, 194, 97);
   --color-product-extraterrestrial: rgb(124, 207, 113);
@@ -135,33 +135,33 @@
   --color-product-future-shock: rgb(240, 236, 29);
   --color-product-future-shock--hover: rgb(252, 249, 43);
 
-  --color-product-sun-maker--active: rgb(233, 195, 3);
-  --color-product-sun-maker: rgb(250, 208, 0);
-  --color-product-sun-maker--hover: rgb(255, 218, 35);
+  --color-product-sun-maker--active: rgb(240, 201, 5);
+  --color-product-sun-maker: rgb(252, 213, 18);
+  --color-product-sun-maker--hover: rgb(255, 220, 46);
 
-  --color-product-new-horizon--active: rgb(238, 174, 0);
-  --color-product-new-horizon: rgb(249, 184, 0);
-  --color-product-new-horizon--hover: rgb(255, 190, 13);
+  --color-product-new-horizon--active: rgb(227, 163, 0);
+  --color-product-new-horizon: rgb(242, 174, 0);
+  --color-product-new-horizon--hover: rgb(255, 186, 13);
 
   --color-product-blast-off--active: rgb(237, 124, 43);
   --color-product-blast-off: rgb(249, 138, 57);
   --color-product-blast-off--hover: rgb(255, 148, 71);
 
-  --color-product-crash-course--active: rgb(242, 83, 58);
-  --color-product-crash-course: rgb(255, 99, 74);
-  --color-product-crash-course--hover: rgb(255, 114, 92);
+  --color-product-crash-course--active: rgb(242, 93, 70);
+  --color-product-crash-course: rgb(255, 109, 86);
+  --color-product-crash-course--hover: rgb(255, 126, 106);
 
   --color-product-solar-rust--active: rgb(191, 118, 15);
   --color-product-solar-rust: rgb(205, 129, 26);
   --color-product-solar-rust--hover: rgb(217, 143, 39);
 
-  --color-product-ground-control--active: rgb(150, 97, 50);
-  --color-product-ground-control: rgb(162, 109, 62);
-  --color-product-ground-control--hover: rgb(176, 122, 76);
+  --color-product-ground-control--active: rgb(145, 71, 22);
+  --color-product-ground-control: rgb(158, 83, 32);
+  --color-product-ground-control--hover: rgb(171, 94, 43);
 
-  --color-product-space-oddity--active: rgb(181, 148, 72);
-  --color-product-space-oddity: rgb(193, 160, 87);
-  --color-product-space-oddity--hover: rgb(207, 176, 103);
+  --color-product-space-oddity--active: rgb(176, 149, 76);
+  --color-product-space-oddity: rgb(189, 163, 91);
+  --color-product-space-oddity--hover: rgb(201, 176, 107);
 
   --color-product-rocky-planet--active: rgb(145, 128, 100);
   --color-product-rocky-planet: rgb(158, 142, 117);
