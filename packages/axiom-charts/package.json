@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-charts",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "Brandwatch Axiom - Charting components",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@brandwatch/axiom-automation-testing": "^0.0.4",
-    "@brandwatch/axiom-components": "^2.7.2",
+    "@brandwatch/axiom-components": "^2.7.3",
     "classnames": "^2.2.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0"
