@@ -3,7 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.7.1"></a>
+      <a name="2.7.3"></a>
+## [2.7.3](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.7.2...@brandwatch/axiom-components@2.7.3) (2018-06-12)
+
+
+### Bug Fixes
+
+* **List:** Reverts tidy up the height of the vertical rule ([d223a13](https://github.com/thatguynamedandy/axiom/commit/d223a13))
+* **ListItem:** Uses alternative approach to fix list separators ([ba0ac54](https://github.com/thatguynamedandy/axiom/commit/ba0ac54))
+
+
+
+
+      <a name="2.7.2"></a>
+## [2.7.2](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.7.1...@brandwatch/axiom-components@2.7.2) (2018-06-11)
+
+
+### Bug Fixes
+
+* **List:** Tidies up the height of the vertical rule ([262d494](https://github.com/thatguynamedandy/axiom/commit/262d494))
+* **Pictogram:** Corrected prop value type in twitter-verified ([292d044](https://github.com/thatguynamedandy/axiom/commit/292d044))
+
+
+
+
+  <a name="2.7.1"></a>
 ## [2.7.1](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.7.0...@brandwatch/axiom-components@2.7.1) (2018-06-05)
 
 
@@ -14,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="2.7.0"></a>
+<a name="2.7.0"></a>
 # [2.7.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.6.2...@brandwatch/axiom-components@2.7.0) (2018-06-01)
 
 
@@ -27,7 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.6.2"></a>
+<a name="2.6.2"></a>
 ## [2.6.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.6.1...@brandwatch/axiom-components@2.6.2) (2018-05-25)
 
 

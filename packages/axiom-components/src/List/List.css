@@ -1,5 +1,6 @@
 :root {
   --cmp-list-item-spacing: calc(var(--spacing-grid-size) * 3);
+  --cmp-list-item-separator: calc(var(--spacing-grid-size) * 3);
 }
 
 .ax-list--style-inline {
@@ -10,16 +11,20 @@
   list-style: none;
 
   & .ax-list__item {
+    position: relative;
     flex: 0 0 auto;
     margin: 0 var(--cmp-list-item-spacing) 0 0;
     padding: 0 var(--cmp-list-item-spacing) 0 0;
-    border-right: var(--component-border-width) solid var(--color-theme-border);
+  }
 
-    &:last-child  {
-      margin-right: 0;
-      padding-right: 0;
-      border-right-width: 0;
-    }
+  & .ax-list__item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: var(--cmp-list-item-separator);
+    transform: translateY(-50%);
+    border-right: var(--component-border-width) solid var(--color-theme-border);
   }
 }
 
