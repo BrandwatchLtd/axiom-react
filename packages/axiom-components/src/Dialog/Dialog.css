@@ -29,6 +29,10 @@
   overflow: auto;
 }
 
+.ax-dialog__body--flex {
+  display: flex;
+}
+
 .ax-dialog__footer {
   padding: 0 var(--page-padding-vertical) var(--page-padding-horizontal);
 }
