@@ -48,12 +48,12 @@ export default class UserMenu extends Component {
   };
 
   render() {
-    const { children, firstName, lastName, email, imageSrc, onLogout } = this.props;
+    const { children, firstName, lastName, email, imageSrc, onLogout, ...rest } = this.props;
     const color = stringToColor(email);
     const { axiomLanguage } = this.context;
 
     return (
-      <Dropdown position="bottom">
+      <Dropdown position="bottom" { ...rest }>
         <DropdownTarget>
           <Link data-ax-at={ atIds.UserMenu.activate }>
             <Avatar size="2rem" src={ imageSrc }>
