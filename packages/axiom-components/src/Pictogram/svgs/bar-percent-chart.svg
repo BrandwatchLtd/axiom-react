@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Bar Percent Chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Axiom-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bar-Percent-Chart" fill="#000000">
+            <rect id="Rectangle" x="0" y="5.75" width="16" height="4.5"></rect>
+            <rect id="Rectangle" fill-opacity="0.3" x="0" y="0" width="16" height="4.5"></rect>
+            <rect id="Rectangle" fill-opacity="0.75"  x="0" y="11.5" width="16" height="4.5"></rect>
+        </g>
+    </g>
+</svg>
