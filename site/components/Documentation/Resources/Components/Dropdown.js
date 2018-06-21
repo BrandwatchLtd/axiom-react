@@ -125,6 +125,7 @@ export default class Documentation extends Component {
               <Dropdown flip="mirror" showArrow={ false }>
                 <DropdownTarget>
                   <TextInput
+                      isTarget
                       onChange={ () => {} }
                       readOnly
                       value={ multiSelection.join(', ') }>

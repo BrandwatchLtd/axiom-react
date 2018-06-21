@@ -118,3 +118,7 @@
 .ax-input__button-container {
   display: flex;
 }
+
+.ax-input__wrapper--target {
+  cursor: pointer;
+}

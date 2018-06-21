@@ -19,6 +19,8 @@ export default class TextInput extends Component {
     error: PropTypes.func,
     /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
+    /** Changes the icon to pointer */
+    isTarget: PropTypes.bool,
     /** Descriptive label that is placed with the input field */
     label: PropTypes.string,
     /** Handler for when the input field is blurred */
@@ -89,6 +91,7 @@ export default class TextInput extends Component {
       error,
       valid,
       invalid,
+      isTarget,
       label,
       onClear,
       patterns,
@@ -113,6 +116,7 @@ export default class TextInput extends Component {
       'ax-input__icon-container--invalid': invalid || isValid === false,
     });
 
+
     return (
       <Validate
           error={ error }
@@ -120,7 +124,7 @@ export default class TextInput extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <InputWrapper label={ label } size={ size } space={ space }>
+          <InputWrapper isTarget={ isTarget } label={ label } size={ size } space={ space }>
             <div className="ax-input__button-container">
               <div className={ classes(isValid) }>
                 { onClear && value ? (
