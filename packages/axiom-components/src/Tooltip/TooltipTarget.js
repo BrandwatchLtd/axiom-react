@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Component, cloneElement } from 'react';
+import omit from 'lodash.omit';
 
 export const TooltipTargetRef = 'TooltipTarget';
 const DELAY_TIMEOUT = 1000;
@@ -63,7 +64,7 @@ export default class TooltipTarget extends Component {
     const { children, ...rest } = this.props;
 
     return cloneElement(children, {
-      ...rest,
+      ...omit(rest, ['delay']),
       onMouseMove: this.handleMouseMove.bind(this),
       onMouseLeave: this.handleMouseLeave.bind(this),
       onClick: this.handleClick.bind(this),
