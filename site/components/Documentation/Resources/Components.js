@@ -33,6 +33,7 @@ import Progress from './Components/Progress';
 import Reveal from './Components/Reveal';
 import Select from './Components/Select';
 import Separator from './Components/Separator';
+import StatusBadge from './Components/StatusBadge';
 import Table from './Components/Table';
 import Tabset from './Components/Tabset';
 import Toggle from './Components/Toggle';
@@ -178,6 +179,10 @@ export default class Documentation extends Component {
             id: 'separator',
             name: 'Separator',
             Component: Separator,
+          }, {
+            id: 'status-badge',
+            name: 'StatusBadge',
+            Component: StatusBadge,
           }, {
             id: 'table',
             name: 'Table',
