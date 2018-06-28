@@ -34,6 +34,7 @@ export default class DropdownContext extends Component {
 
   static contextTypes = {
     closeDropdown: PropTypes.func.isRequired,
+    dropdownRef: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -55,8 +56,9 @@ export default class DropdownContext extends Component {
     document.addEventListener('mousedown', this.handleClick);
   }
 
-  handleClick() {
-    if (!this.el.contains(event.target)) {
+  handleClick(event) {
+    const dropdownRef = this.context.dropdownRef();
+    if (!dropdownRef.contains(event.target) && !this.el.contains(event.target)) {
       return this.context.closeDropdown();
     }
   }

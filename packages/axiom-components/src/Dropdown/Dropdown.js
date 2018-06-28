@@ -6,7 +6,9 @@ import PositionSource from '../Position/PositionSource';
 import PositionTarget from '../Position/PositionTarget';
 import { DropdownSourceRef } from './DropdownSource';
 import { DropdownTargetRef } from './DropdownTarget';
+import ReactDOM from 'react-dom';
 
+/* eslint-disable react/no-find-dom-node */
 export default class Dropdown extends Component {
   static propTypes = {
     /**
@@ -42,6 +44,8 @@ export default class Dropdown extends Component {
   static childContextTypes = {
     closeDropdown: PropTypes.func.isRequired,
     openDropdown: PropTypes.func.isRequired,
+    toggleDropdown: PropTypes.func.isRequired,
+    dropdownRef: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -60,7 +64,16 @@ export default class Dropdown extends Component {
     return {
       closeDropdown: () => this.close(),
       openDropdown: () => this.open(),
+      toggleDropdown: () => this.toggle(),
+      dropdownRef: () => this.el,
     };
+  }
+
+  toggle() {
+    if (this.state.isVisible) {
+      return this.close();
+    }
+    this.open();
   }
 
   open() {
@@ -88,11 +101,10 @@ export default class Dropdown extends Component {
           { ...rest }
           isVisible={ isVisible }
           offset={ offset }
-          position={ position }>
+          position={ position }
+          ref={ (el) => this.el = ReactDOM.findDOMNode(el) }>
         <PositionTarget>
-          { React.cloneElement(findComponent(children, DropdownTargetRef), {
-            pointerEventsDisabled: isVisible,
-          } ) }
+          { React.cloneElement(findComponent(children, DropdownTargetRef)) }
         </PositionTarget>
         <PositionSource>{ findComponent(children, DropdownSourceRef) }</PositionSource>
       </Position>

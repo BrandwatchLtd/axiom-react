@@ -10,14 +10,33 @@ export default class DropdownTarget extends Component {
 
   static contextTypes = {
     openDropdown: PropTypes.func.isRequired,
+    toggleDropdown: PropTypes.func.isRequired,
   };
 
   static typeRef = DropdownTargetRef;
 
-  handleOpen(cb, ...args) {
+  constructor(props) {
+    super(props);
+    this.focusEventHasFired = false;
+  }
+
+  handleClick(cb, event) {
+    const { toggleDropdown } = this.context;
+
+    if (this.focusEventHasFired) {
+      this.focusEventHasFired = false;
+      return;
+    }
+
+    toggleDropdown(event);
+    if (cb) cb(event);
+  }
+
+  handleFocus(cb, event) {
     const { openDropdown } = this.context;
-    openDropdown();
-    if (cb) cb(...args);
+    this.focusEventHasFired = true;
+    openDropdown(event);
+    if (cb) cb(event);
   }
 
   render() {
@@ -25,8 +44,8 @@ export default class DropdownTarget extends Component {
 
     return cloneElement(children, {
       ...rest,
-      onClick: this.handleOpen.bind(this, children.props.onClick),
-      onFocus: this.handleOpen.bind(this, children.props.onFocus),
+      onClick: this.handleClick.bind(this, children.props.onClick),
+      onFocus: this.handleFocus.bind(this, children.props.onFocus),
     });
   }
 }
