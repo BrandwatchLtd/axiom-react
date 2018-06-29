@@ -144,10 +144,10 @@
 
 .ax-context-menu__item:focus {
   outline: 0;
+  background-color: var(--color-theme-background--hover);
 }
 
-.ax-context-menu__item:hover,
-.ax-context-menu__item:focus {
+.ax-context-menu__item:hover {
   background-color: var(--color-ui-accent--hover);
   color: var(--color-ui-white-noise);
   cursor: pointer;
