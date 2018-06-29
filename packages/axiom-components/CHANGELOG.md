@@ -3,7 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="2.9.0"></a>
+      <a name="2.10.0"></a>
+# [2.10.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-components@2.9.0...@brandwatch/axiom-components@2.10.0) (2018-06-29)
+
+
+### Bug Fixes
+
+* **Dropdown:** Restore pointer events ([35fbcee](https://github.com/lpoulter/axiom/commit/35fbcee))
+* **Tooltip:** Delay prop warning ([9d68502](https://github.com/lpoulter/axiom/commit/9d68502))
+
+
+### Features
+
+* **Colors:** Added new product colors to components ([fb3f7ec](https://github.com/lpoulter/axiom/commit/fb3f7ec))
+
+
+
+
+      <a name="2.9.0"></a>
 # [2.9.0](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.8.0...@brandwatch/axiom-components@2.9.0) (2018-06-22)
 
 
@@ -16,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="2.8.0"></a>
+  <a name="2.8.0"></a>
 # [2.8.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@2.7.3...@brandwatch/axiom-components@2.8.0) (2018-06-14)
 
 
@@ -32,7 +49,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="2.7.3"></a>
+<a name="2.7.3"></a>
 ## [2.7.3](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-components@2.7.2...@brandwatch/axiom-components@2.7.3) (2018-06-12)
 
 

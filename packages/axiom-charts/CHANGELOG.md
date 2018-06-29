@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-charts@2.3.7...@brandwatch/axiom-charts@2.4.0) (2018-06-29)
+
+
+### Features
+
+* **Colors:** Added new product colors to components ([fb3f7ec](https://github.com/lpoulter/axiom/commit/fb3f7ec))
+
+
+
+
 <a name="2.3.7"></a>
 ## [2.3.7](https://github.com/thatguynamedandy/axiom/compare/@brandwatch/axiom-charts@2.3.6...@brandwatch/axiom-charts@2.3.7) (2018-06-22)
 
