@@ -10,6 +10,14 @@ chmod 600 github_deploy_key
 eval `ssh-agent -s`
 ssh-add github_deploy_key
 
+# Test SSH connection
+if ! ssh git@github.com 2>&1 | grep "BrandwatchLtd/axiom" > /dev/null
+then
+  echo "Cannot connect to Github via SSH :("
+  echo "Please verify the public deploy key is set in BrandwatchLtd/axiom."
+  exit 1;
+fi
+
 git config --global user.email "ci@brandwatch.com"
 git config --global user.name "Brandwatch (via TravisCI)"
 
