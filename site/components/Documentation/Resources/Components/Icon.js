@@ -32,7 +32,7 @@ export default class Documentation extends Component {
         )) }
 
         <DocumentationShowCase centered>
-          <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
+          <Grid gutters="tiny" none responsive={ false } verticalAlign="middle">
             <GridCell><Icon name="star" size="2rem" /></GridCell>
             <GridCell><Icon name="star" size="3rem" /></GridCell>
             <GridCell><Icon name="star" size="4rem" /></GridCell>

@@ -15,6 +15,13 @@ import './Position.css';
 export default class Position extends Component {
   static propTypes = {
     /**
+     * Allows the boundary element for the positioning to be set.
+     */
+    boundariesElement: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.oneOf(['scrollParent', 'viewport', 'window']),
+    ]),
+    /**
      * Children inside Position this should contain all of and
      * only PositionSource and PositionTarget!
      */
@@ -47,6 +54,7 @@ export default class Position extends Component {
   };
 
   static defaultProps = {
+    boundariesElement: 'viewport',
     enabled: true,
     flip: 'clockwise',
     offset: 'middle',
@@ -89,7 +97,7 @@ export default class Position extends Component {
   }
 
   createPopper() {
-    const { flip, showArrow } = this.props;
+    const { boundariesElement, flip, showArrow } = this.props;
     const { placement } = this.state;
 
     return new popperJS(this._target, this._content, {
@@ -104,8 +112,15 @@ export default class Position extends Component {
         flip: {
           behavior: getPlacementFlipOrder(placement, flip),
         },
-        inner: { enabled: false },
-        offset: { enabled: false },
+        inner: {
+          enabled: false,
+        },
+        offset: {
+          enabled: false,
+        },
+        preventOverflow: {
+          boundariesElement,
+        },
       },
     });
   }

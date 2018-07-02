@@ -3,7 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="1.3.0"></a>
+    <a name="1.4.0"></a>
+# [1.4.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-materials@1.3.0...@brandwatch/axiom-materials@1.4.0) (2018-06-29)
+
+
+### Bug Fixes
+
+* **Colors:** Updated values of existing colors ([a29b006](https://github.com/lpoulter/axiom/commit/a29b006))
+
+
+### Features
+
+* **Colors:** Added new product colors ([2bc5fda](https://github.com/lpoulter/axiom/commit/2bc5fda))
+
+
+
+
+    <a name="1.3.0"></a>
 # [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.1...@brandwatch/axiom-materials@1.3.0) (2018-05-10)
 
 
@@ -14,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.2.1"></a>
+  <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.0...@brandwatch/axiom-materials@1.2.1) (2018-04-06)
 
 
@@ -25,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.2.0"></a>
+<a name="1.2.0"></a>
 # [1.2.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.1.0...@brandwatch/axiom-materials@1.2.0) (2018-04-05)
 
 
