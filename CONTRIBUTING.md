@@ -1,20 +1,10 @@
 # Contributing guide
 
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
-#### Linting & Tests
-
-Linting (CSS & JS) and tests will be run on every PR, and must pass to be merged. You can run locally to check with...
-
-```
-yarn lint
-yarn test
-```
-# Contributing guide
+## Code
 
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-#### Linting & Tests
+### Linting & Tests
 
 Linting (CSS & JS) and tests will be run on every PR, and must pass to be merged. You can run locally to check with...
 
@@ -23,7 +13,17 @@ yarn lint
 yarn test
 ```
 
-#### Branch deployments with Netlify
+### Pull requests
+
+A PR into `master` requires two thumbs up, with at least one of these thumbs from a current member of the Axiom Working Group. This is to allow working group members to be continually exposed to ongoing changes to the codebase and its components.
+
+### Breaking changes
+
+Breaking changes that are commited should have `BREAKING CHANGE:` as the first line of the body of the commit, and should detail the steps needed to resolve the breaking change.
+
+## Deployments
+
+### Branch deployments of the styleguide with Netlify
 
 Complete the steps described in this section, and in about five minutes you'll have a deploy of your Axiom changes hosted on Netlify.
 
@@ -44,5 +44,13 @@ Complete the steps described in this section, and in about five minutes you'll h
 1. Select your running `Branch Deploy` from that list. This will show you a log were you can follow the progress
 1. Once a `Branch Deploy` is complete, you can either publish the changes which will basicly overwrite your initial master deploy or what ever branch was deployed before or just share the `Preview deploy` link.
 1. When pushing changes to your branch, you have to repeat the last three steps every time, because Netilfy does not do auto publish those branches.
+
+### Production deployments of the styleguide
+
+A new version of styleguide at https://axiom.brandwatch.com is built and deployed for every merge to `master`.
+
+### Publishing to npm
+
+New versions of component libraries are published to npm for every merge to `master`.
 
 
