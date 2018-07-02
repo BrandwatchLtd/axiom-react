@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal closes if a esc button was pressed 1`] = `
+<Modal
+  isOpen={true}
+  onOverlayClick={[Function]}
+  overlayShade="shade-2"
+  shouldCloseOnEsc={true}
+>
+  <Portal>
+    <Base
+      Component="div"
+      className="ax-modal__container ax-modal__container--overlay-shade-2"
+    >
+      <div
+        className="ax-modal__container ax-modal__container--overlay-shade-2"
+      >
+        <div
+          className="ax-modal__mask"
+          onClick={[Function]}
+        />
+        <div
+          className="ax-modal"
+        />
+      </div>
+    </Base>
+  </Portal>
+</Modal>
+`;
+
+exports[`Modal renders 1`] = `
+<Modal
+  isOpen={true}
+  overlayShade="shade-2"
+>
+  <Portal>
+    <Base
+      Component="div"
+      className="ax-modal__container ax-modal__container--overlay-shade-2"
+    >
+      <div
+        className="ax-modal__container ax-modal__container--overlay-shade-2"
+      >
+        <div
+          className="ax-modal"
+        />
+      </div>
+    </Base>
+  </Portal>
+</Modal>
+`;

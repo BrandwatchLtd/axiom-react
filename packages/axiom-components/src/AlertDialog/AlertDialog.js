@@ -11,6 +11,8 @@ export default class AlertDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     /** Callback for closing the AlertDialog by clicking on the overlay */
     onRequestClose: PropTypes.func.isRequired,
+    /** Toggle if the AlertDialog should be closed by pressing Esc */
+    shouldCloseOnEsc: PropTypes.bool,
     /** Alert type */
     type: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,
   };

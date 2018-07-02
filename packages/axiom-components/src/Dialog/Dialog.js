@@ -24,6 +24,8 @@ export default class Dialog extends Component {
     ]),
     /** Theme applied to the overlay */
     overlayTheme: PropTypes.oneOf(['day', 'night']),
+    /** Toggle if the Dialog should be closed by pressing Esc */
+    shouldCloseOnEsc: PropTypes.bool,
     /** Theme of the dialog */
     theme: PropTypes.oneOf(['day', 'night']),
     /** Custom width for Dialog */

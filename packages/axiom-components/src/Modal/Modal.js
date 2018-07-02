@@ -27,27 +27,61 @@ export default class Modal extends Component {
       'shade-4',
     ]),
     overlayTheme: PropTypes.oneOf(['day', 'night']),
+    shouldCloseOnEsc: PropTypes.bool,
   };
 
   static defaultProps = {
     overlayShade: 'shade-2',
   };
 
+  constructor(props) {
+    super(props);
+    this.handleEscapeKey = this.handleEscapeKey.bind(this);
+  }
+
   componentDidMount() {
     if (this.props.isOpen) {
       disableScrolling();
+    }
+    if (this.props.shouldCloseOnEsc) {
+      document.body.addEventListener('keydown', this.handleEscapeKey, false);
     }
   }
 
   componentWillUnmount() {
     enableScrolling();
+    if (this.props.shouldCloseOnEsc) {
+      document.body.removeEventListener('keydown', this.handleEscapeKey, false);
+    }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.props.isOpen) {
       disableScrolling();
     } else {
       enableScrolling();
+    }
+
+    if (this.props.shouldCloseOnEsc !== prevProps.shouldCloseOnEsc) {
+      this.toggleEscapeEventListener();
+    }
+  }
+
+  toggleEscapeEventListener() {
+    if (this.props.shouldCloseOnEsc) {
+      document.body.addEventListener('keydown', this.handleEscapeKey, false);
+    } else {
+      document.body.removeEventListener('keydown', this.handleEscapeKey, false);
+    }
+  }
+
+  handleEscapeKey(event) {
+    const { onOverlayClick, shouldCloseOnEsc } = this.props;
+
+    if (event.key === 'Escape' && shouldCloseOnEsc) {
+      if (onOverlayClick) {
+        onOverlayClick();
+      }
     }
   }
 
