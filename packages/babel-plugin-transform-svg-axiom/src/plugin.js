@@ -9,7 +9,7 @@ const svgo = new SVGO({
     { removeDefs: true },
     { removeDesc: true },
     { removeDoctype: true },
-    { removeDimensions: true },
+    { removeDimensions: false },
     { removeTitle: true },
   ],
 });
@@ -39,15 +39,18 @@ module.exports = () => ({
 
           svgo.optimize(readFileSync(svgPath, 'utf8'), (result) => {
             const viewBox = VIEWBOX_REGEX.exec(result.data)[1];
+            const { height, width } = result.info;
             const finalSource = result.data.replace(COLOR_REGEX, (m, prop, value) => {
               if (value === 'none') return `${prop}="none"`;
               if (value.includes('#000')) return `${prop}="currentColor"`;
-              return '';
+              return `${prop}="${value}"`;
             });
 
             svgData = {
-              viewBox,
               body: finalSource.replace(SVG_REGEX, ''),
+              height,
+              viewBox,
+              width,
             };
           });
 

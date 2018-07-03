@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog renders with required props 1`] = `
+<div
+  className="ax-modal__container ax-modal__container--overlay-shade-2"
+>
+  <div
+    className="ax-modal__mask"
+    onClick={[Function]}
+  />
+  <div
+    className="ax-modal"
+  >
+    <div
+      className="ax-dialog ax-theme--day"
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan imperdiet leo, eget fringilla tellus. Praesent turpis libero, maximus lobortis ex vel, feugiat feugiat sapien. Nam in velit orci. Donec dignissim rutrum tellus, vitae fermentum augue blandit vitae. Vestibulum egestas sapien a tortor placerat, ut blandit
+    </div>
+  </div>
+</div>
+`;

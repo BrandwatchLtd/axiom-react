@@ -24,14 +24,13 @@ export default class Dialog extends Component {
     ]),
     /** Theme applied to the overlay */
     overlayTheme: PropTypes.oneOf(['day', 'night']),
-    /** Maximum size of the Dialog */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Theme of the dialog */
     theme: PropTypes.oneOf(['day', 'night']),
+    /** Custom width for Dialog */
+    width: PropTypes.string,
   };
 
   static defaultProps = {
-    size: 'small',
     theme: 'day',
   };
 
@@ -48,18 +47,17 @@ export default class Dialog extends Component {
   render() {
     const {
       children,
-      size,
       fullscreen,
       onRequestClose,
       overlayShade,
       overlayTheme,
       theme,
+      width,
       ...rest
     } = this.props;
 
     const classes = classnames('ax-dialog', {
       'ax-dialog--fullscreen': fullscreen,
-      [`ax-dialog--${size}`]: !fullscreen && size,
     });
 
     return (
@@ -67,7 +65,7 @@ export default class Dialog extends Component {
           onOverlayClick={ onRequestClose }
           overlayShade={ overlayShade }
           overlayTheme={ overlayTheme }>
-        <Base className={ classes } theme={ theme }>
+        <Base className={ classes } style={ { width } } theme={ theme }>
           { children }
         </Base>
       </Modal>

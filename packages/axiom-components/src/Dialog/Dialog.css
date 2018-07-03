@@ -1,9 +1,3 @@
-:root {
-  --cmp-dialog-width-small: 20rem;
-  --cmp-dialog-width-medium: 37.5rem;
-  --cmp-dialog-width-large: 50rem;
-}
-
 .ax-dialog {
   display: flex;
   flex-direction: column;
@@ -41,10 +35,6 @@
 .ax-dialog__footer {
   flex: 0 1 auto;
 }
-
-.ax-dialog--small  { width: var(--cmp-dialog-width-small); }
-.ax-dialog--medium { width: var(--cmp-dialog-width-medium); }
-.ax-dialog--large  { width: var(--cmp-dialog-width-large); }
 
 .ax-dialog--fullscreen {
   width: 100vw;

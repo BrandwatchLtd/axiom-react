@@ -42,6 +42,7 @@ export default class Documentation extends Component {
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/Tooltip'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipContent'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipSource'),
+          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipContext'),
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipTarget'),
         ] } />
       </DocumentationContent>

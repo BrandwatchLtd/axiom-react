@@ -115,6 +115,7 @@ export { default as SelectOption } from './Select/SelectOption';
 export { default as SelectOptionGroup } from './Select/SelectOptionGroup';
 export { default as Separator } from './Separator/Separator';
 export { default as Small } from './Typography/Small';
+export { default as StatusBadge } from './StatusBadge/StatusBadge';
 export { default as Strike } from './Typography/Strike';
 export { default as Strong } from './Typography/Strong';
 export { default as Tab } from './Tabset/Tab';
