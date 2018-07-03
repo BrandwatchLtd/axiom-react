@@ -53,7 +53,7 @@ export default class Documentation extends Component {
               </Paragraph>
 
               <ButtonGroup>
-                <Dropdown flip="mirror" showArrow={ false }>
+                <Dropdown flip="mirror">
                   <DropdownTarget>
                     <Button style="secondary">
                       Dropdown

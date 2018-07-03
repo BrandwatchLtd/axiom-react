@@ -59,7 +59,7 @@ export default class Position extends Component {
     flip: 'clockwise',
     offset: 'middle',
     position: 'top',
-    showArrow:  true,
+    showArrow:  false,
   };
 
   constructor(props) {

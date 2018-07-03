@@ -63,8 +63,7 @@ export default class Select extends Component {
           flip="mirror"
           onRequestClose={ onRequestClose }
           onRequestOpen={ onRequestOpen }
-          position="bottom"
-          showArrow={ false }>
+          position="bottom">
         <DropdownTarget>
           <SelectInput
               { ...omit(props, ['onSelect', 'selectedValue']) } />

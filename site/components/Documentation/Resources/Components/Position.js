@@ -22,7 +22,7 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <Position isVisible position="bottom">
+          <Position isVisible position="bottom" showArrow>
             <PositionTarget>
               <DataPoints size="2rem">
                 <DataPoint color="giant-leap" />

@@ -45,7 +45,7 @@ export default class DatePicker extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Dropdown>
+      <Dropdown showArrow>
         <DropdownTarget>
           { children }
         </DropdownTarget>

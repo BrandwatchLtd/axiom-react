@@ -135,7 +135,8 @@ export default class Documentation extends Component {
               { labels.map(({ color, font, fontSize, text, x, y }) =>
                 <Dropdown
                     key={ text }
-                    onRequestClose={ () => this.setState({ clickedWord: null }) }>
+                    onRequestClose={ () => this.setState({ clickedWord: null }) }
+                    showArrow>
                   <DropdownTarget>
                     <Word
                         color={ color }

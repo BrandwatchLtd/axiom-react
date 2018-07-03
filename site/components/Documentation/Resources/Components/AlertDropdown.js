@@ -19,7 +19,7 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <AlertDropdown>
+          <AlertDropdown showArrow>
             <AlertDropdownTarget>
               <TextInput
                   onChange={ () => {} }

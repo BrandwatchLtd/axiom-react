@@ -52,7 +52,7 @@ export default class Documentation extends Component {
         <Grid>
           <GridCell>
             <DocumentationShowCase centered>
-              <Dropdown flip="mirror" showArrow={ false }>
+              <Dropdown flip="mirror" >
                 <DropdownTarget>
                   <Link tabIndex="0">
                     { selected } <TextIcon name="chevron-down" />
@@ -85,7 +85,7 @@ export default class Documentation extends Component {
               <ButtonGroup joined>
                 <Button style="secondary">Primary Action</Button>
 
-                <Dropdown>
+                <Dropdown showArrow>
                   <DropdownTarget>
                     <Button style="secondary">
                       <ButtonIcon name="chevron-down" />
@@ -122,7 +122,7 @@ export default class Documentation extends Component {
         <Grid>
           <GridCell>
             <DocumentationShowCase centered>
-              <Dropdown flip="mirror" showArrow={ false }>
+              <Dropdown flip="mirror" >
                 <DropdownTarget>
                   <TextInput
                       isTarget
@@ -187,7 +187,7 @@ export default class Documentation extends Component {
 
           <GridCell>
             <DocumentationShowCase centered>
-              <Dropdown flip="mirror">
+              <Dropdown flip="mirror" showArrow>
                 <DropdownTarget>
                   <IconButton name="ellipsis" />
                 </DropdownTarget>

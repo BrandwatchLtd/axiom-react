@@ -110,7 +110,7 @@ export default class DataPicker extends Component {
 
                 <GridCell>
                   { dropdownMenu && (
-                    <Dropdown showArrow={ false }>
+                    <Dropdown>
                       <DropdownTarget>
                         <div
                             className="ax-data-picker__link"

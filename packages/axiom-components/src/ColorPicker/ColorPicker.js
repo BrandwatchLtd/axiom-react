@@ -138,7 +138,7 @@ export default class ColorPicker extends Component {
     } = this.props;
 
     return (
-      <Dropdown position="bottom" { ... rest }>
+      <Dropdown position="bottom" { ... rest } showArrow>
         <DropdownTarget>
           <ColorPickerOption
               color={ selected }

@@ -51,7 +51,7 @@ export default class Dropdown extends Component {
   static defaultProps = {
     enabled: true,
     position: 'bottom',
-    showArrow: true,
+    showArrow: false,
   };
 
   constructor(props) {
