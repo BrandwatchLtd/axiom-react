@@ -22,7 +22,7 @@ git config --global user.email "ci@brandwatch.com"
 git config --global user.name "Brandwatch (via TravisCI)"
 
 # travis sets origin to https. Let set up a second remote for ssh
-git add remote upstream git@github.com:BrandwatchLtd/axiom.git
+git remote add upstream git@github.com:BrandwatchLtd/axiom.git
 
 npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 
