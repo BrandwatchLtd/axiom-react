@@ -10,8 +10,6 @@ curl ci-utils.bwcom.io/gcloud/auth | bash
 
 export COMPRESSION_PLUGIN=true
 
-yarn build:site
-
 cd public;
 
 # clear the bucket, gsutil throws if it's already empty
