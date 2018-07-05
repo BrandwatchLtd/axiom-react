@@ -8,8 +8,6 @@ fi
 curl ci-utils.bwcom.io/gcloud/install | bash
 curl ci-utils.bwcom.io/gcloud/auth | bash
 
-export COMPRESSION_PLUGIN=true
-
 cd public;
 
 # clear the bucket, gsutil throws if it's already empty

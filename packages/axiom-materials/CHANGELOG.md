@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="1.4.0"></a>
+      <a name="1.4.1"></a>
+## [1.4.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-materials@1.4.0...@brandwatch/axiom-materials@1.4.1) (2018-07-05)
+
+
+### Bug Fixes
+
+* **Typography:** increase line heights ([2828a02](https://github.com/BrandwatchLtd/axiom/commit/2828a02))
+
+
+
+
+      <a name="1.4.0"></a>
 # [1.4.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-materials@1.3.0...@brandwatch/axiom-materials@1.4.0) (2018-06-29)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.3.0"></a>
+  <a name="1.3.0"></a>
 # [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.1...@brandwatch/axiom-materials@1.3.0) (2018-05-10)
 
 
@@ -30,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.2.1"></a>
+<a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.0...@brandwatch/axiom-materials@1.2.1) (2018-04-06)
 
 
