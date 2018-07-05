@@ -1,30 +1,18 @@
-import {
-  addDays,
-  addMonths as dateFnsAddMonths,
-  endOfDay,
-  endOfMonth,
-  format,
-  getDay,
-  getDaysInMonth,
-  isAfter,
-  isBefore,
-  isSameDay as dateFnsIsSameDay,
-  isSameMonth as dateFnsIsSameMonth,
-  setHours,
-  startOfMonth,
-} from 'date-fns';
+import { DateTime } from 'luxon';
+
+const { fromJSDate } = DateTime;
 
 export const buildMonthGrid = (date) => {
-  const startMonth = setHours(startOfMonth(date), 12);
-  const startDay = getDay(startMonth) === 0 ? 6 : getDay(startMonth) - 1;
+  const startMonth = fromJSDate(date).startOf('month');
+  const daysToSkip = (startMonth.weekday - 1) % 7;
   const grid = [];
 
-  for (let i = 0; i < startDay; i++) {
+  for (let i = 0; i < daysToSkip; i++) {
     grid.push(null);
   }
 
-  for (let i = 0; i < getDaysInMonth(startMonth); i++) {
-    grid.push(addDays(startMonth, i));
+  for (let i = 0; i < startMonth.daysInMonth; i++) {
+    grid.push(startMonth.plus({ day: i }).toJSDate());
   }
 
   return grid.reduce((w, n, i) => {
@@ -33,45 +21,41 @@ export const buildMonthGrid = (date) => {
   }, []);
 };
 
-export const addMonths = (date, months) => date && dateFnsAddMonths(date, months);
-export const dateOrNow = (date) => setHours(date ? new Date(date) : new Date(), 12);
-export const getDayNumber = (date) => format(date, 'D');
-export const getMonthName = (date) => format(date, 'MMMM');
-export const getYearNumber = (date) => format(date, 'YYYY');
+export const addMonths = (date, months) => date && fromJSDate(date).plus({ months }).toJSDate();
+export const dateOrNow = (date) => fromJSDate(date || new Date()).toJSDate();
+export const getDayNumber = (date) => fromJSDate(date).toFormat('d');
+export const getMonthName = (date) => fromJSDate(date).toFormat('MMMM');
+export const getYearNumber = (date) => fromJSDate(date).toFormat('yyyy');
 
 export const isAfterDay = (aDate, bDate) =>
-  !!bDate && isAfter(
-    endOfDay(aDate),
-    endOfDay(bDate),
-  );
+  !!bDate && fromJSDate(aDate).endOf('day') > fromJSDate(bDate).endOf('day');
 
-export const isBeforeDay = (aDate, bDate) =>
-  !!bDate && isBefore(
-    endOfDay(aDate),
-    endOfDay(bDate),
-  );
+export const isBeforeDay = (aDate, bDate) => !!bDate && isAfterDay(bDate, aDate);
 
 export const isBetweenDate = (date, aDate, bDate) =>
   !!aDate && !!bDate &&
   isAfterDay(date, aDate) &&
   isBeforeDay(date, bDate);
 
-export const isSameDay = (aDate, bDate) => !!bDate && dateFnsIsSameDay(aDate, bDate);
-export const isSameMonth = (aDate, bDate) => !!bDate && dateFnsIsSameMonth(aDate, bDate);
+export const isSameDay = (aDate, bDate) =>
+  !!bDate && fromJSDate(aDate).hasSame(fromJSDate(bDate), 'day');
+
+export const isSameMonth = (aDate, bDate) =>
+  !!bDate && fromJSDate(aDate).hasSame(fromJSDate(bDate), 'month');
 
 export const isSameOrAfterMonth = (aDate, bDate) =>
-  !!bDate && (isSameMonth(aDate, bDate) || isAfter(
-    endOfMonth(aDate),
-    endOfMonth(bDate),
-  ));
+  !!bDate && (
+    isSameMonth(aDate, bDate) ||
+    fromJSDate(aDate).endOf('month') > fromJSDate(bDate).endOf('month')
+  );
 
 export const isSameOrBeforeMonth = (aDate, bDate) =>
-  !!bDate && (isSameMonth(aDate, bDate) || isBefore(
-    endOfMonth(aDate),
-    endOfMonth(bDate),
-  ));
+  !!bDate && (
+    isSameMonth(aDate, bDate) ||
+    fromJSDate(aDate).endOf('month') < fromJSDate(bDate).endOf('month')
+  );
 
-export const isOneOfDays = (date, dates) => dates.some((bDate) => isSameDay(date, bDate));
+export const isOneOfDays = (date, dates) => dates.some(bDate => isSameDay(date, bDate));
 
 export const orderDates = (aDate, bDate) =>
   isAfterDay(aDate, bDate)

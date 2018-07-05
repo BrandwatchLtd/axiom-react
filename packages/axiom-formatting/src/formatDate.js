@@ -1,11 +1,11 @@
-import format from 'date-fns/format';
+import { DateTime } from 'luxon';
 
 export const FORMAT_MAP = {
-  short: 'DD MMM',
-  medium: 'DD MMM YYYY',
-  long: 'ddd, DD MMM YYYY',
+  short: 'dd MMM',
+  medium: 'dd MMM yyyy',
+  long: 'EEE, dd MMM yyyy',
   time: 'HH:mm',
-  timezone: '(UTCZ)',
+  timezone: '(\'UTC\'ZZ)',
 };
 
-export default (formatStr) => date => format(date, formatStr);
+export default (formatStr) => date => DateTime.fromJSDate(date).toFormat(formatStr);
