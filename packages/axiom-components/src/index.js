@@ -114,6 +114,7 @@ export { default as Select } from './Select/Select';
 export { default as SelectOption } from './Select/SelectOption';
 export { default as SelectOptionGroup } from './Select/SelectOptionGroup';
 export { default as Separator } from './Separator/Separator';
+export { default as Slider } from './Slider/Slider';
 export { default as Small } from './Typography/Small';
 export { default as StatusBadge } from './StatusBadge/StatusBadge';
 export { default as Strike } from './Typography/Strike';
