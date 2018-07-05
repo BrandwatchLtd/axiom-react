@@ -2,7 +2,7 @@
 
 exports[`DialogFooter renders with defaultProps 1`] = `
 <div
-  className="ax-dialog__footer"
+  className="ax-dialog__footer ax-dialog__footer--padding-small"
 >
   Lorem ipsum
 </div>

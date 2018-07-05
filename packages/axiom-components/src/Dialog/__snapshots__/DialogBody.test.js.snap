@@ -2,7 +2,7 @@
 
 exports[`DialogBody renders with defaultProps 1`] = `
 <div
-  className="ax-dialog__body"
+  className="ax-dialog__body ax-dialog__body--padding-small"
 >
   Lorem ipsum
 </div>
