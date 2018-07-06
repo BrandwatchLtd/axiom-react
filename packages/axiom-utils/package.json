@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "@brandwatch/axiom-materials": "^1.4.1",
-    "react": "^16.0.0"
+    "react": "^16.4.1"
   }
 }
