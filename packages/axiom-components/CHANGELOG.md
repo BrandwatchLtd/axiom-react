@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.2.0"></a>
+      <a name="4.2.1"></a>
+## [4.2.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.2.0...@brandwatch/axiom-components@4.2.1) (2018-07-11)
+
+
+### Bug Fixes
+
+* **DropdownTarget:** Ensures callback property is always fired ([fc2a8f2](https://github.com/BrandwatchLtd/axiom/commit/fc2a8f2))
+
+
+
+
+      <a name="4.2.0"></a>
 # [4.2.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.1.0...@brandwatch/axiom-components@4.2.0) (2018-07-06)
 
 
@@ -21,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.1.0"></a>
+  <a name="4.1.0"></a>
 # [4.1.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.0.0...@brandwatch/axiom-components@4.1.0) (2018-07-05)
 
 
@@ -34,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.0.0"></a>
+<a name="4.0.0"></a>
 # [4.0.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.1...@brandwatch/axiom-components@4.0.0) (2018-07-05)
 
 
