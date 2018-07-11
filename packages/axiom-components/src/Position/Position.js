@@ -38,10 +38,16 @@ export default class Position extends Component {
     /** Controls the starting offset of the content */
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
     /**
+     * When provided a mask will be placed behind PositionSource, where this
+     * function is called when clicked.
+     */
+    onMaskClick: PropTypes.func,
+    /**
      * Optional handler that is called, with the new position, when PositionSource
      * has been positioned.
      */
     onPositionChange: PropTypes.func,
+
     /**
      * Controls the starting position around PositionTarget in which the
      * PositionSource will attempt to be placed. If that position is not available
@@ -164,7 +170,7 @@ export default class Position extends Component {
   }
 
   render() {
-    const { children, enabled, isVisible, showArrow, ...rest } = this.props;
+    const { children, enabled, isVisible, onMaskClick, showArrow, ...rest } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
 
@@ -186,6 +192,10 @@ export default class Position extends Component {
       enabled && isVisible ? (
         <Portal { ...props } key="portal">
           <div>
+            { onMaskClick && (
+              <div className="ax-position__mask" onClick={ onMaskClick } />
+            ) }
+
             <div className={ classes } ref={ (el) => this._content = el }>
               {
                 cloneElement(findComponent(children, PositionSourceRef), {

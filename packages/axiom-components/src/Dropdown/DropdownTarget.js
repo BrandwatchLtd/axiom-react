@@ -25,10 +25,10 @@ export default class DropdownTarget extends Component {
 
     if (this.focusEventHasFired) {
       this.focusEventHasFired = false;
-      return;
+    } else {
+      toggleDropdown(event);
     }
 
-    toggleDropdown(event);
     if (cb) cb(event);
   }
 

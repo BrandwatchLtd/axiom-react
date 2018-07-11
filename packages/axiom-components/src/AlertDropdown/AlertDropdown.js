@@ -32,6 +32,11 @@ class AlertDropdown extends Component {
      * Type of AlertDropdown that affects the coloring and icon
      * */
     type: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    /**
+     * Configuration to apply a mask behind the Dropdown content while
+     * open. Good for disabling interactions with other things on the page.
+     */
+    withMask: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -78,13 +83,14 @@ class AlertDropdown extends Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, withMask, ...rest } = this.props;
     const { isVisible } = this.state;
 
     return (
       <Position
           { ...rest }
           isVisible={ isVisible }
+          onMaskClick={ withMask ? () => this.close() : null }
           position="bottom">
         <PositionTarget>
           { findComponent(children, AlertDropdownTargetRef) }

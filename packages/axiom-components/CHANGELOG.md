@@ -3,7 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.1.0"></a>
+    <a name="4.2.0"></a>
+# [4.2.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.1.0...@brandwatch/axiom-components@4.2.0) (2018-07-06)
+
+
+### Bug Fixes
+
+* **ChartContent:** Add mask to chart dropdowns ([55db233](https://github.com/BrandwatchLtd/axiom/commit/55db233))
+* **Position:** Add onMaskClick prop back to Position ([0ad5881](https://github.com/BrandwatchLtd/axiom/commit/0ad5881))
+
+
+### Features
+
+* **AlertDropdown:** Added withMask property ([f9e05c7](https://github.com/BrandwatchLtd/axiom/commit/f9e05c7))
+* **Dropdown:** Added withMask property ([bcab6ed](https://github.com/BrandwatchLtd/axiom/commit/bcab6ed))
+
+
+
+
+    <a name="4.1.0"></a>
 # [4.1.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.0.0...@brandwatch/axiom-components@4.1.0) (2018-07-05)
 
 
@@ -16,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.0.0"></a>
+  <a name="4.0.0"></a>
 # [4.0.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.1...@brandwatch/axiom-components@4.0.0) (2018-07-05)
 
 
@@ -32,7 +50,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="3.1.1"></a>
+<a name="3.1.1"></a>
 ## [3.1.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.0...@brandwatch/axiom-components@3.1.1) (2018-07-05)
 
 
