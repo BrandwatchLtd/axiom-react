@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArrowHead renders with color 1`] = `
+<div
+  className=""
+  color="white"
+  position={0.15}
+>
+  <div
+    className="ax-arrow-head--arrow ax-arrow-head--arrow--top"
+    style={
+      Object {
+        "borderBottomColor": "white",
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  />
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArrowHead renders with color 2`] = `
+<div
+  className=""
+  color="white"
+  position={0.15}
+>
+  <div
+    className="ax-arrow-head--arrow ax-arrow-head--arrow--top"
+    style={
+      Object {
+        "borderBottomColor": "white",
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  />
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArrowHead renders with defaultProps 1`] = `
+<div
+  className=""
+  color="black"
+  position={0.15}
+>
+  <div
+    className="ax-arrow-head--arrow ax-arrow-head--arrow--top"
+    style={
+      Object {
+        "borderBottomColor": "black",
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  />
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;

@@ -5,6 +5,7 @@ import AlertCard from './Components/AlertCard';
 import AlertDialog from './Components/AlertDialog';
 import AlertDropdown from './Components/AlertDropdown';
 import AlertIcon from './Components/AlertIcon';
+import ArrowHead from './Components/ArrowHead';
 import Avatar from './Components/Avatar';
 import Badge from './Components/Badge';
 import Base from './Components/Base';
@@ -69,6 +70,10 @@ export default class Documentation extends Component {
             id: 'alert-icon',
             name: 'AlertIcon',
             Component: AlertIcon,
+          }, {
+            id: 'arrow-head',
+            name: 'ArrowHead',
+            Component: ArrowHead,
           }, {
             id: 'avatar',
             name: 'Avatar',

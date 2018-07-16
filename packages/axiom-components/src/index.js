@@ -11,6 +11,7 @@ export { default as AlertDropdownSource } from './AlertDropdown/AlertDropdownSou
 export { default as AlertDropdownTarget } from './AlertDropdown/AlertDropdownTarget';
 export { default as AlertIcon } from './AlertIcon/AlertIcon';
 export { default as Animicon } from './Icon/Animicon';
+export { default as ArrowHead } from './ArrowHead/ArrowHead';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Badge } from './Badge/Badge';
 export { default as BadgeGroup } from './Badge/BadgeGroup';

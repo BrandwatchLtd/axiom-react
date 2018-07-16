@@ -1,0 +1,33 @@
+.ax-arrow-head--arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.ax-arrow-head--arrow--top {
+  top: 0;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid;
+  border-left: 1rem solid transparent;
+}
+
+.ax-arrow-head--arrow--bottom {
+  bottom: 0;
+  border-top: 1rem solid;
+  border-right: 1rem solid transparent;
+  border-left: 1rem solid transparent;
+}
+
+.ax-arrow-head--arrow--left {
+  left: 0;
+  border-top: 1rem solid transparent;
+  border-right: 1rem solid;
+  border-bottom: 1rem solid transparent;
+}
+
+.ax-arrow-head--arrow--right {
+  right: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 1rem solid;
+}
