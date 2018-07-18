@@ -1,3 +1,4 @@
+import atIds from '@brandwatch/axiom-automation-testing/ids';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -45,7 +46,10 @@ export default class Notification extends Component {
 
         { onRemoveClick && (
           <div className="ax-notification__remove">
-            <Link onClick={ () => onRemoveClick() } style="subtle">
+            <Link
+                data-ax-at={ atIds.Notification.close }
+                onClick={ () => onRemoveClick() }
+                style="subtle">
               <Icon name="cross" />
             </Link>
           </div>
