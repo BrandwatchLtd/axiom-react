@@ -1,12 +1,14 @@
 :root {
   /**
-   * The designs of the tip is 1.5rem from corner to corner. To calculate
-   * the pre-rotated square we use `Math.sqrt((1.5rem**2)/2)`
+   * The designs of the tip is 0.75rem from corner to corner. To calculate
+   * the pre-rotated square we use `Math.sqrt((0.75rem**2)/2)`
    */
-  --cmp-context-tip-size: 1.0606601717798212rem;
+  --cmp-context-tip-size: 0.6rem;
   --cmp-context-tip-space: calc(var(--spacing-grid-size) * 2);
-  --cmp-context-padding-small: calc(var(--spacing-grid-size) * 4);
-  --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
+  --cmp-context-padding-vertical-tiny: var(--spacing-grid-size);
+  --cmp-context-padding-horizontal-tiny: calc(var(--spacing-grid-size) * 2);
+  --cmp-context-padding-small: calc(var(--spacing-grid-size) * 2);
+  --cmp-context-padding-large: calc(var(--spacing-grid-size) * 4);
   --cmp-context-menu-item-padding-vertical: calc(var(--spacing-grid-size) * 3);
 }
 
@@ -29,20 +31,23 @@
   /* stylelint-enable */
 }
 
-.ax-context__arrow {
-  position: absolute;
+.ax-context__arrow--normal {
   width: var(--cmp-context-tip-size);
   height: var(--cmp-context-tip-size);
   margin: var(--cmp-context-tip-size);
-  transform: rotate(45deg);
-  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
-  background-color: var(--color-theme-background);
-  pointer-events: none;
 
   @nest .ax-context--top & { bottom: calc(var(--cmp-context-tip-size) * -0.5); }
   @nest .ax-context--right & { left: calc(var(--cmp-context-tip-size) * -0.5); }
   @nest .ax-context--bottom & { top: calc(var(--cmp-context-tip-size) * -0.5); }
   @nest .ax-context--left & { right: calc(var(--cmp-context-tip-size) * -0.5); }
+}
+
+.ax-context__arrow {
+  position: absolute;
+  transform: rotate(45deg);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+  background-color: var(--color-theme-background);
+  pointer-events: none;
 
   @nest .ax-context--success & { background-color: var(--color-ui-success); }
   @nest .ax-context--warning & { background-color: var(--color-ui-warning); }
@@ -50,20 +55,36 @@
   @nest .ax-context--info & { background-color: var(--color-ui-info); }
 }
 
-.ax-context--top .ax-context__arrow {
+.ax-context--top .ax-context__arrow--normal {
   transform: translateY(var(--cmp-context-tip-size)) rotate(45deg);
 }
 
-.ax-context--right .ax-context__arrow {
+.ax-context--right .ax-context__arrow--normal {
   transform: translateX(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
 }
 
-.ax-context--bottom .ax-context__arrow {
+.ax-context--bottom .ax-context__arrow--normal {
   transform: translateY(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
 }
 
-.ax-context--left .ax-context__arrow {
+.ax-context--left .ax-context__arrow--normal {
   transform: translateX(var(--cmp-context-tip-size)) rotate(45deg);
+}
+
+.ax-context--top .ax-context__arrow--tiny {
+  transform: translateY(var(--cmp-context-tip-size--tiny)) rotate(45deg);
+}
+
+.ax-context--right .ax-context__arrow--tiny {
+  transform: translateX(calc(var(--cmp-context-tip-size--tiny) * -1)) rotate(45deg);
+}
+
+.ax-context--bottom .ax-context__arrow--tiny {
+  transform: translateY(calc(var(--cmp-context-tip-size--tiny) * -1)) rotate(45deg);
+}
+
+.ax-context--left .ax-context__arrow--tiny {
+  transform: translateX(var(--cmp-context-tip-size--tiny)) rotate(45deg);
 }
 
 .ax-context-content {
@@ -76,6 +97,11 @@
   @nest .ax-context--info & { background-color: var(--color-ui-info); }
 }
 
+.ax-context-content--padding-horizontal-tiny {
+  padding-right: var(--cmp-context-padding-horizontal-tiny);
+  padding-left: var(--cmp-context-padding-horizontal-tiny);
+}
+
 .ax-context-content--padding-horizontal-small {
   padding-right: var(--cmp-context-padding-small);
   padding-left: var(--cmp-context-padding-small);
@@ -84,6 +110,11 @@
 .ax-context-content--padding-horizontal-large {
   padding-right: var(--cmp-context-padding-large);
   padding-left: var(--cmp-context-padding-large);
+}
+
+.ax-context-content--padding-vertical-tiny {
+  padding-top: var(--cmp-context-padding-vertical-tiny);
+  padding-bottom: var(--cmp-context-padding-vertical-tiny);
 }
 
 .ax-context-content--padding-vertical-small {

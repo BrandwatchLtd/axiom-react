@@ -8,6 +8,7 @@ import './Context.css';
 export default class Context extends Component {
   static propTypes = {
     arrowRef: PropTypes.func,
+    arrowSize: PropTypes.oneOf(['tiny', 'normal']),
     children: PropTypes.node,
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
     maxHeight: PropTypes.string,
@@ -16,6 +17,7 @@ export default class Context extends Component {
   };
 
   static defaultProps = {
+    arrowSize: 'normal',
     maxHeight: '30rem',
     position: 'top',
     width: '14.5rem',
@@ -24,6 +26,7 @@ export default class Context extends Component {
   render() {
     const {
       arrowRef,
+      arrowSize,
       children,
       maxHeight,
       position,
@@ -35,7 +38,11 @@ export default class Context extends Component {
     const classes = classnames('ax-context', `ax-context--${position}`, {
       [`ax-context--${color}`]: color,
     });
-    const arrowClasses = classnames('ax-context__arrow');
+
+    const arrowClasses = classnames('ax-context__arrow', {
+      [`ax-context__arrow--${arrowSize}`]: arrowSize
+    }
+  );
 
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>

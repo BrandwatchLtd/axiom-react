@@ -146,7 +146,7 @@ exports[`Context renders with arrowRef 1`] = `
   }
 >
   <span
-    className="ax-context__arrow"
+    className="ax-context__arrow ax-context__arrow--normal"
   />
   <div
     className="ax-context__content"
