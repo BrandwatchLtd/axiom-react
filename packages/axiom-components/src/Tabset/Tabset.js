@@ -65,8 +65,8 @@ export default class Tabset extends Component {
       }));
 
     return (
-      <Base { ...omit(rest, ['activeTabIndex']) }>
-        <Tabs size={ size }>{ tabs }</Tabs>
+      <Base space={ space } { ...omit(rest, ['activeTabIndex']) }>
+        <Tabs size={ size } space={ space }>{ tabs }</Tabs>
         <Base space={ space }>
           { activeTabContent }
         </Base>
