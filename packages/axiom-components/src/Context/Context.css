@@ -3,7 +3,6 @@
    * The designs of the tip is 1.5rem from corner to corner. To calculate
    * the pre-rotated square we use `Math.sqrt((1.5rem**2)/2)`
    */
-  --cmp-context-tip-size: 1.0606601717798212rem;
   --cmp-context-tip-space: calc(var(--spacing-grid-size) * 2);
   --cmp-context-padding-small: calc(var(--spacing-grid-size) * 4);
   --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
