@@ -22,7 +22,6 @@ export default class Tip extends Component {
   };
 
   static defaultProps = {
-    color: 'shade-2',
     shadow: true,
     direction: 'top',
   };

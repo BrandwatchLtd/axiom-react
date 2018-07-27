@@ -12,7 +12,7 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase>
           <Base container>
-            <Tip shadow={ false }>
+            <Tip color="shade-2" shadow={ false }>
               <AlertCard
                   onRemoveClick={ () => {} }
                   shade="shade-2"

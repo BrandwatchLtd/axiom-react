@@ -146,7 +146,7 @@ exports[`Context renders with arrowRef 1`] = `
   }
 >
   <div
-    className="ax-tip--top ax-tip--shade-2 ax-tip--shadow"
+    className="ax-tip--top ax-tip--shadow"
   >
     <span
       className="ax-tip__arrow"
