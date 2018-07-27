@@ -17,7 +17,7 @@ export default class TextArea extends Component {
     /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
     /** Descriptive label that is placed with the input field */
-    label: PropTypes.string,
+    label: PropTypes.node,
     /** See Validate[patterns] */
     patterns: PropTypes.array,
     /**

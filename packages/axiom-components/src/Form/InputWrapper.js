@@ -15,7 +15,7 @@ export default class InputWrapper extends Component {
   static propTypes = {
     children: PropTypes.node,
     isTarget: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.node,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     space: PropTypes.string,
     usageHint: PropTypes.node,
