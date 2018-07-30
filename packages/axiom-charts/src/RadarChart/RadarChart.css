@@ -1,0 +1,110 @@
+.ax-radar {
+  padding: calc(var(--line-height-label) * 0.5) 0;
+}
+
+.ax-radar__container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ax-radar__svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: visible;
+}
+
+.ax-radar__y-axis-line,
+.ax-radar__x-axis-line {
+  fill: none;
+  stroke: var(--color-theme-background--subtle);
+  stroke-width: 1;
+}
+
+.ax-radar__x-axis-line:first-of-type {
+  stroke-width: 2;
+}
+
+.ax-radar__x-axis-label,
+.ax-radar__y-axis-label {
+  position: absolute;
+  line-height: var(--line-height-label);
+}
+
+.ax-radar__y-axis-label {
+  padding: 0 var(--spacing-grid-size--x1);
+  transform: translate(-50%, -100%);
+}
+
+.ax-radar__x-axis-label--right { transform: translate(0, -50%); }
+.ax-radar__x-axis-label--bottom { transform: translate(-50%, 0); }
+.ax-radar__x-axis-label--left { transform: translate(-100%, -50%); }
+.ax-radar__x-axis-label--top { transform: translate(-50%, -100%); }
+
+.ax-radar__polygon {
+  stroke: transparent;
+  stroke-width: 1.5;
+  transition-property: stroke, fill-opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  stroke-opacity: var(--opacity-background--overlay-heavy);
+}
+
+.ax-radar__polygon--border {
+  stroke: currentColor;
+}
+
+.ax-radar__polygon--fill {
+  fill: currentColor;
+
+  &:not(.ax-radar__polygon--subtle):not(.ax-radar__polygon--overlay-light) {
+    fill-opacity: var(--opacity-background--subtle);
+  }
+}
+
+.ax-radar__polygon--faded {
+  fill-opacity: var(--opacity-background--overlay-light);
+}
+
+.ax-radar__point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.ax-radar__polygon--subtle { color: var(--color-theme-background--subtle); }
+.ax-radar__polygon--overlay-light { color: var(--color-theme-background--overlay-light); }
+.ax-radar__polygon--forbidden-planet { color: var(--color-product-forbidden-planet); }
+.ax-radar__polygon--tiny-clanger { color: var(--color-product-tiny-clanger); }
+.ax-radar__polygon--critical-mass { color: var(--color-product-critical-mass); }
+.ax-radar__polygon--fantastic-voyage { color: var(--color-product-fantastic-voyage); }
+.ax-radar__polygon--paradise-lost { color: var(--color-product-paradise-lost); }
+.ax-radar__polygon--serene-sea { color: var(--color-product-serene-sea); }
+.ax-radar__polygon--event-horizon { color: var(--color-product-event-horizon); }
+.ax-radar__polygon--electric-dreams { color: var(--color-product-electric-dreams); }
+.ax-radar__polygon--outer-limits { color: var(--color-product-outer-limits); }
+.ax-radar__polygon--giant-leap { color: var(--color-product-giant-leap); }
+.ax-radar__polygon--moon-lagoon { color: var(--color-product-moon-lagoon); }
+.ax-radar__polygon--space-invader { color: var(--color-product-space-invader); }
+.ax-radar__polygon--extraterrestrial { color: var(--color-product-extraterrestrial); }
+.ax-radar__polygon--terra-form { color: var(--color-product-terra-form); }
+.ax-radar__polygon--primeval-soup { color: var(--color-product-primeval-soup); }
+.ax-radar__polygon--future-shock { color: var(--color-product-future-shock); }
+.ax-radar__polygon--sun-maker { color: var(--color-product-sun-maker); }
+.ax-radar__polygon--new-horizon { color: var(--color-product-new-horizon); }
+.ax-radar__polygon--blast-off { color: var(--color-product-blast-off); }
+.ax-radar__polygon--crash-course { color: var(--color-product-crash-course); }
+.ax-radar__polygon--solar-rust { color: var(--color-product-solar-rust); }
+.ax-radar__polygon--ground-control { color: var(--color-product-ground-control); }
+.ax-radar__polygon--space-oddity { color: var(--color-product-space-oddity); }
+.ax-radar__polygon--rocky-planet { color: var(--color-product-rocky-planet); }
+.ax-radar__polygon--deep-thought { color: var(--color-product-deep-thought); }
+.ax-radar__polygon--luna-dust { color: var(--color-product-luna-dust); }
+.ax-radar__polygon--sentiment-positive { color: var(--color-sentiment-positive); }
+.ax-radar__polygon--sentiment-negative { color: var(--color-sentiment-negative); }
+.ax-radar__polygon--sentiment-neutral { color: var(--color-sentiment-neutral); }
+.ax-radar__polygon--social-twitter { color: var(--color-social-twitter); }
+.ax-radar__polygon--social-facebook { color: var(--color-social-facebook); }
+.ax-radar__polygon--social-instagram { color: var(--color-social-instagram); }

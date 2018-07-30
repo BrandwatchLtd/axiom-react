@@ -200,6 +200,59 @@ export const sparkLineData = [{
   values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
 }];
 
+export const radarChartData = [{
+  border: true,
+  color: 'critical-mass',
+  fill: true,
+  label: 'Dolar Amor',
+  points: true,
+  values: [75, 50, 50, 70, 50, 85, 50, 75, 50, 20],
+}, {
+  border: true,
+  color: 'social-twitter',
+  fill: true,
+  label: 'Lorem Ipsum',
+  points: true,
+  values: [55, 50, 55, 40, 50, 85, 60, 40, 60, 35],
+}, {
+  border: false,
+  color: 'subtle',
+  fill: true,
+  label: 'Background',
+  points: false,
+  values: [20, 50, 75, 50, 85, 50, 70, 50, 50, 75],
+}];
+
+export const radarChartXAxisLabels = [
+  'Forbidden Planet',
+  'Tiny Clanger',
+  'Critical Mass',
+  'Fantasitc Voyage',
+  'Paradise Lost',
+  'Serene Sea',
+  'Event Horizon',
+  'Electric Dreams',
+  'Outer Limits',
+  'Giant Leap',
+];
+
+export const radarChartYAxisLabels = [{
+  label: '100%',
+  value: 100,
+}, {
+  label: '75%',
+  value: 75,
+}, {
+  label: '50%',
+  value: 50,
+}, {
+  label: '25%',
+  value: 25,
+}, {
+  label: '',
+  value: 0,
+}];
+
 export const wordCloudDataText = [
   'Manager Brandwatch',
   'Marketing Brandwatch',

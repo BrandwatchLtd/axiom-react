@@ -17,6 +17,7 @@ export { default as Line } from './Line/Line';
 export { default as LineChart } from './LineChart/LineChart';
 export { default as LinePoint } from './Line/LinePoint';
 export { default as MirroredColumnChart } from './ColumnChart/MirroredColumnChart';
+export { default as RadarChart } from './RadarChart/RadarChart';
 export { default as SparkLine } from './SparkLine/SparkLine';
 export { default as Word } from './WordCloud/Word';
 export { default as WordCloud } from './WordCloud/WordCloud';

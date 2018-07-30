@@ -7,6 +7,7 @@ import DataPoint from './Charts/DataPoint';
 import DotPlotChart from './Charts/DotPlotChart';
 import Line from './Charts/Line';
 import LineChart from './Charts/LineChart';
+import RadarChart from './Charts/RadarChart';
 import SparkLine from './Charts/SparkLine';
 import WordCloud from './Charts/WordCloud';
 
@@ -42,6 +43,10 @@ export default class Documentation extends Component {
             id: 'line-chart',
             name: 'Line Chart',
             Component: LineChart,
+          }, {
+            id: 'radar-chart',
+            name: 'Radar Chart',
+            Component: RadarChart,
           }, {
             id: 'spark-line',
             name: 'Spark Line',
