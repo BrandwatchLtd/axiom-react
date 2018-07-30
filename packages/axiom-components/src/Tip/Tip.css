@@ -48,7 +48,7 @@
 }
 
 .ax-tip--top .ax-tip__arrow {
-  transform: translateY(var(--cmp-context-tip-size)) rotate(45deg);
+  transform: translateY(var(--cmp-tip-size)) rotate(45deg);
 }
 
 .ax-tip--right .ax-tip__arrow {
