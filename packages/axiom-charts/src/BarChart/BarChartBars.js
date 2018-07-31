@@ -87,8 +87,12 @@ export default class BarChartBars extends Component {
               : hoverColor && color !== hoverColor;
 
             const percent = ((value - lower) / (upper - lower)) * 100;
+
+            const isHoveredByColor = hoverColor && color === hoverColor;
+            const isHoveredByIndex = hoverIndex && index === hoverIndex;
+            const hideLabel = !showBarLabel && !isHoveredByColor && !isHoveredByIndex;
             const labelClasses = classnames('ax-bar-chart__bar-label', {
-              'ax-bar-chart__bar-label--hidden': !(showBarLabel || color === hoverColor),
+              'ax-bar-chart__bar-label--hidden': hideLabel,
             });
 
             const isStretched = benchmarkPercent > percent;
