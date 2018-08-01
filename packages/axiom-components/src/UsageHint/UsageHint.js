@@ -20,10 +20,11 @@ export default class UsageHint extends PureComponent {
     const {
       children,
       position,
+      ...rest
     } = this.props;
 
     return (
-      <Dropdown position={ position }>
+      <Dropdown { ...rest } position={ position } showArrow>
         <DropdownTarget>
           <Link style="subtle" >
             <Icon name="question-mark-circle" size="1rem" />

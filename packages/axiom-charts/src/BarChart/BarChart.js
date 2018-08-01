@@ -231,7 +231,7 @@ export default class BarChart extends Component {
                     benchmark={ benchmark }
                     benchmarkHeight={ rowSpace }
                     data={ data[index] }
-                    fadeBenchmarkLine={ isBenchmarkLineFadable && selectedIndex !== null }
+                    fadeBenchmarkLine={ isBenchmarkLineFadable && selectedIndex !== null && selectedIndex !== index }
                     hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
                     hoverColor={ selectedColor }
                     hoverIndex={ selectedIndex }

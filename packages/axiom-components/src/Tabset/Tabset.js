@@ -17,10 +17,13 @@ export default class Tabset extends Component {
     children: PropTypes.node,
     /** Size control for the Tabs */
     size: PropTypes.oneOf(['medium', 'large']),
+    /** Vertical spacing between elements */
+    space: PropTypes.string,
   };
 
   static defaultProps = {
     size: 'medium',
+    space: 'x6',
   };
 
   constructor(props) {
@@ -47,7 +50,7 @@ export default class Tabset extends Component {
   }
 
   render() {
-    const { children, size, ...rest } = this.props;
+    const { children, size, space, ...rest } = this.props;
     const { activeTabIndex } = this.state;
     const arrayChildren = Children.toArray(children);
     const activeTabContent = arrayChildren[activeTabIndex]
@@ -62,9 +65,9 @@ export default class Tabset extends Component {
       }));
 
     return (
-      <Base space="x6" { ...omit(rest, ['activeTabIndex']) }>
+      <Base { ...omit(rest, ['activeTabIndex']) }>
         <Tabs size={ size }>{ tabs }</Tabs>
-        <Base space="x6">
+        <Base space={ space }>
           { activeTabContent }
         </Base>
       </Base>

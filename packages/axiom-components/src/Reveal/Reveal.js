@@ -48,11 +48,15 @@ export default class Reveal extends Component {
     }
   }
 
+  componentWillUnmount() {
+    window.cancelAnimationFrame( this._frameId );
+  }
+
   conceal() {
     this.setState({ overflow: 'hidden' });
-    window.requestAnimationFrame(() => {
+    this._frameId = window.requestAnimationFrame(() => {
       this.setState({ height: this.inner.offsetHeight });
-      window.requestAnimationFrame(() => {
+      this._frameId = window.requestAnimationFrame(() => {
         this.setState({ height: 0, opacity: 0 });
       });
     });

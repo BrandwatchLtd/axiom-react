@@ -3,7 +3,112 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.1.0"></a>
+      <a name="4.8.0"></a>
+# [4.8.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.7.0...@brandwatch/axiom-components@4.8.0) (2018-07-23)
+
+
+### Features
+
+* **ArrowHead:** Add Tip component to axiom. ([7b94ad8](https://github.com/pmsorhaindo/axiom/commit/7b94ad8))
+
+
+
+
+      <a name="4.7.0"></a>
+# [4.7.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.5.0...@brandwatch/axiom-components@4.7.0) (2018-07-19)
+
+
+### Features
+
+* **Icon:** adds new instagram icon ([385392b](https://github.com/pmsorhaindo/axiom/commit/385392b))
+
+
+
+
+  <a name="4.6.0"></a>
+# [4.6.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.5.0...@brandwatch/axiom-components@4.6.0) (2018-07-19)
+
+
+### Features
+
+* **Icon:** adds new instagram icon ([385392b](https://github.com/pmsorhaindo/axiom/commit/385392b))
+
+
+
+
+<a name="4.5.0"></a>
+# [4.5.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.3.0...@brandwatch/axiom-components@4.5.0) (2018-07-18)
+
+
+### Bug Fixes
+
+* **Notification:** adds atId for close button on Notification popup ([e860d68](https://github.com/pmsorhaindo/axiom/commit/e860d68))
+
+
+### Features
+
+* **TabSet:** Add variable spacing ([a30d189](https://github.com/pmsorhaindo/axiom/commit/a30d189))
+
+
+
+
+<a name="4.4.0"></a>
+# [4.4.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.3.0...@brandwatch/axiom-components@4.4.0) (2018-07-18)
+
+
+### Bug Fixes
+
+* **Notification:** adds atId for close button on Notification popup ([e860d68](https://github.com/pmsorhaindo/axiom/commit/e860d68))
+
+
+### Features
+
+* **TabSet:** Add variable spacing ([a30d189](https://github.com/pmsorhaindo/axiom/commit/a30d189))
+
+
+
+
+<a name="4.3.0"></a>
+# [4.3.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.2.1...@brandwatch/axiom-components@4.3.0) (2018-07-11)
+
+
+### Features
+
+* **Slider:** Added slider component ([7874a1c](https://github.com/BrandwatchLtd/axiom/commit/7874a1c))
+
+
+
+
+<a name="4.2.1"></a>
+## [4.2.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.2.0...@brandwatch/axiom-components@4.2.1) (2018-07-11)
+
+
+### Bug Fixes
+
+* **DropdownTarget:** Ensures callback property is always fired ([fc2a8f2](https://github.com/BrandwatchLtd/axiom/commit/fc2a8f2))
+
+
+
+
+<a name="4.2.0"></a>
+# [4.2.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.1.0...@brandwatch/axiom-components@4.2.0) (2018-07-06)
+
+
+### Bug Fixes
+
+* **ChartContent:** Add mask to chart dropdowns ([55db233](https://github.com/BrandwatchLtd/axiom/commit/55db233))
+* **Position:** Add onMaskClick prop back to Position ([0ad5881](https://github.com/BrandwatchLtd/axiom/commit/0ad5881))
+
+
+### Features
+
+* **AlertDropdown:** Added withMask property ([f9e05c7](https://github.com/BrandwatchLtd/axiom/commit/f9e05c7))
+* **Dropdown:** Added withMask property ([bcab6ed](https://github.com/BrandwatchLtd/axiom/commit/bcab6ed))
+
+
+
+
+<a name="4.1.0"></a>
 # [4.1.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@4.0.0...@brandwatch/axiom-components@4.1.0) (2018-07-05)
 
 
@@ -16,7 +121,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.0.0"></a>
+<a name="4.0.0"></a>
 # [4.0.0](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.1...@brandwatch/axiom-components@4.0.0) (2018-07-05)
 
 
@@ -32,7 +137,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="3.1.1"></a>
+<a name="3.1.1"></a>
 ## [3.1.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-components@3.1.0...@brandwatch/axiom-components@3.1.1) (2018-07-05)
 
 

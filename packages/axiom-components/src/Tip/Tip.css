@@ -1,0 +1,64 @@
+:root {
+  /**
+   * The designs of the tip is 1.5rem from corner to corner. To calculate
+   * the pre-rotated square we use `Math.sqrt((1.5rem**2)/2)`
+   */
+  --cmp-tip-size: 1.0606601717798212rem;
+  --cmp-tip-space: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-tip__content {
+  background-color: var(--color-theme-background);
+  /* stylelint-disable */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /* stylelint-enable */
+}
+
+.ax-tip--shadow .ax-tip__content {
+  background-color: transparent;
+}
+
+.ax-tip__arrow {
+  position: absolute;
+  width: var(--cmp-tip-size);
+  height: var(--cmp-tip-size);
+  margin: var(--cmp-tip-size);
+  transform: rotate(45deg);
+  background-color: var(--color-theme-background);
+  pointer-events: none;
+
+  @nest .ax-tip--top & { bottom: calc(var(--cmp-tip-size) * -0.5); }
+  @nest .ax-tip--right & { left: calc(var(--cmp-tip-size) * -0.5); }
+  @nest .ax-tip--bottom & { top: calc(var(--cmp-tip-size) * -0.5); }
+  @nest .ax-tip--left & { right: calc(var(--cmp-tip-size) * -0.5); }
+
+  @nest .ax-tip--faded { background-color: var(--color-theme-text); }
+  @nest .ax-tip--success & { background-color: var(--color-ui-success); }
+  @nest .ax-tip--warning & { background-color: var(--color-ui-warning); }
+  @nest .ax-tip--error & { background-color: var(--color-ui-error); }
+  @nest .ax-tip--info & { background-color: var(--color-ui-info); }
+  @nest .ax-tip--shade-1 { background-color: var(--color-theme-background--shade-1); }
+  @nest .ax-tip--shade-2 & { background-color: var(--color-theme-background--shade-2); }
+  @nest .ax-tip--shade-3 & { background-color: var(--color-theme-background--shade-3); }
+  @nest .ax-tip--shade-4 & { background-color: var(--color-theme-background--shade-4); }
+
+  @nest .ax-tip--shadow & {
+    box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+  }
+}
+
+.ax-tip--top .ax-tip__arrow {
+  transform: translateY(var(--cmp-tip-size)) rotate(45deg);
+}
+
+.ax-tip--right .ax-tip__arrow {
+  transform: translateX(calc(var(--cmp-tip-size) * -1)) rotate(45deg);
+}
+
+.ax-tip--bottom .ax-tip__arrow {
+  transform: translateY(calc(var(--cmp-tip-size) * -1)) rotate(45deg);
+}
+
+.ax-tip--left .ax-tip__arrow {
+  transform: translateX(var(--cmp-tip-size)) rotate(45deg);
+}

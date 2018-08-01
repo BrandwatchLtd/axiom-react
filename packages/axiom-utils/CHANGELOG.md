@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-utils@0.1.7...@brandwatch/axiom-utils@0.1.9) (2018-07-18)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-utils
+
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-utils@0.1.7...@brandwatch/axiom-utils@0.1.8) (2018-07-18)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-utils
+
 <a name="0.1.7"></a>
 ## [0.1.7](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-utils@0.1.6...@brandwatch/axiom-utils@0.1.7) (2018-07-05)
 

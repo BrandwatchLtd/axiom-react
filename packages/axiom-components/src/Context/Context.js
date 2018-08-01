@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
+import Tip from '../Tip/Tip';
 import './Context.css';
 
-/* eslint-disable react/no-find-dom-node */
 export default class Context extends Component {
   static propTypes = {
     arrowRef: PropTypes.func,
     children: PropTypes.node,
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
     maxHeight: PropTypes.string,
-    position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     width: PropTypes.string,
   };
 
@@ -35,17 +35,17 @@ export default class Context extends Component {
     const classes = classnames('ax-context', `ax-context--${position}`, {
       [`ax-context--${color}`]: color,
     });
-    const arrowClasses = classnames('ax-context__arrow');
-
+    const content = () => <div className="ax-context__content" style={ { maxHeight } }>
+      { children }
+    </div>;
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>
-        { arrowRef && (
-          <span className={ arrowClasses } ref={ arrowRef } />
-        ) }
-
-        <div className="ax-context__content" style={ { maxHeight } }>
-          { children }
-        </div>
+        { arrowRef ?
+          <Tip arrowRef={ arrowRef } color={ color } direction={ position }>
+            { content() }
+          </Tip> :
+        content()
+        }
       </Base>
     );
   }

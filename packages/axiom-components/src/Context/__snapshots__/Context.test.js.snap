@@ -145,18 +145,27 @@ exports[`Context renders with arrowRef 1`] = `
     }
   }
 >
-  <span
-    className="ax-context__arrow"
-  />
   <div
-    className="ax-context__content"
-    style={
-      Object {
-        "maxHeight": "30rem",
-      }
-    }
+    className="ax-tip--top ax-tip--shadow"
   >
-    Lorem ipsum
+    <span
+      className="ax-tip__arrow"
+      style={Object {}}
+    />
+    <div
+      className="ax-tip__content"
+    >
+      <div
+        className="ax-context__content"
+        style={
+          Object {
+            "maxHeight": "30rem",
+          }
+        }
+      >
+        Lorem ipsum
+      </div>
+    </div>
   </div>
 </div>
 `;

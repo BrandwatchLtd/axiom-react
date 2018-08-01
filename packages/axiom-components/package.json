@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "4.1.0",
+  "version": "4.8.0",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/index.js",
   "license": "UNLICENSED",
@@ -8,17 +8,17 @@
     "access": "public"
   },
   "dependencies": {
-    "@brandwatch/axiom-automation-testing": "^0.0.4",
+    "@brandwatch/axiom-automation-testing": "^0.0.6",
     "@brandwatch/axiom-formatting": "^0.0.3",
     "@brandwatch/axiom-materials": "^1.4.1",
-    "@brandwatch/axiom-utils": "^0.1.7",
+    "@brandwatch/axiom-utils": "^0.1.9",
     "classnames": "^2.2.1",
     "date-fns": "^1.0.0",
     "lodash.omit": "^4.5.0",
     "popper.js": "^1.12.5",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-transition-group": "^2.3.0"
   }
 }

@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.9"></a>
+## [3.0.9](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@3.0.8...@brandwatch/axiom-charts@3.0.9) (2018-07-23)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.8"></a>
+## [3.0.8](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@3.0.6...@brandwatch/axiom-charts@3.0.8) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.7"></a>
+## [3.0.7](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@3.0.6...@brandwatch/axiom-charts@3.0.7) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.6"></a>
+## [3.0.6](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@3.0.4...@brandwatch/axiom-charts@3.0.6) (2018-07-18)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.5"></a>
+## [3.0.5](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@3.0.4...@brandwatch/axiom-charts@3.0.5) (2018-07-18)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.4"></a>
+## [3.0.4](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-charts@3.0.3...@brandwatch/axiom-charts@3.0.4) (2018-07-11)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.3"></a>
+## [3.0.3](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-charts@3.0.2...@brandwatch/axiom-charts@3.0.3) (2018-07-11)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.0.2"></a>
+## [3.0.2](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-charts@3.0.1...@brandwatch/axiom-charts@3.0.2) (2018-07-06)
+
+
+### Bug Fixes
+
+* **ChartContent:** Add mask to chart dropdowns ([55db233](https://github.com/BrandwatchLtd/axiom/commit/55db233))
+
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-charts@3.0.0...@brandwatch/axiom-charts@3.0.1) (2018-07-05)
 

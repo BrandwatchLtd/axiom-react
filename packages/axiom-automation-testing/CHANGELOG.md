@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-automation-testing@0.0.4...@brandwatch/axiom-automation-testing@0.0.6) (2018-07-18)
+
+
+### Bug Fixes
+
+* **Notification:** adds atId for close button on Notification popup ([e860d68](https://github.com/pmsorhaindo/axiom/commit/e860d68))
+
+
+
+
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-automation-testing@0.0.4...@brandwatch/axiom-automation-testing@0.0.5) (2018-07-18)
+
+
+### Bug Fixes
+
+* **Notification:** adds atId for close button on Notification popup ([e860d68](https://github.com/pmsorhaindo/axiom/commit/e860d68))
+
+
+
+
 <a name="0.0.4"></a>
 ## [0.0.4](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-automation-testing@0.0.3...@brandwatch/axiom-automation-testing@0.0.4) (2018-03-15)
 

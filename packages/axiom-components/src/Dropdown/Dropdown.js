@@ -39,6 +39,11 @@ export default class Dropdown extends Component {
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
     /** Toggle that allows the arrow of the Context component to be hidden */
     showArrow: PropTypes.bool,
+        /**
+     * Configuration to apply a mask behind the Dropdown content while
+     * open. Good for disabling interactions with other things on the page.
+     */
+    withMask: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -93,7 +98,7 @@ export default class Dropdown extends Component {
   }
 
   render() {
-    const { children, offset, position, ...rest } = this.props;
+    const { children, offset, position, withMask, ...rest } = this.props;
     const { isVisible } = this.state;
 
     return (
@@ -101,6 +106,7 @@ export default class Dropdown extends Component {
           { ...rest }
           isVisible={ isVisible }
           offset={ offset }
+          onMaskClick={ withMask ? () => this.close() : null }
           position={ position }
           ref={ (el) => this.el = ReactDOM.findDOMNode(el) }>
         <PositionTarget>
