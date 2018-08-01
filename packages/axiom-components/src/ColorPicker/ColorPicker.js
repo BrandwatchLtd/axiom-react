@@ -103,6 +103,8 @@ export default class ColorPicker extends Component {
       'deep-thought',
       'luna-dust',
     ]),
+    /** Diameter of the color picker button */
+    size : PropTypes.string,
     /** Width of the color selection container */
     width: PropTypes.string,
   };
@@ -134,6 +136,7 @@ export default class ColorPicker extends Component {
       options,
       selected,
       width,
+      size,
       ...rest
     } = this.props;
 
@@ -143,7 +146,8 @@ export default class ColorPicker extends Component {
           <ColorPickerOption
               color={ selected }
               data-ax-at={ atIds.ColorPicker.dropdown }
-              onClick={ onOpen } />
+              onClick={ onOpen }
+              size={ size } />
         </DropdownTarget>
 
         <DropdownSource>
