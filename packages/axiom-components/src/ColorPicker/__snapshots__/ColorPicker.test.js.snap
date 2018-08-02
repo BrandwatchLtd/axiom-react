@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker renders with a different size 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--clickable"
+  data-ax-at="98df24c31c96"
+  onClick={[Function]}
+  onFocus={[Function]}
+  style={
+    Object {
+      "height": "3rem",
+      "width": "3rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPicker renders with defaultProps 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--clickable"
+  data-ax-at="98df24c31c96"
+  onClick={[Function]}
+  onFocus={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;

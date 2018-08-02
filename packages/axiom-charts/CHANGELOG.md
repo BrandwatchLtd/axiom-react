@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.10"></a>
+## [3.0.10](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.0.9...@brandwatch/axiom-charts@3.0.10) (2018-08-02)
+
+
+### Bug Fixes
+
+* **BarChart:** only fade other benchmark lines ([ee13537](https://github.com/HHogg/axiom/commit/ee13537))
+
+
+
+
 <a name="3.0.9"></a>
 ## [3.0.9](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-charts@3.0.8...@brandwatch/axiom-charts@3.0.9) (2018-07-23)
 

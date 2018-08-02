@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.8.1"></a>
+## [4.8.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.8.0...@brandwatch/axiom-components@4.8.1) (2018-08-02)
+
+
+### Bug Fixes
+
+* **ColorPicker:** cascades size property to main ColorPickerOption ([9794964](https://github.com/HHogg/axiom/commit/9794964))
+* **Reveal:** Add check for inner if component is removed before callback is fired. ([20c45f0](https://github.com/HHogg/axiom/commit/20c45f0))
+* **Tip:** Properly position tip when position is top ([22dc7e3](https://github.com/HHogg/axiom/commit/22dc7e3))
+* **Tip:** Removes default color from Tip ([4c01391](https://github.com/HHogg/axiom/commit/4c01391))
+
+
+
+
       <a name="4.8.0"></a>
 # [4.8.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.7.0...@brandwatch/axiom-components@4.8.0) (2018-07-23)
 
@@ -14,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.7.0"></a>
+    <a name="4.7.0"></a>
 # [4.7.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.5.0...@brandwatch/axiom-components@4.7.0) (2018-07-19)
 
 
@@ -25,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.6.0"></a>
+<a name="4.6.0"></a>
 # [4.6.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.5.0...@brandwatch/axiom-components@4.6.0) (2018-07-19)
 
 
