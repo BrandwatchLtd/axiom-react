@@ -66,6 +66,7 @@
   top: 0;
   right: 0;
   bottom: 0;
+  pointer-events: none;
 }
 
 .ax-chart-table__grid-line {
