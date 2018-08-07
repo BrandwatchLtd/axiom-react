@@ -19,6 +19,8 @@
   fill: currentColor;
 }
 
+.ax-data-point--subtle { color: var(--color-theme-background--subtle); }
+.ax-data-point--overlay-light { color: var(--color-theme-background--overlay-light); }
 .ax-data-point--forbidden-planet { color: var(--color-product-forbidden-planet); }
 .ax-data-point--tiny-clanger { color: var(--color-product-tiny-clanger); }
 .ax-data-point--critical-mass { color: var(--color-product-critical-mass); }

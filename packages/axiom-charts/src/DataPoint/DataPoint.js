@@ -9,6 +9,8 @@ export default class DataPoint extends Component {
   static propTypes = {
     /** Background color of the DataPoint */
     color: PropTypes.oneOf([
+      'subtle',
+      'overlay-light',
       'forbidden-planet',
       'tiny-clanger',
       'critical-mass',
