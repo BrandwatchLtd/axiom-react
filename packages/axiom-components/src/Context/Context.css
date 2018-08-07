@@ -54,6 +54,13 @@
   padding-bottom: var(--cmp-context-padding-large);
 }
 
+.ax-context-content + .ax-context-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-top: var(--component-border-width) solid var(--color-theme-border);
+}
+
 .ax-context-content--padding-horizontal-small::before {
   right: var(--cmp-context-padding-small);
   left: var(--cmp-context-padding-small);
