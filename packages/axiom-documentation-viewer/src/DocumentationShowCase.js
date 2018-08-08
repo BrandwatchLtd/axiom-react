@@ -159,7 +159,7 @@ export default class DocumentationShowCase extends Component {
 
                     { configurations && (
                       <ListItem>
-                        <Dropdown flip="mirror">
+                        <Dropdown flip="mirror" showArrow>
                           <DropdownTarget>
                             <Link style="subtle">
                               <Icon name="customise" />
