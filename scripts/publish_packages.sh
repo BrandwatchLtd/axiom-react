@@ -24,7 +24,7 @@ git config --global user.name "Brandwatch (via TravisCI)"
 # travis sets origin to https. Let set up a second remote for ssh
 git remote add upstream git@github.com:BrandwatchLtd/axiom.git
 
-npm config set registry "https://registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
+npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 
 yarn build:packages
 
