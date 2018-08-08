@@ -5,15 +5,16 @@ exports[`Modal closes if a esc button was pressed 1`] = `
   isOpen={true}
   onOverlayClick={[Function]}
   overlayShade="shade-2"
+  padding="x6"
   shouldCloseOnEsc={true}
 >
   <Portal>
     <Base
       Component="div"
-      className="ax-modal__container ax-modal__container--overlay-shade-2"
+      className="ax-modal__container ax-modal__container--padding-x6 ax-modal__container--overlay-shade-2"
     >
       <div
-        className="ax-modal__container ax-modal__container--overlay-shade-2"
+        className="ax-modal__container ax-modal__container--padding-x6 ax-modal__container--overlay-shade-2"
       >
         <div
           className="ax-modal__mask"
@@ -32,14 +33,15 @@ exports[`Modal renders 1`] = `
 <Modal
   isOpen={true}
   overlayShade="shade-2"
+  padding="x6"
 >
   <Portal>
     <Base
       Component="div"
-      className="ax-modal__container ax-modal__container--overlay-shade-2"
+      className="ax-modal__container ax-modal__container--padding-x6 ax-modal__container--overlay-shade-2"
     >
       <div
-        className="ax-modal__container ax-modal__container--overlay-shade-2"
+        className="ax-modal__container ax-modal__container--padding-x6 ax-modal__container--overlay-shade-2"
       >
         <div
           className="ax-modal"

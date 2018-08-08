@@ -27,11 +27,13 @@ export default class Modal extends Component {
       'shade-4',
     ]),
     overlayTheme: PropTypes.oneOf(['day', 'night']),
+    padding: PropTypes.oneOf(['x6', 'x8', 'x12', 'x16']),
     shouldCloseOnEsc: PropTypes.bool,
   };
 
   static defaultProps = {
     overlayShade: 'shade-2',
+    padding: 'x6',
   };
 
   constructor(props) {
@@ -92,9 +94,10 @@ export default class Modal extends Component {
       overlayShade,
       overlayTheme,
       onOverlayClick,
+      padding,
     } = this.props;
 
-    const classes = classnames('ax-modal__container', {
+    const classes = classnames('ax-modal__container', `ax-modal__container--padding-${padding}`, {
       [`ax-modal__container--overlay-${overlayShade}`]: overlayShade,
     });
 

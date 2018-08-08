@@ -24,6 +24,8 @@ export default class Dialog extends Component {
     ]),
     /** Theme applied to the overlay */
     overlayTheme: PropTypes.oneOf(['day', 'night']),
+    /** Padding around the modal */
+    padding: PropTypes.oneOf(['x6', 'x8', 'x12', 'x16']),
     /** Toggle if the Dialog should be closed by pressing Esc */
     shouldCloseOnEsc: PropTypes.bool,
     /** Theme of the dialog */
@@ -33,6 +35,7 @@ export default class Dialog extends Component {
   };
 
   static defaultProps = {
+    padding: 'x6',
     theme: 'day',
   };
 
@@ -53,6 +56,7 @@ export default class Dialog extends Component {
       onRequestClose,
       overlayShade,
       overlayTheme,
+      padding,
       theme,
       width,
       ...rest
@@ -66,7 +70,8 @@ export default class Dialog extends Component {
       <Modal { ...rest }
           onOverlayClick={ onRequestClose }
           overlayShade={ overlayShade }
-          overlayTheme={ overlayTheme }>
+          overlayTheme={ overlayTheme }
+          padding={ padding }>
         <Base className={ classes } style={ { width } } theme={ theme }>
           { children }
         </Base>

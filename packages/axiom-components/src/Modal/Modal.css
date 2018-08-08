@@ -33,8 +33,12 @@
   flex-direction: column;
   max-width: 100%;
   min-height: 0;
-  padding: var(--page-padding-vertical) var(--page-padding-horizontal);
 }
+
+.ax-modal__container--padding-x6 .ax-modal { padding: calc(var(--spacing-grid-size) * 6); }
+.ax-modal__container--padding-x8 .ax-modal { padding: calc(var(--spacing-grid-size) * 8); }
+.ax-modal__container--padding-x12 .ax-modal { padding: calc(var(--spacing-grid-size) * 12); }
+.ax-modal__container--padding-x16 .ax-modal { padding: calc(var(--spacing-grid-size) * 16); }
 
 .ax-modal__body--open {
   overflow: hidden;
