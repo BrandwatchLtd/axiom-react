@@ -29,7 +29,7 @@ npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 yarn build:packages
 
 git checkout master
-npx lerna publish --conventional-commits --yes --git-remote upstream
+npx lerna publish --npm-client npm --conventional-commits --yes --git-remote upstream
 
 # Workaround https://github.com/travis-ci/travis-ci/issues/8082
 ssh-agent -k
