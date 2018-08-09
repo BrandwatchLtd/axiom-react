@@ -13,7 +13,7 @@ export default class CombinedBar extends Component {
     benchmark: PropTypes.number,
     benchmarkPercent: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
     label: PropTypes.node.isRequired,
     onDropdownClose: PropTypes.func.isRequired,
     onDropdownOpen: PropTypes.func.isRequired,
