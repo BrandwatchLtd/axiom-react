@@ -138,18 +138,38 @@ export default class BarChart extends Component {
     });
   }
 
-  handleMouseEnter(selectedIndex, selectedColor) {
+  handleMouseEnterRow(selectedIndex) {
     this.setState({
-      selectedColor,
       selectedIndex,
     });
   }
 
-  handleMouseLeave() {
+  handleMouseLeaveRow() {
     this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
-      selectedColor: null,
       selectedIndex: null,
     }));
+  }
+
+  handleMouseEnterBar(selectedIndex, selectedColor) {
+    this.setState({
+      selectedIndex,
+      selectedColor,
+    });
+  }
+
+  handleMouseLeaveBar() {
+    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
+      selectedColor: null,
+    }));
+  }
+
+  handleToggleRowVisibility(data, index, hidden) {
+    this.setState({
+      selectedIndex: hidden ? index : null,
+    });
+
+    const { onToggleRowVisibility } = this.props;
+    onToggleRowVisibility && onToggleRowVisibility(data, index);
   }
 
   render() {
@@ -213,10 +233,12 @@ export default class BarChart extends Component {
             <ChartTableRow
                 cloakContainer={ !hidden }
                 hover={ index === selectedIndex }
-                key={ index }>
+                key={ index }
+                onMouseEnter={ () => !hidden && this.handleMouseEnterRow(index) }
+                onMouseLeave={ () => this.handleMouseLeaveRow() } >
               <ChartTableLabel
                   disabled={ hidden }
-                  onToggleRowVisibility={ onToggleRowVisibility && (() => onToggleRowVisibility(data[index], index)) }
+                  onToggleRowVisibility={ () => this.handleToggleRowVisibility(data[index], index, hidden) }
                   textStrong={ index === selectedIndex }
                   width={ labelColumnWidth }>
                 { label }
@@ -242,8 +264,8 @@ export default class BarChart extends Component {
                     lower={ finalLower }
                     onDropdownClose={ () => this.handleDropdonClose() }
                     onDropdownOpen={ (color) => this.handleDropdonOpen(index, color) }
-                    onMouseEnter={ (color) => this.handleMouseEnter(index, color) }
-                    onMouseLeave={ () => this.handleMouseLeave() }
+                    onMouseEnter={ (color) => this.handleMouseEnterBar(index, color) }
+                    onMouseLeave={ () => this.handleMouseLeaveBar() }
                     showBarLabel={ showBarLabel }
                     showDifferenceArea={ showDifferenceArea }
                     singleSelect={ singleSelect }
