@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
+import MenuContext from './MenuContext';
 
 export default class MenuItem extends Component {
   static propTypes = {
@@ -13,12 +14,7 @@ export default class MenuItem extends Component {
     disabled: PropTypes.bool,
   };
 
-  static contextTypes = {
-    size: PropTypes.string.isRequired,
-  };
-
   render() {
-    const { size } = this.context;
     const { children, active, disabled, ...rest } = this.props;
     const classes = classnames('ax-menu__item', {
       'ax-menu__item--active': active,
@@ -28,18 +24,21 @@ export default class MenuItem extends Component {
     const textSize = {
       medium: 'headtitle',
       large: 'headline',
-    }[size];
+    };
 
     return (
-      <Base
-          Component="li"
-          className={ classes }
-          textSize={ textSize }
-          textStrong>
-        <button { ...rest } className="ax-menu__item-button" disabled={ disabled }>
-          { children }
-        </button>
-      </Base>
+      <MenuContext.Consumer>
+        { (context) => (
+          <Base
+              Component="li"
+              className={ classes }
+              textSize={ textSize[context.size] }
+              textStrong>
+            <button { ...rest } className="ax-menu__item-button" disabled={ disabled }>
+              { children }
+            </button>
+          </Base>) }
+      </MenuContext.Consumer>
     );
   }
 }
