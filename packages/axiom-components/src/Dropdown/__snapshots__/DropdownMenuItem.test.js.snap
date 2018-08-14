@@ -1,68 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DropdownMenuItem Snapshots renders with defaultProps 1`] = `
-<ContextMenuItem
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   onClick={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
 
 exports[`DropdownMenuItem Snapshots renders with disabled 1`] = `
-<ContextMenuItem
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   disabled={true}
   onClick={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
 
 exports[`DropdownMenuItem Snapshots renders with index 1`] = `
-<ContextMenuItem
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   index="1"
   onClick={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
 
 exports[`DropdownMenuItem Snapshots renders with keepOpen 1`] = `
-<ContextMenuItem
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   onClick={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
 
 exports[`DropdownMenuItem Snapshots renders with multiSelect 1`] = `
-<ContextMenuItem
-  multiSelect={true}
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   onClick={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-checkbox"
+  >
+    <CheckBox
+      onChange={[Function]}
+    />
+  </div>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
 
 exports[`DropdownMenuItem Snapshots renders with onClick 1`] = `
-<ContextMenuItem
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   onClick={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
 
 exports[`DropdownMenuItem Snapshots renders with onMouseOver 1`] = `
-<ContextMenuItem
+<Base
+  Component="button"
+  className="ax-context-menu__item"
+  data-ax-context-menu-item={true}
   onClick={[Function]}
   onMouseOver={[Function]}
   tabIndex="0"
 >
-  Test
-</ContextMenuItem>
+  <div
+    className="ax-context-menu__item-content"
+  >
+    Test
+  </div>
+</Base>
 `;
