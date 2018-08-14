@@ -16,8 +16,10 @@ export default class DropdownContext extends Component {
     arrowRef: PropTypes.func,
     /** Content to be inserted in the contextual area */
     children: PropTypes.node,
+    closeDropdown: PropTypes.func.isRequired,
     /** Color of the Context */
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    dropdownRef: PropTypes.func.isRequired,
     /** Maximum height for the content area, exceeding this will make it scrollable */
     maxHeight: PropTypes.string,
     /** Position of the content area relative to the arrow */
@@ -27,14 +29,11 @@ export default class DropdownContext extends Component {
   };
 
   static defaultProps = {
+    closeDropdown: () => {},
+    dropdownRef: () => {},
     maxHeight: '30rem',
     position: 'top',
     width: '14.5rem',
-  };
-
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-    dropdownRef: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -57,9 +56,9 @@ export default class DropdownContext extends Component {
   }
 
   handleClick(event) {
-    const dropdownRef = this.context.dropdownRef();
+    const dropdownRef = this.props.dropdownRef();
     if (!dropdownRef.contains(event.target) && !this.el.contains(event.target)) {
-      return this.context.closeDropdown();
+      return this.props.closeDropdown();
     }
   }
 
@@ -82,7 +81,7 @@ export default class DropdownContext extends Component {
     case 'Tab':
     case 'Escape':
       event.preventDefault();
-      return this.context.closeDropdown();
+      return this.props.closeDropdown();
     }
   }
 
@@ -109,7 +108,7 @@ export default class DropdownContext extends Component {
 
   render() {
     return (
-      <Context { ...omit(this.props, ['focusOnOpen', 'onRequestCloseDropdown']) }
+      <Context { ...omit(this.props, ['focusOnOpen', 'onRequestCloseDropdown', 'closeDropdown', 'dropdownRef']) }
           ref={ (el) => this.el = ReactDOM.findDOMNode(el) } />
     );
   }

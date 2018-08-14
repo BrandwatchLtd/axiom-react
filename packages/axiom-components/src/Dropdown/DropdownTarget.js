@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types';
-import { Component, cloneElement } from 'react';
+import React, { Component, cloneElement } from 'react';
+import DropdownReactContext from './DropdownReactContext';
 
 export const DropdownTargetRef = 'DropdownTarget';
 
 export default class DropdownTarget extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-  };
-
-  static contextTypes = {
-    openDropdown: PropTypes.func.isRequired,
-    toggleDropdown: PropTypes.func.isRequired,
   };
 
   static typeRef = DropdownTargetRef;
@@ -20,9 +16,8 @@ export default class DropdownTarget extends Component {
     this.focusEventHasFired = false;
   }
 
-  handleClick(cb, event) {
-    const { toggleDropdown } = this.context;
-
+  handleClick(cb, context, event) {
+    const { toggleDropdown } = context;
     if (this.focusEventHasFired) {
       this.focusEventHasFired = false;
     } else {
@@ -32,8 +27,8 @@ export default class DropdownTarget extends Component {
     if (cb) cb(event);
   }
 
-  handleFocus(cb, event) {
-    const { openDropdown } = this.context;
+  handleFocus(cb, context, event) {
+    const { openDropdown } = context;
     this.focusEventHasFired = true;
     openDropdown(event);
     if (cb) cb(event);
@@ -42,10 +37,16 @@ export default class DropdownTarget extends Component {
   render() {
     const { children, ...rest } = this.props;
 
-    return cloneElement(children, {
-      ...rest,
-      onClick: this.handleClick.bind(this, children.props.onClick),
-      onFocus: this.handleFocus.bind(this, children.props.onFocus),
-    });
+    return (
+      <DropdownReactContext.Consumer>
+        { context =>
+          cloneElement(children, {
+            ...rest,
+            onClick: this.handleClick.bind(this, children.props.onClick, context),
+            onFocus: this.handleFocus.bind(this, children.props.onFocus, context),
+          })
+        }
+      </DropdownReactContext.Consumer>
+    );
   }
 }

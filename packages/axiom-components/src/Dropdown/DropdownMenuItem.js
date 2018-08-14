@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
 import ContextMenuItem from '../Context/ContextMenuItem';
+import DropdownReactContext from './DropdownReactContext';
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {
@@ -24,17 +25,13 @@ export default class DropdownMenuItem extends Component {
     selected: PropTypes.bool,
   };
 
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-  };
-
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event) {
-    const { closeDropdown } = this.context;
+  handleClick(event, context) {
+    const { closeDropdown } = context;
     const { multiSelect, keepOpen, onClick } = this.props;
 
     if (closeDropdown && !multiSelect && !keepOpen) closeDropdown();
@@ -46,12 +43,16 @@ export default class DropdownMenuItem extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <ContextMenuItem
-          { ...omit(rest, ['keepOpen']) }
-          onClick={ this.handleClick }
-          tabIndex="0">
-        { children }
-      </ContextMenuItem>
+      <DropdownReactContext.Consumer>
+        { context =>
+          <ContextMenuItem
+              { ...omit(rest, ['keepOpen']) }
+              onClick={ event => this.handleClick(event, context) }
+              tabIndex="0">
+            { children }
+          </ContextMenuItem>
+        }
+      </DropdownReactContext.Consumer>
     );
   }
 }
