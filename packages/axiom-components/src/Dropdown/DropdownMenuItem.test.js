@@ -25,38 +25,40 @@ describe('DropdownMenuItem', () => {
       disabled: false,
       keepOpen: false,
       multiSelect: false,
-      onClick: jest.fn(),
-    };
-    opts = {
-      context: {
-        closeDropdown: jest.fn(),
-      },
     };
     mockEvent = {};
   });
 
   describe('onClick', () => {
-    it('closes the dropdown menu when clicked', () => {
-      render(props, opts).simulate('click', mockEvent);
-      expect(opts.context.closeDropdown).toHaveBeenCalledTimes(1);
+    let mockCloseDropdown;
+    let context;
+
+    beforeEach(() => {
+      mockCloseDropdown = jest.fn();
+      context = { closeDropdown: mockCloseDropdown };
     });
 
-    it('calls the click property with the event when clicked', () => {
-      render(props, opts).simulate('click', mockEvent);
-      expect(props.onClick).toHaveBeenCalledTimes(1);
-      expect(props.onClick).toHaveBeenCalledWith(mockEvent);
+    it('closes the dropdown menu when clicked', () => {
+      const element = render(props, opts);
+      const elementWithContext = wrapElementWithContext(element, context);
+      elementWithContext.simulate('click', mockEvent);
+      expect(mockCloseDropdown).toHaveBeenCalledTimes(1);
     });
 
     it('does not close the dropdown when multiSelect is set', () => {
       props.multiSelect = true;
-      render(props, opts).simulate('click', mockEvent);
-      expect(opts.context.closeDropdown).not.toHaveBeenCalled();
+      const element = render(props, opts);
+      const elementWithContext = wrapElementWithContext(element, context);
+      elementWithContext.simulate('click', mockEvent);
+      expect(mockCloseDropdown).not.toHaveBeenCalled();
     });
 
     it('does not close the dropdown when keepOpen is set', () => {
       props.keepOpen = true;
-      render(props, opts).simulate('click', mockEvent);
-      expect(opts.context.closeDropdown).not.toHaveBeenCalled();
+      const element = render(props, opts);
+      const elementWithContext = wrapElementWithContext(element, context);
+      elementWithContext.simulate('click', mockEvent);
+      expect(mockCloseDropdown).not.toHaveBeenCalled();
     });
   });
 
