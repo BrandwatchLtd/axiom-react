@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {cloneElement, Component} from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
 
@@ -24,6 +24,7 @@ export default class ContextContent extends Component {
     const {
       color,
       children,
+      closeDropdown,
       hasFullSeparator,
       height,
       maxHeight,
@@ -47,7 +48,7 @@ export default class ContextContent extends Component {
     return (
       <Base { ...rest } className={ classes }>
         <div className="ax-context-content__scroll" style={ { height, maxHeight } }>
-          { children }
+          { cloneElement(children, { closeDropdown }) }
         </div>
       </Base>
     );

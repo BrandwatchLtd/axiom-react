@@ -108,7 +108,7 @@ export default class DropdownContext extends Component {
 
   render() {
     return (
-      <Context { ...omit(this.props, ['focusOnOpen', 'onRequestCloseDropdown', 'closeDropdown', 'dropdownRef']) }
+      <Context { ...omit(this.props, ['focusOnOpen', 'onRequestCloseDropdown', 'dropdownRef']) }
           ref={ (el) => this.el = ReactDOM.findDOMNode(el) } />
     );
   }

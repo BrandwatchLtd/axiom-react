@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
 import ContextMenuItem from '../Context/ContextMenuItem';
-import DropdownReactContext from './DropdownReactContext';
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {
     /** SKIP */
     children: PropTypes.node,
+    closeDropdown: PropTypes.func,
     /** Disabled interactions and applies styling */
     disabled: PropTypes.bool,
    /**
@@ -30,9 +30,8 @@ export default class DropdownMenuItem extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event, context) {
-    const { closeDropdown } = context;
-    const { multiSelect, keepOpen, onClick } = this.props;
+  handleClick(event) {
+    const { closeDropdown, multiSelect, keepOpen, onClick } = this.props;
 
     if (closeDropdown && !multiSelect && !keepOpen) closeDropdown();
 
@@ -40,19 +39,15 @@ export default class DropdownMenuItem extends Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const { children, closeDropdown, ...rest } = this.props;
 
     return (
-      <DropdownReactContext.Consumer>
-        { context =>
-          <ContextMenuItem
-              { ...omit(rest, ['keepOpen']) }
-              onClick={ event => this.handleClick(event, context) }
-              tabIndex="0">
-            { children }
-          </ContextMenuItem>
-        }
-      </DropdownReactContext.Consumer>
+      <ContextMenuItem
+          { ...omit(rest, ['keepOpen']) }
+          onClick={ event => this.handleClick(event) }
+          tabIndex="0">
+        { children }
+      </ContextMenuItem>
     );
   }
 }

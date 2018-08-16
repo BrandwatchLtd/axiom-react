@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { cloneElement, Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
 import Tip from '../Tip/Tip';
@@ -25,6 +25,7 @@ export default class Context extends Component {
     const {
       arrowRef,
       children,
+      closeDropdown,
       maxHeight,
       position,
       width,
@@ -36,7 +37,7 @@ export default class Context extends Component {
       [`ax-context--${color}`]: color,
     });
     const content = () => <div className="ax-context__content" style={ { maxHeight } }>
-      { children }
+      { cloneElement(children, { closeDropdown }) }
     </div>;
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>

@@ -19,6 +19,7 @@ import './DatePicker.css';
 
 export default class DatePickerContext extends Component {
   static propTypes = {
+    closeDropdown: PropTypes.func,
     earliestSelectableDate: PropTypes.instanceOf(Date),
     initialDate: PropTypes.instanceOf(Date),
     latestSelectableDate: PropTypes.instanceOf(Date),
@@ -112,6 +113,7 @@ export default class DatePickerContext extends Component {
     } = this.state;
 
     const {
+      closeDropdown,
       earliestSelectableDate,
       latestSelectableDate,
       rangeSelect,
@@ -123,6 +125,7 @@ export default class DatePickerContext extends Component {
       view,
       ...rest
     } = this.props;
+
 
     const [ startDate, endDate ] = orderDates(selectedStartDate, selectedEndDate);
     const [ earliestDate, latestDate ] = orderDates(earliestSelectableDate, latestSelectableDate);
@@ -177,6 +180,7 @@ export default class DatePickerContext extends Component {
 
         <DropdownContent>
           <DatePickerControls
+              closeDropdown={ closeDropdown }
               onApply={ onApply }
               onCancel={ onCancel }
               rangeSelect={ rangeSelect }

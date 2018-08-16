@@ -5,10 +5,10 @@ import Button from '../Button/Button';
 import ButtonGroup from '../Button/ButtonGroup';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
-import DropdownReactContext from '../Dropdown/DropdownReactContext';
 
 export default class DatePickerControls extends Component {
   static propTypes = {
+    closeDropdown: PropTypes.func,
     onApply: PropTypes.func,
     onCancel: PropTypes.func,
     rangeSelect: PropTypes.bool,
@@ -28,14 +28,14 @@ export default class DatePickerControls extends Component {
     this.handleCancel = this.handleCancel.bind(this);
   }
 
-  handleApply(context) {
-    const { closeDropdown } = context;
+  handleApply() {
+    const { closeDropdown } = this.props;
     this.props.onApply && this.props.onApply();
     closeDropdown();
   }
 
-  handleCancel(context) {
-    const { closeDropdown } = context;
+  handleCancel() {
+    const { closeDropdown } = this.props;
     this.props.onCancel && this.props.onCancel();
     closeDropdown();
   }
@@ -50,32 +50,28 @@ export default class DatePickerControls extends Component {
     } = this.props;
 
     return (
-      <DropdownReactContext.Consumer>
-        { context =>
-          <Grid responsive={ false } space="x1">
-            { view === 'double' && (
-              <GridCell>
-                { rangeSelect && selectedStartDate && mediumDate(selectedStartDate) }
-                { rangeSelect && selectedEndDate && ` – ${mediumDate(selectedEndDate)}` }
-                { !rangeSelect && selectedDate && mediumDate(selectedDate) }
-              </GridCell>
-            ) }
+      <Grid responsive={ false } space="x1">
+        { view === 'double' && (
+          <GridCell>
+            { rangeSelect && selectedStartDate && mediumDate(selectedStartDate) }
+            { rangeSelect && selectedEndDate && ` – ${mediumDate(selectedEndDate)}` }
+            { !rangeSelect && selectedDate && mediumDate(selectedDate) }
+          </GridCell>
+        ) }
 
-            <GridCell shrink>
-              <ButtonGroup>
-                <Button
-                    onClick={ () => this.handleApply(context) }
-                    size="small"
-                    style="primary">Apply</Button>
-                <Button
-                    onClick={ () => this.handleCancel(context) }
-                    size="small"
-                    style="secondary">Cancel</Button>
-              </ButtonGroup>
-            </GridCell>
-          </Grid>
-        }
-      </DropdownReactContext.Consumer>
+        <GridCell shrink>
+          <ButtonGroup>
+            <Button
+                onClick={ this.handleApply }
+                size="small"
+                style="primary">Apply</Button>
+            <Button
+                onClick={ this.handleCancel }
+                size="small"
+                style="secondary">Cancel</Button>
+          </ButtonGroup>
+        </GridCell>
+      </Grid>
     );
   }
 }
