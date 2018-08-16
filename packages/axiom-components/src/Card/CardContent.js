@@ -7,8 +7,6 @@ export default class CardContent extends Component {
   static propTypes = {
     /** Content to be inserted inside the Card */
     children: PropTypes.node.isRequired,
-    /** Color variation */
-    color: PropTypes.oneOf(['default', 'dark', 'darker']),
     /** Indent the separator */
     separatorIndented: PropTypes.bool,
     /** Style of the separator */
@@ -23,11 +21,10 @@ export default class CardContent extends Component {
   }
 
   render() {
-    const { children, color, separatorIndented, separatorStyle, size, ...rest } = this.props;
+    const { children, separatorIndented, separatorStyle, size, ...rest } = this.props;
     const classes = classnames('ax-card__content',
       `ax-card__content--separator-${separatorStyle}`,
       `ax-card__content--size-${size}`, {
-        [`ax-card__content--color-${color}`]: color,
         'ax-card__content--separator-indented': separatorIndented,
       }
     );
