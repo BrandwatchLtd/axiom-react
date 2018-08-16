@@ -6,7 +6,7 @@ export default class DropdownFooter extends Component {
     return (
       <ContextContent { ...this.props }
           hasFullSeparator
-          paddingVertical="small" />
+          paddingVertical="medium" />
     );
   }
 }

@@ -212,5 +212,3 @@ export default class Position extends Component {
     ];
   }
 }
-
-

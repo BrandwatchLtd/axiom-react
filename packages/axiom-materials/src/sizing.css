@@ -67,6 +67,6 @@
   /**
    * Shared component variables.
    */
-  --cmp-context-tip-edge-to-edge: 1.5rem;
+  --cmp-context-tip-edge-to-edge: 0.75rem;
 }
 /* stylelint-enable */

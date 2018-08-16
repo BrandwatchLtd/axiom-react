@@ -19,11 +19,13 @@ export default class Tip extends Component {
     position: PropTypes.string,
     /** The Tip can be configured to have a shadow effect. This value is true by default */
     shadow: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium']),
   };
 
   static defaultProps = {
     shadow: true,
     direction: 'top',
+    size: 'medium',
   };
 
   getArrowStyles = () => {
@@ -40,14 +42,16 @@ export default class Tip extends Component {
   };
 
   render() {
-    const { arrowRef, color, direction, position, children, shadow, ...rest } = this.props;
+    const { arrowRef, color, direction, position, children, shadow, size, ...rest } = this.props;
 
     const classes = classnames(`ax-tip--${direction}`, {
       [`ax-tip--${color}`]: color,
       ['ax-tip--shadow']: shadow,
     });
 
-    const arrowClasses = classnames('ax-tip__arrow');
+    const arrowClasses = classnames('ax-tip__arrow', {
+      [`ax-tip__arrow--${size}`]: size,
+    });
 
     return (
       <Base className={ classes } { ...rest }>

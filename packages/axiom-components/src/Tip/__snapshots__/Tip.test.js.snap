@@ -5,7 +5,7 @@ exports[`Tip renders with arrowRef 1`] = `
   className="ax-tip--top ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -25,7 +25,7 @@ exports[`Tip renders with defaultProps 1`] = `
   className="ax-tip--top ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -45,7 +45,7 @@ exports[`Tip renders with direction bottom 1`] = `
   className="ax-tip--bottom ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -65,7 +65,7 @@ exports[`Tip renders with direction left 1`] = `
   className="ax-tip--left ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -85,7 +85,7 @@ exports[`Tip renders with direction right 1`] = `
   className="ax-tip--right ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -105,7 +105,7 @@ exports[`Tip renders with direction top 1`] = `
   className="ax-tip--top ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -125,7 +125,7 @@ exports[`Tip renders with position 1`] = `
   className="ax-tip--top ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={
       Object {
         "left": "1rem",
@@ -149,7 +149,7 @@ exports[`Tip renders without shadow 1`] = `
   className="ax-tip--top"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -169,7 +169,7 @@ exports[`undefined 1`] = `
   className="ax-tip--top ax-tip--success ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -189,7 +189,7 @@ exports[`undefined 2`] = `
   className="ax-tip--top ax-tip--warning ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -209,7 +209,7 @@ exports[`undefined 3`] = `
   className="ax-tip--top ax-tip--error ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -229,7 +229,7 @@ exports[`undefined 4`] = `
   className="ax-tip--top ax-tip--info ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -249,7 +249,7 @@ exports[`undefined 5`] = `
   className="ax-tip--top ax-tip--shade-1 ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -269,7 +269,7 @@ exports[`undefined 6`] = `
   className="ax-tip--top ax-tip--shade-2 ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -289,7 +289,7 @@ exports[`undefined 7`] = `
   className="ax-tip--top ax-tip--shade-3 ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div
@@ -309,7 +309,7 @@ exports[`undefined 8`] = `
   className="ax-tip--top ax-tip--shade-4 ax-tip--shadow"
 >
   <span
-    className="ax-tip__arrow"
+    className="ax-tip__arrow ax-tip__arrow--medium"
     style={Object {}}
   />
   <div

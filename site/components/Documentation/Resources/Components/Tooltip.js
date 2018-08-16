@@ -4,6 +4,8 @@ import {
   DataPoint,
 } from '@brandwatch/axiom-charts';
 import {
+  Grid,
+  GridCell,
   Tooltip,
   TooltipContent,
   TooltipContext,
@@ -21,21 +23,42 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <Tooltip isVisible position="top">
-            <TooltipTarget>
-              <DataPoints size="2rem">
-                <DataPoint color="giant-leap" />
-                <DataPoint color="critical-mass" />
-                <DataPoint color="new-horizon" />
-              </DataPoints>
-            </TooltipTarget>
+          <Grid>
+            <GridCell>
+              <Tooltip isVisible position="top">
+                <TooltipTarget>
+                  <DataPoints size="2rem">
+                    <DataPoint color="giant-leap" />
+                    <DataPoint color="critical-mass" />
+                    <DataPoint color="new-horizon" />
+                  </DataPoints>
+                </TooltipTarget>
 
-            <TooltipSource theme="night" width="auto">
-              <TooltipContext>
-                <TooltipContent>Tooltip content</TooltipContent>
-              </TooltipContext>
-            </TooltipSource>
-          </Tooltip>
+                <TooltipSource theme="night" width="auto">
+                  <TooltipContext>
+                    <TooltipContent size="tiny">50%</TooltipContent>
+                  </TooltipContext>
+                </TooltipSource>
+              </Tooltip>
+            </GridCell>
+            <GridCell>
+              <Tooltip isVisible position="top">
+                <TooltipTarget>
+                  <DataPoints size="2rem">
+                    <DataPoint color="giant-leap" />
+                    <DataPoint color="critical-mass" />
+                    <DataPoint color="new-horizon" />
+                  </DataPoints>
+                </TooltipTarget>
+
+                <TooltipSource theme="night" width="auto">
+                  <TooltipContext>
+                    <TooltipContent>Tooltip content</TooltipContent>
+                  </TooltipContext>
+                </TooltipSource>
+              </Tooltip>
+            </GridCell>
+          </Grid>
         </DocumentationShowCase>
 
         <DocumentationApi components={ [

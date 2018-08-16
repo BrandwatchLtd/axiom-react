@@ -4,7 +4,11 @@
    * the pre-rotated square we use `Math.sqrt((1.5rem**2)/2)`
    */
   --cmp-context-tip-space: calc(var(--spacing-grid-size) * 2);
-  --cmp-context-padding-small: calc(var(--spacing-grid-size) * 4);
+  --cmp-context-padding-vertical-tiny: calc(var(--spacing-grid-size) / 2);
+  --cmp-context-padding-horizontal-tiny: calc(var(--spacing-grid-size) * 3);
+  --cmp-context-padding-vertical-small: calc(var(--spacing-grid-size) * 1.5);
+  --cmp-context-padding-horizontal-small: calc(var(--spacing-grid-size) * 3);
+  --cmp-context-padding-medium: calc(var(--spacing-grid-size) * 4);
   --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
   --cmp-context-menu-item-padding-vertical: calc(var(--spacing-grid-size) * 3);
 }
@@ -34,9 +38,19 @@
   @nest .ax-context--info & { background-color: var(--color-ui-info); }
 }
 
+.ax-context-content--padding-horizontal-tiny {
+  padding-right: var(--cmp-context-padding-horizontal-tiny);
+  padding-left: var(--cmp-context-padding-horizontal-tiny);
+}
+
 .ax-context-content--padding-horizontal-small {
-  padding-right: var(--cmp-context-padding-small);
-  padding-left: var(--cmp-context-padding-small);
+  padding-right: var(--cmp-context-padding-horizontal-small);
+  padding-left: var(--cmp-context-padding-horizontal-small);
+}
+
+.ax-context-content--padding-horizontal-medium {
+  padding-right: var(--cmp-context-padding-medium);
+  padding-left: var(--cmp-context-padding-medium);
 }
 
 .ax-context-content--padding-horizontal-large {
@@ -44,9 +58,19 @@
   padding-left: var(--cmp-context-padding-large);
 }
 
+.ax-context-content--padding-vertical-tiny {
+  padding-top: var(--cmp-context-padding-vertical-tiny);
+  padding-bottom: var(--cmp-context-padding-vertical-tiny);
+}
+
 .ax-context-content--padding-vertical-small {
-  padding-top: var(--cmp-context-padding-small);
-  padding-bottom: var(--cmp-context-padding-small);
+  padding-top: var(--cmp-context-padding-vertical-small);
+  padding-bottom: var(--cmp-context-padding-vertical-small);
+}
+
+.ax-context-content--padding-vertical-medium {
+  padding-top: var(--cmp-context-padding-medium);
+  padding-bottom: var(--cmp-context-padding-medium);
 }
 
 .ax-context-content--padding-vertical-large {
@@ -61,9 +85,9 @@
   border-top: var(--component-border-width) solid var(--color-theme-border);
 }
 
-.ax-context-content--padding-horizontal-small::before {
-  right: var(--cmp-context-padding-small);
-  left: var(--cmp-context-padding-small);
+.ax-context-content--padding-horizontal-medium::before {
+  right: var(--cmp-context-padding-medium);
+  left: var(--cmp-context-padding-medium);
 }
 
 .ax-context-content--padding-horizontal-none::before,

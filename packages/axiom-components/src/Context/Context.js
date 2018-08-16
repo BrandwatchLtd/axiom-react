@@ -41,7 +41,7 @@ export default class Context extends Component {
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>
         { arrowRef ?
-          <Tip arrowRef={ arrowRef } color={ color } direction={ position }>
+          <Tip arrowRef={ arrowRef } color={ color } direction={ position } size="small">
             { content() }
           </Tip> :
         content()

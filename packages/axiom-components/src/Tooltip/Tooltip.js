@@ -75,7 +75,7 @@ export default class Tooltip extends Component {
     const { isVisible } = this.state;
 
     return (
-      <Position { ...rest } isVisible={ isVisible } position={ position } showArrow>
+      <Position { ...rest } isVisible={ isVisible } position={ position } showArrow >
         <PositionTarget delay={ delay } onClick={ onClick }>
           { findComponent(children, TooltipTargetRef) }
         </PositionTarget>

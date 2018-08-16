@@ -163,7 +163,7 @@ export default class Slider extends Component {
 
           <PositionSource>
             <TooltipContext theme="night" width="auto">
-              <TooltipContent textSize="small" textStrong>
+              <TooltipContent size="tiny" textStrong>
                 { valueFormatter(value) }
               </TooltipContent>
             </TooltipContext>

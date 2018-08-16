@@ -1,10 +1,11 @@
 :root {
   /**
-   * The designs of the tip is 1.5rem from corner to corner. To calculate
+   * The designs of the medium tip is 1.5rem from corner to corner. To calculate
    * the pre-rotated square we use `Math.sqrt((1.5rem**2)/2)`
    */
-  --cmp-tip-size: 1.0606601717798212rem;
-  --cmp-tip-space: calc(var(--spacing-grid-size) * 2);
+  --cmp-tip-size--medium: 1.0606601717798212rem;
+
+  --cmp-tip-size--small: 0.75rem;
 }
 
 .ax-tip__content {
@@ -18,19 +19,33 @@
   background-color: transparent;
 }
 
+.ax-tip__arrow--small {
+  width: var(--cmp-tip-size--small);
+  height: var(--cmp-tip-size--small);
+  margin: var(--cmp-tip-size--small);
+
+  @nest .ax-tip--top & { bottom: calc(var(--cmp-tip-size--small) * -0.5); }
+  @nest .ax-tip--right & { left: calc(var(--cmp-tip-size--small) * -0.5); }
+  @nest .ax-tip--bottom & { top: calc(var(--cmp-tip-size--small) * -0.5); }
+  @nest .ax-tip--left & { right: calc(var(--cmp-tip-size--small) * -0.5); }
+}
+
+.ax-tip__arrow--medium {
+  width: var(--cmp-tip-size--medium);
+  height: var(--cmp-tip-size--medium);
+  margin: var(--cmp-tip-size--medium);
+
+  @nest .ax-tip--top & { bottom: calc(var(--cmp-tip-size--medium) * -0.5); }
+  @nest .ax-tip--right & { left: calc(var(--cmp-tip-size--medium) * -0.5); }
+  @nest .ax-tip--bottom & { top: calc(var(--cmp-tip-size--medium) * -0.5); }
+  @nest .ax-tip--left & { right: calc(var(--cmp-tip-size--medium) * -0.5); }
+}
+
 .ax-tip__arrow {
   position: absolute;
-  width: var(--cmp-tip-size);
-  height: var(--cmp-tip-size);
-  margin: var(--cmp-tip-size);
   transform: rotate(45deg);
   background-color: var(--color-theme-background);
   pointer-events: none;
-
-  @nest .ax-tip--top & { bottom: calc(var(--cmp-tip-size) * -0.5); }
-  @nest .ax-tip--right & { left: calc(var(--cmp-tip-size) * -0.5); }
-  @nest .ax-tip--bottom & { top: calc(var(--cmp-tip-size) * -0.5); }
-  @nest .ax-tip--left & { right: calc(var(--cmp-tip-size) * -0.5); }
 
   @nest .ax-tip--faded { background-color: var(--color-theme-text); }
   @nest .ax-tip--success & { background-color: var(--color-ui-success); }
@@ -47,18 +62,34 @@
   }
 }
 
-.ax-tip--top .ax-tip__arrow {
-  transform: translateY(var(--cmp-tip-size)) rotate(45deg);
+.ax-tip--top .ax-tip__arrow--small {
+  transform: translateY(var(--cmp-tip-size--small)) rotate(45deg);
 }
 
-.ax-tip--right .ax-tip__arrow {
-  transform: translateX(calc(var(--cmp-tip-size) * -1)) rotate(45deg);
+.ax-tip--top .ax-tip__arrow--medium {
+  transform: translateY(var(--cmp-tip-size--medium)) rotate(45deg);
 }
 
-.ax-tip--bottom .ax-tip__arrow {
-  transform: translateY(calc(var(--cmp-tip-size) * -1)) rotate(45deg);
+.ax-tip--right .ax-tip__arrow--small {
+  transform: translateX(calc(var(--cmp-tip-size--small) * -1)) rotate(45deg);
 }
 
-.ax-tip--left .ax-tip__arrow {
-  transform: translateX(var(--cmp-tip-size)) rotate(45deg);
+.ax-tip--right .ax-tip__arrow--medium {
+  transform: translateX(calc(var(--cmp-tip-size--medium) * -1)) rotate(45deg);
+}
+
+.ax-tip--bottom .ax-tip__arrow--small {
+  transform: translateY(calc(var(--cmp-tip-size--small) * -1)) rotate(45deg);
+}
+
+.ax-tip--bottom .ax-tip__arrow--medium {
+  transform: translateY(calc(var(--cmp-tip-size--medium) * -1)) rotate(45deg);
+}
+
+.ax-tip--left .ax-tip__arrow--small {
+  transform: translateX(var(--cmp-tip-size--small)) rotate(45deg);
+}
+
+.ax-tip--left .ax-tip__arrow--medium {
+  transform: translateX(var(--cmp-tip-size--medium)) rotate(45deg);
 }

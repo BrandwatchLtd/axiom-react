@@ -10,9 +10,9 @@ export default class ContextContent extends Component {
     hasFullSeparator: PropTypes.bool,
     height: PropTypes.string,
     maxHeight: PropTypes.string,
-    padding: PropTypes.oneOf(['none', 'small', 'large']),
-    paddingHorizontal: PropTypes.oneOf(['none', 'small', 'large']),
-    paddingVertical: PropTypes.oneOf(['none', 'small', 'large']),
+    padding: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
+    paddingHorizontal: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
+    paddingVertical: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
   };
 
   static defaultProps = {

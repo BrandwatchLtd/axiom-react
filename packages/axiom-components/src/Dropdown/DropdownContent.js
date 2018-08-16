@@ -11,7 +11,7 @@ export default class DropdownContent extends Component {
     /** Maximum height for the content area, exceeding this will make it scrollable */
     maxHeight: PropTypes.string,
     /** Padding size applied to the content area */
-    padding: PropTypes.oneOf(['none', 'small', 'large']),
+    padding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
     /** Horizontal padding size applied to the content area */
     paddingHorizontal: PropTypes.oneOf(['none', 'small', 'large']),
     /** Vertical padding size applied to the content area */

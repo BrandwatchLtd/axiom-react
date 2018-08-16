@@ -149,7 +149,7 @@ exports[`Context renders with arrowRef 1`] = `
     className="ax-tip--top ax-tip--shadow"
   >
     <span
-      className="ax-tip__arrow"
+      className="ax-tip__arrow ax-tip__arrow--small"
       style={Object {}}
     />
     <div
