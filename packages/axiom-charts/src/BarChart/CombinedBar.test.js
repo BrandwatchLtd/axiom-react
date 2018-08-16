@@ -11,7 +11,7 @@ function getComponent(newProps = {}) {
     onClick: jest.fn(),
     onDropdownClose: jest.fn(),
     onDropdownOpen: jest.fn(),
-    data: [],
+    data: {},
     color: 'critical-mass',
     label: 'Possitve',
     value: 4321,

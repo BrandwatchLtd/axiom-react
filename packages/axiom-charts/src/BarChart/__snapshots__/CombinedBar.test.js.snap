@@ -6,7 +6,7 @@ exports[`CombinedBar renders a single bar when benchmark value is less than curr
     DropdownContext={[Function]}
     TooltipContext={[Function]}
     color="giant-leap"
-    data={Array []}
+    data={Object {}}
     label="Possitve"
     onDropdownClose={[Function]}
     onDropdownOpen={[Function]}
@@ -33,7 +33,7 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
     DropdownContext={[Function]}
     TooltipContext={[Function]}
     color="giant-leap"
-    data={Array []}
+    data={Object {}}
     label="Possitve"
     onDropdownClose={[Function]}
     onDropdownOpen={[Function]}
@@ -62,7 +62,7 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
     <ChartContext
       TooltipContext={[Function]}
       color="giant-leap"
-      data={Array []}
+      data={Object {}}
       label="Possitve"
       value={-4271}
     >

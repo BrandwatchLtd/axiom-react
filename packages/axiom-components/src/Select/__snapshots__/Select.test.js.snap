@@ -17,7 +17,7 @@ exports[`Select renders with a selected value 1`] = `
           className="ax-icon ax-icon--chevron-down"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<path d=\\"M4 5L2.5 6.5 8 12l5.5-5.5L12 5 8 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+              "__html": "",
             }
           }
           style={
@@ -61,7 +61,7 @@ exports[`Select renders with defaultProps 1`] = `
           className="ax-icon ax-icon--chevron-down"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<path d=\\"M4 5L2.5 6.5 8 12l5.5-5.5L12 5 8 9z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+              "__html": "",
             }
           }
           style={

@@ -1,6 +1,5 @@
 {
   "plugins": [
-    "@brandwatch/babel-plugin-transform-svg-axiom",
     "transform-class-properties",
     "transform-es2015-classes",
     "transform-object-rest-spread"
@@ -23,17 +22,20 @@
   "env": {
     "development": {
       "plugins": [
+        "@brandwatch/babel-plugin-transform-svg-axiom",
         "react-hot-loader/babel"
       ]
     },
     "static": {
       "plugins": [
+        "@brandwatch/babel-plugin-transform-svg-axiom",
         "@brandwatch/babel-plugin-axiom-imports",
         "transform-react-remove-prop-types"
       ]
     },
     "production": {
       plugins: [
+        "@brandwatch/babel-plugin-transform-svg-axiom",
         "@brandwatch/babel-plugin-axiom-imports",
         "transform-es2015-modules-commonjs"
       ]

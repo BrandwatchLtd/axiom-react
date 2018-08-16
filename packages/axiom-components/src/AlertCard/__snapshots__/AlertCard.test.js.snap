@@ -21,7 +21,7 @@ exports[`AlertCard renders with defaultProps 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -65,7 +65,7 @@ exports[`AlertCard renders with onRemoveClick 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -94,7 +94,7 @@ exports[`AlertCard renders with onRemoveClick 1`] = `
             className="ax-icon ax-icon--cross"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<g fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"><path d=\\"M3.75 12.25l8.5-8.5\\" class=\\"ax-animicon__path-1\\"/><path d=\\"M3.75 3.75l8.5 8.5\\" class=\\"ax-animicon__path-2\\"/></g>",
+                "__html": "",
               }
             }
             style={
@@ -133,7 +133,7 @@ exports[`AlertCard renders with shade shade-1 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -177,7 +177,7 @@ exports[`AlertCard renders with shade shade-2 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -221,7 +221,7 @@ exports[`AlertCard renders with shade shade-3 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -265,7 +265,7 @@ exports[`AlertCard renders with shade shade-4 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -309,7 +309,7 @@ exports[`AlertCard renders with size large 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -353,7 +353,7 @@ exports[`AlertCard renders with size medium 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -397,7 +397,7 @@ exports[`AlertCard renders with size small 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -441,7 +441,7 @@ exports[`AlertCard renders with type error 1`] = `
             className="ax-icon ax-icon--warning"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -485,7 +485,7 @@ exports[`AlertCard renders with type info 1`] = `
             className="ax-icon ax-icon--information"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M10.5 14h-5v-1.25h1.25V7H5.5V5.75h3.75v7h1.25V14zM9.375 3c0 .759-.617 1.375-1.375 1.375A1.376 1.376 0 0 1 6.625 3c0-.758.617-1.375 1.375-1.375S9.375 2.242 9.375 3z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -529,7 +529,7 @@ exports[`AlertCard renders with type success 1`] = `
             className="ax-icon ax-icon--tick"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M3.25 8.25L6 11l6.75-6.75\\" fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"/>",
+                "__html": "",
               }
             }
             style={
@@ -573,7 +573,7 @@ exports[`AlertCard renders with type warning 1`] = `
             className="ax-icon ax-icon--warning"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M6.25 2h3.5l-.5 8.25h-2.5L6.25 2zm.375 11c0-.759.617-1.375 1.375-1.375s1.375.616 1.375 1.375c0 .758-.617 1.375-1.375 1.375A1.377 1.377 0 0 1 6.625 13z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "",
               }
             }
             style={
