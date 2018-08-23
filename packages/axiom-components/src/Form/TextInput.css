@@ -18,6 +18,10 @@
   }
 }
 
+.ax-input__progress {
+  padding-right: var(--component-padding-horizontal-small);
+}
+
 .ax-input__icon--align-right {
   order: 1;
 }
@@ -115,7 +119,7 @@
   }
 }
 
-.ax-input__button-container {
+.ax-input__container {
   display: flex;
 }
 

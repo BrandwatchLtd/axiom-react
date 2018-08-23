@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="1.5.0"></a>
+# [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.4.1...@brandwatch/axiom-materials@1.5.0) (2018-08-16)
+
+
+### Bug Fixes
+
+* **ToolTip:** tooltip arrows made smaller ([815f896](https://github.com/HHogg/axiom/commit/815f896))
+
+
+### Features
+
+* **Icons:** Moved Icons and SVGs to Materials package ([131b066](https://github.com/HHogg/axiom/commit/131b066))
+
+
+
+
       <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-materials@1.4.0...@brandwatch/axiom-materials@1.4.1) (2018-07-05)
 
@@ -14,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.4.0"></a>
+    <a name="1.4.0"></a>
 # [1.4.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-materials@1.3.0...@brandwatch/axiom-materials@1.4.0) (2018-06-29)
 
 
@@ -30,7 +46,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="1.3.0"></a>
+<a name="1.3.0"></a>
 # [1.3.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.2.1...@brandwatch/axiom-materials@1.3.0) (2018-05-10)
 
 

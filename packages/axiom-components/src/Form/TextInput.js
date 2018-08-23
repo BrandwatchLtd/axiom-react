@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import { findComponent } from '@brandwatch/axiom-utils';
 import Base from '../Base/Base';
 import Validate from '../Validation/Validate';
 import TextInputIcon, { TextInputIconRef } from './TextInputIcon';
 import { TextInputButtonRef } from './TextInputButton';
+import ProgressInfinite from '../Progress/ProgressInfinite';
 import InputWrapper from './InputWrapper';
 import './TextInput.css';
 
@@ -19,12 +19,16 @@ export default class TextInput extends Component {
     error: PropTypes.func,
     /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
+    /** Adds a progress indicator the the right of the text input */
+    isInProgress: PropTypes.bool,
     /** Changes the icon to pointer */
     isTarget: PropTypes.bool,
     /** Descriptive label that is placed with the input field */
     label: PropTypes.string,
     /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
+    /** Handler for changing the input field */
+    onChange: PropTypes.func,
     /** Handler for requesting to clear the input field */
     onClear: PropTypes.func,
     /** Handler for when the input field is focused */
@@ -98,6 +102,7 @@ export default class TextInput extends Component {
       error,
       valid,
       invalid,
+      isInProgress,
       isTarget,
       label,
       onClear,
@@ -116,14 +121,8 @@ export default class TextInput extends Component {
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIconRef);
     const button = findComponent(children, TextInputButtonRef);
-    const classes = (isValid) => classnames('ax-input__icon-container', {
-      [`ax-input__icon-container--${size}`]: size,
-      [`ax-input__icon-container--${style}`]: style,
-      'ax-input__icon-container--disabled': disabled,
-      'ax-input__icon-container--focused': hasFocus,
-      'ax-input__icon-container--valid': valid,
-      'ax-input__icon-container--invalid': invalid || isValid === false,
-    });
+    const showOnClear = onClear && value && !isInProgress;
+    const showIcon = icon && (!isInProgress || icon.props.align === 'left');
 
     return (
       <Validate
@@ -132,35 +131,45 @@ export default class TextInput extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <InputWrapper
-              isTarget={ isTarget }
-              label={ label }
-              size={ size }
-              space={ space }
-              usageHint={ usageHint }
-              usageHintPosition={ usageHintPosition }>
-            <div className="ax-input__button-container">
-              <div className={ classes(isValid) }>
-                { onClear && value ? (
-                  <TextInputIcon
-                      align="right"
-                      name="cross"
-                      onClick={ onClear } />
-                  ) : icon
-                }
-
-                <Base { ...rest }
-                    Component="input"
-                    className="ax-input"
-                    disabled={ disabled }
-                    onBlur={ this.handleOnBlur.bind(this) }
-                    onFocus={ this.handleOnFocus.bind(this) }
-                    type={ type }
-                    value={ value } />
-              </div>
-              { button }
-            </div>
-          </InputWrapper>
+          <div className="ax-input__container">
+            <InputWrapper
+                disabled={ disabled }
+                hasFocus={ hasFocus }
+                invalid={ invalid }
+                isTarget={ isTarget }
+                isValid={ isValid }
+                label={ label }
+                size={ size }
+                space={ space }
+                style={ style }
+                usageHint={ usageHint }
+                usageHintPosition={ usageHintPosition }
+                valid={ valid }>
+              {
+                showOnClear && <TextInputIcon
+                    align="right"
+                    name="cross"
+                    onClick={ onClear } />
+              }
+              { !showOnClear && showIcon && icon }
+              <Base { ...rest }
+                  Component="input"
+                  className="ax-input"
+                  disabled={ disabled }
+                  onBlur={ this.handleOnBlur.bind(this) }
+                  onFocus={ this.handleOnFocus.bind(this) }
+                  type={ type }
+                  value={ value } />
+              {
+                isInProgress && (
+                  <span className="ax-input__progress">
+                    <ProgressInfinite sizeRem="1rem" />
+                  </span>
+                )
+              }
+            </InputWrapper>
+            { button }
+          </div>
         }
       </Validate>
     );

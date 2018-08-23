@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import Base from '../Base/Base';
 import Validate from '../Validation/Validate';
 import InputWrapper from './InputWrapper';
+import ProgressInfinite from '../Progress/ProgressInfinite';
 import './TextArea.css';
 
 export default class TextArea extends Component {
@@ -16,8 +17,14 @@ export default class TextArea extends Component {
     height: PropTypes.number,
     /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
+    /** Adds a progress indicator the the right of the text input */
+    isInProgress: PropTypes.bool,
     /** Descriptive label that is placed with the input field */
     label: PropTypes.node,
+    /** Handler for when the input field is blurred */
+    onBlur: PropTypes.func,
+    /** Handler for when the input field is focused */
+    onFocus: PropTypes.func,
     /** See Validate[patterns] */
     patterns: PropTypes.array,
     /**
@@ -44,12 +51,30 @@ export default class TextArea extends Component {
     height: 150,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = { hasFocus: false };
+  }
+
+  handleOnBlur() {
+    const { onBlur = () => {} } = this.props;
+    this.setState({ hasFocus: false });
+    onBlur(...arguments);
+  }
+
+  handleOnFocus() {
+    const { onFocus = () => {} } = this.props;
+    this.setState({ hasFocus: true });
+    onFocus(...arguments);
+  }
+
   render() {
     const {
       disabled,
       error,
       height,
       invalid,
+      isInProgress,
       label,
       patterns,
       placeholder,
@@ -60,8 +85,11 @@ export default class TextArea extends Component {
       value,
       ...rest } = this.props;
 
+    const { hasFocus } = this.state;
+
     const style = { minHeight: height };
-    const classes = (isValid) => classnames('ax-textarea', {
+
+    const textareaClasses = (isValid) => classnames('ax-textarea', {
       'ax-textarea--valid': valid,
       'ax-textarea--invalid': invalid || isValid === false,
     });
@@ -73,14 +101,31 @@ export default class TextArea extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <InputWrapper label={ label } usageHint={ usageHint } usageHintPosition={ usageHintPosition }>
+          <InputWrapper
+              disabled={ disabled }
+              hasFocus={ hasFocus }
+              invalid={ invalid }
+              isValid={ isValid }
+              label={ label }
+              usageHint={ usageHint }
+              usageHintPosition={ usageHintPosition }
+              valid={ valid }>
             <Base { ...rest }
                 Component="textarea"
-                className={ classes(isValid) }
+                className={ textareaClasses(isValid) }
                 disabled={ disabled }
+                onBlur={ this.handleOnBlur.bind(this) }
+                onFocus={ this.handleOnFocus.bind(this) }
                 placeholder={ placeholder }
                 style={ style }
                 value={ value } />
+            {
+              isInProgress && (
+                <span className="ax-textarea__progress">
+                  <ProgressInfinite sizeRem="1rem" />
+                </span>
+              )
+            }
           </InputWrapper>
         }
       </Validate>

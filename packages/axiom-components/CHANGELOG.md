@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.11.0"></a>
+# [4.11.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.10.0...@brandwatch/axiom-components@4.11.0) (2018-08-21)
+
+
+### Features
+
+* **TextArea:** add Progress indicator ([8383091](https://github.com/HHogg/axiom/commit/8383091))
+* **TextInput:** add progress indicator ([bc3072c](https://github.com/HHogg/axiom/commit/bc3072c))
+
+
+
+
+      <a name="4.10.0"></a>
+# [4.10.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.9.0...@brandwatch/axiom-components@4.10.0) (2018-08-16)
+
+
+### Bug Fixes
+
+* **ToolTip:** tooltip arrows made smaller ([815f896](https://github.com/HHogg/axiom/commit/815f896))
+
+
+### Features
+
+* **Icons:** Moved Icons and SVGs to Materials package ([131b066](https://github.com/HHogg/axiom/commit/131b066))
+* **Tip:** can now choose small or medium for tip size ([220f880](https://github.com/HHogg/axiom/commit/220f880))
+* **TooltipContent:** Add option to specify padding and text size ([89a2f14](https://github.com/HHogg/axiom/commit/89a2f14))
+
+
+
+
     <a name="4.9.0"></a>
 # [4.9.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.8.1...@brandwatch/axiom-components@4.9.0) (2018-08-09)
 
@@ -24,7 +54,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.8.1"></a>
+<a name="4.8.1"></a>
 ## [4.8.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.8.0...@brandwatch/axiom-components@4.8.1) (2018-08-02)
 
 
@@ -38,7 +68,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.8.0"></a>
+<a name="4.8.0"></a>
 # [4.8.0](https://github.com/pmsorhaindo/axiom/compare/@brandwatch/axiom-components@4.7.0...@brandwatch/axiom-components@4.8.0) (2018-07-23)
 
 

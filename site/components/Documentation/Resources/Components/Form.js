@@ -51,6 +51,7 @@ export default class Documentation extends Component {
               <TextInput
                   label="Lorem Ipsum"
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
+                  onClear={ (setValue) => setValue('TextInput', 'value', '') }
                   placeholder="Write in me"
                   size="medium"
                   usageHint="This is a usage hint" />

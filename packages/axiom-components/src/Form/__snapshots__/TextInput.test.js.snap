@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput renders when disabled 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium ax-input__icon-container--disabled"
@@ -19,16 +19,16 @@ exports[`TextInput renders when disabled 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders when invalid 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium ax-input__icon-container--invalid"
@@ -42,16 +42,16 @@ exports[`TextInput renders when invalid 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders when valid 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium ax-input__icon-container--valid"
@@ -65,16 +65,16 @@ exports[`TextInput renders when valid 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with TextInputButton 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium"
@@ -88,26 +88,26 @@ exports[`TextInput renders with TextInputButton 1`] = `
         value={undefined}
       />
     </div>
-    <span
-      className="ax-input__button"
+  </label>
+  <span
+    className="ax-input__button"
+  >
+    <button
+      className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--joined-left"
+      disabled={undefined}
     >
-      <button
-        className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--joined-left"
-        disabled={undefined}
-      >
-        Test
-      </button>
-    </span>
-  </div>
-</label>
+      Test
+    </button>
+  </span>
+</div>
 `;
 
 exports[`TextInput renders with TextInputIcon 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium"
@@ -140,16 +140,16 @@ exports[`TextInput renders with TextInputIcon 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with defaultProps 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium"
@@ -163,26 +163,26 @@ exports[`TextInput renders with defaultProps 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with label 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__hint-wrapper ax-space--x2"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
-      className="ax-input__wrapper--label ax-text--size-body"
+      className="ax-input__hint-wrapper ax-space--x2"
     >
-      Lorem ipsum
+      <div
+        className="ax-input__wrapper--label ax-text--size-body"
+      >
+        Lorem ipsum
+      </div>
     </div>
-  </div>
-  <div
-    className="ax-input__button-container"
-  >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium"
     >
@@ -195,16 +195,16 @@ exports[`TextInput renders with label 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with onClear and value 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium"
@@ -242,16 +242,16 @@ exports[`TextInput renders with onClear and value 1`] = `
         value="Lorem"
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with size large 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--large"
@@ -265,16 +265,16 @@ exports[`TextInput renders with size large 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with size medium 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--medium"
@@ -288,16 +288,16 @@ exports[`TextInput renders with size medium 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`TextInput renders with size small 1`] = `
-<label
-  className="ax-input__wrapper ax-space--x4"
+<div
+  className="ax-input__container"
 >
-  <div
-    className="ax-input__button-container"
+  <label
+    className="ax-input__wrapper ax-space--x4"
   >
     <div
       className="ax-input__icon-container ax-input__icon-container--small"
@@ -311,6 +311,6 @@ exports[`TextInput renders with size small 1`] = `
         value={undefined}
       />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;

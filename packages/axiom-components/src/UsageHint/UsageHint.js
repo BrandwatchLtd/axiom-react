@@ -14,17 +14,21 @@ export default class UsageHint extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    showArrow: PropTypes.bool,
   };
+
+  static defaultProps = {
+    showArrow: true,
+  }
 
   render() {
     const {
       children,
-      position,
       ...rest
     } = this.props;
 
     return (
-      <Dropdown { ...rest } position={ position } showArrow>
+      <Dropdown { ...rest } showArrow>
         <DropdownTarget>
           <Link style="subtle" >
             <Icon name="question-mark-circle" size="1rem" />

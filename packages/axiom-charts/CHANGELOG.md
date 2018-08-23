@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.2"></a>
+## [3.1.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.1.1...@brandwatch/axiom-charts@3.1.2) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-charts
+
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.1.0...@brandwatch/axiom-charts@3.1.1) (2018-08-16)
+
+
+### Bug Fixes
+
+* **BarChart:** fix CombinedBar data prop type ([6113a8a](https://github.com/HHogg/axiom/commit/6113a8a))
+
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-charts@3.0.10...@brandwatch/axiom-charts@3.1.0) (2018-08-09)
 

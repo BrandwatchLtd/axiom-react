@@ -14,12 +14,19 @@ const labelSizeMap = {
 export default class InputWrapper extends Component {
   static propTypes = {
     children: PropTypes.node,
+    disabled: PropTypes.bool,
+    hasFocus: PropTypes.bool,
+    inputType: PropTypes.string,
+    invalid: PropTypes.bool,
     isTarget: PropTypes.bool,
+    isValid: PropTypes.bool,
     label: PropTypes.node,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     space: PropTypes.string,
+    style: PropTypes.string,
     usageHint: PropTypes.node,
     usageHintPosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    valid: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -28,10 +35,18 @@ export default class InputWrapper extends Component {
   };
 
   render() {
-    const { children, isTarget, label, size, space, usageHint, usageHintPosition, ...rest } = this.props;
-
+    const { children, disabled, hasFocus, invalid, isTarget, isValid, label, size, space, style, usageHint, usageHintPosition, valid, ...rest } = this.props;
     const classes = classnames('ax-input__wrapper', {
       'ax-input__wrapper--target': isTarget,
+    });
+
+    const innerClasses = (isValid) => classnames('ax-input__icon-container', {
+      [`ax-input__icon-container--${size}`]: size,
+      [`ax-input__icon-container--${style}`]: style,
+      'ax-input__icon-container--disabled': disabled,
+      'ax-input__icon-container--focused': hasFocus,
+      'ax-input__icon-container--valid': valid,
+      'ax-input__icon-container--invalid': invalid || isValid === false,
     });
 
     return (
@@ -62,7 +77,9 @@ export default class InputWrapper extends Component {
             </Base>
           )
         }
-        { children }
+        <div className={ innerClasses(isValid) }>
+          { children }
+        </div>
       </Base>
     );
   }

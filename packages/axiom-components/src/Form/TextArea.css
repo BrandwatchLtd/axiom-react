@@ -1,6 +1,6 @@
 .ax-textarea {
   padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-small);
-  border: var(--component-border-width) solid var(--color-theme-border);
+  border: 0;
   border-radius: var(--component-border-radius);
   background-color: var(--color-theme-background);
   resize: none;
@@ -23,4 +23,10 @@
   &::placeholder {
     color: var(--color-ui-error);
   }
+}
+
+.ax-textarea__progress {
+  align-self: start;
+  padding-top: var(--component-padding-horizontal-small);
+  padding-right: var(--component-padding-horizontal-small);
 }

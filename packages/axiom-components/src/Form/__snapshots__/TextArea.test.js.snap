@@ -13,17 +13,23 @@ exports[`TextArea renders with a label 1`] = `
       Lorem ipsum
     </div>
   </div>
-  <textarea
-    className="ax-textarea"
-    disabled={undefined}
-    placeholder={undefined}
-    style={
-      Object {
-        "minHeight": 150,
+  <div
+    className="ax-input__icon-container ax-input__icon-container--medium"
+  >
+    <textarea
+      className="ax-textarea"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder={undefined}
+      style={
+        Object {
+          "minHeight": 150,
+        }
       }
-    }
-    value={undefined}
-  />
+      value={undefined}
+    />
+  </div>
 </label>
 `;
 
@@ -31,17 +37,23 @@ exports[`TextArea renders with custom height 1`] = `
 <label
   className="ax-input__wrapper ax-space--x4"
 >
-  <textarea
-    className="ax-textarea"
-    disabled={undefined}
-    placeholder={undefined}
-    style={
-      Object {
-        "minHeight": 300,
+  <div
+    className="ax-input__icon-container ax-input__icon-container--medium"
+  >
+    <textarea
+      className="ax-textarea"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder={undefined}
+      style={
+        Object {
+          "minHeight": 300,
+        }
       }
-    }
-    value={undefined}
-  />
+      value={undefined}
+    />
+  </div>
 </label>
 `;
 
@@ -49,16 +61,22 @@ exports[`TextArea renders with defaultProps 1`] = `
 <label
   className="ax-input__wrapper ax-space--x4"
 >
-  <textarea
-    className="ax-textarea"
-    disabled={undefined}
-    placeholder={undefined}
-    style={
-      Object {
-        "minHeight": 150,
+  <div
+    className="ax-input__icon-container ax-input__icon-container--medium"
+  >
+    <textarea
+      className="ax-textarea"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder={undefined}
+      style={
+        Object {
+          "minHeight": 150,
+        }
       }
-    }
-    value={undefined}
-  />
+      value={undefined}
+    />
+  </div>
 </label>
 `;
