@@ -67,6 +67,7 @@ export default class Icon extends Component {
       'line-graph',
       'list',
       'location',
+      'lock',
       'magnify-glass',
       'minus',
       'monitor',

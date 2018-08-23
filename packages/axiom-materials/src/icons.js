@@ -50,6 +50,7 @@ export default {
   'line-graph': require('./icon_svgs/line-graph.svg'),
   'list': require('./icon_svgs/list.svg'),
   'location': require('./icon_svgs/location.svg'),
+  'lock': require('./icon_svgs/lock.svg'),
   'magnify-glass': require('./icon_svgs/magnify-glass.svg'),
   'minus': require('./icon_svgs/minus.svg'),
   'monitor': require('./icon_svgs/monitor.svg'),
