@@ -87,6 +87,11 @@
   padding-bottom: var(--spacing-grid-size--x6);
 }
 
+.ax-card__content--shade-1 { background-color: var(--color-theme-background--shade-1); }
+.ax-card__content--shade-2 { background-color: var(--color-theme-background--shade-2); }
+.ax-card__content--shade-3 { background-color: var(--color-theme-background--shade-3); }
+.ax-card__content--shade-4 { background-color: var(--color-theme-background--shade-4); }
+
 .ax-card--hover:not(.ax-card--shadow) .ax-card__content,
 .ax-card--clickable:not(.ax-card--shadow):focus .ax-card__content,
 .ax-card--clickable:not(.ax-card--shadow):hover .ax-card__content {
