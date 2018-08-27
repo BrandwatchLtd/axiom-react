@@ -18,6 +18,11 @@ export default class ChartLayoutLabels extends Component {
     upper: PropTypes.number,
   };
 
+  static defaultProps = {
+    lower: 0,
+    upper: 100,
+  };
+
   render() {
     const { axis, labels, lower, upper, ...rest } = this.props;
     const side = axis === 'y' ? 'bottom' : 'left';
