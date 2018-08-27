@@ -20,7 +20,7 @@ export default class ChartLayoutLabels extends Component {
 
   render() {
     const { axis, labels, lower, upper, ...rest } = this.props;
-    const side = axis === 'y' ? 'top' : 'left';
+    const side = axis === 'y' ? 'bottom' : 'left';
     const isPrecise = typeof labels[0].value === 'number';
     const classes = classnames(`ax-chart-layout__${axis}-labels`, {
       'ax-chart-layout__labels--precise': isPrecise,
@@ -39,8 +39,8 @@ export default class ChartLayoutLabels extends Component {
                 <ChartLabel>{ label }</ChartLabel>
               </div>
               <div
-                  className="ax-chart-layout__label"
-                  style={ { [side]: `${100 - ((value - lower) / (upper - lower)) * 100}%` } }>
+                  className={ `ax-chart-layout__${axis}-label` }
+                  style={ { [side]: `${(value - lower) / (upper - lower) * 100}%` } }>
                 <ChartLabel>{ label }</ChartLabel>
               </div>
             </Fragment>

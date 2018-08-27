@@ -57,9 +57,14 @@
   position: relative;
 }
 
-.ax-chart-layout__label {
+.ax-chart-layout__y-label {
   position: absolute;
-  transform: translateY(-50%);
+  transform: translateY(50%);
+}
+
+.ax-chart-layout__x-label {
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .ax-chart-layout__x-labels .ax-chart-layout__label { top: 0; }
