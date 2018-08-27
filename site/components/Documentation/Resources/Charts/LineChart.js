@@ -7,7 +7,7 @@ import {
 } from '@brandwatch/axiom-documentation-viewer';
 import DropdownContext from './DropdownContext';
 import TooltipContext from './TooltipContext';
-import { lineChartData, lineChartKey } from './chartData';
+import { lineChartData, lineChartKey, lineChartXAxisLabels } from './chartData';
 
 export default class Documentation extends Component {
   render() {
@@ -22,21 +22,7 @@ export default class Documentation extends Component {
               height="12rem"
               lower={ 0 }
               upper={ 30 }
-              xAxisLabels={ () => [
-                'Dec 1',
-                'Dec 3',
-                'Dec 5',
-                'Dec 7',
-                'Dec 9',
-                'Dec 11',
-                'Dec 13',
-                'Dec 15',
-                'Dec 17',
-                'Dec 19',
-                'Dec 21',
-                'Dec 23',
-                'Dec 25',
-              ] }
+              xAxisLabels={ () => lineChartXAxisLabels }
               xAxisTitle="Previous 30 days"
               yAxisLabels={ [
                 { label: '0M', value: 0 },

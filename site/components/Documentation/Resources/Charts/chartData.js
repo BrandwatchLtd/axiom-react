@@ -192,6 +192,12 @@ export const lineChartData = [{
   values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
 }];
 
+/* Data points for Dec 1st until Dec 27th. Create labels for every 2nd day */
+export const lineChartXAxisLabels = Array(14).fill(null).map((_, index) => ({
+  label: `Dec ${ 1 + index * 2 }`,
+  value: index * 100 / 13,
+}));
+
 export const sparkLineBenchmark = 10;
 
 export const sparkLineData = [{
