@@ -54,9 +54,13 @@ export default class LineChart extends Component {
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
-     * Method which returns the labels to be shown along the xAxis, also used to determine where grid lines are drawn
+     * Labels to be shown along the xAxis. Each label contains of a `value`,
+     * defining the position on the xAxis in percent, and an optional `label`.
      */
-    xAxisLabels: PropTypes.func,
+    xAxisLabels: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.node,
+      value: PropTypes.number.isRequired,
+    })),
     /** The title that appears along the xAxis */
     xAxisTitle: PropTypes.node,
     /**
@@ -138,13 +142,12 @@ export default class LineChart extends Component {
     const finalUpper = Math.max(upper, dataUpper);
     const labelMap = chartKey.reduce((map, { color, label, style }) =>
       ({ ...map, [label]: { color, style } }), {});
-    const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
 
     return (
       <ChartLayout { ...rest }>
         { xAxisTitle && <ChartLayoutTitle axis="x">{ xAxisTitle }</ChartLayoutTitle> }
         { yAxisTitle && <ChartLayoutTitle axis="y">{ yAxisTitle }</ChartLayoutTitle> }
-        { finalXAxisLabels.length > 0 && <ChartLayoutLabels axis="x" labels={ finalXAxisLabels } /> }
+        { xAxisLabels.length > 0 && <ChartLayoutLabels axis="x" labels={ xAxisLabels } /> }
         { yAxisLabels && (
           <ChartLayoutLabels
               axis="y"

@@ -22,7 +22,7 @@ export default class Documentation extends Component {
               height="12rem"
               lower={ 0 }
               upper={ 30 }
-              xAxisLabels={ () => lineChartXAxisLabels }
+              xAxisLabels={ lineChartXAxisLabels }
               xAxisTitle="Previous 30 days"
               yAxisLabels={ [
                 { label: '0M', value: 0 },
