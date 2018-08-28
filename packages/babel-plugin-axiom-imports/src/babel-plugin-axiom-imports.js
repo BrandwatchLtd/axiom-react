@@ -70,8 +70,7 @@ module.exports = ({ types }) => {
 
       MemberExpression(path) {
         if (matchesAxiomExport(path, path.node.object.name)) {
-          const { type, name } = importAxiom(specified[path.node.object.name], path.hub.file);
-          path.replaceWith(types.memberExpression({ type, name }, types.identifier(path.node.property.name)));
+          path.node.object.name = importAxiom(specified[path.node.object.name], path.hub.file).name;
         }
       },
 

@@ -111,6 +111,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 console.log(_axiomMaterials2.default.colors); /* eslint-disable no-console */"
 `;
 
+exports[`babelPluginAxiom property access 1`] = `
+"'use strict';
+
+var _colors = require('@brandwatch/axiom-materials/dist/colors');
+
+var _ = _interopRequireWildcard(_colors);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+console.log(_.foo); /* eslint-disable no-console */
+
+console.log(_['foo']);
+console.log(_['foo-bar']);"
+`;
+
 exports[`babelPluginAxiom scoped imports 1`] = `
 "'use strict';
 
