@@ -5,6 +5,10 @@ import omit from 'lodash.omit';
 import Context from '../Context/Context';
 import { contextMenuItemSelector } from '../Context/ContextMenuItem';
 
+if (typeof window !== 'undefined') {
+  require('element-closest');
+}
+
 const isFocusableMenuItem = (element) =>
   element && element.hasAttribute(contextMenuItemSelector) &&
     !element.disabled;
@@ -41,6 +45,7 @@ export default class DropdownContext extends Component {
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
   componentWillMount() {
@@ -50,10 +55,12 @@ export default class DropdownContext extends Component {
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
     document.removeEventListener('mousedown', this.handleClick);
+    document.removeEventListener('mousemove', this.handleMouseMove);
   }
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClick);
+    document.addEventListener('mousemove', this.handleMouseMove);
   }
 
   handleClick(event) {
@@ -69,6 +76,18 @@ export default class DropdownContext extends Component {
 
   getMenuItems() {
     return [...this.el.querySelectorAll(`[${contextMenuItemSelector}]:not(:disabled)`)];
+  }
+
+  focusMenuItem(element) {
+    const menuItem = element.closest(`[${contextMenuItemSelector}]`);
+
+    if (menuItem && isFocusableMenuItem(menuItem)) {
+      menuItem.focus();
+    }
+  }
+
+  handleMouseMove(event) {
+    this.focusMenuItem(event.target);
   }
 
   handleKeyDown(event) {
