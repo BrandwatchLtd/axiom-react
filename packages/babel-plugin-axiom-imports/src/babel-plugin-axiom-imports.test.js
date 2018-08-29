@@ -1,6 +1,7 @@
 import path from 'path';
 import { transformFileSync } from 'babel-core';
 import babelPluginAxiom from './babel-plugin-axiom-imports';
+import babelPluginTransformSvgAxiom from '../../babel-plugin-transform-svg-axiom';
 
 describe('babelPluginAxiom', () => {
   test('aliased imports', () => {
@@ -36,6 +37,12 @@ describe('babelPluginAxiom', () => {
   test('scoped imports', () => {
     expect(transformFileSync(path.resolve(__dirname, '../test/scoped.js'), {
       plugins: [babelPluginAxiom],
+    }).code).toMatchSnapshot();
+  });
+
+  test('property access', () => {
+    expect(transformFileSync(path.resolve(__dirname, '../test/property.js'), {
+      plugins: [babelPluginTransformSvgAxiom, babelPluginAxiom],
     }).code).toMatchSnapshot();
   });
 });
