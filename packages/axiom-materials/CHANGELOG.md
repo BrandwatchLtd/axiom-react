@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="1.5.0"></a>
+    <a name="1.6.0"></a>
+# [1.6.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.5.0...@brandwatch/axiom-materials@1.6.0) (2018-08-28)
+
+
+### Features
+
+* **Icon:** adds new lock icon ([8c021a1](https://github.com/tomru/axiom/commit/8c021a1))
+
+
+
+
+    <a name="1.5.0"></a>
 # [1.5.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.4.1...@brandwatch/axiom-materials@1.5.0) (2018-08-16)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.4.1"></a>
+  <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/BrandwatchLtd/axiom/compare/@brandwatch/axiom-materials@1.4.0...@brandwatch/axiom-materials@1.4.1) (2018-07-05)
 
 
@@ -30,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.4.0"></a>
+<a name="1.4.0"></a>
 # [1.4.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-materials@1.3.0...@brandwatch/axiom-materials@1.4.0) (2018-06-29)
 
 

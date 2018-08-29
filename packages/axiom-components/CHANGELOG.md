@@ -3,7 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.11.0"></a>
+    <a name="4.12.0"></a>
+# [4.12.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.12.0) (2018-08-28)
+
+
+### Bug Fixes
+
+* **card:** remove unused color prop ([3d3c9d7](https://github.com/tomru/axiom/commit/3d3c9d7))
+
+
+### Features
+
+* **card:** add shade prop to card content ([61e9480](https://github.com/tomru/axiom/commit/61e9480))
+* **Icon:** adds new lock icon ([8c021a1](https://github.com/tomru/axiom/commit/8c021a1))
+
+
+
+
+    <a name="4.11.0"></a>
 # [4.11.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.10.0...@brandwatch/axiom-components@4.11.0) (2018-08-21)
 
 
@@ -15,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.10.0"></a>
+  <a name="4.10.0"></a>
 # [4.10.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.9.0...@brandwatch/axiom-components@4.10.0) (2018-08-16)
 
 
@@ -33,7 +50,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.9.0"></a>
+<a name="4.9.0"></a>
 # [4.9.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.8.1...@brandwatch/axiom-components@4.9.0) (2018-08-09)
 
 
