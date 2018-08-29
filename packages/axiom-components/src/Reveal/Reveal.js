@@ -9,6 +9,8 @@ export default class Reveal extends Component {
   static propTypes = {
     /** Content that will revealed */
     children: PropTypes.node.isRequired,
+    /** Removes children from the reveal container when it is collapsed */
+    removeChildren: PropTypes.bool,
     /** SKIP */
     space: PropTypes.string,
     /** Revealed status, true will expand out the content, false will collapse it. */
@@ -19,6 +21,7 @@ export default class Reveal extends Component {
     super(props);
     this.state = {
       height: 0,
+      isTransitioning: props.visible,
       overflow: 'hidden',
     };
   }
@@ -29,6 +32,8 @@ export default class Reveal extends Component {
     this.el.addEventListener('transitionend', () => {
       if (this.props.visible) {
         this.afterReveal();
+      } else {
+        this.afterConceal();
       }
     });
 
@@ -53,7 +58,7 @@ export default class Reveal extends Component {
   }
 
   conceal() {
-    this.setState({ overflow: 'hidden' });
+    this.setState({ isTransitioning: true, overflow: 'hidden' });
     this._frameId = window.requestAnimationFrame(() => {
       this.setState({ height: this.inner.offsetHeight });
       this._frameId = window.requestAnimationFrame(() => {
@@ -62,23 +67,31 @@ export default class Reveal extends Component {
     });
   }
 
+  afterConceal() {
+    this.setState({ isTransitioning: false });
+  }
+
   reveal() {
-    this.setState({
-      height: this.inner.offsetHeight,
-      opacity: 1,
+    this._frameId = window.requestAnimationFrame(() => {
+      this.setState({
+        height: this.inner.offsetHeight,
+        opacity: 1,
+      });
     });
   }
 
   afterReveal() {
     this.setState({
       height: undefined,
+      isTransitioning: false,
       overflow: undefined,
     });
   }
 
   render() {
-    const { height, opacity, overflow } = this.state;
-    const { children, space, visible, ...rest } = this.props;
+    const { height, isTransitioning, opacity, overflow } = this.state;
+    const { children, removeChildren, space, visible, ...rest } = this.props;
+    const renderChildren = isTransitioning || !removeChildren || visible;
     const style = { height, opacity, overflow };
     const innerStyle = { overflow };
     const classes = classnames('ax-reveal', {
@@ -96,7 +109,7 @@ export default class Reveal extends Component {
             className="ax-reveal__inner"
             ref={ (el) => this.inner = el }
             style={ innerStyle }>
-          { children }
+          { renderChildren && children }
         </div>
       </Base>
     );
