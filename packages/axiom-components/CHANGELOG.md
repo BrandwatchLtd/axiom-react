@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.12.0"></a>
+      <a name="4.12.1"></a>
+## [4.12.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.0...@brandwatch/axiom-components@4.12.1) (2018-08-29)
+
+
+### Bug Fixes
+
+* **Badge:** Remove incorrect flex end alignment to allow text alignment ([c112cb7](https://github.com/HHogg/axiom/commit/c112cb7))
+
+
+
+
+      <a name="4.12.0"></a>
 # [4.12.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.12.0) (2018-08-28)
 
 
@@ -20,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.11.0"></a>
+  <a name="4.11.0"></a>
 # [4.11.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.10.0...@brandwatch/axiom-components@4.11.0) (2018-08-21)
 
 
@@ -32,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.10.0"></a>
+<a name="4.10.0"></a>
 # [4.10.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.9.0...@brandwatch/axiom-components@4.10.0) (2018-08-16)
 
 

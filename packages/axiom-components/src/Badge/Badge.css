@@ -1,7 +1,6 @@
 .ax-badge {
   display: inline-flex;
   position: relative;
-  justify-content: flex-end;
   padding: 0 calc(var(--component-line-height) * 0.5);
   border-radius: var(--component-line-height);
   font-size: var(--font-size-small);
@@ -33,6 +32,7 @@
 
 .ax-badge__content {
   position: relative;
+  width: 100%;
 }
 
 .ax-badge__background {
