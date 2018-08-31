@@ -79,6 +79,18 @@
   }
 }
 
+.ax-toggle--align-left {
+  justify-content: flex-start;
+}
+
+.ax-toggle--align-right {
+  justify-content: flex-end;
+}
+
+.ax-toggle--align-full {
+  justify-content: space-between;
+}
+
 .ax-toggle__input:checked {
   & + .ax-toggle__appearance {
     background-color: var(--color-ui-accent);

@@ -43,4 +43,22 @@ describe('Toggle', () => {
       <Toggle onToggle={ onToggle } size="medium" toggled={ false } />
     ).toJSON()).toMatchSnapshot();
   });
+
+  it('renders with align left', () => {
+    expect(renderer.create(
+      <Toggle align="left" onToggle={ onToggle } toggled={ false } />
+    ).toJSON()).toMatchSnapshot();
+  });
+
+  it('renders with align right', () => {
+    expect(renderer.create(
+      <Toggle align="right" onToggle={ onToggle } toggled={ false } />
+    ).toJSON()).toMatchSnapshot();
+  });
+
+  it('renders with align full', () => {
+    expect(renderer.create(
+      <Toggle align="full" onToggle={ onToggle } toggled={ false } />
+    ).toJSON()).toMatchSnapshot();
+  });
 });

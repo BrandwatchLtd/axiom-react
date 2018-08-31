@@ -2,7 +2,7 @@
 
 exports[`Toggle renders as not toggled 1`] = `
 <label
-  className="ax-toggle ax-toggle--small ax-toggle--enabled ax-space--x2"
+  className="ax-toggle ax-toggle--small ax-toggle--align-left ax-toggle--enabled ax-space--x2"
 >
   <span
     className="ax-toggle__switch"
@@ -23,7 +23,7 @@ exports[`Toggle renders as not toggled 1`] = `
 
 exports[`Toggle renders as toggled 1`] = `
 <label
-  className="ax-toggle ax-toggle--small ax-toggle--enabled ax-space--x2"
+  className="ax-toggle ax-toggle--small ax-toggle--align-left ax-toggle--enabled ax-space--x2"
 >
   <span
     className="ax-toggle__switch"
@@ -42,9 +42,72 @@ exports[`Toggle renders as toggled 1`] = `
 </label>
 `;
 
+exports[`Toggle renders with align full 1`] = `
+<label
+  className="ax-toggle ax-toggle--small ax-toggle--align-full ax-toggle--enabled ax-space--x2"
+>
+  <span
+    className="ax-toggle__switch"
+  >
+    <input
+      checked={false}
+      className="ax-toggle__input"
+      disabled={undefined}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="ax-toggle__appearance"
+    />
+  </span>
+</label>
+`;
+
+exports[`Toggle renders with align left 1`] = `
+<label
+  className="ax-toggle ax-toggle--small ax-toggle--align-left ax-toggle--enabled ax-space--x2"
+>
+  <span
+    className="ax-toggle__switch"
+  >
+    <input
+      checked={false}
+      className="ax-toggle__input"
+      disabled={undefined}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="ax-toggle__appearance"
+    />
+  </span>
+</label>
+`;
+
+exports[`Toggle renders with align right 1`] = `
+<label
+  className="ax-toggle ax-toggle--small ax-toggle--align-right ax-toggle--enabled ax-space--x2"
+>
+  <span
+    className="ax-toggle__switch"
+  >
+    <input
+      checked={false}
+      className="ax-toggle__input"
+      disabled={undefined}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="ax-toggle__appearance"
+    />
+  </span>
+</label>
+`;
+
 exports[`Toggle renders with disabled 1`] = `
 <label
-  className="ax-toggle ax-toggle--small ax-space--x2"
+  className="ax-toggle ax-toggle--small ax-toggle--align-left ax-space--x2"
 >
   <span
     className="ax-toggle__switch"
@@ -65,7 +128,7 @@ exports[`Toggle renders with disabled 1`] = `
 
 exports[`Toggle renders with label children 1`] = `
 <label
-  className="ax-toggle ax-toggle--small ax-toggle--enabled ax-space--x2"
+  className="ax-toggle ax-toggle--small ax-toggle--align-left ax-toggle--enabled ax-space--x2"
 >
   <span
     className="ax-toggle__label"
@@ -91,7 +154,7 @@ exports[`Toggle renders with label children 1`] = `
 
 exports[`Toggle renders with size medium 1`] = `
 <label
-  className="ax-toggle ax-toggle--medium ax-toggle--enabled ax-space--x2"
+  className="ax-toggle ax-toggle--medium ax-toggle--align-left ax-toggle--enabled ax-space--x2"
 >
   <span
     className="ax-toggle__switch"
@@ -112,7 +175,7 @@ exports[`Toggle renders with size medium 1`] = `
 
 exports[`Toggle renders with size small 1`] = `
 <label
-  className="ax-toggle ax-toggle--small ax-toggle--enabled ax-space--x2"
+  className="ax-toggle ax-toggle--small ax-toggle--align-left ax-toggle--enabled ax-space--x2"
 >
   <span
     className="ax-toggle__switch"

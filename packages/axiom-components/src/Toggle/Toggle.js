@@ -6,6 +6,8 @@ import './Toggle.css';
 
 export default class Toggle extends Component {
   static propTypes = {
+    /** Set alignment of the switch **/
+    align: PropTypes.oneOf(['left', 'right', 'full']),
     /** Label that is inserted next to the toggle switch */
     children: PropTypes.node,
     /** Disabled control of the switch */
@@ -19,12 +21,13 @@ export default class Toggle extends Component {
   };
 
   static defaultProps = {
+    align: 'left',
     size: 'small',
   };
 
   render() {
-    const { children, disabled, size, toggled, onToggle, ...rest } = this.props;
-    const classes = classnames('ax-toggle', `ax-toggle--${size}`, {
+    const { align, children, disabled, size, toggled, onToggle, ...rest } = this.props;
+    const classes = classnames('ax-toggle', `ax-toggle--${size}`, `ax-toggle--align-${align}`, {
       'ax-toggle--enabled': !disabled,
     });
 
