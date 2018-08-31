@@ -22,14 +22,25 @@ export default class DatePicker extends Component {
     onApply: PropTypes.func,
     /** Callback for when the cancel button has been clicked */
     onCancel: PropTypes.func,
-    /** Callback for when a date or range has been selected */
+    /** Callback for when a date, range with endDate and startDate, or a range
+     * out of rangeSelections has been selected */
     onSelect: PropTypes.func.isRequired,
     /** Whether a date range can be selected */
     rangeSelect: PropTypes.bool,
+    /** Predefined date ranges offered for selection. label will be shown and
+     * range is passed to onSelect when clicked. */
+    rangeSelections: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        range: PropTypes.string.isRequired,
+      }),
+    ),
     /** A single date that appears selected */
     selectedDate: PropTypes.instanceOf(Date),
     /** The date selected at the end of the range */
     selectedEndDate: PropTypes.instanceOf(Date),
+    /** The selected range, specified as it's label */
+    selectedRange: PropTypes.string,
     /** The date selected at the start of the range */
     selectedStartDate: PropTypes.instanceOf(Date),
     /** Configuration for a single date picker view or two pickers side by side */
