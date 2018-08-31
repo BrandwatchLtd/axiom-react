@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.13.0"></a>
+# [4.13.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.1...@brandwatch/axiom-components@4.13.0) (2018-08-30)
+
+
+### Features
+
+* **Reveal:** Added option to remove the contents of Reveal when it is collapsed ([8084b94](https://github.com/HHogg/axiom/commit/8084b94))
+
+
+
+
       <a name="4.12.1"></a>
 ## [4.12.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.0...@brandwatch/axiom-components@4.12.1) (2018-08-29)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.12.0"></a>
+    <a name="4.12.0"></a>
 # [4.12.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.11.0...@brandwatch/axiom-components@4.12.0) (2018-08-28)
 
 
@@ -31,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.11.0"></a>
+<a name="4.11.0"></a>
 # [4.11.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.10.0...@brandwatch/axiom-components@4.11.0) (2018-08-21)
 
 
