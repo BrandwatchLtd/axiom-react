@@ -40,7 +40,7 @@ export default class InputWrapper extends Component {
       'ax-input__wrapper--target': isTarget,
     });
 
-    const innerClasses = (isValid) => classnames('ax-input__icon-container', {
+    const innerClasses = classnames('ax-input__icon-container', {
       [`ax-input__icon-container--${size}`]: size,
       [`ax-input__icon-container--${style}`]: style,
       'ax-input__icon-container--disabled': disabled,
@@ -77,7 +77,7 @@ export default class InputWrapper extends Component {
             </Base>
           )
         }
-        <div className={ innerClasses(isValid) }>
+        <div className={ innerClasses }>
           { children }
         </div>
       </Base>

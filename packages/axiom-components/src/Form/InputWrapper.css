@@ -22,6 +22,7 @@
 .ax-input__wrapper {
   display: flex;
   position: relative;
+  flex: 1 1 0%;
   flex-direction: column;
 }
 
