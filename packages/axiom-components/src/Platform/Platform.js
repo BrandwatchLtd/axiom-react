@@ -12,7 +12,7 @@ export default class Platform extends Component {
     openConsolePosition: PropTypes.oneOf(['left', 'right']),
     openConsoleWidth: PropTypes.string,
     responsive: PropTypes.bool,
-    shade: PropTypes.oneOf(['shade-1', 'shade-2']),
+    shade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
   };
 
   static defaultProps = {
