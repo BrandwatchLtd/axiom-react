@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.14.0"></a>
+      <a name="4.14.1"></a>
+## [4.14.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.0...@brandwatch/axiom-components@4.14.1) (2018-09-06)
+
+
+### Bug Fixes
+
+* **Slider:** Fix onSlideEnd being unrecognised ([ae7537e](https://github.com/HHogg/axiom/commit/ae7537e))
+* **TextInput:** Fix input growing to available space ([380ca98](https://github.com/HHogg/axiom/commit/380ca98))
+
+
+
+
+      <a name="4.14.0"></a>
 # [4.14.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.13.0...@brandwatch/axiom-components@4.14.0) (2018-09-04)
 
 
@@ -20,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.13.0"></a>
+  <a name="4.13.0"></a>
 # [4.13.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.1...@brandwatch/axiom-components@4.13.0) (2018-08-30)
 
 
@@ -31,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.12.1"></a>
+<a name="4.12.1"></a>
 ## [4.12.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.0...@brandwatch/axiom-components@4.12.1) (2018-08-29)
 
 
