@@ -120,6 +120,18 @@
   background-color: var(--color-theme-background--shade-2);
 }
 
+.ax-platform--shade-3.ax-platform,
+.ax-platform--shade-3 .ax-platform__canvas,
+.ax-platform--shade-3 .ax-platform__canvas-header {
+  background-color: var(--color-theme-background--shade-3);
+}
+
+.ax-platform--shade-4.ax-platform,
+.ax-platform--shade-4 .ax-platform__canvas,
+.ax-platform--shade-4 .ax-platform__canvas-header {
+  background-color: var(--color-theme-background--shade-4);
+}
+
 .ax-platform__console-header--separator,
 .ax-platform__canvas-header--separator {
   border-bottom: 0.0625rem solid var(--color-theme-border);
