@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import omit from 'lodash.omit';
 import Base from '../Base/Base';
 import Position from '../Position/Position';
 import PositionSource from '../Position/PositionSource';
@@ -134,7 +135,7 @@ export default class Slider extends Component {
     });
 
     return (
-      <Base { ...rest }
+      <Base { ...omit(rest, ['onSlideEnd']) }
           className={ classes }
           onBlur={ this.handleBlur }
           onFocus={ disabled ? null : this.handleFocus }
