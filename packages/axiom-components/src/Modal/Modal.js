@@ -58,9 +58,9 @@ export default class Modal extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.isOpen) {
+    if (!prevProps.isOpen && this.props.isOpen) {
       disableScrolling();
-    } else {
+    } else if (prevProps.isOpen && !this.props.isOpen) {
       enableScrolling();
     }
 
