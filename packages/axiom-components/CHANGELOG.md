@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.14.2"></a>
+## [4.14.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.1...@brandwatch/axiom-components@4.14.2) (2018-09-10)
+
+
+### Bug Fixes
+
+* **Dropdown:** Implement native style hover and focus ([950536e](https://github.com/HHogg/axiom/commit/950536e))
+
+
+
+
       <a name="4.14.1"></a>
 ## [4.14.1](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.14.0...@brandwatch/axiom-components@4.14.1) (2018-09-06)
 
@@ -15,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="4.14.0"></a>
+    <a name="4.14.0"></a>
 # [4.14.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.13.0...@brandwatch/axiom-components@4.14.0) (2018-09-04)
 
 
@@ -32,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.13.0"></a>
+<a name="4.13.0"></a>
 # [4.13.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.12.1...@brandwatch/axiom-components@4.13.0) (2018-08-30)
 
 
