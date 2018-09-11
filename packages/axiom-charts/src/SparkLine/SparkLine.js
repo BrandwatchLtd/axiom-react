@@ -20,10 +20,16 @@ export default class SparkLine extends Component {
     })).isRequired,
     /** Height of the line area */
     height: PropTypes.string.isRequired,
+    /** Size of the line point */
+    pointSize: PropTypes.number,
   };
 
+  static defaultProps = {
+    pointSize: '.5rem',
+  }
+
   render() {
-    const { benchmark, data, height } = this.props;
+    const { benchmark, data, height, pointSize } = this.props;
     const flatValues = [].concat(...data.map(({ values }) => values));
 
     if (benchmark !== undefined) {
@@ -61,7 +67,7 @@ export default class SparkLine extends Component {
                     <LinePoint
                         color={ pointColor }
                         key={ index }
-                        size=".5rem" />
+                        size={ pointSize } />
                   )
               ) }
             </Line>
