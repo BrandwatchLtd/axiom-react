@@ -16,6 +16,12 @@ describe('Grid', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with className', () => {
+    const component = getComponent({ className: 'foo' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders with responsive false', () => {
     const component = getComponent({ responsive: false });
     const tree = component.toJSON();

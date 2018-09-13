@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Grid renders with className 1`] = `
+<div
+  className="ax-grid__container ax-space--x6"
+>
+  <div
+    className="ax-grid ax-grid--responsive ax-grid--gutters-horizontal--medium ax-grid--gutters-vertical--medium ax-grid--wrap foo"
+  >
+    <div />
+  </div>
+</div>
+`;
+
 exports[`Grid renders with defaultProps 1`] = `
 <div
   className="ax-grid__container ax-space--x6"

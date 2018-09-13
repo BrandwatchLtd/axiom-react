@@ -8,6 +8,8 @@ export default class Grid extends Component {
   static propTypes = {
     /** <GridCells>. */
     children: PropTypes.node,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /**
      * Applies fill styling for all GridCell children.
      * See GridCell for fill explanation
@@ -61,6 +63,7 @@ export default class Grid extends Component {
   render() {
     const {
       children,
+      className,
       fill,
       fit,
       full,
@@ -93,7 +96,7 @@ export default class Grid extends Component {
       [`ax-grid--vertical-${verticalAlign}`]: verticalAlign,
       [`ax-grid--horizontal-${horizontalAlign}`]: horizontalAlign,
       'ax-grid--wrap': wrap === true,
-    });
+    }, className);
 
     return (
       <Base space="x6" { ...rest } className="ax-grid__container">
