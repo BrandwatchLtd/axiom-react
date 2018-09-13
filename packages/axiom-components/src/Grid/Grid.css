@@ -26,6 +26,8 @@
 .ax-grid--horizontal-around   { justify-content: space-around; }
 .ax-grid--horizontal-between  { justify-content: space-between; }
 
+.ax-grid--columns { flex-direction: column; }
+
 .ax-grid__cell--start  { align-self: flex-start; }
 .ax-grid__cell--middle { align-self: center; }
 .ax-grid__cell--end    { align-self: flex-end; }

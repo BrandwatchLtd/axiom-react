@@ -8,6 +8,10 @@ export default class GridCell extends Component {
     children: PropTypes.node,
     /** Class name to be appended to the element */
     className: PropTypes.string,
+    /*
+    * Controls the direction of the grid cells
+    */
+    direction: PropTypes.oneOf(['row', 'column']),
     /**
      * Sizes itself according to the size of its contents. This causes the grid
      * to attempt to evenly distribute the cells, but allows cells to increase
@@ -67,6 +71,7 @@ export default class GridCell extends Component {
     const {
       children,
       className,
+      direction,
       fill,
       fit,
       full,
@@ -91,6 +96,7 @@ export default class GridCell extends Component {
       [`ax-grid__cell--none--${none}`]: none && none !== true,
       [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
       'ax-grid__cell--sub-grid': subGrid,
+      'ax-grid--columns': subGrid && direction === 'column',
     }, className);
 
     const styles = {

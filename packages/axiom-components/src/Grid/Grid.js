@@ -10,6 +10,10 @@ export default class Grid extends Component {
     children: PropTypes.node,
     /** Class name to be appended to the element */
     className: PropTypes.string,
+    /*
+    * Controls the direction of the grid cells
+    */
+    direction: PropTypes.oneOf(['row', 'column']),
     /**
      * Applies fill styling for all GridCell children.
      * See GridCell for fill explanation
@@ -55,6 +59,7 @@ export default class Grid extends Component {
   };
 
   static defaultProps = {
+    direction: 'row',
     responsive: true,
     gutters: 'medium',
     wrap: true,
@@ -64,6 +69,7 @@ export default class Grid extends Component {
     const {
       children,
       className,
+      direction,
       fill,
       fit,
       full,
@@ -81,6 +87,7 @@ export default class Grid extends Component {
 
     const classes = classnames('ax-grid', {
       'ax-grid--responsive': responsive,
+      'ax-grid--columns': direction === 'column',
       [`ax-grid--gutters-horizontal--${horizontalGutters}`]: typeof horizontalGutters === 'string',
       [`ax-grid--gutters-vertical--${verticalGutters}`]: typeof verticalGutters === 'string',
       'ax-grid--fill': fill === true,
