@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GridCell renders with className 1`] = `
+<div
+  className="ax-grid__cell foo"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div />
+</div>
+`;
+
 exports[`GridCell renders with defaultProps 1`] = `
 <div
   className="ax-grid__cell"

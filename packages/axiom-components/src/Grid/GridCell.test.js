@@ -16,6 +16,12 @@ describe('GridCell', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders with className', () => {
+    const component = getComponent({ className: 'foo' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with fill', () => {
     [true, 'small', 'medium', 'large'].forEach((fill) => {
       it(fill, () => {

@@ -6,6 +6,8 @@ import Base from '../Base/Base';
 export default class GridCell extends Component {
   static propTypes = {
     children: PropTypes.node,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /**
      * Sizes itself according to the size of its contents. This causes the grid
      * to attempt to evenly distribute the cells, but allows cells to increase
@@ -64,6 +66,7 @@ export default class GridCell extends Component {
   render() {
     const {
       children,
+      className,
       fill,
       fit,
       full,
@@ -88,7 +91,7 @@ export default class GridCell extends Component {
       [`ax-grid__cell--none--${none}`]: none && none !== true,
       [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
       'ax-grid__cell--sub-grid': subGrid,
-    });
+    }, className);
 
     const styles = {
       width: width && `${Math.max(0, Math.min(width, 100))}%`,
