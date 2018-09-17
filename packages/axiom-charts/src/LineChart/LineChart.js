@@ -54,13 +54,17 @@ export default class LineChart extends Component {
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
-     * Labels to be shown along the xAxis. Each label contains of a `value`,
-     * defining the position on the xAxis in percent, and an optional `label`.
+     * Labels to be shown along the xAxis. Each label contains either of a string
+     * or an object of a `value`, defining the position on the xAxis in percent,
+     * and an optional `label`.
      */
-    xAxisLabels: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node,
-      value: PropTypes.number.isRequired,
-    })),
+    xAxisLabels: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.string),
+      PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.node,
+        value: PropTypes.number.isRequired,
+      })),
+    ]),
     /** The title that appears along the xAxis */
     xAxisTitle: PropTypes.node,
     /**
@@ -76,7 +80,7 @@ export default class LineChart extends Component {
   };
 
   static defaultProps = {
-    xAxisLabels: () => [],
+    xAxisLabels: [],
   };
 
   constructor(props) {
