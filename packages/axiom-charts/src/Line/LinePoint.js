@@ -21,6 +21,8 @@ export default class LinePoint extends Component {
     TooltipContext: PropTypes.func,
     /** Color of the DataPoint */
     color: PropTypes.oneOf([
+      'subtle',
+      'overlay-light',
       'forbidden-planet',
       'tiny-clanger',
       'critical-mass',
