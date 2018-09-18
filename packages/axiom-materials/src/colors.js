@@ -43,9 +43,9 @@ export const uiWhite = { r: 255, g: 255, b: 255 };
 
 export const uiHighlight = { r: 215, g: 255, b: 0 };
 
-export const productForbiddenPlanetActive = { r: 242, g: 173, b: 141 };
-export const productForbiddenPlanet = { r: 255, g: 190, b: 161 };
-export const productForbiddenPlanetHover = { r: 250, g: 207, b: 188 };
+export const productForbiddenPlanetActive = { r: 232, g: 159, b: 144 };
+export const productForbiddenPlanet = { r: 245, g: 177, b: 164 };
+export const productForbiddenPlanetHover = { r: 255, g: 195, b: 184 };
 
 export const productTinyClangerActive = { r: 232, g: 132, b: 166 };
 export const productTinyClanger = { r: 244, g: 152, b: 183 };
@@ -79,9 +79,9 @@ export const productOuterLimitsActive = { r: 108, g: 199, b: 235 };
 export const productOuterLimits = { r: 127, g: 214, b: 248 };
 export const productOuterLimitsHover = { r: 147, g: 222, b: 252 };
 
-export const productGiantLeapActive = { r: 20, g: 192, b: 204 };
-export const productGiantLeap = { r: 33, g: 206, b: 217 };
-export const productGiantLeapHover = { r: 46, g: 217, b: 230 };
+export const productGiantLeapActive = { r: 69, g: 192, b: 217 };
+export const productGiantLeap = { r: 85, g: 205, b: 230 };
+export const productGiantLeapHover = { r: 102, g: 219, b: 242 };
 
 export const productMoonLagoonActive = { r: 25, g: 161, b: 176 };
 export const productMoonLagoon = { r: 36, g: 173, b: 189 };
@@ -91,9 +91,9 @@ export const productSpaceInvaderActive = { r: 36, g: 133, b: 100 };
 export const productSpaceInvader = { r: 47, g: 145, b: 112 };
 export const productSpaceInvaderHover = { r: 58, g: 158, b: 125 };
 
-export const productExtraterrestrialActive = { r: 108, g: 194, b: 97 };
-export const productExtraterrestrial = { r: 124, g: 207, b: 113 };
-export const productExtraterrestrialHover = { r: 142, g: 219, b: 132 };
+export const productExtraterrestrialActive = { r: 99, g: 189, b: 96 };
+export const productExtraterrestrial = { r: 116, g: 201, b: 113 };
+export const productExtraterrestrialHover = { r: 133, g: 214, b: 131 };
 
 export const productTerraFormActive = { r: 115, g: 179, b: 62 };
 export const productTerraForm = { r: 128, g: 190, b: 76 };
@@ -111,9 +111,9 @@ export const productSunMakerActive = { r: 240, g: 201, b: 5 };
 export const productSunMaker = { r: 252, g: 213, b: 18 };
 export const productSunMakerHover = { r: 255, g: 220, b: 46 };
 
-export const productNewHorizonActive = { r: 227, g: 163, b: 0 };
-export const productNewHorizon = { r: 242, g: 174, b: 0 };
-export const productNewHorizonHover = { r: 255, g: 186, b: 13 };
+export const productNewHorizonActive = { r: 242, g: 178, b: 0 };
+export const productNewHorizon = { r: 255, g: 190, b: 10 };
+export const productNewHorizonHover = { r: 254, g: 199, b: 49 };
 
 export const productBlastOffActive = { r: 237, g: 124, b: 43 };
 export const productBlastOff = { r: 249, g: 138, b: 57 };
@@ -127,9 +127,9 @@ export const productSolarRustActive = { r: 191, g: 118, b: 15 };
 export const productSolarRust = { r: 205, g: 129, b: 26 };
 export const productSolarRustHover = { r: 217, g: 143, b: 39 };
 
-export const productGroundControlActive = { r: 145, g: 71, b: 22 };
-export const productGroundControl = { r: 158, g: 83, b: 32 };
-export const productGroundControlHover = { r: 171, g: 94, b: 43 };
+export const productGroundControlActive = { r: 145, g: 85, b: 45 };
+export const productGroundControl = { r: 158, g: 97, b: 57 };
+export const productGroundControlHover = { r: 171, g: 110, b: 70 };
 
 export const productSpaceOddityActive = { r: 176, g: 149, b: 76 };
 export const productSpaceOddity = { r: 189, g: 163, b: 91 };

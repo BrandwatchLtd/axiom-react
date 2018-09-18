@@ -71,9 +71,9 @@
   --color-sentiment-negative: rgb(215, 74, 74);
   --color-sentiment-negative-hover: rgb(227, 89, 89);
 
-  --color-product-forbidden-planet--active: rgb(242, 173, 141);
-  --color-product-forbidden-planet: rgb(255, 190, 161);
-  --color-product-forbidden-planet--hover: rgb(250, 207, 188);
+  --color-product-forbidden-planet--active: rgb(232, 159, 144);
+  --color-product-forbidden-planet: rgb(245, 177, 164);
+  --color-product-forbidden-planet--hover: rgb(255, 195, 184);
 
   --color-product-tiny-clanger--active: rgb(232, 132, 166);
   --color-product-tiny-clanger: rgb(244, 152, 183);
@@ -107,9 +107,9 @@
   --color-product-outer-limits: rgb(127, 214, 248);
   --color-product-outer-limits--hover: rgb(147, 222, 252);
 
-  --color-product-giant-leap--active: rgb(20, 192, 204);
-  --color-product-giant-leap: rgb(33, 206, 217);
-  --color-product-giant-leap--hover: rgb(46, 217, 230);
+  --color-product-giant-leap--active: rgb(69, 192, 217);
+  --color-product-giant-leap: rgb(85, 205, 230);
+  --color-product-giant-leap--hover: rgb(102, 219, 242);
 
   --color-product-moon-lagoon--active: rgb(25, 161, 176);
   --color-product-moon-lagoon: rgb(36, 173, 189);
@@ -119,9 +119,9 @@
   --color-product-space-invader: rgb(47, 145, 112);
   --color-product-space-invader--hover: rgb(58, 158, 125);
 
-  --color-product-extraterrestrial--active: rgb(108, 194, 97);
-  --color-product-extraterrestrial: rgb(124, 207, 113);
-  --color-product-extraterrestrial--hover: rgb(142, 219, 132);
+  --color-product-extraterrestrial--active: rgb(99, 189, 96);
+  --color-product-extraterrestrial: rgb(116, 201, 113);
+  --color-product-extraterrestrial--hover: rgb(133, 214, 131);
 
   --color-product-terra-form--active: rgb(115, 179, 62);
   --color-product-terra-form: rgb(128, 190, 76);
@@ -139,9 +139,9 @@
   --color-product-sun-maker: rgb(252, 213, 18);
   --color-product-sun-maker--hover: rgb(255, 220, 46);
 
-  --color-product-new-horizon--active: rgb(227, 163, 0);
-  --color-product-new-horizon: rgb(242, 174, 0);
-  --color-product-new-horizon--hover: rgb(255, 186, 13);
+  --color-product-new-horizon--active: rgb(242, 178, 0);
+  --color-product-new-horizon: rgb(255, 190, 10);
+  --color-product-new-horizon--hover: rgb(254, 199, 49);
 
   --color-product-blast-off--active: rgb(237, 124, 43);
   --color-product-blast-off: rgb(249, 138, 57);
@@ -155,9 +155,9 @@
   --color-product-solar-rust: rgb(205, 129, 26);
   --color-product-solar-rust--hover: rgb(217, 143, 39);
 
-  --color-product-ground-control--active: rgb(145, 71, 22);
-  --color-product-ground-control: rgb(158, 83, 32);
-  --color-product-ground-control--hover: rgb(171, 94, 43);
+  --color-product-ground-control--active: rgb(145, 85, 45);
+  --color-product-ground-control: rgb(158, 97, 57);
+  --color-product-ground-control--hover: rgb(171, 110, 70);
 
   --color-product-space-oddity--active: rgb(176, 149, 76);
   --color-product-space-oddity: rgb(189, 163, 91);
