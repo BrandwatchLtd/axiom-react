@@ -206,6 +206,18 @@ export const sparkLineData = [{
   values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
 }];
 
+export const sparkLineEmptyData = [{
+  lineColor: 'overlay-light',
+  pointColor: 'giant-leap',
+  values: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+}];
+
+export const sparkLineNoDifferenceData = [{
+  lineColor: 'overlay-light',
+  pointColor: 'giant-leap',
+  values: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+}];
+
 export const radarChartData = [{
   border: true,
   color: 'critical-mass',

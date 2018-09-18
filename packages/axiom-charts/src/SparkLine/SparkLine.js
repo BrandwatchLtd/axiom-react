@@ -21,7 +21,7 @@ export default class SparkLine extends Component {
     /** Height of the line area */
     height: PropTypes.string.isRequired,
     /** Size of the line point */
-    pointSize: PropTypes.number,
+    pointSize: PropTypes.string,
   };
 
   static defaultProps = {
@@ -36,8 +36,13 @@ export default class SparkLine extends Component {
       flatValues.push(benchmark);
     }
 
-    const lower = Math.min(...flatValues);
-    const upper = Math.max(...flatValues);
+    let lower = Math.min(...flatValues);
+    let upper = Math.max(...flatValues);
+
+    if (upper === lower) {
+      lower--;
+      upper++;
+    }
 
     return (
       <Base className="ax-spark-line" style={ { height } }>
