@@ -6,7 +6,7 @@ import {
   DocumentationContent,
   DocumentationShowCase,
 } from '@brandwatch/axiom-documentation-viewer';
-import { sparkLineBenchmark, sparkLineData } from './chartData';
+import { sparkLineBenchmark, sparkLineData, sparkLineEmptyData, sparkLineNoDifferenceData } from './chartData';
 
 export default class Documentation extends Component {
   render() {
@@ -23,8 +23,7 @@ export default class Documentation extends Component {
             </GridCell>
             <GridCell>
               <SparkLine
-                  benchmark={ sparkLineBenchmark }
-                  data={ sparkLineData }
+                  data={ sparkLineEmptyData }
                   height="5rem"
                   pointColor="critical-mass" />
             </GridCell>
@@ -33,14 +32,12 @@ export default class Documentation extends Component {
           <Grid>
             <GridCell>
               <SparkLine
-                  benchmark={ sparkLineBenchmark }
-                  data={ sparkLineData }
+                  data={ sparkLineNoDifferenceData }
                   height="5rem"
                   pointColor="paradise-lost" />
             </GridCell>
             <GridCell>
               <SparkLine
-                  benchmark={ sparkLineBenchmark }
                   data={ sparkLineData }
                   height="5rem"
                   pointColor="giant-leap" />
