@@ -6,7 +6,7 @@ exports[`TableRow renders with clickable styling 1`] = `
   onClick={[Function]}
 >
   <td
-    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
+    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-small"
   >
     123456
   </td>
@@ -19,7 +19,7 @@ exports[`TableRow renders with defaultProps 1`] = `
   onClick={undefined}
 >
   <td
-    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
+    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-small"
   >
     123456
   </td>
@@ -32,7 +32,7 @@ exports[`TableRow renders without borders 1`] = `
   onClick={undefined}
 >
   <td
-    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-medium"
+    className="ax-table__cell ax-table__cell--align-left ax-table__cell--horizontal-padding-medium ax-table__cell--vertical-padding-small"
   >
     123456
   </td>

@@ -14,14 +14,14 @@ export default class TableCell extends Component {
     /** Set text-align */
     textAlign: PropTypes.oneOf(['left', 'right']),
     /** Sets the vertical padding around the cell's content */
-    verticalPadding: PropTypes.oneOf(['none', 'medium', 'large']),
+    verticalPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   };
 
   static defaultProps = {
     horizontalPadding: 'medium',
     isSelected: false,
     textAlign: 'left',
-    verticalPadding: 'medium',
+    verticalPadding: 'small',
   }
 
   render() {

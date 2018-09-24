@@ -51,9 +51,14 @@
   padding-bottom: 0;
 }
 
-.ax-table__cell--vertical-padding-medium {
+.ax-table__cell--vertical-padding-small {
   padding-top: var(--spacing-grid-size--x2);
   padding-bottom: var(--spacing-grid-size--x2);
+}
+
+.ax-table__cell--vertical-padding-medium {
+  padding-top: var(--spacing-grid-size--x3);
+  padding-bottom: var(--spacing-grid-size--x3);
 }
 
 .ax-table__cell--vertical-padding-large {
