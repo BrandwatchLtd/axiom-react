@@ -64,6 +64,10 @@ export default class DropdownContext extends Component {
   }
 
   handleClick(event) {
+    if (!this.context.dropdownRef || !this.context.closeDropdown) {
+      return;
+    }
+
     const dropdownRef = this.context.dropdownRef();
     if (!dropdownRef.contains(event.target) && !this.el.contains(event.target)) {
       return this.context.closeDropdown();

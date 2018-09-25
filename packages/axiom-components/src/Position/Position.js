@@ -23,9 +23,13 @@ export default class Position extends Component {
     ]),
     /**
      * Children inside Position this should contain all of and
-     * only PositionSource and PositionTarget!
+     * only PositionSource and PositionTarget or just a PositionSource
+     * in the case of a given reference!
      */
-    children: PropTypes.array.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.array,
+    ]).isRequired,
     /**
      * Adds control to conditionally enable or disable the positioning logic.
      * Must be true for isVisible to take effect.
@@ -47,7 +51,6 @@ export default class Position extends Component {
      * has been positioned.
      */
     onPositionChange: PropTypes.func,
-
     /**
      * Controls the starting position around PositionTarget in which the
      * PositionSource will attempt to be placed. If that position is not available
@@ -55,6 +58,13 @@ export default class Position extends Component {
      * a valid position is found.
      */
     position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    /**
+     * If Position should be attached to an element outside of the React context,
+     * either a HTMLElement reference or a Popper.js compatible referenceObject
+     * (see https://popper.js.org/popper-documentation.html#referenceObject) can
+     * be passed in.
+     */
+    reference: PropTypes.object,
     /** Toggle that allows the arrow of the Context component to be hidden */
     showArrow: PropTypes.bool,
   };
@@ -103,10 +113,10 @@ export default class Position extends Component {
   }
 
   createPopper() {
-    const { boundariesElement, flip, showArrow } = this.props;
+    const { boundariesElement, flip, showArrow, reference } = this.props;
     const { placement } = this.state;
 
-    return new popperJS(this._target, this._content, {
+    return new popperJS(reference || this._target, this._content, {
       onCreate: this.handleOnCreate,
       onUpdate: this.handleOnUpdate,
       placement,
@@ -170,7 +180,7 @@ export default class Position extends Component {
   }
 
   render() {
-    const { children, enabled, isVisible, onMaskClick, showArrow, ...rest } = this.props;
+    const { children, enabled, isVisible, onMaskClick, showArrow, reference, ...rest } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
 
@@ -186,7 +196,7 @@ export default class Position extends Component {
     ]);
 
     return [
-      cloneElement(findComponent(children, PositionTargetRef), {
+      !reference && cloneElement(findComponent(children, PositionTargetRef), {
         ref: (target) => this._target = ReactDOM.findDOMNode(target),
       }),
       enabled && isVisible ? (
