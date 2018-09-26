@@ -13,6 +13,7 @@ import {
 import AxiomTitle from '../AxiomTitle/AxiomTitle';
 import Resources from './Resources';
 import Charts from './Resources/Charts';
+import Highcharts from './Resources/Highcharts';
 import Components from './Resources/Components';
 import Composites from './Resources/Composites';
 import Materials from './Resources/Materials';
@@ -63,6 +64,7 @@ export default class Documentation extends Component {
         <div className="si-documentation__body">
           <Switch>
             <Route component={ Charts } path="/docs/packages/axiom-charts" />
+            <Route component={ Highcharts } path="/docs/packages/axiom-highcharts" />
             <Route component={ Components } path="/docs/packages/axiom-components" />
             <Route component={ Composites } path="/docs/packages/axiom-composites" />
             <Route component={ Materials } path="/docs/packages/axiom-materials" />

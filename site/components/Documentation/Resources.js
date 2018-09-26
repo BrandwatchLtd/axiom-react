@@ -36,6 +36,11 @@ export default class Resources extends Component {
                 description="Charting components, including low level components that make up charts."
                 name="axiom-charts"
                 to="/docs/packages/axiom-charts" />
+
+            <PackageRow
+                description="Highcharts components, including low level components that make up charts."
+                name="axiom-highcharts"
+                to="/docs/packages/axiom-highcharts" />
           </PackagesTable>
         </ResourcesSection>
 

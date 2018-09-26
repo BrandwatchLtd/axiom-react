@@ -1,0 +1,1202 @@
+@import '../../../axiom-materials/src/colors.css';
+@import '../../../axiom-materials/src/typography.css';
+@import '../../../axiom-materials/src/sizing.css';
+@import '../../../axiom-materials/src/theme-day.css';
+/**
+ * @license Highcharts
+ *
+ * (c) 2009-2016 Torstein Honsi
+ *
+ * License: www.highcharts.com/license
+ */
+.highcharts-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  line-height: normal;
+  z-index: 0;
+  /* #1072 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: var(--font-family-body);
+  font-size: 12px;
+}
+
+.highcharts-root {
+  display: block;
+}
+
+.highcharts-root text {
+  stroke-width: 0;
+}
+
+.highcharts-strong {
+  font-weight: bold;
+}
+
+.highcharts-emphasized {
+  font-style: italic;
+}
+
+.highcharts-anchor {
+  cursor: pointer;
+}
+
+.highcharts-background {
+  fill: var(--color-theme-background);
+}
+
+.highcharts-plot-border, .highcharts-plot-background {
+  fill: none;
+}
+
+.highcharts-label-box {
+  fill: none;
+}
+
+.highcharts-button-box {
+  fill: inherit;
+}
+
+/* Titles */
+.highcharts-title {
+  fill: var(--color-theme-text);
+  font-size: var(--font-size-large);
+}
+
+.highcharts-subtitle {
+  fill: var(--color-theme-text--subtle);
+}
+
+/* Axes */
+.highcharts-axis-line {
+  fill: none;
+  stroke: #ccd6eb;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+.highcharts-axis-title {
+  fill: var(--color-theme-text--subtle);
+}
+
+.highcharts-axis-labels {
+  fill: var(--color-theme-text--subtle);
+  cursor: default;
+  font-size: var(--font-size-small);
+}
+
+.highcharts-grid-line {
+  fill: none;
+  stroke: var(--color-theme-border);
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 0px;
+}
+
+.highcharts-tick {
+  stroke: #ccd6eb;
+}
+
+.highcharts-yaxis .highcharts-tick {
+  stroke-width: 0;
+}
+
+.highcharts-minor-grid-line {
+  stroke: var(--color-theme-border);
+}
+
+.highcharts-crosshair-thin {
+  stroke-width: 1px;
+  stroke: var(--color-theme-text--disabled);
+}
+
+.highcharts-crosshair-category {
+  stroke: #ccd6eb;
+  stroke-opacity: 0.25;
+}
+
+/* Credits */
+.highcharts-credits {
+  cursor: pointer;
+  fill: var(--color-theme-text);
+  font-size: 0.7em;
+  transition: fill 250ms, font-size 250ms;
+}
+
+.highcharts-credits:hover {
+  fill: black;
+  font-size: 1em;
+}
+
+/* Tooltip */
+.highcharts-tooltip {
+  cursor: default;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: stroke 150ms;
+}
+
+.highcharts-tooltip text {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-tooltip .highcharts-header {
+  font-size: 0.85em;
+}
+
+.highcharts-tooltip-box {
+  stroke-width: 0px;
+  fill: var(--color-theme-background);
+  fill-opacity: 0.85;
+}
+
+.highcharts-tooltip-box .highcharts-label-box {
+  fill: var(--color-theme-background);
+  fill-opacity: 0.85;
+}
+
+.highcharts-selection-marker {
+  fill: #335cad;
+  fill-opacity: 0.25;
+}
+
+.highcharts-graph {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.highcharts-state-hover .highcharts-graph {
+  stroke-width: 3;
+}
+
+.highcharts-state-hover path {
+  transition: stroke-width 50;
+  /* quick in */
+}
+
+.highcharts-state-normal path {
+  transition: stroke-width 250ms;
+  /* slow out */
+}
+
+/* Legend hover affects points and series */
+g.highcharts-series,
+.highcharts-point,
+.highcharts-markers,
+.highcharts-data-labels {
+  transition: opacity 250ms;
+}
+
+.highcharts-legend-series-active g.highcharts-series:not(.highcharts-series-hover),
+.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover),
+.highcharts-legend-series-active .highcharts-markers:not(.highcharts-series-hover),
+.highcharts-legend-series-active .highcharts-data-labels:not(.highcharts-series-hover) {
+  opacity: 0.2;
+}
+
+/* Series options */
+/* Default colors */
+.highcharts-color-0 {
+  fill: var(--color-product-giant-leap);
+  stroke: var(--color-product-giant-leap);
+}
+
+.highcharts-color-1 {
+  fill: var(--color-product-new-horizon);
+  stroke: var(--color-product-new-horizon);
+}
+
+.highcharts-color-2 {
+  fill: var(--color-product-critical-mass);
+  stroke: var(--color-product-critical-mass);
+}
+
+.highcharts-color-3 {
+  fill: var(--color-product-paradise-lost);
+  stroke: var(--color-product-paradise-lost);
+}
+
+.highcharts-color-4 {
+  fill: var(--color-product-terra-form);
+  stroke: var(--color-product-terra-form);
+}
+
+.highcharts-color-5 {
+  fill: var(--color-product-blast-off);
+  stroke: var(--color-product-blast-off);
+}
+
+.highcharts-color-6 {
+  fill: var(--color-product-luna-dust);
+  stroke: var(--color-product-luna-dust);
+}
+
+.highcharts-color-7 {
+  fill: var(--color-product-moon-lagoon);
+  stroke: var(--color-product-moon-lagoon);
+}
+
+.highcharts-color-8 {
+  fill: var(--color-product-tiny-clanger);
+  stroke: var(--color-product-tiny-clanger);
+}
+
+.highcharts-color-9 {
+  fill: var(--color-product-serene-sea);
+  stroke: var(--color-product-serene-sea);
+}
+
+.highcharts-color-10 {
+  fill: var(--color-product-primeval-soup);
+  stroke: var(--color-product-primeval-soup);
+}
+
+.highcharts-color-11 {
+  fill: var(--color-product-future-shock);
+  stroke: var(--color-product-future-shock);
+}
+
+.highcharts-color-12 {
+  fill: var(--color-product-ground-control);
+  stroke: var(--color-product-ground-control);
+}
+
+.highcharts-color-13 {
+  fill: var(--color-product-sun-maker);
+  stroke: var(--color-product-sun-maker);
+}
+
+.highcharts-color-14 {
+  fill: var(--color-product-crash-course);
+  stroke: var(--color-product-crash-course);
+}
+
+.highcharts-color-15 {
+  fill: var(--color-product-forbidden-planet);
+  stroke: var(--color-product-forbidden-planet);
+}
+
+.highcharts-color-16 {
+  fill: var(--color-product-event-horizon);
+  stroke: var(--color-product-event-horizon);
+}
+
+.highcharts-color-17 {
+  fill: var(--color-product-outer-limits);
+  stroke: var(--color-product-outer-limits);
+}
+
+.highcharts-color-18 {
+  fill: var(--color-product-space-invader);
+  stroke: var(--color-product-space-invader);
+}
+
+.highcharts-color-19 {
+  fill: var(--color-product-extraterrestrial);
+  stroke: var(--color-product-extraterrestrial);
+}
+
+.highcharts-color-20 {
+  fill: var(--color-product-space-oddity);
+  stroke: var(--color-product-space-oddity);
+}
+
+.highcharts-color-21 {
+  fill: var(--color-product-rocky-planet);
+  stroke: var(--color-product-rocky-planet);
+}
+
+.highcharts-area {
+  fill-opacity: 0.75;
+  stroke-width: 0;
+}
+
+.highcharts-markers {
+  stroke-width: 1px;
+  stroke: var(--color-theme-background);
+}
+
+.highcharts-point {
+  stroke-width: 1px;
+}
+
+.highcharts-dense-data .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-data-label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.highcharts-data-label-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+.highcharts-data-label text, text.highcharts-data-label {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-data-label-connector {
+  fill: none;
+}
+
+.highcharts-halo {
+  fill-opacity: 0.25;
+  stroke-width: 0;
+}
+
+.highcharts-series:not(.highcharts-pie-series) .highcharts-point-select {
+  fill: var(--color-theme-text--disabled);
+  stroke: #000000;
+}
+
+.highcharts-column-series rect.highcharts-point {
+  stroke: var(--color-theme-background);
+}
+
+.highcharts-column-series .highcharts-point {
+  transition: fill-opacity 250ms;
+}
+
+.highcharts-column-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-pie-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: var(--color-theme-background);
+}
+
+.highcharts-pie-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-funnel-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: var(--color-theme-background);
+}
+
+.highcharts-funnel-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-funnel-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.highcharts-pyramid-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: var(--color-theme-background);
+}
+
+.highcharts-pyramid-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-pyramid-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.highcharts-solidgauge-series .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-treemap-series .highcharts-point {
+  stroke-width: 1px;
+  stroke: var(--color-theme-border);
+  transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
+}
+
+.highcharts-treemap-series .highcharts-point-hover {
+  stroke: var(--color-theme-text);
+  transition: stroke 25ms, fill 25ms, fill-opacity 25ms;
+}
+
+.highcharts-treemap-series .highcharts-above-level {
+  display: none;
+}
+
+.highcharts-treemap-series .highcharts-internal-node {
+  fill: none;
+}
+
+.highcharts-treemap-series .highcharts-internal-node-interactive {
+  fill-opacity: 0.15;
+  cursor: pointer;
+}
+
+.highcharts-treemap-series .highcharts-internal-node-interactive:hover {
+  fill-opacity: 0.75;
+}
+
+/* Legend */
+.highcharts-legend-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+.highcharts-legend-item text {
+  fill: var(--color-theme-text);
+  font-weight: bold;
+  font-size: var(--font-size-small);
+  cursor: pointer;
+  stroke-width: 0;
+}
+
+.highcharts-legend-item:hover text {
+  fill: #000000;
+}
+
+.highcharts-legend-item-hidden * {
+  fill: var(--color-theme-text--disabled) !important;
+  stroke: var(--color-theme-text--disabled) !important;
+  transition: fill 250ms;
+}
+
+.highcharts-legend-nav-active {
+  fill: #003399;
+  cursor: pointer;
+}
+
+.highcharts-legend-nav-inactive {
+  fill: var(--color-theme-text--disabled);
+}
+
+.highcharts-legend-title-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+/* Loading */
+.highcharts-loading {
+  position: absolute;
+  background-color: var(--color-theme-background);
+  opacity: 0.5;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 250ms;
+}
+
+.highcharts-loading-hidden {
+  height: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 250ms, height 250ms step-end;
+}
+
+.highcharts-loading-inner {
+  font-weight: bold;
+  position: relative;
+  top: 45%;
+}
+
+/* Plot bands and polar pane backgrounds */
+.highcharts-plot-band, .highcharts-pane {
+  fill: #000000;
+  fill-opacity: 0.05;
+}
+
+.highcharts-plot-line {
+  fill: none;
+  stroke: var(--color-theme-text);
+  stroke-width: 1px;
+}
+
+/* Highcharts More and modules */
+.highcharts-boxplot-box {
+  fill: var(--color-theme-background);
+}
+
+.highcharts-boxplot-median {
+  stroke-width: 2px;
+}
+
+.highcharts-bubble-series .highcharts-point {
+  fill-opacity: 0.5;
+}
+
+.highcharts-errorbar-series .highcharts-point {
+  stroke: #000000;
+}
+
+.highcharts-gauge-series .highcharts-data-label-box {
+  stroke: var(--color-theme-text--disabled);
+  stroke-width: 1px;
+}
+
+.highcharts-gauge-series .highcharts-dial {
+  fill: #000000;
+  stroke-width: 0;
+}
+
+.highcharts-polygon-series .highcharts-graph {
+  fill: inherit;
+  stroke-width: 0;
+}
+
+.highcharts-waterfall-series .highcharts-graph {
+  stroke: var(--color-theme-text);
+  stroke-dasharray: 1, 3;
+}
+
+.highcharts-sankey-series .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-sankey-series .highcharts-link {
+  transition: fill 250ms, fill-opacity 250ms;
+  fill-opacity: 0.5;
+}
+
+.highcharts-sankey-series .highcharts-point-hover.highcharts-link {
+  transition: fill 50ms, fill-opacity 50ms;
+  fill-opacity: 1;
+}
+
+/* Highstock */
+.highcharts-navigator-mask-outside {
+  fill-opacity: 0;
+}
+
+.highcharts-navigator-mask-inside {
+  fill: #6685c2;
+  /* navigator.maskFill option */
+  fill-opacity: 0.25;
+  cursor: ew-resize;
+}
+
+.highcharts-navigator-outline {
+  stroke: var(--color-theme-text--disabled);
+  fill: none;
+}
+
+.highcharts-navigator-handle {
+  stroke: var(--color-theme-text--disabled);
+  fill: var(--color-theme-border);
+  cursor: ew-resize;
+}
+
+.highcharts-navigator-series {
+  fill: #335cad;
+  stroke: #335cad;
+}
+
+.highcharts-navigator-series .highcharts-graph {
+  stroke-width: 1px;
+}
+
+.highcharts-navigator-series .highcharts-area {
+  fill-opacity: 0.05;
+}
+
+.highcharts-navigator-xaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+.highcharts-navigator-xaxis .highcharts-grid-line {
+  stroke-width: 1px;
+  stroke: var(--color-theme-border);
+}
+
+.highcharts-navigator-xaxis.highcharts-axis-labels {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-navigator-yaxis .highcharts-grid-line {
+  stroke-width: 0;
+}
+
+.highcharts-scrollbar-thumb {
+  fill: var(--color-theme-text--disabled);
+  stroke: var(--color-theme-text--disabled);
+  stroke-width: 1px;
+}
+
+.highcharts-scrollbar-button {
+  fill: var(--color-theme-border);
+  stroke: var(--color-theme-text--disabled);
+  stroke-width: 1px;
+}
+
+.highcharts-scrollbar-arrow {
+  fill: var(--color-theme-text--subtle);
+}
+
+.highcharts-scrollbar-rifles {
+  stroke: var(--color-theme-text--subtle);
+  stroke-width: 1px;
+}
+
+.highcharts-scrollbar-track {
+  fill: var(--color-theme-border);
+  stroke: var(--color-theme-border);
+  stroke-width: 1px;
+}
+
+.highcharts-button {
+  fill: var(--color-theme-background);
+  stroke: var(--color-theme-text--disabled);
+  cursor: default;
+  stroke-width: 1px;
+  transition: fill 250ms;
+}
+
+.highcharts-button text {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-button-hover {
+  transition: fill 0ms;
+  fill: var(--color-theme-border);
+  stroke: var(--color-theme-text--disabled);
+}
+
+.highcharts-button-hover text {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-button-pressed {
+  font-weight: bold;
+  fill: #e6ebf5;
+  stroke: var(--color-theme-text--disabled);
+}
+
+.highcharts-button-pressed text {
+  fill: var(--color-theme-text);
+  font-weight: bold;
+}
+
+.highcharts-button-disabled text {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-range-selector-buttons .highcharts-button {
+  stroke-width: 0px;
+}
+
+.highcharts-range-label rect {
+  fill: none;
+}
+
+.highcharts-range-label text {
+  fill: var(--color-theme-text--subtle);
+}
+
+.highcharts-range-input rect {
+  fill: none;
+}
+
+.highcharts-range-input text {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-range-input {
+  stroke-width: 1px;
+  stroke: var(--color-theme-text--disabled);
+}
+
+input.highcharts-range-selector {
+  position: absolute;
+  border: 0;
+  width: 1px;
+  /* Chrome needs a pixel to see it */
+  height: 1px;
+  padding: 0;
+  text-align: center;
+  left: -9em;
+  /* #4798 */
+}
+
+.highcharts-crosshair-label text {
+  fill: var(--color-theme-background);
+  font-size: 1.1em;
+}
+
+.highcharts-crosshair-label .highcharts-label-box {
+  fill: inherit;
+}
+
+.highcharts-candlestick-series .highcharts-point {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+.highcharts-candlestick-series .highcharts-point-up {
+  fill: var(--color-theme-background);
+}
+
+.highcharts-ohlc-series .highcharts-point-hover {
+  stroke-width: 3px;
+}
+
+.highcharts-flags-series .highcharts-point .highcharts-label-box {
+  stroke: var(--color-theme-text);
+  fill: var(--color-theme-background);
+  transition: fill 250ms;
+}
+
+.highcharts-flags-series .highcharts-point-hover .highcharts-label-box {
+  stroke: #000000;
+  fill: #ccd6eb;
+}
+
+.highcharts-flags-series .highcharts-point text {
+  fill: #000000;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Highmaps */
+.highcharts-map-series .highcharts-point {
+  transition: fill 500ms, fill-opacity 500ms, stroke-width 250ms;
+  stroke: var(--color-theme-text--disabled);
+}
+
+.highcharts-map-series .highcharts-point-hover {
+  transition: fill 0ms, fill-opacity 0ms;
+  fill-opacity: 0.5;
+  stroke-width: 2px;
+}
+
+.highcharts-mapline-series .highcharts-point {
+  fill: none;
+}
+
+.highcharts-heatmap-series .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-map-navigation {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.highcharts-coloraxis {
+  stroke-width: 0;
+}
+
+.highcharts-coloraxis-marker {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-null-point {
+  fill: var(--color-theme-background);
+}
+
+/* 3d charts */
+.highcharts-3d-frame {
+  fill: transparent;
+}
+
+/* Exporting module */
+.highcharts-contextbutton {
+  fill: var(--color-theme-background);
+  /* needed to capture hover */
+  stroke: none;
+  stroke-linecap: round;
+}
+
+.highcharts-contextbutton:hover {
+  fill: var(--color-theme-border);
+  stroke: var(--color-theme-border);
+}
+
+.highcharts-button-symbol {
+  stroke: var(--color-theme-text--subtle);
+  stroke-width: 3px;
+}
+
+.highcharts-menu {
+  border: 1px solid var(--color-theme-text);
+  background: var(--color-theme-background);
+  padding: 5px 0;
+  box-shadow: 3px 3px 10px #888;
+}
+
+.highcharts-menu-item {
+  padding: 0.5em 1em;
+  background: none;
+  color: var(--color-theme-text);
+  cursor: pointer;
+  transition: background 250ms, color 250ms;
+}
+
+.highcharts-menu-item:hover {
+  background: #335cad;
+  color: var(--color-theme-background);
+}
+
+/* Drilldown module */
+.highcharts-drilldown-point {
+  cursor: pointer;
+}
+
+.highcharts-drilldown-data-label text,
+text.highcharts-drilldown-data-label,
+.highcharts-drilldown-axis-label {
+  cursor: pointer;
+  fill: #003399;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* No-data module */
+.highcharts-no-data text {
+  font-weight: bold;
+  font-size: 12px;
+  fill: var(--color-theme-text--subtle);
+}
+
+/* Drag-panes module */
+.highcharts-axis-resizer {
+  cursor: ns-resize;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+/* Bullet type series */
+.highcharts-bullet-target {
+  stroke-width: 0;
+}
+
+/* Lineargauge type series */
+.highcharts-lineargauge-target {
+  stroke-width: 1px;
+  stroke: var(--color-theme-text);
+}
+
+.highcharts-lineargauge-target-line {
+  stroke-width: 1px;
+  stroke: var(--color-theme-text);
+}
+
+/* Annotations module */
+.highcharts-annotation-label-box {
+  stroke-width: 1px;
+  stroke: #000000;
+  fill: #000000;
+  fill-opacity: 0.75;
+}
+
+.highcharts-annotation-label text {
+  fill: var(--color-theme-border);
+}
+
+/* Grid Lines*/
+.highcharts-grid-line {
+  stroke-dasharray: 1;
+}
+
+/* Series */
+.highcharts-series {
+  stroke-width: 20px;
+}
+
+/* Legend */
+.highcharts-legend-item text {
+  fill: var(--color-theme-text--subtle);
+}
+
+.highcharts-legend-item text:hover {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-legend-item .highcharts-graph {
+  stroke-width: 0;
+}
+
+.highcharts-legend-item .highcharts-point {
+  /*stroke-width: 6px;*/
+}
+
+highcharts-legend-item .highcharts-point {
+  stroke-width: 0px;
+}
+
+.highcharts-line-series.highcharts-legend-item .highcharts-point {
+  stroke-width: 4px;
+}
+
+/* Tooltips */
+.highcharts-tooltip {
+  filter: none;
+}
+
+.highcharts-tooltip-box {
+  color: var(--color-theme-text);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+  border-radius: var(--component-border-radius);
+  background-color: var(--color-theme-background);
+  fill-opacity: 1;
+  stroke-width: 1px;
+  stroke: var(--color-theme-shadow--light);
+}
+
+/* Graph */
+.highcharts-graph {
+  stroke-width: 2.25px;
+}
+
+/* Axis */
+.highcharts-axis-title {
+  padding: 12px 0;
+}
+
+/* generate named color classes */
+.highcharts-color-social-twitter {
+  fill: var(--color-social-twitter);
+  stroke: var(--color-social-twitter);
+}
+
+.highcharts-color-social-facebook {
+  fill: var(--color-social-facebook);
+  stroke: var(--color-social-facebook);
+}
+
+.highcharts-color-social-instagram {
+  fill: var(--color-social-instagram);
+  stroke: var(--color-social-instagram);
+}
+
+.highcharts-color-images {
+  fill: var(--color-product-critical-mass);
+  stroke: var(--color-product-critical-mass);
+}
+
+.highcharts-color-microblog {
+  fill: var(--color-product-serene-sea);
+  stroke: var(--color-product-serene-sea);
+}
+
+.highcharts-color-blog {
+  fill: var(--color-product-giant-leap);
+  stroke: var(--color-product-giant-leap);
+}
+
+.highcharts-color-review {
+  fill: var(--color-product-space-invader);
+  stroke: var(--color-product-space-invader);
+}
+
+.highcharts-color-forum {
+  fill: var(--color-product-new-horizon);
+  stroke: var(--color-product-new-horizon);
+}
+
+.highcharts-color-general {
+  fill: var(--color-product-blast-off);
+  stroke: var(--color-product-blast-off);
+}
+
+.highcharts-color-video {
+  fill: var(--color-product-crash-course);
+  stroke: var(--color-product-crash-course);
+}
+
+.highcharts-color-news {
+  fill: var(--color-product-ground-control);
+  stroke: var(--color-product-ground-control);
+}
+
+.highcharts-color-sentiment-positive {
+  fill: var(--color-sentiment-positive);
+  stroke: var(--color-sentiment-positive);
+}
+
+.highcharts-color-sentiment-neutral {
+  fill: var(--color-sentiment-neutral);
+  stroke: var(--color-sentiment-neutral);
+}
+
+.highcharts-color-sentiment-negative {
+  fill: var(--color-sentiment-negative);
+  stroke: var(--color-sentiment-negative);
+}
+
+.highcharts-color-emotions:anger {
+  fill: var(--color-sentiment-negative);
+  stroke: var(--color-sentiment-negative);
+}
+
+.highcharts-color-emotions:sadness {
+  fill: var(--color-product-electric-dreams);
+  stroke: var(--color-product-electric-dreams);
+}
+
+.highcharts-color-emotions:surprise {
+  fill: var(--color-product-terra-form);
+  stroke: var(--color-product-terra-form);
+}
+
+.highcharts-color-emotions:happiness {
+  fill: var(--color-product-sun-maker);
+  stroke: var(--color-product-sun-maker);
+}
+
+.highcharts-color-emotions:anticipation {
+  fill: var(--color-product-blast-off);
+  stroke: var(--color-product-blast-off);
+}
+
+.highcharts-color-emotions:disappointment {
+  fill: var(--color-product-paradise-lost);
+  stroke: var(--color-product-paradise-lost);
+}
+
+.highcharts-color-female {
+  fill: var(--color-product-fantastic-voyage);
+  stroke: var(--color-product-fantastic-voyage);
+}
+
+.highcharts-color-male {
+  fill: var(--color-product-electric-dreams);
+  stroke: var(--color-product-electric-dreams);
+}
+
+.highcharts-color-unknown {
+  fill: var(--color-product-deep-thought);
+  stroke: var(--color-product-deep-thought);
+}
+
+.highcharts-color-giant-leap {
+  fill: var(--color-product-giant-leap);
+  stroke: var(--color-product-giant-leap);
+}
+
+.highcharts-color-new-horizon {
+  fill: var(--color-product-new-horizon);
+  stroke: var(--color-product-new-horizon);
+}
+
+.highcharts-color-critical-mass {
+  fill: var(--color-product-critical-mass);
+  stroke: var(--color-product-critical-mass);
+}
+
+.highcharts-color-paradise-lost {
+  fill: var(--color-product-paradise-lost);
+  stroke: var(--color-product-paradise-lost);
+}
+
+.highcharts-color-terra-form {
+  fill: var(--color-product-terra-form);
+  stroke: var(--color-product-terra-form);
+}
+
+.highcharts-color-blast-off {
+  fill: var(--color-product-blast-off);
+  stroke: var(--color-product-blast-off);
+}
+
+.highcharts-color-luna-dust {
+  fill: var(--color-product-luna-dust);
+  stroke: var(--color-product-luna-dust);
+}
+
+.highcharts-color-moon-lagoon {
+  fill: var(--color-product-moon-lagoon);
+  stroke: var(--color-product-moon-lagoon);
+}
+
+.highcharts-color-tiny-clanger {
+  fill: var(--color-product-tiny-clanger);
+  stroke: var(--color-product-tiny-clanger);
+}
+
+.highcharts-color-serene-sea {
+  fill: var(--color-product-serene-sea);
+  stroke: var(--color-product-serene-sea);
+}
+
+.highcharts-color-primeval-soup {
+  fill: var(--color-product-primeval-soup);
+  stroke: var(--color-product-primeval-soup);
+}
+
+.highcharts-color-future-shock {
+  fill: var(--color-product-future-shock);
+  stroke: var(--color-product-future-shock);
+}
+
+.highcharts-color-ground-control {
+  fill: var(--color-product-ground-control);
+  stroke: var(--color-product-ground-control);
+}
+
+.highcharts-color-sun-maker {
+  fill: var(--color-product-sun-maker);
+  stroke: var(--color-product-sun-maker);
+}
+
+.highcharts-color-crash-course {
+  fill: var(--color-product-crash-course);
+  stroke: var(--color-product-crash-course);
+}
+
+.highcharts-color-forbidden-planet {
+  fill: var(--color-product-forbidden-planet);
+  stroke: var(--color-product-forbidden-planet);
+}
+
+.highcharts-color-event-horizon {
+  fill: var(--color-product-event-horizon);
+  stroke: var(--color-product-event-horizon);
+}
+
+.highcharts-color-outer-limits {
+  fill: var(--color-product-outer-limits);
+  stroke: var(--color-product-outer-limits);
+}
+
+.highcharts-color-space-invader {
+  fill: var(--color-product-space-invader);
+  stroke: var(--color-product-space-invader);
+}
+
+.highcharts-color-extraterrestrial {
+  fill: var(--color-product-extraterrestrial);
+  stroke: var(--color-product-extraterrestrial);
+}
+
+.highcharts-color-space-oddity {
+  fill: var(--color-product-space-oddity);
+  stroke: var(--color-product-space-oddity);
+}
+
+.highcharts-color-rocky-planet {
+  fill: var(--color-product-rocky-planet);
+  stroke: var(--color-product-rocky-planet);
+}
+
+.highcharts-color-fantastic-voyage {
+  fill: var(--color-product-fantastic-voyage);
+  stroke: var(--color-product-fantastic-voyage);
+}
+
+.highcharts-color-electric-dreams {
+  fill: var(--color-product-electric-dreams);
+  stroke: var(--color-product-electric-dreams);
+}
+
+.highcharts-color-deep-thought {
+  fill: var(--color-product-deep-thought);
+  stroke: var(--color-product-deep-thought);
+}
+
+/*# sourceMappingURL=axiom-highcharts.css.map */

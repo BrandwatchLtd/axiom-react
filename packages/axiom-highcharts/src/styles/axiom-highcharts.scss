@@ -1,0 +1,231 @@
+// Axiom/Highcharts default variables
+// https://www.highcharts.com/docs/chart-design-and-style/custom-themes-in-styled-mode
+
+@import '../../../axiom-materials/src/colors.css';
+@import '../../../axiom-materials/src/typography.css';
+@import '../../../axiom-materials/src/sizing.css';
+@import '../../../axiom-materials/src/theme-day.css';
+
+// Colors for data series and points.
+$colors:
+  var(--color-product-giant-leap)
+  var(--color-product-new-horizon)
+  var(--color-product-critical-mass)
+  var(--color-product-paradise-lost)
+  var(--color-product-terra-form)
+  var(--color-product-blast-off)
+  var(--color-product-luna-dust)
+  var(--color-product-moon-lagoon)
+  var(--color-product-tiny-clanger)
+  var(--color-product-serene-sea)
+  var(--color-product-primeval-soup)
+  var(--color-product-future-shock)
+  var(--color-product-ground-control)
+  var(--color-product-sun-maker)
+  var(--color-product-crash-course)
+  var(--color-product-forbidden-planet)
+  var(--color-product-event-horizon)
+  var(--color-product-outer-limits)
+  var(--color-product-space-invader)
+  var(--color-product-extraterrestrial)
+  var(--color-product-space-oddity)
+  var(--color-product-rocky-planet)
+!default;
+
+$named-colors: (
+  // page type colors
+  social-twitter: var(--color-social-twitter),
+  social-facebook: var(--color-social-facebook),
+  social-instagram: var(--color-social-instagram),
+  images: var(--color-product-critical-mass),
+  microblog: var(--color-product-serene-sea),
+  blog: var(--color-product-giant-leap),
+  review: var(--color-product-space-invader),
+  forum: var(--color-product-new-horizon),
+  general: var(--color-product-blast-off),
+  video: var(--color-product-crash-course),
+  news: var(--color-product-ground-control),
+
+  // sentiment colors
+  sentiment-positive: var(--color-sentiment-positive),
+  sentiment-neutral: var(--color-sentiment-neutral),
+  sentiment-negative: var(--color-sentiment-negative),
+
+  // emotions colors
+  'emotions:anger': var(--color-sentiment-negative),
+  'emotions:sadness': var(--color-product-electric-dreams),
+  'emotions:surprise': var(--color-product-terra-form),
+  'emotions:happiness': var(--color-product-sun-maker),
+  'emotions:anticipation': var(--color-product-blast-off),
+  'emotions:disappointment': var(--color-product-paradise-lost),
+
+  // gender colors
+  female: var(--color-product-fantastic-voyage),
+  male: var(--color-product-electric-dreams),
+  unknown: var(--color-product-deep-thought),
+
+  giant-leap: var(--color-product-giant-leap),
+  new-horizon: var(--color-product-new-horizon),
+  critical-mass: var(--color-product-critical-mass),
+  paradise-lost: var(--color-product-paradise-lost),
+  terra-form: var(--color-product-terra-form),
+  blast-off: var(--color-product-blast-off),
+  luna-dust: var(--color-product-luna-dust),
+  moon-lagoon: var(--color-product-moon-lagoon),
+  tiny-clanger: var(--color-product-tiny-clanger),
+  serene-sea: var(--color-product-serene-sea),
+  primeval-soup: var(--color-product-primeval-soup),
+  future-shock: var(--color-product-future-shock),
+  ground-control: var(--color-product-ground-control),
+  sun-maker: var(--color-product-sun-maker),
+  crash-course: var(--color-product-crash-course),
+  forbidden-planet: var(--color-product-forbidden-planet),
+  event-horizon: var(--color-product-event-horizon),
+  outer-limits: var(--color-product-outer-limits),
+  space-invader: var(--color-product-space-invader),
+  extraterrestrial: var(--color-product-extraterrestrial),
+  space-oddity: var(--color-product-space-oddity),
+  rocky-planet: var(--color-product-rocky-planet),
+  fantastic-voyage: var(--color-product-fantastic-voyage),
+  electric-dreams: var(--color-product-electric-dreams),
+  deep-thought: var(--color-product-deep-thought),
+);
+
+// Chart background, point stroke for markers and columns etc
+$background-color: var(--color-theme-background) !default;
+
+// Neutral colors, grayscale by default. The default colors are defined by mixing the background-color with neutral, with a weight corresponding to the number in the name.
+$neutral-color-100: #000000 !default; // Strong text.
+$neutral-color-80: var(--color-theme-text) !default; // Main text and some strokes.
+$neutral-color-60: var(--color-theme-text--subtle) !default; // Axis labels, axis title, connector fallback.
+$neutral-color-40: var(--color-theme-text) !default; // Credits text, export menu stroke.
+$neutral-color-20: var(--color-theme-text--disabled) !default; // Disabled texts, button strokes, crosshair etc.
+$neutral-color-10: var(--color-theme-border) !default; // Grid lines etc.
+$neutral-color-5: var(--color-theme-border) !default; // Minor grid lines etc.
+$neutral-color-3: var(--color-theme-background) !default; // Tooltip background, button fills, map null points.
+
+// Colored, shades of blue by default
+$highlight-color-100: #003399 !default; // Drilldown clickable labels, color axis max color.
+$highlight-color-80: #335cad !default; // Selection marker, menu hover, button hover, chart border, navigator series.
+$highlight-color-60: #6685c2 !default; // Navigator mask fill.
+$highlight-color-20: #ccd6eb !default; // Ticks and axis line.
+$highlight-color-10: #e6ebf5 !default; // Pressed button, color axis min color.
+
+// Fonts
+$font-family: var(--font-family-body) !default;
+$title-font-size: var(--font-size-large) !default;
+$subtitle-font-size: var(--font-size-body) !default;
+$legend-font-size: var(--font-size-small) !default;
+$axis-labels-font-size: var(--font-size-small) !default;
+
+// Tooltip
+$tooltip-border: 0px !default;
+$tooltip-background: $neutral-color-3 !default;
+
+// Axes
+$xaxis-grid-line: 0px !default;
+
+// Range-selector
+$range-selector-button-border: 0px !default;
+$range-selector-input-text: $neutral-color-80 !default;
+$range-selector-input-border: $neutral-color-20 !default;
+
+// Data-labels
+$data-label-color: $neutral-color-80 !default;
+
+// Buttons
+$context-button-background: $background-color !default;
+
+$highcharts-button-background: $neutral-color-3 !default;
+$highcharts-button-border: $neutral-color-20 !default;
+$highcharts-button-text:  $neutral-color-80 !default;
+
+$highcharts-button-pressed-background: $highlight-color-10 !default;
+$highcharts-button-pressed-border: $neutral-color-20 !default;
+$highcharts-button-pressed-text:  $neutral-color-80 !default;
+
+$highcharts-button-hover-background: $neutral-color-10 !default;
+$highcharts-button-hover-border: $neutral-color-20 !default;
+$highcharts-button-hover-text:  $neutral-color-80 !default;
+
+// Navigator
+$navigator-series-fill: $highlight-color-80 !default;
+$navigator-series-border: $highlight-color-80 !default;
+
+// Scrollbar
+$scrollbar-track-background: $neutral-color-5 !default;
+$scrollbar-track-border: $neutral-color-5 !default;
+
+@import 'highcharts/css/highcharts.scss';
+
+/* Grid Lines*/
+.highcharts-grid-line {
+  stroke-dasharray: 1;
+}
+
+/* Series */
+.highcharts-series {
+  stroke-width: 20px;
+}
+
+/* Legend */
+.highcharts-legend-item text {
+  fill: var(--color-theme-text--subtle);
+}
+
+.highcharts-legend-item text:hover {
+  fill: var(--color-theme-text);
+}
+
+.highcharts-legend-item .highcharts-graph {
+  stroke-width: 0;
+}
+
+.highcharts-legend-item .highcharts-point {
+  /*stroke-width: 6px;*/
+}
+
+highcharts-legend-item .highcharts-point {
+  stroke-width: 0px;
+}
+
+.highcharts-line-series.highcharts-legend-item .highcharts-point {
+  stroke-width: 4px;
+}
+
+/* Tooltips */
+.highcharts-tooltip {
+  filter: none;
+}
+
+.highcharts-tooltip-box {
+  color: var(--color-theme-text);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+  border-radius: var(--component-border-radius);
+  background-color: var(--color-theme-background);
+  fill-opacity: 1;
+  stroke-width: 1px;
+  stroke: var(--color-theme-shadow--light);
+}
+
+/* Graph */
+
+.highcharts-graph {
+  stroke-width: 2.25px;
+}
+
+/* Axis */
+
+.highcharts-axis-title {
+  padding: 12px 0;
+}
+
+
+/* generate named color classes */
+
+@each $name, $color in $named-colors {
+  .highcharts-color-#{$name} {
+    fill: $color;
+    stroke: $color;
+  }
+};
