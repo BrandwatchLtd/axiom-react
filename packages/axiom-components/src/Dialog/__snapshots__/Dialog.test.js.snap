@@ -6,7 +6,7 @@ exports[`Dialog renders with required props 1`] = `
 >
   <div
     className="ax-modal__mask"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   />
   <div
     className="ax-modal"

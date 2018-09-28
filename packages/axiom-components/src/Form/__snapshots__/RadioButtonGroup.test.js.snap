@@ -6,14 +6,9 @@ exports[`RadioButton renders with defaultProps 1`] = `
 >
   <label
     className="ax-radio ax-space--x2"
-    onClick={undefined}
-    title={undefined}
   >
     <input
-      checked={undefined}
       className="ax-radio__input"
-      disabled={undefined}
-      name={undefined}
       type="radio"
     />
     <span

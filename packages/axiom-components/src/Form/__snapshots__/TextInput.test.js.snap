@@ -16,7 +16,6 @@ exports[`TextInput renders when disabled 1`] = `
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -35,11 +34,9 @@ exports[`TextInput renders when invalid 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -58,11 +55,9 @@ exports[`TextInput renders when valid 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -81,11 +76,9 @@ exports[`TextInput renders with TextInputButton 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -94,7 +87,6 @@ exports[`TextInput renders with TextInputButton 1`] = `
   >
     <button
       className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--joined-left"
-      disabled={undefined}
     >
       Test
     </button>
@@ -133,11 +125,9 @@ exports[`TextInput renders with TextInputIcon 1`] = `
       </span>
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -156,11 +146,9 @@ exports[`TextInput renders with defaultProps 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -188,11 +176,9 @@ exports[`TextInput renders with label 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -235,7 +221,6 @@ exports[`TextInput renders with onClear and value 1`] = `
       </span>
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
@@ -258,11 +243,9 @@ exports[`TextInput renders with size large 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -281,11 +264,9 @@ exports[`TextInput renders with size medium 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>
@@ -304,11 +285,9 @@ exports[`TextInput renders with size small 1`] = `
     >
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         type="text"
-        value={undefined}
       />
     </div>
   </label>

@@ -18,16 +18,13 @@ exports[`TextArea renders with a label 1`] = `
   >
     <textarea
       className="ax-textarea"
-      disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
-      placeholder={undefined}
       style={
         Object {
           "minHeight": 150,
         }
       }
-      value={undefined}
     />
   </div>
 </label>
@@ -42,16 +39,13 @@ exports[`TextArea renders with custom height 1`] = `
   >
     <textarea
       className="ax-textarea"
-      disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
-      placeholder={undefined}
       style={
         Object {
           "minHeight": 300,
         }
       }
-      value={undefined}
     />
   </div>
 </label>
@@ -66,16 +60,13 @@ exports[`TextArea renders with defaultProps 1`] = `
   >
     <textarea
       className="ax-textarea"
-      disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
-      placeholder={undefined}
       style={
         Object {
           "minHeight": 150,
         }
       }
-      value={undefined}
     />
   </div>
 </label>

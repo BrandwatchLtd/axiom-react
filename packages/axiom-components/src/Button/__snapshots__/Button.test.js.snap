@@ -3,7 +3,6 @@
 exports[`Button renders with active 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--active"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -12,7 +11,6 @@ exports[`Button renders with active 1`] = `
 exports[`Button renders with color accent 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -21,7 +19,6 @@ exports[`Button renders with color accent 1`] = `
 exports[`Button renders with color negative 1`] = `
 <button
   className="ax-button ax-button--negative ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -30,7 +27,6 @@ exports[`Button renders with color negative 1`] = `
 exports[`Button renders with color positive 1`] = `
 <button
   className="ax-button ax-button--positive ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -39,7 +35,6 @@ exports[`Button renders with color positive 1`] = `
 exports[`Button renders with defaultProps 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -48,7 +43,6 @@ exports[`Button renders with defaultProps 1`] = `
 exports[`Button renders with full large 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full--large"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -57,7 +51,6 @@ exports[`Button renders with full large 1`] = `
 exports[`Button renders with full medium 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full--medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -66,7 +59,6 @@ exports[`Button renders with full medium 1`] = `
 exports[`Button renders with full small 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full--small"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -75,7 +67,6 @@ exports[`Button renders with full small 1`] = `
 exports[`Button renders with full true 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -84,7 +75,6 @@ exports[`Button renders with full true 1`] = `
 exports[`Button renders with shape with size circle with huge 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--circle-huge"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -93,7 +83,6 @@ exports[`Button renders with shape with size circle with huge 1`] = `
 exports[`Button renders with shape with size circle with large 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--circle-large"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -102,7 +91,6 @@ exports[`Button renders with shape with size circle with large 1`] = `
 exports[`Button renders with shape with size circle with medium 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--circle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -111,7 +99,6 @@ exports[`Button renders with shape with size circle with medium 1`] = `
 exports[`Button renders with shape with size circle with small 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--circle-small"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -120,7 +107,6 @@ exports[`Button renders with shape with size circle with small 1`] = `
 exports[`Button renders with shape with size rectangle with huge 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-huge"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -129,7 +115,6 @@ exports[`Button renders with shape with size rectangle with huge 1`] = `
 exports[`Button renders with shape with size rectangle with large 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-large"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -138,7 +123,6 @@ exports[`Button renders with shape with size rectangle with large 1`] = `
 exports[`Button renders with shape with size rectangle with medium 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -147,7 +131,6 @@ exports[`Button renders with shape with size rectangle with medium 1`] = `
 exports[`Button renders with shape with size rectangle with small 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-small"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -156,7 +139,6 @@ exports[`Button renders with shape with size rectangle with small 1`] = `
 exports[`Button renders with shape with size stadium with huge 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--stadium-huge"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -165,7 +147,6 @@ exports[`Button renders with shape with size stadium with huge 1`] = `
 exports[`Button renders with shape with size stadium with large 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--stadium-large"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -174,7 +155,6 @@ exports[`Button renders with shape with size stadium with large 1`] = `
 exports[`Button renders with shape with size stadium with medium 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--stadium-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -183,7 +163,6 @@ exports[`Button renders with shape with size stadium with medium 1`] = `
 exports[`Button renders with shape with size stadium with small 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--stadium-small"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -192,7 +171,6 @@ exports[`Button renders with shape with size stadium with small 1`] = `
 exports[`Button renders with style primary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -201,7 +179,6 @@ exports[`Button renders with style primary 1`] = `
 exports[`Button renders with style quaternary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--quaternary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -210,7 +187,6 @@ exports[`Button renders with style quaternary 1`] = `
 exports[`Button renders with style secondary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--secondary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -219,7 +195,6 @@ exports[`Button renders with style secondary 1`] = `
 exports[`Button renders with style tertiary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--tertiary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem Ipsum
 </button>
@@ -228,7 +203,6 @@ exports[`Button renders with style tertiary 1`] = `
 exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem ipsum
   <span
@@ -257,7 +231,6 @@ exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
 exports[`Button with ButtonIcon adds space to end if last child 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   Lorem ipsum
   <span
@@ -285,7 +258,6 @@ exports[`Button with ButtonIcon adds space to end if last child 1`] = `
 exports[`Button with ButtonIcon adds space to start if first child 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
-  disabled={undefined}
 >
   <span
     className="ax-button__icon ax-button__icon--start"

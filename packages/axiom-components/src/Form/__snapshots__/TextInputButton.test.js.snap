@@ -6,7 +6,6 @@ exports[`TextInputButton renders with defaultProps 1`] = `
 >
   <button
     className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--joined-left"
-    disabled={undefined}
   >
     Test
   </button>

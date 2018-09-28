@@ -31,3 +31,43 @@ exports[`ChartBody renders with horizontalAlign start 1`] = `
   Lorem Ipsum
 </div>
 `;
+
+exports[`ChartBody renders with verticalAlign around 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--vertical-around"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with verticalAlign between 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--vertical-between"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with verticalAlign end 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--vertical-end"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with verticalAlign middle 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--vertical-middle"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`ChartBody renders with verticalAlign start 1`] = `
+<div
+  className="ax-chart__body ax-chart__body--vertical-start"
+>
+  Lorem Ipsum
+</div>
+`;

@@ -46,7 +46,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.24.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^19.0.2",
+    "jest": "^23.6.0",
     "jsdom": "^9.10.0",
     "lerna": "^2.8.0",
     "lodash.chunk": "^4.2.0",

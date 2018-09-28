@@ -3,7 +3,6 @@
 exports[`DataPoints renders with defaultProps 1`] = `
 <svg
   className="ax-data-points"
-  onClick={undefined}
   preserveAspectRatio="xMinYMin meet"
   style={
     Object {

@@ -21,7 +21,6 @@ exports[`BulletBars renders with defaultProps 1`] = `
           >
             <div
               className="ax-bars__bar"
-              onClick={undefined}
               style={
                 Object {
                   "height": "10%",
@@ -72,7 +71,6 @@ exports[`BulletBars renders with defaultProps 1`] = `
           >
             <div
               className="ax-bars__bar"
-              onClick={undefined}
               style={
                 Object {
                   "height": "50%",
@@ -134,7 +132,6 @@ exports[`BulletBars renders with the correct label 1`] = `
           >
             <div
               className="ax-bars__bar"
-              onClick={undefined}
               style={
                 Object {
                   "height": "10%",
@@ -185,7 +182,6 @@ exports[`BulletBars renders with the correct label 1`] = `
           >
             <div
               className="ax-bars__bar"
-              onClick={undefined}
               style={
                 Object {
                   "height": "50%",

@@ -9,8 +9,8 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
     style={
       Object {
         "width": "calc(11rem +
-            ((100% - 11rem) / 100) * (100)
-          )",
+      ((100% - 11rem) / 100) * (100)
+    )",
       }
     }
   >
@@ -309,8 +309,8 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
     style={
       Object {
         "width": "calc(11rem +
-            ((100% - 11rem) / 100) * (100)
-          )",
+      ((100% - 11rem) / 100) * (100)
+    )",
       }
     }
   >
@@ -609,8 +609,8 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
     style={
       Object {
         "width": "calc(11rem +
-            ((100% - 11rem) / 100) * (100)
-          )",
+      ((100% - 11rem) / 100) * (100)
+    )",
       }
     }
   >
@@ -909,8 +909,8 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
     style={
       Object {
         "width": "calc(11rem +
-            ((100% - 11rem) / 100) * (100)
-          )",
+      ((100% - 11rem) / 100) * (100)
+    )",
       }
     }
   >

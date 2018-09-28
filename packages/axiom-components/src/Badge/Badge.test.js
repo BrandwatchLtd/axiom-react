@@ -100,7 +100,7 @@ describe('Badge', () => {
 
   describe('renders with full', () => {
     [true, 'small', 'medium', 'large'].forEach((full) => {
-      it(full, () => {
+      it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();

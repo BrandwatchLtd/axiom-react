@@ -286,7 +286,7 @@ exports[`GridCell renders with shrink true 1`] = `
 </div>
 `;
 
-exports[`GridCell renders with sub grid  1`] = `
+exports[`GridCell renders with sub grid false 1`] = `
 <div
   className="ax-grid__cell"
   style={

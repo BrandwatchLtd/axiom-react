@@ -3,12 +3,12 @@
 exports[`CombinedBar renders a single bar when benchmark value is less than current value 1`] = `
 <React.Fragment>
   <ChartContext
-    DropdownContext={[Function]}
-    TooltipContext={[Function]}
+    DropdownContext={[MockFunction]}
+    TooltipContext={[MockFunction]}
     color="giant-leap"
     data={Object {}}
     label="Possitve"
-    onDropdownClose={[Function]}
+    onDropdownClose={[MockFunction]}
     onDropdownOpen={[Function]}
     value={4321}
   >
@@ -20,7 +20,7 @@ exports[`CombinedBar renders a single bar when benchmark value is less than curr
       isHidden={false}
       labelStrong={false}
       minSize="1rem"
-      onClick={[Function]}
+      onClick={[MockFunction]}
       percent={50}
     />
   </ChartContext>
@@ -30,12 +30,12 @@ exports[`CombinedBar renders a single bar when benchmark value is less than curr
 exports[`CombinedBar renders an additional striped bar when benchmark value is grather than current value 1`] = `
 <React.Fragment>
   <ChartContext
-    DropdownContext={[Function]}
-    TooltipContext={[Function]}
+    DropdownContext={[MockFunction]}
+    TooltipContext={[MockFunction]}
     color="giant-leap"
     data={Object {}}
     label="Possitve"
-    onDropdownClose={[Function]}
+    onDropdownClose={[MockFunction]}
     onDropdownOpen={[Function]}
     value={4321}
   >
@@ -47,7 +47,7 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
       isHidden={false}
       labelStrong={false}
       minSize="1rem"
-      onClick={[Function]}
+      onClick={[MockFunction]}
       percent={10}
     />
   </ChartContext>
@@ -60,7 +60,7 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
     }
   >
     <ChartContext
-      TooltipContext={[Function]}
+      TooltipContext={[MockFunction]}
       color="giant-leap"
       data={Object {}}
       label="Possitve"

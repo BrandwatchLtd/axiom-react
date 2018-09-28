@@ -5,7 +5,6 @@ exports[`DataPoint renders with color blast-off 1`] = `
   className="ax-data-point ax-data-point--blast-off ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -15,7 +14,6 @@ exports[`DataPoint renders with color crash-course 1`] = `
   className="ax-data-point ax-data-point--crash-course ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -25,7 +23,6 @@ exports[`DataPoint renders with color critical-mass 1`] = `
   className="ax-data-point ax-data-point--critical-mass ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -35,7 +32,6 @@ exports[`DataPoint renders with color deep-thought 1`] = `
   className="ax-data-point ax-data-point--deep-thought ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -45,7 +41,6 @@ exports[`DataPoint renders with color electric-dreams 1`] = `
   className="ax-data-point ax-data-point--electric-dreams ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -55,7 +50,6 @@ exports[`DataPoint renders with color event-horizon 1`] = `
   className="ax-data-point ax-data-point--event-horizon ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -65,7 +59,6 @@ exports[`DataPoint renders with color extraterrestrial 1`] = `
   className="ax-data-point ax-data-point--extraterrestrial ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -75,7 +68,6 @@ exports[`DataPoint renders with color fantastic-voyage 1`] = `
   className="ax-data-point ax-data-point--fantastic-voyage ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -85,7 +77,6 @@ exports[`DataPoint renders with color forbidden-planet 1`] = `
   className="ax-data-point ax-data-point--forbidden-planet ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -95,7 +86,6 @@ exports[`DataPoint renders with color future-shock 1`] = `
   className="ax-data-point ax-data-point--future-shock ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -105,7 +95,6 @@ exports[`DataPoint renders with color giant-leap 1`] = `
   className="ax-data-point ax-data-point--giant-leap ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -115,7 +104,6 @@ exports[`DataPoint renders with color ground-control 1`] = `
   className="ax-data-point ax-data-point--ground-control ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -125,7 +113,6 @@ exports[`DataPoint renders with color luna-dust 1`] = `
   className="ax-data-point ax-data-point--luna-dust ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -135,7 +122,6 @@ exports[`DataPoint renders with color moon-lagoon 1`] = `
   className="ax-data-point ax-data-point--moon-lagoon ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -145,7 +131,6 @@ exports[`DataPoint renders with color new-horizon 1`] = `
   className="ax-data-point ax-data-point--new-horizon ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -155,7 +140,6 @@ exports[`DataPoint renders with color outer-limits 1`] = `
   className="ax-data-point ax-data-point--outer-limits ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -165,7 +149,6 @@ exports[`DataPoint renders with color paradise-lost 1`] = `
   className="ax-data-point ax-data-point--paradise-lost ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -175,7 +158,6 @@ exports[`DataPoint renders with color primeval-soup 1`] = `
   className="ax-data-point ax-data-point--primeval-soup ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -185,7 +167,6 @@ exports[`DataPoint renders with color rocky-planet 1`] = `
   className="ax-data-point ax-data-point--rocky-planet ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -195,7 +176,6 @@ exports[`DataPoint renders with color serene-sea 1`] = `
   className="ax-data-point ax-data-point--serene-sea ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -205,7 +185,6 @@ exports[`DataPoint renders with color solar-rust 1`] = `
   className="ax-data-point ax-data-point--solar-rust ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -215,7 +194,6 @@ exports[`DataPoint renders with color space-invader 1`] = `
   className="ax-data-point ax-data-point--space-invader ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -225,7 +203,6 @@ exports[`DataPoint renders with color space-oddity 1`] = `
   className="ax-data-point ax-data-point--space-oddity ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -235,7 +212,6 @@ exports[`DataPoint renders with color sun-maker 1`] = `
   className="ax-data-point ax-data-point--sun-maker ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -245,7 +221,6 @@ exports[`DataPoint renders with color terra-form 1`] = `
   className="ax-data-point ax-data-point--terra-form ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -255,7 +230,6 @@ exports[`DataPoint renders with color tiny-clanger 1`] = `
   className="ax-data-point ax-data-point--tiny-clanger ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;
@@ -265,7 +239,6 @@ exports[`DataPoint renders with defaultProps 1`] = `
   className="ax-data-point ax-data-point--tiny-clanger ax-data-point--solid"
   cx={12}
   cy={12}
-  r={undefined}
   strokeWidth={4}
 />
 `;

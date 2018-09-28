@@ -10,7 +10,6 @@ exports[`Toggle renders as not toggled 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -31,7 +30,6 @@ exports[`Toggle renders as toggled 1`] = `
     <input
       checked={true}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -52,7 +50,6 @@ exports[`Toggle renders with align full 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -73,7 +70,6 @@ exports[`Toggle renders with align left 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -94,7 +90,6 @@ exports[`Toggle renders with align right 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -141,7 +136,6 @@ exports[`Toggle renders with label children 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -162,7 +156,6 @@ exports[`Toggle renders with size medium 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />
@@ -183,7 +176,6 @@ exports[`Toggle renders with size small 1`] = `
     <input
       checked={false}
       className="ax-toggle__input"
-      disabled={undefined}
       onChange={[Function]}
       type="checkbox"
     />

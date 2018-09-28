@@ -10,7 +10,6 @@ exports[`WordCloud renders with defaultProps 1`] = `
 >
   <text
     className="ax-word"
-    onClick={undefined}
     style={
       Object {
         "animationDelay": "200ms",

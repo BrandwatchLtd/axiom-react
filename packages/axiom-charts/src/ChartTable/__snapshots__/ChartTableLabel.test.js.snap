@@ -11,7 +11,6 @@ exports[`ChartTableLabel renders with defaultProps 1`] = `
 >
   <div
     className="ax-grid__container ax-space--x6"
-    onClick={undefined}
   >
     <div
       className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"

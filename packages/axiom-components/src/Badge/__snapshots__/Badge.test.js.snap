@@ -3,7 +3,6 @@
 exports[`Badge does not render opacity 1 with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -45,7 +44,6 @@ exports[`Badge renders onClick 1`] = `
 exports[`Badge renders opacity 1`] = `
 <span
   className="ax-badge ax-badge--success"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -66,7 +64,6 @@ exports[`Badge renders opacity 1`] = `
 exports[`Badge renders opacity 1 1`] = `
 <span
   className="ax-badge ax-badge--success ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -87,7 +84,6 @@ exports[`Badge renders opacity 1 1`] = `
 exports[`Badge renders opacity maximum 0.3 with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -108,7 +104,6 @@ exports[`Badge renders opacity maximum 0.3 with color faded 1`] = `
 exports[`Badge renders opacity maximum 0.6 1`] = `
 <span
   className="ax-badge ax-badge--success"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -129,7 +124,6 @@ exports[`Badge renders opacity maximum 0.6 1`] = `
 exports[`Badge renders opacity minimum 0.1 1`] = `
 <span
   className="ax-badge ax-badge--success"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -150,7 +144,6 @@ exports[`Badge renders opacity minimum 0.1 1`] = `
 exports[`Badge renders opacity minimum 0.1 with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -171,7 +164,6 @@ exports[`Badge renders opacity minimum 0.1 with color faded 1`] = `
 exports[`Badge renders opacity with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -192,7 +184,6 @@ exports[`Badge renders opacity with color faded 1`] = `
 exports[`Badge renders with color blast-off 1`] = `
 <span
   className="ax-badge ax-badge--blast-off ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -213,7 +204,6 @@ exports[`Badge renders with color blast-off 1`] = `
 exports[`Badge renders with color critical-mass 1`] = `
 <span
   className="ax-badge ax-badge--critical-mass ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -234,7 +224,6 @@ exports[`Badge renders with color critical-mass 1`] = `
 exports[`Badge renders with color error 1`] = `
 <span
   className="ax-badge ax-badge--error ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -255,7 +244,6 @@ exports[`Badge renders with color error 1`] = `
 exports[`Badge renders with color faded 1`] = `
 <span
   className="ax-badge ax-badge--faded"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -276,7 +264,6 @@ exports[`Badge renders with color faded 1`] = `
 exports[`Badge renders with color giant-leap 1`] = `
 <span
   className="ax-badge ax-badge--giant-leap ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -297,7 +284,6 @@ exports[`Badge renders with color giant-leap 1`] = `
 exports[`Badge renders with color ground-control 1`] = `
 <span
   className="ax-badge ax-badge--ground-control ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -318,7 +304,6 @@ exports[`Badge renders with color ground-control 1`] = `
 exports[`Badge renders with color highlight 1`] = `
 <span
   className="ax-badge ax-badge--highlight ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -339,7 +324,6 @@ exports[`Badge renders with color highlight 1`] = `
 exports[`Badge renders with color luna-dust 1`] = `
 <span
   className="ax-badge ax-badge--luna-dust ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -360,7 +344,6 @@ exports[`Badge renders with color luna-dust 1`] = `
 exports[`Badge renders with color moon-lagoon 1`] = `
 <span
   className="ax-badge ax-badge--moon-lagoon ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -381,7 +364,6 @@ exports[`Badge renders with color moon-lagoon 1`] = `
 exports[`Badge renders with color new-horizon 1`] = `
 <span
   className="ax-badge ax-badge--new-horizon ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -402,7 +384,6 @@ exports[`Badge renders with color new-horizon 1`] = `
 exports[`Badge renders with color paradise-lost 1`] = `
 <span
   className="ax-badge ax-badge--paradise-lost ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -423,7 +404,6 @@ exports[`Badge renders with color paradise-lost 1`] = `
 exports[`Badge renders with color primeval-soup 1`] = `
 <span
   className="ax-badge ax-badge--primeval-soup ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -444,7 +424,6 @@ exports[`Badge renders with color primeval-soup 1`] = `
 exports[`Badge renders with color serene-sea 1`] = `
 <span
   className="ax-badge ax-badge--serene-sea ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -465,7 +444,6 @@ exports[`Badge renders with color serene-sea 1`] = `
 exports[`Badge renders with color success 1`] = `
 <span
   className="ax-badge ax-badge--success ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -486,7 +464,6 @@ exports[`Badge renders with color success 1`] = `
 exports[`Badge renders with color terra-form 1`] = `
 <span
   className="ax-badge ax-badge--terra-form ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -507,7 +484,6 @@ exports[`Badge renders with color terra-form 1`] = `
 exports[`Badge renders with color tiny-clanger 1`] = `
 <span
   className="ax-badge ax-badge--tiny-clanger ax-text--color-night"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -528,7 +504,6 @@ exports[`Badge renders with color tiny-clanger 1`] = `
 exports[`Badge renders with defaultProps 1`] = `
 <span
   className="ax-badge ax-badge--faded"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -549,7 +524,6 @@ exports[`Badge renders with defaultProps 1`] = `
 exports[`Badge renders with full large 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full--large"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -570,7 +544,6 @@ exports[`Badge renders with full large 1`] = `
 exports[`Badge renders with full medium 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full--medium"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -591,7 +564,6 @@ exports[`Badge renders with full medium 1`] = `
 exports[`Badge renders with full small 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full--small"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"
@@ -612,7 +584,6 @@ exports[`Badge renders with full small 1`] = `
 exports[`Badge renders with full true 1`] = `
 <span
   className="ax-badge ax-badge--faded ax-badge--full"
-  onClick={undefined}
 >
   <span
     className="ax-badge__background"

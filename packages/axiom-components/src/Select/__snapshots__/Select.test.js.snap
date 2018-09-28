@@ -31,7 +31,6 @@ exports[`Select renders with a selected value 1`] = `
       </span>
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -75,7 +74,6 @@ exports[`Select renders with defaultProps 1`] = `
       </span>
       <input
         className="ax-input"
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}

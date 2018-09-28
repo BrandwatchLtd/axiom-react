@@ -1,5 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[` 1`] = `
+<div
+  className="ax-tip--top ax-tip--success ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 2`] = `
+<div
+  className="ax-tip--top ax-tip--warning ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 3`] = `
+<div
+  className="ax-tip--top ax-tip--error ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 4`] = `
+<div
+  className="ax-tip--top ax-tip--info ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 5`] = `
+<div
+  className="ax-tip--top ax-tip--shade-1 ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 6`] = `
+<div
+  className="ax-tip--top ax-tip--shade-2 ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 7`] = `
+<div
+  className="ax-tip--top ax-tip--shade-3 ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 8`] = `
+<div
+  className="ax-tip--top ax-tip--shade-4 ax-tip--shadow"
+>
+  <span
+    className="ax-tip__arrow ax-tip__arrow--medium"
+    style={Object {}}
+  />
+  <div
+    className="ax-tip__content"
+  >
+    <div
+      className=""
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tip renders with arrowRef 1`] = `
 <div
   className="ax-tip--top ax-tip--shadow"
@@ -147,166 +307,6 @@ exports[`Tip renders with position 1`] = `
 exports[`Tip renders without shadow 1`] = `
 <div
   className="ax-tip--top"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 1`] = `
-<div
-  className="ax-tip--top ax-tip--success ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 2`] = `
-<div
-  className="ax-tip--top ax-tip--warning ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 3`] = `
-<div
-  className="ax-tip--top ax-tip--error ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 4`] = `
-<div
-  className="ax-tip--top ax-tip--info ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 5`] = `
-<div
-  className="ax-tip--top ax-tip--shade-1 ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 6`] = `
-<div
-  className="ax-tip--top ax-tip--shade-2 ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 7`] = `
-<div
-  className="ax-tip--top ax-tip--shade-3 ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`undefined 8`] = `
-<div
-  className="ax-tip--top ax-tip--shade-4 ax-tip--shadow"
 >
   <span
     className="ax-tip__arrow ax-tip__arrow--medium"

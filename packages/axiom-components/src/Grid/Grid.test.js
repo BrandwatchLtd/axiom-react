@@ -30,7 +30,7 @@ describe('Grid', () => {
 
   describe('renders with fill', () => {
     [true, 'small', 'medium', 'large'].forEach((fill) => {
-      it(fill, () => {
+      it(String(fill), () => {
         const component = getComponent({ fill });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -40,7 +40,7 @@ describe('Grid', () => {
 
   describe('renders with fit', () => {
     [true, 'small', 'medium', 'large'].forEach((fit) => {
-      it(fit, () => {
+      it(String(fit), () => {
         const component = getComponent({ fit });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -50,7 +50,7 @@ describe('Grid', () => {
 
   describe('renders with full', () => {
     [true, 'small', 'medium', 'large'].forEach((full) => {
-      it(full, () => {
+      it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe('Grid', () => {
 
   describe('renders with gutters', () => {
     [false, 'tiny', 'small', 'medium', 'large'].forEach((gutters) => {
-      it(gutters, () => {
+      it(String(gutters), () => {
         const component = getComponent({ gutters });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -80,7 +80,7 @@ describe('Grid', () => {
 
   describe('renders with horizontalGutters', () => {
     [false, 'tiny', 'small', 'medium', 'large'].forEach((horizontalGutters) => {
-      it(horizontalGutters, () => {
+      it(String(horizontalGutters), () => {
         const component = getComponent({ horizontalGutters });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -90,7 +90,7 @@ describe('Grid', () => {
 
   describe('renders with shrink', () => {
     [true, 'small', 'medium', 'large'].forEach((shrink) => {
-      it(shrink, () => {
+      it(String(shrink), () => {
         const component = getComponent({ shrink });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -110,7 +110,7 @@ describe('Grid', () => {
 
   describe('renders with verticalGutters', () => {
     [false, 'tiny', 'small', 'medium', 'large'].forEach((verticalGutters) => {
-      it(verticalGutters, () => {
+      it(String(verticalGutters), () => {
         const component = getComponent({ verticalGutters });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();

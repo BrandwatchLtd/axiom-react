@@ -24,7 +24,7 @@ describe('ChartBody', () => {
     });
   });
 
-  it('renders with verticalAlign', () => {
+  describe('renders with verticalAlign', () => {
     ['start', 'middle', 'end', 'around', 'between'].forEach((verticalAlign) => {
       it(verticalAlign, () => {
         const component = getComponent({ verticalAlign });

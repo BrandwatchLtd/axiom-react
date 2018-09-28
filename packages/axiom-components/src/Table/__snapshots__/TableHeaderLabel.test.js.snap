@@ -7,7 +7,6 @@ exports[`TableHeaderLabel renders 1`] = `
   <button
     className="ax-table__header-button"
     disabled={true}
-    onClick={undefined}
   >
     Test
     <svg
@@ -36,7 +35,6 @@ exports[`TableHeaderLabel renders with grow 1`] = `
   <button
     className="ax-table__header-button"
     disabled={true}
-    onClick={undefined}
   >
     Test
     <svg
@@ -65,7 +63,6 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
   <button
     className="ax-table__header-button"
     disabled={true}
-    onClick={undefined}
   >
     Test
     <svg
@@ -94,7 +91,6 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
   <button
     className="ax-table__header-button"
     disabled={true}
-    onClick={undefined}
   >
     Test
     <svg
@@ -123,7 +119,6 @@ exports[`TableHeaderLabel renders with sortable 1`] = `
   <button
     className="ax-table__header-button"
     disabled={true}
-    onClick={undefined}
   >
     Test
   </button>
@@ -137,7 +132,6 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
   <button
     className="ax-table__header-button"
     disabled={true}
-    onClick={undefined}
   >
     Test
     <svg

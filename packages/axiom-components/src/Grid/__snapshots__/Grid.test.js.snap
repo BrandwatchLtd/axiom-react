@@ -168,7 +168,7 @@ exports[`Grid renders with full true 1`] = `
 </div>
 `;
 
-exports[`Grid renders with gutters  1`] = `
+exports[`Grid renders with gutters false 1`] = `
 <div
   className="ax-grid__container ax-space--x6"
 >
@@ -288,7 +288,7 @@ exports[`Grid renders with horizontalAlign start 1`] = `
 </div>
 `;
 
-exports[`Grid renders with horizontalGutters  1`] = `
+exports[`Grid renders with horizontalGutters false 1`] = `
 <div
   className="ax-grid__container ax-space--x6"
 >
@@ -444,7 +444,7 @@ exports[`Grid renders with verticalAlign start 1`] = `
 </div>
 `;
 
-exports[`Grid renders with verticalGutters  1`] = `
+exports[`Grid renders with verticalGutters false 1`] = `
 <div
   className="ax-grid__container ax-space--x6"
 >

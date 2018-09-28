@@ -3,7 +3,6 @@
 exports[`Word renders with color blast-off 1`] = `
 <text
   className="ax-word ax-word--blast-off"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -19,7 +18,6 @@ exports[`Word renders with color blast-off 1`] = `
 exports[`Word renders with color crash-course 1`] = `
 <text
   className="ax-word ax-word--crash-course"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -35,7 +33,6 @@ exports[`Word renders with color crash-course 1`] = `
 exports[`Word renders with color critical-mass 1`] = `
 <text
   className="ax-word ax-word--critical-mass"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -51,7 +48,6 @@ exports[`Word renders with color critical-mass 1`] = `
 exports[`Word renders with color deep-thought 1`] = `
 <text
   className="ax-word ax-word--deep-thought"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -67,7 +63,6 @@ exports[`Word renders with color deep-thought 1`] = `
 exports[`Word renders with color electric-dreams 1`] = `
 <text
   className="ax-word ax-word--electric-dreams"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -83,7 +78,6 @@ exports[`Word renders with color electric-dreams 1`] = `
 exports[`Word renders with color event-horizon 1`] = `
 <text
   className="ax-word ax-word--event-horizon"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -99,7 +93,6 @@ exports[`Word renders with color event-horizon 1`] = `
 exports[`Word renders with color extraterrestrial 1`] = `
 <text
   className="ax-word ax-word--extraterrestrial"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -115,7 +108,6 @@ exports[`Word renders with color extraterrestrial 1`] = `
 exports[`Word renders with color fantastic-voyage 1`] = `
 <text
   className="ax-word ax-word--fantastic-voyage"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -131,7 +123,6 @@ exports[`Word renders with color fantastic-voyage 1`] = `
 exports[`Word renders with color forbidden-planet 1`] = `
 <text
   className="ax-word ax-word--forbidden-planet"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -147,7 +138,6 @@ exports[`Word renders with color forbidden-planet 1`] = `
 exports[`Word renders with color future-shock 1`] = `
 <text
   className="ax-word ax-word--future-shock"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -163,7 +153,6 @@ exports[`Word renders with color future-shock 1`] = `
 exports[`Word renders with color giant-leap 1`] = `
 <text
   className="ax-word ax-word--giant-leap"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -179,7 +168,6 @@ exports[`Word renders with color giant-leap 1`] = `
 exports[`Word renders with color ground-control 1`] = `
 <text
   className="ax-word ax-word--ground-control"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -195,7 +183,6 @@ exports[`Word renders with color ground-control 1`] = `
 exports[`Word renders with color luna-dust 1`] = `
 <text
   className="ax-word ax-word--luna-dust"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -211,7 +198,6 @@ exports[`Word renders with color luna-dust 1`] = `
 exports[`Word renders with color moon-lagoon 1`] = `
 <text
   className="ax-word ax-word--moon-lagoon"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -227,7 +213,6 @@ exports[`Word renders with color moon-lagoon 1`] = `
 exports[`Word renders with color new-horizon 1`] = `
 <text
   className="ax-word ax-word--new-horizon"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -243,7 +228,6 @@ exports[`Word renders with color new-horizon 1`] = `
 exports[`Word renders with color outer-limits 1`] = `
 <text
   className="ax-word ax-word--outer-limits"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -259,7 +243,6 @@ exports[`Word renders with color outer-limits 1`] = `
 exports[`Word renders with color paradise-lost 1`] = `
 <text
   className="ax-word ax-word--paradise-lost"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -275,7 +258,6 @@ exports[`Word renders with color paradise-lost 1`] = `
 exports[`Word renders with color primeval-soup 1`] = `
 <text
   className="ax-word ax-word--primeval-soup"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -291,7 +273,6 @@ exports[`Word renders with color primeval-soup 1`] = `
 exports[`Word renders with color rocky-planet 1`] = `
 <text
   className="ax-word ax-word--rocky-planet"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -307,7 +288,6 @@ exports[`Word renders with color rocky-planet 1`] = `
 exports[`Word renders with color serene-sea 1`] = `
 <text
   className="ax-word ax-word--serene-sea"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -323,7 +303,6 @@ exports[`Word renders with color serene-sea 1`] = `
 exports[`Word renders with color solar-rust 1`] = `
 <text
   className="ax-word ax-word--solar-rust"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -339,7 +318,6 @@ exports[`Word renders with color solar-rust 1`] = `
 exports[`Word renders with color space-invader 1`] = `
 <text
   className="ax-word ax-word--space-invader"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -355,7 +333,6 @@ exports[`Word renders with color space-invader 1`] = `
 exports[`Word renders with color space-oddity 1`] = `
 <text
   className="ax-word ax-word--space-oddity"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -371,7 +348,6 @@ exports[`Word renders with color space-oddity 1`] = `
 exports[`Word renders with color sun-maker 1`] = `
 <text
   className="ax-word ax-word--sun-maker"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -387,7 +363,6 @@ exports[`Word renders with color sun-maker 1`] = `
 exports[`Word renders with color terra-form 1`] = `
 <text
   className="ax-word ax-word--terra-form"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -403,7 +378,6 @@ exports[`Word renders with color terra-form 1`] = `
 exports[`Word renders with color tiny-clanger 1`] = `
 <text
   className="ax-word ax-word--tiny-clanger"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -419,7 +393,6 @@ exports[`Word renders with color tiny-clanger 1`] = `
 exports[`Word renders with defaultProps 1`] = `
 <text
   className="ax-word"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -435,7 +408,6 @@ exports[`Word renders with defaultProps 1`] = `
 exports[`Word renders with disabled 1`] = `
 <text
   className="ax-word ax-word--disabled"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -451,7 +423,6 @@ exports[`Word renders with disabled 1`] = `
 exports[`Word renders with hidden 1`] = `
 <text
   className="ax-word ax-word--hidden"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",
@@ -467,7 +438,6 @@ exports[`Word renders with hidden 1`] = `
 exports[`Word renders with hidden and disabled 1`] = `
 <text
   className="ax-word ax-word--hidden"
-  onClick={undefined}
   style={
     Object {
       "animationDelay": "0",

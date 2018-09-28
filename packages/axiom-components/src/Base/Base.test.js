@@ -49,7 +49,7 @@ describe('Base', () => {
 
   describe('renders cloak', () =>
     [undefined, true, false].forEach((cloak) =>
-      it(cloak, () => {
+      it(String(cloak), () => {
         const component = getComponent({ cloak });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -113,7 +113,7 @@ describe('Base', () => {
 
   describe('renders with textCenter', () => {
     [true, 'small', 'medium', 'large'].forEach((textCenter) => {
-      it(textCenter, () => {
+      it(String(textCenter), () => {
         const component = getComponent({ textCenter });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -164,7 +164,7 @@ describe('Base', () => {
 
   describe('renders with textLeft', () => {
     [true, 'small', 'medium', 'large'].forEach((textLeft) => {
-      it(textLeft, () => {
+      it(String(textLeft), () => {
         const component = getComponent({ textLeft });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -174,7 +174,7 @@ describe('Base', () => {
 
   describe('renders with textRight', () => {
     [true, 'small', 'medium', 'large'].forEach((textRight) => {
-      it(textRight, () => {
+      it(String(textRight), () => {
         const component = getComponent({ textRight });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();

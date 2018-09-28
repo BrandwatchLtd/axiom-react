@@ -9,7 +9,6 @@ exports[`Menu renders with defaultProps 1`] = `
   >
     <button
       className="ax-menu__item-button"
-      disabled={undefined}
     >
       Lorem ipsum
     </button>
@@ -19,7 +18,6 @@ exports[`Menu renders with defaultProps 1`] = `
   >
     <button
       className="ax-menu__item-button"
-      disabled={undefined}
     >
       Lorem ipsum
     </button>
@@ -36,7 +34,6 @@ exports[`Menu renders with size large 1`] = `
   >
     <button
       className="ax-menu__item-button"
-      disabled={undefined}
     >
       Lorem ipsum
     </button>
@@ -46,7 +43,6 @@ exports[`Menu renders with size large 1`] = `
   >
     <button
       className="ax-menu__item-button"
-      disabled={undefined}
     >
       Lorem ipsum
     </button>
@@ -63,7 +59,6 @@ exports[`Menu renders with size medium 1`] = `
   >
     <button
       className="ax-menu__item-button"
-      disabled={undefined}
     >
       Lorem ipsum
     </button>
@@ -73,7 +68,6 @@ exports[`Menu renders with size medium 1`] = `
   >
     <button
       className="ax-menu__item-button"
-      disabled={undefined}
     >
       Lorem ipsum
     </button>

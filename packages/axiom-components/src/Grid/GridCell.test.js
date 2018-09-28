@@ -24,7 +24,7 @@ describe('GridCell', () => {
 
   describe('renders with fill', () => {
     [true, 'small', 'medium', 'large'].forEach((fill) => {
-      it(fill, () => {
+      it(String(fill), () => {
         const component = getComponent({ fill });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe('GridCell', () => {
 
   describe('renders with fit', () => {
     [true, 'small', 'medium', 'large'].forEach((fit) => {
-      it(fit, () => {
+      it(String(fit), () => {
         const component = getComponent({ fit });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe('GridCell', () => {
 
   describe('renders with full', () => {
     [true, 'small', 'medium', 'large'].forEach((full) => {
-      it(full, () => {
+      it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -54,7 +54,7 @@ describe('GridCell', () => {
 
   describe('renders with none', () => {
     [true, 'small', 'medium', 'large'].forEach((none) => {
-      it(none, () => {
+      it(String(none), () => {
         const component = getComponent({ none });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -64,7 +64,7 @@ describe('GridCell', () => {
 
   describe('renders with shrink', () => {
     [true, 'small', 'medium', 'large'].forEach((shrink) => {
-      it(shrink, () => {
+      it(String(shrink), () => {
         const component = getComponent({ shrink });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe('GridCell', () => {
 
   describe('renders with sub grid', () => {
     [true, false].forEach((subGrid) => {
-      it(subGrid, () => {
+      it(String(subGrid), () => {
         const component = getComponent({ subGrid });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();

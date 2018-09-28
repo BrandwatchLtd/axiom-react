@@ -8,13 +8,7 @@ exports[`Base renders className 1`] = `
 />
 `;
 
-exports[`Base renders cloak  1`] = `
-<div
-  className=""
-/>
-`;
-
-exports[`Base renders cloak  2`] = `
+exports[`Base renders cloak false 1`] = `
 <div
   className="ax-cloak ax-cloak--visible"
 />
@@ -23,6 +17,12 @@ exports[`Base renders cloak  2`] = `
 exports[`Base renders cloak true 1`] = `
 <div
   className="ax-cloak"
+/>
+`;
+
+exports[`Base renders cloak undefined 1`] = `
+<div
+  className=""
 />
 `;
 

@@ -3,14 +3,9 @@
 exports[`RadioButton renders with defaultProps 1`] = `
 <label
   className="ax-radio ax-space--x2"
-  onClick={undefined}
-  title={undefined}
 >
   <input
-    checked={undefined}
     className="ax-radio__input"
-    disabled={undefined}
-    name={undefined}
     type="radio"
   />
   <span
@@ -27,14 +22,10 @@ exports[`RadioButton renders with defaultProps 1`] = `
 exports[`RadioButton renders with disabled 1`] = `
 <label
   className="ax-radio ax-radio--disabled ax-space--x2"
-  onClick={undefined}
-  title={undefined}
 >
   <input
-    checked={undefined}
     className="ax-radio__input"
     disabled={true}
-    name={undefined}
     type="radio"
   />
   <span
@@ -51,14 +42,9 @@ exports[`RadioButton renders with disabled 1`] = `
 exports[`RadioButton renders with invalid 1`] = `
 <label
   className="ax-radio ax-radio--invalid ax-space--x2"
-  onClick={undefined}
-  title={undefined}
 >
   <input
-    checked={undefined}
     className="ax-radio__input"
-    disabled={undefined}
-    name={undefined}
     type="radio"
   />
   <span

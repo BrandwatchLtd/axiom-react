@@ -4,8 +4,6 @@ exports[`ContextMenuItem renders with custom icon 1`] = `
 <button
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
 >
   <div
     className="ax-context-menu__item-content"
@@ -38,8 +36,6 @@ exports[`ContextMenuItem renders with defaultProps 1`] = `
 <button
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
 >
   <div
     className="ax-context-menu__item-content"
@@ -54,7 +50,6 @@ exports[`ContextMenuItem renders with disabled 1`] = `
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
   disabled={true}
-  onClick={undefined}
 >
   <div
     className="ax-context-menu__item-content"
@@ -68,23 +63,16 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
 <button
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
 >
   <div
     className="ax-context-menu__item-checkbox"
   >
     <label
       className="ax-checkbox ax-space--x2"
-      onClick={undefined}
-      title={undefined}
     >
       <input
         checked={false}
         className="ax-checkbox__input"
-        disabled={undefined}
-        name={undefined}
-        onChange={undefined}
         type="checkbox"
       />
       <span
@@ -104,23 +92,16 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
 <button
   className="ax-context-menu__item ax-context-menu__item--selected ax-text--strong"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
 >
   <div
     className="ax-context-menu__item-checkbox"
   >
     <label
       className="ax-checkbox ax-space--x2"
-      onClick={undefined}
-      title={undefined}
     >
       <input
         checked={true}
         className="ax-checkbox__input"
-        disabled={undefined}
-        name={undefined}
-        onChange={undefined}
         type="checkbox"
       />
       <span
@@ -140,8 +121,6 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
 <button
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
   title="Lorem ipsum dolor sit amet"
 >
   <div
@@ -149,15 +128,10 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
   >
     <label
       className="ax-checkbox ax-space--x2"
-      onClick={undefined}
-      title={undefined}
     >
       <input
         checked={false}
         className="ax-checkbox__input"
-        disabled={undefined}
-        name={undefined}
-        onChange={undefined}
         type="checkbox"
       />
       <span
@@ -177,8 +151,6 @@ exports[`ContextMenuItem renders with selected 1`] = `
 <button
   className="ax-context-menu__item ax-context-menu__item--selected ax-text--strong"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
 >
   <div
     className="ax-context-menu__item-content"
@@ -211,8 +183,6 @@ exports[`ContextMenuItem renders with title 1`] = `
 <button
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
-  disabled={undefined}
-  onClick={undefined}
   title="Lorem ipsum dolor sit amet"
 >
   <div

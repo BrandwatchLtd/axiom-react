@@ -3,7 +3,7 @@
 exports[`Modal closes if a esc button was pressed 1`] = `
 <Modal
   isOpen={true}
-  onOverlayClick={[Function]}
+  onOverlayClick={[MockFunction]}
   overlayShade="shade-2"
   padding="x6"
   shouldCloseOnEsc={true}
@@ -18,7 +18,7 @@ exports[`Modal closes if a esc button was pressed 1`] = `
       >
         <div
           className="ax-modal__mask"
-          onClick={[Function]}
+          onClick={[MockFunction]}
         />
         <div
           className="ax-modal"

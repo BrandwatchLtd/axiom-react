@@ -3,12 +3,9 @@
 exports[`Tab renders with active 1`] = `
 <li
   className="ax-tabset__list-item ax-tabset__list-item--active ax-text--size-small ax-text--strong"
-  title={undefined}
 >
   <button
     className="ax-tabset__button"
-    disabled={undefined}
-    onClick={undefined}
   />
 </li>
 `;
@@ -16,12 +13,9 @@ exports[`Tab renders with active 1`] = `
 exports[`Tab renders with defaultProps 1`] = `
 <li
   className="ax-tabset__list-item ax-text--size-small ax-text--strong"
-  title={undefined}
 >
   <button
     className="ax-tabset__button"
-    disabled={undefined}
-    onClick={undefined}
   />
 </li>
 `;
@@ -29,12 +23,10 @@ exports[`Tab renders with defaultProps 1`] = `
 exports[`Tab renders with disabled 1`] = `
 <li
   className="ax-tabset__list-item ax-tabset__list-item--disabled ax-text--size-small ax-text--strong"
-  title={undefined}
 >
   <button
     className="ax-tabset__button"
     disabled={true}
-    onClick={undefined}
   />
 </li>
 `;
@@ -46,8 +38,6 @@ exports[`Tab renders with title number 1`] = `
 >
   <button
     className="ax-tabset__button"
-    disabled={undefined}
-    onClick={undefined}
   >
     1000
   </button>
@@ -61,8 +51,6 @@ exports[`Tab renders with title react element 1`] = `
 >
   <button
     className="ax-tabset__button"
-    disabled={undefined}
-    onClick={undefined}
   >
     <span>
       Lorem Ipsum
@@ -78,8 +66,6 @@ exports[`Tab renders with title string 1`] = `
 >
   <button
     className="ax-tabset__button"
-    disabled={undefined}
-    onClick={undefined}
   >
     Lorem ipsum
   </button>

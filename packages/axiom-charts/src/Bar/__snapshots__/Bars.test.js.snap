@@ -12,7 +12,6 @@ exports[`Bars renders with defaultProps 1`] = `
     >
       <div
         className="ax-bars__bar"
-        onClick={undefined}
         style={
           Object {
             "height": "50%",
@@ -62,7 +61,6 @@ exports[`Bars renders with direction down 1`] = `
     >
       <div
         className="ax-bars__bar"
-        onClick={undefined}
         style={
           Object {
             "height": "50%",
@@ -112,7 +110,6 @@ exports[`Bars renders with direction left 1`] = `
     >
       <div
         className="ax-bars__bar"
-        onClick={undefined}
         style={
           Object {
             "height": false,
@@ -162,7 +159,6 @@ exports[`Bars renders with direction right 1`] = `
     >
       <div
         className="ax-bars__bar"
-        onClick={undefined}
         style={
           Object {
             "height": false,
@@ -212,7 +208,6 @@ exports[`Bars renders with direction up 1`] = `
     >
       <div
         className="ax-bars__bar"
-        onClick={undefined}
         style={
           Object {
             "height": "50%",
@@ -262,7 +257,6 @@ exports[`Bars renders with label 1`] = `
     >
       <div
         className="ax-bars__bar"
-        onClick={undefined}
         style={
           Object {
             "height": "50%",
