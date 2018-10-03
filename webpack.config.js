@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    'babel-polyfill',
+    '@babel/polyfill',
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:4000',
     'webpack/hot/only-dev-server',
