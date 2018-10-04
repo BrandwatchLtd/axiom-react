@@ -30,6 +30,8 @@ export default class Position extends Component {
       PropTypes.node,
       PropTypes.array,
     ]).isRequired,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /**
      * Adds control to conditionally enable or disable the positioning logic.
      * Must be true for isVisible to take effect.
@@ -180,13 +182,13 @@ export default class Position extends Component {
   }
 
   render() {
-    const { children, enabled, isVisible, onMaskClick, showArrow, reference, ...rest } = this.props;
+    const { children, className, enabled, isVisible, onMaskClick, showArrow, reference, ...rest } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
 
     const classes = classnames('ax-position', {
       'ax-position--arrow': showArrow,
-    });
+    }, className);
 
     const props = omit(rest, [
       'flip',
