@@ -15,3 +15,7 @@
   left: 0;
   z-index: var(--z-index-position);
 }
+
+.ax-position--non-interactive {
+  pointer-events: none;
+}
