@@ -39,6 +39,11 @@ export default class Position extends Component {
     flip: PropTypes.oneOf(['anticlockwise', 'clockwise', 'mirror']),
     /** Toggles the visibility of the PositionSource */
     isVisible: PropTypes.bool.isRequired,
+    /**
+     * Controls if the elements that are within the Position component
+     * are non-interactive
+     */
+    nonInteractive: PropTypes.bool,
     /** Controls the starting offset of the content */
     offset: PropTypes.oneOf(['start', 'middle', 'end']),
     /**
@@ -73,6 +78,7 @@ export default class Position extends Component {
     boundariesElement: 'viewport',
     enabled: true,
     flip: 'clockwise',
+    nonInteractive: false,
     offset: 'middle',
     position: 'top',
     showArrow:  false,
@@ -180,12 +186,13 @@ export default class Position extends Component {
   }
 
   render() {
-    const { children, enabled, isVisible, onMaskClick, showArrow, reference, ...rest } = this.props;
+    const { children, enabled, isVisible, nonInteractive, onMaskClick, showArrow, reference, ...rest } = this.props;
     const { placement } = this.state;
     const [ position ] = placementToPosition(placement);
 
     const classes = classnames('ax-position', {
       'ax-position--arrow': showArrow,
+      'ax-position--non-interactive': nonInteractive,
     });
 
     const props = omit(rest, [
