@@ -53,6 +53,7 @@
     "lodash.flatten": "^4.4.0",
     "lodash.maxby": "^4.6.0",
     "lodash.minby": "^4.6.0",
+    "postcss-cli": "^6.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.8",
     "react": "^16.4.1",
