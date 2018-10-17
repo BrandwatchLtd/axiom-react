@@ -168,6 +168,7 @@
 
 .ax-button--secondary {
   border-color: var(--color-theme-border);
+  background-color: var(--color-theme-background);
 
   &:hover {
     border-color: transparent;
