@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.14"></a>
+## [0.1.14](https://github.com/tomru/axiom/compare/@brandwatch/axiom-utils@0.1.13...@brandwatch/axiom-utils@0.1.14) (2018-10-16)
+
+
+
+
+**Note:** Version bump only for package @brandwatch/axiom-utils
+
 <a name="0.1.13"></a>
 ## [0.1.13](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-utils@0.1.12...@brandwatch/axiom-utils@0.1.13) (2018-09-18)
 

@@ -69,6 +69,7 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
   >
     <label
       className="ax-checkbox ax-space--x2"
+      onClick={[Function]}
     >
       <input
         checked={false}
@@ -98,6 +99,7 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
   >
     <label
       className="ax-checkbox ax-space--x2"
+      onClick={[Function]}
     >
       <input
         checked={true}
@@ -128,6 +130,7 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
   >
     <label
       className="ax-checkbox ax-space--x2"
+      onClick={[Function]}
     >
       <input
         checked={false}

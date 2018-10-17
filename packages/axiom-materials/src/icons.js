@@ -1,5 +1,6 @@
 export default {
   'annotate': require('./icon_svgs/annotate.svg'),
+  'analytics-alert': require('./icon_svgs/analytics-alert.svg'),
   'arrow-down': require('./icon_svgs/arrow-down.svg'),
   'arrow-down-left': require('./icon_svgs/arrow-down-left.svg'),
   'arrow-down-right': require('./icon_svgs/arrow-down-right.svg'),
@@ -67,6 +68,7 @@ export default {
   'refresh': require('./icon_svgs/refresh.svg'),
   'replace': require('./icon_svgs/replace.svg'),
   'reply': require('./icon_svgs/reply.svg'),
+  'reports': require('./icon_svgs/reports.svg'),
   'retweet': require('./icon_svgs/retweet.svg'),
   'ring': require('./icon_svgs/ring.svg'),
   'share': require('./icon_svgs/share.svg'),
@@ -74,6 +76,7 @@ export default {
   'sun': require('./icon_svgs/sun.svg'),
   'tag': require('./icon_svgs/tag.svg'),
   'tick': require('./icon_svgs/tick.svg'),
+  'tools': require('./icon_svgs/tools.svg'),
   'trash': require('./icon_svgs/trash.svg'),
   'triangle-down': require('./icon_svgs/triangle-down.svg'),
   'triangle-left': require('./icon_svgs/triangle-left.svg'),

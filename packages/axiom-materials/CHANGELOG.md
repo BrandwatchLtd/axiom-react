@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="1.8.0"></a>
+    <a name="1.9.0"></a>
+# [1.9.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.8.0...@brandwatch/axiom-materials@1.9.0) (2018-10-16)
+
+
+### Features
+
+* **Icon:** adding new icons ([c5af32f](https://github.com/tomru/axiom/commit/c5af32f))
+
+
+
+
+    <a name="1.8.0"></a>
 # [1.8.0](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-materials@1.7.0...@brandwatch/axiom-materials@1.8.0) (2018-09-18)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="1.7.0"></a>
+  <a name="1.7.0"></a>
 # [1.7.0](https://github.com/lpoulter/axiom/compare/@brandwatch/axiom-materials@1.5.0...@brandwatch/axiom-materials@1.7.0) (2018-09-14)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="1.6.0"></a>
+<a name="1.6.0"></a>
 # [1.6.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-materials@1.5.0...@brandwatch/axiom-materials@1.6.0) (2018-08-28)
 
 

@@ -43,7 +43,12 @@ export default class ContextMenuItem extends Component {
           textStrong={ selected }>
         { multiSelect && (
           <div className="ax-context-menu__item-checkbox">
-            <CheckBox checked={ selected } disabled={ disabled } indeterminate={ indeterminate } onChange={ onClick } />
+            <CheckBox
+                checked={ selected }
+                disabled={ disabled }
+                indeterminate={ indeterminate }
+                onChange={ onClick }
+                onClick={ e => e.stopPropagation() }/>
           </div>
         ) }
 

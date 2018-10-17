@@ -17,6 +17,7 @@ export default class Icon extends Component {
     /** Name of the icon that will be displayed */
     name: PropTypes.oneOf([
       'annotate',
+      'analytics-alert',
       'arrow-down',
       'arrow-down-left',
       'arrow-down-right',
@@ -84,6 +85,7 @@ export default class Icon extends Component {
       'refresh',
       'replace',
       'reply',
+      'reports',
       'retweet',
       'ring',
       'share',
@@ -91,6 +93,7 @@ export default class Icon extends Component {
       'sun',
       'tag',
       'tick',
+      'tools',
       'trash',
       'triangle-down',
       'triangle-left',

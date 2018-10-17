@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.17.0"></a>
+      <a name="4.18.0"></a>
+# [4.18.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.17.0...@brandwatch/axiom-components@4.18.0) (2018-10-16)
+
+
+### Features
+
+* **Icon:** adding new icons ([c5af32f](https://github.com/tomru/axiom/commit/c5af32f))
+
+
+
+
+      <a name="4.17.0"></a>
 # [4.17.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.16.0...@brandwatch/axiom-components@4.17.0) (2018-10-08)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.16.0"></a>
+  <a name="4.16.0"></a>
 # [4.16.0](https://github.com/tomru/axiom/compare/@brandwatch/axiom-components@4.15.2...@brandwatch/axiom-components@4.16.0) (2018-10-02)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="4.15.2"></a>
+<a name="4.15.2"></a>
 ## [4.15.2](https://github.com/HHogg/axiom/compare/@brandwatch/axiom-components@4.15.1...@brandwatch/axiom-components@4.15.2) (2018-09-24)
 
 
