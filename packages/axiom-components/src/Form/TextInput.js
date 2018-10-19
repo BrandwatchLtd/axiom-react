@@ -52,7 +52,7 @@ export default class TextInput extends Component {
     /** Visual style variations of the input field */
     style: PropTypes.oneOf(['overlay']),
     /** Type of the input field */
-    type: PropTypes.oneOf(['password', 'text']),
+    type: PropTypes.oneOf(['password', 'text', 'number']),
     /**
      * Specifies text to be used in the form element's usage hint that is
      * displayed in a tooltip coming off a question mark in the top right
