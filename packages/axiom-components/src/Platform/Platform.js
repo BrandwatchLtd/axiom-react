@@ -57,7 +57,7 @@ export default class Platform extends Component {
         { children }
         <div
             className="ax-platform__mask"
-            onClick={ () => onConsoleClose() } />
+            onClick={ () => onConsoleClose && onConsoleClose() } />
       </Base>
     );
   }
