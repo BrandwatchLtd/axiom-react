@@ -93,6 +93,9 @@ export default class Base extends Component {
       'rocky-planet',
       'deep-thought',
       'luna-dust',
+      'sentiment-negative',
+      'sentiment-positive',
+      'sentiment-neutral',
     ]),
     /** Text ellipsis styling */
     textEllipsis: PropTypes.bool,

@@ -65,6 +65,9 @@
 .ax-text--color-rocky-planet { color: var(--color-product-rocky-planet); }
 .ax-text--color-deep-thought { color: var(--color-product-deep-thought); }
 .ax-text--color-luna-dust { color: var(--color-product-luna-dust); }
+.ax-text--color-sentiment-positive { color: var(--color-sentiment-positive); }
+.ax-text--color-sentiment-negative { color: var(--color-sentiment-negative); }
+.ax-text--color-sentiment-neutral { color: var(--color-sentiment-neutral); }
 
 .ax-text--ellipsis {
   max-width: 100%;
