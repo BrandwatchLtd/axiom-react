@@ -12,7 +12,7 @@
     "publish:packages": "bash ./scripts/publish_packages.sh",
     "publish:site": "bash ./scripts/publish_site.sh",
     "start": "bash ./scripts/start_development.sh",
-    "postinstall": "lerna bootstrap",
+    "postinstall": "lerna run prepublish && lerna run prepare",
     "test": "TZ=utc BABEL_ENV=test jest ./packages --config .jest.json"
   },
   "workspaces": [
