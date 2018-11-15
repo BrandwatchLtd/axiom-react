@@ -68,6 +68,7 @@
 .ax-text--color-sentiment-positive { color: var(--color-sentiment-positive); }
 .ax-text--color-sentiment-negative { color: var(--color-sentiment-negative); }
 .ax-text--color-sentiment-neutral { color: var(--color-sentiment-neutral); }
+.ax-text--color-ui-accent { color: var(--color-ui-accent); }
 
 .ax-text--ellipsis {
   max-width: 100%;

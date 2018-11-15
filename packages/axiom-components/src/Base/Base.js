@@ -96,6 +96,7 @@ export default class Base extends Component {
       'sentiment-negative',
       'sentiment-positive',
       'sentiment-neutral',
+      'ui-accent',
     ]),
     /** Text ellipsis styling */
     textEllipsis: PropTypes.bool,
