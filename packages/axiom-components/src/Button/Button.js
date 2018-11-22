@@ -29,7 +29,7 @@ export default class Button extends Component {
     shape: PropTypes.oneOf(['circle', 'rectangle', 'stadium']),
     /** Size of standard shape */
     size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
-    /** Style of the Button, that affects it's coloring and sizing */
+    /** Style of the Button, which affects its coloring and sizing */
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   };
 
