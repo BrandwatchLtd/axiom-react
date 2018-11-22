@@ -16,6 +16,52 @@ export default class IconButton extends Component {
     name: PropTypes.string.isRequired,
     /** Size of the button and icon */
     size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
+    /** Style of the Button, which affects its coloring and sizing */
+    buttonStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+    /** Color of the icon */
+    iconColor: PropTypes.oneOf([
+      'body',
+      'day',
+      'night',
+      'error',
+      'success',
+      'warning',
+      'disabled',
+      'subtle',
+      'twitter',
+      'facebook',
+      'instagram',
+      'forbidden-planet',
+      'tiny-clanger',
+      'critical-mass',
+      'fantastic-voyage',
+      'paradise-lost',
+      'serene-sea',
+      'event-horizon',
+      'electric-dreams',
+      'outer-limits',
+      'giant-leap',
+      'moon-lagoon',
+      'space-invader',
+      'extraterrestrial',
+      'terra-form',
+      'primeval-soup',
+      'future-shock',
+      'sun-maker',
+      'new-horizon',
+      'blast-off',
+      'crash-course',
+      'solar-rust',
+      'ground-control',
+      'space-oddity',
+      'rocky-planet',
+      'deep-thought',
+      'luna-dust',
+      'sentiment-negative',
+      'sentiment-positive',
+      'sentiment-neutral',
+      'ui-accent',
+    ]),
   };
 
   static defaultProps = {
@@ -23,11 +69,11 @@ export default class IconButton extends Component {
   }
 
   render() {
-    const { name, size, ...rest } = this.props;
+    const { name, size, buttonStyle, iconColor, ...rest } = this.props;
 
     return (
-      <Button style="secondary" { ...rest } shape="circle" size={ size }>
-        <ButtonIcon name={ name } size={ sizeMap[size] } />
+      <Button { ...rest } shape="circle" size={ size } style={ buttonStyle }>
+        <ButtonIcon name={ name } color={ iconColor } size={ sizeMap[size] } />
       </Button>
     );
   }

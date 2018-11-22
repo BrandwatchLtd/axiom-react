@@ -16,6 +16,8 @@ export default class ButtonIcon extends Component {
     name: PropTypes.string.isRequired,
     /** Size of the Icon */
     size: PropTypes.string,
+    /** Color of the Icon */
+    color: PropTypes.string,
   };
 
   static defaultProps = {
@@ -25,7 +27,7 @@ export default class ButtonIcon extends Component {
   static typeRef = ButtonIconRef;
 
   render() {
-    const { isEnd, isStart, name, size, ...rest } = this.props;
+    const { isEnd, isStart, name, size, color, ...rest } = this.props;
     const classes = classnames('ax-button__icon', {
       'ax-button__icon--start': isStart,
       'ax-button__icon--end': isEnd,
@@ -33,7 +35,7 @@ export default class ButtonIcon extends Component {
 
     return (
       <span { ...rest } className={ classes }>
-        <Icon name={ name } size={ size } />
+        <Icon name={ name } size={ size } textColor={ color }/>
       </span>
     );
   }
