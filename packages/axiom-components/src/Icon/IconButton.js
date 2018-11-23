@@ -12,10 +12,6 @@ const sizeMap = {
 
 export default class IconButton extends Component {
   static propTypes = {
-    /** Name of the icon that will be displayed */
-    name: PropTypes.string.isRequired,
-    /** Size of the button and icon */
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
     /** Style of the Button, which affects its coloring and sizing */
     buttonStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
     /** Color of the icon */
@@ -62,10 +58,15 @@ export default class IconButton extends Component {
       'sentiment-neutral',
       'ui-accent',
     ]),
+    /** Name of the icon that will be displayed */
+    name: PropTypes.string.isRequired,
+    /** Size of the button and icon */
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   };
 
   static defaultProps = {
     size: 'medium',
+    buttonStyle: 'secondary',
   }
 
   render() {
@@ -73,7 +74,7 @@ export default class IconButton extends Component {
 
     return (
       <Button { ...rest } shape="circle" size={ size } style={ buttonStyle }>
-        <ButtonIcon name={ name } color={ iconColor } size={ sizeMap[size] } />
+        <ButtonIcon color={ iconColor } name={ name } size={ sizeMap[size] } />
       </Button>
     );
   }

@@ -8,6 +8,8 @@ export const ButtonIconRef = 'ButtonIcon';
 
 export default class ButtonIcon extends Component {
   static propTypes = {
+    /** Color of the Icon */
+    color: PropTypes.string,
     /** SKIP */
     isEnd: PropTypes.bool,
     /** SKIP */
@@ -16,8 +18,6 @@ export default class ButtonIcon extends Component {
     name: PropTypes.string.isRequired,
     /** Size of the Icon */
     size: PropTypes.string,
-    /** Color of the Icon */
-    color: PropTypes.string,
   };
 
   static defaultProps = {
