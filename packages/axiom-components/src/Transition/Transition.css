@@ -1,6 +1,6 @@
 .ax-transition__wrapper  {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .ax-transition__item {
