@@ -12,7 +12,7 @@
     "@brandwatch/axiom-formatting": "^0.0.5",
     "@brandwatch/axiom-materials": "^1.11.1",
     "@brandwatch/axiom-utils": "^0.1.17",
-    "classnames": "^2.2.1",
+    "classnames": "^2.2.6",
     "element-closest": "^2.0.2",
     "lodash.omit": "^4.5.0",
     "luxon": "^1.3.1",
