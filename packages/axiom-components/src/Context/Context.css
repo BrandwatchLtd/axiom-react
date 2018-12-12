@@ -106,6 +106,7 @@
 }
 
 .ax-context-menu {
+  height: 100%;
   padding: var(--cmp-context-tip-space) 0;
 }
 
