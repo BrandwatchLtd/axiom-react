@@ -13,6 +13,8 @@ import {
   Heading,
   ProgressButton,
   Paragraph,
+  RadioButton,
+  RadioButtonGroup,
 } from '@brandwatch/axiom-components';
 import { translate } from '@brandwatch/axiom-localization';
 import ConfirmPasswordInput from '../FormInputs/ConfirmPasswordInput';
@@ -69,6 +71,7 @@ export default class ChangePasswordDialog extends Component {
       confirmPassword: '',
       currentPassword: '',
       validationError: '',
+      isNewPassword: false,
       newPassword: '',
     };
   }
@@ -97,6 +100,7 @@ export default class ChangePasswordDialog extends Component {
     const {
       confirmPassword,
       currentPassword,
+      isNewPassword,
       newPassword,
       validationError,
     } = this.state;
@@ -124,21 +128,39 @@ export default class ChangePasswordDialog extends Component {
           ) }
 
           <DialogBody>
+            <RadioButtonGroup>
+              <RadioButton
+                  checked={ isNewPassword }
+                  onChange={ () => this.setState({ isNewPassword: true }) }>
+                Set new Password
+              </RadioButton>
+              <RadioButton
+                  checked={ !isNewPassword }
+                  onChange={ () => this.setState({ isNewPassword: false }) }>
+                Don't Set new Password
+              </RadioButton>
+            </RadioButtonGroup>
             <CurrentPasswordInput
                 data-ax-at={ atIds.ChangePassword.currentPassword }
+                disabled={ !isNewPassword }
                 invalid={ isCurrentPasswordInvalid }
                 onChange={ (e) => this.setState({ currentPassword: e.target.value }) }
+                required={ isNewPassword }
                 value={ currentPassword } />
 
             <NewPasswordInput
                 data-ax-at={ atIds.ChangePassword.newPassword }
+                disabled={ !isNewPassword }
                 onChange={ (e) => this.setState({ newPassword: e.target.value }) }
+                required={ isNewPassword }
                 value={ newPassword } />
 
             <ConfirmPasswordInput
                 data-ax-at={ atIds.ChangePassword.confirmPassword }
+                disabled={ !isNewPassword }
                 onChange={ (e) => this.setState({ confirmPassword: e.target.value }) }
                 passwordValue={ newPassword }
+                required={ isNewPassword }
                 value={ confirmPassword } />
 
             <ButtonGroup textRight>
