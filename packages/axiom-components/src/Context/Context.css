@@ -107,7 +107,16 @@
 
 .ax-context-menu {
   height: 100%;
-  padding: var(--cmp-context-tip-space) 0;
+}
+
+.ax-context-menu--padding-vertical-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ax-context-menu--padding-vertical-medium {
+  padding-top: var(--cmp-context-tip-space);
+  padding-bottom: var(--cmp-context-tip-space);
 }
 
 .ax-context-menu__item {

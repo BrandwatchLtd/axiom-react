@@ -6,6 +6,7 @@ export default class DropdownMenu extends Component {
   static propTypes = {
     /** DropdownMenuItems */
     children: PropTypes.node.isRequired,
+    paddingVertical: PropTypes.oneOf(['none', 'medium']),
   };
 
   render() {
