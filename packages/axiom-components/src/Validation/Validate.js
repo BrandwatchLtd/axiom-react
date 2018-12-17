@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
+import uuid from 'uuid';
 
 export default class Validate extends Component {
   static contextTypes = {
@@ -44,11 +45,8 @@ export default class Validate extends Component {
   constructor(props) {
     super(props);
     this.checkPatternMet = this.checkPatternMet.bind(this);
-    this.indexSetter = this.indexSetter.bind(this);
     this.validationGetter = this.validationGetter.bind(this);
-    this.state = {
-      index: -1,
-    };
+    this.id = uuid();
   }
 
   componentWillMount() {
@@ -56,7 +54,7 @@ export default class Validate extends Component {
 
     this.context.registerValidate(
       this.validationGetter,
-      this.indexSetter,
+      this.id,
     );
   }
 
@@ -65,16 +63,28 @@ export default class Validate extends Component {
 
     this.context.unregisterValidate(
       this.validationGetter,
-      this.indexSetter,
+      this.id,
     );
   }
 
-  checkPatternMet(pattern) {
-    return this.context.checkPatternMet(this.state.index, pattern);
+  componentDidUpdate(prevProps) {
+    if (prevProps.required !== this.props.required) {
+      if (this.props.required) {
+        return this.context.registerValidate(
+          this.validationGetter,
+          this.id,
+        );
+      }
+
+      return this.context.unregisterValidate(
+        this.validationGetter,
+        this.id,
+      );
+    }
   }
 
-  indexSetter(index) {
-    this.setState({ index });
+  checkPatternMet(pattern) {
+    return this.context.checkPatternMet(this.id, pattern);
   }
 
   validationGetter() {
@@ -91,18 +101,17 @@ export default class Validate extends Component {
   }
 
   render() {
-    const { index } = this.state;
     const { children } = this.props;
 
-    if (index === -1 || !this.shouldValidate()) {
+    if (!this.shouldValidate()) {
       return children();
     }
 
     const { getValidity, checkRequiredMet } = this.context;
 
     return children(
-      getValidity(index),
-      checkRequiredMet(index),
+      getValidity(this.id),
+      checkRequiredMet(this.id),
       this.checkPatternMet,
     );
   }

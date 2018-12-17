@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
+import omit from 'lodash.omit';
 
 const getRequiredState = ({ required, value }) =>
   !required || (
@@ -40,15 +41,13 @@ export default class Validation extends Component {
 
   constructor(props) {
     super(props);
-    this._getters = [];
-    this._setters = [];
     this.getUpdatedValidation = this.getUpdatedValidation.bind(this);
     this.getValidity = this.getValidity.bind(this);
     this.checkPatternMet = this.checkPatternMet.bind(this);
     this.checkRequiredMet = this.checkRequiredMet.bind(this);
     this.registerValidate = this.registerValidate.bind(this);
     this.unregisterValidate = this.unregisterValidate.bind(this);
-    this.state = {};
+    this.state = { validators: {} };
   }
 
   getChildContext() {
@@ -61,96 +60,91 @@ export default class Validation extends Component {
     };
   }
 
-  registerValidate(getter, setter) {
-    this._getters.push(getter);
-    this._setters.push(setter);
-    this.setState({
-      invalidationIndex: this.getFirstInvalidIndex(),
-    });
-
-    this.updateIndexes();
-  }
-
-  unregisterValidate(getter, setter) {
-    const gIndex = this._getters.indexOf(getter);
-    const sIndex = this._setters.indexOf(setter);
-
-    this._getters.splice(gIndex, 1);
-    this._setters.splice(sIndex, 1);
-
-    this.updateIndexes();
-  }
-
-  updateIndexes() {
-    this._setters.forEach((setter, index) => setter(index));
-  }
-
-  getFirstInvalidIndex() {
-    if (!this.getOverallRequiredValidity()) return -1;
-
-    const invalidations = this.getAllInvalidations();
-    for (let i = 0; i < invalidations.length; i++) {
-      if (invalidations[i].length > 0) return i;
+  registerValidate(validationState, id) {
+    if (!this.state.validators[id]) {
+      this.setState(({ validators }) => ({
+        invalidationId: this.getFirstInvalidId(),
+        validators: { ...validators, [id]: validationState },
+      }));
     }
-    return -1;
   }
 
-  getValidity(index) {
-    const { validated, invalidationIndex } = this.state;
+  unregisterValidate(_, id) {
+    if (this.state.validators[id]) {
+      this.setState(({ validators }) => ({
+        invalidationId: this.getFirstInvalidId(),
+        validators: omit(validators, id),
+      }));
+    }
+  }
+
+  getValidity(id) {
+    const { validated, invalidationId } = this.state;
 
     if (!validated) {
       return true;
     }
 
     if (!this.getOverallRequiredValidity()) {
-      return this.checkRequiredMet(index);
+      return this.checkRequiredMet(id);
     }
 
-    if (index !== invalidationIndex) {
+    if (id !== invalidationId) {
       return true;
     }
 
-    return !this.getInvalidations(index).length;
+    return !this.getInvalidations(id).length;
   }
 
-  getErrorMessage(index) {
+  getErrorMessage(id) {
     if (!this.getOverallRequiredValidity()) {
       return this.props.requiredError;
     }
 
-    if (index !== -1) {
-      const { error } = this._getters[index]();
-      if (error) return error(this.getInvalidations(index));
+    if (id) {
+      const { error } = this.state.validators[id]();
+      if (error) return error(this.getInvalidations(id));
     }
 
     return null;
   }
 
-  getInvalidations(index) {
-    return getPatternsState(this._getters[index]());
+  getInvalidations(id) {
+    return this.state.validators[id] ? getPatternsState(this.state.validators[id]()) : [];
+  }
+
+  getFirstInvalidId() {
+    const getOverallRequiredValidity = this.getOverallRequiredValidity();
+    if (!getOverallRequiredValidity) return;
+
+    const invalidations = this.getAllInvalidations();
+    const firstInvalidValidator = Object.keys(invalidations).find(id => invalidations[id].length > 0);
+    return firstInvalidValidator ? firstInvalidValidator : '';
   }
 
   getAllInvalidations() {
-    return this._getters.map((_, index) => this.getInvalidations(index));
+    return Object.keys(this.state.validators).reduce((left, nextId) => {
+      return { ...left, [nextId]: this.getInvalidations(nextId) };
+    }, {});
   }
 
   getOverallRequiredValidity() {
-    return this._getters.every((_, index) => this.checkRequiredMet(index));
+    return Object.keys(this.state.validators).every((id) => this.checkRequiredMet(id));
   }
 
-  checkPatternMet(index, metPattern) {
-    return this.getInvalidations(index).indexOf(metPattern) === -1;
+  checkPatternMet(id, metPattern) {
+    return this.getInvalidations(id).indexOf(metPattern) === -1;
   }
 
-  checkRequiredMet(index) {
-    return getRequiredState(this._getters[index]());
+  checkRequiredMet(key) {
+    return this.state.validators[key] ? getRequiredState(this.state.validators[key]()) : true;
   }
 
   getUpdatedValidation() {
-    const invalidationIndex = this.getFirstInvalidIndex();
-    const error = this.getErrorMessage(invalidationIndex);
+    const invalidationId = this.getFirstInvalidId();
+    const error = this.getErrorMessage(invalidationId);
 
-    this.setState({ invalidationIndex, validated: true });
+    this.setState({ invalidationId, validated: true });
 
     return error;
   }

@@ -20,6 +20,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-transition-group": "^2.3.0"
+    "react-transition-group": "^2.3.0",
+    "uuid": "^3.3.2"
   }
 }
