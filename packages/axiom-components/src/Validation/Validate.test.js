@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Validate from './Validate';
 import Validation from './Validation';
+import TextInput from '../Form/TextInput';
 
 const patterns = [ /[A-Z]/, /[0-9]/ ];
 const validValue = 'Valid1';
@@ -92,6 +93,71 @@ describe('Validation', () => {
   });
 
   describe('Validate', () => {
+    describe('on first render with required set to false', () => {
+      let wrapper;
+      let registerMock;
+      let unregisterMock;
+      const uniqueId = '123-456';
+
+      jest.mock('uuid', () => {
+        return jest.fn().mockImplementation((uniqueId) => {
+          return { uniqueId };
+        });
+      });
+
+      beforeEach(() => {
+        registerMock = jest.fn();
+        unregisterMock = jest.fn();
+        const context = {
+          registerValidate: registerMock,
+          unregisterValidate: unregisterMock,
+          getValidity: () => true,
+          checkRequiredMet: () => true,
+        };
+        wrapper = wrapper = mount(
+          <Validate required={ false }>
+            { () => <TextInput /> }
+          </Validate>,
+            { context });
+      });
+
+      test('does not call register validator', () => {
+        expect(registerMock).toHaveBeenCalledTimes(0);
+      });
+
+      describe('when the required prop is changed to true', () => {
+        beforeEach(() => {
+          wrapper.setProps({ required: true });
+          wrapper.update();
+        });
+
+        test('calls registerValidator with 2 args', () => {
+          expect(registerMock).toHaveBeenCalledTimes(1);
+          expect(registerMock.mock.calls[0].length === 2);
+        });
+
+        test('Validate id is the 2nd argument', () => {
+          expect(registerMock.mock.calls[0][1] === uniqueId);
+        });
+
+        describe('when the required prop is changed back to false', () => {
+          beforeEach(() => {
+            wrapper.setProps({ required: false });
+            wrapper.update();
+          });
+
+          test('calls unregisterValidate with 2 args', () => {
+            expect(unregisterMock).toHaveBeenCalledTimes(1);
+            expect(unregisterMock.mock.calls[0].length === 2);
+          });
+
+          test('Validate id is the 2nd argument', () => {
+            expect(unregisterMock.mock.calls[0][1] === uniqueId);
+          });
+        });
+      });
+    });
+
     describe('getValidity', () => {
       test('unmet required validation', () => {
         let isValid1;
@@ -180,7 +246,7 @@ describe('Validation', () => {
         cbValidate1: (_1, _2, checkPatternMet) => hasMetPattern1 = checkPatternMet(patterns[0]),
         cbValidate2: (_1, _2, checkPatternMet) => hasMetPattern2 = checkPatternMet(patterns[0]),
       });
-      component.find('form').simulate('submit');
+
       component.update();
 
       expect(hasMetPattern1).toBe(true);
