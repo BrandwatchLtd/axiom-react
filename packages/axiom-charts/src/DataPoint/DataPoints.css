@@ -53,6 +53,9 @@
 .ax-data-point--social-twitter { color: var(--color-social-twitter); }
 .ax-data-point--social-facebook { color: var(--color-social-facebook); }
 .ax-data-point--social-instagram { color: var(--color-social-instagram); }
+.ax-data-point--ui-success { color: var(--color-ui-success); }
+.ax-data-point--ui-warning { color: var(--color-ui-warning); }
+.ax-data-point--ui-error { color: var(--color-ui-error); }
 
 .ax-data-points--clickable {
   cursor: pointer;

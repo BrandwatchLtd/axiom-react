@@ -43,6 +43,9 @@ export default class DataPoint extends Component {
       'social-twitter',
       'social-facebook',
       'social-instagram',
+      'ui-success',
+      'ui-warning',
+      'ui-error',
     ]).isRequired,
     /** SKIP */
     r: PropTypes.number,
