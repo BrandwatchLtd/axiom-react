@@ -149,6 +149,7 @@
 
 .ax-context-menu__item-content {
   flex: 1 1 auto;
+  overflow-x: hidden;
 }
 
 .ax-context-menu__item-checkbox {
