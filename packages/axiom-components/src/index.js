@@ -68,6 +68,7 @@ export { default as DropdownSource } from './Dropdown/DropdownSource';
 export { default as DropdownTarget } from './Dropdown/DropdownTarget';
 export { default as EditableLine } from './Editable/EditableLine';
 export { default as EditableTitle } from './Editable/EditableTitle';
+export { default as EllipsisTooltip } from './EllipsisTooltip/EllipsisTooltip';
 export { default as Form } from './Form/Form';
 export { default as Ghost } from './CardGraphic/Ghost';
 export { default as Grid } from './Grid/Grid';

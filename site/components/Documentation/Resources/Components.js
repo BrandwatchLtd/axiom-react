@@ -17,6 +17,7 @@ import DatePicker from './Components/DatePicker';
 import Dialog from './Components/Dialog';
 import Dropdown from './Components/Dropdown';
 import Editable from './Components/Editable';
+import EllipsisTooltip from './Components/EllipsisTooltip';
 import Form from './Components/Form';
 import CardGraphic from './Components/CardGraphic';
 import Grid from './Components/Grid';
@@ -123,6 +124,10 @@ export default class Documentation extends Component {
             id: 'editable',
             name: 'Editable',
             Component: Editable,
+          }, {
+            id: 'ellispsistooltip',
+            name: 'EllipsisTooltip',
+            Component: EllipsisTooltip,
           }, {
             id: 'form',
             name: 'Form',
