@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContextMenuItem renders with custom icon 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
 >
@@ -29,11 +30,12 @@ exports[`ContextMenuItem renders with custom icon 1`] = `
       viewBox="0 0 16 16"
     />
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with defaultProps 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
 >
@@ -42,11 +44,12 @@ exports[`ContextMenuItem renders with defaultProps 1`] = `
   >
     Lorem ipsum
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with disabled 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
   disabled={true}
@@ -56,11 +59,12 @@ exports[`ContextMenuItem renders with disabled 1`] = `
   >
     Lorem ipsum
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with multiSelect 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
 >
@@ -86,11 +90,12 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
   >
     Lorem ipsum
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item ax-context-menu__item--selected ax-text--strong"
   data-ax-context-menu-item={true}
 >
@@ -116,11 +121,12 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
   >
     Lorem ipsum
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with multiSelect and title 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
   title="Lorem ipsum dolor sit amet"
@@ -147,11 +153,12 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
   >
     Lorem ipsum
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with selected 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item ax-context-menu__item--selected ax-text--strong"
   data-ax-context-menu-item={true}
 >
@@ -179,11 +186,12 @@ exports[`ContextMenuItem renders with selected 1`] = `
       viewBox="0 0 16 16"
     />
   </div>
-</button>
+</div>
 `;
 
 exports[`ContextMenuItem renders with title 1`] = `
-<button
+<div
+  aria-role="Menuitem"
   className="ax-context-menu__item"
   data-ax-context-menu-item={true}
   title="Lorem ipsum dolor sit amet"
@@ -193,5 +201,5 @@ exports[`ContextMenuItem renders with title 1`] = `
   >
     Lorem ipsum
   </div>
-</button>
+</div>
 `;
