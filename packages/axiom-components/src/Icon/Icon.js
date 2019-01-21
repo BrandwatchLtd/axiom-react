@@ -73,6 +73,7 @@ export default class Icon extends Component {
       'list',
       'location',
       'lock',
+      'log',
       'magnify-glass',
       'minus',
       'monitor',
