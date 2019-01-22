@@ -3,6 +3,8 @@
   "version": "0.0.5",
   "description": "Brandwatch Axiom - Formatting",
   "main": "dist-cjs/index.js",
+  "module": "dist-esm/index.js",
+  "sideEffects": false,
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

@@ -1,4 +1,5 @@
 dist-cjs
+dist-esm
 public
 node_modules
 lerna-debug.log

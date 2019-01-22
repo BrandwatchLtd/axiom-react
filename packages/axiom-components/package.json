@@ -3,6 +3,8 @@
   "version": "5.11.1",
   "description": "Brandwatch Axiom - Components",
   "main": "dist-cjs/index.js",
+  "module": "dist-esm/index.js",
+  "sideEffects": false,
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

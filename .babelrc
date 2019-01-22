@@ -37,7 +37,13 @@
       plugins: [
         "@brandwatch/babel-plugin-transform-svg-axiom",
         "@brandwatch/babel-plugin-axiom-imports",
-        "transform-es2015-modules-commonjs"
+        "transform-es2015-modules-commonjs",
+      ]
+    },
+    "production-esm": {
+      plugins: [
+        "@brandwatch/babel-plugin-transform-svg-axiom",
+        "@brandwatch/babel-plugin-axiom-imports",
       ]
     },
     "test": {

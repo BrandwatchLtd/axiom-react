@@ -7,7 +7,7 @@
   },
   "npmClient": "yarn",
   "packages": [
-    "packages/*"
+    "packages/axiom-*"
   ],
   "useWorkspaces": true,
   "version": "independent"
