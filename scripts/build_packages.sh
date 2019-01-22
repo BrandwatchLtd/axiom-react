@@ -1,8 +1,10 @@
 #!/bin/bash
 set -e
 
-npx lerna exec --parallel -- rm -rf dist
-npx lerna exec --parallel -- rsync -a --prune-empty-dirs --exclude '__snapshots__/*' --exclude '*.test.js' src/* dist
-npx lerna exec --parallel -- BABEL_ENV=production npx babel dist -d dist
+DIST_CJS=dist-cjs
 
-npx postcss packages/**/dist/**/*.css --config ./postcss.prod.config.js --replace --verbose
+npx lerna exec --parallel -- rm -rf $DIST_CJS
+npx lerna exec --parallel -- rsync -a --prune-empty-dirs --exclude '__snapshots__/*' --exclude '*.test.js' src/* $DIST_CJS
+npx lerna exec --parallel -- BABEL_ENV=production-cjs npx babel $DIST_CJS -d $DIST_CJS
+
+npx postcss packages/**/$DIST_CJS/**/*.css --config ./postcss.prod.config.js --replace --verbose

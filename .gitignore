@@ -1,4 +1,4 @@
-dist
+dist-cjs
 public
 node_modules
 lerna-debug.log

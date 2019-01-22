@@ -33,7 +33,7 @@
         "transform-react-remove-prop-types"
       ]
     },
-    "production": {
+    "production-cjs": {
       plugins: [
         "@brandwatch/babel-plugin-transform-svg-axiom",
         "@brandwatch/babel-plugin-axiom-imports",
