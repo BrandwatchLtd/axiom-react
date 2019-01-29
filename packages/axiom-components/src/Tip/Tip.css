@@ -47,12 +47,12 @@
   background-color: var(--color-theme-background);
   pointer-events: none;
 
-  @nest .ax-tip--faded { background-color: var(--color-theme-text); }
+  @nest .ax-tip--faded & { background-color: var(--color-theme-text); }
   @nest .ax-tip--success & { background-color: var(--color-ui-success); }
   @nest .ax-tip--warning & { background-color: var(--color-ui-warning); }
   @nest .ax-tip--error & { background-color: var(--color-ui-error); }
   @nest .ax-tip--info & { background-color: var(--color-ui-info); }
-  @nest .ax-tip--shade-1 { background-color: var(--color-theme-background--shade-1); }
+  @nest .ax-tip--shade-1 & { background-color: var(--color-theme-background--shade-1); }
   @nest .ax-tip--shade-2 & { background-color: var(--color-theme-background--shade-2); }
   @nest .ax-tip--shade-3 & { background-color: var(--color-theme-background--shade-3); }
   @nest .ax-tip--shade-4 & { background-color: var(--color-theme-background--shade-4); }
