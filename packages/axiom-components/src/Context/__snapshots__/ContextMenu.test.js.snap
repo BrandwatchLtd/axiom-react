@@ -16,8 +16,7 @@ exports[`ContextMenu renders with defaultProps 1`] = `
     <div
       className="ax-context-menu ax-context-menu--padding-vertical-medium"
     >
-      <div
-        aria-role="Menuitem"
+      <button
         className="ax-context-menu__item"
         data-ax-context-menu-item={true}
       >
@@ -26,7 +25,7 @@ exports[`ContextMenu renders with defaultProps 1`] = `
         >
           Lorem ipsum
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </div>

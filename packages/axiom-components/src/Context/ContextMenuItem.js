@@ -36,7 +36,7 @@ export default class ContextMenuItem extends Component {
 
     return (
       <Base { ...rest } { ...{ [contextMenuItemSelector]: true } }
-          aria-role="Menuitem"
+          Component="button"
           className={ classes }
           disabled={ disabled }
           onClick={ onClick }
