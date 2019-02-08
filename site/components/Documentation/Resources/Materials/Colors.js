@@ -5,115 +5,138 @@ import ColorSet from './Colors/ColorSet';
 import ColorDot from './Colors/ColorDot';
 
 export default class Documentation extends Component {
+
+  copyColorToClipboard(str) {
+    // Create new element
+    const el = document.createElement('textarea');
+    // Set value (string to be copied)
+    el.value = str;
+    // Set non-editable to avoid focus and move outside of view
+    el.setAttribute('readonly', '');
+    el.style = { position: 'absolute', left: '-9999px' };
+    document.body.appendChild(el);
+    // Select text inside element
+    el.select();
+    // Copy text to clipboard
+    document.execCommand('copy');
+    // Remove temporary element
+    document.body.removeChild(el);
+  }
+
+  toVarName(str) {
+    return str.toLowerCase().replace(' ', '-');
+  }
+
   render() {
     return (
       <Fragment>
+        Click on a colour to copy the variable to your clipboard
         <ColorGrid name="UI Colours">
           <ColorSet name="Carbon">
-            <ColorDot name="Darker" rgb={ colors.uiCarbonDarker } />
-            <ColorDot name="Dark" rgb={ colors.uiCarbonDark } />
-            <ColorDot name="Default" rgb={ colors.uiCarbon } />
+            <ColorDot name="Darker" onClick={ () => this.copyColorToClipboard('var(--color-ui-carbon--darker)') } rgb={ colors.uiCarbonDarker }/>
+            <ColorDot name="Dark" onClick={ () => this.copyColorToClipboard('var(--color-ui-carbon--dark)') } rgb={ colors.uiCarbonDark } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-carbon)') } rgb={ colors.uiCarbon } />
           </ColorSet>
 
           <ColorSet name="Accent">
-            <ColorDot name="Active" rgb={ colors.uiAccentActive } />
-            <ColorDot name="Default" rgb={ colors.uiAccent } />
-            <ColorDot name="Hover" rgb={ colors.uiAccentHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-ui-accent--active)') } rgb={ colors.uiAccentActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-accent)') } rgb={ colors.uiAccent } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-ui-accent--hover)') } rgb={ colors.uiAccentHover } />
           </ColorSet>
 
           <ColorSet name="White Noise">
-            <ColorDot name="Darker" rgb={ colors.uiWhiteNoiseDarker } />
-            <ColorDot name="Dark" rgb={ colors.uiWhiteNoiseDark } />
-            <ColorDot name="Default" rgb={ colors.uiWhiteNoise } />
+            <ColorDot name="Darker" onClick={ () => this.copyColorToClipboard('var(--color-ui-white-noise--darker)') }rgb={ colors.uiWhiteNoiseDarker } />
+            <ColorDot name="Dark" onClick={ () => this.copyColorToClipboard('var(--color-ui-white-noise--dark)') }rgb={ colors.uiWhiteNoiseDark } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-white-noise)') } rgb={ colors.uiWhiteNoise } />
           </ColorSet>
         </ColorGrid>
 
         <ColorGrid>
           <ColorSet name="Black">
-            <ColorDot name="Default" rgb={ colors.uiBlack } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-black)') } rgb={ colors.uiBlack } />
           </ColorSet>
 
           <ColorSet name="White">
-            <ColorDot name="Default" rgb={ colors.uiWhite } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-white)') } rgb={ colors.uiWhite } />
           </ColorSet>
         </ColorGrid>
 
         <ColorGrid name="Attention Colours">
           <ColorSet name="Error">
-            <ColorDot name="Active" rgb={ colors.uiErrorActive } />
-            <ColorDot name="Default" rgb={ colors.uiError } />
-            <ColorDot name="Hover" rgb={ colors.uiErrorHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-ui-error--active)') } rgb={ colors.uiErrorActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-error)') } rgb={ colors.uiError } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-ui-error--hover)') } rgb={ colors.uiErrorHover } />
           </ColorSet>
 
           <ColorSet name="Warning">
-            <ColorDot name="Active" rgb={ colors.uiWarningActive } />
-            <ColorDot name="Default" rgb={ colors.uiWarning } />
-            <ColorDot name="Hover" rgb={ colors.uiWarningHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-ui-warning--active)') } rgb={ colors.uiWarningActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-warning)') } rgb={ colors.uiWarning } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-ui-warning--hover)') } rgb={ colors.uiWarningHover } />
           </ColorSet>
 
           <ColorSet name="Success">
-            <ColorDot name="Active" rgb={ colors.uiSuccessActive } />
-            <ColorDot name="Default" rgb={ colors.uiSuccess } />
-            <ColorDot name="Hover" rgb={ colors.uiSuccessHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-ui-success--active)') } rgb={ colors.uiSuccessActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-success)') } rgb={ colors.uiSuccess } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-ui-success--hover)') } rgb={ colors.uiSuccessHover } />
           </ColorSet>
 
           <ColorSet name="Info">
-            <ColorDot name="Active" rgb={ colors.uiInfoActive } />
-            <ColorDot name="Default" rgb={ colors.uiInfo } />
-            <ColorDot name="Hover" rgb={ colors.uiInfoHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-ui-info--active)') } rgb={ colors.uiInfoActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-info)') } rgb={ colors.uiInfo } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-ui-info--hover)') } rgb={ colors.uiInfoHover } />
           </ColorSet>
 
           <ColorSet name="Highlight">
-            <ColorDot name="Default" rgb={ colors.uiHighlight } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-ui-highlight)') } rgb={ colors.uiHighlight } />
           </ColorSet>
         </ColorGrid>
 
         <ColorGrid name="Social Colours">
           <ColorSet name="Twitter">
-            <ColorDot name="Active" rgb={ colors.socialTwitterActive } />
-            <ColorDot name="Default" rgb={ colors.socialTwitter } />
-            <ColorDot name="Hover" rgb={ colors.socialTwitterHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-twitter--active)') } rgb={ colors.socialTwitterActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-twitter)') } rgb={ colors.socialTwitter } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-twitter--hover)') } rgb={ colors.socialTwitterHover } />
           </ColorSet>
 
           <ColorSet name="Facebook">
-            <ColorDot name="Active" rgb={ colors.socialFacebookActive } />
-            <ColorDot name="Default" rgb={ colors.socialFacebook } />
-            <ColorDot name="Hover" rgb={ colors.socialFacebookHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-facebook--active)') } rgb={ colors.socialFacebookActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-facebook)') } rgb={ colors.socialFacebook } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-facebook--hover)') } rgb={ colors.socialFacebookHover } />
           </ColorSet>
 
           <ColorSet name="Instagram">
-            <ColorDot name="Active" rgb={ colors.socialInstagramActive } />
-            <ColorDot name="Default" rgb={ colors.socialInstagram } />
-            <ColorDot name="Hover" rgb={ colors.socialInstagramHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-instagram--active)') } rgb={ colors.socialInstagramActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-instagram)') } rgb={ colors.socialInstagram } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-instagram--hover)') } rgb={ colors.socialInstagramHover } />
           </ColorSet>
         </ColorGrid>
 
         <ColorGrid name="Sentiment Colours">
           <ColorSet name="Positive">
-            <ColorDot name="Active" rgb={ colors.sentimentPositiveActive } />
-            <ColorDot name="Default" rgb={ colors.sentimentPositive } />
-            <ColorDot name="Hover" rgb={ colors.sentimentPositiveHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-positive--active)') } rgb={ colors.sentimentPositiveActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-positive)') } rgb={ colors.sentimentPositive } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-positive--hover)') } rgb={ colors.sentimentPositiveHover } />
           </ColorSet>
 
           <ColorSet name="Negative">
-            <ColorDot name="Active" rgb={ colors.sentimentNegativeActive } />
-            <ColorDot name="Default" rgb={ colors.sentimentNegative } />
-            <ColorDot name="Hover" rgb={ colors.sentimentNegativeHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-negative--active)') } rgb={ colors.sentimentNegativeActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-negative)') } rgb={ colors.sentimentNegative } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-negative--hover)') } rgb={ colors.sentimentNegativeHover } />
           </ColorSet>
 
           <ColorSet name="Neutral">
-            <ColorDot name="Active" rgb={ colors.sentimentNeutralActive } />
-            <ColorDot name="Default" rgb={ colors.sentimentNeutral } />
-            <ColorDot name="Hover" rgb={ colors.sentimentNeutralHover } />
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-neutral--active)') } rgb={ colors.sentimentNeutralActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-neutral)') } rgb={ colors.sentimentNeutral } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-sentiment-neutral--hover)') } rgb={ colors.sentimentNeutralHover } />
           </ColorSet>
         </ColorGrid>
 
         <ColorGrid name="Product Colours">
           { Object.keys(colors.productColors).map((id) => (
             <ColorSet key={ id } name={ colors.productColorNames[id] }>
-              <ColorDot name="Active" rgb={ colors.productActiveColors[id] } />
-              <ColorDot name="Default" rgb={ colors.productColors[id] } />
-              <ColorDot name="Hover" rgb={ colors.productHoverColors[id] } />
+              <ColorDot name="Active" onClick={ () => this.copyColorToClipboard(`var(--color-product-${this.toVarName(colors.productColorNames[id])}--active)`) } rgb={ colors.productActiveColors[id] } />
+              <ColorDot name="Default" onClick={ () => this.copyColorToClipboard(`var(--color-product-${this.toVarName(colors.productColorNames[id])})`) } rgb={ colors.productColors[id] } />
+              <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard(`var(--color-product-${this.toVarName(colors.productColorNames[id])}--hover)`) } rgb={ colors.productHoverColors[id] } />
             </ColorSet>
           )) }
         </ColorGrid>
