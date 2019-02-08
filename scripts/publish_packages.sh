@@ -14,7 +14,7 @@ ssh-add github_deploy_key
 if ! ssh git@github.com 2>&1 | grep "BrandwatchLtd/axiom" > /dev/null
 then
   echo "Cannot connect to Github via SSH :("
-  echo "Please verify the public deploy key is set in BrandwatchLtd/axiom."
+  echo "Please verify the public deploy key is set in BrandwatchLtd/axiom-react."
   exit 1;
 fi
 
@@ -22,7 +22,7 @@ git config --global user.email "ci@brandwatch.com"
 git config --global user.name "Brandwatch (via TravisCI)"
 
 # travis sets origin to https. Let set up a second remote for ssh
-git remote add upstream git@github.com:BrandwatchLtd/axiom.git
+git remote add upstream git@github.com:BrandwatchLtd/axiom-react.git
 
 npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 

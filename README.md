@@ -40,7 +40,7 @@ This is the monorepo for Axiom packages.
 Axiom uses lerna and yarn workspaces to manage the various packages. To get up and running developing locally, you need the lerna cli. We're using the [latest stable](nodejs.org/en/download/current) Node.js release.
 
 ```
-git clone git@github.com:BrandwatchLtd/axiom.git
+git clone git@github.com:BrandwatchLtd/axiom-react.git
 cd axiom
 yarn
 yarn start
