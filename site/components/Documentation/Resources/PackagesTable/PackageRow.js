@@ -102,7 +102,7 @@ export default class PackageRow extends Component {
 
                 <DropdownMenu>
                   <DropdownMenuItem
-                      onClick={ () => window.open(`https://github.com/BrandwatchLtd/axiom/tree/master/packages/${name}`, '_blank') }>
+                      onClick={ () => window.open(`https://github.com/BrandwatchLtd/axiom-react/tree/master/packages/${name}`, '_blank') }>
                     See package on Github
                   </DropdownMenuItem>
 
