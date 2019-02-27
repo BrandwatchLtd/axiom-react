@@ -171,6 +171,8 @@ export const socialInstagramActive = { r: 171, g: 58, b: 133 };
 export const socialInstagram = { r: 183, g: 71, b: 146 };
 export const socialInstagramHover = { r: 196, g: 86, b: 160 };
 
+export const betterTogether = { r: 240, g: 78, b: 78 };
+
 export const externalTwiiterBlue = socialTwitter;
 
 export const themeDayMain = uiCarbon;

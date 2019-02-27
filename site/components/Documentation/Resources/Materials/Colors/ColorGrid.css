@@ -8,6 +8,11 @@
   margin: 0 auto;
   border: 0.0625rem solid var(--color-theme-border);
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.si-color-dot:active {
+  box-shadow: 0 0 0 0.25rem var(--color-theme-border);
 }
 
 .si-color-letter {

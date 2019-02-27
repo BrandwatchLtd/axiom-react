@@ -30,7 +30,14 @@ export default class Documentation extends Component {
   render() {
     return (
       <Fragment>
-        Click on a colour to copy the variable to your clipboard
+        Tip: You can click on a colour dot to copy the variable name to your clipboard!
+
+        <ColorGrid name="Brandwatch + Crimson Hexagon">
+          <ColorSet name="Better Together">
+            <ColorDot onClick={ () => this.copyColorToClipboard('var(--color-better-together)') } rgb={ colors.betterTogether }/>
+          </ColorSet>
+        </ColorGrid>
+
         <ColorGrid name="UI Colours">
           <ColorSet name="Carbon">
             <ColorDot name="Darker" onClick={ () => this.copyColorToClipboard('var(--color-ui-carbon--darker)') } rgb={ colors.uiCarbonDarker }/>
