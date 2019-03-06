@@ -26,9 +26,9 @@ export const uiSuccessHover = { r: 10, g: 204, b: 162 };
 export const uiSuccess = { r: 0, g: 190, b: 150 };
 export const uiSuccessActive = { r: 0, g: 166, b: 130 };
 
-export const uiWarningHover = { r: 237, g: 195, b: 97 };
-export const uiWarning = { r: 224, g: 182, b: 81 };
-export const uiWarningActive = { r: 212, g: 168, b: 66 };
+export const uiWarningHover = { r: 230, g: 186, b: 85 };
+export const uiWarning = { r: 218, g: 174, b: 69 };
+export const uiWarningActive = { r: 204, g: 159, b: 55 };
 
 export const uiErrorHover = { r: 255, g: 99, b: 133 };
 export const uiError = { r: 252, g: 72, b: 112 };
