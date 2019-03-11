@@ -1,0 +1,1022 @@
+{
+    "ad": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ad.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ae": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ae.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "af": {
+        "src": "https://axiom.brandwatch.com/assets/flags/af.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ag": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ag.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ai": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ai.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "al": {
+        "src": "https://axiom.brandwatch.com/assets/flags/al.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "am": {
+        "src": "https://axiom.brandwatch.com/assets/flags/am.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ao": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ao.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "aq": {
+        "src": "https://axiom.brandwatch.com/assets/flags/aq.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "ar": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ar.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "as": {
+        "src": "https://axiom.brandwatch.com/assets/flags/as.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "at": {
+        "src": "https://axiom.brandwatch.com/assets/flags/at.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "au": {
+        "src": "https://axiom.brandwatch.com/assets/flags/au.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "aw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/aw.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ax": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ax.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "az": {
+        "src": "https://axiom.brandwatch.com/assets/flags/az.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ba": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ba.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bb": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bb.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bd": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bd.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "be": {
+        "src": "https://axiom.brandwatch.com/assets/flags/be.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bf.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bh": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bh.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bi": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bi.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bj": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bj.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bl.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bm.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bo": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bo.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bq": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bq.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "br": {
+        "src": "https://axiom.brandwatch.com/assets/flags/br.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bs": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bs.svg",
+        "color": "rgb(36, 173, 189)"
+    },
+    "bt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bt.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bv": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bv.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "bw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bw.svg",
+        "color": "rgb(36, 173, 189)"
+    },
+    "by": {
+        "src": "https://axiom.brandwatch.com/assets/flags/by.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "bz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/bz.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ca": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ca.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "cc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cc.svg",
+        "color": "rgb(158, 97, 57)"
+    },
+    "cd": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cd.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "cf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cf.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "cg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ch": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ch.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ci": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ci.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "ck": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ck.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cl.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cm.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "cn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "co": {
+        "src": "https://axiom.brandwatch.com/assets/flags/co.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cu.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "cv": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cv.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cw.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cx": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cx.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "cy": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cy.svg",
+        "color": "rgb(158, 97, 57)"
+    },
+    "cz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/cz.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "de": {
+        "src": "https://axiom.brandwatch.com/assets/flags/de.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "dj": {
+        "src": "https://axiom.brandwatch.com/assets/flags/dj.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "dk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/dk.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "dm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/dm.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "do": {
+        "src": "https://axiom.brandwatch.com/assets/flags/do.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "dz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/dz.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ec": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ec.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ee": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ee.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "eg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/eg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "eh": {
+        "src": "https://axiom.brandwatch.com/assets/flags/eh.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "er": {
+        "src": "https://axiom.brandwatch.com/assets/flags/er.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "es": {
+        "src": "https://axiom.brandwatch.com/assets/flags/es.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "et": {
+        "src": "https://axiom.brandwatch.com/assets/flags/et.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "eu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/eu.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "fi": {
+        "src": "https://axiom.brandwatch.com/assets/flags/fi.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "fj": {
+        "src": "https://axiom.brandwatch.com/assets/flags/fj.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "fk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/fk.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "fm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/fm.svg",
+        "color": "rgb(144, 160, 214)"
+    },
+    "fo": {
+        "src": "https://axiom.brandwatch.com/assets/flags/fo.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "fr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/fr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ga": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ga.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "gb-eng": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gb-eng.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gb-nir": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gb-nir.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gb-sct": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gb-sct.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "gb-wls": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gb-wls.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gb": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gb.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gd": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gd.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ge": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ge.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gf.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gh": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gh.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gi": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gi.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gl.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gm.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gp": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gp.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gq": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gq.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gs": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gs.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gt.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gu.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "gw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gw.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "gy": {
+        "src": "https://axiom.brandwatch.com/assets/flags/gy.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "hk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/hk.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "hm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/hm.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "hn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/hn.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "hr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/hr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ht": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ht.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "hu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/hu.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "id": {
+        "src": "https://axiom.brandwatch.com/assets/flags/id.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ie": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ie.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "il": {
+        "src": "https://axiom.brandwatch.com/assets/flags/il.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "im": {
+        "src": "https://axiom.brandwatch.com/assets/flags/im.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "in": {
+        "src": "https://axiom.brandwatch.com/assets/flags/in.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "io": {
+        "src": "https://axiom.brandwatch.com/assets/flags/io.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "iq": {
+        "src": "https://axiom.brandwatch.com/assets/flags/iq.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ir": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ir.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "is": {
+        "src": "https://axiom.brandwatch.com/assets/flags/is.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "it": {
+        "src": "https://axiom.brandwatch.com/assets/flags/it.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "je": {
+        "src": "https://axiom.brandwatch.com/assets/flags/je.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "jm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/jm.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "jo": {
+        "src": "https://axiom.brandwatch.com/assets/flags/jo.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "jp": {
+        "src": "https://axiom.brandwatch.com/assets/flags/jp.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ke": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ke.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "kg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "kh": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kh.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ki": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ki.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "km": {
+        "src": "https://axiom.brandwatch.com/assets/flags/km.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "kn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "kp": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kp.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "kr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "kw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kw.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ky": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ky.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "kz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/kz.svg",
+        "color": "#302d35"
+    },
+    "la": {
+        "src": "https://axiom.brandwatch.com/assets/flags/la.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "lb": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lb.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "lc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lc.svg",
+        "color": "#302d35"
+    },
+    "li": {
+        "src": "https://axiom.brandwatch.com/assets/flags/li.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "lk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lk.svg",
+        "color": "rgb(167, 46, 94)"
+    },
+    "lr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ls": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ls.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "lt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lt.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "lu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lu.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "lv": {
+        "src": "https://axiom.brandwatch.com/assets/flags/lv.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ly": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ly.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ma": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ma.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mc.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "md": {
+        "src": "https://axiom.brandwatch.com/assets/flags/md.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "me": {
+        "src": "https://axiom.brandwatch.com/assets/flags/me.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mf.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mh": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mh.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mk.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ml": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ml.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mm.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mn.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mo": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mo.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "mp": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mp.svg",
+        "color": "rgb(96, 99, 161)"
+    },
+    "mq": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mq.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mr.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "ms": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ms.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mt.svg",
+        "color": "rgb(96, 99, 161)"
+    },
+    "mu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mu.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mv": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mv.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mw.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "mx": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mx.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "my": {
+        "src": "https://axiom.brandwatch.com/assets/flags/my.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "mz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/mz.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "na": {
+        "src": "https://axiom.brandwatch.com/assets/flags/na.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "nc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/nc.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ne": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ne.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "nf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/nf.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "ng": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ng.svg",
+        "color": "rgb(128, 190, 76)"
+    },
+    "ni": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ni.svg",
+        "color": "rgb(167, 46, 94)"
+    },
+    "nl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/nl.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "no": {
+        "src": "https://axiom.brandwatch.com/assets/flags/no.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "np": {
+        "src": "https://axiom.brandwatch.com/assets/flags/np.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "nr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/nr.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "nu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/nu.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "nz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/nz.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "om": {
+        "src": "https://axiom.brandwatch.com/assets/flags/om.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "pa": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pa.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "pe": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pe.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "pf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pf.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "pg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ph": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ph.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "pk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pk.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "pl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pl.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "pm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pm.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "pn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pn.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "pr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pr.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ps": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ps.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "pt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pt.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "pw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/pw.svg",
+        "color": "#302d35"
+    },
+    "py": {
+        "src": "https://axiom.brandwatch.com/assets/flags/py.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "qa": {
+        "src": "https://axiom.brandwatch.com/assets/flags/qa.svg",
+        "color": "rgb(167, 46, 94)"
+    },
+    "re": {
+        "src": "https://axiom.brandwatch.com/assets/flags/re.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ro": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ro.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "rs": {
+        "src": "https://axiom.brandwatch.com/assets/flags/rs.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ru": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ru.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "rw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/rw.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "sa": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sa.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "sb": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sb.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sc.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sd": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sd.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "se": {
+        "src": "https://axiom.brandwatch.com/assets/flags/se.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "sh": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sh.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "si": {
+        "src": "https://axiom.brandwatch.com/assets/flags/si.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sj": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sj.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sk.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sl.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sm.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "sn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "so": {
+        "src": "https://axiom.brandwatch.com/assets/flags/so.svg",
+        "color": "#302d35"
+    },
+    "sr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sr.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "ss": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ss.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "st": {
+        "src": "https://axiom.brandwatch.com/assets/flags/st.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "sv": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sv.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sx": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sx.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "sy": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sy.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "sz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/sz.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tc.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "td": {
+        "src": "https://axiom.brandwatch.com/assets/flags/td.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tf.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tg.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "th": {
+        "src": "https://axiom.brandwatch.com/assets/flags/th.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tj": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tj.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "tk": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tk.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tl": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tl.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "tm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tm.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "tn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "to": {
+        "src": "https://axiom.brandwatch.com/assets/flags/to.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "tr": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tr.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "tt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tt.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "tv": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tv.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tw.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "tz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/tz.svg",
+        "color": "rgb(47, 145, 112)"
+    },
+    "ua": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ua.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "ug": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ug.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "um": {
+        "src": "https://axiom.brandwatch.com/assets/flags/um.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "un": {
+        "src": "https://axiom.brandwatch.com/assets/flags/un.svg",
+        "color": "rgb(59, 121, 204)"
+    },
+    "us": {
+        "src": "https://axiom.brandwatch.com/assets/flags/us.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "uy": {
+        "src": "https://axiom.brandwatch.com/assets/flags/uy.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "uz": {
+        "src": "https://axiom.brandwatch.com/assets/flags/uz.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "va": {
+        "src": "https://axiom.brandwatch.com/assets/flags/va.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "vc": {
+        "src": "https://axiom.brandwatch.com/assets/flags/vc.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ve": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ve.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "vg": {
+        "src": "https://axiom.brandwatch.com/assets/flags/vg.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "vi": {
+        "src": "https://axiom.brandwatch.com/assets/flags/vi.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "vn": {
+        "src": "https://axiom.brandwatch.com/assets/flags/vn.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "vu": {
+        "src": "https://axiom.brandwatch.com/assets/flags/vu.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "wf": {
+        "src": "https://axiom.brandwatch.com/assets/flags/wf.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ws": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ws.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "ye": {
+        "src": "https://axiom.brandwatch.com/assets/flags/ye.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "yt": {
+        "src": "https://axiom.brandwatch.com/assets/flags/yt.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "za": {
+        "src": "https://axiom.brandwatch.com/assets/flags/za.svg",
+        "color": "rgb(48, 77, 140)"
+    },
+    "zm": {
+        "src": "https://axiom.brandwatch.com/assets/flags/zm.svg",
+        "color": "rgb(201, 58, 58)"
+    },
+    "zw": {
+        "src": "https://axiom.brandwatch.com/assets/flags/zw.svg",
+        "color": "rgb(201, 58, 58)"
+    }
+}
