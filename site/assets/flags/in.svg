@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512" width="512" viewBox="0 0 512 512">
+  <path fill="#f98a39" d="M0 0h512v170.667H0z"></path>
+  <path fill="#f7f5fc" d="M0 170.667h512v170.667H0z"></path>
+  <path fill="#2f9170" d="M0 341.333h512V512H0z"></path>
+  <g transform="translate(256 256) scale(3.41333)" fill="#302d35">
+    <circle r="20" fill="#304d8c"></circle>
+    <circle r="17.5" fill="#f7f5fc"></circle>
+    <circle r="3.5" fill="#304d8c"></circle>
+    <g id="d">
+      <g id="c">
+        <g id="b">
+          <g id="a" fill="#304d8c">
+            <circle r=".875" transform="rotate(7.5 -8.75 133.5)"></circle>
+            <path d="M0 17.5L.6 7 0 2l-.6 5L0 17.5z"></path>
+          </g>
+          <use height="100%" width="100%" xlink:href="#a" transform="rotate(15)"></use>
+        </g>
+        <use height="100%" width="100%" xlink:href="#b" transform="rotate(30)"></use>
+      </g>
+      <use height="100%" width="100%" xlink:href="#c" transform="rotate(60)"></use>
+    </g>
+    <use height="100%" width="100%" xlink:href="#d" transform="rotate(120)"></use>
+    <use height="100%" width="100%" xlink:href="#d" transform="rotate(-120)"></use>
+  </g>
+</svg>

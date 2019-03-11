@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512" width="512" viewBox="0 0 512 512">
+  <path d="M0 0h512v512H0z" fill="#3b79cc"></path>
+  <path d="M0 170.666h512v170.667H0z" fill="#f7f5fc"></path>
+  <g id="c" transform="translate(256 256) scale(28.44446)" fill="#3b79cc">
+    <g id="b">
+      <path id="a" d="M0-1l-.31.95.477.156z"></path>
+      <use height="100%" width="100%" xlink:href="#a" transform="scale(-1 1)"></use>
+    </g>
+    <use height="100%" width="100%" xlink:href="#b" transform="rotate(72)"></use>
+    <use height="100%" width="100%" xlink:href="#b" transform="rotate(-72)"></use>
+    <use height="100%" width="100%" xlink:href="#b" transform="rotate(144)"></use>
+    <use height="100%" width="100%" xlink:href="#b" transform="rotate(-144)"></use>
+  </g>
+  <use height="100%" width="100%" xlink:href="#c" transform="translate(142.223 -45.511)" fill="#302d35"></use>
+  <use height="100%" width="100%" xlink:href="#c" transform="translate(142.223 39.822)" fill="#302d35"></use>
+  <use height="100%" width="100%" xlink:href="#c" transform="translate(-142.223 -45.511)" fill="#302d35"></use>
+  <use height="100%" width="100%" xlink:href="#c" transform="translate(-142.223 39.822)" fill="#302d35"></use>
+</svg>
