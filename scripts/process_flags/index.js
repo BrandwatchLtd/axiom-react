@@ -46,7 +46,8 @@ function processFlag(fileName) {
 function processAllFlags() {
   return Promise.all([
     fs.mkdirp(destAssetsPath),
-    fs.mkdirp(destMapPath),
+    fs.mkdirp(path.join(destMapPath, 'src')),
+    fs.mkdirp(path.join(destMapPath, 'dist')),
   ])
     .then(() => fs.readdir(sourceAssetsPath))
     .then((fileNames) => Promise.all(fileNames.map(processFlag)))
