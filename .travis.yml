@@ -13,8 +13,8 @@ before_script:
 script:
 - yarn lint:commits
 - yarn lint
-- yarn ci:test
 - yarn build:flags
+- yarn ci:test
 - yarn build:site
 after_success:
 - bash scripts/publish_packages.sh
