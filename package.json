@@ -21,8 +21,6 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@brandwatch/babel-plugin-axiom-imports": "file:packages/babel-plugin-axiom-imports",
-    "@brandwatch/babel-plugin-transform-svg-axiom": "file:packages/babel-plugin-transform-svg-axiom",
     "babel-cli": "6.11.4",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
