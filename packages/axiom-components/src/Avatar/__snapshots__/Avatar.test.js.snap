@@ -6,6 +6,7 @@ exports[`Avatar renders with custom size 1`] = `
   src="/image/path"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": "4rem",
       "maxWidth": "100%",
       "width": "4rem",

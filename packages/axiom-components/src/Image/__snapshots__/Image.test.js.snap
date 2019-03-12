@@ -6,6 +6,7 @@ exports[`Image renders with border large 1`] = `
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": undefined,
       "maxWidth": "100%",
       "width": undefined,
@@ -20,6 +21,7 @@ exports[`Image renders with border small 1`] = `
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": undefined,
       "maxWidth": "100%",
       "width": undefined,
@@ -34,6 +36,7 @@ exports[`Image renders with defaultProps 1`] = `
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": undefined,
       "maxWidth": "100%",
       "width": undefined,
@@ -48,6 +51,7 @@ exports[`Image renders with shape circle 1`] = `
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": undefined,
       "maxWidth": "100%",
       "width": undefined,
@@ -62,6 +66,7 @@ exports[`Image renders with shape rounded 1`] = `
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": undefined,
       "maxWidth": "100%",
       "width": undefined,
@@ -76,6 +81,7 @@ exports[`Image renders with shape square 1`] = `
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": undefined,
       "maxWidth": "100%",
       "width": undefined,
@@ -90,6 +96,7 @@ exports[`Image with shape circle uses height for both width and height when give
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": "3rem",
       "maxWidth": "100%",
       "width": "3rem",
@@ -104,6 +111,7 @@ exports[`Image with shape circle uses width for both width and height when given
   src="/image.png"
   style={
     Object {
+      "backgroundColor": undefined,
       "height": "3rem",
       "maxWidth": "100%",
       "width": "3rem",

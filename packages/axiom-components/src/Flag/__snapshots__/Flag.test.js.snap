@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flag renders with custom size 1`] = `
+<img
+  className="ax-image ax-image--circle ax-space--x4"
+  src="https://axiom.brandwatch.com/assets/flags/gb.svg"
+  style={
+    Object {
+      "backgroundColor": "rgb(48, 77, 140)",
+      "height": "12rem",
+      "maxWidth": "100%",
+      "width": "12rem",
+    }
+  }
+/>
+`;
