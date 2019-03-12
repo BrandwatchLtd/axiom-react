@@ -7,7 +7,7 @@ const getProcessedFlag = require('./lib/getProcessedFlag');
 
 const sourceAssetsPath = path.join(__dirname, '../../node_modules/flag-svg-collection/flags/1x1');
 const destAssetsPath = path.join(__dirname, '../../site/assets/flags');
-const destMapPath = path.join(__dirname, '../../packages/axiom-materials/src');
+const destMapPath = path.join(__dirname, '../../packages/axiom-materials/dist');
 
 const assetsBaseUrl = 'https://axiom.brandwatch.com/assets/flags';
 
