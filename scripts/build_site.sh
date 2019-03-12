@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-webpack --config webpack.static.config.js
+webpack --config webpack.static.config.js --display-error-details
