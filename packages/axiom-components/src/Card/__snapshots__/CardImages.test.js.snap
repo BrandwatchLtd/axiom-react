@@ -17,6 +17,7 @@ exports[`CardImages renders with 1 src 1`] = `
       src="image.png"
       style={
         Object {
+          "backgroundColor": undefined,
           "height": undefined,
           "maxWidth": "100%",
           "width": undefined,

@@ -11,6 +11,8 @@ export default class Image extends Component {
     border: PropTypes.oneOf(['small', 'large']),
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
+    /** Background color of the image */
+    color: PropTypes.string,
     /** Height of the image. When shape is circle this will be ignored and width will be applied. */
     height: PropTypes.string,
     /** @type {[type]} [description] */
@@ -36,6 +38,7 @@ export default class Image extends Component {
     const {
       border,
       children,
+      color,
       height,
       maxWidth,
       onError,
@@ -50,6 +53,7 @@ export default class Image extends Component {
       maxWidth,
       width: shape === 'circle' ? (width || height) : width,
       height: shape === 'circle' ? (width || height) : height,
+      backgroundColor: color,
     };
 
     const classes = classnames('ax-image', `ax-image--${shape}`, {
