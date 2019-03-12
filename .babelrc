@@ -33,15 +33,18 @@
         "transform-react-remove-prop-types"
       ]
     },
+    "build": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    },
     "production": {
-      plugins: [
+      "plugins": [
         "@brandwatch/babel-plugin-transform-svg-axiom",
         "@brandwatch/babel-plugin-axiom-imports",
         "transform-es2015-modules-commonjs"
       ]
     },
     "test": {
-      plugins: ["transform-es2015-modules-commonjs"]
+      "plugins": ["transform-es2015-modules-commonjs"]
     }
   }
 }
