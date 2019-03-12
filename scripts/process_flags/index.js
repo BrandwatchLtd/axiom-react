@@ -7,7 +7,7 @@ const getProcessedFlag = require('./lib/getProcessedFlag');
 
 const sourceAssetsPath = path.join(__dirname, '../../node_modules/flag-svg-collection/flags/1x1');
 const destAssetsPath = path.join(__dirname, '../../site/assets/flags');
-const destMapPath = path.join(__dirname, '../../packages/axiom-materials/dist');
+const destMapPath = path.join(__dirname, '../../packages/axiom-materials');
 
 const assetsBaseUrl = 'https://axiom.brandwatch.com/assets/flags';
 
@@ -20,7 +20,10 @@ function createJsMap(items) {
       },
     });
   }, {});
-  return fs.writeFile(path.join(destMapPath, 'flags.json'), JSON.stringify(map, null, 4));
+  return Promise.all([
+    fs.writeFile(path.join(destMapPath, 'src', 'flags.json'), JSON.stringify(map)),
+    fs.writeFile(path.join(destMapPath, 'dist', 'flags.json'), JSON.stringify(map)),
+  ]);
 }
 
 function processFlag(fileName) {
