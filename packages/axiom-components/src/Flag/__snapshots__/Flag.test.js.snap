@@ -6,7 +6,7 @@ exports[`Flag renders with custom size 1`] = `
   src="https://axiom.brandwatch.com/assets/flags/gb.svg"
   style={
     Object {
-      "backgroundColor": "rgb(48, 77, 140)",
+      "backgroundColor": undefined,
       "height": "12rem",
       "maxWidth": "100%",
       "width": "12rem",

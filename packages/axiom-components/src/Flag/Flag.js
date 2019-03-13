@@ -36,7 +36,6 @@ export default class Flag extends Component {
 
     return (
       <Image { ...rest }
-          color={ flag.color }
           height={ size }
           shape="circle"
           src={ flag.src }
