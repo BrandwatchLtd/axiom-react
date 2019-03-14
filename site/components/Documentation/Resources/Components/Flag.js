@@ -8,6 +8,8 @@ import {
   DocumentationShowCase,
 } from '@brandwatch/axiom-documentation-viewer';
 
+const assetsUrl = '/assets/';
+
 export default class Documentation extends Component {
   render() {
     return (
@@ -18,7 +20,7 @@ export default class Documentation extends Component {
               <GridCell key={ key } width={ 100 / 5 }>
                 <Grid gutters="tiny" none responsive={ false } verticalAlign="middle">
                   <GridCell>
-                    <Flag alpha2={ key } size="4rem" />
+                    <Flag alpha2={ key } assetsUrl={ assetsUrl } size="4rem" />
                   </GridCell>
                   <GridCell>
                     { key }
@@ -31,7 +33,7 @@ export default class Documentation extends Component {
 
         <DocumentationShowCase centered>
           <Grid responsive={ false }>
-            <GridCell><Flag alpha2="gb" size="12rem" /></GridCell>
+            <GridCell><Flag alpha2="gb" assetsUrl={ assetsUrl } size="12rem" /></GridCell>
           </Grid>
         </DocumentationShowCase>
 

@@ -16,29 +16,35 @@ export default class Flag extends Component {
       // Unofficial
       'eu', 'gb-eng', 'gb-nir', 'gb-sct', 'gb-wls', 'un', 'uk',
     ]),
+    /** Assets URL */
+    assetsUrl: PropTypes.string,
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
     /** Size of the Flag */
     size: PropTypes.string.isRequired,
   };
 
-  static defaultProps = {};
+  static defaultProps = {
+    assetsUrl: 'https://axiom.brandwatch.com/assets/',
+  };
 
   render() {
     const {
       alpha2,
+      assetsUrl,
       children,
       size,
       ...rest
     } = this.props;
 
     const flag = (alpha2Aliases[alpha2] ? flags[alpha2Aliases[alpha2]] : flags[alpha2]) || {};
+    const src = `${assetsUrl}${flag.src}`;
 
     return (
       <Image { ...rest }
           height={ size }
           shape="circle"
-          src={ flag.src }
+          src={ src }
           width={ size }>
         { children }
       </Image>

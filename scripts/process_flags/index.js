@@ -9,13 +9,11 @@ const sourceAssetsPath = path.join(__dirname, '../../node_modules/flag-svg-colle
 const destAssetsPath = path.join(__dirname, '../../site/assets/flags');
 const destMapPath = path.join(__dirname, '../../packages/axiom-materials');
 
-const assetsBaseUrl = 'https://axiom.brandwatch.com/assets/flags';
-
 function createJsMap(items) {
   const map = items.reduce((memo, item) => {
     return Object.assign(memo, {
       [item.id]: {
-        src: `${assetsBaseUrl}/${item.id}.svg`,
+        src: `flags/${item.id}.svg`,
         color: item.color,
       },
     });
