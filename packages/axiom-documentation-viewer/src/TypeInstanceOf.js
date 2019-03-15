@@ -17,7 +17,6 @@ export default class TypeInstanceOf extends Component {
     const { type: { value } } = this.props;
     const InstanceOfEditor = InstaceOfMap[value];
 
-
     return (
       <InstanceOfEditor { ...this.props } />
     );

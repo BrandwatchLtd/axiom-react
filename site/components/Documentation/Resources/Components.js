@@ -17,6 +17,7 @@ import DataPicker from './Components/DataPicker';
 import DatePicker from './Components/DatePicker';
 import Dialog from './Components/Dialog';
 import Dropdown from './Components/Dropdown';
+import DurationPicker from './Components/DurationPicker';
 import Editable from './Components/Editable';
 import EllipsisTooltip from './Components/EllipsisTooltip';
 import Form from './Components/Form';
@@ -125,6 +126,10 @@ export default class Documentation extends Component {
             id: 'dropdown',
             name: 'Dropdown',
             Component: Dropdown,
+          }, {
+            id: 'duration-picker',
+            name: 'DurationPicker',
+            Component: DurationPicker,
           }, {
             id: 'editable',
             name: 'Editable',

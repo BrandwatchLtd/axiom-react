@@ -4,6 +4,7 @@ import { Toggle } from '@brandwatch/axiom-components';
 
 export default class TypeBool extends Component {
   static propTypes = {
+    disabled: PropTypes.bool,
     setValue: PropTypes.func.isRequired,
     value: PropTypes.bool,
   };
@@ -13,10 +14,11 @@ export default class TypeBool extends Component {
   };
 
   render() {
-    const { value, setValue } = this.props;
+    const { disabled, value, setValue } = this.props;
 
     return (
       <Toggle
+          disabled={ disabled }
           onToggle={ () => setValue(!value) }
           toggled={ value }>
         { value.toString() }

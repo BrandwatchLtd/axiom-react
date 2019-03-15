@@ -4,6 +4,7 @@ import { TextInput } from '@brandwatch/axiom-components';
 
 export default class TypeString extends Component {
   static propTypes = {
+    disabled: PropTypes.bool,
     setValue: PropTypes.func.isRequired,
     value: PropTypes.string,
   };
@@ -13,10 +14,11 @@ export default class TypeString extends Component {
   };
 
   render() {
-    const { value, setValue } = this.props;
+    const { value, setValue, disabled } = this.props;
 
     return (
       <TextInput
+          disabled={ disabled }
           onChange={ (e) => setValue(e.target.value) }
           placeholder="Set prop text..."
           value={ value } />

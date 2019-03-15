@@ -51,6 +51,7 @@ export default class DocumentationApiRow extends Component {
     component: PropTypes.string.isRequired,
     defaultValue: PropTypes.any,
     description: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
     name: PropTypes.string.isRequired,
     required: PropTypes.bool,
     type: PropTypes.shape({
@@ -65,7 +66,7 @@ export default class DocumentationApiRow extends Component {
   };
 
   render() {
-    const { component, defaultValue, description, name, required, type, values } = this.props;
+    const { component, defaultValue, description, disabled, name, required, type, values } = this.props;
     const PropEditor = propEditorMap[type.name];
     const showDefault = defaultValue !== undefined &&
       type && type.name !== 'func' && type.name !== 'arrayOf';
@@ -99,6 +100,7 @@ export default class DocumentationApiRow extends Component {
         <TableCell>
           { PropEditor && (
             <PropEditor
+                disabled={ disabled }
                 prop={ name }
                 propOptions={ { } }
                 required={ required }

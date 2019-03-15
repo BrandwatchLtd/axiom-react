@@ -67,6 +67,7 @@ export { default as DropdownMenu } from './Dropdown/DropdownMenu';
 export { default as DropdownMenuItem } from './Dropdown/DropdownMenuItem';
 export { default as DropdownSource } from './Dropdown/DropdownSource';
 export { default as DropdownTarget } from './Dropdown/DropdownTarget';
+export { default as DurationPicker } from './DurationPicker/DurationPicker';
 export { default as EditableLine } from './Editable/EditableLine';
 export { default as EditableTitle } from './Editable/EditableTitle';
 export { default as EllipsisTooltip } from './EllipsisTooltip/EllipsisTooltip';

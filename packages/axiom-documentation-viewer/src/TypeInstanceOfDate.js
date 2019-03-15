@@ -4,6 +4,7 @@ import { DatePicker, TextInput, TextInputIcon } from '@brandwatch/axiom-componen
 
 export default class TypeInstanceOfDate extends Component {
   static propTypes = {
+    disabled: PropTypes.bool,
     setValue: PropTypes.func.isRequired,
     value: PropTypes.oneOfType([
       PropTypes.string,
@@ -12,13 +13,14 @@ export default class TypeInstanceOfDate extends Component {
   };
 
   render() {
-    const { value, setValue } = this.props;
+    const { disabled, value, setValue } = this.props;
 
     return (
       <DatePicker
           onSelect={ ({ date }) => setValue(date) }
           selectedDate={ typeof value === 'string' ? new Date(value) : value }>
         <TextInput
+            disabled={ disabled }
             placeholder="Select a date"
             readOnly={ true }
             value={ value ? value.toString() : '' }>

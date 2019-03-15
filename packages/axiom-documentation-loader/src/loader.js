@@ -35,6 +35,10 @@ function flattenValues({ value }, values = []) {
   return values;
 }
 
+function sanitizeDescription(description) {
+  return description.replace(/\[.*?\]/g, '').trim();
+}
+
 function extractProps({ displayName, props = {} }) {
   return {
     name: displayName,
@@ -43,6 +47,8 @@ function extractProps({ displayName, props = {} }) {
       .reduce((eProps, prop) => Object.assign({}, eProps, {
         [prop]: Object.assign(props[prop], {
           defaultValue: normaliseValue(props[prop].defaultValue),
+          description: sanitizeDescription(props[prop].description),
+          disabled: props[prop].description.includes('[DISABLED]'),
           type: normaliseValue(props[prop].type),
           values: flattenValues(normaliseValue(props[prop].type)),
         }),

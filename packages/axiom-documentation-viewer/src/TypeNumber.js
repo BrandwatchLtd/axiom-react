@@ -4,6 +4,7 @@ import { TextInput } from '@brandwatch/axiom-components';
 
 export default class TypeNumber extends Component {
   static propTypes = {
+    disabled: PropTypes.bool,
     setValue: PropTypes.func.isRequired,
     value: PropTypes.number,
   };
@@ -24,11 +25,12 @@ export default class TypeNumber extends Component {
   }
 
   render() {
-    const { value } = this.props;
+    const { disabled, value } = this.props;
 
     return (
       <TextInput
           defaultValue={ value }
+          disabled={ disabled }
           onChange={ (e) => this.handleOnChange(e) }
           placeholder="Set prop number..." />
     );
