@@ -5,7 +5,7 @@ exports[`DurationPicker Snapshots renders with defaultProps 1`] = `
   direction="row"
   fill={true}
   gutters="tiny"
-  responsive={true}
+  responsive={false}
   wrap={true}
 >
   <GridCell>

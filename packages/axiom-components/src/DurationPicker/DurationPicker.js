@@ -70,7 +70,7 @@ const getIsoDurationValueFromState = (state) => {
   }
 
   const duration = Duration.fromObject({
-    [state.selectedUnit]: state.selectedValue,
+    [selectedUnit]: selectedValue,
   });
 
   return formatDuration(duration);
@@ -82,33 +82,20 @@ const formatTimeUnit = (timeUnit) => {
 
 export default class DurationPicker extends Component {
   static propTypes = {
-    /** Enable days option */
-    days: PropTypes.bool,
-    /** Enable hours option */
-    hours: PropTypes.bool,
-    /** Enable minutes option */
-    minutes: PropTypes.bool,
-    /** Enable months option */
-    months: PropTypes.bool,
-    /** Invoked with the ISO duration value when the it is computed */
+    /** Exclude time units */
+    excludedTimeUnits: PropTypes.arrayOf(
+      PropTypes.oneOf(['minutes', 'hours', 'days', 'weeks', 'months', 'years'])
+    ),
+    /** Invoked with the ISO duration value when it is computed */
     onChange: PropTypes.func,
     /** Valid ISO duration value (see https://en.wikipedia.org/wiki/ISO_8601#Durations) [DISABLED] */
     value: PropTypes.string,
-    /** Enable weeks option */
-    weeks: PropTypes.bool,
-    /** Enable years option */
-    years: PropTypes.bool,
   };
 
   static defaultProps = {
-    days: true,
-    hours: true,
-    minutes: true,
-    months: true,
+    excludedTimeUnits: [],
     onChange: () => {},
     value: 'P7D',
-    weeks: true,
-    years: true,
   };
 
   constructor(props) {
@@ -118,7 +105,7 @@ export default class DurationPicker extends Component {
     this.onChangeUnit = this.onChangeUnit.bind(this);
     this.onChange = this.onChange.bind(this);
 
-    this.state = getStateFromIsoDurationValue(props.value);
+    this.state = { ...getStateFromIsoDurationValue(props.value) };
   }
 
   onChangeValue(event) {
@@ -150,21 +137,13 @@ export default class DurationPicker extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.value !== this.props.value) {
-      this.setState(getStateFromIsoDurationValue(this.props.value), () => this.onChange());
+      this.setState({ ...getStateFromIsoDurationValue(this.props.value) }, () => this.onChange());
     }
   }
 
   render() {
-    const enabledTimeUnits = {
-      minutes: this.props.minutes,
-      hours: this.props.hours,
-      days: this.props.days,
-      weeks: this.props.weeks,
-      months: this.props.months,
-      years: this.props.years,
-    };
-
-    const filteredTimeUnits = validTimeUnits.filter((timeUnit) => enabledTimeUnits[timeUnit]);
+    const excludedTimeUnits = this.props.excludedTimeUnits.concat('seconds');
+    const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedTimeUnits.includes(timeUnit));
 
     const {
       selectedUnit = filteredTimeUnits[0],
