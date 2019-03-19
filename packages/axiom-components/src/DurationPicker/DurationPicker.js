@@ -105,30 +105,35 @@ export default class DurationPicker extends Component {
     this.onChangeUnit = this.onChangeUnit.bind(this);
     this.onChange = this.onChange.bind(this);
 
-    this.state = { ...getStateFromIsoDurationValue(props.value) };
+    this.state = getStateFromIsoDurationValue(props.value);
   }
 
   onChangeValue(event) {
     const inputValue = parseInt(event.target.value, 10);
     const selectedValue = Number.isFinite(inputValue) && inputValue >= 1 ? inputValue : '';
+    const durationValue = getIsoDurationValueFromState({
+      selectedUnit: this.state.selectedUnit,
+      selectedValue,
+    });
 
     this.setState({
+      ...this.state,
       selectedValue,
-      value: getIsoDurationValueFromState({
-        selectedUnit: this.state.selectedUnit,
-        selectedValue,
-      }),
-    }, () => this.onChange());
+      value: durationValue,
+    }, this.onChange);
   }
 
   onChangeUnit(selectedUnit) {
-    this.setState({
+    const durationValue = getIsoDurationValueFromState({
       selectedUnit,
-      value: getIsoDurationValueFromState({
-        selectedUnit,
-        selectedValue: this.state.selectedValue,
-      }),
-    }, () => this.onChange());
+      selectedValue: this.state.selectedValue,
+    });
+
+    this.setState({
+      ...this.state,
+      selectedUnit,
+      value: durationValue,
+    }, this.onChange);
   }
 
   onChange() {
@@ -137,7 +142,10 @@ export default class DurationPicker extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.value !== this.props.value) {
-      this.setState({ ...getStateFromIsoDurationValue(this.props.value) }, () => this.onChange());
+      this.setState({
+        ...this.state,
+        ...getStateFromIsoDurationValue(this.props.value),
+      }, this.onChange);
     }
   }
 
