@@ -76,6 +76,8 @@ export default class DurationPicker extends Component {
   static propTypes = {
     /** Excluded time-unit options */
     excludedOptions: PropTypes.arrayOf(PropTypes.oneOf(validTimeUnits)),
+    /** Invoked when value or unit field has been blurred */
+    onBlur: PropTypes.func,
     /** Invoked with the computed ISO duration value */
     onChange: PropTypes.func,
     /** Valid ISO duration value (see https://en.wikipedia.org/wiki/ISO_8601#Durations) [DISABLED] */
@@ -84,6 +86,7 @@ export default class DurationPicker extends Component {
 
   static defaultProps = {
     excludedOptions: ['seconds'],
+    onBlur: () => {},
     onChange: () => {},
     value: 'P7D',
   };
@@ -91,11 +94,16 @@ export default class DurationPicker extends Component {
   constructor(props) {
     super(props);
 
+    this.onBlur = this.onBlur.bind(this);
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onChangeUnit = this.onChangeUnit.bind(this);
     this.onChange = this.onChange.bind(this);
 
     this.state = getStateFromIsoDurationValue(props.value);
+  }
+
+  onBlur() {
+    this.props.onBlur();
   }
 
   onChangeValue(event) {
@@ -150,12 +158,14 @@ export default class DurationPicker extends Component {
           responsive={ false }>
         <GridCell>
           <TextInput
+              onBlur={ this.onBlur }
               onChange={ this.onChangeValue }
               type="number"
               value={ (`${selectedValue}`) } />
         </GridCell>
         <GridCell>
-          <Dropdown>
+          <Dropdown
+              onRequestClose={ this.onBlur }>
             <DropdownTarget>
               <TextInput
                   isTarget
