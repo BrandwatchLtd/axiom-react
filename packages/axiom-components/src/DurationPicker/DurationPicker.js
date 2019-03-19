@@ -82,18 +82,18 @@ const formatTimeUnit = (timeUnit) => {
 
 export default class DurationPicker extends Component {
   static propTypes = {
-    /** Exclude time units */
-    excludedTimeUnits: PropTypes.arrayOf(
+    /** Excluded time-unit options */
+    excludedOptions: PropTypes.arrayOf(
       PropTypes.oneOf(['minutes', 'hours', 'days', 'weeks', 'months', 'years'])
     ),
-    /** Invoked with the ISO duration value when it is computed */
+    /** Invoked with the computed ISO duration value */
     onChange: PropTypes.func,
     /** Valid ISO duration value (see https://en.wikipedia.org/wiki/ISO_8601#Durations) [DISABLED] */
     value: PropTypes.string,
   };
 
   static defaultProps = {
-    excludedTimeUnits: [],
+    excludedOptions: [],
     onChange: () => {},
     value: 'P7D',
   };
@@ -117,7 +117,6 @@ export default class DurationPicker extends Component {
     });
 
     this.setState({
-      ...this.state,
       selectedValue,
       value: durationValue,
     }, this.onChange);
@@ -130,7 +129,6 @@ export default class DurationPicker extends Component {
     });
 
     this.setState({
-      ...this.state,
       selectedUnit,
       value: durationValue,
     }, this.onChange);
@@ -142,16 +140,13 @@ export default class DurationPicker extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.value !== this.props.value) {
-      this.setState({
-        ...this.state,
-        ...getStateFromIsoDurationValue(this.props.value),
-      }, this.onChange);
+      this.setState(getStateFromIsoDurationValue(this.props.value), this.onChange);
     }
   }
 
   render() {
-    const excludedTimeUnits = this.props.excludedTimeUnits.concat('seconds');
-    const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedTimeUnits.includes(timeUnit));
+    const excludedOptions = this.props.excludedOptions.concat('seconds');
+    const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedOptions.includes(timeUnit));
 
     const {
       selectedUnit = filteredTimeUnits[0],
