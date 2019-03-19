@@ -3,6 +3,7 @@
 exports[`DropdownMenuItem Snapshots renders with defaultProps 1`] = `
 <ContextMenuItem
   onClick={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test
@@ -13,6 +14,7 @@ exports[`DropdownMenuItem Snapshots renders with disabled 1`] = `
 <ContextMenuItem
   disabled={true}
   onClick={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test
@@ -23,6 +25,7 @@ exports[`DropdownMenuItem Snapshots renders with index 1`] = `
 <ContextMenuItem
   index="1"
   onClick={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test
@@ -32,6 +35,7 @@ exports[`DropdownMenuItem Snapshots renders with index 1`] = `
 exports[`DropdownMenuItem Snapshots renders with keepOpen 1`] = `
 <ContextMenuItem
   onClick={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test
@@ -42,6 +46,7 @@ exports[`DropdownMenuItem Snapshots renders with multiSelect 1`] = `
 <ContextMenuItem
   multiSelect={true}
   onClick={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test
@@ -51,6 +56,7 @@ exports[`DropdownMenuItem Snapshots renders with multiSelect 1`] = `
 exports[`DropdownMenuItem Snapshots renders with onClick 1`] = `
 <ContextMenuItem
   onClick={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test
@@ -61,6 +67,7 @@ exports[`DropdownMenuItem Snapshots renders with onMouseOver 1`] = `
 <ContextMenuItem
   onClick={[Function]}
   onMouseOver={[Function]}
+  paddingVertical="medium"
   tabIndex="0"
 >
   Test

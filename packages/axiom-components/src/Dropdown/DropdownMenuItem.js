@@ -20,6 +20,8 @@ export default class DropdownMenuItem extends Component {
     multiSelect: PropTypes.bool,
     /** Click handler  */
     onClick: PropTypes.func,
+    /**  Vertical padding size applied to the menu item */
+    paddingVertical: PropTypes.oneOf(['small', 'medium']),
     /** Provides indication that the menu item is selected */
     selected: PropTypes.bool,
   };
