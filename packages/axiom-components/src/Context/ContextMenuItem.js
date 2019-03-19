@@ -15,7 +15,12 @@ export default class ContextMenuItem extends Component {
     indeterminate: PropTypes.bool,
     multiSelect: PropTypes.bool,
     onClick: PropTypes.func,
+    paddingVertical: PropTypes.oneOf(['small', 'medium']),
     selected: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    paddingVertical: 'medium',
   };
 
   render() {
@@ -27,12 +32,15 @@ export default class ContextMenuItem extends Component {
       onClick,
       multiSelect,
       selected,
+      paddingVertical,
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-context-menu__item', {
-      'ax-context-menu__item--selected': selected,
-    });
+    const classes = classnames(
+      'ax-context-menu__item',
+      `ax-context-menu__item--padding-vertical-${paddingVertical}`, {
+        'ax-context-menu__item--selected': selected,
+      });
 
     return (
       <Base { ...rest } { ...{ [contextMenuItemSelector]: true } }

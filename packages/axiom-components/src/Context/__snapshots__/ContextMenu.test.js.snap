@@ -17,7 +17,7 @@ exports[`ContextMenu renders with defaultProps 1`] = `
       className="ax-context-menu ax-context-menu--padding-vertical-medium"
     >
       <button
-        className="ax-context-menu__item"
+        className="ax-context-menu__item ax-context-menu__item--padding-vertical-medium"
         data-ax-context-menu-item={true}
       >
         <div

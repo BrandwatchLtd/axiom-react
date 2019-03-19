@@ -11,6 +11,7 @@
   --cmp-context-padding-medium: calc(var(--spacing-grid-size) * 4);
   --cmp-context-padding-large: calc(var(--spacing-grid-size) * 6);
   --cmp-context-menu-item-padding-vertical: calc(var(--spacing-grid-size) * 3);
+  --cmp-context-menu-item-padding-vertical-small: calc(var(--spacing-grid-size) * 1.5);
 }
 
 .ax-context {
@@ -123,7 +124,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--cmp-context-menu-item-padding-vertical) var(--cmp-context-padding-large);
   outline: 0;
   border: 0;
   background-color: var(--color-theme-background);
@@ -132,6 +132,14 @@
   transition-property: background-color, color;
   transition-duration: var(--transition-time-base);
   transition-timing-function: var(--transition-function);
+}
+
+.ax-context-menu__item--padding-vertical-medium {
+  padding: var(--cmp-context-menu-item-padding-vertical) var(--cmp-context-padding-large);
+}
+
+.ax-context-menu__item--padding-vertical-small {
+  padding: var(--cmp-context-menu-item-padding-vertical-small) var(--cmp-context-padding-large);
 }
 
 .ax-context-menu__item:focus {
