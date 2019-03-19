@@ -10,6 +10,7 @@ exports[`DurationPicker Snapshots renders with defaultProps 1`] = `
 >
   <GridCell>
     <TextInput
+      onBlur={[Function]}
       onChange={[Function]}
       size="medium"
       space="x4"
@@ -20,6 +21,7 @@ exports[`DurationPicker Snapshots renders with defaultProps 1`] = `
   <GridCell>
     <Dropdown
       enabled={true}
+      onRequestClose={[Function]}
       position="bottom"
       showArrow={false}
     >
