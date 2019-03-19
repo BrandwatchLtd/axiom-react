@@ -12,15 +12,7 @@ import GridCell from '../Grid/GridCell';
 import TextInput from '../Form/TextInput';
 import TextInputIcon from '../Form/TextInputIcon';
 
-const validTimeUnits = [
-  'seconds',
-  'minutes',
-  'hours',
-  'days',
-  'weeks',
-  'months',
-  'years',
-];
+const validTimeUnits = ['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years'];
 
 /**
  * This should be removed in favour of duration.toISO(),
@@ -83,9 +75,7 @@ const formatTimeUnit = (timeUnit) => {
 export default class DurationPicker extends Component {
   static propTypes = {
     /** Excluded time-unit options */
-    excludedOptions: PropTypes.arrayOf(
-      PropTypes.oneOf(['minutes', 'hours', 'days', 'weeks', 'months', 'years'])
-    ),
+    excludedOptions: PropTypes.arrayOf(PropTypes.oneOf(validTimeUnits)),
     /** Invoked with the computed ISO duration value */
     onChange: PropTypes.func,
     /** Valid ISO duration value (see https://en.wikipedia.org/wiki/ISO_8601#Durations) [DISABLED] */
@@ -93,7 +83,7 @@ export default class DurationPicker extends Component {
   };
 
   static defaultProps = {
-    excludedOptions: [],
+    excludedOptions: ['seconds'],
     onChange: () => {},
     value: 'P7D',
   };
@@ -145,7 +135,7 @@ export default class DurationPicker extends Component {
   }
 
   render() {
-    const excludedOptions = this.props.excludedOptions.concat('seconds');
+    const { excludedOptions } = this.props;
     const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedOptions.includes(timeUnit));
 
     const {
