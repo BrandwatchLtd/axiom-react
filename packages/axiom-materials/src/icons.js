@@ -51,6 +51,7 @@ export default {
   'installation': require('./icon_svgs/installation.svg'),
   'instagram': require('./icon_svgs/instagram.svg'),
   'integrations': require('./icon_svgs/integrations.svg'),
+  'iris': require('./icon_svgs/iris.svg'),
   'kred': require('./icon_svgs/kred.svg'),
   'line-graph': require('./icon_svgs/line-graph.svg'),
   'list': require('./icon_svgs/list.svg'),

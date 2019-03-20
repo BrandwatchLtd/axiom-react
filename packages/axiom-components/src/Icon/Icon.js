@@ -68,6 +68,7 @@ export default class Icon extends Component {
       'installation',
       'instagram',
       'integrations',
+      'iris',
       'kred',
       'line-graph',
       'list',
