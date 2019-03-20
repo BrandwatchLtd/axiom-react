@@ -25,4 +25,16 @@ describe('Icon', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with custom width', () => {
+    const component = getComponent({ width: '4rem' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with custom height', () => {
+    const component = getComponent({ height: '4rem' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

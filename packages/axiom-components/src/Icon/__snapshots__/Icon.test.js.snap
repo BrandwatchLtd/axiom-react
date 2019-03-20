@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Icon renders with custom height 1`] = `
+<svg
+  className="ax-icon ax-icon--twitter"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  style={
+    Object {
+      "height": "4rem",
+      "width": undefined,
+    }
+  }
+  viewBox="0 0 16 16"
+/>
+`;
+
 exports[`Icon renders with custom size 1`] = `
 <svg
   className="ax-icon ax-icon--twitter"
@@ -11,6 +29,24 @@ exports[`Icon renders with custom size 1`] = `
   style={
     Object {
       "height": "4rem",
+      "width": "4rem",
+    }
+  }
+  viewBox="0 0 16 16"
+/>
+`;
+
+exports[`Icon renders with custom width 1`] = `
+<svg
+  className="ax-icon ax-icon--twitter"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  style={
+    Object {
+      "height": undefined,
       "width": "4rem",
     }
   }

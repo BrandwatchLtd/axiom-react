@@ -13,6 +13,8 @@ export default class Icon extends Component {
      * Inline styling that allows the Icon to placed next to other inline
      * elements or text.
      */
+    /** Height of icon (with unit). */
+    height: PropTypes.string,
     inline: PropTypes.bool,
     /** Name of the icon that will be displayed */
     name: PropTypes.oneOf([
@@ -110,12 +112,14 @@ export default class Icon extends Component {
       'warning',
       'warning-circle',
     ]).isRequired,
-    /** Size of icon (with unit) */
+    /** Size of icon (with unit). Not used when height or width is provided */
     size: PropTypes.string,
     /** Spacing applied to the left of the Icon. Must be used with the inline property */
     spaceLeft: PropTypes.oneOf(['x1', 'x2']),
     /** Spacing applied to the right of the Icon. Must be used with the inline property */
     spaceRight: PropTypes.oneOf(['x1', 'x2']),
+    /** Width of icon (with unit). */
+    width: PropTypes.string,
   };
 
   static defaultProps = {
@@ -123,8 +127,11 @@ export default class Icon extends Component {
   };
 
   render() {
-    const { className, inline, name, size, spaceLeft, spaceRight, ...rest } = this.props;
-    const style = { width: size, height: size };
+    const { className, inline, name, size, width, height, spaceLeft, spaceRight, ...rest } = this.props;
+    const style = (height || width) ?
+      { width, height } :
+      { width: size, height: size };
+
     const classes = classnames(className, 'ax-icon', `ax-icon--${name}`, {
       'ax-icon--inline': inline,
       [`ax-icon--space-left-${spaceLeft}`]: spaceLeft,
