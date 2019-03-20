@@ -3,9 +3,10 @@
 exports[`DurationPicker Snapshots renders with defaultProps 1`] = `
 <Grid
   direction="row"
-  fill={true}
+  fit={true}
   gutters="tiny"
   responsive={false}
+  space="x0"
   wrap={true}
 >
   <GridCell>

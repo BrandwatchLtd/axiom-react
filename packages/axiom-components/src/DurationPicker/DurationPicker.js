@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Duration } from 'luxon';
+import omit from 'lodash.omit';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownContext from '../Dropdown/DropdownContext';
 import DropdownMenu from '../Dropdown/DropdownMenu';
@@ -144,6 +145,7 @@ export default class DurationPicker extends Component {
 
   render() {
     const { excludedOptions } = this.props;
+    const childProps = omit(this.props, Object.keys(DurationPicker.propTypes));
     const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedOptions.includes(timeUnit));
 
     const {
@@ -153,11 +155,13 @@ export default class DurationPicker extends Component {
 
     return (
       <Grid
-          fill={ true }
+          fit={ true }
           gutters="tiny"
-          responsive={ false }>
+          responsive={ false }
+          space="x0">
         <GridCell>
           <TextInput
+              { ...childProps }
               onBlur={ this.onBlur }
               onChange={ this.onChangeValue }
               type="number"
@@ -168,6 +172,7 @@ export default class DurationPicker extends Component {
               onRequestClose={ this.onBlur }>
             <DropdownTarget>
               <TextInput
+                  { ...childProps }
                   isTarget
                   readOnly
                   value={ formatTimeUnit(selectedUnit) }>
