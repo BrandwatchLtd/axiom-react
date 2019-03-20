@@ -43,6 +43,7 @@ export default {
   'format-title': require('./icon_svgs/format-title.svg'),
   'format-underline': require('./icon_svgs/format-underline.svg'),
   'grid': require('./icon_svgs/grid.svg'),
+  'growth': require('./icon_svgs/growth.svg'),
   'hamburger': require('./icon_svgs/hamburger.svg'),
   'heart': require('./icon_svgs/heart.svg'),
   'home': require('./icon_svgs/home.svg'),
