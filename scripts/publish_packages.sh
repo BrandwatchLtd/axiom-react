@@ -26,6 +26,7 @@ git remote add upstream git@github.com:BrandwatchLtd/axiom-react.git
 
 npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
 
+yarn build:flags
 yarn build:packages
 
 git checkout master
