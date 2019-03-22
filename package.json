@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "netlify": "yarn run build:flags && yarn run build:packages && yarn run build:site",
+    "netlify": "yarn run build:packages && yarn run build:site",
     "build:flags": "NODE_ENV=production BABEL_ENV=build bash ./scripts/build_flags.sh",
     "build:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_packages.sh",
     "build:site": "NODE_ENV=production BABEL_ENV=static bash ./scripts/build_site.sh",
