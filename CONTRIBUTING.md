@@ -51,6 +51,15 @@ A new version of styleguide at https://axiom.brandwatch.com is built and deploye
 
 ### Publishing to npm
 
-New versions of component libraries are published to npm for every merge to `master`.
+The CI for publishing the packages is currently not working and will need to be handled manually. To do this, you will need sign in with the Brandwatch npm credentials and run the following:
 
+```sh
+# Make sure you're on master with all the latest changes
+git checkout master && git fetch origin && git rebase origin/master
 
+# Ensure everything is installed
+yarn
+
+# Run the publish step
+yarn publish:packages
+```

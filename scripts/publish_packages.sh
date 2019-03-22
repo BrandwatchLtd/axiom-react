@@ -1,36 +1,20 @@
 #!/bin/bash
 set -e
 
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    exit 0
+# Check if Git status is clean
+if [ "$(git diff --exit-code)" ]; then
+  echo 'Git status is not clean, stash or commit your changes before publishing.'
+  exit 1
 fi
 
-openssl aes-256-cbc -K $encrypted_7c2951e40ae6_key -iv $encrypted_7c2951e40ae6_iv -in github_deploy_key.enc -out github_deploy_key -d
-chmod 600 github_deploy_key
-eval `ssh-agent -s`
-ssh-add github_deploy_key
-
-# Test SSH connection
-if ! ssh git@github.com 2>&1 | grep "BrandwatchLtd/axiom" > /dev/null
-then
-  echo "Cannot connect to Github via SSH :("
-  echo "Please verify the public deploy key is set in BrandwatchLtd/axiom-react."
-  exit 1;
-fi
-
-git config --global user.email "ci@brandwatch.com"
-git config --global user.name "Brandwatch (via TravisCI)"
-
-# travis sets origin to https. Let set up a second remote for ssh
+# Ensure master is latest
+git remote rm upstream &> /dev/null && true
 git remote add upstream git@github.com:BrandwatchLtd/axiom-react.git
+git checkout master && git fetch upstream && git rebase upstream/master
 
-npm config set "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}"
-
-yarn build:flags
+# Prepare
+yarn
 yarn build:packages
 
-git checkout master
+# Publish
 npx lerna publish --npm-client npm --conventional-commits --yes --git-remote upstream
-
-# Workaround https://github.com/travis-ci/travis-ci/issues/8082
-ssh-agent -k
