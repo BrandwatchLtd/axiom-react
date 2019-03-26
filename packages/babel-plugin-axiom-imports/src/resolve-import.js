@@ -39,9 +39,9 @@ const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
           return importList[spec.local.name] = node.source.value;
         case 'ExportSpecifier':
           if (spec.local.name === spec.exported.name && importList[spec.local.name]) {
-            memo[packageName][spec.local.name] = [path.join(`${packageName}/dist`, importList[spec.local.name]), '*'];
+            memo[packageName][spec.local.name] = [path.join(`${packageName}/dist-esm`, importList[spec.local.name]), '*'];
           } else {
-            memo[packageName][spec.exported.name] = [path.join(`${packageName}/dist`, node.source.value), 'default'];
+            memo[packageName][spec.exported.name] = [path.join(`${packageName}/dist-esm`, node.source.value), 'default'];
           }
         }
       });

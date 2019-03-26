@@ -2,7 +2,9 @@
   "name": "@brandwatch/babel-plugin-axiom-imports",
   "version": "0.2.4",
   "description": "Brandwatch Axiom - Babel plugin to transform Axiom imports",
-  "main": "dist/babel-plugin-axiom-imports.js",
+  "main": "dist-cjs/babel-plugin-axiom-imports.js",
+  "module": "dist-esm/babel-plugin-axiom-imports.js",
+  "sideEffects": false,
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

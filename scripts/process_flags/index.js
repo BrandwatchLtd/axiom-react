@@ -20,7 +20,8 @@ function createJsMap(items) {
   }, {});
   return Promise.all([
     fs.writeFile(path.join(destMapPath, 'src', 'flags.json'), JSON.stringify(map)),
-    fs.writeFile(path.join(destMapPath, 'dist', 'flags.json'), JSON.stringify(map)),
+    fs.writeFile(path.join(destMapPath, 'dist-cjs', 'flags.json'), JSON.stringify(map)),
+    fs.writeFile(path.join(destMapPath, 'dist-esm', 'flags.json'), JSON.stringify(map)),
   ]);
 }
 
@@ -45,7 +46,8 @@ function processAllFlags() {
   return Promise.all([
     fs.mkdirp(destAssetsPath),
     fs.mkdirp(path.join(destMapPath, 'src')),
-    fs.mkdirp(path.join(destMapPath, 'dist')),
+    fs.mkdirp(path.join(destMapPath, 'dist-cjs')),
+    fs.mkdirp(path.join(destMapPath, 'dist-esm')),
   ])
     .then(() => fs.readdir(sourceAssetsPath))
     .then((fileNames) => Promise.all(fileNames.map(processFlag)))
