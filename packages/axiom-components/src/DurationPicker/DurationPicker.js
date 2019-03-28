@@ -15,27 +15,6 @@ import TextInputIcon from '../Form/TextInputIcon';
 
 const validTimeUnits = ['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years'];
 
-/**
- * This should be removed in favour of duration.toISO(),
- * only after the following PR has been merged
- * https://github.com/moment/luxon/pull/470
- */
-const formatDuration = (duration) => {
-  const filteredTimeUnits = []
-    .concat(validTimeUnits)
-    .reverse()
-    .filter((timeUnit) => duration.values[timeUnit]);
-  const timeDesignatorTimeUnits = validTimeUnits.slice(0, 3);
-  const timeDesignatorIndex = filteredTimeUnits.findIndex((timeUnit) => timeDesignatorTimeUnits.includes(timeUnit));
-
-  return filteredTimeUnits.reduce((memo, timeUnit, index) => {
-    const timeDesignator = index === timeDesignatorIndex ? 'T' : '';
-    const value = duration.values[timeUnit];
-    const designator = timeUnit.slice(0, 1).toUpperCase();
-    return `${memo}${timeDesignator}${value}${designator}`;
-  }, 'P');
-};
-
 const getStateFromIsoDurationValue = (value) => {
   const duration = Duration.fromISO(value);
 
@@ -66,7 +45,7 @@ const getIsoDurationValueFromState = (state) => {
     [selectedUnit]: selectedValue,
   });
 
-  return formatDuration(duration);
+  return duration.toISO();
 };
 
 const formatTimeUnit = (timeUnit) => {
