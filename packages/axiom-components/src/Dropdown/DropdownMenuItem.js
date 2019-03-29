@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import omit from 'lodash.omit';
 import ContextMenuItem from '../Context/ContextMenuItem';
+import DropdownReactContext from './DropdownReactContext';
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {
@@ -26,9 +27,7 @@ export default class DropdownMenuItem extends Component {
     selected: PropTypes.bool,
   };
 
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-  };
+  static contextType = DropdownReactContext;
 
   constructor(props) {
     super(props);

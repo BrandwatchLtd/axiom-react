@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import omit from 'lodash.omit';
 import Context from '../Context/Context';
 import { contextMenuItemSelector } from '../Context/ContextMenuItem';
+import DropdownReactContext from './DropdownReactContext';
 
 if (typeof window !== 'undefined') {
   require('element-closest');
@@ -36,10 +37,7 @@ export default class DropdownContext extends Component {
     width: '14.5rem',
   };
 
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-    dropdownRef: PropTypes.func.isRequired,
-  };
+  static contextType = DropdownReactContext;
 
   constructor(props) {
     super(props);

@@ -6,6 +6,7 @@ import PositionSource from '../Position/PositionSource';
 import PositionTarget from '../Position/PositionTarget';
 import { DropdownSourceRef } from './DropdownSource';
 import { DropdownTargetRef } from './DropdownTarget';
+import DropdownReactContext from './DropdownReactContext';
 import ReactDOM from 'react-dom';
 
 /* eslint-disable react/no-find-dom-node */
@@ -46,13 +47,6 @@ export default class Dropdown extends Component {
     withMask: PropTypes.bool,
   };
 
-  static childContextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-    openDropdown: PropTypes.func.isRequired,
-    toggleDropdown: PropTypes.func.isRequired,
-    dropdownRef: PropTypes.func.isRequired,
-  };
-
   static defaultProps = {
     enabled: true,
     position: 'bottom',
@@ -65,7 +59,7 @@ export default class Dropdown extends Component {
     this.state = { isVisible: false };
   }
 
-  getChildContext() {
+  getContext() {
     return {
       closeDropdown: () => this.close(),
       openDropdown: () => this.open(),
@@ -102,18 +96,20 @@ export default class Dropdown extends Component {
     const { isVisible } = this.state;
 
     return (
-      <Position
-          { ...rest }
-          isVisible={ isVisible }
-          offset={ offset }
-          onMaskClick={ withMask ? () => this.close() : null }
-          position={ position }
-          ref={ (el) => this.el = ReactDOM.findDOMNode(el) }>
-        <PositionTarget>
-          { React.cloneElement(findComponent(children, DropdownTargetRef)) }
-        </PositionTarget>
-        <PositionSource>{ findComponent(children, DropdownSourceRef) }</PositionSource>
-      </Position>
+      <DropdownReactContext.Provider value={ this.getContext() }>
+        <Position
+            { ...rest }
+            isVisible={ isVisible }
+            offset={ offset }
+            onMaskClick={ withMask ? () => this.close() : null }
+            position={ position }
+            ref={ (el) => this.el = ReactDOM.findDOMNode(el) }>
+          <PositionTarget>
+            { React.cloneElement(findComponent(children, DropdownTargetRef)) }
+          </PositionTarget>
+          <PositionSource>{ findComponent(children, DropdownSourceRef) }</PositionSource>
+        </Position>
+      </DropdownReactContext.Provider>
     );
   }
 }

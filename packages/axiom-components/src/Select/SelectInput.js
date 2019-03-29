@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import TextInput from '../Form/TextInput';
 import TextInputIcon from '../Form/TextInputIcon';
+import DropdownReactContext from '../Dropdown/DropdownReactContext';
 
 export default class SelectInput extends Component {
   static propTypes = {
@@ -10,10 +11,7 @@ export default class SelectInput extends Component {
     onFocus: PropTypes.func,
   };
 
-  static contextTypes = {
-    closeDropdown: PropTypes.func,
-    openDropdown: PropTypes.func,
-  };
+  static contextType = DropdownReactContext;
 
   constructor(props) {
     super(props);

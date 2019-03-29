@@ -5,6 +5,7 @@ import Button from '../Button/Button';
 import ButtonGroup from '../Button/ButtonGroup';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
+import DropdownReactContext from '../Dropdown/DropdownReactContext';
 
 export default class DatePickerControls extends Component {
   static propTypes = {
@@ -17,9 +18,7 @@ export default class DatePickerControls extends Component {
     view: PropTypes.string.isRequired,
   };
 
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-  };
+  static contextType = DropdownReactContext;
 
   constructor(props) {
     super(props);

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Component, cloneElement } from 'react';
+import DropdownReactContext from './DropdownReactContext';
 
 export const DropdownSourceRef = 'DropdownSource';
 
@@ -8,9 +9,7 @@ export default class DropdownSource extends Component {
     children: PropTypes.node.isRequired,
   };
 
-  static contextTypes = {
-    closeDropdown: PropTypes.func.isRequired,
-  }
+  static contextType = DropdownReactContext;
 
   static typeRef = DropdownSourceRef;
 
