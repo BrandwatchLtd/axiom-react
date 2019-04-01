@@ -6,7 +6,7 @@
     "build:packages": "NODE_ENV=production bash ./scripts/build_packages.sh",
     "build:site": "NODE_ENV=production bash ./scripts/build_site.sh",
     "ci:setup": "NODE_ENV=production bash ./scripts/ci_setup.sh",
-    "ci:test": "TZ=utc jest ./packages/**/dist --config .jest.ci.json",
+    "ci:test": "TZ=utc jest ./packages/**/dist-esm --config .jest.ci.json",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint 'packages/**/*.css' 'site/**/*.css'",
     "lint:js": "eslint --config .eslintrc packages site",

@@ -6,5 +6,7 @@
   "setupFiles": [
     "./enzyme.js"
   ],
-  "transform": {}
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!@brandwatch)"
+  ]
 }
