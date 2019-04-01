@@ -3,23 +3,23 @@
 exports[`babelPluginAxiom aliased imports 1`] = `
 "'use strict';
 
-var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
+var _findComponent = require('@brandwatch/axiom-utils/dist-esm/findComponent');
 
 var _findComponent2 = _interopRequireDefault(_findComponent);
 
-var _DotPlotChart = require('@brandwatch/axiom-charts/dist/DotPlotChart/DotPlotChart');
+var _DotPlotChart = require('@brandwatch/axiom-charts/dist-esm/DotPlotChart/DotPlotChart');
 
 var _DotPlotChart2 = _interopRequireDefault(_DotPlotChart);
 
-var _Base = require('@brandwatch/axiom-components/dist/Base/Base');
+var _Base = require('@brandwatch/axiom-components/dist-esm/Base/Base');
 
 var _Base2 = _interopRequireDefault(_Base);
 
-var _longDate = require('@brandwatch/axiom-formatting/dist/longDate');
+var _longDate = require('@brandwatch/axiom-formatting/dist-esm/longDate');
 
 var _longDate2 = _interopRequireDefault(_longDate);
 
-var _shortDate = require('@brandwatch/axiom-formatting/dist/shortDate');
+var _shortDate = require('@brandwatch/axiom-formatting/dist-esm/shortDate');
 
 var _shortDate2 = _interopRequireDefault(_shortDate);
 
@@ -61,27 +61,27 @@ console.log(materials.colors); /* eslint-disable no-console */"
 exports[`babelPluginAxiom destructured imports 1`] = `
 "'use strict';
 
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
+var _colors = require('@brandwatch/axiom-materials/dist-esm/colors');
 
 var _ = _interopRequireWildcard(_colors);
 
-var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
+var _findComponent = require('@brandwatch/axiom-utils/dist-esm/findComponent');
 
 var _findComponent2 = _interopRequireDefault(_findComponent);
 
-var _DotPlotChart = require('@brandwatch/axiom-charts/dist/DotPlotChart/DotPlotChart');
+var _DotPlotChart = require('@brandwatch/axiom-charts/dist-esm/DotPlotChart/DotPlotChart');
 
 var _DotPlotChart2 = _interopRequireDefault(_DotPlotChart);
 
-var _Base = require('@brandwatch/axiom-components/dist/Base/Base');
+var _Base = require('@brandwatch/axiom-components/dist-esm/Base/Base');
 
 var _Base2 = _interopRequireDefault(_Base);
 
-var _longDate = require('@brandwatch/axiom-formatting/dist/longDate');
+var _longDate = require('@brandwatch/axiom-formatting/dist-esm/longDate');
 
 var _longDate2 = _interopRequireDefault(_longDate);
 
-var _shortDate = require('@brandwatch/axiom-formatting/dist/shortDate');
+var _shortDate = require('@brandwatch/axiom-formatting/dist-esm/shortDate');
 
 var _shortDate2 = _interopRequireDefault(_shortDate);
 
@@ -114,7 +114,7 @@ console.log(_axiomMaterials2.default.colors); /* eslint-disable no-console */"
 exports[`babelPluginAxiom property access 1`] = `
 "'use strict';
 
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
+var _colors = require('@brandwatch/axiom-materials/dist-esm/colors');
 
 var _ = _interopRequireWildcard(_colors);
 
@@ -129,7 +129,7 @@ console.log(_['foo-bar']);"
 exports[`babelPluginAxiom scoped imports 1`] = `
 "'use strict';
 
-var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
+var _findComponent = require('@brandwatch/axiom-utils/dist-esm/findComponent');
 
 var _findComponent2 = _interopRequireDefault(_findComponent);
 
@@ -150,7 +150,7 @@ bar();"
 exports[`babelPluginAxiom used as defaults 1`] = `
 "'use strict';
 
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
+var _colors = require('@brandwatch/axiom-materials/dist-esm/colors');
 
 var _ = _interopRequireWildcard(_colors);
 
