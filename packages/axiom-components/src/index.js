@@ -114,6 +114,7 @@ export { default as ProgressFinite } from './Progress/ProgressFinite';
 export { default as ProgressInfinite } from './Progress/ProgressInfinite';
 export { default as RadioButton } from './Form/RadioButton';
 export { default as RadioButtonGroup } from './Form/RadioButtonGroup';
+export { default as Range } from './Slider/Range';
 export { default as Reveal } from './Reveal/Reveal';
 export { default as Select } from './Select/Select';
 export { default as SelectOption } from './Select/SelectOption';
