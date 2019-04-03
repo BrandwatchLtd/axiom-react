@@ -90,14 +90,15 @@
   transition-timing-function: var(--transition-function);
 }
 
-.ax-checkbox__input:focus + .ax-checkbox__indicator,
-.ax-radio__input:focus + .ax-radio__indicator {
-  border-color: rgba(var(--rgb-ui-accent), var(--opacity-input-border--focused));
-}
-
 .ax-checkbox__input:disabled + .ax-checkbox__indicator,
 .ax-radio__input:disabled + .ax-radio__indicator {
   background-color: var(--color-theme-background--disabled);
+}
+
+.ax-checkbox__input:checked:enabled + .ax-checkbox__indicator,
+.ax-radio__input:checked:enabled + .ax-radio__indicator {
+  border-color: transparent;
+  background-color: var(--color-ui-accent);
 }
 
 .ax-checkbox__input:disabled ~ .ax-checkbox__label,
@@ -105,40 +106,72 @@
   color: var(--color-theme-text--disabled);
 }
 
-.ax-checkbox--invalid .ax-checkbox__input + .ax-checkbox__indicator,
+.ax-checkbox__input:active:enabled + .ax-checkbox__indicator,
+.ax-radio__input:active:enabled + .ax-radio__indicator {
+  border-color: rgba(var(--rgb-ui-accent), var(--opacity-input-border--focused));
+}
+
+.ax-checkbox--invalid .ax-checkbox__input:enabled + .ax-checkbox__indicator,
 .ax-checkbox--invalid .ax-checkbox__input:focus + .ax-checkbox__indicator,
-.ax-radio--invalid .ax-radio__input + .ax-radio__indicator,
+.ax-radio--invalid .ax-radio__input:enabled + .ax-radio__indicator,
 .ax-radio--invalid .ax-radio__input:focus + .ax-radio__indicator {
   border-color: rgba(var(--rgb-ui-error), var(--opacity-input-border--invalid));
+}
+
+.ax-checkbox--invalid .ax-checkbox__input:checked:enabled + .ax-checkbox__indicator,
+.ax-radio--invalid .ax-radio__input:checked:enabled + .ax-radio__indicator {
+  background-color: var(--color-ui-error);
+}
+
+.ax-checkbox--invalid .ax-checkbox__input:active:enabled + .ax-checkbox__indicator,
+.ax-radio--invalid .ax-radio__input:active:enabled + .ax-radio__indicator {
+  border-color: rgba(var(--rgb-ui-error), var(--opacity-input-border--focused));
+}
+
+.ax-checkbox--invalid .ax-checkbox__input:enabled ~ .ax-checkbox__label,
+.ax-radio--invalid .ax-radio__input:enabled ~ .ax-radio__label {
+  color: var(--color-ui-error);
+}
+
+.ax-checkbox__input:checked:active:enabled + .ax-checkbox__indicator,
+.ax-radio__input:checked:active:enabled + .ax-radio__indicator {
+  background-color: var(--color-theme-background);
 }
 
 /* stylelint-disable no-duplicate-selectors */
 .ax-radio__indicator::before {
   @nest .ax-radio__input + & { background-color: transparent; }
-  @nest .ax-radio__input:checked + & { background-color: var(--color-ui-accent); }
+  @nest .ax-radio__input:checked + & { background-color: var(--color-ui-white-noise); }
+  @nest .ax-radio__input:checked:active:enabled + & { background-color: var(--color-ui-accent); }
   @nest .ax-radio__input:disabled + & { background-color: transparent; }
   @nest .ax-radio__input:disabled:checked + & {
     background-color: var(--color-theme-border);
   }
 
   @nest .ax-radio--invalid .ax-radio__input:checked + & {
+    border-color: var(--color-ui-error);
+  }
+
+  @nest .ax-radio--invalid .ax-radio__input:checked:active:enabled + & {
     background-color: var(--color-ui-error);
   }
 }
 
 .ax-checkbox__indicator::before {
   @nest .ax-checkbox__input + & { border-color: transparent; }
-  @nest .ax-checkbox__input:checked + & { border-color: var(--color-ui-accent); }
+  @nest .ax-checkbox__input:checked + & { border-color: var(--color-ui-white-noise); }
+  @nest .ax-checkbox__input:checked:active:enabled + & { border-color: var(--color-ui-accent); }
   @nest .ax-checkbox__input:disabled + & { border-color: transparent; }
   @nest .ax-checkbox__input:disabled:checked + & { border-color: var(--color-theme-border); }
-  @nest .ax-checkbox--invalid .ax-checkbox__input:checked + & {
-    border-color: var(--color-ui-error);
-  }
   @nest .ax-checkbox--indeterminate & {
     top: var(--cmp-checkbox-indeterminate-top);
     right: var(--cmp-checkbox-indeterminate-horizontal);
     left: var(--cmp-checkbox-indeterminate-horizontal);
     transform: rotate(0deg);
     border-left: 0;
+  }
+
+  @nest .ax-checkbox--invalid .ax-checkbox__input:checked:active:enabled + & {
+    border-color: var(--color-ui-error);
   }
 }
