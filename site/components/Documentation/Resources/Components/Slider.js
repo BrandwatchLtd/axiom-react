@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Slider } from '@brandwatch/axiom-components';
+import { Range, Slider } from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
@@ -34,6 +34,32 @@ export default class Documentation extends Component {
 
         <DocumentationApi components={ [
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Slider/Slider'),
+        ] } />
+
+        <DocumentationShowCase centered>
+          <div style={ { width: '20rem', maxWidth: '100%' } }>
+            <Range
+                max={ 200 }
+                min={ 0 }
+                onChange={ (setValue, getValue, values) =>
+            setValue('Range', 'values', values) }
+                size="small"
+                space="x4"
+                values={ [25, 50] } />
+
+            <Range
+                max={ 200 }
+                min={ 0 }
+                onChange={ (setValue, getValue, values) =>
+            setValue('Range', 'values', values) }
+                size="medium"
+                space="x4"
+                values={ [50, 150] } />
+          </div>
+        </DocumentationShowCase>
+
+        <DocumentationApi components={ [
+          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Slider/Range'),
         ] } />
       </DocumentationContent>
     );
