@@ -1,13 +1,10 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
 import Base from '../Base/Base';
-import Position from '../Position/Position';
-import PositionSource from '../Position/PositionSource';
-import PositionTarget from '../Position/PositionTarget';
-import TooltipContent from '../Tooltip/TooltipContent';
-import TooltipContext from '../Tooltip/TooltipContext';
+import Marker from './Marker';
+import sliderDefaultProps from './DefaultProps';
 import './Slider.css';
 
 export default class Slider extends Component {
@@ -34,12 +31,8 @@ export default class Slider extends Component {
     withTooltip: PropTypes.bool,
   };
 
-  static defaultProps = {
-    size: 'small',
-    step: 1,
-    valueFormatter: (n) => n,
-    withTooltip: false,
-  };
+
+  static defaultProps = sliderDefaultProps;
 
   constructor(props) {
     super(props);
@@ -107,6 +100,7 @@ export default class Slider extends Component {
     const { onChange } = this.props;
     const { clientX } = event;
 
+    event.preventDefault();
     onChange(this.getValue(clientX));
   }
 
@@ -150,26 +144,11 @@ export default class Slider extends Component {
               className="ax-slider__fill"
               style={ { width: `${valueAsPercentage}%` } } />
         </div>
-
-        <Position
-            enabled={ withTooltip }
-            isVisible={ isDragging || isMouseOver }
-            showArrow>
-          <PositionTarget>
-            <div
-                className="ax-slider__thumb"
-                onMouseDown={ disabled ? null : this.handleMouseDown }
-                style={ { left: `${valueAsPercentage}%` } } />
-          </PositionTarget>
-
-          <PositionSource>
-            <TooltipContext theme="night" width="auto">
-              <TooltipContent size="tiny" textStrong>
-                { valueFormatter(value) }
-              </TooltipContent>
-            </TooltipContext>
-          </PositionSource>
-        </Position>
+        <Marker disabled={ disabled } isVisible={ isDragging || isMouseOver }
+            onMouseDown={ this.handleMouseDown }
+            value={ value } valueAsPercentage={ valueAsPercentage }
+            valueFormatter={ valueFormatter }
+            withTooltip={ withTooltip }/>
       </Base>
     );
   }
