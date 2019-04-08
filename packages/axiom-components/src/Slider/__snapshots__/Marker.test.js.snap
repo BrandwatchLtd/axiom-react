@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Marker renders with custom props 1`] = `
+<Position
+  boundariesElement="viewport"
+  enabled={true}
+  flip="clockwise"
+  isVisible={false}
+  offset="middle"
+  position="top"
+  showArrow={true}
+>
+  <PositionTarget>
+    <div
+      className="ax-slider__thumb"
+      onMouseDown={null}
+      style={
+        Object {
+          "left": "0.1%",
+        }
+      }
+    />
+  </PositionTarget>
+  <PositionSource>
+    <TooltipContext
+      theme="night"
+      width="auto"
+    >
+      <TooltipContent
+        size="tiny"
+        textStrong={true}
+      >
+        3
+      </TooltipContent>
+    </TooltipContext>
+  </PositionSource>
+</Position>
+`;
+
+exports[`Marker renders with defaultProps 1`] = `
+<Position
+  boundariesElement="viewport"
+  enabled={true}
+  flip="clockwise"
+  isVisible={true}
+  offset="middle"
+  position="top"
+  showArrow={true}
+>
+  <PositionTarget>
+    <div
+      className="ax-slider__thumb"
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "left": "0.1%",
+        }
+      }
+    />
+  </PositionTarget>
+  <PositionSource>
+    <TooltipContext
+      theme="night"
+      width="auto"
+    >
+      <TooltipContent
+        size="tiny"
+        textStrong={true}
+      >
+        3.03
+      </TooltipContent>
+    </TooltipContext>
+  </PositionSource>
+</Position>
+`;

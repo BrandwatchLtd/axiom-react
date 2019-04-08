@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Range renders with custom props 1`] = `
+<div
+  className="ax-slider ax-slider--medium"
+  onBlur={[Function]}
+  onChange={[MockFunction]}
+  onFocus={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={[Function]}
+  step={0.1}
+  tabIndex="0"
+>
+  <div
+    className="ax-slider__track"
+    onMouseDown={[Function]}
+  >
+    <div
+      className="ax-slider__fill"
+      style={
+        Object {
+          "left": "15.15%",
+          "width": "47.85%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="ax-slider__thumb"
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "left": "15.15%",
+      }
+    }
+  />
+  <div
+    className="ax-slider__thumb"
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "left": "63%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Range renders with defaultProps 1`] = `
+<div
+  className="ax-slider ax-slider--small"
+  onBlur={[Function]}
+  onChange={[MockFunction]}
+  onFocus={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={[Function]}
+  step={1}
+  tabIndex="0"
+>
+  <div
+    className="ax-slider__track"
+    onMouseDown={[Function]}
+  >
+    <div
+      className="ax-slider__fill"
+      style={
+        Object {
+          "left": "15.15%",
+          "width": "47.85%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="ax-slider__thumb"
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "left": "15.15%",
+      }
+    }
+  />
+  <div
+    className="ax-slider__thumb"
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "left": "63%",
+      }
+    }
+  />
+</div>
+`;
