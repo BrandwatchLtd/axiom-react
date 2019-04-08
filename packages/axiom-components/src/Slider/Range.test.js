@@ -27,7 +27,7 @@ describe('Range', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('prevents Marker crossing', () => {
+  it('prevents Handle crossing', () => {
     Element.prototype.getBoundingClientRect = jest.fn(() => {
       return {
         width: 120,

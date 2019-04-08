@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
 import Base from '../Base/Base';
-import Marker from './Marker';
+import Handle from './Handle';
 import sliderDefaultProps from './DefaultProps';
 import './Slider.css';
 
@@ -36,10 +36,10 @@ export default class Range extends Component {
   constructor(props) {
     super(props);
 
-    this.focusedMarkerIndex = 0;
+    this.focusedHandleIndex = 0;
 
     this.state = {
-      draggedMarkerIndex: null,
+      draggedHandleIndex: null,
       isMouseOver: false,
     };
 
@@ -64,12 +64,12 @@ export default class Range extends Component {
   getValues(clientX) {
     const { values } = this.props;
 
-    values[this.focusedMarkerIndex] = this.getValueFromPosition(clientX);
+    values[this.focusedHandleIndex] = this.getValueFromPosition(clientX);
 
     return values;
   }
 
-  getClosestMarkerIndex(clientX) {
+  getClosestHandleIndex(clientX) {
     const { values } = this.props;
     const xValue = this.getValueFromPosition(clientX);
     let closestDist;
@@ -91,11 +91,11 @@ export default class Range extends Component {
 
   handleMouseDown(event) {
     const { clientX } = event;
-    this.focusedMarkerIndex = this.getClosestMarkerIndex(clientX);
+    this.focusedHandleIndex = this.getClosestHandleIndex(clientX);
 
     event.preventDefault();
 
-    this.setState({ draggedMarkerIndex: this.focusedMarkerIndex });
+    this.setState({ draggedHandleIndex: this.focusedHandleIndex });
 
     this.handleMouseMove(event);
 
@@ -107,7 +107,7 @@ export default class Range extends Component {
     const { onSlideEnd } = this.props;
     const { clientX } = event;
 
-    this.setState({ draggedMarkerIndex: null });
+    this.setState({ draggedHandleIndex: null });
     onSlideEnd && onSlideEnd(this.getValues(clientX));
 
     document.removeEventListener('mousemove', this.handleMouseMove);
@@ -135,11 +135,11 @@ export default class Range extends Component {
     switch (event.key) {
     case 'ArrowLeft':
     case 'ArrowDown':
-      values[this.focusedMarkerIndex] = Math.max(min, Math.min(values[this.focusedMarkerIndex] - step, max));
+      values[this.focusedHandleIndex] = Math.max(min, Math.min(values[this.focusedHandleIndex] - step, max));
       break;
     case 'ArrowRight':
     case 'ArrowUp':
-      values[this.focusedMarkerIndex] = Math.max(min, Math.min(values[this.focusedMarkerIndex] + step, max));
+      values[this.focusedHandleIndex] = Math.max(min, Math.min(values[this.focusedHandleIndex] + step, max));
       break;
     }
 
@@ -150,7 +150,7 @@ export default class Range extends Component {
     const { onChange } = this.props;
 
     if (values[0] > values[1]) {
-      switch (this.focusedMarkerIndex) {
+      switch (this.focusedHandleIndex) {
       case 0:
         values[0] = values[1];
         break;
@@ -167,7 +167,7 @@ export default class Range extends Component {
 
   render() {
     const { disabled, max, min, size, values, valueFormatter, withTooltip, ...rest } = this.props;
-    const { draggedMarkerIndex, isMouseOver } = this.state;
+    const { draggedHandleIndex, isMouseOver } = this.state;
     const valuesInRange = values.map(value => Math.max(min, Math.min(value, max)));
     const valuesAsPercentage = valuesInRange.map(valueInRange => (valueInRange / max) * 100);
     const classes = classnames('ax-slider', `ax-slider--${size}`, {
@@ -191,14 +191,14 @@ export default class Range extends Component {
               className="ax-slider__fill"
               style={ sliderFillStyle } />
         </div>
-        <Marker disabled={ disabled } isVisible={ draggedMarkerIndex === 0 || (draggedMarkerIndex === null && isMouseOver) }
+        <Handle disabled={ disabled } isVisible={ draggedHandleIndex === 0 || (draggedHandleIndex === null && isMouseOver) }
             onMouseDown={ this.handleMouseDown }
             value={ values[0] }
             valueAsPercentage={ valuesAsPercentage[0] }
             valueFormatter={ valueFormatter }
             withTooltip={ withTooltip }/>
 
-        <Marker disabled={ disabled } isVisible={ draggedMarkerIndex === 1 || (draggedMarkerIndex === null && isMouseOver) }
+        <Handle disabled={ disabled } isVisible={ draggedHandleIndex === 1 || (draggedHandleIndex === null && isMouseOver) }
             onMouseDown={ this.handleMouseDown }
             value={ values[1] }
             valueAsPercentage={ valuesAsPercentage[1] }

@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Marker from './Marker';
+import Handle from './Handle';
 
 const render = (props = {}) => {
   const newProps = { valueAsPercentage: 0.1, value: 3.03, onChange: jest.fn(), ...props };
   return shallow(
-    <Marker { ...newProps }/>
+    <Handle { ...newProps }/>
   );
 };
 
-describe('Marker', () => {
+describe('Handle', () => {
   it('renders with defaultProps', () => {
     expect(toJson(render())).toMatchSnapshot();
   });

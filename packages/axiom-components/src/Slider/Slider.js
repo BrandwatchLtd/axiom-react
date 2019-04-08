@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import omit from 'lodash.omit';
 import Base from '../Base/Base';
-import Marker from './Marker';
+import Handle from './Handle';
 import sliderDefaultProps from './DefaultProps';
 import './Slider.css';
 
@@ -144,7 +144,7 @@ export default class Slider extends Component {
               className="ax-slider__fill"
               style={ { width: `${valueAsPercentage}%` } } />
         </div>
-        <Marker disabled={ disabled } isVisible={ isDragging || isMouseOver }
+        <Handle disabled={ disabled } isVisible={ isDragging || isMouseOver }
             onMouseDown={ this.handleMouseDown }
             value={ value } valueAsPercentage={ valueAsPercentage }
             valueFormatter={ valueFormatter }

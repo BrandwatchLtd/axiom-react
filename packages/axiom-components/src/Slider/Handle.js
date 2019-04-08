@@ -7,17 +7,17 @@ import PositionTarget from '../Position/PositionTarget';
 import TooltipContent from '../Tooltip/TooltipContent';
 import TooltipContext from '../Tooltip/TooltipContext';
 
-export default class Marker extends Component {
+export default class Handle extends Component {
   static propTypes = {
-    /** Disabled control of the marker */
+    /** Disabled control of the Handle */
     disabled: PropTypes.bool,
-    /** Visibility of the marker */
+    /** Visibility of the Handle */
     isVisible: PropTypes.bool,
     /** Callback for when the mouse is down **/
     onMouseDown: PropTypes.func,
     /** Value for the tooltip content */
     value: PropTypes.number,
-    /** Value for the marker position */
+    /** Value for the Handle position */
     valueAsPercentage: PropTypes.number,
     /** Value formatter for the tooltip */
     valueFormatter: PropTypes.func,
