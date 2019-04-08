@@ -1,13 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import Range from './Range';
 
+const requiredProps = { disabled: false, min: 0, max: 20, values: [3.03, 12.6], onChange: jest.fn() };
+
 const getComponent = (props = {}) => {
-  const newProps = { disabled: false, min: 0, max: 20, values: [3.03, 12.6], onChange: jest.fn(), ...props };
+  const newProps = { ...requiredProps, ...props };
   return renderer.create(
     <Range { ...newProps }/>
   );
 };
+
+jest.mock('../Position/Position');
 
 describe('Range', () => {
   it('renders with defaultProps', () => {
@@ -20,5 +25,37 @@ describe('Range', () => {
     const component = getComponent({ size: 'medium', step: 0.1, valueFormatter: x=>Math.floor(x), withTooltip: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it('prevents Marker crossing', () => {
+    Element.prototype.getBoundingClientRect = jest.fn(() => {
+      return {
+        width: 120,
+        height: 120,
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 20,
+      };
+    });
+
+    const props = {
+      ...requiredProps,
+      onChange: jest.fn(),
+      values: [1, 2],
+    };
+    const component = mount(<Range { ...props } />);
+
+    const tracker = component.find('.ax-slider__track');
+    tracker.simulate('mousedown', { clientX: 0 });
+
+    expect(props.onChange).toHaveBeenCalledTimes(1);
+    expect(props.onChange).toHaveBeenCalledWith([0, 2]);
+
+    const event = new MouseEvent('mousemove', { clientX: 3 });
+    document.dispatchEvent(event);
+
+    expect(props.onChange).toHaveBeenCalledTimes(2);
+    expect(props.onChange).toHaveBeenCalledWith([2, 2]);
   });
 });

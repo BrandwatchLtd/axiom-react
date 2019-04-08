@@ -25,24 +25,6 @@ exports[`Range renders with custom props 1`] = `
       }
     />
   </div>
-  <div
-    className="ax-slider__thumb"
-    onMouseDown={[Function]}
-    style={
-      Object {
-        "left": "15.15%",
-      }
-    }
-  />
-  <div
-    className="ax-slider__thumb"
-    onMouseDown={[Function]}
-    style={
-      Object {
-        "left": "63%",
-      }
-    }
-  />
 </div>
 `;
 
@@ -71,23 +53,5 @@ exports[`Range renders with defaultProps 1`] = `
       }
     />
   </div>
-  <div
-    className="ax-slider__thumb"
-    onMouseDown={[Function]}
-    style={
-      Object {
-        "left": "15.15%",
-      }
-    }
-  />
-  <div
-    className="ax-slider__thumb"
-    onMouseDown={[Function]}
-    style={
-      Object {
-        "left": "63%",
-      }
-    }
-  />
 </div>
 `;

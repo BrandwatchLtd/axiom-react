@@ -49,9 +49,6 @@ export default class Range extends Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
-    this.getClosestMarkerIndex = this.getClosestMarkerIndex.bind(this);
-    this.getValues = this.getValues.bind(this);
-    this.getValueFromPosition = this.getValueFromPosition.bind(this);
   }
 
   getValueFromPosition(clientX) {
@@ -126,14 +123,13 @@ export default class Range extends Component {
   }
 
   handleMouseMove(event) {
-    const { onChange } = this.props;
     const { clientX } = event;
 
-    onChange(this.getValues(clientX));
+    this.onChange(this.getValues(clientX));
   }
 
   handleKeyDown(event) {
-    const { max, min, onChange, step } = this.props;
+    const { max, min, step } = this.props;
     const { values } = this.state;
 
     switch (event.key) {
@@ -145,6 +141,25 @@ export default class Range extends Component {
     case 'ArrowUp':
       values[this.focusedMarkerIndex] = Math.max(min, Math.min(values[this.focusedMarkerIndex] + step, max));
       break;
+    }
+
+    this.onChange(values);
+  }
+
+  onChange(values) {
+    const { onChange } = this.props;
+
+    if (values[0] > values[1]) {
+      switch (this.focusedMarkerIndex) {
+      case 0:
+        values[0] = values[1];
+        break;
+      case 1:
+        values[1] = values[0];
+        break;
+      default:
+        return;
+      }
     }
 
     onChange(values);
