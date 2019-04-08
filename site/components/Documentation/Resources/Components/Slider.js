@@ -39,6 +39,7 @@ export default class Documentation extends Component {
         <DocumentationShowCase centered>
           <div style={ { width: '20rem', maxWidth: '100%' } }>
             <Range
+                markerValue={ 100 }
                 max={ 200 }
                 min={ 0 }
                 onChange={ (setValue, getValue, values) =>
@@ -48,6 +49,7 @@ export default class Documentation extends Component {
                 values={ [25, 50] } />
 
             <Range
+                markerValue={ 100 }
                 max={ 200 }
                 min={ 0 }
                 onChange={ (setValue, getValue, values) =>

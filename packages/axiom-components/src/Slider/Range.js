@@ -11,6 +11,8 @@ export default class Range extends Component {
   static propTypes = {
     /** Disabled control of the slider */
     disabled: PropTypes.bool,
+    /** Value of the marker to indicate balanced position */
+    markerValue: PropTypes.number,
     /** Maximum number that can be selected */
     max: PropTypes.number.isRequired,
     /** Minimum number that can be selected */
@@ -51,6 +53,17 @@ export default class Range extends Component {
     this.handleMouseUp = this.handleMouseUp.bind(this);
   }
 
+  ensureValueInRange(value) {
+    const { min, max } = this.props;
+    return Math.max(min, Math.min(value, max));
+  }
+
+  getPercentageFromValue(value) {
+    const { max } = this.props;
+    const valueInRange = this.ensureValueInRange(value);
+    return (valueInRange / max) * 100;
+  }
+
   getValueFromPosition(clientX) {
     const { max, min, step } = this.props;
     const { left: posMin, right: posMax } = this.container.getBoundingClientRect();
@@ -58,7 +71,7 @@ export default class Range extends Component {
     const posAsPercentage = Math.max(0, Math.min((clientX - posMin) / (posMax - posMin), 100));
     const value = step * Math.round(posAsPercentage * (max - min) / step);
 
-    return Math.max(min, Math.min(value, max));
+    return this.ensureValueInRange(value);
   }
 
   getValues(clientX) {
@@ -129,17 +142,17 @@ export default class Range extends Component {
   }
 
   handleKeyDown(event) {
-    const { max, min, step } = this.props;
+    const { step } = this.props;
     const { values } = this.state;
 
     switch (event.key) {
     case 'ArrowLeft':
     case 'ArrowDown':
-      values[this.focusedHandleIndex] = Math.max(min, Math.min(values[this.focusedHandleIndex] - step, max));
+      values[this.focusedHandleIndex] = this.ensureValueInRange(values[this.focusedHandleIndex] - step);
       break;
     case 'ArrowRight':
     case 'ArrowUp':
-      values[this.focusedHandleIndex] = Math.max(min, Math.min(values[this.focusedHandleIndex] + step, max));
+      values[this.focusedHandleIndex] = this.ensureValueInRange(values[this.focusedHandleIndex] + step);
       break;
     }
 
@@ -166,14 +179,16 @@ export default class Range extends Component {
   }
 
   render() {
-    const { disabled, max, min, size, values, valueFormatter, withTooltip, ...rest } = this.props;
+    const { disabled, markerValue, size, values, valueFormatter, withTooltip, ...rest } = this.props;
     const { draggedHandleIndex, isMouseOver } = this.state;
-    const valuesInRange = values.map(value => Math.max(min, Math.min(value, max)));
-    const valuesAsPercentage = valuesInRange.map(valueInRange => (valueInRange / max) * 100);
+    const valuesAsPercentage = values.map(value => this.getPercentageFromValue(value));
     const classes = classnames('ax-slider', `ax-slider--${size}`, {
       'ax-slider--disabled': disabled,
     });
     const sliderFillStyle = { left:`${valuesAsPercentage[0]}%`, width: `${valuesAsPercentage[1] - valuesAsPercentage[0]}%` };
+
+    const markerValueAsPercentage = this.getPercentageFromValue(markerValue);
+    const sliderMarkerStyle = { left:`${markerValueAsPercentage}%` };
 
     return (
       <Base { ...omit(rest, ['onSlideEnd']) }
@@ -190,6 +205,9 @@ export default class Range extends Component {
           <div
               className="ax-slider__fill"
               style={ sliderFillStyle } />
+          { markerValue !== undefined && <div
+              className="ax-slider__marker"
+              style={ sliderMarkerStyle } /> }
         </div>
         <Handle disabled={ disabled } isVisible={ draggedHandleIndex === 0 || (draggedHandleIndex === null && isMouseOver) }
             onMouseDown={ this.handleMouseDown }

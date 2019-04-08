@@ -30,6 +30,13 @@
   background-color: var(--color-ui-accent);
 }
 
+.ax-slider__marker {
+  position: absolute;
+  top: -50%;
+  opacity: 0.75;
+  background-color: var(--color-theme-background--overlay-heavy);
+}
+
 .ax-slider__thumb {
   position: absolute;
   top: 0;
@@ -50,6 +57,11 @@
     border-radius: var(--ax-slider-track-size--small);
   }
 
+  & .ax-slider__marker {
+    width: 0.125rem;
+    height: 0.5rem;
+  }
+
   & .ax-slider__thumb {
     width: var(--ax-slider-thumb-size--small);
     height: var(--ax-slider-thumb-size--small);
@@ -63,6 +75,11 @@
   & .ax-slider__fill {
     height: var(--ax-slider-track-size--medium);
     border-radius: var(--ax-slider-track-size--medium);
+  }
+
+  & .ax-slider__marker {
+    width: 0.25rem;
+    height: 1rem;
   }
 
   & .ax-slider__thumb {

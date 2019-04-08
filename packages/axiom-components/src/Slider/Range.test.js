@@ -22,7 +22,13 @@ describe('Range', () => {
   });
 
   it('renders with custom props', () => {
-    const component = getComponent({ size: 'medium', step: 0.1, valueFormatter: x=>Math.floor(x), withTooltip: true });
+    const component = getComponent({
+      markerValue: 8,
+      size: 'medium',
+      step: 0.1,
+      valueFormatter: x=>Math.floor(x),
+      withTooltip: true,
+    });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
