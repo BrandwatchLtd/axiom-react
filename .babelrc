@@ -2,7 +2,8 @@
   "plugins": [
     "transform-class-properties",
     "transform-es2015-classes",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    "jest-hoist"
   ],
   "presets": [
     "react",
