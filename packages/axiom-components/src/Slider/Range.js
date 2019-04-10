@@ -171,7 +171,7 @@ export default class Range extends Component {
         values[1] = values[0];
         break;
       default:
-        return;
+        throw new Error(`Unknown handle ${this.focusedHandleIndex} was in focus: change is not applied`);
       }
     }
 
