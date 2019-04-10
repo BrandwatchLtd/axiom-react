@@ -3,7 +3,10 @@
 exports[`Range renders with custom props 1`] = `
 <div
   className="ax-slider ax-slider--medium"
+  max={20}
+  min={0}
   onBlur={[Function]}
+  onChange={[MockFunction]}
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
@@ -38,7 +41,10 @@ exports[`Range renders with custom props 1`] = `
 exports[`Range renders with defaultProps 1`] = `
 <div
   className="ax-slider ax-slider--small"
+  max={20}
+  min={0}
   onBlur={[Function]}
+  onChange={[MockFunction]}
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
