@@ -56,6 +56,8 @@
   @nest .ax-tip--shade-2 & { background-color: var(--color-theme-background--shade-2); }
   @nest .ax-tip--shade-3 & { background-color: var(--color-theme-background--shade-3); }
   @nest .ax-tip--shade-4 & { background-color: var(--color-theme-background--shade-4); }
+  @nest .ax-tip--carbon & { background-color: var(--color-ui-carbon); }
+  @nest .ax-tip--white & { background-color: var(--color-ui-white); }
 
   @nest .ax-tip--shadow & {
     box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);

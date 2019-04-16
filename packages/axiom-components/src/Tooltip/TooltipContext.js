@@ -4,7 +4,7 @@ import Context from '../Context/Context';
 
 export default class TooltipContext extends Component {
   static propTypes = {
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'carbon', 'white']),
   }
   render() {
 

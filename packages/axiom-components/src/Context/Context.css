@@ -33,10 +33,35 @@
   position: relative;
   overflow: hidden;
 
-  @nest .ax-context--success & { background-color: var(--color-ui-success); }
-  @nest .ax-context--warning & { background-color: var(--color-ui-warning); }
-  @nest .ax-context--error & { background-color: var(--color-ui-error); }
-  @nest .ax-context--info & { background-color: var(--color-ui-info); }
+  @nest .ax-context--success & {
+    background-color: var(--color-ui-success);
+    color: var(--color-ui-white-noise);
+  }
+
+  @nest .ax-context--warning & {
+    background-color: var(--color-ui-warning);
+    color: var(--color-ui-carbon);
+  }
+
+  @nest .ax-context--error & {
+    background-color: var(--color-ui-error);
+    color: var(--color-ui-white-noise);
+  }
+
+  @nest .ax-context--info & {
+    background-color: var(--color-ui-info);
+    color: var(--color-ui-white-noise);
+  }
+
+  @nest .ax-context--carbon & {
+    background-color: var(--color-ui-carbon);
+    color: var(--color-ui-white-noise);
+  }
+
+  @nest .ax-context--white & {
+    background-color: var(--color-ui-white);
+    color: var(--color-ui-carbon);
+  }
 }
 
 .ax-context-content--padding-horizontal-tiny {

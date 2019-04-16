@@ -9,7 +9,7 @@ export default class Context extends Component {
   static propTypes = {
     arrowRef: PropTypes.func,
     children: PropTypes.node,
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'carbon', 'white']),
     maxHeight: PropTypes.string,
     position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     width: PropTypes.string,

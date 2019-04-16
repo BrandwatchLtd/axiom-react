@@ -34,7 +34,7 @@ export default class Documentation extends Component {
                   </DataPoints>
                 </TooltipTarget>
 
-                <TooltipSource theme="night" width="auto">
+                <TooltipSource width="auto">
                   <TooltipContext>
                     <TooltipContent size="tiny">50%</TooltipContent>
                   </TooltipContext>
@@ -51,7 +51,7 @@ export default class Documentation extends Component {
                   </DataPoints>
                 </TooltipTarget>
 
-                <TooltipSource theme="night" width="auto">
+                <TooltipSource width="auto">
                   <TooltipContext>
                     <TooltipContent>Tooltip content</TooltipContent>
                   </TooltipContext>
