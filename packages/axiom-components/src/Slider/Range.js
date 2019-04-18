@@ -77,9 +77,12 @@ export default class Range extends Component {
   getValues(clientX) {
     const { values } = this.props;
 
-    values[this.focusedHandleIndex] = this.getValueFromPosition(clientX);
-
-    return values;
+    return values.map((value, index) => {
+      if (index === this.focusedHandleIndex) {
+        return this.getValueFromPosition(clientX);
+      }
+      return value;
+    });
   }
 
   getClosestHandleIndex(clientX) {
