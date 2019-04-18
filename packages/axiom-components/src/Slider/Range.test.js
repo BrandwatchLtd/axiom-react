@@ -33,35 +33,58 @@ describe('Range', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('prevents Handle crossing', () => {
-    Element.prototype.getBoundingClientRect = jest.fn(() => {
-      return {
-        width: 120,
-        height: 120,
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 20,
-      };
+  describe('withBoundingClientRect', () => {
+    beforeEach(() => {
+      Element.prototype.getBoundingClientRect = jest.fn(() => {
+        return {
+          width: 120,
+          height: 120,
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 20,
+        };
+      });
     });
 
-    const props = {
-      ...requiredProps,
-      onChange: jest.fn(),
-      values: [1, 2],
-    };
-    const component = mount(<Range { ...props } />);
+    it('picks the right handle when the handles are on the same value', () => {
+      const props = {
+        ...requiredProps,
+        onChange: jest.fn(),
+        values: [2, 2],
+      };
+      const component = mount(<Range { ...props } />);
 
-    const tracker = component.find('.ax-slider__track');
-    tracker.simulate('mousedown', { clientX: 0 });
+      const tracker = component.find('.ax-slider__track');
+      tracker.simulate('mousedown', { clientX: 5 });
 
-    expect(props.onChange).toHaveBeenCalledTimes(1);
-    expect(props.onChange).toHaveBeenCalledWith([0, 2]);
+      const event = new MouseEvent('mousemove', { clientX: 5 });
+      document.dispatchEvent(event);
 
-    const event = new MouseEvent('mousemove', { clientX: 3 });
-    document.dispatchEvent(event);
+      tracker.simulate('mouseup', { clientX: 5 });
 
-    expect(props.onChange).toHaveBeenCalledTimes(2);
-    expect(props.onChange).toHaveBeenCalledWith([2, 2]);
+      expect(props.onChange).toHaveBeenCalledWith([2, 5]);
+    });
+
+    it('prevents Handle crossing', () => {
+      const props = {
+        ...requiredProps,
+        onChange: jest.fn(),
+        values: [1, 2],
+      };
+      const component = mount(<Range { ...props } />);
+
+      const tracker = component.find('.ax-slider__track');
+      tracker.simulate('mousedown', { clientX: 0 });
+
+      expect(props.onChange).toHaveBeenCalledTimes(1);
+      expect(props.onChange).toHaveBeenCalledWith([0, 2]);
+
+      const event = new MouseEvent('mousemove', { clientX: 3 });
+      document.dispatchEvent(event);
+
+      expect(props.onChange).toHaveBeenCalledTimes(2);
+      expect(props.onChange).toHaveBeenCalledWith([2, 2]);
+    });
   });
 });

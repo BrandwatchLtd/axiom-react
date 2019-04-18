@@ -93,6 +93,9 @@ export default class Range extends Component {
         closestDist = currentDist;
         return currentIndex;
       }
+      if (currentDist === closestDist && xValue > currentValue) {
+        return currentIndex;
+      }
       return closestIndex;
     }, 0);
   }
