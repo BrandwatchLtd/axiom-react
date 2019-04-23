@@ -53,10 +53,10 @@ export default class Slider extends Component {
   getValue(clientX) {
     const { max, min, step } = this.props;
 
-    const posAsPercentage = Math.max(0, Math.min((clientX - this.posMin) / (this.posMax - this.posMin), 100));
-    const value = step * Math.round(posAsPercentage * (max - min) / step);
+    const value = (clientX - this.posMin) * (max - min) / (this.posMax - this.posMin) + min;
+    const roundedValue = step * Math.round(value / step);
 
-    return Math.max(min, Math.min(value, max));
+    return Math.max(min, Math.min(roundedValue, max));
   }
 
   componentWillUnmount() {
@@ -123,7 +123,7 @@ export default class Slider extends Component {
     const { disabled, max, min, size, value, valueFormatter, withTooltip, ...rest } = this.props;
     const { isDragging, isMouseOver } = this.state;
     const valueInRange = Math.max(min, Math.min(value, max));
-    const valueAsPercentage = (valueInRange / max) * 100;
+    const valueAsPercentage = ((valueInRange - min) / (max - min)) * 100;
     const classes = classnames('ax-slider', `ax-slider--${size}`, {
       'ax-slider--disabled': disabled,
     });
