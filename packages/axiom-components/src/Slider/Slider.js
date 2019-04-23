@@ -129,7 +129,7 @@ export default class Slider extends Component {
     });
 
     return (
-      <Base { ...omit(rest, ['onSlideEnd']) }
+      <Base { ...omit(rest, ['onSlideEnd', 'min', 'max', 'step']) }
           className={ classes }
           onBlur={ this.handleBlur }
           onFocus={ disabled ? null : this.handleFocus }
