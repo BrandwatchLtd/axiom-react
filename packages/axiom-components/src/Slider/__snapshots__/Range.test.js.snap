@@ -3,14 +3,11 @@
 exports[`Range renders with custom props 1`] = `
 <div
   className="ax-slider ax-slider--medium"
-  max={20}
-  min={0}
   onBlur={[Function]}
   onChange={[MockFunction]}
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
-  step={0.1}
   tabIndex="0"
 >
   <div
@@ -21,8 +18,8 @@ exports[`Range renders with custom props 1`] = `
       className="ax-slider__fill"
       style={
         Object {
-          "left": "15.15%",
-          "width": "47.85%",
+          "left": "15%",
+          "width": "48.000000000000014%",
         }
       }
     />
@@ -41,14 +38,11 @@ exports[`Range renders with custom props 1`] = `
 exports[`Range renders with defaultProps 1`] = `
 <div
   className="ax-slider ax-slider--small"
-  max={20}
-  min={0}
   onBlur={[Function]}
   onChange={[MockFunction]}
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
-  step={1}
   tabIndex="0"
 >
   <div
@@ -59,8 +53,8 @@ exports[`Range renders with defaultProps 1`] = `
       className="ax-slider__fill"
       style={
         Object {
-          "left": "15.15%",
-          "width": "47.85%",
+          "left": "15%",
+          "width": "50%",
         }
       }
     />

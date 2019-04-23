@@ -8,7 +8,6 @@ exports[`Slider renders with custom props 1`] = `
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
-  step={0.1}
   tabIndex="0"
 >
   <div
@@ -44,7 +43,6 @@ exports[`Slider renders with defaultProps 1`] = `
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
-  step={1}
   tabIndex="0"
 >
   <div

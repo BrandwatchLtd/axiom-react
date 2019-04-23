@@ -3,7 +3,7 @@
 exports[`Handle renders with custom props 1`] = `
 <Position
   boundariesElement="viewport"
-  enabled={true}
+  enabled={false}
   flip="clockwise"
   isVisible={false}
   offset="middle"
@@ -40,7 +40,7 @@ exports[`Handle renders with custom props 1`] = `
 exports[`Handle renders with defaultProps 1`] = `
 <Position
   boundariesElement="viewport"
-  enabled={true}
+  enabled={false}
   flip="clockwise"
   isVisible={true}
   offset="middle"
