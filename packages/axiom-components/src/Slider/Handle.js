@@ -21,6 +21,8 @@ export default class Handle extends Component {
     valueAsPercentage: PropTypes.number,
     /** Value formatter for the tooltip */
     valueFormatter: PropTypes.func,
+    /** Enables a value indicating tooltip */
+    withTooltip: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -28,13 +30,15 @@ export default class Handle extends Component {
     isVisible: true,
     onMouseDown: () => {},
     valueFormatter: (n) => n,
+    withTooltip: false,
   };
 
   render() {
 
-    const { disabled, onMouseDown, isVisible, value, valueAsPercentage, valueFormatter } = this.props;
+    const { disabled, onMouseDown, isVisible, value, valueAsPercentage, valueFormatter, withTooltip } = this.props;
     return (
       <Position
+          enabled={ withTooltip }
           isVisible={ isVisible }
           showArrow>
         <PositionTarget>
