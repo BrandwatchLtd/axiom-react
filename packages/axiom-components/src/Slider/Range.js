@@ -54,8 +54,9 @@ export default class Range extends Component {
   }
 
   ensureValueInRange(value) {
-    const { min, max } = this.props;
-    return Math.max(min, Math.min(value, max));
+    const { min, max, step } = this.props;
+    const valueInRange = Math.max(min, Math.min(value, max));
+    return step * Math.round(valueInRange / step);
   }
 
   getPercentageFromValue(value) {
@@ -65,13 +66,12 @@ export default class Range extends Component {
   }
 
   getValueFromPosition(clientX) {
-    const { max, min, step } = this.props;
+    const { max, min } = this.props;
     const { left: posMin, right: posMax } = this.container.getBoundingClientRect();
 
     const value = (clientX - posMin) * (max - min) / (posMax - posMin) + min;
-    const roundedValue = step * Math.round(value / step);
 
-    return this.ensureValueInRange(roundedValue);
+    return this.ensureValueInRange(value);
   }
 
   getValues(clientX) {
