@@ -67,6 +67,7 @@ export default class Icon extends Component {
       'heart',
       'home',
       'information',
+      'input',
       'information-circle',
       'installation',
       'instagram',

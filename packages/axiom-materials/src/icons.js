@@ -48,6 +48,7 @@ export default {
   'heart': require('./icon_svgs/heart.svg'),
   'home': require('./icon_svgs/home.svg'),
   'information': require('./icon_svgs/information.svg'),
+  'input': require('./icon_svgs/input.svg'),
   'information-circle': require('./icon_svgs/information-circle.svg'),
   'installation': require('./icon_svgs/installation.svg'),
   'instagram': require('./icon_svgs/instagram.svg'),
