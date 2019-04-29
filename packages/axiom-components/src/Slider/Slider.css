@@ -50,6 +50,7 @@
 
 .ax-slider--small {
   height: var(--ax-slider-thumb-size--small);
+  margin: 0 calc(var(--ax-slider-thumb-size--small) / 2);
 
   & .ax-slider__track,
   & .ax-slider__fill {
@@ -70,6 +71,7 @@
 
 .ax-slider--medium {
   height: var(--ax-slider-thumb-size--medium);
+  margin: 0 calc(var(--ax-slider-thumb-size--medium) / 2);
 
   & .ax-slider__track,
   & .ax-slider__fill {
