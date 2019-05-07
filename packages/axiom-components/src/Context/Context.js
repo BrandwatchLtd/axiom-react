@@ -9,6 +9,7 @@ export default class Context extends Component {
   static propTypes = {
     arrowRef: PropTypes.func,
     children: PropTypes.node,
+    className: PropTypes.string,
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'carbon', 'white']),
     maxHeight: PropTypes.string,
     position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
@@ -23,6 +24,7 @@ export default class Context extends Component {
 
   render() {
     const {
+      className,
       arrowRef,
       children,
       maxHeight,
@@ -32,7 +34,7 @@ export default class Context extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-context', `ax-context--${position}`, {
+    const classes = classnames(className, 'ax-context', `ax-context--${position}`, {
       [`ax-context--${color}`]: color,
     });
     const content = () => <div className="ax-context__content" style={ { maxHeight } }>

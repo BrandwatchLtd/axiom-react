@@ -6,6 +6,7 @@ import ContextContent from './ContextContent';
 export default class ContextMenu extends Component {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     paddingVertical: PropTypes.oneOf(['none', 'medium']),
   };
 
@@ -15,9 +16,10 @@ export default class ContextMenu extends Component {
   };
 
   render() {
-    const { children, paddingVertical, ...rest } = this.props;
+    const { children, className, paddingVertical, ...rest } = this.props;
 
     const classes = classnames(
+      className,
       'ax-context-menu',
       `ax-context-menu--padding-vertical-${paddingVertical}`,
     );

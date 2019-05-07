@@ -10,6 +10,7 @@ export const contextMenuItemSelector = 'data-ax-context-menu-item';
 export default class ContextMenuItem extends Component {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     disabled: PropTypes.bool,
     icon: PropTypes.string,
     indeterminate: PropTypes.bool,
@@ -26,6 +27,7 @@ export default class ContextMenuItem extends Component {
   render() {
     const {
       children,
+      className,
       disabled,
       icon,
       indeterminate,
@@ -37,6 +39,7 @@ export default class ContextMenuItem extends Component {
     } = this.props;
 
     const classes = classnames(
+      className,
       'ax-context-menu__item',
       `ax-context-menu__item--padding-vertical-${paddingVertical}`, {
         'ax-context-menu__item--selected': selected,

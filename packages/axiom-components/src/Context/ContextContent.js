@@ -6,6 +6,7 @@ import Base from '../Base/Base';
 export default class ContextContent extends Component {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
     hasFullSeparator: PropTypes.bool,
     height: PropTypes.string,
@@ -24,6 +25,7 @@ export default class ContextContent extends Component {
     const {
       color,
       children,
+      className,
       hasFullSeparator,
       height,
       maxHeight,
@@ -34,6 +36,7 @@ export default class ContextContent extends Component {
     } = this.props;
 
     const classes = classnames(
+      className,
       'ax-context-content',
       `ax-context-content--padding-horizontal-${paddingHorizontal}`,
       `ax-context-content--padding-vertical-${paddingVertical}`,
