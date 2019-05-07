@@ -12,6 +12,6 @@
     "@brandwatch/axiom-components": "^5.21.0",
     "classnames": "^2.2.1",
     "prop-types": "^15.6.0",
-    "react": "^16.4.1"
+    "react": "^16.8.6"
   }
 }
