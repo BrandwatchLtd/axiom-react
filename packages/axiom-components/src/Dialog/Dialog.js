@@ -9,6 +9,8 @@ export default class Dialog extends Component {
   static propTypes = {
     /** Content inside the Dialog */
     children: PropTypes.node,
+    /** Stops the dialog closing when the mask is clicked */
+    closeOnOverlayClick: PropTypes.bool,
     /** Control for the Dialog stretching to the windows size */
     fullscreen: PropTypes.bool,
     /** Visibility toggle for the Dialog */
@@ -37,6 +39,7 @@ export default class Dialog extends Component {
   static defaultProps = {
     padding: 'x6',
     theme: 'day',
+    closeOnOverlayClick: true,
   };
 
   static childContextTypes = {
@@ -52,6 +55,7 @@ export default class Dialog extends Component {
   render() {
     const {
       children,
+      closeOnOverlayClick,
       fullscreen,
       onRequestClose,
       overlayShade,
@@ -68,7 +72,7 @@ export default class Dialog extends Component {
 
     return (
       <Modal { ...rest }
-          onOverlayClick={ onRequestClose }
+          onOverlayClick={ closeOnOverlayClick ? onRequestClose : null }
           overlayShade={ overlayShade }
           overlayTheme={ overlayTheme }
           padding={ padding }>
