@@ -1,5 +1,201 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextInput renders TextInputIcon when left aligned renders when is in progress 1`] = `
+<div
+  className="ax-input__container ax-space--x4"
+>
+  <label
+    className="ax-input__wrapper ax-space--x4"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+      />
+      <span
+        className="ax-input__progress"
+      >
+        <svg
+          className="ax-progress-infinite ax-progress-infinite--subtle ax-radial-progress ax-radial-progress--small"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <g
+            transform="translate(12, 12) rotate(-90)"
+          >
+            <circle
+              className="ax-progress-infinite__arc"
+              r={10}
+              style={
+                Object {
+                  "stroke": "url(#ax-progress-infinite__filter--subtle)",
+                  "strokeDasharray": 62.83185307179586,
+                  "strokeDashoffset": 15.707963267948966,
+                  "strokeWidth": 4,
+                }
+              }
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`TextInput renders TextInputIcon when left aligned renders when showing onClear 1`] = `
+<div
+  className="ax-input__container ax-space--x4"
+>
+  <label
+    className="ax-input__wrapper ax-space--x4"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <a
+          className="ax-link ax-link--style-subtle"
+          onClick={[Function]}
+        >
+          <svg
+            className="ax-icon ax-icon--cross"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </a>
+      </span>
+      <input
+        className="ax-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="foobar"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`TextInput renders TextInputIcon when right aligned does not render when is in progress 1`] = `
+<div
+  className="ax-input__container ax-space--x4"
+>
+  <label
+    className="ax-input__wrapper ax-space--x4"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <input
+        className="ax-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+      />
+      <span
+        className="ax-input__progress"
+      >
+        <svg
+          className="ax-progress-infinite ax-progress-infinite--subtle ax-radial-progress ax-radial-progress--small"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <g
+            transform="translate(12, 12) rotate(-90)"
+          >
+            <circle
+              className="ax-progress-infinite__arc"
+              r={10}
+              style={
+                Object {
+                  "stroke": "url(#ax-progress-infinite__filter--subtle)",
+                  "strokeDasharray": 62.83185307179586,
+                  "strokeDashoffset": 15.707963267948966,
+                  "strokeWidth": 4,
+                }
+              }
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`TextInput renders TextInputIcon when right aligned does not render when showing onClear 1`] = `
+<div
+  className="ax-input__container ax-space--x4"
+>
+  <label
+    className="ax-input__wrapper ax-space--x4"
+  >
+    <div
+      className="ax-input__icon-container ax-input__icon-container--medium"
+    >
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <a
+          className="ax-link ax-link--style-subtle"
+          onClick={[Function]}
+        >
+          <svg
+            className="ax-icon ax-icon--cross"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </a>
+      </span>
+      <input
+        className="ax-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="foobar"
+      />
+    </div>
+  </label>
+</div>
+`;
+
 exports[`TextInput renders when disabled 1`] = `
 <div
   className="ax-input__container ax-space--x4"
@@ -91,46 +287,6 @@ exports[`TextInput renders with TextInputButton 1`] = `
       Test
     </button>
   </span>
-</div>
-`;
-
-exports[`TextInput renders with TextInputIcon 1`] = `
-<div
-  className="ax-input__container ax-space--x4"
->
-  <label
-    className="ax-input__wrapper ax-space--x4"
-  >
-    <div
-      className="ax-input__icon-container ax-input__icon-container--medium"
-    >
-      <span
-        className="ax-input__icon ax-input__icon--align-right"
-      >
-        <svg
-          className="ax-icon ax-icon--twitter"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-          style={
-            Object {
-              "height": "1rem",
-              "width": "1rem",
-            }
-          }
-          viewBox="0 0 16 16"
-        />
-      </span>
-      <input
-        className="ax-input"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        type="text"
-      />
-    </div>
-  </label>
 </div>
 `;
 

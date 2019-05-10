@@ -46,12 +46,41 @@ describe('TextInput', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with TextInputIcon', () => {
-    const component = getComponent({},
-      <TextInputIcon name="twitter" />
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  describe('renders TextInputIcon', () => {
+    describe('when left aligned', () => {
+      it('renders when is in progress', () => {
+        const component = getComponent({ isInProgress: true },
+          <TextInputIcon name="twitter" />
+        );
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('renders when showing onClear', () => {
+        const component = getComponent({ onClear: () => { }, value: 'foobar' },
+          <TextInputIcon name="twitter" />
+        );
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+    describe('when right aligned', () => {
+      it('does not render when is in progress', () => {
+        const component = getComponent({ isInProgress: true },
+          <TextInputIcon name="twitter" />
+        );
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('does not render when showing onClear', () => {
+        const component = getComponent({ onClear: () => { }, value: 'foobar' },
+          <TextInputIcon name="twitter" />
+        );
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
   });
 
   it('renders with TextInputButton', () => {
