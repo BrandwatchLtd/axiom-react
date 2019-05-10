@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import TextInputIcon from './TextInputIcon';
+import TooltipContent from '../Tooltip/TooltipContent';
 
 const getComponent = (props) =>
   renderer.create(
@@ -41,5 +43,31 @@ describe('TextInputIcon', () => {
     const component = getComponent(props);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with tooltip when string passed', () => {
+    props.tooltip = 'I am a tooltip';
+
+    const component = getComponent(props);
+    const tree = component.toJSON();
+
+    const wrapper = shallow(<TextInputIcon { ...props } />);
+    wrapper.simulate('mouseenter');
+
+    expect(tree).toMatchSnapshot();
+    expect(wrapper.find(TooltipContent)).toHaveLength(1);
+  });
+
+  it('renders with tooltip when TooltipContent passed', () => {
+    props.tooltip = (<TooltipContent size="tiny">I am a tooltip</TooltipContent>);
+
+    const component = getComponent(props);
+    const tree = component.toJSON();
+
+    const wrapper = shallow(<TextInputIcon { ...props } />);
+    wrapper.simulate('mouseenter');
+
+    expect(tree).toMatchSnapshot();
+    expect(wrapper.find(TooltipContent)).toHaveLength(1);
   });
 });

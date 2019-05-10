@@ -1,8 +1,14 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { isComponent } from '@brandwatch/axiom-utils';
 import Icon from '../Icon/Icon';
 import Link from '../Typography/Link';
+import Tooltip from '../Tooltip/Tooltip';
+import TooltipContent from '../Tooltip/TooltipContent';
+import TooltipContext from '../Tooltip/TooltipContext';
+import TooltipSource from '../Tooltip/TooltipSource';
+import TooltipTarget from '../Tooltip/TooltipTarget';
 
 export const TextInputIconRef = 'TextInputIcon';
 
@@ -16,6 +22,8 @@ export default class TextInputIcon extends Component {
     name: PropTypes.string.isRequired,
     /** Click handler, applies styling to indicate it is clickable. */
     onClick: PropTypes.func,
+    /** Optional tooltip for the icon. */
+    tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   };
 
   static defaultProps = {
@@ -24,8 +32,27 @@ export default class TextInputIcon extends Component {
 
   static typeRef = TextInputIconRef;
 
+  getIcon(name, iconColor, tooltip) {
+    return tooltip ? (
+      <Tooltip isVisible>
+        <TooltipTarget>
+          <Icon name={ name } size="1rem" textColor={ iconColor } />
+        </TooltipTarget>
+        <TooltipSource width="auto">
+          <TooltipContext>
+            { isComponent(tooltip, TooltipContent) ? tooltip : (
+              <TooltipContent size="tiny">
+                { tooltip }
+              </TooltipContent>
+            ) }
+          </TooltipContext>
+        </TooltipSource>
+      </Tooltip>
+    ) : (<Icon name={ name } size="1rem" textColor={ iconColor } />);
+  }
+
   render() {
-    const { align, iconColor, name, onClick, ...rest } = this.props;
+    const { align, iconColor, name, onClick, tooltip, ...rest } = this.props;
     const className = classnames('ax-input__icon', {
       [`ax-input__icon--align-${align}`]: align,
     });
@@ -35,11 +62,9 @@ export default class TextInputIcon extends Component {
         {
           onClick ? (
             <Link { ...rest } onClick={ onClick } style="subtle">
-              <Icon name={ name } size="1rem" textColor={ iconColor } />
+              { this.getIcon(name, iconColor, tooltip) }
             </Link>
-          ) : (
-            <Icon name={ name } size="1rem" textColor={ iconColor }/>
-          )
+          ) : this.getIcon(name, iconColor, tooltip)
         }
       </span>
     );
