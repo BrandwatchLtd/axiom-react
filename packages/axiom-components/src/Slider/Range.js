@@ -45,12 +45,24 @@ export default class Range extends Component {
       isMouseOver: false,
     };
 
+    this.ensureBoundsInRange();
+
     this.handleBlur = this.handleBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
+  }
+
+  ensureBoundsInRange() {
+    const { values } = this.props;
+
+    const valuesInRange = values.map(value => this.ensureValueInRange(value));
+
+    if (values.some(value => !valuesInRange.includes(value))) {
+      this.onChange(valuesInRange);
+    }
   }
 
   ensureValueInRange(value) {

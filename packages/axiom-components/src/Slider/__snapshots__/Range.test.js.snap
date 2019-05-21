@@ -4,7 +4,34 @@ exports[`Range renders with custom props 1`] = `
 <div
   className="ax-slider ax-slider--medium"
   onBlur={[Function]}
-  onChange={[MockFunction]}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Array [
+            3,
+            13,
+          ],
+        ],
+        Array [
+          Array [
+            3,
+            12.600000000000001,
+          ],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
@@ -39,7 +66,24 @@ exports[`Range renders with defaultProps 1`] = `
 <div
   className="ax-slider ax-slider--small"
   onBlur={[Function]}
-  onChange={[MockFunction]}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Array [
+            3,
+            13,
+          ],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
   onFocus={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}

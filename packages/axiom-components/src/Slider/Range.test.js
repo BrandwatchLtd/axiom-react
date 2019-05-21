@@ -33,6 +33,16 @@ describe('Range', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('resets its values when they are out of bounds', () => {
+    getComponent({
+      min: 0,
+      max: 1,
+      values: [-1, 2],
+    });
+
+    expect(requiredProps.onChange).toHaveBeenCalledWith([0, 1]);
+  });
+
   describe('withBoundingClientRect', () => {
     beforeEach(() => {
       Element.prototype.getBoundingClientRect = jest.fn(() => {
