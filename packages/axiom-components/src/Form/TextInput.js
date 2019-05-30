@@ -18,6 +18,8 @@ export default class TextInput extends Component {
     disabled: PropTypes.bool,
     /** See Validate[error] */
     error: PropTypes.func,
+    /** Display label inline */
+    inlineLabel: PropTypes.bool,
     /** Pass this prop to get ref to the Text Component instance. */
     inputRef: PropTypes.object,
     /** Applies styling to indicate the users input was invalid */
@@ -74,6 +76,7 @@ export default class TextInput extends Component {
     size: 'medium',
     space: 'x4',
     type: 'text',
+    inlineLabel: false,
   };
 
   constructor(props) {
@@ -120,6 +123,7 @@ export default class TextInput extends Component {
       usageHintPosition,
       value,
       inputRef,
+      inlineLabel,
       ...rest
     } = this.props;
 
@@ -140,6 +144,7 @@ export default class TextInput extends Component {
             <InputWrapper
                 disabled={ disabled }
                 hasFocus={ hasFocus }
+                inlineLabel={ inlineLabel }
                 invalid={ invalid }
                 isTarget={ isTarget }
                 isValid={ isValid }

@@ -32,10 +32,13 @@ export default class Documentation extends Component {
           <GridCell>
             <DocumentationShowCase centered>
               <TextInput
+                  label="A label"
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
                   placeholder="Write in me"
                   size="medium"/>
               <TextInput
+                  inlineLabel
+                  label="An inline label"
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
                   placeholder="Write in me"
                   size="medium"/>

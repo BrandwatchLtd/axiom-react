@@ -26,6 +26,16 @@
   flex-direction: column;
 }
 
+.ax-input__wrapper--inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ax-input__wrapper--inline .ax-input__icon-container {
+  margin-left: var(--spacing-grid-size--x2);
+}
+
 .ax-input__hint-wrapper {
   display: flex;
   justify-content: flex-end;
