@@ -17,8 +17,8 @@ import './DatePicker.css';
 
 export default class DatePickerSelection extends Component {
   static propTypes = {
+    calendarOpenDate: PropTypes.instanceOf(Date),
     earliestSelectableDate: PropTypes.instanceOf(Date),
-    initialDate: PropTypes.instanceOf(Date),
     latestSelectableDate: PropTypes.instanceOf(Date),
     onSelect: PropTypes.func.isRequired,
     view: PropTypes.string,
@@ -29,7 +29,7 @@ export default class DatePickerSelection extends Component {
     super(props);
     this.handleDaySelect = this.handleDaySelect.bind(this);
 
-    const { initialDate, rangeSelect, selectedDate } = this.props;
+    const { calendarOpenDate, rangeSelect, selectedDate } = this.props;
     const [ selectedStartDate, selectedEndDate ] = orderDates(
       this.props.selectedStartDate,
       this.props.selectedEndDate,
@@ -37,7 +37,7 @@ export default class DatePickerSelection extends Component {
 
     const activeStartDate = dateOrNow(
       (rangeSelect ? selectedStartDate : selectedDate) ||
-      initialDate
+      calendarOpenDate
     );
 
     const activeEndDate = rangeSelect && selectedEndDate

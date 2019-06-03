@@ -10,8 +10,8 @@ import './DatePicker.css';
 
 export default class DatePickerContext extends Component {
   static propTypes = {
+    calendarOpenDate: PropTypes.instanceOf(Date),
     earliestSelectableDate: PropTypes.instanceOf(Date),
-    initialDate: PropTypes.instanceOf(Date),
     latestSelectableDate: PropTypes.instanceOf(Date),
     onApply: PropTypes.func,
     onCancel: PropTypes.func,
@@ -38,6 +38,7 @@ export default class DatePickerContext extends Component {
 
   render() {
     const {
+      calendarOpenDate,
       earliestSelectableDate,
       latestSelectableDate,
       rangeSelect,
@@ -59,6 +60,7 @@ export default class DatePickerContext extends Component {
       <DropdownContext { ...rest }>
         <DropdownContent hasFullSeparator>
           <DatePickerSelection
+              calendarOpenDate={ calendarOpenDate }
               earliestSelectableDate={ earliestSelectableDate }
               latestSelectableDate={ latestSelectableDate }
               onSelect={ onSelect }

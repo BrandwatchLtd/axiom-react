@@ -7,15 +7,16 @@ import DatePickerContext from './DatePickerContext';
 
 export default class DatePicker extends Component {
   static propTypes = {
+    /**
+     * The date that should be shown to the user when the picker opens.
+     * When a selected date or range is given, this supersedes this
+     * property. Defaults to 'today'.
+     */
+    calendarOpenDate: PropTypes.instanceOf(Date),
     /** The element to position the DatePicker around */
     children: PropTypes.node.isRequired,
     /** A lower limit to the earliest date that can be selected */
     earliestSelectableDate: PropTypes.instanceOf(Date),
-    /**
-     * The date that should be initially shown to the user. When a selected date
-     * or range is given, this supersedes this property. Defaults to 'today'.
-     */
-    initialDate: PropTypes.instanceOf(Date),
     /** An upper limit to the latest date that can be selected */
     latestSelectableDate: PropTypes.instanceOf(Date),
     /** Callback for when the apply button has been clicked */
