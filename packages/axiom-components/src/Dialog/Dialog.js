@@ -9,6 +9,8 @@ export default class Dialog extends Component {
   static propTypes = {
     /** Content inside the Dialog */
     children: PropTypes.node,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /** Stops the dialog closing when the mask is clicked */
     closeOnOverlayClick: PropTypes.bool,
     /** Control for the Dialog stretching to the windows size */
@@ -55,6 +57,7 @@ export default class Dialog extends Component {
   render() {
     const {
       children,
+      className,
       closeOnOverlayClick,
       fullscreen,
       onRequestClose,
@@ -68,7 +71,7 @@ export default class Dialog extends Component {
 
     const classes = classnames('ax-dialog', {
       'ax-dialog--fullscreen': fullscreen,
-    });
+    }, className);
 
     return (
       <Modal { ...rest }

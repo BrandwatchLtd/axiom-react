@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import Base from '../Base/Base';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
@@ -10,6 +11,8 @@ export default class DialogHeader extends Component {
   static propTypes = {
     /** Header content inside the Dialog, a good place for a title */
     children: PropTypes.node,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
   };
 
   static contextTypes = {
@@ -18,10 +21,12 @@ export default class DialogHeader extends Component {
 
   render() {
     const { onRequestClose } = this.context;
-    const { children, ...rest } = this.props;
+    const { children, className, ...rest } = this.props;
+
+    const classes = classnames('ax-dialog__header', className);
 
     return (
-      <Base { ...rest } className="ax-dialog__header">
+      <Base { ...rest } className={ classes }>
         <Grid responsive={ false } verticalAlign="middle">
           <GridCell>
             { children }
