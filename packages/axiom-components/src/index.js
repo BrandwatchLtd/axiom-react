@@ -50,6 +50,7 @@ export { default as DataPicker } from './DataPicker/DataPicker';
 export { default as DataPickerDropdown } from './DataPicker/DataPickerDropdown';
 export { default as DataPickerMeta } from './DataPicker/DataPickerMeta';
 export { default as DatePicker } from './DatePicker/DatePicker';
+export { default as DatePickerSelection } from './DatePicker/DatePickerSelection';
 export { default as Dialog } from './Dialog/Dialog';
 export { default as DialogBody } from './Dialog/DialogBody';
 export { default as DialogFooter } from './Dialog/DialogFooter';

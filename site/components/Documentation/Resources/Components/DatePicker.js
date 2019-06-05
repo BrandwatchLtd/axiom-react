@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Duration, DateTime } from 'luxon';
-import { Button, ButtonIcon, DatePicker, Grid, GridCell, TextInput, TextInputIcon } from '@brandwatch/axiom-components';
+import { Button, ButtonIcon, DatePicker, Grid, GridCell, TextInput, TextInputIcon, DatePickerSelection } from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
@@ -122,6 +122,28 @@ export default class Documentation extends Component {
 
         <DocumentationApi components={ [
           require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePicker'),
+        ] } />
+
+
+        <DocumentationShowCase centered>
+          <DatePickerSelection
+              onSelect={ (setValue, getValue, { date, dateStart, dateEnd, range }) => {
+                this.handleSelect({ date, dateEnd, dateStart, range });
+              } }
+              rangeSelect
+              rangeSelections={ rangeSelections }
+              selectedDate={ date }
+              selectedEndDate={ dateEnd }
+              selectedRange={ range }
+              selectedStartDate={ dateStart }
+              view="single">
+          </DatePickerSelection>
+        </DocumentationShowCase>
+
+
+
+        <DocumentationApi components={ [
+          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePickerSelection'),
         ] } />
       </DocumentationContent>
     );

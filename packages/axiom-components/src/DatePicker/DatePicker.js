@@ -9,7 +9,7 @@ export default class DatePicker extends Component {
   static propTypes = {
     /**
      * The date that should be shown to the user when the picker opens.
-     * When a selected date or range is given, this supersedes this
+     * When a selected date or range is given, that supersedes this
      * property. Defaults to 'today'.
      */
     calendarOpenDate: PropTypes.instanceOf(Date),

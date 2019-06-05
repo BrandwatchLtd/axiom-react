@@ -4,7 +4,6 @@ import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 import DatePickerHeaderControl from './DatePickerHeaderControl';
 import DatePickerViewMonth from './DatePickerViewMonth';
-import SelectedDateOrRangePropTypes from './SelectedDateOrRangePropTypes';
 import {
   addMonths,
   dateOrNow,
@@ -17,12 +16,46 @@ import './DatePicker.css';
 
 export default class DatePickerSelection extends Component {
   static propTypes = {
+    /**
+     * The date that should be shown to the user when the picker opens.
+     * When a selected date or range is given, that supersedes this
+     * property. Defaults to 'today'.
+     */
     calendarOpenDate: PropTypes.instanceOf(Date),
+    /** A lower limit to the earliest date that can be selected */
     earliestSelectableDate: PropTypes.instanceOf(Date),
+    /** An upper limit to the latest date that can be selected */
     latestSelectableDate: PropTypes.instanceOf(Date),
+    /** Callback for when a date, range with endDate and startDate, or a range
+     * out of rangeSelections has been selected */
     onSelect: PropTypes.func.isRequired,
-    view: PropTypes.string,
-    ...SelectedDateOrRangePropTypes,
+    /** Whether a date range can be selected */
+    rangeSelect: PropTypes.bool,
+    /** Predefined date ranges offered for selection. label will be shown and
+     * range is passed to onSelect when clicked. */
+    // eslint-disable-next-line react/no-unused-prop-types
+    rangeSelections: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        range: PropTypes.string.isRequired,
+      }),
+    ),
+    /** A single date that appears selected */
+    selectedDate: PropTypes.instanceOf(Date),
+    /** The date selected at the end of the range */
+    selectedEndDate: PropTypes.instanceOf(Date),
+    /** The selected range, specified as it's label */
+    // eslint-disable-next-line react/no-unused-prop-types
+    selectedRange: PropTypes.string,
+    /** The date selected at the start of the range */
+    selectedStartDate: PropTypes.instanceOf(Date),
+    /** Configuration for a single date picker view or two pickers side by side */
+    view: PropTypes.oneOf(['single', 'double']),
+  };
+
+  static defaultProps = {
+    view: 'single',
+    rangeSelect: false,
   };
 
   constructor(props) {
