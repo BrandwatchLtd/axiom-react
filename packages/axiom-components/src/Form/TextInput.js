@@ -21,7 +21,7 @@ export default class TextInput extends Component {
     /** Display label inline */
     inlineLabel: PropTypes.bool,
     /** Pass this prop to get ref to the Text Component instance. */
-    inputRef: PropTypes.object,
+    inputRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     /** Applies styling to indicate the users input was invalid */
     invalid: PropTypes.bool,
     /** Adds a progress indicator the the right of the text input */

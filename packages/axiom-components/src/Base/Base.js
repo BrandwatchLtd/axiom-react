@@ -20,7 +20,7 @@ export default class Base extends Component {
       PropTypes.func,
     ]),
     /** Pass this prop to get ref to the Base Component instance. */
-    baseRef: PropTypes.object,
+    baseRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     /** Class name to be appended to the element */
     className: PropTypes.string,
     /** Adds ability to make an element invisible */
