@@ -76,7 +76,7 @@ describe('Range', () => {
       expect(props.onChange).toHaveBeenCalledWith([2, 5]);
     });
 
-    it('prevents Handle crossing', () => {
+    it('prevents Handle crossing on change', () => {
       const props = {
         ...requiredProps,
         onChange: jest.fn(),
@@ -95,6 +95,27 @@ describe('Range', () => {
 
       expect(props.onChange).toHaveBeenCalledTimes(2);
       expect(props.onChange).toHaveBeenCalledWith([2, 2]);
+    });
+
+    it('prevents Handle crossing on slide end', () => {
+      const props = {
+        ...requiredProps,
+        onSlideEnd: jest.fn(),
+        values: [1, 2],
+      };
+      const component = mount(<Range { ...props } />);
+
+      const tracker = component.find('.ax-slider__track');
+      tracker.simulate('mouseup', { clientX: 0 });
+
+      expect(props.onSlideEnd).toHaveBeenCalledTimes(1);
+      expect(props.onSlideEnd).toHaveBeenCalledWith([0, 2]);
+
+      const event = new MouseEvent('mouseup', { clientX: 3 });
+      document.dispatchEvent(event);
+
+      expect(props.onSlideEnd).toHaveBeenCalledTimes(2);
+      expect(props.onSlideEnd).toHaveBeenCalledWith([2, 2]);
     });
   });
 });

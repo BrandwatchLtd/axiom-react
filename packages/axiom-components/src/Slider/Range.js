@@ -71,6 +71,24 @@ export default class Range extends Component {
     return step * Math.round(valueInRange / step);
   }
 
+  ensureValuesDontCrossover(values) {
+    const orderedValues = [...values];
+
+    if (orderedValues[0] > orderedValues[1]) {
+      switch (this.focusedHandleIndex) {
+      case 0:
+        orderedValues[0] = orderedValues[1];
+        break;
+      case 1:
+        orderedValues[1] = orderedValues[0];
+        break;
+      default:
+        throw new Error(`Unknown handle ${this.focusedHandleIndex} was in focus: change is not applied`);
+      }
+    }
+    return orderedValues;
+  }
+
   getPercentageFromValue(value) {
     const { min, max } = this.props;
     const valueInRange = this.ensureValueInRange(value);
@@ -137,9 +155,11 @@ export default class Range extends Component {
   handleMouseUp(event) {
     const { onSlideEnd } = this.props;
     const { clientX } = event;
+    const values = this.getValues(clientX);
+    const orderedValues = this.ensureValuesDontCrossover(values);
 
     this.setState({ draggedHandleIndex: null });
-    onSlideEnd && onSlideEnd(this.getValues(clientX));
+    onSlideEnd && onSlideEnd(orderedValues);
 
     document.removeEventListener('mousemove', this.handleMouseMove);
     document.removeEventListener('mouseup', this.handleMouseUp);
@@ -178,22 +198,7 @@ export default class Range extends Component {
   }
 
   onChange(values) {
-    const { onChange } = this.props;
-
-    if (values[0] > values[1]) {
-      switch (this.focusedHandleIndex) {
-      case 0:
-        values[0] = values[1];
-        break;
-      case 1:
-        values[1] = values[0];
-        break;
-      default:
-        throw new Error(`Unknown handle ${this.focusedHandleIndex} was in focus: change is not applied`);
-      }
-    }
-
-    onChange(values);
+    this.props.onChange(this.ensureValuesDontCrossover(values));
   }
 
   render() {
