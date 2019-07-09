@@ -103,18 +103,16 @@ describe('Range', () => {
         onSlideEnd: jest.fn(),
         values: [1, 2],
       };
+
       const component = mount(<Range { ...props } />);
 
       const tracker = component.find('.ax-slider__track');
-      tracker.simulate('mouseup', { clientX: 0 });
+      tracker.simulate('mousedown', { clientX: 0 });
+
+      const event2 = new MouseEvent('mouseup', { clientX: 3 });
+      document.dispatchEvent(event2);
 
       expect(props.onSlideEnd).toHaveBeenCalledTimes(1);
-      expect(props.onSlideEnd).toHaveBeenCalledWith([0, 2]);
-
-      const event = new MouseEvent('mouseup', { clientX: 3 });
-      document.dispatchEvent(event);
-
-      expect(props.onSlideEnd).toHaveBeenCalledTimes(2);
       expect(props.onSlideEnd).toHaveBeenCalledWith([2, 2]);
     });
   });
