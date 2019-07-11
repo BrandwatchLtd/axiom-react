@@ -150,6 +150,7 @@ export default class TextInput extends Component {
                 isValid={ isValid }
                 label={ label }
                 size={ size }
+                space={ space }
                 style={ style }
                 usageHint={ usageHint }
                 usageHintPosition={ usageHintPosition }
