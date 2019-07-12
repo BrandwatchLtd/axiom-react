@@ -67,7 +67,7 @@ export default class DropdownContext extends Component {
     }
 
     const dropdownRef = this.context.dropdownRef();
-    if (!dropdownRef.contains(event.target) && !this.el.contains(event.target)) {
+    if (dropdownRef && !dropdownRef.contains(event.target) && !this.el.contains(event.target)) {
       return this.context.closeDropdown();
     }
   }
