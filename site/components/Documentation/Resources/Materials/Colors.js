@@ -179,6 +179,16 @@ export default class Documentation extends Component {
           )) }
         </ColorGrid>
 
+        <ColorGrid name="Brand Colours">
+          <ColorSet>
+            { Object.keys(colors.brandColors).map((id) => (
+              <ColorDot
+                  key={ id }
+                  rgb={ colors.brandColors[id] } />
+            )) }
+          </ColorSet>
+        </ColorGrid>
+
         <ColorGrid name="User Defined Graph Colours">
           <ColorSet>
             { Object.keys(colors.userDefinedGraphColors).map((id) => (

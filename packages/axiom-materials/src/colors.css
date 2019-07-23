@@ -184,8 +184,8 @@
   --color-product-extraterrestrial: rgb(var(--rgb-product-extraterrestrial));
   --color-product-extraterrestrial--hover: rgb(var(--rgb-product-extraterrestrial--hover));
 
-  --rgb-product-terra-form--active: 138, 197, 57;
-  --rgb-product-terra-form: 125, 184, 44;
+  --rgb-product-terra-form--active: 125, 184, 44;
+  --rgb-product-terra-form: 138, 197, 57;
   --rgb-product-terra-form--hover: 151, 209, 71;
 
   --color-product-terra-form--active: rgb(var(--rgb-product-terra-form--active));
@@ -375,5 +375,8 @@
   --rgb-better-together: 240, 78, 78;
 
   --color-better-together: rgb(var(--rgb-better-together));
+
+  --rgb-brand-hooloovoo: 87, 183, 221;
+  --color-brand-hooloovoo: rgb(var(--rgb-brand-hooloovoo));
 }
 /* stylelint-enable */

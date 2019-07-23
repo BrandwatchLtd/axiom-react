@@ -48,8 +48,8 @@ export const productForbiddenPlanet = { r: 245, g: 177, b: 164 };
 export const productForbiddenPlanetHover = { r: 255, g: 195, b: 184 };
 
 export const productTinyClangerActive = { r: 232, g: 132, b: 166 };
-export const productTinyClanger = { r: 244, g: 152, b: 183 };
-export const productTinyClangerHover = { r: 255, g: 171, b: 199 };
+export const productTinyClanger = { r: 245, g: 152, b: 183 };
+export const productTinyClangerHover = { r: 255, g: 171, b: 200 };
 
 export const productCriticalMassActive = { r: 214, g: 75, b: 107 };
 export const productCriticalMass = { r: 227, g: 90, b: 122 };
@@ -59,9 +59,9 @@ export const productFantasticVoyageActive = { r: 156, g: 36, b: 82 };
 export const productFantasticVoyage = { r: 167, g: 46, b: 94 };
 export const productFantasticVoyageHover = { r: 181, g: 60, b: 106 };
 
-export const productParadiseLostActive = { r: 143, g: 99, b: 166 };
-export const productParadiseLost = { r: 156, g: 115, b: 178 };
-export const productParadiseLostHover = { r: 171, g: 134, b: 191 };
+export const productParadiseLostActive = { r: 129, g: 90, b: 153 };
+export const productParadiseLost = { r: 144, g: 107, b: 167 };
+export const productParadiseLostHover = { r: 157, g: 123, b: 179 };
 
 export const productSereneSeaActive = { r: 125, g: 143, b: 201 };
 export const productSereneSea = { r: 144, g: 160, b: 214 };
@@ -91,13 +91,13 @@ export const productSpaceInvaderActive = { r: 36, g: 133, b: 100 };
 export const productSpaceInvader = { r: 47, g: 145, b: 112 };
 export const productSpaceInvaderHover = { r: 58, g: 158, b: 125 };
 
-export const productExtraterrestrialActive = { r: 99, g: 189, b: 96 };
-export const productExtraterrestrial = { r: 116, g: 201, b: 113 };
-export const productExtraterrestrialHover = { r: 133, g: 214, b: 131 };
+export const productExtraterrestrialActive = { r: 82, g: 168, b: 76 };
+export const productExtraterrestrial = { r: 96, g: 180, b: 90 };
+export const productExtraterrestrialHover = { r: 112, g: 194, b: 107 };
 
-export const productTerraFormActive = { r: 115, g: 179, b: 62 };
-export const productTerraForm = { r: 128, g: 190, b: 76 };
-export const productTerraFormHover = { r: 142, g: 204, b: 92 };
+export const productTerraFormActive = { r: 125, g: 184, b: 44 };
+export const productTerraForm = { r: 138, g: 197, b: 57 };
+export const productTerraFormHover = { r: 151, g: 209, b: 71 };
 
 export const productPrimevalSoupActive = { r: 186, g: 186, b: 15 };
 export const productPrimevalSoup = { r: 200, g: 200, b: 25 };
@@ -115,9 +115,9 @@ export const productNewHorizonActive = { r: 242, g: 178, b: 0 };
 export const productNewHorizon = { r: 255, g: 190, b: 10 };
 export const productNewHorizonHover = { r: 254, g: 199, b: 49 };
 
-export const productBlastOffActive = { r: 237, g: 124, b: 43 };
-export const productBlastOff = { r: 249, g: 138, b: 57 };
-export const productBlastOffHover = { r: 255, g: 148, b: 71 };
+export const productBlastOffActive = { r: 237, g: 132, b: 36 };
+export const productBlastOff = { r: 249, g: 145, b: 50 };
+export const productBlastOffHover = { r: 255, g: 157, b: 67 };
 
 export const productCrashCourseActive = { r: 242, g: 93, b: 70 };
 export const productCrashCourse = { r: 255, g: 109, b: 86 };
@@ -352,10 +352,23 @@ export const userDefinedGraphColors = {
   'serene-sea': productSereneSea,
   'giant-leap': productGiantLeap,
   'moon-lagoon': productMoonLagoon,
-  'terra-form': productTerraForm,
   'primeval-soup': productPrimevalSoup,
+  'terra-form': productTerraForm,
   'new-horizon': productNewHorizon,
   'blast-off': productBlastOff,
   'ground-control': productGroundControl,
   'luna-dust': productLunaDust,
 };
+
+export const hooloovoo = { r: 87, g: 183, b: 221 };
+
+export const brandColors = {
+  hooloovoo,
+  'paradise-lost': productParadiseLost,
+  'crash-course': productCrashCourseHover,
+  'blast-off': productBlastOff,
+  'new-horizon': productNewHorizon,
+  'terra-form': productTerraForm,
+};
+
+
