@@ -89,8 +89,8 @@
   --color-product-forbidden-planet--hover: rgb(var(--rgb-product-forbidden-planet--hover));
 
   --rgb-product-tiny-clanger--active: 232, 132, 166;
-  --rgb-product-tiny-clanger: 244, 152, 183;
-  --rgb-product-tiny-clanger--hover: 255, 171, 199;
+  --rgb-product-tiny-clanger: 245, 152, 183;
+  --rgb-product-tiny-clanger--hover: 255, 171, 200;
 
   --color-product-tiny-clanger--active: rgb(var(--rgb-product-tiny-clanger--active));
   --color-product-tiny-clanger: rgb(var(--rgb-product-tiny-clanger));
@@ -112,9 +112,9 @@
   --color-product-fantastic-voyage: rgb(var(--rgb-product-fantastic-voyage));
   --color-product-fantastic-voyage--hover: rgb(var(--rgb-product-fantastic-voyage--hover));
 
-  --rgb-product-paradise-lost--active: 143, 99, 166;
-  --rgb-product-paradise-lost: 156, 115, 178;
-  --rgb-product-paradise-lost--hover: 171, 134, 191;
+  --rgb-product-paradise-lost--active: 129, 90, 153;
+  --rgb-product-paradise-lost: 144, 107, 167;
+  --rgb-product-paradise-lost--hover: 157, 123, 179;
 
   --color-product-paradise-lost--active: rgb(var(--rgb-product-paradise-lost--active));
   --color-product-paradise-lost: rgb(var(--rgb-product-paradise-lost));
@@ -176,17 +176,17 @@
   --color-product-space-invader: rgb(var(--rgb-product-space-invader));
   --color-product-space-invader--hover: rgb(var(--rgb-product-space-invader--hover));
 
-  --rgb-product-extraterrestrial--active: 99, 189, 96;
-  --rgb-product-extraterrestrial: 116, 201, 113;
-  --rgb-product-extraterrestrial--hover: 133, 214, 131;
+  --rgb-product-extraterrestrial--active: 82, 168, 76;
+  --rgb-product-extraterrestrial: 96, 180, 90;
+  --rgb-product-extraterrestrial--hover: 112, 194, 107;
 
   --color-product-extraterrestrial--active: rgb(var(--rgb-product-extraterrestrial--active));
   --color-product-extraterrestrial: rgb(var(--rgb-product-extraterrestrial));
   --color-product-extraterrestrial--hover: rgb(var(--rgb-product-extraterrestrial--hover));
 
-  --rgb-product-terra-form--active: 115, 179, 62;
-  --rgb-product-terra-form: 128, 190, 76;
-  --rgb-product-terra-form--hover: 142, 204, 92;
+  --rgb-product-terra-form--active: 138, 197, 57;
+  --rgb-product-terra-form: 125, 184, 44;
+  --rgb-product-terra-form--hover: 151, 209, 71;
 
   --color-product-terra-form--active: rgb(var(--rgb-product-terra-form--active));
   --color-product-terra-form: rgb(var(--rgb-product-terra-form));
@@ -224,9 +224,9 @@
   --color-product-new-horizon: rgb(var(--rgb-product-new-horizon));
   --color-product-new-horizon--hover: rgb(var(--rgb-product-new-horizon--hover));
 
-  --rgb-product-blast-off--active: 237, 124, 43;
-  --rgb-product-blast-off: 249, 138, 57;
-  --rgb-product-blast-off--hover: 255, 148, 71;
+  --rgb-product-blast-off--active: 237, 132, 36;
+  --rgb-product-blast-off: 249, 145, 50;
+  --rgb-product-blast-off--hover: 255, 157, 67;
 
   --color-product-blast-off--active: rgb(var(--rgb-product-blast-off--active));
   --color-product-blast-off: rgb(var(--rgb-product-blast-off));
