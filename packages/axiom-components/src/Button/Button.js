@@ -12,6 +12,8 @@ export default class Button extends Component {
     active: PropTypes.bool,
     /** Content inserted into the Button */
     children: PropTypes.node.isRequired,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /** Color of the button */
     color: PropTypes.oneOf(['accent', 'negative', 'positive']),
     /** Disable interaction behaviour */
@@ -49,6 +51,7 @@ export default class Button extends Component {
     const {
       active,
       children,
+      className,
       color,
       disabled,
       joinedLeft,
@@ -73,7 +76,8 @@ export default class Button extends Component {
         'ax-button--icon-only': shape === 'rectangle' && iconOnly,
         'ax-button--full': full === true,
         [`ax-button--full--${full}`]: typeof full === 'string',
-      }
+      },
+      className
     );
 
     const mappedChildren = childrenArray.map((child, index, array) =>
