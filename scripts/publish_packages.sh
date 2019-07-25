@@ -17,4 +17,4 @@ yarn
 yarn build:packages
 
 # Publish
-npx lerna publish --npm-client npm --conventional-commits --yes --git-remote upstream
+npx lerna publish --npm-client npm --registry https://registry.npmjs.org/ --conventional-commits --yes --git-remote upstream
