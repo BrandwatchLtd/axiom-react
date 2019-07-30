@@ -365,7 +365,7 @@ export const hooloovoo = { r: 87, g: 183, b: 221 };
 export const brandColors = {
   hooloovoo,
   'paradise-lost': productParadiseLost,
-  'crash-course': productCrashCourseHover,
+  'crash-course': productCrashCourse,
   'blast-off': productBlastOff,
   'new-horizon': productNewHorizon,
   'terra-form': productTerraForm,
