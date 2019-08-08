@@ -5,10 +5,13 @@ module.exports = {
     palette.uiCarbonDarker,
     palette.uiWhiteNoise,
   ],
-  brand: Object.values(palette.productColors)
-    // Add additional colours to fill the gaps (e.g. red, navy)
-    .concat(...[
-      palette.sentimentNegativeActive,
-      palette.socialFacebookActive,
-    ]),
+  brand: [].concat(
+    Object.values(palette.productColors),
+    Object.values(palette.productActiveColors),
+    Object.values(palette.productHoverColors),
+    // Red
+    palette.sentimentNegativeActive,
+    // Navy
+    palette.socialTumblrHover
+  ),
 };
