@@ -5,9 +5,8 @@
     <desc>Created with sketchtool.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="cross" fill-rule="nonzero" stroke="#000000" stroke-width="2.1">
-            <path d="M3.75,12.25 L12.25,3.75" id="Path" class="ax-animicon__path-1"></path>
-            <path d="M3.75,3.75 L12.25,12.25" id="Path" class="ax-animicon__path-2"></path>
+        <g id="cross" transform="translate(3.000000, 3.000000)" fill-rule="nonzero" stroke="#000000" stroke-width="2.1">
+          <path d="M5,5 L0.75,9.25 L5,5 L0.75,0.75 L5,5 Z M5,5 L9.25,0.75 L5,5 L9.25,9.25 L5,5 Z" id="Path" class="ax-animicon__path-1"></path>
         </g>
     </g>
 </svg>

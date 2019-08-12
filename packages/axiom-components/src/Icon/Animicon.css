@@ -21,9 +21,9 @@
 .ax-animicon--cross {
   & .ax-animicon__path-1,
   & .ax-animicon__path-2 {
-    stroke-dasharray: 14;
-    stroke-dashoffset: 14;
-    animation-duration: var(--transition-time-base);
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+    animation-duration: var(--transition-time-slow);
     animation-fill-mode: forwards;
     animation-timing-function: var(--transition-function);
   }
