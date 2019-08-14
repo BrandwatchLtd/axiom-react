@@ -10,6 +10,7 @@ const defaultPickerFn = (colors) =>
   colors[Math.floor(Math.random() * colors.length)];
 
 export default class Candytar extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Color of the Candytar */
     color: PropTypes.oneOf([

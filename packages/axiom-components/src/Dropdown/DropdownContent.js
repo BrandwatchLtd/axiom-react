@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ContextContent from '../Context/ContextContent';
 
 export default class DropdownContent extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Determines whether the separator below this context box should cut through the padding */
     hasFullSeparator: PropTypes.bool,

@@ -12,6 +12,7 @@ import {
 } from './utils';
 
 export default class Pagination extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Active page number */
     currentPage: PropTypes.number.isRequired,

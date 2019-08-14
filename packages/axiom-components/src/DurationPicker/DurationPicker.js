@@ -53,6 +53,7 @@ const formatTimeUnit = (timeUnit) => {
 };
 
 export default class DurationPicker extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Excluded time-unit options */
     excludedOptions: PropTypes.arrayOf(PropTypes.oneOf(validTimeUnits)),

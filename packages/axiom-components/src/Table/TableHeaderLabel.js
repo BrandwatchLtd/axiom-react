@@ -5,6 +5,7 @@ import Base from '../Base/Base';
 import TextIcon from '../Typography/TextIcon';
 
 export default class TableHeaderLabel extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Table header label */
     children: PropTypes.node,

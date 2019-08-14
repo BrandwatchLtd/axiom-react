@@ -11,6 +11,7 @@ import GridCell from '../Grid/GridCell';
 import ColorPickerOption from './ColorPickerOption';
 
 export default class ColorPicker extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Colors that should be disabled from selection */
     disabledOptions: PropTypes.arrayOf(PropTypes.oneOf([

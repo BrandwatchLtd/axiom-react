@@ -8,6 +8,7 @@ import sliderDefaultProps from './DefaultProps';
 import './Slider.css';
 
 export default class Range extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Disabled control of the slider */
     disabled: PropTypes.bool,

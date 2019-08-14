@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import Base from '../Base/Base';
 
 export default class DialogFooter extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Footer content inside the Dialog, a good place for some buttons */
     children: PropTypes.node,

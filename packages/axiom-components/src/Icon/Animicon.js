@@ -5,6 +5,7 @@ import Icon from './Icon';
 import './Animicon.css';
 
 export default class Animicon extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Toggle for the animation, when true the Icon will animate in */
     isIn: PropTypes.bool.isRequired,

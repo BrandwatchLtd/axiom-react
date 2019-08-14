@@ -5,6 +5,7 @@ import Base from '../Base/Base';
 import CardImage from './CardImage';
 
 export default class CardImages extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Class name to be appended to the element */
     className: PropTypes.string,

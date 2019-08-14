@@ -4,6 +4,7 @@ import Base from '../Base/Base';
 import Validation from '../Validation/Validation';
 
 export default class Form extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node,
     /**

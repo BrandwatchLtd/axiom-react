@@ -5,6 +5,7 @@ import TextInputIcon from '../Form/TextInputIcon';
 import DropdownReactContext from '../Dropdown/DropdownReactContext';
 
 export default class SelectInput extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node,
     /** SKIP */

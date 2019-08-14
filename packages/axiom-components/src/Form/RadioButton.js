@@ -4,6 +4,7 @@ import Validate from '../Validation/Validate';
 import ChedioButtox from './ChedioButtox';
 
 export default class RadioButton extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Checked state of the input */
     checked: PropTypes.bool,

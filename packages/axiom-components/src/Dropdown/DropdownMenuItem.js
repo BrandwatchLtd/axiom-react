@@ -5,6 +5,7 @@ import ContextMenuItem from '../Context/ContextMenuItem';
 import DropdownReactContext from './DropdownReactContext';
 
 export default class DropdownMenuItem extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** SKIP */
     children: PropTypes.node,

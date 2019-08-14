@@ -5,6 +5,7 @@ import Base from '../Base/Base';
 import './Tip.css';
 
 export default class Tip extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** optional property which should be provided in case positioning of the tip is done using popperJs. If this value is true, the value of position prop will be ignored. */
     arrowRef: PropTypes.func,

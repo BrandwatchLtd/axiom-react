@@ -12,6 +12,7 @@ const TAG_MAP = {
 };
 
 export default class Heading extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     textSize: PropTypes.oneOf([
       'display2',

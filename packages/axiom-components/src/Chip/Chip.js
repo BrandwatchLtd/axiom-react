@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import './Chip.css';
 
 export default class Chip extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Apply active styling */
     active: PropTypes.bool,

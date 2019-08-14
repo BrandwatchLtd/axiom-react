@@ -7,6 +7,7 @@ import Tabs from './Tabs';
 import { TabRef } from './Tab';
 
 export default class Tabset extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Initial activated Tab, after initial mount Tabset takes control of

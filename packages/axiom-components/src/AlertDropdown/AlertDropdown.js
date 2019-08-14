@@ -10,6 +10,7 @@ import PositionTarget from '../Position/PositionTarget';
 import './AlertDropdown.css';
 
 class AlertDropdown extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Children inside AlertDropdown should contain all of and

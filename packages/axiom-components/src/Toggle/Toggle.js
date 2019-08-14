@@ -5,6 +5,7 @@ import Base from '../Base/Base';
 import './Toggle.css';
 
 export default class Toggle extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Set alignment of the switch **/
     align: PropTypes.oneOf(['left', 'right', 'full']),

@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import './ChipList.css';
 
 export default class ChipList extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Array of Chip components */
     children: PropTypes.node.isRequired,

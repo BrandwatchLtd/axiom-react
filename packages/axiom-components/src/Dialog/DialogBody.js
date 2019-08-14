@@ -4,6 +4,7 @@ import Base from '../Base/Base';
 import classnames from 'classnames';
 
 export default class DialogBody extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** The main content side a Dialog that occupies most of the space */
     children: PropTypes.node,

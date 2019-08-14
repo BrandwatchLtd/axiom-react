@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom';
 
 /* eslint-disable react/no-find-dom-node */
 export default class Dropdown extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Children inside Dropdown should contain all of and

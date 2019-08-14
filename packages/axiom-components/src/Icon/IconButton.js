@@ -11,6 +11,7 @@ const sizeMap = {
 };
 
 export default class IconButton extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Style of the Button, which affects its coloring and sizing */
     buttonStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),

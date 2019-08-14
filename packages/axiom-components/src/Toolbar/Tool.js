@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ListItem from '../List/ListItem';
 
 export default class Tool extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Content to be placed inside the Tool */
     children: PropTypes.node.isRequired,

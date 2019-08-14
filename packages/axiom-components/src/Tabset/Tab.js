@@ -6,6 +6,7 @@ import Base from '../Base/Base';
 export const TabRef = 'Tab';
 
 export default class Tab extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Applies active state to the tab, this will be controlled by Tabset when used together */
     active: PropTypes.bool,

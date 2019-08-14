@@ -4,6 +4,7 @@ import { Component, cloneElement } from 'react';
 export const AlertDropdownTargetRef = 'AlertDropdownTarget';
 
 export default class AlertDropdownTarget extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node,
   };

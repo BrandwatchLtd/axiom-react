@@ -5,6 +5,7 @@ import ProgressFinite from './ProgressFinite';
 import ProgressInfinite from './ProgressInfinite';
 
 export default class Progress extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Shows a successful completion state */
     complete: PropTypes.bool,

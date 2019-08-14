@@ -8,6 +8,7 @@ import DropdownTarget from '../Dropdown/DropdownTarget';
 import SelectInput from './SelectInput';
 
 export default class Select extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Children inside Select should contain all of and

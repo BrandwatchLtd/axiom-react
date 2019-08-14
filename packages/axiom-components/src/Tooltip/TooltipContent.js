@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ContextContent from '../Context/ContextContent';
 
 export default class TooltipContent extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     size: PropTypes.oneOf(['tiny', 'small']),
   }

@@ -15,6 +15,7 @@ import {
 import './DatePicker.css';
 
 export default class DatePickerSelection extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * The date that should be shown to the user when the picker opens.

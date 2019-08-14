@@ -13,6 +13,7 @@ import TooltipTarget from '../Tooltip/TooltipTarget';
 export const TextInputIconRef = 'TextInputIcon';
 
 export default class TextInputIcon extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Alignment inside the input field */
     align: PropTypes.oneOf(['left', 'right']),

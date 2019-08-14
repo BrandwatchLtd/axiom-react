@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 const canOpenPortal = typeof document !== 'undefined';
 
 export default class Portal extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node,
     parentNode: PropTypes.object,

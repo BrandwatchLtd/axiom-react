@@ -16,6 +16,7 @@ const isFocusableMenuItem = (element) =>
 
 /* eslint-disable react/no-find-dom-node */
 export default class DropdownContext extends Component {
+  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** React reference function for the arrow element */
     arrowRef: PropTypes.func,
