@@ -56,6 +56,10 @@ module.exports = {
       from: './site/assets',
       to: './assets',
     }]),
+    new CopyWebpackPlugin([{
+      from: './packages/axiom-components/src/index.d.ts',
+      to: './dist/',
+    }]),
     new StaticSiteGeneratorPlugin({
       crawl: true,
       paths: ['/', '/docs/packages'],

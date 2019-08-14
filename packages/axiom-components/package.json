@@ -22,5 +22,8 @@
     "react-dom": "^16.8.6",
     "react-transition-group": "^2.3.0",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.6"
   }
 }
