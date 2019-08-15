@@ -19,22 +19,13 @@
 }
 
 .ax-animicon--cross {
-  & .ax-animicon__path-1,
-  & .ax-animicon__path-2 {
-    stroke-dasharray: 25;
-    stroke-dashoffset: 25;
-    animation-duration: var(--transition-time-slow);
-    animation-fill-mode: forwards;
-    animation-timing-function: var(--transition-function);
-  }
-
-  & .ax-animicon__path-1 { animation-delay: 0ms; }
-  & .ax-animicon__path-2 { animation-delay: var(--transition-time-fast); }
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+  animation-duration: var(--transition-time-slow);
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--transition-function);
 }
 
 .ax-animicon--cross-in {
-  & .ax-animicon__path-1,
-  & .ax-animicon__path-2 {
-    animation-name: ax-animicon-cross;
-  }
+  animation-name: ax-animicon-cross;
 }
