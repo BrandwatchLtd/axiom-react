@@ -20,7 +20,7 @@ export default class ProgressFinite extends Component {
     size: 'small',
   }
 
-  componentWillMount = renderFilter
+  UNSAFE_componentWillMount = renderFilter
 
   render() {
     const {

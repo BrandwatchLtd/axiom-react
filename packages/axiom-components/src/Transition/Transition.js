@@ -18,7 +18,7 @@ export default class Transition extends Component {
     this.previousIndex = props.activeIndex;
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     if (nextProps.activeIndex !== this.props.activeIndex) {
       this.previousIndex = this.props.activeIndex;
     }

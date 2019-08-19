@@ -23,7 +23,7 @@ export default class EditableLine extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({ value: nextProps.value });
   }
 

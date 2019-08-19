@@ -22,11 +22,11 @@ export default class DocumentationApi extends Component {
     registerPropTypes: PropTypes.func.isRequired,
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.context.registerPropTypes(this.props.components);
   }
 
-  componentWillReceiveProps({ components: nextComponents }) {
+  UNSAFE_componentWillReceiveProps({ components: nextComponents }) {
     if (this.props.components !== nextComponents) {
       this.context.registerPropTypes(this.props.components);
     }

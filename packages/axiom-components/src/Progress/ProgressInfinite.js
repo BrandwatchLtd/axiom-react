@@ -24,7 +24,7 @@ export default class ProgressInfinite extends Component {
     size: 'small',
   }
 
-  componentWillMount = renderFilter
+  UNSAFE_componentWillMount = renderFilter
 
   render() {
     const {

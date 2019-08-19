@@ -33,7 +33,7 @@ export default class Tabset extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.children.length !== this.props.children.length) {
       this.setState({ activeTabIndex: 0 });
     }

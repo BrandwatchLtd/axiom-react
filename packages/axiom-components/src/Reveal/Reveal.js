@@ -42,7 +42,7 @@ export default class Reveal extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { visible } = this.props;
     const { visible: willBeVisible } = nextProps;
 

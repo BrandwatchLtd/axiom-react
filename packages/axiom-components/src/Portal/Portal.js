@@ -14,7 +14,7 @@ export default class Portal extends Component {
     axiomPositionParentNode: PropTypes.object,
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (!canOpenPortal) return;
     this._reactRootNode = document.createElement('div');
     this._reactRootNode.classList.add('AxiomSubtree');

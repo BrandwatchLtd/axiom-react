@@ -46,7 +46,7 @@ export default class DropdownContext extends Component {
     this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     document.addEventListener('keydown', this.handleKeyDown);
   }
 

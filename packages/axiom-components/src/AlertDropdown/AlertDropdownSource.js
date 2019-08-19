@@ -19,7 +19,7 @@ export default class AlertDropdownSource extends Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     document.addEventListener('keydown', this.handleKeyDown);
   }
 
