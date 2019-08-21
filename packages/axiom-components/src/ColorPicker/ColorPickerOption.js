@@ -5,7 +5,6 @@ import Base from '../Base/Base';
 import './ColorPickerOption.css';
 
 export default class ColorPickerOption extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     color: PropTypes.oneOf([
       'forbidden-planet',

@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { getDayNumber } from './utils';
 
 export default class DatePickerDay extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     date: PropTypes.instanceOf(Date),
     disabled: PropTypes.bool.isRequired,

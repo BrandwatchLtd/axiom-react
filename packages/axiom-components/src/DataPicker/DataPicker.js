@@ -20,7 +20,6 @@ import { DataPickerMetaRef } from './DataPickerMeta';
 import './DataPicker.css';
 
 export default class DataPicker extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node.isRequired,
     /** Selected color that will be displayed in the header */

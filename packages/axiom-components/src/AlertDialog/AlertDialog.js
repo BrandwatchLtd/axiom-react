@@ -5,7 +5,6 @@ import Modal from '../Modal/Modal';
 import './AlertDialog.css';
 
 export default class AlertDialog extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node.isRequired,
     /** Visibility toggle for the AlertDialog */

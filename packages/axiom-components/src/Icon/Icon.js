@@ -6,7 +6,6 @@ import Base from '../Base/Base';
 import './Icon.css';
 
 export default class Icon extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** SKIP */
     className: PropTypes.string,

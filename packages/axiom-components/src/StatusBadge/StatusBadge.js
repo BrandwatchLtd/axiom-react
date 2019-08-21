@@ -12,7 +12,6 @@ const BADGE_MAP = {
 };
 
 export default class StatusBadge extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Type of status the badge should display (determines wording and colouring) */
     status: PropTypes.oneOf([

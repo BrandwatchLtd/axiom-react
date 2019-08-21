@@ -11,7 +11,6 @@ import InputWrapper from './InputWrapper';
 import './TextInput.css';
 
 export default class TextInput extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Optional TextInputIcon or TextInputButton all other children are ignored */
     children: PropTypes.node,

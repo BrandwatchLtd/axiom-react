@@ -19,7 +19,6 @@ const SIZE_MAP = {
 };
 
 export default class AlertIcon extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Size of the indicator and icon */
     size: PropTypes.oneOf(['small', 'medium', 'large']),

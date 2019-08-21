@@ -10,7 +10,6 @@ import Link from '../Typography/Link';
 import './AlertBar.css';
 
 export default class AlertBar extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Content displayed next to the AlertIcon */
     children: PropTypes.node.isRequired,

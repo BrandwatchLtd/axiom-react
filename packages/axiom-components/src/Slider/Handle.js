@@ -8,7 +8,6 @@ import TooltipContent from '../Tooltip/TooltipContent';
 import TooltipContext from '../Tooltip/TooltipContext';
 
 export default class Handle extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Disabled control of the Handle */
     disabled: PropTypes.bool,

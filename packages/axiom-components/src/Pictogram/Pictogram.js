@@ -35,7 +35,6 @@ const PICTOGRAM_NAME_MAP = {
 };
 
 export default class Pictogram extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Name of the pictogram that will be displayed */
     name: PropTypes.oneOf([

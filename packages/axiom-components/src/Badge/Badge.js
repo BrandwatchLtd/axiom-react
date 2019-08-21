@@ -5,7 +5,6 @@ import Base from '../Base/Base';
 import './Badge.css';
 
 export default class Badge extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Content to appear inside the Badge */
     children: PropTypes.node,

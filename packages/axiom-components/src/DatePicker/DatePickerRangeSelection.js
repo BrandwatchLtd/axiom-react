@@ -7,7 +7,6 @@ import Separator from '../Separator/Separator';
 import './DatePickerRangeSelection.css';
 
 export default class DatePickerRangeSelection extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     onRangeSelection: PropTypes.func.isRequired,
     rangeSelections: PropTypes.arrayOf(PropTypes.shape({

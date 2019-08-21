@@ -8,7 +8,6 @@ import GridCell from '../Grid/GridCell';
 import DropdownReactContext from '../Dropdown/DropdownReactContext';
 
 export default class DatePickerControls extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     onApply: PropTypes.func,
     onCancel: PropTypes.func,

@@ -8,7 +8,6 @@ import './LabelIcon.css';
 export const LabelIconRef = 'LabelIcon';
 
 export default class LabelIcon extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** SKIP */
     color: PropTypes.string,

@@ -8,7 +8,6 @@ const alpha2Aliases = {
 };
 
 export default class Flag extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Alpha2 country code */
     alpha2: PropTypes.oneOf([

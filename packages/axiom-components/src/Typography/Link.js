@@ -5,7 +5,6 @@ import Base from '../Base/Base';
 import './Link.css';
 
 export default class Link extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     Component: PropTypes.oneOfType([
       PropTypes.string,

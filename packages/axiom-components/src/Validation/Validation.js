@@ -16,7 +16,6 @@ const getPatternsState = ({ patterns, value }) =>
   ) : [];
 
 export default class Validation extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Function that returns React.node type and is provided with information

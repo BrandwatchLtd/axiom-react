@@ -13,7 +13,6 @@ import './Position.css';
 
 /* eslint-disable react/no-find-dom-node */
 export default class Position extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Allows the boundary element for the positioning to be set.

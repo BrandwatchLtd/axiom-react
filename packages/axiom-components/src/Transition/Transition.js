@@ -6,7 +6,6 @@ import { Base } from '@brandwatch/axiom-components';
 import './Transition.css';
 
 export default class Transition extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     activeIndex: PropTypes.number.isRequired,
     children: PropTypes.node.isRequired,

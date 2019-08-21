@@ -10,7 +10,6 @@ import Link from '../Typography/Link';
 import './Notification.css';
 
 export default class Notification extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node.isRequired,
     onAppear: PropTypes.func,

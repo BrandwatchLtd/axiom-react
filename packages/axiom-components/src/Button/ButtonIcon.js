@@ -7,7 +7,6 @@ import './ButtonIcon.css';
 export const ButtonIconRef = 'ButtonIcon';
 
 export default class ButtonIcon extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Color of the Icon */
     color: PropTypes.string,

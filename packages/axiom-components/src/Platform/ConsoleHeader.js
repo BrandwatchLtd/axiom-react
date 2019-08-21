@@ -8,7 +8,6 @@ import Icon from '../Icon/Icon';
 import Link from '../Typography/Link';
 
 export default class ConsoleHeader extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node,
     separator: PropTypes.bool,

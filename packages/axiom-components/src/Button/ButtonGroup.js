@@ -4,7 +4,6 @@ import Base from '../Base/Base';
 import InlineGroup from '../InlineGroup/InlineGroup';
 
 export default class ButtonGroup extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Content inserted into the group, ideally Buttons */
     children: PropTypes.node.isRequired,

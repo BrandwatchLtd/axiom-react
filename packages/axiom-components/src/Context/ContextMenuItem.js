@@ -8,7 +8,6 @@ import Icon from '../Icon/Icon';
 export const contextMenuItemSelector = 'data-ax-context-menu-item';
 
 export default class ContextMenuItem extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,

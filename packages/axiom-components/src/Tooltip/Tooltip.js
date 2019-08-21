@@ -8,7 +8,6 @@ import { TooltipSourceRef } from './TooltipSource';
 import { TooltipTargetRef } from './TooltipTarget';
 
 export default class Tooltip extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Children inside Tooltip should contain all of and

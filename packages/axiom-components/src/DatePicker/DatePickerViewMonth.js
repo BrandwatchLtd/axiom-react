@@ -14,7 +14,6 @@ import {
 } from './utils';
 
 export default class DatePickerViewMonth extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     date: PropTypes.instanceOf(Date).isRequired,
     earliestSelectableDate: PropTypes.instanceOf(Date),

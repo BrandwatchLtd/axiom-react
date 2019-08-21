@@ -7,7 +7,6 @@ import { ButtonIconRef } from './ButtonIcon';
 import './Button.css';
 
 export default class Button extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Apply active styling */
     active: PropTypes.bool,

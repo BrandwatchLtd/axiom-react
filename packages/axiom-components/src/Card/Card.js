@@ -23,7 +23,6 @@ const cardListStyleProps = {
 };
 
 export default class Card extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Applies styling to indicate the Card is in an active state */
     active: PropTypes.bool,

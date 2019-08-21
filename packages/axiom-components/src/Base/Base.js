@@ -9,7 +9,6 @@ import './Base.css';
 const underlineTextSizes = new Set(['display2', 'display1', 'headline', 'body']);
 
 export default class Base extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * The component that should be rendered with the Base component

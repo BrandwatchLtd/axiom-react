@@ -6,7 +6,6 @@ import ImageFallback from './ImageFallback';
 import './Image.css';
 
 export default class Image extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /** Border applied around the image */
     border: PropTypes.oneOf(['small', 'large']),

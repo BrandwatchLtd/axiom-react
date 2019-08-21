@@ -11,7 +11,6 @@ export default class Validate extends Component {
     unregisterValidate: PropTypes.func,
   };
 
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Function that returns React.node type and is provided with information

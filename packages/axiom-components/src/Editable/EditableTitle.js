@@ -5,7 +5,6 @@ import Icon from '../Icon/Icon';
 import './EditableTitle.css';
 
 export default class EditableTitle extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     children: PropTypes.node.isRequired,
   };

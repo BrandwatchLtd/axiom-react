@@ -6,7 +6,6 @@ import Tip from '../Tip/Tip';
 import './Context.css';
 
 export default class Context extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     arrowRef: PropTypes.func,
     children: PropTypes.node,

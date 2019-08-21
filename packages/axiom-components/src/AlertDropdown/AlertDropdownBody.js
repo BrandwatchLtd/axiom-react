@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Base from '../Base/Base';
 
 class AlertDropdownBody extends Component {
-  /** If you change the propTypes it would be great if you could also change the typescript file (axiom-components/src/index.d.ts) */
   static propTypes = {
     /**
      * Children inside AlertDropdownBody
