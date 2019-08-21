@@ -134,28 +134,77 @@ declare module '@brandwatch/axiom-components' {
   interface BaseProps {
     Component?: any
     baseRef?: any
-    className?: any
-    cloak?: any
-    cloakContainer?: any
-    container?: any
-    hiddenUntil?: any
-    pointerEventsDisabled?: any
-    space?: any
-    sticky?: any
-    textBreak?: any
-    textCase?: any
-    textCenter?: any
-    textColor?: any
-    textEllipsis?: any
-    textEmphasize?: any
+    className?: string,
+    cloak?: boolean,
+    cloakContainer?: boolean,
+    container?: boolean,
+    hiddenUntil?: "small" | "medium" | "large",
+    pointerEventsDisabled?: boolean,
+    space?: "x0" | "x1" | "x2" | "x3" | "x4" | "x5" | "x6" | "x8",
+    sticky?: string,
+    textBreak?: "all" | "none" | "word",
+    textCase?: "capital" | "lower" | "upper",
+    textCenter?: any,
+    textColor?:
+      | "body"
+      | "day"
+      | "night"
+      | "error"
+      | "success"
+      | "warning"
+      | "disabled"
+      | "subtle"
+      | "twitter"
+      | "facebook"
+      | "instagram"
+      | "forbidden-planet"
+      | "tiny-clanger"
+      | "critical-mass"
+      | "fantastic-voyage"
+      | "paradise-lost"
+      | "serene-sea"
+      | "event-horizon"
+      | "electric-dreams"
+      | "outer-limits"
+      | "giant-leap"
+      | "moon-lagoon"
+      | "space-invader"
+      | "extraterrestrial"
+      | "terra-form"
+      | "primeval-soup"
+      | "future-shock"
+      | "sun-maker"
+      | "new-horizon"
+      | "blast-off"
+      | "crash-course"
+      | "solar-rust"
+      | "ground-control"
+      | "space-oddity"
+      | "rocky-planet"
+      | "deep-thought"
+      | "luna-dust"
+      | "sentiment-negative"
+      | "sentiment-positive"
+      | "sentiment-neutral"
+      | "ui-accent",
+    textEllipsis?: boolean,
+    textEmphasize?: boolean,
     textLeft?: any
     textRight?: any
-    textSize?: any
-    textStrike?: any
-    textStrong?: any
-    textUnderline?: any
-    theme?: any
-    visibleUntil?: any
+    textSize?:
+      | "display2"
+      | "display1"
+      | "headline"
+      | "headtitle"
+      | "large"
+      | "label"
+      | "body"
+      | "small",
+    textStrike?: boolean,
+    textStrong?: boolean,
+    textUnderline?: boolean,
+    theme?: "day" | "night",
+    visibleUntil?: "small" | "medium" | "large"
   }
 
   class Button extends React.Component<React.PropsWithChildren<ButtonProps>, any> {
