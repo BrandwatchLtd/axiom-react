@@ -16,12 +16,14 @@ function elementHasEllipsis(ref = {}) {
 export default class EllipsisTooltip extends Component {
   static propTypes = {
     children: PropTypes.node,
+    color: PropTypes.oneOf(['carbon', 'white']),
     delay: PropTypes.bool,
     theme: PropTypes.oneOf(['day', 'night']),
     width: PropTypes.string,
   };
 
   static defaultProps = {
+    color: 'carbon',
     delay: true,
     theme: 'night',
     width: 'auto',
@@ -51,7 +53,7 @@ export default class EllipsisTooltip extends Component {
   }
 
   render() {
-    const { children, delay, width, theme, ...rest } = this.props;
+    const { children, color, delay, width, theme, ...rest } = this.props;
     const { hasEllipsis } = this.state;
 
     if (!hasEllipsis) {
@@ -70,7 +72,7 @@ export default class EllipsisTooltip extends Component {
           </Base>
         </TooltipTarget>
         <TooltipSource theme={ theme } width={ width }>
-          <TooltipContext>
+          <TooltipContext color={ color }>
             <TooltipContent>
               { children }
             </TooltipContent>
