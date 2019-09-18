@@ -4,6 +4,11 @@
   margin-left: auto;
 }
 
+.ax-candytar__initials {
+  fill: var(--color-ui-white);
+  font-size: 0.9rem;
+}
+
 .ax-candytar--tiny-clanger {
   & .ax-candytar__body,
   & .ax-candytar__background {
