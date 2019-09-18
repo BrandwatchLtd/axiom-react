@@ -51,13 +51,15 @@ export default class UserMenu extends Component {
     const { children, firstName, lastName, email, imageSrc, onLogout, ...rest } = this.props;
     const color = stringToColor(email);
     const { axiomLanguage } = this.context;
+    const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`;
+
 
     return (
       <Dropdown position="bottom" { ...rest }>
         <DropdownTarget>
           <Link data-ax-at={ atIds.UserMenu.activate }>
             <Avatar size="2rem" src={ imageSrc }>
-              <Candytar color={ color } size="2rem" />
+              <Candytar color={ color } initials={ initials } size="2rem" />
             </Avatar>
           </Link>
         </DropdownTarget>
@@ -78,7 +80,7 @@ export default class UserMenu extends Component {
 
                 <GridCell shrink>
                   <Avatar size="4.5rem" src={ imageSrc }>
-                    <Candytar color={ color } size="4.5rem" />
+                    <Candytar color={ color } initials={ initials } size="4.5rem" />
                   </Avatar>
                 </GridCell>
               </Grid>
