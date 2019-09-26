@@ -58,7 +58,7 @@ describe('TextInput', () => {
 
       it('renders when showing onClear', () => {
         const component = getComponent({ onClear: () => { }, value: 'foobar' },
-          <TextInputIcon name="twitter" />
+          <TextInputIcon align="left" name="twitter" />
         );
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe('TextInput', () => {
         expect(tree).toMatchSnapshot();
       });
 
-      it('does not render when showing onClear', () => {
+      it('renders when showing onClear', () => {
         const component = getComponent({ onClear: () => { }, value: 'foobar' },
           <TextInputIcon name="twitter" />
         );

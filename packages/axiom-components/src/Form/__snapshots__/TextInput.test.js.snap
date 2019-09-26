@@ -86,6 +86,25 @@ exports[`TextInput renders TextInputIcon when left aligned renders when showing 
           />
         </a>
       </span>
+      <span
+        className="ax-input__icon ax-input__icon--align-left"
+      >
+        <svg
+          className="ax-icon ax-icon--twitter"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+        />
+      </span>
       <input
         className="ax-input"
         onBlur={[Function]}
@@ -150,7 +169,7 @@ exports[`TextInput renders TextInputIcon when right aligned does not render when
 </div>
 `;
 
-exports[`TextInput renders TextInputIcon when right aligned does not render when showing onClear 1`] = `
+exports[`TextInput renders TextInputIcon when right aligned renders when showing onClear 1`] = `
 <div
   className="ax-input__container ax-space--x4"
 >
@@ -183,6 +202,25 @@ exports[`TextInput renders TextInputIcon when right aligned does not render when
             viewBox="0 0 16 16"
           />
         </a>
+      </span>
+      <span
+        className="ax-input__icon ax-input__icon--align-right"
+      >
+        <svg
+          className="ax-icon ax-icon--twitter"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+        />
       </span>
       <input
         className="ax-input"

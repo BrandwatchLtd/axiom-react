@@ -161,7 +161,7 @@ export default class TextInput extends Component {
                     name="cross"
                     onClick={ onClear } />
               }
-              { !showOnClear && showIcon && icon }
+              { showIcon && icon }
               <Base { ...rest }
                   Component="input"
                   baseRef={ inputRef }
