@@ -47,7 +47,7 @@ export default class Candytar extends Component {
     initials: '',
   };
 
-  UNSAFE_componentWillMount = renderFilter
+  componentDidMount = renderFilter
 
   render() {
     const { picker, color = picker(availableColors), size, initials } = this.props;
