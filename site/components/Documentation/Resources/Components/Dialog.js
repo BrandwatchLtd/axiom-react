@@ -31,8 +31,7 @@ export default class Documentation extends Component {
         <DocumentationShowCase hidePreview>
           <Dialog
               isOpen
-              onRequestClose={ (setValue) => setValue('Dialog', 'isOpen', false) }
-              width="50rem">
+              onRequestClose={ (setValue) => setValue('Dialog', 'isOpen', false) }>
             <DialogHeader>
               <Heading textSize="headtitle">Dialog Title</Heading>
             </DialogHeader>

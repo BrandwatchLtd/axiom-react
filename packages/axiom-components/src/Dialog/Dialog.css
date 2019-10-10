@@ -36,7 +36,12 @@
   flex: 0 1 auto;
 }
 
-.ax-dialog--fullscreen {
+.ax-dialog--fullscreen,
+.ax-dialog--large {
   width: 100vw;
   height: 100vh;
+}
+
+.ax-dialog--fullscreen {
+  border-radius: 0;
 }

@@ -13,8 +13,6 @@ export default class Dialog extends Component {
     className: PropTypes.string,
     /** Stops the dialog closing when the mask is clicked */
     closeOnOverlayClick: PropTypes.bool,
-    /** Control for the Dialog stretching to the windows size */
-    fullscreen: PropTypes.bool,
     /** Visibility toggle for the Dialog */
     isOpen: PropTypes.bool.isRequired,
     /** Callback for closing the Dialog by clicking on the overlay */
@@ -29,9 +27,11 @@ export default class Dialog extends Component {
     /** Theme applied to the overlay */
     overlayTheme: PropTypes.oneOf(['day', 'night']),
     /** Padding around the modal */
-    padding: PropTypes.oneOf(['x6', 'x8', 'x12', 'x16']),
+    padding: PropTypes.oneOf(['x0', 'x6', 'x8', 'x12', 'x16']),
     /** Toggle if the Dialog should be closed by pressing Esc */
     shouldCloseOnEsc: PropTypes.bool,
+    /** Provides defaults for dialog and modal size*/
+    size: PropTypes.oneOf(['large', 'fullscreen']),
     /** Theme of the dialog */
     theme: PropTypes.oneOf(['day', 'night']),
     /** Custom width for Dialog */
@@ -59,26 +59,29 @@ export default class Dialog extends Component {
       children,
       className,
       closeOnOverlayClick,
-      fullscreen,
       onRequestClose,
       overlayShade,
       overlayTheme,
       padding,
+      size,
       theme,
       width,
       ...rest
     } = this.props;
 
     const classes = classnames('ax-dialog', {
-      'ax-dialog--fullscreen': fullscreen,
+      'ax-dialog--fullscreen': size === 'fullscreen',
+      'ax-dialog--large': size === 'large',
     }, className);
+
+    const modalPadding = size === 'fullscreen' ? 'x0' : padding;
 
     return (
       <Modal { ...rest }
           onOverlayClick={ closeOnOverlayClick ? onRequestClose : null }
           overlayShade={ overlayShade }
           overlayTheme={ overlayTheme }
-          padding={ padding }>
+          padding={ modalPadding }>
         <Base className={ classes } style={ { width } } theme={ theme }>
           { children }
         </Base>

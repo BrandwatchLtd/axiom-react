@@ -27,7 +27,7 @@ export default class Modal extends Component {
       'shade-4',
     ]),
     overlayTheme: PropTypes.oneOf(['day', 'night']),
-    padding: PropTypes.oneOf(['x6', 'x8', 'x12', 'x16']),
+    padding: PropTypes.oneOf(['x0', 'x6', 'x8', 'x12', 'x16']),
     shouldCloseOnEsc: PropTypes.bool,
   };
 
