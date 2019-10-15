@@ -14,9 +14,9 @@ export const uiCarbon = { r: 63, g: 63, b: 63 };
 export const uiCarbonDark = { r: 53, g: 53, b: 53 };
 export const uiCarbonDarker = { r: 43, g: 43, b: 43 };
 
-export const uiWhiteNoiseDarker = { r: 227, g: 225, b: 232 };
-export const uiWhiteNoiseDark = { r: 237, g: 235, b: 242 };
-export const uiWhiteNoise = { r: 247, g: 245, b: 252 };
+export const uiWhiteNoiseDarker = { r: 228, g: 228, b: 228 };
+export const uiWhiteNoiseDark = { r: 238, g: 238, b: 238 };
+export const uiWhiteNoise = { r: 248, g: 248, b: 248 };
 
 export const uiAccentHover = { r: 48, g: 171, b: 232 };
 export const uiAccent = { r: 35, g: 158, b: 219 };
