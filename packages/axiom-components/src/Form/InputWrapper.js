@@ -22,6 +22,7 @@ export default class InputWrapper extends Component {
     isTarget: PropTypes.bool,
     isValid: PropTypes.bool,
     label: PropTypes.node,
+    labelSpace: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x8']),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     space: PropTypes.string,
     style: PropTypes.string,
@@ -33,11 +34,12 @@ export default class InputWrapper extends Component {
   static defaultProps = {
     size: 'medium',
     space: 'x4',
+    labelSpace: 'x2',
     inlineLabel: false,
   };
 
   render() {
-    const { children, inlineLabel, disabled, hasFocus, invalid, isTarget, isValid, label, size, space, style, usageHint, usageHintPosition, valid, ...rest } = this.props;
+    const { children, inlineLabel, disabled, hasFocus, invalid, isTarget, isValid, label, labelSpace, size, space, style, usageHint, usageHintPosition, valid, ...rest } = this.props;
     const classes = classnames('ax-input__wrapper', {
       'ax-input__wrapper--target': isTarget,
       'ax-input__wrapper--inline': inlineLabel,
@@ -52,7 +54,7 @@ export default class InputWrapper extends Component {
       'ax-input__icon-container--invalid': invalid || isValid === false,
     });
 
-    const inputWrapperSpace = inlineLabel ? 'x0' : 'x2';
+    const inputWrapperSpace = inlineLabel ? 'x0' : labelSpace;
 
     return (
       <Base { ...rest }

@@ -30,6 +30,8 @@ export default class TextInput extends Component {
     isTarget: PropTypes.bool,
     /** Descriptive label that is placed with the input field */
     label: PropTypes.string,
+    /** Vertical margin between label and input */
+    labelSpace: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x8']),
     /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
     /** Handler for changing the input field */
@@ -112,6 +114,7 @@ export default class TextInput extends Component {
       isInProgress,
       isTarget,
       label,
+      labelSpace,
       onClear,
       patterns,
       required,
@@ -149,6 +152,7 @@ export default class TextInput extends Component {
                 isTarget={ isTarget }
                 isValid={ isValid }
                 label={ label }
+                labelSpace={ labelSpace }
                 size={ size }
                 space={ space }
                 style={ style }
