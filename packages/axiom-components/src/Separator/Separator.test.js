@@ -14,6 +14,12 @@ describe('Separator', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('accepts className prop', () => {
+    const component = getComponent({ className: 'test' });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   describe('renders with style', () => {
     ['solid', 'dotted'].forEach((borderStyle) => {
       it(borderStyle, () => {

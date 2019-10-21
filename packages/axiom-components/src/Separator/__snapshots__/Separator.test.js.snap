@@ -6,6 +6,12 @@ exports[`Separator renders with defaultProps 1`] = `
 />
 `;
 
+exports[`Separator accepts className prop 1`] = `
+<hr
+  className="ax-separator ax-separator--solid ax-separator--horizontal test ax-space--x0"
+/>
+`;
+
 exports[`Separator renders with direction horizontal 1`] = `
 <hr
   className="ax-separator ax-separator--solid ax-separator--horizontal ax-space--x0"

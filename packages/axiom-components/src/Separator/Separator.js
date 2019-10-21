@@ -7,6 +7,7 @@ import './Separator.css';
 export default class Separator extends Component {
   static propTypes = {
     borderStyle: PropTypes.oneOf(['solid', 'dotted']),
+    className: PropTypes.string,
     direction: PropTypes.oneOf(['horizontal', 'vertical']),
   };
 
@@ -16,8 +17,12 @@ export default class Separator extends Component {
   };
 
   render() {
-    const { borderStyle, direction, ...rest } = this.props;
-    const classes = classnames('ax-separator', `ax-separator--${borderStyle}`, `ax-separator--${direction}`);
+    const { borderStyle, direction, className, ...rest } = this.props;
+    const classes = classnames('ax-separator',
+      `ax-separator--${borderStyle}`,
+      `ax-separator--${direction}`,
+      className
+    );
 
     return (
       <Base
