@@ -16,17 +16,19 @@ export default class InlineValidation extends Component {
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
     position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    showArrow: PropTypes.bool,
   }
 
   static defaultProps = {
     position: 'bottom',
+    showArrow: false,
   }
 
   render() {
-    const { children, message, position, onClick, onFocus } = this.props;
+    const { children, message, position, onClick, onFocus, showArrow } = this.props;
 
     return (
-      <Position isVisible={ !!message } position={ position }>
+      <Position isVisible={ !!message } position={ position } showArrow={ showArrow }>
         <PositionTarget>
           { cloneElement(children, { onClick, onFocus }) }
         </PositionTarget>
