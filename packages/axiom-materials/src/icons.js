@@ -33,6 +33,7 @@ export default {
   'exclude': require('./icon_svgs/exclude.svg'),
   'facebook': require('./icon_svgs/facebook.svg'),
   'filter': require('./icon_svgs/filter.svg'),
+  'filter-line': require('./icon_svgs/filter-line.svg'),
   'flip-horizontal': require('./icon_svgs/flip-horizontal.svg'),
   'flip-vertical': require('./icon_svgs/flip-vertical.svg'),
   'folder': require('./icon_svgs/folder.svg'),

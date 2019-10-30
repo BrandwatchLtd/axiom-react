@@ -52,6 +52,7 @@ export default class Icon extends Component {
       'exclude',
       'facebook',
       'filter',
+      'filter-line',
       'flip-horizontal',
       'flip-vertical',
       'folder',
