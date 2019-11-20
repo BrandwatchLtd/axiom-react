@@ -56,13 +56,12 @@ export default class NewPasswordInput extends Component {
   };
 
   static propTypes = {
-    required: PropTypes.bool,
     value: PropTypes.string.isRequired,
   };
 
   render() {
     const { axiomLanguage } = this.context;
-    const { required, value, ...rest } = this.props;
+    const { value, ...rest } = this.props;
 
     const validations = [{
       error: t('at least 8 characters', axiomLanguage),
@@ -96,8 +95,8 @@ export default class NewPasswordInput extends Component {
       <Validate
           error={ getValidationError }
           key="newPassword"
-          patterns={ required ? validations.map(({ pattern }) => pattern) : [] }
-          required={ required }
+          patterns={ validations.map(({ pattern }) => pattern) }
+          required
           value={ value }>
         { (valid, hasMetRequired, hasMetPattern) => [
           <TextInput { ...rest }

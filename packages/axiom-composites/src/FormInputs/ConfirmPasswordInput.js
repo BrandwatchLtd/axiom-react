@@ -35,6 +35,7 @@ export default class ConfirmPasswordInput extends Component {
           error={ () => t('Sorry, your password confirmation doesn\'t match', axiomLanguage) }
           label={ t('Confirm new password', axiomLanguage) }
           patterns={ [(value) => value === passwordValue] }
+          required
           space="x8"
           type="password"
           value={ value } />

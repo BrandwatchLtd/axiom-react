@@ -29,6 +29,7 @@ export default class CurrentPasswordInput extends Component {
       <TextInput { ...rest }
           invalid={ invalid }
           label={ t('Enter current password', axiomLanguage) }
+          required
           space="x8"
           type="password"
           value={ value } />
