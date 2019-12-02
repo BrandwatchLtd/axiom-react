@@ -65,7 +65,7 @@ export default class Candytar extends Component {
     );
 
     const showInitials = (
-      <text className="ax-candytar__initials" dominantBaseline="middle" textAnchor="middle" x="50%" y="54%">{ userInitials }</text>
+      <text className="ax-candytar__initials" textAnchor="middle" x="50%" y="65%">{ userInitials }</text>
     );
     /* eslint-enable max-len */
 
