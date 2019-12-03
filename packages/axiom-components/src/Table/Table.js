@@ -7,13 +7,18 @@ export default class Table extends Component {
   static propTypes = {
     /** TableHead and/or TableBody */
     children: PropTypes.node,
+    space: PropTypes.string,
   };
 
+  static defaultProps = {
+    space: 'x6',
+  }
+
   render() {
-    const { children, ...rest } = this.props;
+    const { children, space, ...rest } = this.props;
 
     return (
-      <Base space="x6" textColor="subtle" { ...rest } Component="table" className="ax-table">
+      <Base space={ space } textColor="subtle" { ...rest } Component="table" className="ax-table">
         { children }
       </Base>
     );
