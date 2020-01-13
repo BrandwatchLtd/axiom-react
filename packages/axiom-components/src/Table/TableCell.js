@@ -7,6 +7,7 @@ export default class TableCell extends Component {
   static propTypes = {
     /** Tabular data for this cell */
     children: PropTypes.node,
+    className: PropTypes.string,
     /** Sets the horizontal padding around the cell's content */
     horizontalPadding: PropTypes.oneOf(['none', 'medium']),
     /** Marks cell as selected */
@@ -26,6 +27,7 @@ export default class TableCell extends Component {
 
   render() {
     const {
+      className,
       children,
       horizontalPadding,
       isSelected,
@@ -34,16 +36,17 @@ export default class TableCell extends Component {
       ...rest
     } = this.props;
 
-    const className = classnames(
+    const classes = classnames(
       'ax-table__cell',
       `ax-table__cell--align-${textAlign}`,
       `ax-table__cell--horizontal-padding-${horizontalPadding}`,
       `ax-table__cell--vertical-padding-${verticalPadding}`,
-      { 'ax-table__cell--selected': isSelected }
+      { 'ax-table__cell--selected': isSelected },
+      className
     );
 
     return (
-      <Base { ...rest } Component="td" className={ className }>
+      <Base { ...rest } Component="td" className={ classes }>
         { children }
       </Base>
     );

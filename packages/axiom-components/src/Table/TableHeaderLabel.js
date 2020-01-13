@@ -8,6 +8,7 @@ export default class TableHeaderLabel extends Component {
   static propTypes = {
     /** Table header label */
     children: PropTypes.node,
+    className: PropTypes.node,
     /** Expands table column (Incompatible with 'width') */
     grow: PropTypes.bool,
     /** Makes label clickable */
@@ -33,6 +34,7 @@ export default class TableHeaderLabel extends Component {
   render() {
     const {
       children,
+      className,
       grow,
       onClick,
       shrink,
@@ -43,14 +45,15 @@ export default class TableHeaderLabel extends Component {
       ...rest
     } = this.props;
 
-    const className = classnames(
+    const classes = classnames(
       'ax-table__header-label',
       `ax-table__header-label--align-${textAlign}`,
       {
         'ax-table__header-label--grow': grow && !width,
         'ax-table__header-label--selected': sortDirection !== undefined,
         'ax-table__header-label--shrink': shrink && !width,
-      }
+      },
+      className
     );
 
     const styles = width && {
@@ -58,7 +61,7 @@ export default class TableHeaderLabel extends Component {
     };
 
     return (
-      <Base { ...rest } Component="th" className={ className } style={ styles }>
+      <Base { ...rest } Component="th" className={ classes } style={ styles }>
         <button
             className="ax-table__header-button"
             disabled={ !onClick }
