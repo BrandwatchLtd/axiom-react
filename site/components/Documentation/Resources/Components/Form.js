@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import {
   CheckBox,
   CheckBoxGroup,
@@ -23,6 +23,11 @@ import {
 const getTextInputIconTooltip = () => (
   <TooltipContext color="carbon"><TooltipContent>Some tooltip</TooltipContent></TooltipContext>
 );
+
+function ToggableCheckBox() {
+  const [checked, setChecked] = useState(false);
+  return <CheckBox checked={ checked } name="lorem" onChange={ () => setChecked(c => !c) } title="Lorem ipsum dolor sit amet">Lorem ipsum</CheckBox>;
+}
 
 export default class Documentation extends Component {
   render() {
@@ -122,9 +127,9 @@ export default class Documentation extends Component {
           <GridCell>
             <DocumentationShowCase>
               <CheckBoxGroup>
-                <CheckBox name="lorem" title="Lorem ipsum dolor sit amet">Lorem ipsum</CheckBox>
-                <CheckBox name="lorem" title="Lorem ipsum dolor sit amet">Lorem ipsum</CheckBox>
-                <CheckBox name="lorem" title="Lorem ipsum dolor sit amet">Lorem ipsum</CheckBox>
+                <ToggableCheckBox name="lorem" title="Lorem ipsum dolor sit amet">Lorem ipsum</ToggableCheckBox>
+                <ToggableCheckBox name="lorem" title="Lorem ipsum dolor sit amet">Lorem ipsum</ToggableCheckBox>
+                <ToggableCheckBox name="lorem" title="Lorem ipsum dolor sit amet">Lorem ipsum</ToggableCheckBox>
               </CheckBoxGroup>
             </DocumentationShowCase>
           </GridCell>
