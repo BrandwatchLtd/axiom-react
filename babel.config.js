@@ -37,11 +37,7 @@ module.exports = {
       plugins: [
         '@brandwatch/babel-plugin-transform-svg-axiom',
         '@brandwatch/babel-plugin-axiom-imports',
-        '@babel/plugin-transform-modules-commonjs',
       ],
-    },
-    test: {
-      plugins: ['@babel/plugin-transform-modules-commonjs'],
     },
   },
 };
