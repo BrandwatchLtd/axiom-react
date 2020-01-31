@@ -3,6 +3,10 @@
   "version": "8.7.1",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/index.js",
+  "sideEffects": [
+    "./src/Base/Base.js",
+    "./**/*.css"
+  ],
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
