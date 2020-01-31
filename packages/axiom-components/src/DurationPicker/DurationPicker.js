@@ -124,7 +124,7 @@ export default class DurationPicker extends Component {
 
   render() {
     const { excludedOptions } = this.props;
-    const childProps = omit(this.props, Object.keys(DurationPicker.propTypes));
+    const childProps = omit(this.props, ['excludedOptions', 'onBlur', 'value', 'onChange']);
     const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedOptions.includes(timeUnit));
 
     const {

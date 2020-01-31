@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    '@babel/plugin-proposal-class-properties',
-  ],
+  plugins: ['@babel/plugin-proposal-class-properties'],
   presets: [
     '@babel/preset-react',
     [
@@ -29,14 +27,12 @@ module.exports = {
     static: {
       plugins: [
         '@brandwatch/babel-plugin-transform-svg-axiom',
-        '@brandwatch/babel-plugin-axiom-imports',
-        'transform-react-remove-prop-types',
       ],
     },
     production: {
       plugins: [
         '@brandwatch/babel-plugin-transform-svg-axiom',
-        '@brandwatch/babel-plugin-axiom-imports',
+        'transform-react-remove-prop-types',
       ],
     },
   },
