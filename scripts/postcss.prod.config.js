@@ -1,14 +1,9 @@
 module.exports = {
   plugins: [
-    require('postcss-cssnext')({
-      browsers: [
-        ...require('@brandwatch/axiom-materials/browsers'),
-        'IE 11',
-      ],
+    require('postcss-preset-env')({
+      stage: 1,
+      browsers: [...require('@brandwatch/axiom-materials/browsers')],
       features: {
-        autoprefixer: {
-          grid: true,
-        },
         customProperties: false,
       },
     }),

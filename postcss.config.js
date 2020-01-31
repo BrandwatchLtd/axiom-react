@@ -2,7 +2,7 @@ module.exports = {
   plugins: [
     require('postcss-preset-env')({
       stage: 1,
-      browsers: [...require('@brandwatch/axiom-materials/browsers', 'IE 11')],
+      browsers: [...require('@brandwatch/axiom-materials/browsers')],
       importFrom: [
         './packages/axiom-materials/src/animations.css',
         './packages/axiom-materials/src/layout.css',
@@ -13,11 +13,6 @@ module.exports = {
         './packages/axiom-materials/src/theme-day.css',
         './packages/axiom-materials/src/theme-night.css',
       ],
-      features: {
-        autoprefixer: {
-          grid: true,
-        },
-      },
     }),
   ],
 };
