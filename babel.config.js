@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['@babel/plugin-proposal-class-properties'],
+  plugins: ['@babel/plugin-proposal-class-properties', '@brandwatch/babel-plugin-transform-svg-axiom'],
   presets: [
     '@babel/preset-react',
     [
@@ -20,19 +20,24 @@ module.exports = {
   env: {
     development: {
       plugins: [
-        '@brandwatch/babel-plugin-transform-svg-axiom',
         'react-hot-loader/babel',
-      ],
-    },
-    static: {
-      plugins: [
-        '@brandwatch/babel-plugin-transform-svg-axiom',
       ],
     },
     production: {
       plugins: [
-        '@brandwatch/babel-plugin-transform-svg-axiom',
         'transform-react-remove-prop-types',
+      ],
+    },
+    test: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              esmodules: true,
+            },
+          },
+        ],
       ],
     },
   },

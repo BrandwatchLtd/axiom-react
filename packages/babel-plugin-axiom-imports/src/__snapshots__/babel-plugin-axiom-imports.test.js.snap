@@ -1,166 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`babelPluginAxiom aliased imports 1`] = `
-"'use strict';
-
-var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
-
-var _findComponent2 = _interopRequireDefault(_findComponent);
-
-var _DotPlotChart = require('@brandwatch/axiom-charts/dist/DotPlotChart/DotPlotChart');
-
-var _DotPlotChart2 = _interopRequireDefault(_DotPlotChart);
-
-var _Base = require('@brandwatch/axiom-components/dist/Base/Base');
-
-var _Base2 = _interopRequireDefault(_Base);
-
-var _longDate = require('@brandwatch/axiom-formatting/dist/longDate');
-
-var _longDate2 = _interopRequireDefault(_longDate);
-
-var _shortDate = require('@brandwatch/axiom-formatting/dist/shortDate');
-
-var _shortDate2 = _interopRequireDefault(_shortDate);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+"\\"use strict\\";
 
 /* eslint-disable no-console */
+var shortDate = () => {};
 
-var shortDate = function shortDate() {};
-var longDate = function longDate() {};
-var Base = function Base() {};
-var DotPlotChart = function DotPlotChart() {};
-var findComponent = function findComponent() {};
+var longDate = () => {};
+
+var Base = () => {};
+
+var DotPlotChart = () => {};
+
+var findComponent = () => {};
 
 console.log(shortDate);
 console.log(longDate);
 console.log(Base);
 console.log(DotPlotChart);
 console.log(findComponent);
-
-console.log(_shortDate2.default);
-console.log(_longDate2.default);
-console.log(_Base2.default);
-console.log(_DotPlotChart2.default);
-console.log(_findComponent2.default);"
+console.log(shortDateAxiom);
+console.log(longDateAxiom);
+console.log(BaseAxiom);
+console.log(DotPlotChartAxiom);
+console.log(findComponentAxiom);"
 `;
 
 exports[`babelPluginAxiom all imports 1`] = `
-"'use strict';
+"\\"use strict\\";
 
-var _axiomMaterials = require('@brandwatch/axiom-materials');
+var materials = _interopRequireWildcard(require(\\"@brandwatch/axiom-materials\\"));
 
-var materials = _interopRequireWildcard(_axiomMaterials);
+function _getRequireWildcardCache() { if (typeof WeakMap !== \\"function\\") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== \\"object\\" && typeof obj !== \\"function\\") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-console.log(materials.colors); /* eslint-disable no-console */"
+/* eslint-disable no-console */
+console.log(materials.colors);"
 `;
 
 exports[`babelPluginAxiom destructured imports 1`] = `
-"'use strict';
+"\\"use strict\\";
 
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
-
-var _ = _interopRequireWildcard(_colors);
-
-var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
-
-var _findComponent2 = _interopRequireDefault(_findComponent);
-
-var _DotPlotChart = require('@brandwatch/axiom-charts/dist/DotPlotChart/DotPlotChart');
-
-var _DotPlotChart2 = _interopRequireDefault(_DotPlotChart);
-
-var _Base = require('@brandwatch/axiom-components/dist/Base/Base');
-
-var _Base2 = _interopRequireDefault(_Base);
-
-var _longDate = require('@brandwatch/axiom-formatting/dist/longDate');
-
-var _longDate2 = _interopRequireDefault(_longDate);
-
-var _shortDate = require('@brandwatch/axiom-formatting/dist/shortDate');
-
-var _shortDate2 = _interopRequireDefault(_shortDate);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-console.log(_shortDate2.default); /* eslint-disable no-console */
-
-console.log(_longDate2.default);
-console.log(_Base2.default);
-console.log(_DotPlotChart2.default);
-console.log(_findComponent2.default);
-console.log(_);
-console.log(_.productColorNames);"
+/* eslint-disable no-console */
+console.log(shortDate);
+console.log(longDate);
+console.log(Base);
+console.log(DotPlotChart);
+console.log(findComponent);
+console.log(colors);
+console.log(colors.productColorNames);"
 `;
 
 exports[`babelPluginAxiom direct import 1`] = `
-"'use strict';
+"\\"use strict\\";
 
-var _axiomMaterials = require('@brandwatch/axiom-materials');
-
-var _axiomMaterials2 = _interopRequireDefault(_axiomMaterials);
+var _axiomMaterials = _interopRequireDefault(require(\\"@brandwatch/axiom-materials\\"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(_axiomMaterials2.default.colors); /* eslint-disable no-console */"
+/* eslint-disable no-console */
+console.log(_axiomMaterials.default.colors);"
 `;
 
 exports[`babelPluginAxiom property access 1`] = `
-"'use strict';
+"\\"use strict\\";
 
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
-
-var _ = _interopRequireWildcard(_colors);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-console.log(_.foo); /* eslint-disable no-console */
-
-console.log(_['foo']);
-console.log(_['foo-bar']);"
+/* eslint-disable no-console */
+console.log(colors.foo);
+console.log(colors['foo']);
+console.log(colors['foo-bar']);"
 `;
 
 exports[`babelPluginAxiom scoped imports 1`] = `
-"'use strict';
+"\\"use strict\\";
 
-var _findComponent = require('@brandwatch/axiom-utils/dist/findComponent');
+/* eslint-disable no-console */
+var foo = findComponent => findComponent();
 
-var _findComponent2 = _interopRequireDefault(_findComponent);
+var bar = () => findComponent();
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var foo = function foo(findComponent) {
-  return findComponent();
-}; /* eslint-disable no-console */
-
-var bar = function bar() {
-  return (0, _findComponent2.default)();
-};
-
-foo(_findComponent2.default);
+foo(findComponent);
 bar();"
 `;
 
 exports[`babelPluginAxiom used as defaults 1`] = `
-"'use strict';
+"\\"use strict\\";
 
-var _colors = require('@brandwatch/axiom-materials/dist/colors');
-
-var _ = _interopRequireWildcard(_colors);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-var productColors = Object.keys(_.productColorNames); /* eslint-disable no-console */
+/* eslint-disable no-console */
+var productColors = Object.keys(colors.productColorNames);
 
 var fn = function fn() {
   var colors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : productColors;
-
   console.log(colors);
 };
 

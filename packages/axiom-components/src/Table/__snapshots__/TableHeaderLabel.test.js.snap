@@ -13,7 +13,7 @@ exports[`TableHeaderLabel renders 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -41,7 +41,7 @@ exports[`TableHeaderLabel renders with grow 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -69,7 +69,7 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -97,7 +97,7 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak ax-cloak--visible"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -138,7 +138,7 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-right-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -171,7 +171,7 @@ exports[`TableHeaderLabel renders with width 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -204,7 +204,7 @@ exports[`TableHeaderLabel width overrides grow 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -237,7 +237,7 @@ exports[`TableHeaderLabel width overrides shrink 1`] = `
       className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={

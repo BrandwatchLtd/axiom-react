@@ -17,7 +17,7 @@ exports[`ContextMenuItem renders with custom icon 1`] = `
       className="ax-icon ax-icon--heart"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M10.802 3c-1.172 0-2.271.989-2.8 1.547C7.473 3.989 6.374 3 5.202 3 3.199 3 2 4.253 2 6.351 2 8.07 3.474 9.51 3.528 9.56c0 0 4.367 4.44 4.474 4.44.108 0 4.468-4.426 4.468-4.426.061-.064 1.534-1.504 1.534-3.223C14.004 4.253 12.805 3 10.802 3\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
         }
       }
       style={
@@ -167,7 +167,7 @@ exports[`ContextMenuItem renders with selected 1`] = `
       className="ax-icon ax-icon--tick ax-cloak ax-cloak--visible"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "",
+          "__html": "<path d=\\"M3.25 8.25L6 11l6.75-6.75\\" fill-rule=\\"nonzero\\" stroke=\\"currentColor\\" stroke-width=\\"2.1\\" fill=\\"none\\"/>",
         }
       }
       style={
