@@ -15,7 +15,7 @@
     "classnames": "^2.2.6",
     "element-closest": "^2.0.2",
     "lodash.omit": "^4.5.0",
-    "luxon": "^1.12.0",
+    "luxon": "^1.22.0",
     "popper.js": "1.12.5",
     "prop-types": "^15.6.0",
     "react": "^16.8.6",
