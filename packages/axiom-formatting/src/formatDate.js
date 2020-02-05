@@ -8,4 +8,4 @@ export const FORMAT_MAP = {
   timezone: '(\'UTC\'ZZ)',
 };
 
-export default (formatStr) => date => DateTime.fromJSDate(date).toFormat(formatStr);
+export default (formatStr) => (date, timezone) => DateTime.fromJSDate(date, timezone ? { zone: timezone } : undefined).toFormat(formatStr);
