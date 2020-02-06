@@ -1,0 +1,30 @@
+.ax-documentation-viewer__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ax-documentation-viewer__menu-item {
+  border-right: var(--spacing-grid-size--x1) solid transparent;
+  transition-property: border-right-color, background-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:hover {
+    background-color: var(--color-theme-background--hover);
+  }
+}
+
+.ax-documentation-viewer__menu-item--active,
+.ax-documentation-viewer__menu-item--active:hover {
+  border-right-color: var(--color-ui-accent--active);
+  background-color: var(--color-theme-background--active);
+  color: var(--color-ui-accent--hover);
+}
+
+.ax-documentation-viewer__link {
+  display: block;
+  padding: var(--spacing-grid-size--x2) var(--page-padding-horizontal);
+  color: inherit;
+  text-decoration: none;
+}

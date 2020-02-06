@@ -1,0 +1,62 @@
+.ax-input,
+.ax-textarea {
+  width: 100%;
+  min-width: 0;
+  color: inherit;
+  appearance: none;
+
+  &::placeholder {
+    opacity: 1;
+    color: var(--color-theme-text--disabled);
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.ax-input__wrapper {
+  display: flex;
+  position: relative;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.ax-input__wrapper--inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ax-input__wrapper--inline .ax-input__icon-container {
+  margin-left: var(--spacing-grid-size--x2);
+}
+
+.ax-input__hint-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ax-input__hint-wrapper .ax-input__wrapper--label {
+  flex-grow: 1;
+}
+
+.ax-input__hint {
+  flex-shrink: 0;
+}
+
+.ax-input__wrapper--inline .ax-input__hint-wrapper {
+  align-items: center;
+}
+
+.ax-input__wrapper--inline .ax-input__hint {
+  margin-left: var(--spacing-grid-size--x1);
+}
+
+.ax-input__wrapper--target .ax-input {
+  cursor: pointer;
+}

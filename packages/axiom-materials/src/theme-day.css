@@ -1,0 +1,88 @@
+/* stylelint-disable max-line-length */
+:root {
+  --rgb-theme-day-main: var(--rgb-ui-carbon);
+  --rgb-theme-day-main--dark: var(--rgb-ui-carbon--dark);
+  --rgb-theme-day-main--darker: var(--rgb-ui-carbon--darker);
+
+  --rgb-theme-day-background--shade-1: var(--rgb-ui-white);
+  --rgb-theme-day-background--shade-2: var(--rgb-ui-white-noise);
+  --rgb-theme-day-background--shade-3: var(--rgb-ui-white-noise--dark);
+  --rgb-theme-day-background--shade-4: var(--rgb-ui-white-noise--darker);
+
+  --color-theme-day-main: rgb(var(--rgb-theme-day-main));
+  --color-theme-day-main--dark: rgb(var(--rgb-theme-day-main--dark));
+  --color-theme-day-main--darker: rgb(var(--rgb-theme-day-main--darker));
+
+  --color-theme-day-text: var(--color-theme-day-main);
+  --color-theme-day-text--subtle: rgba(var(--rgb-theme-day-main), var(--opacity-text--subtle));
+  --color-theme-day-text--disabled: rgba(var(--rgb-theme-day-main), var(--opacity-text--disabled));
+
+  --color-theme-day-background--shade-1: rgb(var(--rgb-theme-day-background--shade-1));
+  --color-theme-day-background--shade-2: rgb(var(--rgb-theme-day-background--shade-2));
+  --color-theme-day-background--shade-3: rgb(var(--rgb-theme-day-background--shade-3));
+  --color-theme-day-background--shade-4: rgb(var(--rgb-theme-day-background--shade-4));
+
+  --color-theme-day-background: var(--color-theme-day-background--shade-1);
+  --color-theme-day-background--overlay-heavy: rgba(var(--rgb-theme-day-main), var(--opacity-background--overlay-heavy));
+  --color-theme-day-background--overlay-light: rgba(var(--rgb-theme-day-main), var(--opacity-background--overlay-light));
+  --color-theme-day-background--subtle: rgba(var(--rgb-theme-day-main), var(--opacity-background--subtle));
+  --color-theme-day-background--active: rgba(var(--rgb-theme-day-main), var(--opacity-background--active));
+  --color-theme-day-background--disabled: rgba(var(--rgb-theme-day-main), var(--opacity-background--disabled));
+  --color-theme-day-background--hover: rgba(var(--rgb-theme-day-main), var(--opacity-background--hover));
+
+  --color-theme-day-border: rgba(var(--rgb-theme-day-main), var(--opacity-border));
+
+  --color-theme-day-shadow--border: rgba(var(--rgb-theme-day-main), var(--opacity-border));
+  --color-theme-day-shadow--light: rgba(var(--rgb-theme-day-main), var(--opacity-shadow--light));
+  --color-theme-day-shadow--heavy: rgba(var(--rgb-theme-day-main), var(--opacity-shadow--heavy));
+
+  --drop-shadow-theme-day-border: var(--drop-shadow-border) var(--color-theme-day-shadow--border);
+  --drop-shadow-theme-day-elevation--x1:
+    var(--drop-shadow-elevation--x1) var(--color-theme-day-shadow--light),
+    var(--drop-shadow-definition) var(--color-theme-day-shadow--heavy);
+  --drop-shadow-theme-day-elevation--x2:
+    var(--drop-shadow-elevation--x2) var(--color-theme-day-shadow--light),
+    var(--drop-shadow-definition) var(--color-theme-day-shadow--heavy);
+}
+
+.ax-theme--day {
+  --rgb-theme-main: var(--rgb-theme-day-main);
+  --rgb-theme-main--dark: var(--rgb-theme-day-main--dark);
+  --rgb-theme-main--darker: var(--rgb-theme-day-main--darker);
+
+  --rgb-theme-background--shade-1: var(--rgb-theme-day-background--shade-1);
+  --rgb-theme-background--shade-2: var(--rgb-theme-day-background--shade-2);
+  --rgb-theme-background--shade-3: var(--rgb-theme-day-background--shade-3);
+  --rgb-theme-background--shade-4: var(--rgb-theme-day-background--shade-4);
+
+  --color-theme-main: var(--color-theme-day-main);
+  --color-theme-main--dark: var(--color-theme-day-main--dark);
+  --color-theme-main--darker: var(--color-theme-day-main--darker);
+
+  --color-theme-text: var(--color-theme-day-text);
+  --color-theme-text--subtle: var(--color-theme-day-text--subtle);
+  --color-theme-text--disabled: var(--color-theme-day-text--disabled);
+
+  --color-theme-background--shade-1: var(--color-theme-day-background--shade-1);
+  --color-theme-background--shade-2: var(--color-theme-day-background--shade-2);
+  --color-theme-background--shade-3: var(--color-theme-day-background--shade-3);
+  --color-theme-background--shade-4: var(--color-theme-day-background--shade-4);
+
+  --color-theme-background: var(--color-theme-day-background);
+  --color-theme-background--overlay-heavy: var(--color-theme-day-background--overlay-heavy);
+  --color-theme-background--overlay-light: var(--color-theme-day-background--overlay-light);
+  --color-theme-background--subtle: var(--color-theme-day-background--subtle);
+  --color-theme-background--active: var(--color-theme-day-background--active);
+  --color-theme-background--disabled: var(--color-theme-day-background--disabled);
+  --color-theme-background--hover: var(--color-theme-day-background--hover);
+
+  --color-theme-border: var(--color-theme-day-border);
+
+  --color-theme-shadow--border: var(--color-theme-day-shadow--border);
+  --color-theme-shadow--light: var(--color-theme-day-shadow--heavy);
+  --color-theme-shadow--heavy: var(--color-theme-day-shadow--light);
+
+  --drop-shadow-theme-border: var(--drop-shadow-theme-day-border);
+  --drop-shadow-theme-elevation--x1: var(--drop-shadow-theme-day-elevation--x1);
+  --drop-shadow-theme-elevation--x2: var(--drop-shadow-theme-day-elevation--x2);
+}

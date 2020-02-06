@@ -1,0 +1,20 @@
+.ax-radial-progress {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ax-radial-progress--small {
+  width: var(--component-round-size-small);
+  height: var(--component-round-size-small);
+}
+
+.ax-radial-progress--medium {
+  width: var(--component-round-size-medium);
+  height: var(--component-round-size-medium);
+}
+
+.ax-radial-progress--large {
+  width: var(--component-round-size-large);
+  height: var(--component-round-size-large);
+}

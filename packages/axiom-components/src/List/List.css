@@ -1,0 +1,27 @@
+:root {
+  --cmp-list-item-spacing: calc(var(--spacing-grid-size) * 3);
+}
+
+.ax-list--style-inline {
+  padding: 0;
+  list-style: none;
+
+  & .ax-list__item {
+    display: inline-block;
+    margin: 0 var(--cmp-list-item-spacing) 0 0;
+    padding: 0 var(--cmp-list-item-spacing) 0 0;
+    border-right: var(--component-border-width) solid var(--color-theme-border);
+    vertical-align: middle;
+
+    &:last-child  {
+      margin-right: 0;
+      padding-right: 0;
+      border-right-width: 0;
+    }
+  }
+}
+
+.ax-list--style-none {
+  padding: 0;
+  list-style: none;
+}

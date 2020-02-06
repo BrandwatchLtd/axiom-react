@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContextMenu renders with defaultProps 1`] = `
+<div
+  className="ax-context-content ax-context-content--padding-horizontal-none ax-context-content--padding-vertical-none"
+>
+  <div
+    className="ax-context-content__scroll"
+    style={
+      Object {
+        "height": undefined,
+        "maxHeight": undefined,
+      }
+    }
+  >
+    <div
+      className="ax-context-menu ax-context-menu--padding-vertical-medium"
+    >
+      <button
+        className="ax-context-menu__item ax-context-menu__item--padding-vertical-medium"
+        data-ax-context-menu-item={true}
+      >
+        <div
+          className="ax-context-menu__item-content"
+        >
+          Lorem ipsum
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

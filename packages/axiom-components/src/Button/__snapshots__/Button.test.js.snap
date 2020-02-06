@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders with active 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--active"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with color accent 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with color negative 1`] = `
+<button
+  className="ax-button ax-button--negative ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with color positive 1`] = `
+<button
+  className="ax-button ax-button--positive ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with defaultProps 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full large 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full--large"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full medium 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full--medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full small 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full--small"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with full true 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium ax-button--full"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size circle with huge 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--circle-huge"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size circle with large 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--circle-large"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size circle with medium 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--circle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size circle with small 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--circle-small"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with huge 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-huge"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with large 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-large"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with medium 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size rectangle with small 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-small"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with huge 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--stadium-huge"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with large 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--stadium-large"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with medium 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--stadium-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with shape with size stadium with small 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--stadium-small"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style primary 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style quaternary 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--quaternary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style secondary 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--secondary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button renders with style tertiary 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--tertiary ax-button--rectangle-medium"
+>
+  Lorem Ipsum
+</button>
+`;
+
+exports[`Button with ButtonIcon adds space all around if middle children 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem ipsum
+  <span
+    className="ax-button__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+  Lorem ipsum
+</button>
+`;
+
+exports[`Button with ButtonIcon adds space to end if last child 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  Lorem ipsum
+  <span
+    className="ax-button__icon ax-button__icon--end"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+</button>
+`;
+
+exports[`Button with ButtonIcon adds space to start if first child 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+>
+  <span
+    className="ax-button__icon ax-button__icon--start"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+  Lorem ipsum
+</button>
+`;

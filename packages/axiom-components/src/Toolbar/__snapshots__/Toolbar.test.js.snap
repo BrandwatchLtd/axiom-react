@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar renders 1`] = `
+<ul
+  className="ax-list ax-list--style-inline ax-space--x4"
+>
+  <li
+    className="ax-list__item"
+  >
+    Test
+  </li>
+</ul>
+`;

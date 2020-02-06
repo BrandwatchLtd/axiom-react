@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Word renders with color blast-off 1`] = `
+<text
+  className="ax-word ax-word--blast-off"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color crash-course 1`] = `
+<text
+  className="ax-word ax-word--crash-course"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color critical-mass 1`] = `
+<text
+  className="ax-word ax-word--critical-mass"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color deep-thought 1`] = `
+<text
+  className="ax-word ax-word--deep-thought"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color electric-dreams 1`] = `
+<text
+  className="ax-word ax-word--electric-dreams"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color event-horizon 1`] = `
+<text
+  className="ax-word ax-word--event-horizon"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color extraterrestrial 1`] = `
+<text
+  className="ax-word ax-word--extraterrestrial"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color fantastic-voyage 1`] = `
+<text
+  className="ax-word ax-word--fantastic-voyage"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color forbidden-planet 1`] = `
+<text
+  className="ax-word ax-word--forbidden-planet"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color future-shock 1`] = `
+<text
+  className="ax-word ax-word--future-shock"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color giant-leap 1`] = `
+<text
+  className="ax-word ax-word--giant-leap"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color ground-control 1`] = `
+<text
+  className="ax-word ax-word--ground-control"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color luna-dust 1`] = `
+<text
+  className="ax-word ax-word--luna-dust"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color moon-lagoon 1`] = `
+<text
+  className="ax-word ax-word--moon-lagoon"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color new-horizon 1`] = `
+<text
+  className="ax-word ax-word--new-horizon"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color outer-limits 1`] = `
+<text
+  className="ax-word ax-word--outer-limits"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color paradise-lost 1`] = `
+<text
+  className="ax-word ax-word--paradise-lost"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color primeval-soup 1`] = `
+<text
+  className="ax-word ax-word--primeval-soup"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color rocky-planet 1`] = `
+<text
+  className="ax-word ax-word--rocky-planet"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color serene-sea 1`] = `
+<text
+  className="ax-word ax-word--serene-sea"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color solar-rust 1`] = `
+<text
+  className="ax-word ax-word--solar-rust"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color space-invader 1`] = `
+<text
+  className="ax-word ax-word--space-invader"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color space-oddity 1`] = `
+<text
+  className="ax-word ax-word--space-oddity"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color sun-maker 1`] = `
+<text
+  className="ax-word ax-word--sun-maker"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color terra-form 1`] = `
+<text
+  className="ax-word ax-word--terra-form"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with color tiny-clanger 1`] = `
+<text
+  className="ax-word ax-word--tiny-clanger"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with defaultProps 1`] = `
+<text
+  className="ax-word"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with disabled 1`] = `
+<text
+  className="ax-word ax-word--disabled"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with hidden 1`] = `
+<text
+  className="ax-word ax-word--hidden"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with hidden and disabled 1`] = `
+<text
+  className="ax-word ax-word--hidden"
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;
+
+exports[`Word renders with onClick 1`] = `
+<text
+  className="ax-word ax-word--clickable"
+  onClick={[Function]}
+  style={
+    Object {
+      "animationDelay": "0",
+      "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": undefined,
+    }
+  }
+  textAnchor="middle"
+  transform="translate(0,0)"
+/>
+`;

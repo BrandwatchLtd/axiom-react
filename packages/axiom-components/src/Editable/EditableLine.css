@@ -1,0 +1,54 @@
+.ax-editable-line {
+  position: relative;
+  padding: 0 var(--spacing-grid-size) 0 0;
+  white-space: pre;
+}
+
+.ax-editable-line__structure {
+  visibility: hidden;
+}
+
+.ax-editable-line__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0.0625rem solid transparent;
+  border-radius: var(--component-border-radius);
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-overflow: ellipsis;
+  line-height: inherit;
+  transition-property: border-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  appearance: none;
+
+  &:hover {
+    border-color: var(--color-theme-border);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(var(--rgb-ui-accent), var(--opacity-input-border--focused));
+  }
+
+  &::placeholder {
+    color: var(--color-theme-text--disabled);
+    user-select: none;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.ax-editable-line__input[value='']:focus + .ax-editable-line__structure {
+  width: 0;
+}

@@ -1,0 +1,14 @@
+{
+  "lerna": "3.4.0",
+  "command": {
+    "publish": {
+      "message": "chore(release): Updated release notes and package versions."
+    }
+  },
+  "npmClient": "yarn",
+  "packages": [
+    "packages/*"
+  ],
+  "useWorkspaces": true,
+  "version": "independent"
+}

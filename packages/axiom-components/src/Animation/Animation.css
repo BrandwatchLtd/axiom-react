@@ -1,0 +1,48 @@
+.ax-animation-wrapper__fade-in-right {
+  transform: translateX(-1.875rem);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.ax-animation-wrapper__fade-in-right--toggled {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.ax-animation-wrapper__fade-in-left {
+  transform: translateX(1.875rem);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.ax-animation-wrapper__fade-in-left--toggled {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.ax-animation-wrapper__fade-in-down {
+  transform: translateY(-1.875rem);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.ax-animation-wrapper__fade-in-down--toggled {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ax-animation-wrapper__fade-in-up {
+  transform: translateY(1.875rem);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.ax-animation-wrapper__fade-in-up--toggled {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ax-animation-wrapper__timing-function--ease-out { transition-timing-function: ease-out; }
+.ax-animation-wrapper__timing-function--ease-in { transition-timing-function: ease-in; }
+.ax-animation-wrapper__timing-function--ease-in-out { transition-timing-function: ease-in-out; }
+.ax-animation-wrapper__timing-function--linear { transition-timing-function: linear; }

@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPickerOption renders with color blast-off 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--blast-off"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color crash-course 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--crash-course"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color critical-mass 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--critical-mass"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color deep-thought 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--deep-thought"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color electric-dreams 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--electric-dreams"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color event-horizon 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--event-horizon"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color extraterrestrial 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--extraterrestrial"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color fantastic-voyage 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--fantastic-voyage"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color forbidden-planet 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--forbidden-planet"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color future-shock 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--future-shock"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color giant-leap 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--giant-leap"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color ground-control 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--ground-control"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color luna-dust 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--luna-dust"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color moon-lagoon 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--moon-lagoon"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color new-horizon 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--new-horizon"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color outer-limits 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--outer-limits"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color paradise-lost 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--paradise-lost"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color primeval-soup 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--primeval-soup"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color rocky-planet 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--rocky-planet"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color serene-sea 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--serene-sea"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color solar-rust 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--solar-rust"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color space-invader 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--space-invader"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color space-oddity 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--space-oddity"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color sun-maker 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--sun-maker"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color terra-form 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--terra-form"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with color tiny-clanger 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--tiny-clanger"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with defaultProps 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with disabled 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--disabled"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with onClick 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty ax-color-picker__option--clickable"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": ".75rem",
+      "width": ".75rem",
+    }
+  }
+/>
+`;
+
+exports[`ColorPickerOption renders with size 1`] = `
+<div
+  className="ax-color-picker__option ax-color-picker__option--empty"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+/>
+`;

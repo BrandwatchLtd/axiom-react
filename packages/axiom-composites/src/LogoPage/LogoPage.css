@@ -1,0 +1,29 @@
+.ax-logo-page {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 var(--page-padding-horizontal);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: var(--color-theme-text);
+}
+
+.ax-logo-page--night { background-color: var(--color-ui-carbon--dark); }
+.ax-logo-page--day { background-color: var(--color-ui-white-noise); }
+
+.ax-logo-page__header {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: var(--layout-width-medium);
+  margin: 0 auto;
+}
+
+.ax-logo-page__body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--page-padding-vertical) 0;
+}

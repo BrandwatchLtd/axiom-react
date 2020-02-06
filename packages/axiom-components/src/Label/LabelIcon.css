@@ -1,0 +1,7 @@
+.ax-label__icon {
+  display: inline-flex;
+  margin: 0 var(--spacing-grid-size);
+}
+
+.ax-label__icon--start { margin-left: 0; }
+.ax-label__icon--end   { margin-right: 0; }

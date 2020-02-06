@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders with a label 1`] = `
+<label
+  className="ax-input__wrapper ax-space--x4"
+>
+  <div
+    className="ax-input__hint-wrapper ax-space--x2"
+  >
+    <div
+      className="ax-input__wrapper--label ax-text--size-body"
+    >
+      Lorem ipsum
+    </div>
+  </div>
+  <div
+    className="ax-input__icon-container ax-input__icon-container--medium"
+  >
+    <textarea
+      className="ax-textarea"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "minHeight": 150,
+        }
+      }
+    />
+  </div>
+</label>
+`;
+
+exports[`TextArea renders with custom height 1`] = `
+<label
+  className="ax-input__wrapper ax-space--x4"
+>
+  <div
+    className="ax-input__icon-container ax-input__icon-container--medium"
+  >
+    <textarea
+      className="ax-textarea"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "minHeight": 300,
+        }
+      }
+    />
+  </div>
+</label>
+`;
+
+exports[`TextArea renders with defaultProps 1`] = `
+<label
+  className="ax-input__wrapper ax-space--x4"
+>
+  <div
+    className="ax-input__icon-container ax-input__icon-container--medium"
+  >
+    <textarea
+      className="ax-textarea"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "minHeight": 150,
+        }
+      }
+    />
+  </div>
+</label>
+`;

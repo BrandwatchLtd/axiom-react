@@ -1,0 +1,16 @@
+.ax-reveal {
+  transition-property: height, opacity, margin;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-reveal__inner {
+  transform: translateY(25%);
+  transition-property: transform;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-reveal--visible .ax-reveal__inner {
+  transform: translateY(0%);
+}

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem renders with defaultProps 1`] = `
+<li
+  className="ax-list__item"
+>
+  Lorem Ipsum
+</li>
+`;

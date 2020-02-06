@@ -1,0 +1,382 @@
+/* stylelint-disable max-line-length */
+:root {
+  --rgb-ui-carbon--darker: 43, 43, 43;
+  --rgb-ui-carbon--dark: 53, 53, 53;
+  --rgb-ui-carbon: 63, 63, 63;
+
+  --rgb-ui-white-noise--darker: 228, 228, 228;
+  --rgb-ui-white-noise--dark: 238, 238, 238;
+  --rgb-ui-white-noise: 248, 248, 248;
+
+  --rgb-ui-white: 255, 255, 255;
+  --rgb-ui-black: 33, 33, 33;
+
+  --rgb-ui-accent--hover: 48, 171, 232;
+  --rgb-ui-accent: 35, 158, 219;
+  --rgb-ui-accent--active: 22, 145, 207;
+
+  --rgb-ui-success--hover: 10, 204, 162;
+  --rgb-ui-success: 0, 190, 150;
+  --rgb-ui-success--active: 0, 166, 130;
+
+  --rgb-ui-warning--hover: 230, 186, 85;
+  --rgb-ui-warning: 218, 174, 69;
+  --rgb-ui-warning--active: 204, 159, 55;
+
+  --rgb-ui-error--hover: 255, 99, 133;
+  --rgb-ui-error: 252, 72, 112;
+  --rgb-ui-error--active: 240, 58, 97;
+
+  --rgb-ui-highlight: 215, 255, 0;
+
+  --rgb-ui-info--hover: var(--rgb-ui-accent--hover);
+  --rgb-ui-info: var(--rgb-ui-accent);
+  --rgb-ui-info--active: var(--rgb-ui-accent--active);
+
+  --color-ui-carbon--darker: rgb(var(--rgb-ui-carbon--darker));
+  --color-ui-carbon--dark: rgb(var(--rgb-ui-carbon--dark));
+  --color-ui-carbon: rgb(var(--rgb-ui-carbon));
+
+  --color-ui-white-noise--darker: rgb(var(--rgb-ui-white-noise--darker));
+  --color-ui-white-noise--dark: rgb(var(--rgb-ui-white-noise--dark));
+  --color-ui-white-noise: rgb(var(--rgb-ui-white-noise));
+
+  --color-ui-black: rgb(var(--rgb-ui-black));
+  --color-ui-white: rgb(var(--rgb-ui-white));
+
+  --color-ui-accent--active: rgb(var(--rgb-ui-accent--active));
+  --color-ui-accent: rgb(var(--rgb-ui-accent));
+  --color-ui-accent--hover: rgb(var(--rgb-ui-accent--hover));
+
+  --color-ui-success--hover: rgb(var(--rgb-ui-success--hover));
+  --color-ui-success: rgb(var(--rgb-ui-success));
+  --color-ui-success--active: rgb(var(--rgb-ui-success--active));
+
+  --color-ui-warning--hover: rgb(var(--rgb-ui-warning--hover));
+  --color-ui-warning: rgb(var(--rgb-ui-warning));
+  --color-ui-warning--active: rgb(var(--rgb-ui-warning--active));
+
+  --color-ui-error--hover: rgb(var(--rgb-ui-error--hover));
+  --color-ui-error: rgb(var(--rgb-ui-error));
+  --color-ui-error--active: rgb(var(--rgb-ui-error--active));
+
+  --color-ui-info--hover: rgb(var(--rgb-ui-info--hover));
+  --color-ui-info: rgb(var(--rgb-ui-info));
+  --color-ui-info--active: rgb(var(--rgb-ui-info--active));
+
+  --color-ui-highlight: rgb(var(--rgb-ui-highlight));
+
+  --rgb-sentiment-positive-active: 62, 148, 76;
+  --rgb-sentiment-positive: 76, 161, 90;
+  --rgb-sentiment-positive-hover: 90, 173, 104;
+  --rgb-sentiment-negative-active: 201, 58, 58;
+  --rgb-sentiment-negative: 215, 74, 74;
+  --rgb-sentiment-negative-hover: 227, 89, 89;
+
+  --color-sentiment-positive-active: rgb(var(--rgb-sentiment-positive-active));
+  --color-sentiment-positive: rgb(var(--rgb-sentiment-positive));
+  --color-sentiment-positive-hover: rgb(var(--rgb-sentiment-positive-hover));
+  --color-sentiment-negative-active: rgb(var(--rgb-sentiment-negative-active));
+  --color-sentiment-negative: rgb(var(--rgb-sentiment-negative));
+  --color-sentiment-negative-hover: rgb(var(--rgb-sentiment-negative-hover));
+
+  --rgb-product-forbidden-planet--active: 232, 159, 144;
+  --rgb-product-forbidden-planet: 245, 177, 164;
+  --rgb-product-forbidden-planet--hover: 255, 195, 184;
+
+  --color-product-forbidden-planet--active: rgb(var(--rgb-product-forbidden-planet--active));
+  --color-product-forbidden-planet: rgb(var(--rgb-product-forbidden-planet));
+  --color-product-forbidden-planet--hover: rgb(var(--rgb-product-forbidden-planet--hover));
+
+  --rgb-product-tiny-clanger--active: 232, 132, 166;
+  --rgb-product-tiny-clanger: 245, 152, 183;
+  --rgb-product-tiny-clanger--hover: 255, 171, 200;
+
+  --color-product-tiny-clanger--active: rgb(var(--rgb-product-tiny-clanger--active));
+  --color-product-tiny-clanger: rgb(var(--rgb-product-tiny-clanger));
+  --color-product-tiny-clanger--hover: rgb(var(--rgb-product-tiny-clanger--hover));
+
+  --rgb-product-critical-mass--active: 214, 75, 107;
+  --rgb-product-critical-mass: 227, 90, 122;
+  --rgb-product-critical-mass--hover: 240, 108, 139;
+
+  --color-product-critical-mass--active: rgb(var(--rgb-product-critical-mass--active));
+  --color-product-critical-mass: rgb(var(--rgb-product-critical-mass));
+  --color-product-critical-mass--hover: rgb(var(--rgb-product-critical-mass--hover));
+
+  --rgb-product-fantastic-voyage--active: 156, 36, 82;
+  --rgb-product-fantastic-voyage: 167, 46, 94;
+  --rgb-product-fantastic-voyage--hover: 181, 60, 106;
+
+  --color-product-fantastic-voyage--active: rgb(var(--rgb-product-fantastic-voyage--active));
+  --color-product-fantastic-voyage: rgb(var(--rgb-product-fantastic-voyage));
+  --color-product-fantastic-voyage--hover: rgb(var(--rgb-product-fantastic-voyage--hover));
+
+  --rgb-product-paradise-lost--active: 129, 90, 153;
+  --rgb-product-paradise-lost: 144, 107, 167;
+  --rgb-product-paradise-lost--hover: 157, 123, 179;
+
+  --color-product-paradise-lost--active: rgb(var(--rgb-product-paradise-lost--active));
+  --color-product-paradise-lost: rgb(var(--rgb-product-paradise-lost));
+  --color-product-paradise-lost--hover: rgb(var(--rgb-product-paradise-lost--hover));
+
+  --rgb-product-serene-sea--active: 125, 143, 201;
+  --rgb-product-serene-sea: 144, 160, 214;
+  --rgb-product-serene-sea--hover: 163, 178, 227;
+
+  --color-product-serene-sea--active: rgb(var(--rgb-product-serene-sea--active));
+  --color-product-serene-sea: rgb(var(--rgb-product-serene-sea));
+  --color-product-serene-sea--hover: rgb(var(--rgb-product-serene-sea--hover));
+
+  --rgb-product-event-horizon--active: 81, 85, 148;
+  --rgb-product-event-horizon: 96, 99, 161;
+  --rgb-product-event-horizon--hover: 113, 116, 173;
+
+  --color-product-event-horizon--active: rgb(var(--rgb-product-event-horizon--active));
+  --color-product-event-horizon: rgb(var(--rgb-product-event-horizon));
+  --color-product-event-horizon--hover: rgb(var(--rgb-product-event-horizon--hover));
+
+  --rgb-product-electric-dreams--active: 46, 109, 191;
+  --rgb-product-electric-dreams: 59, 121, 204;
+  --rgb-product-electric-dreams--hover: 74, 136, 217;
+
+  --color-product-electric-dreams--active: rgb(var(--rgb-product-electric-dreams--active));
+  --color-product-electric-dreams: rgb(var(--rgb-product-electric-dreams));
+  --color-product-electric-dreams--hover: rgb(var(--rgb-product-electric-dreams--hover));
+
+  --rgb-product-outer-limits--active: 108, 199, 235;
+  --rgb-product-outer-limits: 127, 214, 248;
+  --rgb-product-outer-limits--hover: 147, 222, 252;
+
+  --color-product-outer-limits--active: rgb(var(--rgb-product-outer-limits--active));
+  --color-product-outer-limits: rgb(var(--rgb-product-outer-limits));
+  --color-product-outer-limits--hover: rgb(var(--rgb-product-outer-limits--hover));
+
+  --rgb-product-giant-leap--active: 69, 192, 217;
+  --rgb-product-giant-leap: 85, 205, 230;
+  --rgb-product-giant-leap--hover: 102, 219, 242;
+
+  --color-product-giant-leap--active: rgb(var(--rgb-product-giant-leap--active));
+  --color-product-giant-leap: rgb(var(--rgb-product-giant-leap));
+  --color-product-giant-leap--hover: rgb(var(--rgb-product-giant-leap--hover));
+
+  --rgb-product-moon-lagoon--active: 25, 161, 176;
+  --rgb-product-moon-lagoon: 36, 173, 189;
+  --rgb-product-moon-lagoon--hover: 48, 186, 201;
+
+  --color-product-moon-lagoon--active: rgb(var(--rgb-product-moon-lagoon--active));
+  --color-product-moon-lagoon: rgb(var(--rgb-product-moon-lagoon));
+  --color-product-moon-lagoon--hover: rgb(var(--rgb-product-moon-lagoon--hover));
+
+  --rgb-product-space-invader--active: 36, 133, 100;
+  --rgb-product-space-invader: 47, 145, 112;
+  --rgb-product-space-invader--hover: 58, 158, 125;
+
+  --color-product-space-invader--active: rgb(var(--rgb-product-space-invader--active));
+  --color-product-space-invader: rgb(var(--rgb-product-space-invader));
+  --color-product-space-invader--hover: rgb(var(--rgb-product-space-invader--hover));
+
+  --rgb-product-extraterrestrial--active: 82, 168, 76;
+  --rgb-product-extraterrestrial: 96, 180, 90;
+  --rgb-product-extraterrestrial--hover: 112, 194, 107;
+
+  --color-product-extraterrestrial--active: rgb(var(--rgb-product-extraterrestrial--active));
+  --color-product-extraterrestrial: rgb(var(--rgb-product-extraterrestrial));
+  --color-product-extraterrestrial--hover: rgb(var(--rgb-product-extraterrestrial--hover));
+
+  --rgb-product-terra-form--active: 125, 184, 44;
+  --rgb-product-terra-form: 138, 197, 57;
+  --rgb-product-terra-form--hover: 151, 209, 71;
+
+  --color-product-terra-form--active: rgb(var(--rgb-product-terra-form--active));
+  --color-product-terra-form: rgb(var(--rgb-product-terra-form));
+  --color-product-terra-form--hover: rgb(var(--rgb-product-terra-form--hover));
+
+  --rgb-product-primeval-soup--active: 186, 186, 15;
+  --rgb-product-primeval-soup: 200, 200, 25;
+  --rgb-product-primeval-soup--hover: 212, 212, 38;
+
+  --color-product-primeval-soup--active: rgb(var(--rgb-product-primeval-soup--active));
+  --color-product-primeval-soup: rgb(var(--rgb-product-primeval-soup));
+  --color-product-primeval-soup--hover: rgb(var(--rgb-product-primeval-soup--hover));
+
+  --rgb-product-future-shock--active: 227, 223, 16;
+  --rgb-product-future-shock: 240, 236, 29;
+  --rgb-product-future-shock--hover: 252, 249, 43;
+
+  --color-product-future-shock--active: rgb(var(--rgb-product-future-shock--active));
+  --color-product-future-shock: rgb(var(--rgb-product-future-shock));
+  --color-product-future-shock--hover: rgb(var(--rgb-product-future-shock--hover));
+
+  --rgb-product-sun-maker--active: 240, 201, 5;
+  --rgb-product-sun-maker: 252, 213, 18;
+  --rgb-product-sun-maker--hover: 255, 220, 46;
+
+  --color-product-sun-maker--active: rgb(var(--rgb-product-sun-maker--active));
+  --color-product-sun-maker: rgb(var(--rgb-product-sun-maker));
+  --color-product-sun-maker--hover: rgb(var(--rgb-product-sun-maker--hover));
+
+  --rgb-product-new-horizon--active: 242, 178, 0;
+  --rgb-product-new-horizon: 255, 190, 10;
+  --rgb-product-new-horizon--hover: 254, 199, 49;
+
+  --color-product-new-horizon--active: rgb(var(--rgb-product-new-horizon--active));
+  --color-product-new-horizon: rgb(var(--rgb-product-new-horizon));
+  --color-product-new-horizon--hover: rgb(var(--rgb-product-new-horizon--hover));
+
+  --rgb-product-blast-off--active: 237, 132, 36;
+  --rgb-product-blast-off: 249, 145, 50;
+  --rgb-product-blast-off--hover: 255, 157, 67;
+
+  --color-product-blast-off--active: rgb(var(--rgb-product-blast-off--active));
+  --color-product-blast-off: rgb(var(--rgb-product-blast-off));
+  --color-product-blast-off--hover: rgb(var(--rgb-product-blast-off--hover));
+
+  --rgb-product-crash-course--active: 242, 93, 70;
+  --rgb-product-crash-course: 255, 109, 86;
+  --rgb-product-crash-course--hover: 255, 126, 106;
+
+  --color-product-crash-course--active: rgb(var(--rgb-product-crash-course--active));
+  --color-product-crash-course: rgb(var(--rgb-product-crash-course));
+  --color-product-crash-course--hover: rgb(var(--rgb-product-crash-course--hover));
+
+  --rgb-product-solar-rust--active: 191, 118, 15;
+  --rgb-product-solar-rust: 205, 129, 26;
+  --rgb-product-solar-rust--hover: 217, 143, 39;
+
+  --color-product-solar-rust--active: rgb(var(--rgb-product-solar-rust--active));
+  --color-product-solar-rust: rgb(var(--rgb-product-solar-rust));
+  --color-product-solar-rust--hover: rgb(var(--rgb-product-solar-rust--hover));
+
+  --rgb-product-ground-control--active: 145, 85, 45;
+  --rgb-product-ground-control: 158, 97, 57;
+  --rgb-product-ground-control--hover: 171, 110, 70;
+
+  --color-product-ground-control--active: rgb(var(--rgb-product-ground-control--active));
+  --color-product-ground-control: rgb(var(--rgb-product-ground-control));
+  --color-product-ground-control--hover: rgb(var(--rgb-product-ground-control--hover));
+
+  --rgb-product-space-oddity--active: 176, 149, 76;
+  --rgb-product-space-oddity: 189, 163, 91;
+  --rgb-product-space-oddity--hover: 201, 176, 107;
+
+  --color-product-space-oddity--active: rgb(var(--rgb-product-space-oddity--active));
+  --color-product-space-oddity: rgb(var(--rgb-product-space-oddity));
+  --color-product-space-oddity--hover: rgb(var(--rgb-product-space-oddity--hover));
+
+  --rgb-product-rocky-planet--active: 145, 128, 100;
+  --rgb-product-rocky-planet: 158, 142, 117;
+  --rgb-product-rocky-planet--hover: 171, 157, 135;
+
+  --color-product-rocky-planet--active: rgb(var(--rgb-product-rocky-planet--active));
+  --color-product-rocky-planet: rgb(var(--rgb-product-rocky-planet));
+  --color-product-rocky-planet--hover: rgb(var(--rgb-product-rocky-planet--hover));
+
+  --rgb-product-deep-thought--active: 167, 162, 179;
+  --rgb-product-deep-thought: 187, 185, 192;
+  --rgb-product-deep-thought--hover: 204, 204, 204;
+
+  --color-product-deep-thought--active: rgb(var(--rgb-product-deep-thought--active));
+  --color-product-deep-thought: rgb(var(--rgb-product-deep-thought));
+  --color-product-deep-thought--hover: rgb(var(--rgb-product-deep-thought--hover));
+
+  --rgb-product-luna-dust--active: 103, 129, 143;
+  --rgb-product-luna-dust: 120, 144, 156;
+  --rgb-product-luna-dust--hover: 138, 158, 168;
+
+  --color-product-luna-dust--active: rgb(var(--rgb-product-luna-dust--active));
+  --color-product-luna-dust: rgb(var(--rgb-product-luna-dust));
+  --color-product-luna-dust--hover: rgb(var(--rgb-product-luna-dust--hover));
+
+  --rgb-sentiment-negative--active: 201, 58, 58;
+  --rgb-sentiment-negative: 215, 74, 74;
+  --rgb-sentiment-negative--hover: 227, 89, 89;
+
+  --color-sentiment-negative--active: rgb(var(--rgb-sentiment-negative--active));
+  --color-sentiment-negative: rgb(var(--rgb-sentiment-negative));
+  --color-sentiment-negative--hover: rgb(var(--rgb-sentiment-negative--hover));
+
+  --rgb-sentiment-positive--active: 62, 148, 76;
+  --rgb-sentiment-positive: 76, 161, 90;
+  --rgb-sentiment-positive--hover: 90, 173, 104;
+
+  --color-sentiment-positive--active: rgb(var(--rgb-sentiment-positive--active));
+  --color-sentiment-positive: rgb(var(--rgb-sentiment-positive));
+  --color-sentiment-positive--hover: rgb(var(--rgb-sentiment-positive--hover));
+
+  --color-sentiment-neutral--active: var(--color-product-deep-thought--active);
+  --color-sentiment-neutral: var(--color-product-deep-thought);
+  --color-sentiment-neutral--hover: var(--color-product-deep-thought--hover);
+
+  --rgb-social-twitter--active: 16, 148, 230;
+  --rgb-social-twitter: 29, 161, 242;
+  --rgb-social-twitter--hover: 43, 174, 255;
+
+  --color-social-twitter--active: rgb(var(--rgb-social-twitter--active));
+  --color-social-twitter: rgb(var(--rgb-social-twitter));
+  --color-social-twitter--hover: rgb(var(--rgb-social-twitter--hover));
+
+  --rgb-social-facebook--active: 11, 106, 230;
+  --rgb-social-facebook: 23, 118, 242;
+  --rgb-social-facebook--hover: 38, 132, 255;
+
+  --color-social-facebook--active: rgb(var(--rgb-social-facebook--active));
+  --color-social-facebook: rgb(var(--rgb-social-facebook));
+  --color-social-facebook--hover: rgb(var(--rgb-social-facebook--hover));
+
+  --rgb-social-instagram--active: 171, 58, 133;
+  --rgb-social-instagram: 183, 71, 146;
+  --rgb-social-instagram--hover: 196, 86, 160;
+
+  --color-social-instagram--active: rgb(var(--rgb-social-instagram--active));
+  --color-social-instagram: rgb(var(--rgb-social-instagram));
+  --color-social-instagram--hover: rgb(var(--rgb-social-instagram--hover));
+
+  --rgb-social-four-chan--active: 224, 153, 117;
+  --rgb-social-four-chan: 238, 170, 136;
+  --rgb-social-four-chan--hover: 250, 187, 155;
+
+  --color-social-four-chan--active: rgb(var(--rgb-social-four-chan--active));
+  --color-social-four-chan: rgb(var(--rgb-social-four-chan));
+  --color-social-four-chan--hover: rgb(var(--rgb-social-four-chan--hover));
+
+  --rgb-social-reddit--active: 225, 61, 0;
+  --rgb-social-reddit: 255, 69, 0;
+  --rgb-social-reddit--hover: 255, 87, 25;
+
+  --color-social-reddit--active: rgb(var(--rgb-social-reddit--active));
+  --color-social-reddit: rgb(var(--rgb-social-reddit));
+  --color-social-reddit--hover: rgb(var(--rgb-social-reddit--hover));
+
+  --rgb-social-tumblr--active: 41, 57, 79;
+  --rgb-social-tumblr: 53, 70, 93;
+  --rgb-social-tumblr--hover: 65, 82, 105;
+
+  --color-social-tumblr--active: rgb(var(--rgb-social-tumblr--active));
+  --color-social-tumblr: rgb(var(--rgb-social-tumblr));
+  --color-social-tumblr--hover: rgb(var(--rgb-social-tumblr--hover));
+
+  --rgb-social-vk--active: 61, 105, 156;
+  --rgb-social-vk: 74, 118, 168;
+  --rgb-social-vk--hover: 89, 132, 181;
+
+  --color-social-vk--active: rgb(var(--rgb-social-vk--active));
+  --color-social-vk: rgb(var(--rgb-social-vk));
+  --color-social-vk--hover: rgb(var(--rgb-social-vk--hover));
+
+  --rgb-social-youtube--active: 209, 0, 0;
+  --rgb-social-youtube: 222, 0, 0;
+  --rgb-social-youtube--hover: 226, 0, 0;
+
+  --color-social-youtube--active: rgb(var(--rgb-social-youtube--active));
+  --color-social-youtube: rgb(var(--rgb-social-youtube));
+  --color-social-youtube--hover: rgb(var(--rgb-social-youtube--hover));
+
+  --rgb-better-together: 240, 78, 78;
+
+  --color-better-together: rgb(var(--rgb-better-together));
+
+  --rgb-brand-hooloovoo: 87, 183, 221;
+  --color-brand-hooloovoo: rgb(var(--rgb-brand-hooloovoo));
+}
+/* stylelint-enable */

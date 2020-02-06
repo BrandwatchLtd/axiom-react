@@ -1,0 +1,17 @@
+.ax-progress-infinite__arc {
+  fill: none;
+  animation: spin 1s linear infinite;
+}
+
+.ax-progress-infinite__arc-gradient-stop--subtle {
+  stop-color: var(--color-theme-background--subtle);
+}
+
+.ax-progress-infinite__arc-gradient-stop--white {
+  stop-color: var(--color-ui-white-noise--dark);
+}
+
+.ax-progress-infinite__arc-gradient-stop--subtle:last-of-type,
+.ax-progress-infinite__arc-gradient-stop--white:last-of-type {
+  stop-opacity: 0;
+}

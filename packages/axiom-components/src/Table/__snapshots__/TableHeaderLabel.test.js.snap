@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeaderLabel renders 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with grow 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--grow"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with shrink 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with sortDirection 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak ax-cloak--visible"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with sortable 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with textAlign 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-right"
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-right-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with width 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+  style={
+    Object {
+      "width": "20%",
+    }
+  }
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel width overrides grow 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+  style={
+    Object {
+      "width": "20%",
+    }
+  }
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;
+
+exports[`TableHeaderLabel width overrides shrink 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+  style={
+    Object {
+      "width": "20%",
+    }
+  }
+>
+  <button
+    className="ax-table__header-button"
+    disabled={true}
+  >
+    Test
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </button>
+</th>
+`;

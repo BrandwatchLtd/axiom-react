@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Context renders custom maxHeight 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "20rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders custom width 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context error 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="error"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context info 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="info"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context success 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="success"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with "type" context warning 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+  type="warning"
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with arrowRef 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-tip--top ax-tip--shadow"
+  >
+    <span
+      className="ax-tip__arrow ax-tip__arrow--small"
+      style={Object {}}
+    />
+    <div
+      className="ax-tip__content"
+    >
+      <div
+        className="ax-context__content"
+        style={
+          Object {
+            "maxHeight": "30rem",
+          }
+        }
+      >
+        Lorem ipsum
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Context renders with defaultProps 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with position bottom 1`] = `
+<div
+  className="ax-context ax-context--bottom ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with position left 1`] = `
+<div
+  className="ax-context ax-context--left ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with position right 1`] = `
+<div
+  className="ax-context ax-context--right ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with position top 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with theme day 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--day"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Context renders with theme night 1`] = `
+<div
+  className="ax-context ax-context--top ax-theme--night"
+  style={
+    Object {
+      "width": "14.5rem",
+    }
+  }
+>
+  <div
+    className="ax-context__content"
+    style={
+      Object {
+        "maxHeight": "30rem",
+      }
+    }
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;

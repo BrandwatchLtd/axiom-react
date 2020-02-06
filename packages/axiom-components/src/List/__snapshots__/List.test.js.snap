@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders with defaultProps 1`] = `
+<ul
+  className="ax-list ax-list--style-disc ax-space--x4"
+>
+  <li
+    className="ax-list__item"
+  >
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`List renders with style disc 1`] = `
+<ul
+  className="ax-list ax-list--style-disc ax-space--x4"
+>
+  <li
+    className="ax-list__item"
+  >
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`List renders with style inline 1`] = `
+<ul
+  className="ax-list ax-list--style-inline ax-space--x4"
+>
+  <li
+    className="ax-list__item"
+  >
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`List renders with style none 1`] = `
+<ul
+  className="ax-list ax-list--style-none ax-space--x4"
+>
+  <li
+    className="ax-list__item"
+  >
+    Lorem Ipsum
+  </li>
+</ul>
+`;
+
+exports[`List renders with style ordered 1`] = `
+<ol
+  className="ax-list ax-list--style-ordered ax-space--x4"
+>
+  <li
+    className="ax-list__item"
+  >
+    Lorem Ipsum
+  </li>
+</ol>
+`;

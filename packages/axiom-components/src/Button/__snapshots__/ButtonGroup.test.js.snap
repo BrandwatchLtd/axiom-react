@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup renders with defaultProps 1`] = `
+<div
+  className="ax-inline-group ax-button-group ax-space--x6"
+>
+  <div
+    className="ax-inline-group__spacer"
+  >
+    <button
+      className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
+    >
+      Lorem ipsum
+    </button>
+  </div>
+</div>
+`;

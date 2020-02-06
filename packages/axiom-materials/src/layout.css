@@ -1,0 +1,14 @@
+:root {
+  --layout-width-tiny: 23rem;
+  --layout-width-small: 48rem;
+  --layout-width-medium: 62rem;
+  --layout-width-large: 75rem;
+
+  --z-index-sticky: 1;
+  --z-index-platform-mask: 2;
+  --z-index-platform-console: 3;
+  --z-index-platform-dock: 4;
+  --z-index-position: 5;
+  --z-index-modal: 5;
+  --z-index-notifications: 6;
+}

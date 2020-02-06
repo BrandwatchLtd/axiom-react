@@ -1,0 +1,97 @@
+:root {
+  --cmp-dot-plot-difference-line-width: 0.0625rem;
+}
+
+.ax-dot-plot {
+  display: block;
+  position: relative;
+  width: calc(100% - var(--cmp-chart-overflow-space));
+  height: var(--cmp-dot-plot-diameter);
+}
+
+.ax-dot-plot__dots {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  transform: translateX(calc(var(--cmp-dot-plot-radius) * -1));
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-dot-plot__value {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  margin-left: var(--cmp-chart-label-margin);
+  transform: translate(var(--cmp-dot-plot-diameter), -50%);
+  line-height: var(--cmp-dot-plot-diameter);
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  pointer-events: none;
+}
+
+.ax-dot-plot__benchmark-line-container,
+.ax-dot-plot__difference-line-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ax-dot-plot__benchmark-line {
+  height: var(--cmp-benchmark-line-height);
+}
+
+.ax-dot-plot__benchmark-line,
+.ax-dot-plot__difference-line {
+  position: relative;
+  transition-property: opacity;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-dot-plot__benchmark-line-path {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-right: var(--cmp-benchmark-line-width) solid var(--color-theme-text--subtle);
+}
+
+.ax-dot-plot__difference-line-path {
+  position: absolute;
+  top: 50%;
+  border-top: var(--cmp-dot-plot-difference-line-width) solid var(--color-theme-text--disabled);
+}
+
+.ax-dot-plot__difference-line-container {
+  & .ax-dot-plot__difference-line-path {
+    margin-right: var(--cmp-dot-plot-radius);
+    margin-left: var(--cmp-dot-plot-radius);
+  }
+}
+
+.ax-dot-plot__difference-line-container--to-benchmark {
+  & .ax-dot-plot__difference-line-path {
+    margin-right: 0;
+  }
+}
+
+.ax-dot-plot__difference-line-container--from-benchmark {
+  & .ax-dot-plot__difference-line-path {
+    margin-left: 0;
+  }
+}
+
+.ax-dot-plot__dots--hidden,
+.ax-dot-plot__difference-line--hidden,
+.ax-dot-plot__value--hidden {
+  opacity: 0;
+}
+
+.ax-dot-plot__benchmark-line--faded,
+.ax-dot-plot__difference-line--faded,
+.ax-dot-plot__dots--faded {
+  opacity: var(--cmp-chart-opacity-faded);
+}

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartTableLabel renders with defaultProps 1`] = `
+<div
+  className="ax-chart-table__label"
+  style={
+    Object {
+      "width": "11rem",
+    }
+  }
+>
+  <div
+    className="ax-grid__container ax-space--x6"
+  >
+    <div
+      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
+    >
+      <div
+        className="ax-grid__cell"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          Lorem Ipsum
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ChartTableLabel renders with onToggleRowVisibility and disabled 1`] = `
+<div
+  className="ax-chart-table__label"
+  style={
+    Object {
+      "width": "11rem",
+    }
+  }
+>
+  <div
+    className="ax-grid__container ax-space--x6"
+    onClick={[Function]}
+  >
+    <div
+      className="ax-grid ax-grid--gutters-horizontal--tiny ax-grid--gutters-vertical--tiny ax-grid--vertical-middle ax-grid--wrap"
+    >
+      <div
+        className="ax-grid__cell"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <span
+          className="ax-text--color-disabled"
+        >
+          Lorem Ipsum
+        </span>
+      </div>
+      <div
+        className="ax-grid__cell ax-grid__cell--shrink ax-cloak ax-cloak--visible"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        <a
+          className="ax-link ax-link--style-subtle"
+        >
+          <svg
+            className="ax-icon ax-icon--preview"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+            style={
+              Object {
+                "height": "1rem",
+                "width": "1rem",
+              }
+            }
+            viewBox="0 0 16 16"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

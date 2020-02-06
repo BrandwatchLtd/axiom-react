@@ -1,0 +1,18 @@
+.ax-icon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  fill: currentColor;
+}
+
+.ax-icon--inline {
+  display: inline;
+  margin-right: initial;
+  margin-left: initial;
+  vertical-align: middle;
+}
+
+.ax-icon--inline.ax-icon--space-left-x1 { margin-left: var(--spacing-grid-size--x1); }
+.ax-icon--inline.ax-icon--space-left-x2 { margin-left: var(--spacing-grid-size--x2); }
+.ax-icon--inline.ax-icon--space-right-x1 { margin-right: var(--spacing-grid-size--x1); }
+.ax-icon--inline.ax-icon--space-right-x2 { margin-right: var(--spacing-grid-size--x2); }

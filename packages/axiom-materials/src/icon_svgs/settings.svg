@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Icon/Settings Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Settings-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Symbols---Icon---Settings-Icon" transform="translate(1.250000, 1.250000)" fill="#000000">
+            <path d="M6.75,9.5 C5.231,9.5 4,8.269 4,6.75 C4,5.231 5.231,4 6.75,4 C8.269,4 9.5,5.231 9.5,6.75 C9.5,8.269 8.269,9.5 6.75,9.5 L6.75,9.5 Z M13.5,7.5 L13.5,6 L11.523,5.342 C11.423,5 11.289,4.677 11.122,4.37 L12.054,2.508 L10.992,1.446 L9.13,2.378 C8.823,2.211 8.5,2.077 8.158,1.977 L7.5,0 L6,0 L5.342,1.977 C5,2.077 4.677,2.211 4.37,2.378 L2.508,1.446 L1.446,2.508 L2.378,4.37 C2.211,4.677 2.077,5 1.977,5.342 L0,6 L0,7.5 L1.977,8.158 C2.077,8.5 2.211,8.823 2.378,9.13 L1.446,10.992 L2.508,12.054 L4.37,11.122 C4.677,11.289 5,11.423 5.342,11.523 L6,13.5 L7.5,13.5 L8.158,11.523 C8.5,11.423 8.823,11.289 9.13,11.122 L10.992,12.054 L12.054,10.992 L11.122,9.13 C11.289,8.823 11.423,8.5 11.523,8.158 L13.5,7.5 Z" id="Icon"></path>
+        </g>
+    </g>
+</svg>

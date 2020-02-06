@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label render with size medium 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label render with size small 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--small"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with color error 1`] = `
+<span
+  className="ax-label ax-label--error ax-label--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with color success 1`] = `
+<span
+  className="ax-label ax-label--success ax-label--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with color white 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with defaultProps 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with full large 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium ax-label--full--large"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with full medium 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium ax-label--full--medium"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with full small 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium ax-label--full--small"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label renders with full true 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium ax-label--full"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Label with LabelIcon adds space all around if middle children 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium"
+>
+  Lorem ipsum
+  <span
+    className="ax-label__icon"
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      size="medium"
+    >
+      <svg
+        className="ax-icon ax-icon--twitter"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </a>
+  </span>
+  Lorem ipsum
+</span>
+`;
+
+exports[`Label with LabelIcon adds space to end if last child 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium"
+>
+  Lorem ipsum
+  <span
+    className="ax-label__icon ax-label__icon--end"
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      size="medium"
+    >
+      <svg
+        className="ax-icon ax-icon--twitter"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </a>
+  </span>
+</span>
+`;
+
+exports[`Label with LabelIcon adds space to start if first child 1`] = `
+<span
+  className="ax-label ax-label--white ax-label--medium"
+>
+  <span
+    className="ax-label__icon ax-label__icon--start"
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      size="medium"
+    >
+      <svg
+        className="ax-icon ax-icon--twitter"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </a>
+  </span>
+  Lorem ipsum
+</span>
+`;

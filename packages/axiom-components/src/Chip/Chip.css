@@ -1,0 +1,79 @@
+.ax-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: var(--cmp-inline-spacing);
+  margin-bottom: var(--cmp-inline-spacing);
+  padding: 0;
+  outline: 0;
+  border-width: var(--component-border-width);
+  border-style: solid;
+  border-radius: var(--component-border-radius-huge);
+  border-color: transparent;
+  background-color: var(--color-ui-white-noise);
+  color: var(--color-ui-carbon);
+  letter-spacing: var(--letter-spacing-loose);
+  text-align: center;
+  line-height: var(--component-line-height);
+  white-space: nowrap;
+  vertical-align: middle;
+  transition-property: background-color, border-color, color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  &:hover {
+    background-color: var(--color-ui-white-noise--dark);
+    cursor: pointer;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    cursor: default;
+  }
+
+  &[disabled]:hover {
+    background-color: var(--color-ui-white-noise);
+  }
+}
+
+.ax-chip-metric {
+  margin-right: var(--spacing-grid-size--x1);
+  color: var(--color-theme-text--subtle);
+}
+
+.ax-chip-metric--light {
+  color: var(--color-ui-white);
+}
+
+.ax-chip--active {
+  background-color: var(--color-ui-accent);
+  color: var(--color-ui-white);
+
+  &:hover {
+    background-color: var(--color-ui-accent--hover);
+  }
+
+  &[disabled]:hover {
+    background-color: var(--color-ui-accent);
+  }
+}
+
+.ax-chip-label {
+  margin: 0 var(--spacing-grid-size--x2) 0 var(--spacing-grid-size--x2);
+}
+
+.ax-chip--small {
+  padding: var(--component-padding-vertical-small) var(--component-padding-horizontal-small);
+  font-size: var(--font-size-small);
+}
+
+.ax-chip--medium {
+  padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-medium);
+  font-size: var(--font-size-medium);
+}
+
+.ax-chip--large {
+  padding: var(--component-padding-vertical-large) var(--component-padding-horizontal-large);
+  font-size: var(--font-size-large);
+}

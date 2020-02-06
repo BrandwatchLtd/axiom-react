@@ -1,0 +1,18 @@
+:root {
+  --cmp-inline-spacing: calc(var(--spacing-grid-size) * 2);
+}
+
+.ax-inline-group__spacer {
+  margin-bottom: calc(var(--cmp-inline-spacing) * -1);
+
+  /* stylelint-disable selector-max-universal */
+  & > * {
+    margin-right: var(--cmp-inline-spacing);
+    margin-bottom: var(--cmp-inline-spacing);
+  }
+
+  & > *:last-child {
+    margin-right: 0;
+  }
+  /* stylelint-enable */
+}

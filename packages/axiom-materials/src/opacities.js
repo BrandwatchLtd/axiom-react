@@ -1,0 +1,14 @@
+export const opacityTextSubtle = 0.75;
+export const opacityTextDisabled = 0.3;
+export const opacityBackgroundOverlayModal = 0.9;
+export const opacityBackgroundOverlayHeavy = 0.75;
+export const opacityBackgroundOverlayLight = 0.3;
+export const opacityBackgroundSubtle = 0.15;
+export const opacityBackgroundActive = 0.08;
+export const opacityBackgroundDisabled = 0.05;
+export const opacityBackgroundHover = 0.04;
+export const opacityBorder = 0.2;
+export const opacityShadow = 0.1;
+export const opacityInputBorderFocused = 0.5;
+export const opacityInputBorderValid = 0.4;
+export const opacityInputBorderInvalid = 0.25;

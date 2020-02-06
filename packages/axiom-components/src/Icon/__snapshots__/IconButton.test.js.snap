@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton renders with defaultProps 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-medium"
+>
+  <span
+    className="ax-button__icon ax-button__icon--start ax-button__icon--end"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+</button>
+`;
+
+exports[`IconButton renders with size huge 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-huge"
+>
+  <span
+    className="ax-button__icon ax-button__icon--start ax-button__icon--end"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "5rem",
+          "width": "5rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+</button>
+`;
+
+exports[`IconButton renders with size large 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-large"
+>
+  <span
+    className="ax-button__icon ax-button__icon--start ax-button__icon--end"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "3rem",
+          "width": "3rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+</button>
+`;
+
+exports[`IconButton renders with size medium 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-medium"
+>
+  <span
+    className="ax-button__icon ax-button__icon--start ax-button__icon--end"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+</button>
+`;
+
+exports[`IconButton renders with size small 1`] = `
+<button
+  className="ax-button ax-button--accent ax-button--secondary ax-button--circle-small"
+>
+  <span
+    className="ax-button__icon ax-button__icon--start ax-button__icon--end"
+  >
+    <svg
+      className="ax-icon ax-icon--twitter"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </span>
+</button>
+`;

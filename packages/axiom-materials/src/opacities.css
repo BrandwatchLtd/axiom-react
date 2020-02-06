@@ -1,0 +1,21 @@
+:root {
+  --opacity-text--subtle: 0.75;
+  --opacity-text--disabled: 0.3;
+
+  --opacity-background--overlay-modal: 0.9;
+  --opacity-background--overlay-heavy: 0.75;
+  --opacity-background--overlay-light: 0.3;
+  --opacity-background--subtle: 0.15;
+  --opacity-background--active: 0.08;
+  --opacity-background--disabled: 0.05;
+  --opacity-background--hover: 0.04;
+
+  --opacity-border: 0.2;
+
+  --opacity-shadow--light: 0.14;
+  --opacity-shadow--heavy: 0.15;
+
+  --opacity-input-border--focused: 0.5;
+  --opacity-input-border--valid: 0.4;
+  --opacity-input-border--invalid: 0.25;
+}

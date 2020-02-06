@@ -1,0 +1,7 @@
+dist
+public
+node_modules
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+github_deploy_key

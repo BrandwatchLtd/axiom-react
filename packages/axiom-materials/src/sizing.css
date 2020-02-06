@@ -1,0 +1,82 @@
+/* stylelint-disable max-line-length */
+:root {
+  --spacing-grid-size: 0.25rem;
+
+  --spacing-grid-size--x1: var(--spacing-grid-size);
+  --spacing-grid-size--x2: calc(var(--spacing-grid-size) * 2);
+  --spacing-grid-size--x3: calc(var(--spacing-grid-size) * 3);
+  --spacing-grid-size--x4: calc(var(--spacing-grid-size) * 4);
+  --spacing-grid-size--x5: calc(var(--spacing-grid-size) * 5);
+  --spacing-grid-size--x6: calc(var(--spacing-grid-size) * 6);
+  --spacing-grid-size--x8: calc(var(--spacing-grid-size) * 8);
+
+  --page-padding-horizontal: var(--spacing-grid-size--x6);
+  --page-padding-vertical: var(--spacing-grid-size--x6);
+
+  --component-line-height: 1rem;
+
+  --component-total-line-height-small: calc(var(--component-line-height) + (var(--component-padding-vertical-small) * 2) + (var(--component-border-width-small) * 2));
+  --component-total-line-height-medium: calc(var(--component-line-height) + (var(--component-padding-vertical-medium) * 2) + (var(--component-border-width-medium) * 2));
+  --component-total-line-height-large: calc(var(--component-line-height) + (var(--component-padding-vertical-large) * 2) + (var(--component-border-width-large) * 2));
+
+  --component-border-width-small: 0.0625rem;
+  --component-border-width-medium: 0.0625rem;
+  --component-border-width-large: 0.125rem;
+  --component-border-width-huge: 0.125rem;
+  --component-border-width: var(--component-border-width-small);
+
+  --component-border-radius: 0.1875rem;
+  --component-border-radius-large: 0.5rem;
+  --component-border-radius-huge: 1.25rem;
+
+  --component-padding-vertical-small: calc(var(--spacing-grid-size) - var(--component-border-width-small));
+  --component-padding-vertical-medium: calc(calc(var(--spacing-grid-size) * 2) - var(--component-border-width-small));
+  --component-padding-vertical-large: calc(calc(var(--spacing-grid-size) * 3) - var(--component-border-width-small));
+
+  --component-padding-horizontal-small: calc(var(--spacing-grid-size) * 3);
+  --component-padding-horizontal-medium: calc(var(--spacing-grid-size) * 3);
+  --component-padding-horizontal-large: calc(var(--spacing-grid-size) * 4);
+
+  --component-round-size-small: calc(var(--spacing-grid-size) * 6);
+  --component-round-size-medium: calc(var(--spacing-grid-size) * 12);
+  --component-round-size-large: calc(var(--spacing-grid-size) * 18);
+  --component-round-size-huge: calc(var(--spacing-grid-size) * 30);
+
+  --drop-shadow-border: 0 0 0 0.0625rem;
+  --drop-shadow-definition: 0 0.0625rem 0.125rem 0.03125rem;
+  --drop-shadow-elevation--x1: 0 0.0625rem 0.1875rem 0;
+  --drop-shadow-elevation--x2: 0 0.25rem 0.5625rem 0;
+
+  /**
+   * Shared chart variables.
+   *
+   *  [1] Needed to normalise bar widths. However
+   *      this is not in relation to anything so
+   *      will need adjusting if text widths change :sob:
+   */
+  --cmp-chart-label-margin: var(--spacing-grid-size--x2);
+  --cmp-chart-label-line-height: 1rem;  /* [1] */
+  --cmp-chart-label-width: calc(2rem + var(--cmp-chart-label-margin));  /* [1] */
+  --cmp-chart-label-height: calc(var(--cmp-chart-label-line-height) + var(--cmp-chart-label-margin));
+
+  --cmp-chart-opacity-faded: 0.25;
+
+  --cmp-dot-plot-diameter: 0.8125rem;
+  --cmp-dot-plot-radius: calc(var(--cmp-dot-plot-diameter) * 0.5);
+
+  --cmp-benchmark-line-width: 0.0625rem;
+  --cmp-benchmark-line-height: var(--cmp-dot-plot-diameter);
+
+  --cmp-chart-overflow-space: calc(var(--cmp-chart-label-width) + var(--cmp-dot-plot-radius));
+
+  /**
+   * Shared component variables.
+   */
+  --cmp-context-tip-edge-to-edge: 0.75rem;
+
+  /**
+   * Used for max-height of a topics container
+   */
+  --component-max-height: 62.5rem;
+}
+/* stylelint-enable */

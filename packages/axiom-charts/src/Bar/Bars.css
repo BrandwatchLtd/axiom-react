@@ -1,0 +1,105 @@
+:root {
+  --cmp-chart-label-spacing: calc(var(--spacing-grid-size) * 3);
+}
+
+.ax-bars {
+  display: flex;
+  flex: 1 1 0%;
+}
+
+.ax-bars__bars-container {
+  position: relative;
+  flex: 1 1 0%;
+}
+
+.ax-bars__bars {
+  display: flex;
+}
+
+.ax-bars__label {
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.ax-bars--up,
+.ax-bars--down {
+  min-height: 100%;
+
+  & .ax-bars__bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ax-bars--up,
+.ax-bars--left {
+  & .ax-bars__bars {
+    align-items: flex-end;
+  }
+}
+
+.ax-bars--right,
+.ax-bars--down {
+  & .ax-bars__bars {
+    align-items: flex-start;
+  }
+}
+
+.ax-bars--right,
+.ax-bars--left {
+  & .ax-bars__bars {
+    flex-direction: column;
+  }
+}
+
+.ax-bars--up    {
+  flex-direction: column;
+
+  & .ax-bars__bars {
+    padding-top: var(--cmp-chart-label-height);
+  }
+
+  & .ax-bars__label {
+    margin-top: var(--cmp-chart-label-spacing);
+  }
+}
+
+.ax-bars--right {
+  flex-direction: row-reverse;
+
+  & .ax-bars__bars {
+    padding-right: var(--cmp-chart-overflow-space);
+  }
+
+  & .ax-bars__label {
+    margin-right: var(--cmp-chart-label-spacing);
+  }
+}
+
+.ax-bars--down  {
+  flex-direction: column-reverse;
+
+  & .ax-bars__bars {
+    padding-bottom: var(--cmp-chart-label-height);
+  }
+
+  & .ax-bars__label {
+    margin-bottom: var(--cmp-chart-label-spacing);
+  }
+}
+
+.ax-bars--left  {
+  flex-direction: row;
+
+  & .ax-bars__bars {
+    padding-left: var(--cmp-chart-overflow-space);
+  }
+
+  & .ax-bars__label {
+    margin-left: var(--cmp-chart-label-spacing);
+  }
+}

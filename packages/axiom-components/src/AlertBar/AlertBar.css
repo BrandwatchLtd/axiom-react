@@ -1,0 +1,19 @@
+.ax-alert-bar {
+  padding-right: var(--page-padding-horizontal);
+  padding-left: var(--page-padding-horizontal);
+}
+
+.ax-alert-bar--small {
+  padding-top: var(--spacing-grid-size--x2);
+  padding-bottom: var(--spacing-grid-size--x2);
+}
+
+.ax-alert-bar--medium {
+  padding-top: var(--spacing-grid-size--x3);
+  padding-bottom: var(--spacing-grid-size--x3);
+}
+
+.ax-alert-bar--success { background-color: var(--color-ui-success); }
+.ax-alert-bar--warning { background-color: var(--color-ui-warning); }
+.ax-alert-bar--error   { background-color: var(--color-ui-error); }
+.ax-alert-bar--info    { background-color: var(--color-ui-info); }

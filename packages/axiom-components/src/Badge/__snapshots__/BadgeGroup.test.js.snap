@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeGroup renders with defaultProps 1`] = `
+<div
+  className="ax-inline-group ax-badge-group ax-space--x4"
+>
+  <div
+    className="ax-inline-group__spacer"
+  >
+    <span
+      className="ax-badge ax-badge--faded"
+    >
+      <span
+        className="ax-badge__background"
+        style={
+          Object {
+            "opacity": 0.3,
+          }
+        }
+      />
+      <span
+        className="ax-badge__content"
+      >
+        Lorem ipsum
+      </span>
+    </span>
+  </div>
+</div>
+`;

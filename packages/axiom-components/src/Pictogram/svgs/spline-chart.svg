@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Spline Chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Axiom-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Spline-Chart" fill="#000000">
+            <circle id="Oval" transform="translate(2.000000, 10.000000) scale(1, -1) translate(-2.000000, -10.000000) " cx="2" cy="10" r="2"></circle>
+            <polygon id="Path" fill-opacity="0.3" fill-rule="nonzero" points="7.91885436 5.14180581 13.4 12.45 14.6 11.55 8.08114564 2.85819419 1.46966991 9.46966991 2.53033009 10.5303301"></polygon>
+            <circle id="Oval" transform="translate(8.000000, 4.000000) scale(1, -1) translate(-8.000000, -4.000000) " cx="8" cy="4" r="2"></circle>
+            <circle id="Oval" transform="translate(14.000000, 12.000000) scale(1, -1) translate(-14.000000, -12.000000) " cx="14" cy="12" r="2"></circle>
+        </g>
+    </g>
+</svg>

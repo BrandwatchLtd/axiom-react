@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulletBars renders with defaultProps 1`] = `
+<div
+  className="ax-bullet-chart__block"
+>
+  <div
+    className="ax-bullet-chart__bars"
+  >
+    <div
+      className="ax-bullet-chart__bars-bar"
+    >
+      <div
+        className="ax-bars ax-bars--up"
+      >
+        <div
+          className="ax-bars__bars-container"
+        >
+          <div
+            className="ax-bars__bars"
+          >
+            <div
+              className="ax-bars__bar"
+              style={
+                Object {
+                  "height": "10%",
+                  "width": false,
+                }
+              }
+            >
+              <div
+                className="ax-bars__bar-rect ax-bars__bar-rect--giant-leap"
+                style={
+                  Object {
+                    "height": false,
+                    "minHeight": false,
+                    "minWidth": "1rem",
+                    "width": undefined,
+                  }
+                }
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
+              <div
+                className="ax-bars__bar-label ax-bars__bar-label--hidden"
+              >
+                <small
+                  className="ax-text--size-small"
+                >
+                  undefined%
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ax-bullet-chart__bars-bar"
+    >
+      <div
+        className="ax-bars ax-bars--up"
+      >
+        <div
+          className="ax-bars__bars-container"
+        >
+          <div
+            className="ax-bars__bars"
+          >
+            <div
+              className="ax-bars__bar"
+              style={
+                Object {
+                  "height": "50%",
+                  "width": false,
+                }
+              }
+            >
+              <div
+                className="ax-bars__bar-rect ax-bars__bar-rect--critical-mass"
+                style={
+                  Object {
+                    "height": false,
+                    "minHeight": false,
+                    "minWidth": "1rem",
+                    "width": undefined,
+                  }
+                }
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
+              <div
+                className="ax-bars__bar-label ax-bars__bar-label--hidden"
+              >
+                <small
+                  className="ax-text--size-small"
+                >
+                  undefined%
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BulletBars renders with the correct label 1`] = `
+<div
+  className="ax-bullet-chart__block"
+>
+  <div
+    className="ax-bullet-chart__bars"
+  >
+    <div
+      className="ax-bullet-chart__bars-bar"
+    >
+      <div
+        className="ax-bars ax-bars--up"
+      >
+        <div
+          className="ax-bars__bars-container"
+        >
+          <div
+            className="ax-bars__bars"
+          >
+            <div
+              className="ax-bars__bar"
+              style={
+                Object {
+                  "height": "10%",
+                  "width": false,
+                }
+              }
+            >
+              <div
+                className="ax-bars__bar-rect ax-bars__bar-rect--giant-leap"
+                style={
+                  Object {
+                    "height": false,
+                    "minHeight": false,
+                    "minWidth": "1rem",
+                    "width": undefined,
+                  }
+                }
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
+              <div
+                className="ax-bars__bar-label ax-bars__bar-label--hidden"
+              >
+                <small
+                  className="ax-text--size-small"
+                >
+                  1%
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ax-bullet-chart__bars-bar"
+    >
+      <div
+        className="ax-bars ax-bars--up"
+      >
+        <div
+          className="ax-bars__bars-container"
+        >
+          <div
+            className="ax-bars__bars"
+          >
+            <div
+              className="ax-bars__bar"
+              style={
+                Object {
+                  "height": "50%",
+                  "width": false,
+                }
+              }
+            >
+              <div
+                className="ax-bars__bar-rect ax-bars__bar-rect--critical-mass"
+                style={
+                  Object {
+                    "height": false,
+                    "minHeight": false,
+                    "minWidth": "1rem",
+                    "width": undefined,
+                  }
+                }
+              >
+                <div
+                  className="ax-bars__bar--solid"
+                />
+              </div>
+              <div
+                className="ax-bars__bar-label"
+              >
+                <small
+                  className="ax-text--size-small"
+                >
+                  1%
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonIcon renders with defaultProps 1`] = `
+<span
+  className="ax-button__icon"
+>
+  <svg
+    className="ax-icon ax-icon--twitter"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;
+
+exports[`ButtonIcon renders with end spacing 1`] = `
+<span
+  className="ax-button__icon ax-button__icon--end"
+>
+  <svg
+    className="ax-icon ax-icon--twitter"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;
+
+exports[`ButtonIcon renders with start spacing 1`] = `
+<span
+  className="ax-button__icon ax-button__icon--start"
+>
+  <svg
+    className="ax-icon ax-icon--twitter"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;

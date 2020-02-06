@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getEquallyDistributedAxisLabels creates equal labels when lower -1, upper 1, tickCount 7 1`] = `
+Array [
+  -1,
+  -0.6666666666666667,
+  -0.33333333333333337,
+  0,
+  0.33333333333333326,
+  0.6666666666666665,
+  1,
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels creates equal labels when lower -10k, upper 10k, tickCount 11 1`] = `
+Array [
+  -10000,
+  -8000,
+  -6000,
+  -4000,
+  -2000,
+  0,
+  2000,
+  4000,
+  6000,
+  8000,
+  10000,
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels creates equal labels when lower 0, upper 1, tickCount 11 1`] = `
+Array [
+  0,
+  0.1,
+  0.2,
+  0.30000000000000004,
+  0.4,
+  0.5,
+  0.6000000000000001,
+  0.7000000000000001,
+  0.8,
+  0.9,
+  1,
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels creates equal labels when lower 0, upper 10k, tickCount 6 1`] = `
+Array [
+  0,
+  2000,
+  4000,
+  6000,
+  8000,
+  10000,
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels creates equal labels when lower 1k, upper 10k, tickCount 6 1`] = `
+Array [
+  1000,
+  2800,
+  4600,
+  6400,
+  8200,
+  10000,
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels creates equal labels when lower 70k, upper 1m, tickCount 6 1`] = `
+Array [
+  70000,
+  256000,
+  442000,
+  628000,
+  814000,
+  1000000,
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels formats label when "labelFormatter" is provided 1`] = `
+Array [
+  "formatted 1000 unit",
+  "formatted 2800 unit",
+  "formatted 4600 unit",
+  "formatted 6400 unit",
+  "formatted 8200 unit",
+  "formatted 10000 unit",
+]
+`;
+
+exports[`getEquallyDistributedAxisLabels provides a minimum of 3 ticks if less is specified 1`] = `
+Array [
+  0,
+  5000,
+  10000,
+]
+`;

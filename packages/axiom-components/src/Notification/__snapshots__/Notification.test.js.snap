@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification renders with defaultProps 1`] = `
+<div
+  className="ax-notification ax-notification--info ax-text--color-subtle"
+>
+  <div
+    className="ax-notification__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--information"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+  <div
+    className="ax-notification__messsage"
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Notification renders with onRemoveClick 1`] = `
+<div
+  className="ax-notification ax-notification--info ax-text--color-subtle"
+>
+  <div
+    className="ax-notification__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--information"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+  <div
+    className="ax-notification__messsage"
+  >
+    Lorem ipsum
+  </div>
+  <div
+    className="ax-notification__remove"
+  >
+    <a
+      className="ax-link ax-link--style-subtle"
+      data-ax-at="166ebc0c761f"
+      onClick={[Function]}
+    >
+      <svg
+        className="ax-icon ax-icon--cross"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+        style={
+          Object {
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        viewBox="0 0 16 16"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Notification renders with type error 1`] = `
+<div
+  className="ax-notification ax-notification--error ax-text--color-subtle"
+>
+  <div
+    className="ax-notification__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--warning"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+  <div
+    className="ax-notification__messsage"
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Notification renders with type info 1`] = `
+<div
+  className="ax-notification ax-notification--info ax-text--color-subtle"
+>
+  <div
+    className="ax-notification__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--information"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+  <div
+    className="ax-notification__messsage"
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Notification renders with type success 1`] = `
+<div
+  className="ax-notification ax-notification--success ax-text--color-subtle"
+>
+  <div
+    className="ax-notification__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--tick"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+  <div
+    className="ax-notification__messsage"
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;
+
+exports[`Notification renders with type warning 1`] = `
+<div
+  className="ax-notification ax-notification--warning ax-text--color-subtle"
+>
+  <div
+    className="ax-notification__icon"
+  >
+    <svg
+      className="ax-icon ax-icon--warning"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+      style={
+        Object {
+          "height": "2rem",
+          "width": "2rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
+  <div
+    className="ax-notification__messsage"
+  >
+    Lorem ipsum
+  </div>
+</div>
+`;

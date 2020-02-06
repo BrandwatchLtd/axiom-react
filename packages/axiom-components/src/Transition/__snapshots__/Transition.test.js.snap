@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transition renders first child 1`] = `
+<div
+  className="ax-transition__wrapper"
+  style={
+    Object {
+      "height": "4rem",
+      "width": "4rem",
+    }
+  }
+>
+  <div
+    className="ax-transition__item"
+    style={
+      Object {
+        "animationDuration": "400ms",
+      }
+    }
+  >
+    <div
+      className="first"
+    />
+  </div>
+</div>
+`;
+
+exports[`Transition renders second child 1`] = `
+<div
+  className="ax-transition__wrapper"
+  style={
+    Object {
+      "height": "4rem",
+      "width": "4rem",
+    }
+  }
+>
+  <div
+    className="ax-transition__item"
+    style={
+      Object {
+        "animationDuration": "400ms",
+      }
+    }
+  >
+    <div
+      className="second"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base renders class Component 1`] = `<span />`;
+
+exports[`Base renders className 1`] = `
+<div
+  className="Lorem Ipsum"
+/>
+`;
+
+exports[`Base renders cloak false 1`] = `
+<div
+  className="ax-cloak ax-cloak--visible"
+/>
+`;
+
+exports[`Base renders cloak true 1`] = `
+<div
+  className="ax-cloak"
+/>
+`;
+
+exports[`Base renders cloak undefined 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Base renders cloakContainer 1`] = `
+<div
+  className="ax-cloak__container"
+/>
+`;
+
+exports[`Base renders container 1`] = `
+<div
+  className="ax-container"
+/>
+`;
+
+exports[`Base renders functional Component 1`] = `<span />`;
+
+exports[`Base renders sticky with style 1`] = `
+<div
+  className="ax-sticky"
+  style={
+    Object {
+      "height": "1rem",
+      "top": "1rem",
+    }
+  }
+/>
+`;
+
+exports[`Base renders sticky without style 1`] = `
+<div
+  className="ax-sticky"
+  style={
+    Object {
+      "top": "1rem",
+    }
+  }
+/>
+`;
+
+exports[`Base renders string Component 1`] = `
+<span
+  className=""
+/>
+`;
+
+exports[`Base renders textEllipsis 1`] = `
+<div
+  className="ax-text--ellipsis"
+/>
+`;
+
+exports[`Base renders textEmphasize 1`] = `
+<div
+  className="ax-text--emphasize"
+/>
+`;
+
+exports[`Base renders textStrike 1`] = `
+<div
+  className="ax-text--strike"
+/>
+`;
+
+exports[`Base renders textStrong 1`] = `
+<div
+  className="ax-text--strong"
+/>
+`;
+
+exports[`Base renders textUnderline 1`] = `
+<div
+  className="ax-text--underline-body"
+/>
+`;
+
+exports[`Base renders with defaultProps 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Base renders with hiddenUntil large 1`] = `
+<div
+  className="ax-hidden-until--large"
+/>
+`;
+
+exports[`Base renders with hiddenUntil medium 1`] = `
+<div
+  className="ax-hidden-until--medium"
+/>
+`;
+
+exports[`Base renders with hiddenUntil small 1`] = `
+<div
+  className="ax-hidden-until--small"
+/>
+`;
+
+exports[`Base renders with textBreak all 1`] = `
+<div
+  className="ax-text--break-all"
+/>
+`;
+
+exports[`Base renders with textBreak none 1`] = `
+<div
+  className="ax-text--break-none"
+/>
+`;
+
+exports[`Base renders with textBreak word 1`] = `
+<div
+  className="ax-text--break-word"
+/>
+`;
+
+exports[`Base renders with textCase capital 1`] = `
+<div
+  className="ax-text--case-capital"
+/>
+`;
+
+exports[`Base renders with textCase lower 1`] = `
+<div
+  className="ax-text--case-lower"
+/>
+`;
+
+exports[`Base renders with textCase upper 1`] = `
+<div
+  className="ax-text--case-upper"
+/>
+`;
+
+exports[`Base renders with textCenter large 1`] = `
+<div
+  className="ax-text--align-center--large"
+/>
+`;
+
+exports[`Base renders with textCenter medium 1`] = `
+<div
+  className="ax-text--align-center--medium"
+/>
+`;
+
+exports[`Base renders with textCenter small 1`] = `
+<div
+  className="ax-text--align-center--small"
+/>
+`;
+
+exports[`Base renders with textCenter true 1`] = `
+<div
+  className="ax-text--align-center"
+/>
+`;
+
+exports[`Base renders with textColor day 1`] = `
+<div
+  className="ax-text--color-day"
+/>
+`;
+
+exports[`Base renders with textColor disabled 1`] = `
+<div
+  className="ax-text--color-disabled"
+/>
+`;
+
+exports[`Base renders with textColor error 1`] = `
+<div
+  className="ax-text--color-error"
+/>
+`;
+
+exports[`Base renders with textColor night 1`] = `
+<div
+  className="ax-text--color-night"
+/>
+`;
+
+exports[`Base renders with textColor subtle 1`] = `
+<div
+  className="ax-text--color-subtle"
+/>
+`;
+
+exports[`Base renders with textColor success 1`] = `
+<div
+  className="ax-text--color-success"
+/>
+`;
+
+exports[`Base renders with textColor warning 1`] = `
+<div
+  className="ax-text--color-warning"
+/>
+`;
+
+exports[`Base renders with textLeft large 1`] = `
+<div
+  className="ax-text--align-left--large"
+/>
+`;
+
+exports[`Base renders with textLeft medium 1`] = `
+<div
+  className="ax-text--align-left--medium"
+/>
+`;
+
+exports[`Base renders with textLeft small 1`] = `
+<div
+  className="ax-text--align-left--small"
+/>
+`;
+
+exports[`Base renders with textLeft true 1`] = `
+<div
+  className="ax-text--align-left"
+/>
+`;
+
+exports[`Base renders with textRight large 1`] = `
+<div
+  className="ax-text--align-right--large"
+/>
+`;
+
+exports[`Base renders with textRight medium 1`] = `
+<div
+  className="ax-text--align-right--medium"
+/>
+`;
+
+exports[`Base renders with textRight small 1`] = `
+<div
+  className="ax-text--align-right--small"
+/>
+`;
+
+exports[`Base renders with textRight true 1`] = `
+<div
+  className="ax-text--align-right"
+/>
+`;
+
+exports[`Base renders with textSize body 1`] = `
+<div
+  className="ax-text--size-body"
+/>
+`;
+
+exports[`Base renders with textSize display1 1`] = `
+<div
+  className="ax-text--size-display1"
+/>
+`;
+
+exports[`Base renders with textSize display2 1`] = `
+<div
+  className="ax-text--size-display2"
+/>
+`;
+
+exports[`Base renders with textSize headline 1`] = `
+<div
+  className="ax-text--size-headline"
+/>
+`;
+
+exports[`Base renders with textSize headtitle 1`] = `
+<div
+  className="ax-text--size-headtitle"
+/>
+`;
+
+exports[`Base renders with textSize label 1`] = `
+<div
+  className="ax-text--size-label"
+/>
+`;
+
+exports[`Base renders with textSize large 1`] = `
+<div
+  className="ax-text--size-large"
+/>
+`;
+
+exports[`Base renders with textSize small 1`] = `
+<div
+  className="ax-text--size-small"
+/>
+`;
+
+exports[`Base renders with visibleUntil large 1`] = `
+<div
+  className="ax-visible-until--large"
+/>
+`;
+
+exports[`Base renders with visibleUntil medium 1`] = `
+<div
+  className="ax-visible-until--medium"
+/>
+`;
+
+exports[`Base renders with visibleUntil small 1`] = `
+<div
+  className="ax-visible-until--small"
+/>
+`;

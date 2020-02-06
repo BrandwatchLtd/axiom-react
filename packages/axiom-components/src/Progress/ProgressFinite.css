@@ -1,0 +1,12 @@
+.ax-progress-finite__background {
+  fill: none;
+  stroke: var(--color-theme-background--subtle);
+}
+
+.ax-progress-finite__arc {
+  fill: none;
+  stroke: var(--color-ui-accent--hover);
+  transition-property: stroke-dashoffset;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}

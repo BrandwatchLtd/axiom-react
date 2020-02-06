@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineGroup renders with className 1`] = `
+<div
+  className="ax-inline-group custom"
+>
+  <div
+    className="ax-inline-group__spacer"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`InlineGroup renders with defaultProps 1`] = `
+<div
+  className="ax-inline-group"
+>
+  <div
+    className="ax-inline-group__spacer"
+  >
+    Test
+  </div>
+</div>
+`;

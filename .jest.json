@@ -1,0 +1,12 @@
+{
+  "moduleNameMapper": {
+    "^.+\\.css$": "identity-obj-proxy",
+    "^.+\\.svg$": "<rootDir>/test/svg_inline_mock.js"
+  },
+  "setupFiles": [
+    "./enzyme.js"
+  ],
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!@brandwatch)"
+  ]
+}

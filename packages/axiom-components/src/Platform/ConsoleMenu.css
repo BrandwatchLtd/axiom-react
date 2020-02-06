@@ -1,0 +1,41 @@
+.ax-console-menu__header {
+  margin:
+    var(--spacing-grid-size--x4)
+    var(--page-padding-horizontal)
+    var(--spacing-grid-size--x2);
+  padding: 0 0 calc(var(--spacing-grid-size--x1) - var(--component-border-width));
+  border-bottom: var(--component-border-width) solid var(--color-theme-border);
+}
+
+.ax-console-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.ax-console-menu__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: var(--spacing-grid-size--x2) var(--page-padding-horizontal);
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-console-menu__item:hover {
+  background-color: var(--color-theme-background--hover);
+}
+
+.ax-console-menu__item:active,
+.ax-console-menu__item--active,
+.ax-console-menu__item--active:hover {
+  background-color: var(--color-theme-background--active);
+}
+
+.ax-console-menu__item--disabed,
+.ax-console-menu__item--disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}

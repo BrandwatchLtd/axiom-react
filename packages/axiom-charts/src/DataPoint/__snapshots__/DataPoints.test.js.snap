@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataPoints renders with defaultProps 1`] = `
+<svg
+  className="ax-data-points"
+  preserveAspectRatio="xMinYMin meet"
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+  viewBox="0 0 24 24"
+>
+  <circle
+    className="ax-data-point ax-data-point--giant-leap ax-data-point--solid"
+    cx={12}
+    cy={12}
+    r={12}
+    strokeWidth={4}
+  />
+  <circle
+    className="ax-data-point ax-data-point--critical-mass ax-data-point--solid"
+    cx={12}
+    cy={12}
+    r={8}
+    strokeWidth={4}
+  />
+  <circle
+    className="ax-data-point ax-data-point--new-horizon ax-data-point--solid"
+    cx={12}
+    cy={12}
+    r={4}
+    strokeWidth={4}
+  />
+</svg>
+`;
+
+exports[`DataPoints renders with onClick 1`] = `
+<svg
+  className="ax-data-points ax-data-points--clickable"
+  onClick={[Function]}
+  preserveAspectRatio="xMinYMin meet"
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+  viewBox="0 0 24 24"
+>
+  <circle
+    className="ax-data-point ax-data-point--giant-leap ax-data-point--solid"
+    cx={12}
+    cy={12}
+    r={12}
+    strokeWidth={4}
+  />
+  <circle
+    className="ax-data-point ax-data-point--critical-mass ax-data-point--solid"
+    cx={12}
+    cy={12}
+    r={8}
+    strokeWidth={4}
+  />
+  <circle
+    className="ax-data-point ax-data-point--new-horizon ax-data-point--solid"
+    cx={12}
+    cy={12}
+    r={4}
+    strokeWidth={4}
+  />
+</svg>
+`;

@@ -1,0 +1,69 @@
+.ax-chiplist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-grid-size--x2);
+  margin-bottom: var(--spacing-grid-size--x2);
+  overflow: hidden;
+}
+
+.ax-chiplist-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-grid-size--x1);
+  margin-bottom: var(--cmp-inline-spacing);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--component-line-height);
+}
+
+.ax-chiplist--small,
+.ax-chiplist--medium,
+.ax-chiplist--large {
+  transition-property: max-height, opacity, margin;
+  transition-duration: var(--transition-time-fast);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-chiplist--small {
+  max-height: var(--component-total-line-height-small);
+}
+
+.ax-chiplist--medium {
+  max-height: var(--component-total-line-height-medium);
+}
+
+.ax-chiplist--large {
+  max-height: var(--component-total-line-height-large);
+}
+
+.ax-chiplist-label--small {
+  padding-top: var(--component-padding-vertical-small);
+  padding-right: var(--component-padding-horizontal-small);
+  padding-bottom: var(--component-padding-vertical-small);
+  padding-left: 0;
+  font-size: var(--font-size-small);
+}
+
+.ax-chiplist-label--medium {
+  padding-top: var(--component-padding-vertical-medium);
+  padding-right: var(--component-padding-horizontal-medium);
+  padding-bottom: var(--component-padding-vertical-medium);
+  padding-left: 0;
+  font-size: var(--font-size-medium);
+}
+
+.ax-chiplist-label--large {
+  padding-top: var(--component-padding-vertical-large);
+  padding-right: var(--component-padding-horizontal-large);
+  padding-bottom: var(--component-padding-vertical-large);
+  padding-left: 0;
+  font-size: var(--font-size-large);
+}
+
+.ax-chiplist--expanded {
+  max-height: var(--component-max-height);
+}
+
+.ax-chiplist--expandable {
+  cursor: pointer;
+}

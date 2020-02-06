@@ -1,0 +1,167 @@
+.ax-table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.ax-table__cell {
+  padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
+  border-top: var(--component-border-width-medium) dotted var(--color-theme-border);
+  transition-property: color, border-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-table__row--clickable {
+  cursor: pointer;
+}
+
+.ax-table__row--borderless .ax-table__cell {
+  border-top-width: 0;
+}
+
+.ax-table__row:first-child .ax-table__cell {
+  border-top-width: var(--component-border-width-medium);
+  border-top-style: solid;
+}
+
+.ax-table__row:last-child .ax-table__cell {
+  border-bottom: var(--component-border-width-medium) dotted var(--color-theme-border);
+}
+
+.ax-table__cell--align-left {
+  text-align: left;
+}
+
+.ax-table__cell--align-right {
+  text-align: right;
+}
+
+.ax-table__cell--align-centre {
+  text-align: center;
+}
+
+.ax-table__cell--horizontal-padding-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ax-table__cell--horizontal-padding-medium {
+  padding-top: var(--spacing-grid-size--x4);
+  padding-bottom: var(--spacing-grid-size--x4);
+}
+
+.ax-table__cell--vertical-padding-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ax-table__cell--vertical-padding-small {
+  padding-top: var(--spacing-grid-size--x2);
+  padding-bottom: var(--spacing-grid-size--x2);
+}
+
+.ax-table__cell--vertical-padding-medium {
+  padding-top: var(--spacing-grid-size--x3);
+  padding-bottom: var(--spacing-grid-size--x3);
+}
+
+.ax-table__cell--vertical-padding-large {
+  padding-top: var(--spacing-grid-size--x4);
+  padding-bottom: var(--spacing-grid-size--x4);
+}
+
+.ax-table__header-button {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding: 0;
+  outline: 0;
+  border: none;
+  background: none;
+  color: var(--color-theme-text--subtle);
+  cursor: pointer;
+  transition: color var(--transition-time-base) var(--transition-function);
+}
+
+.ax-table__cell--selected {
+  color: var(--color-theme-text);
+}
+
+.ax-table__header-button:disabled {
+  cursor: auto;
+}
+
+.ax-table__header-label--align-right .ax-table__header-button {
+  flex-direction: row-reverse;
+}
+
+.ax-table__header-label--selected .ax-table__header-button {
+  color: var(--color-theme-text);
+}
+
+.ax-table__header-button::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0) translateY(var(--spacing-grid-size--x2));
+  border-bottom: var(--spacing-grid-size--x1) solid var(--color-ui-accent);
+  transition: transform var(--transition-time-base) var(--transition-function);
+}
+
+.ax-table__header-label--selected .ax-table__header-button::after {
+  transform: scaleX(1) translateY(var(--spacing-grid-size--x2));
+}
+
+.ax-table__header-button:hover:not(:disabled) {
+  color: var(--color-ui-accent--hover);
+}
+
+.ax-table__header-label {
+  padding: var(--spacing-grid-size--x2) var(--spacing-grid-size--x4);
+  color: var(--color-theme-text--subtle);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  vertical-align: bottom;
+  transition: color var(--transition-time-base) var(--transition-function);
+}
+
+.ax-table__header:only-child .ax-table__header-label {
+  border-bottom: var(--component-border-width-medium) solid var(--color-theme-border);
+}
+
+.ax-table__header-label--align-left {
+  text-align: left;
+}
+
+.ax-table__header-label--align-right {
+  text-align: right;
+}
+
+.ax-table__header-label--align-centre {
+  text-align: center;
+}
+
+.ax-table__header-label--grow {
+  width: 100%;
+}
+
+.ax-table__header-label--selected {
+  color: var(--color-theme-text);
+}
+
+.ax-table__header-label--shrink {
+  width: 1%;
+}
+
+.ax-table__row {
+  transition-property: background-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.ax-table__row.ax-table__row--hover,
+.ax-table__row:hover {
+  background-color: var(--color-theme-background--hover);
+}

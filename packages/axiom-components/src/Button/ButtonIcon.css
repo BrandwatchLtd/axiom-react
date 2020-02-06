@@ -1,0 +1,7 @@
+.ax-button__icon {
+  display: inline-flex;
+  margin: 0 var(--spacing-grid-size);
+}
+
+.ax-button__icon--start { margin-left: 0; }
+.ax-button__icon--end   { margin-right: 0; }

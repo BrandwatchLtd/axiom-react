@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarChart (utils) it gets a flatt list of all values 1`] = `
+Array [
+  100,
+  0,
+  90,
+  50,
+  33,
+  40,
+  53,
+  40,
+  33,
+  50,
+  50,
+  50,
+  33,
+  69,
+  33,
+  25,
+  50,
+]
+`;

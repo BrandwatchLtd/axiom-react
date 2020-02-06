@@ -1,0 +1,22 @@
+.ax-progress-button {
+  position: relative;
+}
+
+.ax-progress-button__indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition-property: transform;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+
+  @nest .ax-progress-button--in-progress & {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.ax-progress-button__content {
+  display: flex;
+}

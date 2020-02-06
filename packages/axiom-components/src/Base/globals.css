@@ -1,0 +1,59 @@
+/* stylelint-disable property-no-vendor-prefix, selector-max-type */
+/* stylelint-disable selector-max-universal */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* stylelint-enable selector-max-universal */
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  line-height: var(--line-height-body);
+}
+
+button,
+hr,
+input {
+  overflow: visible; /*  Show the overflow in Edge. */
+}
+
+input,
+textarea {
+  margin: 0; /* Remove the margin in Firefox and Safari. */
+  font: inherit;
+}
+
+textarea {
+  overflow: auto; /* Remove the default vertical scrollbar in IE. */
+}
+
+/* normalise button styles */
+button {
+  margin: 0;
+  border-radius: 0;
+  font: inherit;
+
+  /* Remove the inner border and padding in Firefox. */
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+}

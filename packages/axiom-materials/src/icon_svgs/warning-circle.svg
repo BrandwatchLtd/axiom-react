@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>warning-circle</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="warning-circle" fill="#000000">
+            <path d="M16,8 C16,12.418 12.418,16 8,16 C3.582,16 0,12.418 0,8 C0,3.582 3.582,0 8,0 C12.418,0 16,3.582 16,8 Z M15,8 C15,4.134 11.866,1 8,1 C4.134,1 1,4.134 1,8 C1,11.866 4.134,15 8,15 C11.866,15 15,11.866 15,8 Z M8.9000001,11.0249996 C8.9000001,11.5078285 8.50782897,11.8999996 8.0250001,11.8999996 C7.54217122,11.8999996 7.1500001,11.5078285 7.1500001,11.0249996 C7.1500001,10.5421707 7.54217122,10.1499996 8.0250001,10.1499996 C8.50782897,10.1499996 8.9000001,10.5421707 8.9000001,11.0249996 Z M6.9000001,4 L9.10000038,4 L8.89999962,9.19999932 L7.0999999,9.19999981 L6.9000001,4 Z" id="Warning-Popup-Circle"></path>
+        </g>
+    </g>
+</svg>

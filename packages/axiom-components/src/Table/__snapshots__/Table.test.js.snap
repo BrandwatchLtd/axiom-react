@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders 1`] = `
+<table
+  className="ax-table ax-space--x6 ax-text--color-subtle"
+>
+  <tbody
+    className="ax-table__body"
+  />
+</table>
+`;
