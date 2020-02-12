@@ -20,7 +20,8 @@ function createJsMap(items) {
   }, {});
   return Promise.all([
     fs.writeFile(path.join(destMapPath, 'src', 'flags.json'), JSON.stringify(map)),
-    fs.writeFile(path.join(destMapPath, 'dist', 'flags.json'), JSON.stringify(map)),
+    fs.writeFile(path.join(destMapPath, 'dist', 'cjs', 'flags.json'), JSON.stringify(map)),
+    fs.writeFile(path.join(destMapPath, 'dist', 'esm', 'flags.json'), JSON.stringify(map)),
   ]);
 }
 

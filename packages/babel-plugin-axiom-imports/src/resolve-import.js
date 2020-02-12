@@ -23,7 +23,7 @@ const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
       Module._resolveFilename(packageName, Object.assign({}, new Module, {
         'paths': Module._nodeModulePaths(process.cwd()),
       }))
-    ), '../src/index.js'), 'utf8');
+    ), '../../src/index.js'), 'utf8');
   } catch (error) {
     if (error.code !== 'MODULE_NOT_FOUND') {
       throw error;
@@ -39,9 +39,9 @@ const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
           return importList[spec.local.name] = node.source.value;
         case 'ExportSpecifier':
           if (spec.local.name === spec.exported.name && importList[spec.local.name]) {
-            memo[packageName][spec.local.name] = [path.join(`${packageName}/dist`, importList[spec.local.name]), '*'];
+            memo[packageName][spec.local.name] = [path.join(`${packageName}/dist/cjs`, importList[spec.local.name]), '*'];
           } else {
-            memo[packageName][spec.exported.name] = [path.join(`${packageName}/dist`, node.source.value), 'default'];
+            memo[packageName][spec.exported.name] = [path.join(`${packageName}/dist/cjs`, node.source.value), 'default'];
           }
         }
       });
