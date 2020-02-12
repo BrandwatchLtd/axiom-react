@@ -28,6 +28,12 @@ module.exports = {
         'transform-react-remove-prop-types',
       ],
     },
+    cjs: {
+      plugins: [
+        'transform-react-remove-prop-types',
+        '@babel/plugin-transform-modules-commonjs',
+      ],
+    },
     test: {
       presets: [
         [
