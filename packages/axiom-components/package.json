@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "8.8.2",
+  "version": "8.8.3",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-documentation-viewer",
-  "version": "0.2.47",
+  "version": "0.2.48",
   "description": "Brandwatch Axiom - Documentation Viewer",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

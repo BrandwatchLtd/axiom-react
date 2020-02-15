@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-charts",
-  "version": "5.2.14",
+  "version": "5.2.15",
   "description": "Brandwatch Axiom - Charting components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
