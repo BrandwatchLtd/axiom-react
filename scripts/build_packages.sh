@@ -15,7 +15,7 @@ npx lerna exec --parallel -- rsync -a --prune-empty-dirs --exclude '__snapshots_
 npx lerna exec --parallel -- npx babel dist/esm -d dist/esm --config-file $(pwd)/babel.config.js
 
 # Post CSS
-npx postcss packages/**/dist/**/*.css --config ./postcss.prod.config.js --replace --verbose
+npx postcss 'packages/**/dist/**/*.css' --config ./postcss.prod.config.js --replace --verbose
 
 # Flags
 yarn build:flags
