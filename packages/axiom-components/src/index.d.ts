@@ -42,41 +42,6 @@ declare module '@brandwatch/axiom-components' {
   interface AlertDialogHeaderProps {
   }
 
-  class AlertDropdown extends React.Component<React.PropsWithChildren<AlertDropdownProps>, any> {
-  }
-
-  interface AlertDropdownProps {
-    enabled?: any
-    onRequestClose?: any
-    onRequestOpen?: any
-    type?: any
-    withMask?: any
-  }
-
-  class AlertDropdownBody extends React.Component<React.PropsWithChildren<AlertDropdownBodyProps>, any> {
-  }
-
-  interface AlertDropdownBodyProps extends BaseProps {
-  }
-
-  class AlertDropdownHeader extends React.Component<React.PropsWithChildren<AlertDropdownHeaderProps>, any> {
-  }
-
-  interface AlertDropdownHeaderProps {
-  }
-
-  class AlertDropdownSource extends React.Component<React.PropsWithChildren<AlertDropdownSourceProps>, any> {
-  }
-
-  interface AlertDropdownSourceProps {
-  }
-
-  class AlertDropdownTarget extends React.Component<React.PropsWithChildren<AlertDropdownTargetProps>, any> {
-  }
-
-  interface AlertDropdownTargetProps {
-  }
-
   class AlertIcon extends React.Component<AlertIconProps, any> {
   }
 
