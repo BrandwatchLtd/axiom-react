@@ -22,7 +22,6 @@ import Editable from './Components/Editable';
 import EllipsisTooltip from './Components/EllipsisTooltip';
 import Flag from './Components/Flag';
 import Form from './Components/Form';
-import CardGraphic from './Components/CardGraphic';
 import Grid from './Components/Grid';
 import Icon from './Components/Icon';
 import Image from './Components/Image';
@@ -95,10 +94,6 @@ export default class Documentation extends Component {
             id: 'card',
             name: 'Card',
             Component: Card,
-          }, {
-            id: 'card-graphic',
-            name: 'Card Graphic',
-            Component: CardGraphic,
           }, {
             id: 'chip',
             name: 'Chip',
