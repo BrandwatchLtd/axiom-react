@@ -1,34 +1,28 @@
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
 import AlertBar from "../AlertBar/AlertBar";
 import Strong from "../Typography/Strong";
+import AlertDialogContext from "./AlertDialogContext";
 
-export default class AlertDialogHeader extends Component {
-  static propTypes = {
-    /** Header content inside the AlertDialog, a good place for a title */
-    children: PropTypes.node.isRequired,
-  };
+export default function AlertDialogHeader(props) {
+  const { onRequestClose, type } = useContext(AlertDialogContext);
 
-  static contextTypes = {
-    onRequestClose: PropTypes.func.isRequired,
-    type: PropTypes.string.isRequired,
-  };
+  const { children, ...rest } = props;
 
-  render() {
-    const { onRequestClose, type } = this.context;
-    const { children, ...rest } = this.props;
-
-    return (
-      <div className="ax-alert-dialog__header">
-        <AlertBar
-          {...rest}
-          onRemoveClick={onRequestClose}
-          size="medium"
-          type={type}
-        >
-          <Strong>{children}</Strong>
-        </AlertBar>
-      </div>
-    );
-  }
+  return (
+    <AlertBar
+      {...rest}
+      className="ax-alert-dialog__header"
+      onRemoveClick={onRequestClose}
+      size="medium"
+      type={type}
+    >
+      <Strong>{children}</Strong>
+    </AlertBar>
+  );
 }
+
+AlertDialogHeader.propTypes = {
+  /** Header content inside the AlertDialog, a good place for a title */
+  children: PropTypes.node.isRequired,
+};
