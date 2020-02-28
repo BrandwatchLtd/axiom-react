@@ -33,8 +33,8 @@ export default class ProgressButton extends Component {
     const {
       children,
       isInProgress,
-      size = Button.defaultProps.size,
-      variant = Button.defaultProps.variant,
+      size = "medium",
+      variant = "primary",
       ...rest
     } = this.props;
 
