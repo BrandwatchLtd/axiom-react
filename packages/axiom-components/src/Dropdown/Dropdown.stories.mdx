@@ -1,0 +1,128 @@
+import { Meta, Story, Preview, Props, Source, Subtitle,Title } from "@storybook/addon-docs/blocks";
+import * as stories from "./Dropdown.stories.js";
+import Dropdown from "./Dropdown";
+import DropdownContext from "./DropdownContext";
+
+<Meta title="Components/Dropdown" component={Dropdown}/>
+
+<Title>Dropdown</Title>
+
+The Dropdown component and it's supporting components can be combined to produce many variations.
+
+<Story name="Default">{stories.DropdownWithState()}</Story>
+
+<Props />
+
+## Common Examples
+
+### Form Input
+
+<Preview>
+  <Story name="Form Input">{stories.DropdownWithState()}</Story>
+</Preview>
+
+### Pick from Menu
+
+<Preview>
+  <Story name="Menu">{stories.MenuDropdown()}</Story>
+</Preview>
+
+### Link
+
+<Preview>
+  <Story name="Link">{stories.DropdownLink()}</Story>
+</Preview>
+
+
+### Mutliselect
+
+<Preview>
+  <Story name="Mutliselect">{stories.DropdownMenuMutiSelect()}</Story>
+</Preview>
+
+### Custom Dropdown
+
+Any JSX you include as a child of DropdownContext will be rendered in the popup. This allows you to create custom dropdown menus.
+
+<Preview>
+  <Story name="Custom Dropdown">{stories.CustomDropdown()}</Story>
+</Preview>
+
+## Building Blocks
+
+Dropdown is used with two children. `<DropdownTarget>` and `<DropdownSource>` 
+
+### DropdownTarget
+DropdownTarget is what is first rendered and is clicked to open the Dropdown.
+
+DropdownTarget must contain exaclty 1 child but you are free to render what you like, common Target examples include 
+```jsx 
+<TextInputIcon name="chevron-down" />
+```
+```jsx 
+<IconButton name="ellipsis" />
+```
+```jsx
+<Link>
+    <TextIcon name="chevron-down" />
+</Link>
+```
+
+### DropdownSource
+This is what is rendered in the Dropdown once opened. Generally you will also want to include `<DropdownContext>` and `<DropdownContent>` as the only child of DropdownSource. 
+
+```jsx 
+<DropdownSource>
+    <DropdownContext>
+        <DropdownContent>
+            // Your components here
+        </DropdownContent>
+    </DropdownContext>
+</DropdownSource>
+```
+
+#### DropdownContext
+
+This is used to control where `<DropdownSource>` is rendered.
+
+#### DropdownContent
+
+Provides padding and styling to your content.
+
+#### DropdownMenu
+You will often want to include `<DropdownMenu>` as a child of `<DropdownSource>`.  
+You can use `<DropdownMenuItem>` and `<DropdownMenuHeader>`/`<DropdownMenuFooter>` to build different types of menus.
+
+##### Dropdown groups
+
+Dropdown groups can be used to seperate content in a DropdownMenu
+
+<Preview>
+  <Story name="Menu groups">{stories.DropdownMenuGroups()}</Story>
+</Preview>
+
+##### Dropdown Header & Footer
+These can be used provide a header and footer in a DropdownMenu
+
+<Preview>
+  <Story name="Header & Footer">{stories.DropdownMenuHeaderFooter()}</Story>
+</Preview>
+
+## Positioning
+You can use the position and offset prop to control where the Source is displayed relative to the Target. Popper.js is used to manage the placement of the Dropdown Source. See [Version 1 of Popper.js](https://popper.js.org/docs/v1/) and [Position](https://github.com/BrandwatchLtd/axiom-react/blob/master/packages/axiom-components/src/Position/Position.js) for more information.
+
+## Useful Techniques
+
+#### Setting Source to be same width as Target
+
+<Preview>
+  <Story name="Source to be same width as Target">{stories.SourceSameWidthAsTarget()}</Story>
+</Preview>
+
+#### Programmatically opening and closing the Dropdown
+Normally this behaviour is handled for you. However sometimes you might want to have more control over this behaviour.  
+You can pass a ref into `<Dropdown>`. You can then call the instance methods on the underlying component e.g. `dropdownRef.current.close()` or `dropdownRef.current.open()`
+
+<Preview>
+  <Story name="Closing with ref">{stories.ClosingTheDropdown()}</Story>
+</Preview>
