@@ -17,7 +17,7 @@ export default function ConsoleHeader({
   ...rest
 }) {
   const { onConsoleClose } = useContext(PlaformContext);
-  const { consolePosition } = useContext(ConsoleContext);
+  const consolePosition = useContext(ConsoleContext);
   const classes = classnames(
     'ax-platform__console-header',
     `ax-platform__console-header--${shade}`,

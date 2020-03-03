@@ -25,9 +25,7 @@ export default function Console({
 
   return (
     <ConsoleContext.Provider
-        value={ {
-          consolePosition: position,
-        } }>
+        value={ position }>
       <Base { ...rest } className={ classes } style={ style }>
         { children }
       </Base>
