@@ -12,26 +12,25 @@ export default class Menu extends Component {
     size: PropTypes.oneOf(['medium', 'large']),
   };
 
-  static childContextTypes = {
-    size: PropTypes.string.isRequired,
-  };
-
   static defaultProps = {
     size: 'large',
   };
 
-  getChildContext() {
-    return {
-      size: this.props.size,
-    };
-  }
-
   render() {
-    const { children, ...rest } = this.props;
+    const { children, size, ...rest } = this.props;
+
+    const mappedChildren = React.Children.map(children, child => {
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child, {
+          size,
+        });
+      }
+      return child;
+    });
 
     return (
       <Base { ...omit(rest, ['size']) } Component="ul" className="ax-menu">
-        { children }
+        { mappedChildren }
       </Base>
     );
   }

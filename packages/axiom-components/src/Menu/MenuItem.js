@@ -11,15 +11,12 @@ export default class MenuItem extends Component {
     children: PropTypes.node,
     /** Applies styling to indicate it is disabled, and blocks interactions */
     disabled: PropTypes.bool,
-  };
-
-  static contextTypes = {
-    size: PropTypes.string.isRequired,
+    /** SKIP */
+    size: PropTypes.string,
   };
 
   render() {
-    const { size } = this.context;
-    const { children, active, disabled, ...rest } = this.props;
+    const { children, active, disabled, size = 'large', ...rest } = this.props;
     const classes = classnames('ax-menu__item', {
       'ax-menu__item--active': active,
       'ax-menu__item--disabled': disabled,

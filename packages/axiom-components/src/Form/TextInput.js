@@ -70,10 +70,6 @@ export default class TextInput extends Component {
     value: PropTypes.string,
   };
 
-  static childContextTypes ={
-    size: PropTypes.string,
-  };
-
   static defaultProps = {
     size: 'medium',
     space: 'x4',
@@ -84,12 +80,6 @@ export default class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = { hasFocus: false };
-  }
-
-  getChildContext() {
-    return {
-      size: this.props.size,
-    };
   }
 
   handleOnBlur() {
@@ -132,7 +122,7 @@ export default class TextInput extends Component {
 
     const { hasFocus } = this.state;
     const icon = findComponent(children, TextInputIconRef);
-    const button = findComponent(children, TextInputButtonRef);
+    const Button = findComponent(children, TextInputButtonRef);
     const showOnClear = onClear && value && !isInProgress;
     const showIcon = icon && (!isInProgress || icon.props.align === 'left');
 
@@ -183,7 +173,7 @@ export default class TextInput extends Component {
                 )
               }
             </InputWrapper>
-            { button }
+            { Button ? React.cloneElement(Button, { size }) : null }
           </Base>
         }
       </Validate>

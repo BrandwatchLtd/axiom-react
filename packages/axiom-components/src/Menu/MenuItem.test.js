@@ -5,7 +5,7 @@ import MenuItem from './MenuItem';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Menu>
+    <Menu size="medium">
       <MenuItem { ...props }>Lorem ipsum</MenuItem>
     </Menu>
   );

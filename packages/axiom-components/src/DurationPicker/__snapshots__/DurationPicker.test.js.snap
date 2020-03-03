@@ -44,11 +44,7 @@ exports[`DurationPicker Snapshots renders with defaultProps 1`] = `
         </TextInput>
       </DropdownTarget>
       <DropdownSource>
-        <DropdownContext
-          maxHeight="30rem"
-          position="top"
-          width="14.5rem"
-        >
+        <DropdownContext>
           <DropdownMenu>
             <DropdownMenuItem
               key="minutes"

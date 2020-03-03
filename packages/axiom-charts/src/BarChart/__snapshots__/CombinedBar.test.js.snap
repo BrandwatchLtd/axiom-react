@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CombinedBar renders a single bar when benchmark value is less than current value 1`] = `
-<React.Fragment>
+<Fragment>
   <ChartContext
     DropdownContext={[MockFunction]}
     TooltipContext={[MockFunction]}
@@ -24,11 +24,11 @@ exports[`CombinedBar renders a single bar when benchmark value is less than curr
       percent={50}
     />
   </ChartContext>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`CombinedBar renders an additional striped bar when benchmark value is grather than current value 1`] = `
-<React.Fragment>
+<Fragment>
   <ChartContext
     DropdownContext={[MockFunction]}
     TooltipContext={[MockFunction]}
@@ -78,5 +78,5 @@ exports[`CombinedBar renders an additional striped bar when benchmark value is g
       />
     </ChartContext>
   </div>
-</React.Fragment>
+</Fragment>
 `;

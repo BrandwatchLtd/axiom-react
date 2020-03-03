@@ -5,7 +5,7 @@ exports[`MenuItem renders with active 1`] = `
   className="ax-menu"
 >
   <li
-    className="ax-menu__item ax-menu__item--active ax-text--size-headline ax-text--strong"
+    className="ax-menu__item ax-menu__item--active ax-text--size-headtitle ax-text--strong"
   >
     <button
       className="ax-menu__item-button"
@@ -21,7 +21,7 @@ exports[`MenuItem renders with defaultProps 1`] = `
   className="ax-menu"
 >
   <li
-    className="ax-menu__item ax-text--size-headline ax-text--strong"
+    className="ax-menu__item ax-text--size-headtitle ax-text--strong"
   >
     <button
       className="ax-menu__item-button"
@@ -37,7 +37,7 @@ exports[`MenuItem renders with disabled 1`] = `
   className="ax-menu"
 >
   <li
-    className="ax-menu__item ax-menu__item--disabled ax-text--size-headline ax-text--strong"
+    className="ax-menu__item ax-menu__item--disabled ax-text--size-headtitle ax-text--strong"
   >
     <button
       className="ax-menu__item-button"

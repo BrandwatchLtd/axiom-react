@@ -26,7 +26,7 @@ export default class ProgressButton extends Component {
     const {
       children,
       isInProgress,
-      size = Button.defaultProps.size,
+      size = 'medium',
       ...rest
     } = this.props;
 

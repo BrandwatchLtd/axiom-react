@@ -26,6 +26,8 @@ describe('DropdownMenuItem', () => {
       },
     };
     mockEvent = {};
+    // shallow does not have support for useContext See issue https://github.com/enzymejs/enzyme/issues/2176
+    jest.spyOn(React, 'useContext').mockImplementation(() => opts.context);
   });
 
   describe('onClick', () => {

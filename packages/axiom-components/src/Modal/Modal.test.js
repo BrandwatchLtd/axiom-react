@@ -10,12 +10,12 @@ describe('Modal', () => {
   });
 
   it('closes if a esc button was pressed', () => {
-    const spy = jest.fn();
-    const component = mount(<Modal isOpen onOverlayClick={ spy } shouldCloseOnEsc />);
+    const onRequestCloseSpy = jest.fn();
+    const component = mount(<Modal isOpen onRequestClose={ onRequestCloseSpy } shouldCloseOnEsc />);
     expect(toJSON(component)).toMatchSnapshot();
 
     const keyboardEvent = new KeyboardEvent('keydown', { keyCode: 27, key: 'Escape' });
     document.body.dispatchEvent(keyboardEvent);
-    expect(spy).toHaveBeenCalledTimes(1);
+    expect(onRequestCloseSpy).toHaveBeenCalledTimes(1);
   });
 });
