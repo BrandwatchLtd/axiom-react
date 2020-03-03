@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useMemo } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
 import PlaformContext from './PlatformContext';
@@ -20,13 +20,15 @@ export default function Platform({
     'ax-platform--console-open': openConsolePosition,
   });
 
+  const providerValue = useMemo(() => ({
+    onConsoleClose,
+    openConsolePosition,
+    openConsoleWidth,
+  } ), [onConsoleClose, openConsolePosition, openConsoleWidth]);
+
   return (
     <PlaformContext.Provider
-        value={ {
-          onConsoleClose,
-          openConsolePosition,
-          openConsoleWidth,
-        } }>
+        value={ providerValue }>
       <Base { ...rest } className={ classes }>
         { children }
         <div
