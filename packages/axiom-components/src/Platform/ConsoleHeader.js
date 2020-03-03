@@ -1,65 +1,60 @@
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 import Icon from '../Icon/Icon';
 import Link from '../Typography/Link';
+import PlaformContext from './PlatformContext';
+import ConsoleContext from './ConsoleContext';
 
-export default class ConsoleHeader extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    separator: PropTypes.bool,
-    shade: PropTypes.oneOf(['shade-2', 'shade-3', 'shade-4']),
-    size: PropTypes.oneOf(['small', 'large']),
-  };
+export default function ConsoleHeader({
+  children,
+  separator,
+  shade = 'shade-3',
+  size = 'large',
+  ...rest
+}) {
+  const { onConsoleClose } = useContext(PlaformContext);
+  const { consolePosition } = useContext(ConsoleContext);
+  const classes = classnames(
+    'ax-platform__console-header',
+    `ax-platform__console-header--${shade}`,
+    `ax-platform__console-header--${size}`,
+    {
+      'ax-platform__console-header--separator': separator,
+    }
+  );
 
-  static contextTypes = {
-    onConsoleClose: PropTypes.func,
-    consolePosition: PropTypes.string.isRequired,
-  };
-
-  static defaultProps = {
-    shade: 'shade-3',
-    size: 'large',
-  };
-
-  render() {
-    const { onConsoleClose, consolePosition } = this.context;
-    const { children, separator, shade, size, ...rest } = this.props;
-    const classes = classnames(
-      'ax-platform__console-header',
-      `ax-platform__console-header--${shade}`,
-      `ax-platform__console-header--${size}`, {
-        'ax-platform__console-header--separator': separator,
-      },
-    );
-
-    return (
-      <Base { ...rest } className={ classes }>
-        <Grid gutters="small" responsive={ false } verticalAlign="middle">
-          { onConsoleClose && size === 'large' && consolePosition === 'right' && (
-            <GridCell shrink>
-              <Link onClick={ onConsoleClose } style="subtle">
-                <Icon name="cross" size="1.5rem" />
-              </Link>
-            </GridCell>
-          ) }
-
-          <GridCell>
-            { children }
+  return (
+    <Base { ...rest } className={ classes }>
+      <Grid gutters="small" responsive={ false } verticalAlign="middle">
+        { onConsoleClose && size === 'large' && consolePosition === 'right' && (
+          <GridCell shrink>
+            <Link onClick={ onConsoleClose } style="subtle">
+              <Icon name="cross" size="1.5rem" />
+            </Link>
           </GridCell>
+        ) }
 
-          { onConsoleClose && size === 'large' && consolePosition === 'left' && (
-            <GridCell shrink>
-              <Link onClick={ onConsoleClose } style="subtle">
-                <Icon name="cross" size="1.5rem" />
-              </Link>
-            </GridCell>
-          ) }
-        </Grid>
-      </Base>
-    );
-  }
+        <GridCell>{ children }</GridCell>
+
+        { onConsoleClose && size === 'large' && consolePosition === 'left' && (
+          <GridCell shrink>
+            <Link onClick={ onConsoleClose } style="subtle">
+              <Icon name="cross" size="1.5rem" />
+            </Link>
+          </GridCell>
+        ) }
+      </Grid>
+    </Base>
+  );
 }
+
+ConsoleHeader.propTypes = {
+  children: PropTypes.node,
+  separator: PropTypes.bool,
+  shade: PropTypes.oneOf(['shade-2', 'shade-3', 'shade-4']),
+  size: PropTypes.oneOf(['small', 'large']),
+};

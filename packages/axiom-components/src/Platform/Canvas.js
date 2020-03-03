@@ -1,31 +1,23 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import Base from '../Base/Base';
+import PlatformContext from './PlatformContext';
 
-export default class Canvas extends Component {
-  static propTypes = {
-    children: PropTypes.node,
+export default function Canvas({ children, ...rest }) {
+  const { openConsoleWidth, openConsolePosition } = useContext(PlatformContext);
+
+  const style = {
+    marginLeft: openConsolePosition === 'left' && openConsoleWidth,
+    marginRight: openConsolePosition === 'right' && openConsoleWidth,
   };
 
-  static contextTypes = {
-    openConsolePosition: PropTypes.string,
-    openConsoleWidth: PropTypes.string,
-  };
-
-  render() {
-    const { children, ...rest } = this.props;
-    const { openConsolePosition, openConsoleWidth } = this.context;
-    const style = {
-      marginLeft: (openConsolePosition === 'left' && openConsoleWidth),
-      marginRight: (openConsolePosition === 'right' && openConsoleWidth),
-    };
-
-    return (
-      <Base { ...rest }
-          className="ax-platform__canvas"
-          style={ style }>
-        { children }
-      </Base>
-    );
-  }
+  return (
+    <Base { ...rest } className="ax-platform__canvas" style={ style }>
+      { children }
+    </Base>
+  );
 }
+
+Canvas.propTypes = {
+  children: PropTypes.node,
+};
