@@ -70,6 +70,7 @@ export default {
   'monitor': require('./icon_svgs/monitor.svg'),
   'moon': require('./icon_svgs/moon.svg'),
   'open': require('./icon_svgs/open.svg'),
+  'pause': require('./icon_svgs/pause.svg'),
   'pencil': require('./icon_svgs/pencil.svg'),
   'pinterest': require('./icon_svgs/pinterest.svg'),
   'plugin': require('./icon_svgs/plugin.svg'),
