@@ -27,26 +27,27 @@ export default function ConsoleHeader({
     }
   );
 
+  const showCloseOnRight = () =>
+    onConsoleClose && size === 'large' && consolePosition === 'left';
+  const showCloseOnLeft = () =>
+    onConsoleClose && size === 'large' && consolePosition === 'right';
+
+  const CloseLink = () => (
+    <GridCell shrink>
+      <Link onClick={ onConsoleClose } style="subtle">
+        <Icon name="cross" size="1.5rem" />
+      </Link>
+    </GridCell>
+  );
+
   return (
     <Base { ...rest } className={ classes }>
       <Grid gutters="small" responsive={ false } verticalAlign="middle">
-        { onConsoleClose && size === 'large' && consolePosition === 'right' && (
-          <GridCell shrink>
-            <Link onClick={ onConsoleClose } style="subtle">
-              <Icon name="cross" size="1.5rem" />
-            </Link>
-          </GridCell>
-        ) }
+        { showCloseOnLeft() && <CloseLink /> }
 
         <GridCell>{ children }</GridCell>
 
-        { onConsoleClose && size === 'large' && consolePosition === 'left' && (
-          <GridCell shrink>
-            <Link onClick={ onConsoleClose } style="subtle">
-              <Icon name="cross" size="1.5rem" />
-            </Link>
-          </GridCell>
-        ) }
+        { showCloseOnRight() && <CloseLink /> }
       </Grid>
     </Base>
   );
