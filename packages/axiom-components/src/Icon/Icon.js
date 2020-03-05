@@ -89,6 +89,7 @@ export default class Icon extends Component {
       'monitor',
       'moon',
       'open',
+      'pause',
       'pencil',
       'pinterest',
       'plugin',
