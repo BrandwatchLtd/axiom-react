@@ -9,19 +9,17 @@ export default class TooltipTarget extends Component {
   static propTypes = {
     children: PropTypes.node,
     delay: PropTypes.bool,
+    /** SKIP */
+    hideTooltip: PropTypes.func,
     onClick: PropTypes.func,
-  };
-
-  static contextTypes = {
-    hideTooltip: PropTypes.func.isRequired,
-    showTooltip: PropTypes.func.isRequired,
+    /** SKIP */
+    showTooltip: PropTypes.func,
   };
 
   static typeRef = TooltipTargetRef;
 
   handleMouseMove(...args) {
-    const { children, delay } = this.props;
-    const { showTooltip } = this.context;
+    const { children, delay, showTooltip } = this.props;
     const { onMouseMove = () => {} } = children.props;
 
     if (delay && !this.showTimeout) {
@@ -34,8 +32,7 @@ export default class TooltipTarget extends Component {
   }
 
   handleMouseLeave(...args) {
-    const { children } = this.props;
-    const { hideTooltip } = this.context;
+    const { children, hideTooltip } = this.props;
     const { onMouseLeave = () => {} } = children.props;
 
     if (this.showTimeout) {
@@ -64,7 +61,7 @@ export default class TooltipTarget extends Component {
     const { children, ...rest } = this.props;
 
     return cloneElement(children, {
-      ...omit(rest, ['delay']),
+      ...omit(rest, ['delay', 'hideTooltip', 'showTooltip']),
       onMouseMove: this.handleMouseMove.bind(this),
       onMouseLeave: this.handleMouseLeave.bind(this),
       onClick: this.handleClick.bind(this),
