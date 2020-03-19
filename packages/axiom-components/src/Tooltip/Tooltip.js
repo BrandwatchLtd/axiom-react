@@ -7,15 +7,22 @@ import PositionTarget from '../Position/PositionTarget';
 import { TooltipSourceRef } from './TooltipSource';
 import { TooltipTargetRef } from './TooltipTarget';
 
-export default function Tooltip({
+export default React.forwardRef(Tooltip);
+
+function Tooltip({
   children,
   delay = false,
   onClick,
   position = 'top',
   enabled = true,
   ...rest
-}) {
+}, ref) {
   const [isVisible, setIsVisible] = useState(false);
+
+  React.useImperativeHandle(ref, () => ({
+    showTooltip,
+    hideTooltip,
+  }));
 
   function showTooltip() {
     if (enabled && !isVisible) {
