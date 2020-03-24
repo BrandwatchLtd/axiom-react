@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { select, withKnobs } from '@storybook/addon-knobs';
 import Dropdown from './Dropdown';
 import DropdownTarget from './DropdownTarget';
 import DropdownSource from './DropdownSource';
@@ -21,6 +22,7 @@ export default {
   component: Dropdown,
   subcomponents: { DropdownTarget, DropdownSource, DropdownContext, DropdownContent, DropdownMenu, DropdownMenuItem },
   includeStories: [],
+  decorators: [withKnobs],
 };
 
 export function MenuDropdown() {
@@ -301,6 +303,59 @@ export function SourceSameWidthAsTarget() {
               <DropdownMenuItem>fantastic-voyage</DropdownMenuItem>
               <DropdownMenuItem>giant-leap</DropdownMenuItem>
               <DropdownMenuItem>primeval-soup</DropdownMenuItem>
+            </DropdownMenu>
+          </DropdownContext>
+        </DropdownSource>
+      </Dropdown>
+    </div>
+  );
+}
+
+export function Position() {
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const label = 'offset';
+  const options = ['start', 'middle', 'end'];
+  const defaultValue = 'middle';
+
+  const offset = select(label, options, defaultValue);
+
+  const positionLabel = 'position';
+  const positionOptions = ['top', 'right', 'bottom', 'left'];
+  const positionDefaultValue = 'top';
+
+  const position = select(positionLabel, positionOptions, positionDefaultValue);
+
+  return (
+    <div
+        style={ {
+          height: '150vh',
+          width: '150vw',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        } }>
+      <Dropdown offset={ offset } position={ position } showArrow>
+        <DropdownTarget>
+          <TextInput
+              isTarget
+              onChange={ () => {} }
+              placeholder="Pick an Option"
+              value={ selectedValue }>
+            <TextInputIcon name="chevron-down" />
+          </TextInput>
+        </DropdownTarget>
+        <DropdownSource>
+          <DropdownContext>
+            <DropdownMenu>
+              { items.map(item => (
+                <DropdownMenuItem
+                    key={ item.id }
+                    onClick={ () => setSelectedValue(item.value) }
+                    selected={ selectedValue === item.value }>
+                  { item.name }
+                </DropdownMenuItem>
+              )) }
             </DropdownMenu>
           </DropdownContext>
         </DropdownSource>
