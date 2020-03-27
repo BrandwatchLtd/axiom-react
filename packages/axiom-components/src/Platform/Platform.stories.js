@@ -17,7 +17,7 @@ import PlatformTitle from './PlatformTitle';
 import Heading from '../Typography/Heading';
 
 export default {
-  title: 'Platform',
+  title: 'Components/Platform',
   component: Platform,
   subcomponents: {
     Dock,
