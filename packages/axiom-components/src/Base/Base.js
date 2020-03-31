@@ -8,6 +8,11 @@ import './Base.css';
 
 const underlineTextSizes = new Set(['display2', 'display1', 'headline', 'body']);
 
+/**
+ * Internally nearly all components in Axiom render Base. It is used as a place to access common styles.
+ * You can also use it outside of Axiom as an alternative to using the exported Axiom CSS variables
+ * You can also use that fact that most components render Base to pass props to it indirectly.
+ */
 export default class Base extends Component {
   static propTypes = {
     /**

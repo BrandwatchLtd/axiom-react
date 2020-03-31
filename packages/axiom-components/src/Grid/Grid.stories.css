@@ -1,0 +1,5 @@
+.color-box {
+  background-color: var(--color-product-deep-thought--active);
+  color: var(--color-ui-white);
+  text-align: center;
+}

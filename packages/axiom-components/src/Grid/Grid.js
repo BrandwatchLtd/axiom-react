@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import Base from '../Base/Base';
 import './Grid.css';
 
+/**
+ * Grid provides an abstraction over CSS Flex box with Grid acting as the Flex parent and
+ * GridCell the Flex child. It also adds the option for gutters between flex children.
+ */
 export default class Grid extends Component {
   static propTypes = {
     /** <GridCells>. */

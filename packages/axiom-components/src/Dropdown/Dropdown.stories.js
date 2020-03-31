@@ -99,11 +99,6 @@ export function DropdownWithState() {
   );
 }
 
-DropdownWithState.story = {
-  name: 'test',
-  parameters: { foo: 'bar' },
-};
-
 export function DropdownLink() {
   return (
     <Dropdown>

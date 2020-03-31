@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { icons } from '@brandwatch/axiom-materials';
 import Base from '../Base/Base';
+
 import './Icon.css';
 
 export default class Icon extends Component {
