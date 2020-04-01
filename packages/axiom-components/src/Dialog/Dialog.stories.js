@@ -5,6 +5,7 @@ import DialogBody from "./DialogBody";
 import DialogFooter from "./DialogFooter";
 import Button from "../Button/Button";
 import ButtonGroup from "../Button/ButtonGroup";
+import Heading from "../Typography/Heading";
 
 export default {
   title: "Components/Dialog",
@@ -20,15 +21,25 @@ export function Default() {
   return (
     <React.Fragment>
       <Button onClick={openDialog}>Open Dialog</Button>
-      <Dialog isOpen={isOpen} onRequestClose={closeDialog} size="large">
-        <DialogHeader>Dialog Header</DialogHeader>
-        <DialogBody>Dialog Body</DialogBody>
+      <Dialog
+        isOpen={isOpen}
+        onRequestClose={closeDialog}
+        shouldCloseOnEsc
+        width="380px"
+      >
+        <DialogHeader>
+          <Heading textSize="headtitle">Create New Report</Heading>
+        </DialogHeader>
+        <DialogBody>
+          You will be redirected to the Report Builder. All your data will be
+          automatically saved.
+        </DialogBody>
         <DialogFooter>
           <ButtonGroup textRight>
-            <Button onClick={closeDialog}>Save</Button>
             <Button onClick={closeDialog} style="secondary">
-              Close
+              Cancel
             </Button>
+            <Button onClick={closeDialog}>Continue</Button>
           </ButtonGroup>
         </DialogFooter>
       </Dialog>
