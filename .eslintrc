@@ -1,10 +1,17 @@
 {
-  "extends": ["@brandwatch/eslint-config-axiom"],
-  "globals": {
-    "Set": true,
-    "Promise": true
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module" //allows import syntax
+  },
+  "extends": ["plugin:react/recommended", "prettier", "prettier/react", "plugin:prettier/recommended"],
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "rules": {
-    "max-len": [0]
+    "react/no-children-prop": [0], //React router uses <Route children>
+    "react/no-unescaped-entities": [0], //Overzealous erroring of qoutes in JSX
   }
 }
