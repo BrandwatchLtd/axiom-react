@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import Cloak from './Cloak';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Cloak { ...props }>
-      Lorem Ipsum
-    </Cloak>
-  );
+  renderer.create(<Cloak {...props}>Lorem Ipsum</Cloak>);
 
 describe('Cloak', () => {
   it('renders with defaultProps', () => {

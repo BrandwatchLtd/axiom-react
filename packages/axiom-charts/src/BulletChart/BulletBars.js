@@ -27,20 +27,21 @@ export default class BulletBars extends Component {
     const barGroupMax = values.reduce(findBarGroupMax);
 
     return (
-      <Base { ...rest } className="ax-bullet-chart__block">
+      <Base {...rest} className="ax-bullet-chart__block">
         <div className="ax-bullet-chart__bars">
-          { values.map(({ color, value }) =>
-            <div className="ax-bullet-chart__bars-bar" key={ `${color}-div` }>
-              <Bars direction={ direction } label={ label }>
+          {values.map(({ color, value }) => (
+            <div className="ax-bullet-chart__bars-bar" key={`${color}-div`}>
+              <Bars direction={direction} label={label}>
                 <Bar
-                    color={ color }
-                    key={ color }
-                    label={ `${barLabel}%` }
-                    percent={ value }
-                    showLabel={ value === barGroupMax && showBarLabel }/>
+                  color={color}
+                  key={color}
+                  label={`${barLabel}%`}
+                  percent={value}
+                  showLabel={value === barGroupMax && showBarLabel}
+                />
               </Bars>
             </div>
-          ) }
+          ))}
         </div>
       </Base>
     );

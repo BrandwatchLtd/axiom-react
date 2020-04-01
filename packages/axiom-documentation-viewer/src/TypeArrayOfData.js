@@ -19,7 +19,7 @@ export default class TypeArrayOf extends Component {
 
   static defaultProps = {
     value: [],
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -59,40 +59,35 @@ export default class TypeArrayOf extends Component {
 
     return [
       <ButtonGroup key="button">
-        <Button
-            onClick={ () => this.open() }
-            size="small"
-            style="secondary">
+        <Button onClick={() => this.open()} size="small" style="secondary">
           Open Editor
         </Button>
       </ButtonGroup>,
       <Dialog
-          contentLabel="Editor"
-          isOpen={ isOpen }
-          key="dialog"
-          onRequestClose={ () => this.close() }
-          size="medium">
+        contentLabel="Editor"
+        isOpen={isOpen}
+        key="dialog"
+        onRequestClose={() => this.close()}
+        size="medium"
+      >
         <DialogHeader>
           <Heading textSize="headtitle">Editor</Heading>
         </DialogHeader>
 
         <DialogBody>
           <Editor
-              initialValue={ content }
-              onChange={ ({ content }) => this.setState({ content }) } />
+            initialValue={content}
+            onChange={({ content }) => this.setState({ content })}
+          />
         </DialogBody>
 
         <DialogFooter>
           <ButtonGroup textRight>
-            <Button
-                onClick={ () => this.close() }
-                style="secondary">
+            <Button onClick={() => this.close()} style="secondary">
               Cancel
             </Button>
 
-            <Button onClick={ () => this.update() }>
-              Update
-            </Button>
+            <Button onClick={() => this.update()}>Update</Button>
           </ButtonGroup>
         </DialogFooter>
       </Dialog>,

@@ -18,10 +18,9 @@ export default class Chart extends Component {
     const { children, minimumHeight, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-chart" style={ { minHeight: minimumHeight } }>
-        { children }
+      <Base {...rest} className="ax-chart" style={{ minHeight: minimumHeight }}>
+        {children}
       </Base>
     );
   }
 }
-

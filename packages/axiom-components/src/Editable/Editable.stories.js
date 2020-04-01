@@ -13,9 +13,10 @@ export function Default() {
     <EditableTitle>
       <Heading textSize="headline">
         <EditableLine
-            onChange={ function() {} }
-            placeholder="Editable text here"
-            value="Editable text..."/>
+          onChange={function() {}}
+          placeholder="Editable text here"
+          value="Editable text..."
+        />
       </Heading>
     </EditableTitle>
   );

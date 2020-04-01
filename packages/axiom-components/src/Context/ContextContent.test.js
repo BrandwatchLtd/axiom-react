@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import ContextContent from './ContextContent';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ContextContent { ...props }>
-      Lorem ipsum
-    </ContextContent>
-  );
+  renderer.create(<ContextContent {...props}>Lorem ipsum</ContextContent>);
 
 describe('ContextContent', () => {
   it('renders with defaultProps', () => {
@@ -17,7 +13,7 @@ describe('ContextContent', () => {
   });
 
   describe('renders with padding', () => {
-    ['none', 'small', 'large'].forEach((padding) => {
+    ['none', 'small', 'large'].forEach(padding => {
       it(padding, () => {
         const component = getComponent({ padding });
         const tree = component.toJSON();

@@ -43,71 +43,82 @@ export default class PackageRow extends Component {
     const { description, name, to } = this.props;
 
     return (
-      <TableRow cloakContainer hover={ isOpen }>
+      <TableRow cloakContainer hover={isOpen}>
         <TableCell>
           <Heading space="x1" textStrong>
-            { to && (
-              <Link
-                  Component={ RouterLink }
-                  style="subtle"
-                  to={ to }>@brandwatch/{ name }</Link>
-            ) }
+            {to && (
+              <Link Component={RouterLink} style="subtle" to={to}>
+                @brandwatch/{name}
+              </Link>
+            )}
 
-            { !to && (
+            {!to && (
               <Fragment>
-                @brandwatch/{ name } • <Badge
-                    color="paradise-lost">Awaiting docs</Badge>
+                @brandwatch/{name} •{' '}
+                <Badge color="paradise-lost">Awaiting docs</Badge>
               </Fragment>
-            ) }
+            )}
           </Heading>
 
           <Paragraph space="x1" textColor="subtle">
-            { description }
+            {description}
           </Paragraph>
         </TableCell>
 
         <TableCell>
-          <Link href={ `https://www.npmjs.com/package/@brandwatch/${name}` }>
-            <span style={ { display: 'inline-block' } }>
+          <Link href={`https://www.npmjs.com/package/@brandwatch/${name}`}>
+            <span style={{ display: 'inline-block' }}>
               <Image
-                  height="18"
-                  maxWidth="auto"
-                  src={ `https://badge.fury.io/js/@brandwatch%2F${name}.svg` } />
+                height="18"
+                maxWidth="auto"
+                src={`https://badge.fury.io/js/@brandwatch%2F${name}.svg`}
+              />
             </span>
           </Link>
         </TableCell>
 
         <TableCell>
           <Dropdown
-              flip="mirror"
-              onRequestClose={ () => this.setState({ isOpen: false }) }
-              onRequestOpen={ () => this.setState({ isOpen: true }) }>
+            flip="mirror"
+            onRequestClose={() => this.setState({ isOpen: false })}
+            onRequestOpen={() => this.setState({ isOpen: true })}
+          >
             <DropdownTarget>
-              <Cloak invisible={ !isOpen }>
-                <IconButton
-                    name="ellipsis"
-                    size="small" />
+              <Cloak invisible={!isOpen}>
+                <IconButton name="ellipsis" size="small" />
               </Cloak>
             </DropdownTarget>
 
             <DropdownSource>
               <DropdownContext>
-                { to && (
+                {to && (
                   <DropdownMenu>
-                    <DropdownMenuItem onClick={ () => push(to) }>
+                    <DropdownMenuItem onClick={() => push(to)}>
                       Read package docs
                     </DropdownMenuItem>
                   </DropdownMenu>
-                ) }
+                )}
 
                 <DropdownMenu>
                   <DropdownMenuItem
-                      onClick={ () => window.open(`https://github.com/BrandwatchLtd/axiom-react/tree/master/packages/${name}`, '_blank') }>
+                    onClick={() =>
+                      window.open(
+                        `https://github.com/BrandwatchLtd/axiom-react/tree/master/packages/${name}`,
+                        '_blank'
+                      )
+                    }
+                  >
                     See package on Github
                   </DropdownMenuItem>
 
                   <DropdownMenuItem
-                      onClick={ () => window.open(`https://www.npmjs.com/package/@brandwatch/${name}`, '_blank') }>
+                    onClick={() =>
+                      window.open(
+                        `https://www.npmjs.com/package/@brandwatch/${name}`,
+                        '_blank'
+                      )
+                    }
+                  >
                     See package on NPM
                   </DropdownMenuItem>
                 </DropdownMenu>

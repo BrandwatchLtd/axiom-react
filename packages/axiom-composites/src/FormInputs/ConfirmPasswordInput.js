@@ -4,7 +4,7 @@ import { TextInput } from '@brandwatch/axiom-components';
 import { translate } from '@brandwatch/axiom-localization';
 
 const t = translate({
-  'Sorry, your password confirmation doesn\'t match': {
+  "Sorry, your password confirmation doesn't match": {
     de: 'Entschuldigung, Ihre Passwortbestätigung stimmt nicht überein',
     es: 'Lo sentimos, la confirmación de la contraseña no coincide',
     fr: 'Désolé, votre confirmation de mot de passe ne correspond pas',
@@ -31,14 +31,18 @@ export default class ConfirmPasswordInput extends Component {
     const { passwordValue, value, ...rest } = this.props;
 
     return (
-      <TextInput { ...rest }
-          error={ () => t('Sorry, your password confirmation doesn\'t match', axiomLanguage) }
-          label={ t('Confirm new password', axiomLanguage) }
-          patterns={ [(value) => value === passwordValue] }
-          required
-          space="x8"
-          type="password"
-          value={ value } />
+      <TextInput
+        {...rest}
+        error={() =>
+          t("Sorry, your password confirmation doesn't match", axiomLanguage)
+        }
+        label={t('Confirm new password', axiomLanguage)}
+        patterns={[value => value === passwordValue]}
+        required
+        space="x8"
+        type="password"
+        value={value}
+      />
     );
   }
 }

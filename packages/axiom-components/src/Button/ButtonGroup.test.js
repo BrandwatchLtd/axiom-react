@@ -5,7 +5,7 @@ import ButtonGroup from './ButtonGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <ButtonGroup { ...props }>
+    <ButtonGroup {...props}>
       <Button>Lorem ipsum</Button>
     </ButtonGroup>
   );

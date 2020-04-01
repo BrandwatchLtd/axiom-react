@@ -5,7 +5,12 @@ import ButtonIcon from '../Button/ButtonIcon';
 import Grid from '../Grid/Grid';
 import GridCell from '../Grid/GridCell';
 import Paragraph from '../Typography/Paragraph';
-import { getMonthName, getYearNumber, isSameOrAfterMonth, isSameOrBeforeMonth } from './utils';
+import {
+  getMonthName,
+  getYearNumber,
+  isSameOrAfterMonth,
+  isSameOrBeforeMonth,
+} from './utils';
 
 export default class DatePickerHeaderControl extends Component {
   static propTypes = {
@@ -27,30 +32,35 @@ export default class DatePickerHeaderControl extends Component {
 
     return (
       <Grid
-          gutters="small"
-          horizontalAlign="between"
-          responsive={ false }
-          shrink
-          space="x4"
-          verticalAlign="middle">
+        gutters="small"
+        horizontalAlign="between"
+        responsive={false}
+        shrink
+        space="x4"
+        verticalAlign="middle"
+      >
         <GridCell>
           <Button
-              disabled={ isSameOrBeforeMonth(date, earliestSelectableDate) }
-              onClick={ () => onPrevious() }
-              style="quaternary">
+            disabled={isSameOrBeforeMonth(date, earliestSelectableDate)}
+            onClick={() => onPrevious()}
+            style="quaternary"
+          >
             <ButtonIcon name="chevron-left" />
           </Button>
         </GridCell>
 
         <GridCell>
-          <Paragraph>{ getMonthName(date) } { getYearNumber(date) }</Paragraph>
+          <Paragraph>
+            {getMonthName(date)} {getYearNumber(date)}
+          </Paragraph>
         </GridCell>
 
         <GridCell>
           <Button
-              disabled={ isSameOrAfterMonth(date, latestSelectableDate) }
-              onClick={ () => onNext() }
-              style="quaternary">
+            disabled={isSameOrAfterMonth(date, latestSelectableDate)}
+            onClick={() => onNext()}
+            style="quaternary"
+          >
             <ButtonIcon name="chevron-right" />
           </Button>
         </GridCell>

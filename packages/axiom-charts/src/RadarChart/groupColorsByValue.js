@@ -1,5 +1,5 @@
-export default (data, filter) => data
-  .reduce((grouped, { color, label, values }) => {
+export default (data, filter) =>
+  data.reduce((grouped, { color, label, values }) => {
     if (filter && !filter.includes(label)) {
       return grouped;
     }
@@ -8,7 +8,7 @@ export default (data, filter) => data
       if (!grouped[index]) {
         grouped[index] = [{ colors: [color], labels: [label], value }];
       } else {
-        const group = grouped[index].find((group) => group.value === value);
+        const group = grouped[index].find(group => group.value === value);
 
         if (group) {
           group.colors.push(color);

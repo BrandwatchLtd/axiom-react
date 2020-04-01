@@ -36,19 +36,21 @@ export default class TextInputIcon extends Component {
     return tooltip ? (
       <Tooltip isVisible>
         <TooltipTarget>
-          <Icon name={ name } size="1rem" textColor={ iconColor } />
+          <Icon name={name} size="1rem" textColor={iconColor} />
         </TooltipTarget>
         <TooltipSource width="auto">
-          { isComponent(tooltip, TooltipContextRef) ? tooltip : (
+          {isComponent(tooltip, TooltipContextRef) ? (
+            tooltip
+          ) : (
             <TooltipContext>
-              <TooltipContent size="tiny">
-                { tooltip }
-              </TooltipContent>
+              <TooltipContent size="tiny">{tooltip}</TooltipContent>
             </TooltipContext>
-          ) }
+          )}
         </TooltipSource>
       </Tooltip>
-    ) : (<Icon name={ name } size="1rem" textColor={ iconColor } />);
+    ) : (
+      <Icon name={name} size="1rem" textColor={iconColor} />
+    );
   }
 
   render() {
@@ -58,14 +60,14 @@ export default class TextInputIcon extends Component {
     });
 
     return (
-      <span className={ className }>
-        {
-          onClick ? (
-            <Link { ...rest } onClick={ onClick } style="subtle">
-              { this.getIcon(name, iconColor, tooltip) }
-            </Link>
-          ) : this.getIcon(name, iconColor, tooltip)
-        }
+      <span className={className}>
+        {onClick ? (
+          <Link {...rest} onClick={onClick} style="subtle">
+            {this.getIcon(name, iconColor, tooltip)}
+          </Link>
+        ) : (
+          this.getIcon(name, iconColor, tooltip)
+        )}
       </span>
     );
   }

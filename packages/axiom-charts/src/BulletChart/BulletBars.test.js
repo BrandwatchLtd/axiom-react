@@ -4,14 +4,11 @@ import BulletBars from './BulletBars';
 
 function getComponent(props = {}) {
   props.values = [
-    { 'color':'giant-leap', 'value': 10 },
-    { 'color':'critical-mass', 'value': 50 },
+    { color: 'giant-leap', value: 10 },
+    { color: 'critical-mass', value: 50 },
   ];
 
-  return renderer.create(
-    <BulletBars { ...props }>
-    </BulletBars>
-  );
+  return renderer.create(<BulletBars {...props}></BulletBars>);
 }
 
 describe('BulletBars', () => {

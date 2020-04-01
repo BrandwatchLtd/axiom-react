@@ -30,8 +30,9 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase hidePreview>
           <Dialog
-              isOpen
-              onRequestClose={ (setValue) => setValue('Dialog', 'isOpen', false) }>
+            isOpen
+            onRequestClose={setValue => setValue('Dialog', 'isOpen', false)}
+          >
             <DialogHeader>
               <Heading textSize="headtitle">Dialog Title</Heading>
             </DialogHeader>
@@ -43,12 +44,12 @@ export default class Documentation extends Component {
                 libero, maximus lobortis ex vel, feugiat feugiat sapien. Nam in
                 velit orci. Donec dignissim rutrum tellus, vitae fermentum augue
                 blandit vitae. Vestibulum egestas sapien a tortor placerat, ut
-                blandit sapien rhoncus. Aliquam eleifend maximus velit, at euismod
-                erat efficitur id. Sed mattis vehicula scelerisque. Ut justo nibh,
-                dignissim id lacinia sit amet, fermentum a massa. Phasellus
-                ullamcorper augue dolor, eu dapibus enim interdum non. Curabitur
-                porttitor nibh a gravida aliquet. Maecenas eros nisi, pretium vel
-                dui in, dictum convallis enim.
+                blandit sapien rhoncus. Aliquam eleifend maximus velit, at
+                euismod erat efficitur id. Sed mattis vehicula scelerisque. Ut
+                justo nibh, dignissim id lacinia sit amet, fermentum a massa.
+                Phasellus ullamcorper augue dolor, eu dapibus enim interdum non.
+                Curabitur porttitor nibh a gravida aliquet. Maecenas eros nisi,
+                pretium vel dui in, dictum convallis enim.
               </Paragraph>
 
               <ButtonGroup>
@@ -89,12 +90,14 @@ export default class Documentation extends Component {
           </Dialog>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/Dialog'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogBody'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogFooter'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogHeader'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/Dialog'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogBody'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogFooter'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogHeader'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

@@ -19,8 +19,8 @@ export default class TextInputButton extends Component {
     const { children, ...rest } = this.props;
     return (
       <span className="ax-input__button">
-        <Button { ...rest } joinedLeft size={ this.context.size }>
-          { children }
+        <Button {...rest} joinedLeft size={this.context.size}>
+          {children}
         </Button>
       </span>
     );

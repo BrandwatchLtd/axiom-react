@@ -11,17 +11,13 @@ export default class TableBody extends Component {
   };
 
   render() {
-    const {
-      children,
-      className,
-      ...rest
-    } = this.props;
+    const { children, className, ...rest } = this.props;
 
     const classes = classnames('ax-table__body', className);
 
     return (
-      <Base { ...rest } Component="tbody" className={ classes } >
-        { children }
+      <Base {...rest} Component="tbody" className={classes}>
+        {children}
       </Base>
     );
   }

@@ -34,7 +34,7 @@ export default class DatePicker extends Component {
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         range: PropTypes.string.isRequired,
-      }),
+      })
     ),
     /** A single date that appears selected */
     selectedDate: PropTypes.instanceOf(Date),
@@ -58,12 +58,10 @@ export default class DatePicker extends Component {
 
     return (
       <Dropdown showArrow>
-        <DropdownTarget>
-          { children }
-        </DropdownTarget>
+        <DropdownTarget>{children}</DropdownTarget>
 
         <DropdownSource maxHeight="auto" width="auto">
-          <DatePickerContext { ...rest } />
+          <DatePickerContext {...rest} />
         </DropdownSource>
       </Dropdown>
     );

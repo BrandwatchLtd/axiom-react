@@ -49,12 +49,7 @@ export default class Word extends Component {
     /** The content of the word */
     text: PropTypes.string,
     /** Where the word should be horizontal positioned from */
-    textAnchor: PropTypes.oneOf([
-      'start',
-      'middle',
-      'end',
-      'inherit',
-    ]),
+    textAnchor: PropTypes.oneOf(['start', 'middle', 'end', 'inherit']),
     /** x coordinate of the word */
     x: PropTypes.number.isRequired,
     /** y coordinate of the word */
@@ -97,13 +92,15 @@ export default class Word extends Component {
     };
 
     return (
-      <text { ...rest }
-          className={ classes }
-          onClick={ active ? onClick : undefined }
-          style={ style }
-          textAnchor={ textAnchor }
-          transform={ `translate(${x},${y})` }>
-        { text }
+      <text
+        {...rest}
+        className={classes}
+        onClick={active ? onClick : undefined}
+        style={style}
+        textAnchor={textAnchor}
+        transform={`translate(${x},${y})`}
+      >
+        {text}
       </text>
     );
   }

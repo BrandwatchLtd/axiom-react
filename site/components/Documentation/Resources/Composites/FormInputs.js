@@ -37,54 +37,82 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase>
-          <Form onSubmit={ (event, error) => {
-            event.preventDefault();
-            this.setState({ confirmError: error });
-          } } requiredError="Password field is required">
+          <Form
+            onSubmit={(event, error) => {
+              event.preventDefault();
+              this.setState({ confirmError: error });
+            }}
+            requiredError="Password field is required"
+          >
             <ConfirmPasswordInput
-                onChange={ (event) => this.setState({ confirmPassword: event.target.value }) }
-                passwordValue="Password1"
-                value={ confirmPassword } />
-            { confirmError && <Paragraph textColor="error">{ confirmError }</Paragraph> }
+              onChange={event =>
+                this.setState({ confirmPassword: event.target.value })
+              }
+              passwordValue="Password1"
+              value={confirmPassword}
+            />
+            {confirmError && (
+              <Paragraph textColor="error">{confirmError}</Paragraph>
+            )}
           </Form>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/ConfirmPasswordInput'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/ConfirmPasswordInput'),
+          ]}
+        />
 
         <DocumentationShowCase>
-          <Form onSubmit={ (event, error) => {
-            event.preventDefault();
-            this.setState({ currentError: error });
-          } } requiredError="Password field is required">
+          <Form
+            onSubmit={(event, error) => {
+              event.preventDefault();
+              this.setState({ currentError: error });
+            }}
+            requiredError="Password field is required"
+          >
             <CurrentPasswordInput
-                invalid={ false }
-                onChange={ (event) => this.setState({ currentPassword: event.target.value }) }
-                value={ currentPassword } />
-            { currentError && <Paragraph textColor="error">{ currentError }</Paragraph> }
+              invalid={false}
+              onChange={event =>
+                this.setState({ currentPassword: event.target.value })
+              }
+              value={currentPassword}
+            />
+            {currentError && (
+              <Paragraph textColor="error">{currentError}</Paragraph>
+            )}
           </Form>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/CurrentPasswordInput'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/CurrentPasswordInput'),
+          ]}
+        />
 
         <DocumentationShowCase>
-          <Form onSubmit={ (event, error) => {
-            event.preventDefault();
-            this.setState({ newError: error });
-          } } requiredError="Password field is required">
+          <Form
+            onSubmit={(event, error) => {
+              event.preventDefault();
+              this.setState({ newError: error });
+            }}
+            requiredError="Password field is required"
+          >
             <NewPasswordInput
-                onChange={ (event) => this.setState({ newPassword: event.target.value }) }
-                value={ newPassword } />
-            { newError && <Paragraph textColor="error">{ newError }</Paragraph> }
+              onChange={event =>
+                this.setState({ newPassword: event.target.value })
+              }
+              value={newPassword}
+            />
+            {newError && <Paragraph textColor="error">{newError}</Paragraph>}
           </Form>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/NewPasswordInput'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/NewPasswordInput'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

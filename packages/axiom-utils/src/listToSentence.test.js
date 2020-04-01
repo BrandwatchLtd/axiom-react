@@ -1,13 +1,14 @@
 import listToSentence from './listToSentence';
 
-
 describe('listToSentence', () => {
   const initialPhrase = 'Lorem ipsum dolor ';
 
   describe('when an initial phrase has been provided', () => {
     const phrases = ['sit', 'amet'];
     it('returns the inital phrase', () => {
-      expect(listToSentence(phrases, initialPhrase)).toEqual('Lorem ipsum dolor sit and amet');
+      expect(listToSentence(phrases, initialPhrase)).toEqual(
+        'Lorem ipsum dolor sit and amet'
+      );
     });
   });
 
@@ -27,6 +28,8 @@ describe('listToSentence', () => {
   });
 
   it('returns the correct string', () => {
-    expect(listToSentence(['sit', 'amet', 'consectetur'])).toEqual('sit, amet and consectetur');
+    expect(listToSentence(['sit', 'amet', 'consectetur'])).toEqual(
+      'sit, amet and consectetur'
+    );
   });
 });

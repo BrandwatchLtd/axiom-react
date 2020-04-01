@@ -11,15 +11,14 @@ export default class DialogBody extends Component {
     className: PropTypes.string,
   };
 
-
   render() {
     const { children, className, ...rest } = this.props;
 
     const classes = classnames('ax-dialog__body', className);
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

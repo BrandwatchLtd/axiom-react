@@ -4,7 +4,7 @@ import Validate from './Validate';
 import Validation from './Validation';
 import TextInput from '../Form/TextInput';
 
-const patterns = [ /[A-Z]/, /[0-9]/ ];
+const patterns = [/[A-Z]/, /[0-9]/];
 const validValue = 'Valid1';
 const invalidValue = 'invalid';
 const errorValidation = 'Error Validation';
@@ -23,21 +23,29 @@ const render = ({
   cbValidate2 = () => null,
 } = {}) =>
   mount(
-    <Validation requiredError={ errorValidation }>
-      { (getUpdatedValidation) => (
-        <form onSubmit={ (e) => handleSubmit(e, getUpdatedValidation, cbValidation) }>
+    <Validation requiredError={errorValidation}>
+      {getUpdatedValidation => (
+        <form
+          onSubmit={e => handleSubmit(e, getUpdatedValidation, cbValidation)}
+        >
           <Validate
-              error={ () => errorValidate1 }
-              patterns={ patterns }
-              required
-              value={ value1 }>{ cbValidate1 }</Validate>
+            error={() => errorValidate1}
+            patterns={patterns}
+            required
+            value={value1}
+          >
+            {cbValidate1}
+          </Validate>
           <Validate
-              error={ () => errorValidate2 }
-              patterns={ patterns }
-              required
-              value={ value2 }>{ cbValidate2 }</Validate>
+            error={() => errorValidate2}
+            patterns={patterns}
+            required
+            value={value2}
+          >
+            {cbValidate2}
+          </Validate>
         </form>
-      ) }
+      )}
     </Validation>
   );
 
@@ -46,31 +54,37 @@ describe('Validation', () => {
     describe('getUpdatedValidation', () => {
       test('unmet validations', () => {
         render({
-          cbValidation: (error) => expect(error).toBe(errorValidation),
-        }).find('form').simulate('submit');
+          cbValidation: error => expect(error).toBe(errorValidation),
+        })
+          .find('form')
+          .simulate('submit');
       });
 
       test('met validations', () => {
         render({
           value1: validValue,
           value2: validValue,
-          cbValidation: (error) => expect(error).toBe(null),
-        }).find('form').simulate('submit');
+          cbValidation: error => expect(error).toBe(null),
+        })
+          .find('form')
+          .simulate('submit');
       });
     });
 
     describe('validationError', () => {
       test('unmet required validation', () => {
         render({
-          cbValidation: (error) => expect(error).toBe(errorValidation),
-        }).find('form').simulate('submit');
+          cbValidation: error => expect(error).toBe(errorValidation),
+        })
+          .find('form')
+          .simulate('submit');
       });
 
       test('unmet first pattern validation', () => {
         render({
           value1: invalidValue,
           value2: invalidValue,
-          cbValidation: (error) => expect(error).toBe(errorValidation),
+          cbValidation: error => expect(error).toBe(errorValidation),
         });
       });
 
@@ -78,7 +92,7 @@ describe('Validation', () => {
         render({
           value1: validValue,
           value2: invalidValue,
-          cbValidation: (error) => expect(error).toBe(errorValidate2),
+          cbValidation: error => expect(error).toBe(errorValidate2),
         });
       });
 
@@ -86,8 +100,10 @@ describe('Validation', () => {
         render({
           value1: validValue,
           value2: validValue,
-          cbValidation: (error) => expect(error).toBe(null),
-        }).find('form').simulate('submit');
+          cbValidation: error => expect(error).toBe(null),
+        })
+          .find('form')
+          .simulate('submit');
       });
     });
   });
@@ -100,7 +116,7 @@ describe('Validation', () => {
       const uniqueId = '123-456';
 
       jest.mock('uuid', () => {
-        return jest.fn().mockImplementation((uniqueId) => {
+        return jest.fn().mockImplementation(uniqueId => {
           return { uniqueId };
         });
       });
@@ -115,10 +131,9 @@ describe('Validation', () => {
           checkRequiredMet: () => true,
         };
         wrapper = wrapper = mount(
-          <Validate required={ false }>
-            { () => <TextInput /> }
-          </Validate>,
-            { context });
+          <Validate required={false}>{() => <TextInput />}</Validate>,
+          { context }
+        );
       });
 
       test('does not call register validator', () => {
@@ -163,8 +178,8 @@ describe('Validation', () => {
         let isValid1;
         let isValid2;
         const component = render({
-          cbValidate1: (isValid) => isValid1 = isValid,
-          cbValidate2: (isValid) => isValid2 = isValid,
+          cbValidate1: isValid => (isValid1 = isValid),
+          cbValidate2: isValid => (isValid2 = isValid),
         });
         component.find('form').simulate('submit');
         component.update();
@@ -179,8 +194,8 @@ describe('Validation', () => {
         const component = render({
           value1: invalidValue,
           value2: invalidValue,
-          cbValidate1: (isValid) => isValid1 = isValid,
-          cbValidate2: (isValid) => isValid2 = isValid,
+          cbValidate1: isValid => (isValid1 = isValid),
+          cbValidate2: isValid => (isValid2 = isValid),
         });
         component.find('form').simulate('submit');
         component.update();
@@ -195,8 +210,8 @@ describe('Validation', () => {
         const component = render({
           value1: validValue,
           value2: invalidValue,
-          cbValidate1: (isValid) => isValid1 = isValid,
-          cbValidate2: (isValid) => isValid2 = isValid,
+          cbValidate1: isValid => (isValid1 = isValid),
+          cbValidate2: isValid => (isValid2 = isValid),
         });
         component.find('form').simulate('submit');
         component.update();
@@ -211,8 +226,8 @@ describe('Validation', () => {
         const component = render({
           value1: validValue,
           value2: validValue,
-          cbValidate1: (isValid) => isValid1 = isValid,
-          cbValidate2: (isValid) => isValid2 = isValid,
+          cbValidate1: isValid => (isValid1 = isValid),
+          cbValidate2: isValid => (isValid2 = isValid),
         });
         component.find('form').simulate('submit');
         component.update();
@@ -227,8 +242,8 @@ describe('Validation', () => {
       let hasMetRequired2;
       const component = render({
         value1: validValue,
-        cbValidate1: (_, hasMetRequired) => hasMetRequired1 = hasMetRequired,
-        cbValidate2: (_, hasMetRequired) => hasMetRequired2 = hasMetRequired,
+        cbValidate1: (_, hasMetRequired) => (hasMetRequired1 = hasMetRequired),
+        cbValidate2: (_, hasMetRequired) => (hasMetRequired2 = hasMetRequired),
       });
       component.find('form').simulate('submit');
       component.update();
@@ -243,8 +258,10 @@ describe('Validation', () => {
       const component = render({
         value1: validValue,
         value2: invalidValue,
-        cbValidate1: (_1, _2, checkPatternMet) => hasMetPattern1 = checkPatternMet(patterns[0]),
-        cbValidate2: (_1, _2, checkPatternMet) => hasMetPattern2 = checkPatternMet(patterns[0]),
+        cbValidate1: (_1, _2, checkPatternMet) =>
+          (hasMetPattern1 = checkPatternMet(patterns[0])),
+        cbValidate2: (_1, _2, checkPatternMet) =>
+          (hasMetPattern2 = checkPatternMet(patterns[0])),
       });
 
       component.update();

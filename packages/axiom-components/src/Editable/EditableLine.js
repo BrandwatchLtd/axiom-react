@@ -45,14 +45,13 @@ export default class EditableLine extends Component {
 
   handleOnKeyDown(event) {
     switch (event.key) {
-    case 'Enter':
-      event.preventDefault();
-      this.input.blur();
-      break;
-    case 'Escape':
-      this.setState({ value: this.props.value },
-        () => this.input.blur());
-      break;
+      case 'Enter':
+        event.preventDefault();
+        this.input.blur();
+        break;
+      case 'Escape':
+        this.setState({ value: this.props.value }, () => this.input.blur());
+        break;
     }
 
     if (this.props.onKeyDown) {
@@ -66,20 +65,21 @@ export default class EditableLine extends Component {
 
     return (
       <div className="ax-editable-line">
-        <input { ...rest }
-            className="ax-editable-line__input"
-            onBlur={ (event) => this.handleOnBlur(event) }
-            onChange={ (event) => this.handleChange(event) }
-            onKeyDown={ (event) => this.handleOnKeyDown(event) }
-            placeholder={ placeholder }
-            ref={ (el) => this.input = el }
-            value={ value } />
+        <input
+          {...rest}
+          className="ax-editable-line__input"
+          onBlur={event => this.handleOnBlur(event)}
+          onChange={event => this.handleChange(event)}
+          onKeyDown={event => this.handleOnKeyDown(event)}
+          placeholder={placeholder}
+          ref={el => (this.input = el)}
+          value={value}
+        />
 
         <div className="ax-editable-line__structure">
-          { value || placeholder || ' ' }
+          {value || placeholder || ' '}
         </div>
       </div>
     );
   }
 }
-

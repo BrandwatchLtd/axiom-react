@@ -26,26 +26,37 @@ export default class Toggle extends Component {
   };
 
   render() {
-    const { align, children, disabled, size, toggled, onToggle, ...rest } = this.props;
-    const classes = classnames('ax-toggle', `ax-toggle--${size}`, `ax-toggle--align-${align}`, {
-      'ax-toggle--enabled': !disabled,
-    });
+    const {
+      align,
+      children,
+      disabled,
+      size,
+      toggled,
+      onToggle,
+      ...rest
+    } = this.props;
+    const classes = classnames(
+      'ax-toggle',
+      `ax-toggle--${size}`,
+      `ax-toggle--align-${align}`,
+      {
+        'ax-toggle--enabled': !disabled,
+      }
+    );
 
     return (
-      <Base Component="label" className={ classes } space="x2">
-        { children && (
-          <span className="ax-toggle__label">
-            { children }
-          </span>
-        ) }
+      <Base Component="label" className={classes} space="x2">
+        {children && <span className="ax-toggle__label">{children}</span>}
 
         <span className="ax-toggle__switch">
-          <input { ...rest }
-              checked={ toggled }
-              className="ax-toggle__input"
-              disabled={ disabled }
-              onChange={ onToggle }
-              type="checkbox" />
+          <input
+            {...rest}
+            checked={toggled}
+            className="ax-toggle__input"
+            disabled={disabled}
+            onChange={onToggle}
+            type="checkbox"
+          />
           <span className="ax-toggle__appearance" />
         </span>
       </Base>

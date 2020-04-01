@@ -12,8 +12,8 @@ export default class DockItem extends Component {
 
     return (
       <li className="ax-dock__item">
-        <div { ...rest } className="ax-dock__item-wrapper">
-          { children }
+        <div {...rest} className="ax-dock__item-wrapper">
+          {children}
         </div>
       </li>
     );

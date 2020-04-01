@@ -24,10 +24,9 @@ export default function Console({
   );
 
   return (
-    <ConsoleContext.Provider
-        value={ position }>
-      <Base { ...rest } className={ classes } style={ style }>
-        { children }
+    <ConsoleContext.Provider value={position}>
+      <Base {...rest} className={classes} style={style}>
+        {children}
       </Base>
     </ConsoleContext.Provider>
   );

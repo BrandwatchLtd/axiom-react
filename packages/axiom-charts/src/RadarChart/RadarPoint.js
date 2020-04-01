@@ -33,19 +33,17 @@ export default class RadarPoint extends Component {
 
     return (
       <div
-          className="ax-radar__point"
-          onClick={ onClick && (() => onClick({ colors, label, value })) }
-          onMouseEnter={ onMouseEnter }
-          onMouseLeave={ onMouseLeave }
-          style={ { top: `${y}px`, left: `${x}px` } }>
-        <ChartContext { ...rest }
-            colors={ colors }
-            label={ label }
-            value={ value }>
+        className="ax-radar__point"
+        onClick={onClick && (() => onClick({ colors, label, value }))}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        style={{ top: `${y}px`, left: `${x}px` }}
+      >
+        <ChartContext {...rest} colors={colors} label={label} value={value}>
           <DataPoints size="0.5rem">
-            { colors.map((color) => (
-              <DataPoint color={ color } key={ color } />
-            )) }
+            {colors.map(color => (
+              <DataPoint color={color} key={color} />
+            ))}
           </DataPoints>
         </ChartContext>
       </div>

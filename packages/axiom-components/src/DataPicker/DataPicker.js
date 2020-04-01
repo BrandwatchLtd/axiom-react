@@ -83,48 +83,57 @@ export default class DataPicker extends Component {
     const title = value || placeholder;
 
     return (
-      <Card { ...rest }
-          border={ Boolean(dropdownMenu) }
-          shade={ dropdownMenu ? 'shade-1' : 'shade-3' }
-          size="medium">
+      <Card
+        {...rest}
+        border={Boolean(dropdownMenu)}
+        shade={dropdownMenu ? 'shade-1' : 'shade-3'}
+        size="medium"
+      >
         <div className="ax-data-picker">
           <div className="ax-data-picker__dropdown">
             <CardContent size="small">
               <Grid
-                  gutters="tiny"
-                  responsive={ false }
-                  verticalAlign="middle"
-                  wrap={ false }>
+                gutters="tiny"
+                responsive={false}
+                verticalAlign="middle"
+                wrap={false}
+              >
                 <GridCell none>
-                  { onSelectColor ? (
+                  {onSelectColor ? (
                     <ColorPicker
-                        colorOptions={ colorOptions }
-                        disabledOptions={ disabledColors }
-                        onOpen={ onColorPickerOpen }
-                        onSelectColor={ onSelectColor }
-                        selected={ color } />
+                      colorOptions={colorOptions}
+                      disabledOptions={disabledColors}
+                      onOpen={onColorPickerOpen}
+                      onSelectColor={onSelectColor}
+                      selected={color}
+                    />
                   ) : (
-                    <ColorPickerOption color={ color } />
-                  ) }
+                    <ColorPickerOption color={color} />
+                  )}
                 </GridCell>
 
                 <GridCell>
-                  { dropdownMenu && (
+                  {dropdownMenu && (
                     <Dropdown>
                       <DropdownTarget>
                         <div
-                            className="ax-data-picker__link"
-                            data-ax-at={ atIds.DataPicker.dropdown }>
+                          className="ax-data-picker__link"
+                          data-ax-at={atIds.DataPicker.dropdown}
+                        >
                           <Link style="body">
-                            <Grid responsive={ false } verticalAlign="middle" wrap={ false }>
+                            <Grid
+                              responsive={false}
+                              verticalAlign="middle"
+                              wrap={false}
+                            >
                               <GridCell>
-                                <Heading textEllipsis title={ title }>
-                                  { title }
+                                <Heading textEllipsis title={title}>
+                                  {title}
                                 </Heading>
                               </GridCell>
 
                               <GridCell none>
-                                <Icon name="chevron-down"/>
+                                <Icon name="chevron-down" />
                               </GridCell>
                             </Grid>
                           </Link>
@@ -132,33 +141,28 @@ export default class DataPicker extends Component {
                       </DropdownTarget>
 
                       <DropdownSource>
-                        <DropdownContext>
-                          { dropdownMenu }
-                        </DropdownContext>
+                        <DropdownContext>{dropdownMenu}</DropdownContext>
                       </DropdownSource>
                     </Dropdown>
-                  ) }
+                  )}
 
-                  { !dropdownMenu && (
-                    <Heading textEllipsis title={ title }>
-                      { title }
+                  {!dropdownMenu && (
+                    <Heading textEllipsis title={title}>
+                      {title}
                     </Heading>
-                  ) }
+                  )}
                 </GridCell>
               </Grid>
             </CardContent>
           </div>
 
-          { metaData && (
+          {metaData && (
             <div className="ax-data-picker__meta">
-              <CardContent size="small">
-                { metaData }
-              </CardContent>
+              <CardContent size="small">{metaData}</CardContent>
             </div>
-          ) }
+          )}
         </div>
       </Card>
     );
   }
 }
-

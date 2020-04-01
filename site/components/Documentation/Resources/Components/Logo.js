@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Grid, GridCell, LogoBox, LogoTab, LogoHorizontal } from '@brandwatch/axiom-components';
+import {
+  Grid,
+  GridCell,
+  LogoBox,
+  LogoTab,
+  LogoHorizontal,
+} from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
@@ -24,11 +30,13 @@ export default class Documentation extends Component {
           <LogoHorizontal width="12rem" />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Logo/LogoBox'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Logo/LogoHorizontal'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Logo/LogoTab'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Logo/LogoBox'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Logo/LogoHorizontal'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Logo/LogoTab'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

@@ -19,22 +19,18 @@ export default class Avatar extends Component {
   };
 
   render() {
-    const {
-      border,
-      children,
-      size,
-      src,
-      ...rest
-    } = this.props;
+    const { border, children, size, src, ...rest } = this.props;
 
     return (
-      <Image { ...rest }
-          border={ border }
-          height={ size }
-          shape="circle"
-          src={ src }
-          width={ size }>
-        { children }
+      <Image
+        {...rest}
+        border={border}
+        height={size}
+        shape="circle"
+        src={src}
+        width={size}
+      >
+        {children}
       </Image>
     );
   }

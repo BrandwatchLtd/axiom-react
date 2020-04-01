@@ -103,7 +103,8 @@ export default class Bar extends Component {
       percent,
       showLabel,
       size,
-      ...rest } = this.props;
+      ...rest
+    } = this.props;
     const isVertical = direction === 'up' || direction === 'down';
     const classes = classnames('ax-bars__bar', {
       'ax-bars__bar--center': size,
@@ -116,8 +117,10 @@ export default class Bar extends Component {
       'ax-bars__bar-label--hidden': !showLabel,
     });
 
-    const rectClasses = classnames('ax-bars__bar-rect',
-      `ax-bars__bar-rect--${color}`);
+    const rectClasses = classnames(
+      'ax-bars__bar-rect',
+      `ax-bars__bar-rect--${color}`
+    );
 
     const stripClasses = classnames({
       'ax-bars__bar--semistriped': fillMode !== FILL_MODE_STRIPED,
@@ -137,16 +140,15 @@ export default class Bar extends Component {
     };
 
     return (
-      <Base { ...rest }
-          className={ classes }
-          onClick={ onClick }
-          style={ style }>
-        <div className={ rectClasses } style={ rectStyle }>
-          { fillMode !== FILL_MODE_STRIPED && (<div className="ax-bars__bar--solid" />) }
-          { fillMode !== FILL_MODE_SOLID && (<div className={ stripClasses } />) }
+      <Base {...rest} className={classes} onClick={onClick} style={style}>
+        <div className={rectClasses} style={rectStyle}>
+          {fillMode !== FILL_MODE_STRIPED && (
+            <div className="ax-bars__bar--solid" />
+          )}
+          {fillMode !== FILL_MODE_SOLID && <div className={stripClasses} />}
         </div>
-        <div className={ labelClasses }>
-          <Small textStrong={ labelStrong }>{ label || `${percent}%` }</Small>
+        <div className={labelClasses}>
+          <Small textStrong={labelStrong}>{label || `${percent}%`}</Small>
         </div>
       </Base>
     );

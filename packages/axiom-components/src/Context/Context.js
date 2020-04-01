@@ -10,7 +10,14 @@ export default class Context extends Component {
     arrowRef: PropTypes.func,
     children: PropTypes.node,
     className: PropTypes.string,
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'carbon', 'white']),
+    color: PropTypes.oneOf([
+      'success',
+      'warning',
+      'error',
+      'info',
+      'carbon',
+      'white',
+    ]),
     maxHeight: PropTypes.string,
     position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     width: PropTypes.string,
@@ -34,20 +41,28 @@ export default class Context extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(className, 'ax-context', `ax-context--${position}`, {
-      [`ax-context--${color}`]: color,
-    });
-    const content = () => <div className="ax-context__content" style={ { maxHeight } }>
-      { children }
-    </div>;
+    const classes = classnames(
+      className,
+      'ax-context',
+      `ax-context--${position}`,
+      {
+        [`ax-context--${color}`]: color,
+      }
+    );
+    const content = () => (
+      <div className="ax-context__content" style={{ maxHeight }}>
+        {children}
+      </div>
+    );
     return (
-      <Base theme="day" { ...rest } className={ classes } style={ { width } }>
-        { arrowRef ?
-          <ContextTip color={ color } direction={ position } ref={ arrowRef }>
-            { content() }
-          </ContextTip> :
-        content()
-        }
+      <Base theme="day" {...rest} className={classes} style={{ width }}>
+        {arrowRef ? (
+          <ContextTip color={color} direction={position} ref={arrowRef}>
+            {content()}
+          </ContextTip>
+        ) : (
+          content()
+        )}
       </Base>
     );
   }

@@ -28,29 +28,30 @@ export default class AlertBar extends Component {
 
   render() {
     const { children, size, type, onRemoveClick, ...rest } = this.props;
-    const classes = classnames('ax-alert-bar', `ax-alert-bar--${size}`, `ax-alert-bar--${type}`);
+    const classes = classnames(
+      'ax-alert-bar',
+      `ax-alert-bar--${size}`,
+      `ax-alert-bar--${type}`
+    );
 
     return (
-      <Base { ...rest } className={ classes }>
-        <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
+      <Base {...rest} className={classes}>
+        <Grid gutters="tiny" responsive={false} verticalAlign="middle">
           <GridCell shrink>
-            <AlertIcon
-                style="subtle"
-                theme="day"
-                type={ type } />
+            <AlertIcon style="subtle" theme="day" type={type} />
           </GridCell>
 
           <GridCell textColor="night" textStrong>
-            { children }
+            {children}
           </GridCell>
 
-          { onRemoveClick && (
+          {onRemoveClick && (
             <GridCell shrink>
-              <Link onClick={ onRemoveClick } style="night">
+              <Link onClick={onRemoveClick} style="night">
                 <Icon name="cross" />
               </Link>
             </GridCell>
-          ) }
+          )}
         </Grid>
       </Base>
     );

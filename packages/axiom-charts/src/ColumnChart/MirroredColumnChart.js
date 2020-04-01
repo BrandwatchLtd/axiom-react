@@ -18,18 +18,22 @@ export default class MirroredColumnChart extends Component {
      * The key that is shown along the bottom of the axis. It is also used
      * to determine the order of bars.
      */
-    chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })).isRequired,
+    chartKey: PropTypes.arrayOf(
+      PropTypes.shape({
+        color: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+      })
+    ).isRequired,
     /**
      * The data used to render the bars along the top. The `label` is used for
      * the xAxis and `values` for bars
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node.isRequired,
-      values: PropTypes.object.isRequired,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        values: PropTypes.object.isRequired,
+      })
+    ).isRequired,
     /** Overall height of the individual column charts */
     height: PropTypes.string.isRequired,
     /** Label to show on the top yAxis row */
@@ -40,10 +44,12 @@ export default class MirroredColumnChart extends Component {
      * The data used to render the bars along the bottom. The `label` is used for
      * the xAxis and `values` for bars
      */
-    reflectionData: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node.isRequired,
-      values: PropTypes.object.isRequired,
-    })).isRequired,
+    reflectionData: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        values: PropTypes.object.isRequired,
+      })
+    ).isRequired,
     /** Label to show on the bottom yAxis row */
     reflectionLabel: PropTypes.node.isRequired,
     /** Control for showing the percentage labels above the Bars */
@@ -76,41 +82,40 @@ export default class MirroredColumnChart extends Component {
     } = this.props;
 
     return (
-      <Base { ...rest }
-          className="ax-mirrored-column-chart">
+      <Base {...rest} className="ax-mirrored-column-chart">
         <ColumnChart
-            DropdownContext={ DropdownContext }
-            chartKey={ chartKey }
-            data={ data }
-            direction="up"
-            height={ height }
-            label={ label }
-            labelColumnWidth={ labelColumnWidth }
-            showBarLabel={ showBarLabel }
-            showSubLabel={ showSubLabel }
-            showXAxisLabels={ false } />
+          DropdownContext={DropdownContext}
+          chartKey={chartKey}
+          data={data}
+          direction="up"
+          height={height}
+          label={label}
+          labelColumnWidth={labelColumnWidth}
+          showBarLabel={showBarLabel}
+          showSubLabel={showSubLabel}
+          showXAxisLabels={false}
+        />
 
-        { showXAxisLabels && (
-          <ColumnChartXAxis labelColumnWidth={ labelColumnWidth }>
-            { data.map(({ label }, index) =>
-              <ColumnChartXAxisLabel key={ index }>
-                { label }
-              </ColumnChartXAxisLabel>
-            ) }
+        {showXAxisLabels && (
+          <ColumnChartXAxis labelColumnWidth={labelColumnWidth}>
+            {data.map(({ label }, index) => (
+              <ColumnChartXAxisLabel key={index}>{label}</ColumnChartXAxisLabel>
+            ))}
           </ColumnChartXAxis>
-        ) }
+        )}
 
         <ColumnChart
-            DropdownContext={ DropdownContext }
-            chartKey={ chartKey }
-            data={ reflectionData }
-            direction="down"
-            height={ height }
-            label={ reflectionLabel }
-            labelColumnWidth={ labelColumnWidth }
-            showBarLabel={ showBarLabel }
-            showSubLabel={ showSubLabel }
-            showXAxisLabels={ false } />
+          DropdownContext={DropdownContext}
+          chartKey={chartKey}
+          data={reflectionData}
+          direction="down"
+          height={height}
+          label={reflectionLabel}
+          labelColumnWidth={labelColumnWidth}
+          showBarLabel={showBarLabel}
+          showSubLabel={showSubLabel}
+          showXAxisLabels={false}
+        />
       </Base>
     );
   }

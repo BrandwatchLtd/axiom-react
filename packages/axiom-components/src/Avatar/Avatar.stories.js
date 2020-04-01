@@ -8,7 +8,7 @@ export default {
 
 export function Default() {
   return (
-    <Avatar size="4rem" src={ '/avatar.png' }>
+    <Avatar size="4rem" src={'/avatar.png'}>
       Default Avatar
     </Avatar>
   );

@@ -46,25 +46,25 @@ export default class DatePickerControls extends Component {
     } = this.props;
 
     return (
-      <Grid horizontalAlign="end" responsive={ false }>
-        { view === 'double' && (
+      <Grid horizontalAlign="end" responsive={false}>
+        {view === 'double' && (
           <GridCell hiddenUntil="small">
-            { rangeSelect && selectedStartDate && mediumDate(selectedStartDate) }
-            { rangeSelect && selectedEndDate && ` – ${mediumDate(selectedEndDate)}` }
-            { !rangeSelect && selectedDate && mediumDate(selectedDate) }
+            {rangeSelect && selectedStartDate && mediumDate(selectedStartDate)}
+            {rangeSelect &&
+              selectedEndDate &&
+              ` – ${mediumDate(selectedEndDate)}`}
+            {!rangeSelect && selectedDate && mediumDate(selectedDate)}
           </GridCell>
-        ) }
+        )}
 
         <GridCell shrink>
           <ButtonGroup>
-            <Button
-                onClick={ this.handleApply }
-                size="small"
-                style="primary">Apply</Button>
-            <Button
-                onClick={ this.handleCancel }
-                size="small"
-                style="secondary">Cancel</Button>
+            <Button onClick={this.handleApply} size="small" style="primary">
+              Apply
+            </Button>
+            <Button onClick={this.handleCancel} size="small" style="secondary">
+              Cancel
+            </Button>
           </ButtonGroup>
         </GridCell>
       </Grid>

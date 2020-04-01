@@ -13,13 +13,13 @@ export default class EditableTitle extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          Component="label"
-          className="ax-editable-title"
-          cloakContainer>
-        <div className="ax-editable-title__input">
-          { children }
-        </div>
+      <Base
+        {...rest}
+        Component="label"
+        className="ax-editable-title"
+        cloakContainer
+      >
+        <div className="ax-editable-title__input">{children}</div>
 
         <div className="ax-editable-title__icon">
           <Icon cloak name="pencil" size="1.5rem" />

@@ -8,7 +8,11 @@ import { findComponent } from '@brandwatch/axiom-utils';
 import Portal from '../Portal/Portal';
 import { PositionSourceRef } from './PositionSource';
 import { PositionTargetRef } from './PositionTarget';
-import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
+import {
+  placementToPosition,
+  positionToPlacement,
+  getPlacementFlipOrder,
+} from './_utils';
 import './Position.css';
 
 /* eslint-disable react/no-find-dom-node */
@@ -26,10 +30,7 @@ export default class Position extends Component {
      * only PositionSource and PositionTarget or just a PositionSource
      * in the case of a given reference!
      */
-    children: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.array,
-    ]).isRequired,
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
     /** Class name to be appended to the element */
     className: PropTypes.string,
     /**
@@ -175,7 +176,10 @@ export default class Position extends Component {
     delete this._arrow;
     delete this._content;
 
-    const placement = positionToPlacement(this.props.position, this.props.offset);
+    const placement = positionToPlacement(
+      this.props.position,
+      this.props.offset
+    );
     if (placement !== this.state.placement) {
       this.setState({ placement });
     }
@@ -203,13 +207,26 @@ export default class Position extends Component {
   }
 
   render() {
-    const { children, className, enabled, isVisible, onMaskClick, showArrow, reference, ...rest } = this.props;
+    const {
+      children,
+      className,
+      enabled,
+      isVisible,
+      onMaskClick,
+      showArrow,
+      reference,
+      ...rest
+    } = this.props;
     const { placement } = this.state;
-    const [ position ] = placementToPosition(placement);
+    const [position] = placementToPosition(placement);
 
-    const classes = classnames('ax-position', {
-      'ax-position--arrow': showArrow,
-    }, className);
+    const classes = classnames(
+      'ax-position',
+      {
+        'ax-position--arrow': showArrow,
+      },
+      className
+    );
 
     const props = omit(rest, [
       'flip',
@@ -219,25 +236,24 @@ export default class Position extends Component {
     ]);
 
     return [
-      !reference && cloneElement(findComponent(children, PositionTargetRef), {
-        ref: (target) => this._target = ReactDOM.findDOMNode(target),
-      }),
+      !reference &&
+        cloneElement(findComponent(children, PositionTargetRef), {
+          ref: target => (this._target = ReactDOM.findDOMNode(target)),
+        }),
       enabled && isVisible ? (
-        <Portal { ...props } key="portal">
+        <Portal {...props} key="portal">
           <div>
-            { onMaskClick && (
-              <div className="ax-position__mask" onClick={ onMaskClick } />
-            ) }
+            {onMaskClick && (
+              <div className="ax-position__mask" onClick={onMaskClick} />
+            )}
 
-            <div className={ classes } ref={ (el) => this._content = el }>
-              {
-                cloneElement(findComponent(children, PositionSourceRef), {
-                  arrowRef: showArrow
-                    ? (arrow) => this._arrow = ReactDOM.findDOMNode(arrow)
-                    : undefined,
-                  position,
-                })
-              }
+            <div className={classes} ref={el => (this._content = el)}>
+              {cloneElement(findComponent(children, PositionSourceRef), {
+                arrowRef: showArrow
+                  ? arrow => (this._arrow = ReactDOM.findDOMNode(arrow))
+                  : undefined,
+                position,
+              })}
             </div>
           </div>
         </Portal>

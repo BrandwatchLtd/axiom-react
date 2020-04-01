@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import Tool from './Tool';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Tool { ...props }>Test</Tool>
-  );
+  renderer.create(<Tool {...props}>Test</Tool>);
 
 describe('Toolbar', () => {
   it('renders', () => {

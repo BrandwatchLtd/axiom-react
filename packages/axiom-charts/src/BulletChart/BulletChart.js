@@ -14,15 +14,19 @@ import './BulletChart.css';
 export default class BulletChart extends Component {
   static propTypes = {
     /** A key for the chart */
-    chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })).isRequired,
+    chartKey: PropTypes.arrayOf(
+      PropTypes.shape({
+        color: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+      })
+    ).isRequired,
     /** The data to build the chart */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node.isRequired,
-      values: PropTypes.object.isRequired,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        values: PropTypes.object.isRequired,
+      })
+    ).isRequired,
     /** Controls the direction of the bars */
     direction: PropTypes.string,
     /** Controls the height of the containing element */
@@ -68,36 +72,37 @@ export default class BulletChart extends Component {
     const formattedData = formatData(chartKey, data);
 
     return (
-      <Base { ...rest }
-          className="ax-bullet-chart"
-          style={ { height } }>
+      <Base {...rest} className="ax-bullet-chart" style={{ height }}>
         <ColumnChartRow>
-          { label &&
-          <ColumnChartYAxis align={ this.getLabelAlignment() } yAxisWidth={ labelColumnWidth }>
-            { label }
-          </ColumnChartYAxis>
-          }
+          {label && (
+            <ColumnChartYAxis
+              align={this.getLabelAlignment()}
+              yAxisWidth={labelColumnWidth}
+            >
+              {label}
+            </ColumnChartYAxis>
+          )}
           <ColumnChartVisual>
-            { formattedData.map(({ values, subLabel }, index) =>
-              <ColumnChartBars key={ index }>
+            {formattedData.map(({ values, subLabel }, index) => (
+              <ColumnChartBars key={index}>
                 <BulletBars
-                    barLabel={ values[labelIndex] && values[labelIndex].valueLabel }
-                    direction={ direction }
-                    label={ showSubLabel && subLabel }
-                    showBarLabel={ showBarLabel }
-                    values={ values }>
-                </BulletBars>
+                  barLabel={values[labelIndex] && values[labelIndex].valueLabel}
+                  direction={direction}
+                  label={showSubLabel && subLabel}
+                  showBarLabel={showBarLabel}
+                  values={values}
+                ></BulletBars>
               </ColumnChartBars>
-            ) }
+            ))}
           </ColumnChartVisual>
         </ColumnChartRow>
-        { showXAxisLabels && <ColumnChartXAxis labelColumnWidth={ labelColumnWidth }>
-          { formattedData.map(({ label }, index) =>
-            <ColumnChartXAxisLabel key={ index }>
-              { label }
-            </ColumnChartXAxisLabel>
-          ) }
-        </ColumnChartXAxis> }
+        {showXAxisLabels && (
+          <ColumnChartXAxis labelColumnWidth={labelColumnWidth}>
+            {formattedData.map(({ label }, index) => (
+              <ColumnChartXAxisLabel key={index}>{label}</ColumnChartXAxisLabel>
+            ))}
+          </ColumnChartXAxis>
+        )}
       </Base>
     );
   }

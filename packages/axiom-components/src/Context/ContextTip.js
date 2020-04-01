@@ -12,9 +12,9 @@ function ContextTip({ color, direction, children, ...rest }, ref) {
   });
 
   return (
-    <Base className={ classes } { ...rest }>
-      <span className="ax-context-tip__arrow" ref={ ref } />
-      <Base className="ax-context-tip__content">{ children }</Base>
+    <Base className={classes} {...rest}>
+      <span className="ax-context-tip__arrow" ref={ref} />
+      <Base className="ax-context-tip__content">{children}</Base>
     </Base>
   );
 }

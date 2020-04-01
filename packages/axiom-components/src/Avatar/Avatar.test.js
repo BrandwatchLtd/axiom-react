@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import Avatar from './Avatar';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Avatar src="/image/path" { ...props } />
-  );
+  renderer.create(<Avatar src="/image/path" {...props} />);
 
 describe('Avatar', () => {
   it('renders with custom size', () => {

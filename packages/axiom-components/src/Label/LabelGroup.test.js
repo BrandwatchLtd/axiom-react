@@ -5,7 +5,7 @@ import LabelGroup from './LabelGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <LabelGroup { ...props }>
+    <LabelGroup {...props}>
       <Label>Lorem ipsum</Label>
     </LabelGroup>
   );

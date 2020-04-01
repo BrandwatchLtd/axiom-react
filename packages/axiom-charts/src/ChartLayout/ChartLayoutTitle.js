@@ -11,11 +11,13 @@ export default class ChartLayoutTitle extends Component {
     const { axis, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          className={ `ax-chart-layout__${axis}-title` }
-          textCenter
-          textColor="subtle"
-          textSize="small" />
+      <Base
+        {...rest}
+        className={`ax-chart-layout__${axis}-title`}
+        textCenter
+        textColor="subtle"
+        textSize="small"
+      />
     );
   }
 }

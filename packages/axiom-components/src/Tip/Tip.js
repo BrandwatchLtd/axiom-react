@@ -9,7 +9,18 @@ export default class Tip extends Component {
     /** The content on which the tip should be placed. */
     children: PropTypes.node,
     /** Background color for the tip */
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'shade-1', 'shade-2', 'shade-3', 'shade-4', 'carbon', 'white']),
+    color: PropTypes.oneOf([
+      'success',
+      'warning',
+      'error',
+      'info',
+      'shade-1',
+      'shade-2',
+      'shade-3',
+      'shade-4',
+      'carbon',
+      'white',
+    ]),
     /** The direction at which the Tip should be pointing. The directions are opposite, for example,
      * if the arrow should be placed on the 'left', its direction prop should be 'right'. The same applies for 'top' and 'bottom'. */
     direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
@@ -30,17 +41,25 @@ export default class Tip extends Component {
     const { position, direction } = this.props;
 
     switch (direction) {
-    case 'top':
-    case 'bottom':
-      return { left: position };
-    case 'left':
-    case 'right':
-      return { top: position };
+      case 'top':
+      case 'bottom':
+        return { left: position };
+      case 'left':
+      case 'right':
+        return { top: position };
     }
   };
 
   render() {
-    const { color, direction, position, children, shadow, size, ...rest } = this.props;
+    const {
+      color,
+      direction,
+      position,
+      children,
+      shadow,
+      size,
+      ...rest
+    } = this.props;
 
     const classes = classnames(`ax-tip--${direction}`, {
       [`ax-tip--${color}`]: color,
@@ -52,9 +71,12 @@ export default class Tip extends Component {
     });
 
     return (
-      <Base className={ classes } { ...rest }>
-        <span className={ arrowClasses } style={ position ? this.getArrowStyles() : {} } />
-        <Base className="ax-tip__content">{ children }</Base>
+      <Base className={classes} {...rest}>
+        <span
+          className={arrowClasses}
+          style={position ? this.getArrowStyles() : {}}
+        />
+        <Base className="ax-tip__content">{children}</Base>
       </Base>
     );
   }

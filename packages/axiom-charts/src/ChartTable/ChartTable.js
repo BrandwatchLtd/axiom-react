@@ -13,12 +13,13 @@ export default class ChartTable extends Component {
   render() {
     const { children, xAxisLabels, ...rest } = this.props;
     const classes = classnames('ax-chart-table', {
-      'ax-chart-table--responsive': !xAxisLabels || Boolean(xAxisLabels.length % 2),
+      'ax-chart-table--responsive':
+        !xAxisLabels || Boolean(xAxisLabels.length % 2),
     });
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

@@ -38,7 +38,7 @@ export default class DatePickerSelection extends Component {
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         range: PropTypes.string.isRequired,
-      }),
+      })
     ),
     /** A single date that appears selected */
     selectedDate: PropTypes.instanceOf(Date),
@@ -63,21 +63,21 @@ export default class DatePickerSelection extends Component {
     this.handleDaySelect = this.handleDaySelect.bind(this);
 
     const { calendarOpenDate, rangeSelect, selectedDate } = this.props;
-    const [ selectedStartDate, selectedEndDate ] = orderDates(
+    const [selectedStartDate, selectedEndDate] = orderDates(
       this.props.selectedStartDate,
-      this.props.selectedEndDate,
+      this.props.selectedEndDate
     );
 
     const activeStartDate = dateOrNow(
-      (rangeSelect ? selectedStartDate : selectedDate) ||
-      calendarOpenDate
+      (rangeSelect ? selectedStartDate : selectedDate) || calendarOpenDate
     );
 
-    const activeEndDate = rangeSelect && selectedEndDate
-      ? (isSameMonth(selectedEndDate, selectedStartDate)
-        ? addMonths(selectedEndDate, 1)
-        : selectedEndDate)
-      : addMonths(activeStartDate, 1);
+    const activeEndDate =
+      rangeSelect && selectedEndDate
+        ? isSameMonth(selectedEndDate, selectedStartDate)
+          ? addMonths(selectedEndDate, 1)
+          : selectedEndDate
+        : addMonths(activeStartDate, 1);
 
     this.state = {
       activeStartDate,
@@ -86,7 +86,13 @@ export default class DatePickerSelection extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { selectedDate, selectedStartDate, selectedEndDate, rangeSelect, view } = this.props;
+    const {
+      selectedDate,
+      selectedStartDate,
+      selectedEndDate,
+      rangeSelect,
+      view,
+    } = this.props;
 
     if (!rangeSelect && selectedDate && !prevProps.selectedDate) {
       this.setState({ activeStartDate: selectedDate });
@@ -96,7 +102,11 @@ export default class DatePickerSelection extends Component {
       this.setState({ activeStartDate: selectedStartDate });
     }
 
-    if (rangeSelect && view === 'double' && selectedEndDate !== prevProps.selectedEndDate) {
+    if (
+      rangeSelect &&
+      view === 'double' &&
+      selectedEndDate !== prevProps.selectedEndDate
+    ) {
       if (isSameMonth(selectedStartDate, selectedEndDate)) {
         this.setState({ activeEndDate: addMonths(selectedEndDate, 1) });
       } else {
@@ -106,13 +116,13 @@ export default class DatePickerSelection extends Component {
   }
 
   handleActiveStartDateChange(direction) {
-    this.setState((state) => ({
+    this.setState(state => ({
       activeStartDate: addMonths(state.activeStartDate, direction),
     }));
   }
 
   handleActiveEndDateChange(direction) {
-    this.setState((state) => ({
+    this.setState(state => ({
       activeEndDate: addMonths(state.activeEndDate, direction),
     }));
   }
@@ -129,16 +139,14 @@ export default class DatePickerSelection extends Component {
       return onSelect({ date: new Date(date) });
     }
 
-    if (!selectedStartDate ||
-        isBeforeDay(date, selectedStartDate)) {
+    if (!selectedStartDate || isBeforeDay(date, selectedStartDate)) {
       return onSelect({
         dateStart: new Date(date),
         dateEnd: selectedEndDate && new Date(selectedEndDate),
       });
     }
 
-    if (!selectedEndDate ||
-        isAfterDay(date, selectedEndDate)) {
+    if (!selectedEndDate || isAfterDay(date, selectedEndDate)) {
       return onSelect({
         dateStart: new Date(selectedStartDate),
         dateEnd: new Date(date),
@@ -152,10 +160,7 @@ export default class DatePickerSelection extends Component {
   }
 
   render() {
-    const {
-      activeEndDate,
-      activeStartDate,
-    } = this.state;
+    const { activeEndDate, activeStartDate } = this.state;
 
     const {
       earliestSelectableDate,
@@ -167,54 +172,62 @@ export default class DatePickerSelection extends Component {
       view,
     } = this.props;
 
-    const [ startDate, endDate ] = orderDates(selectedStartDate, selectedEndDate);
-    const [ earliestDate, latestDate ] = orderDates(earliestSelectableDate, latestSelectableDate);
+    const [startDate, endDate] = orderDates(selectedStartDate, selectedEndDate);
+    const [earliestDate, latestDate] = orderDates(
+      earliestSelectableDate,
+      latestSelectableDate
+    );
 
     const isDoubleView = view === 'double';
 
-    const activeEndDateOrNextMonth = activeEndDate || addMonths(activeStartDate, 1);
+    const activeEndDateOrNextMonth =
+      activeEndDate || addMonths(activeStartDate, 1);
 
     return (
-      <Grid responsive={ false } shrink>
+      <Grid responsive={false} shrink>
         <GridCell>
           <DatePickerHeaderControl
-              date={ activeStartDate }
-              earliestSelectableDate={ earliestDate }
-              latestSelectableDate={ isDoubleView
-                ? addMonths(activeEndDate, -1)
-                : latestDate }
-              onNext={ () => this.handleActiveStartDateChange(1) }
-              onPrevious={ () => this.handleActiveStartDateChange(-1) } />
+            date={activeStartDate}
+            earliestSelectableDate={earliestDate}
+            latestSelectableDate={
+              isDoubleView ? addMonths(activeEndDate, -1) : latestDate
+            }
+            onNext={() => this.handleActiveStartDateChange(1)}
+            onPrevious={() => this.handleActiveStartDateChange(-1)}
+          />
           <DatePickerViewMonth
-              date={ activeStartDate }
-              earliestSelectableDate={ earliestDate }
-              latestSelectableDate={ latestDate }
-              onSelect={ this.handleDaySelect }
-              rangeSelect={ rangeSelect }
-              selectedDate={ !rangeSelect ? selectedDate : undefined }
-              selectedEndDate={ rangeSelect ? endDate : undefined }
-              selectedStartDate={ rangeSelect ? startDate : undefined } />
+            date={activeStartDate}
+            earliestSelectableDate={earliestDate}
+            latestSelectableDate={latestDate}
+            onSelect={this.handleDaySelect}
+            rangeSelect={rangeSelect}
+            selectedDate={!rangeSelect ? selectedDate : undefined}
+            selectedEndDate={rangeSelect ? endDate : undefined}
+            selectedStartDate={rangeSelect ? startDate : undefined}
+          />
         </GridCell>
 
-        { isDoubleView && (
+        {isDoubleView && (
           <GridCell hiddenUntil="small">
             <DatePickerHeaderControl
-                date={ activeEndDateOrNextMonth }
-                earliestSelectableDate={ addMonths(activeStartDate, 1) }
-                latestSelectableDate={ latestDate }
-                onNext={ () => this.handleActiveEndDateChange(1) }
-                onPrevious={ () => this.handleActiveEndDateChange(-1) } />
+              date={activeEndDateOrNextMonth}
+              earliestSelectableDate={addMonths(activeStartDate, 1)}
+              latestSelectableDate={latestDate}
+              onNext={() => this.handleActiveEndDateChange(1)}
+              onPrevious={() => this.handleActiveEndDateChange(-1)}
+            />
             <DatePickerViewMonth
-                date={ activeEndDateOrNextMonth }
-                earliestSelectableDate={ earliestDate }
-                latestSelectableDate={ latestDate }
-                onSelect={ this.handleDaySelect }
-                rangeSelect={ rangeSelect }
-                selectedDate={ !rangeSelect ? selectedDate : undefined }
-                selectedEndDate={ rangeSelect ? endDate : undefined }
-                selectedStartDate={ rangeSelect ? startDate : undefined } />
+              date={activeEndDateOrNextMonth}
+              earliestSelectableDate={earliestDate}
+              latestSelectableDate={latestDate}
+              onSelect={this.handleDaySelect}
+              rangeSelect={rangeSelect}
+              selectedDate={!rangeSelect ? selectedDate : undefined}
+              selectedEndDate={rangeSelect ? endDate : undefined}
+              selectedStartDate={rangeSelect ? startDate : undefined}
+            />
           </GridCell>
-        ) }
+        )}
       </Grid>
     );
   }

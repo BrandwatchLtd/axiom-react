@@ -10,7 +10,7 @@ export default class CardImage extends Component {
     children: PropTypes.node,
     /** Class name to be appended to the element */
     className: PropTypes.string,
-  }
+  };
 
   render() {
     const { children, className, ...rest } = this.props;
@@ -18,9 +18,9 @@ export default class CardImage extends Component {
     const classes = classnames('ax-card__image', className);
 
     return (
-      <Base className={ classes }>
-        <Image space="x0" { ...rest } />
-        { children }
+      <Base className={classes}>
+        <Image space="x0" {...rest} />
+        {children}
       </Base>
     );
   }

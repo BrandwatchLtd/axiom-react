@@ -31,21 +31,22 @@ export default class ChartContext extends Component {
     if (DropdownContext && TooltipContext) {
       return (
         <Dropdown
-            onRequestClose={ onDropdownClose }
-            onRequestOpen={ onDropdownOpen }
-            position="top"
-            showArrow
-            withMask>
+          onRequestClose={onDropdownClose}
+          onRequestOpen={onDropdownOpen}
+          position="top"
+          showArrow
+          withMask
+        >
           <DropdownTarget>
             <Tooltip>
-              <TooltipTarget>{ children }</TooltipTarget>
+              <TooltipTarget>{children}</TooltipTarget>
               <TooltipSource>
-                <TooltipContext { ...rest } />
+                <TooltipContext {...rest} />
               </TooltipSource>
             </Tooltip>
           </DropdownTarget>
           <DropdownSource>
-            <DropdownContext { ...rest } />
+            <DropdownContext {...rest} />
           </DropdownSource>
         </Dropdown>
       );
@@ -54,14 +55,15 @@ export default class ChartContext extends Component {
     if (DropdownContext) {
       return (
         <Dropdown
-            onRequestClose={ onDropdownClose }
-            onRequestOpen={ onDropdownOpen }
-            position="top"
-            showArrow
-            withMask>
-          <DropdownTarget>{ children }</DropdownTarget>
+          onRequestClose={onDropdownClose}
+          onRequestOpen={onDropdownOpen}
+          position="top"
+          showArrow
+          withMask
+        >
+          <DropdownTarget>{children}</DropdownTarget>
           <DropdownSource>
-            <DropdownContext { ...rest } />
+            <DropdownContext {...rest} />
           </DropdownSource>
         </Dropdown>
       );
@@ -70,9 +72,9 @@ export default class ChartContext extends Component {
     if (TooltipContext) {
       return (
         <Tooltip>
-          <TooltipTarget>{ children }</TooltipTarget>
+          <TooltipTarget>{children}</TooltipTarget>
           <TooltipSource>
-            <TooltipContext { ...rest } />
+            <TooltipContext {...rest} />
           </TooltipSource>
         </Tooltip>
       );

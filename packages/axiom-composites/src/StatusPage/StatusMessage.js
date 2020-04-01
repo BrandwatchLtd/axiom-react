@@ -12,8 +12,8 @@ export default class StatusMessage extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-status-message" textCenter>
-        { children }
+      <Base {...rest} className="ax-status-message" textCenter>
+        {children}
       </Base>
     );
   }

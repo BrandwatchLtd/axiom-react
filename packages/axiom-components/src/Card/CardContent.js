@@ -22,21 +22,32 @@ export default class CardContent extends Component {
   static defaultProps = {
     separatorStyle: 'solid',
     size: 'medium',
-  }
+  };
 
   render() {
-    const { children, className, separatorIndented, separatorStyle, shade, size, ...rest } = this.props;
-    const classes = classnames('ax-card__content',
+    const {
+      children,
+      className,
+      separatorIndented,
+      separatorStyle,
+      shade,
+      size,
+      ...rest
+    } = this.props;
+    const classes = classnames(
+      'ax-card__content',
       `ax-card__content--separator-${separatorStyle}`,
-      `ax-card__content--size-${size}`, {
+      `ax-card__content--size-${size}`,
+      {
         [`ax-card__content--${shade}`]: shade,
         'ax-card__content--separator-indented': separatorIndented,
-      }, className
+      },
+      className
     );
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

@@ -36,14 +36,16 @@ export default class RadarChart extends Component {
      * options for setting `border`, `fill` and `points`. See example
      * for data format.
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      border: PropTypes.bool,
-      color: PropTypes.string.isRequired,
-      fill: PropTypes.bool,
-      label: PropTypes.node.isRequired,
-      points: PropTypes.bool,
-      values: PropTypes.arrayOf(PropTypes.number).isRequired,
-    })),
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        border: PropTypes.bool,
+        color: PropTypes.string.isRequired,
+        fill: PropTypes.bool,
+        label: PropTypes.node.isRequired,
+        points: PropTypes.bool,
+        values: PropTypes.arrayOf(PropTypes.number).isRequired,
+      })
+    ),
     /** Height of the radar chart */
     height: PropTypes.number.isRequired,
     /** Callback for when a point is clicked */
@@ -57,10 +59,12 @@ export default class RadarChart extends Component {
     /** Y Axis labels, also used to determine where the radial
      *  grid lines are drawn by the value property.
      */
-    yAxisLabels: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      value: PropTypes.number.isRequired,
-    })).isRequired,
+    yAxisLabels: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired,
+      })
+    ).isRequired,
   };
 
   constructor(props) {
@@ -93,10 +97,14 @@ export default class RadarChart extends Component {
   }
 
   handleMouseLeave() {
-    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
-      selectedIndex: undefined,
-      selectedLabels: undefined,
-    }));
+    this.setState(({ isDropdownOpen }) =>
+      isDropdownOpen
+        ? {}
+        : {
+            selectedIndex: undefined,
+            selectedLabels: undefined,
+          }
+    );
   }
 
   render() {
@@ -113,10 +121,7 @@ export default class RadarChart extends Component {
       ...rest
     } = this.props;
 
-    const {
-      selectedIndex,
-      selectedLabels,
-    } = this.state;
+    const { selectedIndex, selectedLabels } = this.state;
 
     const cx = width / 2;
     const cy = height / 2;
@@ -126,100 +131,109 @@ export default class RadarChart extends Component {
     const tickValues = yAxisLabels.map(({ value }) => value);
     const lower = Math.min(...tickValues);
     const upper = Math.max(...tickValues);
-    const plot = (value) => innerRadius * ((value - lower) / (upper - lower));
-    const xAxisTicks = xAxisLabels.map((_, index) => (Math.PI * -0.5) + (tickGap / 2) + (index * tickGap));
-    const yAxisTicks = tickValues.map((value) => value && plot(value));
-    const points = groupColorsByValue(data.filter(({ points }) => points), selectedLabels);
+    const plot = value => innerRadius * ((value - lower) / (upper - lower));
+    const xAxisTicks = xAxisLabels.map(
+      (_, index) => Math.PI * -0.5 + tickGap / 2 + index * tickGap
+    );
+    const yAxisTicks = tickValues.map(value => value && plot(value));
+    const points = groupColorsByValue(
+      data.filter(({ points }) => points),
+      selectedLabels
+    );
 
     return (
-      <Base { ...rest } className="ax-radar">
+      <Base {...rest} className="ax-radar">
         <div
-            className="ax-radar__container"
-            style={ { width: `${width}px`, height: `${height}px` } }>
+          className="ax-radar__container"
+          style={{ width: `${width}px`, height: `${height}px` }}
+        >
           <svg
-              className="ax-radar__svg-container"
-              viewBox={ `0 0 ${width} ${height}` }>
+            className="ax-radar__svg-container"
+            viewBox={`0 0 ${width} ${height}`}
+          >
+            {yAxisTicks.map((r, index) => (
+              <RadarYAxisLine key={index} r={r} x={cx} y={cy} />
+            ))}
 
-            { yAxisTicks.map((r, index) => (
-              <RadarYAxisLine
-                  key={ index }
-                  r={ r }
-                  x={ cx }
-                  y={ cy } />
-            )) }
-
-            { xAxisTicks.map((r, index) => (
+            {xAxisTicks.map((r, index) => (
               <RadarXAxisLine
-                  key={ index }
-                  x1={ cx }
-                  x2={ cx + Math.cos(r) * (innerRadius + TICK_PADDING) }
-                  y1={ cy }
-                  y2={ cy + Math.sin(r) * (innerRadius + TICK_PADDING) } />
-            )) }
+                key={index}
+                x1={cx}
+                x2={cx + Math.cos(r) * (innerRadius + TICK_PADDING)}
+                y1={cy}
+                y2={cy + Math.sin(r) * (innerRadius + TICK_PADDING)}
+              />
+            ))}
 
-            { data.map(({ border, label, ...rest }, index) => (
-              <RadarPolygon { ...rest }
-                  border={ border && (!selectedLabels || selectedLabels.includes(label)) }
-                  cx={ cx }
-                  cy={ cy }
-                  faded={ selectedLabels && !selectedLabels.includes(label) }
-                  key={ index }
-                  lower={ lower }
-                  radius={ innerRadius }
-                  ticks={ xAxisTicks }
-                  upper={ upper } />
-            )) }
+            {data.map(({ border, label, ...rest }, index) => (
+              <RadarPolygon
+                {...rest}
+                border={
+                  border && (!selectedLabels || selectedLabels.includes(label))
+                }
+                cx={cx}
+                cy={cy}
+                faded={selectedLabels && !selectedLabels.includes(label)}
+                key={index}
+                lower={lower}
+                radius={innerRadius}
+                ticks={xAxisTicks}
+                upper={upper}
+              />
+            ))}
           </svg>
 
-          { xAxisLabels.map((label, index) => (
+          {xAxisLabels.map((label, index) => (
             <RadarXAxisLabel
-                active={ selectedIndex === index }
-                key={ index }
-                onClick={ onXAxisLabelClick }
-                r={ xAxisTicks[index] }
-                x={ cx + Math.cos(xAxisTicks[index]) * outerRadius }
-                y={ cy + Math.sin(xAxisTicks[index]) * outerRadius }>
-              { label }
+              active={selectedIndex === index}
+              key={index}
+              onClick={onXAxisLabelClick}
+              r={xAxisTicks[index]}
+              x={cx + Math.cos(xAxisTicks[index]) * outerRadius}
+              y={cy + Math.sin(xAxisTicks[index]) * outerRadius}
+            >
+              {label}
             </RadarXAxisLabel>
-          )) }
+          ))}
 
-          { yAxisLabels.map(({ label }, index) => (
-            <RadarYAxisLabel
-                key={ index }
-                x={ cx }
-                y={ cy - yAxisTicks[index] }>
-              { label }
+          {yAxisLabels.map(({ label }, index) => (
+            <RadarYAxisLabel key={index} x={cx} y={cy - yAxisTicks[index]}>
+              {label}
             </RadarYAxisLabel>
-          )) }
+          ))}
 
-          { points.map((points, a) => points.map(({ colors, labels, value }, b) => (
-            <RadarPoint
-                DropdownContext={ DropdownContext }
-                TooltipContext={ TooltipContext }
-                colors={ colors }
-                key={ `${a}${b}` }
-                label={ xAxisLabels[a] }
-                onClick={ onPointClick }
-                onDropdownClose={ () => this.handleDropdownClose() }
-                onDropdownOpen={ () => this.handleDropdownOpen(a, labels) }
-                onMouseEnter={ () => this.handleMouseEnter(a, labels) }
-                onMouseLeave={ () => this.handleMouseLeave() }
-                value={ value }
-                x={ cx + Math.cos(xAxisTicks[a]) * plot(value) }
-                y={ cy + Math.sin(xAxisTicks[a]) * plot(value) } />
-          ))) }
+          {points.map((points, a) =>
+            points.map(({ colors, labels, value }, b) => (
+              <RadarPoint
+                DropdownContext={DropdownContext}
+                TooltipContext={TooltipContext}
+                colors={colors}
+                key={`${a}${b}`}
+                label={xAxisLabels[a]}
+                onClick={onPointClick}
+                onDropdownClose={() => this.handleDropdownClose()}
+                onDropdownOpen={() => this.handleDropdownOpen(a, labels)}
+                onMouseEnter={() => this.handleMouseEnter(a, labels)}
+                onMouseLeave={() => this.handleMouseLeave()}
+                value={value}
+                x={cx + Math.cos(xAxisTicks[a]) * plot(value)}
+                y={cy + Math.sin(xAxisTicks[a]) * plot(value)}
+              />
+            ))
+          )}
         </div>
 
         <ChartKey space="x8">
-          { data.map(({ label, color, style }) => (
-            <ChartKeyItem key={ `${label}.${color}` } label={ label }>
+          {data.map(({ label, color, style }) => (
+            <ChartKeyItem key={`${label}.${color}`} label={label}>
               <DataPoints size="0.75rem">
                 <DataPoint
-                    color={ color }
-                    style={ style === 'dashed' ? 'hollow' : 'solid' } />
+                  color={color}
+                  style={style === 'dashed' ? 'hollow' : 'solid'}
+                />
               </DataPoints>
             </ChartKeyItem>
-          )) }
+          ))}
         </ChartKey>
       </Base>
     );

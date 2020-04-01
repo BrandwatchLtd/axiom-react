@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Grid, GridCell, Label, LabelGroup, LabelIcon } from '@brandwatch/axiom-components';
+import {
+  Grid,
+  GridCell,
+  Label,
+  LabelGroup,
+  LabelIcon,
+} from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
@@ -36,11 +42,12 @@ export default class Documentation extends Component {
           </GridCell>
         </Grid>
 
-
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/Label'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/LabelGroup'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/Label'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/LabelGroup'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

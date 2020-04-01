@@ -34,20 +34,20 @@ export default function ConsoleHeader({
 
   const CloseLink = () => (
     <GridCell shrink>
-      <Link onClick={ onConsoleClose } style="subtle">
+      <Link onClick={onConsoleClose} style="subtle">
         <Icon name="cross" size="1.5rem" />
       </Link>
     </GridCell>
   );
 
   return (
-    <Base { ...rest } className={ classes }>
-      <Grid gutters="small" responsive={ false } verticalAlign="middle">
-        { showCloseOnLeft() && <CloseLink /> }
+    <Base {...rest} className={classes}>
+      <Grid gutters="small" responsive={false} verticalAlign="middle">
+        {showCloseOnLeft() && <CloseLink />}
 
-        <GridCell>{ children }</GridCell>
+        <GridCell>{children}</GridCell>
 
-        { showCloseOnRight() && <CloseLink /> }
+        {showCloseOnRight() && <CloseLink />}
       </Grid>
     </Base>
   );

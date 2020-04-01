@@ -3,7 +3,8 @@ import { shallow } from 'enzyme';
 import DurationPicker from './DurationPicker';
 import toJson from 'enzyme-to-json';
 
-const render = (props = {}, opts = {}) => shallow(<DurationPicker { ...props } />, opts);
+const render = (props = {}, opts = {}) =>
+  shallow(<DurationPicker {...props} />, opts);
 
 describe('DurationPicker', () => {
   describe('Snapshots', () => {

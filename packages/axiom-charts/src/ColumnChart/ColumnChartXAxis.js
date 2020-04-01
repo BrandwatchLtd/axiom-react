@@ -12,10 +12,12 @@ export default class ColumnChartXAxis extends Component {
     const { children, labelColumnWidth, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          className="ax-column-chart__x-axis"
-          style={ { paddingLeft: labelColumnWidth } }>
-        { children }
+      <Base
+        {...rest}
+        className="ax-column-chart__x-axis"
+        style={{ paddingLeft: labelColumnWidth }}
+      >
+        {children}
       </Base>
     );
   }

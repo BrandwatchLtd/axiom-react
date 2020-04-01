@@ -32,24 +32,22 @@ export default class AlertCard extends Component {
     const classes = classnames('ax-alert-card', `ax-alert-card--${size}`);
 
     return (
-      <Card { ...rest } size={ size }>
-        <CardContent size={ size }>
-          <div className={ classes }>
+      <Card {...rest} size={size}>
+        <CardContent size={size}>
+          <div className={classes}>
             <div className="ax-alert-card__icon">
-              <AlertIcon type={ type } />
+              <AlertIcon type={type} />
             </div>
 
-            <div className="ax-alert-card__content">
-              { children }
-            </div>
+            <div className="ax-alert-card__content">{children}</div>
 
-            { onRemoveClick && (
+            {onRemoveClick && (
               <div className="ax-alert-card__remove">
-                <Link onClick={ onRemoveClick } style="subtle">
+                <Link onClick={onRemoveClick} style="subtle">
                   <Icon name="cross" />
                 </Link>
               </div>
-            ) }
+            )}
           </div>
         </CardContent>
       </Card>

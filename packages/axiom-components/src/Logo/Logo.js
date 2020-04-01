@@ -24,13 +24,17 @@ export default class Logo extends Component {
 
     const viewBoxAspectRatio = viewBoxWidth / viewBoxHeight;
     const style = {
-      width: height ? `${(parseFloat(height, 10) * viewBoxAspectRatio)}rem` : width,
-      height: height ? height : `${(parseFloat(width, 10) / viewBoxAspectRatio)}rem`,
+      width: height
+        ? `${parseFloat(height, 10) * viewBoxAspectRatio}rem`
+        : width,
+      height: height
+        ? height
+        : `${parseFloat(width, 10) / viewBoxAspectRatio}rem`,
     };
 
     return (
-      <Base { ...rest } className="ax-logo" style={ style }>
-        { children }
+      <Base {...rest} className="ax-logo" style={style}>
+        {children}
       </Base>
     );
   }

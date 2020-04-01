@@ -15,48 +15,60 @@ export default class Documentation extends Component {
   render() {
     return (
       <DocumentationViewer
-          config={ [{
+        config={[
+          {
             id: 'bars',
             name: 'Bars',
             Component: Bars,
-          }, {
+          },
+          {
             id: 'bar-chart',
             name: 'Bar Chart',
             Component: BarChart,
-          }, {
+          },
+          {
             id: 'chart',
             name: 'Chart',
             Component: Chart,
-          }, {
+          },
+          {
             id: 'data-point',
             name: 'Data Point',
             Component: DataPoint,
-          }, {
+          },
+          {
             id: 'dot-plot-chart',
             name: 'Dot Plot Chart',
             Component: DotPlotChart,
-          }, {
+          },
+          {
             id: 'line',
             name: 'Line',
             Component: Line,
-          }, {
+          },
+          {
             id: 'line-chart',
             name: 'Line Chart',
             Component: LineChart,
-          }, {
+          },
+          {
             id: 'radar-chart',
             name: 'Radar Chart',
             Component: RadarChart,
-          }, {
+          },
+          {
             id: 'spark-line',
             name: 'Spark Line',
             Component: SparkLine,
-          }, {
+          },
+          {
             id: 'word-cloud',
             name: 'Word Cloud',
             Component: WordCloud,
-          }] }
-          path="/docs/packages/axiom-charts" />
+          },
+        ]}
+        path="/docs/packages/axiom-charts"
+      />
     );
   }
 }

@@ -18,8 +18,6 @@ export default class Animicon extends Component {
       [`ax-animicon--${name}-in`]: isIn,
     });
 
-    return (
-      <Icon { ...rest } className={ classes } name={ name } />
-    );
+    return <Icon {...rest} className={classes} name={name} />;
   }
 }

@@ -18,7 +18,7 @@ class Site extends Component {
   render() {
     return (
       <Switch>
-        <Route component={ Documentation } path="/" />
+        <Route component={Documentation} path="/" />
       </Switch>
     );
   }

@@ -31,7 +31,12 @@ export default class Heading extends Component {
     const { textSize, ...rest } = this.props;
 
     return (
-      <Text space="x2" { ...rest } Component={ TAG_MAP[textSize] } textSize={ textSize } />
+      <Text
+        space="x2"
+        {...rest}
+        Component={TAG_MAP[textSize]}
+        textSize={textSize}
+      />
     );
   }
 }

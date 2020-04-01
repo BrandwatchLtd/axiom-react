@@ -1,7 +1,10 @@
 import longNumber from './longNumber';
 
-const isInvalidPrecision = (precision) =>
-  isNaN(parseInt(precision)) && precision % 1 === 0 && precision >= 0 && precision <= 20;
+const isInvalidPrecision = precision =>
+  isNaN(parseInt(precision)) &&
+  precision % 1 === 0 &&
+  precision >= 0 &&
+  precision <= 20;
 
 export const toFixed = (number, precision) => {
   if (!isInvalidPrecision(precision)) {
@@ -11,16 +14,16 @@ export const toFixed = (number, precision) => {
   return number.toString().replace(/\.0+$|(\.[0-9]*[1-9])0+$/, '$1');
 };
 
-export const isInvalidNumber = (number) =>
+export const isInvalidNumber = number =>
   isNaN(parseFloat(number)) || !isFinite(number);
 
 export default (number, precision, suffixes) => {
   const threshold = 9999;
   const metricSuffix = [
-    { n: 1E12, suffix: suffixes.TRILLION },
-    { n: 1E9, suffix: suffixes.BILLION },
-    { n: 1E6, suffix: suffixes.MILLION },
-    { n: 1E3, suffix: suffixes.THOUSAND },
+    { n: 1e12, suffix: suffixes.TRILLION },
+    { n: 1e9, suffix: suffixes.BILLION },
+    { n: 1e6, suffix: suffixes.MILLION },
+    { n: 1e3, suffix: suffixes.THOUSAND },
   ];
 
   if (isInvalidNumber(number)) {
@@ -33,7 +36,9 @@ export default (number, precision, suffixes) => {
 
   for (let i = 0; i < metricSuffix.length; i++) {
     if (number >= metricSuffix[i].n) {
-      return `${toFixed(number / metricSuffix[i].n, precision)}${metricSuffix[i].suffix}`;
+      return `${toFixed(number / metricSuffix[i].n, precision)}${
+        metricSuffix[i].suffix
+      }`;
     }
   }
 };

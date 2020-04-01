@@ -34,8 +34,8 @@ export default class ButtonIcon extends Component {
     });
 
     return (
-      <span { ...rest } className={ classes }>
-        <Icon name={ name } size={ size } textColor={ color }/>
+      <span {...rest} className={classes}>
+        <Icon name={name} size={size} textColor={color} />
       </span>
     );
   }

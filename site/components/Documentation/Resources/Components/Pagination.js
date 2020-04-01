@@ -12,15 +12,20 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase centered>
           <Pagination
-              currentPage={ 1 }
-              displayRange={ 5 }
-              onPageChange={ (setValue, getValue, page) => setValue('Pagination', 'currentPage', page) }
-              totalPages={ 100 } />
+            currentPage={1}
+            displayRange={5}
+            onPageChange={(setValue, getValue, page) =>
+              setValue('Pagination', 'currentPage', page)
+            }
+            totalPages={100}
+          />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Pagination/Pagination'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Pagination/Pagination'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

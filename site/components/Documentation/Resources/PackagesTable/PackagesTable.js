@@ -16,19 +16,13 @@ export default class PackagesTable extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Table { ...rest } space="x2">
+      <Table {...rest} space="x2">
         <TableHeader>
-          <TableHeaderLabel>
-            Package
-          </TableHeaderLabel>
-          <TableHeaderLabel>
-            Version
-          </TableHeaderLabel>
+          <TableHeaderLabel>Package</TableHeaderLabel>
+          <TableHeaderLabel>Version</TableHeaderLabel>
           <TableHeaderLabel shrink />
         </TableHeader>
-        <TableBody>
-          { children }
-        </TableBody>
+        <TableBody>{children}</TableBody>
       </Table>
     );
   }

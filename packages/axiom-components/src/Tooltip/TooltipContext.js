@@ -6,20 +6,21 @@ export const TooltipContextRef = 'TooltipContext';
 
 export default class TooltipContext extends Component {
   static propTypes = {
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'carbon', 'white']),
-  }
+    color: PropTypes.oneOf([
+      'success',
+      'warning',
+      'error',
+      'info',
+      'carbon',
+      'white',
+    ]),
+  };
 
   static typeRef = TooltipContextRef;
 
   render() {
+    const { color, ...rest } = this.props;
 
-    const {
-      color,
-      ...rest
-    } = this.props;
-
-    return (
-      <Context color={ color } { ...rest } />
-    );
+    return <Context color={color} {...rest} />;
   }
 }

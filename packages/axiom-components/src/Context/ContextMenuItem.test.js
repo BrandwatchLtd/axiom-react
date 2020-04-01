@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import ContextMenuItem from './ContextMenuItem';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ContextMenuItem { ...props }>
-      Lorem ipsum
-    </ContextMenuItem>
-  );
+  renderer.create(<ContextMenuItem {...props}>Lorem ipsum</ContextMenuItem>);
 
 describe('ContextMenuItem', () => {
   it('renders with defaultProps', () => {

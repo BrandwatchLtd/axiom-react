@@ -24,14 +24,14 @@ export default class SelectInput extends Component {
     const { closeDropdown, openDropdown } = this.context;
 
     switch (key) {
-    case 'Enter':
-      closeDropdown();
-      break;
-    case 'Tab':
-      closeDropdown();
-      break;
-    default:
-      openDropdown();
+      case 'Enter':
+        closeDropdown();
+        break;
+      case 'Tab':
+        closeDropdown();
+        break;
+      default:
+        openDropdown();
     }
   }
 
@@ -46,9 +46,10 @@ export default class SelectInput extends Component {
   render() {
     return (
       <TextInput
-          { ...this.props }
-          onFocus={ this.handleFocus }
-          onKeyDown={ this.handleKeyDown }>
+        {...this.props}
+        onFocus={this.handleFocus}
+        onKeyDown={this.handleKeyDown}
+      >
         <TextInputIcon name="chevron-down" />
       </TextInput>
     );

@@ -5,7 +5,7 @@ import CheckBoxGroup from './CheckBoxGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <CheckBoxGroup { ...props }>
+    <CheckBoxGroup {...props}>
       <CheckBox>Lorem ipsum</CheckBox>
     </CheckBoxGroup>
   );

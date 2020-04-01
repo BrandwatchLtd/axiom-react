@@ -34,7 +34,7 @@ export default class Validate extends Component {
       PropTypes.oneOfType([
         PropTypes.func.isRequired,
         PropTypes.instanceOf(RegExp).isRequired,
-      ]).isRequired,
+      ]).isRequired
     ),
     /** If this is a required field */
     required: PropTypes.bool,
@@ -52,34 +52,22 @@ export default class Validate extends Component {
   UNSAFE_componentWillMount() {
     if (!this.shouldValidate()) return;
 
-    this.context.registerValidate(
-      this.validationGetter,
-      this.id,
-    );
+    this.context.registerValidate(this.validationGetter, this.id);
   }
 
   componentWillUnmount() {
     if (!this.shouldValidate()) return;
 
-    this.context.unregisterValidate(
-      this.validationGetter,
-      this.id,
-    );
+    this.context.unregisterValidate(this.validationGetter, this.id);
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.required !== this.props.required) {
       if (this.props.required) {
-        return this.context.registerValidate(
-          this.validationGetter,
-          this.id,
-        );
+        return this.context.registerValidate(this.validationGetter, this.id);
       }
 
-      return this.context.unregisterValidate(
-        this.validationGetter,
-        this.id,
-      );
+      return this.context.unregisterValidate(this.validationGetter, this.id);
     }
   }
 
@@ -112,7 +100,7 @@ export default class Validate extends Component {
     return children(
       getValidity(this.id),
       checkRequiredMet(this.id),
-      this.checkPatternMet,
+      this.checkPatternMet
     );
   }
 }

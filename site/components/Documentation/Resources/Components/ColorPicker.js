@@ -11,13 +11,19 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <ColorPicker onSelectColor={ (setValue, getValue, color) => setValue('ColorPicker', 'selected', color) } />
+          <ColorPicker
+            onSelectColor={(setValue, getValue, color) =>
+              setValue('ColorPicker', 'selected', color)
+            }
+          />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPicker'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPickerOption'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPicker'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPickerOption'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

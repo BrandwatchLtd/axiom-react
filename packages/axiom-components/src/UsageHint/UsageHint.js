@@ -10,7 +10,6 @@ import Icon from '../Icon/Icon';
 import Link from '../Typography/Link';
 
 export default class UsageHint extends PureComponent {
-
   static propTypes = {
     children: PropTypes.node,
     position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
@@ -21,27 +20,21 @@ export default class UsageHint extends PureComponent {
 
   static defaultProps = {
     showArrow: true,
-  }
+  };
 
   render() {
-    const {
-      children,
-      width,
-      ...rest
-    } = this.props;
+    const { children, width, ...rest } = this.props;
 
     return (
-      <Dropdown { ...rest } showArrow>
+      <Dropdown {...rest} showArrow>
         <DropdownTarget>
-          <Link style="subtle" >
+          <Link style="subtle">
             <Icon name="question-mark-circle" size="1rem" />
           </Link>
         </DropdownTarget>
         <DropdownSource>
-          <DropdownContext width={ width }>
-            <DropdownContent>
-              { children }
-            </DropdownContent>
+          <DropdownContext width={width}>
+            <DropdownContent>{children}</DropdownContent>
           </DropdownContext>
         </DropdownSource>
       </Dropdown>

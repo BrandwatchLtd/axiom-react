@@ -58,18 +58,12 @@ export default class Badge extends Component {
   };
 
   render() {
-    const {
-      children,
-      color,
-      full,
-      onClick,
-      opacity: o,
-      ...rest
-    } = this.props;
+    const { children, color, full, onClick, opacity: o, ...rest } = this.props;
 
     const isFaded = color === 'faded';
     const textColor = isFaded || o < 1 ? undefined : 'night';
-    const opacity = isFaded || o < 1 ? Math.max(.1, Math.min(isFaded ? .3 : .6, o)) : 1;
+    const opacity =
+      isFaded || o < 1 ? Math.max(0.1, Math.min(isFaded ? 0.3 : 0.6, o)) : 1;
     const style = { opacity };
     const classes = classnames('ax-badge', {
       [`ax-badge--${color}`]: color,
@@ -79,9 +73,15 @@ export default class Badge extends Component {
     });
 
     return (
-      <Base { ...rest } Component="span" className={ classes } onClick={ onClick } textColor={ textColor }>
-        <span className="ax-badge__background" style={ style } />
-        <span className="ax-badge__content">{ children }</span>
+      <Base
+        {...rest}
+        Component="span"
+        className={classes}
+        onClick={onClick}
+        textColor={textColor}
+      >
+        <span className="ax-badge__background" style={style} />
+        <span className="ax-badge__content">{children}</span>
       </Base>
     );
   }

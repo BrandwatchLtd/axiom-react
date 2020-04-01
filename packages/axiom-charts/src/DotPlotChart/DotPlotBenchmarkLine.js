@@ -24,8 +24,8 @@ export default class DotPlotBenchmarkLine extends Component {
     });
 
     return (
-      <div { ...rest } className={ classes } style={ style }>
-        <div className="ax-dot-plot__benchmark-line-path" style={ lineStyle } />
+      <div {...rest} className={classes} style={style}>
+        <div className="ax-dot-plot__benchmark-line-path" style={lineStyle} />
       </div>
     );
   }

@@ -17,7 +17,7 @@ export default class ChipList extends Component {
 
   static defaultProps = {
     size: 'medium',
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -30,12 +30,9 @@ export default class ChipList extends Component {
   }
 
   componentDidMount() {
-    const {
-      clientHeight,
-      scrollHeight,
-    } = this.chipList.current;
+    const { clientHeight, scrollHeight } = this.chipList.current;
 
-    if (scrollHeight > (clientHeight * 2)) {
+    if (scrollHeight > clientHeight * 2) {
       this.setState({ isExpandable: true });
     }
   }
@@ -44,42 +41,41 @@ export default class ChipList extends Component {
     if (this.state.isExpandable) {
       this.setState({ isExpanded: !this.state.isExpanded });
     }
-  }
+  };
 
   render() {
-    const {
-      children,
-      label,
-      size,
-    } = this.props;
+    const { children, label, size } = this.props;
 
-    const {
-      isExpanded,
-      isExpandable,
-    } = this.state;
+    const { isExpanded, isExpandable } = this.state;
 
-    const childrenWithSize = React.Children.map(children, child => React.cloneElement(child, { size }));
-
-    const classes = classnames('ax-chiplist',
-      `ax-chiplist--${size}`,
-      { 'ax-chiplist--expanded': isExpanded }
+    const childrenWithSize = React.Children.map(children, child =>
+      React.cloneElement(child, { size })
     );
 
-    const labelClasses = classnames('ax-chiplist-label',
+    const classes = classnames('ax-chiplist', `ax-chiplist--${size}`, {
+      'ax-chiplist--expanded': isExpanded,
+    });
+
+    const labelClasses = classnames(
+      'ax-chiplist-label',
       `ax-chiplist-label--${size}`,
       { 'ax-chiplist--expandable': isExpandable }
     );
 
     return (
-      <Base baseRef={ this.chipList } className={ classes }>
-
-        <div className={ labelClasses } onClick={ this.handleExpand }>
-          { label }
-          { isExpandable && (<Icon inline name={ isExpanded ? 'chevron-up' : 'chevron-down' } spaceLeft="x1" />) }
+      <Base baseRef={this.chipList} className={classes}>
+        <div className={labelClasses} onClick={this.handleExpand}>
+          {label}
+          {isExpandable && (
+            <Icon
+              inline
+              name={isExpanded ? 'chevron-up' : 'chevron-down'}
+              spaceLeft="x1"
+            />
+          )}
         </div>
 
-        { childrenWithSize }
-
+        {childrenWithSize}
       </Base>
     );
   }

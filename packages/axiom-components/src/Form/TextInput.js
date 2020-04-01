@@ -31,7 +31,16 @@ export default class TextInput extends Component {
     /** Descriptive label that is placed with the input field */
     label: PropTypes.string,
     /** Vertical margin between label and input */
-    labelSpace: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x8']),
+    labelSpace: PropTypes.oneOf([
+      'x0',
+      'x1',
+      'x2',
+      'x3',
+      'x4',
+      'x5',
+      'x6',
+      'x8',
+    ]),
     /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
     /** Handler for changing the input field */
@@ -70,7 +79,7 @@ export default class TextInput extends Component {
     value: PropTypes.string,
   };
 
-  static childContextTypes ={
+  static childContextTypes = {
     size: PropTypes.string,
   };
 
@@ -138,54 +147,53 @@ export default class TextInput extends Component {
 
     return (
       <Validate
-          error={ error }
-          patterns={ patterns }
-          required={ required }
-          value={ value }>
-        { (isValid) =>
-          <Base className="ax-input__container" space={ space }>
+        error={error}
+        patterns={patterns}
+        required={required}
+        value={value}
+      >
+        {isValid => (
+          <Base className="ax-input__container" space={space}>
             <InputWrapper
-                disabled={ disabled }
-                hasFocus={ hasFocus }
-                inlineLabel={ inlineLabel }
-                invalid={ invalid }
-                isTarget={ isTarget }
-                isValid={ isValid }
-                label={ label }
-                labelSpace={ labelSpace }
-                size={ size }
-                space={ space }
-                style={ style }
-                usageHint={ usageHint }
-                usageHintPosition={ usageHintPosition }
-                valid={ valid }>
-              {
-                showOnClear && <TextInputIcon
-                    align="right"
-                    name="cross"
-                    onClick={ onClear } />
-              }
-              { showIcon && icon }
-              <Base { ...rest }
-                  Component="input"
-                  baseRef={ inputRef }
-                  className="ax-input"
-                  disabled={ disabled }
-                  onBlur={ this.handleOnBlur.bind(this) }
-                  onFocus={ this.handleOnFocus.bind(this) }
-                  type={ type }
-                  value={ value } />
-              {
-                isInProgress && (
-                  <span className="ax-input__progress">
-                    <ProgressInfinite sizeRem="1rem" />
-                  </span>
-                )
-              }
+              disabled={disabled}
+              hasFocus={hasFocus}
+              inlineLabel={inlineLabel}
+              invalid={invalid}
+              isTarget={isTarget}
+              isValid={isValid}
+              label={label}
+              labelSpace={labelSpace}
+              size={size}
+              space={space}
+              style={style}
+              usageHint={usageHint}
+              usageHintPosition={usageHintPosition}
+              valid={valid}
+            >
+              {showOnClear && (
+                <TextInputIcon align="right" name="cross" onClick={onClear} />
+              )}
+              {showIcon && icon}
+              <Base
+                {...rest}
+                Component="input"
+                baseRef={inputRef}
+                className="ax-input"
+                disabled={disabled}
+                onBlur={this.handleOnBlur.bind(this)}
+                onFocus={this.handleOnFocus.bind(this)}
+                type={type}
+                value={value}
+              />
+              {isInProgress && (
+                <span className="ax-input__progress">
+                  <ProgressInfinite sizeRem="1rem" />
+                </span>
+              )}
             </InputWrapper>
-            { button }
+            {button}
           </Base>
-        }
+        )}
       </Validate>
     );
   }

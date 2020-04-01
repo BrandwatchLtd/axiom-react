@@ -4,9 +4,7 @@ import Label from './Label';
 import LabelIcon from './LabelIcon';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Label children="Lorem Ipsum" { ...props } />
-  );
+  renderer.create(<Label children="Lorem Ipsum" {...props} />);
 
 describe('Label', () => {
   it('renders with defaultProps', () => {
@@ -16,7 +14,7 @@ describe('Label', () => {
   });
 
   describe('renders with color', () => {
-    ['white', 'success', 'error'].forEach((color) => {
+    ['white', 'success', 'error'].forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
@@ -26,7 +24,7 @@ describe('Label', () => {
   });
 
   describe('renders with full', () => {
-    [true, 'small', 'medium', 'large'].forEach((full) => {
+    [true, 'small', 'medium', 'large'].forEach(full => {
       it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();
@@ -36,7 +34,7 @@ describe('Label', () => {
   });
 
   describe('render with size', () => {
-    ['small', 'medium'].forEach((size) => {
+    ['small', 'medium'].forEach(size => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();
@@ -48,10 +46,7 @@ describe('Label', () => {
   describe('with LabelIcon', () => {
     it('adds space to start if first child', () => {
       const component = getComponent({
-        children: [
-          <LabelIcon key="LabelIcon" name="twitter" />,
-          'Lorem ipsum',
-        ],
+        children: [<LabelIcon key="LabelIcon" name="twitter" />, 'Lorem ipsum'],
       });
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
@@ -59,10 +54,7 @@ describe('Label', () => {
 
     it('adds space to end if last child', () => {
       const component = getComponent({
-        children: [
-          'Lorem ipsum',
-          <LabelIcon key="LabelIcon" name="twitter" />,
-        ],
+        children: ['Lorem ipsum', <LabelIcon key="LabelIcon" name="twitter" />],
       });
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();

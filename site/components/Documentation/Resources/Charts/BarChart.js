@@ -34,26 +34,43 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase>
           <BarChart
-              BenchmarkTooltipContext={ DropdownContext }
-              DifferenceAreaTooltipContext={ DropdownContext }
-              DropdownContext={ DropdownContext }
-              TooltipContext={ DropdownContext }
-              axisTitle="% of each something"
-              chartKey={ dotPlotKey }
-              chartKeyBenchmarkLabel="Benchmark"
-              collapsedVisibleRowCount={ 4 }
-              data={ dotPlotData.map((_, i) => ({ ..._, hidden: hiddenRows[i] })) }
-              expandButtonSuffix="Categories"
-              labelColumnWidth="11rem"
-              lower={ 0 }
-              onToggleRowVisibility={ (a, b, data, i) => this.handleToggleRowVisibility(i) }
-              upper={ 100 }
-              xAxisLabels={ () => [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
+            BenchmarkTooltipContext={DropdownContext}
+            DifferenceAreaTooltipContext={DropdownContext}
+            DropdownContext={DropdownContext}
+            TooltipContext={DropdownContext}
+            axisTitle="% of each something"
+            chartKey={dotPlotKey}
+            chartKeyBenchmarkLabel="Benchmark"
+            collapsedVisibleRowCount={4}
+            data={dotPlotData.map((_, i) => ({ ..._, hidden: hiddenRows[i] }))}
+            expandButtonSuffix="Categories"
+            labelColumnWidth="11rem"
+            lower={0}
+            onToggleRowVisibility={(a, b, data, i) =>
+              this.handleToggleRowVisibility(i)
+            }
+            upper={100}
+            xAxisLabels={() => [
+              '0',
+              '10',
+              '20',
+              '30',
+              '40',
+              '50',
+              '60',
+              '70',
+              '80',
+              '90',
+              '100',
+            ]}
+          />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/BarChart/BarChart'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/BarChart/BarChart'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

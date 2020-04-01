@@ -19,9 +19,7 @@ function getComponent(newProps = {}) {
   };
 
   return shallow(
-    <CombinedBar { ...props }
-        color="giant-leap"
-        direction="right" />
+    <CombinedBar {...props} color="giant-leap" direction="right" />
   );
 }
 

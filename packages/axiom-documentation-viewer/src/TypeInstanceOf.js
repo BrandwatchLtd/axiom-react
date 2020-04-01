@@ -14,11 +14,11 @@ export default class TypeInstanceOf extends Component {
   };
 
   render() {
-    const { type: { value } } = this.props;
+    const {
+      type: { value },
+    } = this.props;
     const InstanceOfEditor = InstaceOfMap[value];
 
-    return (
-      <InstanceOfEditor { ...this.props } />
-    );
+    return <InstanceOfEditor {...this.props} />;
   }
 }

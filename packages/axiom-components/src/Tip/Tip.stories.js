@@ -11,8 +11,8 @@ export default {
 export function Default() {
   return (
     <Base container>
-      <Tip color="shade-2" shadow={ false } size="medium">
-        <AlertCard onRemoveClick={ () => {} } shade="shade-2" space="x2">
+      <Tip color="shade-2" shadow={false} size="medium">
+        <AlertCard onRemoveClick={() => {}} shade="shade-2" space="x2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
           amet pulvinar lorem. Aliquam porta eros at dui commodo posuere.
         </AlertCard>

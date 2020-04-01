@@ -6,7 +6,7 @@ import renderFilter from './_filter';
 import './Candytar.css';
 
 const availableColors = Object.keys(colors.userDefinedGraphColors);
-const defaultPickerFn = (colors) =>
+const defaultPickerFn = colors =>
   colors[Math.floor(Math.random() * colors.length)];
 
 export default class Candytar extends Component {
@@ -47,10 +47,15 @@ export default class Candytar extends Component {
     initials: '',
   };
 
-  componentDidMount = renderFilter
+  componentDidMount = renderFilter;
 
   render() {
-    const { picker, color = picker(availableColors), size, initials } = this.props;
+    const {
+      picker,
+      color = picker(availableColors),
+      size,
+      initials,
+    } = this.props;
     const style = { height: size, width: size };
     const classes = classnames('ax-candytar', `ax-candytar--${color}`);
     const userInitials = initials.slice(0, 2).toUpperCase();
@@ -58,21 +63,33 @@ export default class Candytar extends Component {
     /* eslint-disable max-len */
     const showSilhouette = (
       <path
-          className="ax-candytar__body"
-          d="M16 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7zM6 28.5c1.7-3.8 5.6-6.5 10-6.5 4.5 0 8.3 2.7 10 6.5C23.4 30.7 20 32 16 32s-7.3-1.3-10-3.5z"
-          filter="url(#ax-candytar__filter)">
-      </path>
+        className="ax-candytar__body"
+        d="M16 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7zM6 28.5c1.7-3.8 5.6-6.5 10-6.5 4.5 0 8.3 2.7 10 6.5C23.4 30.7 20 32 16 32s-7.3-1.3-10-3.5z"
+        filter="url(#ax-candytar__filter)"
+      ></path>
     );
 
     const showInitials = (
-      <text className="ax-candytar__initials" textAnchor="middle" x="50%" y="65%">{ userInitials }</text>
+      <text
+        className="ax-candytar__initials"
+        textAnchor="middle"
+        x="50%"
+        y="65%"
+      >
+        {userInitials}
+      </text>
     );
     /* eslint-enable max-len */
 
     return (
-      <svg className={ classes } style={ style } viewBox="0 0 32 32">
-        <circle className="ax-candytar__background" cx="16" cy="16" r="16"></circle>
-        { initials ? showInitials : showSilhouette }
+      <svg className={classes} style={style} viewBox="0 0 32 32">
+        <circle
+          className="ax-candytar__background"
+          cx="16"
+          cy="16"
+          r="16"
+        ></circle>
+        {initials ? showInitials : showSilhouette}
       </svg>
     );
   }

@@ -18,19 +18,20 @@ export default class TypeEnum extends Component {
 
     return (
       <Select
-          onChange={ () => {} }
-          onClear={ () => setValue(undefined) }
-          onSelect={ (value) => setValue(value) }
-          placeholder="Select a prop value"
-          readOnly
-          selectedValue={ value }
-          value={ value }>
+        onChange={() => {}}
+        onClear={() => setValue(undefined)}
+        onSelect={value => setValue(value)}
+        placeholder="Select a prop value"
+        readOnly
+        selectedValue={value}
+        value={value}
+      >
         <SelectOptionGroup>
-          { values.map((val) => (
-            <SelectOption key={ val } value={ val }>
-              { val.toString() }
+          {values.map(val => (
+            <SelectOption key={val} value={val}>
+              {val.toString()}
             </SelectOption>
-          )) }
+          ))}
         </SelectOptionGroup>
       </Select>
     );

@@ -23,16 +23,18 @@ export default class DataPoints extends Component {
     });
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className={ classes }
-          onClick={ onClick }
-          preserveAspectRatio="xMinYMin meet"
-          style={ style }
-          viewBox={ `0 0 ${VB_HEIGHT} ${VB_HEIGHT}` }>
-        { Children.toArray(children).map((child, n, { length }) =>
-          cloneElement(child, { r: ((VB_HEIGHT / 2) / length) * (length - n) })
-        ) }
+      <Base
+        {...rest}
+        Component="svg"
+        className={classes}
+        onClick={onClick}
+        preserveAspectRatio="xMinYMin meet"
+        style={style}
+        viewBox={`0 0 ${VB_HEIGHT} ${VB_HEIGHT}`}
+      >
+        {Children.toArray(children).map((child, n, { length }) =>
+          cloneElement(child, { r: (VB_HEIGHT / 2 / length) * (length - n) })
+        )}
       </Base>
     );
   }

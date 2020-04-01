@@ -9,10 +9,12 @@ export default class ChartLayoutLabels extends Component {
     axis: PropTypes.oneOf(['x', 'y']).isRequired,
     labels: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.string),
-      PropTypes.arrayOf(PropTypes.shape({
-        label: PropTypes.node,
-        value: PropTypes.number.isRequired,
-      })),
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          label: PropTypes.node,
+          value: PropTypes.number.isRequired,
+        })
+      ),
     ]).isRequired,
     lower: PropTypes.number,
     upper: PropTypes.number,
@@ -31,34 +33,37 @@ export default class ChartLayoutLabels extends Component {
       'ax-chart-layout__labels--precise': isPrecise,
     });
 
-    if (!labels.some((label) => isPrecise ? label.label : label)) {
+    if (!labels.some(label => (isPrecise ? label.label : label))) {
       return null;
     }
 
     if (isPrecise) {
       return (
-        <Base { ...rest } className={ classes }>
-          { labels.map(({ label, value }, index) => (
-            <Fragment key={ index }>
+        <Base {...rest} className={classes}>
+          {labels.map(({ label, value }, index) => (
+            <Fragment key={index}>
               <div className="ax-chart-layout__label--hidden">
-                <ChartLabel>{ label }</ChartLabel>
+                <ChartLabel>{label}</ChartLabel>
               </div>
               <div
-                  className={ `ax-chart-layout__${axis}-label` }
-                  style={ { [side]: `${(value - lower) / (upper - lower) * 100}%` } }>
-                <ChartLabel>{ label }</ChartLabel>
+                className={`ax-chart-layout__${axis}-label`}
+                style={{
+                  [side]: `${((value - lower) / (upper - lower)) * 100}%`,
+                }}
+              >
+                <ChartLabel>{label}</ChartLabel>
               </div>
             </Fragment>
-          )) }
+          ))}
         </Base>
       );
     }
 
     return (
-      <Base { ...rest } className={ classes }>
-        { labels.map((label, index) => (
-          <ChartLabel key={ index }>{ label }</ChartLabel>
-        )) }
+      <Base {...rest} className={classes}>
+        {labels.map((label, index) => (
+          <ChartLabel key={index}>{label}</ChartLabel>
+        ))}
       </Base>
     );
   }

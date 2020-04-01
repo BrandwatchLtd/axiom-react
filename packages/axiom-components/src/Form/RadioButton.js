@@ -40,22 +40,24 @@ export default class RadioButton extends Component {
 
     return (
       <Validate
-          error={ error }
-          patterns={ patterns }
-          required={ required }
-          value={ checked }>
-        { (isValid) =>
+        error={error}
+        patterns={patterns}
+        required={required}
+        value={checked}
+      >
+        {isValid => (
           <ChedioButtox
-              { ...rest }
-              checked={ checked }
-              className="ax-radio"
-              disabled={ disabled }
-              inputType="radio"
-              invalid={ invalid || isValid === false }
-              name={ name }>
-            { children }
+            {...rest}
+            checked={checked}
+            className="ax-radio"
+            disabled={disabled}
+            inputType="radio"
+            invalid={invalid || isValid === false}
+            name={name}
+          >
+            {children}
           </ChedioButtox>
-        }
+        )}
       </Validate>
     );
   }

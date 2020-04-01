@@ -29,13 +29,15 @@ export default class CardList extends Component {
 
   render() {
     const { children, className, style, ...rest } = this.props;
-    const classes = classnames('ax-card-list',
-      `ax-card-list--${style}`, className
+    const classes = classnames(
+      'ax-card-list',
+      `ax-card-list--${style}`,
+      className
     );
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

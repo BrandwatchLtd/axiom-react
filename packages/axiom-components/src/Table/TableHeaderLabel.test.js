@@ -2,9 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import TableHeaderLabel from './TableHeaderLabel';
 
-const getComponent = props => renderer.create(
-  <TableHeaderLabel { ...props }>Test</TableHeaderLabel>
-);
+const getComponent = props =>
+  renderer.create(<TableHeaderLabel {...props}>Test</TableHeaderLabel>);
 
 describe('TableHeaderLabel', () => {
   it('renders', () => {

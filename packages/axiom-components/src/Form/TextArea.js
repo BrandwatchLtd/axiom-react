@@ -83,51 +83,55 @@ export default class TextArea extends Component {
       usageHintPosition,
       valid,
       value,
-      ...rest } = this.props;
+      ...rest
+    } = this.props;
 
     const { hasFocus } = this.state;
 
     const style = { minHeight: height };
 
-    const textareaClasses = (isValid) => classnames('ax-textarea', {
-      'ax-textarea--valid': valid,
-      'ax-textarea--invalid': invalid || isValid === false,
-    });
+    const textareaClasses = isValid =>
+      classnames('ax-textarea', {
+        'ax-textarea--valid': valid,
+        'ax-textarea--invalid': invalid || isValid === false,
+      });
 
     return (
       <Validate
-          error={ error }
-          patterns={ patterns }
-          required={ required }
-          value={ value }>
-        { (isValid) =>
+        error={error}
+        patterns={patterns}
+        required={required}
+        value={value}
+      >
+        {isValid => (
           <InputWrapper
-              disabled={ disabled }
-              hasFocus={ hasFocus }
-              invalid={ invalid }
-              isValid={ isValid }
-              label={ label }
-              usageHint={ usageHint }
-              usageHintPosition={ usageHintPosition }
-              valid={ valid }>
-            <Base { ...rest }
-                Component="textarea"
-                className={ textareaClasses(isValid) }
-                disabled={ disabled }
-                onBlur={ this.handleOnBlur.bind(this) }
-                onFocus={ this.handleOnFocus.bind(this) }
-                placeholder={ placeholder }
-                style={ style }
-                value={ value } />
-            {
-              isInProgress && (
-                <span className="ax-textarea__progress">
-                  <ProgressInfinite sizeRem="1rem" />
-                </span>
-              )
-            }
+            disabled={disabled}
+            hasFocus={hasFocus}
+            invalid={invalid}
+            isValid={isValid}
+            label={label}
+            usageHint={usageHint}
+            usageHintPosition={usageHintPosition}
+            valid={valid}
+          >
+            <Base
+              {...rest}
+              Component="textarea"
+              className={textareaClasses(isValid)}
+              disabled={disabled}
+              onBlur={this.handleOnBlur.bind(this)}
+              onFocus={this.handleOnFocus.bind(this)}
+              placeholder={placeholder}
+              style={style}
+              value={value}
+            />
+            {isInProgress && (
+              <span className="ax-textarea__progress">
+                <ProgressInfinite sizeRem="1rem" />
+              </span>
+            )}
           </InputWrapper>
-        }
+        )}
       </Validate>
     );
   }

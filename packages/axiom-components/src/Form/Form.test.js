@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import Form from './Form';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Form { ...props }>Lorem ipsum</Form>
-  );
+  renderer.create(<Form {...props}>Lorem ipsum</Form>);
 
 describe('Form', () => {
   it('renders with defaultProps', () => {

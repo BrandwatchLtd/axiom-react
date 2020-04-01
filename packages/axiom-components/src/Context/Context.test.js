@@ -4,7 +4,7 @@ import Context from './Context';
 
 const getComponent = (props = {}, context = {}) =>
   renderer.create(
-    <Context { ...props } { ...context }>
+    <Context {...props} {...context}>
       Lorem ipsum
     </Context>
   );
@@ -35,7 +35,7 @@ describe('Context', () => {
   });
 
   describe('renders with position', () => {
-    ['top', 'bottom', 'right', 'left'].forEach((position) => {
+    ['top', 'bottom', 'right', 'left'].forEach(position => {
       it(position, () => {
         const component = getComponent({ position });
         const tree = component.toJSON();
@@ -45,7 +45,7 @@ describe('Context', () => {
   });
 
   describe('renders with theme', () => {
-    ['day', 'night'].forEach((theme) => {
+    ['day', 'night'].forEach(theme => {
       it(theme, () => {
         const component = getComponent({ theme });
         const tree = component.toJSON();

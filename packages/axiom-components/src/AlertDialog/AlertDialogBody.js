@@ -12,10 +12,8 @@ export default class AlertDialogBody extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          className="ax-alert-dialog__body"
-          textColor="subtle">
-        { children }
+      <Base {...rest} className="ax-alert-dialog__body" textColor="subtle">
+        {children}
       </Base>
     );
   }

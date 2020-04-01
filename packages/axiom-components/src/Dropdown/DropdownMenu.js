@@ -12,10 +12,6 @@ export default class DropdownMenu extends Component {
   render() {
     const { children, ...rest } = this.props;
 
-    return (
-      <ContextMenu { ...rest }>
-        { children }
-      </ContextMenu>
-    );
+    return <ContextMenu {...rest}>{children}</ContextMenu>;
   }
 }

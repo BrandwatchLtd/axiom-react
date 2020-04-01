@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import Image from './Image';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Image src="/image.png" { ...props } />
-  );
+  renderer.create(<Image src="/image.png" {...props} />);
 
 describe('Image', () => {
   it('renders with defaultProps', () => {
@@ -15,7 +13,7 @@ describe('Image', () => {
   });
 
   describe('renders with border', () => {
-    ['small', 'large'].forEach((border) => {
+    ['small', 'large'].forEach(border => {
       it(border, () => {
         const component = getComponent({ border });
         const tree = component.toJSON();
@@ -25,7 +23,7 @@ describe('Image', () => {
   });
 
   describe('renders with shape', () => {
-    ['circle', 'rounded', 'square'].forEach((shape) => {
+    ['circle', 'rounded', 'square'].forEach(shape => {
       it(shape, () => {
         const component = getComponent({ shape });
         const tree = component.toJSON();

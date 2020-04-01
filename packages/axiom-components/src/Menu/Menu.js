@@ -30,8 +30,8 @@ export default class Menu extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...omit(rest, ['size']) } Component="ul" className="ax-menu">
-        { children }
+      <Base {...omit(rest, ['size'])} Component="ul" className="ax-menu">
+        {children}
       </Base>
     );
   }

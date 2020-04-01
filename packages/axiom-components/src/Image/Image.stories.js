@@ -15,7 +15,6 @@ export function Default() {
   );
 }
 
-
 export function WithFallback() {
   return (
     <Image src="badPath">
@@ -27,10 +26,9 @@ export function WithFallback() {
 export function Shape() {
   return (
     <div>
-      <Image shape="square" src="/avatar.png" width="50px"/>
-      <Image shape="circle" src="/avatar.png" width="50px"/>
-      <Image shape="rounded" src="/avatar.png" width="50px"/>
+      <Image shape="square" src="/avatar.png" width="50px" />
+      <Image shape="circle" src="/avatar.png" width="50px" />
+      <Image shape="rounded" src="/avatar.png" width="50px" />
     </div>
-
   );
 }

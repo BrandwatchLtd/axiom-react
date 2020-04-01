@@ -62,15 +62,18 @@ export default class DataPoint extends Component {
     const classes = classnames(
       'ax-data-point',
       `ax-data-point--${color}`,
-      `ax-data-point--${style}`);
+      `ax-data-point--${style}`
+    );
 
     return (
-      <circle { ...rest }
-          className={ classes }
-          cx={ VB_HEIGHT / 2 }
-          cy={ VB_HEIGHT / 2 }
-          r={ style === 'solid' ? r : r - (HOLLOW_STROKE_WIDTH / 2) }
-          strokeWidth={ HOLLOW_STROKE_WIDTH } />
+      <circle
+        {...rest}
+        className={classes}
+        cx={VB_HEIGHT / 2}
+        cy={VB_HEIGHT / 2}
+        r={style === 'solid' ? r : r - HOLLOW_STROKE_WIDTH / 2}
+        strokeWidth={HOLLOW_STROKE_WIDTH}
+      />
     );
   }
 }

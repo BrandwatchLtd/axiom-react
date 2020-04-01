@@ -6,7 +6,12 @@ import {
   DocumentationContent,
   DocumentationShowCase,
 } from '@brandwatch/axiom-documentation-viewer';
-import { sparkLineBenchmark, sparkLineData, sparkLineEmptyData, sparkLineNoDifferenceData } from './chartData';
+import {
+  sparkLineBenchmark,
+  sparkLineData,
+  sparkLineEmptyData,
+  sparkLineNoDifferenceData,
+} from './chartData';
 
 export default class Documentation extends Component {
   render() {
@@ -16,38 +21,44 @@ export default class Documentation extends Component {
           <Grid>
             <GridCell>
               <SparkLine
-                  benchmark={ sparkLineBenchmark }
-                  data={ sparkLineData }
-                  height="5rem"
-                  pointColor="tiny-clanger" />
+                benchmark={sparkLineBenchmark}
+                data={sparkLineData}
+                height="5rem"
+                pointColor="tiny-clanger"
+              />
             </GridCell>
             <GridCell>
               <SparkLine
-                  data={ sparkLineEmptyData }
-                  height="5rem"
-                  pointColor="critical-mass" />
+                data={sparkLineEmptyData}
+                height="5rem"
+                pointColor="critical-mass"
+              />
             </GridCell>
           </Grid>
 
           <Grid>
             <GridCell>
               <SparkLine
-                  data={ sparkLineNoDifferenceData }
-                  height="5rem"
-                  pointColor="paradise-lost" />
+                data={sparkLineNoDifferenceData}
+                height="5rem"
+                pointColor="paradise-lost"
+              />
             </GridCell>
             <GridCell>
               <SparkLine
-                  data={ sparkLineData }
-                  height="5rem"
-                  pointColor="giant-leap" />
+                data={sparkLineData}
+                height="5rem"
+                pointColor="giant-leap"
+              />
             </GridCell>
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/SparkLine/SparkLine'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/SparkLine/SparkLine'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

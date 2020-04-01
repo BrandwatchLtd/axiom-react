@@ -51,8 +51,8 @@ export default class Image extends Component {
 
     const style = {
       maxWidth,
-      width: shape === 'circle' ? (width || height) : width,
-      height: shape === 'circle' ? (width || height) : height,
+      width: shape === 'circle' ? width || height : width,
+      height: shape === 'circle' ? width || height : height,
       backgroundColor: color,
     };
 
@@ -62,17 +62,19 @@ export default class Image extends Component {
 
     return (
       <ImageFallback
-          fallback={ children }
-          onError={ onError }
-          onLoad={ onLoad }
-          src={ src }>
+        fallback={children}
+        onError={onError}
+        onLoad={onLoad}
+        src={src}
+      >
         <Base
-            space="x4"
-            { ...rest }
-            Component="img"
-            className={ classes }
-            src={ src }
-            style={ style } />
+          space="x4"
+          {...rest}
+          Component="img"
+          className={classes}
+          src={src}
+          style={style}
+        />
       </ImageFallback>
     );
   }

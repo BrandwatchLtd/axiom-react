@@ -29,17 +29,12 @@ export default class LogoPage extends Component {
     };
 
     return (
-      <Base { ...rest }
-          className={ classes }
-          style={ style }
-          theme={ theme }>
+      <Base {...rest} className={classes} style={style} theme={theme}>
         <div className="ax-logo-page__header">
-          <LogoTab color={ LOGO_COLOR_MAP[theme] } height={ LOGO_HEIGHT } />
+          <LogoTab color={LOGO_COLOR_MAP[theme]} height={LOGO_HEIGHT} />
         </div>
 
-        <div className="ax-logo-page__body">
-          { children }
-        </div>
+        <div className="ax-logo-page__body">{children}</div>
       </Base>
     );
   }

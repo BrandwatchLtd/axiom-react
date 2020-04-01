@@ -4,7 +4,7 @@ import ChartTableLabel from './ChartTableLabel';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <ChartTableLabel { ...props } width="11rem">
+    <ChartTableLabel {...props} width="11rem">
       Lorem Ipsum
     </ChartTableLabel>
   );

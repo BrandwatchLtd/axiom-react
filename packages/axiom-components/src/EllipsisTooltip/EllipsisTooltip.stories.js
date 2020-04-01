@@ -8,10 +8,8 @@ export default {
 
 export function Default() {
   return (
-    <div style={ { width: '100px', display: 'block' } }>
-      <EllipsisTooltip>
-        Hover to see wrapped text.
-      </EllipsisTooltip>
+    <div style={{ width: '100px', display: 'block' }}>
+      <EllipsisTooltip>Hover to see wrapped text.</EllipsisTooltip>
     </div>
   );
 }

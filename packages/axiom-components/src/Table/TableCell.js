@@ -23,7 +23,7 @@ export default class TableCell extends Component {
     isSelected: false,
     textAlign: 'left',
     verticalPadding: 'small',
-  }
+  };
 
   render() {
     const {
@@ -46,8 +46,8 @@ export default class TableCell extends Component {
     );
 
     return (
-      <Base { ...rest } Component="td" className={ classes }>
-        { children }
+      <Base {...rest} Component="td" className={classes}>
+        {children}
       </Base>
     );
   }

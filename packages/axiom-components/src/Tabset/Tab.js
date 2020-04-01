@@ -29,17 +29,21 @@ export default class Tab extends Component {
     });
 
     return (
-      <Base { ...rest }
-          Component="li"
-          className={ classes }
-          textSize="small"
-          textStrong
-          title={ isValidElement(title) ? null : title }>
-        <button { ...rest }
-            className="ax-tabset__button"
-            disabled={ disabled }
-            onClick={ onClick }>
-          { title }
+      <Base
+        {...rest}
+        Component="li"
+        className={classes}
+        textSize="small"
+        textStrong
+        title={isValidElement(title) ? null : title}
+      >
+        <button
+          {...rest}
+          className="ax-tabset__button"
+          disabled={disabled}
+          onClick={onClick}
+        >
+          {title}
         </button>
       </Base>
     );

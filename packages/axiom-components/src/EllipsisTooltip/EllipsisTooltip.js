@@ -27,7 +27,7 @@ export default class EllipsisTooltip extends Component {
     delay: true,
     theme: 'night',
     width: 'auto',
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -58,24 +58,27 @@ export default class EllipsisTooltip extends Component {
 
     if (!hasEllipsis) {
       return (
-        <Base baseRef={ this.container } textEllipsis { ...rest } onMouseOver={ this.updateTooltipEnabled }>
-          { children }
+        <Base
+          baseRef={this.container}
+          textEllipsis
+          {...rest}
+          onMouseOver={this.updateTooltipEnabled}
+        >
+          {children}
         </Base>
       );
     }
 
     return (
-      <Tooltip delay={ delay } enabled>
+      <Tooltip delay={delay} enabled>
         <TooltipTarget>
-          <Base baseRef={ this.container } textEllipsis { ...rest }>
-            { children }
+          <Base baseRef={this.container} textEllipsis {...rest}>
+            {children}
           </Base>
         </TooltipTarget>
-        <TooltipSource theme={ theme } width={ width }>
-          <TooltipContext color={ color }>
-            <TooltipContent>
-              { children }
-            </TooltipContent>
+        <TooltipSource theme={theme} width={width}>
+          <TooltipContext color={color}>
+            <TooltipContent>{children}</TooltipContent>
           </TooltipContext>
         </TooltipSource>
       </Tooltip>

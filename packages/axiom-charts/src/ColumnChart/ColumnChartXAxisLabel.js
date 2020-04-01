@@ -11,8 +11,10 @@ export default class ColumnChartXAxisLabel extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-column-chart__x-axis-label">
-        <Heading><Strong>{ children }</Strong></Heading>
+      <Base {...rest} className="ax-column-chart__x-axis-label">
+        <Heading>
+          <Strong>{children}</Strong>
+        </Heading>
       </Base>
     );
   }

@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import AlertIcon from './AlertIcon';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <AlertIcon name="twitter" { ...props } />
-  );
+  renderer.create(<AlertIcon name="twitter" {...props} />);
 
 describe('AlertIcon', () => {
   it('renders with defaultProps', () => {
@@ -15,7 +13,7 @@ describe('AlertIcon', () => {
   });
 
   describe('renders with color', () => {
-    ['success', 'warning', 'error', 'info', 'subtle'].forEach((color) => {
+    ['success', 'warning', 'error', 'info', 'subtle'].forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
@@ -25,7 +23,7 @@ describe('AlertIcon', () => {
   });
 
   describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach((size) => {
+    ['small', 'medium', 'large'].forEach(size => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();
@@ -35,7 +33,7 @@ describe('AlertIcon', () => {
   });
 
   describe('renders with a primary or secondary style', () => {
-    ['primary', 'secondary'].forEach((style) => {
+    ['primary', 'secondary'].forEach(style => {
       it(style, () => {
         const component = getComponent({ style });
         const tree = component.toJSON();

@@ -4,16 +4,21 @@ import Button from '../Button/Button';
 import ButtonIcon from '../Button/ButtonIcon';
 
 const sizeMap = {
-  'small': '1rem',
-  'medium': '2rem',
-  'large': '3rem',
-  'huge': '5rem',
+  small: '1rem',
+  medium: '2rem',
+  large: '3rem',
+  huge: '5rem',
 };
 
 export default class IconButton extends Component {
   static propTypes = {
     /** Style of the Button, which affects its coloring and sizing */
-    buttonStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+    buttonStyle: PropTypes.oneOf([
+      'primary',
+      'secondary',
+      'tertiary',
+      'quaternary',
+    ]),
     /** Color of the icon */
     iconColor: PropTypes.oneOf([
       'body',
@@ -67,14 +72,14 @@ export default class IconButton extends Component {
   static defaultProps = {
     size: 'medium',
     buttonStyle: 'secondary',
-  }
+  };
 
   render() {
     const { name, size, buttonStyle, iconColor, ...rest } = this.props;
 
     return (
-      <Button { ...rest } shape="circle" size={ size } style={ buttonStyle }>
-        <ButtonIcon color={ iconColor } name={ name } size={ sizeMap[size] } />
+      <Button {...rest} shape="circle" size={size} style={buttonStyle}>
+        <ButtonIcon color={iconColor} name={name} size={sizeMap[size]} />
       </Button>
     );
   }

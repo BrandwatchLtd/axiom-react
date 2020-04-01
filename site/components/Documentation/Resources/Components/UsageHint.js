@@ -19,23 +19,24 @@ export default class Documentation extends Component {
         <Grid>
           <GridCell>
             <DocumentationShowCase centered>
-              <UsageHint>
-                This is a usage hint.
-              </UsageHint>
+              <UsageHint>This is a usage hint.</UsageHint>
             </DocumentationShowCase>
           </GridCell>
           <GridCell>
             <DocumentationShowCase centered>
               <UsageHint position="right">
-                <TextIcon name="clock" /> Usage hints <Strong>can also</Strong> contain other components.
+                <TextIcon name="clock" /> Usage hints <Strong>can also</Strong>{' '}
+                contain other components.
               </UsageHint>
             </DocumentationShowCase>
           </GridCell>
         </Grid>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/UsageHint/UsageHint'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/UsageHint/UsageHint'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

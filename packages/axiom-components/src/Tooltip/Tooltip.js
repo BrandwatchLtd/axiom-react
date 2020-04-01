@@ -9,14 +9,17 @@ import { TooltipTargetRef } from './TooltipTarget';
 
 export default React.forwardRef(Tooltip);
 
-function Tooltip({
-  children,
-  delay = false,
-  onClick,
-  position = 'top',
-  enabled = true,
-  ...rest
-}, ref) {
+function Tooltip(
+  {
+    children,
+    delay = false,
+    onClick,
+    position = 'top',
+    enabled = true,
+    ...rest
+  },
+  ref
+) {
   const [isVisible, setIsVisible] = useState(false);
 
   React.useImperativeHandle(ref, () => ({
@@ -36,19 +39,20 @@ function Tooltip({
 
   return (
     <Position
-        { ...rest }
-        enabled={ enabled }
-        isVisible={ isVisible }
-        position={ position }
-        showArrow>
-      <PositionTarget delay={ delay } onClick={ onClick }>
-        { cloneElement(findComponent(children, TooltipTargetRef), {
+      {...rest}
+      enabled={enabled}
+      isVisible={isVisible}
+      position={position}
+      showArrow
+    >
+      <PositionTarget delay={delay} onClick={onClick}>
+        {cloneElement(findComponent(children, TooltipTargetRef), {
           showTooltip,
           hideTooltip,
-        }) }
+        })}
       </PositionTarget>
       <PositionSource>
-        { findComponent(children, TooltipSourceRef) }
+        {findComponent(children, TooltipSourceRef)}
       </PositionSource>
     </Position>
   );

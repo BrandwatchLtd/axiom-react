@@ -2,12 +2,11 @@ const DEFAULT_TICK_COUNT = 5;
 const MIN_TICK_COUNT = 3;
 
 export function getEquallyDistributedAxisLabels({
-    lower,
-    upper,
-    tickCount = DEFAULT_TICK_COUNT,
-    labelFormatter = v => v,
+  lower,
+  upper,
+  tickCount = DEFAULT_TICK_COUNT,
+  labelFormatter = v => v,
 }) {
-
   if (lower === upper) {
     return [];
   }

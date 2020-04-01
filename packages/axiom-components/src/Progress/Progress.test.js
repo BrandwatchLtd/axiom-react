@@ -2,10 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Progress from './Progress';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <Progress { ...props } />
-  );
+const getComponent = (props = {}) => renderer.create(<Progress {...props} />);
 
 describe('Progress', () => {
   it('renders with defaultProps', () => {

@@ -46,65 +46,69 @@ export function BasicExample() {
 
   function renderCanvas() {
     switch (openCanvas) {
-    case 'folder':
-      return (
-        <Canvas>
-          <CanvasHeader>
-            <Heading>Folder Canvas</Heading>
-          </CanvasHeader>
-        </Canvas>
-      );
-    case 'followers':
-      return (
-        <Canvas>
-          <CanvasHeader>
-            <Heading>Followers Canvas</Heading>
-          </CanvasHeader>
-        </Canvas>
-      );
-    default:
-      return (
-        <Canvas>
-          <CanvasHeader>
-            <Heading>Home Canvas</Heading>
-          </CanvasHeader>
-        </Canvas>
-      );
+      case 'folder':
+        return (
+          <Canvas>
+            <CanvasHeader>
+              <Heading>Folder Canvas</Heading>
+            </CanvasHeader>
+          </Canvas>
+        );
+      case 'followers':
+        return (
+          <Canvas>
+            <CanvasHeader>
+              <Heading>Followers Canvas</Heading>
+            </CanvasHeader>
+          </Canvas>
+        );
+      default:
+        return (
+          <Canvas>
+            <CanvasHeader>
+              <Heading>Home Canvas</Heading>
+            </CanvasHeader>
+          </Canvas>
+        );
     }
   }
 
   return (
     <Platform
-        onConsoleClose={ closeConsole }
-        openConsolePosition={ openConsolePosition }
-        openConsoleWidth="26.25rem">
+      onConsoleClose={closeConsole}
+      openConsolePosition={openConsolePosition}
+      openConsoleWidth="26.25rem"
+    >
       <Dock>
         <DockHeader>
           <DockIconLink
-              active={ openCanvas === 'home' }
-              icon="home"
-              onClick={ () => {
-                setOpenCanvas('home');
-                openConsole();
-              } }
-              title="Home"/>
+            active={openCanvas === 'home'}
+            icon="home"
+            onClick={() => {
+              setOpenCanvas('home');
+              openConsole();
+            }}
+            title="Home"
+          />
         </DockHeader>
         <DockIconLink
-            active={ openCanvas === 'folder' }
-            icon="folder"
-            onClick={ () => setOpenCanvas('folder') }
-            title="folder"/>
+          active={openCanvas === 'folder'}
+          icon="folder"
+          onClick={() => setOpenCanvas('folder')}
+          title="folder"
+        />
         <DockIconLink
-            active={ openCanvas === 'followers' }
-            icon="followers"
-            onClick={ () => setOpenCanvas('followers') }
-            title="folder"/>
+          active={openCanvas === 'followers'}
+          icon="followers"
+          onClick={() => setOpenCanvas('followers')}
+          title="folder"
+        />
         <DockFooter>
           <DockIconLink icon="customise" title="customise" />
         </DockFooter>
       </Dock>
-      <Console position={ 'left' } width="26.25rem">
-        <ConsoleHeader separator={ true } size="large">
+      <Console position={'left'} width="26.25rem">
+        <ConsoleHeader separator={true} size="large">
           ConsoleHeader
         </ConsoleHeader>
         <ConsoleMenu>
@@ -115,14 +119,14 @@ export function BasicExample() {
           <ConsoleMenuItem>ConsoleMenuItem</ConsoleMenuItem>
         </ConsoleMenu>
       </Console>
-      { renderCanvas() }
+      {renderCanvas()}
     </Platform>
   );
 }
 
 export function UsingConsoleWithoutPlatorm() {
   return (
-    <ConsoleHeader separator={ true } size="large">
+    <ConsoleHeader separator={true} size="large">
       ConsoleHeader
     </ConsoleHeader>
   );

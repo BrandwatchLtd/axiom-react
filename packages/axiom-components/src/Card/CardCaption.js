@@ -9,7 +9,7 @@ export default class CardCaption extends Component {
     children: PropTypes.node.isRequired,
     /** Class name to be appended to the element */
     className: PropTypes.string,
-  }
+  };
 
   render() {
     const { children, className, ...rest } = this.props;
@@ -17,8 +17,8 @@ export default class CardCaption extends Component {
     const classes = classnames('ax-card__caption', className);
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

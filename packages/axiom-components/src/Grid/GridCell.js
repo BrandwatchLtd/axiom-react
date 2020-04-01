@@ -9,8 +9,8 @@ export default class GridCell extends Component {
     /** Class name to be appended to the element */
     className: PropTypes.string,
     /*
-    * Controls the direction of the grid cells
-    */
+     * Controls the direction of the grid cells
+     */
     direction: PropTypes.oneOf(['row', 'column']),
     /**
      * Sizes itself according to the size of its contents. This causes the grid
@@ -83,29 +83,33 @@ export default class GridCell extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-grid__cell', {
-      [`ax-grid__cell--${verticalAlign}`]: verticalAlign,
-      'ax-grid__cell--fill': fill === true,
-      'ax-grid__cell--fit': fit === true,
-      'ax-grid__cell--full': full === true,
-      'ax-grid__cell--none': none === true || width,
-      'ax-grid__cell--shrink': shrink === true,
-      [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
-      [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
-      [`ax-grid__cell--full--${full}`]: full && full !== true,
-      [`ax-grid__cell--none--${none}`]: none && none !== true,
-      [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
-      'ax-grid__cell--sub-grid': subGrid,
-      'ax-grid--columns': subGrid && direction === 'column',
-    }, className);
+    const classes = classnames(
+      'ax-grid__cell',
+      {
+        [`ax-grid__cell--${verticalAlign}`]: verticalAlign,
+        'ax-grid__cell--fill': fill === true,
+        'ax-grid__cell--fit': fit === true,
+        'ax-grid__cell--full': full === true,
+        'ax-grid__cell--none': none === true || width,
+        'ax-grid__cell--shrink': shrink === true,
+        [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
+        [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
+        [`ax-grid__cell--full--${full}`]: full && full !== true,
+        [`ax-grid__cell--none--${none}`]: none && none !== true,
+        [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
+        'ax-grid__cell--sub-grid': subGrid,
+        'ax-grid--columns': subGrid && direction === 'column',
+      },
+      className
+    );
 
     const styles = {
       width: width && `${Math.max(0, Math.min(width, 100))}%`,
     };
 
     return (
-      <Base { ...rest } className={ classes } style={ styles }>
-        { children }
+      <Base {...rest} className={classes} style={styles}>
+        {children}
       </Base>
     );
   }

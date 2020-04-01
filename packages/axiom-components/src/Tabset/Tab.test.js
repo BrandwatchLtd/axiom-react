@@ -2,10 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Tab from './Tab';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <Tab { ...props } />
-  );
+const getComponent = (props = {}) => renderer.create(<Tab {...props} />);
 
 describe('Tab', () => {
   it('renders with defaultProps', () => {
@@ -40,7 +37,7 @@ describe('Tab', () => {
     });
 
     it('react element', () => {
-      const component = getComponent({ title: (<span>Lorem Ipsum</span>) });
+      const component = getComponent({ title: <span>Lorem Ipsum</span> });
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });

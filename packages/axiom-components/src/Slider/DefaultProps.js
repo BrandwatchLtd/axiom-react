@@ -1,6 +1,6 @@
 export default {
   size: 'small',
   step: 1,
-  valueFormatter: (n) => n,
+  valueFormatter: n => n,
   withTooltip: false,
 };

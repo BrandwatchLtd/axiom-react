@@ -18,10 +18,11 @@ export default class TypeBool extends Component {
 
     return (
       <Toggle
-          disabled={ disabled }
-          onToggle={ () => setValue(!value) }
-          toggled={ value }>
-        { value.toString() }
+        disabled={disabled}
+        onToggle={() => setValue(!value)}
+        toggled={value}
+      >
+        {value.toString()}
       </Toggle>
     );
   }

@@ -34,31 +34,33 @@ export default function ColorPicker({
   ...rest
 }) {
   return (
-    <Dropdown position="bottom" { ...rest } showArrow>
+    <Dropdown position="bottom" {...rest} showArrow>
       <DropdownTarget>
         <ColorPickerOption
-            color={ selected }
-            data-ax-at={ atIds.ColorPicker.dropdown }
-            onClick={ onOpen }
-            size={ size }/>
+          color={selected}
+          data-ax-at={atIds.ColorPicker.dropdown}
+          onClick={onOpen}
+          size={size}
+        />
       </DropdownTarget>
 
       <DropdownSource>
-        <DropdownContext width={ width }>
+        <DropdownContext width={width}>
           <DropdownContent>
-            <Grid gutters="small" horizontalAlign="middle" responsive={ false }>
-              { options.map(color => {
+            <Grid gutters="small" horizontalAlign="middle" responsive={false}>
+              {options.map(color => {
                 const isColorDisabled = disabledOptions.indexOf(color) !== -1;
                 return (
-                  <GridCell key={ color } shrink>
+                  <GridCell key={color} shrink>
                     <ColorPickerOption
-                        color={ color }
-                        data-ax-at={ atIds.ColorPicker.option }
-                        disabled={ isColorDisabled }
-                        onClick={ () => isColorDisabled || onSelectColor(color) }/>
+                      color={color}
+                      data-ax-at={atIds.ColorPicker.option}
+                      disabled={isColorDisabled}
+                      onClick={() => isColorDisabled || onSelectColor(color)}
+                    />
                   </GridCell>
                 );
-              }) }
+              })}
             </Grid>
           </DropdownContent>
         </DropdownContext>

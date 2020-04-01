@@ -31,31 +31,37 @@ export default class Handle extends Component {
     disabled: false,
     isVisible: true,
     onMouseDown: () => {},
-    valueFormatter: (n) => n,
+    valueFormatter: n => n,
     withTooltip: false,
   };
 
   render() {
-
-    const { disabled, onMouseDown, isVisible, value, valueAsPercentage, valueFormatter, withTooltip, size } = this.props;
-    const setSize = size ? { width: `${size}px`, height:`${size}px` } : {};
+    const {
+      disabled,
+      onMouseDown,
+      isVisible,
+      value,
+      valueAsPercentage,
+      valueFormatter,
+      withTooltip,
+      size,
+    } = this.props;
+    const setSize = size ? { width: `${size}px`, height: `${size}px` } : {};
 
     return (
-      <Position
-          enabled={ withTooltip }
-          isVisible={ isVisible }
-          showArrow>
+      <Position enabled={withTooltip} isVisible={isVisible} showArrow>
         <PositionTarget>
           <div
-              className="ax-slider__thumb"
-              onMouseDown={ disabled ? null : onMouseDown }
-              style={ { left: `${valueAsPercentage}%`, ...setSize } }/>
+            className="ax-slider__thumb"
+            onMouseDown={disabled ? null : onMouseDown}
+            style={{ left: `${valueAsPercentage}%`, ...setSize }}
+          />
         </PositionTarget>
 
         <PositionSource>
           <TooltipContext theme="night" width="auto">
             <TooltipContent size="tiny" textStrong>
-              { valueFormatter(value) }
+              {valueFormatter(value)}
             </TooltipContent>
           </TooltipContext>
         </PositionSource>

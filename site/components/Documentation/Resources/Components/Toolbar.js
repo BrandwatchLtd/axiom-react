@@ -19,10 +19,12 @@ export default class Documentation extends Component {
           </Toolbar>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Toolbar/Tool'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Toolbar/Toolbar'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Toolbar/Tool'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Toolbar/Toolbar'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

@@ -7,12 +7,12 @@ import {
 } from '@brandwatch/axiom-components';
 
 function isSelected(values, val) {
-  return Array.isArray(values) && values.filter((v) => v === val).length > 0;
+  return Array.isArray(values) && values.filter(v => v === val).length > 0;
 }
 
 function withOrWithout(values = [], val) {
   return isSelected(values, val)
-    ? values.filter((v) => v !== val)
+    ? values.filter(v => v !== val)
     : [...values, val];
 }
 
@@ -28,19 +28,20 @@ export default class TypeArrayOfEnum extends Component {
 
     return (
       <Select
-          onChange={ () => {} }
-          onClear={ () => setValue(undefined) }
-          onSelect={ (val) => setValue(withOrWithout(value, val)) }
-          placeholder="Select prop values"
-          readOnly
-          selectedValue={ value }
-          value={ Array.isArray(value) ? value.join(', ') : (value || '') }>
+        onChange={() => {}}
+        onClear={() => setValue(undefined)}
+        onSelect={val => setValue(withOrWithout(value, val))}
+        placeholder="Select prop values"
+        readOnly
+        selectedValue={value}
+        value={Array.isArray(value) ? value.join(', ') : value || ''}
+      >
         <SelectOptionGroup>
-          { values.map((val) => (
-            <SelectOption key={ val } multiSelect value={ val }>
-              { val.toString() }
+          {values.map(val => (
+            <SelectOption key={val} multiSelect value={val}>
+              {val.toString()}
             </SelectOption>
-          )) }
+          ))}
         </SelectOptionGroup>
       </Select>
     );

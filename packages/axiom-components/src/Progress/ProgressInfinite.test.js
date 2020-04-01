@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import ProgressInfinite from './ProgressInfinite';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ProgressInfinite { ...props } />
-  );
+  renderer.create(<ProgressInfinite {...props} />);
 
 describe('ProgressInfinite', () => {
   it('renders with defaultProps', () => {
@@ -15,7 +13,7 @@ describe('ProgressInfinite', () => {
   });
 
   describe('renders with color', () => {
-    ['white', 'subtle'].forEach((color) => {
+    ['white', 'subtle'].forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

@@ -6,11 +6,11 @@ import DataPickerMeta from './DataPickerMeta';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <DataPicker { ...props } placeholder="Lorem ipsum">
-      { props.children || [
+    <DataPicker {...props} placeholder="Lorem ipsum">
+      {props.children || [
         <DataPickerDropdown key="dropdown" />,
         <DataPickerMeta key="meta" />,
-      ] }
+      ]}
     </DataPicker>
   );
 
@@ -49,4 +49,3 @@ describe('DataPicker', () => {
     expect(tree).toMatchSnapshot();
   });
 });
-

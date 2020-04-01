@@ -31,17 +31,16 @@ export default class Portal extends Component {
   }
 
   getParentNode() {
-    return this.props.parentNode ||
+    return (
+      this.props.parentNode ||
       this.context.axiomPositionParentNode ||
-      document.body;
+      document.body
+    );
   }
 
   render() {
     if (!canOpenPortal) return null;
 
-    return ReactDOM.createPortal(
-      this.props.children,
-      this._reactRootNode,
-    );
+    return ReactDOM.createPortal(this.props.children, this._reactRootNode);
   }
 }

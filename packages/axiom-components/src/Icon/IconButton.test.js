@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import IconButton from './IconButton';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <IconButton name="twitter" { ...props } />
-  );
+  renderer.create(<IconButton name="twitter" {...props} />);
 
 describe('IconButton', () => {
   it('renders with defaultProps', () => {
@@ -15,7 +13,7 @@ describe('IconButton', () => {
   });
 
   describe('renders with size', () => {
-    ['small', 'medium', 'large', 'huge'].forEach((size) => {
+    ['small', 'medium', 'large', 'huge'].forEach(size => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();

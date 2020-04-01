@@ -10,9 +10,8 @@ if (typeof window !== 'undefined') {
   require('element-closest');
 }
 
-const isFocusableMenuItem = (element) =>
-  element && element.hasAttribute(contextMenuItemSelector) &&
-    !element.disabled;
+const isFocusableMenuItem = element =>
+  element && element.hasAttribute(contextMenuItemSelector) && !element.disabled;
 
 /* eslint-disable react/no-find-dom-node */
 export default class DropdownContext extends Component {
@@ -67,7 +66,11 @@ export default class DropdownContext extends Component {
     }
 
     const dropdownRef = this.context.dropdownRef();
-    if (dropdownRef && !dropdownRef.contains(event.target) && !this.el.contains(event.target)) {
+    if (
+      dropdownRef &&
+      !dropdownRef.contains(event.target) &&
+      !this.el.contains(event.target)
+    ) {
       return this.context.closeDropdown();
     }
   }
@@ -77,7 +80,11 @@ export default class DropdownContext extends Component {
   }
 
   getMenuItems() {
-    return [...this.el.querySelectorAll(`[${contextMenuItemSelector}]:not(:disabled)`)];
+    return [
+      ...this.el.querySelectorAll(
+        `[${contextMenuItemSelector}]:not(:disabled)`
+      ),
+    ];
   }
 
   focusMenuItem(element) {
@@ -94,25 +101,25 @@ export default class DropdownContext extends Component {
 
   handleKeyDown(event) {
     switch (event.key) {
-    case 'ArrowDown':
-      event.preventDefault();
-      return this.handleDirectionKey('nextElementSibling', 1);
-    case 'ArrowUp':
-      event.preventDefault();
-      return this.handleDirectionKey('previousElementSibling', -1);
-    case 'Tab':
-    case 'Escape':
-      event.preventDefault();
-      return this.context.closeDropdown();
+      case 'ArrowDown':
+        event.preventDefault();
+        return this.handleDirectionKey('nextElementSibling', 1);
+      case 'ArrowUp':
+        event.preventDefault();
+        return this.handleDirectionKey('previousElementSibling', -1);
+      case 'Tab':
+      case 'Escape':
+        event.preventDefault();
+        return this.context.closeDropdown();
     }
   }
 
   handleDirectionKey(sibling, delta) {
     const focusedMenuItem = this.getFocusedMenuItem();
-    const siblingElement = focusedMenuItem && isFocusableMenuItem(focusedMenuItem[sibling])
-      ? focusedMenuItem[sibling]
-      : null;
-
+    const siblingElement =
+      focusedMenuItem && isFocusableMenuItem(focusedMenuItem[sibling])
+        ? focusedMenuItem[sibling]
+        : null;
 
     if (siblingElement) {
       return siblingElement.focus();
@@ -130,8 +137,10 @@ export default class DropdownContext extends Component {
 
   render() {
     return (
-      <Context { ...omit(this.props, ['focusOnOpen', 'onRequestCloseDropdown']) }
-          ref={ (el) => this.el = ReactDOM.findDOMNode(el) } />
+      <Context
+        {...omit(this.props, ['focusOnOpen', 'onRequestCloseDropdown'])}
+        ref={el => (this.el = ReactDOM.findDOMNode(el))}
+      />
     );
   }
 }

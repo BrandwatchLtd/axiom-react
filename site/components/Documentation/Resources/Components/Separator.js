@@ -11,14 +11,16 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase>
-          <Base style={ { height: '12rem' } }>
+          <Base style={{ height: '12rem' }}>
             <Separator />
           </Base>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Separator/Separator'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Separator/Separator'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

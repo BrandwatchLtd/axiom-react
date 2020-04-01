@@ -12,8 +12,20 @@ export default class ContextContent extends Component {
     height: PropTypes.string,
     maxHeight: PropTypes.string,
     padding: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
-    paddingHorizontal: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
-    paddingVertical: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
+    paddingHorizontal: PropTypes.oneOf([
+      'none',
+      'tiny',
+      'small',
+      'medium',
+      'large',
+    ]),
+    paddingVertical: PropTypes.oneOf([
+      'none',
+      'tiny',
+      'small',
+      'medium',
+      'large',
+    ]),
   };
 
   static defaultProps = {
@@ -48,9 +60,12 @@ export default class ContextContent extends Component {
     );
 
     return (
-      <Base { ...rest } className={ classes }>
-        <div className="ax-context-content__scroll" style={ { height, maxHeight } }>
-          { children }
+      <Base {...rest} className={classes}>
+        <div
+          className="ax-context-content__scroll"
+          style={{ height, maxHeight }}
+        >
+          {children}
         </div>
       </Base>
     );

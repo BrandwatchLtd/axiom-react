@@ -11,19 +11,31 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <Grid responsive={ false }>
-            <GridCell><Candytar initials="bw" size="3rem" /></GridCell>
-            <GridCell><Candytar initials="bw" size="3rem" /></GridCell>
-            <GridCell><Avatar size="3rem" src="/assets/avatar.png" /></GridCell>
-            <GridCell><Candytar size="3rem" /></GridCell>
-            <GridCell><Candytar size="3rem" /></GridCell>
+          <Grid responsive={false}>
+            <GridCell>
+              <Candytar initials="bw" size="3rem" />
+            </GridCell>
+            <GridCell>
+              <Candytar initials="bw" size="3rem" />
+            </GridCell>
+            <GridCell>
+              <Avatar size="3rem" src="/assets/avatar.png" />
+            </GridCell>
+            <GridCell>
+              <Candytar size="3rem" />
+            </GridCell>
+            <GridCell>
+              <Candytar size="3rem" />
+            </GridCell>
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Avatar'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Candytar'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Avatar'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Candytar'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

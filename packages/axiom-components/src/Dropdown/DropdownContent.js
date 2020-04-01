@@ -19,8 +19,6 @@ export default class DropdownContent extends Component {
   };
 
   render() {
-    return (
-      <ContextContent { ...this.props } />
-    );
+    return <ContextContent {...this.props} />;
   }
 }

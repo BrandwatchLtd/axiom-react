@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import PaginationButton from './PaginationButton';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <PaginationButton { ...props }>1</PaginationButton>
-  );
+  renderer.create(<PaginationButton {...props}>1</PaginationButton>);
 
 describe('Composite: PaginationButton', () => {
   it('renders with defaultProps', () => {

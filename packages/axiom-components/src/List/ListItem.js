@@ -11,8 +11,8 @@ export default class ListItem extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } Component="li" className="ax-list__item">
-        { children }
+      <Base {...rest} Component="li" className="ax-list__item">
+        {children}
       </Base>
     );
   }

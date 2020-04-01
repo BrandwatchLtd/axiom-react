@@ -10,8 +10,8 @@ export default class DockFooter extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <ul { ...rest } className="ax-dock__list-footer">
-        { children }
+      <ul {...rest} className="ax-dock__list-footer">
+        {children}
       </ul>
     );
   }

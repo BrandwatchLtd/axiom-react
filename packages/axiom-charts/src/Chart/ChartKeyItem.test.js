@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import ChartKeyItem from './ChartKeyItem';
 
 const getComponent = () =>
-  renderer.create(
-    <ChartKeyItem label="Ipsum">Lorem</ChartKeyItem>
-  );
+  renderer.create(<ChartKeyItem label="Ipsum">Lorem</ChartKeyItem>);
 
 describe('ChartKeyItem', () => {
   it('renders with defaultProps', () => {

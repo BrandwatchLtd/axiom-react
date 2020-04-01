@@ -18,10 +18,11 @@ export default class TypeString extends Component {
 
     return (
       <TextInput
-          disabled={ disabled }
-          onChange={ (e) => setValue(e.target.value) }
-          placeholder="Set prop text..."
-          value={ value } />
+        disabled={disabled}
+        onChange={e => setValue(e.target.value)}
+        placeholder="Set prop text..."
+        value={value}
+      />
     );
   }
 }

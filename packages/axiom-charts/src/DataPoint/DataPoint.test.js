@@ -4,9 +4,7 @@ import { colors } from '@brandwatch/axiom-materials';
 import DataPoint from './DataPoint';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <DataPoint color="tiny-clanger" { ...props } />
-  );
+  renderer.create(<DataPoint color="tiny-clanger" {...props} />);
 
 describe('DataPoint', () => {
   it('renders with defaultProps', () => {
@@ -22,7 +20,7 @@ describe('DataPoint', () => {
   });
 
   describe('renders with color', () => {
-    Object.keys(colors.productColorNames).forEach((color) => {
+    Object.keys(colors.productColorNames).forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

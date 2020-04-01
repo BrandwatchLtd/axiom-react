@@ -203,12 +203,30 @@ export const themeDayText = themeDayMain;
 export const themeDayTextSubtle = { ...themeDayMain, a: opacityTextSubtle };
 export const themeDayTextDisabled = { ...themeDayMain, a: opacityTextDisabled };
 
-export const themeDayBackgroundOverlayHeavy = { ...themeDayMain, a: opacityBackgroundOverlayHeavy };
-export const themeDayBackgroundOverlayLight = { ...themeDayMain, a: opacityBackgroundOverlayLight };
-export const themeDayBackgroundSubtle = { ...themeDayMain, a: opacityBackgroundSubtle };
-export const themeDayBackgroundActive = { ...themeDayMain, a: opacityBackgroundActive };
-export const themeDayBackgroundDisabled = { ...themeDayMain, a: opacityBackgroundDisabled };
-export const themeDayBackgroundHover = { ...themeDayMain, a: opacityBackgroundHover };
+export const themeDayBackgroundOverlayHeavy = {
+  ...themeDayMain,
+  a: opacityBackgroundOverlayHeavy,
+};
+export const themeDayBackgroundOverlayLight = {
+  ...themeDayMain,
+  a: opacityBackgroundOverlayLight,
+};
+export const themeDayBackgroundSubtle = {
+  ...themeDayMain,
+  a: opacityBackgroundSubtle,
+};
+export const themeDayBackgroundActive = {
+  ...themeDayMain,
+  a: opacityBackgroundActive,
+};
+export const themeDayBackgroundDisabled = {
+  ...themeDayMain,
+  a: opacityBackgroundDisabled,
+};
+export const themeDayBackgroundHover = {
+  ...themeDayMain,
+  a: opacityBackgroundHover,
+};
 
 export const themeDayBorder = { ...themeDayMain, a: opacityBorder };
 
@@ -218,14 +236,35 @@ export const themeNightMainDarker = uiWhiteNoiseDarker;
 
 export const themeNightText = themeNightMain;
 export const themeNightTextSubtle = { ...themeNightMain, a: opacityTextSubtle };
-export const themeNightTextDisabled = { ...themeNightMain, a: opacityTextDisabled };
+export const themeNightTextDisabled = {
+  ...themeNightMain,
+  a: opacityTextDisabled,
+};
 
-export const themeNightBackgroundOverlayHeavy = { ...themeNightMain, a: opacityBackgroundOverlayHeavy };
-export const themeNightBackgroundOverlayLight = { ...themeNightMain, a: opacityBackgroundOverlayLight };
-export const themeNightBackgroundSubtle = { ...themeNightMain, a: opacityBackgroundSubtle };
-export const themeNightBackgroundActive = { ...themeNightMain, a: opacityBackgroundActive };
-export const themeNightBackgroundDisabled = { ...themeNightMain, a: opacityBackgroundDisabled };
-export const themeNightBackgroundHover = { ...themeNightMain, a: opacityBackgroundHover };
+export const themeNightBackgroundOverlayHeavy = {
+  ...themeNightMain,
+  a: opacityBackgroundOverlayHeavy,
+};
+export const themeNightBackgroundOverlayLight = {
+  ...themeNightMain,
+  a: opacityBackgroundOverlayLight,
+};
+export const themeNightBackgroundSubtle = {
+  ...themeNightMain,
+  a: opacityBackgroundSubtle,
+};
+export const themeNightBackgroundActive = {
+  ...themeNightMain,
+  a: opacityBackgroundActive,
+};
+export const themeNightBackgroundDisabled = {
+  ...themeNightMain,
+  a: opacityBackgroundDisabled,
+};
+export const themeNightBackgroundHover = {
+  ...themeNightMain,
+  a: opacityBackgroundHover,
+};
 
 export const themeNightBorder = { ...themeNightMain, a: opacityBorder };
 
@@ -242,7 +281,7 @@ export const productColorNames = {
   'giant-leap': 'Giant Leap',
   'moon-lagoon': 'Moon Lagoon',
   'space-invader': 'Space Invader',
-  'extraterrestrial': 'Extraterrestrial',
+  extraterrestrial: 'Extraterrestrial',
   'terra-form': 'Terra Form',
   'primeval-soup': 'Primeval Soup',
   'future-shock': 'Future Shock',
@@ -271,7 +310,7 @@ export const productColors = {
   'giant-leap': productGiantLeap,
   'moon-lagoon': productMoonLagoon,
   'space-invader': productSpaceInvader,
-  'extraterrestrial': productExtraterrestrial,
+  extraterrestrial: productExtraterrestrial,
   'terra-form': productTerraForm,
   'primeval-soup': productPrimevalSoup,
   'future-shock': productFutureShock,
@@ -300,7 +339,7 @@ export const productActiveColors = {
   'giant-leap': productGiantLeapActive,
   'moon-lagoon': productMoonLagoonActive,
   'space-invader': productSpaceInvaderActive,
-  'extraterrestrial': productExtraterrestrialActive,
+  extraterrestrial: productExtraterrestrialActive,
   'terra-form': productTerraFormActive,
   'primeval-soup': productPrimevalSoupActive,
   'future-shock': productFutureShockActive,
@@ -329,7 +368,7 @@ export const productHoverColors = {
   'giant-leap': productGiantLeapHover,
   'moon-lagoon': productMoonLagoonHover,
   'space-invader': productSpaceInvaderHover,
-  'extraterrestrial': productExtraterrestrialHover,
+  extraterrestrial: productExtraterrestrialHover,
   'terra-form': productTerraFormHover,
   'primeval-soup': productPrimevalSoupHover,
   'future-shock': productFutureShockHover,
@@ -370,5 +409,3 @@ export const brandColors = {
   'new-horizon': productNewHorizon,
   'terra-form': productTerraForm,
 };
-
-

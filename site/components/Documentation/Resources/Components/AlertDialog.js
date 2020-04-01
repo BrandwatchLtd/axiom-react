@@ -16,12 +16,13 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase hidePreview>
           <AlertDialog
-              isOpen={ false }
-              onRequestClose={ (setValue) => setValue('AlertDialog', 'isOpen', false) }
-              type="info">
-            <AlertDialogHeader>
-              Lorem ipsum dolor sit amet
-            </AlertDialogHeader>
+            isOpen={false}
+            onRequestClose={setValue =>
+              setValue('AlertDialog', 'isOpen', false)
+            }
+            type="info"
+          >
+            <AlertDialogHeader>Lorem ipsum dolor sit amet</AlertDialogHeader>
 
             <AlertDialogBody>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -33,11 +34,13 @@ export default class Documentation extends Component {
           </AlertDialog>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialog'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogBody'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogHeader'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialog'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogBody'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogHeader'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

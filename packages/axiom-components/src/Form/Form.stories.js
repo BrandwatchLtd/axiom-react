@@ -21,19 +21,19 @@ export function Default() {
 
   return (
     <Form
-        onSubmit={ onSubmit }
-        requiredError="Please complete all required fields">
-      { errorMessage && (
+      onSubmit={onSubmit}
+      requiredError="Please complete all required fields"
+    >
+      {errorMessage && (
         <AlertBar type="error">
-          <Paragraph>
-            { errorMessage }
-          </Paragraph>
+          <Paragraph>{errorMessage}</Paragraph>
         </AlertBar>
-      ) }
+      )}
       <TextInput
-          onChange={ event => setValue(event.target.value) }
-          required
-          value={ value }/>
+        onChange={event => setValue(event.target.value)}
+        required
+        value={value}
+      />
       <Button type="submit">Submit</Button>
     </Form>
   );

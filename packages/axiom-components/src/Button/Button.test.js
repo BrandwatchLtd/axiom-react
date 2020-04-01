@@ -4,9 +4,7 @@ import Button from './Button';
 import ButtonIcon from './ButtonIcon';
 
 const getComponent = (props = {}, children = 'Lorem Ipsum') =>
-  renderer.create(
-    <Button { ...props }>{ children }</Button>
-  );
+  renderer.create(<Button {...props}>{children}</Button>);
 
 describe('Button', () => {
   it('renders with defaultProps', () => {
@@ -22,7 +20,7 @@ describe('Button', () => {
   });
 
   describe('renders with color', () => {
-    ['accent', 'negative', 'positive'].forEach((color) => {
+    ['accent', 'negative', 'positive'].forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
@@ -32,7 +30,7 @@ describe('Button', () => {
   });
 
   describe('renders with full', () => {
-    [true, 'small', 'medium', 'large'].forEach((full) => {
+    [true, 'small', 'medium', 'large'].forEach(full => {
       it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();
@@ -42,7 +40,7 @@ describe('Button', () => {
   });
 
   describe('renders with style', () => {
-    ['primary', 'secondary', 'tertiary', 'quaternary'].forEach((style) => {
+    ['primary', 'secondary', 'tertiary', 'quaternary'].forEach(style => {
       it(style, () => {
         const component = getComponent({ style });
         const tree = component.toJSON();
@@ -52,18 +50,16 @@ describe('Button', () => {
   });
 
   describe('renders with shape', () =>
-    ['circle', 'rectangle', 'stadium'].forEach((shape) =>
+    ['circle', 'rectangle', 'stadium'].forEach(shape =>
       describe('with size', () =>
-        ['small', 'medium', 'large', 'huge'].forEach((size) =>
+        ['small', 'medium', 'large', 'huge'].forEach(size =>
           it(`${shape} with ${size}`, () => {
             const component = getComponent({ shape, size });
             const tree = component.toJSON();
             expect(tree).toMatchSnapshot();
           })
-        )
-      )
-    )
-  );
+        ))
+    ));
 
   describe('with ButtonIcon', () => {
     it('adds space to start if first child', () => {

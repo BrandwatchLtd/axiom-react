@@ -31,15 +31,17 @@ export default class Form extends Component {
     const { children, requiredError, ...rest } = this.props;
 
     return (
-      <Validation requiredError={ requiredError }>
-        { (getUpdatedValidation) =>
-          <Base { ...rest }
-              Component="form"
-              className="ax-form"
-              onSubmit={ (e) => this.handleSubmit(e, getUpdatedValidation) }>
-            { children }
+      <Validation requiredError={requiredError}>
+        {getUpdatedValidation => (
+          <Base
+            {...rest}
+            Component="form"
+            className="ax-form"
+            onSubmit={e => this.handleSubmit(e, getUpdatedValidation)}
+          >
+            {children}
           </Base>
-        }
+        )}
       </Validation>
     );
   }

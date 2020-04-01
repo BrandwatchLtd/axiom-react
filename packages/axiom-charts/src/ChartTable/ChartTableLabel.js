@@ -27,28 +27,24 @@ export default class ChartTableLabel extends Component {
     } = this.props;
 
     return (
-      <Base { ...rest }
-          className="ax-chart-table__label"
-          style={ { width } }>
+      <Base {...rest} className="ax-chart-table__label" style={{ width }}>
         <Grid
-            gutters="tiny"
-            onClick={ onToggleRowVisibility }
-            responsive={ false }
-            verticalAlign="middle">
+          gutters="tiny"
+          onClick={onToggleRowVisibility}
+          responsive={false}
+          verticalAlign="middle"
+        >
           <GridCell>
-            <Text textColor={ disabled ? 'disabled' : null }>
-              { children }
-            </Text>
+            <Text textColor={disabled ? 'disabled' : null}>{children}</Text>
           </GridCell>
-          { onToggleRowVisibility &&
-            <GridCell cloak={ !disabled } shrink>
+          {onToggleRowVisibility && (
+            <GridCell cloak={!disabled} shrink>
               <Link style="subtle">
                 <Icon name="preview" />
               </Link>
             </GridCell>
-            }
+          )}
         </Grid>
-
       </Base>
     );
   }

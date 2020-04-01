@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Dropdown, DropdownSource, DropdownTarget } from '@brandwatch/axiom-components';
+import {
+  Dropdown,
+  DropdownSource,
+  DropdownTarget,
+} from '@brandwatch/axiom-components';
 import Bar from '../Bar/Bar';
 
 export default class ColumnChartContext extends PureComponent {
@@ -37,31 +41,32 @@ export default class ColumnChartContext extends PureComponent {
     } = this.props;
 
     const bar = (
-      <Bar { ...rest }
-          color={ color }
-          isFaded={ isFaded }
-          isHidden={ isHidden }
-          labelStrong={ labelStrong }
-          onMouseEnter={ onMouseEnter && (() => onMouseEnter(color)) }
-          onMouseLeave={ onMouseLeave }
-          percent={ value }
-          showLabel={ showBarLabel }
-          size={ size } />
+      <Bar
+        {...rest}
+        color={color}
+        isFaded={isFaded}
+        isHidden={isHidden}
+        labelStrong={labelStrong}
+        onMouseEnter={onMouseEnter && (() => onMouseEnter(color))}
+        onMouseLeave={onMouseLeave}
+        percent={value}
+        showLabel={showBarLabel}
+        size={size}
+      />
     );
 
     if (DropdownContext && value > 0) {
       return (
         <Dropdown>
-          <DropdownTarget>
-            { bar }
-          </DropdownTarget>
+          <DropdownTarget>{bar}</DropdownTarget>
 
           <DropdownSource>
             <DropdownContext
-                color={ color }
-                data={ data }
-                label={ label }
-                value={ value } />
+              color={color}
+              data={data}
+              label={label}
+              value={value}
+            />
           </DropdownSource>
         </Dropdown>
       );

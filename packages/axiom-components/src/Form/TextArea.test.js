@@ -2,10 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import TextArea from './TextArea';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <TextArea { ...props } />
-  );
+const getComponent = (props = {}) => renderer.create(<TextArea {...props} />);
 
 describe('TextArea', () => {
   it('renders with defaultProps', () => {

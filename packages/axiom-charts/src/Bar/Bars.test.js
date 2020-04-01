@@ -5,8 +5,8 @@ import Bars from './Bars';
 
 function getComponent(props = {}) {
   return renderer.create(
-    <Bars { ...props }>
-      <Bar color="tiny-clanger" percent={ 50 } />
+    <Bars {...props}>
+      <Bar color="tiny-clanger" percent={50} />
     </Bars>
   );
 }
@@ -19,7 +19,7 @@ describe('Bars', () => {
   });
 
   describe('renders with direction', () => {
-    ['up', 'down', 'left', 'right'].forEach((direction) => {
+    ['up', 'down', 'left', 'right'].forEach(direction => {
       it(direction, () => {
         const component = getComponent({ direction });
         const tree = component.toJSON();

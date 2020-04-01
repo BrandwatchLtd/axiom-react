@@ -5,9 +5,11 @@ import './DocumentationMenu.css';
 export default class DocumentationMenu extends Component {
   render() {
     return (
-      <Base { ...this.props }
-          Component="ul"
-          className="ax-documentation-viewer__menu" />
+      <Base
+        {...this.props}
+        Component="ul"
+        className="ax-documentation-viewer__menu"
+      />
     );
   }
 }

@@ -11,18 +11,18 @@ export default {
 
 export function Default() {
   return (
-    <Grid responsive={ false }>
-      { iconNames.map(name => (
-        <GridCell key={ name } width={ 25 }>
-          <Grid gutters="tiny" none responsive={ false } verticalAlign="middle">
+    <Grid responsive={false}>
+      {iconNames.map(name => (
+        <GridCell key={name} width={25}>
+          <Grid gutters="tiny" none responsive={false} verticalAlign="middle">
             <GridCell>
-              <Icon name={ name } />
+              <Icon name={name} />
             </GridCell>
 
-            <GridCell>{ name }</GridCell>
+            <GridCell>{name}</GridCell>
           </Grid>
         </GridCell>
-      )) }
+      ))}
     </Grid>
   );
 }

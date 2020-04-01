@@ -3,17 +3,19 @@ import { Component } from 'react';
 import omit from 'lodash.omit';
 
 const getRequiredState = ({ required, value }) =>
-  !required || (
-    value !== undefined &&
+  !required ||
+  (value !== undefined &&
     value !== null &&
-    (typeof value !== 'string' || value.trim() !== '')
-  );
+    (typeof value !== 'string' || value.trim() !== ''));
 
 const getPatternsState = ({ patterns, value }) =>
-  Array.isArray(patterns) ? patterns.filter((pattern) =>
-    (pattern instanceof RegExp && !pattern.test(value)) ||
-    typeof pattern === 'function' && !pattern(value)
-  ) : [];
+  Array.isArray(patterns)
+    ? patterns.filter(
+        pattern =>
+          (pattern instanceof RegExp && !pattern.test(value)) ||
+          (typeof pattern === 'function' && !pattern(value))
+      )
+    : [];
 
 export default class Validation extends Component {
   static propTypes = {
@@ -110,7 +112,9 @@ export default class Validation extends Component {
   }
 
   getInvalidations(id) {
-    return this.state.validators[id] ? getPatternsState(this.state.validators[id]()) : [];
+    return this.state.validators[id]
+      ? getPatternsState(this.state.validators[id]())
+      : [];
   }
 
   getFirstInvalidId() {
@@ -118,7 +122,9 @@ export default class Validation extends Component {
     if (!getOverallRequiredValidity) return;
 
     const invalidations = this.getAllInvalidations();
-    const firstInvalidValidator = Object.keys(invalidations).find(id => invalidations[id].length > 0);
+    const firstInvalidValidator = Object.keys(invalidations).find(
+      id => invalidations[id].length > 0
+    );
     return firstInvalidValidator ? firstInvalidValidator : '';
   }
 
@@ -129,7 +135,9 @@ export default class Validation extends Component {
   }
 
   getOverallRequiredValidity() {
-    return Object.keys(this.state.validators).every((id) => this.checkRequiredMet(id));
+    return Object.keys(this.state.validators).every(id =>
+      this.checkRequiredMet(id)
+    );
   }
 
   checkPatternMet(id, metPattern) {
@@ -137,7 +145,9 @@ export default class Validation extends Component {
   }
 
   checkRequiredMet(key) {
-    return this.state.validators[key] ? getRequiredState(this.state.validators[key]()) : true;
+    return this.state.validators[key]
+      ? getRequiredState(this.state.validators[key]())
+      : true;
   }
 
   getUpdatedValidation() {

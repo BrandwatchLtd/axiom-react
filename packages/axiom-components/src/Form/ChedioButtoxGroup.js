@@ -11,8 +11,8 @@ export default class ChedioButtoxGroup extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-chedio-buttox-group">
-        { children }
+      <Base {...rest} className="ax-chedio-buttox-group">
+        {children}
       </Base>
     );
   }

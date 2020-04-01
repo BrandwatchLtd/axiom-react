@@ -71,7 +71,7 @@ export function BaseRef() {
   }, [baseRef]);
 
   return (
-    <Card baseRef={ baseRef } shade="shade-4">
+    <Card baseRef={baseRef} shade="shade-4">
       <CardContent>A Card</CardContent>
     </Card>
   );

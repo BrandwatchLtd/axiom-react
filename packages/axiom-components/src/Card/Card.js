@@ -77,8 +77,10 @@ export default class Card extends Component {
       ...rest
     } = props;
 
-    const classes = classnames('ax-card',
-      `ax-card--size-${size}`, {
+    const classes = classnames(
+      'ax-card',
+      `ax-card--size-${size}`,
+      {
         'ax-card--active': active,
         'ax-card--border': border,
         'ax-card--clickable': onClick,
@@ -86,12 +88,13 @@ export default class Card extends Component {
         [`ax-card--${shade}`]: shade,
         [`ax-card--border-radius-${borderRadius}`]: borderRadius,
         'ax-card--shadow': shadow,
-      }, className
+      },
+      className
     );
 
     return (
-      <Base { ...rest } className={ classes } onClick={ onClick }>
-        { children }
+      <Base {...rest} className={classes} onClick={onClick}>
+        {children}
       </Base>
     );
   }

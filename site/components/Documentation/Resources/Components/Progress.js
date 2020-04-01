@@ -18,26 +18,36 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <Grid responsive={ false }>
-            <GridCell><Progress /></GridCell>
-            <GridCell><ProgressFinite /></GridCell>
-            <GridCell><ProgressInfinite /></GridCell>
+          <Grid responsive={false}>
+            <GridCell>
+              <Progress />
+            </GridCell>
+            <GridCell>
+              <ProgressFinite />
+            </GridCell>
+            <GridCell>
+              <ProgressInfinite />
+            </GridCell>
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/Progress'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/ProgressFinite'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/ProgressInfinite'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/Progress'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/ProgressFinite'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/ProgressInfinite'),
+          ]}
+        />
 
         <DocumentationShowCase centered>
           <ProgressButton>Set isInProgress</ProgressButton>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/ProgressButton'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Progress/ProgressButton'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

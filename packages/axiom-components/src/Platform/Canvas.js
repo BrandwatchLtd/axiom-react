@@ -12,8 +12,8 @@ export default function Canvas({ children, ...rest }) {
   };
 
   return (
-    <Base { ...rest } className="ax-platform__canvas" style={ style }>
-      { children }
+    <Base {...rest} className="ax-platform__canvas" style={style}>
+      {children}
     </Base>
   );
 }

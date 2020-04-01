@@ -13,25 +13,24 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase centered>
           <UserMenu
-              email="lorem@brandwatch.com"
-              firstName="Lorem"
-              lastName="Ipsum"
-              onLogout={ () => {} }>
+            email="lorem@brandwatch.com"
+            firstName="Lorem"
+            lastName="Ipsum"
+            onLogout={() => {}}
+          >
             <DropdownMenu>
-              <DropdownMenuItem>
-                Settings
-              </DropdownMenuItem>
+              <DropdownMenuItem>Settings</DropdownMenuItem>
 
-              <DropdownMenuItem>
-                Help!
-              </DropdownMenuItem>
+              <DropdownMenuItem>Help!</DropdownMenuItem>
             </DropdownMenu>
           </UserMenu>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/UserMenu/UserMenu'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/UserMenu/UserMenu'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

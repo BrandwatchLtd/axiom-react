@@ -12,8 +12,8 @@ export default class DialogFooterImage extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-dialog__footer-image">
-        { children }
+      <Base {...rest} className="ax-dialog__footer-image">
+        {children}
       </Base>
     );
   }

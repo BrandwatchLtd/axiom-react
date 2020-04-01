@@ -19,14 +19,16 @@ export function Default() {
 
   return (
     <React.Fragment>
-      <Button onClick={ openDialog }>Open Dialog</Button>
-      <Dialog isOpen={ isOpen } onRequestClose={ closeDialog } size="large">
+      <Button onClick={openDialog}>Open Dialog</Button>
+      <Dialog isOpen={isOpen} onRequestClose={closeDialog} size="large">
         <DialogHeader>Dialog Header</DialogHeader>
         <DialogBody>Dialog Body</DialogBody>
         <DialogFooter>
           <ButtonGroup textRight>
-            <Button onClick={ closeDialog }>Save</Button>
-            <Button onClick={ closeDialog } style="secondary">Close</Button>
+            <Button onClick={closeDialog}>Save</Button>
+            <Button onClick={closeDialog} style="secondary">
+              Close
+            </Button>
           </ButtonGroup>
         </DialogFooter>
       </Dialog>

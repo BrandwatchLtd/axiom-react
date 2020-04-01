@@ -28,10 +28,12 @@ export default class DotPlot extends Component {
   static propTypes = {
     DropdownContext: PropTypes.func,
     benchmark: PropTypes.number,
-    data: PropTypes.arrayOf(PropTypes.shape({
-      colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-      value: PropTypes.number.isRequired,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+        value: PropTypes.number.isRequired,
+      })
+    ).isRequired,
     dotPlotLabel: PropTypes.func,
     label: PropTypes.string,
     lower: PropTypes.number,
@@ -73,56 +75,72 @@ export default class DotPlot extends Component {
     }
 
     return (
-      <Base { ...rest } className="ax-dot-plot">
-        { getLines(data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex, lower, upper)
-          .map(({ fromBenchmark, toBenchmark, faded, fromX, toX }) =>
-            <div
-                className={ differenceLineContainerClasses(fromBenchmark, toBenchmark) }
-                key={ `${fromX}.${toX}` }>
-              <DotPlotDifferenceLine faded={ faded } from={ fromX } to={ toX } />
-            </div>
-          )
-        }
+      <Base {...rest} className="ax-dot-plot">
+        {getLines(
+          data,
+          benchmark,
+          mouseOverRowIndex,
+          mouseOverColors,
+          rowIndex,
+          lower,
+          upper
+        ).map(({ fromBenchmark, toBenchmark, faded, fromX, toX }) => (
+          <div
+            className={differenceLineContainerClasses(
+              fromBenchmark,
+              toBenchmark
+            )}
+            key={`${fromX}.${toX}`}
+          >
+            <DotPlotDifferenceLine faded={faded} from={fromX} to={toX} />
+          </div>
+        ))}
 
-        { data.map(({ colors, value }) =>
+        {data.map(({ colors, value }) => (
           <ChartContext
-              DropdownContext={ DropdownContext }
-              colors={ getDotColors(...dotPlotsArgs, colors) }
-              data={ rawData }
-              key={ value }
-              label={ label }
-              lower={ lower }
-              onDropdownClose={ onDropdownClose }
-              onDropdownOpen={ () => onDropdownOpen(getDotColors(...dotPlotsArgs, colors) ) }
-              upper={ upper }
-              value={ value }>
+            DropdownContext={DropdownContext}
+            colors={getDotColors(...dotPlotsArgs, colors)}
+            data={rawData}
+            key={value}
+            label={label}
+            lower={lower}
+            onDropdownClose={onDropdownClose}
+            onDropdownOpen={() =>
+              onDropdownOpen(getDotColors(...dotPlotsArgs, colors))
+            }
+            upper={upper}
+            value={value}
+          >
             <DotPlotDots
-                colors={ getDotColors(...dotPlotsArgs, colors) }
-                faded={ isDotFaded(...dotPlotsArgs, colors) }
-                hidden={ isDotHidden(...dotPlotsArgs, colors) }
-                onMouseEnter={ () => onDotMouseEnter(colors) }
-                onMouseLeave={ onDotMouseLeave }
-                value={ ((value - lower) / (upper - lower)) * 100 } />
+              colors={getDotColors(...dotPlotsArgs, colors)}
+              faded={isDotFaded(...dotPlotsArgs, colors)}
+              hidden={isDotHidden(...dotPlotsArgs, colors)}
+              onMouseEnter={() => onDotMouseEnter(colors)}
+              onMouseLeave={onDotMouseLeave}
+              value={((value - lower) / (upper - lower)) * 100}
+            />
           </ChartContext>
-        ) }
+        ))}
 
-        { benchmarkPercent !== undefined && (
+        {benchmarkPercent !== undefined && (
           <div className="ax-dot-plot__benchmark-line-container">
             <DotPlotBenchmarkLine
-                faded={ isBenchmarkFaded(...dotPlotsArgs) }
-                value={ benchmarkPercent } />
+              faded={isBenchmarkFaded(...dotPlotsArgs)}
+              value={benchmarkPercent}
+            />
           </div>
-        ) }
+        )}
 
-        { data.map(({ colors, value }) =>
+        {data.map(({ colors, value }) => (
           <DotPlotValue
-              dotPlotLabel={ dotPlotLabel }
-              hidden={ isValueHidden(...dotPlotsArgs, colors) }
-              key={ value }
-              textStrong={ isValueStrong(...dotPlotsArgs, colors) }
-              value={ value }
-              x={ ((value - lower) / (upper - lower)) * 100 } />
-        ) }
+            dotPlotLabel={dotPlotLabel}
+            hidden={isValueHidden(...dotPlotsArgs, colors)}
+            key={value}
+            textStrong={isValueStrong(...dotPlotsArgs, colors)}
+            value={value}
+            x={((value - lower) / (upper - lower)) * 100}
+          />
+        ))}
       </Base>
     );
   }

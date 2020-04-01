@@ -17,8 +17,8 @@ export default class DialogFooter extends Component {
     const classes = classnames('ax-dialog__footer', className);
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

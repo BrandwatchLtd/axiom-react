@@ -13,12 +13,14 @@ export default class RadarYAxisLabel extends Component {
     const { children, x, y, ...rest } = this.props;
 
     return (
-      <Text { ...rest }
-          className="ax-radar__y-axis-label"
-          style={ { top: `${y}px`, left: `${x}px` } }
-          textColor="subtle"
-          textSize="label">
-        { children }
+      <Text
+        {...rest}
+        className="ax-radar__y-axis-label"
+        style={{ top: `${y}px`, left: `${x}px` }}
+        textColor="subtle"
+        textSize="label"
+      >
+        {children}
       </Text>
     );
   }

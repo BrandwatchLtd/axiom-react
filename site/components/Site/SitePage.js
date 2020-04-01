@@ -21,8 +21,6 @@ export default class SitePage extends Component {
       'si-site__page--v': verticalPadding,
     });
 
-    return (
-      <Base { ...rest } className={ classes } />
-    );
+    return <Base {...rest} className={classes} />;
   }
 }

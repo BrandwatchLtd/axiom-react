@@ -54,8 +54,8 @@ export function Configurable() {
   const gutters = select(guttersLabel, guttersOptions, guttersDefaultValue);
 
   return (
-    <div style={ { height: '100vh', width: '100wh' } } >
-      <Grid direction={ direction } gutters={ gutters }>
+    <div style={{ height: '100vh', width: '100wh' }}>
+      <Grid direction={direction} gutters={gutters}>
         <GridCell>
           <div className="color-box">One</div>
         </GridCell>
@@ -88,7 +88,7 @@ export function CardRow() {
         </div>
       </GridCell>
       <GridCell>
-        <div className="color-box" style={ { height: '100%' } }>
+        <div className="color-box" style={{ height: '100%' }}>
           This card doesn't have much content.
         </div>
       </GridCell>
@@ -98,7 +98,7 @@ export function CardRow() {
 
 export function FormControlFill() {
   return (
-    <Grid gutters={ false }>
+    <Grid gutters={false}>
       <GridCell fill>
         <TextInput type="text" />
       </GridCell>

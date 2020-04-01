@@ -2,12 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import TextInputButton from './TextInputButton';
 
-const getComponent = (props) =>
-  renderer.create(
-    <TextInputButton { ...props }>
-      Test
-    </TextInputButton>
-  );
+const getComponent = props =>
+  renderer.create(<TextInputButton {...props}>Test</TextInputButton>);
 
 describe('TextInputButton', () => {
   let props;

@@ -19,20 +19,26 @@ describe('getEquallyDistributedAxisLabels', () => {
   });
 
   it('returns no labels when lower and upper are equal', () => {
-    expect(getEquallyDistributedAxisLabels({
-      lower: 0,
-      upper: 0,
-    })).toEqual([]);
+    expect(
+      getEquallyDistributedAxisLabels({
+        lower: 0,
+        upper: 0,
+      })
+    ).toEqual([]);
 
-    expect(getEquallyDistributedAxisLabels({
-      lower: 1,
-      upper: 1,
-    })).toEqual([]);
+    expect(
+      getEquallyDistributedAxisLabels({
+        lower: 1,
+        upper: 1,
+      })
+    ).toEqual([]);
 
-    expect(getEquallyDistributedAxisLabels({
-      lower: -100,
-      upper: -100,
-    })).toEqual([]);
+    expect(
+      getEquallyDistributedAxisLabels({
+        lower: -100,
+        upper: -100,
+      })
+    ).toEqual([]);
   });
 
   it('creates equal labels when lower 0, upper 10k, tickCount 6', () => {
@@ -103,7 +109,7 @@ describe('getEquallyDistributedAxisLabels', () => {
 describe('getAxisUpper', () => {
   it('returns 0.05 when max is below or equal 0.05', () => {
     expect(getAxisUpper([0, 0.045])).toEqual(0.05);
-    expect(getAxisUpper([0.040, 0.045])).toEqual(0.05);
+    expect(getAxisUpper([0.04, 0.045])).toEqual(0.05);
     expect(getAxisUpper([0.04, 0.05])).toEqual(0.05);
   });
 

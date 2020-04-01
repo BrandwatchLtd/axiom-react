@@ -19,10 +19,12 @@ export default class Documentation extends Component {
           </Notifications>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Notification/Notification'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Notification/Notifications'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Notification/Notification'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Notification/Notifications'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

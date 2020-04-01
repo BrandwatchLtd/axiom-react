@@ -64,11 +64,15 @@ export default class Button extends Component {
     } = this.props;
 
     const childrenArray = Children.toArray(children);
-    const iconOnly = childrenArray.length === 1 && isComponent(childrenArray[0], ButtonIconRef);
-    const classes = classnames('ax-button',
+    const iconOnly =
+      childrenArray.length === 1 &&
+      isComponent(childrenArray[0], ButtonIconRef);
+    const classes = classnames(
+      'ax-button',
       `ax-button--${color}`,
       `ax-button--${style}`,
-      `ax-button--${shape}-${size}`, {
+      `ax-button--${shape}-${size}`,
+      {
         'ax-button--active': active,
         'ax-button--joined': joined,
         'ax-button--joined-left': joinedLeft,
@@ -81,17 +85,22 @@ export default class Button extends Component {
     );
 
     const mappedChildren = childrenArray.map((child, index, array) =>
-      !isComponent(child, ButtonIconRef) ? child : cloneElement(child, {
-        isEnd: index === array.length - 1,
-        isStart: index === 0,
-      })
+      !isComponent(child, ButtonIconRef)
+        ? child
+        : cloneElement(child, {
+            isEnd: index === array.length - 1,
+            isStart: index === 0,
+          })
     );
 
     return (
-      <Base Component="button" { ...rest }
-          className={ classes }
-          disabled={ disabled }>
-        { mappedChildren }
+      <Base
+        Component="button"
+        {...rest}
+        className={classes}
+        disabled={disabled}
+      >
+        {mappedChildren}
       </Base>
     );
   }

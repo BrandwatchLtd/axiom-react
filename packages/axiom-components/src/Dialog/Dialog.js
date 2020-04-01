@@ -18,12 +18,7 @@ export default class Dialog extends Component {
     /** Callback for closing the Dialog by clicking on the overlay */
     onRequestClose: PropTypes.func.isRequired,
     /** Overlay shade */
-    overlayShade: PropTypes.oneOf([
-      'shade-1',
-      'shade-2',
-      'shade-3',
-      'shade-4',
-    ]),
+    overlayShade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
     /** Theme applied to the overlay */
     overlayTheme: PropTypes.oneOf(['day', 'night']),
     /** Padding around the modal */
@@ -69,21 +64,27 @@ export default class Dialog extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-dialog', {
-      'ax-dialog--fullscreen': size === 'fullscreen',
-      'ax-dialog--large': size === 'large',
-    }, className);
+    const classes = classnames(
+      'ax-dialog',
+      {
+        'ax-dialog--fullscreen': size === 'fullscreen',
+        'ax-dialog--large': size === 'large',
+      },
+      className
+    );
 
     const modalPadding = size === 'fullscreen' ? 'x0' : padding;
 
     return (
-      <Modal { ...rest }
-          onOverlayClick={ closeOnOverlayClick ? onRequestClose : null }
-          overlayShade={ overlayShade }
-          overlayTheme={ overlayTheme }
-          padding={ modalPadding }>
-        <Base className={ classes } style={ { width } } theme={ theme }>
-          { children }
+      <Modal
+        {...rest}
+        onOverlayClick={closeOnOverlayClick ? onRequestClose : null}
+        overlayShade={overlayShade}
+        overlayTheme={overlayTheme}
+        padding={modalPadding}
+      >
+        <Base className={classes} style={{ width }} theme={theme}>
+          {children}
         </Base>
       </Modal>
     );

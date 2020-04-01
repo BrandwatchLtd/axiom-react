@@ -26,10 +26,8 @@ export default class DotPlotValue extends Component {
     };
 
     return (
-      <Base { ...rest }
-          className={ classes }
-          style={ { left: `${x}%` } }>
-        <Small>{ getLabel() }</Small>
+      <Base {...rest} className={classes} style={{ left: `${x}%` }}>
+        <Small>{getLabel()}</Small>
       </Base>
     );
   }

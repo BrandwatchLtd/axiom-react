@@ -21,7 +21,14 @@ import Button from '../Button/Button';
 export default {
   title: 'Components/Dropdown',
   component: Dropdown,
-  subcomponents: { DropdownTarget, DropdownSource, DropdownContext, DropdownContent, DropdownMenu, DropdownMenuItem },
+  subcomponents: {
+    DropdownTarget,
+    DropdownSource,
+    DropdownContext,
+    DropdownContent,
+    DropdownMenu,
+    DropdownMenuItem,
+  },
   includeStories: [],
   decorators: [withKnobs],
 };
@@ -30,7 +37,7 @@ export function MenuDropdown() {
   return (
     <Dropdown showArrow>
       <DropdownTarget>
-        <IconButton name="ellipsis" size="small"/>
+        <IconButton name="ellipsis" size="small" />
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
@@ -52,12 +59,19 @@ export function CustomDropdown() {
   return (
     <Dropdown>
       <DropdownTarget>
-        <IconButton name="question-mark" size="small"/>
+        <IconButton name="question-mark" size="small" />
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
-          <div style={ { display: 'flex' } }>
-            <div style={ { backgroundColor: 'pink', color: 'white', height: '20px', width: '20px' } } />
+          <div style={{ display: 'flex' }}>
+            <div
+              style={{
+                backgroundColor: 'pink',
+                color: 'white',
+                height: '20px',
+                width: '20px',
+              }}
+            />
             <div>A pink Box</div>
           </div>
         </DropdownContext>
@@ -78,21 +92,27 @@ export function DropdownWithState() {
   return (
     <Dropdown>
       <DropdownTarget>
-        <TextInput isTarget onChange={ () => {} } placeholder="Pick an Option" value={ selectedValue }>
-          <TextInputIcon name="chevron-down"/>
+        <TextInput
+          isTarget
+          onChange={() => {}}
+          placeholder="Pick an Option"
+          value={selectedValue}
+        >
+          <TextInputIcon name="chevron-down" />
         </TextInput>
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
           <DropdownMenu>
-            { items.map(item => (
+            {items.map(item => (
               <DropdownMenuItem
-                  key={ item.id }
-                  onClick={ () => setSelectedValue(item.value) }
-                  selected={ selectedValue === item.value }>
-                { item.name }
+                key={item.id}
+                onClick={() => setSelectedValue(item.value)}
+                selected={selectedValue === item.value}
+              >
+                {item.name}
               </DropdownMenuItem>
-          )) }
+            ))}
           </DropdownMenu>
         </DropdownContext>
       </DropdownSource>
@@ -105,7 +125,7 @@ export function DropdownLink() {
     <Dropdown>
       <DropdownTarget>
         <Link>
-            Click Me
+          Click Me
           <TextIcon name="chevron-down" spaceLeft="x1" />
         </Link>
       </DropdownTarget>
@@ -139,22 +159,28 @@ export function DropdownMenuMutiSelect() {
   return (
     <Dropdown>
       <DropdownTarget>
-        <TextInput isTarget onChange={ () => {} } placeholder="Pick an Option" value={ selectedItems.toString() }>
-          <TextInputIcon name="chevron-down"/>
+        <TextInput
+          isTarget
+          onChange={() => {}}
+          placeholder="Pick an Option"
+          value={selectedItems.toString()}
+        >
+          <TextInputIcon name="chevron-down" />
         </TextInput>
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
           <DropdownMenu>
-            { items.map(item => (
+            {items.map(item => (
               <DropdownMenuItem
-                  key={ item.id }
-                  multiSelect
-                  onClick={ () => toggleItem(item.id) }
-                  selected={ selectedItems.includes(item.id) }>
-                { item.name }
+                key={item.id}
+                multiSelect
+                onClick={() => toggleItem(item.id)}
+                selected={selectedItems.includes(item.id)}
+              >
+                {item.name}
               </DropdownMenuItem>
-          )) }
+            ))}
           </DropdownMenu>
         </DropdownContext>
       </DropdownSource>
@@ -167,7 +193,7 @@ export function DropdownMenuGroups() {
     <Dropdown>
       <DropdownTarget>
         <TextInput isTarget placeholder="Pick an Option">
-          <TextInputIcon name="chevron-down"/>
+          <TextInputIcon name="chevron-down" />
         </TextInput>
       </DropdownTarget>
       <DropdownSource>
@@ -193,18 +219,19 @@ export function DropdownMenuHeaderFooter() {
     <Dropdown>
       <DropdownTarget>
         <TextInput isTarget placeholder="Pick an Option">
-          <TextInputIcon name="chevron-down"/>
+          <TextInputIcon name="chevron-down" />
         </TextInput>
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
           <DropdownHeader>
             <Paragraph
-                textCase="upper"
-                textCenter
-                textColor="subtle"
-                textSize="small">
-                Header
+              textCase="upper"
+              textCenter
+              textColor="subtle"
+              textSize="small"
+            >
+              Header
             </Paragraph>
           </DropdownHeader>
           <DropdownMenu hasFullSeparator maxHeight="15rem">
@@ -214,11 +241,12 @@ export function DropdownMenuHeaderFooter() {
           </DropdownMenu>
           <DropdownFooter>
             <Paragraph
-                textCase="upper"
-                textCenter
-                textColor="subtle"
-                textSize="small">
-                Footer
+              textCase="upper"
+              textCenter
+              textColor="subtle"
+              textSize="small"
+            >
+              Footer
             </Paragraph>
           </DropdownFooter>
         </DropdownContext>
@@ -232,7 +260,7 @@ export function DropdownWithContent() {
     <Dropdown>
       <DropdownTarget>
         <TextInput isTarget placeholder="Pick an Option">
-          <TextInputIcon name="chevron-down"/>
+          <TextInputIcon name="chevron-down" />
         </TextInput>
       </DropdownTarget>
       <DropdownSource>
@@ -263,15 +291,21 @@ export function ClosingTheDropdown() {
   return (
     <React.Fragment>
       <div>
-        <Button onClick={ () => dropdownRef.current.open() }>Open without Target</Button>
+        <Button onClick={() => dropdownRef.current.open()}>
+          Open without Target
+        </Button>
       </div>
-      <Dropdown ref={ dropdownRef }>
+      <Dropdown ref={dropdownRef}>
         <DropdownTarget>
-          <Button size="small" style="secondary">Open</Button>
+          <Button size="small" style="secondary">
+            Open
+          </Button>
         </DropdownTarget>
         <DropdownSource>
           <DropdownContext width="100%">
-            <Button onClick={ closeDropdown } size="small" style="secondary">Close</Button>
+            <Button onClick={closeDropdown} size="small" style="secondary">
+              Close
+            </Button>
           </DropdownContext>
         </DropdownSource>
       </Dropdown>
@@ -283,15 +317,15 @@ export function SourceSameWidthAsTarget() {
   const width = '150px';
 
   return (
-    <div style={ { width } }>
+    <div style={{ width }}>
       <Dropdown>
         <DropdownTarget>
           <TextInput isTarget placeholder="Pick an Option">
-            <TextInputIcon name="chevron-down"/>
+            <TextInputIcon name="chevron-down" />
           </TextInput>
         </DropdownTarget>
         <DropdownSource>
-          <DropdownContext width={ width }>
+          <DropdownContext width={width}>
             <DropdownMenu>
               <DropdownMenuItem>electric-dreams</DropdownMenuItem>
               <DropdownMenuItem>sun-maker</DropdownMenuItem>
@@ -330,34 +364,45 @@ export function Position() {
 
   return (
     <div
-        style={ {
-          height: '150vh',
-          width: '150vw',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        } }>
-      <Dropdown flip={ flip } offset={ offset } onPositionChange={ (position) => console.log('onPositionChange new position: ', position) } position={ position } showArrow>
+      style={{
+        height: '150vh',
+        width: '150vw',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <Dropdown
+        flip={flip}
+        offset={offset}
+        onPositionChange={position =>
+          console.log('onPositionChange new position: ', position)
+        }
+        position={position}
+        showArrow
+      >
         <DropdownTarget>
           <TextInput
-              isTarget
-              onChange={ () => {} }
-              placeholder="Pick an Option"
-              value={ selectedValue }>
+            isTarget
+            onChange={() => {}}
+            placeholder="Pick an Option"
+            value={selectedValue}
+          >
             <TextInputIcon name="chevron-down" />
           </TextInput>
         </DropdownTarget>
         <DropdownSource>
           <DropdownContext>
             <DropdownMenu>
-              { items.map(item => (
+              {items.map(item => (
                 <DropdownMenuItem
-                    key={ item.id }
-                    onClick={ () => setSelectedValue(item.value) }
-                    selected={ selectedValue === item.value }>
-                  { item.name }
+                  key={item.id}
+                  onClick={() => setSelectedValue(item.value)}
+                  selected={selectedValue === item.value}
+                >
+                  {item.name}
                 </DropdownMenuItem>
-              )) }
+              ))}
             </DropdownMenu>
           </DropdownContext>
         </DropdownSource>

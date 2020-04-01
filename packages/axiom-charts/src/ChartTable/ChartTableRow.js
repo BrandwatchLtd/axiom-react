@@ -16,8 +16,8 @@ export default class ChartTableRow extends Component {
     });
 
     return (
-      <Base { ...rest } className={ classes }>
-        { children }
+      <Base {...rest} className={classes}>
+        {children}
       </Base>
     );
   }

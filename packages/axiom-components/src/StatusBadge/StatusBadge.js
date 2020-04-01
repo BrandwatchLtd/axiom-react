@@ -14,13 +14,8 @@ const BADGE_MAP = {
 export default class StatusBadge extends Component {
   static propTypes = {
     /** Type of status the badge should display (determines wording and colouring) */
-    status: PropTypes.oneOf([
-      'alpha',
-      'beta',
-      'internal',
-      'new',
-      'prototype',
-    ]).isRequired,
+    status: PropTypes.oneOf(['alpha', 'beta', 'internal', 'new', 'prototype'])
+      .isRequired,
   };
 
   render() {
@@ -28,13 +23,15 @@ export default class StatusBadge extends Component {
     const { body, height, viewBox, width } = BADGE_MAP[status];
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className="ax-status-badge"
-          dangerouslySetInnerHTML={ { __html: body } }
-          height={ height }
-          viewBox={ viewBox }
-          width={ width } />
+      <Base
+        {...rest}
+        Component="svg"
+        className="ax-status-badge"
+        dangerouslySetInnerHTML={{ __html: body }}
+        height={height}
+        viewBox={viewBox}
+        width={width}
+      />
     );
   }
 }

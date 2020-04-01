@@ -35,9 +35,9 @@ export default class LabelIcon extends Component {
     }[color];
 
     return (
-      <span className={ classes }>
-        <Link { ...rest } style={ linkStyle }>
-          <Icon name={ name } size="1rem" />
+      <span className={classes}>
+        <Link {...rest} style={linkStyle}>
+          <Icon name={name} size="1rem" />
         </Link>
       </span>
     );

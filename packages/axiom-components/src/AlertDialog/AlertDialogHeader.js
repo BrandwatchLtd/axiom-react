@@ -20,14 +20,15 @@ export default class AlertDialogHeader extends Component {
 
     return (
       <div className="ax-alert-dialog__header">
-        <AlertBar { ...rest }
-            onRemoveClick={ onRequestClose }
-            size="medium"
-            type={ type }>
-          <Strong>{ children }</Strong>
+        <AlertBar
+          {...rest}
+          onRemoveClick={onRequestClose}
+          size="medium"
+          type={type}
+        >
+          <Strong>{children}</Strong>
         </AlertBar>
       </div>
     );
   }
 }
-

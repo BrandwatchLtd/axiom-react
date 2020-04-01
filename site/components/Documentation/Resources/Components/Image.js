@@ -16,10 +16,12 @@ export default class Documentation extends Component {
           </Image>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Image/Image'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Image/ImageFallback'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Image/Image'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Image/ImageFallback'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

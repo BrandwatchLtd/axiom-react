@@ -1,1 +1,1 @@
-export default (id) => `[data-ax-at="${id}"]`;
+export default id => `[data-ax-at="${id}"]`;

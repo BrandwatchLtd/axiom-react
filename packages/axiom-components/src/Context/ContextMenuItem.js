@@ -41,43 +41,47 @@ export default class ContextMenuItem extends Component {
     const classes = classnames(
       className,
       'ax-context-menu__item',
-      `ax-context-menu__item--padding-vertical-${paddingVertical}`, {
+      `ax-context-menu__item--padding-vertical-${paddingVertical}`,
+      {
         'ax-context-menu__item--selected': selected,
-      });
+      }
+    );
 
     return (
-      <Base { ...rest } { ...{ [contextMenuItemSelector]: true } }
-          Component="button"
-          className={ classes }
-          disabled={ disabled }
-          onClick={ onClick }
-          textStrong={ selected }>
-        { multiSelect && (
+      <Base
+        {...rest}
+        {...{ [contextMenuItemSelector]: true }}
+        Component="button"
+        className={classes}
+        disabled={disabled}
+        onClick={onClick}
+        textStrong={selected}
+      >
+        {multiSelect && (
           <div className="ax-context-menu__item-checkbox">
             <CheckBox
-                checked={ selected }
-                disabled={ disabled }
-                indeterminate={ indeterminate }
-                onChange={ onClick }
-                onClick={ e => e.stopPropagation() }/>
+              checked={selected}
+              disabled={disabled}
+              indeterminate={indeterminate}
+              onChange={onClick}
+              onClick={e => e.stopPropagation()}
+            />
           </div>
-        ) }
+        )}
 
-        <div className="ax-context-menu__item-content">
-          { children }
-        </div>
+        <div className="ax-context-menu__item-content">{children}</div>
 
-        { !multiSelect && selected !== undefined && (
+        {!multiSelect && selected !== undefined && (
           <div className="ax-context-menu__item-icon">
-            <Icon cloak={ !selected } name="tick" />
+            <Icon cloak={!selected} name="tick" />
           </div>
-        ) }
+        )}
 
-        { icon !== undefined && (
+        {icon !== undefined && (
           <div className="ax-context-menu__item-icon">
-            <Icon name={ icon } />
+            <Icon name={icon} />
           </div>
-        ) }
+        )}
       </Base>
     );
   }

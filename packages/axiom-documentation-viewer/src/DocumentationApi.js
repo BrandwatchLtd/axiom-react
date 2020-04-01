@@ -37,42 +37,47 @@ export default class DocumentationApi extends Component {
 
     return (
       <Fragment>
-        { components.map(({ name, props }) => (
-          <Base key={ name } space="x8">
-            <Heading textSize="headtitle" textStrong>{ name }</Heading>
+        {components.map(({ name, props }) => (
+          <Base key={name} space="x8">
+            <Heading textSize="headtitle" textStrong>
+              {name}
+            </Heading>
             <Table space="x2">
-              { !!Object.keys(props).length && (
+              {!!Object.keys(props).length && (
                 <TableHeader>
-                  <TableHeaderLabel sortDirection="ascending">Property</TableHeaderLabel>
+                  <TableHeaderLabel sortDirection="ascending">
+                    Property
+                  </TableHeaderLabel>
                   <TableHeaderLabel>Type</TableHeaderLabel>
                   <TableHeaderLabel>Default</TableHeaderLabel>
                   <TableHeaderLabel>Control</TableHeaderLabel>
-                  <TableHeaderLabel shrink sortable={ false }></TableHeaderLabel>
+                  <TableHeaderLabel shrink sortable={false}></TableHeaderLabel>
                 </TableHeader>
-              ) }
+              )}
 
               <TableBody>
-                { !Object.keys(props).length && (
+                {!Object.keys(props).length && (
                   <TableRow>
-                    <TableCell colSpan={ 5 }>
+                    <TableCell colSpan={5}>
                       <Paragraph textCenter>
                         There are no configurable props for this component
                       </Paragraph>
                     </TableCell>
                   </TableRow>
-                ) }
+                )}
 
-
-                { Object.keys(props).map((prop) => (
-                  <DocumentationApiRow { ...props[prop] }
-                      component={ name }
-                      key={ prop }
-                      name={ prop } />
-                )) }
+                {Object.keys(props).map(prop => (
+                  <DocumentationApiRow
+                    {...props[prop]}
+                    component={name}
+                    key={prop}
+                    name={prop}
+                  />
+                ))}
               </TableBody>
             </Table>
           </Base>
-        )) }
+        ))}
       </Fragment>
     );
   }

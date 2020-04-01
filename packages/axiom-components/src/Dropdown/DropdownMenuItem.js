@@ -10,11 +10,11 @@ export default class DropdownMenuItem extends Component {
     children: PropTypes.node,
     /** Disabled interactions and applies styling */
     disabled: PropTypes.bool,
-   /**
-    * Whether the menu should stay open after being clicked.
-    */
+    /**
+     * Whether the menu should stay open after being clicked.
+     */
     keepOpen: PropTypes.bool,
-     /**
+    /**
      * Whether the menu is part of a multi-selection menu. When true, this
      * will disable automatically closing the DropdownMenu when clicked.
      */
@@ -48,10 +48,11 @@ export default class DropdownMenuItem extends Component {
 
     return (
       <ContextMenuItem
-          { ...omit(rest, ['keepOpen']) }
-          onClick={ this.handleClick }
-          tabIndex="0">
-        { children }
+        {...omit(rest, ['keepOpen'])}
+        onClick={this.handleClick}
+        tabIndex="0"
+      >
+        {children}
       </ContextMenuItem>
     );
   }

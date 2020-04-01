@@ -11,17 +11,22 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase centered>
-          <Grid responsive={ false }>
+          <Grid responsive={false}>
             <GridCell>
               <DurationPicker
-                  onChange={ (setValue, getValue, value) => setValue('DurationPicker', 'value', value) }/>
+                onChange={(setValue, getValue, value) =>
+                  setValue('DurationPicker', 'value', value)
+                }
+              />
             </GridCell>
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DurationPicker/DurationPicker'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DurationPicker/DurationPicker'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

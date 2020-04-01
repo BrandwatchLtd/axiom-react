@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { Duration, DateTime } from 'luxon';
-import { Button, ButtonIcon, DatePicker, Grid, GridCell, TextInput, TextInputIcon, DatePickerSelection } from '@brandwatch/axiom-components';
+import {
+  Button,
+  ButtonIcon,
+  DatePicker,
+  Grid,
+  GridCell,
+  TextInput,
+  TextInputIcon,
+  DatePickerSelection,
+} from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
@@ -31,7 +40,6 @@ const rangeSelections = [
   },
 ];
 
-
 export default class Documentation extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +54,10 @@ export default class Documentation extends Component {
     if (range) {
       const end = DateTime.local().endOf('day');
       dateEnd = end.toJSDate();
-      dateStart = end.minus(Duration.fromISO(range)).plus(1, 'microsecond').toJSDate();
+      dateStart = end
+        .minus(Duration.fromISO(range))
+        .plus(1, 'microsecond')
+        .toJSDate();
     }
 
     this.setState({
@@ -65,7 +76,9 @@ export default class Documentation extends Component {
     }
 
     if (dateStart && dateEnd) {
-      return `${mediumDate(dateStart)} ${dateEnd ? `- ${mediumDate(dateEnd)}` : ''}`;
+      return `${mediumDate(dateStart)} ${
+        dateEnd ? `- ${mediumDate(dateEnd)}` : ''
+      }`;
     }
 
     return '';
@@ -80,15 +93,20 @@ export default class Documentation extends Component {
           <GridCell>
             <DocumentationShowCase centered>
               <DatePicker
-                  onSelect={ (setValue, getValue, { date, dateStart, dateEnd, range }) => {
-                    this.handleSelect({ date, dateEnd, dateStart, range });
-                  } }
-                  rangeSelect
-                  rangeSelections={ rangeSelections }
-                  selectedDate={ date }
-                  selectedEndDate={ dateEnd }
-                  selectedRange={ range }
-                  selectedStartDate={ dateStart }>
+                onSelect={(
+                  setValue,
+                  getValue,
+                  { date, dateStart, dateEnd, range }
+                ) => {
+                  this.handleSelect({ date, dateEnd, dateStart, range });
+                }}
+                rangeSelect
+                rangeSelections={rangeSelections}
+                selectedDate={date}
+                selectedEndDate={dateEnd}
+                selectedRange={range}
+                selectedStartDate={dateStart}
+              >
                 <Button>
                   Show Date Picker <ButtonIcon name="chevron-down" />
                 </Button>
@@ -99,20 +117,26 @@ export default class Documentation extends Component {
           <GridCell>
             <DocumentationShowCase centered>
               <DatePicker
-                  onSelect={ (setValue, getValue, { date, dateStart, dateEnd, range }) => {
-                    this.handleSelect({ date, dateEnd, dateStart, range });
-                  } }
-                  rangeSelect
-                  rangeSelections={ rangeSelections }
-                  selectedDate={ date }
-                  selectedEndDate={ dateEnd }
-                  selectedRange={ range }
-                  selectedStartDate={ dateStart }
-                  view="double">
+                onSelect={(
+                  setValue,
+                  getValue,
+                  { date, dateStart, dateEnd, range }
+                ) => {
+                  this.handleSelect({ date, dateEnd, dateStart, range });
+                }}
+                rangeSelect
+                rangeSelections={rangeSelections}
+                selectedDate={date}
+                selectedEndDate={dateEnd}
+                selectedRange={range}
+                selectedStartDate={dateStart}
+                view="double"
+              >
                 <TextInput
-                    placeholder="Select a date"
-                    readOnly
-                    value={ this.getSelectedDateValue() }>
+                  placeholder="Select a date"
+                  readOnly
+                  value={this.getSelectedDateValue()}
+                >
                   <TextInputIcon align="right" name="chevron-down" />
                 </TextInput>
               </DatePicker>
@@ -120,31 +144,36 @@ export default class Documentation extends Component {
           </GridCell>
         </Grid>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePicker'),
-        ] } />
-
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePicker'),
+          ]}
+        />
 
         <DocumentationShowCase centered>
           <DatePickerSelection
-              onSelect={ (setValue, getValue, { date, dateStart, dateEnd, range }) => {
-                this.handleSelect({ date, dateEnd, dateStart, range });
-              } }
-              rangeSelect
-              rangeSelections={ rangeSelections }
-              selectedDate={ date }
-              selectedEndDate={ dateEnd }
-              selectedRange={ range }
-              selectedStartDate={ dateStart }
-              view="single">
-          </DatePickerSelection>
+            onSelect={(
+              setValue,
+              getValue,
+              { date, dateStart, dateEnd, range }
+            ) => {
+              this.handleSelect({ date, dateEnd, dateStart, range });
+            }}
+            rangeSelect
+            rangeSelections={rangeSelections}
+            selectedDate={date}
+            selectedEndDate={dateEnd}
+            selectedRange={range}
+            selectedStartDate={dateStart}
+            view="single"
+          ></DatePickerSelection>
         </DocumentationShowCase>
 
-
-
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePickerSelection'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePickerSelection'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

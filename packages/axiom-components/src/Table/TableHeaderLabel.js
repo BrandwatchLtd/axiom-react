@@ -29,7 +29,7 @@ export default class TableHeaderLabel extends Component {
   static defaultProps = {
     textAlign: 'left',
     sortable: true,
-  }
+  };
 
   render() {
     const {
@@ -61,19 +61,24 @@ export default class TableHeaderLabel extends Component {
     };
 
     return (
-      <Base { ...rest } Component="th" className={ classes } style={ styles }>
+      <Base {...rest} Component="th" className={classes} style={styles}>
         <button
-            className="ax-table__header-button"
-            disabled={ !onClick }
-            onClick={ onClick }>
-          { children }
+          className="ax-table__header-button"
+          disabled={!onClick}
+          onClick={onClick}
+        >
+          {children}
 
-          { sortable && ( <TextIcon
-              cloak={ sortDirection === undefined }
-              name={ sortDirection === 'descending' ? 'triangle-down' : 'triangle-up' }
-              spaceLeft={ textAlign === 'left' ? 'x2' : undefined }
-              spaceRight={ textAlign === 'right' ? 'x2' : undefined } />
-          ) }
+          {sortable && (
+            <TextIcon
+              cloak={sortDirection === undefined}
+              name={
+                sortDirection === 'descending' ? 'triangle-down' : 'triangle-up'
+              }
+              spaceLeft={textAlign === 'left' ? 'x2' : undefined}
+              spaceRight={textAlign === 'right' ? 'x2' : undefined}
+            />
+          )}
         </button>
       </Base>
     );

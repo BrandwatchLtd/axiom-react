@@ -8,9 +8,11 @@ export default class ChartGrid extends Component {
   static propTypes = {
     axis: PropTypes.oneOf(['x', 'y']).isRequired,
     children: PropTypes.node.isRequired,
-    labels: PropTypes.arrayOf(PropTypes.shape({
-      value: PropTypes.number.isRequired,
-    })),
+    labels: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.number.isRequired,
+      })
+    ),
     lower: PropTypes.number.isRequired,
     upper: PropTypes.number.isRequired,
   };
@@ -25,19 +27,20 @@ export default class ChartGrid extends Component {
     }
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base {...rest} className={classes}>
         <div className="ax-chart-grid__lines">
-          { labels.map(({ value }, index) => (
+          {labels.map(({ value }, index) => (
             <div
-                className="ax-chart-grid__line"
-                key={ index }
-                style={ { [side]: `${100 - ((value - lower) / (upper - lower)) * 100}%` } } />
-          )) }
+              className="ax-chart-grid__line"
+              key={index}
+              style={{
+                [side]: `${100 - ((value - lower) / (upper - lower)) * 100}%`,
+              }}
+            />
+          ))}
         </div>
 
-        <div className="ax-chart-grid__chart">
-          { children }
-        </div>
+        <div className="ax-chart-grid__chart">{children}</div>
       </Base>
     );
   }

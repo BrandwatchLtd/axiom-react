@@ -10,8 +10,8 @@ export default class ChartTableVisual extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <div { ...rest } className="ax-chart-table__visual">
-        { children }
+      <div {...rest} className="ax-chart-table__visual">
+        {children}
       </div>
     );
   }

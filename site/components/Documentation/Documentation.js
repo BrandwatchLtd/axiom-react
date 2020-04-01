@@ -41,20 +41,26 @@ export default class Documentation extends Component {
     return (
       <div className="si-documentation">
         <Base className="si-documentation__header" sticky="0">
-          <Grid responsive={ false } verticalAlign="end">
+          <Grid responsive={false} verticalAlign="end">
             <GridCell verticalAlign="start">
-              <Link Component={ RouterLink } style="inherit" to="/">
+              <Link Component={RouterLink} style="inherit" to="/">
                 <AxiomTitle size="1.5rem" />
               </Link>
             </GridCell>
 
             <GridCell shrink>
               <Menu size="medium">
-                <Route children={ ({ match }) => (
-                  <MenuItem
-                      active={ !!match }
-                      onClick={ () => push('/docs/packages/') }>Packages</MenuItem>
-                ) } path="/docs/packages/" />
+                <Route
+                  children={({ match }) => (
+                    <MenuItem
+                      active={!!match}
+                      onClick={() => push('/docs/packages/')}
+                    >
+                      Packages
+                    </MenuItem>
+                  )}
+                  path="/docs/packages/"
+                />
               </Menu>
             </GridCell>
           </Grid>
@@ -62,11 +68,20 @@ export default class Documentation extends Component {
 
         <div className="si-documentation__body">
           <Switch>
-            <Route component={ Charts } path="/docs/packages/axiom-charts" />
-            <Route component={ Components } path="/docs/packages/axiom-components" />
-            <Route component={ Composites } path="/docs/packages/axiom-composites" />
-            <Route component={ Materials } path="/docs/packages/axiom-materials" />
-            <Route component={ Resources } />
+            <Route component={Charts} path="/docs/packages/axiom-charts" />
+            <Route
+              component={Components}
+              path="/docs/packages/axiom-components"
+            />
+            <Route
+              component={Composites}
+              path="/docs/packages/axiom-composites"
+            />
+            <Route
+              component={Materials}
+              path="/docs/packages/axiom-materials"
+            />
+            <Route component={Resources} />
           </Switch>
         </div>
       </div>

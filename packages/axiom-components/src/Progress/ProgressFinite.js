@@ -18,15 +18,12 @@ export default class ProgressFinite extends Component {
   static defaultProps = {
     percent: 0,
     size: 'small',
-  }
+  };
 
-  UNSAFE_componentWillMount = renderFilter
+  UNSAFE_componentWillMount = renderFilter;
 
   render() {
-    const {
-      percent,
-      ...rest
-    } = this.props;
+    const { percent, ...rest } = this.props;
 
     const {
       diameter,
@@ -37,15 +34,21 @@ export default class ProgressFinite extends Component {
     } = getArcProperties({ percent });
 
     return (
-      <RadialProgress { ...rest } className="ax-progress-finite" diameter={ diameter }>
+      <RadialProgress
+        {...rest}
+        className="ax-progress-finite"
+        diameter={diameter}
+      >
         <circle
-            className="ax-progress-finite__background"
-            r={ innerRadius }
-            style={ { strokeWidth } } />
+          className="ax-progress-finite__background"
+          r={innerRadius}
+          style={{ strokeWidth }}
+        />
         <circle
-            className="ax-progress-finite__arc"
-            r={ innerRadius }
-            style={ { strokeDasharray, strokeDashoffset, strokeWidth } } />
+          className="ax-progress-finite__arc"
+          r={innerRadius}
+          style={{ strokeDasharray, strokeDashoffset, strokeWidth }}
+        />
       </RadialProgress>
     );
   }

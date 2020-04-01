@@ -48,18 +48,25 @@ export default class UserMenu extends Component {
   };
 
   render() {
-    const { children, firstName, lastName, email, imageSrc, onLogout, ...rest } = this.props;
+    const {
+      children,
+      firstName,
+      lastName,
+      email,
+      imageSrc,
+      onLogout,
+      ...rest
+    } = this.props;
     const color = stringToColor(email);
     const { axiomLanguage } = this.context;
     const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`;
 
-
     return (
-      <Dropdown position="bottom" { ...rest }>
+      <Dropdown position="bottom" {...rest}>
         <DropdownTarget>
-          <Link data-ax-at={ atIds.UserMenu.activate }>
-            <Avatar size="2rem" src={ imageSrc }>
-              <Candytar color={ color } initials={ initials } size="2rem" />
+          <Link data-ax-at={atIds.UserMenu.activate}>
+            <Avatar size="2rem" src={imageSrc}>
+              <Candytar color={color} initials={initials} size="2rem" />
             </Avatar>
           </Link>
         </DropdownTarget>
@@ -67,26 +74,33 @@ export default class UserMenu extends Component {
         <DropdownSource>
           <DropdownContext width="auto">
             <DropdownContent>
-              <Grid gutters="large" responsive={ false } verticalAlign="middle">
+              <Grid gutters="large" responsive={false} verticalAlign="middle">
                 <GridCell fill>
-                  <Heading space="x0" textSize="headtitle">{ firstName } { lastName }</Heading>
-                  <Paragraph space="x0" textColor="subtle">{ email }</Paragraph>
+                  <Heading space="x0" textSize="headtitle">
+                    {firstName} {lastName}
+                  </Heading>
+                  <Paragraph space="x0" textColor="subtle">
+                    {email}
+                  </Paragraph>
                   <ButtonGroup space="x4">
-                    <Button data-ax-at={ atIds.UserMenu.logout } onClick={ onLogout }>
-                      { t('Sign out', axiomLanguage) }
+                    <Button
+                      data-ax-at={atIds.UserMenu.logout}
+                      onClick={onLogout}
+                    >
+                      {t('Sign out', axiomLanguage)}
                     </Button>
                   </ButtonGroup>
                 </GridCell>
 
                 <GridCell shrink>
-                  <Avatar size="4.5rem" src={ imageSrc }>
-                    <Candytar color={ color } initials={ initials } size="4.5rem" />
+                  <Avatar size="4.5rem" src={imageSrc}>
+                    <Candytar color={color} initials={initials} size="4.5rem" />
                   </Avatar>
                 </GridCell>
               </Grid>
             </DropdownContent>
 
-            { children }
+            {children}
           </DropdownContext>
         </DropdownSource>
       </Dropdown>

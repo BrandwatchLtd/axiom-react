@@ -19,26 +19,23 @@ export default class WordCloud extends Component {
   };
 
   render() {
-    const {
-      children,
-      height,
-      width,
-      ...rest
-    } = this.props;
+    const { children, height, width, ...rest } = this.props;
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className="ax-word-cloud"
-          height="100%"
-          version="1.1"
-          viewBox={ `0 0 ${width} ${height}` }
-          width="100%">
-        { Children.map(children, (child, index) =>
+      <Base
+        {...rest}
+        Component="svg"
+        className="ax-word-cloud"
+        height="100%"
+        version="1.1"
+        viewBox={`0 0 ${width} ${height}`}
+        width="100%"
+      >
+        {Children.map(children, (child, index) =>
           cloneElement(child, {
-            animationDelay: `${ index * 10 + 200 }ms`,
+            animationDelay: `${index * 10 + 200}ms`,
           })
-        ) }
+        )}
       </Base>
     );
   }

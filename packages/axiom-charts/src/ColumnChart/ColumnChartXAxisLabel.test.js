@@ -4,9 +4,7 @@ import ColumnChartXAxisLabel from './ColumnChartXAxisLabel';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <ColumnChartXAxisLabel { ...props }>
-      Lorem
-    </ColumnChartXAxisLabel>
+    <ColumnChartXAxisLabel {...props}>Lorem</ColumnChartXAxisLabel>
   );
 
 describe('ColumnChartXAxisLabel', () => {

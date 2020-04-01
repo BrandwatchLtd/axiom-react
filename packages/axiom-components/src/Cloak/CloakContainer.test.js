@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import CloakContainer from './CloakContainer';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <CloakContainer { ...props }>
-      Lorem Ipsum
-    </CloakContainer>
-  );
+  renderer.create(<CloakContainer {...props}>Lorem Ipsum</CloakContainer>);
 
 describe('CloakContainer', () => {
   it('renders with defaultProps', () => {

@@ -13,10 +13,11 @@ export function Default() {
   return (
     <CheckBoxGroup>
       <CheckBox
-          checked={ checked }
-          name="lorem"
-          onChange={ () => setChecked(c => !c) }
-          title="Lorem ipsum dolor sit amet">
+        checked={checked}
+        name="lorem"
+        onChange={() => setChecked(c => !c)}
+        title="Lorem ipsum dolor sit amet"
+      >
         Lorem ipsum
       </CheckBox>
     </CheckBoxGroup>
@@ -28,11 +29,12 @@ export function CheckBoxGroups() {
     const [checked, setChecked] = useState(false);
     return (
       <CheckBox
-          checked={ checked }
-          name="lorem"
-          onChange={ () => setChecked(c => !c) }
-          title="Lorem ipsum dolor sit amet">
-        { children }
+        checked={checked}
+        name="lorem"
+        onChange={() => setChecked(c => !c)}
+        title="Lorem ipsum dolor sit amet"
+      >
+        {children}
       </CheckBox>
     );
   };

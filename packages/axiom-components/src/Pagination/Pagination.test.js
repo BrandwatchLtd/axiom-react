@@ -1,15 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Pagination from './Pagination';
-import { getDisplayRange, getSetStart, isWithinStartRange, isWithinEndRange } from './utils';
+import {
+  getDisplayRange,
+  getSetStart,
+  isWithinStartRange,
+  isWithinEndRange,
+} from './utils';
 
 const getComponent = (props = {}) =>
   renderer.create(
     <Pagination
-        currentPage={ 1 }
-        onPageChange={ () => {} }
-        totalPages={ 10 }
-        { ...props } />
+      currentPage={1}
+      onPageChange={() => {}}
+      totalPages={10}
+      {...props}
+    />
   );
 
 describe('Composite: Pagination', () => {
@@ -39,35 +45,45 @@ describe('Composite: Pagination', () => {
 
   describe('getDisplayRange', () => {
     it('within range of the lower and higher bounds', () => {
-      expect(getDisplayRange(1, 6, 10)).toEqual(
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-      );
+      expect(getDisplayRange(1, 6, 10)).toEqual([
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+      ]);
     });
 
     it('within range of the lower bound', () => {
-      expect(getDisplayRange(1, 5, 10)).toEqual(
-        [1, 2, 3, 4, 5, 6, 7]
-      );
+      expect(getDisplayRange(1, 5, 10)).toEqual([1, 2, 3, 4, 5, 6, 7]);
 
-      expect(getDisplayRange(6, 5, 10)).toEqual(
-        [1, 2, 3, 4, 5, 6, 7]
-      );
+      expect(getDisplayRange(6, 5, 10)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     });
 
     it('within range of the higher bound', () => {
-      expect(getDisplayRange(7, 5, 10)).toEqual(
-        [4, 5, 6, 7, 8, 9, 10]
-      );
+      expect(getDisplayRange(7, 5, 10)).toEqual([4, 5, 6, 7, 8, 9, 10]);
 
-      expect(getDisplayRange(10, 5, 10)).toEqual(
-        [4, 5, 6, 7, 8, 9, 10]
-      );
+      expect(getDisplayRange(10, 5, 10)).toEqual([4, 5, 6, 7, 8, 9, 10]);
     });
 
     it('with higher range than total', () => {
-      expect(getDisplayRange(10, 100, 10)).toEqual(
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-      );
+      expect(getDisplayRange(10, 100, 10)).toEqual([
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+      ]);
     });
   });
 

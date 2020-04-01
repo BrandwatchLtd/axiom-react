@@ -26,13 +26,15 @@ export default class CurrentPasswordInput extends Component {
     const { invalid, value, ...rest } = this.props;
 
     return (
-      <TextInput { ...rest }
-          invalid={ invalid }
-          label={ t('Enter current password', axiomLanguage) }
-          required
-          space="x8"
-          type="password"
-          value={ value } />
+      <TextInput
+        {...rest}
+        invalid={invalid}
+        label={t('Enter current password', axiomLanguage)}
+        required
+        space="x8"
+        type="password"
+        value={value}
+      />
     );
   }
 }

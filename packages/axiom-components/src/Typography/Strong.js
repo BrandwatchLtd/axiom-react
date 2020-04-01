@@ -3,8 +3,6 @@ import Text from './Text';
 
 export default class Strong extends Component {
   render() {
-    return (
-      <Text { ...this.props } Component="strong" textStrong />
-    );
+    return <Text {...this.props} Component="strong" textStrong />;
   }
 }

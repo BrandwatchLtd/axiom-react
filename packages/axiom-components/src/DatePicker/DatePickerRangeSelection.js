@@ -9,10 +9,12 @@ import './DatePickerRangeSelection.css';
 export default class DatePickerRangeSelection extends Component {
   static propTypes = {
     onRangeSelection: PropTypes.func.isRequired,
-    rangeSelections: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      range: PropTypes.string.isRequired,
-    })).isRequired,
+    rangeSelections: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        range: PropTypes.string.isRequired,
+      })
+    ).isRequired,
     selectedRange: PropTypes.string,
     view: PropTypes.string,
   };
@@ -28,20 +30,21 @@ export default class DatePickerRangeSelection extends Component {
     const isDoubleView = view === 'double';
     const rangeSelection = (
       <div className="ax-date-range-selection">
-        { rangeSelections.map(({ label, range }) => {
+        {rangeSelections.map(({ label, range }) => {
           const classes = classnames('ax-date-range-selection__item', {
             'ax-date-range-selection__item--active': range === selectedRange,
           });
 
           return (
             <button
-                className={ classes }
-                key={ label }
-                onClick={ () => onRangeSelection(range) }>
-              { label }
+              className={classes}
+              key={label}
+              onClick={() => onRangeSelection(range)}
+            >
+              {label}
             </button>
           );
-        }) }
+        })}
       </div>
     );
 
@@ -49,16 +52,20 @@ export default class DatePickerRangeSelection extends Component {
       return (
         <Fragment>
           <Grid hiddenUntil="small" verticalAlign="middle">
-            <GridCell><Separator /></GridCell>
-            <GridCell none>
-              { rangeSelection }
+            <GridCell>
+              <Separator />
             </GridCell>
-            <GridCell><Separator /></GridCell>
+            <GridCell none>{rangeSelection}</GridCell>
+            <GridCell>
+              <Separator />
+            </GridCell>
           </Grid>
-          <Grid horizontalAlign="middle" responsive={ false } visibleUntil="small">
-            <GridCell shrink>
-              { rangeSelection }
-            </GridCell>
+          <Grid
+            horizontalAlign="middle"
+            responsive={false}
+            visibleUntil="small"
+          >
+            <GridCell shrink>{rangeSelection}</GridCell>
             <GridCell full>
               <Separator />
             </GridCell>
@@ -68,10 +75,8 @@ export default class DatePickerRangeSelection extends Component {
     }
 
     return (
-      <Grid horizontalAlign="middle" responsive={ false }>
-        <GridCell shrink>
-          { rangeSelection }
-        </GridCell>
+      <Grid horizontalAlign="middle" responsive={false}>
+        <GridCell shrink>{rangeSelection}</GridCell>
         <GridCell full>
           <Separator />
         </GridCell>

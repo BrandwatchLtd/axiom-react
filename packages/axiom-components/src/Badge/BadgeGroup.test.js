@@ -5,7 +5,7 @@ import BadgeGroup from './BadgeGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <BadgeGroup { ...props }>
+    <BadgeGroup {...props}>
       <Badge>Lorem ipsum</Badge>
     </BadgeGroup>
   );

@@ -9,10 +9,6 @@ export default class CheckBoxGroup extends Component {
   render() {
     const { children, ...rest } = this.props;
 
-    return (
-      <ChedioButtoxGroup { ...rest }>
-        { children }
-      </ChedioButtoxGroup>
-    );
+    return <ChedioButtoxGroup {...rest}>{children}</ChedioButtoxGroup>;
   }
 }

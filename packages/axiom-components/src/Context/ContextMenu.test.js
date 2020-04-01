@@ -5,7 +5,7 @@ import ContextMenuItem from './ContextMenuItem';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <ContextMenu { ...props }>
+    <ContextMenu {...props}>
       <ContextMenuItem>Lorem ipsum</ContextMenuItem>
     </ContextMenu>
   );

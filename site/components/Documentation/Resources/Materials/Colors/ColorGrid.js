@@ -13,16 +13,15 @@ export default class ColorGrid extends Component {
     const { children, name, ...rest } = this.props;
 
     return (
-      <Base { ...rest } space="x8">
-        { name && (
-          <Heading
-              space="x4"
-              textSize="headtitle"
-              textStrong>{ name }</Heading>
-        ) }
+      <Base {...rest} space="x8">
+        {name && (
+          <Heading space="x4" textSize="headtitle" textStrong>
+            {name}
+          </Heading>
+        )}
 
-        <Grid gutters="large" responsive={ false } shrink>
-          { children }
+        <Grid gutters="large" responsive={false} shrink>
+          {children}
         </Grid>
       </Base>
     );

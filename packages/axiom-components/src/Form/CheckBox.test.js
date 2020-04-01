@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import CheckBox from './CheckBox';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <CheckBox { ...props }>Lorem ipsum</CheckBox>
-  );
+  renderer.create(<CheckBox {...props}>Lorem ipsum</CheckBox>);
 
 describe('CheckBox', () => {
   it('renders with defaultProps', () => {

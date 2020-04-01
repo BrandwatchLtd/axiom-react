@@ -36,72 +36,72 @@ export default class Pagination extends Component {
       ...rest
     } = this.props;
 
-    const showPrevious = isLargerThanRange(displayRange, totalPages) &&
+    const showPrevious =
+      isLargerThanRange(displayRange, totalPages) &&
       !isWithinStartRange(currentPage, displayRange);
-    const showNext = isLargerThanRange(displayRange, totalPages) &&
+    const showNext =
+      isLargerThanRange(displayRange, totalPages) &&
       !isWithinEndRange(currentPage, displayRange, totalPages);
 
     return (
-      <PaginationButtonGroup { ...rest }>
+      <PaginationButtonGroup {...rest}>
         <PaginationButton
-            data-ax-at={ atIds.Pagination.previous }
-            disabled={ currentPage === 1 }
-            onClick={ onPageChange }
-            page={ currentPage - 1 }
-            shape="circle">
+          data-ax-at={atIds.Pagination.previous}
+          disabled={currentPage === 1}
+          onClick={onPageChange}
+          page={currentPage - 1}
+          shape="circle"
+        >
           <Icon name="chevron-left" />
         </PaginationButton>
 
-        { showPrevious && [
+        {showPrevious && [
           <PaginationButton
-              data-ax-at={ atIds.Pagination.first }
-              key="page-first"
-              onClick={ onPageChange }
-              page={ 1 }>
+            data-ax-at={atIds.Pagination.first}
+            key="page-first"
+            onClick={onPageChange}
+            page={1}
+          >
             1
           </PaginationButton>,
-          <PaginationButton
-              disabled
-              key="page-first-ellipsis"
-              shape="circle">
+          <PaginationButton disabled key="page-first-ellipsis" shape="circle">
             <Icon name="ellipsis" />
           </PaginationButton>,
-        ] }
+        ]}
 
-        { Boolean(displayRange) && (
-          getDisplayRange(currentPage, displayRange, totalPages).map((n) =>
+        {Boolean(displayRange) &&
+          getDisplayRange(currentPage, displayRange, totalPages).map(n => (
             <PaginationButton
-                active={ currentPage === n }
-                key={ n }
-                onClick={ onPageChange }
-                page={ n }>
-              { n }
+              active={currentPage === n}
+              key={n}
+              onClick={onPageChange}
+              page={n}
+            >
+              {n}
             </PaginationButton>
-          )
-        ) }
+          ))}
 
-        { showNext && [
-          <PaginationButton
-              disabled
-              key="page-last-ellipsis"
-              shape="circle">
+        {showNext && [
+          <PaginationButton disabled key="page-last-ellipsis" shape="circle">
             <Icon name="ellipsis" />
           </PaginationButton>,
           <PaginationButton
-              data-ax-at={ atIds.Pagination.last }
-              key="page-last"
-              onClick={ onPageChange }
-              page={ totalPages }>
-            { totalPages }
+            data-ax-at={atIds.Pagination.last}
+            key="page-last"
+            onClick={onPageChange}
+            page={totalPages}
+          >
+            {totalPages}
           </PaginationButton>,
-        ] }
+        ]}
 
         <PaginationButton
-            data-ax-at={ atIds.Pagination.next }
-            disabled={ currentPage === totalPages }
-            onClick={ onPageChange }
-            page={ currentPage + 1 }
-            shape="circle">
+          data-ax-at={atIds.Pagination.next}
+          disabled={currentPage === totalPages}
+          onClick={onPageChange}
+          page={currentPage + 1}
+          shape="circle"
+        >
           <Icon name="chevron-right" />
         </PaginationButton>
       </PaginationButtonGroup>

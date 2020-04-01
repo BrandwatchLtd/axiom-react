@@ -6,10 +6,7 @@ import './Link.css';
 
 export default class Link extends Component {
   static propTypes = {
-    Component: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.func,
-    ]),
+    Component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     children: PropTypes.node,
     className: PropTypes.string,
     style: PropTypes.oneOf([
@@ -35,8 +32,8 @@ export default class Link extends Component {
     });
 
     return (
-      <Base { ...rest } Component={ Component } className={ classes }>
-        { children }
+      <Base {...rest} Component={Component} className={classes}>
+        {children}
       </Base>
     );
   }

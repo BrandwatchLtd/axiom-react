@@ -43,23 +43,25 @@ export default class CheckBox extends Component {
 
     return (
       <Validate
-          error={ error }
-          patterns={ patterns }
-          required={ required }
-          value={ checked }>
-        { (isValid) =>
+        error={error}
+        patterns={patterns}
+        required={required}
+        value={checked}
+      >
+        {isValid => (
           <ChedioButtox
-              { ...rest }
-              checked={ !!(checked || indeterminate) }
-              className="ax-checkbox"
-              disabled={ disabled }
-              indeterminate={ indeterminate && !checked }
-              inputType="checkbox"
-              invalid={ invalid || isValid === false }
-              name={ name }>
-            { children }
+            {...rest}
+            checked={!!(checked || indeterminate)}
+            className="ax-checkbox"
+            disabled={disabled}
+            indeterminate={indeterminate && !checked}
+            inputType="checkbox"
+            invalid={invalid || isValid === false}
+            name={name}
+          >
+            {children}
           </ChedioButtox>
-        }
+        )}
       </Validate>
     );
   }

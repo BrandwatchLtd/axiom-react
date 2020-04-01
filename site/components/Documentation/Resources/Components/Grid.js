@@ -12,7 +12,7 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase>
-          <Grid responsive={ false }>
+          <Grid responsive={false}>
             <GridCell>
               <DataPoints size="2rem">
                 <DataPoint color="paradise-lost" />
@@ -36,10 +36,12 @@ export default class Documentation extends Component {
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Grid/Grid'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Grid/GridCell'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Grid/Grid'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Grid/GridCell'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

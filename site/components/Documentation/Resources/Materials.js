@@ -7,16 +7,20 @@ export default class Guidelines extends Component {
   render() {
     return (
       <DocumentationViewer
-          config={ [{
+        config={[
+          {
             id: 'colours',
             name: 'Colours',
             Component: Colors,
-          }, {
+          },
+          {
             id: 'themes',
             name: 'Themes',
             Component: Themes,
-          }] }
-          path="/docs/packages/axiom-materials" />
+          },
+        ]}
+        path="/docs/packages/axiom-materials"
+      />
     );
   }
 }

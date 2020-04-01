@@ -20,12 +20,7 @@ export default class Modal extends Component {
     children: PropTypes.node,
     isOpen: PropTypes.bool.isRequired,
     onOverlayClick: PropTypes.func,
-    overlayShade: PropTypes.oneOf([
-      'shade-1',
-      'shade-2',
-      'shade-3',
-      'shade-4',
-    ]),
+    overlayShade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
     overlayTheme: PropTypes.oneOf(['day', 'night']),
     padding: PropTypes.oneOf(['x0', 'x6', 'x8', 'x12', 'x16']),
     shouldCloseOnEsc: PropTypes.bool,
@@ -97,20 +92,22 @@ export default class Modal extends Component {
       padding,
     } = this.props;
 
-    const classes = classnames('ax-modal__container', `ax-modal__container--padding-${padding}`, {
-      [`ax-modal__container--overlay-${overlayShade}`]: overlayShade,
-    });
+    const classes = classnames(
+      'ax-modal__container',
+      `ax-modal__container--padding-${padding}`,
+      {
+        [`ax-modal__container--overlay-${overlayShade}`]: overlayShade,
+      }
+    );
 
     return isOpen ? (
       <Portal>
-        <Base className={ classes } theme={ overlayTheme }>
-          { onOverlayClick && (
-            <div className="ax-modal__mask" onClick={ onOverlayClick } />
-          ) }
+        <Base className={classes} theme={overlayTheme}>
+          {onOverlayClick && (
+            <div className="ax-modal__mask" onClick={onOverlayClick} />
+          )}
 
-          <div className="ax-modal">
-            { children }
-          </div>
+          <div className="ax-modal">{children}</div>
         </Base>
       </Portal>
     ) : null;

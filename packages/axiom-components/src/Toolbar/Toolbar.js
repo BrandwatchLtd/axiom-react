@@ -6,15 +6,11 @@ export default class Toolbar extends Component {
   static propTypes = {
     /** Tools along the Toolbar */
     children: PropTypes.node.isRequired,
-  }
+  };
 
   render() {
     const { children } = this.props;
 
-    return (
-      <List style="inline">
-        { children }
-      </List>
-    );
+    return <List style="inline">{children}</List>;
   }
 }

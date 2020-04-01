@@ -9,7 +9,13 @@ export default class ChartBody extends Component {
     /** Horizontal alignment of content */
     horizontalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
     /** Vertical alignment of content */
-    verticalAlign: PropTypes.oneOf(['start', 'middle', 'end', 'around', 'between']),
+    verticalAlign: PropTypes.oneOf([
+      'start',
+      'middle',
+      'end',
+      'around',
+      'between',
+    ]),
   };
 
   render() {
@@ -20,11 +26,9 @@ export default class ChartBody extends Component {
     });
 
     return (
-      <Base className={ classes } { ...rest }>
-        { children }
+      <Base className={classes} {...rest}>
+        {children}
       </Base>
     );
   }
 }
-
-

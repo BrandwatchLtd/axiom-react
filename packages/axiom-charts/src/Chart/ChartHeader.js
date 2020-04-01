@@ -11,11 +11,9 @@ export default class ChartHeader extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base className="ax-chart__header" { ...rest }>
-        { children }
+      <Base className="ax-chart__header" {...rest}>
+        {children}
       </Base>
     );
   }
 }
-
-

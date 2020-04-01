@@ -39,46 +39,51 @@ export default class CombinedBar extends Component {
     } = this.props;
     const isStretched = benchmarkPercent > percent;
 
-    const stripedBarWidth = isStretched ? benchmarkPercent - percent : percent - benchmarkPercent;
+    const stripedBarWidth = isStretched
+      ? benchmarkPercent - percent
+      : percent - benchmarkPercent;
     const stripedBarStyle = {
       left: isStretched ? `${percent}%` : `${benchmarkPercent}%`,
     };
 
-    const stripedBarProps = omit(rest, [
-      'onClick',
-    ]);
+    const stripedBarProps = omit(rest, ['onClick']);
 
     return (
       <React.Fragment>
         <ChartContext
-            DropdownContext={ DropdownContext }
-            TooltipContext={ TooltipContext }
-            color={ color }
-            data={ data }
-            label={ label }
-            onDropdownClose={ onDropdownClose }
-            onDropdownOpen={ () => onDropdownOpen(color) }
-            value={ value }>
-          <Bar
-              color={ color }
-              percent={ percent }
-              { ...rest } />
+          DropdownContext={DropdownContext}
+          TooltipContext={TooltipContext}
+          color={color}
+          data={data}
+          label={label}
+          onDropdownClose={onDropdownClose}
+          onDropdownOpen={() => onDropdownOpen(color)}
+          value={value}
+        >
+          <Bar color={color} percent={percent} {...rest} />
         </ChartContext>
 
-        { isStretched && (<div className="ax-bar-chart__combined-bar-diff" style={ stripedBarStyle }>
-          <ChartContext
-              TooltipContext={ DifferenceAreaTooltipContext }
-              color={ color }
-              data={ data }
-              label={ label }
-              value={ benchmark - value }>
-            <Bar
-                color={ color }
+        {isStretched && (
+          <div
+            className="ax-bar-chart__combined-bar-diff"
+            style={stripedBarStyle}
+          >
+            <ChartContext
+              TooltipContext={DifferenceAreaTooltipContext}
+              color={color}
+              data={data}
+              label={label}
+              value={benchmark - value}
+            >
+              <Bar
+                color={color}
                 fillMode="striped"
-                percent={ stripedBarWidth }
-                { ...stripedBarProps } />
-          </ChartContext>
-        </div>) }
+                percent={stripedBarWidth}
+                {...stripedBarProps}
+              />
+            </ChartContext>
+          </div>
+        )}
       </React.Fragment>
     );
   }

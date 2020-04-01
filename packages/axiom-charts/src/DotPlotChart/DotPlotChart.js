@@ -31,10 +31,12 @@ export default class DotPlotChart extends Component {
      * The key that is shown along the bottom of the axis. It is also used
      * to determine the order of stacked dots.
      */
-    chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })).isRequired,
+    chartKey: PropTypes.arrayOf(
+      PropTypes.shape({
+        color: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+      })
+    ).isRequired,
     /** The description displayed for the benchmarking line in the key */
     chartKeyBenchmarkLabel: PropTypes.string,
     /** The description displayed for the difference line in the key */
@@ -45,10 +47,12 @@ export default class DotPlotChart extends Component {
      * The data used to render the dots. The `label` is used for the yAxis
      * and `values` for dots
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node.isRequired,
-      values: PropTypes.object.isRequired,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        values: PropTypes.object.isRequired,
+      })
+    ).isRequired,
     /** Control the appearance of the value */
     dotPlotLabel: PropTypes.func,
     /** The description given to the expand button */
@@ -110,10 +114,14 @@ export default class DotPlotChart extends Component {
   }
 
   handleDotMouseLeave() {
-    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
-      selectedColors: [],
-      selectedIndex: null,
-    }));
+    this.setState(({ isDropdownOpen }) =>
+      isDropdownOpen
+        ? {}
+        : {
+            selectedColors: [],
+            selectedIndex: null,
+          }
+    );
   }
 
   render() {
@@ -147,81 +155,86 @@ export default class DotPlotChart extends Component {
 
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
-    const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
-    const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
+    const finalZoomMax = Math.max(
+      dataUpper,
+      Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper)
+    );
+    const zoomTo =
+      ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
     const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
 
     return (
-      <ChartTable { ...rest } xAxisLabels={ finalXAxisLabels }>
+      <ChartTable {...rest} xAxisLabels={finalXAxisLabels}>
         <ChartTableRows
-            collapsedVisibleRowCount={ collapsedVisibleRowCount }
-            expandButtonSuffix={ expandButtonSuffix }
-            labelColumnWidth={ labelColumnWidth }
-            space="x2"
-            xAxisLabels={ finalXAxisLabels }
-            zoomTo={ zoom ? zoomTo : undefined }>
-          { formattedData.map(({ values, benchmark, label }, index) =>
-            <ChartTableRow
-                hover={ index === selectedIndex }
-                key={ label }>
+          collapsedVisibleRowCount={collapsedVisibleRowCount}
+          expandButtonSuffix={expandButtonSuffix}
+          labelColumnWidth={labelColumnWidth}
+          space="x2"
+          xAxisLabels={finalXAxisLabels}
+          zoomTo={zoom ? zoomTo : undefined}
+        >
+          {formattedData.map(({ values, benchmark, label }, index) => (
+            <ChartTableRow hover={index === selectedIndex} key={label}>
               <ChartTableLabel
-                  textStrong={ index === selectedIndex }
-                  width={ labelColumnWidth }>
-                { label }
+                textStrong={index === selectedIndex}
+                width={labelColumnWidth}
+              >
+                {label}
               </ChartTableLabel>
               <ChartTableVisual>
                 <DotPlot
-                    DropdownContext={ DropdownContext }
-                    benchmark={ benchmark }
-                    data={ values }
-                    dotPlotLabel={ dotPlotLabel }
-                    label={ label }
-                    lower={ finalLower }
-                    mouseOverColors={ selectedColors }
-                    mouseOverRowIndex={ selectedIndex }
-                    onDotMouseEnter={ (colors) => this.handleDotMouseEnter(index, colors) }
-                    onDotMouseLeave={ () => this.handleDotMouseLeave() }
-                    onDropdownClose={ () => this.handleDropdownClose() }
-                    onDropdownOpen={ (colors) => this.handleDropdownOpen(index, colors) }
-                    rawData={ data[index] }
-                    rowIndex={ index }
-                    upper={ finalUpper } />
+                  DropdownContext={DropdownContext}
+                  benchmark={benchmark}
+                  data={values}
+                  dotPlotLabel={dotPlotLabel}
+                  label={label}
+                  lower={finalLower}
+                  mouseOverColors={selectedColors}
+                  mouseOverRowIndex={selectedIndex}
+                  onDotMouseEnter={colors =>
+                    this.handleDotMouseEnter(index, colors)
+                  }
+                  onDotMouseLeave={() => this.handleDotMouseLeave()}
+                  onDropdownClose={() => this.handleDropdownClose()}
+                  onDropdownOpen={colors =>
+                    this.handleDropdownOpen(index, colors)
+                  }
+                  rawData={data[index]}
+                  rowIndex={index}
+                  upper={finalUpper}
+                />
               </ChartTableVisual>
             </ChartTableRow>
-          ) }
+          ))}
         </ChartTableRows>
 
-        { axisTitle && (
-          <ChartTableAxisTitle>
-            { axisTitle }
-          </ChartTableAxisTitle>
-        ) }
+        {axisTitle && <ChartTableAxisTitle>{axisTitle}</ChartTableAxisTitle>}
 
-        { showKey && (
+        {showKey && (
           <ChartTableKey>
             <ChartKey>
-              { chartKeyBenchmarkLabel && (
-                <ChartKeyItem label={ chartKeyBenchmarkLabel }>
+              {chartKeyBenchmarkLabel && (
+                <ChartKeyItem label={chartKeyBenchmarkLabel}>
                   <DotPlotBenchmarkLine height="1rem" width="0.75rem" />
                 </ChartKeyItem>
-              ) }
+              )}
 
-              { chartKey.map(({ label, color }) =>
-                <ChartKeyItem key={ `${label}.${color}` } label={ label }>
+              {chartKey.map(({ label, color }) => (
+                <ChartKeyItem key={`${label}.${color}`} label={label}>
                   <DataPoints size="0.75rem">
-                    <DataPoint color={ color } />
+                    <DataPoint color={color} />
                   </DataPoints>
                 </ChartKeyItem>
-              ) }
+              ))}
 
-              { chartKeyDifferenceLabel && (
-                <ChartKeyItem label={ chartKeyDifferenceLabel }>
+              {chartKeyDifferenceLabel && (
+                <ChartKeyItem label={chartKeyDifferenceLabel}>
                   <DotPlotDifferenceLine width="1rem" />
                 </ChartKeyItem>
-              ) }
+              )}
             </ChartKey>
           </ChartTableKey>
-        ) }
+        )}
       </ChartTable>
     );
   }

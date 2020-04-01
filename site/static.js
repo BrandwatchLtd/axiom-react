@@ -9,11 +9,12 @@ import Site from './components/Site/Site';
 import template from './index.ejs';
 
 if (typeof document !== 'undefined') {
-  render((
+  render(
     <BrowserRouter>
       <Site />
-    </BrowserRouter>
-  ), document.getElementById('react-root'));
+    </BrowserRouter>,
+    document.getElementById('react-root')
+  );
 }
 
 export default ({ path, webpackStats }) => {
@@ -24,7 +25,7 @@ export default ({ path, webpackStats }) => {
         stylesheet: `/assets/bundle.${hash}.min.css`,
         script: `/assets/bundle.${hash}.min.js`,
         html: renderToString(
-          <StaticRouter location={ path }>
+          <StaticRouter location={path}>
             <Site />
           </StaticRouter>
         ),

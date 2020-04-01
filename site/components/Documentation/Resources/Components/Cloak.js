@@ -25,7 +25,7 @@ export default class Documentation extends Component {
               <CloakContainer>
                 <Card border>
                   <CardContent>
-                    <Grid none responsive={ false } verticalAlign="middle">
+                    <Grid none responsive={false} verticalAlign="middle">
                       <GridCell>
                         <Heading>Using components</Heading>
                       </GridCell>
@@ -43,7 +43,7 @@ export default class Documentation extends Component {
             <GridCell>
               <Card border cloakContainer>
                 <CardContent>
-                  <Grid none responsive={ false } verticalAlign="middle">
+                  <Grid none responsive={false} verticalAlign="middle">
                     <GridCell>
                       <Heading>Using base props</Heading>
                     </GridCell>
@@ -57,10 +57,12 @@ export default class Documentation extends Component {
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Cloak/Cloak'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Cloak/CloakContainer'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Cloak/Cloak'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Cloak/CloakContainer'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

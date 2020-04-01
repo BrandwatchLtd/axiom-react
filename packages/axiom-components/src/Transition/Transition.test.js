@@ -4,7 +4,7 @@ import Transition from './Transition';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Transition height="4rem" width="4rem" { ...props }>
+    <Transition height="4rem" width="4rem" {...props}>
       <div className="first" />
       <div className="second" />
     </Transition>

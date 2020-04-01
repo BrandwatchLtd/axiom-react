@@ -18,19 +18,13 @@ export default class Separator extends Component {
 
   render() {
     const { borderStyle, direction, className, ...rest } = this.props;
-    const classes = classnames('ax-separator',
+    const classes = classnames(
+      'ax-separator',
       `ax-separator--${borderStyle}`,
       `ax-separator--${direction}`,
       className
     );
 
-    return (
-      <Base
-          space="x0"
-          { ...rest }
-          Component="hr"
-          className={ classes } />
-    );
+    return <Base space="x0" {...rest} Component="hr" className={classes} />;
   }
 }
-

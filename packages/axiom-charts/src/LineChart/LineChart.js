@@ -32,19 +32,23 @@ export default class LineChart extends Component {
      * The key that is shown along the bottom of the axis. It is also used
      * to determine the order of lines and points.
      */
-    chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      style: PropTypes.oneOf(['dashed', 'solid']),
-      label: PropTypes.string.isRequired,
-    })).isRequired,
+    chartKey: PropTypes.arrayOf(
+      PropTypes.shape({
+        color: PropTypes.string.isRequired,
+        style: PropTypes.oneOf(['dashed', 'solid']),
+        label: PropTypes.string.isRequired,
+      })
+    ).isRequired,
     /**
      * The data used to render the line and points. The `label` is used
      * to lookup color and style from the `chartKey`.
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node.isRequired,
-      values: PropTypes.array.isRequired,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        values: PropTypes.array.isRequired,
+      })
+    ).isRequired,
     /** Height of the line area */
     height: PropTypes.string.isRequired,
     /** Lower value of the data displayed on the chart */
@@ -60,10 +64,12 @@ export default class LineChart extends Component {
      */
     xAxisLabels: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.string),
-      PropTypes.arrayOf(PropTypes.shape({
-        label: PropTypes.node,
-        value: PropTypes.number.isRequired,
-      })),
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          label: PropTypes.node,
+          value: PropTypes.number.isRequired,
+        })
+      ),
     ]),
     /** The title that appears along the xAxis */
     xAxisTitle: PropTypes.node,
@@ -71,10 +77,12 @@ export default class LineChart extends Component {
      * Labels to be shown along the yAxis, also used to determine where
      * grid lines are drawn
      */
-    yAxisLabels: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node,
-      value: PropTypes.number.isRequired,
-    })),
+    yAxisLabels: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node,
+        value: PropTypes.number.isRequired,
+      })
+    ),
     /** The title that appears along the yAxis */
     yAxisTitle: PropTypes.node,
   };
@@ -116,14 +124,20 @@ export default class LineChart extends Component {
   }
 
   handleMouseLeave() {
-    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
-      selectedIndex: null,
-      selectedLabel: null,
-    }));
+    this.setState(({ isDropdownOpen }) =>
+      isDropdownOpen
+        ? {}
+        : {
+            selectedIndex: null,
+            selectedLabel: null,
+          }
+    );
   }
 
   render() {
-    const flatValues = [].concat(...this.props.data.map(({ values }) => values)).filter((n) => !isNaN(n) && n !== null);
+    const flatValues = []
+      .concat(...this.props.data.map(({ values }) => values))
+      .filter(n => !isNaN(n) && n !== null);
     const dataLower = Math.min(...flatValues);
     const dataUpper = Math.max(...flatValues);
     const {
@@ -144,74 +158,94 @@ export default class LineChart extends Component {
     const { selectedIndex, selectedLabel } = this.state;
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
-    const labelMap = chartKey.reduce((map, { color, label, style }) =>
-      ({ ...map, [label]: { color, style } }), {});
+    const labelMap = chartKey.reduce(
+      (map, { color, label, style }) => ({ ...map, [label]: { color, style } }),
+      {}
+    );
 
     return (
-      <ChartLayout { ...rest }>
-        { xAxisTitle && <ChartLayoutTitle axis="x">{ xAxisTitle }</ChartLayoutTitle> }
-        { yAxisTitle && <ChartLayoutTitle axis="y">{ yAxisTitle }</ChartLayoutTitle> }
-        { xAxisLabels.length > 0 && <ChartLayoutLabels axis="x" labels={ xAxisLabels } /> }
-        { yAxisLabels && (
+      <ChartLayout {...rest}>
+        {xAxisTitle && (
+          <ChartLayoutTitle axis="x">{xAxisTitle}</ChartLayoutTitle>
+        )}
+        {yAxisTitle && (
+          <ChartLayoutTitle axis="y">{yAxisTitle}</ChartLayoutTitle>
+        )}
+        {xAxisLabels.length > 0 && (
+          <ChartLayoutLabels axis="x" labels={xAxisLabels} />
+        )}
+        {yAxisLabels && (
           <ChartLayoutLabels
-              axis="y"
-              labels={ yAxisLabels }
-              lower={ finalLower }
-              upper={ finalUpper } />
-        ) }
+            axis="y"
+            labels={yAxisLabels}
+            lower={finalLower}
+            upper={finalUpper}
+          />
+        )}
 
         <ChartLayoutVisual>
-          <ChartGrid
-              axis="y"
-              labels={ yAxisLabels }
-              lower={ lower }
-              upper={ upper }>
-            <div className="ax-line-chart__lines" style={ { height } }>
-              { data.map(({ label, values }) => (
-                <div className="ax-line-chart__line" key={ label }>
+          <ChartGrid axis="y" labels={yAxisLabels} lower={lower} upper={upper}>
+            <div className="ax-line-chart__lines" style={{ height }}>
+              {data.map(({ label, values }) => (
+                <div className="ax-line-chart__line" key={label}>
                   <Line
-                      color={ labelMap[label].color }
-                      dasharray={ labelMap[label].style === 'dashed' ? '0.125rem 0.25rem' : '' }
-                      dasharrayWithoutScalingStroke={ labelMap[label].style === 'dashed' ? '0.03125rem 0.0625rem' : '' }
-                      data={ values }
-                      faded={ selectedLabel && selectedLabel !== label }
-                      height={ height }
-                      lower={ finalLower }
-                      upper={ finalUpper }>
-                    { values.map((_, index) =>
+                    color={labelMap[label].color}
+                    dasharray={
+                      labelMap[label].style === 'dashed'
+                        ? '0.125rem 0.25rem'
+                        : ''
+                    }
+                    dasharrayWithoutScalingStroke={
+                      labelMap[label].style === 'dashed'
+                        ? '0.03125rem 0.0625rem'
+                        : ''
+                    }
+                    data={values}
+                    faded={selectedLabel && selectedLabel !== label}
+                    height={height}
+                    lower={finalLower}
+                    upper={finalUpper}
+                  >
+                    {values.map((_, index) => (
                       <LinePoint
-                          DropdownContext={ DropdownContext }
-                          TooltipContext={ TooltipContext }
-                          color={ labelMap[label].color }
-                          hover={ selectedIndex === index && selectedLabel === label }
-                          index={ index }
-                          key={ index }
-                          label={ label }
-                          onClick={ onPointClick }
-                          onDropdownClose={ () => this.handleDropdownClose() }
-                          onDropdownOpen={ () => this.handleDropdownOpen(index, label) }
-                          onMouseEnter={ () => this.handleMouseEnter(index, label) }
-                          onMouseLeave={ () => this.handleMouseLeave() }
-                          size=".5rem" />
-                    ) }
+                        DropdownContext={DropdownContext}
+                        TooltipContext={TooltipContext}
+                        color={labelMap[label].color}
+                        hover={
+                          selectedIndex === index && selectedLabel === label
+                        }
+                        index={index}
+                        key={index}
+                        label={label}
+                        onClick={onPointClick}
+                        onDropdownClose={() => this.handleDropdownClose()}
+                        onDropdownOpen={() =>
+                          this.handleDropdownOpen(index, label)
+                        }
+                        onMouseEnter={() => this.handleMouseEnter(index, label)}
+                        onMouseLeave={() => this.handleMouseLeave()}
+                        size=".5rem"
+                      />
+                    ))}
                   </Line>
                 </div>
-              )) }
+              ))}
             </div>
           </ChartGrid>
         </ChartLayoutVisual>
 
         <ChartLayoutKey>
           <ChartKey>
-            { chartKey.map(({ label, color, style }) => (
-              <ChartKeyItem key={ `${label}.${color}` } label={ label }>
+            {chartKey.map(({ label, color, style }) => (
+              <ChartKeyItem key={`${label}.${color}`} label={label}>
                 <DataPoints size="0.75rem">
                   <DataPoint
-                      color={ color }
-                      style={ style === 'dashed' ? 'hollow' : 'solid' } />
+                    color={color}
+                    style={style === 'dashed' ? 'hollow' : 'solid'}
+                  />
                 </DataPoints>
               </ChartKeyItem>
-            )) }
+            ))}
           </ChartKey>
         </ChartLayoutKey>
       </ChartLayout>

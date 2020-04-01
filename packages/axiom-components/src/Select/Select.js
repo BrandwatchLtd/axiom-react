@@ -59,20 +59,18 @@ export default class Select extends Component {
 
     return (
       <Dropdown
-          enabled={ Children.count(children) > 0 }
-          flip="mirror"
-          onRequestClose={ onRequestClose }
-          onRequestOpen={ onRequestOpen }
-          position="bottom">
+        enabled={Children.count(children) > 0}
+        flip="mirror"
+        onRequestClose={onRequestClose}
+        onRequestOpen={onRequestOpen}
+        position="bottom"
+      >
         <DropdownTarget>
-          <SelectInput
-              { ...omit(props, ['onSelect', 'selectedValue']) } />
+          <SelectInput {...omit(props, ['onSelect', 'selectedValue'])} />
         </DropdownTarget>
 
         <DropdownSource focusOnOpen>
-          <DropdownContext>
-            { children }
-          </DropdownContext>
+          <DropdownContext>{children}</DropdownContext>
         </DropdownSource>
       </Dropdown>
     );

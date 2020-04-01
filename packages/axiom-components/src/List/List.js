@@ -17,21 +17,14 @@ export default class List extends Component {
   };
 
   render() {
-    const {
-      children,
-      style,
-      ...rest
-    } = this.props;
+    const { children, style, ...rest } = this.props;
 
     const tag = style === 'ordered' ? 'ol' : 'ul';
-    const classes = classnames(
-      'ax-list',
-      `ax-list--style-${ style }`,
-    );
+    const classes = classnames('ax-list', `ax-list--style-${style}`);
 
     return (
-      <Base space="x4" { ...rest } Component={ tag } className={ classes }>
-        { children }
+      <Base space="x4" {...rest} Component={tag} className={classes}>
+        {children}
       </Base>
     );
   }

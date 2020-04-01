@@ -31,7 +31,6 @@ export default class Slider extends Component {
     withTooltip: PropTypes.bool,
   };
 
-
   static defaultProps = sliderDefaultProps;
 
   constructor(props) {
@@ -53,7 +52,9 @@ export default class Slider extends Component {
   getValue(clientX) {
     const { max, min, step } = this.props;
 
-    const value = (clientX - this.posMin) * (max - min) / (this.posMax - this.posMin) + min;
+    const value =
+      ((clientX - this.posMin) * (max - min)) / (this.posMax - this.posMin) +
+      min;
     const roundedValue = step * Math.round(value / step);
 
     return Math.max(min, Math.min(roundedValue, max));
@@ -77,7 +78,6 @@ export default class Slider extends Component {
   }
 
   handleMouseUp(event) {
-
     const { onSlideEnd } = this.props;
     const { clientX } = event;
 
@@ -108,19 +108,28 @@ export default class Slider extends Component {
     const { max, min, onChange, step, value } = this.props;
 
     switch (event.key) {
-    case 'ArrowLeft':
-    case 'ArrowDown':
-      onChange(Math.max(min, Math.min(value - step, max)));
-      break;
-    case 'ArrowRight':
-    case 'ArrowUp':
-      onChange(Math.max(min, Math.min(value + step, max)));
-      break;
+      case 'ArrowLeft':
+      case 'ArrowDown':
+        onChange(Math.max(min, Math.min(value - step, max)));
+        break;
+      case 'ArrowRight':
+      case 'ArrowUp':
+        onChange(Math.max(min, Math.min(value + step, max)));
+        break;
     }
   }
 
   render() {
-    const { disabled, max, min, size, value, valueFormatter, withTooltip, ...rest } = this.props;
+    const {
+      disabled,
+      max,
+      min,
+      size,
+      value,
+      valueFormatter,
+      withTooltip,
+      ...rest
+    } = this.props;
     const { isDragging, isMouseOver } = this.state;
     const valueInRange = Math.max(min, Math.min(value, max));
     const valueAsPercentage = ((valueInRange - min) / (max - min)) * 100;
@@ -129,26 +138,34 @@ export default class Slider extends Component {
     });
 
     return (
-      <Base { ...omit(rest, ['onSlideEnd', 'min', 'max', 'step']) }
-          className={ classes }
-          onBlur={ this.handleBlur }
-          onFocus={ disabled ? null : this.handleFocus }
-          onMouseLeave={ () => this.setState({ isMouseOver: false }) }
-          onMouseOver={ () => this.setState({ isMouseOver: true }) }
-          tabIndex="0">
+      <Base
+        {...omit(rest, ['onSlideEnd', 'min', 'max', 'step'])}
+        className={classes}
+        onBlur={this.handleBlur}
+        onFocus={disabled ? null : this.handleFocus}
+        onMouseLeave={() => this.setState({ isMouseOver: false })}
+        onMouseOver={() => this.setState({ isMouseOver: true })}
+        tabIndex="0"
+      >
         <div
-            className="ax-slider__track"
-            onMouseDown={ disabled ? null : this.handleMouseDown }
-            ref={ (el) => this.container = el }>
+          className="ax-slider__track"
+          onMouseDown={disabled ? null : this.handleMouseDown}
+          ref={el => (this.container = el)}
+        >
           <div
-              className="ax-slider__fill"
-              style={ { width: `${valueAsPercentage}%` } } />
+            className="ax-slider__fill"
+            style={{ width: `${valueAsPercentage}%` }}
+          />
         </div>
-        <Handle disabled={ disabled } isVisible={ isDragging || isMouseOver }
-            onMouseDown={ this.handleMouseDown }
-            value={ value } valueAsPercentage={ valueAsPercentage }
-            valueFormatter={ valueFormatter }
-            withTooltip={ withTooltip }/>
+        <Handle
+          disabled={disabled}
+          isVisible={isDragging || isMouseOver}
+          onMouseDown={this.handleMouseDown}
+          value={value}
+          valueAsPercentage={valueAsPercentage}
+          valueFormatter={valueFormatter}
+          withTooltip={withTooltip}
+        />
       </Base>
     );
   }

@@ -16,15 +16,7 @@ export default class RadarXAxisLabel extends Component {
   };
 
   render() {
-    const {
-      active,
-      children: label,
-      onClick,
-      r,
-      x,
-      y,
-      ...rest
-    } = this.props;
+    const { active, children: label, onClick, r, x, y, ...rest } = this.props;
 
     const isTop = r > RADIAN * 247.5 || r < RADIAN * -67.5;
     const isRight = r >= RADIAN * -67.5 && r <= RADIAN * 67.5;
@@ -39,20 +31,21 @@ export default class RadarXAxisLabel extends Component {
     });
 
     return (
-      <div { ...rest }
-          className={ classes }
-          style={ { top: `${y}px`, left: `${x}px` } }>
-        { onClick ? (
+      <div
+        {...rest}
+        className={classes}
+        style={{ top: `${y}px`, left: `${x}px` }}
+      >
+        {onClick ? (
           <Link
-              onClick={ () => onClick(label) }
-              style={ active ? 'body' : 'subtle' }>
-            { label }
+            onClick={() => onClick(label)}
+            style={active ? 'body' : 'subtle'}
+          >
+            {label}
           </Link>
         ) : (
-          <Text textColor={ active ? 'body' : 'subtle' }>
-            { label }
-          </Text>
-        ) }
+          <Text textColor={active ? 'body' : 'subtle'}>{label}</Text>
+        )}
       </div>
     );
   }

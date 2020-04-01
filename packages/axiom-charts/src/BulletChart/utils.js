@@ -6,7 +6,7 @@ export const formatData = (key, data) => {
     label,
     subLabel,
     values: Object.keys(values)
-      .map((color) => ({
+      .map(color => ({
         color,
         valueLabel: values[color],
         value: Math.floor((values[color] / highestValue) * 100),
@@ -15,7 +15,7 @@ export const formatData = (key, data) => {
   }));
 };
 
-export const getHighestValue = (data) => {
+export const getHighestValue = data => {
   let max = 0;
 
   for (let i = 0; i < data.length; i++) {

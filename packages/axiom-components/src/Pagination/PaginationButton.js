@@ -11,20 +11,16 @@ export default class PaginationButton extends Component {
   };
 
   render() {
-    const {
-      active,
-      onClick,
-      page,
-      shape,
-      ...rest
-    } = this.props;
+    const { active, onClick, page, shape, ...rest } = this.props;
 
     return (
-      <Button { ...rest }
-          onClick={ () => onClick(page) }
-          shape={ shape || page <= 99 ? 'circle' : 'stadium' }
-          size="small"
-          style={ active ? 'primary' : 'quaternary' } />
+      <Button
+        {...rest}
+        onClick={() => onClick(page)}
+        shape={shape || page <= 99 ? 'circle' : 'stadium'}
+        size="small"
+        style={active ? 'primary' : 'quaternary'}
+      />
     );
   }
 }

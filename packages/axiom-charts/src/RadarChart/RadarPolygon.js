@@ -68,22 +68,24 @@ export default class RadarPolygon extends Component {
       values,
     } = this.props;
 
-    const classes = classnames('ax-radar__polygon', `ax-radar__polygon--${color}`, {
-      'ax-radar__polygon--border': border,
-      'ax-radar__polygon--faded': faded,
-      'ax-radar__polygon--fill': fill,
-    });
+    const classes = classnames(
+      'ax-radar__polygon',
+      `ax-radar__polygon--${color}`,
+      {
+        'ax-radar__polygon--border': border,
+        'ax-radar__polygon--faded': faded,
+        'ax-radar__polygon--fill': fill,
+      }
+    );
 
-    const plot = (v) => ((v - lower) / (upper - lower)) * radius;
-    const x = (i) => cx + Math.cos(ticks[i]) * plot(values[i]);
-    const y = (i) => cy + Math.sin(ticks[i]) * plot(values[i]);
-    const moveTo = (i) => `M ${x(i)},${y(i)}`;
+    const plot = v => ((v - lower) / (upper - lower)) * radius;
+    const x = i => cx + Math.cos(ticks[i]) * plot(values[i]);
+    const y = i => cy + Math.sin(ticks[i]) * plot(values[i]);
+    const moveTo = i => `M ${x(i)},${y(i)}`;
     const lineTo = (d, i) => `${d} L ${x(i)},${y(i)}`;
-    const lineEnd = (d) => `${lineTo(d, 0)} Z`;
+    const lineEnd = d => `${lineTo(d, 0)} Z`;
     const path = lineEnd(values.reduce((d, _, i) => lineTo(d, i), moveTo(0)));
 
-    return (
-      <path className={ classes } d={ path } />
-    );
+    return <path className={classes} d={path} />;
   }
 }

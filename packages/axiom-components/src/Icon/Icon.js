@@ -139,10 +139,19 @@ export default class Icon extends Component {
   };
 
   render() {
-    const { className, inline, name, size, width, height, spaceLeft, spaceRight, ...rest } = this.props;
-    const style = (height || width) ?
-      { width, height } :
-      { width: size, height: size };
+    const {
+      className,
+      inline,
+      name,
+      size,
+      width,
+      height,
+      spaceLeft,
+      spaceRight,
+      ...rest
+    } = this.props;
+    const style =
+      height || width ? { width, height } : { width: size, height: size };
 
     const classes = classnames(className, 'ax-icon', `ax-icon--${name}`, {
       'ax-icon--inline': inline,
@@ -157,12 +166,14 @@ export default class Icon extends Component {
     const { body, viewBox } = icons[name];
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className={ classes }
-          dangerouslySetInnerHTML={ { __html: body } }
-          style={ style }
-          viewBox={ viewBox } />
+      <Base
+        {...rest}
+        Component="svg"
+        className={classes}
+        dangerouslySetInnerHTML={{ __html: body }}
+        style={style}
+        viewBox={viewBox}
+      />
     );
   }
 }

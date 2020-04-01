@@ -6,14 +6,15 @@ import { BrowserRouter } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
 import Site from './components/Site/Site';
 
-const render = (Site) => {
-  ReactDOM.render((
+const render = Site => {
+  ReactDOM.render(
     <AppContainer>
       <BrowserRouter>
         <Site />
       </BrowserRouter>
-    </AppContainer>
-  ), document.getElementById('react-root'));
+    </AppContainer>,
+    document.getElementById('react-root')
+  );
 };
 
 render(Site);

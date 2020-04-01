@@ -7,9 +7,10 @@ export default (number, precision = 0) => {
     return '-';
   }
 
-  const [ integer, fraction ] = toFixed(number, precision).split('.');
+  const [integer, fraction] = toFixed(number, precision).split('.');
   const formatted = parseFloat(integer)
-    .toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${NUMBER_SEPARATOR}`);
+    .toString()
+    .replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${NUMBER_SEPARATOR}`);
 
   return fraction ? `${formatted}.${fraction}` : formatted;
 };

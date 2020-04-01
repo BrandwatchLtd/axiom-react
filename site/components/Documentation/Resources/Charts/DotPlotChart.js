@@ -14,23 +14,38 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase>
           <DotPlotChart
-              DropdownContext={ DropdownContext }
-              axisTitle="% of each something"
-              chartKey={ dotPlotKey }
-              chartKeyBenchmarkLabel="Benchmark"
-              chartKeyDifferenceLabel="Size of Difference"
-              collapsedVisibleRowCount={ 6 }
-              data={ dotPlotData }
-              expandButtonSuffix="Categories"
-              labelColumnWidth="11rem"
-              lower={ 0 }
-              upper={ 100 }
-              xAxisLabels={ () => [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
+            DropdownContext={DropdownContext}
+            axisTitle="% of each something"
+            chartKey={dotPlotKey}
+            chartKeyBenchmarkLabel="Benchmark"
+            chartKeyDifferenceLabel="Size of Difference"
+            collapsedVisibleRowCount={6}
+            data={dotPlotData}
+            expandButtonSuffix="Categories"
+            labelColumnWidth="11rem"
+            lower={0}
+            upper={100}
+            xAxisLabels={() => [
+              '0',
+              '10',
+              '20',
+              '30',
+              '40',
+              '50',
+              '60',
+              '70',
+              '80',
+              '90',
+              '100',
+            ]}
+          />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DotPlotChart/DotPlotChart'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DotPlotChart/DotPlotChart'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

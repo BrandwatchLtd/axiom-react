@@ -26,15 +26,19 @@ export default class TableRow extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-table__row', {
-      'ax-table__row--hover': hover,
-      'ax-table__row--clickable': onClick,
-      'ax-table__row--borderless': borderless,
-    }, className);
+    const classes = classnames(
+      'ax-table__row',
+      {
+        'ax-table__row--hover': hover,
+        'ax-table__row--clickable': onClick,
+        'ax-table__row--borderless': borderless,
+      },
+      className
+    );
 
     return (
-      <Base className={ classes } { ...rest } Component="tr" onClick={ onClick }>
-        { children }
+      <Base className={classes} {...rest} Component="tr" onClick={onClick}>
+        {children}
       </Base>
     );
   }

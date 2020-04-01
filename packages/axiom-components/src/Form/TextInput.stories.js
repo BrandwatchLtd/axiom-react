@@ -15,13 +15,13 @@ export function Default() {
 }
 
 export function OnChange() {
-  return <TextInput onChange={ event => console.log(event.target.value) } />;
+  return <TextInput onChange={event => console.log(event.target.value)} />;
 }
 
 export function InputEvents() {
   const handleOnKeyPress = event => console.log(event.key);
 
-  return <TextInput onKeyPress={ handleOnKeyPress } />;
+  return <TextInput onKeyPress={handleOnKeyPress} />;
 }
 
 InputEvents.story = {
@@ -67,11 +67,10 @@ export function WithRef() {
   }, [inputRef.current]);
 
   return (
-    <TextInput inputRef={ inputRef }>
+    <TextInput inputRef={inputRef}>
       <TextInputButton align="left" name="magnify-glass">
         Submit
       </TextInputButton>
     </TextInput>
   );
 }
-

@@ -70,9 +70,10 @@ export default class Range extends Component {
     this.handleMouseUp = this.handleMouseUp.bind(this);
     this.handleResize = this.handleResize.bind(this);
 
-    this.observer = new ResizeObserver(([entry]) => this.handleResize(entry.contentRect.width));
+    this.observer = new ResizeObserver(([entry]) =>
+      this.handleResize(entry.contentRect.width)
+    );
   }
-
 
   ensureBoundsInRange() {
     const { values } = this.props;
@@ -95,14 +96,16 @@ export default class Range extends Component {
 
     if (orderedValues[0] > orderedValues[1]) {
       switch (this.focusedHandleIndex) {
-      case 0:
-        orderedValues[0] = orderedValues[1];
-        break;
-      case 1:
-        orderedValues[1] = orderedValues[0];
-        break;
-      default:
-        throw new Error(`Unknown handle ${this.focusedHandleIndex} was in focus: change is not applied`);
+        case 0:
+          orderedValues[0] = orderedValues[1];
+          break;
+        case 1:
+          orderedValues[1] = orderedValues[0];
+          break;
+        default:
+          throw new Error(
+            `Unknown handle ${this.focusedHandleIndex} was in focus: change is not applied`
+          );
       }
     }
     return orderedValues;
@@ -116,9 +119,12 @@ export default class Range extends Component {
 
   getValueFromPosition(clientX) {
     const { max, min } = this.props;
-    const { left: posMin, right: posMax } = this.trackRef.current.getBoundingClientRect();
+    const {
+      left: posMin,
+      right: posMax,
+    } = this.trackRef.current.getBoundingClientRect();
 
-    const value = (clientX - posMin) * (max - min) / (posMax - posMin) + min;
+    const value = ((clientX - posMin) * (max - min)) / (posMax - posMin) + min;
 
     return this.ensureValueInRange(value);
   }
@@ -141,7 +147,7 @@ export default class Range extends Component {
 
     return values.reduce((closestIndex, currentValue, currentIndex) => {
       const currentDist = Math.abs(xValue - currentValue);
-      if ( closestDist === undefined || currentDist < closestDist) {
+      if (closestDist === undefined || currentDist < closestDist) {
         closestDist = currentDist;
         return currentIndex;
       }
@@ -152,7 +158,7 @@ export default class Range extends Component {
     }, 0);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.rangeRef.current && this.observer.observe(this.rangeRef.current);
   }
 
@@ -208,14 +214,18 @@ export default class Range extends Component {
     const { values } = this.state;
 
     switch (event.key) {
-    case 'ArrowLeft':
-    case 'ArrowDown':
-      values[this.focusedHandleIndex] = this.ensureValueInRange(values[this.focusedHandleIndex] - step);
-      break;
-    case 'ArrowRight':
-    case 'ArrowUp':
-      values[this.focusedHandleIndex] = this.ensureValueInRange(values[this.focusedHandleIndex] + step);
-      break;
+      case 'ArrowLeft':
+      case 'ArrowDown':
+        values[this.focusedHandleIndex] = this.ensureValueInRange(
+          values[this.focusedHandleIndex] - step
+        );
+        break;
+      case 'ArrowRight':
+      case 'ArrowUp':
+        values[this.focusedHandleIndex] = this.ensureValueInRange(
+          values[this.focusedHandleIndex] + step
+        );
+        break;
     }
 
     this.onChange(values);
@@ -229,69 +239,107 @@ export default class Range extends Component {
     this.props.onChange(this.ensureValuesDontCrossover(values));
   }
 
-
   render() {
-    const { disabled, markerValue, maxLabel, minLabel, size, values, valueFormatter, withTooltip, ...rest } = this.props;
+    const {
+      disabled,
+      markerValue,
+      maxLabel,
+      minLabel,
+      size,
+      values,
+      valueFormatter,
+      withTooltip,
+      ...rest
+    } = this.props;
     const { draggedHandleIndex, isMouseOver, rangeWidth } = this.state;
     const showLabels = rangeWidth >= HIDE_LABELS_THRESHOLD;
-    const valuesAsPercentage = values.map(value => this.getPercentageFromValue(value));
-    const classes = classnames('ax-slider', `ax-slider--${size}`, 'ax-slider__range', {
-      'ax-slider--disabled': disabled,
-    });
+    const valuesAsPercentage = values.map(value =>
+      this.getPercentageFromValue(value)
+    );
+    const classes = classnames(
+      'ax-slider',
+      `ax-slider--${size}`,
+      'ax-slider__range',
+      {
+        'ax-slider--disabled': disabled,
+      }
+    );
 
-    const sliderFillStyle = { left:`${valuesAsPercentage[0]}%`, width: `${valuesAsPercentage[1] - valuesAsPercentage[0]}%` };
+    const sliderFillStyle = {
+      left: `${valuesAsPercentage[0]}%`,
+      width: `${valuesAsPercentage[1] - valuesAsPercentage[0]}%`,
+    };
 
     const markerValueAsPercentage = this.getPercentageFromValue(markerValue);
-    const sliderMarkerStyle = { left:`${markerValueAsPercentage}%` };
+    const sliderMarkerStyle = { left: `${markerValueAsPercentage}%` };
 
     return (
-      <Grid baseRef={ this.rangeRef } horizontalGutters="tiny" responsive={ false }
-          verticalAlign="middle" verticalGutters={ false } wrap={ false }>
-        { showLabels &&
-        <GridCell none={ true }>
-          <Text>{ minLabel }</Text>
-        </GridCell>
-        }
-        <GridCell width={ showLabels ? 70 : 100 }>
-          <Base { ...omit(rest, ['onSlideEnd', 'min', 'max', 'step']) }
-              className={ classes }
-              onBlur={ this.handleBlur }
-              onFocus={ disabled ? null : this.handleFocus }
-              onMouseLeave={ () => this.setState({ isMouseOver: false }) }
-              onMouseOver={ () => this.setState({ isMouseOver: true }) }
-              tabIndex="0">
+      <Grid
+        baseRef={this.rangeRef}
+        horizontalGutters="tiny"
+        responsive={false}
+        verticalAlign="middle"
+        verticalGutters={false}
+        wrap={false}
+      >
+        {showLabels && (
+          <GridCell none={true}>
+            <Text>{minLabel}</Text>
+          </GridCell>
+        )}
+        <GridCell width={showLabels ? 70 : 100}>
+          <Base
+            {...omit(rest, ['onSlideEnd', 'min', 'max', 'step'])}
+            className={classes}
+            onBlur={this.handleBlur}
+            onFocus={disabled ? null : this.handleFocus}
+            onMouseLeave={() => this.setState({ isMouseOver: false })}
+            onMouseOver={() => this.setState({ isMouseOver: true })}
+            tabIndex="0"
+          >
             <div
-                className="ax-slider__track"
-                onMouseDown={ disabled ? null : this.handleMouseDown }
-                ref={ this.trackRef }>
-              <div
-                  className="ax-slider__fill"
-                  style={ sliderFillStyle } />
-              { markerValue !== undefined && <div
-                  className="ax-slider__marker"
-                  style={ sliderMarkerStyle } /> }
-              <Handle disabled={ disabled } isVisible={ draggedHandleIndex === 0 || (draggedHandleIndex === null && isMouseOver) }
-                  onMouseDown={ this.handleMouseDown }
-                  size={ rangeWidth * SLIDER_HANDLE_SIZE }
-                  value={ values[0] }
-                  valueAsPercentage={ valuesAsPercentage[0] }
-                  valueFormatter={ valueFormatter }
-                  withTooltip={ withTooltip }/>
-              <Handle disabled={ disabled } isVisible={ draggedHandleIndex === 1 || (draggedHandleIndex === null && isMouseOver) }
-                  onMouseDown={ this.handleMouseDown }
-                  size={ rangeWidth * SLIDER_HANDLE_SIZE }
-                  value={ values[1] }
-                  valueAsPercentage={ valuesAsPercentage[1] }
-                  valueFormatter={ valueFormatter }
-                  withTooltip={ withTooltip }/>
+              className="ax-slider__track"
+              onMouseDown={disabled ? null : this.handleMouseDown}
+              ref={this.trackRef}
+            >
+              <div className="ax-slider__fill" style={sliderFillStyle} />
+              {markerValue !== undefined && (
+                <div className="ax-slider__marker" style={sliderMarkerStyle} />
+              )}
+              <Handle
+                disabled={disabled}
+                isVisible={
+                  draggedHandleIndex === 0 ||
+                  (draggedHandleIndex === null && isMouseOver)
+                }
+                onMouseDown={this.handleMouseDown}
+                size={rangeWidth * SLIDER_HANDLE_SIZE}
+                value={values[0]}
+                valueAsPercentage={valuesAsPercentage[0]}
+                valueFormatter={valueFormatter}
+                withTooltip={withTooltip}
+              />
+              <Handle
+                disabled={disabled}
+                isVisible={
+                  draggedHandleIndex === 1 ||
+                  (draggedHandleIndex === null && isMouseOver)
+                }
+                onMouseDown={this.handleMouseDown}
+                size={rangeWidth * SLIDER_HANDLE_SIZE}
+                value={values[1]}
+                valueAsPercentage={valuesAsPercentage[1]}
+                valueFormatter={valueFormatter}
+                withTooltip={withTooltip}
+              />
             </div>
           </Base>
         </GridCell>
-        { showLabels &&
-        <GridCell none={ true }>
-          <Text>{ maxLabel }</Text>
-        </GridCell>
-        }
+        {showLabels && (
+          <GridCell none={true}>
+            <Text>{maxLabel}</Text>
+          </GridCell>
+        )}
       </Grid>
     );
   }

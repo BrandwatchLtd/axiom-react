@@ -113,22 +113,24 @@ export default class LinePoint extends Component {
     };
 
     return (
-      <div
-          className={ classes }
-          onMouseEnter={ onMouseEnter }
-          style={ position }>
+      <div className={classes} onMouseEnter={onMouseEnter} style={position}>
         <ChartContext
-            DropdownContext={ DropdownContext }
-            TooltipContext={ TooltipContext }
-            color={ color }
-            index={ index }
-            label={ label }
-            onDropdownClose={ onDropdownClose }
-            onDropdownOpen={ onDropdownOpen }
-            style={ style }
-            value={ value }>
-          <DataPoints { ...rest } onClick={ onClick && (() => onClick({ color, index, label, value })) } size={ size }>
-            <DataPoint color={ color } style={ style } />
+          DropdownContext={DropdownContext}
+          TooltipContext={TooltipContext}
+          color={color}
+          index={index}
+          label={label}
+          onDropdownClose={onDropdownClose}
+          onDropdownOpen={onDropdownOpen}
+          style={style}
+          value={value}
+        >
+          <DataPoints
+            {...rest}
+            onClick={onClick && (() => onClick({ color, index, label, value }))}
+            size={size}
+          >
+            <DataPoint color={color} style={style} />
           </DataPoints>
         </ChartContext>
       </div>

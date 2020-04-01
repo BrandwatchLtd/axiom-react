@@ -11,11 +11,9 @@ export default class ChartTitle extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Heading textSize="headtitle" { ...rest }>
-        { children }
+      <Heading textSize="headtitle" {...rest}>
+        {children}
       </Heading>
     );
   }
 }
-
-

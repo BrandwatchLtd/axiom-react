@@ -8,17 +8,15 @@ export default class InlineGroup extends Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-  }
+  };
 
   render() {
     const { children, className, ...rest } = this.props;
     const classes = classnames('ax-inline-group', className);
 
     return (
-      <Base { ...rest } className={ classes }>
-        <div className="ax-inline-group__spacer">
-          { children }
-        </div>
+      <Base {...rest} className={classes}>
+        <div className="ax-inline-group__spacer">{children}</div>
       </Base>
     );
   }

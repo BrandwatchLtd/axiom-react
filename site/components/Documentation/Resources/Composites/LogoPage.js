@@ -11,12 +11,16 @@ export default class Documentation extends Component {
     return (
       <DocumentationContent>
         <DocumentationShowCase>
-          <LogoPage textCenter theme="day">Lorem ipsum</LogoPage>
+          <LogoPage textCenter theme="day">
+            Lorem ipsum
+          </LogoPage>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/LogoPage/LogoPage'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/LogoPage/LogoPage'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

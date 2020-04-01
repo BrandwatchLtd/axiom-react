@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import LabelIcon from './LabelIcon';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <LabelIcon { ...props } name="twitter" />
-  );
+  renderer.create(<LabelIcon {...props} name="twitter" />);
 
 describe('LabelIcon', () => {
   it('renders with defaultProps', () => {
@@ -27,7 +25,7 @@ describe('LabelIcon', () => {
   });
 
   describe('renders with color', () => {
-    ['white', 'success', 'error'].forEach((color) => {
+    ['white', 'success', 'error'].forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

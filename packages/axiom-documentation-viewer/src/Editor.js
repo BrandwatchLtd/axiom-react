@@ -40,10 +40,6 @@ export default class Editor extends Component {
   }
 
   render() {
-    return (
-      <div
-          className="dm-editor"
-          ref={ (el) => this.el = el } />
-    );
+    return <div className="dm-editor" ref={el => (this.el = el)} />;
   }
 }

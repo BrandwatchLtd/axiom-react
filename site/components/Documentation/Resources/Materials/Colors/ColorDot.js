@@ -9,14 +9,12 @@ export default class ColorsDot extends Component {
 
   render() {
     return (
-      <Color { ...this.props }>
+      <Color {...this.props}>
         <div
-            className="si-color-dot"
-            style={ { backgroundColor: `rgb(${
-              Object.values(this.props.rgb)
-            })` } } />
+          className="si-color-dot"
+          style={{ backgroundColor: `rgb(${Object.values(this.props.rgb)})` }}
+        />
       </Color>
     );
   }
 }
-

@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import InlineGroup from './InlineGroup';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <InlineGroup { ...props }>Test</InlineGroup>
-  );
+  renderer.create(<InlineGroup {...props}>Test</InlineGroup>);
 
 describe('InlineGroup', () => {
   it('renders with defaultProps', () => {

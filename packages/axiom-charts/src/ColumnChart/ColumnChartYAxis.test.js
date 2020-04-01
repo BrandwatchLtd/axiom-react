@@ -6,11 +6,12 @@ import ColumnChartYAxis from './ColumnChartYAxis';
 const getComponent = (props = {}) =>
   renderer.create(
     <ColumnChart
-        chartKey={ [{ label: 'Lorem', color: 'tiny-clanger' }] }
-        data={ [{ label: 'test', values: {} }] }
-        height="10rem">
-      <ColumnChartYAxis yAxisWidth="1rem" { ...props }>
-          Lorem
+      chartKey={[{ label: 'Lorem', color: 'tiny-clanger' }]}
+      data={[{ label: 'test', values: {} }]}
+      height="10rem"
+    >
+      <ColumnChartYAxis yAxisWidth="1rem" {...props}>
+        Lorem
       </ColumnChartYAxis>
     </ColumnChart>
   );
@@ -23,7 +24,7 @@ describe('ColumnChartYAxis', () => {
   });
 
   describe('renders with align', () => {
-    ['top', 'bottom'].forEach((align) => {
+    ['top', 'bottom'].forEach(align => {
       it(align, () => {
         const component = getComponent({ align });
         const tree = component.toJSON();

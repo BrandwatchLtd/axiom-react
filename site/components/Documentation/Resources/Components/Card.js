@@ -26,8 +26,7 @@ import {
 class CardExampleContainer extends Component {
   render() {
     return (
-      <div { ...this.props }
-          style={ { margin: 'auto', maxWidth: '16.375rem' } } />
+      <div {...this.props} style={{ margin: 'auto', maxWidth: '16.375rem' }} />
     );
   }
 }
@@ -36,34 +35,44 @@ class CardExampleContent extends Component {
   render() {
     return (
       <Fragment>
-        <Paragraph space="x0" textStrong>Name Surname</Paragraph>
+        <Paragraph space="x0" textStrong>
+          Name Surname
+        </Paragraph>
         <Paragraph space="x0" textColor="subtle">
           <TextIcon name="twitter" spaceRight="x1" textColor="twitter" />
           @TwitterHandle • 6hrs
         </Paragraph>
         <Paragraph space="x2" textColor="subtle" textSize="small">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore: <Link href="https://goo.gl/4oWkDa">https://goo.gl/4oWkDa</Link>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore:{' '}
+          <Link href="https://goo.gl/4oWkDa">https://goo.gl/4oWkDa</Link>
           <Link href="https://goo.gl/4oWkDa"> #HashTag</Link>
         </Paragraph>
         <Grid
-            gutters="small"
-            responsive={ false }
-            space="x0"
-            textColor="subtle"
-            textSize="small"
-            textStrong
-            verticalAlign="middle">
+          gutters="small"
+          responsive={false}
+          space="x0"
+          textColor="subtle"
+          textSize="small"
+          textStrong
+          verticalAlign="middle"
+        >
           <GridCell shrink>
-            <Link style="subtle"><TextIcon name="retweet" /> 1</Link>
+            <Link style="subtle">
+              <TextIcon name="retweet" /> 1
+            </Link>
           </GridCell>
 
           <GridCell shrink>
-            <Link style="subtle"><TextIcon name="heart" /> 6</Link>
+            <Link style="subtle">
+              <TextIcon name="heart" /> 6
+            </Link>
           </GridCell>
 
           <GridCell>
-            <Link style="subtle"><TextIcon name="reply" /> 0</Link>
+            <Link style="subtle">
+              <TextIcon name="reply" /> 0
+            </Link>
           </GridCell>
 
           <GridCell shrink>
@@ -81,43 +90,69 @@ export default class Documentation extends Component {
   render() {
     return (
       <DocumentationContent>
-        <DocumentationShowCase description="The matrix above illustrates the different card
+        <DocumentationShowCase
+          description="The matrix above illustrates the different card
             styles and configurations achievable. Shaded backgrounds and states are
-            configurable through the props and will alter in the standard way for themes.">
+            configurable through the props and will alter in the standard way for themes."
+        >
           <Grid textCenter textColor="subtle">
             <GridCell>
               <Heading>Border</Heading>
-              <Card border onClick={ () => {} } space="x4"><CardContent>Default</CardContent></Card>
-              <Card border hover space="x4"><CardContent>Hover</CardContent></Card>
-              <Card active border space="x4"><CardContent>Active</CardContent></Card>
+              <Card border onClick={() => {}} space="x4">
+                <CardContent>Default</CardContent>
+              </Card>
+              <Card border hover space="x4">
+                <CardContent>Hover</CardContent>
+              </Card>
+              <Card active border space="x4">
+                <CardContent>Active</CardContent>
+              </Card>
             </GridCell>
 
             <GridCell>
               <Heading>Border & Shadow</Heading>
-              <Card border onClick={ () => {} } shadow space="x4"><CardContent>Default</CardContent></Card>
-              <Card border hover shadow space="x4"><CardContent>Hover</CardContent></Card>
-              <Card active border shadow space="x4"><CardContent>Active</CardContent></Card>
+              <Card border onClick={() => {}} shadow space="x4">
+                <CardContent>Default</CardContent>
+              </Card>
+              <Card border hover shadow space="x4">
+                <CardContent>Hover</CardContent>
+              </Card>
+              <Card active border shadow space="x4">
+                <CardContent>Active</CardContent>
+              </Card>
             </GridCell>
 
             <GridCell>
               <Heading>Borderless</Heading>
-              <Card onClick={ () => {} } space="x4"><CardContent>Default</CardContent></Card>
-              <Card hover space="x4"><CardContent>Hover</CardContent></Card>
-              <Card active space="x4"><CardContent>Active</CardContent></Card>
+              <Card onClick={() => {}} space="x4">
+                <CardContent>Default</CardContent>
+              </Card>
+              <Card hover space="x4">
+                <CardContent>Hover</CardContent>
+              </Card>
+              <Card active space="x4">
+                <CardContent>Active</CardContent>
+              </Card>
             </GridCell>
 
             <GridCell>
               <Heading>Borderless & Shadow</Heading>
-              <Card onClick={ () => {} } shadow space="x4"><CardContent>Default</CardContent></Card>
-              <Card hover shadow space="x4"><CardContent>Hover</CardContent></Card>
-              <Card active shadow space="x4"><CardContent>Active</CardContent></Card>
+              <Card onClick={() => {}} shadow space="x4">
+                <CardContent>Default</CardContent>
+              </Card>
+              <Card hover shadow space="x4">
+                <CardContent>Hover</CardContent>
+              </Card>
+              <Card active shadow space="x4">
+                <CardContent>Active</CardContent>
+              </Card>
             </GridCell>
           </Grid>
         </DocumentationShowCase>
 
         <DocumentationShowCase>
           <CardExampleContainer>
-            <Card onClick={ () => {} } shadow>
+            <Card onClick={() => {}} shadow>
               <CardImage src="/assets/card.jpg">
                 <CardCaption textStrong>
                   <List style="inline">
@@ -134,31 +169,30 @@ export default class Documentation extends Component {
           </CardExampleContainer>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/Card'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardContent'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImage'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardCaption'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/Card'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardContent'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImage'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardCaption'),
+          ]}
+        />
 
         <DocumentationShowCase>
           <Grid gutters="small" horizontalAlign="middle">
             <GridCell none>
               <CardExampleContainer>
                 <Card shadow space="x4">
-                  <CardImages srcs={ [
-                    '/assets/card-1.jpeg',
-                  ] } />
+                  <CardImages srcs={['/assets/card-1.jpeg']} />
                   <CardContent size="large">
                     <CardExampleContent />
                   </CardContent>
                 </Card>
 
                 <Card shadow space="x4">
-                  <CardImages srcs={ [
-                    '/assets/card-1.jpeg',
-                    '/assets/card-2.jpeg',
-                  ] } />
+                  <CardImages
+                    srcs={['/assets/card-1.jpeg', '/assets/card-2.jpeg']}
+                  />
                   <CardContent size="large">
                     <CardExampleContent />
                   </CardContent>
@@ -169,23 +203,27 @@ export default class Documentation extends Component {
             <GridCell none>
               <CardExampleContainer>
                 <Card shadow space="x4">
-                  <CardImages srcs={ [
-                    '/assets/card-1.jpeg',
-                    '/assets/card-2.jpeg',
-                    '/assets/card-3.jpeg',
-                  ] } />
+                  <CardImages
+                    srcs={[
+                      '/assets/card-1.jpeg',
+                      '/assets/card-2.jpeg',
+                      '/assets/card-3.jpeg',
+                    ]}
+                  />
                   <CardContent size="large">
                     <CardExampleContent />
                   </CardContent>
                 </Card>
 
                 <Card shadow space="x4">
-                  <CardImages srcs={ [
-                    '/assets/card-1.jpeg',
-                    '/assets/card-2.jpeg',
-                    '/assets/card-3.jpeg',
-                    '/assets/card-4.jpeg',
-                  ] } />
+                  <CardImages
+                    srcs={[
+                      '/assets/card-1.jpeg',
+                      '/assets/card-2.jpeg',
+                      '/assets/card-3.jpeg',
+                      '/assets/card-4.jpeg',
+                    ]}
+                  />
                   <CardContent size="large">
                     <CardExampleContent />
                   </CardContent>
@@ -195,13 +233,15 @@ export default class Documentation extends Component {
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImages'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImages'),
+          ]}
+        />
 
         <DocumentationShowCase>
           <CardList>
-            <Card onClick={ () => {} }>
+            <Card onClick={() => {}}>
               <CardContent>
                 <Grid>
                   <GridCell none>
@@ -209,16 +249,19 @@ export default class Documentation extends Component {
                   </GridCell>
                   <GridCell>
                     <Heading textStrong>Lorem ipsum</Heading>
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
-                      pretium erat. Aenean placerat quam leo, eu consequat sem malesuada varius.
-                      In vitae nunc ut elit auctor semper eget eu ex. Sed ultricies placerat lectus,
-                      quis venenatis metus sagittis egestas.</Paragraph>
+                    <Paragraph>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce at pretium erat. Aenean placerat quam leo, eu
+                      consequat sem malesuada varius. In vitae nunc ut elit
+                      auctor semper eget eu ex. Sed ultricies placerat lectus,
+                      quis venenatis metus sagittis egestas.
+                    </Paragraph>
                   </GridCell>
                 </Grid>
               </CardContent>
             </Card>
 
-            <Card onClick={ () => {} }>
+            <Card onClick={() => {}}>
               <CardContent>
                 <Grid>
                   <GridCell none>
@@ -226,16 +269,19 @@ export default class Documentation extends Component {
                   </GridCell>
                   <GridCell>
                     <Heading textStrong>Lorem ipsum</Heading>
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
-                      pretium erat. Aenean placerat quam leo, eu consequat sem malesuada varius.
-                      In vitae nunc ut elit auctor semper eget eu ex. Sed ultricies placerat lectus,
-                      quis venenatis metus sagittis egestas.</Paragraph>
+                    <Paragraph>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce at pretium erat. Aenean placerat quam leo, eu
+                      consequat sem malesuada varius. In vitae nunc ut elit
+                      auctor semper eget eu ex. Sed ultricies placerat lectus,
+                      quis venenatis metus sagittis egestas.
+                    </Paragraph>
                   </GridCell>
                 </Grid>
               </CardContent>
             </Card>
 
-            <Card onClick={ () => {} }>
+            <Card onClick={() => {}}>
               <CardContent>
                 <Grid>
                   <GridCell none>
@@ -243,10 +289,13 @@ export default class Documentation extends Component {
                   </GridCell>
                   <GridCell>
                     <Heading textStrong>Lorem ipsum</Heading>
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
-                      pretium erat. Aenean placerat quam leo, eu consequat sem malesuada varius.
-                      In vitae nunc ut elit auctor semper eget eu ex. Sed ultricies placerat lectus,
-                      quis venenatis metus sagittis egestas.</Paragraph>
+                    <Paragraph>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce at pretium erat. Aenean placerat quam leo, eu
+                      consequat sem malesuada varius. In vitae nunc ut elit
+                      auctor semper eget eu ex. Sed ultricies placerat lectus,
+                      quis venenatis metus sagittis egestas.
+                    </Paragraph>
                   </GridCell>
                 </Grid>
               </CardContent>
@@ -254,9 +303,11 @@ export default class Documentation extends Component {
           </CardList>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardList'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardList'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

@@ -37,7 +37,8 @@ export default class AlertIcon extends Component {
 
   render() {
     const { className, size, style, type, ...rest } = this.props;
-    const classes = classnames(className,
+    const classes = classnames(
+      className,
       'ax-alert-icon',
       `ax-alert-icon--${style}`,
       `ax-alert-icon--${size}`,
@@ -45,8 +46,8 @@ export default class AlertIcon extends Component {
     );
 
     return (
-      <Base { ...rest } className={ classes }>
-        <Icon name={ ALERT_ICON_NAME_MAP[type] } size={ SIZE_MAP[size] } />
+      <Base {...rest} className={classes}>
+        <Icon name={ALERT_ICON_NAME_MAP[type]} size={SIZE_MAP[size]} />
       </Base>
     );
   }

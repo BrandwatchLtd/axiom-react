@@ -6,8 +6,8 @@ export default (elements, Component) => {
   for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
     //Storybook wraps components in this outer wrapper
-    if (element.type && element.type.displayName === 'MDXCreateElement'){
-      if (element.props.originalType.typeRef == Component){
+    if (element.type && element.type.displayName === 'MDXCreateElement') {
+      if (element.props.originalType.typeRef == Component) {
         return element;
       }
     }

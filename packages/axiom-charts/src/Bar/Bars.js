@@ -32,18 +32,16 @@ export default class Bars extends Component {
     const classes = classnames('ax-bars', `ax-bars--${direction}`);
 
     return (
-      <Base { ...rest } className={ classes }>
+      <Base {...rest} className={classes}>
         <div className="ax-bars__bars-container">
-          <div className="ax-bars__bars">
-            { children }
-          </div>
+          <div className="ax-bars__bars">{children}</div>
         </div>
 
-        { label && (
+        {label && (
           <div className="ax-bars__label">
-            <Small textColor="subtle">{ label }</Small>
+            <Small textColor="subtle">{label}</Small>
           </div>
-        ) }
+        )}
       </Base>
     );
   }

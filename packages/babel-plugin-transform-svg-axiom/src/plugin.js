@@ -14,7 +14,6 @@ const svgo = new SVGO({
   ],
 });
 
-
 /**
  * Credit to Shopify Polaris for the approach.
  * https://github.com/Shopify/polaris/blob/master/config/rollup/plugins/icon.js
@@ -37,14 +36,17 @@ module.exports = () => ({
           const svgPath = resolveFrom(dirname(filePath), requirePath);
           let svgData;
 
-          svgo.optimize(readFileSync(svgPath, 'utf8'), (result) => {
+          svgo.optimize(readFileSync(svgPath, 'utf8'), result => {
             const viewBox = VIEWBOX_REGEX.exec(result.data)[1];
             const { height, width } = result.info;
-            const finalSource = result.data.replace(COLOR_REGEX, (m, prop, value) => {
-              if (value === 'none') return `${prop}="none"`;
-              if (value.includes('#000')) return `${prop}="currentColor"`;
-              return `${prop}="${value}"`;
-            });
+            const finalSource = result.data.replace(
+              COLOR_REGEX,
+              (m, prop, value) => {
+                if (value === 'none') return `${prop}="none"`;
+                if (value.includes('#000')) return `${prop}="currentColor"`;
+                return `${prop}="${value}"`;
+              }
+            );
 
             svgData = {
               body: finalSource.replace(SVG_REGEX, ''),

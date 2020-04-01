@@ -21,8 +21,8 @@ export default class Tabs extends Component {
     const classes = classnames('ax-tabset__list', `ax-tabset__list--${size}`);
 
     return (
-      <Base space="x6" { ...rest } Component="ul" className={ classes }>
-        { children }
+      <Base space="x6" {...rest} Component="ul" className={classes}>
+        {children}
       </Base>
     );
   }

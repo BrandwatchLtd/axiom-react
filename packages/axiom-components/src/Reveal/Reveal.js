@@ -54,7 +54,7 @@ export default class Reveal extends Component {
   }
 
   componentWillUnmount() {
-    window.cancelAnimationFrame( this._frameId );
+    window.cancelAnimationFrame(this._frameId);
   }
 
   conceal() {
@@ -100,16 +100,19 @@ export default class Reveal extends Component {
 
     /* eslint-disable react/no-find-dom-node */
     return (
-      <Base { ...rest }
-          className={ classes }
-          ref={ (el) => this.el = findDOMNode(el) }
-          space={ visible ? space : 'x0' }
-          style={ style }>
+      <Base
+        {...rest}
+        className={classes}
+        ref={el => (this.el = findDOMNode(el))}
+        space={visible ? space : 'x0'}
+        style={style}
+      >
         <div
-            className="ax-reveal__inner"
-            ref={ (el) => this.inner = el }
-            style={ innerStyle }>
-          { renderChildren && children }
+          className="ax-reveal__inner"
+          ref={el => (this.inner = el)}
+          style={innerStyle}
+        >
+          {renderChildren && children}
         </div>
       </Base>
     );

@@ -4,7 +4,7 @@ import RadialProgress from './RadialProgress';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <RadialProgress className="lorem" diameter={ 75 } size="small" { ...props }>
+    <RadialProgress className="lorem" diameter={75} size="small" {...props}>
       <svg />
     </RadialProgress>
   );
@@ -17,7 +17,7 @@ describe('RadialProgress', () => {
   });
 
   describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach((size) => {
+    ['small', 'medium', 'large'].forEach(size => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();

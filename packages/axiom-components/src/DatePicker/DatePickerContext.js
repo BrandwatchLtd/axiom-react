@@ -20,7 +20,7 @@ export default class DatePickerContext extends Component {
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         range: PropTypes.string.isRequired,
-      }),
+      })
     ),
     selectedRange: PropTypes.string,
     view: PropTypes.string,
@@ -28,10 +28,7 @@ export default class DatePickerContext extends Component {
   };
 
   handleRangeSelection(range) {
-    const {
-      onSelect,
-      rangeSelect,
-    } = this.props;
+    const { onSelect, rangeSelect } = this.props;
 
     rangeSelect && onSelect({ range });
   }
@@ -54,36 +51,40 @@ export default class DatePickerContext extends Component {
       ...rest
     } = this.props;
 
-    const showRangeSelection = rangeSelect && rangeSelections && rangeSelections.length;
+    const showRangeSelection =
+      rangeSelect && rangeSelections && rangeSelections.length;
 
     return (
-      <DropdownContext { ...rest }>
+      <DropdownContext {...rest}>
         <DropdownContent hasFullSeparator>
           <DatePickerSelection
-              calendarOpenDate={ calendarOpenDate }
-              earliestSelectableDate={ earliestSelectableDate }
-              latestSelectableDate={ latestSelectableDate }
-              onSelect={ onSelect }
-              rangeSelect={ rangeSelect }
-              selectedDate={ selectedDate }
-              selectedEndDate={ selectedEndDate }
-              selectedStartDate={ selectedStartDate }
-              view={ view } />
-          { showRangeSelection && (
+            calendarOpenDate={calendarOpenDate}
+            earliestSelectableDate={earliestSelectableDate}
+            latestSelectableDate={latestSelectableDate}
+            onSelect={onSelect}
+            rangeSelect={rangeSelect}
+            selectedDate={selectedDate}
+            selectedEndDate={selectedEndDate}
+            selectedStartDate={selectedStartDate}
+            view={view}
+          />
+          {showRangeSelection && (
             <DatePickerRangeSelection
-                onRangeSelection={ range => this.handleRangeSelection(range) }
-                rangeSelections={ rangeSelections }
-                selectedRange={ selectedRange }
-                view={ view } />
-          ) }
+              onRangeSelection={range => this.handleRangeSelection(range)}
+              rangeSelections={rangeSelections}
+              selectedRange={selectedRange}
+              view={view}
+            />
+          )}
           <DatePickerControls
-              onApply={ onApply }
-              onCancel={ onCancel }
-              rangeSelect={ rangeSelect }
-              selectedDate={ selectedDate }
-              selectedEndDate={ selectedEndDate }
-              selectedStartDate={ selectedStartDate }
-              view={ view } />
+            onApply={onApply}
+            onCancel={onCancel}
+            rangeSelect={rangeSelect}
+            selectedDate={selectedDate}
+            selectedEndDate={selectedEndDate}
+            selectedStartDate={selectedStartDate}
+            view={view}
+          />
         </DropdownContent>
       </DropdownContext>
     );

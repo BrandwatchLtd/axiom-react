@@ -39,7 +39,7 @@ export default class Documentation extends Component {
         <DocumentationShowCase>
           <Chart>
             <ChartHeader>
-              <Grid responsive={ false }>
+              <Grid responsive={false}>
                 <GridCell>
                   <ChartTitle>Chart title</ChartTitle>
                 </GridCell>
@@ -47,11 +47,13 @@ export default class Documentation extends Component {
                 <GridCell none>
                   <Toolbar>
                     <Tool>
-                      <Toggle onToggle={ () => {} } toggled>Zoom</Toggle>
+                      <Toggle onToggle={() => {}} toggled>
+                        Zoom
+                      </Toggle>
                     </Tool>
 
                     <Tool>
-                      <Dropdown flip="mirror" showArrow={ false }>
+                      <Dropdown flip="mirror" showArrow={false}>
                         <DropdownTarget>
                           <Link style="subtle">
                             Options
@@ -78,25 +80,40 @@ export default class Documentation extends Component {
 
             <ChartBody>
               <DotPlotChart
-                  axisTitle="% of each something"
-                  chartKey={ dotPlotKey }
-                  chartKeyBenchmarkLabel="Benchmark"
-                  chartKeyDifferenceLabel="Size of Difference"
-                  collapsedVisibleRowCount={ 6 }
-                  data={ dotPlotData }
-                  expandButtonSuffix="Categories"
-                  labelColumnWidth="11rem"
-                  xAxisLabels={ () => [ '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] }/>
+                axisTitle="% of each something"
+                chartKey={dotPlotKey}
+                chartKeyBenchmarkLabel="Benchmark"
+                chartKeyDifferenceLabel="Size of Difference"
+                collapsedVisibleRowCount={6}
+                data={dotPlotData}
+                expandButtonSuffix="Categories"
+                labelColumnWidth="11rem"
+                xAxisLabels={() => [
+                  '0',
+                  '10',
+                  '20',
+                  '30',
+                  '40',
+                  '50',
+                  '60',
+                  '70',
+                  '80',
+                  '90',
+                  '100',
+                ]}
+              />
             </ChartBody>
           </Chart>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/Chart'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartBody'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartHeader'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartTitle'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/Chart'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartBody'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartHeader'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartTitle'),
+          ]}
+        />
 
         <DocumentationShowCase>
           <ChartKey>
@@ -119,10 +136,12 @@ export default class Documentation extends Component {
           </ChartKey>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKey'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKeyItem'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKey'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKeyItem'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

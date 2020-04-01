@@ -35,23 +35,20 @@ export default class ProgressButton extends Component {
     });
 
     return (
-      <Button { ...rest }
-          active={ isInProgress }
-          size={ size }
-          style="primary">
-        <div className={ classes }>
+      <Button {...rest} active={isInProgress} size={size} style="primary">
+        <div className={classes}>
           <Cloak
-              className="ax-progress-button__content"
-              invisible={ isInProgress }>
-            { children }
+            className="ax-progress-button__content"
+            invisible={isInProgress}
+          >
+            {children}
           </Cloak>
 
           <Cloak
-              className="ax-progress-button__indicator"
-              invisible={ !isInProgress }>
-            <ProgressInfinite
-                color="white"
-                sizeRem={ progressSizeMap[size] } />
+            className="ax-progress-button__indicator"
+            invisible={!isInProgress}
+          >
+            <ProgressInfinite color="white" sizeRem={progressSizeMap[size]} />
           </Cloak>
         </div>
       </Button>

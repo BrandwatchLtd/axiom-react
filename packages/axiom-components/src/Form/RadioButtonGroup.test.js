@@ -5,7 +5,7 @@ import RadioButtonGroup from './RadioButtonGroup';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <RadioButtonGroup { ...props }>
+    <RadioButtonGroup {...props}>
       <RadioButton>Lorem ipsum</RadioButton>
     </RadioButtonGroup>
   );

@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import ChartTable from './ChartTable';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ChartTable { ...props }>
-      Lorem Ipsum
-    </ChartTable>
-  );
+  renderer.create(<ChartTable {...props}>Lorem Ipsum</ChartTable>);
 
 describe('ChartTable', () => {
   it('renders with defaultProps', () => {

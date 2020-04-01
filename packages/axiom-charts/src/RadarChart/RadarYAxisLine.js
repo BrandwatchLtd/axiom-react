@@ -12,12 +12,14 @@ export default class RadarXAxisLine extends Component {
     const { r, x, y, ...rest } = this.props;
 
     return (
-      <circle { ...rest }
-          className="ax-radar__x-axis-line"
-          cx={ x }
-          cy={ y }
-          key={ r }
-          r={ r } />
+      <circle
+        {...rest}
+        className="ax-radar__x-axis-line"
+        cx={x}
+        cy={y}
+        key={r}
+        r={r}
+      />
     );
   }
 }

@@ -14,7 +14,14 @@ export default class RadialProgress extends Component {
   };
 
   render() {
-    const { children, className, diameter, size, sizeRem, ...rest } = this.props;
+    const {
+      children,
+      className,
+      diameter,
+      size,
+      sizeRem,
+      ...rest
+    } = this.props;
     const style = {};
     const classes = classnames(className, 'ax-radial-progress', {
       [`ax-radial-progress--${size}`]: size,
@@ -26,13 +33,17 @@ export default class RadialProgress extends Component {
     }
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className={ classes }
-          style={ style }
-          viewBox={ `0 0 ${ diameter } ${ diameter }` }>
-        <g transform={ `translate(${ diameter / 2 }, ${ diameter / 2 }) rotate(-90)` }>
-          { children }
+      <Base
+        {...rest}
+        Component="svg"
+        className={classes}
+        style={style}
+        viewBox={`0 0 ${diameter} ${diameter}`}
+      >
+        <g
+          transform={`translate(${diameter / 2}, ${diameter / 2}) rotate(-90)`}
+        >
+          {children}
         </g>
       </Base>
     );

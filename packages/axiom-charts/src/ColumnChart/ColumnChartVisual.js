@@ -11,8 +11,8 @@ export default class ColumnChartVisual extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-column-chart__visual">
-        { children }
+      <Base {...rest} className="ax-column-chart__visual">
+        {children}
       </Base>
     );
   }

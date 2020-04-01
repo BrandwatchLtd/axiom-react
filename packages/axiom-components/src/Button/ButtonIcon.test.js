@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import ButtonIcon from './ButtonIcon';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ButtonIcon { ...props } name="twitter" />
-  );
+  renderer.create(<ButtonIcon {...props} name="twitter" />);
 
 describe('ButtonIcon', () => {
   it('renders with defaultProps', () => {

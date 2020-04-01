@@ -10,9 +10,9 @@ export default class Notifications extends Component {
 
   render() {
     const { children, ...rest } = this.props;
-    const isRendered = Boolean(Array.isArray(children)
-      ? children.length
-      : children);
+    const isRendered = Boolean(
+      Array.isArray(children) ? children.length : children
+    );
 
     if (!isRendered) {
       return null;
@@ -20,12 +20,10 @@ export default class Notifications extends Component {
 
     return (
       <Portal>
-        <Base { ...rest } className="ax-notifications">
-          { Children.map(children, (child) =>
-            <div className="ax-notifications__notification">
-              { child }
-            </div>
-          ) }
+        <Base {...rest} className="ax-notifications">
+          {Children.map(children, child => (
+            <div className="ax-notifications__notification">{child}</div>
+          ))}
         </Base>
       </Portal>
     );

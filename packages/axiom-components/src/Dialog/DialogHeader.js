@@ -26,14 +26,12 @@ export default class DialogHeader extends Component {
     const classes = classnames('ax-dialog__header', className);
 
     return (
-      <Base { ...rest } className={ classes }>
-        <Grid responsive={ false } verticalAlign="middle">
-          <GridCell>
-            { children }
-          </GridCell>
+      <Base {...rest} className={classes}>
+        <Grid responsive={false} verticalAlign="middle">
+          <GridCell>{children}</GridCell>
 
           <GridCell shrink>
-            <Link onClick={ onRequestClose } style="subtle">
+            <Link onClick={onRequestClose} style="subtle">
               <Icon name="cross" size="1.5rem" />
             </Link>
           </GridCell>

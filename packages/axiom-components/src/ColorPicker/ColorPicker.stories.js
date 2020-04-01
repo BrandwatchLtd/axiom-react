@@ -12,5 +12,5 @@ export function Default() {
     console.log(`the color ${color} was selected`);
   }
 
-  return <ColorPicker onSelectColor={ colorSelectCallback } />;
+  return <ColorPicker onSelectColor={colorSelectCallback} />;
 }

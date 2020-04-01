@@ -58,18 +58,19 @@ export default class Tabset extends Component {
       : null;
 
     const tabs = arrayChildren
-      .filter((child) => isComponent(child, TabRef))
-      .map((child, index) => cloneElement(child, {
-        active: index === activeTabIndex,
-        onClick: (...args) => this.activateTab(index, child.props.onClick, ...args),
-      }));
+      .filter(child => isComponent(child, TabRef))
+      .map((child, index) =>
+        cloneElement(child, {
+          active: index === activeTabIndex,
+          onClick: (...args) =>
+            this.activateTab(index, child.props.onClick, ...args),
+        })
+      );
 
     return (
-      <Base { ...omit(rest, ['activeTabIndex']) }>
-        <Tabs size={ size }>{ tabs }</Tabs>
-        <Base space={ space }>
-          { activeTabContent }
-        </Base>
+      <Base {...omit(rest, ['activeTabIndex'])}>
+        <Tabs size={size}>{tabs}</Tabs>
+        <Base space={space}>{activeTabContent}</Base>
       </Base>
     );
   }

@@ -3,8 +3,6 @@ import Text from './Text';
 
 export default class Underline extends Component {
   render() {
-    return (
-      <Text { ...this.props } Component="u" textUnderline />
-    );
+    return <Text {...this.props} Component="u" textUnderline />;
   }
 }

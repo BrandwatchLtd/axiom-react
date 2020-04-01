@@ -3,13 +3,17 @@ import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import Range from './Range';
 
-const requiredProps = { disabled: false, min: 0, max: 20, values: [3.03, 12.6], onChange: jest.fn() };
+const requiredProps = {
+  disabled: false,
+  min: 0,
+  max: 20,
+  values: [3.03, 12.6],
+  onChange: jest.fn(),
+};
 
 const getComponent = (props = {}) => {
   const newProps = { ...requiredProps, ...props };
-  return renderer.create(
-    <Range { ...newProps }/>
-  );
+  return renderer.create(<Range {...newProps} />);
 };
 
 jest.mock('../Position/Position');
@@ -26,7 +30,7 @@ describe('Range', () => {
       markerValue: 8,
       size: 'medium',
       step: 0.1,
-      valueFormatter: x=>Math.floor(x),
+      valueFormatter: x => Math.floor(x),
       withTooltip: true,
     });
     const tree = component.toJSON();
@@ -63,7 +67,7 @@ describe('Range', () => {
         onChange: jest.fn(),
         values: [2, 2],
       };
-      const component = mount(<Range { ...props } />);
+      const component = mount(<Range {...props} />);
 
       const tracker = component.find('.ax-slider__track');
       tracker.simulate('mousedown', { clientX: 5 });
@@ -82,7 +86,7 @@ describe('Range', () => {
         onChange: jest.fn(),
         values: [1, 2],
       };
-      const component = mount(<Range { ...props } />);
+      const component = mount(<Range {...props} />);
 
       const tracker = component.find('.ax-slider__track');
       tracker.simulate('mousedown', { clientX: 0 });
@@ -104,7 +108,7 @@ describe('Range', () => {
         values: [1, 2],
       };
 
-      const component = mount(<Range { ...props } />);
+      const component = mount(<Range {...props} />);
 
       const tracker = component.find('.ax-slider__track');
       tracker.simulate('mousedown', { clientX: 0 });

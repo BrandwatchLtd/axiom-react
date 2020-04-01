@@ -2,10 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import CardImages from './CardImages';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <CardImages { ...props } />
-  );
+const getComponent = (props = {}) => renderer.create(<CardImages {...props} />);
 
 describe('CardImages', () => {
   it('renders with 1 src', () => {

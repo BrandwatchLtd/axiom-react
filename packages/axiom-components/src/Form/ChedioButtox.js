@@ -35,28 +35,33 @@ export default class ChedioButtox extends Component {
       [`${className}--indeterminate`]: indeterminate,
     });
 
-    const handleClick = onClick && (e => {
-      if (e.target.tagName !== 'INPUT') {
-        e.stopPropagation();
-        return;
-      }
-      onClick(e);
-    });
+    const handleClick =
+      onClick &&
+      (e => {
+        if (e.target.tagName !== 'INPUT') {
+          e.stopPropagation();
+          return;
+        }
+        onClick(e);
+      });
 
     return (
       <Base
-          Component="label"
-          className={ classes }
-          onClick={ handleClick }
-          space="x2"
-          title={ title }>
-        <input { ...rest }
-            className={ `${className}__input` }
-            disabled={ disabled }
-            type={ inputType } />
+        Component="label"
+        className={classes}
+        onClick={handleClick}
+        space="x2"
+        title={title}
+      >
+        <input
+          {...rest}
+          className={`${className}__input`}
+          disabled={disabled}
+          type={inputType}
+        />
 
-        <span className={ `${className}__indicator` } />
-        { children && <span className={ `${className}__label` }>{ children }</span> }
+        <span className={`${className}__indicator`} />
+        {children && <span className={`${className}__label`}>{children}</span>}
       </Base>
     );
   }

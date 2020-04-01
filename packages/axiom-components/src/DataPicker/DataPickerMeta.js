@@ -14,4 +14,3 @@ export default class DataPickerMeta extends Component {
     return this.props.children || null;
   }
 }
-

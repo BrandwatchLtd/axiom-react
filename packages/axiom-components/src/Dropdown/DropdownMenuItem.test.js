@@ -3,10 +3,8 @@ import { shallow } from 'enzyme';
 import DropdownMenuItem from './DropdownMenuItem';
 import toJson from 'enzyme-to-json';
 
-const render = (props = {}, opts = {}) => shallow(
-  <DropdownMenuItem { ...props }>
-    Test
-  </DropdownMenuItem>, opts);
+const render = (props = {}, opts = {}) =>
+  shallow(<DropdownMenuItem {...props}>Test</DropdownMenuItem>, opts);
 
 describe('DropdownMenuItem', () => {
   let props;
@@ -59,39 +57,81 @@ describe('DropdownMenuItem', () => {
     });
 
     it('renders with disabled', () => {
-      expect(toJson(render({
-        disabled: true,
-      }, opts))).toMatchSnapshot();
+      expect(
+        toJson(
+          render(
+            {
+              disabled: true,
+            },
+            opts
+          )
+        )
+      ).toMatchSnapshot();
     });
 
     it('renders with index', () => {
-      expect(toJson(render({
-        index: '1',
-      }, opts))).toMatchSnapshot();
+      expect(
+        toJson(
+          render(
+            {
+              index: '1',
+            },
+            opts
+          )
+        )
+      ).toMatchSnapshot();
     });
 
     it('renders with keepOpen', () => {
-      expect(toJson(render({
-        keepOpen: true,
-      }, opts))).toMatchSnapshot();
+      expect(
+        toJson(
+          render(
+            {
+              keepOpen: true,
+            },
+            opts
+          )
+        )
+      ).toMatchSnapshot();
     });
 
     it('renders with multiSelect', () => {
-      expect(toJson(render({
-        multiSelect: true,
-      }, opts))).toMatchSnapshot();
+      expect(
+        toJson(
+          render(
+            {
+              multiSelect: true,
+            },
+            opts
+          )
+        )
+      ).toMatchSnapshot();
     });
 
     it('renders with onClick', () => {
-      expect(toJson(render({
-        onClick: () => {},
-      }, opts))).toMatchSnapshot();
+      expect(
+        toJson(
+          render(
+            {
+              onClick: () => {},
+            },
+            opts
+          )
+        )
+      ).toMatchSnapshot();
     });
 
     it('renders with onMouseOver', () => {
-      expect(toJson(render({
-        onMouseOver: () => { },
-      }, opts))).toMatchSnapshot();
+      expect(
+        toJson(
+          render(
+            {
+              onMouseOver: () => {},
+            },
+            opts
+          )
+        )
+      ).toMatchSnapshot();
     });
   });
 });

@@ -16,7 +16,7 @@ export default class AxiomTitle extends Component {
   render() {
     const { height, width, ...rest } = this.props;
     const { body, viewBox } = require('../../assets/axiom-text.svg');
-    const [,, viewBoxWidth, viewBoxHeight] = viewBox.split(' ');
+    const [, , viewBoxWidth, viewBoxHeight] = viewBox.split(' ');
     const viewBoxAspectRatio = viewBoxWidth / viewBoxHeight;
     const style = {
       width: height ? `${height * viewBoxAspectRatio}px` : `${width}px`,
@@ -24,12 +24,14 @@ export default class AxiomTitle extends Component {
     };
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className="si-axiom-title"
-          dangerouslySetInnerHTML={ { __html: body } }
-          style={ style }
-          viewBox={ viewBox } />
+      <Base
+        {...rest}
+        Component="svg"
+        className="si-axiom-title"
+        dangerouslySetInnerHTML={{ __html: body }}
+        style={style}
+        viewBox={viewBox}
+      />
     );
   }
 }

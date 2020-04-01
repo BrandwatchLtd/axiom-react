@@ -23,11 +23,10 @@ import {
 import DocumentationCodeSnippet from './DocumentationCodeSnippet';
 import './DocumentationShowCase.css';
 
-const hasCustomPropertySupport = (
+const hasCustomPropertySupport =
   typeof window !== 'undefined' &&
   window.CSS &&
-  CSS.supports('color', 'var(--primary)')
-);
+  CSS.supports('color', 'var(--primary)');
 
 export default class DocumentationShowCase extends Component {
   static propTypes = {
@@ -89,75 +88,87 @@ export default class DocumentationShowCase extends Component {
 
     if (!hideCode && (hidePreview || isCodeVisisble)) {
       try {
-        snippet = (Children.map(showCase, (child) =>
-          reactElementToJsxString(child, {
-            showDefaultProps: false,
-            filterProps: ['key'],
-          })
-        ) || []).join('\n');
+        snippet = (
+          Children.map(showCase, child =>
+            reactElementToJsxString(child, {
+              showDefaultProps: false,
+              filterProps: ['key'],
+            })
+          ) || []
+        ).join('\n');
       } catch (e) {
         error = e;
       }
     }
 
     return (
-      <Card border space="x8" theme={ theme }>
+      <Card border space="x8" theme={theme}>
         <CardContent separatorStyle="dotted" size="large">
-          <Base cloak={ hidePreview || isCodeVisisble }>
-            { (!centeredHorizontal && !centeredVertical) ? (
-              <div style={ style }>{ showCase }</div>
+          <Base cloak={hidePreview || isCodeVisisble}>
+            {!centeredHorizontal && !centeredVertical ? (
+              <div style={style}>{showCase}</div>
             ) : (
               <div className="ax-documentation-viewer__showcase-container">
-                <div className="ax-documentation-viewer__showcase" style={ style }>
-                  <div>{ showCase }</div>
+                <div
+                  className="ax-documentation-viewer__showcase"
+                  style={style}
+                >
+                  <div>{showCase}</div>
                 </div>
               </div>
-            ) }
+            )}
           </Base>
 
-          { snippet && (
+          {snippet && (
             <Cloak
-                className="ax-documentation-viewer__showcase-snippet"
-                invisible={ !hidePreview && !isCodeVisisble }
-                theme="night">
-              <DocumentationCodeSnippet>{ snippet }</DocumentationCodeSnippet>
+              className="ax-documentation-viewer__showcase-snippet"
+              invisible={!hidePreview && !isCodeVisisble}
+              theme="night"
+            >
+              <DocumentationCodeSnippet>{snippet}</DocumentationCodeSnippet>
             </Cloak>
-          ) }
+          )}
         </CardContent>
 
-        { error && (
+        {error && (
           <AlertBar type="error">
-            Failed to render code snippet: { error.toString() }
+            Failed to render code snippet: {error.toString()}
           </AlertBar>
-        ) }
+        )}
 
-        { description && (
+        {description && (
           <CardContent separatorStyle="dotted" textColor="subtle">
-            { description }
+            {description}
           </CardContent>
-        ) }
+        )}
 
-        { (!hideCode || configurations) && !error && (
+        {(!hideCode || configurations) && !error && (
           <CardContent size="small">
-            <Grid responsive={ false } verticalAlign="middle">
+            <Grid responsive={false} verticalAlign="middle">
               <GridCell>
-                { (onRefresh || configurations || (!hidePreview && hasCustomPropertySupport)) && (
+                {(onRefresh ||
+                  configurations ||
+                  (!hidePreview && hasCustomPropertySupport)) && (
                   <List style="inline">
-                    { (!hidePreview && hasCustomPropertySupport) && (
+                    {!hidePreview && hasCustomPropertySupport && (
                       <ListItem>
                         <Link
-                            onClick={ () => this.setState({ theme: 'day' }) }
-                            style={ theme === 'day' ? 'normal' : 'subtle' }>
+                          onClick={() => this.setState({ theme: 'day' })}
+                          style={theme === 'day' ? 'normal' : 'subtle'}
+                        >
                           <Icon inline name="sun" />
-                        </Link> / <Link
-                            onClick={ () => this.setState({ theme: 'night' }) }
-                            style={ theme === 'night' ? 'normal' : 'subtle' }>
+                        </Link>{' '}
+                        /{' '}
+                        <Link
+                          onClick={() => this.setState({ theme: 'night' })}
+                          style={theme === 'night' ? 'normal' : 'subtle'}
+                        >
                           <Icon inline name="moon" />
                         </Link>
                       </ListItem>
-                    ) }
+                    )}
 
-                    { configurations && (
+                    {configurations && (
                       <ListItem>
                         <Dropdown flip="mirror" showArrow>
                           <DropdownTarget>
@@ -168,48 +179,52 @@ export default class DocumentationShowCase extends Component {
 
                           <DropdownSource>
                             <DropdownContext>
-                              { configurations.map((items, index) => (
-                                <DropdownMenu key={ index }>
-                                  { items.map(({ name, ...props }) => (
-                                    <DropdownMenuItem { ...props } key={ name }>
-                                      { name }
+                              {configurations.map((items, index) => (
+                                <DropdownMenu key={index}>
+                                  {items.map(({ name, ...props }) => (
+                                    <DropdownMenuItem {...props} key={name}>
+                                      {name}
                                     </DropdownMenuItem>
-                                  )) }
+                                  ))}
                                 </DropdownMenu>
-                              )) }
+                              ))}
                             </DropdownContext>
                           </DropdownSource>
                         </Dropdown>
                       </ListItem>
-                    ) }
+                    )}
 
-                    { onRefresh && (
+                    {onRefresh && (
                       <ListItem>
-                        <Link onClick={ onRefresh } style="subtle">
+                        <Link onClick={onRefresh} style="subtle">
                           <Icon name="retweet" />
                         </Link>
                       </ListItem>
-                    ) }
+                    )}
                   </List>
-                ) }
+                )}
               </GridCell>
 
-              { !hideCode && (
+              {!hideCode && (
                 <GridCell none>
                   <Link
-                      onClick={ () => this.setState(({ isCodeVisisble }) =>
-                        ({ isCodeVisisble: !isCodeVisisble })) }
-                      textCase="upper"
-                      textColor="subtle"
-                      textSize="small"
-                      textStrong>
-                    { isCodeVisisble ? 'Hide' : 'Show' } code
+                    onClick={() =>
+                      this.setState(({ isCodeVisisble }) => ({
+                        isCodeVisisble: !isCodeVisisble,
+                      }))
+                    }
+                    textCase="upper"
+                    textColor="subtle"
+                    textSize="small"
+                    textStrong
+                  >
+                    {isCodeVisisble ? 'Hide' : 'Show'} code
                   </Link>
                 </GridCell>
-              ) }
+              )}
             </Grid>
           </CardContent>
-        ) }
+        )}
       </Card>
     );
   }

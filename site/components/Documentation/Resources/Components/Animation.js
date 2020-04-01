@@ -35,25 +35,35 @@ export default class Documentation extends Component {
         <DocumentationShowCase>
           <Grid>
             <GridCell>
-              <Animation name="fade-in-right" toggled={ this.state.toggled }>
+              <Animation name="fade-in-right" toggled={this.state.toggled}>
                 <Card shade="shade-3" size="small">
                   <CardContent separatorStyle="dotted">
                     <Heading textSize="headtitle">Fade in right</Heading>
                   </CardContent>
                   <CardContent separatorStyle="dotted">
-                    <Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis vitae eligendi exercitationem quam, quo, blanditiis cupiditate tenetur dolores deleniti delectus molestiae recusandae omnis consequuntur sed neque!</Text>
+                    <Text>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iusto officiis vitae eligendi exercitationem quam, quo,
+                      blanditiis cupiditate tenetur dolores deleniti delectus
+                      molestiae recusandae omnis consequuntur sed neque!
+                    </Text>
                   </CardContent>
                 </Card>
               </Animation>
             </GridCell>
             <GridCell>
-              <Animation name="fade-in-down" toggled={ this.state.toggled }>
+              <Animation name="fade-in-down" toggled={this.state.toggled}>
                 <Card shade="shade-3" size="small">
                   <CardContent separatorStyle="dotted">
                     <Heading textSize="headtitle">Fade in down</Heading>
                   </CardContent>
                   <CardContent separatorStyle="dotted">
-                    <Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis vitae eligendi exercitationem quam, quo, blanditiis cupiditate tenetur dolores deleniti delectus molestiae recusandae omnis consequuntur sed neque!</Text>
+                    <Text>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iusto officiis vitae eligendi exercitationem quam, quo,
+                      blanditiis cupiditate tenetur dolores deleniti delectus
+                      molestiae recusandae omnis consequuntur sed neque!
+                    </Text>
                   </CardContent>
                 </Card>
               </Animation>
@@ -62,25 +72,35 @@ export default class Documentation extends Component {
 
           <Grid>
             <GridCell>
-              <Animation name="fade-in-up" toggled={ this.state.toggled }>
+              <Animation name="fade-in-up" toggled={this.state.toggled}>
                 <Card shade="shade-3" size="small">
                   <CardContent separatorStyle="dotted">
                     <Heading textSize="headtitle">Fade in up</Heading>
                   </CardContent>
                   <CardContent separatorStyle="dotted">
-                    <Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis vitae eligendi exercitationem quam, quo, blanditiis cupiditate tenetur dolores deleniti delectus molestiae recusandae omnis consequuntur sed neque!</Text>
+                    <Text>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iusto officiis vitae eligendi exercitationem quam, quo,
+                      blanditiis cupiditate tenetur dolores deleniti delectus
+                      molestiae recusandae omnis consequuntur sed neque!
+                    </Text>
                   </CardContent>
                 </Card>
               </Animation>
             </GridCell>
             <GridCell>
-              <Animation name="fade-in-left" toggled={ this.state.toggled }>
+              <Animation name="fade-in-left" toggled={this.state.toggled}>
                 <Card shade="shade-3" size="small">
                   <CardContent separatorStyle="dotted">
                     <Heading textSize="headtitle">Fade in left</Heading>
                   </CardContent>
                   <CardContent separatorStyle="dotted">
-                    <Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis vitae eligendi exercitationem quam, quo, blanditiis cupiditate tenetur dolores deleniti delectus molestiae recusandae omnis consequuntur sed neque!</Text>
+                    <Text>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iusto officiis vitae eligendi exercitationem quam, quo,
+                      blanditiis cupiditate tenetur dolores deleniti delectus
+                      molestiae recusandae omnis consequuntur sed neque!
+                    </Text>
                   </CardContent>
                 </Card>
               </Animation>
@@ -88,9 +108,11 @@ export default class Documentation extends Component {
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Animation/Animation'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Animation/Animation'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

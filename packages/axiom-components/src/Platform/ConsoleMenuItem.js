@@ -21,13 +21,15 @@ export default class ConsoleMenuItem extends Component {
     });
 
     return (
-      <Base { ...rest }
-          Component="li"
-          className={ classes }
-          textColor={ (disabled && 'disabled') || (!active && 'subtle') || null }
-          textSize="small"
-          textStrong={ active }>
-        { children }
+      <Base
+        {...rest}
+        Component="li"
+        className={classes}
+        textColor={(disabled && 'disabled') || (!active && 'subtle') || null}
+        textSize="small"
+        textStrong={active}
+      >
+        {children}
       </Base>
     );
   }

@@ -43,13 +43,14 @@ export default class BarChartBenchmarkLine extends Component {
     });
 
     return (
-      <div className={ classes } style={ style }>
+      <div className={classes} style={style}>
         <ChartContext
-            TooltipContext={ BenchmarkTooltipContext }
-            data={ data }
-            label={ label }
-            value={ benchmark }>
-          <div className={ pathClasses } style={ lineStyle } />
+          TooltipContext={BenchmarkTooltipContext}
+          data={data}
+          label={label}
+          value={benchmark}
+        >
+          <div className={pathClasses} style={lineStyle} />
         </ChartContext>
       </div>
     );

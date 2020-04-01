@@ -11,8 +11,8 @@ export default class ColumnChartBars extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-column-chart__bars">
-        { children }
+      <Base {...rest} className="ax-column-chart__bars">
+        {children}
       </Base>
     );
   }

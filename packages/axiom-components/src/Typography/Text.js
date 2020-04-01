@@ -4,8 +4,6 @@ import './Text.css';
 
 export default class Text extends Component {
   render() {
-    return (
-      <Base Component="span" { ...this.props } />
-    );
+    return <Base Component="span" {...this.props} />;
   }
 }

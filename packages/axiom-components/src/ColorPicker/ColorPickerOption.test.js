@@ -4,9 +4,7 @@ import ColorPickerOption from './ColorPickerOption';
 import { colors } from '@brandwatch/axiom-materials';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ColorPickerOption { ...props } />
-  );
+  renderer.create(<ColorPickerOption {...props} />);
 
 describe('ColorPickerOption', () => {
   it('renders with defaultProps', () => {
@@ -16,7 +14,7 @@ describe('ColorPickerOption', () => {
   });
 
   describe('renders with color', () => {
-    Object.keys(colors.productColorNames).forEach((color) => {
+    Object.keys(colors.productColorNames).forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
@@ -42,5 +40,4 @@ describe('ColorPickerOption', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
 });

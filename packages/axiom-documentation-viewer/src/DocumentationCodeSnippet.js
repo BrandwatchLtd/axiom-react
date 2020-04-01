@@ -21,14 +21,15 @@ export default class DocumentationCodeSnippet extends Component {
         preserve_newlines: true,
         unformatted: [],
       }),
-      Prism.languages.jsx,
+      Prism.languages.jsx
     );
 
     return (
       <Base Component="pre" className="language-jsx" space="x6" theme="night">
         <code
-            className="language-jsx"
-            dangerouslySetInnerHTML={ { __html: code } } />
+          className="language-jsx"
+          dangerouslySetInnerHTML={{ __html: code }}
+        />
       </Base>
     );
   }

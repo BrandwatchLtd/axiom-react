@@ -14,12 +14,7 @@ export default class Notification extends Component {
     children: PropTypes.node.isRequired,
     onAppear: PropTypes.func,
     onRemoveClick: PropTypes.func,
-    type: PropTypes.oneOf([
-      'error',
-      'info',
-      'success',
-      'warning',
-    ]).isRequired,
+    type: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,
   };
 
   componentDidMount() {
@@ -35,25 +30,28 @@ export default class Notification extends Component {
     const classes = classnames('ax-notification', `ax-notification--${type}`);
 
     return (
-      <Base { ...omit(rest, ['onAppear']) } className={ classes } textColor="subtle">
+      <Base
+        {...omit(rest, ['onAppear'])}
+        className={classes}
+        textColor="subtle"
+      >
         <div className="ax-notification__icon">
-          <Icon name={ ALERT_ICON_NAME_MAP[type] } size="2rem" />
+          <Icon name={ALERT_ICON_NAME_MAP[type]} size="2rem" />
         </div>
 
-        <div className="ax-notification__messsage">
-          { children }
-        </div>
+        <div className="ax-notification__messsage">{children}</div>
 
-        { onRemoveClick && (
+        {onRemoveClick && (
           <div className="ax-notification__remove">
             <Link
-                data-ax-at={ atIds.Notification.close }
-                onClick={ () => onRemoveClick() }
-                style="subtle">
+              data-ax-at={atIds.Notification.close}
+              onClick={() => onRemoveClick()}
+              style="subtle"
+            >
               <Icon name="cross" />
             </Link>
           </div>
-        ) }
+        )}
       </Base>
     );
   }

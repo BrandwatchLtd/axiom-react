@@ -12,14 +12,17 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase>
           <Status404
-              contactUsLocation="https://brandwatch.com"
-              homeLocation="/"
-              theme="day" />
+            contactUsLocation="https://brandwatch.com"
+            homeLocation="/"
+            theme="day"
+          />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/StatusPage/Status404'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/StatusPage/Status404'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  DataPoints,
-  DataPoint,
-} from '@brandwatch/axiom-charts';
+import { DataPoints, DataPoint } from '@brandwatch/axiom-charts';
 import {
   Grid,
   GridCell,
@@ -61,13 +58,15 @@ export default class Documentation extends Component {
           </Grid>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/Tooltip'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipContent'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipSource'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipContext'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipTarget'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/Tooltip'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipContent'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipSource'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipContext'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Tooltip/TooltipTarget'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

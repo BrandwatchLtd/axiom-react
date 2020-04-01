@@ -63,74 +63,88 @@ export default class NewPasswordInput extends Component {
     const { axiomLanguage } = this.context;
     const { value, ...rest } = this.props;
 
-    const validations = [{
-      error: t('at least 8 characters', axiomLanguage),
-      hint: t('8 characters', axiomLanguage),
-      pattern: /^.{8,}$/,
-    }, {
-      error: t('1 numeric character', axiomLanguage),
-      hint: t('1 numeric character', axiomLanguage),
-      pattern: /^.*[0-9].*$/,
-    }, {
-      error: t('1 uppercase character', axiomLanguage),
-      hint: t('1 uppercase character', axiomLanguage),
-      pattern: /^.*[A-Z].*$/,
-    }, {
-      error: t('1 non-alphanumeric character (e.g. !#%,+-/)', axiomLanguage),
-      hint: t('1 non-alphanumeric character (e.g. !#%,+-/)', axiomLanguage),
-      pattern: /^.*[^a-zA-Z\d:].*$/,
-    }];
+    const validations = [
+      {
+        error: t('at least 8 characters', axiomLanguage),
+        hint: t('8 characters', axiomLanguage),
+        pattern: /^.{8,}$/,
+      },
+      {
+        error: t('1 numeric character', axiomLanguage),
+        hint: t('1 numeric character', axiomLanguage),
+        pattern: /^.*[0-9].*$/,
+      },
+      {
+        error: t('1 uppercase character', axiomLanguage),
+        hint: t('1 uppercase character', axiomLanguage),
+        pattern: /^.*[A-Z].*$/,
+      },
+      {
+        error: t('1 non-alphanumeric character (e.g. !#%,+-/)', axiomLanguage),
+        hint: t('1 non-alphanumeric character (e.g. !#%,+-/)', axiomLanguage),
+        pattern: /^.*[^a-zA-Z\d:].*$/,
+      },
+    ];
 
     const validationsColumns = [
       validations.filter((_, idx) => idx < validations.length / 2),
       validations.filter((_, idx) => idx >= validations.length / 2),
     ];
 
-    const getValidationError = (invalidations) =>
-      listToSentence(invalidations.map((invalidPattern) =>
-        validations.find(({ pattern }) => pattern === invalidPattern).error
-      ), `${t('Sorry, your new password must include', axiomLanguage)} `);
+    const getValidationError = invalidations =>
+      listToSentence(
+        invalidations.map(
+          invalidPattern =>
+            validations.find(({ pattern }) => pattern === invalidPattern).error
+        ),
+        `${t('Sorry, your new password must include', axiomLanguage)} `
+      );
 
     return (
       <Validate
-          error={ getValidationError }
-          key="newPassword"
-          patterns={ validations.map(({ pattern }) => pattern) }
-          required
-          value={ value }>
-        { (valid, hasMetRequired, hasMetPattern) => [
-          <TextInput { ...rest }
-              invalid={ !valid }
-              key="input"
-              label={ t('Create new password', axiomLanguage) }
-              type="password"
-              value={ value } />,
+        error={getValidationError}
+        key="newPassword"
+        patterns={validations.map(({ pattern }) => pattern)}
+        required
+        value={value}
+      >
+        {(valid, hasMetRequired, hasMetPattern) => [
+          <TextInput
+            {...rest}
+            invalid={!valid}
+            key="input"
+            label={t('Create new password', axiomLanguage)}
+            type="password"
+            value={value}
+          />,
 
           <Grid
-              horizontalGutters="large"
-              key="hints"
-              responsive={ false }
-              space="x3"
-              verticalGutters="tiny">
-            { validationsColumns.map((validations, index) =>
-              <GridCell key={ index } shrink>
+            horizontalGutters="large"
+            key="hints"
+            responsive={false}
+            space="x3"
+            verticalGutters="tiny"
+          >
+            {validationsColumns.map((validations, index) => (
+              <GridCell key={index} shrink>
                 <List style="none" textColor="subtle">
-                  { validations.map(({ hint, pattern }, index) =>
-                    <ListItem key={ index } space="x2">
-                      { hint }
+                  {validations.map(({ hint, pattern }, index) => (
+                    <ListItem key={index} space="x2">
+                      {hint}
                       <Animicon
-                          inline
-                          isIn={ hasMetPattern(pattern) }
-                          name="tick"
-                          spaceLeft="x1"
-                          textColor="success" />
+                        inline
+                        isIn={hasMetPattern(pattern)}
+                        name="tick"
+                        spaceLeft="x1"
+                        textColor="success"
+                      />
                     </ListItem>
-                  ) }
+                  ))}
                 </List>
               </GridCell>
-            ) }
+            ))}
           </Grid>,
-        ] }
+        ]}
       </Validate>
     );
   }

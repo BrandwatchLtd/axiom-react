@@ -17,13 +17,12 @@ export default class CanvasHeader extends Component {
     const { separator, size, ...rest } = this.props;
     const classes = classnames(
       'ax-platform__canvas-header',
-      `ax-platform__canvas-header--${size}`, {
+      `ax-platform__canvas-header--${size}`,
+      {
         'ax-platform__canvas-header--separator': separator,
-      },
+      }
     );
 
-    return (
-      <Base { ...rest } className={ classes } />
-    );
+    return <Base {...rest} className={classes} />;
   }
 }

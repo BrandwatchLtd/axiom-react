@@ -23,15 +23,9 @@ export default class Documentation extends Component {
               <TableHeaderLabel sortDirection="ascending">
                 Column A
               </TableHeaderLabel>
-              <TableHeaderLabel>
-                Column B
-              </TableHeaderLabel>
-              <TableHeaderLabel>
-                Column C
-              </TableHeaderLabel>
-              <TableHeaderLabel>
-                Column D
-              </TableHeaderLabel>
+              <TableHeaderLabel>Column B</TableHeaderLabel>
+              <TableHeaderLabel>Column C</TableHeaderLabel>
+              <TableHeaderLabel>Column D</TableHeaderLabel>
             </TableHeader>
             <TableBody>
               <TableRow>
@@ -58,14 +52,16 @@ export default class Documentation extends Component {
           </Table>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/Table'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableBody'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableCell'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableHeader'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableHeaderLabel'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableRow'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/Table'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableBody'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableCell'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableHeader'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableHeaderLabel'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Table/TableRow'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

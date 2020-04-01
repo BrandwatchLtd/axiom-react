@@ -5,10 +5,7 @@ import TextInputIcon from './TextInputIcon';
 import TooltipContext from '../Tooltip/TooltipContext';
 import TooltipContent from '../Tooltip/TooltipContent';
 
-const getComponent = (props) =>
-  renderer.create(
-    <TextInputIcon { ...props } />
-  );
+const getComponent = props => renderer.create(<TextInputIcon {...props} />);
 
 describe('TextInputIcon', () => {
   let props;
@@ -52,7 +49,7 @@ describe('TextInputIcon', () => {
     const component = getComponent(props);
     const tree = component.toJSON();
 
-    const wrapper = shallow(<TextInputIcon { ...props } />);
+    const wrapper = shallow(<TextInputIcon {...props} />);
     wrapper.simulate('mouseenter');
 
     expect(tree).toMatchSnapshot();
@@ -61,13 +58,15 @@ describe('TextInputIcon', () => {
 
   it('renders with tooltip when TooltipContext passed', () => {
     props.tooltip = (
-      <TooltipContext><TooltipContent size="tiny">I am a tooltip</TooltipContent></TooltipContext>
+      <TooltipContext>
+        <TooltipContent size="tiny">I am a tooltip</TooltipContent>
+      </TooltipContext>
     );
 
     const component = getComponent(props);
     const tree = component.toJSON();
 
-    const wrapper = shallow(<TextInputIcon { ...props } />);
+    const wrapper = shallow(<TextInputIcon {...props} />);
     wrapper.simulate('mouseenter');
 
     expect(tree).toMatchSnapshot();

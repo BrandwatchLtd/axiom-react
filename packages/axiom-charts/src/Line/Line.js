@@ -4,18 +4,18 @@ import classnames from 'classnames';
 import './Line.css';
 
 /** Browsers that don't support SVG vector-effect ... IE11 */
-const hasVectorEffectSupport = typeof window !== 'undefined' &&
+const hasVectorEffectSupport =
+  typeof window !== 'undefined' &&
   window.CSS &&
   CSS.supports('vector-effect', 'non-scaling-stroke');
 
 const createPath = (data, upper) =>
   data.reduce((path, n, i, { length: l }) => {
     if (isNaN(n) || n === null) return path;
-    return `${path}${i === 0
-      ? `M 0,${upper - n}`
-      : ` L ${(i / (l - 1)) * 100},${upper - n}`}`;
-  }
-  , '');
+    return `${path}${
+      i === 0 ? `M 0,${upper - n}` : ` L ${(i / (l - 1)) * 100},${upper - n}`
+    }`;
+  }, '');
 
 export default class Line extends Component {
   static propTypes = {
@@ -96,7 +96,7 @@ export default class Line extends Component {
   };
 
   render() {
-    const fData = this.props.data.filter((n) => !isNaN(n) && n !== null);
+    const fData = this.props.data.filter(n => !isNaN(n) && n !== null);
     const dataLower = Math.min(...fData);
     const dataUpper = Math.max(...fData);
     const {
@@ -114,40 +114,45 @@ export default class Line extends Component {
       ...rest
     } = this.props;
 
-    const strokeDasharray = hasVectorEffectSupport ? dasharray : dasharrayWithoutScalingStroke;
-    const strokeWidth = hasVectorEffectSupport ? width : widthWithoutScalingStroke;
+    const strokeDasharray = hasVectorEffectSupport
+      ? dasharray
+      : dasharrayWithoutScalingStroke;
+    const strokeWidth = hasVectorEffectSupport
+      ? width
+      : widthWithoutScalingStroke;
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
-    const classes = classnames(
-      'ax-line',
-      `ax-line--${color}`, {
-        'ax-line--faded': faded,
-      });
+    const classes = classnames('ax-line', `ax-line--${color}`, {
+      'ax-line--faded': faded,
+    });
 
     return (
-      <div { ...rest } className={ classes }>
+      <div {...rest} className={classes}>
         <svg
-            className="ax-line__svg"
-            preserveAspectRatio="none"
-            style={ { height } }
-            viewBox={ `0 0 100 ${finalUpper - finalLower}` }
-            width="100%">
+          className="ax-line__svg"
+          preserveAspectRatio="none"
+          style={{ height }}
+          viewBox={`0 0 100 ${finalUpper - finalLower}`}
+          width="100%"
+        >
           <path
-              className="ax-line__path"
-              d={ createPath(data, finalUpper) }
-              style={ { strokeDasharray, strokeWidth } } />
+            className="ax-line__path"
+            d={createPath(data, finalUpper)}
+            style={{ strokeDasharray, strokeWidth }}
+          />
         </svg>
 
-        { children && children.map((c, i) =>
-          (!c || isNaN(data[i]) || data[i] === null) ? null :
-            cloneElement(c, {
-              style: strokeDasharray ? 'hollow' : 'solid',
-              value: data[i],
-              x: (i / (data.length - 1)) * 100,
-              y: ((data[i] - finalLower) / (finalUpper - finalLower)) * 100,
-            })
-          )
-        }
+        {children &&
+          children.map((c, i) =>
+            !c || isNaN(data[i]) || data[i] === null
+              ? null
+              : cloneElement(c, {
+                  style: strokeDasharray ? 'hollow' : 'solid',
+                  value: data[i],
+                  x: (i / (data.length - 1)) * 100,
+                  y: ((data[i] - finalLower) / (finalUpper - finalLower)) * 100,
+                })
+          )}
       </div>
     );
   }

@@ -10,10 +10,6 @@ export default class SelectOptionGroup extends Component {
   render() {
     const { children, ...rest } = this.props;
 
-    return (
-      <DropdownMenu { ...rest } >
-        { children }
-      </DropdownMenu>
-    );
+    return <DropdownMenu {...rest}>{children}</DropdownMenu>;
   }
 }

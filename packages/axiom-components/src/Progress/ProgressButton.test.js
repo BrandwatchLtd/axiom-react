@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import ProgressButton from './ProgressButton';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ProgressButton { ...props }>Lorem</ProgressButton>
-  );
+  renderer.create(<ProgressButton {...props}>Lorem</ProgressButton>);
 
 describe('ProgressButton', () => {
   it('renders with defaultProps', () => {
@@ -21,7 +19,7 @@ describe('ProgressButton', () => {
   });
 
   describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach((size) =>
+    ['small', 'medium', 'large'].forEach(size =>
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();

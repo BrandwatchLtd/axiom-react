@@ -10,28 +10,35 @@ export default class Documentation extends Component {
   render() {
     return (
       <DocumentationViewer
-          config={ [{
+        config={[
+          {
             id: 'change-password-dialog',
             name: 'Change Password Dialog',
             Component: ChangePasswordDialog,
-          }, {
+          },
+          {
             id: 'form-inputs',
             name: 'Form Inputs',
             Component: FormInputs,
-          }, {
+          },
+          {
             id: 'logo-page',
             name: 'Logo Page',
             Component: LogoPage,
-          }, {
+          },
+          {
             id: 'status-page',
             name: 'Status Page',
             Component: StatusPages,
-          }, {
+          },
+          {
             id: 'user-menu',
             name: 'User Menu',
             Component: UserMenu,
-          }] }
-          path="/docs/packages/axiom-composites" />
+          },
+        ]}
+        path="/docs/packages/axiom-composites"
+      />
     );
   }
 }

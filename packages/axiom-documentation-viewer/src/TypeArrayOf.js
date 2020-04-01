@@ -13,12 +13,16 @@ export default class TypeArrayOf extends Component {
   };
 
   render() {
-    const { type: { value: { name } } } = this.props;
+    const {
+      type: {
+        value: { name },
+      },
+    } = this.props;
 
     if (name === 'enum') {
-      return <TypeArrayOfEnum { ...this.props } />;
+      return <TypeArrayOfEnum {...this.props} />;
     }
 
-    return <TypeArrayOfData { ...this.props } />;
+    return <TypeArrayOfData {...this.props} />;
   }
 }

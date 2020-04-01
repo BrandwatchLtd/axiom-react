@@ -22,7 +22,7 @@ export const flipOrders = {
 export const positionToPlacement = (position, offset) =>
   offset === 'middle' ? position : `${position}-${offset}`;
 
-export const placementToPosition = (placement) => {
+export const placementToPosition = placement => {
   const [position, offset] = placement.split('-');
   return [position, offset || 'middle'];
 };

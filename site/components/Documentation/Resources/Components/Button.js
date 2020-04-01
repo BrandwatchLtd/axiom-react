@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { ButtonGroup, ButtonIcon, Button, Grid, GridCell } from '@brandwatch/axiom-components';
+import {
+  ButtonGroup,
+  ButtonIcon,
+  Button,
+  Grid,
+  GridCell,
+} from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
@@ -14,10 +20,18 @@ export default class Documentation extends Component {
           <GridCell>
             <DocumentationShowCase centered>
               <ButtonGroup space="x2" textBreak="none" textCenter>
-                <Button size="small" style="primary">Primary</Button>
-                <Button size="small" style="secondary">Secondary</Button>
-                <Button size="small" style="tertiary">Tertiary</Button>
-                <Button size="small" style="quaternary">Quaternary</Button>
+                <Button size="small" style="primary">
+                  Primary
+                </Button>
+                <Button size="small" style="secondary">
+                  Secondary
+                </Button>
+                <Button size="small" style="tertiary">
+                  Tertiary
+                </Button>
+                <Button size="small" style="quaternary">
+                  Quaternary
+                </Button>
               </ButtonGroup>
             </DocumentationShowCase>
 
@@ -53,27 +67,39 @@ export default class Documentation extends Component {
 
             <DocumentationShowCase centered>
               <ButtonGroup space="x2" textCenter>
-                <Button shape="circle" size="medium">1</Button>
-                <Button shape="circle" size="medium">B</Button>
+                <Button shape="circle" size="medium">
+                  1
+                </Button>
+                <Button shape="circle" size="medium">
+                  B
+                </Button>
                 <Button shape="circle" size="medium">
                   <ButtonIcon name="twitter" />
                 </Button>
               </ButtonGroup>
 
               <ButtonGroup space="x2" textCenter>
-                <Button shape="stadium" size="small">10</Button>
-                <Button shape="stadium" size="small">100</Button>
-                <Button shape="stadium" size="small">1000</Button>
+                <Button shape="stadium" size="small">
+                  10
+                </Button>
+                <Button shape="stadium" size="small">
+                  100
+                </Button>
+                <Button shape="stadium" size="small">
+                  1000
+                </Button>
               </ButtonGroup>
             </DocumentationShowCase>
           </GridCell>
         </Grid>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Button/Button'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Button/ButtonGroup'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Button/ButtonIcon'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Button/Button'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Button/ButtonGroup'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Button/ButtonIcon'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

@@ -5,7 +5,7 @@ import ListItem from './ListItem';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <List { ...props }>
+    <List {...props}>
       <ListItem>Lorem Ipsum</ListItem>
     </List>
   );
@@ -18,7 +18,7 @@ describe('List', () => {
   });
 
   describe('renders with style', () => {
-    ['disc', 'inline', 'none', 'ordered'].forEach((style) => {
+    ['disc', 'inline', 'none', 'ordered'].forEach(style => {
       it(style, () => {
         const component = getComponent({ style });
         const tree = component.toJSON();

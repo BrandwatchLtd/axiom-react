@@ -28,7 +28,6 @@ export default class Chip extends Component {
   };
 
   render() {
-
     const {
       active,
       children,
@@ -40,21 +39,20 @@ export default class Chip extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-chip',
-      `ax-chip--${size}`,
-      { 'ax-chip--active': active },
-    );
+    const classes = classnames('ax-chip', `ax-chip--${size}`, {
+      'ax-chip--active': active,
+    });
 
-    const metricClasses = classnames('ax-chip-metric',
-      { 'ax-chip-metric--light': active }
-    );
+    const metricClasses = classnames('ax-chip-metric', {
+      'ax-chip-metric--light': active,
+    });
 
     return (
-      <Base className={ classes } disabled={ disabled } { ...rest }>
-        { leftIcon && (<Icon className={ 'ax-chip-icon' } name={ leftIcon } /> ) }
-        <Base className="ax-chip-label">{ children }</Base>
-        { metric && (<Base className={ metricClasses }> { metric }</Base>) }
-        { rightIcon && (<Icon className={ 'ax-chip-icon' } name={ rightIcon } />) }
+      <Base className={classes} disabled={disabled} {...rest}>
+        {leftIcon && <Icon className={'ax-chip-icon'} name={leftIcon} />}
+        <Base className="ax-chip-label">{children}</Base>
+        {metric && <Base className={metricClasses}> {metric}</Base>}
+        {rightIcon && <Icon className={'ax-chip-icon'} name={rightIcon} />}
       </Base>
     );
   }

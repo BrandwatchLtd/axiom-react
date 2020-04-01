@@ -12,14 +12,19 @@ export default class Documentation extends Component {
       <DocumentationContent>
         <DocumentationShowCase hidePreview>
           <ChangePasswordDialog
-              isOpen
-              onRequestClose={ (setValue) => setValue('ChangePasswordDialog', 'isOpen', false) }
-              onSubmit={ () => {} } />
+            isOpen
+            onRequestClose={setValue =>
+              setValue('ChangePasswordDialog', 'isOpen', false)
+            }
+            onSubmit={() => {}}
+          />
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/ChangePasswordDialog/ChangePasswordDialog'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/ChangePasswordDialog/ChangePasswordDialog'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

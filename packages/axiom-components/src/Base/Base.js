@@ -6,7 +6,12 @@ import './globals.css';
 importCssVariables();
 import './Base.css';
 
-const underlineTextSizes = new Set(['display2', 'display1', 'headline', 'body']);
+const underlineTextSizes = new Set([
+  'display2',
+  'display1',
+  'headline',
+  'body',
+]);
 
 /**
  * Internally nearly all components in Axiom render Base. It is used as a place to access common styles.
@@ -20,10 +25,7 @@ export default class Base extends Component {
      * functionality. If a string is given then it must be a valid
      * React registered element tag.
      */
-    Component: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.func,
-    ]),
+    Component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     /** Pass this prop to get ref to the Base Component instance. */
     baseRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     /** Class name to be appended to the element */
@@ -176,8 +178,10 @@ export default class Base extends Component {
       ...rest
     } = this.props;
 
-    const underline = textUnderline &&
-      underlineTextSizes.has(textSize || 'body') && (textSize || 'body');
+    const underline =
+      textUnderline &&
+      underlineTextSizes.has(textSize || 'body') &&
+      (textSize || 'body');
     const classes = classnames(className, {
       'ax-cloak': cloak !== undefined,
       'ax-cloak--visible': cloak === false,
@@ -189,7 +193,8 @@ export default class Base extends Component {
       'ax-sticky': sticky,
       [`ax-text--case-${textCase}`]: textCase,
       'ax-text--align-center': textCenter === true,
-      [`ax-text--align-center--${textCenter}`]: textCenter && textCenter !== true,
+      [`ax-text--align-center--${textCenter}`]:
+        textCenter && textCenter !== true,
       [`ax-text--break-${textBreak}`]: textBreak,
       [`ax-text--color-${textColor}`]: textColor,
       'ax-text--ellipsis': textEllipsis,
@@ -213,8 +218,6 @@ export default class Base extends Component {
       };
     }
 
-    return (
-      <Component { ...rest } className={ classes } ref={ baseRef } />
-    );
+    return <Component {...rest} className={classes} ref={baseRef} />;
   }
 }

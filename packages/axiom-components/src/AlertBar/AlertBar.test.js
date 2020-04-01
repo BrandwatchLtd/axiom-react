@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import AlertBar from './AlertBar';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <AlertBar { ...props }>Lorem</AlertBar>
-  );
+  renderer.create(<AlertBar {...props}>Lorem</AlertBar>);
 
 describe('AlertBar', () => {
   it('renders with defaultProps', () => {
@@ -21,7 +19,7 @@ describe('AlertBar', () => {
   });
 
   describe('renders with size', () => {
-    ['small', 'medium'].forEach((size) => {
+    ['small', 'medium'].forEach(size => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();
@@ -31,7 +29,7 @@ describe('AlertBar', () => {
   });
 
   describe('renders with type', () => {
-    ['success', 'warning', 'error', 'info'].forEach((type) => {
+    ['success', 'warning', 'error', 'info'].forEach(type => {
       it(type, () => {
         const component = getComponent({ type });
         const tree = component.toJSON();
@@ -39,5 +37,4 @@ describe('AlertBar', () => {
       });
     });
   });
-
 });

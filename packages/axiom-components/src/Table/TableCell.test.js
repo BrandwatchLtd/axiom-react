@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import TableCell from './TableCell';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <TableCell { ...props }>
-      123456
-    </TableCell>
-  );
+  renderer.create(<TableCell {...props}>123456</TableCell>);
 
 describe('TableBody', () => {
   it('renders', () => {

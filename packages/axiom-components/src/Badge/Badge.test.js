@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import Badge from './Badge';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Badge { ...props }>
-      Lorem Ipsum
-    </Badge>
-  );
+  renderer.create(<Badge {...props}>Lorem Ipsum</Badge>);
 
 describe('Badge', () => {
   it('renders with defaultProps', () => {
@@ -70,7 +66,6 @@ describe('Badge', () => {
     expect(tree).toMatchSnapshot();
   });
 
-
   describe('renders with color', () => {
     [
       'faded',
@@ -89,7 +84,7 @@ describe('Badge', () => {
       'blast-off',
       'ground-control',
       'luna-dust',
-    ].forEach((color) => {
+    ].forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
@@ -99,7 +94,7 @@ describe('Badge', () => {
   });
 
   describe('renders with full', () => {
-    [true, 'small', 'medium', 'large'].forEach((full) => {
+    [true, 'small', 'medium', 'large'].forEach(full => {
       it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();

@@ -28,7 +28,9 @@ describe('formatDate', () => {
 
   describe('longDateWithTimezone', () => {
     it('formats dates correctly', () => {
-      expect(longDateWithTimezone(new Date(0), 'Etc/UTC')).toBe('Thu, 01 Jan 1970 00:00 (UTC+00:00)');
+      expect(longDateWithTimezone(new Date(0), 'Etc/UTC')).toBe(
+        'Thu, 01 Jan 1970 00:00 (UTC+00:00)'
+      );
     });
   });
 

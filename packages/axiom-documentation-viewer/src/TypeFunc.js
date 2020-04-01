@@ -19,9 +19,10 @@ export default class TypeFunc extends Component {
 
     return (
       <Toggle
-          disabled={ disabled }
-          onToggle={ () => setValue(value ? false : true) }
-          toggled={ !!value }>
+        disabled={disabled}
+        onToggle={() => setValue(value ? false : true)}
+        toggled={!!value}
+      >
         Included
       </Toggle>
     );

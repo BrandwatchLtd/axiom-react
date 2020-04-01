@@ -50,10 +50,12 @@ export default class BarChart extends Component {
      * The key that is shown along the bottom of the axis. It is also used
      * to determine the order of stacked dots.
      */
-    chartKey: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })).isRequired,
+    chartKey: PropTypes.arrayOf(
+      PropTypes.shape({
+        color: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+      })
+    ).isRequired,
     /** The description displayed for the benchmarking line in the key */
     chartKeyBenchmarkLabel: PropTypes.string,
     /** The number of rows to be visible when collapsed */
@@ -62,11 +64,13 @@ export default class BarChart extends Component {
      * The data used to render the dots. The `label` is used for the yAxis
      * and `values` for dots
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.node.isRequired,
-      values: PropTypes.object.isRequired,
-      hidden: PropTypes.bool,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        values: PropTypes.object.isRequired,
+        hidden: PropTypes.bool,
+      })
+    ).isRequired,
     /** The description given to the expand button */
     expandButtonSuffix: PropTypes.string,
     /** If set to false the benachmark line will not fade out on hover */
@@ -113,7 +117,6 @@ export default class BarChart extends Component {
     xAxisLabels: () => [],
   };
 
-
   constructor(props) {
     super(props);
     this.state = {
@@ -145,9 +148,13 @@ export default class BarChart extends Component {
   }
 
   handleMouseLeaveRow() {
-    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
-      selectedIndex: null,
-    }));
+    this.setState(({ isDropdownOpen }) =>
+      isDropdownOpen
+        ? {}
+        : {
+            selectedIndex: null,
+          }
+    );
   }
 
   handleMouseEnterBar(selectedIndex, selectedColor) {
@@ -158,9 +165,13 @@ export default class BarChart extends Component {
   }
 
   handleMouseLeaveBar() {
-    this.setState(({ isDropdownOpen }) => isDropdownOpen ? {} : ({
-      selectedColor: null,
-    }));
+    this.setState(({ isDropdownOpen }) =>
+      isDropdownOpen
+        ? {}
+        : {
+            selectedColor: null,
+          }
+    );
   }
 
   handleToggleRowVisibility(data, index, hidden) {
@@ -173,7 +184,9 @@ export default class BarChart extends Component {
   }
 
   render() {
-    const flatValues = flattenValues(this.props.data.filter(({ hidden }) => !hidden));
+    const flatValues = flattenValues(
+      this.props.data.filter(({ hidden }) => !hidden)
+    );
     const dataLower = Math.min(...flatValues);
     const dataUpper = Math.max(...flatValues);
 
@@ -212,96 +225,110 @@ export default class BarChart extends Component {
 
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
-    const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
-    const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
+    const finalZoomMax = Math.max(
+      dataUpper,
+      Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper)
+    );
+    const zoomTo =
+      ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
 
     const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
 
     return (
-      <ChartTable { ...rest } xAxisLabels={ finalXAxisLabels }>
+      <ChartTable {...rest} xAxisLabels={finalXAxisLabels}>
         <ChartTableRows
-            collapsedVisibleRowCount={ collapsedVisibleRowCount }
-            expandButtonSuffix={ expandButtonSuffix }
-            labelColumnWidth={ labelColumnWidth }
-            lower={ dataUpper }
-            space={ rowSpace }
-            upper={ finalUpper }
-            xAxisLabels={ finalXAxisLabels }
-            zoom={ zoom }
-            zoomTo={ zoom ? zoomTo : undefined }>
-          { formattedData.map(({ values, label, benchmark, hidden }, index) =>
+          collapsedVisibleRowCount={collapsedVisibleRowCount}
+          expandButtonSuffix={expandButtonSuffix}
+          labelColumnWidth={labelColumnWidth}
+          lower={dataUpper}
+          space={rowSpace}
+          upper={finalUpper}
+          xAxisLabels={finalXAxisLabels}
+          zoom={zoom}
+          zoomTo={zoom ? zoomTo : undefined}
+        >
+          {formattedData.map(({ values, label, benchmark, hidden }, index) => (
             <ChartTableRow
-                cloakContainer={ !hidden }
-                hover={ index === selectedIndex }
-                key={ index }
-                onMouseEnter={ () => !hidden && this.handleMouseEnterRow(index) }
-                onMouseLeave={ () => this.handleMouseLeaveRow() } >
+              cloakContainer={!hidden}
+              hover={index === selectedIndex}
+              key={index}
+              onMouseEnter={() => !hidden && this.handleMouseEnterRow(index)}
+              onMouseLeave={() => this.handleMouseLeaveRow()}
+            >
               <ChartTableLabel
-                  disabled={ hidden }
-                  onToggleRowVisibility={ () => this.handleToggleRowVisibility(data[index], index, hidden) }
-                  textStrong={ index === selectedIndex }
-                  width={ labelColumnWidth }>
-                { label }
+                disabled={hidden}
+                onToggleRowVisibility={() =>
+                  this.handleToggleRowVisibility(data[index], index, hidden)
+                }
+                textStrong={index === selectedIndex}
+                width={labelColumnWidth}
+              >
+                {label}
               </ChartTableLabel>
               <ChartTableVisual>
                 <BarChartBars
-                    BenchmarkTooltipContext={ BenchmarkTooltipContext }
-                    DifferenceAreaTooltipContext={ DifferenceAreaTooltipContext }
-                    DropdownContext={ DropdownContext }
-                    TooltipContext={ TooltipContext }
-                    barLabel={ barLabel }
-                    benchmark={ benchmark }
-                    benchmarkHeight={ rowSpace }
-                    data={ data[index] }
-                    fadeBenchmarkLine={ isBenchmarkLineFadable && selectedIndex !== null && selectedIndex !== index }
-                    hideBars={ isMultipleValuesData && selectedIndex !== null && selectedIndex !== index }
-                    hoverColor={ selectedColor }
-                    hoverIndex={ selectedIndex }
-                    index={ index }
-                    isHidden={ onToggleRowVisibility ? hidden : false }
-                    isHovered={ index === selectedIndex }
-                    label={ label }
-                    lower={ finalLower }
-                    onDropdownClose={ () => this.handleDropdonClose() }
-                    onDropdownOpen={ (color) => this.handleDropdonOpen(index, color) }
-                    onMouseEnter={ (color) => this.handleMouseEnterBar(index, color) }
-                    onMouseLeave={ () => this.handleMouseLeaveBar() }
-                    showBarLabel={ showBarLabel }
-                    showDifferenceArea={ showDifferenceArea }
-                    singleSelect={ singleSelect }
-                    size={ size }
-                    upper={ finalUpper }
-                    values={ values } />
+                  BenchmarkTooltipContext={BenchmarkTooltipContext}
+                  DifferenceAreaTooltipContext={DifferenceAreaTooltipContext}
+                  DropdownContext={DropdownContext}
+                  TooltipContext={TooltipContext}
+                  barLabel={barLabel}
+                  benchmark={benchmark}
+                  benchmarkHeight={rowSpace}
+                  data={data[index]}
+                  fadeBenchmarkLine={
+                    isBenchmarkLineFadable &&
+                    selectedIndex !== null &&
+                    selectedIndex !== index
+                  }
+                  hideBars={
+                    isMultipleValuesData &&
+                    selectedIndex !== null &&
+                    selectedIndex !== index
+                  }
+                  hoverColor={selectedColor}
+                  hoverIndex={selectedIndex}
+                  index={index}
+                  isHidden={onToggleRowVisibility ? hidden : false}
+                  isHovered={index === selectedIndex}
+                  label={label}
+                  lower={finalLower}
+                  onDropdownClose={() => this.handleDropdonClose()}
+                  onDropdownOpen={color => this.handleDropdonOpen(index, color)}
+                  onMouseEnter={color => this.handleMouseEnterBar(index, color)}
+                  onMouseLeave={() => this.handleMouseLeaveBar()}
+                  showBarLabel={showBarLabel}
+                  showDifferenceArea={showDifferenceArea}
+                  singleSelect={singleSelect}
+                  size={size}
+                  upper={finalUpper}
+                  values={values}
+                />
               </ChartTableVisual>
             </ChartTableRow>
-          ) }
+          ))}
         </ChartTableRows>
 
-        { axisTitle && (
-          <ChartTableAxisTitle>
-            { axisTitle }
-          </ChartTableAxisTitle>
-        ) }
+        {axisTitle && <ChartTableAxisTitle>{axisTitle}</ChartTableAxisTitle>}
 
-        { showKey && (
+        {showKey && (
           <ChartTableKey>
             <ChartKey>
-              { chartKeyBenchmarkLabel && (
-                <ChartKeyItem label={ chartKeyBenchmarkLabel }>
+              {chartKeyBenchmarkLabel && (
+                <ChartKeyItem label={chartKeyBenchmarkLabel}>
                   <BarChartBenchmarkLine height="1rem" width="0.75rem" />
                 </ChartKeyItem>
-              ) }
+              )}
 
-              { chartKey.map(({ label, color }) =>
-                <ChartKeyItem key={ `${label}.${color}` } label={ label }>
+              {chartKey.map(({ label, color }) => (
+                <ChartKeyItem key={`${label}.${color}`} label={label}>
                   <DataPoints size="0.75rem">
-                    <DataPoint color={ color } />
+                    <DataPoint color={color} />
                   </DataPoints>
                 </ChartKeyItem>
-              ) }
+              ))}
             </ChartKey>
           </ChartTableKey>
-        ) }
+        )}
       </ChartTable>
     );
   }

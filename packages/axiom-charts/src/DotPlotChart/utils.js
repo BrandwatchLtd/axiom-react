@@ -5,8 +5,11 @@ export const formatData = (key, data) => {
     label,
     benchmark,
     values: Object.keys(values)
-      .map((color) => ({ color, value: values[color] }))
-      .sort((a, b) => a.value - b.value || order.indexOf(a.color) - order.indexOf(b.color))
+      .map(color => ({ color, value: values[color] }))
+      .sort(
+        (a, b) =>
+          a.value - b.value || order.indexOf(a.color) - order.indexOf(b.color)
+      )
       .reduce((acc, { value, color }) => {
         for (const data of acc) {
           if (data.value === value) {
@@ -22,7 +25,7 @@ export const formatData = (key, data) => {
   }));
 };
 
-export const flattenValues = (data) => {
+export const flattenValues = data => {
   return data.reduce((memo, { benchmark, values }) => {
     if (benchmark) {
       memo.push(benchmark);
@@ -33,11 +36,21 @@ export const flattenValues = (data) => {
   }, []);
 };
 
-export const getLines = (data, benchmark, mouseOverRowIndex, mouseOverColors, rowIndex, lower, upper) => {
+export const getLines = (
+  data,
+  benchmark,
+  mouseOverRowIndex,
+  mouseOverColors,
+  rowIndex,
+  lower,
+  upper
+) => {
   const lines = [];
-  const elements = data
-    .filter(({ colors }) => mouseOverRowIndex === rowIndex ||
-        !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors));
+  const elements = data.filter(
+    ({ colors }) =>
+      mouseOverRowIndex === rowIndex ||
+      !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors)
+  );
 
   if (benchmark !== undefined) {
     elements.push({ colors: [], value: benchmark });
@@ -58,22 +71,43 @@ export const getLines = (data, benchmark, mouseOverRowIndex, mouseOverColors, ro
   return lines;
 };
 
-export const getDotColors = (mouseOverRowIndex, mouseOverColors, rowIndex, colors) =>
+export const getDotColors = (
+  mouseOverRowIndex,
+  mouseOverColors,
+  rowIndex,
+  colors
+) =>
   mouseOverColors.length && colors.length > 1 && mouseOverRowIndex !== rowIndex
-    ? colors.filter((color) => mouseOverColors.indexOf(color) > -1)
+    ? colors.filter(color => mouseOverColors.indexOf(color) > -1)
     : colors;
 
-export const isBenchmarkFaded = (mouseOverRowIndex) => mouseOverRowIndex !== null;
-export const isLineFaded = (mouseOverRowIndex) => mouseOverRowIndex !== null;
+export const isBenchmarkFaded = mouseOverRowIndex => mouseOverRowIndex !== null;
+export const isLineFaded = mouseOverRowIndex => mouseOverRowIndex !== null;
 
-export const isDotFaded = (mouseOverRowIndex, mouseOverColors, rowIndex, colors) =>
+export const isDotFaded = (
+  mouseOverRowIndex,
+  mouseOverColors,
+  rowIndex,
+  colors
+) =>
   isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors) &&
-    mouseOverRowIndex === rowIndex;
+  mouseOverRowIndex === rowIndex;
 
-export const isDotHidden = (mouseOverRowIndex, mouseOverColors, rowIndex, colors) =>
-  !!mouseOverColors.length && !mouseOverColors.some((color) => colors.indexOf(color) > -1);
+export const isDotHidden = (
+  mouseOverRowIndex,
+  mouseOverColors,
+  rowIndex,
+  colors
+) =>
+  !!mouseOverColors.length &&
+  !mouseOverColors.some(color => colors.indexOf(color) > -1);
 
-export const isValueHidden = (mouseOverRowIndex, mouseOverColors, rowIndex, colors) => {
+export const isValueHidden = (
+  mouseOverRowIndex,
+  mouseOverColors,
+  rowIndex,
+  colors
+) => {
   if (mouseOverColors.length < 1) {
     return true;
   }
@@ -82,10 +116,17 @@ export const isValueHidden = (mouseOverRowIndex, mouseOverColors, rowIndex, colo
     return isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors);
   }
 
-  return mouseOverRowIndex !== rowIndex ||
-    mouseOverColors.some((color) => colors.indexOf(color) === -1);
+  return (
+    mouseOverRowIndex !== rowIndex ||
+    mouseOverColors.some(color => colors.indexOf(color) === -1)
+  );
 };
 
-export const isValueStrong = (mouseOverRowIndex, mouseOverColors, rowIndex, colors) =>
+export const isValueStrong = (
+  mouseOverRowIndex,
+  mouseOverColors,
+  rowIndex,
+  colors
+) =>
   mouseOverRowIndex === rowIndex &&
-    !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors);
+  !isDotHidden(mouseOverRowIndex, mouseOverColors, rowIndex, colors);

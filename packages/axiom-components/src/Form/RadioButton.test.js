@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import RadioButton from './RadioButton';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <RadioButton { ...props }>Lorem ipsum</RadioButton>
-  );
+  renderer.create(<RadioButton {...props}>Lorem ipsum</RadioButton>);
 
 describe('RadioButton', () => {
   it('renders with defaultProps', () => {

@@ -27,13 +27,7 @@ export default class Label extends Component {
   };
 
   render() {
-    const {
-      children,
-      color,
-      full,
-      size,
-      ...rest
-    } = this.props;
+    const { children, color, full, size, ...rest } = this.props;
 
     const classes = classnames('ax-label', {
       [`ax-label--${color}`]: color,
@@ -42,18 +36,21 @@ export default class Label extends Component {
       [`ax-label--full--${full}`]: typeof full === 'string',
     });
 
-    const mappedChildren = Children.toArray(children).map((child, index, array) =>
-      !isComponent(child, LabelIconRef) ? child : cloneElement(child, {
-        isEnd: index === array.length - 1,
-        isStart: index === 0,
-        color,
-        size,
-      })
+    const mappedChildren = Children.toArray(children).map(
+      (child, index, array) =>
+        !isComponent(child, LabelIconRef)
+          ? child
+          : cloneElement(child, {
+              isEnd: index === array.length - 1,
+              isStart: index === 0,
+              color,
+              size,
+            })
     );
 
     return (
-      <Base { ...rest } Component="span" className={ classes }>
-        { mappedChildren }
+      <Base {...rest} Component="span" className={classes}>
+        {mappedChildren}
       </Base>
     );
   }

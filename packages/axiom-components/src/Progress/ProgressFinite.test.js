@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import ProgressFinite from './ProgressFinite';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ProgressFinite { ...props } />
-  );
+  renderer.create(<ProgressFinite {...props} />);
 
 describe('ProgressFinite', () => {
   it('renders with defaultProps', () => {

@@ -2,10 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Separator from './Separator';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <Separator { ...props } />
-  );
+const getComponent = (props = {}) => renderer.create(<Separator {...props} />);
 
 describe('Separator', () => {
   it('renders with defaultProps', () => {
@@ -21,7 +18,7 @@ describe('Separator', () => {
   });
 
   describe('renders with style', () => {
-    ['solid', 'dotted'].forEach((borderStyle) => {
+    ['solid', 'dotted'].forEach(borderStyle => {
       it(borderStyle, () => {
         const component = getComponent({ borderStyle });
         const tree = component.toJSON();
@@ -31,7 +28,7 @@ describe('Separator', () => {
   });
 
   describe('renders with direction', () => {
-    ['horizontal', 'vertical'].forEach((direction) => {
+    ['horizontal', 'vertical'].forEach(direction => {
       it(direction, () => {
         const component = getComponent({ direction });
         const tree = component.toJSON();

@@ -8,11 +8,14 @@ test.each`
   ${0}   | ${0}   | ${255} | ${'#0000ff'}
   ${0}   | ${255} | ${255} | ${'#00ffff'}
   ${255} | ${255} | ${0}   | ${'#ffff00'}
-  ${255} | ${0} | ${255}   | ${'#ff00ff'}
+  ${255} | ${0}   | ${255} | ${'#ff00ff'}
   ${255} | ${255} | ${255} | ${'#ffffff'}
   ${63}  | ${63}  | ${63}  | ${'#3f3f3f'}
   ${183} | ${71}  | ${146} | ${'#b74792'}
   ${35}  | ${158} | ${219} | ${'#239edb'}
-`('rgb2hex returns $expected for { r: $r, g: $g, b: $b}', ({ r, g, b, expected }) => {
-  expect(rgb2hex({ r, g, b })).toBe(expected);
-});
+`(
+  'rgb2hex returns $expected for { r: $r, g: $g, b: $b}',
+  ({ r, g, b, expected }) => {
+    expect(rgb2hex({ r, g, b })).toBe(expected);
+  }
+);

@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import Icon from './Icon';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Icon name="twitter" { ...props } />
-  );
+  renderer.create(<Icon name="twitter" {...props} />);
 
 describe('Icon', () => {
   it('renders with defaultProps', () => {

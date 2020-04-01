@@ -4,9 +4,7 @@ import ChartTableAxisTitle from './ChartTableAxisTitle';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <ChartTableAxisTitle { ...props }>
-      Lorem Ipsum
-    </ChartTableAxisTitle>
+    <ChartTableAxisTitle {...props}>Lorem Ipsum</ChartTableAxisTitle>
   );
 
 describe('ChartTableAxisTitle', () => {

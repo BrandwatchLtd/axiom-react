@@ -23,25 +23,20 @@ export default class Progress extends Component {
   };
 
   render() {
-    const {
-      complete,
-      error,
-      percent,
-      ...rest
-    } = this.props;
+    const { complete, error, percent, ...rest } = this.props;
 
     if (error) {
-      return <AlertIcon { ...rest } type="error" />;
+      return <AlertIcon {...rest} type="error" />;
     }
 
     if (complete) {
-      return <AlertIcon { ...rest } type="success" />;
+      return <AlertIcon {...rest} type="success" />;
     }
 
     if (!isNaN(parseFloat(percent))) {
-      return <ProgressFinite { ...rest } percent={ percent } />;
+      return <ProgressFinite {...rest} percent={percent} />;
     }
 
-    return <ProgressInfinite { ...rest } />;
+    return <ProgressInfinite {...rest} />;
   }
 }

@@ -3,9 +3,7 @@ import renderer from 'react-test-renderer';
 import ChartBody from './ChartBody';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <ChartBody { ...props }>Lorem Ipsum</ChartBody>
-  );
+  renderer.create(<ChartBody {...props}>Lorem Ipsum</ChartBody>);
 
 describe('ChartBody', () => {
   it('renders with defaultProps', () => {
@@ -15,7 +13,7 @@ describe('ChartBody', () => {
   });
 
   describe('renders with horizontalAlign', () => {
-    ['start', 'middle', 'end'].forEach((horizontalAlign) => {
+    ['start', 'middle', 'end'].forEach(horizontalAlign => {
       it(horizontalAlign, () => {
         const component = getComponent({ horizontalAlign });
         const tree = component.toJSON();
@@ -25,7 +23,7 @@ describe('ChartBody', () => {
   });
 
   describe('renders with verticalAlign', () => {
-    ['start', 'middle', 'end', 'around', 'between'].forEach((verticalAlign) => {
+    ['start', 'middle', 'end', 'around', 'between'].forEach(verticalAlign => {
       it(verticalAlign, () => {
         const component = getComponent({ verticalAlign });
         const tree = component.toJSON();

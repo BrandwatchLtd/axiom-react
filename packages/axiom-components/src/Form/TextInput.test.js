@@ -5,9 +5,7 @@ import TextInputIcon from './TextInputIcon';
 import TextInputButton from './TextInputButton';
 
 const getComponent = (props = {}, children = 'Lorem ipsum') =>
-  renderer.create(
-    <TextInput { ...props }>{ children }</TextInput>
-  );
+  renderer.create(<TextInput {...props}>{children}</TextInput>);
 
 describe('TextInput', () => {
   it('renders with defaultProps', () => {
@@ -49,7 +47,8 @@ describe('TextInput', () => {
   describe('renders TextInputIcon', () => {
     describe('when left aligned', () => {
       it('renders when is in progress', () => {
-        const component = getComponent({ isInProgress: true },
+        const component = getComponent(
+          { isInProgress: true },
           <TextInputIcon name="twitter" />
         );
         const tree = component.toJSON();
@@ -57,7 +56,8 @@ describe('TextInput', () => {
       });
 
       it('renders when showing onClear', () => {
-        const component = getComponent({ onClear: () => { }, value: 'foobar' },
+        const component = getComponent(
+          { onClear: () => {}, value: 'foobar' },
           <TextInputIcon align="left" name="twitter" />
         );
         const tree = component.toJSON();
@@ -66,7 +66,8 @@ describe('TextInput', () => {
     });
     describe('when right aligned', () => {
       it('does not render when is in progress', () => {
-        const component = getComponent({ isInProgress: true },
+        const component = getComponent(
+          { isInProgress: true },
           <TextInputIcon name="twitter" />
         );
         const tree = component.toJSON();
@@ -74,7 +75,8 @@ describe('TextInput', () => {
       });
 
       it('renders when showing onClear', () => {
-        const component = getComponent({ onClear: () => { }, value: 'foobar' },
+        const component = getComponent(
+          { onClear: () => {}, value: 'foobar' },
           <TextInputIcon name="twitter" />
         );
         const tree = component.toJSON();
@@ -84,15 +86,13 @@ describe('TextInput', () => {
   });
 
   it('renders with TextInputButton', () => {
-    const component = getComponent({},
-      <TextInputButton>Test</TextInputButton>
-    );
+    const component = getComponent({}, <TextInputButton>Test</TextInputButton>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach((size) => {
+    ['small', 'medium', 'large'].forEach(size => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();

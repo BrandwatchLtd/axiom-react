@@ -29,10 +29,11 @@ export default class TypeNumber extends Component {
 
     return (
       <TextInput
-          defaultValue={ value }
-          disabled={ disabled }
-          onChange={ (e) => this.handleOnChange(e) }
-          placeholder="Set prop number..." />
+        defaultValue={value}
+        disabled={disabled}
+        onChange={e => this.handleOnChange(e)}
+        placeholder="Set prop number..."
+      />
     );
   }
 }

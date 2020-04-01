@@ -79,9 +79,9 @@ export default class BarChartBars extends Component {
     }
 
     return (
-      <Base className={ classes } cloak={ isHidden }>
+      <Base className={classes} cloak={isHidden}>
         <Bars direction="right">
-          { values.map(({ color, value }) => {
+          {values.map(({ color, value }) => {
             const isFaded = singleSelect
               ? Number.isInteger(hoverIndex) && hoverIndex !== index
               : hoverColor && color !== hoverColor;
@@ -90,7 +90,8 @@ export default class BarChartBars extends Component {
 
             const isHoveredByColor = hoverColor && color === hoverColor;
             const isHoveredByIndex = hoverIndex && index === hoverIndex;
-            const hideLabel = !showBarLabel && !isHoveredByColor && !isHoveredByIndex;
+            const hideLabel =
+              !showBarLabel && !isHoveredByColor && !isHoveredByIndex;
             const labelClasses = classnames('ax-bar-chart__bar-label', {
               'ax-bar-chart__bar-label--hidden': hideLabel,
             });
@@ -98,51 +99,59 @@ export default class BarChartBars extends Component {
             const isStretched = benchmarkPercent > percent;
 
             const labelStyle = {
-              left: `${showDifferenceArea && isStretched ? benchmarkPercent : percent}%`,
+              left: `${
+                showDifferenceArea && isStretched ? benchmarkPercent : percent
+              }%`,
             };
 
             return (
-              <div className="ax-bar-chart__bar-container" key={ color }>
+              <div className="ax-bar-chart__bar-container" key={color}>
                 <CombinedBar
-                    DifferenceAreaTooltipContext={ DifferenceAreaTooltipContext }
-                    DropdownContext={ DropdownContext }
-                    TooltipContext={ TooltipContext }
-                    benchmark={ benchmark }
-                    benchmarkPercent={ showDifferenceArea ? benchmarkPercent : null }
-                    color={ color }
-                    data={ data }
-                    data-ax-at={ atIds.BarChart.bar }
-                    isFaded={ isFaded }
-                    isHidden={ hideBars && isFaded }
-                    label={ label }
-                    onDropdownClose={ onDropdownClose }
-                    onDropdownOpen={ () => onDropdownOpen(color) }
-                    onMouseEnter={ () => onMouseEnter(color) }
-                    onMouseLeave={ onMouseLeave }
-                    percent={ percent }
-                    showLabel={ false }
-                    size={ size }
-                    value={ value } />
+                  DifferenceAreaTooltipContext={DifferenceAreaTooltipContext}
+                  DropdownContext={DropdownContext}
+                  TooltipContext={TooltipContext}
+                  benchmark={benchmark}
+                  benchmarkPercent={
+                    showDifferenceArea ? benchmarkPercent : null
+                  }
+                  color={color}
+                  data={data}
+                  data-ax-at={atIds.BarChart.bar}
+                  isFaded={isFaded}
+                  isHidden={hideBars && isFaded}
+                  label={label}
+                  onDropdownClose={onDropdownClose}
+                  onDropdownOpen={() => onDropdownOpen(color)}
+                  onMouseEnter={() => onMouseEnter(color)}
+                  onMouseLeave={onMouseLeave}
+                  percent={percent}
+                  showLabel={false}
+                  size={size}
+                  value={value}
+                />
 
-                <div className={ labelClasses } style={ labelStyle }>
-                  <Small textStrong={ isHovered }>{ barLabel ? barLabel({ value, data, color, label }) : value }</Small>
+                <div className={labelClasses} style={labelStyle}>
+                  <Small textStrong={isHovered}>
+                    {barLabel ? barLabel({ value, data, color, label }) : value}
+                  </Small>
                 </div>
               </div>
             );
-          }) }
+          })}
         </Bars>
 
-        { benchmarkPercent !== undefined && (
+        {benchmarkPercent !== undefined && (
           <div className="ax-bar-chart__benchmark-line-container">
             <BarChartBenchmarkLine
-                BenchmarkTooltipContext={ BenchmarkTooltipContext }
-                benchmark={ benchmark }
-                data={ data }
-                faded={ fadeBenchmarkLine }
-                label={ label }
-                value={ benchmarkPercent } />
+              BenchmarkTooltipContext={BenchmarkTooltipContext}
+              benchmark={benchmark}
+              data={data}
+              faded={fadeBenchmarkLine}
+              label={label}
+              value={benchmarkPercent}
+            />
           </div>
-        ) }
+        )}
       </Base>
     );
   }

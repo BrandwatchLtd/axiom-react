@@ -11,8 +11,8 @@ export default class ColumnChartRow extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base { ...rest } className="ax-column-chart__row">
-        { children }
+      <Base {...rest} className="ax-column-chart__row">
+        {children}
       </Base>
     );
   }

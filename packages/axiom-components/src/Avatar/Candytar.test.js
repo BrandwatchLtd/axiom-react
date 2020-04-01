@@ -4,9 +4,7 @@ import { colors } from '@brandwatch/axiom-materials';
 import Candytar from './Candytar';
 
 const getComponent = (props = {}) =>
-  renderer.create(
-    <Candytar size="2rem" src="/image/path" { ...props } />
-  );
+  renderer.create(<Candytar size="2rem" src="/image/path" {...props} />);
 
 describe('Candytar', () => {
   it('renders with custom size', () => {
@@ -16,7 +14,7 @@ describe('Candytar', () => {
   });
 
   describe('renders with color', () => {
-    Object.keys(colors.userDefinedGraphColors).forEach((color) => {
+    Object.keys(colors.userDefinedGraphColors).forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

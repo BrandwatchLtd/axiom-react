@@ -25,15 +25,15 @@ export default class ButtonGroup extends Component {
     const { children, joined, ...rest } = this.props;
 
     return (
-      <Base space="x6" { ...rest }
-          Component={ joined ? 'div' : InlineGroup }
-          className="ax-button-group"
-          textBreak={ joined ? 'none' : null }>
-        { children }
+      <Base
+        space="x6"
+        {...rest}
+        Component={joined ? 'div' : InlineGroup}
+        className="ax-button-group"
+        textBreak={joined ? 'none' : null}
+      >
+        {children}
       </Base>
     );
   }
 }
-
-
-

@@ -11,8 +11,8 @@ export default class ChartTableAxisTitle extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Paragraph { ...rest } textCenter textColor="subtle">
-        <Small>{ children }</Small>
+      <Paragraph {...rest} textCenter textColor="subtle">
+        <Small>{children}</Small>
       </Paragraph>
     );
   }

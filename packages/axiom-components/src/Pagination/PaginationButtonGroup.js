@@ -3,8 +3,6 @@ import ButtonGroup from '../Button/ButtonGroup';
 
 export default class PaginationButtonGroup extends Component {
   render() {
-    return (
-      <ButtonGroup { ...this.props } textCenter />
-    );
+    return <ButtonGroup {...this.props} textCenter />;
   }
 }

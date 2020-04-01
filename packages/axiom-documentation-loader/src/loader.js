@@ -18,14 +18,17 @@ function castValue(value) {
 }
 
 function normaliseValue(prop) {
-  return prop && Object.assign({}, prop, {
-    value: castValue(prop.value),
-  });
+  return (
+    prop &&
+    Object.assign({}, prop, {
+      value: castValue(prop.value),
+    })
+  );
 }
 
 function flattenValues({ value }, values = []) {
   if (Array.isArray(value)) {
-    value.forEach((value) => flattenValues(value, values));
+    value.forEach(value => flattenValues(value, values));
   } else if (isPlainObject(value)) {
     flattenValues(value, values);
   } else if (value !== undefined) {
@@ -43,16 +46,20 @@ function extractProps({ displayName, props = {} }) {
   return {
     name: displayName,
     props: Object.keys(props)
-      .filter((prop) => props[prop].description !== 'SKIP')
-      .reduce((eProps, prop) => Object.assign({}, eProps, {
-        [prop]: Object.assign(props[prop], {
-          defaultValue: normaliseValue(props[prop].defaultValue),
-          description: sanitizeDescription(props[prop].description),
-          disabled: props[prop].description.includes('[DISABLED]'),
-          type: normaliseValue(props[prop].type),
-          values: flattenValues(normaliseValue(props[prop].type)),
-        }),
-      }), {}),
+      .filter(prop => props[prop].description !== 'SKIP')
+      .reduce(
+        (eProps, prop) =>
+          Object.assign({}, eProps, {
+            [prop]: Object.assign(props[prop], {
+              defaultValue: normaliseValue(props[prop].defaultValue),
+              description: sanitizeDescription(props[prop].description),
+              disabled: props[prop].description.includes('[DISABLED]'),
+              type: normaliseValue(props[prop].type),
+              values: flattenValues(normaliseValue(props[prop].type)),
+            }),
+          }),
+        {}
+      ),
   };
 }
 

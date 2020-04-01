@@ -24,18 +24,21 @@ const t = translate({
   'Ooops!': {
     de: 'Hoppla!',
     es: 'Huy!',
-    fr: 'page d\'accueil',
+    fr: "page d'accueil",
   },
-  'or': {
+  or: {
     de: 'oder',
     es: 'o',
     fr: 'ou',
   },
   'The link you clicked may be broken or the page may have been removed': {
-    de: 'Der Link, den Sie geklickt haben, kann kaputt sein oder die Seite wurde möglicherweise' +
+    de:
+      'Der Link, den Sie geklickt haben, kann kaputt sein oder die Seite wurde möglicherweise' +
       ' entfernt',
-    es: 'El enlace al que ha hecho clic puede estar roto o la página puede haber sido eliminada',
-    fr: 'Le lien sur lequel vous avez cliqué peut être brisé ou si la page a été supprimée',
+    es:
+      'El enlace al que ha hecho clic puede estar roto o la página puede haber sido eliminada',
+    fr:
+      'Le lien sur lequel vous avez cliqué peut être brisé ou si la page a été supprimée',
   },
   'Visit the': {
     de: 'Besuche den',
@@ -65,20 +68,26 @@ export default class Status404 extends Component {
     const { contactUsLocation, homeLocation, ...rest } = this.props;
 
     return (
-      <LogoPage { ...rest }>
+      <LogoPage {...rest}>
         <StatusMessage>
           <Heading space="x4" textSize="display1">
-            <Strong>{ t('Ooops!', axiomLanguage) }</Strong>
+            <Strong>{t('Ooops!', axiomLanguage)}</Strong>
           </Heading>
           <Heading space="x4" textSize="headline">
-            { t('The link you clicked may be broken or ' +
-                  'the page may have been removed', axiomLanguage) }
+            {t(
+              'The link you clicked may be broken or ' +
+                'the page may have been removed',
+              axiomLanguage
+            )}
           </Heading>
           <Paragraph space="x4">
-            { t('Visit the', axiomLanguage) } <Link href={ homeLocation }>
-              { t('home page', axiomLanguage) }
-            </Link> { t('or', axiomLanguage) } <Link href={ contactUsLocation }>
-              { t('contact us', axiomLanguage) }</Link> { t('about the problem', axiomLanguage) }.
+            {t('Visit the', axiomLanguage)}{' '}
+            <Link href={homeLocation}>{t('home page', axiomLanguage)}</Link>{' '}
+            {t('or', axiomLanguage)}{' '}
+            <Link href={contactUsLocation}>
+              {t('contact us', axiomLanguage)}
+            </Link>{' '}
+            {t('about the problem', axiomLanguage)}.
           </Paragraph>
         </StatusMessage>
       </LogoPage>

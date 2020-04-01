@@ -5,7 +5,7 @@ import SelectOption from './SelectOption';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Select { ...props }>
+    <Select {...props}>
       <SelectOption value="1" />
       <SelectOption value="2" />
       <SelectOption value="3" />

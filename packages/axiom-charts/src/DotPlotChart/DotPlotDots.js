@@ -25,13 +25,11 @@ export default class DotPlotDots extends Component {
     });
 
     return (
-      <div className={ classes } style={ style }>
-        <DataPoints { ...rest }
-            data-ax-at={ atIds.DotPlotChart.dot }
-            size={ size }>
-          { colors.map((color, index) =>
-            <DataPoint color={ color } key={ index } />
-          ) }
+      <div className={classes} style={style}>
+        <DataPoints {...rest} data-ax-at={atIds.DotPlotChart.dot} size={size}>
+          {colors.map((color, index) => (
+            <DataPoint color={color} key={index} />
+          ))}
         </DataPoints>
       </div>
     );

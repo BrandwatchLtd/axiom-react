@@ -5,10 +5,8 @@ import TableRow from './TableRow';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <TableRow { ...props }>
-      <TableCell>
-        123456
-      </TableCell>
+    <TableRow {...props}>
+      <TableCell>123456</TableCell>
     </TableRow>
   );
 

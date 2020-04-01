@@ -13,10 +13,10 @@ export default class ResourcesSection extends Component {
     const { children, description, title, ...rest } = this.props;
 
     return (
-      <Base { ...rest } space="x8">
-        <Heading textSize="headtitle">{ title }</Heading>
-        <Heading>{ description }</Heading>
-        { children }
+      <Base {...rest} space="x8">
+        <Heading textSize="headtitle">{title}</Heading>
+        <Heading>{description}</Heading>
+        {children}
       </Base>
     );
   }

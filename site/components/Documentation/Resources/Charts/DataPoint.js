@@ -14,7 +14,7 @@ export default class Documentation extends Component {
         <Grid>
           <GridCell>
             <DocumentationShowCase centered>
-              <DataPoints onClick={ () => {} } size="4rem">
+              <DataPoints onClick={() => {}} size="4rem">
                 <DataPoint color="giant-leap" />
                 <DataPoint color="critical-mass" />
                 <DataPoint color="new-horizon" />
@@ -26,19 +26,19 @@ export default class Documentation extends Component {
             <DocumentationShowCase centered>
               <Grid shrink>
                 <GridCell>
-                  <DataPoints onClick={ () => {} } size="2rem">
+                  <DataPoints onClick={() => {}} size="2rem">
                     <DataPoint color="giant-leap" style="hollow" />
                   </DataPoints>
                 </GridCell>
 
                 <GridCell>
-                  <DataPoints onClick={ () => {} } size="2rem">
+                  <DataPoints onClick={() => {}} size="2rem">
                     <DataPoint color="critical-mass" style="hollow" />
                   </DataPoints>
                 </GridCell>
 
                 <GridCell>
-                  <DataPoints onClick={ () => {} } size="2rem">
+                  <DataPoints onClick={() => {}} size="2rem">
                     <DataPoint color="new-horizon" style="hollow" />
                   </DataPoints>
                 </GridCell>
@@ -47,10 +47,12 @@ export default class Documentation extends Component {
           </GridCell>
         </Grid>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoint'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoints'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoint'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoints'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

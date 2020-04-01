@@ -15,10 +15,13 @@ export function Default() {
   return (
     <Grid>
       <GridCell>
-        <Button onClick={ () => setAnimated(a => !a) } size="small"> Toggle Animation</Button>
+        <Button onClick={() => setAnimated(a => !a)} size="small">
+          {' '}
+          Toggle Animation
+        </Button>
       </GridCell>
       <GridCell>
-        <Animation toggled={ animated }>Animated text</Animation>
+        <Animation toggled={animated}>Animated text</Animation>
       </GridCell>
     </Grid>
   );

@@ -13,11 +13,13 @@ export default class SparkLine extends Component {
      * The data used to render the lines and final Point of the last data
      * entry.
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      lineColor: PropTypes.string.isRequired,
-      pointColor: PropTypes.string,
-      values: PropTypes.array.isRequired,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        lineColor: PropTypes.string.isRequired,
+        pointColor: PropTypes.string,
+        values: PropTypes.array.isRequired,
+      })
+    ).isRequired,
     /** Height of the line area */
     height: PropTypes.string.isRequired,
     /** Size of the line point */
@@ -26,7 +28,7 @@ export default class SparkLine extends Component {
 
   static defaultProps = {
     pointSize: '.5rem',
-  }
+  };
 
   render() {
     const { benchmark, data, height, pointSize } = this.props;
@@ -45,39 +47,43 @@ export default class SparkLine extends Component {
     }
 
     return (
-      <Base className="ax-spark-line" style={ { height } }>
-        { benchmark !== undefined && (
+      <Base className="ax-spark-line" style={{ height }}>
+        {benchmark !== undefined && (
           <div className="ax-spark-line__line">
             <Line
-                color="subtle"
-                data={ [benchmark, benchmark] }
-                height={ height }
-                lower={ lower }
-                upper={ upper }
-                width="0.0625rem" />
+              color="subtle"
+              data={[benchmark, benchmark]}
+              height={height}
+              lower={lower}
+              upper={upper}
+              width="0.0625rem"
+            />
           </div>
-        ) }
+        )}
 
-        { data.map(({ lineColor, pointColor, values }, index) => (
-          <div className="ax-spark-line__line" key={ index }>
+        {data.map(({ lineColor, pointColor, values }, index) => (
+          <div className="ax-spark-line__line" key={index}>
             <Line
-                color={ lineColor }
-                data={ values }
-                height={ height }
-                lower={ lower }
-                upper={ upper }
-                width="0.09375rem">
-              { pointColor && values.map((_, index, { length }) =>
+              color={lineColor}
+              data={values}
+              height={height}
+              lower={lower}
+              upper={upper}
+              width="0.09375rem"
+            >
+              {pointColor &&
+                values.map((_, index, { length }) =>
                   index + 1 < length ? null : (
                     <LinePoint
-                        color={ pointColor }
-                        key={ index }
-                        size={ pointSize } />
+                      color={pointColor}
+                      key={index}
+                      size={pointSize}
+                    />
                   )
-              ) }
+                )}
             </Line>
           </div>
-        )) }
+        ))}
       </Base>
     );
   }

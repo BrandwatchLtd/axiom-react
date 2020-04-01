@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  DataPoints,
-  DataPoint,
-} from '@brandwatch/axiom-charts';
+import { DataPoints, DataPoint } from '@brandwatch/axiom-charts';
 import {
   DropdownContext,
   DropdownContent,
@@ -34,18 +31,22 @@ export default class Documentation extends Component {
             <PositionSource>
               <DropdownContext>
                 <DropdownContent>
-                  <Heading textCenter textStrong>Positioned content</Heading>
+                  <Heading textCenter textStrong>
+                    Positioned content
+                  </Heading>
                 </DropdownContent>
               </DropdownContext>
             </PositionSource>
           </Position>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Position/Position'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Position/PositionSource'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Position/PositionTarget'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Position/Position'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Position/PositionSource'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Position/PositionTarget'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

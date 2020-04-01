@@ -10,7 +10,6 @@ const getComponent = () =>
     </ChartKey>
   );
 
-
 describe('ChartKey', () => {
   it('renders with defaultProps', () => {
     const component = getComponent();

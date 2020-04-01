@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
 import Base from './Base';
 
-const getComponent = (props = {}) =>
-  renderer.create(
-    <Base { ...props } />
-  );
+const getComponent = (props = {}) => renderer.create(<Base {...props} />);
 
 describe('Base', () => {
   it('renders with defaultProps', () => {
@@ -23,9 +20,7 @@ describe('Base', () => {
   it('renders class Component', () => {
     class CustomComponent extends Component {
       render() {
-        return (
-          <span />
-        );
+        return <span />;
       }
     }
 
@@ -48,14 +43,13 @@ describe('Base', () => {
   });
 
   describe('renders cloak', () =>
-    [undefined, true, false].forEach((cloak) =>
+    [undefined, true, false].forEach(cloak =>
       it(String(cloak), () => {
         const component = getComponent({ cloak });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       })
-    )
-  );
+    ));
 
   it('renders cloakContainer', () => {
     const component = getComponent({ cloakContainer: true });
@@ -64,7 +58,7 @@ describe('Base', () => {
   });
 
   describe('renders with hiddenUntil', () => {
-    ['small', 'medium', 'large'].forEach((hiddenUntil) => {
+    ['small', 'medium', 'large'].forEach(hiddenUntil => {
       it(hiddenUntil, () => {
         const component = getComponent({ hiddenUntil });
         const tree = component.toJSON();
@@ -74,7 +68,7 @@ describe('Base', () => {
   });
 
   describe('renders with visibleUntil', () => {
-    ['small', 'medium', 'large'].forEach((visibleUntil) => {
+    ['small', 'medium', 'large'].forEach(visibleUntil => {
       it(visibleUntil, () => {
         const component = getComponent({ visibleUntil });
         const tree = component.toJSON();
@@ -90,7 +84,10 @@ describe('Base', () => {
   });
 
   it('renders sticky with style', () => {
-    const component = getComponent({ sticky: '1rem', style: { height: '1rem' } });
+    const component = getComponent({
+      sticky: '1rem',
+      style: { height: '1rem' },
+    });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -102,7 +99,7 @@ describe('Base', () => {
   });
 
   describe('renders with textBreak', () => {
-    ['none', 'all', 'word'].forEach((textBreak) => {
+    ['none', 'all', 'word'].forEach(textBreak => {
       it(textBreak, () => {
         const component = getComponent({ textBreak });
         const tree = component.toJSON();
@@ -112,7 +109,7 @@ describe('Base', () => {
   });
 
   describe('renders with textCenter', () => {
-    [true, 'small', 'medium', 'large'].forEach((textCenter) => {
+    [true, 'small', 'medium', 'large'].forEach(textCenter => {
       it(String(textCenter), () => {
         const component = getComponent({ textCenter });
         const tree = component.toJSON();
@@ -122,7 +119,7 @@ describe('Base', () => {
   });
 
   describe('renders with textCase', () => {
-    ['upper', 'capital', 'lower'].forEach((textCase) => {
+    ['upper', 'capital', 'lower'].forEach(textCase => {
       it(textCase, () => {
         const component = getComponent({ textCase });
         const tree = component.toJSON();
@@ -130,7 +127,6 @@ describe('Base', () => {
       });
     });
   });
-
 
   describe('renders with textColor', () => {
     [
@@ -141,7 +137,7 @@ describe('Base', () => {
       'subtle',
       'success',
       'warning',
-    ].forEach((textColor) => {
+    ].forEach(textColor => {
       it(textColor, () => {
         const component = getComponent({ textColor });
         const tree = component.toJSON();
@@ -163,7 +159,7 @@ describe('Base', () => {
   });
 
   describe('renders with textLeft', () => {
-    [true, 'small', 'medium', 'large'].forEach((textLeft) => {
+    [true, 'small', 'medium', 'large'].forEach(textLeft => {
       it(String(textLeft), () => {
         const component = getComponent({ textLeft });
         const tree = component.toJSON();
@@ -173,7 +169,7 @@ describe('Base', () => {
   });
 
   describe('renders with textRight', () => {
-    [true, 'small', 'medium', 'large'].forEach((textRight) => {
+    [true, 'small', 'medium', 'large'].forEach(textRight => {
       it(String(textRight), () => {
         const component = getComponent({ textRight });
         const tree = component.toJSON();
@@ -192,7 +188,7 @@ describe('Base', () => {
       'label',
       'body',
       'small',
-    ].forEach((textSize) => {
+    ].forEach(textSize => {
       it(textSize, () => {
         const component = getComponent({ textSize });
         const tree = component.toJSON();

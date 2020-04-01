@@ -36,7 +36,7 @@ export function Default() {
 
 export function Disabled() {
   return (
-    <Tooltip enabled={ false } position="bottom">
+    <Tooltip enabled={false} position="bottom">
       <TooltipTarget>
         <IconButton name="question-mark" size="small" />
       </TooltipTarget>
@@ -72,19 +72,21 @@ export function WithRef() {
   return (
     <React.Fragment>
       <Button
-          onClick={ () => {
-            ref.current.showTooltip();
-          } }>
-          Open
+        onClick={() => {
+          ref.current.showTooltip();
+        }}
+      >
+        Open
       </Button>
       <Button
-          onClick={ () => {
-            ref.current.hideTooltip();
-          } }
-          style="secondary">
-          Close
+        onClick={() => {
+          ref.current.hideTooltip();
+        }}
+        style="secondary"
+      >
+        Close
       </Button>
-      <Tooltip position="bottom" ref={ ref }>
+      <Tooltip position="bottom" ref={ref}>
         <TooltipTarget>
           <IconButton name="question-mark" size="small" />
         </TooltipTarget>

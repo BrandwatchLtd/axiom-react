@@ -37,12 +37,8 @@ export default class AlertDialog extends Component {
     const { children, onRequestClose, ...rest } = this.props;
 
     return (
-      <Modal { ...rest }
-          onOverlayClick={ onRequestClose }
-          overlayShade={ null }>
-        <Base className="ax-alert-dialog">
-          { children }
-        </Base>
+      <Modal {...rest} onOverlayClick={onRequestClose} overlayShade={null}>
+        <Base className="ax-alert-dialog">{children}</Base>
       </Modal>
     );
   }

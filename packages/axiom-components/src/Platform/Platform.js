@@ -14,26 +14,28 @@ export default function Platform({
   shade = 'shade-1',
   ...rest
 }) {
-
   const classes = classnames('ax-platform', `ax-platform--${shade}`, {
     'ax-platform--responsive': responsive,
     'ax-platform--console-open': openConsolePosition,
   });
 
-  const providerValue = useMemo(() => ({
-    onConsoleClose,
-    openConsolePosition,
-    openConsoleWidth,
-  } ), [onConsoleClose, openConsolePosition, openConsoleWidth]);
+  const providerValue = useMemo(
+    () => ({
+      onConsoleClose,
+      openConsolePosition,
+      openConsoleWidth,
+    }),
+    [onConsoleClose, openConsolePosition, openConsoleWidth]
+  );
 
   return (
-    <PlaformContext.Provider
-        value={ providerValue }>
-      <Base { ...rest } className={ classes }>
-        { children }
+    <PlaformContext.Provider value={providerValue}>
+      <Base {...rest} className={classes}>
+        {children}
         <div
-            className="ax-platform__mask"
-            onClick={ () => onConsoleClose && onConsoleClose() }/>
+          className="ax-platform__mask"
+          onClick={() => onConsoleClose && onConsoleClose()}
+        />
       </Base>
     </PlaformContext.Provider>
   );

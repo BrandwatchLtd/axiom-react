@@ -13,18 +13,27 @@ import GridCell from '../Grid/GridCell';
 import TextInput from '../Form/TextInput';
 import TextInputIcon from '../Form/TextInputIcon';
 
-const validTimeUnits = ['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years'];
+const validTimeUnits = [
+  'seconds',
+  'minutes',
+  'hours',
+  'days',
+  'weeks',
+  'months',
+  'years',
+];
 
-const getStateFromIsoDurationValue = (value) => {
+const getStateFromIsoDurationValue = value => {
   const duration = Duration.fromISO(value);
 
   if (!duration.isValid) {
     return {};
   }
 
-  const selectedUnit = [].concat(validTimeUnits)
+  const selectedUnit = []
+    .concat(validTimeUnits)
     .reverse()
-    .find((timeUnit) => duration.values[timeUnit]);
+    .find(timeUnit => duration.values[timeUnit]);
   const selectedValue = duration.values[selectedUnit];
 
   return {
@@ -34,7 +43,7 @@ const getStateFromIsoDurationValue = (value) => {
   };
 };
 
-const getIsoDurationValueFromState = (state) => {
+const getIsoDurationValueFromState = state => {
   const { selectedUnit, selectedValue } = state;
 
   if (!validTimeUnits.includes(selectedUnit) || !selectedValue) {
@@ -48,7 +57,7 @@ const getIsoDurationValueFromState = (state) => {
   return duration.toISO();
 };
 
-const formatTimeUnit = (timeUnit) => {
+const formatTimeUnit = timeUnit => {
   return `${timeUnit.slice(0, 1).toUpperCase()}${timeUnit.slice(1)}`;
 };
 
@@ -88,16 +97,20 @@ export default class DurationPicker extends Component {
 
   onChangeValue(event) {
     const inputValue = parseInt(event.target.value, 10);
-    const selectedValue = Number.isFinite(inputValue) && inputValue >= 1 ? inputValue : '';
+    const selectedValue =
+      Number.isFinite(inputValue) && inputValue >= 1 ? inputValue : '';
     const durationValue = getIsoDurationValueFromState({
       selectedUnit: this.state.selectedUnit,
       selectedValue,
     });
 
-    this.setState({
-      selectedValue,
-      value: durationValue,
-    }, this.onChange);
+    this.setState(
+      {
+        selectedValue,
+        value: durationValue,
+      },
+      this.onChange
+    );
   }
 
   onChangeUnit(selectedUnit) {
@@ -106,10 +119,13 @@ export default class DurationPicker extends Component {
       selectedValue: this.state.selectedValue,
     });
 
-    this.setState({
-      selectedUnit,
-      value: durationValue,
-    }, this.onChange);
+    this.setState(
+      {
+        selectedUnit,
+        value: durationValue,
+      },
+      this.onChange
+    );
   }
 
   onChange() {
@@ -118,14 +134,24 @@ export default class DurationPicker extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.value !== this.props.value) {
-      this.setState(getStateFromIsoDurationValue(this.props.value), this.onChange);
+      this.setState(
+        getStateFromIsoDurationValue(this.props.value),
+        this.onChange
+      );
     }
   }
 
   render() {
     const { excludedOptions } = this.props;
-    const childProps = omit(this.props, ['excludedOptions', 'onBlur', 'value', 'onChange']);
-    const filteredTimeUnits = validTimeUnits.filter((timeUnit) => !excludedOptions.includes(timeUnit));
+    const childProps = omit(this.props, [
+      'excludedOptions',
+      'onBlur',
+      'value',
+      'onChange',
+    ]);
+    const filteredTimeUnits = validTimeUnits.filter(
+      timeUnit => !excludedOptions.includes(timeUnit)
+    );
 
     const {
       selectedUnit = filteredTimeUnits[0],
@@ -133,47 +159,42 @@ export default class DurationPicker extends Component {
     } = this.state;
 
     return (
-      <Grid
-          fit={ true }
-          gutters="tiny"
-          responsive={ false }
-          space="x0">
+      <Grid fit={true} gutters="tiny" responsive={false} space="x0">
         <GridCell>
           <TextInput
-              { ...childProps }
-              onBlur={ this.onBlur }
-              onChange={ this.onChangeValue }
-              type="number"
-              value={ (`${selectedValue}`) } />
+            {...childProps}
+            onBlur={this.onBlur}
+            onChange={this.onChangeValue}
+            type="number"
+            value={`${selectedValue}`}
+          />
         </GridCell>
         <GridCell>
-          <Dropdown
-              onRequestClose={ this.onBlur }>
+          <Dropdown onRequestClose={this.onBlur}>
             <DropdownTarget>
               <TextInput
-                  { ...childProps }
-                  isTarget
-                  readOnly
-                  value={ formatTimeUnit(selectedUnit) }>
-                <TextInputIcon
-                    name="chevron-down" />
+                {...childProps}
+                isTarget
+                readOnly
+                value={formatTimeUnit(selectedUnit)}
+              >
+                <TextInputIcon name="chevron-down" />
               </TextInput>
             </DropdownTarget>
             <DropdownSource>
               <DropdownContext>
                 <DropdownMenu>
-                  {
-                    filteredTimeUnits.map((timeUnit) => {
-                      return (
-                        <DropdownMenuItem
-                            key={ timeUnit }
-                            onClick={ () => this.onChangeUnit(timeUnit) }
-                            selected={ timeUnit === selectedUnit }>
-                          { formatTimeUnit(timeUnit) }
-                        </DropdownMenuItem>
-                      );
-                    })
-                  }
+                  {filteredTimeUnits.map(timeUnit => {
+                    return (
+                      <DropdownMenuItem
+                        key={timeUnit}
+                        onClick={() => this.onChangeUnit(timeUnit)}
+                        selected={timeUnit === selectedUnit}
+                      >
+                        {formatTimeUnit(timeUnit)}
+                      </DropdownMenuItem>
+                    );
+                  })}
                 </DropdownMenu>
               </DropdownContext>
             </DropdownSource>

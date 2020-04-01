@@ -14,8 +14,6 @@ export default class Cloak extends Component {
   render() {
     const { invisible, ...rest } = this.props;
 
-    return (
-      <Base cloak={ invisible } { ...rest } />
-    );
+    return <Base cloak={invisible} {...rest} />;
   }
 }

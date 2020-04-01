@@ -16,8 +16,8 @@ export default class TableHeader extends Component {
     const classes = classnames('ax-table__header', className);
 
     return (
-      <Base { ...rest } Component="thead" className={ classes }>
-        <tr>{ children }</tr>
+      <Base {...rest} Component="thead" className={classes}>
+        <tr>{children}</tr>
       </Base>
     );
   }

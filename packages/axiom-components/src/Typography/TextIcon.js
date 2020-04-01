@@ -3,8 +3,6 @@ import Icon from '../Icon/Icon';
 
 export default class TextIcon extends Component {
   render() {
-    return (
-      <Icon { ...this.props } inline />
-    );
+    return <Icon {...this.props} inline />;
   }
 }

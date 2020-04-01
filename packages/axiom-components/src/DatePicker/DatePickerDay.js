@@ -40,11 +40,12 @@ export default class DatePickerDay extends Component {
 
     return (
       <button
-          className={ classes }
-          disabled={ !date || disabled }
-          onClick={ () => date && onSelect(date) }>
+        className={classes}
+        disabled={!date || disabled}
+        onClick={() => date && onSelect(date)}
+      >
         <div className="ax-date-picker__day-inner">
-          { date && getDayNumber(date) }
+          {date && getDayNumber(date)}
         </div>
       </button>
     );

@@ -18,10 +18,12 @@ export default class Documentation extends Component {
           </List>
         </DocumentationShowCase>
 
-        <DocumentationApi components={ [
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/List/List'),
-          require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/List/ListItem'),
-        ] } />
+        <DocumentationApi
+          components={[
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/List/List'),
+            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/List/ListItem'),
+          ]}
+        />
       </DocumentationContent>
     );
   }

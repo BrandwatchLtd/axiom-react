@@ -3,8 +3,6 @@ import Base from '../Base/Base';
 
 export default class CloakContainer extends Component {
   render() {
-    return (
-      <Base cloakContainer { ...this.props } />
-    );
+    return <Base cloakContainer {...this.props} />;
   }
 }

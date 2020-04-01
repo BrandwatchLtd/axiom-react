@@ -5,11 +5,7 @@ import Word from './Word';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Word
-        font="Roboto, Helvetica, Arial, sans-serif"
-        x={ 0 }
-        y={ 0 }
-        { ...props } />
+    <Word font="Roboto, Helvetica, Arial, sans-serif" x={0} y={0} {...props} />
   );
 
 describe('Word', () => {
@@ -47,7 +43,7 @@ describe('Word', () => {
   });
 
   describe('renders with color', () => {
-    Object.keys(colors.productColorNames).forEach((color) => {
+    Object.keys(colors.productColorNames).forEach(color => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();

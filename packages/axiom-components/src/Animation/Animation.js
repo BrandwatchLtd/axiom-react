@@ -21,31 +21,22 @@ export default class Animation extends Component {
       'linear',
     ]),
     toggled: PropTypes.bool,
-  }
+  };
 
   static defaultProps = {
     name: 'fade-in-right',
     timingFunction: 'ease-out',
     toggled: false,
-  }
+  };
 
   render() {
-    const {
-      children,
-      name,
-      timingFunction,
-      toggled,
-    } = this.props;
+    const { children, name, timingFunction, toggled } = this.props;
 
     const classes = classnames(`ax-animation-wrapper__${name}`, {
       [`ax-animation-wrapper__timing-function--${timingFunction}`]: timingFunction,
       [`ax-animation-wrapper__${name}--toggled`]: toggled,
     });
 
-    return (
-      <Base className={ classes }>
-        { children }
-      </Base>
-    );
+    return <Base className={classes}>{children}</Base>;
   }
 }

@@ -12,10 +12,10 @@ export default class ColorSet extends Component {
     const { children, name, ...rest } = this.props;
 
     return (
-      <GridCell { ...rest }>
-        { name && <Heading space="x3">{ name }</Heading> }
-        <Grid gutters="tiny" none responsive={ false }>
-          { children }
+      <GridCell {...rest}>
+        {name && <Heading space="x3">{name}</Heading>}
+        <Grid gutters="tiny" none responsive={false}>
+          {children}
         </Grid>
       </GridCell>
     );

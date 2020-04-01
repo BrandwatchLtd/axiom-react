@@ -5,7 +5,7 @@ import TableBody from './TableBody';
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Table { ...props }>
+    <Table {...props}>
       <TableBody />
     </Table>
   );

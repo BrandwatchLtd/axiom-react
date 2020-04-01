@@ -18,16 +18,19 @@ export default class DocumentationMenuItem extends Component {
     });
 
     return (
-      <Base { ...rest }
-          Component="li"
-          className={ classes }
-          textSize="large"
-          textStrong>
+      <Base
+        {...rest}
+        Component="li"
+        className={classes}
+        textSize="large"
+        textStrong
+      >
         <Base
-            Component={ RouterLink }
-            className="ax-documentation-viewer__link"
-            to={ to }>
-          { children }
+          Component={RouterLink}
+          className="ax-documentation-viewer__link"
+          to={to}
+        >
+          {children}
         </Base>
       </Base>
     );

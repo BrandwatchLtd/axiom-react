@@ -66,54 +66,62 @@ export default class DocumentationApiRow extends Component {
   };
 
   render() {
-    const { component, defaultValue, description, disabled, name, required, type, values } = this.props;
+    const {
+      component,
+      defaultValue,
+      description,
+      disabled,
+      name,
+      required,
+      type,
+      values,
+    } = this.props;
     const PropEditor = propEditorMap[type.name];
-    const showDefault = defaultValue !== undefined &&
-      type && type.name !== 'func' && type.name !== 'arrayOf';
+    const showDefault =
+      defaultValue !== undefined &&
+      type &&
+      type.name !== 'func' &&
+      type.name !== 'arrayOf';
 
     return (
       <TableRow>
         <TableCell>
-          <Heading
-              space="x0"
-              textStrong>
-            { name }
+          <Heading space="x0" textStrong>
+            {name}
           </Heading>
 
-          { description && (
-            <Paragraph
-                space="x0"
-                textColor="subtle"
-                textSize="small">
-              { description }
+          {description && (
+            <Paragraph space="x0" textColor="subtle" textSize="small">
+              {description}
             </Paragraph>
-          ) }
+          )}
         </TableCell>
 
         <TableCell>
-          <Badge color={ typeColorMap[type.name] } opacity={ 0.2 }>
-            { type.name }
+          <Badge color={typeColorMap[type.name]} opacity={0.2}>
+            {type.name}
           </Badge>
         </TableCell>
 
-        <TableCell>{ showDefault && defaultValue.value.toString() }</TableCell>
+        <TableCell>{showDefault && defaultValue.value.toString()}</TableCell>
         <TableCell>
-          { PropEditor && (
+          {PropEditor && (
             <PropEditor
-                disabled={ disabled }
-                prop={ name }
-                propOptions={ { } }
-                required={ required }
-                setOptionValue={ () => {} }
-                setValue={ this.context.setValue.bind(null, component, name) }
-                type={ type }
-                value={ this.context.getPropValue(component, name) }
-                values={ values } />
-          ) }
+              disabled={disabled}
+              prop={name}
+              propOptions={{}}
+              required={required}
+              setOptionValue={() => {}}
+              setValue={this.context.setValue.bind(null, component, name)}
+              type={type}
+              value={this.context.getPropValue(component, name)}
+              values={values}
+            />
+          )}
         </TableCell>
 
         <TableCell>
-          { required && (
+          {required && (
             <Tooltip>
               <TooltipTarget>
                 <DataPoints size=".75rem">
@@ -127,7 +135,7 @@ export default class DocumentationApiRow extends Component {
                 </TooltipContext>
               </TooltipSource>
             </Tooltip>
-          ) }
+          )}
         </TableCell>
       </TableRow>
     );

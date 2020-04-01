@@ -31,15 +31,17 @@ export default class SelectOption extends Component {
     const { selectedOptionValue } = this.context;
 
     const selected =
-      (Array.isArray(selectedOptionValue) && selectedOptionValue.indexOf(value) !== -1)
-      || value === selectedOptionValue;
+      (Array.isArray(selectedOptionValue) &&
+        selectedOptionValue.indexOf(value) !== -1) ||
+      value === selectedOptionValue;
 
     return (
       <DropdownMenuItem
-          { ...props }
-          onClick={ this.handleClick }
-          selected={ selected }>
-        { children }
+        {...props}
+        onClick={this.handleClick}
+        selected={selected}
+      >
+        {children}
       </DropdownMenuItem>
     );
   }

@@ -11,14 +11,14 @@ export default class ColorsLetter extends Component {
     const { r, g, b, a = 1 } = this.props.rgb;
 
     return (
-      <Color { ...this.props }>
+      <Color {...this.props}>
         <div
-            className="si-color-letter"
-            style={ { color: `rgba(${r},${g},${b},${a})` } }>
+          className="si-color-letter"
+          style={{ color: `rgba(${r},${g},${b},${a})` }}
+        >
           a
         </div>
       </Color>
     );
   }
 }
-

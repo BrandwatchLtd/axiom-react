@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 
-const cancelable = (fn) => {
+const cancelable = fn => {
   let cancelled;
 
   const wrapped = (...args) => {
@@ -10,7 +10,7 @@ const cancelable = (fn) => {
     }
   };
 
-  wrapped.cancel = () => cancelled = true;
+  wrapped.cancel = () => (cancelled = true);
 
   return wrapped;
 };
@@ -38,12 +38,16 @@ export default class ImageFallback extends Component {
       this.image = new window.Image();
       this.image.src = src;
       this.image.onload = cancelable((...args) => {
-        this.setState(({ useFallback }) => useFallback && ({ useFallback: false }));
+        this.setState(
+          ({ useFallback }) => useFallback && { useFallback: false }
+        );
         if (onLoad) onLoad(...args);
       });
 
       this.image.onerror = cancelable((...args) => {
-        this.setState(({ useFallback }) => !useFallback && ({ useFallback: true }));
+        this.setState(
+          ({ useFallback }) => !useFallback && { useFallback: true }
+        );
         if (onError) onError(...args);
       });
     }

@@ -3,11 +3,7 @@ import renderer from 'react-test-renderer';
 import Notification from './Notification';
 
 function getComponent(props = {}) {
-  return renderer.create(
-    <Notification { ...props }>
-      Lorem ipsum
-    </Notification>
-  );
+  return renderer.create(<Notification {...props}>Lorem ipsum</Notification>);
 }
 
 describe('Notification', () => {
@@ -24,7 +20,7 @@ describe('Notification', () => {
   });
 
   describe('renders with type', () => {
-    ['error', 'info', 'success', 'warning'].forEach((type) => {
+    ['error', 'info', 'success', 'warning'].forEach(type => {
       it(type, () => {
         const component = getComponent({ type });
         const tree = component.toJSON();

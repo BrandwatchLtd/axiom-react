@@ -19,8 +19,8 @@ export default class DockIconLink extends Component {
 
     return (
       <DockItem>
-        <Base Component="a" { ...rest } className={ classes }>
-          <Icon name={ icon } size="2rem" />
+        <Base Component="a" {...rest} className={classes}>
+          <Icon name={icon} size="2rem" />
         </Base>
       </DockItem>
     );

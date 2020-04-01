@@ -22,8 +22,14 @@ export default class Table extends Component {
     const classes = classnames('ax-table', className);
 
     return (
-      <Base Component="table" space={ space } textColor="subtle" { ...rest } className={ classes } >
-        { children }
+      <Base
+        Component="table"
+        space={space}
+        textColor="subtle"
+        {...rest}
+        className={classes}
+      >
+        {children}
       </Base>
     );
   }

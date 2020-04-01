@@ -16,16 +16,14 @@ export default class ColumnChartYAxis extends Component {
 
   render() {
     const { align, children, yAxisWidth, ...rest } = this.props;
-    const classes = classnames('ax-column-chart__y-axis',
-      `ax-column-chart__y-axis--${align}`);
+    const classes = classnames(
+      'ax-column-chart__y-axis',
+      `ax-column-chart__y-axis--${align}`
+    );
 
     return (
-      <Base { ...rest }
-          className={ classes }
-          style={ { flexBasis: yAxisWidth } }>
-        <div className="ax-column-chart__y-axis-content">
-          { children }
-        </div>
+      <Base {...rest} className={classes} style={{ flexBasis: yAxisWidth }}>
+        <div className="ax-column-chart__y-axis-content">{children}</div>
       </Base>
     );
   }

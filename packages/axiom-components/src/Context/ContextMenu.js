@@ -21,14 +21,12 @@ export default class ContextMenu extends Component {
     const classes = classnames(
       className,
       'ax-context-menu',
-      `ax-context-menu--padding-vertical-${paddingVertical}`,
+      `ax-context-menu--padding-vertical-${paddingVertical}`
     );
 
     return (
-      <ContextContent { ...rest } padding="none">
-        <div className={ classes }>
-          { children }
-        </div>
+      <ContextContent {...rest} padding="none">
+        <div className={classes}>{children}</div>
       </ContextContent>
     );
   }
