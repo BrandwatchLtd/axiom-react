@@ -1,5 +1,7 @@
-import React from "react";
-import Progress from "./Progress";
+import React from 'react';
+import Progress from './Progress';
+import ProgressFinite from './ProgressFinite';
+import ProgressInfinite from './ProgressInfinite';
 
 const SvgFilters = () => (
   <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
@@ -37,6 +39,7 @@ const SvgFilters = () => (
 export default {
   title: "Components/Progress",
   component: Progress,
+  subcomponents: { ProgressFinite, ProgressInfinite },
   decorators: [
     // eslint-disable-next-line react/display-name
     (storyFn) => (
@@ -49,5 +52,11 @@ export default {
 };
 
 export function Default() {
-  return <Progress />;
+  return (
+    <React.Fragment>
+      <Progress complete />
+      <ProgressFinite percent={50} />
+      <ProgressInfinite />
+    </React.Fragment>
+  );
 }
