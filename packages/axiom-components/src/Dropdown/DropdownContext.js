@@ -45,10 +45,6 @@ export default class DropdownContext extends Component {
     this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
-  UNSAFE_componentWillMount() {
-    document.addEventListener("keydown", this.handleKeyDown);
-  }
-
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown);
     document.removeEventListener("mousedown", this.handleClick);
@@ -56,6 +52,7 @@ export default class DropdownContext extends Component {
   }
 
   componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown);
     document.addEventListener("mousedown", this.handleClick);
     document.addEventListener("mousemove", this.handleMouseMove);
   }

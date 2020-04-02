@@ -20,7 +20,11 @@ export default class ProgressFinite extends Component {
     size: "small",
   };
 
-  UNSAFE_componentWillMount = renderFilter;
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount = renderFilter;
 
   render() {
     const { percent, ...rest } = this.props;

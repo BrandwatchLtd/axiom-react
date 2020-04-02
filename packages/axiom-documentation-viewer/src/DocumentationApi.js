@@ -22,7 +22,7 @@ export default class DocumentationApi extends Component {
     registerPropTypes: PropTypes.func.isRequired,
   };
 
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     this.context.registerPropTypes(this.props.components);
   }
 

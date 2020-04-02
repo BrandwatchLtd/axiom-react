@@ -49,7 +49,7 @@ export default class Validate extends Component {
     this.id = uuid();
   }
 
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     if (!this.shouldValidate()) return;
 
     this.context.registerValidate(this.validationGetter, this.id);
