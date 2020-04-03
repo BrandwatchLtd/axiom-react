@@ -70,8 +70,8 @@ exports[`babelPluginAxiom property access 1`] = `
 
 /* eslint-disable no-console */
 console.log(colors.foo);
-console.log(colors['foo']);
-console.log(colors['foo-bar']);"
+console.log(colors[\\"foo\\"]);
+console.log(colors[\\"foo-bar\\"]);"
 `;
 
 exports[`babelPluginAxiom scoped imports 1`] = `
