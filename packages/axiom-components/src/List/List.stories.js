@@ -17,3 +17,33 @@ export function Default() {
     </List>
   );
 }
+
+export function Inline() {
+  return (
+    <List style="inline">
+      <ListItem>List item</ListItem>
+      <ListItem>List item</ListItem>
+      <ListItem>List item</ListItem>
+    </List>
+  );
+}
+
+export function Ordered() {
+  return (
+    <List style="ordered">
+      <ListItem>List item</ListItem>
+      <ListItem>List item</ListItem>
+      <ListItem>List item</ListItem>
+    </List>
+  );
+}
+
+export function None() {
+  return (
+    <List style="none">
+      <ListItem>List item</ListItem>
+      <ListItem>List item</ListItem>
+      <ListItem>List item</ListItem>
+    </List>
+  );
+}

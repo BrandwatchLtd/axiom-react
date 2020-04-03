@@ -10,7 +10,7 @@ export default {
   component: Form,
 };
 
-export function Default() {
+export function WithValidation() {
   const [value, setValue] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 

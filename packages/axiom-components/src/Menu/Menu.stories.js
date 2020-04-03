@@ -5,6 +5,7 @@ import MenuItem from "./MenuItem";
 export default {
   title: "Components/Menu",
   component: Menu,
+  subcomponents: { MenuItem },
 };
 
 export function Default() {
@@ -12,7 +13,7 @@ export function Default() {
     <Menu>
       <MenuItem active>Menu item</MenuItem>
       <MenuItem>Menu item</MenuItem>
-      <MenuItem>Menu item</MenuItem>
+      <MenuItem disabled>Menu item</MenuItem>
     </Menu>
   );
 }
