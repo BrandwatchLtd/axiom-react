@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Image from '../Image/Image';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Image from "../Image/Image";
 
 export default class Avatar extends Component {
   static propTypes = {
     /** Border around the avatar */
-    border: PropTypes.oneOf(['small', 'large']),
+    border: PropTypes.oneOf(["small", "large"]),
     /** Fallback content when the image fails to load */
     children: PropTypes.node,
     /** Size of the Avatar */
@@ -15,7 +15,7 @@ export default class Avatar extends Component {
   };
 
   static defaultProps = {
-    border: 'small',
+    border: "small",
   };
 
   render() {

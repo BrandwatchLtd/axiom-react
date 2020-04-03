@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { UserMenu } from '@brandwatch/axiom-composites';
-import { DropdownMenu, DropdownMenuItem } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { UserMenu } from "@brandwatch/axiom-composites";
+import { DropdownMenu, DropdownMenuItem } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -28,7 +28,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/UserMenu/UserMenu'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-composites/src/UserMenu/UserMenu"),
           ]}
         />
       </DocumentationContent>

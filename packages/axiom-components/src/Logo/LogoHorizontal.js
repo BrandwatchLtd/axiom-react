@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Logo from './Logo';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Logo from "./Logo";
 
 export default class LogoHorizontal extends Component {
   static propTypes = {

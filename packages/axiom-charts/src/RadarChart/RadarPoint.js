@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import ChartContext from '../ChartContext/ChartContext';
-import DataPoint from '../DataPoint/DataPoint';
-import DataPoints from '../DataPoint/DataPoints';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ChartContext from "../ChartContext/ChartContext";
+import DataPoint from "../DataPoint/DataPoint";
+import DataPoints from "../DataPoint/DataPoints";
 
 export default class RadarPoint extends Component {
   static propTypes = {
@@ -41,7 +41,7 @@ export default class RadarPoint extends Component {
       >
         <ChartContext {...rest} colors={colors} label={label} value={value}>
           <DataPoints size="0.5rem">
-            {colors.map(color => (
+            {colors.map((color) => (
               <DataPoint color={color} key={color} />
             ))}
           </DataPoints>

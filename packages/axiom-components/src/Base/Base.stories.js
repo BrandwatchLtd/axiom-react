@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import React, { useEffect, useRef } from 'react';
-import Base from './Base';
-import Paragraph from '../Typography/Paragraph';
-import Card from '../Card/Card';
-import CardContent from '../Card/CardContent';
+import React, { useEffect, useRef } from "react";
+import Base from "./Base";
+import Paragraph from "../Typography/Paragraph";
+import Card from "../Card/Card";
+import CardContent from "../Card/CardContent";
 
 export default {
-  title: 'Components/Base',
+  title: "Components/Base",
   component: Base,
 };
 
@@ -42,7 +42,7 @@ SpreadPropsToBase.story = {
   parameters: {
     docs: {
       storyDescription:
-        'Internally nearly all components in Axiom render Base. This means you can pass Base properites via parent components they will be spread into Base. In the example below Paragraph passes textStrike to Base',
+        "Internally nearly all components in Axiom render Base. This means you can pass Base properites via parent components they will be spread into Base. In the example below Paragraph passes textStrike to Base",
     },
   },
 };
@@ -57,7 +57,7 @@ export function Text() {
 
 Text.story = {
   parameters: {
-    docs: { storyDescription: 'Base supports a number of text styles' },
+    docs: { storyDescription: "Base supports a number of text styles" },
   },
 };
 
@@ -66,7 +66,7 @@ export function BaseRef() {
 
   useEffect(() => {
     if (baseRef.current) {
-      console.log('ref', baseRef.current);
+      console.log("ref", baseRef.current);
     }
   }, [baseRef]);
 
@@ -81,7 +81,7 @@ BaseRef.story = {
   parameters: {
     docs: {
       storyDescription:
-        'You can use BaseRef to get a reference to the underlying DOM element for each component.',
+        "You can use BaseRef to get a reference to the underlying DOM element for each component.",
     },
   },
 };

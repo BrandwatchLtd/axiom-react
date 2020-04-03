@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import Line from '../Line/Line';
-import LinePoint from '../Line/LinePoint';
-import './SparkLine.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import Line from "../Line/Line";
+import LinePoint from "../Line/LinePoint";
+import "./SparkLine.css";
 
 export default class SparkLine extends Component {
   static propTypes = {
@@ -27,7 +27,7 @@ export default class SparkLine extends Component {
   };
 
   static defaultProps = {
-    pointSize: '.5rem',
+    pointSize: ".5rem",
   };
 
   render() {

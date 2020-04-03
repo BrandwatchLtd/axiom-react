@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './Reveal.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { findDOMNode } from "react-dom";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./Reveal.css";
 
 export default class Reveal extends Component {
   static propTypes = {
@@ -22,14 +22,14 @@ export default class Reveal extends Component {
     this.state = {
       height: 0,
       isTransitioning: props.visible,
-      overflow: 'hidden',
+      overflow: "hidden",
     };
   }
 
   componentDidMount() {
     const { visible } = this.props;
 
-    this.el.addEventListener('transitionend', () => {
+    this.el.addEventListener("transitionend", () => {
       if (this.props.visible) {
         this.afterReveal();
       } else {
@@ -58,7 +58,7 @@ export default class Reveal extends Component {
   }
 
   conceal() {
-    this.setState({ isTransitioning: true, overflow: 'hidden' });
+    this.setState({ isTransitioning: true, overflow: "hidden" });
     this._frameId = window.requestAnimationFrame(() => {
       this.setState({ height: this.inner.offsetHeight });
       this._frameId = window.requestAnimationFrame(() => {
@@ -94,8 +94,8 @@ export default class Reveal extends Component {
     const renderChildren = isTransitioning || !removeChildren || visible;
     const style = { height, opacity, overflow };
     const innerStyle = { overflow };
-    const classes = classnames('ax-reveal', {
-      'ax-reveal--visible': visible,
+    const classes = classnames("ax-reveal", {
+      "ax-reveal--visible": visible,
     });
 
     /* eslint-disable react/no-find-dom-node */
@@ -103,13 +103,13 @@ export default class Reveal extends Component {
       <Base
         {...rest}
         className={classes}
-        ref={el => (this.el = findDOMNode(el))}
-        space={visible ? space : 'x0'}
+        ref={(el) => (this.el = findDOMNode(el))}
+        space={visible ? space : "x0"}
         style={style}
       >
         <div
           className="ax-reveal__inner"
-          ref={el => (this.inner = el)}
+          ref={(el) => (this.inner = el)}
           style={innerStyle}
         >
           {renderChildren && children}

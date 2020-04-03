@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import DataPoint from './DataPoint';
-import DataPoints from './DataPoints';
+import React from "react";
+import renderer from "react-test-renderer";
+import DataPoint from "./DataPoint";
+import DataPoints from "./DataPoints";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -12,14 +12,14 @@ const getComponent = (props = {}) =>
     </DataPoints>
   );
 
-describe('DataPoints', () => {
-  it('renders with defaultProps', () => {
+describe("DataPoints", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with onClick', () => {
+  it("renders with onClick", () => {
     const component = getComponent({ onClick: () => {} });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

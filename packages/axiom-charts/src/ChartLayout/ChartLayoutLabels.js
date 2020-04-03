@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
-import classnames from 'classnames';
-import { Base } from '@brandwatch/axiom-components';
-import ChartLabel from './ChartLabel';
+import PropTypes from "prop-types";
+import React, { Component, Fragment } from "react";
+import classnames from "classnames";
+import { Base } from "@brandwatch/axiom-components";
+import ChartLabel from "./ChartLabel";
 
 export default class ChartLayoutLabels extends Component {
   static propTypes = {
-    axis: PropTypes.oneOf(['x', 'y']).isRequired,
+    axis: PropTypes.oneOf(["x", "y"]).isRequired,
     labels: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.string),
       PropTypes.arrayOf(
@@ -27,13 +27,13 @@ export default class ChartLayoutLabels extends Component {
 
   render() {
     const { axis, labels, lower, upper, ...rest } = this.props;
-    const side = axis === 'y' ? 'bottom' : 'left';
-    const isPrecise = typeof labels[0].value === 'number';
+    const side = axis === "y" ? "bottom" : "left";
+    const isPrecise = typeof labels[0].value === "number";
     const classes = classnames(`ax-chart-layout__${axis}-labels`, {
-      'ax-chart-layout__labels--precise': isPrecise,
+      "ax-chart-layout__labels--precise": isPrecise,
     });
 
-    if (!labels.some(label => (isPrecise ? label.label : label))) {
+    if (!labels.some((label) => (isPrecise ? label.label : label))) {
       return null;
     }
 

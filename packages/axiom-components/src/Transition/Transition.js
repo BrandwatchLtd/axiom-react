@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { animations } from '@brandwatch/axiom-materials';
-import { Base } from '@brandwatch/axiom-components';
-import './Transition.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { animations } from "@brandwatch/axiom-materials";
+import { Base } from "@brandwatch/axiom-components";
+import "./Transition.css";
 
 export default class Transition extends Component {
   static propTypes = {
@@ -29,13 +29,13 @@ export default class Transition extends Component {
 
     const directionNext = this.previousIndex < activeIndex;
     const duration = animations.transitionTimeSlow;
-    const className = directionNext ? 'ax-animate-next' : 'ax-animate-previous';
+    const className = directionNext ? "ax-animate-next" : "ax-animate-previous";
     const style = {
       animationDuration: `${duration}ms`,
     };
 
     // https://medium.com/lalilo/dynamic-transitions-with-react-router-and-react-transition-group-69ab795815c9
-    const childFactoryCreator = classNames => child =>
+    const childFactoryCreator = (classNames) => (child) =>
       React.cloneElement(child, {
         classNames,
       });

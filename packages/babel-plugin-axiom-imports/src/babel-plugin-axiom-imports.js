@@ -1,4 +1,4 @@
-const resolveImport = require('./resolve-import');
+const resolveImport = require("./resolve-import");
 
 module.exports = ({ types }) => {
   let specified;
@@ -12,7 +12,7 @@ module.exports = ({ types }) => {
     return types.clone(selectedAxioms[name]);
   };
 
-  const isSpecialTypes = node =>
+  const isSpecialTypes = (node) =>
     types.isMemberExpression(node) ||
     types.isProperty(node) ||
     types.isVariableDeclarator(node);
@@ -21,7 +21,7 @@ module.exports = ({ types }) => {
     scope.hasBinding(name) && scope.getBinding(name).path.type === type;
 
   const matchesAxiomExport = (path, name) =>
-    specified[name] && hasBindingOfType(path.scope, name, 'ImportSpecifier');
+    specified[name] && hasBindingOfType(path.scope, name, "ImportSpecifier");
 
   return {
     visitor: {
@@ -36,7 +36,7 @@ module.exports = ({ types }) => {
         if (resolveImport.packages[path.node.source.value]) {
           let remove;
 
-          path.node.specifiers.forEach(spec => {
+          path.node.specifiers.forEach((spec) => {
             if (types.isImportSpecifier(spec)) {
               remove = true;
               specified[spec.local.name] = {
@@ -63,7 +63,7 @@ module.exports = ({ types }) => {
         }
 
         if (path.node.arguments) {
-          path.node.arguments = path.node.arguments.map(argument =>
+          path.node.arguments = path.node.arguments.map((argument) =>
             matchesAxiomExport(path, path.node.callee.name)
               ? importAxiom(specified[path.node.callee.name], path.hub.file)
               : argument

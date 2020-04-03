@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Line, LinePoint } from '@brandwatch/axiom-charts';
+import React, { Component } from "react";
+import { Line, LinePoint } from "@brandwatch/axiom-charts";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import { lineChartData } from './chartData';
+} from "@brandwatch/axiom-documentation-viewer";
+import { lineChartData } from "./chartData";
 
 export default class Documentation extends Component {
   render() {
@@ -25,8 +25,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Line/Line'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Line/LinePoint'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Line/Line"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Line/LinePoint"),
           ]}
         />
       </DocumentationContent>

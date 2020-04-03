@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import './Dock.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import "./Dock.css";
 
 export default class Dock extends Component {
   static propTypes = {

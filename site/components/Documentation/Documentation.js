@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
-import { Link as RouterLink } from 'react-router-dom';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Switch, Route } from "react-router";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Base,
   Grid,
@@ -9,14 +9,14 @@ import {
   Link,
   Menu,
   MenuItem,
-} from '@brandwatch/axiom-components';
-import AxiomTitle from '../AxiomTitle/AxiomTitle';
-import Resources from './Resources';
-import Charts from './Resources/Charts';
-import Components from './Resources/Components';
-import Composites from './Resources/Composites';
-import Materials from './Resources/Materials';
-import './Documentation.css';
+} from "@brandwatch/axiom-components";
+import AxiomTitle from "../AxiomTitle/AxiomTitle";
+import Resources from "./Resources";
+import Charts from "./Resources/Charts";
+import Components from "./Resources/Components";
+import Composites from "./Resources/Composites";
+import Materials from "./Resources/Materials";
+import "./Documentation.css";
 
 export default class Documentation extends Component {
   static propTypes = {
@@ -54,7 +54,7 @@ export default class Documentation extends Component {
                   children={({ match }) => (
                     <MenuItem
                       active={!!match}
-                      onClick={() => push('/docs/packages/')}
+                      onClick={() => push("/docs/packages/")}
                     >
                       Packages
                     </MenuItem>

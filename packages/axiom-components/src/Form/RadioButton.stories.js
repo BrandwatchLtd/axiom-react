@@ -1,9 +1,9 @@
-import React from 'react';
-import RadioButton from './RadioButton';
-import RadioButtonGroup from './RadioButtonGroup';
+import React from "react";
+import RadioButton from "./RadioButton";
+import RadioButtonGroup from "./RadioButtonGroup";
 
 export default {
-  title: 'Components/RadioButton',
+  title: "Components/RadioButton",
   component: RadioButton,
 };
 

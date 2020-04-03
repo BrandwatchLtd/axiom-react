@@ -1,21 +1,21 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import ChartKey from '../Chart/ChartKey';
-import ChartKeyItem from '../Chart/ChartKeyItem';
-import ChartTable from '../ChartTable/ChartTable';
-import ChartTableAxisTitle from '../ChartTable/ChartTableAxisTitle';
-import ChartTableKey from '../ChartTable/ChartTableKey';
-import ChartTableLabel from '../ChartTable/ChartTableLabel';
-import ChartTableRow from '../ChartTable/ChartTableRow';
-import ChartTableRows from '../ChartTable/ChartTableRows';
-import ChartTableVisual from '../ChartTable/ChartTableVisual';
-import DataPoint from '../DataPoint/DataPoint';
-import DataPoints from '../DataPoint/DataPoints';
-import DotPlot from './DotPlot';
-import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
-import DotPlotDifferenceLine from './DotPlotDifferenceLine';
-import { formatData, flattenValues } from './utils';
-import './DotPlot.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ChartKey from "../Chart/ChartKey";
+import ChartKeyItem from "../Chart/ChartKeyItem";
+import ChartTable from "../ChartTable/ChartTable";
+import ChartTableAxisTitle from "../ChartTable/ChartTableAxisTitle";
+import ChartTableKey from "../ChartTable/ChartTableKey";
+import ChartTableLabel from "../ChartTable/ChartTableLabel";
+import ChartTableRow from "../ChartTable/ChartTableRow";
+import ChartTableRows from "../ChartTable/ChartTableRows";
+import ChartTableVisual from "../ChartTable/ChartTableVisual";
+import DataPoint from "../DataPoint/DataPoint";
+import DataPoints from "../DataPoint/DataPoints";
+import DotPlot from "./DotPlot";
+import DotPlotBenchmarkLine from "./DotPlotBenchmarkLine";
+import DotPlotDifferenceLine from "./DotPlotDifferenceLine";
+import { formatData, flattenValues } from "./utils";
+import "./DotPlot.css";
 
 export default class DotPlotChart extends Component {
   static propTypes = {
@@ -191,12 +191,12 @@ export default class DotPlotChart extends Component {
                   lower={finalLower}
                   mouseOverColors={selectedColors}
                   mouseOverRowIndex={selectedIndex}
-                  onDotMouseEnter={colors =>
+                  onDotMouseEnter={(colors) =>
                     this.handleDotMouseEnter(index, colors)
                   }
                   onDotMouseLeave={() => this.handleDotMouseLeave()}
                   onDropdownClose={() => this.handleDropdownClose()}
-                  onDropdownOpen={colors =>
+                  onDropdownOpen={(colors) =>
                     this.handleDropdownOpen(index, colors)
                   }
                   rawData={data[index]}

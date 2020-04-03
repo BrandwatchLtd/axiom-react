@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import omit from 'lodash.omit';
-import Base from '../Base/Base';
-import './Menu.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import omit from "lodash.omit";
+import Base from "../Base/Base";
+import "./Menu.css";
 
 export default class Menu extends Component {
   static propTypes = {
     /** MenuItems */
     children: PropTypes.node,
     /** Size of the menu */
-    size: PropTypes.oneOf(['medium', 'large']),
+    size: PropTypes.oneOf(["medium", "large"]),
   };
 
   static childContextTypes = {
@@ -17,7 +17,7 @@ export default class Menu extends Component {
   };
 
   static defaultProps = {
-    size: 'large',
+    size: "large",
   };
 
   getChildContext() {
@@ -30,7 +30,7 @@ export default class Menu extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Base {...omit(rest, ['size'])} Component="ul" className="ax-menu">
+      <Base {...omit(rest, ["size"])} Component="ul" className="ax-menu">
         {children}
       </Base>
     );

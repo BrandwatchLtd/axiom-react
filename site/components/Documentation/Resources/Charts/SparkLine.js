@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { SparkLine } from '@brandwatch/axiom-charts';
-import { Grid, GridCell } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { SparkLine } from "@brandwatch/axiom-charts";
+import { Grid, GridCell } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 import {
   sparkLineBenchmark,
   sparkLineData,
   sparkLineEmptyData,
   sparkLineNoDifferenceData,
-} from './chartData';
+} from "./chartData";
 
 export default class Documentation extends Component {
   render() {
@@ -56,7 +56,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/SparkLine/SparkLine'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/SparkLine/SparkLine"),
           ]}
         />
       </DocumentationContent>

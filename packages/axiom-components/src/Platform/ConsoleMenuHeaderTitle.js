@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Text from '../Typography/Text';
+import React, { Component } from "react";
+import Text from "../Typography/Text";
 
 export default class ConsoleMenuHeaderTitle extends Component {
   render() {

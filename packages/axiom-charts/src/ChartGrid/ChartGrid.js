@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Base } from '@brandwatch/axiom-components';
-import './ChartGrid.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { Base } from "@brandwatch/axiom-components";
+import "./ChartGrid.css";
 
 export default class ChartGrid extends Component {
   static propTypes = {
-    axis: PropTypes.oneOf(['x', 'y']).isRequired,
+    axis: PropTypes.oneOf(["x", "y"]).isRequired,
     children: PropTypes.node.isRequired,
     labels: PropTypes.arrayOf(
       PropTypes.shape({
@@ -19,8 +19,8 @@ export default class ChartGrid extends Component {
 
   render() {
     const { children, axis, labels, lower, upper, ...rest } = this.props;
-    const side = axis === 'y' ? 'top' : 'left';
-    const classes = classnames('ax-chart-grid', `ax-chart-grid--${axis}`);
+    const side = axis === "y" ? "top" : "left";
+    const classes = classnames("ax-chart-grid", `ax-chart-grid--${axis}`);
 
     if (!labels) {
       return children;

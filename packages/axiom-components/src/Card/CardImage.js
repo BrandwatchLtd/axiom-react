@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import Image from '../Image/Image';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import Image from "../Image/Image";
 
 export default class CardImage extends Component {
   static propTypes = {
@@ -15,7 +15,7 @@ export default class CardImage extends Component {
   render() {
     const { children, className, ...rest } = this.props;
 
-    const classes = classnames('ax-card__image', className);
+    const classes = classnames("ax-card__image", className);
 
     return (
       <Base className={classes}>

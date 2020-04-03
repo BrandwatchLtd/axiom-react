@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './ChedioButtox.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./ChedioButtox.css";
 
 export default class ChedioButtox extends Component {
   static propTypes = {
@@ -10,7 +10,7 @@ export default class ChedioButtox extends Component {
     className: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     indeterminate: PropTypes.bool,
-    inputType: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
+    inputType: PropTypes.oneOf(["checkbox", "radio"]).isRequired,
     invalid: PropTypes.bool,
     onClick: PropTypes.func,
     title: PropTypes.string,
@@ -37,8 +37,8 @@ export default class ChedioButtox extends Component {
 
     const handleClick =
       onClick &&
-      (e => {
-        if (e.target.tagName !== 'INPUT') {
+      ((e) => {
+        if (e.target.tagName !== "INPUT") {
           e.stopPropagation();
           return;
         }

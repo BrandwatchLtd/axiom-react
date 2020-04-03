@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base, Grid, Heading } from '@brandwatch/axiom-components';
-import './ColorGrid.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base, Grid, Heading } from "@brandwatch/axiom-components";
+import "./ColorGrid.css";
 
 export default class ColorGrid extends Component {
   static propTypes = {

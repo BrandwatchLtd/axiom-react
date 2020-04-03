@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Grid, GridCell, EllipsisTooltip } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { Grid, GridCell, EllipsisTooltip } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -13,14 +13,14 @@ export default class Documentation extends Component {
         <Grid>
           <GridCell>
             <DocumentationShowCase centered>
-              <div style={{ width: '100px', display: 'block' }}>
+              <div style={{ width: "100px", display: "block" }}>
                 <EllipsisTooltip>Text not wrapped</EllipsisTooltip>
               </div>
             </DocumentationShowCase>
           </GridCell>
           <GridCell>
             <DocumentationShowCase centered>
-              <div style={{ width: '100px', display: 'block' }}>
+              <div style={{ width: "100px", display: "block" }}>
                 <EllipsisTooltip>
                   Text that will be wrappen having a tooltip on hover
                 </EllipsisTooltip>
@@ -31,7 +31,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/EllipsisTooltip/EllipsisTooltip'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/EllipsisTooltip/EllipsisTooltip"),
           ]}
         />
       </DocumentationContent>

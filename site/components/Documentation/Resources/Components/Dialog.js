@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Button,
   ButtonGroup,
@@ -17,12 +17,12 @@ import {
   List,
   ListItem,
   Paragraph,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -31,7 +31,7 @@ export default class Documentation extends Component {
         <DocumentationShowCase hidePreview>
           <Dialog
             isOpen
-            onRequestClose={setValue => setValue('Dialog', 'isOpen', false)}
+            onRequestClose={(setValue) => setValue("Dialog", "isOpen", false)}
           >
             <DialogHeader>
               <Heading textSize="headtitle">Dialog Title</Heading>
@@ -92,10 +92,10 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/Dialog'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogBody'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogFooter'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogHeader'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/Dialog"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogBody"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogFooter"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dialog/DialogHeader"),
           ]}
         />
       </DocumentationContent>

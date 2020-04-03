@@ -1,13 +1,13 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import ColumnChart from './ColumnChart';
-import ColumnChartXAxis from './ColumnChartXAxis';
+import React from "react";
+import renderer from "react-test-renderer";
+import ColumnChart from "./ColumnChart";
+import ColumnChartXAxis from "./ColumnChartXAxis";
 
 const getComponent = (props = {}) =>
   renderer.create(
     <ColumnChart
-      chartKey={[{ label: 'Lorem', color: 'tiny-clanger' }]}
-      data={[{ label: 'test', values: {} }]}
+      chartKey={[{ label: "Lorem", color: "tiny-clanger" }]}
+      data={[{ label: "test", values: {} }]}
       height="10rem"
     >
       <ColumnChartXAxis labelColumnWidth="1rem" {...props}>
@@ -16,8 +16,8 @@ const getComponent = (props = {}) =>
     </ColumnChart>
   );
 
-describe('ColumnChartXAxis', () => {
-  it('renders with defaultProps', () => {
+describe("ColumnChartXAxis", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

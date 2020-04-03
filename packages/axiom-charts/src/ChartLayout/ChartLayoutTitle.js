@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
 
 export default class ChartLayoutTitle extends Component {
   static propTypes = {
-    axis: PropTypes.oneOf(['x', 'y']).isRequired,
+    axis: PropTypes.oneOf(["x", "y"]).isRequired,
   };
 
   render() {

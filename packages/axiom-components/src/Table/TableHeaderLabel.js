@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import TextIcon from '../Typography/TextIcon';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import TextIcon from "../Typography/TextIcon";
 
 export default class TableHeaderLabel extends Component {
   static propTypes = {
@@ -16,18 +16,18 @@ export default class TableHeaderLabel extends Component {
     /** Shrinks table column (Incompatible with 'width') */
     shrink: PropTypes.bool,
     /** Selects the column and sets the sort direction */
-    sortDirection: PropTypes.oneOf(['ascending', 'descending']),
+    sortDirection: PropTypes.oneOf(["ascending", "descending"]),
     /** Indicates the column is sortable if false it will remove the cloaked icon
     indicating sort direction */
     sortable: PropTypes.bool,
     /** Set text-align */
-    textAlign: PropTypes.oneOf(['left', 'right', 'centre']),
+    textAlign: PropTypes.oneOf(["left", "right", "centre"]),
     /** Set percentage column width (Incompatible with 'grow' and 'shink') */
     width: PropTypes.number,
   };
 
   static defaultProps = {
-    textAlign: 'left',
+    textAlign: "left",
     sortable: true,
   };
 
@@ -46,12 +46,12 @@ export default class TableHeaderLabel extends Component {
     } = this.props;
 
     const classes = classnames(
-      'ax-table__header-label',
+      "ax-table__header-label",
       `ax-table__header-label--align-${textAlign}`,
       {
-        'ax-table__header-label--grow': grow && !width,
-        'ax-table__header-label--selected': sortDirection !== undefined,
-        'ax-table__header-label--shrink': shrink && !width,
+        "ax-table__header-label--grow": grow && !width,
+        "ax-table__header-label--selected": sortDirection !== undefined,
+        "ax-table__header-label--shrink": shrink && !width,
       },
       className
     );
@@ -73,10 +73,10 @@ export default class TableHeaderLabel extends Component {
             <TextIcon
               cloak={sortDirection === undefined}
               name={
-                sortDirection === 'descending' ? 'triangle-down' : 'triangle-up'
+                sortDirection === "descending" ? "triangle-down" : "triangle-up"
               }
-              spaceLeft={textAlign === 'left' ? 'x2' : undefined}
-              spaceRight={textAlign === 'right' ? 'x2' : undefined}
+              spaceLeft={textAlign === "left" ? "x2" : undefined}
+              spaceRight={textAlign === "right" ? "x2" : undefined}
             />
           )}
         </button>

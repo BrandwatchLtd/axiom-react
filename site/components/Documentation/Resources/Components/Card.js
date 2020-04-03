@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 import {
   Badge,
   Candytar,
@@ -16,17 +16,17 @@ import {
   ListItem,
   Paragraph,
   TextIcon,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 class CardExampleContainer extends Component {
   render() {
     return (
-      <div {...this.props} style={{ margin: 'auto', maxWidth: '16.375rem' }} />
+      <div {...this.props} style={{ margin: "auto", maxWidth: "16.375rem" }} />
     );
   }
 }
@@ -44,7 +44,7 @@ class CardExampleContent extends Component {
         </Paragraph>
         <Paragraph space="x2" textColor="subtle" textSize="small">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore:{' '}
+          eiusmod tempor incididunt ut labore:{" "}
           <Link href="https://goo.gl/4oWkDa">https://goo.gl/4oWkDa</Link>
           <Link href="https://goo.gl/4oWkDa"> #HashTag</Link>
         </Paragraph>
@@ -171,10 +171,10 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/Card'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardContent'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImage'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardCaption'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/Card"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardContent"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImage"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardCaption"),
           ]}
         />
 
@@ -183,7 +183,7 @@ export default class Documentation extends Component {
             <GridCell none>
               <CardExampleContainer>
                 <Card shadow space="x4">
-                  <CardImages srcs={['/assets/card-1.jpeg']} />
+                  <CardImages srcs={["/assets/card-1.jpeg"]} />
                   <CardContent size="large">
                     <CardExampleContent />
                   </CardContent>
@@ -191,7 +191,7 @@ export default class Documentation extends Component {
 
                 <Card shadow space="x4">
                   <CardImages
-                    srcs={['/assets/card-1.jpeg', '/assets/card-2.jpeg']}
+                    srcs={["/assets/card-1.jpeg", "/assets/card-2.jpeg"]}
                   />
                   <CardContent size="large">
                     <CardExampleContent />
@@ -205,9 +205,9 @@ export default class Documentation extends Component {
                 <Card shadow space="x4">
                   <CardImages
                     srcs={[
-                      '/assets/card-1.jpeg',
-                      '/assets/card-2.jpeg',
-                      '/assets/card-3.jpeg',
+                      "/assets/card-1.jpeg",
+                      "/assets/card-2.jpeg",
+                      "/assets/card-3.jpeg",
                     ]}
                   />
                   <CardContent size="large">
@@ -218,10 +218,10 @@ export default class Documentation extends Component {
                 <Card shadow space="x4">
                   <CardImages
                     srcs={[
-                      '/assets/card-1.jpeg',
-                      '/assets/card-2.jpeg',
-                      '/assets/card-3.jpeg',
-                      '/assets/card-4.jpeg',
+                      "/assets/card-1.jpeg",
+                      "/assets/card-2.jpeg",
+                      "/assets/card-3.jpeg",
+                      "/assets/card-4.jpeg",
                     ]}
                   />
                   <CardContent size="large">
@@ -235,7 +235,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImages'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardImages"),
           ]}
         />
 
@@ -305,7 +305,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardList'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Card/CardList"),
           ]}
         />
       </DocumentationContent>

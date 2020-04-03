@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Animation,
   Card,
@@ -7,13 +7,13 @@ import {
   GridCell,
   Heading,
   Text,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   constructor(props) {
@@ -110,7 +110,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Animation/Animation'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Animation/Animation"),
           ]}
         />
       </DocumentationContent>

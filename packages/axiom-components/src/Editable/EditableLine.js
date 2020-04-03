@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import './EditableLine.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import "./EditableLine.css";
 
 export default class EditableLine extends Component {
   static propTypes = {
@@ -45,11 +45,11 @@ export default class EditableLine extends Component {
 
   handleOnKeyDown(event) {
     switch (event.key) {
-      case 'Enter':
+      case "Enter":
         event.preventDefault();
         this.input.blur();
         break;
-      case 'Escape':
+      case "Escape":
         this.setState({ value: this.props.value }, () => this.input.blur());
         break;
     }
@@ -68,16 +68,16 @@ export default class EditableLine extends Component {
         <input
           {...rest}
           className="ax-editable-line__input"
-          onBlur={event => this.handleOnBlur(event)}
-          onChange={event => this.handleChange(event)}
-          onKeyDown={event => this.handleOnKeyDown(event)}
+          onBlur={(event) => this.handleOnBlur(event)}
+          onChange={(event) => this.handleChange(event)}
+          onKeyDown={(event) => this.handleOnKeyDown(event)}
           placeholder={placeholder}
-          ref={el => (this.input = el)}
+          ref={(el) => (this.input = el)}
           value={value}
         />
 
         <div className="ax-editable-line__structure">
-          {value || placeholder || ' '}
+          {value || placeholder || " "}
         </div>
       </div>
     );

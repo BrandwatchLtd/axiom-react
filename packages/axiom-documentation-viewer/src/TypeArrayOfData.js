@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import {
   ButtonGroup,
   Button,
@@ -8,8 +8,8 @@ import {
   DialogBody,
   DialogFooter,
   Heading,
-} from '@brandwatch/axiom-components';
-import Editor from './Editor';
+} from "@brandwatch/axiom-components";
+import Editor from "./Editor";
 
 export default class TypeArrayOf extends Component {
   static propTypes = {

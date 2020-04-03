@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
 
 export default class ColumnChartVisual extends Component {
   static propTypes = {

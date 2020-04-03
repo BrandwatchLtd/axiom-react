@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { ColorPicker } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { ColorPicker } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -13,15 +13,15 @@ export default class Documentation extends Component {
         <DocumentationShowCase centered>
           <ColorPicker
             onSelectColor={(setValue, getValue, color) =>
-              setValue('ColorPicker', 'selected', color)
+              setValue("ColorPicker", "selected", color)
             }
           />
         </DocumentationShowCase>
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPicker'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPickerOption'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPicker"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/ColorPicker/ColorPickerOption"),
           ]}
         />
       </DocumentationContent>

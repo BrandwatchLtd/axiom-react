@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
 export default class GridCell extends Component {
   static propTypes = {
@@ -11,7 +11,7 @@ export default class GridCell extends Component {
     /*
      * Controls the direction of the grid cells
      */
-    direction: PropTypes.oneOf(['row', 'column']),
+    direction: PropTypes.oneOf(["row", "column"]),
     /**
      * Sizes itself according to the size of its contents. This causes the grid
      * to attempt to evenly distribute the cells, but allows cells to increase
@@ -23,7 +23,7 @@ export default class GridCell extends Component {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    fill: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    fill: PropTypes.oneOf([true, "small", "medium", "large"]),
     /**
      * Sizes itself irrespective of its contents. This causes the grid to evenly
      * distribute all children cells. If the grid has wrapping enabled, the cell
@@ -31,14 +31,14 @@ export default class GridCell extends Component {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    fit: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    fit: PropTypes.oneOf([true, "small", "medium", "large"]),
     /**
      * Sizes itself to 100% of the available width within a grid. This causes
      * all other siblings to placed vertically of itself.
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    full: PropTypes.oneOf([true, "small", "medium", "large"]),
     /**
      * Sizes itself according to the size of its contents, similar to `shrink` it
      * will no increase to any available space but also will not decrease below
@@ -46,7 +46,7 @@ export default class GridCell extends Component {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    none: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    none: PropTypes.oneOf([true, "small", "medium", "large"]),
     /**
      * Sizes itself according to the size of its contents, but does not increase
      * to any available width within a grid. This allows all other siblings to
@@ -54,7 +54,7 @@ export default class GridCell extends Component {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    shrink: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    shrink: PropTypes.oneOf([true, "small", "medium", "large"]),
     /**
      * Allows a grid cell function as a flex container itself.
      */
@@ -62,7 +62,7 @@ export default class GridCell extends Component {
     /**
      * Vertically aligns itself relative to other cells within a grid.
      */
-    verticalAlign: PropTypes.oneOf(['start', 'middle', 'end']),
+    verticalAlign: PropTypes.oneOf(["start", "middle", "end"]),
     /** Percentage width */
     width: PropTypes.number,
   };
@@ -84,21 +84,21 @@ export default class GridCell extends Component {
     } = this.props;
 
     const classes = classnames(
-      'ax-grid__cell',
+      "ax-grid__cell",
       {
         [`ax-grid__cell--${verticalAlign}`]: verticalAlign,
-        'ax-grid__cell--fill': fill === true,
-        'ax-grid__cell--fit': fit === true,
-        'ax-grid__cell--full': full === true,
-        'ax-grid__cell--none': none === true || width,
-        'ax-grid__cell--shrink': shrink === true,
+        "ax-grid__cell--fill": fill === true,
+        "ax-grid__cell--fit": fit === true,
+        "ax-grid__cell--full": full === true,
+        "ax-grid__cell--none": none === true || width,
+        "ax-grid__cell--shrink": shrink === true,
         [`ax-grid__cell--fit--${fit}`]: fit && fit !== true,
         [`ax-grid__cell--fill--${fill}`]: fill && fill !== true,
         [`ax-grid__cell--full--${full}`]: full && full !== true,
         [`ax-grid__cell--none--${none}`]: none && none !== true,
         [`ax-grid__cell--shrink--${shrink}`]: shrink && shrink !== true,
-        'ax-grid__cell--sub-grid': subGrid,
-        'ax-grid--columns': subGrid && direction === 'column',
+        "ax-grid__cell--sub-grid": subGrid,
+        "ax-grid--columns": subGrid && direction === "column",
       },
       className
     );

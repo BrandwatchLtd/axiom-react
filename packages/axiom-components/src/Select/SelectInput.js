@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import TextInput from '../Form/TextInput';
-import TextInputIcon from '../Form/TextInputIcon';
-import DropdownReactContext from '../Dropdown/DropdownReactContext';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import TextInput from "../Form/TextInput";
+import TextInputIcon from "../Form/TextInputIcon";
+import DropdownReactContext from "../Dropdown/DropdownReactContext";
 
 export default class SelectInput extends Component {
   static propTypes = {
@@ -24,10 +24,10 @@ export default class SelectInput extends Component {
     const { closeDropdown, openDropdown } = this.context;
 
     switch (key) {
-      case 'Enter':
+      case "Enter":
         closeDropdown();
         break;
-      case 'Tab':
+      case "Tab":
         closeDropdown();
         break;
       default:

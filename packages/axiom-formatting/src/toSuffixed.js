@@ -1,6 +1,6 @@
-import longNumber from './longNumber';
+import longNumber from "./longNumber";
 
-const isInvalidPrecision = precision =>
+const isInvalidPrecision = (precision) =>
   isNaN(parseInt(precision)) &&
   precision % 1 === 0 &&
   precision >= 0 &&
@@ -11,10 +11,10 @@ export const toFixed = (number, precision) => {
     number = number.toFixed(precision);
   }
 
-  return number.toString().replace(/\.0+$|(\.[0-9]*[1-9])0+$/, '$1');
+  return number.toString().replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1");
 };
 
-export const isInvalidNumber = number =>
+export const isInvalidNumber = (number) =>
   isNaN(parseFloat(number)) || !isFinite(number);
 
 export default (number, precision, suffixes) => {
@@ -27,7 +27,7 @@ export default (number, precision, suffixes) => {
   ];
 
   if (isInvalidNumber(number)) {
-    return '-';
+    return "-";
   }
 
   if (number <= threshold) {

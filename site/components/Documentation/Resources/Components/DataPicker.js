@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   DataPicker,
   DataPickerDropdown,
@@ -9,12 +9,12 @@ import {
   GridCell,
   Icon,
   Small,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -24,7 +24,7 @@ export default class Documentation extends Component {
           <DataPicker
             color="new-horizon"
             onSelectColor={(setValue, getValue, color) =>
-              setValue('DataPicker', 'color', color)
+              setValue("DataPicker", "color", color)
             }
             placeholder="Please select a value"
           >
@@ -71,9 +71,9 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DataPicker/DataPicker'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DataPicker/DataPickerDropdown'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DataPicker/DataPickerMeta'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/DataPicker/DataPicker"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/DataPicker/DataPickerDropdown"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/DataPicker/DataPickerMeta"),
           ]}
         />
       </DocumentationContent>

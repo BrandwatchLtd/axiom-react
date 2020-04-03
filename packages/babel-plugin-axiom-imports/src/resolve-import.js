@@ -1,17 +1,17 @@
-const path = require('path');
-const fs = require('fs');
-const Module = require('module');
-const { parse } = require('babylon');
+const path = require("path");
+const fs = require("fs");
+const Module = require("module");
+const { parse } = require("babylon");
 
 const supportedAxiomPackages = [
-  '@brandwatch/axiom-automation-testing',
-  '@brandwatch/axiom-charts',
-  '@brandwatch/axiom-components',
-  '@brandwatch/axiom-composites',
-  '@brandwatch/axiom-formatting',
-  '@brandwatch/axiom-localization',
-  '@brandwatch/axiom-materials',
-  '@brandwatch/axiom-utils',
+  "@brandwatch/axiom-automation-testing",
+  "@brandwatch/axiom-charts",
+  "@brandwatch/axiom-components",
+  "@brandwatch/axiom-composites",
+  "@brandwatch/axiom-formatting",
+  "@brandwatch/axiom-localization",
+  "@brandwatch/axiom-materials",
+  "@brandwatch/axiom-utils",
 ];
 
 const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
@@ -29,24 +29,24 @@ const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
             })
           )
         ),
-        '../../src/index.js'
+        "../../src/index.js"
       ),
-      'utf8'
+      "utf8"
     );
   } catch (error) {
-    if (error.code !== 'MODULE_NOT_FOUND') {
+    if (error.code !== "MODULE_NOT_FOUND") {
       throw error;
     }
   }
 
   if (exportList) {
     memo[packageName] = {};
-    parse(exportList, { sourceType: 'module' }).program.body.forEach(node => {
-      node.specifiers.forEach(spec => {
+    parse(exportList, { sourceType: "module" }).program.body.forEach((node) => {
+      node.specifiers.forEach((spec) => {
         switch (spec.type) {
-          case 'ImportNamespaceSpecifier':
+          case "ImportNamespaceSpecifier":
             return (importList[spec.local.name] = node.source.value);
-          case 'ExportSpecifier':
+          case "ExportSpecifier":
             if (
               spec.local.name === spec.exported.name &&
               importList[spec.local.name]
@@ -56,12 +56,12 @@ const exportsList = supportedAxiomPackages.reduce((memo, packageName) => {
                   `${packageName}/dist/cjs`,
                   importList[spec.local.name]
                 ),
-                '*',
+                "*",
               ];
             } else {
               memo[packageName][spec.exported.name] = [
                 path.join(`${packageName}/dist/cjs`, node.source.value),
-                'default',
+                "default",
               ];
             }
         }

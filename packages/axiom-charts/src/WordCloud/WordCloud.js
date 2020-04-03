@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Children, cloneElement, Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import './WordCloud.css';
+import PropTypes from "prop-types";
+import React, { Children, cloneElement, Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import "./WordCloud.css";
 
 export default class WordCloud extends Component {
   static propTypes = {

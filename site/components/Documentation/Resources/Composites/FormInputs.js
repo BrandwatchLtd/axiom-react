@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   ConfirmPasswordInput,
   CurrentPasswordInput,
   NewPasswordInput,
-} from '@brandwatch/axiom-composites';
-import { Form, Paragraph } from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-composites";
+import { Form, Paragraph } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      confirmPassword: '',
-      confirmError: '',
-      currentPassword: '',
-      currentError: '',
-      newPassword: '',
-      newError: '',
+      confirmPassword: "",
+      confirmError: "",
+      currentPassword: "",
+      currentError: "",
+      newPassword: "",
+      newError: "",
     };
   }
 
@@ -45,7 +45,7 @@ export default class Documentation extends Component {
             requiredError="Password field is required"
           >
             <ConfirmPasswordInput
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ confirmPassword: event.target.value })
               }
               passwordValue="Password1"
@@ -59,7 +59,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/ConfirmPasswordInput'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/ConfirmPasswordInput"),
           ]}
         />
 
@@ -73,7 +73,7 @@ export default class Documentation extends Component {
           >
             <CurrentPasswordInput
               invalid={false}
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ currentPassword: event.target.value })
               }
               value={currentPassword}
@@ -86,7 +86,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/CurrentPasswordInput'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/CurrentPasswordInput"),
           ]}
         />
 
@@ -99,7 +99,7 @@ export default class Documentation extends Component {
             requiredError="Password field is required"
           >
             <NewPasswordInput
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ newPassword: event.target.value })
               }
               value={newPassword}
@@ -110,7 +110,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/NewPasswordInput'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-composites/src/FormInputs/NewPasswordInput"),
           ]}
         />
       </DocumentationContent>

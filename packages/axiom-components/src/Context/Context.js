@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import ContextTip from './ContextTip';
-import './Context.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import ContextTip from "./ContextTip";
+import "./Context.css";
 
 export default class Context extends Component {
   static propTypes = {
@@ -11,22 +11,22 @@ export default class Context extends Component {
     children: PropTypes.node,
     className: PropTypes.string,
     color: PropTypes.oneOf([
-      'success',
-      'warning',
-      'error',
-      'info',
-      'carbon',
-      'white',
+      "success",
+      "warning",
+      "error",
+      "info",
+      "carbon",
+      "white",
     ]),
     maxHeight: PropTypes.string,
-    position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    position: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     width: PropTypes.string,
   };
 
   static defaultProps = {
-    maxHeight: '30rem',
-    position: 'top',
-    width: '14.5rem',
+    maxHeight: "30rem",
+    position: "top",
+    width: "14.5rem",
   };
 
   render() {
@@ -43,7 +43,7 @@ export default class Context extends Component {
 
     const classes = classnames(
       className,
-      'ax-context',
+      "ax-context",
       `ax-context--${position}`,
       {
         [`ax-context--${color}`]: color,

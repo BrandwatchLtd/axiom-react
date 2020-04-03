@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Button from '../Button/Button';
-import ButtonIcon from '../Button/ButtonIcon';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import Paragraph from '../Typography/Paragraph';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Button from "../Button/Button";
+import ButtonIcon from "../Button/ButtonIcon";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import Paragraph from "../Typography/Paragraph";
 import {
   getMonthName,
   getYearNumber,
   isSameOrAfterMonth,
   isSameOrBeforeMonth,
-} from './utils';
+} from "./utils";
 
 export default class DatePickerHeaderControl extends Component {
   static propTypes = {

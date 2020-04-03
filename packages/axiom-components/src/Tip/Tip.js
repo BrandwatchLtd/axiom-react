@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './Tip.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./Tip.css";
 
 export default class Tip extends Component {
   static propTypes = {
@@ -10,42 +10,42 @@ export default class Tip extends Component {
     children: PropTypes.node,
     /** Background color for the tip */
     color: PropTypes.oneOf([
-      'success',
-      'warning',
-      'error',
-      'info',
-      'shade-1',
-      'shade-2',
-      'shade-3',
-      'shade-4',
-      'carbon',
-      'white',
+      "success",
+      "warning",
+      "error",
+      "info",
+      "shade-1",
+      "shade-2",
+      "shade-3",
+      "shade-4",
+      "carbon",
+      "white",
     ]),
     /** The direction at which the Tip should be pointing. The directions are opposite, for example,
      * if the arrow should be placed on the 'left', its direction prop should be 'right'. The same applies for 'top' and 'bottom'. */
-    direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    direction: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     /** The position of the Tip along the baseline, can be any valid css units including px/rem/percentage. Should be adjusted according ot the use case */
     position: PropTypes.string,
     /** The Tip can be configured to have a shadow effect. This value is true by default */
     shadow: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium']),
+    size: PropTypes.oneOf(["small", "medium"]),
   };
 
   static defaultProps = {
     shadow: true,
-    direction: 'top',
-    size: 'medium',
+    direction: "top",
+    size: "medium",
   };
 
   getArrowStyles = () => {
     const { position, direction } = this.props;
 
     switch (direction) {
-      case 'top':
-      case 'bottom':
+      case "top":
+      case "bottom":
         return { left: position };
-      case 'left':
-      case 'right':
+      case "left":
+      case "right":
         return { top: position };
     }
   };
@@ -63,10 +63,10 @@ export default class Tip extends Component {
 
     const classes = classnames(`ax-tip--${direction}`, {
       [`ax-tip--${color}`]: color,
-      ['ax-tip--shadow']: shadow,
+      ["ax-tip--shadow"]: shadow,
     });
 
-    const arrowClasses = classnames('ax-tip__arrow', {
+    const arrowClasses = classnames("ax-tip__arrow", {
       [`ax-tip__arrow--${size}`]: size,
     });
 

@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import BulletBars from './BulletBars';
-import ColumnChartBars from '../ColumnChart/ColumnChartBars';
-import ColumnChartRow from '../ColumnChart/ColumnChartRow';
-import ColumnChartVisual from '../ColumnChart/ColumnChartVisual';
-import ColumnChartXAxis from '../ColumnChart/ColumnChartXAxis';
-import ColumnChartXAxisLabel from '../ColumnChart/ColumnChartXAxisLabel';
-import ColumnChartYAxis from '../ColumnChart/ColumnChartYAxis';
-import { formatData } from './utils';
-import './BulletChart.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import BulletBars from "./BulletBars";
+import ColumnChartBars from "../ColumnChart/ColumnChartBars";
+import ColumnChartRow from "../ColumnChart/ColumnChartRow";
+import ColumnChartVisual from "../ColumnChart/ColumnChartVisual";
+import ColumnChartXAxis from "../ColumnChart/ColumnChartXAxis";
+import ColumnChartXAxisLabel from "../ColumnChart/ColumnChartXAxisLabel";
+import ColumnChartYAxis from "../ColumnChart/ColumnChartYAxis";
+import { formatData } from "./utils";
+import "./BulletChart.css";
 
 export default class BulletChart extends Component {
   static propTypes = {
@@ -46,12 +46,12 @@ export default class BulletChart extends Component {
   };
 
   static defaultProps = {
-    labelColumnWidth: '0rem',
+    labelColumnWidth: "0rem",
     labelIndex: 0,
   };
 
   getLabelAlignment() {
-    return this.props.direction === 'down' ? 'top' : 'bottom';
+    return this.props.direction === "down" ? "top" : "bottom";
   }
 
   render() {

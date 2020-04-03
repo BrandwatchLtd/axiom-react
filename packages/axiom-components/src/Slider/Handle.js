@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 
-import Position from '../Position/Position';
-import PositionSource from '../Position/PositionSource';
-import PositionTarget from '../Position/PositionTarget';
-import TooltipContent from '../Tooltip/TooltipContent';
-import TooltipContext from '../Tooltip/TooltipContext';
+import Position from "../Position/Position";
+import PositionSource from "../Position/PositionSource";
+import PositionTarget from "../Position/PositionTarget";
+import TooltipContent from "../Tooltip/TooltipContent";
+import TooltipContext from "../Tooltip/TooltipContext";
 
 export default class Handle extends Component {
   static propTypes = {
@@ -31,7 +31,7 @@ export default class Handle extends Component {
     disabled: false,
     isVisible: true,
     onMouseDown: () => {},
-    valueFormatter: n => n,
+    valueFormatter: (n) => n,
     withTooltip: false,
   };
 

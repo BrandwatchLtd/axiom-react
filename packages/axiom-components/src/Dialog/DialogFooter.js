@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
 export default class DialogFooter extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class DialogFooter extends Component {
   render() {
     const { children, className, ...rest } = this.props;
 
-    const classes = classnames('ax-dialog__footer', className);
+    const classes = classnames("ax-dialog__footer", className);
 
     return (
       <Base {...rest} className={classes}>

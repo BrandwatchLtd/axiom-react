@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { RadarChart } from '@brandwatch/axiom-charts';
+import React, { Component } from "react";
+import { RadarChart } from "@brandwatch/axiom-charts";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import DropdownContext from './DropdownContext';
+} from "@brandwatch/axiom-documentation-viewer";
+import DropdownContext from "./DropdownContext";
 import {
   radarChartData,
   radarChartXAxisLabels,
   radarChartYAxisLabels,
-} from './chartData';
+} from "./chartData";
 
 export default class Documentation extends Component {
   constructor(props) {
@@ -25,14 +25,14 @@ export default class Documentation extends Component {
     const configurations = [
       [
         {
-          name: 'Add X Axis',
+          name: "Add X Axis",
           onClick: () =>
             this.setState({
               count: Math.min(radarChartXAxisLabels.length, count + 1),
             }),
         },
         {
-          name: 'Remove X Axis',
+          name: "Remove X Axis",
           onClick: () => this.setState({ count: Math.max(3, count - 1) }),
         },
       ],
@@ -61,7 +61,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/RadarChart/RadarChart'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/RadarChart/RadarChart"),
           ]}
         />
       </DocumentationContent>

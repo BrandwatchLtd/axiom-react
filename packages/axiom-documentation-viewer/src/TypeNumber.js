@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { TextInput } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { TextInput } from "@brandwatch/axiom-components";
 
 export default class TypeNumber extends Component {
   static propTypes = {
@@ -31,7 +31,7 @@ export default class TypeNumber extends Component {
       <TextInput
         defaultValue={value}
         disabled={disabled}
-        onChange={e => this.handleOnChange(e)}
+        onChange={(e) => this.handleOnChange(e)}
         placeholder="Set prop number..."
       />
     );

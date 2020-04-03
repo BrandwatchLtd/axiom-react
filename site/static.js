@@ -1,19 +1,19 @@
-import './index.css';
+import "./index.css";
 
-import React from 'react';
-import { render } from 'react-dom';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-import Site from './components/Site/Site';
-import template from './index.ejs';
+import React from "react";
+import { render } from "react-dom";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import Site from "./components/Site/Site";
+import template from "./index.ejs";
 
-if (typeof document !== 'undefined') {
+if (typeof document !== "undefined") {
   render(
     <BrowserRouter>
       <Site />
     </BrowserRouter>,
-    document.getElementById('react-root')
+    document.getElementById("react-root")
   );
 }
 

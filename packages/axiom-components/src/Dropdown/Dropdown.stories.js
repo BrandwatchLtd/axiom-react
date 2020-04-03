@@ -1,25 +1,25 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react';
-import { select, withKnobs } from '@storybook/addon-knobs';
-import Dropdown from './Dropdown';
-import DropdownTarget from './DropdownTarget';
-import DropdownSource from './DropdownSource';
-import DropdownContext from './DropdownContext';
-import DropdownMenu from './DropdownMenu';
-import DropdownMenuItem from './DropdownMenuItem';
-import DropdownContent from './DropdownContent';
-import DropdownHeader from './DropdownHeader';
-import DropdownFooter from './DropdownFooter';
-import TextInput from '../Form/TextInput';
-import TextInputIcon from '../Form/TextInputIcon';
-import IconButton from '../Icon/IconButton';
-import Link from '../Typography/Link';
-import TextIcon from '../Typography/TextIcon';
-import Paragraph from '../Typography/Paragraph';
-import Button from '../Button/Button';
+import React, { useState } from "react";
+import { select, withKnobs } from "@storybook/addon-knobs";
+import Dropdown from "./Dropdown";
+import DropdownTarget from "./DropdownTarget";
+import DropdownSource from "./DropdownSource";
+import DropdownContext from "./DropdownContext";
+import DropdownMenu from "./DropdownMenu";
+import DropdownMenuItem from "./DropdownMenuItem";
+import DropdownContent from "./DropdownContent";
+import DropdownHeader from "./DropdownHeader";
+import DropdownFooter from "./DropdownFooter";
+import TextInput from "../Form/TextInput";
+import TextInputIcon from "../Form/TextInputIcon";
+import IconButton from "../Icon/IconButton";
+import Link from "../Typography/Link";
+import TextIcon from "../Typography/TextIcon";
+import Paragraph from "../Typography/Paragraph";
+import Button from "../Button/Button";
 
 export default {
-  title: 'Components/Dropdown',
+  title: "Components/Dropdown",
   component: Dropdown,
   subcomponents: {
     DropdownTarget,
@@ -63,13 +63,13 @@ export function CustomDropdown() {
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: "flex" }}>
             <div
               style={{
-                backgroundColor: 'pink',
-                color: 'white',
-                height: '20px',
-                width: '20px',
+                backgroundColor: "pink",
+                color: "white",
+                height: "20px",
+                width: "20px",
               }}
             />
             <div>A pink Box</div>
@@ -87,7 +87,7 @@ const items = Array.from({ length: 5 }, (_, index) => ({
 }));
 
 export function DropdownWithState() {
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <Dropdown>
@@ -104,7 +104,7 @@ export function DropdownWithState() {
       <DropdownSource>
         <DropdownContext>
           <DropdownMenu>
-            {items.map(item => (
+            {items.map((item) => (
               <DropdownMenuItem
                 key={item.id}
                 onClick={() => setSelectedValue(item.value)}
@@ -148,9 +148,9 @@ export function DropdownLink() {
 export function DropdownMenuMutiSelect() {
   const [selectedItems, setSelectedItems] = useState([]);
 
-  const toggleItem = itemId => {
-    setSelectedItems(items => {
-      if (items.includes(itemId)) return items.filter(id => id !== itemId);
+  const toggleItem = (itemId) => {
+    setSelectedItems((items) => {
+      if (items.includes(itemId)) return items.filter((id) => id !== itemId);
 
       return items.concat(itemId);
     });
@@ -171,7 +171,7 @@ export function DropdownMenuMutiSelect() {
       <DropdownSource>
         <DropdownContext>
           <DropdownMenu>
-            {items.map(item => (
+            {items.map((item) => (
               <DropdownMenuItem
                 key={item.id}
                 multiSelect
@@ -314,7 +314,7 @@ export function ClosingTheDropdown() {
 }
 
 export function SourceSameWidthAsTarget() {
-  const width = '150px';
+  const width = "150px";
 
   return (
     <div style={{ width }}>
@@ -342,41 +342,41 @@ export function SourceSameWidthAsTarget() {
 }
 
 export function Position() {
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState("");
 
-  const label = 'offset';
-  const options = ['start', 'middle', 'end'];
-  const defaultValue = 'middle';
+  const label = "offset";
+  const options = ["start", "middle", "end"];
+  const defaultValue = "middle";
 
   const offset = select(label, options, defaultValue);
 
-  const positionLabel = 'position';
-  const positionOptions = ['top', 'right', 'bottom', 'left'];
-  const positionDefaultValue = 'top';
+  const positionLabel = "position";
+  const positionOptions = ["top", "right", "bottom", "left"];
+  const positionDefaultValue = "top";
 
   const position = select(positionLabel, positionOptions, positionDefaultValue);
 
-  const flipLabel = 'flip';
-  const flipOptions = ['anticlockwise', 'clockwise', 'mirror'];
-  const flipDefaultValue = 'clockwise';
+  const flipLabel = "flip";
+  const flipOptions = ["anticlockwise", "clockwise", "mirror"];
+  const flipDefaultValue = "clockwise";
 
   const flip = select(flipLabel, flipOptions, flipDefaultValue);
 
   return (
     <div
       style={{
-        height: '150vh',
-        width: '150vw',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        height: "150vh",
+        width: "150vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Dropdown
         flip={flip}
         offset={offset}
-        onPositionChange={position =>
-          console.log('onPositionChange new position: ', position)
+        onPositionChange={(position) =>
+          console.log("onPositionChange new position: ", position)
         }
         position={position}
         showArrow
@@ -394,7 +394,7 @@ export function Position() {
         <DropdownSource>
           <DropdownContext>
             <DropdownMenu>
-              {items.map(item => (
+              {items.map((item) => (
                 <DropdownMenuItem
                   key={item.id}
                   onClick={() => setSelectedValue(item.value)}

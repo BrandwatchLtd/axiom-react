@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import ChedioButtoxGroup from './ChedioButtoxGroup';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ChedioButtoxGroup from "./ChedioButtoxGroup";
 
 export default class RadioButtonGroup extends Component {
   static propTypes = {

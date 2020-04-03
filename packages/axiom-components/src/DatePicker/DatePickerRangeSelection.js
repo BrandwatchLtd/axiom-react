@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
-import classnames from 'classnames';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import Separator from '../Separator/Separator';
-import './DatePickerRangeSelection.css';
+import PropTypes from "prop-types";
+import React, { Component, Fragment } from "react";
+import classnames from "classnames";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import Separator from "../Separator/Separator";
+import "./DatePickerRangeSelection.css";
 
 export default class DatePickerRangeSelection extends Component {
   static propTypes = {
@@ -27,12 +27,12 @@ export default class DatePickerRangeSelection extends Component {
       view,
     } = this.props;
 
-    const isDoubleView = view === 'double';
+    const isDoubleView = view === "double";
     const rangeSelection = (
       <div className="ax-date-range-selection">
         {rangeSelections.map(({ label, range }) => {
-          const classes = classnames('ax-date-range-selection__item', {
-            'ax-date-range-selection__item--active': range === selectedRange,
+          const classes = classnames("ax-date-range-selection__item", {
+            "ax-date-range-selection__item--active": range === selectedRange,
           });
 
           return (

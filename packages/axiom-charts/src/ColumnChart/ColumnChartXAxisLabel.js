@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base, Heading, Strong } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base, Heading, Strong } from "@brandwatch/axiom-components";
 
 export default class ColumnChartXAxisLabel extends Component {
   static propTypes = {

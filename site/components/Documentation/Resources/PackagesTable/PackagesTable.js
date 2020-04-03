@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import {
   Table,
   TableBody,
   TableHeader,
   TableHeaderLabel,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class PackagesTable extends Component {
   static propTypes = {

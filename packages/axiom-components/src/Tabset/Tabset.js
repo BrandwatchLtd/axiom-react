@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { Component, Children, cloneElement } from 'react';
-import omit from 'lodash.omit';
-import { isComponent } from '@brandwatch/axiom-utils';
-import Base from '../Base/Base';
-import Tabs from './Tabs';
-import { TabRef } from './Tab';
+import PropTypes from "prop-types";
+import React, { Component, Children, cloneElement } from "react";
+import omit from "lodash.omit";
+import { isComponent } from "@brandwatch/axiom-utils";
+import Base from "../Base/Base";
+import Tabs from "./Tabs";
+import { TabRef } from "./Tab";
 
 export default class Tabset extends Component {
   static propTypes = {
@@ -16,14 +16,14 @@ export default class Tabset extends Component {
     /** Tabs */
     children: PropTypes.node,
     /** Size control for the Tabs */
-    size: PropTypes.oneOf(['medium', 'large']),
+    size: PropTypes.oneOf(["medium", "large"]),
     /** Vertical spacing between elements */
     space: PropTypes.string,
   };
 
   static defaultProps = {
-    size: 'medium',
-    space: 'x6',
+    size: "medium",
+    space: "x6",
   };
 
   constructor(props) {
@@ -58,7 +58,7 @@ export default class Tabset extends Component {
       : null;
 
     const tabs = arrayChildren
-      .filter(child => isComponent(child, TabRef))
+      .filter((child) => isComponent(child, TabRef))
       .map((child, index) =>
         cloneElement(child, {
           active: index === activeTabIndex,
@@ -68,7 +68,7 @@ export default class Tabset extends Component {
       );
 
     return (
-      <Base {...omit(rest, ['activeTabIndex'])}>
+      <Base {...omit(rest, ["activeTabIndex"])}>
         <Tabs size={size}>{tabs}</Tabs>
         <Base space={space}>{activeTabContent}</Base>
       </Base>

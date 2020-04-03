@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import omit from 'lodash.omit';
-import Base from '../Base/Base';
-import Handle from './Handle';
-import sliderDefaultProps from './DefaultProps';
-import './Slider.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import omit from "lodash.omit";
+import Base from "../Base/Base";
+import Handle from "./Handle";
+import sliderDefaultProps from "./DefaultProps";
+import "./Slider.css";
 
 export default class Slider extends Component {
   static propTypes = {
@@ -20,7 +20,7 @@ export default class Slider extends Component {
     /** Called when the slider is let go */
     onSlideEnd: PropTypes.func,
     /** Size of the slider */
-    size: PropTypes.oneOf(['small', 'medium']),
+    size: PropTypes.oneOf(["small", "medium"]),
     /** Configures the increments of the slide */
     step: PropTypes.number,
     /** Value */
@@ -61,8 +61,8 @@ export default class Slider extends Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousemove', this.handleMouseMove);
-    document.removeEventListener('mouseup', this.handleMouseUp);
+    document.removeEventListener("mousemove", this.handleMouseMove);
+    document.removeEventListener("mouseup", this.handleMouseUp);
   }
 
   handleMouseDown(event) {
@@ -73,8 +73,8 @@ export default class Slider extends Component {
     this.posMax = left + width;
     this.handleMouseMove(event);
     this.setState({ isDragging: true });
-    document.addEventListener('mousemove', this.handleMouseMove);
-    document.addEventListener('mouseup', this.handleMouseUp);
+    document.addEventListener("mousemove", this.handleMouseMove);
+    document.addEventListener("mouseup", this.handleMouseUp);
   }
 
   handleMouseUp(event) {
@@ -84,16 +84,16 @@ export default class Slider extends Component {
     this.setState({ isDragging: false });
     onSlideEnd && onSlideEnd(this.getValue(clientX));
 
-    document.removeEventListener('mousemove', this.handleMouseMove);
-    document.removeEventListener('mouseup', this.handleMouseUp);
+    document.removeEventListener("mousemove", this.handleMouseMove);
+    document.removeEventListener("mouseup", this.handleMouseUp);
   }
 
   handleBlur() {
-    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener("keydown", this.handleKeyDown);
   }
 
   handleFocus() {
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   handleMouseMove(event) {
@@ -108,12 +108,12 @@ export default class Slider extends Component {
     const { max, min, onChange, step, value } = this.props;
 
     switch (event.key) {
-      case 'ArrowLeft':
-      case 'ArrowDown':
+      case "ArrowLeft":
+      case "ArrowDown":
         onChange(Math.max(min, Math.min(value - step, max)));
         break;
-      case 'ArrowRight':
-      case 'ArrowUp':
+      case "ArrowRight":
+      case "ArrowUp":
         onChange(Math.max(min, Math.min(value + step, max)));
         break;
     }
@@ -133,13 +133,13 @@ export default class Slider extends Component {
     const { isDragging, isMouseOver } = this.state;
     const valueInRange = Math.max(min, Math.min(value, max));
     const valueAsPercentage = ((valueInRange - min) / (max - min)) * 100;
-    const classes = classnames('ax-slider', `ax-slider--${size}`, {
-      'ax-slider--disabled': disabled,
+    const classes = classnames("ax-slider", `ax-slider--${size}`, {
+      "ax-slider--disabled": disabled,
     });
 
     return (
       <Base
-        {...omit(rest, ['onSlideEnd', 'min', 'max', 'step'])}
+        {...omit(rest, ["onSlideEnd", "min", "max", "step"])}
         className={classes}
         onBlur={this.handleBlur}
         onFocus={disabled ? null : this.handleFocus}
@@ -150,7 +150,7 @@ export default class Slider extends Component {
         <div
           className="ax-slider__track"
           onMouseDown={disabled ? null : this.handleMouseDown}
-          ref={el => (this.container = el)}
+          ref={(el) => (this.container = el)}
         >
           <div
             className="ax-slider__fill"

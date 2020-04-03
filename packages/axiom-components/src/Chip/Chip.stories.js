@@ -1,9 +1,9 @@
-import React from 'react';
-import Chip from './Chip';
-import ChipList from './ChipList';
+import React from "react";
+import Chip from "./Chip";
+import ChipList from "./ChipList";
 
 export default {
-  title: 'Components/Chip',
+  title: "Components/Chip",
   component: Chip,
   subcomponents: { ChipList },
 };

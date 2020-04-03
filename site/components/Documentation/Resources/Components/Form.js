@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState } from "react";
 import {
   CheckBox,
   CheckBoxGroup,
@@ -13,12 +13,12 @@ import {
   InlineValidation,
   TooltipContent,
   TooltipContext,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 const getTextInputIconTooltip = () => (
   <TooltipContext color="carbon">
@@ -32,7 +32,7 @@ function ToggableCheckBox() {
     <CheckBox
       checked={checked}
       name="lorem"
-      onChange={() => setChecked(c => !c)}
+      onChange={() => setChecked((c) => !c)}
       title="Lorem ipsum dolor sit amet"
     >
       Lorem ipsum
@@ -50,7 +50,7 @@ export default class Documentation extends Component {
               <TextInput
                 label="A label"
                 onChange={(setValue, getValue, event) =>
-                  setValue('TextInput', 'value', event.target.value)
+                  setValue("TextInput", "value", event.target.value)
                 }
                 placeholder="Write in me"
                 size="medium"
@@ -59,7 +59,7 @@ export default class Documentation extends Component {
                 inlineLabel
                 label="An inline label"
                 onChange={(setValue, getValue, event) =>
-                  setValue('TextInput', 'value', event.target.value)
+                  setValue("TextInput", "value", event.target.value)
                 }
                 placeholder="Write in me"
                 size="medium"
@@ -68,7 +68,7 @@ export default class Documentation extends Component {
                 inlineLabel
                 label="An inline label"
                 onChange={(setValue, getValue, event) =>
-                  setValue('TextInput', 'value', event.target.value)
+                  setValue("TextInput", "value", event.target.value)
                 }
                 placeholder="Write in me"
                 size="medium"
@@ -83,9 +83,9 @@ export default class Documentation extends Component {
                 inlineLabel
                 label="Lorem Ipsum"
                 onChange={(setValue, getValue, event) =>
-                  setValue('TextInput', 'value', event.target.value)
+                  setValue("TextInput", "value", event.target.value)
                 }
-                onClear={setValue => setValue('TextInput', 'value', '')}
+                onClear={(setValue) => setValue("TextInput", "value", "")}
                 placeholder="Write in me"
                 size="medium"
                 usageHint="This is a usage hint"
@@ -97,7 +97,7 @@ export default class Documentation extends Component {
             <DocumentationShowCase centered>
               <TextInput
                 onChange={(setValue, getValue, event) =>
-                  setValue('TextInput', 'value', event.target.value)
+                  setValue("TextInput", "value", event.target.value)
                 }
                 placeholder="Write in me"
                 size="medium"
@@ -119,9 +119,9 @@ export default class Documentation extends Component {
               <TextInput
                 label="Lorem Ipsum"
                 onChange={(setValue, getValue, event) =>
-                  setValue('TextInput', 'value', event.target.value)
+                  setValue("TextInput", "value", event.target.value)
                 }
-                onClear={setValue => setValue('TextInput', 'value', '')}
+                onClear={(setValue) => setValue("TextInput", "value", "")}
                 placeholder="Write in me"
                 size="medium"
                 usageHint="This is a usage hint"
@@ -134,7 +134,7 @@ export default class Documentation extends Component {
                 <TextInput
                   invalid
                   onChange={(setValue, getValue, event) =>
-                    setValue('TextInput', 'value', event.target.value)
+                    setValue("TextInput", "value", event.target.value)
                   }
                   placeholder="Write in me"
                   size="medium"
@@ -146,9 +146,9 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInput'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInputButton'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInputIcon'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInput"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInputButton"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextInputIcon"),
           ]}
         />
 
@@ -167,7 +167,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextArea'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/TextArea"),
           ]}
         />
 
@@ -216,10 +216,10 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/CheckBox'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/CheckBoxGroup'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/RadioButton'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/RadioButtonGroup'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/CheckBox"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/CheckBoxGroup"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/RadioButton"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Form/RadioButtonGroup"),
           ]}
         />
       </DocumentationContent>

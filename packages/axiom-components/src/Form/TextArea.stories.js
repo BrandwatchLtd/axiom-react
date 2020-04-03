@@ -1,8 +1,8 @@
-import React from 'react';
-import TextArea from './TextArea';
+import React from "react";
+import TextArea from "./TextArea";
 
 export default {
-  title: 'Components/TextArea',
+  title: "Components/TextArea",
   component: TextArea,
 };
 

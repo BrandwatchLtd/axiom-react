@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Dropdown from '../Dropdown/Dropdown';
-import DropdownSource from '../Dropdown/DropdownSource';
-import DropdownTarget from '../Dropdown/DropdownTarget';
-import DatePickerContext from './DatePickerContext';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Dropdown from "../Dropdown/Dropdown";
+import DropdownSource from "../Dropdown/DropdownSource";
+import DropdownTarget from "../Dropdown/DropdownTarget";
+import DatePickerContext from "./DatePickerContext";
 
 export default class DatePicker extends Component {
   static propTypes = {
@@ -45,11 +45,11 @@ export default class DatePicker extends Component {
     /** The date selected at the start of the range */
     selectedStartDate: PropTypes.instanceOf(Date),
     /** Configuration for a single date picker view or two pickers side by side */
-    view: PropTypes.oneOf(['single', 'double']),
+    view: PropTypes.oneOf(["single", "double"]),
   };
 
   static defaultProps = {
-    view: 'single',
+    view: "single",
     rangeSelect: false,
   };
 

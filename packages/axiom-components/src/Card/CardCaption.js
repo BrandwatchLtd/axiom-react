@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
 export default class CardCaption extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class CardCaption extends Component {
   render() {
     const { children, className, ...rest } = this.props;
 
-    const classes = classnames('ax-card__caption', className);
+    const classes = classnames("ax-card__caption", className);
 
     return (
       <Base {...rest} className={classes}>

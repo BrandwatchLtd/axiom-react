@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { DataPoints, DataPoint } from '@brandwatch/axiom-charts';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { DataPoints, DataPoint } from "@brandwatch/axiom-charts";
 import {
   DropdownContext,
   DropdownContent,
@@ -11,7 +11,7 @@ import {
   ListItem,
   Paragraph,
   Small,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class DropdownContextExample extends Component {
   static propTypes = {
@@ -23,7 +23,7 @@ export default class DropdownContextExample extends Component {
   };
 
   static defaultProps = {
-    color: 'deep-thought',
+    color: "deep-thought",
   };
 
   render() {
@@ -44,7 +44,7 @@ export default class DropdownContextExample extends Component {
               <Grid gutters="tiny" responsive={false} verticalAlign="middle">
                 <GridCell shrink>
                   <DataPoints size="1.5rem">
-                    {colors.map(color => (
+                    {colors.map((color) => (
                       <DataPoint color={color} key={color} style={style} />
                     ))}
                   </DataPoints>

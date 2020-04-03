@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
 
 export default class ChartLayoutKey extends Component {
   render() {

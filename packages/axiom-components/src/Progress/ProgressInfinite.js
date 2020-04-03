@@ -1,24 +1,24 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { getArcProperties } from './utils';
-import renderFilter from './_filter';
-import RadialProgress from './RadialProgress';
-import './ProgressInfinite.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { getArcProperties } from "./utils";
+import renderFilter from "./_filter";
+import RadialProgress from "./RadialProgress";
+import "./ProgressInfinite.css";
 
 export default class ProgressInfinite extends Component {
   static propTypes = {
     /** Color of the indicator */
-    color: PropTypes.oneOf(['subtle', 'white']),
+    color: PropTypes.oneOf(["subtle", "white"]),
     /** Size of the indicator */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(["small", "medium", "large"]),
     /** Size in REM units */
     sizeRem: PropTypes.string,
   };
 
   static defaultProps = {
-    color: 'subtle',
-    size: 'small',
+    color: "subtle",
+    size: "small",
   };
 
   UNSAFE_componentWillMount = renderFilter;
@@ -26,7 +26,7 @@ export default class ProgressInfinite extends Component {
   render() {
     const { color, ...rest } = this.props;
     const classes = classnames(
-      'ax-progress-infinite',
+      "ax-progress-infinite",
       `ax-progress-infinite--${color}`
     );
     const {

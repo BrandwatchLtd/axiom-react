@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import renderer from 'react-test-renderer';
-import Base from './Base';
+import React, { Component } from "react";
+import renderer from "react-test-renderer";
+import Base from "./Base";
 
 const getComponent = (props = {}) => renderer.create(<Base {...props} />);
 
-describe('Base', () => {
-  it('renders with defaultProps', () => {
+describe("Base", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders string Component', () => {
-    const component = getComponent({ Component: 'span' });
+  it("renders string Component", () => {
+    const component = getComponent({ Component: "span" });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders class Component', () => {
+  it("renders class Component", () => {
     class CustomComponent extends Component {
       render() {
         return <span />;
@@ -29,21 +29,21 @@ describe('Base', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders functional Component', () => {
+  it("renders functional Component", () => {
     const CustomComponent = () => <span />;
     const component = getComponent({ Component: CustomComponent });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders className', () => {
-    const component = getComponent({ className: 'Lorem Ipsum' });
+  it("renders className", () => {
+    const component = getComponent({ className: "Lorem Ipsum" });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders cloak', () =>
-    [undefined, true, false].forEach(cloak =>
+  describe("renders cloak", () =>
+    [undefined, true, false].forEach((cloak) =>
       it(String(cloak), () => {
         const component = getComponent({ cloak });
         const tree = component.toJSON();
@@ -51,14 +51,14 @@ describe('Base', () => {
       })
     ));
 
-  it('renders cloakContainer', () => {
+  it("renders cloakContainer", () => {
     const component = getComponent({ cloakContainer: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with hiddenUntil', () => {
-    ['small', 'medium', 'large'].forEach(hiddenUntil => {
+  describe("renders with hiddenUntil", () => {
+    ["small", "medium", "large"].forEach((hiddenUntil) => {
       it(hiddenUntil, () => {
         const component = getComponent({ hiddenUntil });
         const tree = component.toJSON();
@@ -67,8 +67,8 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with visibleUntil', () => {
-    ['small', 'medium', 'large'].forEach(visibleUntil => {
+  describe("renders with visibleUntil", () => {
+    ["small", "medium", "large"].forEach((visibleUntil) => {
       it(visibleUntil, () => {
         const component = getComponent({ visibleUntil });
         const tree = component.toJSON();
@@ -77,29 +77,29 @@ describe('Base', () => {
     });
   });
 
-  it('renders sticky without style', () => {
-    const component = getComponent({ sticky: '1rem' });
+  it("renders sticky without style", () => {
+    const component = getComponent({ sticky: "1rem" });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders sticky with style', () => {
+  it("renders sticky with style", () => {
     const component = getComponent({
-      sticky: '1rem',
-      style: { height: '1rem' },
+      sticky: "1rem",
+      style: { height: "1rem" },
     });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders container', () => {
+  it("renders container", () => {
     const component = getComponent({ container: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with textBreak', () => {
-    ['none', 'all', 'word'].forEach(textBreak => {
+  describe("renders with textBreak", () => {
+    ["none", "all", "word"].forEach((textBreak) => {
       it(textBreak, () => {
         const component = getComponent({ textBreak });
         const tree = component.toJSON();
@@ -108,8 +108,8 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with textCenter', () => {
-    [true, 'small', 'medium', 'large'].forEach(textCenter => {
+  describe("renders with textCenter", () => {
+    [true, "small", "medium", "large"].forEach((textCenter) => {
       it(String(textCenter), () => {
         const component = getComponent({ textCenter });
         const tree = component.toJSON();
@@ -118,8 +118,8 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with textCase', () => {
-    ['upper', 'capital', 'lower'].forEach(textCase => {
+  describe("renders with textCase", () => {
+    ["upper", "capital", "lower"].forEach((textCase) => {
       it(textCase, () => {
         const component = getComponent({ textCase });
         const tree = component.toJSON();
@@ -128,16 +128,16 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with textColor', () => {
+  describe("renders with textColor", () => {
     [
-      'day',
-      'disabled',
-      'error',
-      'night',
-      'subtle',
-      'success',
-      'warning',
-    ].forEach(textColor => {
+      "day",
+      "disabled",
+      "error",
+      "night",
+      "subtle",
+      "success",
+      "warning",
+    ].forEach((textColor) => {
       it(textColor, () => {
         const component = getComponent({ textColor });
         const tree = component.toJSON();
@@ -146,20 +146,20 @@ describe('Base', () => {
     });
   });
 
-  it('renders textEllipsis', () => {
+  it("renders textEllipsis", () => {
     const component = getComponent({ textEllipsis: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textEmphasize', () => {
+  it("renders textEmphasize", () => {
     const component = getComponent({ textEmphasize: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with textLeft', () => {
-    [true, 'small', 'medium', 'large'].forEach(textLeft => {
+  describe("renders with textLeft", () => {
+    [true, "small", "medium", "large"].forEach((textLeft) => {
       it(String(textLeft), () => {
         const component = getComponent({ textLeft });
         const tree = component.toJSON();
@@ -168,8 +168,8 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with textRight', () => {
-    [true, 'small', 'medium', 'large'].forEach(textRight => {
+  describe("renders with textRight", () => {
+    [true, "small", "medium", "large"].forEach((textRight) => {
       it(String(textRight), () => {
         const component = getComponent({ textRight });
         const tree = component.toJSON();
@@ -178,17 +178,17 @@ describe('Base', () => {
     });
   });
 
-  describe('renders with textSize', () => {
+  describe("renders with textSize", () => {
     [
-      'display2',
-      'display1',
-      'headline',
-      'headtitle',
-      'large',
-      'label',
-      'body',
-      'small',
-    ].forEach(textSize => {
+      "display2",
+      "display1",
+      "headline",
+      "headtitle",
+      "large",
+      "label",
+      "body",
+      "small",
+    ].forEach((textSize) => {
       it(textSize, () => {
         const component = getComponent({ textSize });
         const tree = component.toJSON();
@@ -197,19 +197,19 @@ describe('Base', () => {
     });
   });
 
-  it('renders textStrike', () => {
+  it("renders textStrike", () => {
     const component = getComponent({ textStrike: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textStrong', () => {
+  it("renders textStrong", () => {
     const component = getComponent({ textStrong: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders textUnderline', () => {
+  it("renders textUnderline", () => {
     const component = getComponent({ textUnderline: true });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

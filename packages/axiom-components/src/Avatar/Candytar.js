@@ -1,30 +1,30 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { colors } from '@brandwatch/axiom-materials';
-import renderFilter from './_filter';
-import './Candytar.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { colors } from "@brandwatch/axiom-materials";
+import renderFilter from "./_filter";
+import "./Candytar.css";
 
 const availableColors = Object.keys(colors.userDefinedGraphColors);
-const defaultPickerFn = colors =>
+const defaultPickerFn = (colors) =>
   colors[Math.floor(Math.random() * colors.length)];
 
 export default class Candytar extends Component {
   static propTypes = {
     /** Color of the Candytar */
     color: PropTypes.oneOf([
-      'tiny-clanger',
-      'critical-mass',
-      'paradise-lost',
-      'serene-sea',
-      'giant-leap',
-      'moon-lagoon',
-      'terra-form',
-      'primeval-soup',
-      'new-horizon',
-      'blast-off',
-      'ground-control',
-      'luna-dust',
+      "tiny-clanger",
+      "critical-mass",
+      "paradise-lost",
+      "serene-sea",
+      "giant-leap",
+      "moon-lagoon",
+      "terra-form",
+      "primeval-soup",
+      "new-horizon",
+      "blast-off",
+      "ground-control",
+      "luna-dust",
     ]),
     /**
      * The User's initials to appear in the candytar.
@@ -44,7 +44,7 @@ export default class Candytar extends Component {
 
   static defaultProps = {
     picker: defaultPickerFn,
-    initials: '',
+    initials: "",
   };
 
   componentDidMount = renderFilter;
@@ -57,7 +57,7 @@ export default class Candytar extends Component {
       initials,
     } = this.props;
     const style = { height: size, width: size };
-    const classes = classnames('ax-candytar', `ax-candytar--${color}`);
+    const classes = classnames("ax-candytar", `ax-candytar--${color}`);
     const userInitials = initials.slice(0, 2).toUpperCase();
 
     /* eslint-disable max-len */

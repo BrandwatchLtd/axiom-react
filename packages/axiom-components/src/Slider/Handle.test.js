@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import Handle from './Handle';
+import React from "react";
+import { shallow } from "enzyme";
+import toJson from "enzyme-to-json";
+import Handle from "./Handle";
 
 const render = (props = {}) => {
   const newProps = {
@@ -13,16 +13,16 @@ const render = (props = {}) => {
   return shallow(<Handle {...newProps} />);
 };
 
-describe('Handle', () => {
-  it('renders with defaultProps', () => {
+describe("Handle", () => {
+  it("renders with defaultProps", () => {
     expect(toJson(render())).toMatchSnapshot();
   });
 
-  it('renders with custom props', () => {
+  it("renders with custom props", () => {
     const props = {
       disabled: true,
       isVisible: false,
-      valueFormatter: x => Math.floor(x),
+      valueFormatter: (x) => Math.floor(x),
     };
     expect(toJson(render(props))).toMatchSnapshot();
   });

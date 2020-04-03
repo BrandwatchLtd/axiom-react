@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import TypeArrayOfData from './TypeArrayOfData';
-import TypeArrayOfEnum from './TypeArrayOfEnum';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import TypeArrayOfData from "./TypeArrayOfData";
+import TypeArrayOfEnum from "./TypeArrayOfEnum";
 
 export default class TypeArrayOf extends Component {
   static propTypes = {
@@ -19,7 +19,7 @@ export default class TypeArrayOf extends Component {
       },
     } = this.props;
 
-    if (name === 'enum') {
+    if (name === "enum") {
       return <TypeArrayOfEnum {...this.props} />;
     }
 

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import {
   Base,
   Grid,
@@ -7,7 +7,7 @@ import {
   Icon,
   Link,
   Text,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class ChartTableLabel extends Component {
   static propTypes = {
@@ -35,7 +35,7 @@ export default class ChartTableLabel extends Component {
           verticalAlign="middle"
         >
           <GridCell>
-            <Text textColor={disabled ? 'disabled' : null}>{children}</Text>
+            <Text textColor={disabled ? "disabled" : null}>{children}</Text>
           </GridCell>
           {onToggleRowVisibility && (
             <GridCell cloak={!disabled} shrink>

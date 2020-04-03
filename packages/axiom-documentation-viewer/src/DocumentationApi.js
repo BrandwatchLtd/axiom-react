@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
+import PropTypes from "prop-types";
+import React, { Component, Fragment } from "react";
 import {
   Base,
   Heading,
@@ -10,8 +10,8 @@ import {
   TableHeader,
   TableHeaderLabel,
   TableRow,
-} from '@brandwatch/axiom-components';
-import DocumentationApiRow from './DocumentationApiRow';
+} from "@brandwatch/axiom-components";
+import DocumentationApiRow from "./DocumentationApiRow";
 
 export default class DocumentationApi extends Component {
   static propTypes = {
@@ -66,7 +66,7 @@ export default class DocumentationApi extends Component {
                   </TableRow>
                 )}
 
-                {Object.keys(props).map(prop => (
+                {Object.keys(props).map((prop) => (
                   <DocumentationApiRow
                     {...props[prop]}
                     component={name}

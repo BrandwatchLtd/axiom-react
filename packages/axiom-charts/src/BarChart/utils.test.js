@@ -1,161 +1,161 @@
-import { formatData, flattenValues, hasMultipleValues } from './utils';
+import { formatData, flattenValues, hasMultipleValues } from "./utils";
 
 const chartKey = [
-  { color: 'giant-leap', label: 'Brand A' },
-  { color: 'critical-mass', label: 'Brand B' },
-  { color: 'serene-sea', label: 'Brand C' },
+  { color: "giant-leap", label: "Brand A" },
+  { color: "critical-mass", label: "Brand B" },
+  { color: "serene-sea", label: "Brand C" },
 ];
 
 const data = [
   {
-    label: 'Family',
+    label: "Family",
     benchmark: 100,
     values: {
-      'giant-leap': 0,
-      'serene-sea': 90,
-      'critical-mass': 50,
+      "giant-leap": 0,
+      "serene-sea": 90,
+      "critical-mass": 50,
     },
   },
   {
-    label: 'Games',
+    label: "Games",
     benchmark: 33,
     values: {
-      'giant-leap': 40,
-      'serene-sea': 53,
-      'critical-mass': 40,
+      "giant-leap": 40,
+      "serene-sea": 53,
+      "critical-mass": 40,
     },
   },
   {
-    label: 'Family & Parenting',
+    label: "Family & Parenting",
     benchmark: 33,
     values: {
-      'giant-leap': 50,
-      'serene-sea': 50,
-      'critical-mass': 50,
+      "giant-leap": 50,
+      "serene-sea": 50,
+      "critical-mass": 50,
     },
   },
   {
-    label: 'Technology',
+    label: "Technology",
     benchmark: 33,
     values: {
-      'giant-leap': 69,
+      "giant-leap": 69,
     },
   },
   {
-    label: 'Books',
+    label: "Books",
     benchmark: 33,
     values: {
-      'giant-leap': 25,
-      'serene-sea': 50,
+      "giant-leap": 25,
+      "serene-sea": 50,
     },
   },
 ];
 
-describe('BarChart (utils)', () => {
-  it('formats data', () => {
+describe("BarChart (utils)", () => {
+  it("formats data", () => {
     expect(formatData(chartKey, data)).toEqual([
       {
-        label: 'Family',
+        label: "Family",
         benchmark: 100,
         values: [
           {
             value: 0,
-            color: 'giant-leap',
+            color: "giant-leap",
           },
           {
             value: 50,
-            color: 'critical-mass',
+            color: "critical-mass",
           },
           {
             value: 90,
-            color: 'serene-sea',
+            color: "serene-sea",
           },
         ],
       },
       {
-        label: 'Games',
+        label: "Games",
         benchmark: 33,
         values: [
           {
             value: 40,
-            color: 'giant-leap',
+            color: "giant-leap",
           },
           {
             value: 40,
-            color: 'critical-mass',
+            color: "critical-mass",
           },
           {
             value: 53,
-            color: 'serene-sea',
+            color: "serene-sea",
           },
         ],
       },
       {
-        label: 'Family & Parenting',
+        label: "Family & Parenting",
         benchmark: 33,
         values: [
           {
             value: 50,
-            color: 'giant-leap',
+            color: "giant-leap",
           },
           {
             value: 50,
-            color: 'critical-mass',
+            color: "critical-mass",
           },
           {
             value: 50,
-            color: 'serene-sea',
+            color: "serene-sea",
           },
         ],
       },
       {
-        label: 'Technology',
+        label: "Technology",
         benchmark: 33,
         values: [
           {
             value: 69,
-            color: 'giant-leap',
+            color: "giant-leap",
           },
         ],
       },
       {
-        label: 'Books',
+        label: "Books",
         benchmark: 33,
         values: [
           {
             value: 25,
-            color: 'giant-leap',
+            color: "giant-leap",
           },
           {
             value: 50,
-            color: 'serene-sea',
+            color: "serene-sea",
           },
         ],
       },
     ]);
   });
 
-  it('it gets a flatt list of all values', () => {
+  it("it gets a flatt list of all values", () => {
     expect(flattenValues(data)).toMatchSnapshot();
   });
 
-  describe('hasMultipleValues', () => {
-    it('returns true when data has multiple values', () => {
+  describe("hasMultipleValues", () => {
+    it("returns true when data has multiple values", () => {
       expect(hasMultipleValues(data)).toEqual(true);
     });
 
-    it('returns false when data has just single values', () => {
+    it("returns false when data has just single values", () => {
       const data = [
         {
-          label: 'Technology',
+          label: "Technology",
           values: {
-            'giant-leep': 20,
+            "giant-leep": 20,
           },
         },
         {
-          label: 'Books',
+          label: "Books",
           values: {
-            'serene-sea': 15,
+            "serene-sea": 15,
           },
         },
       ];

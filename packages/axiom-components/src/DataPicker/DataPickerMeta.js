@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { Component } from 'react';
+import PropTypes from "prop-types";
+import { Component } from "react";
 
-export const DataPickerMetaRef = 'DataPickerMeta';
+export const DataPickerMetaRef = "DataPickerMeta";
 
 export default class DataPickerMeta extends Component {
   static propTypes = {

@@ -1,12 +1,12 @@
-import Prism from 'prismjs';
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { html as beautifyHtml } from 'js-beautify';
-import { Base } from '@brandwatch/axiom-components';
-import 'prismjs/components/prism-json';
-import 'prismjs/components/prism-jsx';
-import 'prismjs/components/prism-scss';
-import './DocumentationCodeSnippet.css';
+import Prism from "prismjs";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { html as beautifyHtml } from "js-beautify";
+import { Base } from "@brandwatch/axiom-components";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-scss";
+import "./DocumentationCodeSnippet.css";
 
 export default class DocumentationCodeSnippet extends Component {
   static propTypes = {

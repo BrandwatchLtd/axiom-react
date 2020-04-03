@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { Component, cloneElement } from 'react';
+import PropTypes from "prop-types";
+import { Component, cloneElement } from "react";
 
-export const PositionSourceRef = 'PositionSource';
+export const PositionSourceRef = "PositionSource";
 
 export default class PositionSource extends Component {
   static propTypes = {

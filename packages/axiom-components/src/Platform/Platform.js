@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { useMemo } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import PlaformContext from './PlatformContext';
-import './Platform.css';
+import PropTypes from "prop-types";
+import React, { useMemo } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import PlaformContext from "./PlatformContext";
+import "./Platform.css";
 
 export default function Platform({
   children,
@@ -11,12 +11,12 @@ export default function Platform({
   openConsolePosition,
   openConsoleWidth,
   responsive,
-  shade = 'shade-1',
+  shade = "shade-1",
   ...rest
 }) {
-  const classes = classnames('ax-platform', `ax-platform--${shade}`, {
-    'ax-platform--responsive': responsive,
-    'ax-platform--console-open': openConsolePosition,
+  const classes = classnames("ax-platform", `ax-platform--${shade}`, {
+    "ax-platform--responsive": responsive,
+    "ax-platform--console-open": openConsolePosition,
   });
 
   const providerValue = useMemo(
@@ -44,8 +44,8 @@ export default function Platform({
 Platform.propTypes = {
   children: PropTypes.node.isRequired,
   onConsoleClose: PropTypes.func,
-  openConsolePosition: PropTypes.oneOf(['left', 'right']),
+  openConsolePosition: PropTypes.oneOf(["left", "right"]),
   openConsoleWidth: PropTypes.string,
   responsive: PropTypes.bool,
-  shade: PropTypes.oneOf(['shade-1', 'shade-2']),
+  shade: PropTypes.oneOf(["shade-1", "shade-2"]),
 };

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { DataPoint, DataPoints } from '@brandwatch/axiom-charts';
-import { Grid, GridCell } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { DataPoint, DataPoints } from "@brandwatch/axiom-charts";
+import { Grid, GridCell } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -49,8 +49,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoint'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoints'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoint"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/DataPoint/DataPoints"),
           ]}
         />
       </DocumentationContent>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Heading,
   Italic,
@@ -9,12 +9,12 @@ import {
   Strong,
   TextIcon,
   Underline,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -34,9 +34,9 @@ export default class Documentation extends Component {
             <TextIcon name="star" /> <Strong>Lorem ipsum</Strong> dolor sit amet
           </Heading>
           <Paragraph>
-            Phasellus gravida ante eu lectus rutrum, faucibus{' '}
+            Phasellus gravida ante eu lectus rutrum, faucibus{" "}
             <Link>laoreet nunc sagittis.</Link> Pellentesque ac cursus lorem,
-            non ullamcorper mi. Donec luctus tellus vitae mattis blandit.{' '}
+            non ullamcorper mi. Donec luctus tellus vitae mattis blandit.{" "}
             <Link>Sed molestie augue non velit</Link> ornare facilisis.
             Curabitur consectetur dolor ac nisi varius accumsan.
           </Paragraph>
@@ -55,13 +55,13 @@ export default class Documentation extends Component {
             <TextIcon name="star" /> <Strong>Lorem ipsum</Strong> dolor sit amet
           </Heading>
           <Paragraph>
-            Maecenas fermentum magna ut lectus elementum ultrices.{' '}
+            Maecenas fermentum magna ut lectus elementum ultrices.{" "}
             <Strike>
               Quisque pellentesque mauris eu ligula hendrerit, eu cursus mauris
               tristique. Cras dictum posuere libero nec pulvinar.
-            </Strike>{' '}
+            </Strike>{" "}
             Nulla vitae lobortis nisl. Etiam ac ante at tortor volutpat auctor
-            sed sed leo.{' '}
+            sed sed leo.{" "}
             <Underline>
               Aliquam mauris ex, cursus a est et, maximus scelerisque sem.
             </Underline>
@@ -95,16 +95,16 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Heading'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Italic'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Link'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Paragraph'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Small'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Strike'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Strong'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Text'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/TextIcon'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Underline'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Heading"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Italic"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Link"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Paragraph"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Small"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Strike"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Strong"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Text"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/TextIcon"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Typography/Underline"),
           ]}
         />
       </DocumentationContent>

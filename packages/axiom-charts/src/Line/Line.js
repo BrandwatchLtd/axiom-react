@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React, { Component, cloneElement } from 'react';
-import classnames from 'classnames';
-import './Line.css';
+import PropTypes from "prop-types";
+import React, { Component, cloneElement } from "react";
+import classnames from "classnames";
+import "./Line.css";
 
 /** Browsers that don't support SVG vector-effect ... IE11 */
 const hasVectorEffectSupport =
-  typeof window !== 'undefined' &&
+  typeof window !== "undefined" &&
   window.CSS &&
-  CSS.supports('vector-effect', 'non-scaling-stroke');
+  CSS.supports("vector-effect", "non-scaling-stroke");
 
 const createPath = (data, upper) =>
   data.reduce((path, n, i, { length: l }) => {
@@ -15,7 +15,7 @@ const createPath = (data, upper) =>
     return `${path}${
       i === 0 ? `M 0,${upper - n}` : ` L ${(i / (l - 1)) * 100},${upper - n}`
     }`;
-  }, '');
+  }, "");
 
 export default class Line extends Component {
   static propTypes = {
@@ -23,40 +23,40 @@ export default class Line extends Component {
     children: PropTypes.node,
     /** Background color of the Line */
     color: PropTypes.oneOf([
-      'subtle',
-      'overlay-light',
-      'forbidden-planet',
-      'tiny-clanger',
-      'critical-mass',
-      'fantastic-voyage',
-      'paradise-lost',
-      'serene-sea',
-      'event-horizon',
-      'electric-dreams',
-      'outer-limits',
-      'giant-leap',
-      'moon-lagoon',
-      'space-invader',
-      'extraterrestrial',
-      'terra-form',
-      'primeval-soup',
-      'future-shock',
-      'sun-maker',
-      'new-horizon',
-      'blast-off',
-      'crash-course',
-      'solar-rust',
-      'ground-control',
-      'space-oddity',
-      'rocky-planet',
-      'deep-thought',
-      'luna-dust',
-      'sentiment-positive',
-      'sentiment-negative',
-      'sentiment-neutral',
-      'social-twitter',
-      'social-facebook',
-      'social-instagram',
+      "subtle",
+      "overlay-light",
+      "forbidden-planet",
+      "tiny-clanger",
+      "critical-mass",
+      "fantastic-voyage",
+      "paradise-lost",
+      "serene-sea",
+      "event-horizon",
+      "electric-dreams",
+      "outer-limits",
+      "giant-leap",
+      "moon-lagoon",
+      "space-invader",
+      "extraterrestrial",
+      "terra-form",
+      "primeval-soup",
+      "future-shock",
+      "sun-maker",
+      "new-horizon",
+      "blast-off",
+      "crash-course",
+      "solar-rust",
+      "ground-control",
+      "space-oddity",
+      "rocky-planet",
+      "deep-thought",
+      "luna-dust",
+      "sentiment-positive",
+      "sentiment-negative",
+      "sentiment-neutral",
+      "social-twitter",
+      "social-facebook",
+      "social-instagram",
     ]).isRequired,
     /** Dash length */
     dasharray: PropTypes.string,
@@ -89,14 +89,14 @@ export default class Line extends Component {
   };
 
   static defaultProps = {
-    dasharray: '',
-    dasharrayWithoutScalingStroke: '',
-    width: '0.125rem',
-    widthWithoutScalingStroke: '0.015625rem',
+    dasharray: "",
+    dasharrayWithoutScalingStroke: "",
+    width: "0.125rem",
+    widthWithoutScalingStroke: "0.015625rem",
   };
 
   render() {
-    const fData = this.props.data.filter(n => !isNaN(n) && n !== null);
+    const fData = this.props.data.filter((n) => !isNaN(n) && n !== null);
     const dataLower = Math.min(...fData);
     const dataUpper = Math.max(...fData);
     const {
@@ -122,8 +122,8 @@ export default class Line extends Component {
       : widthWithoutScalingStroke;
     const finalLower = Math.min(lower, dataLower);
     const finalUpper = Math.max(upper, dataUpper);
-    const classes = classnames('ax-line', `ax-line--${color}`, {
-      'ax-line--faded': faded,
+    const classes = classnames("ax-line", `ax-line--${color}`, {
+      "ax-line--faded": faded,
     });
 
     return (
@@ -147,7 +147,7 @@ export default class Line extends Component {
             !c || isNaN(data[i]) || data[i] === null
               ? null
               : cloneElement(c, {
-                  style: strokeDasharray ? 'hollow' : 'solid',
+                  style: strokeDasharray ? "hollow" : "solid",
                   value: data[i],
                   x: (i / (data.length - 1)) * 100,
                   y: ((data[i] - finalLower) / (finalUpper - finalLower)) * 100,

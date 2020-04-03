@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import AlertIcon from '../AlertIcon/AlertIcon';
-import ProgressFinite from './ProgressFinite';
-import ProgressInfinite from './ProgressInfinite';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import AlertIcon from "../AlertIcon/AlertIcon";
+import ProgressFinite from "./ProgressFinite";
+import ProgressInfinite from "./ProgressInfinite";
 
 export default class Progress extends Component {
   static propTypes = {
@@ -13,13 +13,13 @@ export default class Progress extends Component {
     /** Percentage of progress */
     percent: PropTypes.number,
     /** Size of the indicator */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(["small", "medium", "large"]),
     /** Size in REM units */
     sizeRem: PropTypes.string,
   };
 
   static defaultProps = {
-    size: 'small',
+    size: "small",
   };
 
   render() {

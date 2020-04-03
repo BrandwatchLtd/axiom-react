@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Logo from './Logo';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Logo from "./Logo";
 
 export default class LogoTab extends Component {
   static propTypes = {
     /** Color of the Logo background */
-    color: PropTypes.oneOf(['grey', 'white']),
+    color: PropTypes.oneOf(["grey", "white"]),
     /** Height of the Logo, higher precedence than width */
     height: PropTypes.string,
     /** Width of the Logo, lower precedence than height */
@@ -13,7 +13,7 @@ export default class LogoTab extends Component {
   };
 
   static defaultProps = {
-    color: 'grey',
+    color: "grey",
   };
 
   render() {
@@ -21,8 +21,8 @@ export default class LogoTab extends Component {
     const viewBoxHeight = 124;
     const { color, ...rest } = this.props;
     const colorMap = {
-      grey: '#F3F3F3',
-      white: '#FFFFFF',
+      grey: "#F3F3F3",
+      white: "#FFFFFF",
     };
 
     /* eslint-disable max-len, react/jsx-sort-props */

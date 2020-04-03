@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import Portal from '../Portal/Portal';
-import './Modal.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import Portal from "../Portal/Portal";
+import "./Modal.css";
 
-const bodyOpenClassName = 'ax-modal__body--open';
+const bodyOpenClassName = "ax-modal__body--open";
 
 const enableScrolling = () => {
   document.body.classList.remove(bodyOpenClassName);
@@ -20,15 +20,15 @@ export default class Modal extends Component {
     children: PropTypes.node,
     isOpen: PropTypes.bool.isRequired,
     onOverlayClick: PropTypes.func,
-    overlayShade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
-    overlayTheme: PropTypes.oneOf(['day', 'night']),
-    padding: PropTypes.oneOf(['x0', 'x6', 'x8', 'x12', 'x16']),
+    overlayShade: PropTypes.oneOf(["shade-1", "shade-2", "shade-3", "shade-4"]),
+    overlayTheme: PropTypes.oneOf(["day", "night"]),
+    padding: PropTypes.oneOf(["x0", "x6", "x8", "x12", "x16"]),
     shouldCloseOnEsc: PropTypes.bool,
   };
 
   static defaultProps = {
-    overlayShade: 'shade-2',
-    padding: 'x6',
+    overlayShade: "shade-2",
+    padding: "x6",
   };
 
   constructor(props) {
@@ -41,14 +41,14 @@ export default class Modal extends Component {
       disableScrolling();
     }
     if (this.props.shouldCloseOnEsc) {
-      document.body.addEventListener('keydown', this.handleEscapeKey, false);
+      document.body.addEventListener("keydown", this.handleEscapeKey, false);
     }
   }
 
   componentWillUnmount() {
     enableScrolling();
     if (this.props.shouldCloseOnEsc) {
-      document.body.removeEventListener('keydown', this.handleEscapeKey, false);
+      document.body.removeEventListener("keydown", this.handleEscapeKey, false);
     }
   }
 
@@ -66,16 +66,16 @@ export default class Modal extends Component {
 
   toggleEscapeEventListener() {
     if (this.props.shouldCloseOnEsc) {
-      document.body.addEventListener('keydown', this.handleEscapeKey, false);
+      document.body.addEventListener("keydown", this.handleEscapeKey, false);
     } else {
-      document.body.removeEventListener('keydown', this.handleEscapeKey, false);
+      document.body.removeEventListener("keydown", this.handleEscapeKey, false);
     }
   }
 
   handleEscapeKey(event) {
     const { onOverlayClick, shouldCloseOnEsc } = this.props;
 
-    if (event.key === 'Escape' && shouldCloseOnEsc) {
+    if (event.key === "Escape" && shouldCloseOnEsc) {
       if (onOverlayClick) {
         onOverlayClick();
       }
@@ -93,7 +93,7 @@ export default class Modal extends Component {
     } = this.props;
 
     const classes = classnames(
-      'ax-modal__container',
+      "ax-modal__container",
       `ax-modal__container--padding-${padding}`,
       {
         [`ax-modal__container--overlay-${overlayShade}`]: overlayShade,

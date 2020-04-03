@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from './Image';
-import AlertBar from '../AlertBar/AlertBar';
+import React from "react";
+import Image from "./Image";
+import AlertBar from "../AlertBar/AlertBar";
 
 export default {
-  title: 'Components/Image',
+  title: "Components/Image",
   component: Image,
 };
 

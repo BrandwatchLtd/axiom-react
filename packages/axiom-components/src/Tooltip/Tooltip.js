@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { useState, cloneElement } from 'react';
-import { findComponent } from '@brandwatch/axiom-utils';
-import Position from '../Position/Position';
-import PositionSource from '../Position/PositionSource';
-import PositionTarget from '../Position/PositionTarget';
-import { TooltipSourceRef } from './TooltipSource';
-import { TooltipTargetRef } from './TooltipTarget';
+import PropTypes from "prop-types";
+import React, { useState, cloneElement } from "react";
+import { findComponent } from "@brandwatch/axiom-utils";
+import Position from "../Position/Position";
+import PositionSource from "../Position/PositionSource";
+import PositionTarget from "../Position/PositionTarget";
+import { TooltipSourceRef } from "./TooltipSource";
+import { TooltipTargetRef } from "./TooltipTarget";
 
 export default React.forwardRef(Tooltip);
 
@@ -14,7 +14,7 @@ function Tooltip(
     children,
     delay = false,
     onClick,
-    position = 'top',
+    position = "top",
     enabled = true,
     ...rest
   },
@@ -80,5 +80,5 @@ Tooltip.propTypes = {
    * due to collision, it will be placed according to the flip behaviour  until
    * a valid position is found.
    */
-  position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
 };

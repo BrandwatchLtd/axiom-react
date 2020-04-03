@@ -1,36 +1,36 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
 export default class ContextContent extends Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    color: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    color: PropTypes.oneOf(["success", "warning", "error", "info"]),
     hasFullSeparator: PropTypes.bool,
     height: PropTypes.string,
     maxHeight: PropTypes.string,
-    padding: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
+    padding: PropTypes.oneOf(["none", "tiny", "small", "medium", "large"]),
     paddingHorizontal: PropTypes.oneOf([
-      'none',
-      'tiny',
-      'small',
-      'medium',
-      'large',
+      "none",
+      "tiny",
+      "small",
+      "medium",
+      "large",
     ]),
     paddingVertical: PropTypes.oneOf([
-      'none',
-      'tiny',
-      'small',
-      'medium',
-      'large',
+      "none",
+      "tiny",
+      "small",
+      "medium",
+      "large",
     ]),
   };
 
   static defaultProps = {
     hasFullSeparator: false,
-    padding: 'large',
+    padding: "large",
   };
 
   render() {
@@ -49,13 +49,13 @@ export default class ContextContent extends Component {
 
     const classes = classnames(
       className,
-      'ax-context-content',
+      "ax-context-content",
       `ax-context-content--padding-horizontal-${paddingHorizontal}`,
       `ax-context-content--padding-vertical-${paddingVertical}`,
       {
         [`ax-context-content--${color}`]: color,
-        'ax-context-content--full-separator': hasFullSeparator,
-        'ax-context-content--scrollable': height || maxHeight,
+        "ax-context-content--full-separator": hasFullSeparator,
+        "ax-context-content--scrollable": height || maxHeight,
       }
     );
 

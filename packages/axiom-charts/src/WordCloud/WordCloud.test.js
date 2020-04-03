@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import WordCloud from './WordCloud';
-import Word from './Word';
+import React from "react";
+import renderer from "react-test-renderer";
+import WordCloud from "./WordCloud";
+import Word from "./Word";
 
 const getComponent = () =>
   renderer.create(
@@ -10,8 +10,8 @@ const getComponent = () =>
     </WordCloud>
   );
 
-describe('WordCloud', () => {
-  it('renders with defaultProps', () => {
+describe("WordCloud", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

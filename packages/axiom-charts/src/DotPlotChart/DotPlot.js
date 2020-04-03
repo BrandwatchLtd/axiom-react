@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Base } from '@brandwatch/axiom-components';
-import ChartContext from '../ChartContext/ChartContext';
-import DotPlotBenchmarkLine from './DotPlotBenchmarkLine';
-import DotPlotDots from './DotPlotDots';
-import DotPlotDifferenceLine from './DotPlotDifferenceLine';
-import DotPlotValue from './DotPlotValue';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { Base } from "@brandwatch/axiom-components";
+import ChartContext from "../ChartContext/ChartContext";
+import DotPlotBenchmarkLine from "./DotPlotBenchmarkLine";
+import DotPlotDots from "./DotPlotDots";
+import DotPlotDifferenceLine from "./DotPlotDifferenceLine";
+import DotPlotValue from "./DotPlotValue";
 import {
   getLines,
   getDotColors,
@@ -15,13 +15,13 @@ import {
   isDotHidden,
   isValueHidden,
   isValueStrong,
-} from './utils';
-import './DotPlot.css';
+} from "./utils";
+import "./DotPlot.css";
 
 const differenceLineContainerClasses = (fromBenchmark, toBenchmark) =>
-  classnames('ax-dot-plot__difference-line-container', {
-    'ax-dot-plot__difference-line-container--from-benchmark': fromBenchmark,
-    'ax-dot-plot__difference-line-container--to-benchmark': toBenchmark,
+  classnames("ax-dot-plot__difference-line-container", {
+    "ax-dot-plot__difference-line-container--from-benchmark": fromBenchmark,
+    "ax-dot-plot__difference-line-container--to-benchmark": toBenchmark,
   });
 
 export default class DotPlot extends Component {

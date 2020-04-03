@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Button from '../Button/Button';
-import Cloak from '../Cloak/Cloak';
-import ProgressInfinite from './ProgressInfinite';
-import './ProgressButton.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Button from "../Button/Button";
+import Cloak from "../Cloak/Cloak";
+import ProgressInfinite from "./ProgressInfinite";
+import "./ProgressButton.css";
 
 const progressSizeMap = {
-  small: '1rem',
-  medium: '1.25rem',
-  large: '1.5rem',
+  small: "1rem",
+  medium: "1.25rem",
+  large: "1.5rem",
 };
 
 export default class ProgressButton extends Component {
@@ -19,7 +19,7 @@ export default class ProgressButton extends Component {
     /** Flag if an action is in progress, shows the progress indicator */
     isInProgress: PropTypes.bool,
     /** Size of the Button. See Button[size]. */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(["small", "medium", "large"]),
   };
 
   render() {
@@ -30,8 +30,8 @@ export default class ProgressButton extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-progress-button', {
-      'ax-progress-button--in-progress': isInProgress,
+    const classes = classnames("ax-progress-button", {
+      "ax-progress-button--in-progress": isInProgress,
     });
 
     return (

@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 
-import { findComponent } from '@brandwatch/axiom-utils';
-import Base from '../Base/Base';
-import Validate from '../Validation/Validate';
-import TextInputIcon, { TextInputIconRef } from './TextInputIcon';
-import { TextInputButtonRef } from './TextInputButton';
-import ProgressInfinite from '../Progress/ProgressInfinite';
-import InputWrapper from './InputWrapper';
-import './TextInput.css';
+import { findComponent } from "@brandwatch/axiom-utils";
+import Base from "../Base/Base";
+import Validate from "../Validation/Validate";
+import TextInputIcon, { TextInputIconRef } from "./TextInputIcon";
+import { TextInputButtonRef } from "./TextInputButton";
+import ProgressInfinite from "../Progress/ProgressInfinite";
+import InputWrapper from "./InputWrapper";
+import "./TextInput.css";
 
 export default class TextInput extends Component {
   static propTypes = {
@@ -32,14 +32,14 @@ export default class TextInput extends Component {
     label: PropTypes.string,
     /** Vertical margin between label and input */
     labelSpace: PropTypes.oneOf([
-      'x0',
-      'x1',
-      'x2',
-      'x3',
-      'x4',
-      'x5',
-      'x6',
-      'x8',
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x6",
+      "x8",
     ]),
     /** Handler for when the input field is blurred */
     onBlur: PropTypes.func,
@@ -59,20 +59,20 @@ export default class TextInput extends Component {
     /** See Validate[required] */
     required: PropTypes.bool,
     /** Size of the input field */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(["small", "medium", "large"]),
     /** SKIP */
     space: PropTypes.string,
     /** Visual style variations of the input field */
-    style: PropTypes.oneOf(['overlay']),
+    style: PropTypes.oneOf(["overlay"]),
     /** Type of the input field */
-    type: PropTypes.oneOf(['password', 'text', 'number']),
+    type: PropTypes.oneOf(["password", "text", "number"]),
     /**
      * Specifies text to be used in the form element's usage hint that is
      * displayed in a tooltip coming off a question mark in the top right
      */
     usageHint: PropTypes.node,
     /** direction of usagehint popup */
-    usageHintPosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    usageHintPosition: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     /** Applies styling to indicate the users input was valid */
     valid: PropTypes.bool,
     /** Value of the input field */
@@ -84,9 +84,9 @@ export default class TextInput extends Component {
   };
 
   static defaultProps = {
-    size: 'medium',
-    space: 'x4',
-    type: 'text',
+    size: "medium",
+    space: "x4",
+    type: "text",
     inlineLabel: false,
   };
 
@@ -143,7 +143,7 @@ export default class TextInput extends Component {
     const icon = findComponent(children, TextInputIconRef);
     const button = findComponent(children, TextInputButtonRef);
     const showOnClear = onClear && value && !isInProgress;
-    const showIcon = icon && (!isInProgress || icon.props.align === 'left');
+    const showIcon = icon && (!isInProgress || icon.props.align === "left");
 
     return (
       <Validate
@@ -152,7 +152,7 @@ export default class TextInput extends Component {
         required={required}
         value={value}
       >
-        {isValid => (
+        {(isValid) => (
           <Base className="ax-input__container" space={space}>
             <InputWrapper
               disabled={disabled}

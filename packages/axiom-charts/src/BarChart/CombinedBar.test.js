@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import toJSON from 'enzyme-to-json';
-import CombinedBar from './CombinedBar';
+import React from "react";
+import { shallow } from "enzyme";
+import toJSON from "enzyme-to-json";
+import CombinedBar from "./CombinedBar";
 
 function getComponent(newProps = {}) {
   const props = {
@@ -12,8 +12,8 @@ function getComponent(newProps = {}) {
     onDropdownClose: jest.fn(),
     onDropdownOpen: jest.fn(),
     data: {},
-    color: 'critical-mass',
-    label: 'Possitve',
+    color: "critical-mass",
+    label: "Possitve",
     value: 4321,
     ...newProps,
   };
@@ -23,8 +23,8 @@ function getComponent(newProps = {}) {
   );
 }
 
-describe('CombinedBar', () => {
-  it('renders a single bar when benchmark value is less than current value', () => {
+describe("CombinedBar", () => {
+  it("renders a single bar when benchmark value is less than current value", () => {
     const component = getComponent({
       benchmarkPercent: 10,
       percent: 50,
@@ -33,7 +33,7 @@ describe('CombinedBar', () => {
     expect(toJSON(component)).toMatchSnapshot();
   });
 
-  it('renders an additional striped bar when benchmark value is grather than current value', () => {
+  it("renders an additional striped bar when benchmark value is grather than current value", () => {
     const component = getComponent({
       benchmark: 50,
       benchmarkPercent: 50,

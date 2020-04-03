@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import ContextContent from '../Context/ContextContent';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ContextContent from "../Context/ContextContent";
 
 export default class TooltipContent extends Component {
   static propTypes = {
-    size: PropTypes.oneOf(['tiny', 'small']),
+    size: PropTypes.oneOf(["tiny", "small"]),
   };
 
   static defaultProps = {
-    size: 'small',
+    size: "small",
   };
 
   render() {
@@ -16,7 +16,7 @@ export default class TooltipContent extends Component {
 
     return (
       <ContextContent
-        textSize={size === 'tiny' ? 'small' : 'body'}
+        textSize={size === "tiny" ? "small" : "body"}
         {...rest}
         padding={size}
       />

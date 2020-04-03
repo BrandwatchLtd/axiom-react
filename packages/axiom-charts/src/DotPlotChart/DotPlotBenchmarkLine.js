@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
 
 export default class DotPlotBenchmarkLine extends Component {
   static propTypes = {
@@ -11,7 +11,7 @@ export default class DotPlotBenchmarkLine extends Component {
   };
 
   static defaultProps = {
-    width: 'auto',
+    width: "auto",
     value: 50,
   };
 
@@ -19,8 +19,8 @@ export default class DotPlotBenchmarkLine extends Component {
     const { faded, height, value, width, ...rest } = this.props;
     const style = { height, width };
     const lineStyle = { left: `${value}%` };
-    const classes = classnames('ax-dot-plot__benchmark-line', {
-      'ax-dot-plot__benchmark-line--faded': faded,
+    const classes = classnames("ax-dot-plot__benchmark-line", {
+      "ax-dot-plot__benchmark-line--faded": faded,
     });
 
     return (

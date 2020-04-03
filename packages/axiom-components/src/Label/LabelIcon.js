@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Icon from '../Icon/Icon';
-import Link from '../Typography/Link';
-import './LabelIcon.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Icon from "../Icon/Icon";
+import Link from "../Typography/Link";
+import "./LabelIcon.css";
 
-export const LabelIconRef = 'LabelIcon';
+export const LabelIconRef = "LabelIcon";
 
 export default class LabelIcon extends Component {
   static propTypes = {
@@ -23,15 +23,15 @@ export default class LabelIcon extends Component {
 
   render() {
     const { color, isEnd, isStart, name, ...rest } = this.props;
-    const classes = classnames('ax-label__icon', {
-      'ax-label__icon--start': isStart,
-      'ax-label__icon--end': isEnd,
+    const classes = classnames("ax-label__icon", {
+      "ax-label__icon--start": isStart,
+      "ax-label__icon--end": isEnd,
     });
 
     const linkStyle = {
-      white: 'subtle',
-      success: 'night',
-      error: 'night',
+      white: "subtle",
+      success: "night",
+      error: "night",
     }[color];
 
     return (

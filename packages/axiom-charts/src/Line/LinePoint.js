@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import ChartContext from '../ChartContext/ChartContext';
-import DataPoint from '../DataPoint/DataPoint';
-import DataPoints from '../DataPoint/DataPoints';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import ChartContext from "../ChartContext/ChartContext";
+import DataPoint from "../DataPoint/DataPoint";
+import DataPoints from "../DataPoint/DataPoints";
 
 export default class LinePoint extends Component {
   static propTypes = {
@@ -21,40 +21,40 @@ export default class LinePoint extends Component {
     TooltipContext: PropTypes.func,
     /** Color of the DataPoint */
     color: PropTypes.oneOf([
-      'subtle',
-      'overlay-light',
-      'forbidden-planet',
-      'tiny-clanger',
-      'critical-mass',
-      'fantastic-voyage',
-      'paradise-lost',
-      'serene-sea',
-      'event-horizon',
-      'electric-dreams',
-      'outer-limits',
-      'giant-leap',
-      'moon-lagoon',
-      'space-invader',
-      'extraterrestrial',
-      'terra-form',
-      'primeval-soup',
-      'future-shock',
-      'sun-maker',
-      'new-horizon',
-      'blast-off',
-      'crash-course',
-      'solar-rust',
-      'ground-control',
-      'space-oddity',
-      'rocky-planet',
-      'deep-thought',
-      'luna-dust',
-      'sentiment-positive',
-      'sentiment-negative',
-      'sentiment-neutral',
-      'social-twitter',
-      'social-facebook',
-      'social-instagram',
+      "subtle",
+      "overlay-light",
+      "forbidden-planet",
+      "tiny-clanger",
+      "critical-mass",
+      "fantastic-voyage",
+      "paradise-lost",
+      "serene-sea",
+      "event-horizon",
+      "electric-dreams",
+      "outer-limits",
+      "giant-leap",
+      "moon-lagoon",
+      "space-invader",
+      "extraterrestrial",
+      "terra-form",
+      "primeval-soup",
+      "future-shock",
+      "sun-maker",
+      "new-horizon",
+      "blast-off",
+      "crash-course",
+      "solar-rust",
+      "ground-control",
+      "space-oddity",
+      "rocky-planet",
+      "deep-thought",
+      "luna-dust",
+      "sentiment-positive",
+      "sentiment-negative",
+      "sentiment-neutral",
+      "social-twitter",
+      "social-facebook",
+      "social-instagram",
     ]).isRequired,
     /** Applies hover state, useful to retain hover styling. */
     hover: PropTypes.bool,
@@ -73,7 +73,7 @@ export default class LinePoint extends Component {
     /** Size of the DataPoint */
     size: PropTypes.string.isRequired,
     /** Style of the DataPoint */
-    style: PropTypes.oneOf(['hollow', 'solid']),
+    style: PropTypes.oneOf(["hollow", "solid"]),
     /** SKIP */
     value: PropTypes.number,
     /** SKIP */
@@ -102,9 +102,9 @@ export default class LinePoint extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames('ax-line__point', `ax-line__point--${color}`, {
-      'ax-line__point--hoverable': onMouseEnter,
-      'ax-line__point--hover': hover,
+    const classes = classnames("ax-line__point", `ax-line__point--${color}`, {
+      "ax-line__point--hoverable": onMouseEnter,
+      "ax-line__point--hover": hover,
     });
 
     const position = {

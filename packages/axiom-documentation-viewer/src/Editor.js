@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import './Editor.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import "./Editor.css";
 
 let brace;
 
-if (typeof window !== 'undefined') {
-  brace = require('brace');
-  require('brace/mode/javascript');
-  brace.define('ace/theme/dm', (require, exports) => {
+if (typeof window !== "undefined") {
+  brace = require("brace");
+  require("brace/mode/javascript");
+  brace.define("ace/theme/dm", (require, exports) => {
     exports.isDark = false;
-    exports.cssClass = 'ace-dm';
+    exports.cssClass = "ace-dm";
   });
 }
 
@@ -27,8 +27,8 @@ export default class Editor extends Component {
     this.ide.setShowFoldWidgets(false);
     this.ide.setHighlightActiveLine(false);
     this.ide.$blockScrolling = Infinity;
-    this.ide.getSession().setMode('ace/mode/javascript');
-    this.ide.setTheme('ace/theme/dm');
+    this.ide.getSession().setMode("ace/mode/javascript");
+    this.ide.setTheme("ace/theme/dm");
     this.ide.session.setUseWrapMode(true);
     this.ide.session.setOptions({
       tabSize: 2,
@@ -36,10 +36,10 @@ export default class Editor extends Component {
     });
 
     this.ide.setValue(initialValue, 1);
-    this.ide.on('change', () => onChange({ content: this.ide.getValue() }));
+    this.ide.on("change", () => onChange({ content: this.ide.getValue() }));
   }
 
   render() {
-    return <div className="dm-editor" ref={el => (this.el = el)} />;
+    return <div className="dm-editor" ref={(el) => (this.el = el)} />;
   }
 }

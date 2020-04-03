@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import atIds from '@brandwatch/axiom-automation-testing/ids';
-import { Base, Small } from '@brandwatch/axiom-components';
-import Bars from '../Bar/Bars';
-import CombinedBar from './CombinedBar';
-import BarChartBenchmarkLine from './BarChartBenchmarkLine';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import atIds from "@brandwatch/axiom-automation-testing/ids";
+import { Base, Small } from "@brandwatch/axiom-components";
+import Bars from "../Bar/Bars";
+import CombinedBar from "./CombinedBar";
+import BarChartBenchmarkLine from "./BarChartBenchmarkLine";
 
 export default class BarChartBars extends Component {
   static propTypes = {
@@ -15,7 +15,7 @@ export default class BarChartBars extends Component {
     TooltipContext: PropTypes.func,
     barLabel: PropTypes.func,
     benchmark: PropTypes.number,
-    benchmarkHeight: PropTypes.oneOf(['x1', 'x2', 'x3']),
+    benchmarkHeight: PropTypes.oneOf(["x1", "x2", "x3"]),
     data: PropTypes.object.isRequired,
     fadeBenchmarkLine: PropTypes.bool.isRequired,
     hideBars: PropTypes.bool.isRequired,
@@ -69,7 +69,7 @@ export default class BarChartBars extends Component {
       onMouseLeave,
     } = this.props;
 
-    const classes = classnames('ax-bar-chart__bars', {
+    const classes = classnames("ax-bar-chart__bars", {
       [`ax-bar-chart__bars--${benchmarkHeight}`]: benchmarkHeight,
     });
 
@@ -92,8 +92,8 @@ export default class BarChartBars extends Component {
             const isHoveredByIndex = hoverIndex && index === hoverIndex;
             const hideLabel =
               !showBarLabel && !isHoveredByColor && !isHoveredByIndex;
-            const labelClasses = classnames('ax-bar-chart__bar-label', {
-              'ax-bar-chart__bar-label--hidden': hideLabel,
+            const labelClasses = classnames("ax-bar-chart__bar-label", {
+              "ax-bar-chart__bar-label--hidden": hideLabel,
             });
 
             const isStretched = benchmarkPercent > percent;

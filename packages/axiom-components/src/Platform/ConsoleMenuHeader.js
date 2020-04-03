@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Base from '../Base/Base';
+import React, { Component } from "react";
+import Base from "../Base/Base";
 
 export default class ConsoleMenuHeader extends Component {
   render() {

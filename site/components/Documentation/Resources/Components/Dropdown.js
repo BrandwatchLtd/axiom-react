@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Button,
   ButtonGroup,
@@ -20,19 +20,19 @@ import {
   TextIcon,
   TextInput,
   TextInputIcon,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'Option 1',
-      multiSelection: ['Option 1'],
+      selected: "Option 1",
+      multiSelection: ["Option 1"],
     };
   }
 
@@ -40,7 +40,7 @@ export default class Documentation extends Component {
     this.setState(({ multiSelection }) => ({
       multiSelection:
         multiSelection.indexOf(value) >= 0
-          ? multiSelection.filter(v => v !== value)
+          ? multiSelection.filter((v) => v !== value)
           : [...multiSelection, value],
     }));
   }
@@ -64,15 +64,15 @@ export default class Documentation extends Component {
                   <DropdownContext>
                     <DropdownMenu>
                       <DropdownMenuItem
-                        onClick={() => this.setState({ selected: 'Option 1' })}
-                        selected={selected === 'Option 1'}
+                        onClick={() => this.setState({ selected: "Option 1" })}
+                        selected={selected === "Option 1"}
                       >
                         Option 1
                       </DropdownMenuItem>
 
                       <DropdownMenuItem
-                        onClick={() => this.setState({ selected: 'Option 2' })}
-                        selected={selected === 'Option 2'}
+                        onClick={() => this.setState({ selected: "Option 2" })}
+                        selected={selected === "Option 2"}
                       >
                         Option 2
                       </DropdownMenuItem>
@@ -123,7 +123,7 @@ export default class Documentation extends Component {
                     isTarget
                     onChange={() => {}}
                     readOnly
-                    value={multiSelection.join(', ')}
+                    value={multiSelection.join(", ")}
                   >
                     <TextInputIcon name="chevron-down" />
                   </TextInput>
@@ -134,16 +134,16 @@ export default class Documentation extends Component {
                     <DropdownMenu>
                       <DropdownMenuItem
                         multiSelect
-                        onClick={() => this.handleMultiSelection('Option 1')}
-                        selected={multiSelection.indexOf('Option 1') >= 0}
+                        onClick={() => this.handleMultiSelection("Option 1")}
+                        selected={multiSelection.indexOf("Option 1") >= 0}
                       >
                         Option 1
                       </DropdownMenuItem>
 
                       <DropdownMenuItem
                         multiSelect
-                        onClick={() => this.handleMultiSelection('Option 2')}
-                        selected={multiSelection.indexOf('Option 2') >= 0}
+                        onClick={() => this.handleMultiSelection("Option 2")}
+                        selected={multiSelection.indexOf("Option 2") >= 0}
                       >
                         Option 2
                       </DropdownMenuItem>
@@ -151,18 +151,18 @@ export default class Documentation extends Component {
                         <DropdownMenuItem
                           multiSelect
                           onClick={() =>
-                            this.handleMultiSelection('Option 2.1')
+                            this.handleMultiSelection("Option 2.1")
                           }
-                          selected={multiSelection.indexOf('Option 2.1') >= 0}
+                          selected={multiSelection.indexOf("Option 2.1") >= 0}
                         >
                           Option 2.1
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           multiSelect
                           onClick={() =>
-                            this.handleMultiSelection('Option 2.2')
+                            this.handleMultiSelection("Option 2.2")
                           }
-                          selected={multiSelection.indexOf('Option 2.2') >= 0}
+                          selected={multiSelection.indexOf("Option 2.2") >= 0}
                         >
                           Option 2.2
                         </DropdownMenuItem>
@@ -171,16 +171,16 @@ export default class Documentation extends Component {
                       <DropdownMenuItem
                         disabled
                         multiSelect
-                        onClick={() => this.handleMultiSelection('Option 3')}
-                        selected={multiSelection.indexOf('Option 3') >= 0}
+                        onClick={() => this.handleMultiSelection("Option 3")}
+                        selected={multiSelection.indexOf("Option 3") >= 0}
                       >
                         Option 3
                       </DropdownMenuItem>
 
                       <DropdownMenuItem
                         multiSelect
-                        onClick={() => this.handleMultiSelection('Option 4')}
-                        selected={multiSelection.indexOf('Option 4') >= 0}
+                        onClick={() => this.handleMultiSelection("Option 4")}
+                        selected={multiSelection.indexOf("Option 4") >= 0}
                       >
                         Option 4
                       </DropdownMenuItem>
@@ -312,13 +312,13 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/Dropdown'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownContent'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownContext'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownMenu'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownMenuItem'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownSource'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownTarget'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/Dropdown"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownContent"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownContext"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownMenu"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownMenuItem"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownSource"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Dropdown/DropdownTarget"),
           ]}
         />
       </DocumentationContent>

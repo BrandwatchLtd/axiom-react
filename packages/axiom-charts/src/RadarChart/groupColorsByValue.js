@@ -8,7 +8,7 @@ export default (data, filter) =>
       if (!grouped[index]) {
         grouped[index] = [{ colors: [color], labels: [label], value }];
       } else {
-        const group = grouped[index].find(group => group.value === value);
+        const group = grouped[index].find((group) => group.value === value);
 
         if (group) {
           group.colors.push(color);

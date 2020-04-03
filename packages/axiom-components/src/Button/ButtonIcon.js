@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Icon from '../Icon/Icon';
-import './ButtonIcon.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Icon from "../Icon/Icon";
+import "./ButtonIcon.css";
 
-export const ButtonIconRef = 'ButtonIcon';
+export const ButtonIconRef = "ButtonIcon";
 
 export default class ButtonIcon extends Component {
   static propTypes = {
@@ -21,16 +21,16 @@ export default class ButtonIcon extends Component {
   };
 
   static defaultProps = {
-    size: '1rem',
+    size: "1rem",
   };
 
   static typeRef = ButtonIconRef;
 
   render() {
     const { isEnd, isStart, name, size, color, ...rest } = this.props;
-    const classes = classnames('ax-button__icon', {
-      'ax-button__icon--start': isStart,
-      'ax-button__icon--end': isEnd,
+    const classes = classnames("ax-button__icon", {
+      "ax-button__icon--start": isStart,
+      "ax-button__icon--end": isEnd,
     });
 
     return (

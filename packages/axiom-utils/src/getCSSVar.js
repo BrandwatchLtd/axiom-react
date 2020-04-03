@@ -1,5 +1,5 @@
 export default (variable, context) => {
-  if (typeof window === 'undefined') return;
+  if (typeof window === "undefined") return;
 
   if (!context || context === document) {
     context = document.documentElement;

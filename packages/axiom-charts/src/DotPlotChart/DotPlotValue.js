@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Base, Small } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { Base, Small } from "@brandwatch/axiom-components";
 
 export default class DotPlotValue extends Component {
   static propTypes = {
@@ -13,8 +13,8 @@ export default class DotPlotValue extends Component {
 
   render() {
     const { hidden, value, dotPlotLabel, x, ...rest } = this.props;
-    const classes = classnames('ax-dot-plot__value', {
-      'ax-dot-plot__value--hidden': hidden,
+    const classes = classnames("ax-dot-plot__value", {
+      "ax-dot-plot__value--hidden": hidden,
     });
 
     const getLabel = () => {

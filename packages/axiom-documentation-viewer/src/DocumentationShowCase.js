@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Children, Component } from 'react';
-import reactElementToJsxString from 'react-element-to-jsx-string';
+import PropTypes from "prop-types";
+import React, { Children, Component } from "react";
+import reactElementToJsxString from "react-element-to-jsx-string";
 import {
   AlertBar,
   Base,
@@ -19,14 +19,14 @@ import {
   Link,
   List,
   ListItem,
-} from '@brandwatch/axiom-components';
-import DocumentationCodeSnippet from './DocumentationCodeSnippet';
-import './DocumentationShowCase.css';
+} from "@brandwatch/axiom-components";
+import DocumentationCodeSnippet from "./DocumentationCodeSnippet";
+import "./DocumentationShowCase.css";
 
 const hasCustomPropertySupport =
-  typeof window !== 'undefined' &&
+  typeof window !== "undefined" &&
   window.CSS &&
-  CSS.supports('color', 'var(--primary)');
+  CSS.supports("color", "var(--primary)");
 
 export default class DocumentationShowCase extends Component {
   static propTypes = {
@@ -48,7 +48,7 @@ export default class DocumentationShowCase extends Component {
   };
 
   static defaultProps = {
-    minHeight: '12rem',
+    minHeight: "12rem",
   };
 
   constructor(props) {
@@ -79,8 +79,8 @@ export default class DocumentationShowCase extends Component {
     const style = {
       height,
       minHeight: !height && minHeight,
-      alignItems: centeredHorizontal && 'center',
-      justifyContent: centeredVertical && 'center',
+      alignItems: centeredHorizontal && "center",
+      justifyContent: centeredVertical && "center",
     };
 
     let snippet;
@@ -89,13 +89,13 @@ export default class DocumentationShowCase extends Component {
     if (!hideCode && (hidePreview || isCodeVisisble)) {
       try {
         snippet = (
-          Children.map(showCase, child =>
+          Children.map(showCase, (child) =>
             reactElementToJsxString(child, {
               showDefaultProps: false,
-              filterProps: ['key'],
+              filterProps: ["key"],
             })
           ) || []
-        ).join('\n');
+        ).join("\n");
       } catch (e) {
         error = e;
       }
@@ -153,15 +153,15 @@ export default class DocumentationShowCase extends Component {
                     {!hidePreview && hasCustomPropertySupport && (
                       <ListItem>
                         <Link
-                          onClick={() => this.setState({ theme: 'day' })}
-                          style={theme === 'day' ? 'normal' : 'subtle'}
+                          onClick={() => this.setState({ theme: "day" })}
+                          style={theme === "day" ? "normal" : "subtle"}
                         >
                           <Icon inline name="sun" />
-                        </Link>{' '}
-                        /{' '}
+                        </Link>{" "}
+                        /{" "}
                         <Link
-                          onClick={() => this.setState({ theme: 'night' })}
-                          style={theme === 'night' ? 'normal' : 'subtle'}
+                          onClick={() => this.setState({ theme: "night" })}
+                          style={theme === "night" ? "normal" : "subtle"}
                         >
                           <Icon inline name="moon" />
                         </Link>
@@ -218,7 +218,7 @@ export default class DocumentationShowCase extends Component {
                     textSize="small"
                     textStrong
                   >
-                    {isCodeVisisble ? 'Hide' : 'Show'} code
+                    {isCodeVisisble ? "Hide" : "Show"} code
                   </Link>
                 </GridCell>
               )}

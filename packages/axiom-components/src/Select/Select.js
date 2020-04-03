@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Children, Component } from 'react';
-import omit from 'lodash.omit';
-import Dropdown from '../Dropdown/Dropdown';
-import DropdownContext from '../Dropdown/DropdownContext';
-import DropdownSource from '../Dropdown/DropdownSource';
-import DropdownTarget from '../Dropdown/DropdownTarget';
-import SelectInput from './SelectInput';
+import PropTypes from "prop-types";
+import React, { Children, Component } from "react";
+import omit from "lodash.omit";
+import Dropdown from "../Dropdown/Dropdown";
+import DropdownContext from "../Dropdown/DropdownContext";
+import DropdownSource from "../Dropdown/DropdownSource";
+import DropdownTarget from "../Dropdown/DropdownTarget";
+import SelectInput from "./SelectInput";
 
 export default class Select extends Component {
   static propTypes = {
@@ -29,7 +29,7 @@ export default class Select extends Component {
   };
 
   static defaultProps = {
-    value: '',
+    value: "",
     onSelect: () => {},
   };
 
@@ -66,7 +66,7 @@ export default class Select extends Component {
         position="bottom"
       >
         <DropdownTarget>
-          <SelectInput {...omit(props, ['onSelect', 'selectedValue'])} />
+          <SelectInput {...omit(props, ["onSelect", "selectedValue"])} />
         </DropdownTarget>
 
         <DropdownSource focusOnOpen>

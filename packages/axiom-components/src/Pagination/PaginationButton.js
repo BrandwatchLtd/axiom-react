@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Button from '../Button/Button';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Button from "../Button/Button";
 
 export default class PaginationButton extends Component {
   static propTypes = {
@@ -17,9 +17,9 @@ export default class PaginationButton extends Component {
       <Button
         {...rest}
         onClick={() => onClick(page)}
-        shape={shape || page <= 99 ? 'circle' : 'stadium'}
+        shape={shape || page <= 99 ? "circle" : "stadium"}
         size="small"
-        style={active ? 'primary' : 'quaternary'}
+        style={active ? "primary" : "quaternary"}
       />
     );
   }

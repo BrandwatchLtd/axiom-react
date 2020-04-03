@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
 import {
   Dropdown,
   DropdownSource,
   DropdownTarget,
-} from '@brandwatch/axiom-components';
-import Bar from '../Bar/Bar';
+} from "@brandwatch/axiom-components";
+import Bar from "../Bar/Bar";
 
 export default class ColumnChartContext extends PureComponent {
   static propTypes = {

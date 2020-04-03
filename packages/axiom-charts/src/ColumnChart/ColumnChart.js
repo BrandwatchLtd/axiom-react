@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import Bars from '../Bar/Bars';
-import ColumnChartBars from './ColumnChartBars';
-import ColumnChartContext from './ColumnChartContext';
-import ColumnChartRow from './ColumnChartRow';
-import ColumnChartVisual from './ColumnChartVisual';
-import ColumnChartXAxis from './ColumnChartXAxis';
-import ColumnChartXAxisLabel from './ColumnChartXAxisLabel';
-import ColumnChartYAxis from './ColumnChartYAxis';
-import { formatData } from './utils';
-import './ColumnChart.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import Bars from "../Bar/Bars";
+import ColumnChartBars from "./ColumnChartBars";
+import ColumnChartContext from "./ColumnChartContext";
+import ColumnChartRow from "./ColumnChartRow";
+import ColumnChartVisual from "./ColumnChartVisual";
+import ColumnChartXAxis from "./ColumnChartXAxis";
+import ColumnChartXAxisLabel from "./ColumnChartXAxisLabel";
+import ColumnChartYAxis from "./ColumnChartYAxis";
+import { formatData } from "./utils";
+import "./ColumnChart.css";
 
 export default class ColumnChart extends Component {
   static propTypes = {
@@ -41,7 +41,7 @@ export default class ColumnChart extends Component {
       })
     ).isRequired,
     /** Direction the bars point */
-    direction: PropTypes.oneOf(['up', 'down']),
+    direction: PropTypes.oneOf(["up", "down"]),
     /** Overall height of the individual column charts */
     height: PropTypes.string.isRequired,
     /** Label to show on the top yAxis row */
@@ -57,7 +57,7 @@ export default class ColumnChart extends Component {
   };
 
   static defaultProps = {
-    labelColumnWidth: '0rem',
+    labelColumnWidth: "0rem",
   };
 
   constructor(props) {
@@ -73,7 +73,7 @@ export default class ColumnChart extends Component {
   }
 
   getLabelAlignment() {
-    return this.props.direction === 'down' ? 'top' : 'bottom';
+    return this.props.direction === "down" ? "top" : "bottom";
   }
 
   render() {

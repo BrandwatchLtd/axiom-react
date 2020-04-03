@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import Icon from '../Icon/Icon';
-import Link from '../Typography/Link';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import Icon from "../Icon/Icon";
+import Link from "../Typography/Link";
 
 export default class DialogHeader extends Component {
   static propTypes = {
@@ -23,7 +23,7 @@ export default class DialogHeader extends Component {
     const { onRequestClose } = this.context;
     const { children, className, ...rest } = this.props;
 
-    const classes = classnames('ax-dialog__header', className);
+    const classes = classnames("ax-dialog__header", className);
 
     return (
       <Base {...rest} className={classes}>

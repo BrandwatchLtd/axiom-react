@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Bar from './Bar';
-import Bars from './Bars';
+import React from "react";
+import renderer from "react-test-renderer";
+import Bar from "./Bar";
+import Bars from "./Bars";
 
 function getComponent(props = {}) {
   return renderer.create(
@@ -11,15 +11,15 @@ function getComponent(props = {}) {
   );
 }
 
-describe('Bars', () => {
-  it('renders with defaultProps', () => {
+describe("Bars", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with direction', () => {
-    ['up', 'down', 'left', 'right'].forEach(direction => {
+  describe("renders with direction", () => {
+    ["up", "down", "left", "right"].forEach((direction) => {
       it(direction, () => {
         const component = getComponent({ direction });
         const tree = component.toJSON();
@@ -28,8 +28,8 @@ describe('Bars', () => {
     });
   });
 
-  it('renders with label', () => {
-    const component = getComponent({ label: 'Lorem' });
+  it("renders with label", () => {
+    const component = getComponent({ label: "Lorem" });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

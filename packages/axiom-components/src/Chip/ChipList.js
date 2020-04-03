@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import Icon from '../Icon/Icon';
-import classnames from 'classnames';
-import './ChipList.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import Icon from "../Icon/Icon";
+import classnames from "classnames";
+import "./ChipList.css";
 
 export default class ChipList extends Component {
   static propTypes = {
@@ -12,11 +12,11 @@ export default class ChipList extends Component {
     /** Label of the List */
     label: PropTypes.string,
     /** Size of the chips in the chip list */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(["small", "medium", "large"]),
   };
 
   static defaultProps = {
-    size: 'medium',
+    size: "medium",
   };
 
   constructor(props) {
@@ -48,18 +48,18 @@ export default class ChipList extends Component {
 
     const { isExpanded, isExpandable } = this.state;
 
-    const childrenWithSize = React.Children.map(children, child =>
+    const childrenWithSize = React.Children.map(children, (child) =>
       React.cloneElement(child, { size })
     );
 
-    const classes = classnames('ax-chiplist', `ax-chiplist--${size}`, {
-      'ax-chiplist--expanded': isExpanded,
+    const classes = classnames("ax-chiplist", `ax-chiplist--${size}`, {
+      "ax-chiplist--expanded": isExpanded,
     });
 
     const labelClasses = classnames(
-      'ax-chiplist-label',
+      "ax-chiplist-label",
       `ax-chiplist-label--${size}`,
-      { 'ax-chiplist--expandable': isExpandable }
+      { "ax-chiplist--expandable": isExpandable }
     );
 
     return (
@@ -69,7 +69,7 @@ export default class ChipList extends Component {
           {isExpandable && (
             <Icon
               inline
-              name={isExpanded ? 'chevron-up' : 'chevron-down'}
+              name={isExpanded ? "chevron-up" : "chevron-down"}
               spaceLeft="x1"
             />
           )}

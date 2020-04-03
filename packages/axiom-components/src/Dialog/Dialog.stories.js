@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Dialog from './Dialog';
-import DialogHeader from './DialogHeader';
-import DialogBody from './DialogBody';
-import DialogFooter from './DialogFooter';
-import Button from '../Button/Button';
-import ButtonGroup from '../Button/ButtonGroup';
+import React, { useState } from "react";
+import Dialog from "./Dialog";
+import DialogHeader from "./DialogHeader";
+import DialogBody from "./DialogBody";
+import DialogFooter from "./DialogFooter";
+import Button from "../Button/Button";
+import ButtonGroup from "../Button/ButtonGroup";
 
 export default {
-  title: 'Components/Dialog',
+  title: "Components/Dialog",
   component: Dialog,
 };
 

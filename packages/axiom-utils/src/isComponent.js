@@ -1,7 +1,7 @@
-import { isValidElement } from 'react';
+import { isValidElement } from "react";
 
 export default (element, Component) =>
   isValidElement(element) &&
-  (typeof Component === 'string'
+  (typeof Component === "string"
     ? element.type.typeRef === Component
     : element.type === Component);

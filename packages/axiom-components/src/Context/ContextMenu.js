@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import ContextContent from './ContextContent';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import ContextContent from "./ContextContent";
 
 export default class ContextMenu extends Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    paddingVertical: PropTypes.oneOf(['none', 'medium']),
+    paddingVertical: PropTypes.oneOf(["none", "medium"]),
   };
 
   static defaultProps = {
     hasFullSeparator: false,
-    paddingVertical: 'medium',
+    paddingVertical: "medium",
   };
 
   render() {
@@ -20,7 +20,7 @@ export default class ContextMenu extends Component {
 
     const classes = classnames(
       className,
-      'ax-context-menu',
+      "ax-context-menu",
       `ax-context-menu--padding-vertical-${paddingVertical}`
     );
 

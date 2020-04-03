@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import omit from 'lodash.omit';
-import atIds from '@brandwatch/axiom-automation-testing/ids';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import omit from "lodash.omit";
+import atIds from "@brandwatch/axiom-automation-testing/ids";
 import {
   AlertBar,
   Button,
@@ -13,27 +13,27 @@ import {
   Heading,
   ProgressButton,
   Paragraph,
-} from '@brandwatch/axiom-components';
-import { translate } from '@brandwatch/axiom-localization';
-import ConfirmPasswordInput from '../FormInputs/ConfirmPasswordInput';
-import CurrentPasswordInput from '../FormInputs/CurrentPasswordInput';
-import NewPasswordInput from '../FormInputs/NewPasswordInput';
+} from "@brandwatch/axiom-components";
+import { translate } from "@brandwatch/axiom-localization";
+import ConfirmPasswordInput from "../FormInputs/ConfirmPasswordInput";
+import CurrentPasswordInput from "../FormInputs/CurrentPasswordInput";
+import NewPasswordInput from "../FormInputs/NewPasswordInput";
 
 const t = translate({
-  'Change Password': {
-    de: 'Passwort ändern',
-    es: 'Cambiar Contraseña',
-    fr: 'Changement de votre mot de passe',
+  "Change Password": {
+    de: "Passwort ändern",
+    es: "Cambiar Contraseña",
+    fr: "Changement de votre mot de passe",
   },
-  'Please complete all the password fields': {
-    de: 'Es tut uns leid, Sie müssen alle Passwortfelder ausfüllen',
-    es: 'Lo sentimos, debe completar todos los campos de contraseña',
-    fr: 'Désolé, vous devez compléter tous les champs de mot de passe',
+  "Please complete all the password fields": {
+    de: "Es tut uns leid, Sie müssen alle Passwortfelder ausfüllen",
+    es: "Lo sentimos, debe completar todos los campos de contraseña",
+    fr: "Désolé, vous devez compléter tous les champs de mot de passe",
   },
   Cancel: {
-    de: 'Abbrechen',
-    es: 'Cancelar',
-    fr: 'Effacer',
+    de: "Abbrechen",
+    es: "Cancelar",
+    fr: "Effacer",
   },
 });
 
@@ -66,10 +66,10 @@ export default class ChangePasswordDialog extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      confirmPassword: '',
-      currentPassword: '',
-      validationError: '',
-      newPassword: '',
+      confirmPassword: "",
+      currentPassword: "",
+      validationError: "",
+      newPassword: "",
     };
   }
 
@@ -103,19 +103,19 @@ export default class ChangePasswordDialog extends Component {
 
     return (
       <Dialog
-        {...omit(rest, ['onSubmit'])}
+        {...omit(rest, ["onSubmit"])}
         onRequestClose={onRequestClose}
         size="medium"
       >
         <DialogHeader>
           <Heading textSize="headtitle">
-            {t('Change Password', axiomLanguage)}
+            {t("Change Password", axiomLanguage)}
           </Heading>
         </DialogHeader>
 
         <Form
           onSubmit={this.handleSubmit}
-          requiredError={t('Please complete all the password fields')}
+          requiredError={t("Please complete all the password fields")}
         >
           {(validationError || error) && (
             <AlertBar type="error">
@@ -129,19 +129,23 @@ export default class ChangePasswordDialog extends Component {
             <CurrentPasswordInput
               data-ax-at={atIds.ChangePassword.currentPassword}
               invalid={isCurrentPasswordInvalid}
-              onChange={e => this.setState({ currentPassword: e.target.value })}
+              onChange={(e) =>
+                this.setState({ currentPassword: e.target.value })
+              }
               value={currentPassword}
             />
 
             <NewPasswordInput
               data-ax-at={atIds.ChangePassword.newPassword}
-              onChange={e => this.setState({ newPassword: e.target.value })}
+              onChange={(e) => this.setState({ newPassword: e.target.value })}
               value={newPassword}
             />
 
             <ConfirmPasswordInput
               data-ax-at={atIds.ChangePassword.confirmPassword}
-              onChange={e => this.setState({ confirmPassword: e.target.value })}
+              onChange={(e) =>
+                this.setState({ confirmPassword: e.target.value })
+              }
               passwordValue={newPassword}
               value={confirmPassword}
             />
@@ -153,7 +157,7 @@ export default class ChangePasswordDialog extends Component {
                 style="secondary"
                 type="button"
               >
-                {t('Cancel', axiomLanguage)}
+                {t("Cancel", axiomLanguage)}
               </Button>
               <ProgressButton
                 data-ax-at={atIds.ChangePassword.submit}
@@ -161,7 +165,7 @@ export default class ChangePasswordDialog extends Component {
                 isInProgress={isSubmitting}
                 type="submit"
               >
-                {t('Change Password', axiomLanguage)}
+                {t("Change Password", axiomLanguage)}
               </ProgressButton>
             </ButtonGroup>
           </DialogBody>

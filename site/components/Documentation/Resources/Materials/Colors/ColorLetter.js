@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Color from './Color';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Color from "./Color";
 
 export default class ColorsLetter extends Component {
   static propTypes = {

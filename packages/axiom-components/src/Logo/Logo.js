@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import './Logo.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import "./Logo.css";
 
 export default class Logo extends Component {
   static propTypes = {

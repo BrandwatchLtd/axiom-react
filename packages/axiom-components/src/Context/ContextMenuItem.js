@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import CheckBox from '../Form/CheckBox';
-import Icon from '../Icon/Icon';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import CheckBox from "../Form/CheckBox";
+import Icon from "../Icon/Icon";
 
-export const contextMenuItemSelector = 'data-ax-context-menu-item';
+export const contextMenuItemSelector = "data-ax-context-menu-item";
 
 export default class ContextMenuItem extends Component {
   static propTypes = {
@@ -16,12 +16,12 @@ export default class ContextMenuItem extends Component {
     indeterminate: PropTypes.bool,
     multiSelect: PropTypes.bool,
     onClick: PropTypes.func,
-    paddingVertical: PropTypes.oneOf(['small', 'medium']),
+    paddingVertical: PropTypes.oneOf(["small", "medium"]),
     selected: PropTypes.bool,
   };
 
   static defaultProps = {
-    paddingVertical: 'medium',
+    paddingVertical: "medium",
   };
 
   render() {
@@ -40,10 +40,10 @@ export default class ContextMenuItem extends Component {
 
     const classes = classnames(
       className,
-      'ax-context-menu__item',
+      "ax-context-menu__item",
       `ax-context-menu__item--padding-vertical-${paddingVertical}`,
       {
-        'ax-context-menu__item--selected': selected,
+        "ax-context-menu__item--selected": selected,
       }
     );
 
@@ -64,7 +64,7 @@ export default class ContextMenuItem extends Component {
               disabled={disabled}
               indeterminate={indeterminate}
               onChange={onClick}
-              onClick={e => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             />
           </div>
         )}

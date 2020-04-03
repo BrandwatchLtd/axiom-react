@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { withRouter, Switch, Route } from 'react-router';
-import Documentation from '../Documentation/Documentation';
-import './Site.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { withRouter, Switch, Route } from "react-router";
+import Documentation from "../Documentation/Documentation";
+import "./Site.css";
 
 class Site extends Component {
   static propTypes = {

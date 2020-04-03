@@ -1,43 +1,43 @@
-import React, { Component } from 'react';
-import cloud from 'd3-cloud';
-import maxBy from 'lodash.maxby';
-import minBy from 'lodash.minby';
-import { Word, WordCloud } from '@brandwatch/axiom-charts';
+import React, { Component } from "react";
+import cloud from "d3-cloud";
+import maxBy from "lodash.maxby";
+import minBy from "lodash.minby";
+import { Word, WordCloud } from "@brandwatch/axiom-charts";
 import {
   AlertBar,
   Dropdown,
   DropdownSource,
   DropdownTarget,
   ProgressInfinite,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import { colors } from '@brandwatch/axiom-materials';
-import { stringToColor } from '@brandwatch/axiom-utils';
-import DropdownContext from './DropdownContext';
+} from "@brandwatch/axiom-documentation-viewer";
+import { colors } from "@brandwatch/axiom-materials";
+import { stringToColor } from "@brandwatch/axiom-utils";
+import DropdownContext from "./DropdownContext";
 import {
   wordCloudData,
   wordCloudDataEmoji,
   wordCloudDataText,
-} from './chartData';
+} from "./chartData";
 
 const productColors = Object.keys(colors.productColorNames);
 
-const toValues = words =>
-  words.map(word => ({
+const toValues = (words) =>
+  words.map((word) => ({
     text: word,
     value: Math.random() * 80 + 10,
   }));
 
-const linearScale = ([min, max], [lower, upper]) => value =>
+const linearScale = ([min, max], [lower, upper]) => (value) =>
   min === lower || min === max
     ? lower
     : lower + ((upper - lower) / (max - min)) * (value - min);
 
-const getPositions = words =>
+const getPositions = (words) =>
   new Promise((resolve, reject) => {
     try {
       const width = 1000;
@@ -57,12 +57,12 @@ const getPositions = words =>
         .rotate(0)
         .random(() => 0.5)
         .fontSize(({ value }) => sizeScale(value))
-        .font('Roboto, Helvetica, Arial, sans-serif')
+        .font("Roboto, Helvetica, Arial, sans-serif")
         .padding(4)
-        .on('end', (d3Labels, bounds) => {
+        .on("end", (d3Labels, bounds) => {
           const boundsHeight = bounds ? bounds[1].y - bounds[0].y : 0;
           const boundsWidth = bounds ? bounds[1].x - bounds[0].x : 0;
-          const labels = d3Labels.map(label => ({
+          const labels = d3Labels.map((label) => ({
             color: stringToColor(label.text, productColors),
             font: label.font,
             fontSize: label.size,
@@ -106,7 +106,7 @@ export default class Documentation extends Component {
           labels: labels.sort((a, b) => a.text.localeCompare(b.text)),
         });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ error });
       });
   }
@@ -124,19 +124,19 @@ export default class Documentation extends Component {
     const configurations = [
       [
         {
-          name: 'Filter Emojis',
+          name: "Filter Emojis",
           onClick: () => this.initWordCloud(wordCloudDataEmoji),
           selected: this._lastData === wordCloudDataEmoji,
         },
         {
-          name: 'Filter Text',
+          name: "Filter Text",
           onClick: () => this.initWordCloud(wordCloudDataText),
           selected: this._lastData === wordCloudDataText,
         },
       ],
       [
         {
-          name: 'Remove filters',
+          name: "Remove filters",
           onClick: () => this.initWordCloud(wordCloudData),
         },
       ],
@@ -194,8 +194,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/WordCloud/Word'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/WordCloud/WordCloud'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/WordCloud/Word"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/WordCloud/WordCloud"),
           ]}
         />
       </DocumentationContent>

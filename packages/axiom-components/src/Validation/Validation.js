@@ -1,19 +1,19 @@
-import PropTypes from 'prop-types';
-import { Component } from 'react';
-import omit from 'lodash.omit';
+import PropTypes from "prop-types";
+import { Component } from "react";
+import omit from "lodash.omit";
 
 const getRequiredState = ({ required, value }) =>
   !required ||
   (value !== undefined &&
     value !== null &&
-    (typeof value !== 'string' || value.trim() !== ''));
+    (typeof value !== "string" || value.trim() !== ""));
 
 const getPatternsState = ({ patterns, value }) =>
   Array.isArray(patterns)
     ? patterns.filter(
-        pattern =>
+        (pattern) =>
           (pattern instanceof RegExp && !pattern.test(value)) ||
-          (typeof pattern === 'function' && !pattern(value))
+          (typeof pattern === "function" && !pattern(value))
       )
     : [];
 
@@ -123,9 +123,9 @@ export default class Validation extends Component {
 
     const invalidations = this.getAllInvalidations();
     const firstInvalidValidator = Object.keys(invalidations).find(
-      id => invalidations[id].length > 0
+      (id) => invalidations[id].length > 0
     );
-    return firstInvalidValidator ? firstInvalidValidator : '';
+    return firstInvalidValidator ? firstInvalidValidator : "";
   }
 
   getAllInvalidations() {
@@ -135,7 +135,7 @@ export default class Validation extends Component {
   }
 
   getOverallRequiredValidity() {
-    return Object.keys(this.state.validators).every(id =>
+    return Object.keys(this.state.validators).every((id) =>
       this.checkRequiredMet(id)
     );
   }

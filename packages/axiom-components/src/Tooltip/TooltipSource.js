@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { Component, cloneElement } from 'react';
+import PropTypes from "prop-types";
+import { Component, cloneElement } from "react";
 
-export const TooltipSourceRef = 'TooltipSource';
+export const TooltipSourceRef = "TooltipSource";
 
 export default class TooltipSource extends Component {
   static propTypes = {

@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import BulletChart from './BulletChart';
-import ColumnChartXAxis from '../ColumnChart/ColumnChartXAxis';
-import ColumnChartXAxisLabel from '../ColumnChart/ColumnChartXAxisLabel';
-import './MirroredBulletChart.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import BulletChart from "./BulletChart";
+import ColumnChartXAxis from "../ColumnChart/ColumnChartXAxis";
+import ColumnChartXAxisLabel from "../ColumnChart/ColumnChartXAxisLabel";
+import "./MirroredBulletChart.css";
 
 export default class MirroredBulletChart extends Component {
   static propTypes = {
@@ -44,7 +44,7 @@ export default class MirroredBulletChart extends Component {
   };
 
   static defaultProps = {
-    labelColumnWidth: '0rem',
+    labelColumnWidth: "0rem",
   };
 
   render() {

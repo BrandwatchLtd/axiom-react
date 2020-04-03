@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
-import CheckBox from './CheckBox';
-import CheckBoxGroup from './CheckBoxGroup';
+import React, { useState } from "react";
+import CheckBox from "./CheckBox";
+import CheckBoxGroup from "./CheckBoxGroup";
 
 export default {
-  title: 'Components/CheckBox',
+  title: "Components/CheckBox",
   component: CheckBox,
 };
 
@@ -15,7 +15,7 @@ export function Default() {
       <CheckBox
         checked={checked}
         name="lorem"
-        onChange={() => setChecked(c => !c)}
+        onChange={() => setChecked((c) => !c)}
         title="Lorem ipsum dolor sit amet"
       >
         Lorem ipsum
@@ -31,7 +31,7 @@ export function CheckBoxGroups() {
       <CheckBox
         checked={checked}
         name="lorem"
-        onChange={() => setChecked(c => !c)}
+        onChange={() => setChecked((c) => !c)}
         title="Lorem ipsum dolor sit amet"
       >
         {children}

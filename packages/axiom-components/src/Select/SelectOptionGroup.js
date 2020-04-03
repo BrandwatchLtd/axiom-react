@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import DropdownMenu from '../Dropdown/DropdownMenu';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import DropdownMenu from "../Dropdown/DropdownMenu";
 
 export default class SelectOptionGroup extends Component {
   static propTypes = {

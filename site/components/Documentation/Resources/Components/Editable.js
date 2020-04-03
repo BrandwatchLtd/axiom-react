@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   EditableLine,
   EditableTitle,
   Heading,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class Documentation extends Component {
             <Heading textSize="headline">
               <EditableLine
                 onChange={(setValue, getValue, value) =>
-                  setValue('EditableLine', 'value', value)
+                  setValue("EditableLine", "value", value)
                 }
                 placeholder="Editable text here"
                 value=""
@@ -30,8 +30,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Editable/EditableLine'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Editable/EditableTitle'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Editable/EditableLine"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Editable/EditableTitle"),
           ]}
         />
       </DocumentationContent>

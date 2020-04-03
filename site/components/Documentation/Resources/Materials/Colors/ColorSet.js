@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Grid, GridCell, Heading } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Grid, GridCell, Heading } from "@brandwatch/axiom-components";
 
 export default class ColorSet extends Component {
   static propTypes = {

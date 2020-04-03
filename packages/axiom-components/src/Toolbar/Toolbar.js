@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import List from '../List/List';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import List from "../List/List";
 
 export default class Toolbar extends Component {
   static propTypes = {

@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Button from './Button';
-import ButtonGroup from './ButtonGroup';
+import React from "react";
+import renderer from "react-test-renderer";
+import Button from "./Button";
+import ButtonGroup from "./ButtonGroup";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -10,8 +10,8 @@ const getComponent = (props = {}) =>
     </ButtonGroup>
   );
 
-describe('ButtonGroup', () => {
-  it('renders with defaultProps', () => {
+describe("ButtonGroup", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

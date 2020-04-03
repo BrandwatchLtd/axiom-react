@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import DatePickerDay from './DatePickerDay';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import DatePickerDay from "./DatePickerDay";
 import {
   buildMonthGrid,
   isAfterDay,
@@ -11,7 +11,7 @@ import {
   isBetweenDate,
   isSameDay,
   isOneOfDays,
-} from './utils';
+} from "./utils";
 
 export default class DatePickerViewMonth extends Component {
   static propTypes = {

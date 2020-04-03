@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import CardImage from './CardImage';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import CardImage from "./CardImage";
 
 export default class CardImages extends Component {
   static propTypes = {
@@ -18,7 +18,7 @@ export default class CardImages extends Component {
   };
 
   static defaultProps = {
-    ratios: [null, '50%', '75%', '100%'],
+    ratios: [null, "50%", "75%", "100%"],
   };
 
   render() {
@@ -26,10 +26,10 @@ export default class CardImages extends Component {
     const ratio = ratios[srcs.length - 1];
     const style = { paddingBottom: ratio };
     const classes = classnames(
-      'ax-card__images',
+      "ax-card__images",
       `ax-card__images--${srcs.length}`,
       {
-        'ax-card__images--ratio': ratio,
+        "ax-card__images--ratio": ratio,
       },
       className
     );

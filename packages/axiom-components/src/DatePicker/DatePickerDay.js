@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { getDayNumber } from './utils';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { getDayNumber } from "./utils";
 
 export default class DatePickerDay extends Component {
   static propTypes = {
@@ -29,13 +29,13 @@ export default class DatePickerDay extends Component {
       weekStart,
     } = this.props;
 
-    const classes = classnames('ax-date-picker__day', {
-      'ax-date-picker__day--first': weekStart,
-      'ax-date-picker__day--last': weekEnd,
-      'ax-date-picker__day--selected': selected,
-      'ax-date-picker__day--selected-end': selectedEnd,
-      'ax-date-picker__day--selected-start': selectedStart,
-      'ax-date-picker__day--selection': selection,
+    const classes = classnames("ax-date-picker__day", {
+      "ax-date-picker__day--first": weekStart,
+      "ax-date-picker__day--last": weekEnd,
+      "ax-date-picker__day--selected": selected,
+      "ax-date-picker__day--selected-end": selectedEnd,
+      "ax-date-picker__day--selected-start": selectedStart,
+      "ax-date-picker__day--selection": selection,
     });
 
     return (

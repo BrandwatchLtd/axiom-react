@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import {
   Badge,
   Heading,
@@ -11,16 +11,16 @@ import {
   TooltipContext,
   TooltipSource,
   TooltipTarget,
-} from '@brandwatch/axiom-components';
-import { DataPoint, DataPoints } from '@brandwatch/axiom-charts';
-import { colors } from '@brandwatch/axiom-materials';
-import TypeArrayOf from './TypeArrayOf';
-import TypeBool from './TypeBool';
-import TypeEnum from './TypeEnum';
-import TypeFunc from './TypeFunc';
-import TypeInstanceOf from './TypeInstanceOf';
-import TypeNumber from './TypeNumber';
-import TypeString from './TypeString';
+} from "@brandwatch/axiom-components";
+import { DataPoint, DataPoints } from "@brandwatch/axiom-charts";
+import { colors } from "@brandwatch/axiom-materials";
+import TypeArrayOf from "./TypeArrayOf";
+import TypeBool from "./TypeBool";
+import TypeEnum from "./TypeEnum";
+import TypeFunc from "./TypeFunc";
+import TypeInstanceOf from "./TypeInstanceOf";
+import TypeNumber from "./TypeNumber";
+import TypeString from "./TypeString";
 
 const productColors = Object.keys(colors.productColorNames);
 
@@ -80,8 +80,8 @@ export default class DocumentationApiRow extends Component {
     const showDefault =
       defaultValue !== undefined &&
       type &&
-      type.name !== 'func' &&
-      type.name !== 'arrayOf';
+      type.name !== "func" &&
+      type.name !== "arrayOf";
 
     return (
       <TableRow>

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import {
   Dropdown,
   DropdownSource,
@@ -7,7 +7,7 @@ import {
   Tooltip,
   TooltipSource,
   TooltipTarget,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class ChartContext extends Component {
   static propTypes = {

@@ -1,14 +1,14 @@
-import React from 'react';
-import { select, withKnobs } from '@storybook/addon-knobs';
-import Grid from './Grid';
-import GridCell from './GridCell';
-import Button from '../Button/Button';
-import TextInput from '../Form/TextInput';
+import React from "react";
+import { select, withKnobs } from "@storybook/addon-knobs";
+import Grid from "./Grid";
+import GridCell from "./GridCell";
+import Button from "../Button/Button";
+import TextInput from "../Form/TextInput";
 
-import './Grid.stories.css';
+import "./Grid.stories.css";
 
 export default {
-  title: 'Components/Grid',
+  title: "Components/Grid",
   component: Grid,
   decorators: [withKnobs],
   subcomponents: { GridCell },
@@ -37,9 +37,9 @@ export function Default() {
 }
 
 export function Configurable() {
-  const directionLabel = 'direction';
-  const directionOptions = ['row', 'column'];
-  const directionDefaultValue = 'row';
+  const directionLabel = "direction";
+  const directionOptions = ["row", "column"];
+  const directionDefaultValue = "row";
 
   const direction = select(
     directionLabel,
@@ -47,14 +47,14 @@ export function Configurable() {
     directionDefaultValue
   );
 
-  const guttersLabel = 'gutters';
-  const guttersOptions = [false, 'tiny', 'small', 'medium', 'large'];
-  const guttersDefaultValue = 'medium';
+  const guttersLabel = "gutters";
+  const guttersOptions = [false, "tiny", "small", "medium", "large"];
+  const guttersDefaultValue = "medium";
 
   const gutters = select(guttersLabel, guttersOptions, guttersDefaultValue);
 
   return (
-    <div style={{ height: '100vh', width: '100wh' }}>
+    <div style={{ height: "100vh", width: "100wh" }}>
       <Grid direction={direction} gutters={gutters}>
         <GridCell>
           <div className="color-box">One</div>
@@ -88,7 +88,7 @@ export function CardRow() {
         </div>
       </GridCell>
       <GridCell>
-        <div className="color-box" style={{ height: '100%' }}>
+        <div className="color-box" style={{ height: "100%" }}>
           This card doesn't have much content.
         </div>
       </GridCell>

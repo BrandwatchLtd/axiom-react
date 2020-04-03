@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import Modal from '../Modal/Modal';
-import './AlertDialog.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import Modal from "../Modal/Modal";
+import "./AlertDialog.css";
 
 export default class AlertDialog extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class AlertDialog extends Component {
     /** Toggle if the AlertDialog should be closed by pressing Esc */
     shouldCloseOnEsc: PropTypes.bool,
     /** Alert type */
-    type: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,
+    type: PropTypes.oneOf(["error", "info", "success", "warning"]).isRequired,
   };
 
   static childContextTypes = {
@@ -23,7 +23,7 @@ export default class AlertDialog extends Component {
   };
 
   static defaultProps = {
-    type: 'info',
+    type: "info",
   };
 
   getChildContext() {

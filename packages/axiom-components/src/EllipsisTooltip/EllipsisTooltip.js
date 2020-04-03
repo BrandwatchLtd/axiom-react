@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 
-import Base from '../Base/Base';
-import Tooltip from '../Tooltip/Tooltip';
-import TooltipContent from '../Tooltip/TooltipContent';
-import TooltipContext from '../Tooltip/TooltipContext';
-import TooltipSource from '../Tooltip/TooltipSource';
-import TooltipTarget from '../Tooltip/TooltipTarget';
+import Base from "../Base/Base";
+import Tooltip from "../Tooltip/Tooltip";
+import TooltipContent from "../Tooltip/TooltipContent";
+import TooltipContext from "../Tooltip/TooltipContext";
+import TooltipSource from "../Tooltip/TooltipSource";
+import TooltipTarget from "../Tooltip/TooltipTarget";
 
 function elementHasEllipsis(ref = {}) {
   const { current } = ref;
@@ -16,17 +16,17 @@ function elementHasEllipsis(ref = {}) {
 export default class EllipsisTooltip extends Component {
   static propTypes = {
     children: PropTypes.node,
-    color: PropTypes.oneOf(['carbon', 'white']),
+    color: PropTypes.oneOf(["carbon", "white"]),
     delay: PropTypes.bool,
-    theme: PropTypes.oneOf(['day', 'night']),
+    theme: PropTypes.oneOf(["day", "night"]),
     width: PropTypes.string,
   };
 
   static defaultProps = {
-    color: 'carbon',
+    color: "carbon",
     delay: true,
-    theme: 'night',
-    width: 'auto',
+    theme: "night",
+    width: "auto",
   };
 
   constructor(props) {

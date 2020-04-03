@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Grid,
   GridCell,
   Label,
   LabelGroup,
   LabelIcon,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -44,8 +44,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/Label'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/LabelGroup'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/Label"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Label/LabelGroup"),
           ]}
         />
       </DocumentationContent>

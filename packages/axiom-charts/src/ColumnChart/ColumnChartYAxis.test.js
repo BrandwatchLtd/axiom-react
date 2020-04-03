@@ -1,13 +1,13 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import ColumnChart from './ColumnChart';
-import ColumnChartYAxis from './ColumnChartYAxis';
+import React from "react";
+import renderer from "react-test-renderer";
+import ColumnChart from "./ColumnChart";
+import ColumnChartYAxis from "./ColumnChartYAxis";
 
 const getComponent = (props = {}) =>
   renderer.create(
     <ColumnChart
-      chartKey={[{ label: 'Lorem', color: 'tiny-clanger' }]}
-      data={[{ label: 'test', values: {} }]}
+      chartKey={[{ label: "Lorem", color: "tiny-clanger" }]}
+      data={[{ label: "test", values: {} }]}
       height="10rem"
     >
       <ColumnChartYAxis yAxisWidth="1rem" {...props}>
@@ -16,15 +16,15 @@ const getComponent = (props = {}) =>
     </ColumnChart>
   );
 
-describe('ColumnChartYAxis', () => {
-  it('renders with defaultProps', () => {
+describe("ColumnChartYAxis", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with align', () => {
-    ['top', 'bottom'].forEach(align => {
+  describe("renders with align", () => {
+    ["top", "bottom"].forEach((align) => {
       it(align, () => {
         const component = getComponent({ align });
         const tree = component.toJSON();

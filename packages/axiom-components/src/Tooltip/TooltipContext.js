@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Context from '../Context/Context';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Context from "../Context/Context";
 
-export const TooltipContextRef = 'TooltipContext';
+export const TooltipContextRef = "TooltipContext";
 
 export default class TooltipContext extends Component {
   static propTypes = {
     color: PropTypes.oneOf([
-      'success',
-      'warning',
-      'error',
-      'info',
-      'carbon',
-      'white',
+      "success",
+      "warning",
+      "error",
+      "info",
+      "carbon",
+      "white",
     ]),
   };
 

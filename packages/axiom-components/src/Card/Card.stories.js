@@ -1,9 +1,9 @@
-import React from 'react';
-import Card from './Card';
-import CardContent from './CardContent';
+import React from "react";
+import Card from "./Card";
+import CardContent from "./CardContent";
 
 export default {
-  title: 'Components/Card',
+  title: "Components/Card",
   component: Card,
 };
 

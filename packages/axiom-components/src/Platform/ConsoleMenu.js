@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import './ConsoleMenu.css';
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import "./ConsoleMenu.css";
 
 export default class ConsoleMenu extends Component {
   render() {

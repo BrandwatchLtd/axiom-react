@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
 export default class MenuItem extends Component {
   static propTypes = {
@@ -20,14 +20,14 @@ export default class MenuItem extends Component {
   render() {
     const { size } = this.context;
     const { children, active, disabled, ...rest } = this.props;
-    const classes = classnames('ax-menu__item', {
-      'ax-menu__item--active': active,
-      'ax-menu__item--disabled': disabled,
+    const classes = classnames("ax-menu__item", {
+      "ax-menu__item--active": active,
+      "ax-menu__item--disabled": disabled,
     });
 
     const textSize = {
-      medium: 'headtitle',
-      large: 'headline',
+      medium: "headtitle",
+      large: "headline",
     }[size];
 
     return (

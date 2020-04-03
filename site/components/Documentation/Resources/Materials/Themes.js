@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import { Card, CardContent } from '@brandwatch/axiom-components';
-import { colors } from '@brandwatch/axiom-materials';
-import ColorGrid from './Colors/ColorGrid';
-import ColorSet from './Colors/ColorSet';
-import ColorDot from './Colors/ColorDot';
-import ColorLetter from './Colors/ColorLetter';
+import React, { Component, Fragment } from "react";
+import { Card, CardContent } from "@brandwatch/axiom-components";
+import { colors } from "@brandwatch/axiom-materials";
+import ColorGrid from "./Colors/ColorGrid";
+import ColorSet from "./Colors/ColorSet";
+import ColorDot from "./Colors/ColorDot";
+import ColorLetter from "./Colors/ColorLetter";
 
 export default class Documentation extends Component {
   render() {

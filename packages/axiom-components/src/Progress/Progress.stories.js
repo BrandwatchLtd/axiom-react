@@ -1,5 +1,5 @@
-import React from 'react';
-import Progress from './Progress';
+import React from "react";
+import Progress from "./Progress";
 
 const SvgFilters = () => (
   <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
@@ -35,11 +35,11 @@ const SvgFilters = () => (
 );
 
 export default {
-  title: 'Components/Progress',
+  title: "Components/Progress",
   component: Progress,
   decorators: [
     // eslint-disable-next-line react/display-name
-    storyFn => (
+    (storyFn) => (
       <React.Fragment>
         {storyFn()}
         <SvgFilters />

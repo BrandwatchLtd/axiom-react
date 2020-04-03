@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
-import chunk from 'lodash.chunk';
+import React, { Component } from "react";
+import chunk from "lodash.chunk";
 import {
   Animicon,
   Grid,
   GridCell,
   Icon,
   IconButton,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
-    const iconProps = require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Icon/Icon');
+    const iconProps = require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Icon/Icon");
 
     return (
       <DocumentationContent>
         {chunk(iconProps.props.name.values, 4).map((chunk, index) => (
           <Grid key={index} responsive={false}>
-            {chunk.map(name => (
+            {chunk.map((name) => (
               <GridCell key={name} width={25}>
                 <Grid
                   gutters="tiny"
@@ -72,7 +72,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Icon/Animicon'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Icon/Animicon"),
           ]}
         />
 
@@ -82,7 +82,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Icon/IconButton'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Icon/IconButton"),
           ]}
         />
       </DocumentationContent>

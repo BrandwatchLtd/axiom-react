@@ -5,7 +5,7 @@ export function getEquallyDistributedAxisLabels({
   lower,
   upper,
   tickCount = DEFAULT_TICK_COUNT,
-  labelFormatter = v => v,
+  labelFormatter = (v) => v,
 }) {
   if (lower === upper) {
     return [];

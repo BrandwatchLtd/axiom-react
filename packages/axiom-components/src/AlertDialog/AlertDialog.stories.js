@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import AlertDialog from './AlertDialog';
-import AlertDialogHeader from './AlertDialogHeader';
-import AlertDialogBody from './AlertDialogBody';
-import Button from '../Button/Button';
+import React, { useState } from "react";
+import AlertDialog from "./AlertDialog";
+import AlertDialogHeader from "./AlertDialogHeader";
+import AlertDialogBody from "./AlertDialogBody";
+import Button from "../Button/Button";
 
 export default {
-  title: 'Components/AlertDialog',
+  title: "Components/AlertDialog",
   component: AlertDialog,
 };
 

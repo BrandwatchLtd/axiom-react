@@ -1,14 +1,14 @@
-import React from 'react';
-import Cloak from './Cloak';
-import CloakContainer from './CloakContainer';
-import Card from '../Card/Card';
-import CardContent from '../Card/CardContent';
-import IconButton from '../Icon/IconButton';
-import Heading from '../Typography/Heading';
-import Base from '../Base/Base';
+import React from "react";
+import Cloak from "./Cloak";
+import CloakContainer from "./CloakContainer";
+import Card from "../Card/Card";
+import CardContent from "../Card/CardContent";
+import IconButton from "../Icon/IconButton";
+import Heading from "../Typography/Heading";
+import Base from "../Base/Base";
 
 export default {
-  title: 'Components/Cloak',
+  title: "Components/Cloak",
   component: Cloak,
 };
 

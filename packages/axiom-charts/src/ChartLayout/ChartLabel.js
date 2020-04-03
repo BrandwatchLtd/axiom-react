@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Text } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { Text } from "@brandwatch/axiom-components";
 
 export default class ChartLabel extends Component {
   render() {

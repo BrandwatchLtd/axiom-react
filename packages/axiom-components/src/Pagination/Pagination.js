@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import atIds from '@brandwatch/axiom-automation-testing/ids';
-import Icon from '../Icon/Icon';
-import PaginationButtonGroup from './PaginationButtonGroup';
-import PaginationButton from './PaginationButton';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import atIds from "@brandwatch/axiom-automation-testing/ids";
+import Icon from "../Icon/Icon";
+import PaginationButtonGroup from "./PaginationButtonGroup";
+import PaginationButton from "./PaginationButton";
 import {
   isLargerThanRange,
   isWithinStartRange,
   isWithinEndRange,
   getDisplayRange,
-} from './utils';
+} from "./utils";
 
 export default class Pagination extends Component {
   static propTypes = {
@@ -70,7 +70,7 @@ export default class Pagination extends Component {
         ]}
 
         {Boolean(displayRange) &&
-          getDisplayRange(currentPage, displayRange, totalPages).map(n => (
+          getDisplayRange(currentPage, displayRange, totalPages).map((n) => (
             <PaginationButton
               active={currentPage === n}
               key={n}

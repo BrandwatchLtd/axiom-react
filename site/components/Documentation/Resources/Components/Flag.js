@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import chunk from 'lodash.chunk';
-import { flags } from '@brandwatch/axiom-materials';
-import { Flag, Grid, GridCell } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import chunk from "lodash.chunk";
+import { flags } from "@brandwatch/axiom-materials";
+import { Flag, Grid, GridCell } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
-const assetsUrl = '/assets/';
+const assetsUrl = "/assets/";
 
 export default class Documentation extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class Documentation extends Component {
       <DocumentationContent>
         {chunk(Object.keys(flags), 5).map((chunk, index) => (
           <Grid key={index} responsive={false}>
-            {chunk.map(key => (
+            {chunk.map((key) => (
               <GridCell key={key} width={100 / 5}>
                 <Grid
                   gutters="tiny"
@@ -44,7 +44,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Flag/Flag'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Flag/Flag"),
           ]}
         />
       </DocumentationContent>

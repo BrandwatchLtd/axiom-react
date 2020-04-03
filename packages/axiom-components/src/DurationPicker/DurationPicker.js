@@ -1,29 +1,29 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Duration } from 'luxon';
-import omit from 'lodash.omit';
-import Dropdown from '../Dropdown/Dropdown';
-import DropdownContext from '../Dropdown/DropdownContext';
-import DropdownMenu from '../Dropdown/DropdownMenu';
-import DropdownMenuItem from '../Dropdown/DropdownMenuItem';
-import DropdownSource from '../Dropdown/DropdownSource';
-import DropdownTarget from '../Dropdown/DropdownTarget';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import TextInput from '../Form/TextInput';
-import TextInputIcon from '../Form/TextInputIcon';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Duration } from "luxon";
+import omit from "lodash.omit";
+import Dropdown from "../Dropdown/Dropdown";
+import DropdownContext from "../Dropdown/DropdownContext";
+import DropdownMenu from "../Dropdown/DropdownMenu";
+import DropdownMenuItem from "../Dropdown/DropdownMenuItem";
+import DropdownSource from "../Dropdown/DropdownSource";
+import DropdownTarget from "../Dropdown/DropdownTarget";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import TextInput from "../Form/TextInput";
+import TextInputIcon from "../Form/TextInputIcon";
 
 const validTimeUnits = [
-  'seconds',
-  'minutes',
-  'hours',
-  'days',
-  'weeks',
-  'months',
-  'years',
+  "seconds",
+  "minutes",
+  "hours",
+  "days",
+  "weeks",
+  "months",
+  "years",
 ];
 
-const getStateFromIsoDurationValue = value => {
+const getStateFromIsoDurationValue = (value) => {
   const duration = Duration.fromISO(value);
 
   if (!duration.isValid) {
@@ -33,7 +33,7 @@ const getStateFromIsoDurationValue = value => {
   const selectedUnit = []
     .concat(validTimeUnits)
     .reverse()
-    .find(timeUnit => duration.values[timeUnit]);
+    .find((timeUnit) => duration.values[timeUnit]);
   const selectedValue = duration.values[selectedUnit];
 
   return {
@@ -43,11 +43,11 @@ const getStateFromIsoDurationValue = value => {
   };
 };
 
-const getIsoDurationValueFromState = state => {
+const getIsoDurationValueFromState = (state) => {
   const { selectedUnit, selectedValue } = state;
 
   if (!validTimeUnits.includes(selectedUnit) || !selectedValue) {
-    return '';
+    return "";
   }
 
   const duration = Duration.fromObject({
@@ -57,7 +57,7 @@ const getIsoDurationValueFromState = state => {
   return duration.toISO();
 };
 
-const formatTimeUnit = timeUnit => {
+const formatTimeUnit = (timeUnit) => {
   return `${timeUnit.slice(0, 1).toUpperCase()}${timeUnit.slice(1)}`;
 };
 
@@ -74,10 +74,10 @@ export default class DurationPicker extends Component {
   };
 
   static defaultProps = {
-    excludedOptions: ['seconds'],
+    excludedOptions: ["seconds"],
     onBlur: () => {},
     onChange: () => {},
-    value: 'P7D',
+    value: "P7D",
   };
 
   constructor(props) {
@@ -98,7 +98,7 @@ export default class DurationPicker extends Component {
   onChangeValue(event) {
     const inputValue = parseInt(event.target.value, 10);
     const selectedValue =
-      Number.isFinite(inputValue) && inputValue >= 1 ? inputValue : '';
+      Number.isFinite(inputValue) && inputValue >= 1 ? inputValue : "";
     const durationValue = getIsoDurationValueFromState({
       selectedUnit: this.state.selectedUnit,
       selectedValue,
@@ -144,18 +144,18 @@ export default class DurationPicker extends Component {
   render() {
     const { excludedOptions } = this.props;
     const childProps = omit(this.props, [
-      'excludedOptions',
-      'onBlur',
-      'value',
-      'onChange',
+      "excludedOptions",
+      "onBlur",
+      "value",
+      "onChange",
     ]);
     const filteredTimeUnits = validTimeUnits.filter(
-      timeUnit => !excludedOptions.includes(timeUnit)
+      (timeUnit) => !excludedOptions.includes(timeUnit)
     );
 
     const {
       selectedUnit = filteredTimeUnits[0],
-      selectedValue = '',
+      selectedValue = "",
     } = this.state;
 
     return (
@@ -184,7 +184,7 @@ export default class DurationPicker extends Component {
             <DropdownSource>
               <DropdownContext>
                 <DropdownMenu>
-                  {filteredTimeUnits.map(timeUnit => {
+                  {filteredTimeUnits.map((timeUnit) => {
                     return (
                       <DropdownMenuItem
                         key={timeUnit}

@@ -1,10 +1,10 @@
-import React from 'react';
-import Tip from './Tip';
-import AlertCard from '../AlertCard/AlertCard';
-import Base from '../Base/Base';
+import React from "react";
+import Tip from "./Tip";
+import AlertCard from "../AlertCard/AlertCard";
+import Base from "../Base/Base";
 
 export default {
-  title: 'Components/Tip',
+  title: "Components/Tip",
   component: Tip,
 };
 

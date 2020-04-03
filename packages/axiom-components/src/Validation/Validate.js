@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import { Component } from 'react';
-import uuid from 'uuid';
+import PropTypes from "prop-types";
+import { Component } from "react";
+import uuid from "uuid";
 
 export default class Validate extends Component {
   static contextTypes = {

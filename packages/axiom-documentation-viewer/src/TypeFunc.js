@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Toggle } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Toggle } from "@brandwatch/axiom-components";
 
 export default class TypeFunc extends Component {
   static propTypes = {

@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { isValidElement, Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { isValidElement, Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
-export const TabRef = 'Tab';
+export const TabRef = "Tab";
 
 export default class Tab extends Component {
   static propTypes = {
@@ -23,9 +23,9 @@ export default class Tab extends Component {
     /* eslint-disable react/prop-types */
     const { active, disabled, onClick, title, ...rest } = this.props;
     /* eslint-enable react/prop-types */
-    const classes = classnames('ax-tabset__list-item', {
-      'ax-tabset__list-item--active': active,
-      'ax-tabset__list-item--disabled': disabled,
+    const classes = classnames("ax-tabset__list-item", {
+      "ax-tabset__list-item--active": active,
+      "ax-tabset__list-item--disabled": disabled,
     });
 
     return (

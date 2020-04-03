@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import React, {
   Children,
   Component,
   cloneElement,
   isValidElement,
-} from 'react';
-import { Base, Heading, Paragraph } from '@brandwatch/axiom-components';
+} from "react";
+import { Base, Heading, Paragraph } from "@brandwatch/axiom-components";
 
 export default class DocumentationContent extends Component {
   static propTypes = {
@@ -56,10 +56,10 @@ export default class DocumentationContent extends Component {
 
   getComponentProps(componentName) {
     return Object.keys(this.state)
-      .filter(key => key.indexOf(`${componentName}.`) === 0)
+      .filter((key) => key.indexOf(`${componentName}.`) === 0)
       .reduce((props, key) => {
         if (this.state[key] !== undefined) {
-          const [, prop] = key.split('.');
+          const [, prop] = key.split(".");
 
           if (this.isComponentPropFunc(componentName, prop)) {
             if (this.state[key]) {
@@ -75,7 +75,7 @@ export default class DocumentationContent extends Component {
   }
 
   isComponentPropFunc(componentName, prop) {
-    return this.state[componentName][prop].type.name === 'func';
+    return this.state[componentName][prop].type.name === "func";
   }
 
   interceptFuncProps(componentName, props, defaultProps = {}) {
@@ -85,7 +85,7 @@ export default class DocumentationContent extends Component {
 
     return Object.keys(props)
       .filter(
-        prop =>
+        (prop) =>
           this.state[componentName][prop] &&
           this.isComponentPropFunc(componentName, prop) &&
           props[prop] &&
@@ -108,7 +108,9 @@ export default class DocumentationContent extends Component {
 
   applyComponentProps(component) {
     if (Array.isArray(component)) {
-      return Children.map(component, child => this.applyComponentProps(child));
+      return Children.map(component, (child) =>
+        this.applyComponentProps(child)
+      );
     }
 
     if (!isValidElement(component) || !component.type) {
@@ -128,7 +130,7 @@ export default class DocumentationContent extends Component {
 
     if (component.props.children) {
       props.children = Array.isArray(component.props.children)
-        ? Children.map(component.props.children, child =>
+        ? Children.map(component.props.children, (child) =>
             this.applyComponentProps(child)
           )
         : this.applyComponentProps(component.props.children);

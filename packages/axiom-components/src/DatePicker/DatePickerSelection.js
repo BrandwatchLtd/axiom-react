@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import DatePickerHeaderControl from './DatePickerHeaderControl';
-import DatePickerViewMonth from './DatePickerViewMonth';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import DatePickerHeaderControl from "./DatePickerHeaderControl";
+import DatePickerViewMonth from "./DatePickerViewMonth";
 import {
   addMonths,
   dateOrNow,
@@ -11,8 +11,8 @@ import {
   isBeforeDay,
   isSameMonth,
   orderDates,
-} from './utils';
-import './DatePicker.css';
+} from "./utils";
+import "./DatePicker.css";
 
 export default class DatePickerSelection extends Component {
   static propTypes = {
@@ -50,11 +50,11 @@ export default class DatePickerSelection extends Component {
     /** The date selected at the start of the range */
     selectedStartDate: PropTypes.instanceOf(Date),
     /** Configuration for a single date picker view or two pickers side by side */
-    view: PropTypes.oneOf(['single', 'double']),
+    view: PropTypes.oneOf(["single", "double"]),
   };
 
   static defaultProps = {
-    view: 'single',
+    view: "single",
     rangeSelect: false,
   };
 
@@ -104,7 +104,7 @@ export default class DatePickerSelection extends Component {
 
     if (
       rangeSelect &&
-      view === 'double' &&
+      view === "double" &&
       selectedEndDate !== prevProps.selectedEndDate
     ) {
       if (isSameMonth(selectedStartDate, selectedEndDate)) {
@@ -116,13 +116,13 @@ export default class DatePickerSelection extends Component {
   }
 
   handleActiveStartDateChange(direction) {
-    this.setState(state => ({
+    this.setState((state) => ({
       activeStartDate: addMonths(state.activeStartDate, direction),
     }));
   }
 
   handleActiveEndDateChange(direction) {
-    this.setState(state => ({
+    this.setState((state) => ({
       activeEndDate: addMonths(state.activeEndDate, direction),
     }));
   }
@@ -178,7 +178,7 @@ export default class DatePickerSelection extends Component {
       latestSelectableDate
     );
 
-    const isDoubleView = view === 'double';
+    const isDoubleView = view === "double";
 
     const activeEndDateOrNextMonth =
       activeEndDate || addMonths(activeStartDate, 1);

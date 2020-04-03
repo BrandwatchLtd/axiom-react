@@ -1,14 +1,14 @@
-import React, { useRef } from 'react';
-import Tooltip from './Tooltip';
-import TooltipTarget from './TooltipTarget';
-import TooltipSource from './TooltipSource';
-import TooltipContext from './TooltipContext';
-import TooltipContent from './TooltipContent';
-import IconButton from '../Icon/IconButton';
-import Button from '../Button/Button';
+import React, { useRef } from "react";
+import Tooltip from "./Tooltip";
+import TooltipTarget from "./TooltipTarget";
+import TooltipSource from "./TooltipSource";
+import TooltipContext from "./TooltipContext";
+import TooltipContent from "./TooltipContent";
+import IconButton from "../Icon/IconButton";
+import Button from "../Button/Button";
 
 export default {
-  title: 'Components/Tooltip',
+  title: "Components/Tooltip",
   component: Tooltip,
   subcomponents: {
     TooltipTarget,

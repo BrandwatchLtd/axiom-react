@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import RadioButton from './RadioButton';
-import RadioButtonGroup from './RadioButtonGroup';
+import React from "react";
+import renderer from "react-test-renderer";
+import RadioButton from "./RadioButton";
+import RadioButtonGroup from "./RadioButtonGroup";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -10,8 +10,8 @@ const getComponent = (props = {}) =>
     </RadioButtonGroup>
   );
 
-describe('RadioButton', () => {
-  it('renders with defaultProps', () => {
+describe("RadioButton", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

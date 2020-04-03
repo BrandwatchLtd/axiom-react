@@ -1,4 +1,4 @@
-import { svgDefineOnce } from '@brandwatch/axiom-utils';
+import { svgDefineOnce } from "@brandwatch/axiom-utils";
 
 export default () =>
   svgDefineOnce(`

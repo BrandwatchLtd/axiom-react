@@ -1,20 +1,20 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import BarChartBars from './BarChartBars';
-import BarChartBenchmarkLine from './BarChartBenchmarkLine';
-import ChartKey from '../Chart/ChartKey';
-import ChartKeyItem from '../Chart/ChartKeyItem';
-import ChartTable from '../ChartTable/ChartTable';
-import ChartTableAxisTitle from '../ChartTable/ChartTableAxisTitle';
-import ChartTableKey from '../ChartTable/ChartTableKey';
-import ChartTableLabel from '../ChartTable/ChartTableLabel';
-import ChartTableRow from '../ChartTable/ChartTableRow';
-import ChartTableRows from '../ChartTable/ChartTableRows';
-import ChartTableVisual from '../ChartTable/ChartTableVisual';
-import DataPoint from '../DataPoint/DataPoint';
-import DataPoints from '../DataPoint/DataPoints';
-import { formatData, flattenValues, hasMultipleValues } from './utils';
-import './BarChart.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import BarChartBars from "./BarChartBars";
+import BarChartBenchmarkLine from "./BarChartBenchmarkLine";
+import ChartKey from "../Chart/ChartKey";
+import ChartKeyItem from "../Chart/ChartKeyItem";
+import ChartTable from "../ChartTable/ChartTable";
+import ChartTableAxisTitle from "../ChartTable/ChartTableAxisTitle";
+import ChartTableKey from "../ChartTable/ChartTableKey";
+import ChartTableLabel from "../ChartTable/ChartTableLabel";
+import ChartTableRow from "../ChartTable/ChartTableRow";
+import ChartTableRows from "../ChartTable/ChartTableRows";
+import ChartTableVisual from "../ChartTable/ChartTableVisual";
+import DataPoint from "../DataPoint/DataPoint";
+import DataPoints from "../DataPoint/DataPoints";
+import { formatData, flattenValues, hasMultipleValues } from "./utils";
+import "./BarChart.css";
 
 export default class BarChart extends Component {
   static propTypes = {
@@ -86,7 +86,7 @@ export default class BarChart extends Component {
      */
     onToggleRowVisibility: PropTypes.func,
     /** Spacing applied between Bar groups */
-    rowSpace: PropTypes.oneOf(['x1', 'x2', 'x3']),
+    rowSpace: PropTypes.oneOf(["x1", "x2", "x3"]),
     /** Option to always show the label next to bars, as opposed to on mouse over  */
     showBarLabel: PropTypes.bool,
     /**  Control the appearance of the bar */
@@ -111,7 +111,7 @@ export default class BarChart extends Component {
 
   static defaultProps = {
     isBenchmarkLineFadable: true,
-    rowSpace: 'x2',
+    rowSpace: "x2",
     showKey: true,
     showDifferenceArea: false,
     xAxisLabels: () => [],
@@ -293,8 +293,12 @@ export default class BarChart extends Component {
                   label={label}
                   lower={finalLower}
                   onDropdownClose={() => this.handleDropdonClose()}
-                  onDropdownOpen={color => this.handleDropdonOpen(index, color)}
-                  onMouseEnter={color => this.handleMouseEnterBar(index, color)}
+                  onDropdownOpen={(color) =>
+                    this.handleDropdonOpen(index, color)
+                  }
+                  onMouseEnter={(color) =>
+                    this.handleMouseEnterBar(index, color)
+                  }
                   onMouseLeave={() => this.handleMouseLeaveBar()}
                   showBarLabel={showBarLabel}
                   showDifferenceArea={showDifferenceArea}

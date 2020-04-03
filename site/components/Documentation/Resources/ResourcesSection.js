@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base, Heading } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base, Heading } from "@brandwatch/axiom-components";
 
 export default class ResourcesSection extends Component {
   static propTypes = {

@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { Component } from 'react';
+import PropTypes from "prop-types";
+import { Component } from "react";
 
-export const DataPickerDropdownRef = 'DataPickerDropdown';
+export const DataPickerDropdownRef = "DataPickerDropdown";
 
 export default class DataPickerDropdown extends Component {
   static propTypes = {

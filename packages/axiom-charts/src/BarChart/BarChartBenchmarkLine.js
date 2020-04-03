@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
 
-import ChartContext from '../ChartContext/ChartContext';
+import ChartContext from "../ChartContext/ChartContext";
 
 export default class BarChartBenchmarkLine extends Component {
   static propTypes = {
@@ -34,12 +34,12 @@ export default class BarChartBenchmarkLine extends Component {
     const style = { height, width };
     const lineStyle = { left: `${value}%` };
 
-    const classes = classnames('ax-bar-chart__benchmark-line', {
-      'ax-bar-chart__benchmark-line--faded': faded,
+    const classes = classnames("ax-bar-chart__benchmark-line", {
+      "ax-bar-chart__benchmark-line--faded": faded,
     });
 
-    const pathClasses = classnames('ax-bar-chart__benchmark-line-path', {
-      'ax-bar-chart__benchmark-line-path--interactive': BenchmarkTooltipContext,
+    const pathClasses = classnames("ax-bar-chart__benchmark-line-path", {
+      "ax-bar-chart__benchmark-line-path--interactive": BenchmarkTooltipContext,
     });
 
     return (

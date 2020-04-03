@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import DropdownContent from '../Dropdown/DropdownContent';
-import DropdownContext from '../Dropdown/DropdownContext';
-import DatePickerControls from './DatePickerControls';
-import DatePickerSelection from './DatePickerSelection';
-import DatePickerRangeSelection from './DatePickerRangeSelection';
-import SelectedDateOrRangePropTypes from './SelectedDateOrRangePropTypes';
-import './DatePicker.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import DropdownContent from "../Dropdown/DropdownContent";
+import DropdownContext from "../Dropdown/DropdownContext";
+import DatePickerControls from "./DatePickerControls";
+import DatePickerSelection from "./DatePickerSelection";
+import DatePickerRangeSelection from "./DatePickerRangeSelection";
+import SelectedDateOrRangePropTypes from "./SelectedDateOrRangePropTypes";
+import "./DatePicker.css";
 
 export default class DatePickerContext extends Component {
   static propTypes = {
@@ -70,7 +70,7 @@ export default class DatePickerContext extends Component {
           />
           {showRangeSelection && (
             <DatePickerRangeSelection
-              onRangeSelection={range => this.handleRangeSelection(range)}
+              onRangeSelection={(range) => this.handleRangeSelection(range)}
               rangeSelections={rangeSelections}
               selectedRange={selectedRange}
               view={view}

@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   AlertBar,
   Button,
   Form,
   TextInput,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationShowCase,
   DocumentationContent,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: '',
-      input1: '',
-      input2: '',
-      input3: '',
+      error: "",
+      input1: "",
+      input2: "",
+      input3: "",
     };
   }
 
@@ -50,23 +50,29 @@ export default class Documentation extends Component {
             )}
 
             <TextInput
-              error={() => 'The first inputs needs a number'}
-              onChange={event => this.setState({ input1: event.target.value })}
+              error={() => "The first inputs needs a number"}
+              onChange={(event) =>
+                this.setState({ input1: event.target.value })
+              }
               patterns={[/^.*[0-9].*$/]}
               placeholder="1 numeric character"
               required
               value={this.state.input1}
             />
             <TextInput
-              onChange={event => this.setState({ input2: event.target.value })}
+              onChange={(event) =>
+                this.setState({ input2: event.target.value })
+              }
               placeholder="Required"
               required
               value={this.state.input2}
             />
             <TextInput
               error={() => 'The second inputs has to be "Brandwatch"'}
-              onChange={event => this.setState({ input3: event.target.value })}
-              patterns={[() => this.state.input3 === 'Brandwatch']}
+              onChange={(event) =>
+                this.setState({ input3: event.target.value })
+              }
+              patterns={[() => this.state.input3 === "Brandwatch"]}
               placeholder="Must match 'Brandwatch'"
               value={this.state.input3}
             />
@@ -77,8 +83,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Validation/Validation'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Validation/Validate'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Validation/Validation"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Validation/Validate"),
           ]}
         />
       </DocumentationContent>

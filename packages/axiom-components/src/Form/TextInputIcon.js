@@ -1,21 +1,21 @@
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { isComponent } from '@brandwatch/axiom-utils';
-import Icon from '../Icon/Icon';
-import Link from '../Typography/Link';
-import Tooltip from '../Tooltip/Tooltip';
-import TooltipContent from '../Tooltip/TooltipContent';
-import TooltipContext, { TooltipContextRef } from '../Tooltip/TooltipContext';
-import TooltipSource from '../Tooltip/TooltipSource';
-import TooltipTarget from '../Tooltip/TooltipTarget';
+import classnames from "classnames";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { isComponent } from "@brandwatch/axiom-utils";
+import Icon from "../Icon/Icon";
+import Link from "../Typography/Link";
+import Tooltip from "../Tooltip/Tooltip";
+import TooltipContent from "../Tooltip/TooltipContent";
+import TooltipContext, { TooltipContextRef } from "../Tooltip/TooltipContext";
+import TooltipSource from "../Tooltip/TooltipSource";
+import TooltipTarget from "../Tooltip/TooltipTarget";
 
-export const TextInputIconRef = 'TextInputIcon';
+export const TextInputIconRef = "TextInputIcon";
 
 export default class TextInputIcon extends Component {
   static propTypes = {
     /** Alignment inside the input field */
-    align: PropTypes.oneOf(['left', 'right']),
+    align: PropTypes.oneOf(["left", "right"]),
     /** Color of the TextInputIcon. */
     iconColor: PropTypes.string,
     /** Name of the icon. See <Icon>. */
@@ -27,7 +27,7 @@ export default class TextInputIcon extends Component {
   };
 
   static defaultProps = {
-    align: 'right',
+    align: "right",
   };
 
   static typeRef = TextInputIconRef;
@@ -55,7 +55,7 @@ export default class TextInputIcon extends Component {
 
   render() {
     const { align, iconColor, name, onClick, tooltip, ...rest } = this.props;
-    const className = classnames('ax-input__icon', {
+    const className = classnames("ax-input__icon", {
       [`ax-input__icon--align-${align}`]: align,
     });
 

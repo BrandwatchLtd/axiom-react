@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Chart,
   ChartBody,
@@ -9,7 +9,7 @@ import {
   DataPoint,
   DataPoints,
   DotPlotChart,
-} from '@brandwatch/axiom-charts';
+} from "@brandwatch/axiom-charts";
 import {
   Dropdown,
   DropdownContext,
@@ -24,13 +24,13 @@ import {
   Toggle,
   Tool,
   Toolbar,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import { dotPlotData, dotPlotKey } from './chartData';
+} from "@brandwatch/axiom-documentation-viewer";
+import { dotPlotData, dotPlotKey } from "./chartData";
 
 export default class Documentation extends Component {
   render() {
@@ -89,17 +89,17 @@ export default class Documentation extends Component {
                 expandButtonSuffix="Categories"
                 labelColumnWidth="11rem"
                 xAxisLabels={() => [
-                  '0',
-                  '10',
-                  '20',
-                  '30',
-                  '40',
-                  '50',
-                  '60',
-                  '70',
-                  '80',
-                  '90',
-                  '100',
+                  "0",
+                  "10",
+                  "20",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100",
                 ]}
               />
             </ChartBody>
@@ -108,10 +108,10 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/Chart'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartBody'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartHeader'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartTitle'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/Chart"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartBody"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartHeader"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartTitle"),
           ]}
         />
 
@@ -138,8 +138,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKey'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKeyItem'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKey"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Chart/ChartKeyItem"),
           ]}
         />
       </DocumentationContent>

@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Base, Small } from '@brandwatch/axiom-components';
-import './Bars.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { Base, Small } from "@brandwatch/axiom-components";
+import "./Bars.css";
 
 export default class Bars extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     /** Direction in which the bars will ascend to */
-    direction: PropTypes.oneOf(['up', 'right', 'down', 'left']),
+    direction: PropTypes.oneOf(["up", "right", "down", "left"]),
     /** The label placed at the start of the Bars  */
     label: PropTypes.string,
   };
@@ -18,7 +18,7 @@ export default class Bars extends Component {
   };
 
   static defaultProps = {
-    direction: 'up',
+    direction: "up",
   };
 
   getChildContext() {
@@ -29,7 +29,7 @@ export default class Bars extends Component {
 
   render() {
     const { children, direction, label, ...rest } = this.props;
-    const classes = classnames('ax-bars', `ax-bars--${direction}`);
+    const classes = classnames("ax-bars", `ax-bars--${direction}`);
 
     return (
       <Base {...rest} className={classes}>

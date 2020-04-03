@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import AlertBar from '../AlertBar/AlertBar';
-import Strong from '../Typography/Strong';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import AlertBar from "../AlertBar/AlertBar";
+import Strong from "../Typography/Strong";
 
 export default class AlertDialogHeader extends Component {
   static propTypes = {

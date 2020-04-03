@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './InlineGroup.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./InlineGroup.css";
 
 export default class InlineGroup extends Component {
   static propTypes = {
@@ -12,7 +12,7 @@ export default class InlineGroup extends Component {
 
   render() {
     const { children, className, ...rest } = this.props;
-    const classes = classnames('ax-inline-group', className);
+    const classes = classnames("ax-inline-group", className);
 
     return (
       <Base {...rest} className={classes}>

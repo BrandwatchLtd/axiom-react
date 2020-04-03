@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Button from '../Button/Button';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Button from "../Button/Button";
 
-export const TextInputButtonRef = 'TextInputButton';
+export const TextInputButtonRef = "TextInputButton";
 
 export default class TextInputButton extends Component {
   static propTypes = {

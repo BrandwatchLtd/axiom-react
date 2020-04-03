@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
-import { Switch, Redirect, Route } from 'react-router';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component, Fragment } from "react";
+import { Switch, Redirect, Route } from "react-router";
+import classnames from "classnames";
 import {
   Base,
   List,
@@ -9,10 +9,10 @@ import {
   Heading,
   Icon,
   Link,
-} from '@brandwatch/axiom-components';
-import DocumentationMenu from './DocumentationMenu';
-import DocumentationMenuItem from './DocumentationMenuItem';
-import './DocumentationViewer.css';
+} from "@brandwatch/axiom-components";
+import DocumentationMenu from "./DocumentationMenu";
+import DocumentationMenuItem from "./DocumentationMenuItem";
+import "./DocumentationViewer.css";
 
 export default class DocumentationViewer extends Component {
   static propTypes = {
@@ -28,7 +28,7 @@ export default class DocumentationViewer extends Component {
   };
 
   static defaultProps = {
-    path: '',
+    path: "",
   };
 
   constructor(props) {
@@ -41,8 +41,8 @@ export default class DocumentationViewer extends Component {
   render() {
     const { isSidebarOpen } = this.state;
     const { Landing, config, path, ...rest } = this.props;
-    const classes = classnames('ax-documentation-viewer', {
-      'ax-documentation-viewer--sidebar-open': isSidebarOpen,
+    const classes = classnames("ax-documentation-viewer", {
+      "ax-documentation-viewer--sidebar-open": isSidebarOpen,
     });
 
     return (

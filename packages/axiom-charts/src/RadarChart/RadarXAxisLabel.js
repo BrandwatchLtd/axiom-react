@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Link, Text } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import { Link, Text } from "@brandwatch/axiom-components";
 
 const RADIAN = Math.PI / 180;
 
@@ -23,11 +23,11 @@ export default class RadarXAxisLabel extends Component {
     const isBottom = r > RADIAN * 67.5 && r < RADIAN * 112.5;
     const isLeft = r >= RADIAN * 112.5 && r <= RADIAN * 247.5;
 
-    const classes = classnames('ax-radar__x-axis-label', {
-      'ax-radar__x-axis-label--right': isRight,
-      'ax-radar__x-axis-label--bottom': isBottom,
-      'ax-radar__x-axis-label--left': isLeft,
-      'ax-radar__x-axis-label--top': isTop,
+    const classes = classnames("ax-radar__x-axis-label", {
+      "ax-radar__x-axis-label--right": isRight,
+      "ax-radar__x-axis-label--bottom": isBottom,
+      "ax-radar__x-axis-label--left": isLeft,
+      "ax-radar__x-axis-label--top": isTop,
     });
 
     return (
@@ -39,12 +39,12 @@ export default class RadarXAxisLabel extends Component {
         {onClick ? (
           <Link
             onClick={() => onClick(label)}
-            style={active ? 'body' : 'subtle'}
+            style={active ? "body" : "subtle"}
           >
             {label}
           </Link>
         ) : (
-          <Text textColor={active ? 'body' : 'subtle'}>{label}</Text>
+          <Text textColor={active ? "body" : "subtle"}>{label}</Text>
         )}
       </div>
     );

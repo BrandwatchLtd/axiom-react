@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './Toggle.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./Toggle.css";
 
 export default class Toggle extends Component {
   static propTypes = {
     /** Set alignment of the switch **/
-    align: PropTypes.oneOf(['left', 'right', 'full']),
+    align: PropTypes.oneOf(["left", "right", "full"]),
     /** Label that is inserted next to the toggle switch */
     children: PropTypes.node,
     /** Disabled control of the switch */
@@ -15,14 +15,14 @@ export default class Toggle extends Component {
     /** Called when the toggle is toggled/changed */
     onToggle: PropTypes.func.isRequired,
     /** Size of the toggle */
-    size: PropTypes.oneOf(['small', 'medium']),
+    size: PropTypes.oneOf(["small", "medium"]),
     /** Toggled/checked state of the switch */
     toggled: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
-    align: 'left',
-    size: 'small',
+    align: "left",
+    size: "small",
   };
 
   render() {
@@ -36,11 +36,11 @@ export default class Toggle extends Component {
       ...rest
     } = this.props;
     const classes = classnames(
-      'ax-toggle',
+      "ax-toggle",
       `ax-toggle--${size}`,
       `ax-toggle--align-${align}`,
       {
-        'ax-toggle--enabled': !disabled,
+        "ax-toggle--enabled": !disabled,
       }
     );
 

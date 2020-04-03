@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 
-import { DotPlotChart as DotPlotChartAxiom } from '@brandwatch/axiom-charts';
-import { Base as BaseAxiom } from '@brandwatch/axiom-components';
+import { DotPlotChart as DotPlotChartAxiom } from "@brandwatch/axiom-charts";
+import { Base as BaseAxiom } from "@brandwatch/axiom-components";
 import {
   shortDate as shortDateAxiom,
   longDate as longDateAxiom,
-} from '@brandwatch/axiom-formatting';
-import { findComponent as findComponentAxiom } from '@brandwatch/axiom-utils';
+} from "@brandwatch/axiom-formatting";
+import { findComponent as findComponentAxiom } from "@brandwatch/axiom-utils";
 
 const shortDate = () => {};
 const longDate = () => {};

@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import ListItem from '../List/ListItem';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ListItem from "../List/ListItem";
 
 export default class Tool extends Component {
   static propTypes = {

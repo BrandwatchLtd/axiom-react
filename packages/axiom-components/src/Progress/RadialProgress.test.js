@@ -1,6 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import RadialProgress from './RadialProgress';
+import React from "react";
+import renderer from "react-test-renderer";
+import RadialProgress from "./RadialProgress";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -9,15 +9,15 @@ const getComponent = (props = {}) =>
     </RadialProgress>
   );
 
-describe('RadialProgress', () => {
-  it('renders with defaultProps', () => {
+describe("RadialProgress", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with size', () => {
-    ['small', 'medium', 'large'].forEach(size => {
+  describe("renders with size", () => {
+    ["small", "medium", "large"].forEach((size) => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();

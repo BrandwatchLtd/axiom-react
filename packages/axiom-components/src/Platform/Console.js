@@ -1,25 +1,25 @@
-import PropTypes from 'prop-types';
-import React, { useContext } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import ConsoleContext from './ConsoleContext';
-import PlaformContext from './PlatformContext';
+import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import ConsoleContext from "./ConsoleContext";
+import PlaformContext from "./PlatformContext";
 
 export default function Console({
   children,
   position,
-  shade = 'shade-3',
+  shade = "shade-3",
   width,
   ...rest
 }) {
   const { openConsolePosition } = useContext(PlaformContext);
   const style = { width };
   const classes = classnames(
-    'ax-platform__console',
+    "ax-platform__console",
     `ax-platform__console--${position}`,
     `ax-platform__console--${shade}`,
     {
-      'ax-platform__console--open': openConsolePosition === position,
+      "ax-platform__console--open": openConsolePosition === position,
     }
   );
 
@@ -34,7 +34,7 @@ export default function Console({
 
 Console.propTypes = {
   children: PropTypes.node,
-  position: PropTypes.oneOf(['left', 'right']).isRequired,
-  shade: PropTypes.oneOf(['shade-2', 'shade-3', 'shade-4']),
+  position: PropTypes.oneOf(["left", "right"]).isRequired,
+  shade: PropTypes.oneOf(["shade-2", "shade-3", "shade-4"]),
   width: PropTypes.string.isRequired,
 };

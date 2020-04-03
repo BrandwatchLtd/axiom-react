@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Avatar, Candytar, Grid, GridCell } from '@brandwatch/axiom-components';
+import React, { Component } from "react";
+import { Avatar, Candytar, Grid, GridCell } from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -32,8 +32,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Avatar'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Candytar'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Avatar"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Avatar/Candytar"),
           ]}
         />
       </DocumentationContent>

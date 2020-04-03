@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { ChangePasswordDialog } from '@brandwatch/axiom-composites';
+import React, { Component } from "react";
+import { ChangePasswordDialog } from "@brandwatch/axiom-composites";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -13,8 +13,8 @@ export default class Documentation extends Component {
         <DocumentationShowCase hidePreview>
           <ChangePasswordDialog
             isOpen
-            onRequestClose={setValue =>
-              setValue('ChangePasswordDialog', 'isOpen', false)
+            onRequestClose={(setValue) =>
+              setValue("ChangePasswordDialog", "isOpen", false)
             }
             onSubmit={() => {}}
           />
@@ -22,7 +22,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-composites/src/ChangePasswordDialog/ChangePasswordDialog'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-composites/src/ChangePasswordDialog/ChangePasswordDialog"),
           ]}
         />
       </DocumentationContent>

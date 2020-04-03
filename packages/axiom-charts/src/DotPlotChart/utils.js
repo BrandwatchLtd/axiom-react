@@ -5,7 +5,7 @@ export const formatData = (key, data) => {
     label,
     benchmark,
     values: Object.keys(values)
-      .map(color => ({ color, value: values[color] }))
+      .map((color) => ({ color, value: values[color] }))
       .sort(
         (a, b) =>
           a.value - b.value || order.indexOf(a.color) - order.indexOf(b.color)
@@ -25,7 +25,7 @@ export const formatData = (key, data) => {
   }));
 };
 
-export const flattenValues = data => {
+export const flattenValues = (data) => {
   return data.reduce((memo, { benchmark, values }) => {
     if (benchmark) {
       memo.push(benchmark);
@@ -78,11 +78,12 @@ export const getDotColors = (
   colors
 ) =>
   mouseOverColors.length && colors.length > 1 && mouseOverRowIndex !== rowIndex
-    ? colors.filter(color => mouseOverColors.indexOf(color) > -1)
+    ? colors.filter((color) => mouseOverColors.indexOf(color) > -1)
     : colors;
 
-export const isBenchmarkFaded = mouseOverRowIndex => mouseOverRowIndex !== null;
-export const isLineFaded = mouseOverRowIndex => mouseOverRowIndex !== null;
+export const isBenchmarkFaded = (mouseOverRowIndex) =>
+  mouseOverRowIndex !== null;
+export const isLineFaded = (mouseOverRowIndex) => mouseOverRowIndex !== null;
 
 export const isDotFaded = (
   mouseOverRowIndex,
@@ -100,7 +101,7 @@ export const isDotHidden = (
   colors
 ) =>
   !!mouseOverColors.length &&
-  !mouseOverColors.some(color => colors.indexOf(color) > -1);
+  !mouseOverColors.some((color) => colors.indexOf(color) > -1);
 
 export const isValueHidden = (
   mouseOverRowIndex,
@@ -118,7 +119,7 @@ export const isValueHidden = (
 
   return (
     mouseOverRowIndex !== rowIndex ||
-    mouseOverColors.some(color => colors.indexOf(color) === -1)
+    mouseOverColors.some((color) => colors.indexOf(color) === -1)
   );
 };
 

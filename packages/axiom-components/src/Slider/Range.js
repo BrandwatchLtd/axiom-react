@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import omit from 'lodash.omit';
-import ResizeObserver from 'resize-observer-polyfill';
-import Base from '../Base/Base';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import Handle from './Handle';
-import Text from '../Typography/Text';
-import sliderDefaultProps from './DefaultProps';
-import './Slider.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import omit from "lodash.omit";
+import ResizeObserver from "resize-observer-polyfill";
+import Base from "../Base/Base";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import Handle from "./Handle";
+import Text from "../Typography/Text";
+import sliderDefaultProps from "./DefaultProps";
+import "./Slider.css";
 
 const HIDE_LABELS_THRESHOLD = 150;
 const SLIDER_HANDLE_SIZE = 0.01;
@@ -33,7 +33,7 @@ export default class Range extends Component {
     /** Called when the slider is let go */
     onSlideEnd: PropTypes.func,
     /** Size of the slider */
-    size: PropTypes.oneOf(['small', 'medium']),
+    size: PropTypes.oneOf(["small", "medium"]),
     /** Configures the increments of the slide */
     step: PropTypes.number,
     /** Value formatter for the tooltip */
@@ -57,7 +57,7 @@ export default class Range extends Component {
       draggedHandleIndex: null,
       isMouseOver: false,
       showLabels: true,
-      rangeWidth: '104',
+      rangeWidth: "104",
     };
 
     this.ensureBoundsInRange();
@@ -78,9 +78,9 @@ export default class Range extends Component {
   ensureBoundsInRange() {
     const { values } = this.props;
 
-    const valuesInRange = values.map(value => this.ensureValueInRange(value));
+    const valuesInRange = values.map((value) => this.ensureValueInRange(value));
 
-    if (values.some(value => !valuesInRange.includes(value))) {
+    if (values.some((value) => !valuesInRange.includes(value))) {
       this.onChange(valuesInRange);
     }
   }
@@ -163,8 +163,8 @@ export default class Range extends Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousemove', this.handleMouseMove);
-    document.removeEventListener('mouseup', this.handleMouseUp);
+    document.removeEventListener("mousemove", this.handleMouseMove);
+    document.removeEventListener("mouseup", this.handleMouseUp);
     this.observer.unobserve(this.rangeRef.current);
   }
 
@@ -178,8 +178,8 @@ export default class Range extends Component {
 
     this.handleMouseMove(event);
 
-    document.addEventListener('mousemove', this.handleMouseMove);
-    document.addEventListener('mouseup', this.handleMouseUp);
+    document.addEventListener("mousemove", this.handleMouseMove);
+    document.addEventListener("mouseup", this.handleMouseUp);
   }
 
   handleMouseUp(event) {
@@ -191,16 +191,16 @@ export default class Range extends Component {
     this.setState({ draggedHandleIndex: null });
     onSlideEnd && onSlideEnd(orderedValues);
 
-    document.removeEventListener('mousemove', this.handleMouseMove);
-    document.removeEventListener('mouseup', this.handleMouseUp);
+    document.removeEventListener("mousemove", this.handleMouseMove);
+    document.removeEventListener("mouseup", this.handleMouseUp);
   }
 
   handleBlur() {
-    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener("keydown", this.handleKeyDown);
   }
 
   handleFocus() {
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   handleMouseMove(event) {
@@ -214,14 +214,14 @@ export default class Range extends Component {
     const { values } = this.state;
 
     switch (event.key) {
-      case 'ArrowLeft':
-      case 'ArrowDown':
+      case "ArrowLeft":
+      case "ArrowDown":
         values[this.focusedHandleIndex] = this.ensureValueInRange(
           values[this.focusedHandleIndex] - step
         );
         break;
-      case 'ArrowRight':
-      case 'ArrowUp':
+      case "ArrowRight":
+      case "ArrowUp":
         values[this.focusedHandleIndex] = this.ensureValueInRange(
           values[this.focusedHandleIndex] + step
         );
@@ -253,15 +253,15 @@ export default class Range extends Component {
     } = this.props;
     const { draggedHandleIndex, isMouseOver, rangeWidth } = this.state;
     const showLabels = rangeWidth >= HIDE_LABELS_THRESHOLD;
-    const valuesAsPercentage = values.map(value =>
+    const valuesAsPercentage = values.map((value) =>
       this.getPercentageFromValue(value)
     );
     const classes = classnames(
-      'ax-slider',
+      "ax-slider",
       `ax-slider--${size}`,
-      'ax-slider__range',
+      "ax-slider__range",
       {
-        'ax-slider--disabled': disabled,
+        "ax-slider--disabled": disabled,
       }
     );
 
@@ -289,7 +289,7 @@ export default class Range extends Component {
         )}
         <GridCell width={showLabels ? 70 : 100}>
           <Base
-            {...omit(rest, ['onSlideEnd', 'min', 'max', 'step'])}
+            {...omit(rest, ["onSlideEnd", "min", "max", "step"])}
             className={classes}
             onBlur={this.handleBlur}
             onFocus={disabled ? null : this.handleFocus}

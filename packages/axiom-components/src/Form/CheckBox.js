@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Validate from '../Validation/Validate';
-import ChedioButtox from './ChedioButtox';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Validate from "../Validation/Validate";
+import ChedioButtox from "./ChedioButtox";
 
 export default class CheckBox extends Component {
   static propTypes = {
@@ -48,7 +48,7 @@ export default class CheckBox extends Component {
         required={required}
         value={checked}
       >
-        {isValid => (
+        {(isValid) => (
           <ChedioButtox
             {...rest}
             checked={!!(checked || indeterminate)}

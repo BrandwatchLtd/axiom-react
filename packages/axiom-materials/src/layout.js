@@ -1,8 +1,8 @@
 export default {
-  layoutWidthTiny: '23rem',
-  layoutWidthSmall: '48rem',
-  layoutWidthMedium: '62rem',
-  layoutWidthLarge: '75rem',
+  layoutWidthTiny: "23rem",
+  layoutWidthSmall: "48rem",
+  layoutWidthMedium: "62rem",
+  layoutWidthLarge: "75rem",
 
   zIndexSticky: 1,
   zIndexPlatformMask: 2,

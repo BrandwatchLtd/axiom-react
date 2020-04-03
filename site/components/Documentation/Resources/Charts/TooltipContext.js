@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   DropdownContext,
   DropdownContent,
   Paragraph,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class TooltipContextExample extends Component {
   render() {

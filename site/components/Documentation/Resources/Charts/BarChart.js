@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { BarChart } from '@brandwatch/axiom-charts';
+import React, { Component } from "react";
+import { BarChart } from "@brandwatch/axiom-charts";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import { dotPlotKey, dotPlotData } from './chartData';
-import DropdownContext from './DropdownContext';
+} from "@brandwatch/axiom-documentation-viewer";
+import { dotPlotKey, dotPlotData } from "./chartData";
+import DropdownContext from "./DropdownContext";
 
 export default class Documentation extends Component {
   constructor(props) {
@@ -51,24 +51,24 @@ export default class Documentation extends Component {
             }
             upper={100}
             xAxisLabels={() => [
-              '0',
-              '10',
-              '20',
-              '30',
-              '40',
-              '50',
-              '60',
-              '70',
-              '80',
-              '90',
-              '100',
+              "0",
+              "10",
+              "20",
+              "30",
+              "40",
+              "50",
+              "60",
+              "70",
+              "80",
+              "90",
+              "100",
             ]}
           />
         </DocumentationShowCase>
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/BarChart/BarChart'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/BarChart/BarChart"),
           ]}
         />
       </DocumentationContent>

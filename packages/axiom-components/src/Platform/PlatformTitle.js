@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Heading from '../Typography/Heading';
+import React, { Component } from "react";
+import Heading from "../Typography/Heading";
 
 export default class PlatformTitle extends Component {
   render() {

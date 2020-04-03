@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './ContextTip.css';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./ContextTip.css";
 
 export default React.forwardRef(ContextTip);
 
@@ -24,18 +24,18 @@ ContextTip.propTypes = {
   children: PropTypes.node,
   /** Background color for the tip */
   color: PropTypes.oneOf([
-    'success',
-    'warning',
-    'error',
-    'info',
-    'shade-1',
-    'shade-2',
-    'shade-3',
-    'shade-4',
-    'carbon',
-    'white',
+    "success",
+    "warning",
+    "error",
+    "info",
+    "shade-1",
+    "shade-2",
+    "shade-3",
+    "shade-4",
+    "carbon",
+    "white",
   ]),
   /** The direction at which the Tip should be pointing. The directions are opposite, for example,
    * if the arrow should be placed on the 'left', its direction prop should be 'right'. The same applies for 'top' and 'bottom'. */
-  direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+  direction: PropTypes.oneOf(["top", "bottom", "left", "right"]),
 };

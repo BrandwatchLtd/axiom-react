@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import { Component } from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from "prop-types";
+import { Component } from "react";
+import ReactDOM from "react-dom";
 
-const canOpenPortal = typeof document !== 'undefined';
+const canOpenPortal = typeof document !== "undefined";
 
 export default class Portal extends Component {
   static propTypes = {
@@ -16,8 +16,8 @@ export default class Portal extends Component {
 
   UNSAFE_componentWillMount() {
     if (!canOpenPortal) return;
-    this._reactRootNode = document.createElement('div');
-    this._reactRootNode.classList.add('AxiomSubtree');
+    this._reactRootNode = document.createElement("div");
+    this._reactRootNode.classList.add("AxiomSubtree");
   }
 
   componentDidMount() {

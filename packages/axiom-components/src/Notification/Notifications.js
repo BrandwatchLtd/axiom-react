@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component, Children } from 'react';
-import Base from '../Base/Base';
-import Portal from '../Portal/Portal';
+import PropTypes from "prop-types";
+import React, { Component, Children } from "react";
+import Base from "../Base/Base";
+import Portal from "../Portal/Portal";
 
 export default class Notifications extends Component {
   static propTypes = {
@@ -21,7 +21,7 @@ export default class Notifications extends Component {
     return (
       <Portal>
         <Base {...rest} className="ax-notifications">
-          {Children.map(children, child => (
+          {Children.map(children, (child) => (
             <div className="ax-notifications__notification">{child}</div>
           ))}
         </Base>

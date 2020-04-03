@@ -1,8 +1,8 @@
-import React from 'react';
-import AlertCard from './AlertCard';
+import React from "react";
+import AlertCard from "./AlertCard";
 
 export default {
-  title: 'Components/AlertCard',
+  title: "Components/AlertCard",
   component: AlertCard,
 };
 

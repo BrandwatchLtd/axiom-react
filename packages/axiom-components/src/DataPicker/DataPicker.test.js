@@ -1,8 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import DataPicker from './DataPicker';
-import DataPickerDropdown from './DataPickerDropdown';
-import DataPickerMeta from './DataPickerMeta';
+import React from "react";
+import renderer from "react-test-renderer";
+import DataPicker from "./DataPicker";
+import DataPickerDropdown from "./DataPickerDropdown";
+import DataPickerMeta from "./DataPickerMeta";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -14,14 +14,14 @@ const getComponent = (props = {}) =>
     </DataPicker>
   );
 
-describe('DataPicker', () => {
-  it('renders with defaultProps', () => {
+describe("DataPicker", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with just DataPickerDropdown', () => {
+  it("renders with just DataPickerDropdown", () => {
     const component = getComponent({
       children: <DataPickerDropdown />,
     });
@@ -29,7 +29,7 @@ describe('DataPicker', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with just DataPickerMeta', () => {
+  it("renders with just DataPickerMeta", () => {
     const component = getComponent({
       children: <DataPickerMeta />,
     });
@@ -37,14 +37,14 @@ describe('DataPicker', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with onSelectColor', () => {
+  it("renders with onSelectColor", () => {
     const component = getComponent({ onSelectColor: () => {} });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with value', () => {
-    const component = getComponent({ value: 'Dolar amor' });
+  it("renders with value", () => {
+    const component = getComponent({ value: "Dolar amor" });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import './Table.css';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import "./Table.css";
+import classnames from "classnames";
 
 export default class Table extends Component {
   static propTypes = {
@@ -13,13 +13,13 @@ export default class Table extends Component {
   };
 
   static defaultProps = {
-    space: 'x6',
+    space: "x6",
   };
 
   render() {
     const { children, className, space, ...rest } = this.props;
 
-    const classes = classnames('ax-table', className);
+    const classes = classnames("ax-table", className);
 
     return (
       <Base

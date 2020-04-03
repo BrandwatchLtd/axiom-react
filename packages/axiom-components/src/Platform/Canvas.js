@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import React, { useContext } from 'react';
-import Base from '../Base/Base';
-import PlatformContext from './PlatformContext';
+import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import Base from "../Base/Base";
+import PlatformContext from "./PlatformContext";
 
 export default function Canvas({ children, ...rest }) {
   const { openConsoleWidth, openConsolePosition } = useContext(PlatformContext);
 
   const style = {
-    marginLeft: openConsolePosition === 'left' && openConsoleWidth,
-    marginRight: openConsolePosition === 'right' && openConsoleWidth,
+    marginLeft: openConsolePosition === "left" && openConsoleWidth,
+    marginRight: openConsolePosition === "right" && openConsoleWidth,
   };
 
   return (

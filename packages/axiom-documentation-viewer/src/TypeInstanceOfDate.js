@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import {
   DatePicker,
   TextInput,
   TextInputIcon,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class TypeInstanceOfDate extends Component {
   static propTypes = {
@@ -19,13 +19,13 @@ export default class TypeInstanceOfDate extends Component {
     return (
       <DatePicker
         onSelect={({ date }) => setValue(date)}
-        selectedDate={typeof value === 'string' ? new Date(value) : value}
+        selectedDate={typeof value === "string" ? new Date(value) : value}
       >
         <TextInput
           disabled={disabled}
           placeholder="Select a date"
           readOnly={true}
-          value={value ? value.toString() : ''}
+          value={value ? value.toString() : ""}
         >
           <TextInputIcon name="chevron-down" />
         </TextInput>

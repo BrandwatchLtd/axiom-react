@@ -1,8 +1,8 @@
-import React from 'react';
-import AlertIcon from './AlertIcon';
+import React from "react";
+import AlertIcon from "./AlertIcon";
 
 export default {
-  title: 'Components/AlertIcon',
+  title: "Components/AlertIcon",
   component: AlertIcon,
 };
 

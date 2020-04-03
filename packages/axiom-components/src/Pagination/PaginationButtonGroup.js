@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ButtonGroup from '../Button/ButtonGroup';
+import React, { Component } from "react";
+import ButtonGroup from "../Button/ButtonGroup";
 
 export default class PaginationButtonGroup extends Component {
   render() {

@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import atIds from '@brandwatch/axiom-automation-testing/ids';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import atIds from "@brandwatch/axiom-automation-testing/ids";
 import {
   Avatar,
   Button,
@@ -16,15 +16,15 @@ import {
   Heading,
   Link,
   Paragraph,
-} from '@brandwatch/axiom-components';
-import { translate } from '@brandwatch/axiom-localization';
-import { stringToColor } from '@brandwatch/axiom-utils';
+} from "@brandwatch/axiom-components";
+import { translate } from "@brandwatch/axiom-localization";
+import { stringToColor } from "@brandwatch/axiom-utils";
 
 const t = translate({
-  'Sign out': {
-    de: 'Abmelden',
-    es: 'Cerrar Sesión',
-    fr: 'Se déconnecter',
+  "Sign out": {
+    de: "Abmelden",
+    es: "Cerrar Sesión",
+    fr: "Se déconnecter",
   },
 });
 
@@ -87,7 +87,7 @@ export default class UserMenu extends Component {
                       data-ax-at={atIds.UserMenu.logout}
                       onClick={onLogout}
                     >
-                      {t('Sign out', axiomLanguage)}
+                      {t("Sign out", axiomLanguage)}
                     </Button>
                   </ButtonGroup>
                 </GridCell>

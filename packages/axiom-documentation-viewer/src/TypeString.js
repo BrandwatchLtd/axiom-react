@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { TextInput } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { TextInput } from "@brandwatch/axiom-components";
 
 export default class TypeString extends Component {
   static propTypes = {
@@ -10,7 +10,7 @@ export default class TypeString extends Component {
   };
 
   static defaultProps = {
-    value: '',
+    value: "",
   };
 
   render() {
@@ -19,7 +19,7 @@ export default class TypeString extends Component {
     return (
       <TextInput
         disabled={disabled}
-        onChange={e => setValue(e.target.value)}
+        onChange={(e) => setValue(e.target.value)}
         placeholder="Set prop text..."
         value={value}
       />

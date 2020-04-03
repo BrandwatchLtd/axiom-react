@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import Bar from '../Bar/Bar';
-import Bars from '../Bar/Bars';
-import { findBarGroupMax } from './utils';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import Bar from "../Bar/Bar";
+import Bars from "../Bar/Bars";
+import { findBarGroupMax } from "./utils";
 
 export default class BulletBars extends Component {
   static propTypes = {

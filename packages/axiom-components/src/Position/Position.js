@@ -1,19 +1,19 @@
-import PropTypes from 'prop-types';
-import React, { Component, cloneElement } from 'react';
-import ReactDOM from 'react-dom';
-import { createPopper } from '@popperjs/core';
-import omit from 'lodash.omit';
-import classnames from 'classnames';
-import { findComponent } from '@brandwatch/axiom-utils';
-import Portal from '../Portal/Portal';
-import { PositionSourceRef } from './PositionSource';
-import { PositionTargetRef } from './PositionTarget';
+import PropTypes from "prop-types";
+import React, { Component, cloneElement } from "react";
+import ReactDOM from "react-dom";
+import { createPopper } from "@popperjs/core";
+import omit from "lodash.omit";
+import classnames from "classnames";
+import { findComponent } from "@brandwatch/axiom-utils";
+import Portal from "../Portal/Portal";
+import { PositionSourceRef } from "./PositionSource";
+import { PositionTargetRef } from "./PositionTarget";
 import {
   placementToPosition,
   positionToPlacement,
   getPlacementFlipOrder,
-} from './_utils';
-import './Position.css';
+} from "./_utils";
+import "./Position.css";
 
 /* eslint-disable react/no-find-dom-node */
 export default class Position extends Component {
@@ -23,7 +23,7 @@ export default class Position extends Component {
      */
     boundariesElement: PropTypes.oneOfType([
       PropTypes.object,
-      PropTypes.oneOf(['scrollParent', 'viewport', 'window']),
+      PropTypes.oneOf(["scrollParent", "viewport", "window"]),
     ]),
     /**
      * Children inside Position this should contain all of and
@@ -39,11 +39,11 @@ export default class Position extends Component {
      */
     enabled: PropTypes.bool,
     /** Adds control of content flipping fallbacks. */
-    flip: PropTypes.oneOf(['anticlockwise', 'clockwise', 'mirror']),
+    flip: PropTypes.oneOf(["anticlockwise", "clockwise", "mirror"]),
     /** Toggles the visibility of the PositionSource */
     isVisible: PropTypes.bool.isRequired,
     /** Controls the starting offset of the content */
-    offset: PropTypes.oneOf(['start', 'middle', 'end']),
+    offset: PropTypes.oneOf(["start", "middle", "end"]),
     /**
      * When provided a mask will be placed behind PositionSource, where this
      * function is called when clicked.
@@ -60,7 +60,7 @@ export default class Position extends Component {
      * due to collision, it will be placed according to the flip behaviour  until
      * a valid position is found.
      */
-    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
     /**
      * If Position should be attached to an element outside of the React context,
      * either a HTMLElement reference or a Popper.js compatible referenceObject
@@ -73,11 +73,11 @@ export default class Position extends Component {
   };
 
   static defaultProps = {
-    boundariesElement: 'viewport',
+    boundariesElement: "viewport",
     enabled: true,
-    flip: 'clockwise',
-    offset: 'middle',
-    position: 'top',
+    flip: "clockwise",
+    offset: "middle",
+    position: "top",
     showArrow: false,
   };
 
@@ -122,26 +122,26 @@ export default class Position extends Component {
 
     const modifiers = [
       {
-        name: 'afterWrite',
+        name: "afterWrite",
         enabled: true,
-        phase: 'afterWrite',
+        phase: "afterWrite",
         fn: this.handleOnUpdate,
       },
       {
-        name: 'arrow',
+        name: "arrow",
         options: {
           enabled: showArrow,
           element: this._arrow,
         },
       },
       {
-        name: 'flip',
+        name: "flip",
         options: {
           fallbackPlacements: getPlacementFlipOrder(placement, flip),
         },
       },
       {
-        name: 'offset',
+        name: "offset",
         options: {
           offset: () => {
             if (showArrow) {
@@ -153,7 +153,7 @@ export default class Position extends Component {
         },
       },
       {
-        name: 'preventOverflow',
+        name: "preventOverflow",
         options: {
           boundariesElement,
         },
@@ -221,24 +221,24 @@ export default class Position extends Component {
     const [position] = placementToPosition(placement);
 
     const classes = classnames(
-      'ax-position',
+      "ax-position",
       {
-        'ax-position--arrow': showArrow,
+        "ax-position--arrow": showArrow,
       },
       className
     );
 
     const props = omit(rest, [
-      'flip',
-      'offset',
-      'position',
-      'onPositionChange',
+      "flip",
+      "offset",
+      "position",
+      "onPositionChange",
     ]);
 
     return [
       !reference &&
         cloneElement(findComponent(children, PositionTargetRef), {
-          ref: target => (this._target = ReactDOM.findDOMNode(target)),
+          ref: (target) => (this._target = ReactDOM.findDOMNode(target)),
         }),
       enabled && isVisible ? (
         <Portal {...props} key="portal">
@@ -247,10 +247,10 @@ export default class Position extends Component {
               <div className="ax-position__mask" onClick={onMaskClick} />
             )}
 
-            <div className={classes} ref={el => (this._content = el)}>
+            <div className={classes} ref={(el) => (this._content = el)}>
               {cloneElement(findComponent(children, PositionSourceRef), {
                 arrowRef: showArrow
-                  ? arrow => (this._arrow = ReactDOM.findDOMNode(arrow))
+                  ? (arrow) => (this._arrow = ReactDOM.findDOMNode(arrow))
                   : undefined,
                 position,
               })}

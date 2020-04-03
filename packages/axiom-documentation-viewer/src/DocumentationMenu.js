@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import './DocumentationMenu.css';
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import "./DocumentationMenu.css";
 
 export default class DocumentationMenu extends Component {
   render() {

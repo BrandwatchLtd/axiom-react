@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { findComponent } from '@brandwatch/axiom-utils';
-import Position from '../Position/Position';
-import PositionSource from '../Position/PositionSource';
-import PositionTarget from '../Position/PositionTarget';
-import { DropdownSourceRef } from './DropdownSource';
-import { DropdownTargetRef } from './DropdownTarget';
-import DropdownReactContext from './DropdownReactContext';
-import ReactDOM from 'react-dom';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { findComponent } from "@brandwatch/axiom-utils";
+import Position from "../Position/Position";
+import PositionSource from "../Position/PositionSource";
+import PositionTarget from "../Position/PositionTarget";
+import { DropdownSourceRef } from "./DropdownSource";
+import { DropdownTargetRef } from "./DropdownTarget";
+import DropdownReactContext from "./DropdownReactContext";
+import ReactDOM from "react-dom";
 
 /* eslint-disable react/no-find-dom-node */
 export default class Dropdown extends Component {
@@ -22,7 +22,7 @@ export default class Dropdown extends Component {
      */
     enabled: PropTypes.bool,
     /** Controls the starting offset of the content */
-    offset: PropTypes.oneOf(['start', 'middle', 'end']),
+    offset: PropTypes.oneOf(["start", "middle", "end"]),
     /**
      * Invoked when the Dropdown is closed.
      */
@@ -37,7 +37,7 @@ export default class Dropdown extends Component {
      * due to collision, it will be placed according to the flip behaviour  until
      * a valid position is found.
      */
-    position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
     /** Toggle that allows the arrow of the Context component to be hidden */
     showArrow: PropTypes.bool,
     /**
@@ -49,7 +49,7 @@ export default class Dropdown extends Component {
 
   static defaultProps = {
     enabled: true,
-    position: 'bottom',
+    position: "bottom",
     showArrow: false,
   };
 
@@ -103,7 +103,7 @@ export default class Dropdown extends Component {
           offset={offset}
           onMaskClick={withMask ? () => this.close() : null}
           position={position}
-          ref={el => (this.el = ReactDOM.findDOMNode(el))}
+          ref={(el) => (this.el = ReactDOM.findDOMNode(el))}
         >
           <PositionTarget>
             {React.cloneElement(findComponent(children, DropdownTargetRef))}

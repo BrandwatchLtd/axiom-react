@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { LineChart } from '@brandwatch/axiom-charts';
+import React, { Component } from "react";
+import { LineChart } from "@brandwatch/axiom-charts";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import DropdownContext from './DropdownContext';
-import TooltipContext from './TooltipContext';
-import { lineChartData, lineChartKey, lineChartXAxisLabels } from './chartData';
+} from "@brandwatch/axiom-documentation-viewer";
+import DropdownContext from "./DropdownContext";
+import TooltipContext from "./TooltipContext";
+import { lineChartData, lineChartKey, lineChartXAxisLabels } from "./chartData";
 
 export default class Documentation extends Component {
   render() {
@@ -25,10 +25,10 @@ export default class Documentation extends Component {
             xAxisLabels={lineChartXAxisLabels}
             xAxisTitle="Previous 30 days"
             yAxisLabels={[
-              { label: '0M', value: 0 },
-              { label: '10M', value: 10 },
-              { label: '20M', value: 20 },
-              { label: '30M', value: 30 },
+              { label: "0M", value: 0 },
+              { label: "10M", value: 10 },
+              { label: "20M", value: 20 },
+              { label: "30M", value: 30 },
             ]}
             yAxisTitle="Volume of Total Mentions Daily"
           />
@@ -36,7 +36,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/LineChart/LineChart'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/LineChart/LineChart"),
           ]}
         />
       </DocumentationContent>

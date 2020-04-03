@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import Icon from '../Icon/Icon';
-import './EditableTitle.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import Icon from "../Icon/Icon";
+import "./EditableTitle.css";
 
 export default class EditableTitle extends Component {
   static propTypes = {

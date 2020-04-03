@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import AlertIcon from '../AlertIcon/AlertIcon';
-import Base from '../Base/Base';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import Icon from '../Icon/Icon';
-import Link from '../Typography/Link';
-import './AlertBar.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import AlertIcon from "../AlertIcon/AlertIcon";
+import Base from "../Base/Base";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import Icon from "../Icon/Icon";
+import Link from "../Typography/Link";
+import "./AlertBar.css";
 
 export default class AlertBar extends Component {
   static propTypes = {
@@ -16,20 +16,20 @@ export default class AlertBar extends Component {
     /** An optional callback that when given adds a removable cross */
     onRemoveClick: PropTypes.func,
     /** Size of the AlertBar */
-    size: PropTypes.oneOf(['small', 'medium']),
+    size: PropTypes.oneOf(["small", "medium"]),
     /** Type of AlertBar that affects the coloring and icon */
-    type: PropTypes.oneOf(['success', 'warning', 'error', 'info']),
+    type: PropTypes.oneOf(["success", "warning", "error", "info"]),
   };
 
   static defaultProps = {
-    size: 'small',
-    type: 'info',
+    size: "small",
+    type: "info",
   };
 
   render() {
     const { children, size, type, onRemoveClick, ...rest } = this.props;
     const classes = classnames(
-      'ax-alert-bar',
+      "ax-alert-bar",
       `ax-alert-bar--${size}`,
       `ax-alert-bar--${type}`
     );

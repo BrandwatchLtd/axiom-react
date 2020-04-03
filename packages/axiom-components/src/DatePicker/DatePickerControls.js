@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { mediumDate } from '@brandwatch/axiom-formatting';
-import Button from '../Button/Button';
-import ButtonGroup from '../Button/ButtonGroup';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import DropdownReactContext from '../Dropdown/DropdownReactContext';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { mediumDate } from "@brandwatch/axiom-formatting";
+import Button from "../Button/Button";
+import ButtonGroup from "../Button/ButtonGroup";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import DropdownReactContext from "../Dropdown/DropdownReactContext";
 
 export default class DatePickerControls extends Component {
   static propTypes = {
@@ -47,7 +47,7 @@ export default class DatePickerControls extends Component {
 
     return (
       <Grid horizontalAlign="end" responsive={false}>
-        {view === 'double' && (
+        {view === "double" && (
           <GridCell hiddenUntil="small">
             {rangeSelect && selectedStartDate && mediumDate(selectedStartDate)}
             {rangeSelect &&

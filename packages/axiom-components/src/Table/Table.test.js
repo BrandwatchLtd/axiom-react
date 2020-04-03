@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Table from './Table';
-import TableBody from './TableBody';
+import React from "react";
+import renderer from "react-test-renderer";
+import Table from "./Table";
+import TableBody from "./TableBody";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -10,8 +10,8 @@ const getComponent = (props = {}) =>
     </Table>
   );
 
-describe('Table', () => {
-  it('renders', () => {
+describe("Table", () => {
+  it("renders", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
-import React from 'react';
-import ColorPicker from './ColorPicker';
+import React from "react";
+import ColorPicker from "./ColorPicker";
 
 export default {
-  title: 'Components/ColorPicker',
+  title: "Components/ColorPicker",
   component: ColorPicker,
 };
 

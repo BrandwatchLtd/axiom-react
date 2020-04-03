@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import PropTypes from "prop-types";
+import React, { Component, Fragment } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Badge,
   Cloak,
@@ -17,7 +17,7 @@ import {
   Paragraph,
   TableCell,
   TableRow,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class PackageRow extends Component {
   static propTypes = {
@@ -54,7 +54,7 @@ export default class PackageRow extends Component {
 
             {!to && (
               <Fragment>
-                @brandwatch/{name} •{' '}
+                @brandwatch/{name} •{" "}
                 <Badge color="paradise-lost">Awaiting docs</Badge>
               </Fragment>
             )}
@@ -67,7 +67,7 @@ export default class PackageRow extends Component {
 
         <TableCell>
           <Link href={`https://www.npmjs.com/package/@brandwatch/${name}`}>
-            <span style={{ display: 'inline-block' }}>
+            <span style={{ display: "inline-block" }}>
               <Image
                 height="18"
                 maxWidth="auto"
@@ -104,7 +104,7 @@ export default class PackageRow extends Component {
                     onClick={() =>
                       window.open(
                         `https://github.com/BrandwatchLtd/axiom-react/tree/master/packages/${name}`,
-                        '_blank'
+                        "_blank"
                       )
                     }
                   >
@@ -115,7 +115,7 @@ export default class PackageRow extends Component {
                     onClick={() =>
                       window.open(
                         `https://www.npmjs.com/package/@brandwatch/${name}`,
-                        '_blank'
+                        "_blank"
                       )
                     }
                   >

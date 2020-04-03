@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import InlineGroup from '../InlineGroup/InlineGroup';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import InlineGroup from "../InlineGroup/InlineGroup";
 
 export default class ButtonGroup extends Component {
   static propTypes = {
@@ -28,9 +28,9 @@ export default class ButtonGroup extends Component {
       <Base
         space="x6"
         {...rest}
-        Component={joined ? 'div' : InlineGroup}
+        Component={joined ? "div" : InlineGroup}
         className="ax-button-group"
-        textBreak={joined ? 'none' : null}
+        textBreak={joined ? "none" : null}
       >
         {children}
       </Base>

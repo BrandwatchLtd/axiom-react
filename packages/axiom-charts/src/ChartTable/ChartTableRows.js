@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component, Children } from 'react';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component, Children } from "react";
+import classnames from "classnames";
 import {
   Grid,
   GridCell,
@@ -9,7 +9,7 @@ import {
   Reveal,
   Small,
   Strong,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 
 export default class ChartTableRows extends Component {
   static propTypes = {
@@ -17,14 +17,14 @@ export default class ChartTableRows extends Component {
     collapsedVisibleRowCount: PropTypes.number,
     expandButtonSuffix: PropTypes.string,
     labelColumnWidth: PropTypes.string.isRequired,
-    space: PropTypes.oneOf(['x1', 'x2', 'x3']),
+    space: PropTypes.oneOf(["x1", "x2", "x3"]),
     xAxisLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
     zoomTo: PropTypes.number,
   };
 
   static defaultProps = {
-    expandButtonSuffix: 'Items',
-    space: 'x2',
+    expandButtonSuffix: "Items",
+    space: "x2",
     zoomTo: 100,
   };
 
@@ -62,7 +62,7 @@ export default class ChartTableRows extends Component {
     )`;
 
     const classes = classnames(
-      'ax-chart-table__rows-container',
+      "ax-chart-table__rows-container",
       `ax-chart-table__rows-container--space-${space}`
     );
 
@@ -104,18 +104,18 @@ export default class ChartTableRows extends Component {
 
         <div
           className="ax-chart-table__collapse"
-          style={{ visibility: collapsible ? 'visible' : 'hidden' }}
+          style={{ visibility: collapsible ? "visible" : "hidden" }}
         >
           <Link onClick={this.toggleReveal} style="subtle">
             <Grid gutters="tiny" responsive={false} verticalAlign="middle">
               <GridCell shrink>
-                <Icon name={`box-${collapsed ? 'expand' : 'collapse'}`} />
+                <Icon name={`box-${collapsed ? "expand" : "collapse"}`} />
               </GridCell>
               <GridCell shrink>
                 <Strong>
                   {collapsed
                     ? `See All ${children.length} ${expandButtonSuffix}`
-                    : 'Collapse'}
+                    : "Collapse"}
                 </Strong>
               </GridCell>
             </Grid>

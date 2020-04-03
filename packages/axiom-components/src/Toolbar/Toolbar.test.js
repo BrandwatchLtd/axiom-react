@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Tool from './Tool';
-import Toolbar from './Toolbar';
+import React from "react";
+import renderer from "react-test-renderer";
+import Tool from "./Tool";
+import Toolbar from "./Toolbar";
 
 const getComponent = () =>
   renderer.create(
@@ -10,8 +10,8 @@ const getComponent = () =>
     </Toolbar>
   );
 
-describe('Toolbar', () => {
-  it('renders', () => {
+describe("Toolbar", () => {
+  it("renders", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

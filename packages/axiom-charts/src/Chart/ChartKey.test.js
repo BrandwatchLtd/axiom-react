@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import ChartKey from './ChartKey';
-import ChartKeyItem from './ChartKeyItem';
+import React from "react";
+import renderer from "react-test-renderer";
+import ChartKey from "./ChartKey";
+import ChartKeyItem from "./ChartKeyItem";
 
 const getComponent = () =>
   renderer.create(
@@ -10,8 +10,8 @@ const getComponent = () =>
     </ChartKey>
   );
 
-describe('ChartKey', () => {
-  it('renders with defaultProps', () => {
+describe("ChartKey", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

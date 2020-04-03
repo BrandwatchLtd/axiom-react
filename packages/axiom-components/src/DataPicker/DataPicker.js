@@ -1,55 +1,55 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { findComponent } from '@brandwatch/axiom-utils';
-import atIds from '@brandwatch/axiom-automation-testing/ids';
-import Card from '../Card/Card';
-import CardContent from '../Card/CardContent';
-import ColorPicker from '../ColorPicker/ColorPicker';
-import ColorPickerOption from '../ColorPicker/ColorPickerOption';
-import Dropdown from '../Dropdown/Dropdown';
-import DropdownContext from '../Dropdown/DropdownContext';
-import DropdownSource from '../Dropdown/DropdownSource';
-import DropdownTarget from '../Dropdown/DropdownTarget';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
-import Heading from '../Typography/Heading';
-import Icon from '../Icon/Icon';
-import Link from '../Typography/Link';
-import { DataPickerDropdownRef } from './DataPickerDropdown';
-import { DataPickerMetaRef } from './DataPickerMeta';
-import './DataPicker.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { findComponent } from "@brandwatch/axiom-utils";
+import atIds from "@brandwatch/axiom-automation-testing/ids";
+import Card from "../Card/Card";
+import CardContent from "../Card/CardContent";
+import ColorPicker from "../ColorPicker/ColorPicker";
+import ColorPickerOption from "../ColorPicker/ColorPickerOption";
+import Dropdown from "../Dropdown/Dropdown";
+import DropdownContext from "../Dropdown/DropdownContext";
+import DropdownSource from "../Dropdown/DropdownSource";
+import DropdownTarget from "../Dropdown/DropdownTarget";
+import Grid from "../Grid/Grid";
+import GridCell from "../Grid/GridCell";
+import Heading from "../Typography/Heading";
+import Icon from "../Icon/Icon";
+import Link from "../Typography/Link";
+import { DataPickerDropdownRef } from "./DataPickerDropdown";
+import { DataPickerMetaRef } from "./DataPickerMeta";
+import "./DataPicker.css";
 
 export default class DataPicker extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     /** Selected color that will be displayed in the header */
     color: PropTypes.oneOf([
-      'forbidden-planet',
-      'tiny-clanger',
-      'critical-mass',
-      'fantastic-voyage',
-      'paradise-lost',
-      'serene-sea',
-      'event-horizon',
-      'electric-dreams',
-      'outer-limits',
-      'giant-leap',
-      'moon-lagoon',
-      'space-invader',
-      'extraterrestrial',
-      'terra-form',
-      'primeval-soup',
-      'future-shock',
-      'sun-maker',
-      'new-horizon',
-      'blast-off',
-      'crash-course',
-      'solar-rust',
-      'ground-control',
-      'space-oddity',
-      'rocky-planet',
-      'deep-thought',
-      'luna-dust',
+      "forbidden-planet",
+      "tiny-clanger",
+      "critical-mass",
+      "fantastic-voyage",
+      "paradise-lost",
+      "serene-sea",
+      "event-horizon",
+      "electric-dreams",
+      "outer-limits",
+      "giant-leap",
+      "moon-lagoon",
+      "space-invader",
+      "extraterrestrial",
+      "terra-form",
+      "primeval-soup",
+      "future-shock",
+      "sun-maker",
+      "new-horizon",
+      "blast-off",
+      "crash-course",
+      "solar-rust",
+      "ground-control",
+      "space-oddity",
+      "rocky-planet",
+      "deep-thought",
+      "luna-dust",
     ]),
     /** List of pickable colors to override the default, which is all colors. */
     colorOptions: PropTypes.arrayOf(PropTypes.string),
@@ -86,7 +86,7 @@ export default class DataPicker extends Component {
       <Card
         {...rest}
         border={Boolean(dropdownMenu)}
-        shade={dropdownMenu ? 'shade-1' : 'shade-3'}
+        shade={dropdownMenu ? "shade-1" : "shade-3"}
         size="medium"
       >
         <div className="ax-data-picker">

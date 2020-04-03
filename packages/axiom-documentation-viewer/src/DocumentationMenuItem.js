@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import classnames from 'classnames';
-import { Base } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import classnames from "classnames";
+import { Base } from "@brandwatch/axiom-components";
 
 export default class DocumentationMenuItem extends Component {
   static propTypes = {
@@ -13,8 +13,8 @@ export default class DocumentationMenuItem extends Component {
 
   render() {
     const { active, children, to, ...rest } = this.props;
-    const classes = classnames('ax-documentation-viewer__menu-item', {
-      'ax-documentation-viewer__menu-item--active': active,
+    const classes = classnames("ax-documentation-viewer__menu-item", {
+      "ax-documentation-viewer__menu-item--active": active,
     });
 
     return (

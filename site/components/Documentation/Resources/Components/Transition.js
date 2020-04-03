@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Base, Icon, Transition, Button } from '@brandwatch/axiom-components';
-import { colors } from '@brandwatch/axiom-materials';
+import React, { Component } from "react";
+import { Base, Icon, Transition, Button } from "@brandwatch/axiom-components";
+import { colors } from "@brandwatch/axiom-materials";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   constructor(props) {
@@ -26,8 +26,8 @@ export default class Documentation extends Component {
             <Transition activeIndex={activeIndex} height="8rem" width="8rem">
               <Base
                 style={{
-                  height: '8rem',
-                  lineHeight: '8rem',
+                  height: "8rem",
+                  lineHeight: "8rem",
                   backgroundColor: `rgb(${Object.values(
                     colors.productNewHorizon
                   )})`,
@@ -40,8 +40,8 @@ export default class Documentation extends Component {
               </Base>
               <Base
                 style={{
-                  height: '8rem',
-                  lineHeight: '8rem',
+                  height: "8rem",
+                  lineHeight: "8rem",
                   backgroundColor: `rgb(${Object.values(
                     colors.productBlastOff
                   )})`,
@@ -54,8 +54,8 @@ export default class Documentation extends Component {
               </Base>
               <Base
                 style={{
-                  height: '8rem',
-                  lineHeight: '8rem',
+                  height: "8rem",
+                  lineHeight: "8rem",
                   backgroundColor: `rgb(${Object.values(
                     colors.productCrashCourse
                   )})`,
@@ -68,8 +68,8 @@ export default class Documentation extends Component {
               </Base>
               <Base
                 style={{
-                  height: '8rem',
-                  lineHeight: '8rem',
+                  height: "8rem",
+                  lineHeight: "8rem",
                   backgroundColor: `rgb(${Object.values(
                     colors.productCriticalMass
                   )})`,
@@ -82,8 +82,8 @@ export default class Documentation extends Component {
               </Base>
               <Base
                 style={{
-                  height: '8rem',
-                  lineHeight: '8rem',
+                  height: "8rem",
+                  lineHeight: "8rem",
                   backgroundColor: `rgb(${Object.values(
                     colors.productDeepThought
                   )})`,
@@ -96,8 +96,8 @@ export default class Documentation extends Component {
               </Base>
               <Base
                 style={{
-                  height: '8rem',
-                  lineHeight: '8rem',
+                  height: "8rem",
+                  lineHeight: "8rem",
                   backgroundColor: `rgb(${Object.values(
                     colors.productSereneSea
                   )})`,
@@ -121,7 +121,7 @@ export default class Documentation extends Component {
               <Icon name="chevron-left" />
             </Button>
 
-            <div style={{ display: 'inline-block', margin: '0  1rem' }}>
+            <div style={{ display: "inline-block", margin: "0  1rem" }}>
               {activeIndex}
             </div>
 
@@ -139,7 +139,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/Transition/Transition'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/Transition/Transition"),
           ]}
         />
       </DocumentationContent>

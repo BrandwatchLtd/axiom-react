@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   AlertDialog,
   AlertDialogBody,
   AlertDialogHeader,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
@@ -17,8 +17,8 @@ export default class Documentation extends Component {
         <DocumentationShowCase hidePreview>
           <AlertDialog
             isOpen={false}
-            onRequestClose={setValue =>
-              setValue('AlertDialog', 'isOpen', false)
+            onRequestClose={(setValue) =>
+              setValue("AlertDialog", "isOpen", false)
             }
             type="info"
           >
@@ -36,9 +36,9 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialog'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogBody'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogHeader'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialog"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogBody"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/AlertDialog/AlertDialogHeader"),
           ]}
         />
       </DocumentationContent>

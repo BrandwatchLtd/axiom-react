@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
-import Range from './Range';
+import React from "react";
+import renderer from "react-test-renderer";
+import { mount } from "enzyme";
+import Range from "./Range";
 
 const requiredProps = {
   disabled: false,
@@ -16,28 +16,28 @@ const getComponent = (props = {}) => {
   return renderer.create(<Range {...newProps} />);
 };
 
-jest.mock('../Position/Position');
+jest.mock("../Position/Position");
 
-describe('Range', () => {
-  it('renders with defaultProps', () => {
+describe("Range", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with custom props', () => {
+  it("renders with custom props", () => {
     const component = getComponent({
       markerValue: 8,
-      size: 'medium',
+      size: "medium",
       step: 0.1,
-      valueFormatter: x => Math.floor(x),
+      valueFormatter: (x) => Math.floor(x),
       withTooltip: true,
     });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('resets its values when they are out of bounds', () => {
+  it("resets its values when they are out of bounds", () => {
     getComponent({
       min: 0,
       max: 1,
@@ -47,7 +47,7 @@ describe('Range', () => {
     expect(requiredProps.onChange).toHaveBeenCalledWith([0, 1]);
   });
 
-  describe('withBoundingClientRect', () => {
+  describe("withBoundingClientRect", () => {
     beforeEach(() => {
       Element.prototype.getBoundingClientRect = jest.fn(() => {
         return {
@@ -61,7 +61,7 @@ describe('Range', () => {
       });
     });
 
-    it('picks the right handle when the handles are on the same value', () => {
+    it("picks the right handle when the handles are on the same value", () => {
       const props = {
         ...requiredProps,
         onChange: jest.fn(),
@@ -69,18 +69,18 @@ describe('Range', () => {
       };
       const component = mount(<Range {...props} />);
 
-      const tracker = component.find('.ax-slider__track');
-      tracker.simulate('mousedown', { clientX: 5 });
+      const tracker = component.find(".ax-slider__track");
+      tracker.simulate("mousedown", { clientX: 5 });
 
-      const event = new MouseEvent('mousemove', { clientX: 5 });
+      const event = new MouseEvent("mousemove", { clientX: 5 });
       document.dispatchEvent(event);
 
-      tracker.simulate('mouseup', { clientX: 5 });
+      tracker.simulate("mouseup", { clientX: 5 });
 
       expect(props.onChange).toHaveBeenCalledWith([2, 5]);
     });
 
-    it('prevents Handle crossing on change', () => {
+    it("prevents Handle crossing on change", () => {
       const props = {
         ...requiredProps,
         onChange: jest.fn(),
@@ -88,20 +88,20 @@ describe('Range', () => {
       };
       const component = mount(<Range {...props} />);
 
-      const tracker = component.find('.ax-slider__track');
-      tracker.simulate('mousedown', { clientX: 0 });
+      const tracker = component.find(".ax-slider__track");
+      tracker.simulate("mousedown", { clientX: 0 });
 
       expect(props.onChange).toHaveBeenCalledTimes(1);
       expect(props.onChange).toHaveBeenCalledWith([0, 2]);
 
-      const event = new MouseEvent('mousemove', { clientX: 3 });
+      const event = new MouseEvent("mousemove", { clientX: 3 });
       document.dispatchEvent(event);
 
       expect(props.onChange).toHaveBeenCalledTimes(2);
       expect(props.onChange).toHaveBeenCalledWith([2, 2]);
     });
 
-    it('prevents Handle crossing on slide end', () => {
+    it("prevents Handle crossing on slide end", () => {
       const props = {
         ...requiredProps,
         onSlideEnd: jest.fn(),
@@ -110,10 +110,10 @@ describe('Range', () => {
 
       const component = mount(<Range {...props} />);
 
-      const tracker = component.find('.ax-slider__track');
-      tracker.simulate('mousedown', { clientX: 0 });
+      const tracker = component.find(".ax-slider__track");
+      tracker.simulate("mousedown", { clientX: 0 });
 
-      const event2 = new MouseEvent('mouseup', { clientX: 3 });
+      const event2 = new MouseEvent("mouseup", { clientX: 3 });
       document.dispatchEvent(event2);
 
       expect(props.onSlideEnd).toHaveBeenCalledTimes(1);

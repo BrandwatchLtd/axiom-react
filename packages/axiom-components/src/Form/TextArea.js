@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import Validate from '../Validation/Validate';
-import InputWrapper from './InputWrapper';
-import ProgressInfinite from '../Progress/ProgressInfinite';
-import './TextArea.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import Validate from "../Validation/Validate";
+import InputWrapper from "./InputWrapper";
+import ProgressInfinite from "../Progress/ProgressInfinite";
+import "./TextArea.css";
 
 export default class TextArea extends Component {
   static propTypes = {
@@ -40,7 +40,7 @@ export default class TextArea extends Component {
      */
     usageHint: PropTypes.string,
     /** direction of usagehint popup */
-    usageHintPosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    usageHintPosition: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     /** Applies styling to indicate the users input was valid */
     valid: PropTypes.bool,
     /** Value of the input field */
@@ -90,10 +90,10 @@ export default class TextArea extends Component {
 
     const style = { minHeight: height };
 
-    const textareaClasses = isValid =>
-      classnames('ax-textarea', {
-        'ax-textarea--valid': valid,
-        'ax-textarea--invalid': invalid || isValid === false,
+    const textareaClasses = (isValid) =>
+      classnames("ax-textarea", {
+        "ax-textarea--valid": valid,
+        "ax-textarea--invalid": invalid || isValid === false,
       });
 
     return (
@@ -103,7 +103,7 @@ export default class TextArea extends Component {
         required={required}
         value={value}
       >
-        {isValid => (
+        {(isValid) => (
           <InputWrapper
             disabled={disabled}
             hasFocus={hasFocus}

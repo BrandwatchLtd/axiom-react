@@ -1,29 +1,29 @@
-import React, { Component, Fragment } from 'react';
-import { colors } from '@brandwatch/axiom-materials';
-import ColorGrid from './Colors/ColorGrid';
-import ColorSet from './Colors/ColorSet';
-import ColorDot from './Colors/ColorDot';
+import React, { Component, Fragment } from "react";
+import { colors } from "@brandwatch/axiom-materials";
+import ColorGrid from "./Colors/ColorGrid";
+import ColorSet from "./Colors/ColorSet";
+import ColorDot from "./Colors/ColorDot";
 
 export default class Documentation extends Component {
   copyColorToClipboard(str) {
     // Create new element
-    const el = document.createElement('textarea');
+    const el = document.createElement("textarea");
     // Set value (string to be copied)
     el.value = str;
     // Set non-editable to avoid focus and move outside of view
-    el.setAttribute('readonly', '');
-    el.style = { position: 'absolute', left: '-9999px' };
+    el.setAttribute("readonly", "");
+    el.style = { position: "absolute", left: "-9999px" };
     document.body.appendChild(el);
     // Select text inside element
     el.select();
     // Copy text to clipboard
-    document.execCommand('copy');
+    document.execCommand("copy");
     // Remove temporary element
     document.body.removeChild(el);
   }
 
   toVarName(str) {
-    return str.toLowerCase().replace(' ', '-');
+    return str.toLowerCase().replace(" ", "-");
   }
 
   render() {
@@ -35,7 +35,7 @@ export default class Documentation extends Component {
           <ColorSet name="Better Together">
             <ColorDot
               onClick={() =>
-                this.copyColorToClipboard('var(--color-better-together)')
+                this.copyColorToClipboard("var(--color-better-together)")
               }
               rgb={colors.betterTogether}
             />
@@ -46,21 +46,21 @@ export default class Documentation extends Component {
             <ColorDot
               name="Darker"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-carbon--darker)')
+                this.copyColorToClipboard("var(--color-ui-carbon--darker)")
               }
               rgb={colors.uiCarbonDarker}
             />
             <ColorDot
               name="Dark"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-carbon--dark)')
+                this.copyColorToClipboard("var(--color-ui-carbon--dark)")
               }
               rgb={colors.uiCarbonDark}
             />
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-carbon)')
+                this.copyColorToClipboard("var(--color-ui-carbon)")
               }
               rgb={colors.uiCarbon}
             />
@@ -70,21 +70,21 @@ export default class Documentation extends Component {
             <ColorDot
               name="Active"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-accent--active)')
+                this.copyColorToClipboard("var(--color-ui-accent--active)")
               }
               rgb={colors.uiAccentActive}
             />
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-accent)')
+                this.copyColorToClipboard("var(--color-ui-accent)")
               }
               rgb={colors.uiAccent}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-accent--hover)')
+                this.copyColorToClipboard("var(--color-ui-accent--hover)")
               }
               rgb={colors.uiAccentHover}
             />
@@ -94,21 +94,21 @@ export default class Documentation extends Component {
             <ColorDot
               name="Darker"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-white-noise--darker)')
+                this.copyColorToClipboard("var(--color-ui-white-noise--darker)")
               }
               rgb={colors.uiWhiteNoiseDarker}
             />
             <ColorDot
               name="Dark"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-white-noise--dark)')
+                this.copyColorToClipboard("var(--color-ui-white-noise--dark)")
               }
               rgb={colors.uiWhiteNoiseDark}
             />
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-white-noise)')
+                this.copyColorToClipboard("var(--color-ui-white-noise)")
               }
               rgb={colors.uiWhiteNoise}
             />
@@ -118,7 +118,7 @@ export default class Documentation extends Component {
           <ColorSet name="Black">
             <ColorDot
               name="Default"
-              onClick={() => this.copyColorToClipboard('var(--color-ui-black)')}
+              onClick={() => this.copyColorToClipboard("var(--color-ui-black)")}
               rgb={colors.uiBlack}
             />
           </ColorSet>
@@ -126,7 +126,7 @@ export default class Documentation extends Component {
           <ColorSet name="White">
             <ColorDot
               name="Default"
-              onClick={() => this.copyColorToClipboard('var(--color-ui-white)')}
+              onClick={() => this.copyColorToClipboard("var(--color-ui-white)")}
               rgb={colors.uiWhite}
             />
           </ColorSet>
@@ -136,19 +136,19 @@ export default class Documentation extends Component {
             <ColorDot
               name="Active"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-error--active)')
+                this.copyColorToClipboard("var(--color-ui-error--active)")
               }
               rgb={colors.uiErrorActive}
             />
             <ColorDot
               name="Default"
-              onClick={() => this.copyColorToClipboard('var(--color-ui-error)')}
+              onClick={() => this.copyColorToClipboard("var(--color-ui-error)")}
               rgb={colors.uiError}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-error--hover)')
+                this.copyColorToClipboard("var(--color-ui-error--hover)")
               }
               rgb={colors.uiErrorHover}
             />
@@ -158,21 +158,21 @@ export default class Documentation extends Component {
             <ColorDot
               name="Active"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-warning--active)')
+                this.copyColorToClipboard("var(--color-ui-warning--active)")
               }
               rgb={colors.uiWarningActive}
             />
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-warning)')
+                this.copyColorToClipboard("var(--color-ui-warning)")
               }
               rgb={colors.uiWarning}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-warning--hover)')
+                this.copyColorToClipboard("var(--color-ui-warning--hover)")
               }
               rgb={colors.uiWarningHover}
             />
@@ -182,21 +182,21 @@ export default class Documentation extends Component {
             <ColorDot
               name="Active"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-success--active)')
+                this.copyColorToClipboard("var(--color-ui-success--active)")
               }
               rgb={colors.uiSuccessActive}
             />
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-success)')
+                this.copyColorToClipboard("var(--color-ui-success)")
               }
               rgb={colors.uiSuccess}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-success--hover)')
+                this.copyColorToClipboard("var(--color-ui-success--hover)")
               }
               rgb={colors.uiSuccessHover}
             />
@@ -206,19 +206,19 @@ export default class Documentation extends Component {
             <ColorDot
               name="Active"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-info--active)')
+                this.copyColorToClipboard("var(--color-ui-info--active)")
               }
               rgb={colors.uiInfoActive}
             />
             <ColorDot
               name="Default"
-              onClick={() => this.copyColorToClipboard('var(--color-ui-info)')}
+              onClick={() => this.copyColorToClipboard("var(--color-ui-info)")}
               rgb={colors.uiInfo}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-info--hover)')
+                this.copyColorToClipboard("var(--color-ui-info--hover)")
               }
               rgb={colors.uiInfoHover}
             />
@@ -228,7 +228,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-ui-highlight)')
+                this.copyColorToClipboard("var(--color-ui-highlight)")
               }
               rgb={colors.uiHighlight}
             />
@@ -239,21 +239,21 @@ export default class Documentation extends Component {
             <ColorDot
               name="Active"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-twitter--active)')
+                this.copyColorToClipboard("var(--color-social-twitter--active)")
               }
               rgb={colors.socialTwitterActive}
             />
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-twitter)')
+                this.copyColorToClipboard("var(--color-social-twitter)")
               }
               rgb={colors.socialTwitter}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-twitter--hover)')
+                this.copyColorToClipboard("var(--color-social-twitter--hover)")
               }
               rgb={colors.socialTwitterHover}
             />
@@ -264,7 +264,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-facebook--active)'
+                  "var(--color-social-facebook--active)"
                 )
               }
               rgb={colors.socialFacebookActive}
@@ -272,14 +272,14 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-facebook)')
+                this.copyColorToClipboard("var(--color-social-facebook)")
               }
               rgb={colors.socialFacebook}
             />
             <ColorDot
               name="Hover"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-facebook--hover)')
+                this.copyColorToClipboard("var(--color-social-facebook--hover)")
               }
               rgb={colors.socialFacebookHover}
             />
@@ -290,7 +290,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-instagram--active)'
+                  "var(--color-social-instagram--active)"
                 )
               }
               rgb={colors.socialInstagramActive}
@@ -298,7 +298,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-instagram)')
+                this.copyColorToClipboard("var(--color-social-instagram)")
               }
               rgb={colors.socialInstagram}
             />
@@ -306,7 +306,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-instagram--hover)'
+                  "var(--color-social-instagram--hover)"
                 )
               }
               rgb={colors.socialInstagramHover}
@@ -318,7 +318,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--active)'
+                  "var(--color-social-four-chan--active)"
                 )
               }
               rgb={colors.socialFourChanActive}
@@ -326,7 +326,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-four-chan)')
+                this.copyColorToClipboard("var(--color-social-four-chan)")
               }
               rgb={colors.socialFourChan}
             />
@@ -334,7 +334,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--hover)'
+                  "var(--color-social-four-chan--hover)"
                 )
               }
               rgb={colors.socialFourChanHover}
@@ -346,7 +346,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--active)'
+                  "var(--color-social-four-chan--active)"
                 )
               }
               rgb={colors.socialRedditActive}
@@ -354,7 +354,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-four-chan)')
+                this.copyColorToClipboard("var(--color-social-four-chan)")
               }
               rgb={colors.socialReddit}
             />
@@ -362,7 +362,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--hover)'
+                  "var(--color-social-four-chan--hover)"
                 )
               }
               rgb={colors.socialRedditHover}
@@ -374,7 +374,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--active)'
+                  "var(--color-social-four-chan--active)"
                 )
               }
               rgb={colors.socialTumblrActive}
@@ -382,7 +382,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-four-chan)')
+                this.copyColorToClipboard("var(--color-social-four-chan)")
               }
               rgb={colors.socialTumblr}
             />
@@ -390,7 +390,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--hover)'
+                  "var(--color-social-four-chan--hover)"
                 )
               }
               rgb={colors.socialTumblrHover}
@@ -402,7 +402,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--active)'
+                  "var(--color-social-four-chan--active)"
                 )
               }
               rgb={colors.socialVKActive}
@@ -410,7 +410,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-four-chan)')
+                this.copyColorToClipboard("var(--color-social-four-chan)")
               }
               rgb={colors.socialVK}
             />
@@ -418,7 +418,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--hover)'
+                  "var(--color-social-four-chan--hover)"
                 )
               }
               rgb={colors.socialVKHover}
@@ -430,7 +430,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--active)'
+                  "var(--color-social-four-chan--active)"
                 )
               }
               rgb={colors.socialYouTubeActive}
@@ -438,7 +438,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-social-four-chan)')
+                this.copyColorToClipboard("var(--color-social-four-chan)")
               }
               rgb={colors.socialYouTube}
             />
@@ -446,7 +446,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-social-four-chan--hover)'
+                  "var(--color-social-four-chan--hover)"
                 )
               }
               rgb={colors.socialYouTubeHover}
@@ -459,7 +459,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-sentiment-positive--active)'
+                  "var(--color-sentiment-positive--active)"
                 )
               }
               rgb={colors.sentimentPositiveActive}
@@ -467,7 +467,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-sentiment-positive)')
+                this.copyColorToClipboard("var(--color-sentiment-positive)")
               }
               rgb={colors.sentimentPositive}
             />
@@ -475,7 +475,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-sentiment-positive--hover)'
+                  "var(--color-sentiment-positive--hover)"
                 )
               }
               rgb={colors.sentimentPositiveHover}
@@ -487,7 +487,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-sentiment-negative--active)'
+                  "var(--color-sentiment-negative--active)"
                 )
               }
               rgb={colors.sentimentNegativeActive}
@@ -495,7 +495,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-sentiment-negative)')
+                this.copyColorToClipboard("var(--color-sentiment-negative)")
               }
               rgb={colors.sentimentNegative}
             />
@@ -503,7 +503,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-sentiment-negative--hover)'
+                  "var(--color-sentiment-negative--hover)"
                 )
               }
               rgb={colors.sentimentNegativeHover}
@@ -515,7 +515,7 @@ export default class Documentation extends Component {
               name="Active"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-sentiment-neutral--active)'
+                  "var(--color-sentiment-neutral--active)"
                 )
               }
               rgb={colors.sentimentNeutralActive}
@@ -523,7 +523,7 @@ export default class Documentation extends Component {
             <ColorDot
               name="Default"
               onClick={() =>
-                this.copyColorToClipboard('var(--color-sentiment-neutral)')
+                this.copyColorToClipboard("var(--color-sentiment-neutral)")
               }
               rgb={colors.sentimentNeutral}
             />
@@ -531,7 +531,7 @@ export default class Documentation extends Component {
               name="Hover"
               onClick={() =>
                 this.copyColorToClipboard(
-                  'var(--color-sentiment-neutral--hover)'
+                  "var(--color-sentiment-neutral--hover)"
                 )
               }
               rgb={colors.sentimentNeutralHover}
@@ -539,7 +539,7 @@ export default class Documentation extends Component {
           </ColorSet>
         </ColorGrid>
         <ColorGrid name="Product Colours">
-          {Object.keys(colors.productColors).map(id => (
+          {Object.keys(colors.productColors).map((id) => (
             <ColorSet key={id} name={colors.productColorNames[id]}>
               <ColorDot
                 name="Active"
@@ -579,14 +579,14 @@ export default class Documentation extends Component {
         </ColorGrid>
         <ColorGrid name="Brand Colours">
           <ColorSet>
-            {Object.keys(colors.brandColors).map(id => (
+            {Object.keys(colors.brandColors).map((id) => (
               <ColorDot key={id} rgb={colors.brandColors[id]} />
             ))}
           </ColorSet>
         </ColorGrid>
         <ColorGrid name="User Defined Graph Colours">
           <ColorSet>
-            {Object.keys(colors.userDefinedGraphColors).map(id => (
+            {Object.keys(colors.userDefinedGraphColors).map((id) => (
               <ColorDot key={id} rgb={colors.userDefinedGraphColors[id]} />
             ))}
           </ColorSet>

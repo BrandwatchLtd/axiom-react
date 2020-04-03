@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import omit from 'lodash.omit';
-import Bar from '../Bar/Bar';
-import ChartContext from '../ChartContext/ChartContext';
-import './CombinedBar.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import omit from "lodash.omit";
+import Bar from "../Bar/Bar";
+import ChartContext from "../ChartContext/ChartContext";
+import "./CombinedBar.css";
 
 export default class CombinedBar extends Component {
   static propTypes = {
@@ -46,7 +46,7 @@ export default class CombinedBar extends Component {
       left: isStretched ? `${percent}%` : `${benchmarkPercent}%`,
     };
 
-    const stripedBarProps = omit(rest, ['onClick']);
+    const stripedBarProps = omit(rest, ["onClick"]);
 
     return (
       <React.Fragment>

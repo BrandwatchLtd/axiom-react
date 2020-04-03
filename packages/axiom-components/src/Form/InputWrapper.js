@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import UsageHintComponent from '../UsageHint/UsageHint';
-import './InputWrapper.css';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import UsageHintComponent from "../UsageHint/UsageHint";
+import "./InputWrapper.css";
+import classnames from "classnames";
 
 const labelSizeMap = {
-  small: 'small',
-  medium: 'body',
-  large: 'large',
+  small: "small",
+  medium: "body",
+  large: "large",
 };
 
 export default class InputWrapper extends Component {
@@ -23,27 +23,27 @@ export default class InputWrapper extends Component {
     isValid: PropTypes.bool,
     label: PropTypes.node,
     labelSpace: PropTypes.oneOf([
-      'x0',
-      'x1',
-      'x2',
-      'x3',
-      'x4',
-      'x5',
-      'x6',
-      'x8',
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x6",
+      "x8",
     ]),
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(["small", "medium", "large"]),
     space: PropTypes.string,
     style: PropTypes.string,
     usageHint: PropTypes.node,
-    usageHintPosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    usageHintPosition: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     valid: PropTypes.bool,
   };
 
   static defaultProps = {
-    size: 'medium',
-    space: 'x4',
-    labelSpace: 'x2',
+    size: "medium",
+    space: "x4",
+    labelSpace: "x2",
     inlineLabel: false,
   };
 
@@ -66,21 +66,21 @@ export default class InputWrapper extends Component {
       valid,
       ...rest
     } = this.props;
-    const classes = classnames('ax-input__wrapper', {
-      'ax-input__wrapper--target': isTarget,
-      'ax-input__wrapper--inline': inlineLabel,
+    const classes = classnames("ax-input__wrapper", {
+      "ax-input__wrapper--target": isTarget,
+      "ax-input__wrapper--inline": inlineLabel,
     });
 
-    const innerClasses = classnames('ax-input__icon-container', {
+    const innerClasses = classnames("ax-input__icon-container", {
       [`ax-input__icon-container--${size}`]: size,
       [`ax-input__icon-container--${style}`]: style,
-      'ax-input__icon-container--disabled': disabled,
-      'ax-input__icon-container--focused': hasFocus,
-      'ax-input__icon-container--valid': valid,
-      'ax-input__icon-container--invalid': invalid || isValid === false,
+      "ax-input__icon-container--disabled": disabled,
+      "ax-input__icon-container--focused": hasFocus,
+      "ax-input__icon-container--valid": valid,
+      "ax-input__icon-container--invalid": invalid || isValid === false,
     });
 
-    const inputWrapperSpace = inlineLabel ? 'x0' : labelSpace;
+    const inputWrapperSpace = inlineLabel ? "x0" : labelSpace;
 
     return (
       <Base {...rest} Component="label" className={classes} space={space}>

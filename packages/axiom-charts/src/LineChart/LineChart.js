@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import ChartLayout from '../ChartLayout/ChartLayout';
-import ChartLayoutKey from '../ChartLayout/ChartLayoutKey';
-import ChartLayoutLabels from '../ChartLayout/ChartLayoutLabels';
-import ChartLayoutTitle from '../ChartLayout/ChartLayoutTitle';
-import ChartLayoutVisual from '../ChartLayout/ChartLayoutVisual';
-import ChartKey from '../Chart/ChartKey';
-import ChartKeyItem from '../Chart/ChartKeyItem';
-import ChartGrid from '../ChartGrid/ChartGrid';
-import DataPoint from '../DataPoint/DataPoint';
-import DataPoints from '../DataPoint/DataPoints';
-import Line from '../Line/Line';
-import LinePoint from '../Line/LinePoint';
-import './LineChart.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ChartLayout from "../ChartLayout/ChartLayout";
+import ChartLayoutKey from "../ChartLayout/ChartLayoutKey";
+import ChartLayoutLabels from "../ChartLayout/ChartLayoutLabels";
+import ChartLayoutTitle from "../ChartLayout/ChartLayoutTitle";
+import ChartLayoutVisual from "../ChartLayout/ChartLayoutVisual";
+import ChartKey from "../Chart/ChartKey";
+import ChartKeyItem from "../Chart/ChartKeyItem";
+import ChartGrid from "../ChartGrid/ChartGrid";
+import DataPoint from "../DataPoint/DataPoint";
+import DataPoints from "../DataPoint/DataPoints";
+import Line from "../Line/Line";
+import LinePoint from "../Line/LinePoint";
+import "./LineChart.css";
 
 export default class LineChart extends Component {
   static propTypes = {
@@ -35,7 +35,7 @@ export default class LineChart extends Component {
     chartKey: PropTypes.arrayOf(
       PropTypes.shape({
         color: PropTypes.string.isRequired,
-        style: PropTypes.oneOf(['dashed', 'solid']),
+        style: PropTypes.oneOf(["dashed", "solid"]),
         label: PropTypes.string.isRequired,
       })
     ).isRequired,
@@ -137,7 +137,7 @@ export default class LineChart extends Component {
   render() {
     const flatValues = []
       .concat(...this.props.data.map(({ values }) => values))
-      .filter(n => !isNaN(n) && n !== null);
+      .filter((n) => !isNaN(n) && n !== null);
     const dataLower = Math.min(...flatValues);
     const dataUpper = Math.max(...flatValues);
     const {
@@ -191,14 +191,14 @@ export default class LineChart extends Component {
                   <Line
                     color={labelMap[label].color}
                     dasharray={
-                      labelMap[label].style === 'dashed'
-                        ? '0.125rem 0.25rem'
-                        : ''
+                      labelMap[label].style === "dashed"
+                        ? "0.125rem 0.25rem"
+                        : ""
                     }
                     dasharrayWithoutScalingStroke={
-                      labelMap[label].style === 'dashed'
-                        ? '0.03125rem 0.0625rem'
-                        : ''
+                      labelMap[label].style === "dashed"
+                        ? "0.03125rem 0.0625rem"
+                        : ""
                     }
                     data={values}
                     faded={selectedLabel && selectedLabel !== label}
@@ -241,7 +241,7 @@ export default class LineChart extends Component {
                 <DataPoints size="0.75rem">
                   <DataPoint
                     color={color}
-                    style={style === 'dashed' ? 'hollow' : 'solid'}
+                    style={style === "dashed" ? "hollow" : "solid"}
                   />
                 </DataPoints>
               </ChartKeyItem>

@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Select from './Select';
-import SelectOption from './SelectOption';
+import React from "react";
+import renderer from "react-test-renderer";
+import Select from "./Select";
+import SelectOption from "./SelectOption";
 
 const getComponent = (props = {}) =>
   renderer.create(
@@ -12,15 +12,15 @@ const getComponent = (props = {}) =>
     </Select>
   );
 
-describe('Select', () => {
-  it('renders with defaultProps', () => {
+describe("Select", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with a selected value', () => {
-    const component = getComponent({ selectedValue: '2' });
+  it("renders with a selected value", () => {
+    const component = getComponent({ selectedValue: "2" });
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

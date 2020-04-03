@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Duration, DateTime } from 'luxon';
+import React, { Component } from "react";
+import { Duration, DateTime } from "luxon";
 import {
   Button,
   ButtonIcon,
@@ -9,34 +9,34 @@ import {
   TextInput,
   TextInputIcon,
   DatePickerSelection,
-} from '@brandwatch/axiom-components';
+} from "@brandwatch/axiom-components";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
-import { mediumDate } from '@brandwatch/axiom-formatting';
+} from "@brandwatch/axiom-documentation-viewer";
+import { mediumDate } from "@brandwatch/axiom-formatting";
 
 const rangeSelections = [
   {
-    label: 'Today',
-    range: 'P1D',
+    label: "Today",
+    range: "P1D",
   },
   {
-    label: '7D',
-    range: 'P7D',
+    label: "7D",
+    range: "P7D",
   },
   {
-    label: '14D',
-    range: 'P14D',
+    label: "14D",
+    range: "P14D",
   },
   {
-    label: '1M',
-    range: 'P1M',
+    label: "1M",
+    range: "P1M",
   },
   {
-    label: '2M',
-    range: 'P2M',
+    label: "2M",
+    range: "P2M",
   },
 ];
 
@@ -52,11 +52,11 @@ export default class Documentation extends Component {
 
   handleSelect({ date, dateEnd, dateStart, range }) {
     if (range) {
-      const end = DateTime.local().endOf('day');
+      const end = DateTime.local().endOf("day");
       dateEnd = end.toJSDate();
       dateStart = end
         .minus(Duration.fromISO(range))
-        .plus(1, 'microsecond')
+        .plus(1, "microsecond")
         .toJSDate();
     }
 
@@ -77,11 +77,11 @@ export default class Documentation extends Component {
 
     if (dateStart && dateEnd) {
       return `${mediumDate(dateStart)} ${
-        dateEnd ? `- ${mediumDate(dateEnd)}` : ''
+        dateEnd ? `- ${mediumDate(dateEnd)}` : ""
       }`;
     }
 
-    return '';
+    return "";
   }
 
   render() {
@@ -146,7 +146,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePicker'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePicker"),
           ]}
         />
 
@@ -171,7 +171,7 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePickerSelection'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-components/src/DatePicker/DatePickerSelection"),
           ]}
         />
       </DocumentationContent>

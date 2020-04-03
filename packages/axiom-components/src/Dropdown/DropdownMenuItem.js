@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import omit from 'lodash.omit';
-import ContextMenuItem from '../Context/ContextMenuItem';
-import DropdownReactContext from './DropdownReactContext';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import omit from "lodash.omit";
+import ContextMenuItem from "../Context/ContextMenuItem";
+import DropdownReactContext from "./DropdownReactContext";
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {
@@ -22,7 +22,7 @@ export default class DropdownMenuItem extends Component {
     /** Click handler  */
     onClick: PropTypes.func,
     /**  Vertical padding size applied to the menu item */
-    paddingVertical: PropTypes.oneOf(['small', 'medium']),
+    paddingVertical: PropTypes.oneOf(["small", "medium"]),
     /** Provides indication that the menu item is selected */
     selected: PropTypes.bool,
   };
@@ -48,7 +48,7 @@ export default class DropdownMenuItem extends Component {
 
     return (
       <ContextMenuItem
-        {...omit(rest, ['keepOpen'])}
+        {...omit(rest, ["keepOpen"])}
         onClick={this.handleClick}
         tabIndex="0"
       >

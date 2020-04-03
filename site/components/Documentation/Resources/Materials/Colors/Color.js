@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base, GridCell } from '@brandwatch/axiom-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base, GridCell } from "@brandwatch/axiom-components";
 
 const to16 = (n, ns = n.toString(16)) => `00${ns}`.substring(ns.length);
 const rgbToHex = ({ r, g, b }) => `#${to16(r)}${to16(g)}${to16(b)}`;

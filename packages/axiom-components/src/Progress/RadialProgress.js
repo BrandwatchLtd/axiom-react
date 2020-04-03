@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import './RadialProgress.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import "./RadialProgress.css";
 
 export default class RadialProgress extends Component {
   static propTypes = {
@@ -23,7 +23,7 @@ export default class RadialProgress extends Component {
       ...rest
     } = this.props;
     const style = {};
-    const classes = classnames(className, 'ax-radial-progress', {
+    const classes = classnames(className, "ax-radial-progress", {
       [`ax-radial-progress--${size}`]: size,
     });
 

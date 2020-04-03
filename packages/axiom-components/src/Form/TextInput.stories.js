@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import React, { useEffect, useRef } from 'react';
-import TextInput from './TextInput';
-import TextInputIcon from './TextInputIcon';
-import TextInputButton from './TextInputButton';
+import React, { useEffect, useRef } from "react";
+import TextInput from "./TextInput";
+import TextInputIcon from "./TextInputIcon";
+import TextInputButton from "./TextInputButton";
 
 export default {
-  title: 'Components/TextInput',
+  title: "Components/TextInput",
   component: TextInput,
   subcomponents: { TextInputButton, TextInputIcon },
 };
@@ -15,11 +15,11 @@ export function Default() {
 }
 
 export function OnChange() {
-  return <TextInput onChange={event => console.log(event.target.value)} />;
+  return <TextInput onChange={(event) => console.log(event.target.value)} />;
 }
 
 export function InputEvents() {
-  const handleOnKeyPress = event => console.log(event.key);
+  const handleOnKeyPress = (event) => console.log(event.key);
 
   return <TextInput onKeyPress={handleOnKeyPress} />;
 }
@@ -28,7 +28,7 @@ InputEvents.story = {
   parameters: {
     docs: {
       storyDescription:
-        'TextInput spreads the props it doesnt use to the underlying HTML Input element. For example here we pass an onKeyPress listener.',
+        "TextInput spreads the props it doesnt use to the underlying HTML Input element. For example here we pass an onKeyPress listener.",
     },
   },
 };

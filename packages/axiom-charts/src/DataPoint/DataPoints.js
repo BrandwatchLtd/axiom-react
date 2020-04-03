@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Children, Component, cloneElement } from 'react';
-import classnames from 'classnames';
-import { Base } from '@brandwatch/axiom-components';
-import './DataPoints.css';
+import PropTypes from "prop-types";
+import React, { Children, Component, cloneElement } from "react";
+import classnames from "classnames";
+import { Base } from "@brandwatch/axiom-components";
+import "./DataPoints.css";
 
 export const VB_HEIGHT = 24;
 
@@ -18,8 +18,8 @@ export default class DataPoints extends Component {
   render() {
     const { children, onClick, size, ...rest } = this.props;
     const style = { height: size, width: size };
-    const classes = classnames('ax-data-points', {
-      'ax-data-points--clickable': onClick,
+    const classes = classnames("ax-data-points", {
+      "ax-data-points--clickable": onClick,
     });
 
     return (

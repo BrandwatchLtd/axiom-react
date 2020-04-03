@@ -1,20 +1,20 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Label from './Label';
-import LabelIcon from './LabelIcon';
+import React from "react";
+import renderer from "react-test-renderer";
+import Label from "./Label";
+import LabelIcon from "./LabelIcon";
 
 const getComponent = (props = {}) =>
   renderer.create(<Label children="Lorem Ipsum" {...props} />);
 
-describe('Label', () => {
-  it('renders with defaultProps', () => {
+describe("Label", () => {
+  it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  describe('renders with color', () => {
-    ['white', 'success', 'error'].forEach(color => {
+  describe("renders with color", () => {
+    ["white", "success", "error"].forEach((color) => {
       it(color, () => {
         const component = getComponent({ color });
         const tree = component.toJSON();
@@ -23,8 +23,8 @@ describe('Label', () => {
     });
   });
 
-  describe('renders with full', () => {
-    [true, 'small', 'medium', 'large'].forEach(full => {
+  describe("renders with full", () => {
+    [true, "small", "medium", "large"].forEach((full) => {
       it(String(full), () => {
         const component = getComponent({ full });
         const tree = component.toJSON();
@@ -33,8 +33,8 @@ describe('Label', () => {
     });
   });
 
-  describe('render with size', () => {
-    ['small', 'medium'].forEach(size => {
+  describe("render with size", () => {
+    ["small", "medium"].forEach((size) => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();
@@ -43,29 +43,29 @@ describe('Label', () => {
     });
   });
 
-  describe('with LabelIcon', () => {
-    it('adds space to start if first child', () => {
+  describe("with LabelIcon", () => {
+    it("adds space to start if first child", () => {
       const component = getComponent({
-        children: [<LabelIcon key="LabelIcon" name="twitter" />, 'Lorem ipsum'],
+        children: [<LabelIcon key="LabelIcon" name="twitter" />, "Lorem ipsum"],
       });
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
 
-    it('adds space to end if last child', () => {
+    it("adds space to end if last child", () => {
       const component = getComponent({
-        children: ['Lorem ipsum', <LabelIcon key="LabelIcon" name="twitter" />],
+        children: ["Lorem ipsum", <LabelIcon key="LabelIcon" name="twitter" />],
       });
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
 
-    it('adds space all around if middle children', () => {
+    it("adds space all around if middle children", () => {
       const component = getComponent({
         children: [
-          'Lorem ipsum',
+          "Lorem ipsum",
           <LabelIcon key="LabelIcon" name="twitter" />,
-          'Lorem ipsum',
+          "Lorem ipsum",
         ],
       });
       const tree = component.toJSON();

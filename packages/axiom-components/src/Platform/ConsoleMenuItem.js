@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
 
 export default class ConsoleMenuItem extends Component {
   static propTypes = {
@@ -15,9 +15,9 @@ export default class ConsoleMenuItem extends Component {
 
   render() {
     const { active, children, disabled, ...rest } = this.props;
-    const classes = classnames('ax-console-menu__item', {
-      'ax-console-menu__item--active': active,
-      'ax-console-menu__item--disabled': disabled,
+    const classes = classnames("ax-console-menu__item", {
+      "ax-console-menu__item--active": active,
+      "ax-console-menu__item--disabled": disabled,
     });
 
     return (
@@ -25,7 +25,7 @@ export default class ConsoleMenuItem extends Component {
         {...rest}
         Component="li"
         className={classes}
-        textColor={(disabled && 'disabled') || (!active && 'subtle') || null}
+        textColor={(disabled && "disabled") || (!active && "subtle") || null}
         textSize="small"
         textStrong={active}
       >

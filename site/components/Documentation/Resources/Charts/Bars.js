@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { Bar, Bars } from '@brandwatch/axiom-charts';
+import React, { Component } from "react";
+import { Bar, Bars } from "@brandwatch/axiom-charts";
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
-} from '@brandwatch/axiom-documentation-viewer';
+} from "@brandwatch/axiom-documentation-viewer";
 
 export default class Documentation extends Component {
   render() {
     return (
       <DocumentationContent>
         <DocumentationShowCase>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', minHeight: '10rem' }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", minHeight: "10rem" }}>
               <Bars direction="up">
                 <Bar
                   color="critical-mass"
@@ -51,8 +51,8 @@ export default class Documentation extends Component {
 
         <DocumentationApi
           components={[
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Bar/Bar'),
-            require('!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Bar/Bars'),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Bar/Bar"),
+            require("!!axiom-documentation-loader!@brandwatch/axiom-charts/src/Bar/Bars"),
           ]}
         />
       </DocumentationContent>

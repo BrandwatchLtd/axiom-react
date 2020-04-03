@@ -1,8 +1,8 @@
-import React from 'react';
-import AlertBar from './AlertBar';
+import React from "react";
+import AlertBar from "./AlertBar";
 
 export default {
-  title: 'Components/AlertBar',
+  title: "Components/AlertBar",
   component: AlertBar,
 };
 

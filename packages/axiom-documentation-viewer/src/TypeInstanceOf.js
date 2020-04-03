@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import TypeInstanceOfDate from './TypeInstanceOfDate';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import TypeInstanceOfDate from "./TypeInstanceOfDate";
 
 const InstaceOfMap = {
   Date: TypeInstanceOfDate,

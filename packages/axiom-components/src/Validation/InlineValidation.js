@@ -1,12 +1,12 @@
-import React, { Component, cloneElement } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, cloneElement } from "react";
+import PropTypes from "prop-types";
 
-import Position from '../Position/Position';
-import PositionTarget from '../Position/PositionTarget';
-import PositionSource from '../Position/PositionSource';
-import TooltipContent from '../Tooltip/TooltipContent';
-import TooltipContext from '../Tooltip/TooltipContext';
-import Text from '../Typography/Text';
+import Position from "../Position/Position";
+import PositionTarget from "../Position/PositionTarget";
+import PositionSource from "../Position/PositionSource";
+import TooltipContent from "../Tooltip/TooltipContent";
+import TooltipContext from "../Tooltip/TooltipContext";
+import Text from "../Typography/Text";
 
 export default class InlineValidation extends Component {
   static propTypes = {
@@ -14,12 +14,12 @@ export default class InlineValidation extends Component {
     message: PropTypes.string,
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
-    position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
+    position: PropTypes.oneOf(["top", "bottom", "right", "left"]),
     showArrow: PropTypes.bool,
   };
 
   static defaultProps = {
-    position: 'bottom',
+    position: "bottom",
     showArrow: false,
   };
 

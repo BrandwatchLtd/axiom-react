@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import { Component, cloneElement } from 'react';
-import DropdownReactContext from './DropdownReactContext';
+import PropTypes from "prop-types";
+import { Component, cloneElement } from "react";
+import DropdownReactContext from "./DropdownReactContext";
 
-export const DropdownTargetRef = 'DropdownTarget';
+export const DropdownTargetRef = "DropdownTarget";
 
 export default class DropdownTarget extends Component {
   static propTypes = {

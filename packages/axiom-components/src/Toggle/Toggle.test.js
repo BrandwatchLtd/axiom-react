@@ -1,32 +1,32 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Toggle from './Toggle';
+import React from "react";
+import renderer from "react-test-renderer";
+import Toggle from "./Toggle";
 
 const onToggle = () => {};
 
-describe('Toggle', () => {
-  it('renders as toggled', () => {
+describe("Toggle", () => {
+  it("renders as toggled", () => {
     const tree = renderer
       .create(<Toggle onToggle={onToggle} toggled />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders as not toggled', () => {
+  it("renders as not toggled", () => {
     const tree = renderer
       .create(<Toggle onToggle={onToggle} toggled={false} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with disabled', () => {
+  it("renders with disabled", () => {
     const tree = renderer
       .create(<Toggle disabled onToggle={onToggle} toggled={false} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with label children', () => {
+  it("renders with label children", () => {
     const tree = renderer
       .create(
         <Toggle onToggle={onToggle} toggled={false}>
@@ -37,7 +37,7 @@ describe('Toggle', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with size small', () => {
+  it("renders with size small", () => {
     expect(
       renderer
         .create(<Toggle onToggle={onToggle} size="small" toggled={false} />)
@@ -45,7 +45,7 @@ describe('Toggle', () => {
     ).toMatchSnapshot();
   });
 
-  it('renders with size medium', () => {
+  it("renders with size medium", () => {
     expect(
       renderer
         .create(<Toggle onToggle={onToggle} size="medium" toggled={false} />)
@@ -53,7 +53,7 @@ describe('Toggle', () => {
     ).toMatchSnapshot();
   });
 
-  it('renders with align left', () => {
+  it("renders with align left", () => {
     expect(
       renderer
         .create(<Toggle align="left" onToggle={onToggle} toggled={false} />)
@@ -61,7 +61,7 @@ describe('Toggle', () => {
     ).toMatchSnapshot();
   });
 
-  it('renders with align right', () => {
+  it("renders with align right", () => {
     expect(
       renderer
         .create(<Toggle align="right" onToggle={onToggle} toggled={false} />)
@@ -69,7 +69,7 @@ describe('Toggle', () => {
     ).toMatchSnapshot();
   });
 
-  it('renders with align full', () => {
+  it("renders with align full", () => {
     expect(
       renderer
         .create(<Toggle align="full" onToggle={onToggle} toggled={false} />)

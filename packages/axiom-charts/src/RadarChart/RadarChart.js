@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import ChartKey from '../Chart/ChartKey';
-import ChartKeyItem from '../Chart/ChartKeyItem';
-import DataPoint from '../DataPoint/DataPoint';
-import DataPoints from '../DataPoint/DataPoints';
-import RadarPoint from './RadarPoint';
-import RadarPolygon from './RadarPolygon';
-import RadarXAxisLabel from './RadarXAxisLabel';
-import RadarXAxisLine from './RadarXAxisLine';
-import RadarYAxisLabel from './RadarYAxisLabel';
-import RadarYAxisLine from './RadarYAxisLine';
-import groupColorsByValue from './groupColorsByValue';
-import './RadarChart.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Base } from "@brandwatch/axiom-components";
+import ChartKey from "../Chart/ChartKey";
+import ChartKeyItem from "../Chart/ChartKeyItem";
+import DataPoint from "../DataPoint/DataPoint";
+import DataPoints from "../DataPoint/DataPoints";
+import RadarPoint from "./RadarPoint";
+import RadarPolygon from "./RadarPolygon";
+import RadarXAxisLabel from "./RadarXAxisLabel";
+import RadarXAxisLine from "./RadarXAxisLine";
+import RadarYAxisLabel from "./RadarYAxisLabel";
+import RadarYAxisLine from "./RadarYAxisLine";
+import groupColorsByValue from "./groupColorsByValue";
+import "./RadarChart.css";
 
 const LABEL_PADDING = 16;
 const TICK_PADDING = 16;
@@ -131,11 +131,11 @@ export default class RadarChart extends Component {
     const tickValues = yAxisLabels.map(({ value }) => value);
     const lower = Math.min(...tickValues);
     const upper = Math.max(...tickValues);
-    const plot = value => innerRadius * ((value - lower) / (upper - lower));
+    const plot = (value) => innerRadius * ((value - lower) / (upper - lower));
     const xAxisTicks = xAxisLabels.map(
       (_, index) => Math.PI * -0.5 + tickGap / 2 + index * tickGap
     );
-    const yAxisTicks = tickValues.map(value => value && plot(value));
+    const yAxisTicks = tickValues.map((value) => value && plot(value));
     const points = groupColorsByValue(
       data.filter(({ points }) => points),
       selectedLabels
@@ -229,7 +229,7 @@ export default class RadarChart extends Component {
               <DataPoints size="0.75rem">
                 <DataPoint
                   color={color}
-                  style={style === 'dashed' ? 'hollow' : 'solid'}
+                  style={style === "dashed" ? "hollow" : "solid"}
                 />
               </DataPoints>
             </ChartKeyItem>

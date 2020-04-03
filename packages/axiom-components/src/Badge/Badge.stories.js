@@ -1,8 +1,8 @@
-import React from 'react';
-import Badge from './Badge';
+import React from "react";
+import Badge from "./Badge";
 
 export default {
-  title: 'Components/Badge',
+  title: "Components/Badge",
   component: Badge,
 };
 

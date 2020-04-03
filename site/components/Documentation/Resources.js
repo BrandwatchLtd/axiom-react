@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Heading } from '@brandwatch/axiom-components';
-import PackagesTable from './Resources/PackagesTable/PackagesTable';
-import PackageRow from './Resources/PackagesTable/PackageRow';
-import ResourcesSection from './Resources/ResourcesSection';
-import SitePage from '../Site/SitePage';
+import React, { Component } from "react";
+import { Heading } from "@brandwatch/axiom-components";
+import PackagesTable from "./Resources/PackagesTable/PackagesTable";
+import PackageRow from "./Resources/PackagesTable/PackageRow";
+import ResourcesSection from "./Resources/ResourcesSection";
+import SitePage from "../Site/SitePage";
 
 export default class Resources extends Component {
   render() {

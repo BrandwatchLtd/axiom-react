@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import classnames from "classnames";
 
 export default class DialogBody extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class DialogBody extends Component {
   render() {
     const { children, className, ...rest } = this.props;
 
-    const classes = classnames('ax-dialog__body', className);
+    const classes = classnames("ax-dialog__body", className);
 
     return (
       <Base {...rest} className={classes}>

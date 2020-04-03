@@ -1,5 +1,5 @@
-const reactDocgen = require('react-docgen');
-const isPlainObject = require('lodash.isplainobject');
+const reactDocgen = require("react-docgen");
+const isPlainObject = require("lodash.isplainobject");
 
 function castValue(value) {
   if (Array.isArray(value)) {
@@ -10,7 +10,7 @@ function castValue(value) {
 
   const evaldValue = eval(value);
 
-  if (typeof evaldValue === 'function') {
+  if (typeof evaldValue === "function") {
     return evaldValue.name;
   }
 
@@ -28,7 +28,7 @@ function normaliseValue(prop) {
 
 function flattenValues({ value }, values = []) {
   if (Array.isArray(value)) {
-    value.forEach(value => flattenValues(value, values));
+    value.forEach((value) => flattenValues(value, values));
   } else if (isPlainObject(value)) {
     flattenValues(value, values);
   } else if (value !== undefined) {
@@ -39,21 +39,21 @@ function flattenValues({ value }, values = []) {
 }
 
 function sanitizeDescription(description) {
-  return description.replace(/\[.*?\]/g, '').trim();
+  return description.replace(/\[.*?\]/g, "").trim();
 }
 
 function extractProps({ displayName, props = {} }) {
   return {
     name: displayName,
     props: Object.keys(props)
-      .filter(prop => props[prop].description !== 'SKIP')
+      .filter((prop) => props[prop].description !== "SKIP")
       .reduce(
         (eProps, prop) =>
           Object.assign({}, eProps, {
             [prop]: Object.assign(props[prop], {
               defaultValue: normaliseValue(props[prop].defaultValue),
               description: sanitizeDescription(props[prop].description),
-              disabled: props[prop].description.includes('[DISABLED]'),
+              disabled: props[prop].description.includes("[DISABLED]"),
               type: normaliseValue(props[prop].type),
               values: flattenValues(normaliseValue(props[prop].type)),
             }),
@@ -63,7 +63,7 @@ function extractProps({ displayName, props = {} }) {
   };
 }
 
-module.exports = function(source) {
+module.exports = function (source) {
   let value = {};
 
   this.cacheable && this.cacheable();

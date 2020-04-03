@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import Base from '../Base/Base';
-import Modal from '../Modal/Modal';
-import './Dialog.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import classnames from "classnames";
+import Base from "../Base/Base";
+import Modal from "../Modal/Modal";
+import "./Dialog.css";
 
 export default class Dialog extends Component {
   static propTypes = {
@@ -18,24 +18,24 @@ export default class Dialog extends Component {
     /** Callback for closing the Dialog by clicking on the overlay */
     onRequestClose: PropTypes.func.isRequired,
     /** Overlay shade */
-    overlayShade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
+    overlayShade: PropTypes.oneOf(["shade-1", "shade-2", "shade-3", "shade-4"]),
     /** Theme applied to the overlay */
-    overlayTheme: PropTypes.oneOf(['day', 'night']),
+    overlayTheme: PropTypes.oneOf(["day", "night"]),
     /** Padding around the modal */
-    padding: PropTypes.oneOf(['x0', 'x6', 'x8', 'x12', 'x16']),
+    padding: PropTypes.oneOf(["x0", "x6", "x8", "x12", "x16"]),
     /** Toggle if the Dialog should be closed by pressing Esc */
     shouldCloseOnEsc: PropTypes.bool,
     /** Provides defaults for dialog and modal size*/
-    size: PropTypes.oneOf(['large', 'fullscreen']),
+    size: PropTypes.oneOf(["large", "fullscreen"]),
     /** Theme of the dialog */
-    theme: PropTypes.oneOf(['day', 'night']),
+    theme: PropTypes.oneOf(["day", "night"]),
     /** Custom width for Dialog */
     width: PropTypes.string,
   };
 
   static defaultProps = {
-    padding: 'x6',
-    theme: 'day',
+    padding: "x6",
+    theme: "day",
     closeOnOverlayClick: true,
   };
 
@@ -65,15 +65,15 @@ export default class Dialog extends Component {
     } = this.props;
 
     const classes = classnames(
-      'ax-dialog',
+      "ax-dialog",
       {
-        'ax-dialog--fullscreen': size === 'fullscreen',
-        'ax-dialog--large': size === 'large',
+        "ax-dialog--fullscreen": size === "fullscreen",
+        "ax-dialog--large": size === "large",
       },
       className
     );
 
-    const modalPadding = size === 'fullscreen' ? 'x0' : padding;
+    const modalPadding = size === "fullscreen" ? "x0" : padding;
 
     return (
       <Modal

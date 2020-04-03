@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Base from '../Base/Base';
-import Validation from '../Validation/Validation';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import Validation from "../Validation/Validation";
 
 export default class Form extends Component {
   static propTypes = {
@@ -32,12 +32,12 @@ export default class Form extends Component {
 
     return (
       <Validation requiredError={requiredError}>
-        {getUpdatedValidation => (
+        {(getUpdatedValidation) => (
           <Base
             {...rest}
             Component="form"
             className="ax-form"
-            onSubmit={e => this.handleSubmit(e, getUpdatedValidation)}
+            onSubmit={(e) => this.handleSubmit(e, getUpdatedValidation)}
           >
             {children}
           </Base>

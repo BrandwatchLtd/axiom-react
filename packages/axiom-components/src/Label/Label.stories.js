@@ -1,10 +1,10 @@
-import React from 'react';
-import Label from './Label';
-import LabelGroup from './LabelGroup';
-import LabelIcon from './LabelIcon';
+import React from "react";
+import Label from "./Label";
+import LabelGroup from "./LabelGroup";
+import LabelIcon from "./LabelIcon";
 
 export default {
-  title: 'Components/Label',
+  title: "Components/Label",
   component: Label,
   subcomponents: { LabelIcon, LabelGroup },
 };
