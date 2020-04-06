@@ -16,6 +16,11 @@ import {
 import "./Position.css";
 
 /* eslint-disable react/no-find-dom-node */
+
+/**
+ * Position is a wrapper around PopperJs. It is used within Axiom by the Dropdown and Tooltip component.
+ * You can use it if you want more control or to create custom components.
+ */
 export default class Position extends Component {
   static propTypes = {
     /**
