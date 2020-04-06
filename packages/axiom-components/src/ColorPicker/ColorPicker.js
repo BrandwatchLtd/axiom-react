@@ -31,6 +31,7 @@ export default function ColorPicker({
   onSelectColor,
   selected,
   size,
+  blankOption,
   ...rest
 }) {
   return (
@@ -48,6 +49,14 @@ export default function ColorPicker({
         <DropdownContext width={width}>
           <DropdownContent>
             <Grid gutters="small" horizontalAlign="middle" responsive={false}>
+              {blankOption && (
+                <GridCell shrink>
+                  <ColorPickerOption
+                    data-ax-at={atIds.ColorPicker.option}
+                    onClick={() => onSelectColor()}
+                  />
+                </GridCell>
+              )}
               {options.map((color) => {
                 const isColorDisabled = disabledOptions.indexOf(color) !== -1;
                 return (
@@ -169,4 +178,6 @@ ColorPicker.propTypes = {
   size: PropTypes.string,
   /** Width of the color selection container */
   width: PropTypes.string,
+  /**  Show a blank color option to clear selection */
+  blankOption: PropTypes.bool,
 };
