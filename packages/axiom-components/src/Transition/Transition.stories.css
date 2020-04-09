@@ -1,0 +1,5 @@
+.controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 150px; /* stylelint-disable-line */
+}
