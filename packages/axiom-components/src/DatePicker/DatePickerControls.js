@@ -59,10 +59,14 @@ export default class DatePickerControls extends Component {
 
         <GridCell shrink>
           <ButtonGroup>
-            <Button onClick={this.handleApply} size="small" style="primary">
+            <Button onClick={this.handleApply} size="small" variant="primary">
               Apply
             </Button>
-            <Button onClick={this.handleCancel} size="small" style="secondary">
+            <Button
+              onClick={this.handleCancel}
+              size="small"
+              variant="secondary"
+            >
               Cancel
             </Button>
           </ButtonGroup>

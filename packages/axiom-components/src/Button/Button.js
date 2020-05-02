@@ -31,8 +31,13 @@ export default class Button extends Component {
     shape: PropTypes.oneOf(["circle", "rectangle", "stadium"]),
     /** Size of standard shape */
     size: PropTypes.oneOf(["small", "medium", "large", "huge"]),
-    /** Style of the Button, which affects its coloring and sizing */
-    style: PropTypes.oneOf(["primary", "secondary", "tertiary", "quaternary"]),
+    /** variant of the Button, which affects its coloring and sizing */
+    variant: PropTypes.oneOf([
+      "primary",
+      "secondary",
+      "tertiary",
+      "quaternary",
+    ]),
   };
 
   static contextTypes = {
@@ -43,7 +48,7 @@ export default class Button extends Component {
     color: "accent",
     shape: "rectangle",
     size: "medium",
-    style: "primary",
+    variant: "primary",
   };
 
   render() {
@@ -57,7 +62,7 @@ export default class Button extends Component {
       joinedLeft,
       joinedRight,
       shape,
-      style,
+      variant,
       size,
       full,
       ...rest
@@ -70,7 +75,7 @@ export default class Button extends Component {
     const classes = classnames(
       "ax-button",
       `ax-button--${color}`,
-      `ax-button--${style}`,
+      `ax-button--${variant}`,
       `ax-button--${shape}-${size}`,
       {
         "ax-button--active": active,

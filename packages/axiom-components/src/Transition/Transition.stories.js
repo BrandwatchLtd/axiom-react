@@ -23,7 +23,7 @@ function WrapperComponet({ storyFn }) {
           onClick={() => setActiveIndex((i) => i - 1)}
           shape="circle"
           size="small"
-          style="secondary"
+          variant="secondary"
         >
           <Icon name="chevron-left" />
         </Button>
@@ -33,7 +33,7 @@ function WrapperComponet({ storyFn }) {
           onClick={() => setActiveIndex((i) => i + 1)}
           shape="circle"
           size="small"
-          style="secondary"
+          variant="secondary"
         >
           <Icon name="chevron-right" />
         </Button>

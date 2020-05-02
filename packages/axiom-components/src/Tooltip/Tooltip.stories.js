@@ -82,7 +82,7 @@ export function WithRef() {
         onClick={() => {
           ref.current.hideTooltip();
         }}
-        style="secondary"
+        variant="secondary"
       >
         Close
       </Button>

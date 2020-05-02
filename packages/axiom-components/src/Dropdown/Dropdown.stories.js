@@ -297,13 +297,13 @@ export function ClosingTheDropdown() {
       </div>
       <Dropdown ref={dropdownRef}>
         <DropdownTarget>
-          <Button size="small" style="secondary">
+          <Button size="small" variant="secondary">
             Open
           </Button>
         </DropdownTarget>
         <DropdownSource>
           <DropdownContext width="100%">
-            <Button onClick={closeDropdown} size="small" style="secondary">
+            <Button onClick={closeDropdown} size="small" variant="secondary">
               Close
             </Button>
           </DropdownContext>
