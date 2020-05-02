@@ -168,7 +168,7 @@ exports[`Button renders with shape with size stadium with small 1`] = `
 </button>
 `;
 
-exports[`Button renders with style primary 1`] = `
+exports[`Button renders with variant primary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--primary ax-button--rectangle-medium"
 >
@@ -176,7 +176,7 @@ exports[`Button renders with style primary 1`] = `
 </button>
 `;
 
-exports[`Button renders with style quaternary 1`] = `
+exports[`Button renders with variant quaternary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--quaternary ax-button--rectangle-medium"
 >
@@ -184,7 +184,7 @@ exports[`Button renders with style quaternary 1`] = `
 </button>
 `;
 
-exports[`Button renders with style secondary 1`] = `
+exports[`Button renders with variant secondary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--secondary ax-button--rectangle-medium"
 >
@@ -192,7 +192,7 @@ exports[`Button renders with style secondary 1`] = `
 </button>
 `;
 
-exports[`Button renders with style tertiary 1`] = `
+exports[`Button renders with variant tertiary 1`] = `
 <button
   className="ax-button ax-button--accent ax-button--tertiary ax-button--rectangle-medium"
 >

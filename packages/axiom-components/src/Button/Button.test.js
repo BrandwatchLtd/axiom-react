@@ -39,10 +39,10 @@ describe("Button", () => {
     });
   });
 
-  describe("renders with style", () => {
-    ["primary", "secondary", "tertiary", "quaternary"].forEach((style) => {
-      it(style, () => {
-        const component = getComponent({ style });
+  describe("renders with variant", () => {
+    ["primary", "secondary", "tertiary", "quaternary"].forEach((variant) => {
+      it(variant, () => {
+        const component = getComponent({ variant });
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
       });
