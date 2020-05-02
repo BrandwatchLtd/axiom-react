@@ -36,7 +36,7 @@ export function Default() {
         </DialogBody>
         <DialogFooter>
           <ButtonGroup textRight>
-            <Button onClick={closeDialog} style="secondary">
+            <Button onClick={closeDialog} variant="secondary">
               Cancel
             </Button>
             <Button onClick={closeDialog}>Continue</Button>

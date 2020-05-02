@@ -19,7 +19,7 @@ export default class PaginationButton extends Component {
         onClick={() => onClick(page)}
         shape={shape || page <= 99 ? "circle" : "stadium"}
         size="small"
-        style={active ? "primary" : "quaternary"}
+        variant={active ? "primary" : "quaternary"}
       />
     );
   }

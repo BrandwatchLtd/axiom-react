@@ -13,16 +13,16 @@ export default {
 export function Style() {
   return (
     <ButtonGroup space="x2">
-      <Button size="small" style="primary">
+      <Button size="small" variant="primary">
         Primary
       </Button>
-      <Button size="small" style="secondary">
+      <Button size="small" variant="secondary">
         Secondary
       </Button>
-      <Button size="small" style="tertiary">
+      <Button size="small" variant="tertiary">
         Tertiary
       </Button>
-      <Button size="small" style="quaternary">
+      <Button size="small" variant="quaternary">
         Quaternary
       </Button>
     </ButtonGroup>
@@ -64,13 +64,13 @@ export function Shape() {
 export function Icon() {
   return (
     <ButtonGroup>
-      <Button shape="circle" style="secondary">
+      <Button shape="circle" variant="secondary">
         <ButtonIcon name="twitter" />
       </Button>
-      <Button shape="circle" style="quaternary">
+      <Button shape="circle" variant="quaternary">
         <ButtonIcon name="cross" />
       </Button>
-      <Button style="primary">
+      <Button variant="primary">
         Search
         <ButtonIcon name="magnify-glass" />
       </Button>
@@ -98,10 +98,10 @@ export function Progress() {
 export function Joined() {
   return (
     <ButtonGroup joined>
-      <Button size="small" style="primary">
+      <Button size="small" variant="primary">
         Submit
       </Button>
-      <Button size="small" style="secondary">
+      <Button size="small" variant="secondary">
         Cancel
       </Button>
     </ButtonGroup>

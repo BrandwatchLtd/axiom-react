@@ -78,7 +78,7 @@ export default class IconButton extends Component {
     const { name, size, buttonStyle, iconColor, ...rest } = this.props;
 
     return (
-      <Button {...rest} shape="circle" size={size} style={buttonStyle}>
+      <Button {...rest} shape="circle" size={size} variant={buttonStyle}>
         <ButtonIcon color={iconColor} name={name} size={sizeMap[size]} />
       </Button>
     );

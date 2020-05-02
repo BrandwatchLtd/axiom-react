@@ -154,7 +154,7 @@ export default class ChangePasswordDialog extends Component {
               <Button
                 data-ax-at={atIds.ChangePassword.cancel}
                 onClick={onRequestClose}
-                style="secondary"
+                variant="secondary"
                 type="button"
               >
                 {t("Cancel", axiomLanguage)}
