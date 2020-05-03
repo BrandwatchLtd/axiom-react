@@ -15,11 +15,12 @@ jobs:
       with:
         node-version: '12.x'
     - uses: actions/cache@v1
+      env:
+          cache-name: cache-node-modules
       with:
         path: ~/.npm
-        key: ${{ github.sha }}
+        key: ${{ runner.sha }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
     - run: yarn install --frozen-lockfile
-    - run: yarn build:packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   test:
@@ -28,9 +29,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v1
+      env:
+          cache-name: cache-node-modules
       with:
         path: ~/.npm
-        key: ${{ github.sha }}
+        key: ${{ runner.sha }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
     - run: yarn install --frozen-lockfile
     - run: yarn test
       env:
