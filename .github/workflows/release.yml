@@ -15,13 +15,19 @@ jobs:
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
     - uses: actions/cache@v1
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
     - run: yarn install --verbose --frozen-lockfile
+    - run: yarn build:packages
+    - name: Upload Packages
+      uses: actions/upload-artifact@v2
+      with:
+        name: packages-build
+        path: packages/**/dist/**/*
   test:
     needs: build_packages
     runs-on: ubuntu-latest
@@ -31,11 +37,17 @@ jobs:
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
     - uses: actions/cache@v1
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
     - run: yarn install --verbose --frozen-lockfile
+    - name: Download Packages
+      uses: actions/download-artifact@v2
+      with:
+        name: packages-build
+        path: packages-build
+    - run: cd packages-build && ls -R
     - run: yarn test
