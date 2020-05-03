@@ -86,9 +86,5 @@
     "validate-commit": "^3.4.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
-  },
-  "dependencies": {
-    "semantic-release": "^17.0.7",
-    "semantic-release-monorepo": "^7.0.2"
   }
 }
