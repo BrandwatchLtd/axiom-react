@@ -16,5 +16,7 @@ jobs:
     - run: yarn install --frozen-lockfile
     - run: yarn build:packages
     - run: yarn test
+    - run: yarn build:storybook
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
