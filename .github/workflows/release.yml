@@ -6,7 +6,8 @@ on:
       - master
   pull_request:
 jobs:
-  build:
+  build_packages:
+    name: 'Build packages'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -15,8 +16,22 @@ jobs:
         node-version: '12.x'
     - run: yarn install --frozen-lockfile
     - run: yarn build:packages
-    - run: yarn test
-    - run: yarn build:storybook
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
+  test:
+    needs: build_packages
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: yarn test
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  build_storybook:
+    name: 'Build storybook'
+    needs: build_packages
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: yarn test
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
