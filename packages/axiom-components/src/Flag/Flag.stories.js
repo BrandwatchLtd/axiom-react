@@ -7,5 +7,5 @@ export default {
 };
 
 export function Default() {
-  return <Flag alpha2="gb" assetsUrl="/" size="12rem" />;
+  return <Flag alpha2="gb" size="12rem" />;
 }
