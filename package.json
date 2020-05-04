@@ -12,7 +12,7 @@
     "prettier": "prettier --write packages/**/**/*.*.js",
     "lint:commits": "./scripts/validate_commit_messages.sh",
     "publish:packages": "bash ./scripts/publish_packages.sh",
-    "start": "bash ./scripts/start_development.sh",
+    "start": "yarn storybook",
     "postinstall": "lerna run prepublish && lerna run prepare",
     "test": "TZ=utc BABEL_ENV=test jest ./packages --config .jest.json",
     "storybook": "bash ./scripts/start_storybook.sh",
