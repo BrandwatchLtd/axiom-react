@@ -10,6 +10,9 @@ import {
   opacityBorder,
 } from "./opacities";
 
+// If you updated these colors please re-reun yarn build:flags
+// see here for more detail https://github.com/BrandwatchLtd/axiom-react/pull/870
+
 export const uiCarbon = { r: 63, g: 63, b: 63 };
 export const uiCarbonDark = { r: 53, g: 53, b: 53 };
 export const uiCarbonDarker = { r: 43, g: 43, b: 43 };
