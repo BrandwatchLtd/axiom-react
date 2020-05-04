@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['@babel/plugin-proposal-class-properties', '@brandwatch/babel-plugin-transform-svg-axiom'],
+  plugins: ['@babel/plugin-proposal-class-properties', './packages/babel-plugin-transform-svg-axiom/src'],
   presets: [
     '@babel/preset-react',
     [

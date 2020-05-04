@@ -40,7 +40,7 @@ jobs:
     - run: yarn install --verbose --frozen-lockfile
     - run: yarn build:packages
     - run: yarn test
-  build:
+  build-storybook:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -55,5 +55,5 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - run: yarn install --verbose --frozen-lockfile
-    - run: yarn build:packages
+    - run: yarn build:esm:packages
     - run: yarn build:storybook
