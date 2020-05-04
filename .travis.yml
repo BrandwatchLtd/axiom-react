@@ -13,7 +13,6 @@ before_script:
 script:
 - yarn lint:commits
 - yarn lint
-- yarn build:flags
 - yarn ci:test
 - yarn build:storybook
 env:

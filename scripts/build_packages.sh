@@ -16,6 +16,3 @@ npx lerna exec --parallel -- npx babel dist/esm -d dist/esm --config-file $(pwd)
 
 # Post CSS
 npx postcss 'packages/**/dist/**/*.css' --config ./postcss.prod.config.js --replace --verbose
-
-# Flags
-yarn build:flags
