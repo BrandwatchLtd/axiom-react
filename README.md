@@ -9,7 +9,6 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/BrandwatchLtd/axiom"><img alt="Travis Status" src="https://img.shields.io/travis/BrandwatchLtd/axiom.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/@brandwatch/axiom-materials"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@brandwatch/axiom-materials.svg?style=flat-square"></a>
 </p>
 

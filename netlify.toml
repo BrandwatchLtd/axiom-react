@@ -1,4 +1,0 @@
-# Global settings applied to the whole site.
-[build]
-  publish = "public"
-  command = "npm run netlify"
