@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build:flags": "NODE_ENV=production BABEL_ENV=build bash ./scripts/build_flags.sh",
-    "build:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_packages.sh",
+    "build:cjs:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_packages.sh",
     "build:esm:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_esm_packages.sh",
     "ci:setup": "NODE_ENV=production BABEL_ENV=test bash ./scripts/ci_setup.sh",
     "ci:test": "TZ=utc jest ./packages/**/dist/cjs --config .jest.json",
