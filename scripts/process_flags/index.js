@@ -6,7 +6,6 @@ const path = require('path');
 const getProcessedFlag = require('./lib/getProcessedFlag');
 
 const sourceAssetsPath = path.join(__dirname, '../../node_modules/flag-svg-collection/flags/1x1');
-const destAssetsPath = path.join(__dirname, '../../site/assets/flags');
 const destMapPath = path.join(__dirname, '../../packages/axiom-materials');
 
 function createJsMap(items) {
@@ -30,11 +29,6 @@ function processFlag(fileName) {
     .readFile(path.join(sourceAssetsPath, fileName))
     .then(getProcessedFlag)
     .then((result) => {
-      return fs
-        .writeFile(path.join(destAssetsPath, fileName), result.svg)
-        .then(() => result);
-    })
-    .then((result) => {
       return {
         id: fileName.split('.')[0],
         color: result.color,
@@ -44,7 +38,6 @@ function processFlag(fileName) {
 
 function processAllFlags() {
   return Promise.all([
-    fs.mkdirp(destAssetsPath),
     fs.mkdirp(path.join(destMapPath, 'src')),
     fs.mkdirp(path.join(destMapPath, 'dist')),
   ])
