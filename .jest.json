@@ -1,7 +1,9 @@
 {
   "moduleNameMapper": {
     "^.+\\.css$": "identity-obj-proxy",
-    "^.+\\.svg$": "<rootDir>/test/svg_inline_mock.js"
+    "^.+\\.svg$": "<rootDir>/test/svg_inline_mock.js",
+    "@brandwatch/axiom-automation-testing/ids": "<rootDir>packages/axiom-automation-testing/ids.json" ,
+    "^@brandwatch\\/([^/]+)": "@brandwatch/$1/src"
   },
   "setupFiles": [
     "./enzyme.js"
