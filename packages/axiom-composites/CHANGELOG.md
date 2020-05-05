@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-composites@1.0.3...@brandwatch/axiom-composites@2.0.0) (2020-05-05)
+
+
+### Code Refactoring
+
+* 💡 Rename Button attribute style => variant ([8886ae0](https://github.com/BrandwatchLtd/axiom-react/commit/8886ae0))
+
+
+### BREAKING CHANGES
+
+* 🧨
+<Button style="primary"> becomes <Button variant="primary">
+Please use `npx axiom-codemods rename-button-style-attribute <path>` to replace in your code.
+
+
+
+
+
 ## [1.0.3](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-composites@1.0.2...@brandwatch/axiom-composites@1.0.3) (2020-05-04)
 
 **Note:** Version bump only for package @brandwatch/axiom-composites
