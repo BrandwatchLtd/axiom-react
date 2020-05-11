@@ -2,8 +2,10 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
-import "./ChedioButtox.css";
+import Tick from "./Tick";
 
+import "./ChedioButtox.css";
+console.log("Tick", Tick);
 export default class ChedioButtox extends Component {
   static propTypes = {
     children: PropTypes.node,
@@ -60,7 +62,9 @@ export default class ChedioButtox extends Component {
           type={inputType}
         />
 
-        <span className={`${className}__indicator`} />
+        <span className={`${className}__indicator`}>
+          <Tick />
+        </span>
         {children && <span className={`${className}__label`}>{children}</span>}
       </Base>
     );
