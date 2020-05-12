@@ -21,6 +21,9 @@ export default class AlertBar extends Component {
     type: PropTypes.oneOf(["success", "warning", "error", "info"]),
   };
 
+  should fail linting
+
+  
   static defaultProps = {
     size: "small",
     type: "info",

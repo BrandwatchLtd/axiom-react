@@ -28,6 +28,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^8.3.5",
     "@storybook/addon-docs": "^6.0.0-alpha.30",
     "@storybook/addon-knobs": "^6.0.0-alpha.30",
     "@storybook/react": "^6.0.0-alpha.30",
