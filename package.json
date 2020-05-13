@@ -8,7 +8,7 @@
     "lint:css": "stylelint 'packages/**/*.css'",
     "lint:js": "eslint --config .eslintrc packages",
     "prettier": "prettier --write packages/**/**/*.*.js",
-    "lint:commits": "./scripts/validate_commit_messages.sh",
+    "lint:commits": "commitlint --from master to --to HEAD",
     "publish:packages": "bash ./scripts/publish_packages.sh",
     "start": "yarn storybook",
     "postinstall": "lerna run prepublish && lerna run prepare",
