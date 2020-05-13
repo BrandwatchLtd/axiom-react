@@ -7,56 +7,58 @@ import PositionTarget from "../Position/PositionTarget";
 import { TooltipSourceRef } from "./TooltipSource";
 import { TooltipTargetRef } from "./TooltipTarget";
 
-export default React.forwardRef(Tooltip);
+const Tooltip = React.forwardRef(
+  (
+    {
+      children,
+      delay = false,
+      onClick,
+      position = "Top",
+      enabled = true,
+      ...rest
+    },
+    ref
+  ) => {
+    const [isVisible, setIsVisible] = useState(false);
 
-function Tooltip(
-  {
-    children,
-    delay = false,
-    onClick,
-    position = "top",
-    enabled = true,
-    ...rest
-  },
-  ref
-) {
-  const [isVisible, setIsVisible] = useState(false);
+    React.useImperativeHandle(ref, () => ({
+      showTooltip,
+      hideTooltip,
+    }));
 
-  React.useImperativeHandle(ref, () => ({
-    showTooltip,
-    hideTooltip,
-  }));
-
-  function showTooltip() {
-    if (enabled && !isVisible) {
-      setIsVisible(true);
+    function showTooltip() {
+      if (enabled && !isVisible) {
+        setIsVisible(true);
+      }
     }
-  }
 
-  function hideTooltip() {
-    setIsVisible(false);
-  }
+    function hideTooltip() {
+      setIsVisible(false);
+    }
 
-  return (
-    <Position
-      {...rest}
-      enabled={enabled}
-      isVisible={isVisible}
-      position={position}
-      showArrow
-    >
-      <PositionTarget delay={delay} onClick={onClick}>
-        {cloneElement(findComponent(children, TooltipTargetRef), {
-          showTooltip,
-          hideTooltip,
-        })}
-      </PositionTarget>
-      <PositionSource>
-        {findComponent(children, TooltipSourceRef)}
-      </PositionSource>
-    </Position>
-  );
-}
+    return (
+      <Position
+        {...rest}
+        enabled={enabled}
+        isVisible={isVisible}
+        position={position}
+        showArrow
+      >
+        <PositionTarget delay={delay} onClick={onClick}>
+          {cloneElement(findComponent(children, TooltipTargetRef), {
+            showTooltip,
+            hideTooltip,
+          })}
+        </PositionTarget>
+        <PositionSource>
+          {findComponent(children, TooltipSourceRef)}
+        </PositionSource>
+      </Position>
+    );
+  }
+);
+
+Tooltip.displayName = "Tooltip";
 
 Tooltip.propTypes = {
   /**
@@ -82,3 +84,5 @@ Tooltip.propTypes = {
    */
   position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
 };
+
+export default Tooltip;
