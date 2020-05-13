@@ -31,7 +31,7 @@ import { Button } from '@brandwatch/axiom-components';
 You can now use the button component - To see how this can be styled and configured see [Button](https://axiom.brandwatch.com/docs/packages/axiom-components/button)
 
 ```
-<Button variant="primary">
+<Button style="primary">
   Primary
 </Button>
 ```
