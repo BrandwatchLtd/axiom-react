@@ -60,11 +60,11 @@ export default class DatePickerControls extends Component {
             <Button
                 onClick={ this.handleApply }
                 size="small"
-                style="primary">Apply</Button>
+                variant="primary">Apply</Button>
             <Button
                 onClick={ this.handleCancel }
                 size="small"
-                style="secondary">Cancel</Button>
+                variant="secondary">Cancel</Button>
           </ButtonGroup>
         </GridCell>
       </Grid>

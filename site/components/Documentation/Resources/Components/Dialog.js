@@ -54,7 +54,7 @@ export default class Documentation extends Component {
               <ButtonGroup>
                 <Dropdown flip="mirror">
                   <DropdownTarget>
-                    <Button style="secondary">
+                    <Button variant="secondary">
                       Dropdown
                       <ButtonIcon key="ButtonIcon" name="chevron-down" />
                     </Button>
@@ -75,13 +75,13 @@ export default class Documentation extends Component {
             <DialogFooter textRight>
               <List style="inline">
                 <ListItem>
-                  <Button style="secondary">Secondary 1</Button>
+                  <Button variant="secondary">Secondary 1</Button>
                 </ListItem>
 
                 <ListItem>
                   <ButtonGroup textRight>
-                    <Button style="secondary">Secondary 2</Button>
-                    <Button style="primary">Primary</Button>
+                    <Button variant="secondary">Secondary 2</Button>
+                    <Button variant="primary">Primary</Button>
                   </ButtonGroup>
                 </ListItem>
               </List>

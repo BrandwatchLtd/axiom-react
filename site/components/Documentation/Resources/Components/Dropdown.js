@@ -83,11 +83,11 @@ export default class Documentation extends Component {
           <GridCell>
             <DocumentationShowCase centered>
               <ButtonGroup joined>
-                <Button style="secondary">Primary Action</Button>
+                <Button variant="secondary">Primary Action</Button>
 
                 <Dropdown showArrow>
                   <DropdownTarget>
-                    <Button style="secondary">
+                    <Button variant="secondary">
                       <ButtonIcon name="chevron-down" />
                     </Button>
                   </DropdownTarget>
@@ -252,7 +252,7 @@ export default class Documentation extends Component {
 
                     <DropdownFooter>
                       <ButtonGroup textRight>
-                        <Button size="small" style="secondary">Cancel</Button>
+                        <Button size="small" variant="secondary">Cancel</Button>
                         <Button size="small">Confirm</Button>
                       </ButtonGroup>
                     </DropdownFooter>

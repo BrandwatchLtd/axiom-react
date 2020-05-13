@@ -62,7 +62,7 @@ export default class TypeArrayOf extends Component {
         <Button
             onClick={ () => this.open() }
             size="small"
-            style="secondary">
+            variant="secondary">
           Open Editor
         </Button>
       </ButtonGroup>,
@@ -86,7 +86,7 @@ export default class TypeArrayOf extends Component {
           <ButtonGroup textRight>
             <Button
                 onClick={ () => this.close() }
-                style="secondary">
+                variant="secondary">
               Cancel
             </Button>
 

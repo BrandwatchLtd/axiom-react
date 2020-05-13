@@ -38,7 +38,7 @@ export default class ProgressButton extends Component {
       <Button { ...rest }
           active={ isInProgress }
           size={ size }
-          style="primary">
+          variant="primary">
         <div className={ classes }>
           <Cloak
               className="ax-progress-button__content"

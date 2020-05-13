@@ -37,7 +37,7 @@ export default class DatePickerHeaderControl extends Component {
           <Button
               disabled={ isSameOrBeforeMonth(date, earliestSelectableDate) }
               onClick={ () => onPrevious() }
-              style="quaternary">
+              variant="quaternary">
             <ButtonIcon name="chevron-left" />
           </Button>
         </GridCell>
@@ -50,7 +50,7 @@ export default class DatePickerHeaderControl extends Component {
           <Button
               disabled={ isSameOrAfterMonth(date, latestSelectableDate) }
               onClick={ () => onNext() }
-              style="quaternary">
+              variant="quaternary">
             <ButtonIcon name="chevron-right" />
           </Button>
         </GridCell>

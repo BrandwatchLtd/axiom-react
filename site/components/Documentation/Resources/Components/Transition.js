@@ -34,13 +34,13 @@ export default class Documentation extends Component {
 
           </Base>
           <Base space="x4" textCenter={ true }>
-            <Button disabled={ activeIndex === 0 } onClick={ () => this.setState({ activeIndex: activeIndex - 1 }) } shape="circle" size="small" style="secondary">
+            <Button disabled={ activeIndex === 0 } onClick={ () => this.setState({ activeIndex: activeIndex - 1 }) } shape="circle" size="small" variant="secondary">
               <Icon name="chevron-left" />
             </Button>
 
             <div style={ { display: 'inline-block', margin: '0  1rem' } }>{ activeIndex }</div>
 
-            <Button disabled={ activeIndex === 5 } onClick={ () => this.setState({ activeIndex: activeIndex + 1 }) } shape="circle" size="small" style="secondary">
+            <Button disabled={ activeIndex === 5 } onClick={ () => this.setState({ activeIndex: activeIndex + 1 }) } shape="circle" size="small" variant="secondary">
               <Icon name="chevron-right" />
             </Button>
           </Base>
