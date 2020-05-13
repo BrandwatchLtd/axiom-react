@@ -19,6 +19,11 @@
   "workspaces": [
     "packages/*"
   ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
@@ -28,6 +33,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/config-conventional": "^8.3.4",
     "@storybook/addon-docs": "^6.0.0-alpha.30",
     "@storybook/addon-knobs": "^6.0.0-alpha.30",
     "@storybook/react": "^6.0.0-alpha.30",
@@ -38,6 +44,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.9",
     "caniuse-lite": "^1.0.30000697",
     "color": "^3.1.0",
+    "commitlint": "^8.3.5",
     "css-loader": "^0.23.1",
     "d3-cloud": "^1.2.5",
     "ejs": "^2.5.2",
@@ -50,6 +57,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "flag-svg-collection": "^1.1.0",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "jsdom": "^14.0",
