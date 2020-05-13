@@ -21,8 +21,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - run: yarn install --verbose --frozen-lockfile
-    - run: yarn lint:commits
     - run: yarn lint
+  commit-lint:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: wagoid/commitlint-github-action@v1
   test:
     runs-on: ubuntu-latest
     steps:
