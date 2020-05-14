@@ -18,6 +18,8 @@ import TextIcon from "../Typography/TextIcon";
 import Paragraph from "../Typography/Paragraph";
 import Button from "../Button/Button";
 
+import "./Dropdown.stories.css";
+
 export default {
   title: "Components/Dropdown",
   component: Dropdown,
@@ -170,7 +172,7 @@ export function DropdownMenuMutiSelect() {
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext>
-          <DropdownMenu>
+          <DropdownMenu style={{ boxSizing: "border-box" }}>
             {items.map((item) => (
               <DropdownMenuItem
                 key={item.id}
@@ -333,76 +335,6 @@ export function SourceSameWidthAsTarget() {
               <DropdownMenuItem>fantastic-voyage</DropdownMenuItem>
               <DropdownMenuItem>giant-leap</DropdownMenuItem>
               <DropdownMenuItem>primeval-soup</DropdownMenuItem>
-            </DropdownMenu>
-          </DropdownContext>
-        </DropdownSource>
-      </Dropdown>
-    </div>
-  );
-}
-
-export function Position() {
-  const [selectedValue, setSelectedValue] = useState("");
-
-  const label = "offset";
-  const options = ["start", "middle", "end"];
-  const defaultValue = "middle";
-
-  const offset = select(label, options, defaultValue);
-
-  const positionLabel = "position";
-  const positionOptions = ["top", "right", "bottom", "left"];
-  const positionDefaultValue = "top";
-
-  const position = select(positionLabel, positionOptions, positionDefaultValue);
-
-  const flipLabel = "flip";
-  const flipOptions = ["anticlockwise", "clockwise", "mirror"];
-  const flipDefaultValue = "clockwise";
-
-  const flip = select(flipLabel, flipOptions, flipDefaultValue);
-
-  return (
-    <div
-      style={{
-        height: "150vh",
-        width: "150vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Dropdown
-        flip={flip}
-        offset={offset}
-        onPositionChange={(position) =>
-          console.log("onPositionChange new position: ", position)
-        }
-        position={position}
-        showArrow
-      >
-        <DropdownTarget>
-          <TextInput
-            isTarget
-            onChange={() => {}}
-            placeholder="Pick an Option"
-            value={selectedValue}
-          >
-            <TextInputIcon name="chevron-down" />
-          </TextInput>
-        </DropdownTarget>
-        <DropdownSource>
-          <DropdownContext>
-            <DropdownMenu>
-              {items.map((item) => (
-                <DropdownMenuItem
-                  key={item.id}
-                  onClick={() => setSelectedValue(item.value)}
-                  selected={selectedValue === item.value}
-                >
-                  {item.name}
-                </DropdownMenuItem>
-              ))}
             </DropdownMenu>
           </DropdownContext>
         </DropdownSource>

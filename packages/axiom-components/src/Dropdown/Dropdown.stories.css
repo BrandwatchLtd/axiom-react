@@ -1,0 +1,6 @@
+/* Avoids padding causing :horizontal scroll bar.
+   Not sure why this is needed appears to be a storybook only bug
+*/
+.ax-context-menu {
+  box-sizing: border-box;
+}
