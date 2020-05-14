@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React from "react";
+import React, { useState } from "react";
 import ColorPicker from "./ColorPicker";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
@@ -10,14 +10,24 @@ export default {
 };
 
 export function Default() {
-  function colorSelectCallback(color) {
-    console.log(`the color ${color} was selected`);
-  }
+  const [selectedColor, setSelectedColor] = useState();
+  return (
+    <ColorPicker
+      selected={selectedColor}
+      onSelectColor={(color) => setSelectedColor(color)}
+      blankOption={boolean("false")}
+    />
+  );
+}
+
+export function ResetChoice() {
+  const [selectedColor, setSelectedColor] = useState();
 
   return (
     <ColorPicker
-      onSelectColor={colorSelectCallback}
-      blankOption={boolean("blankOption", false)}
+      selected={selectedColor}
+      onSelectColor={(color) => setSelectedColor(color)}
+      blankOption={true}
     />
   );
 }
