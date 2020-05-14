@@ -42,7 +42,7 @@ SpreadPropsToBase.story = {
   parameters: {
     docs: {
       storyDescription:
-        "Internally nearly all components in Axiom render Base. This means you can pass Base properites via parent components they will be spread into Base. In the example below Paragraph passes textStrike to Base",
+        "Internally nearly all components in Axiom render Base. This means you can pass Base properites via parent components and they will be spread into Base. In the example below Paragraph passes textStrike to Base",
     },
   },
 };
