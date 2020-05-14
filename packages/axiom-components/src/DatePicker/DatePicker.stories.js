@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import DatePicker from "./DatePicker";
+import DatePickerContext from "./DatePickerContext";
+import DatePickerControls from "./DatePickerControls";
+import DatePickerDay from "./DatePickerDay";
+import DatePickerHeaderControl from "./DatePickerHeaderControl";
+import DatePickerRangeSelection from "./DatePickerRangeSelection";
 import DatePickerSelection from "./DatePickerSelection";
+import DatePickerViewMonth from "./DatePickerViewMonth";
 import Button from "../Button/Button";
 import ButtonIcon from "../Button/ButtonIcon";
 
 export default {
   title: "Components/DatePicker",
   component: DatePicker,
-  subcomponents: { DatePickerSelection },
+  subcomponents: {
+    DatePickerContext,
+    DatePickerControls,
+    DatePickerDay,
+    DatePickerHeaderControl,
+    DatePickerRangeSelection,
+    DatePickerSelection,
+    DatePickerViewMonth,
+  },
 };
 
 export function SingleDate() {
