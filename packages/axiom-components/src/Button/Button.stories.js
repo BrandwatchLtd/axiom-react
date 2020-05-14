@@ -84,8 +84,14 @@ export function Icon() {
   );
 }
 
-export function Disabled() {
-  return <Button disabled>Disabled</Button>;
+export function State() {
+  return (
+    <ButtonGroup>
+      <Button>Default</Button>
+      <Button disabled>Disabled</Button>
+      <Button active>Active</Button>
+    </ButtonGroup>
+  );
 }
 
 export function Progress() {
