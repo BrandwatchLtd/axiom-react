@@ -10,6 +10,7 @@ import Heading from "../Typography/Heading";
 export default {
   title: "Components/Dialog",
   component: Dialog,
+  subcomponents: { DialogHeader, DialogBody, DialogFooter },
 };
 
 export function Default() {
