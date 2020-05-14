@@ -7,18 +7,19 @@ import Button from "../Button/Button";
 export default {
   title: "Components/AlertDialog",
   component: AlertDialog,
+  subcomponents: { AlertDialogHeader, AlertDialogBody },
 };
 
 export function Default() {
-  const [showDialog, setshowDialog] = useState(true);
+  const [showDialog, setShowDialog] = useState(true);
 
   return (
     <div>
-      <Button onClick={() => setshowDialog(true)}>Open Dialog</Button>
+      <Button onClick={() => setShowDialog(true)}>Open Dialog</Button>
 
       <AlertDialog
         isOpen={showDialog}
-        onRequestClose={() => setshowDialog(false)}
+        onRequestClose={() => setShowDialog(false)}
       >
         <AlertDialogHeader>Lorem ipsum dolor sit amet</AlertDialogHeader>
 
