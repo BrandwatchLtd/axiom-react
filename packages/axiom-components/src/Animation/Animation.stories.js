@@ -16,7 +16,6 @@ export function Default() {
     <Grid>
       <GridCell>
         <Button onClick={() => setAnimated((a) => !a)} size="small">
-          {" "}
           Toggle Animation
         </Button>
       </GridCell>

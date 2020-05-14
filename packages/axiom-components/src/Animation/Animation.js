@@ -5,6 +5,9 @@ import classnames from "classnames";
 
 import "./Animation.css";
 
+/**
+ * Animate components using CSS
+ */
 export default class Animation extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
