@@ -2,6 +2,9 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Base from "../Base/Base";
 
+/**
+ * Hide and reveal on hover
+ */
 export default class Cloak extends Component {
   static propTypes = {
     /**

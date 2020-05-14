@@ -10,6 +10,7 @@ import Base from "../Base/Base";
 export default {
   title: "Components/Cloak",
   component: Cloak,
+  subComponents: { CloakContainer },
 };
 
 export function WithComponent() {
