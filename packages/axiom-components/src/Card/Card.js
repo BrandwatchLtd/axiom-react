@@ -22,6 +22,9 @@ const cardListStyleProps = {
   },
 };
 
+/**
+ * Group related data.
+ */
 export default class Card extends Component {
   static propTypes = {
     /** Applies styling to indicate the Card is in an active state */
