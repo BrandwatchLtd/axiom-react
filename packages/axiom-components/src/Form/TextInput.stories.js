@@ -6,7 +6,7 @@ import TextInputButton from "./TextInputButton";
 import InlineValidation from "../Validation/InlineValidation";
 
 export default {
-  title: "Components/TextInput",
+  title: "Components/Form/TextInput",
   component: TextInput,
   subcomponents: { TextInputButton, TextInputIcon },
 };

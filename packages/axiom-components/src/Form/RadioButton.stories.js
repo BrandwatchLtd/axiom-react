@@ -3,7 +3,7 @@ import RadioButton from "./RadioButton";
 import RadioButtonGroup from "./RadioButtonGroup";
 
 export default {
-  title: "Components/RadioButton",
+  title: "Components/Form/RadioButton",
   component: RadioButton,
 };
 
