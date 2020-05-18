@@ -7,6 +7,7 @@ import "./Grid.css";
 /**
  * Grid provides an abstraction over CSS Flex box with Grid acting as the Flex parent and
  * GridCell the Flex child. It also adds the option for gutters between flex children.
+ * By default Grid is responsive, altering Grid Cells to take up full rows as the screen-width reduces.
  */
 export default class Grid extends Component {
   static propTypes = {
