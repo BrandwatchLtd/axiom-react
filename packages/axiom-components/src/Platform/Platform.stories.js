@@ -124,7 +124,7 @@ export function BasicExample() {
   );
 }
 
-export function UsingConsoleWithoutPlatorm() {
+export function UsingConsoleWithoutPlatform() {
   return (
     <ConsoleHeader separator={true} size="large">
       ConsoleHeader
