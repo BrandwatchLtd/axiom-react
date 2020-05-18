@@ -13,7 +13,7 @@ const Tooltip = React.forwardRef(
       children,
       delay = false,
       onClick,
-      position = "Top",
+      position = "top",
       enabled = true,
       ...rest
     },
