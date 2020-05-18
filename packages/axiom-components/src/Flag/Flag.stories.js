@@ -6,6 +6,6 @@ export default {
   component: Flag,
 };
 
-export function Default() {
-  return <Flag alpha2="gb" size="12rem" />;
+export function Default(props) {
+  return <Flag alpha2="gb" size="12rem" {...props} />;
 }
