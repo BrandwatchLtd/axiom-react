@@ -4,6 +4,9 @@ import classnames from "classnames";
 import Base from "../Base/Base";
 import "./Tip.css";
 
+/**
+ * Add a Tip to a parent with position: relative.
+ */
 export default class Tip extends Component {
   static propTypes = {
     /** The content on which the tip should be placed. */

@@ -5,6 +5,9 @@ import { animations } from "@brandwatch/axiom-materials";
 import { Base } from "@brandwatch/axiom-components";
 import "./Transition.css";
 
+/**
+ * A helper component to provide smooth transition animations
+ */
 export default class Transition extends Component {
   static propTypes = {
     activeIndex: PropTypes.number.isRequired,

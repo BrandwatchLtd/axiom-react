@@ -9,6 +9,9 @@ import DropdownTarget from "../Dropdown/DropdownTarget";
 import Icon from "../Icon/Icon";
 import Link from "../Typography/Link";
 
+/**
+ * Shows help text on click
+ **/
 export default class UsageHint extends PureComponent {
   static propTypes = {
     children: PropTypes.node,

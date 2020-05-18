@@ -53,7 +53,7 @@ function ColorBox({ color }) {
   );
 }
 
-export function Default({ activeIndex }) {
+export function Default(props, { activeIndex }) {
   return (
     <Transition activeIndex={activeIndex} height="50px" width="150px">
       <ColorBox color="paradise-lost" />
