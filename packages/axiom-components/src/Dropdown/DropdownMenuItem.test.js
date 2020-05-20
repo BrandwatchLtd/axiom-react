@@ -27,7 +27,7 @@ describe("DropdownMenuItem", () => {
   });
 
   describe("onClick", () => {
-    it("closes the dropdown menu when clicked", () => {
+    it.skip("closes the dropdown menu when clicked", () => {
       render(props, opts).simulate("click", mockEvent);
       expect(opts.context.closeDropdown).toHaveBeenCalledTimes(1);
     });
