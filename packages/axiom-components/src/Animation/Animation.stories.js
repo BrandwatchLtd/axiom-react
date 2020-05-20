@@ -5,7 +5,7 @@ import Grid from "../Grid/Grid";
 import GridCell from "../Grid/GridCell";
 
 export default {
-  title: "Components/Animation",
+  title: "Animation",
   component: Animation,
 };
 

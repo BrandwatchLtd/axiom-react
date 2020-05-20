@@ -21,7 +21,7 @@ import Button from "../Button/Button";
 import "./Dropdown.stories.css";
 
 export default {
-  title: "Components/Dropdown",
+  title: "Dropdown",
   component: Dropdown,
   subcomponents: {
     DropdownTarget,

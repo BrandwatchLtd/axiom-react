@@ -8,7 +8,7 @@ import Heading from "../Typography/Heading";
 import Base from "../Base/Base";
 
 export default {
-  title: "Components/Cloak",
+  title: "Cloak",
   component: Cloak,
   subComponents: { CloakContainer },
 };

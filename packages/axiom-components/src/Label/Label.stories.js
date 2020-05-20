@@ -4,7 +4,7 @@ import LabelGroup from "./LabelGroup";
 import LabelIcon from "./LabelIcon";
 
 export default {
-  title: "Components/Label",
+  title: "Label",
   component: Label,
   subcomponents: { LabelIcon, LabelGroup },
 };

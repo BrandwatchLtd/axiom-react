@@ -7,7 +7,7 @@ import TableCell from "./TableCell";
 import TableBody from "./TableBody";
 
 export default {
-  title: "Components/Table",
+  title: "Table",
   component: Table,
   subcomponents: {
     TableHeader,

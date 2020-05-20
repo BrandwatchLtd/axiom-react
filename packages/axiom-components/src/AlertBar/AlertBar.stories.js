@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AlertBar from "./AlertBar";
 
 export default {
-  title: "Components/AlertBar",
+  title: "AlertBar",
   component: AlertBar,
 };
 

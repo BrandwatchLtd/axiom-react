@@ -4,7 +4,7 @@ import ColorPicker from "./ColorPicker";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 export default {
-  title: "Components/ColorPicker",
+  title: "ColorPicker",
   component: ColorPicker,
   decorators: [withKnobs],
 };

@@ -5,7 +5,7 @@ import ButtonIcon from "./ButtonIcon";
 import ProgressButton from "../Progress/ProgressButton";
 
 export default {
-  title: "Components/Button",
+  title: "Button",
   component: Button,
   subcomponents: { ButtonGroup, ButtonIcon, ProgressButton },
 };

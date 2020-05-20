@@ -3,7 +3,7 @@ import Notification from "./Notification";
 import Notifications from "./Notifications";
 
 export default {
-  title: "Components/Notification",
+  title: "Notification",
   component: Notification,
 };
 

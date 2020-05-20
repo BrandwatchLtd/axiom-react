@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AlertCard from "./AlertCard";
 
 export default {
-  title: "Components/AlertCard",
+  title: "AlertCard",
   component: AlertCard,
 };
 

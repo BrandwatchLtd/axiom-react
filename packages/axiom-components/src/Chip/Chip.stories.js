@@ -3,7 +3,7 @@ import Chip from "./Chip";
 import ChipList from "./ChipList";
 
 export default {
-  title: "Components/Chip",
+  title: "Chip",
   component: Chip,
   subcomponents: { ChipList },
 };

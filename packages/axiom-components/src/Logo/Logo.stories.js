@@ -5,7 +5,7 @@ import LogoTab from "./LogoTab";
 import LogoHorizontal from "./LogoHorizontal";
 
 export default {
-  title: "Components/Logo",
+  title: "Logo",
   component: Logo,
 };
 

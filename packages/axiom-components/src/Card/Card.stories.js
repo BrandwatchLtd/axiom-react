@@ -17,7 +17,7 @@ import Candytar from "../Avatar/Candytar";
 import Heading from "../Typography/Heading";
 
 export default {
-  title: "Components/Card",
+  title: "Card",
   component: Card,
   subcomponents: { CardContent, CardCaption, CardImage, CardList },
   decorators: [withKnobs],

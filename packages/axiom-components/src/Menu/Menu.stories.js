@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import MenuItem from "./MenuItem";
 
 export default {
-  title: "Components/Menu",
+  title: "Menu",
   component: Menu,
   subcomponents: { MenuItem },
 };

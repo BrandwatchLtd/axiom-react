@@ -5,7 +5,7 @@ import SelectOption from "./SelectOption";
 import { useState } from "react";
 
 export default {
-  title: "Components/Select",
+  title: "Select",
   component: Select,
 };
 const options = [

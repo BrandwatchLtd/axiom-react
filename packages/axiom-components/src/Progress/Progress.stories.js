@@ -37,7 +37,7 @@ const SvgFilters = () => (
 );
 
 export default {
-  title: "Components/Progress",
+  title: "Progress",
   component: Progress,
   subcomponents: { ProgressFinite, ProgressInfinite },
   decorators: [

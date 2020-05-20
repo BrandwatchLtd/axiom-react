@@ -9,7 +9,7 @@ import Heading from "../Typography/Heading";
 import Toggle from "../Toggle/Toggle";
 
 export default {
-  title: "Components/Position",
+  title: "Position",
   component: Position,
   subComponents: { PositionTarget, PositionSource },
 };

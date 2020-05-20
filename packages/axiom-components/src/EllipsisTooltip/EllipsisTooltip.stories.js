@@ -2,7 +2,7 @@ import React from "react";
 import EllipsisTooltip from "./EllipsisTooltip";
 
 export default {
-  title: "Components/EllipsisTooltip",
+  title: "EllipsisTooltip",
   component: EllipsisTooltip,
 };
 

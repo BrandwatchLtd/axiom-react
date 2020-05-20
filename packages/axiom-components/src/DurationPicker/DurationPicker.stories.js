@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DurationPicker from "./DurationPicker";
 
 export default {
-  title: "Components/DurationPicker",
+  title: "DurationPicker",
   component: DurationPicker,
 };
 

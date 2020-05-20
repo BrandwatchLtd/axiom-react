@@ -11,7 +11,7 @@ import Button from "../Button/Button";
 import ButtonIcon from "../Button/ButtonIcon";
 
 export default {
-  title: "Components/DatePicker",
+  title: "DatePicker",
   component: DatePicker,
   subcomponents: {
     DatePickerContext,
