@@ -6,7 +6,7 @@ addParameters({
     theme: axiomTheme,
     storySort: {
       method: "alphabetical",
-      order: ["Introduction"],
+      order: ["Introduction", "Getting Started"],
     },
   },
 });
