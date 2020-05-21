@@ -7,17 +7,17 @@ export default {
 };
 
 export function Info() {
-  return <AlertIcon>Info AlertIcon</AlertIcon>;
+  return <AlertIcon />;
 }
 
 export function Success() {
-  return <AlertIcon type="success">Success AlertIcon</AlertIcon>;
+  return <AlertIcon type="success" />;
 }
 
 export function Error() {
-  return <AlertIcon type="error">Error AlertIcon</AlertIcon>;
+  return <AlertIcon type="error" />;
 }
 
 export function Warning() {
-  return <AlertIcon type="warning">Warning AlertIcon</AlertIcon>;
+  return <AlertIcon type="warning" />;
 }
