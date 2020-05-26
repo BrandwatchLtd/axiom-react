@@ -5,7 +5,7 @@ import AlertDialogBody from "./AlertDialogBody";
 import Button from "../Button/Button";
 
 export default {
-  title: "Components/AlertDialog",
+  title: "AlertDialog",
   component: AlertDialog,
   subcomponents: { AlertDialogHeader, AlertDialogBody },
 };

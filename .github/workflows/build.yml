@@ -20,7 +20,7 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
-    - run: yarn install --verbose --frozen-lockfile
+    - run: yarn install --frozen-lockfile
     - run: yarn lint
   commit-lint:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
-    - run: yarn install --verbose --frozen-lockfile
+    - run: yarn install --frozen-lockfile
     - run: yarn test
   build-storybook:
     runs-on: ubuntu-latest
@@ -61,7 +61,7 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
-    - run: yarn install --verbose --frozen-lockfile
+    - run: yarn install --frozen-lockfile
     - run: yarn build:esm:packages
     - run: yarn build:storybook
     - name: Deploy to Netlify
@@ -87,6 +87,6 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
-    - run: yarn install --verbose --frozen-lockfile
+    - run: yarn install --frozen-lockfile
     - run: yarn build:cjs:packages
     

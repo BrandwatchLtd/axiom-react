@@ -4,7 +4,7 @@ import Grid from "../Grid/Grid";
 import GridCell from "../Grid/GridCell";
 
 export default {
-  title: "Components/StatusBadge",
+  title: "StatusBadge",
   component: StatusBadge,
 };
 

@@ -4,7 +4,7 @@ import AlertCard from "../AlertCard/AlertCard";
 import Base from "../Base/Base";
 
 export default {
-  title: "Components/Tip",
+  title: "Tip",
   component: Tip,
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import Candytar from "./Candytar";
 
 export default {
-  title: "Components/Candytar",
+  title: "Candytar",
   component: Candytar,
 };
 

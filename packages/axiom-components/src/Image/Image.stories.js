@@ -3,7 +3,7 @@ import Image from "./Image";
 import AlertBar from "../AlertBar/AlertBar";
 
 export default {
-  title: "Components/Image",
+  title: "Image",
   component: Image,
 };
 

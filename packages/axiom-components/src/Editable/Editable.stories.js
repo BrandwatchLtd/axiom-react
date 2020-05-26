@@ -4,7 +4,7 @@ import EditableLine from "./EditableLine";
 import Heading from "../Typography/Heading";
 
 export default {
-  title: "Components/Editable",
+  title: "Editable",
   component: EditableLine,
 };
 

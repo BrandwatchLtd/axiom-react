@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://axiom.brandwatch.com/">
-    <img alt="axiom" src="./public/assets/axiom-text.png" height="50" width="177">
+    <img alt="axiom" src="./.storybook/static_assets/axiom-text.png" height="50" width="177">
   </a>
 </p>
 

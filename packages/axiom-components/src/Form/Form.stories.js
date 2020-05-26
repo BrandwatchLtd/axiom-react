@@ -6,7 +6,7 @@ import AlertBar from "../AlertBar/AlertBar";
 import Paragraph from "../Typography/Paragraph";
 
 export default {
-  title: "Components/Form",
+  title: "Form",
   component: Form,
 };
 

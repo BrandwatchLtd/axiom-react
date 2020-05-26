@@ -3,7 +3,7 @@ import List from "./List";
 import ListItem from "./ListItem";
 
 export default {
-  title: "Components/List",
+  title: "List",
   component: List,
   subcomponents: { ListItem },
 };

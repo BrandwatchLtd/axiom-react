@@ -8,7 +8,7 @@ import IconButton from "../Icon/IconButton";
 import Button from "../Button/Button";
 
 export default {
-  title: "Components/Tooltip",
+  title: "Tooltip",
   component: Tooltip,
   subcomponents: {
     TooltipTarget,

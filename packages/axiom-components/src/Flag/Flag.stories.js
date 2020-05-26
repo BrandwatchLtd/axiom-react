@@ -2,7 +2,7 @@ import React from "react";
 import Flag from "./Flag";
 
 export default {
-  title: "Components/Flag",
+  title: "Flag",
   component: Flag,
 };
 

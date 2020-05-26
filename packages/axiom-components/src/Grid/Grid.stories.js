@@ -8,7 +8,7 @@ import TextInput from "../Form/TextInput";
 import "./Grid.stories.css";
 
 export default {
-  title: "Components/Grid",
+  title: "Grid",
   component: Grid,
   decorators: [withKnobs],
   subcomponents: { GridCell },

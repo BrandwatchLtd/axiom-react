@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "./Slider";
 
 export default {
-  title: "Components/Slider",
+  title: "Slider",
   component: Slider,
 };
 

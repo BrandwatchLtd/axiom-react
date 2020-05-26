@@ -2,7 +2,7 @@ import React from "react";
 import IconButton from "./IconButton";
 
 export default {
-  title: "Components/IconButton",
+  title: "IconButton",
   component: IconButton,
 };
 

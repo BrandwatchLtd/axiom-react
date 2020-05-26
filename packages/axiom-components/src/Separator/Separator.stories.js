@@ -3,7 +3,7 @@ import Separator from "./Separator";
 import { withKnobs, select } from "@storybook/addon-knobs";
 
 export default {
-  title: "Components/Separator",
+  title: "Separator",
   component: Separator,
   decorators: [
     withKnobs,

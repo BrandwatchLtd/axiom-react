@@ -2,7 +2,7 @@ import React from "react";
 import UsageHint from "./UsageHint";
 
 export default {
-  title: "Components/UsageHint",
+  title: "UsageHint",
   component: UsageHint,
 };
 

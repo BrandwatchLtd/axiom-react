@@ -5,7 +5,7 @@ import GridCell from "../Grid/GridCell";
 import iconNames from "./iconNames";
 
 export default {
-  title: "Components/Icon",
+  title: "Icon",
   component: Icon,
 };
 

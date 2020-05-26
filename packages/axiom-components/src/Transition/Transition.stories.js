@@ -6,7 +6,7 @@ import Icon from "../Icon/Icon";
 import "./Transition.stories.css";
 
 export default {
-  title: "Components/Transition",
+  title: "Transition",
   component: Transition,
   decorators: [(storyFn) => <WrapperComponet storyFn={storyFn} />],
 };

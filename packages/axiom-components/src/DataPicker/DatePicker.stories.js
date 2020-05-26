@@ -10,7 +10,7 @@ import Icon from "../Icon/Icon";
 import Small from "../Typography/Small";
 
 export default {
-  title: "Components/DataPicker",
+  title: "DataPicker",
   component: DataPicker,
 };
 

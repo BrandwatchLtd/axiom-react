@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 import CardContent from "../Card/CardContent";
 
 export default {
-  title: "Components/Base",
+  title: "Base",
   component: Base,
 };
 
