@@ -1,0 +1,132 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Source,
+  Subtitle,
+  Title,
+} from "@storybook/addon-docs/blocks";
+import Heading from "./Heading";
+import Italic from "./Italic";
+import Link from "./Link";
+import Paragraph from "./Paragraph";
+import Small from "./Small";
+import Strike from "./Strike";
+import Strong from "./Strong";
+import Text from "./Text";
+import TextIcon from "./TextIcon";
+import Underline from "./Underline";
+
+<Meta title="Typography" />
+
+<Title>Typography</Title>
+
+Typography plays a key part in helping users navigate an interface. Good typographic rules help establish consistency, hierarchy  and clarity.
+
+The Typography components spread text styles to the Base component see this [Story](/?path=/docs/base--default#text).
+
+<Preview>
+  <Text textColor="success">Some Axiom Text</Text>
+</Preview>
+
+## Headings
+
+Display 2 is used for main headings and titles that need more prominance than Display 1. See the also [Heading](?path=/docs/heading--default)
+
+<Preview>
+  <Story name="Headings">
+    <Heading textSize="display2">Display 2 Heading</Heading>
+  </Story>
+</Preview>
+
+Display 1 is used for main headings and titles.
+
+<Preview>
+  <Heading textSize="display1">Display 1 Heading</Heading>
+</Preview>
+
+Headline is used for section headings, titles, subtitles and labels that need more prominance than Headtitle.
+
+<Preview>
+  <Heading textSize="headline">Headline Heading</Heading>
+</Preview>
+
+Headtitle is used for section headings, titles, subtitles and labels.
+
+<Preview>
+  <Heading textSize="headtitle">Headtitle Heading</Heading>
+</Preview>
+
+Large is used for blocks of text, data points and labels that need more prominance than Body.
+
+<Preview>
+  <Heading textSize="large">Large Heading</Heading>
+</Preview>
+
+<Preview>
+  <Heading textSize="label">Label Heading</Heading>
+</Preview>
+
+## Body Text
+
+Body is primarily used for blocks of text, data points and labels.
+
+<Preview>
+  <Story name="Body Text">
+    <Text>Inline text</Text>
+    <Paragraph>Paragraph</Paragraph>
+  </Story>
+</Preview>
+
+Body Small is used for blocks of text, data points and labels that need less prominance than Body or where space is limited
+
+<Preview>
+  <Small>Small text</Small>
+</Preview>
+
+## Text Style
+
+Strong can be used sparingly when extra emphasis is needed.
+
+<Preview>
+  <Strong>Strong text</Strong>
+</Preview>
+
+Disabled is used exclusively to indicate a non-interactive state
+
+<Preview>
+  <Text textColor="disabled">Strike text</Text>
+</Preview>
+
+Accent is used exclusively to indicate an interactive state such as links.
+
+<Preview>
+  <Text textColor="ui-accent">accent text</Text>
+  <Link>A link</Link>
+</Preview>
+
+Success is used exclusively to indicate an valid state
+
+<Preview>
+  <Text textColor="success">success text</Text>
+</Preview>
+
+Error is used exclusively to indicate an invalid state
+
+<Preview>
+  <Text textColor="error">error text</Text>
+</Preview>
+
+## Icons
+
+Pass any of the [Icons](?path=/docs/icon--all) to `<TextIcon>`
+
+<Preview>
+  <Story name="Text Icons">
+    <Text>
+      <TextIcon name="annotate" />
+      Use TextIcon to align text and icons.
+    </Text>
+  </Story>
+</Preview>

@@ -11,6 +11,9 @@ const TAG_MAP = {
   label: "h6",
 };
 
+/**
+ * See [Typography](?path=/docs/typography--headings) for more examples.
+ */
 export default class Heading extends Component {
   static propTypes = {
     textSize: PropTypes.oneOf([

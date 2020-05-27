@@ -10,6 +10,21 @@ export default {
   component: Base,
 };
 
+/**
+ * textBreak
+ * textCase
+ * textCenter
+ * textColor
+ * textEllipsis
+ * textEmphasize
+ * textLeft
+ * textRight
+ * textStrike
+ * textStrong
+ * textSize
+ * textUnderline
+ */
+
 export function Default() {
   return (
     <React.Fragment>
@@ -49,15 +64,23 @@ SpreadPropsToBase.story = {
 
 export function Text() {
   return (
-    <Paragraph textEmphasize textSize="large">
-      Text styles
-    </Paragraph>
+    <>
+      <Paragraph textEmphasize textSize="large">
+        Text styles
+      </Paragraph>
+      <Paragraph textEmphasize textColor="facebook">
+        Text styles
+      </Paragraph>
+    </>
   );
 }
 
 Text.story = {
   parameters: {
-    docs: { storyDescription: "Base supports a number of text styles" },
+    docs: {
+      storyDescription:
+        "Base supports a number of text styles. Use with caution and consider using the in built [Typography](http://localhost:6006/?path=/docs/typography--text-icon) components.",
+    },
   },
 };
 
