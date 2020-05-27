@@ -66,20 +66,6 @@
 
 .ax-checkbox__indicator {
   border-radius: var(--component-border-radius);
-
-  &::before {
-    position: absolute;
-    top: var(--cmp-checkbox-padding-top);
-    right: var(--cmp-checkbox-padding-horizontal);
-    bottom: var(--cmp-checkbox-padding-bottom);
-    left: var(--cmp-checkbox-padding-horizontal);
-    transform: rotate(-45deg);
-    border-bottom: var(--cmp-checkbox-thickness) solid;
-    border-left: var(--cmp-checkbox-thickness) solid;
-    transition-property: border-color;
-    transition-duration: var(--transition-time-base);
-    transition-timing-function: var(--transition-function);
-  }
 }
 
 .ax-checkbox__label,
