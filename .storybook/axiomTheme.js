@@ -12,7 +12,6 @@ export default create({
   base: "light", // base to extend I guess this is SB's light theme
 
   brandTitle: "Axiom",
-  brandUrl: "https://github.com/BrandwatchLtd/axiom-react",
   brandImage: logo,
   //colorPrimary: "palegoldenrod", // Not sure where this is used
   colorSecondary: active, // active used in side bar for active story
