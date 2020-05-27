@@ -14,7 +14,7 @@
     "postinstall": "lerna run prepublish && lerna run prepare",
     "test": "TZ=utc BABEL_ENV=test jest ./packages --config .jest.json",
     "storybook": "bash ./scripts/start_storybook.sh",
-    "build:storybook": "build-storybook -s ./.storybook/static_assets"
+    "build:storybook": "build-storybook --docs --static-dir ./.storybook/static_assets"
   },
   "workspaces": [
     "packages/*"

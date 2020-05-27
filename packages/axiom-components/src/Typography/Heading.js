@@ -12,7 +12,7 @@ const TAG_MAP = {
 };
 
 /**
- * See [Typography](?path=/docs/typography--headings) for more examples.
+ * See [Typography](/?path=/docs/typography--headings) for more examples.
  */
 export default class Heading extends Component {
   static propTypes = {

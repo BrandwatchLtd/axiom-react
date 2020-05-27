@@ -3,6 +3,7 @@ import axiomTheme from "./axiomTheme";
 
 addParameters({
   options: {
+    initialActive: "addons",
     theme: axiomTheme,
     storySort: {
       method: "alphabetical",
