@@ -18,7 +18,7 @@ Example.story = { args: { children: "Button" } };
 
 export function Variant() {
   return (
-    <ButtonGroup space="x2">
+    <ButtonGroup>
       <Button size="small" variant="primary">
         Primary
       </Button>
