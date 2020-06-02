@@ -90,6 +90,7 @@ export { default as ListItem } from "./List/ListItem";
 export { default as LogoBox } from "./Logo/LogoBox";
 export { default as LogoHorizontal } from "./Logo/LogoHorizontal";
 export { default as LogoTab } from "./Logo/LogoTab";
+export { default as Lozenge } from "./Lozenge/Lozenge";
 export { default as Menu } from "./Menu/Menu";
 export { default as MenuItem } from "./Menu/MenuItem";
 export { default as Modal } from "./Modal/Modal";
