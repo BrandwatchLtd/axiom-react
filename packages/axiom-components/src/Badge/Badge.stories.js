@@ -12,8 +12,6 @@ export function Default() {
     <BadgeGroup>
       <Badge color="moon-lagoon">128%</Badge>
       <Badge color="blast-off">+30031</Badge>
-      <Badge color="giant-leap">Beta</Badge>
-      <Badge color="new-horizon">NEW</Badge>
     </BadgeGroup>
   );
 }
