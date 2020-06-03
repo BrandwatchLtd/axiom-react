@@ -8,6 +8,7 @@ import "./ProgressInfinite.css";
 
 export default class ProgressInfinite extends Component {
   static propTypes = {
+    className: PropTypes.string,
     /** Color of the indicator */
     color: PropTypes.oneOf(["subtle", "white"]),
     /** Size of the indicator */
@@ -24,8 +25,9 @@ export default class ProgressInfinite extends Component {
   componentDidMount = renderFilter;
 
   render() {
-    const { color, ...rest } = this.props;
+    const { color, className, ...rest } = this.props;
     const classes = classnames(
+      className,
       "ax-progress-infinite",
       `ax-progress-infinite--${color}`
     );
