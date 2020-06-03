@@ -13,30 +13,30 @@ import "./Lozenge.css";
 export default function Lozenge({
   className,
   size = "small",
-  type = "default",
+  status = "none",
   children,
   color = "ui-carbon",
   ...rest
 }) {
   const statusTypes = ["success", "warning", "error", "info", "loading"];
-  const isStatusLozenge = statusTypes.includes(type);
+  const isStatusLozenge = statusTypes.includes(status);
 
   const classes = classnames(
     "ax-lozenge",
     className,
     `ax-lozenge--${size}`,
-    `ax-lozenge--${type}`,
+    `ax-lozenge--${status}`,
     `ax-lozenge--${color}`,
     { "ax-status-lozenge": isStatusLozenge }
   );
 
   const indicatorClasses = classnames(
     "ax-status-lozenge__indicator",
-    `ax-status-lozenge__indicator--${type}`
+    `ax-status-lozenge__indicator--${status}`
   );
 
   const StatusIndicator = () => {
-    if (type === "loading") {
+    if (status === "loading") {
       return <Progress className={indicatorClasses} />;
     }
 
@@ -55,8 +55,8 @@ export default function Lozenge({
 
 Lozenge.propTypes = {
   size: PropTypes.oneOf(["small", "medium"]),
-  type: PropTypes.oneOf([
-    "default",
+  status: PropTypes.oneOf([
+    "none",
     "success",
     "warning",
     "error",

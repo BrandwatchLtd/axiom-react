@@ -20,11 +20,11 @@ Default.propTypes = {
 export function StatusLozenges() {
   return (
     <LozengeGroup>
-      <Lozenge type="success">done</Lozenge>
-      <Lozenge type="warning">warning</Lozenge>
-      <Lozenge type="error">error</Lozenge>
-      <Lozenge type="info">info</Lozenge>
-      <Lozenge type="loading">Loading</Lozenge>
+      <Lozenge status="success">done</Lozenge>
+      <Lozenge status="warning">warning</Lozenge>
+      <Lozenge status="error">error</Lozenge>
+      <Lozenge status="info">info</Lozenge>
+      <Lozenge status="loading">Loading</Lozenge>
     </LozengeGroup>
   );
 }
