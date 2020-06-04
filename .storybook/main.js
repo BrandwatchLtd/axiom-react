@@ -4,5 +4,6 @@ module.exports = {
     "@storybook/addon-docs",
     "@storybook/addon-knobs/register",
     "@storybook/addon-a11y/register",
+    "@storybook/addon-controls",
   ],
 };
