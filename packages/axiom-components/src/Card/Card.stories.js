@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { select, withKnobs } from "@storybook/addon-knobs";
 import Card from "./Card";
 import CardContent from "./CardContent";
 import CardImage from "./CardImage";
@@ -20,7 +19,6 @@ export default {
   title: "Card",
   component: Card,
   subcomponents: { CardContent, CardCaption, CardImage, CardList },
-  decorators: [withKnobs],
 };
 
 class CardExampleContainer extends Component {
@@ -106,13 +104,7 @@ export function Default() {
   );
 }
 
-export function WithCardList() {
-  const styleLabel = "style";
-  const styleOptions = ["divided", "seamless", "separate"];
-  const styleDefaultValue = "separate";
-
-  const style = select(styleLabel, styleOptions, styleDefaultValue);
-
+export function WithCardList({ style }) {
   return (
     <CardList style={style}>
       <Card>
@@ -177,3 +169,13 @@ export function WithCardList() {
     </CardList>
   );
 }
+
+WithCardList.args = {
+  style: "separate",
+};
+
+WithCardList.argTypes = {
+  style: {
+    control: { type: "select", options: ["divided", "seamless", "separate"] },
+  },
+};
