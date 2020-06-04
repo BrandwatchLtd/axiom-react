@@ -577,7 +577,7 @@ export function SourceSameWidthAsTarget() {
   );
 }
 
-const SourceSameWidthAsTargetJsx = `
+export const SourceSameWidthAsTargetJsx = `
 function SourceSameWidthAsTarget() {
   const width = "150px";
 
