@@ -37,10 +37,10 @@ export default function Lozenge({
 
   const StatusIndicator = () => {
     if (status === "loading") {
-      return <Progress className={indicatorClasses} />;
+      return <Progress className={indicatorClasses} aria-label={status} />;
     }
 
-    return <Base className={indicatorClasses} />;
+    return <Base className={indicatorClasses} aria-label={status} />;
   };
 
   return (
