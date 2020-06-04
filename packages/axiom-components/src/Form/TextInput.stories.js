@@ -44,7 +44,7 @@ export function WithInlineLabel() {
 
 export function WithIcon() {
   return (
-    <TextInput>
+    <TextInput aria-label="Search">
       <TextInputIcon align="left" name="magnify-glass" />
     </TextInput>
   );
@@ -52,7 +52,7 @@ export function WithIcon() {
 
 export function WithButton() {
   return (
-    <TextInput>
+    <TextInput aria-label="Submit">
       <TextInputButton align="left" name="magnify-glass">
         Submit
       </TextInputButton>
@@ -91,7 +91,7 @@ export function WithRef() {
   }, [inputRef.current]);
 
   return (
-    <TextInput inputRef={inputRef}>
+    <TextInput inputRef={inputRef} aria-label="Submit">
       <TextInputButton align="left" name="magnify-glass">
         Submit
       </TextInputButton>

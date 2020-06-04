@@ -70,10 +70,10 @@ export function Shape() {
 export function Icon() {
   return (
     <ButtonGroup>
-      <Button shape="circle" variant="secondary">
+      <Button shape="circle" variant="secondary" aria-label="twitter">
         <ButtonIcon name="twitter" />
       </Button>
-      <Button shape="circle" variant="quaternary">
+      <Button shape="circle" variant="quaternary" aria-label="close">
         <ButtonIcon name="cross" />
       </Button>
       <Button variant="primary">

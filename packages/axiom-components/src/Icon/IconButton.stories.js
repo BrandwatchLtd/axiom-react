@@ -7,5 +7,5 @@ export default {
 };
 
 export function Default() {
-  return <IconButton name="ellipsis" />;
+  return <IconButton name="ellipsis" aria-label="open" />;
 }
