@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React, { useState } from "react";
-import { select, withKnobs } from "@storybook/addon-knobs";
 import Dropdown from "./Dropdown";
 import DropdownTarget from "./DropdownTarget";
 import DropdownSource from "./DropdownSource";
@@ -32,7 +31,6 @@ export default {
     DropdownMenuItem,
   },
   includeStories: [],
-  decorators: [withKnobs],
 };
 
 export function MenuDropdown() {

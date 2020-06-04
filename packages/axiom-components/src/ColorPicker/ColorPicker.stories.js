@@ -1,21 +1,19 @@
 /* eslint-disable no-console */
 import React, { useState } from "react";
 import ColorPicker from "./ColorPicker";
-import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 export default {
   title: "ColorPicker",
   component: ColorPicker,
-  decorators: [withKnobs],
 };
 
-export function Default() {
+export function Default(args) {
   const [selectedColor, setSelectedColor] = useState();
   return (
     <ColorPicker
       selected={selectedColor}
+      {...args}
       onSelectColor={(color) => setSelectedColor(color)}
-      blankOption={boolean("false")}
     />
   );
 }

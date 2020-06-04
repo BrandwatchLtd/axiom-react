@@ -1,5 +1,4 @@
 import React from "react";
-import { select, withKnobs } from "@storybook/addon-knobs";
 import Grid from "./Grid";
 import GridCell from "./GridCell";
 import Button from "../Button/Button";
@@ -10,7 +9,6 @@ import "./Grid.stories.css";
 export default {
   title: "Grid",
   component: Grid,
-  decorators: [withKnobs],
   subcomponents: { GridCell },
 };
 
@@ -36,26 +34,10 @@ export function Default() {
   );
 }
 
-export function Configurable() {
-  const directionLabel = "direction";
-  const directionOptions = ["row", "column"];
-  const directionDefaultValue = "row";
-
-  const direction = select(
-    directionLabel,
-    directionOptions,
-    directionDefaultValue
-  );
-
-  const guttersLabel = "gutters";
-  const guttersOptions = [false, "tiny", "small", "medium", "large"];
-  const guttersDefaultValue = "medium";
-
-  const gutters = select(guttersLabel, guttersOptions, guttersDefaultValue);
-
+export function Configurable(args) {
   return (
     <div style={{ height: "100vh", width: "100wh" }}>
-      <Grid direction={direction} gutters={gutters}>
+      <Grid {...args}>
         <GridCell>
           <div className="color-box">One</div>
         </GridCell>
