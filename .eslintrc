@@ -13,5 +13,13 @@
   "rules": {
     "react/no-children-prop": [0], //React router uses <Route children>
     "react/no-unescaped-entities": [0], //Overzealous erroring of qoutes in JSX
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**.stories.js"],
+      "rules": {  
+        "react/prop-types": [0]
+      }
+    }
+  ]
 }
