@@ -2654,6 +2654,17 @@
     vue-docgen-api "^4.7.0"
     vue-docgen-loader "^1.4.0"
 
+"@storybook/addon-toolbars@^6.0.0-beta.21":
+  version "6.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.0.0-beta.21.tgz#2f704997c88e00a8842264c0be543d9c03ba3f94"
+  integrity sha512-TE3D11Yf2CHBf9nAiF/GGK6J9GNmr9NDU5JkiYiwl+NBbR2Wp6gtaVlwBa1d7y35zyBtKQd/xBYsqoqVo8VOsg==
+  dependencies:
+    "@storybook/addons" "6.0.0-beta.21"
+    "@storybook/api" "6.0.0-beta.21"
+    "@storybook/client-api" "6.0.0-beta.21"
+    "@storybook/components" "6.0.0-beta.21"
+    core-js "^3.0.1"
+
 "@storybook/addons@6.0.0-beta.21":
   version "6.0.0-beta.21"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.0.0-beta.21.tgz#17ba2a8de4a4e64bdf1de26eeb6604316a3f2e98"
