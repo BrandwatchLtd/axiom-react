@@ -35,7 +35,12 @@ addParameters({
     theme: axiomTheme,
     storySort: {
       method: "alphabetical",
-      order: ["Introduction", "Getting Started", "Typography"],
+      order: [
+        "Introduction",
+        "Getting Started",
+        "Colors & Themes",
+        "Typography",
+      ],
     },
   },
 });
