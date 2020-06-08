@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+rsync -r assets storybook-static
+
 cd storybook-static;
 
 # delete everything in bucket gsutil throws if it's already empty
