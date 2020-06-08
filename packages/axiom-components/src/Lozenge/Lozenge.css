@@ -2,13 +2,12 @@
   display: inline-flex;
   align-items: center;
   max-width: 10rem;
-  height: 1.25rem;
+  height: 1rem;
   padding: 0.125rem var(--spacing-grid-size--x2);
   border-radius: var(--component-border-radius);
   background-color: var(--color-theme-background--shade-4);
   color: var(--color-theme-text);
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-medium);
   line-height: normal;
 }
 
