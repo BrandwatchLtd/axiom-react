@@ -20,3 +20,9 @@ gsutil -m acl -r ch -u AllUsers:R gs://axiom.platform-prod.gcp0.bwcom.net
 
 # Set assests to cache for 1 year
 gsutil -m setmeta -h "Cache-Control:max-age=31536000" gs://axiom.platform-prod.gcp0.bwcom.net/assets/**
+
+# don't cache html files
+gsutil -m setmeta \
+  -h "Content-Type:text/html" \
+  -h "Cache-Control:no-cache, max-age=0" \
+  gs://axiom.platform-prod.gcp0.bwcom.net/**.html
