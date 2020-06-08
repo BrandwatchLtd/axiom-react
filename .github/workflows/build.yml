@@ -92,7 +92,7 @@ jobs:
     - run: yarn build:esm:packages
     - run: yarn build:storybook
     - name: Deploy to gcp
-      run: publish:site
+      run: yarn publish:site
   build-cjs:
     runs-on: ubuntu-latest
     steps:
