@@ -23,7 +23,7 @@ export default create({
   appBorderRadius: componentBorderRadius,
 
   // Typography
-  fontBase: "Roboto",
+  fontBase: '"Roboto", Helvetica',
   fontCode: "Monaco", // font used for code samples
 
   // Text colors
