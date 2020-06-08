@@ -19,6 +19,7 @@
 
 .ax-status-lozenge {
   font-variant: small-caps;
+  text-transform: uppercase;
 }
 
 .ax-status-lozenge__indicator {
