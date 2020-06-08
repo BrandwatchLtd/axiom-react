@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.0.0...@brandwatch/axiom-components@11.1.0) (2020-06-08)
+
+
+### Bug Fixes
+
+* 🐛 Reduce font weight and small lozenge height ([197e156](https://github.com/BrandwatchLtd/axiom-react/commit/197e1566842b2e4b6c70a769aff342947a68323a))
+* 🐛 Set status text to uppercase ([09029f6](https://github.com/BrandwatchLtd/axiom-react/commit/09029f636cb208fbee22a3a102ad2924d15ed4b6))
+* 🐛 update snapshots ([8b6a92a](https://github.com/BrandwatchLtd/axiom-react/commit/8b6a92a7422fa8f2f0313f42e2c508b67a771c5e))
+* **Checkbox:** 🐛 Improve checkbox check mark ([7763f25](https://github.com/BrandwatchLtd/axiom-react/commit/7763f254032a856b156e7342720043983d27a057))
+* 🐛 Add all icon types to proptypes ([c36632f](https://github.com/BrandwatchLtd/axiom-react/commit/c36632fd287689b9f2d7cd9201ba5bebf27ee7d6))
+* **Tooltip:** 🐛 correct default position ([71895b3](https://github.com/BrandwatchLtd/axiom-react/commit/71895b3b64a05612a62ccfeca95037f1fc79c7c4))
+
+
+### Features
+
+* **lozenge:** 🎸 Adds new Lozenge component ([76be5bc](https://github.com/BrandwatchLtd/axiom-react/commit/76be5bce105b5c3861f2d26096ac0cb0022a5128))
+* **lozenge:** 🎸 Rename type to status ([e6be5c5](https://github.com/BrandwatchLtd/axiom-react/commit/e6be5c5bcd649359df79e0b4d5b4f7b858e220f9))
+* **progressInfinite:** 🎸 Add classname to ProgressInfinite ([6128a3e](https://github.com/BrandwatchLtd/axiom-react/commit/6128a3e50309d178a22d00963a68cd5a895ad07b))
+
+
+### Reverts
+
+* Revert "docs: ✏️ update button example to include variant" ([7493e41](https://github.com/BrandwatchLtd/axiom-react/commit/7493e416cf0825f6ebe7e0ed71c297537c399727))
+
+
+
+
+
 # [11.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@10.2.1...@brandwatch/axiom-components@11.0.0) (2020-05-05)
 
 
