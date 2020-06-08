@@ -6,11 +6,15 @@ export default {
   component: AlertBar,
 };
 
-export function Example(props) {
-  return <AlertBar {...props} />;
+export function Default({ children, onRemoveClick, size, type }) {
+  return (
+    <AlertBar onRemoveClick={onRemoveClick} size={size} type={type}>
+      {children}
+    </AlertBar>
+  );
 }
 
-Example.story = { args: { children: "Alert Bar" } };
+Default.story = { args: { children: "Alert Bar" } };
 
 export function Info() {
   return <AlertBar type="info">Success AlertBar</AlertBar>;

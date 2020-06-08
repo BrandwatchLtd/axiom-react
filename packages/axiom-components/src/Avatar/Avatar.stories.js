@@ -6,10 +6,12 @@ export default {
   component: Avatar,
 };
 
-export function Default() {
+export function Default({ border, children, size, shape }) {
   return (
-    <Avatar size="4rem" src={"/avatar.png"}>
-      Default Avatar
+    <Avatar border={border} size={size} shape={shape} src={"/avatar.png"}>
+      {children}
     </Avatar>
   );
 }
+
+Default.story = { args: { children: "username", size: "4rem" } };

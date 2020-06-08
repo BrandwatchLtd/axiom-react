@@ -6,6 +6,10 @@ export default {
   component: AlertIcon,
 };
 
+export function Default({ size, style, type }) {
+  return <AlertIcon size={size} style={style} type={type} />;
+}
+
 export function Info() {
   return <AlertIcon />;
 }

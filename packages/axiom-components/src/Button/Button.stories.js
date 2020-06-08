@@ -10,11 +10,36 @@ export default {
   subcomponents: { ButtonGroup, ButtonIcon, ProgressButton },
 };
 
-export function Example(props) {
-  return <Button {...props} />;
+export function Default({
+  active,
+  children,
+  color,
+  disabled,
+  joinedLeft,
+  joinedRight,
+  shape,
+  variant,
+  size,
+  full,
+}) {
+  return (
+    <Button
+      active={active}
+      color={color}
+      disabled={disabled}
+      joinedLeft={joinedLeft}
+      joinedRight={joinedRight}
+      shape={shape}
+      variant={variant}
+      size={size}
+      full={full}
+    >
+      {children}
+    </Button>
+  );
 }
 
-Example.story = { args: { children: "Button" } };
+Default.story = { args: { children: "Button" } };
 
 export function Variant() {
   return (

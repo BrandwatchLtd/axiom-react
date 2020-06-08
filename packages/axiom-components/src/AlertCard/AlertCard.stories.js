@@ -6,6 +6,21 @@ export default {
   component: AlertCard,
 };
 
+export function Default({ children, onRemoveClick, shade, size, type }) {
+  return (
+    <AlertCard
+      onRemoveClick={onRemoveClick}
+      shade={shade}
+      size={size}
+      type={type}
+    >
+      {children}
+    </AlertCard>
+  );
+}
+
+Default.story = { args: { children: "Alert Card" } };
+
 export function Info() {
   return <AlertCard shade="shade-2">Info AlertCard</AlertCard>;
 }

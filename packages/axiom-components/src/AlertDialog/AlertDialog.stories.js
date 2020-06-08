@@ -10,7 +10,7 @@ export default {
   subcomponents: { AlertDialogHeader, AlertDialogBody },
 };
 
-export function Default() {
+export function Default({ type }) {
   const [showDialog, setShowDialog] = useState(true);
 
   return (
@@ -18,6 +18,7 @@ export function Default() {
       <Button onClick={() => setShowDialog(true)}>Open Dialog</Button>
 
       <AlertDialog
+        type={type}
         isOpen={showDialog}
         onRequestClose={() => setShowDialog(false)}
       >

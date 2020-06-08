@@ -9,7 +9,7 @@ export default {
   component: Animation,
 };
 
-export function Default() {
+export function Default({ name, timingFunction, children }) {
   const [animated, setAnimated] = useState(false);
 
   return (
@@ -20,8 +20,16 @@ export function Default() {
         </Button>
       </GridCell>
       <GridCell>
-        <Animation toggled={animated}>Animated text</Animation>
+        <Animation
+          toggled={animated}
+          name={name}
+          timingFunction={timingFunction}
+        >
+          {children}
+        </Animation>
       </GridCell>
     </Grid>
   );
 }
+
+Default.story = { args: { children: "Animated text" } };
