@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Base from "../Base/Base";
 import EllipsisTooltip from "../EllipsisTooltip/EllipsisTooltip";
-import Progress from "../Progress/Progress";
+import StatusIndicator from "./StatusIndicator";
 
 import "./Lozenge.css";
 
@@ -30,23 +30,10 @@ export default function Lozenge({
     { "ax-status-lozenge": isStatusLozenge }
   );
 
-  const indicatorClasses = classnames(
-    "ax-status-lozenge__indicator",
-    `ax-status-lozenge__indicator--${status}`
-  );
-
-  const StatusIndicator = () => {
-    if (status === "loading") {
-      return <Progress className={indicatorClasses} aria-label={status} />;
-    }
-
-    return <Base className={indicatorClasses} aria-label={status} />;
-  };
-
   return (
     <Base Component="span" className={classes} role="status" {...rest}>
       <EllipsisTooltip>
-        {isStatusLozenge && <StatusIndicator />}
+        {isStatusLozenge && <StatusIndicator status={status} />}
         {children}
       </EllipsisTooltip>
     </Base>
