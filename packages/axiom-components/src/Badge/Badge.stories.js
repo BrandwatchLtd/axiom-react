@@ -7,13 +7,19 @@ export default {
   component: Badge,
 };
 
-export function Default() {
+export function Default(props) {
+  return (
+    <Badge color="blast-off" {...props}>
+      99%
+    </Badge>
+  );
+}
+
+export function GroupedBadges(props) {
   return (
     <BadgeGroup>
       <Badge color="moon-lagoon">128%</Badge>
       <Badge color="blast-off">+30031</Badge>
-      <Badge color="giant-leap">Beta</Badge>
-      <Badge color="new-horizon">NEW</Badge>
     </BadgeGroup>
   );
 }

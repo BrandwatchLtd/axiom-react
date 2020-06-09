@@ -4,10 +4,13 @@ import classnames from "classnames";
 import Base from "../Base/Base";
 import "./Badge.css";
 
+/**
+ * A badge should only contain a numeric value.
+ **/
 export default class Badge extends Component {
   static propTypes = {
     /** Content to appear inside the Badge */
-    children: PropTypes.node,
+    children: PropTypes.string,
     /** Colour of the Badge */
     color: PropTypes.oneOf([
       "faded",
