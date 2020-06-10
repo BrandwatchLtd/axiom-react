@@ -6,12 +6,14 @@ export default {
   component: Toggle,
 };
 
-export function Default() {
+export function Default({ children, ...rest }) {
   const [toggled, setToggled] = useState(false);
 
   return (
-    <Toggle onToggle={() => setToggled((t) => !t)} toggled={toggled}>
-      Toggle label
+    <Toggle onToggle={() => setToggled((t) => !t)} toggled={toggled} {...rest}>
+      {children}
     </Toggle>
   );
 }
+
+Default.story = { args: { children: "label" } };
