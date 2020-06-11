@@ -6,7 +6,7 @@ const withThemeWrapper = (Story, context) => {
   const { theme } = context.globalArgs;
 
   return (
-    <div className={`ax-theme--${theme}`}>
+    <div className={`ax-theme--${theme}`} style={{ boxSizing: "border-box" }}>
       <Story {...context} />
     </div>
   );
