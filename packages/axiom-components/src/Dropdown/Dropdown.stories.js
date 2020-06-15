@@ -17,8 +17,6 @@ import TextIcon from "../Typography/TextIcon";
 import Paragraph from "../Typography/Paragraph";
 import Button from "../Button/Button";
 
-import "./Dropdown.stories.css";
-
 export default {
   title: "Dropdown",
   component: Dropdown,
