@@ -4,6 +4,7 @@
     "build:flags": "NODE_ENV=production BABEL_ENV=build bash ./scripts/build_flags.sh",
     "build:cjs:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_packages.sh",
     "build:esm:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_esm_packages.sh",
+    "build:packages": "yarn build:cjs:packages && yarn build:esm:packages",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint 'packages/**/*.css'",
     "lint:js": "eslint --config .eslintrc packages",
