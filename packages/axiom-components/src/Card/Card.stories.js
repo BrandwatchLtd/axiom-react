@@ -55,11 +55,11 @@ class CardExampleContent extends Component {
           textStrong
           verticalAlign="middle"
         >
-          <Grid shrink>
+          <GridCell shrink>
             <Link style="subtle">
               <TextIcon name="retweet" /> 1
             </Link>
-          </Grid>
+          </GridCell>
 
           <GridCell shrink>
             <Link style="subtle">
