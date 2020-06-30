@@ -80,9 +80,9 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
         className="ax-checkbox__indicator"
       >
         <svg
-          height="17"
+          height="14"
           viewBox="0 0 16 16"
-          width="17"
+          width="14"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -134,9 +134,9 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
         className="ax-checkbox__indicator"
       >
         <svg
-          height="17"
+          height="14"
           viewBox="0 0 16 16"
-          width="17"
+          width="14"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -189,9 +189,9 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
         className="ax-checkbox__indicator"
       >
         <svg
-          height="17"
+          height="14"
           viewBox="0 0 16 16"
-          width="17"
+          width="14"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g

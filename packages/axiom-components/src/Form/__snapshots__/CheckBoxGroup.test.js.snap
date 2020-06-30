@@ -16,9 +16,9 @@ exports[`CheckBox renders with defaultProps 1`] = `
       className="ax-checkbox__indicator"
     >
       <svg
-        height="17"
+        height="14"
         viewBox="0 0 16 16"
-        width="17"
+        width="14"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
