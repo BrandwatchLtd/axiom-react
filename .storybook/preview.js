@@ -3,7 +3,7 @@ import React from "react";
 import axiomTheme from "./axiomTheme";
 
 const withThemeWrapper = (Story, context) => {
-  const { theme } = context.globalArgs;
+  const { theme } = context.globals;
 
   return (
     <div className={`ax-theme--${theme}`} style={{ boxSizing: "border-box" }}>

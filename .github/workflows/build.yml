@@ -62,7 +62,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - run: yarn install --frozen-lockfile
-    - run: yarn build:esm:packages
     - run: yarn build:storybook
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v1.1
