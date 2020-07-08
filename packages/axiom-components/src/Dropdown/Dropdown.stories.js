@@ -19,19 +19,19 @@ import Button from "../Button/Button";
 
 import "./Dropdown.stories.css";
 
-export default {
-  title: "Dropdown",
-  component: Dropdown,
-  subcomponents: {
-    DropdownTarget,
-    DropdownSource,
-    DropdownContext,
-    DropdownContent,
-    DropdownMenu,
-    DropdownMenuItem,
-  },
-  includeStories: [],
-};
+// export default {
+//   title: "Dropdown",
+//   component: Dropdown,
+//   subcomponents: {
+//     DropdownTarget,
+//     DropdownSource,
+//     DropdownContext,
+//     DropdownContent,
+//     DropdownMenu,
+//     DropdownMenuItem,
+//   },
+//   includeStories: [],
+// };
 
 export function MenuDropdown() {
   return (
