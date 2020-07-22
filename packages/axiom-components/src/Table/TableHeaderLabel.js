@@ -82,6 +82,7 @@ export default class TableHeaderLabel extends Component {
           )}
           {sortable && (
             <TextIcon
+              className="ax-table__header-icon"
               cloak={sortDirection === undefined}
               name={
                 sortDirection === "descending" ? "triangle-down" : "triangle-up"

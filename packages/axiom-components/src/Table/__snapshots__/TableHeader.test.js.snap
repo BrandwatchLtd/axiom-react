@@ -15,7 +15,7 @@ exports[`TableHeader renders 1`] = `
       >
         Test
         <svg
-          className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+          className="ax-table__header-icon ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
