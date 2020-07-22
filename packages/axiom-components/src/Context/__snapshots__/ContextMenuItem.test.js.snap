@@ -78,31 +78,7 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
       />
       <span
         className="ax-checkbox__indicator"
-      >
-        <svg
-          height="14"
-          viewBox="0 0 16 16"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="none"
-            fillRule="evenodd"
-            stroke="none"
-            strokeWidth="1"
-          >
-            <g
-              fillRule="nonzero"
-              stroke="white"
-              strokeWidth="2.1"
-            >
-              <path
-                d="M3.25 8.25L6 11l6.75-6.75"
-              />
-            </g>
-          </g>
-        </svg>
-      </span>
+      />
     </label>
   </div>
   <div
@@ -146,6 +122,7 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
             strokeWidth="1"
           >
             <g
+              className="tick"
               fillRule="nonzero"
               stroke="white"
               strokeWidth="2.1"
@@ -187,31 +164,7 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
       />
       <span
         className="ax-checkbox__indicator"
-      >
-        <svg
-          height="14"
-          viewBox="0 0 16 16"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="none"
-            fillRule="evenodd"
-            stroke="none"
-            strokeWidth="1"
-          >
-            <g
-              fillRule="nonzero"
-              stroke="white"
-              strokeWidth="2.1"
-            >
-              <path
-                d="M3.25 8.25L6 11l6.75-6.75"
-              />
-            </g>
-          </g>
-        </svg>
-      </span>
+      />
     </label>
   </div>
   <div

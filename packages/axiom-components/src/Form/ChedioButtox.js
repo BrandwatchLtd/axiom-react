@@ -8,6 +8,7 @@ import "./ChedioButtox.css";
 
 export default class ChedioButtox extends Component {
   static propTypes = {
+    checked: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
@@ -28,6 +29,7 @@ export default class ChedioButtox extends Component {
       title,
       onClick,
       indeterminate,
+      checked,
       ...rest
     } = this.props;
 
@@ -57,13 +59,14 @@ export default class ChedioButtox extends Component {
       >
         <input
           {...rest}
+          checked={checked}
           className={`${className}__input`}
           disabled={disabled}
           type={inputType}
         />
 
         <span className={`${className}__indicator`}>
-          {inputType === "checkbox" && <Tick />}
+          {inputType === "checkbox" && checked && <Tick />}
         </span>
         {children && <span className={`${className}__label`}>{children}</span>}
       </Base>
