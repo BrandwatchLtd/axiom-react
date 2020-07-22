@@ -8,21 +8,25 @@ export default {
   component: CheckBox,
 };
 
-export function Default() {
-  const [checked, setChecked] = useState(false);
+export function Default({ children, checked, ...rest }) {
+  const [isChecked, setChecked] = useState(checked);
+
   return (
     <CheckBoxGroup>
       <CheckBox
-        checked={checked}
+        checked={isChecked}
         name="lorem"
         onChange={() => setChecked((c) => !c)}
         title="Lorem ipsum dolor sit amet"
+        {...rest}
       >
-        Lorem ipsum
+        {children}
       </CheckBox>
     </CheckBoxGroup>
   );
 }
+
+Default.args = { children: "Lorem ipsum", checked: false };
 
 export function CheckBoxGroups() {
   const ToggableCheckBox = ({ children }) => {
