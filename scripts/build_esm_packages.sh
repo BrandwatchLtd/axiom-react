@@ -2,7 +2,7 @@
 set -e
 
 # Prepare
-npx lerna exec --parallel -- rm -rf dist
+npx lerna exec --parallel -- rm -rf dist/esm
 
 ## ESM
 npx lerna exec --parallel -- mkdir -p "dist/esm"
