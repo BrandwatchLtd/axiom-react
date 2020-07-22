@@ -19,6 +19,10 @@ const getComponent = (props = {}) => {
 jest.mock("../Position/Position");
 
 describe("Range", () => {
+  beforeEach(() => {
+    requiredProps.onChange.mockClear();
+  });
+
   it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
@@ -45,6 +49,16 @@ describe("Range", () => {
     });
 
     expect(requiredProps.onChange).toHaveBeenCalledWith([0, 1]);
+  });
+
+  it("doesn't reset its values when min and max are infinite", () => {
+    getComponent({
+      min: Infinity,
+      max: -Infinity,
+      values: [-1.5, 2.4],
+    });
+
+    expect(requiredProps.onChange).toHaveBeenCalledTimes(0);
   });
 
   describe("withBoundingClientRect", () => {

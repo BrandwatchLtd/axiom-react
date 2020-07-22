@@ -88,6 +88,9 @@ export default class Range extends Component {
   ensureValueInRange(value) {
     const { min, max, step } = this.props;
     const valueInRange = Math.max(min, Math.min(value, max));
+    if (!isFinite(valueInRange) || !isFinite(step)) {
+      return value;
+    }
     return step * Math.round(valueInRange / step);
   }
 

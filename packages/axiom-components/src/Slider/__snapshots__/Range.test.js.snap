@@ -24,21 +24,11 @@ exports[`Range renders with custom props 1`] = `
               Array [
                 Array [
                   3,
-                  13,
-                ],
-              ],
-              Array [
-                Array [
-                  3,
                   12.600000000000001,
                 ],
               ],
             ],
             "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
               Object {
                 "type": "return",
                 "value": undefined,
