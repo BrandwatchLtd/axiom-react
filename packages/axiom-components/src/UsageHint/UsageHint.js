@@ -17,22 +17,24 @@ export default class UsageHint extends PureComponent {
     children: PropTypes.node,
     position: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     showArrow: PropTypes.bool,
+    inline: PropTypes.bool,
     /** Total width of the usageHint dropdown context */
     width: PropTypes.string,
   };
 
   static defaultProps = {
     showArrow: true,
+    inline: false,
   };
 
   render() {
-    const { children, width, ...rest } = this.props;
+    const { children, inline, width, ...rest } = this.props;
 
     return (
       <Dropdown {...rest} showArrow>
         <DropdownTarget>
           <Link style="subtle">
-            <Icon name="question-mark-circle" size="1rem" />
+            <Icon inline={inline} name="question-mark-circle" size="1rem" />
           </Link>
         </DropdownTarget>
         <DropdownSource>
