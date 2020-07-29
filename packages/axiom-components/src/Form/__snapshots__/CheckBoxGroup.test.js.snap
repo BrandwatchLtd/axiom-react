@@ -8,6 +8,7 @@ exports[`CheckBox renders with defaultProps 1`] = `
     className="ax-checkbox ax-space--x2"
   >
     <input
+      aria-checked={false}
       checked={false}
       className="ax-checkbox__input"
       type="checkbox"

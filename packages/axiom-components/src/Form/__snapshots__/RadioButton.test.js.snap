@@ -5,6 +5,7 @@ exports[`RadioButton renders with defaultProps 1`] = `
   className="ax-radio ax-space--x2"
 >
   <input
+    aria-checked={false}
     className="ax-radio__input"
     type="radio"
   />
@@ -24,6 +25,7 @@ exports[`RadioButton renders with disabled 1`] = `
   className="ax-radio ax-radio--disabled ax-space--x2"
 >
   <input
+    aria-checked={false}
     className="ax-radio__input"
     disabled={true}
     type="radio"
@@ -44,6 +46,7 @@ exports[`RadioButton renders with invalid 1`] = `
   className="ax-radio ax-radio--invalid ax-space--x2"
 >
   <input
+    aria-checked={false}
     className="ax-radio__input"
     type="radio"
   />

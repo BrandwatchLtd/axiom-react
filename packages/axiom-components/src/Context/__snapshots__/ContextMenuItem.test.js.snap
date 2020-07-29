@@ -72,6 +72,7 @@ exports[`ContextMenuItem renders with multiSelect 1`] = `
       onClick={[Function]}
     >
       <input
+        aria-checked={false}
         checked={false}
         className="ax-checkbox__input"
         type="checkbox"
@@ -102,6 +103,7 @@ exports[`ContextMenuItem renders with multiSelect and selected 1`] = `
       onClick={[Function]}
     >
       <input
+        aria-checked={true}
         checked={true}
         className="ax-checkbox__input"
         type="checkbox"
@@ -158,6 +160,7 @@ exports[`ContextMenuItem renders with multiSelect and title 1`] = `
       onClick={[Function]}
     >
       <input
+        aria-checked={false}
         checked={false}
         className="ax-checkbox__input"
         type="checkbox"

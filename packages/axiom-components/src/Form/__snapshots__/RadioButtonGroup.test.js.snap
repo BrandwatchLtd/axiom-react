@@ -8,6 +8,7 @@ exports[`RadioButton renders with defaultProps 1`] = `
     className="ax-radio ax-space--x2"
   >
     <input
+      aria-checked={false}
       className="ax-radio__input"
       type="radio"
     />

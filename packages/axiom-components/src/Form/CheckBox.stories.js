@@ -49,3 +49,38 @@ export function CheckBoxGroups() {
     </CheckBoxGroup>
   );
 }
+
+export function Indeterminate() {
+  return (
+    <CheckBoxGroup>
+      <CheckBox name="lorem" indeterminate title="Lorem ipsum dolor sit amet">
+        Indeterminate
+      </CheckBox>
+    </CheckBoxGroup>
+  );
+}
+
+export function Disabled() {
+  return (
+    <CheckBoxGroup>
+      <CheckBox
+        disabled
+        name="lorem"
+        checked
+        title="Lorem ipsum dolor sit amet"
+      >
+        Disabled
+      </CheckBox>
+    </CheckBoxGroup>
+  );
+}
+
+export function Invaild() {
+  return (
+    <CheckBoxGroup>
+      <CheckBox invalid name="lorem" checked title="Lorem ipsum dolor sit amet">
+        Invaild
+      </CheckBox>
+    </CheckBoxGroup>
+  );
+}
