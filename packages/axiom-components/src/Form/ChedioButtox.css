@@ -145,3 +145,7 @@
 .ax-checkbox--disabled .tick {
   stroke: var(--color-theme-border);
 }
+
+.ax-checkbox--disabled .indeterminate {
+  fill: var(--color-theme-border);
+}

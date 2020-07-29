@@ -59,23 +59,12 @@ exports[`CheckBox renders with indeterminate 1`] = `
       width="14"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g
-        fill="none"
+      <path
+        className="indeterminate"
+        d="M3 7h10v2H3z"
+        fill="white"
         fillRule="evenodd"
-        stroke="none"
-        strokeWidth="1"
-      >
-        <g
-          className="tick"
-          fillRule="nonzero"
-          stroke="white"
-          strokeWidth="2.1"
-        >
-          <path
-            d="M3.25 8.25L6 11l6.75-6.75"
-          />
-        </g>
-      </g>
+      />
     </svg>
   </span>
   <span
