@@ -29,6 +29,18 @@ export default function ChedioButtox({
     }
   };
 
+  const getAriaChecked = () => {
+    if (indeterminate) {
+      return "mixed";
+    }
+
+    if (checked) {
+      return true;
+    }
+
+    return false;
+  };
+
   const handleClick =
     onClick &&
     ((e) => {
@@ -59,6 +71,7 @@ export default function ChedioButtox({
         className={`${className}__input`}
         disabled={disabled}
         type={inputType}
+        aria-checked={getAriaChecked()}
       />
 
       <span className={`${className}__indicator`}>
