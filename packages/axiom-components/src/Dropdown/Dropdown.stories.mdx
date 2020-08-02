@@ -26,47 +26,25 @@ The Dropdown component and it's supporting components can be combined to produce
 ### Form Input
 
 <Preview>
-  <Story
-    name="Form Input"
-    parameters={{ docs: { source: { code: stories.DropdownWithStateJsx } } }}
-  >
-    {stories.DropdownWithState()}
-  </Story>
+  <Story name="Form Input" story={stories.DropdownWithState} />
 </Preview>
 
 ### Pick from Menu
 
 <Preview>
-  <Story
-    name="Menu"
-    parameters={{ docs: { source: { code: stories.MenuDropdownJsx } } }}
-  >
-    {stories.MenuDropdown()}
-  </Story>
+  <Story name="Menu" story={stories.MenuDropdown} />
 </Preview>
 
 ### Link
 
 <Preview>
-  <Story
-    name="Link"
-    parameters={{ docs: { source: { code: stories.DropdownLinkJsx } } }}
-  >
-    {stories.DropdownLink()}
-  </Story>
+  <Story name="Link" story={stories.DropdownLink} />
 </Preview>
 
 ### Mutliselect
 
 <Preview>
-  <Story
-    name="Mutliselect"
-    parameters={{
-      docs: { source: { code: stories.DropdownMenuMutiSelectJsx } },
-    }}
-  >
-    {stories.DropdownMenuMutiSelect()}
-  </Story>
+  <Story name="Mutliselect" story={stories.DropdownMenuMutiSelect} />
 </Preview>
 
 ### Custom Dropdown
@@ -74,14 +52,7 @@ The Dropdown component and it's supporting components can be combined to produce
 Any JSX you include as a child of DropdownContext will be rendered in the popup. This allows you to create custom dropdown menus.
 
 <Preview>
-  <Story
-    name="Custom Dropdown"
-    parameters={{
-      docs: { source: { code: stories.CustomDropdownJsx } },
-    }}
-  >
-    {stories.CustomDropdown()}
-  </Story>
+  <Story name="Custom Dropdown" story={stories.CustomDropdown} />
 </Preview>
 
 ## Building Blocks
@@ -136,14 +107,7 @@ You can use `<DropdownMenuItem>` and `<DropdownMenuHeader>`/`<DropdownMenuFooter
 Dropdown groups can be used to seperate content in a DropdownMenu
 
 <Preview>
-  <Story
-    name="Menu groups"
-    parameters={{
-      docs: { source: { code: stories.DropdownMenuGroupsJsx } },
-    }}
-  >
-    {stories.DropdownMenuGroups()}
-  </Story>
+  <Story name="Menu groups" story={stories.DropdownMenuGroups} />
 </Preview>
 
 ##### Dropdown Header & Footer
@@ -151,14 +115,7 @@ Dropdown groups can be used to seperate content in a DropdownMenu
 These can be used provide a header and footer in a DropdownMenu
 
 <Preview>
-  <Story
-    name="Header & Footer"
-    parameters={{
-      docs: { source: { code: stories.DropdownMenuHeaderFooterJsx } },
-    }}
-  >
-    {stories.DropdownMenuHeaderFooter()}
-  </Story>
+  <Story name="Header & Footer" story={stories.DropdownMenuHeaderFooter} />
 </Preview>
 
 ## Positioning
@@ -172,12 +129,8 @@ You can use the position and offset prop to control where the Source is displaye
 <Preview>
   <Story
     name="Source to be same width as Target"
-    parameters={{
-      docs: { source: { code: stories.SourceSameWidthAsTargetJsx } },
-    }}
-  >
-    {stories.SourceSameWidthAsTarget()}
-  </Story>
+    story={stories.SourceSameWidthAsTarget}
+  />
 </Preview>
 
 #### Programmatically opening and closing the Dropdown
@@ -186,12 +139,5 @@ Normally this behaviour is handled for you. However sometimes you might want to 
 You can pass a ref into `<Dropdown>`. You can use this ref to access the instance methods on the underlying component e.g. `dropdownRef.current.close()` or `dropdownRef.current.open()`
 
 <Preview>
-  <Story
-    name="Closing with ref"
-    parameters={{
-      docs: { source: { code: stories.ClosingTheDropdownJsx } },
-    }}
-  >
-    {stories.ClosingTheDropdown()}
-  </Story>
+  <Story name="Closing with ref" story={stories.ClosingTheDropdown} />
 </Preview>
