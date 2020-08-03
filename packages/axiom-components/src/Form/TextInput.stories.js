@@ -25,10 +25,10 @@ export function InputEvents() {
   return <TextInput onKeyPress={handleOnKeyPress} />;
 }
 
-InputEvents.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+InputEvents.parameters = {
+  docs: {
+    description: {
+      story:
         "TextInput spreads the props it doesnt use to the underlying HTML Input element. For example here we pass an onKeyPress listener.",
     },
   },
@@ -82,6 +82,15 @@ export function WithValidation() {
     </InlineValidation>
   );
 }
+
+WithValidation.parameters = {
+  docs: {
+    description: {
+      story:
+        "To show inline validation message you can wrap your component with InlineValidation and pass the message you want to show or null if there is no error. See the example below or check out this [sandbox](https://codesandbox.io/s/axiom-form-validation-r9g9n?file=/src/index.js).",
+    },
+  },
+};
 
 export function WithRef() {
   const inputRef = useRef();
