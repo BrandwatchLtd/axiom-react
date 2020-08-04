@@ -11,8 +11,8 @@ export default {
   subcomponents: { TextInputButton, TextInputIcon },
 };
 
-export function Default() {
-  return <TextInput />;
+export function Default(args) {
+  return <TextInput {...args} />;
 }
 
 export function OnChange() {
@@ -87,7 +87,7 @@ export function WithRef() {
   const inputRef = useRef();
 
   useEffect(() => {
-    inputRef.current?.focus();
+    inputRef.current.value = "Added with a ref";
   }, [inputRef.current]);
 
   return (
