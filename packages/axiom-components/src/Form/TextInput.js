@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-
+import classnames from "classnames";
 import { findComponent } from "@brandwatch/axiom-utils";
 import Base from "../Base/Base";
 import Validate from "../Validation/Validate";
@@ -14,6 +14,7 @@ export default class TextInput extends Component {
   static propTypes = {
     /** Optional TextInputIcon or TextInputButton all other children are ignored */
     children: PropTypes.node,
+    className: PropTypes.string,
     /** Disables interactions and applies styling */
     disabled: PropTypes.bool,
     /** See Validate[error] */
@@ -116,6 +117,7 @@ export default class TextInput extends Component {
   render() {
     const {
       children,
+      className,
       disabled,
       error,
       valid,
@@ -145,6 +147,8 @@ export default class TextInput extends Component {
     const showOnClear = onClear && value && !isInProgress;
     const showIcon = icon && (!isInProgress || icon.props.align === "left");
 
+    const inputContainerclasses = classnames("ax-input__container", className);
+
     return (
       <Validate
         error={error}
@@ -153,7 +157,7 @@ export default class TextInput extends Component {
         value={value}
       >
         {(isValid) => (
-          <Base className="ax-input__container" space={space}>
+          <Base className={inputContainerclasses} space={space}>
             <InputWrapper
               disabled={disabled}
               hasFocus={hasFocus}
