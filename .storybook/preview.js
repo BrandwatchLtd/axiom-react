@@ -37,6 +37,7 @@ addParameters({
       order: [
         "Introduction",
         "Getting Started",
+        "Customising Axiom",
         "Colors & Themes",
         "Typography",
       ],

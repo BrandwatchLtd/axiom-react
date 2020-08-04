@@ -1,0 +1,46 @@
+<Meta title="Customising Axiom" />
+
+# Customising Axiom
+
+Axiom aims to cover the vast majority of use cases but inevitably there will be times when you need to implement a behaviour or style that Axiom does not support. 
+When this occurs you have a few options, we would ask before considering these options you reach out to us so we can consider updating Axiom to support more use cases.
+
+<br /> 
+
+## Custom CSS classNames
+Nearly all components now support custom ClassNames being passed, please raise a PR or issue if you find one that does not. 
+These classnames will then be rendered in the final DOM output e.g
+
+```
+<Table className="my-nice-class"/>
+```
+
+Some components render multiple children in this case we will provide a custom prop to describe the element you want to target.
+
+```
+  <TextInput className="my-custom-class" inputClassName="my-input-class"/>
+
+  <Base className={className}>
+    <TextInput className={inputClassName} />
+  </Base>
+```
+
+## Using Axiom CSS Variables
+This feature is not yet fully documented however `@brandwatch/axiom-materials` defines utility CSS variables which can be used to compose your own components 
+or add spacing or other styles that are consistent with the Axiom designs.
+
+One common use case is to apply color or spacing e.g.
+
+```
+// app.css
+
+.box {
+  padding: var(--spacing-grid-size--x2);
+  background: var(--color-theme-background--shade-2);
+}
+
+```
+
+Exported CSS variables can be found [here](https://github.com/BrandwatchLtd/axiom-react/blob/master/packages/axiom-materials/src/importCssVariables.js)
+
+You can also use this [Code Sandbox](https://codesandbox.io/s/axiom-materials-import-importcssvariables-9mwhi) as an example template.
