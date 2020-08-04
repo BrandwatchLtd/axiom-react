@@ -123,12 +123,22 @@ export function Progress() {
   const [isInProgress, setIsInProgress] = useState(true);
 
   return (
-    <ProgressButton
-      isInProgress={isInProgress}
-      onClick={() => setIsInProgress((p) => !p)}
-    >
-      Submit
-    </ProgressButton>
+    <ButtonGroup>
+      <ProgressButton
+        isInProgress={isInProgress}
+        onClick={() => setIsInProgress((p) => !p)}
+        variant="primary"
+      >
+        Submit
+      </ProgressButton>
+      <ProgressButton
+        isInProgress={isInProgress}
+        onClick={() => setIsInProgress((p) => !p)}
+        variant="secondary"
+      >
+        Submit
+      </ProgressButton>
+    </ButtonGroup>
   );
 }
 

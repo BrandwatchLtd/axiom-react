@@ -12,6 +12,11 @@ const progressSizeMap = {
   large: "1.5rem",
 };
 
+const progressColorMap = {
+  primary: "white",
+  secondary: "subtle",
+};
+
 export default class ProgressButton extends Component {
   static propTypes = {
     /** Content to be inserted into the Button */
@@ -20,6 +25,8 @@ export default class ProgressButton extends Component {
     isInProgress: PropTypes.bool,
     /** Size of the Button. See Button[size]. */
     size: PropTypes.oneOf(["small", "medium", "large"]),
+    /** variant of the Button, which affects its coloring and sizing */
+    variant: PropTypes.oneOf(["primary", "secondary"]),
   };
 
   render() {
@@ -27,6 +34,7 @@ export default class ProgressButton extends Component {
       children,
       isInProgress,
       size = Button.defaultProps.size,
+      variant = Button.defaultProps.variant,
       ...rest
     } = this.props;
 
@@ -35,7 +43,7 @@ export default class ProgressButton extends Component {
     });
 
     return (
-      <Button {...rest} active={isInProgress} size={size} variant="primary">
+      <Button {...rest} active={isInProgress} size={size} variant={variant}>
         <div className={classes}>
           <Cloak
             className="ax-progress-button__content"
@@ -48,7 +56,10 @@ export default class ProgressButton extends Component {
             className="ax-progress-button__indicator"
             invisible={!isInProgress}
           >
-            <ProgressInfinite color="white" sizeRem={progressSizeMap[size]} />
+            <ProgressInfinite
+              color={progressColorMap[variant]}
+              sizeRem={progressSizeMap[size]}
+            />
           </Cloak>
         </div>
       </Button>
