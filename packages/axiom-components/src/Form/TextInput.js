@@ -14,6 +14,7 @@ export default class TextInput extends Component {
   static propTypes = {
     /** Optional TextInputIcon or TextInputButton all other children are ignored */
     children: PropTypes.node,
+    /** Class applied to input container*/
     className: PropTypes.string,
     /** Disables interactions and applies styling */
     disabled: PropTypes.bool,
@@ -21,6 +22,8 @@ export default class TextInput extends Component {
     error: PropTypes.func,
     /** Display label inline */
     inlineLabel: PropTypes.bool,
+    /** Class applied to input element */
+    inputClassName: PropTypes.string,
     /** Pass this prop to get ref to the Text Component instance. */
     inputRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     /** Applies styling to indicate the users input was invalid */
@@ -121,6 +124,7 @@ export default class TextInput extends Component {
       disabled,
       error,
       valid,
+      inputClassName,
       invalid,
       isInProgress,
       isTarget,
@@ -148,6 +152,7 @@ export default class TextInput extends Component {
     const showIcon = icon && (!isInProgress || icon.props.align === "left");
 
     const inputContainerclasses = classnames("ax-input__container", className);
+    const inputclasses = classnames("ax-input", inputClassName);
 
     return (
       <Validate
@@ -182,7 +187,7 @@ export default class TextInput extends Component {
                 {...rest}
                 Component="input"
                 baseRef={inputRef}
-                className="ax-input"
+                className={inputclasses}
                 disabled={disabled}
                 onBlur={this.handleOnBlur.bind(this)}
                 onFocus={this.handleOnFocus.bind(this)}
