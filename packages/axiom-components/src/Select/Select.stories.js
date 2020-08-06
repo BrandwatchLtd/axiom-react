@@ -1,105 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "./Select";
-import SelectOptionGroup from "./SelectOptionGroup";
-import SelectOption from "./SelectOption";
-import { useState } from "react";
+import Form from "../Form/Form";
 
 export default {
   title: "Select",
   component: Select,
 };
-const options = [
-  { label: "Apple", value: "ap" },
-  { label: "Banana", value: "ba" },
-  { label: "Grape", value: "gr" },
-  { label: "Grapefruit", value: "gra" },
-  { label: "Mango", value: "ma" },
-  { label: "Pear", value: "pe" },
-  { label: "Peach", value: "pa" },
-  { label: "Pineapple", value: "pi", disabled: true },
-  { label: "Plum", value: "pl" },
-];
 
-export function Default() {
-  const [selectedValue, setSelectedValue] = useState("");
+const options = Array.from({ length: 50 }, (_, index) => ({
+  id: index,
+  name: `item-${index}`,
+  value: `${index}`,
+}));
 
-  const onSelect = (newSelectedValue) => {
-    setSelectedValue(
-      options.find((option) => option.value === newSelectedValue).label
-    );
-  };
+export function Default(props) {
+  const [selectedValue, setSelectedValue] = useState("25");
 
   return (
-    <Select
-      onChange={() => {}}
-      onSelect={onSelect}
-      placeholder="Select an item"
-      value={selectedValue}
-    >
-      <SelectOptionGroup>
-        <SelectOption value="ap">Apple</SelectOption>
-        <SelectOption value="ba">Banana</SelectOption>
-        <SelectOption value="gr">Grape</SelectOption>
-        <SelectOption value="gra">Grapefruit</SelectOption>
-        <SelectOption value="ma">Mango</SelectOption>
-        <SelectOption value="pe">Pear</SelectOption>
-        <SelectOption value="pa">Peach</SelectOption>
-        <SelectOption disabled value="pi">
-          Pineapple
-        </SelectOption>
-        <SelectOption value="pl">Plum</SelectOption>
-      </SelectOptionGroup>
-    </Select>
+    <div style={{ width: "200px" }}>
+      <Select
+        {...props}
+        options={options}
+        selectedValue={selectedValue}
+        onChange={setSelectedValue}
+      />
+    </div>
   );
 }
 
-export function WithDynamicSelect() {
-  const [selectedValue, setSelectedValue] = useState();
-  const [value, setValue] = useState();
+Default.args = {
+  label: "Items",
+  placeholder: "Choose an Item",
+  disabled: false,
+};
 
-  const onSelect = (newSelectedValue) => {
-    setSelectedValue(
-      options.find((option) => option.value === newSelectedValue).label
-    );
-  };
-
-  const onChange = (event) => {
-    const selectedOption = options.find(
-      (option) =>
-        option.label.toLowerCase() === event.target.value.toLowerCase()
-    );
-
-    setSelectedValue(selectedOption?.value);
-    setValue(event.target.value);
-  };
-
-  const onClear = () => {
-    setSelectedValue("");
-    setValue("");
-  };
+export function InForm(props) {
+  const [selectedValue, setSelectedValue] = useState("25");
 
   return (
-    <Select
-      onChange={onChange}
-      onClear={onClear}
-      onSelect={onSelect}
-      placeholder="Select an item"
-      value={value}
-      selectedValue={selectedValue}
-    >
-      <SelectOptionGroup>
-        <SelectOption value="ap">Apple</SelectOption>
-        <SelectOption value="ba">Banana</SelectOption>
-        <SelectOption value="gr">Grape</SelectOption>
-        <SelectOption value="gra">Grapefruit</SelectOption>
-        <SelectOption value="ma">Mango</SelectOption>
-        <SelectOption value="pe">Pear</SelectOption>
-        <SelectOption value="pa">Peach</SelectOption>
-        <SelectOption disabled value="pi">
-          Pineapple
-        </SelectOption>
-        <SelectOption value="pl">Plum</SelectOption>
-      </SelectOptionGroup>
-    </Select>
+    <Form>
+      <Select
+        {...props}
+        options={options}
+        selectedValue={selectedValue}
+        onChange={setSelectedValue}
+      />
+    </Form>
   );
 }

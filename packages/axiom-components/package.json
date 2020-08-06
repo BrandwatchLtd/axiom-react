@@ -27,6 +27,7 @@
     "react-dom": "^16.8.6",
     "react-transition-group": "^2.3.0",
     "resize-observer-polyfill": "^1.5.1",
+    "use-resize-observer": "^6.1.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

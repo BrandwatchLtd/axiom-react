@@ -1,78 +1,84 @@
+import React, { useState, useEffect } from "react";
+import useResizeObserver from "use-resize-observer";
 import PropTypes from "prop-types";
-import React, { Children, Component } from "react";
-import omit from "lodash.omit";
 import Dropdown from "../Dropdown/Dropdown";
-import DropdownContext from "../Dropdown/DropdownContext";
 import DropdownSource from "../Dropdown/DropdownSource";
 import DropdownTarget from "../Dropdown/DropdownTarget";
-import SelectInput from "./SelectInput";
+import DropdownContext from "../Dropdown/DropdownContext";
+import DropdownMenu from "../Dropdown/DropdownMenu";
+import DropdownMenuItem from "../Dropdown/DropdownMenuItem";
+import TextInput from "../Form/TextInput";
+import TextInputIcon from "../Form/TextInputIcon";
 
-export default class Select extends Component {
-  static propTypes = {
-    /**
-     * Children inside Select should contain all of and
-     * only SelectOption and SelectOptionGroup!
-     */
-    children: PropTypes.node,
-    /** Event that is fired when the input field is cleared */
-    onClear: PropTypes.func,
-    /** Invoked when the SelectMenu is closed. */
-    onRequestClose: PropTypes.func,
-    /** Invoked when the SelectMenu is opened. */
-    onRequestOpen: PropTypes.func,
-    /** Event that is fired when an option is selected */
-    onSelect: PropTypes.func,
-    /** The value of the selected option  */
-    selectedValue: PropTypes.any,
-    /** Value of the input field */
-    value: PropTypes.string.isRequired,
-  };
+function Select({
+  options,
+  label,
+  selectedValue,
+  onChange,
+  placeholder,
+  ...rest
+}) {
+  const [dropdownMenuRef, setDropdownMenuRef] = useState(null);
+  const [dropdownSourceWidth, setDropdownSourceWidth] = useState();
 
-  static defaultProps = {
-    value: "",
-    onSelect: () => {},
-  };
+  const { ref: dropdownTargetRef } = useResizeObserver({
+    onResize: ({ width }) => {
+      setDropdownSourceWidth(`${width}px`);
+    },
+  });
 
-  static childContextTypes = {
-    handleSelectOption: PropTypes.func.isRequired,
-    selectedOptionValue: PropTypes.any,
-  };
+  useEffect(() => {
+    if (!dropdownMenuRef) return;
 
-  constructor(props) {
-    super(props);
-    this.handleSelectOption = this.handleSelectOption.bind(this);
-  }
-
-  getChildContext() {
-    return {
-      handleSelectOption: this.handleSelectOption,
-      selectedOptionValue: this.props.selectedValue,
-    };
-  }
-
-  handleSelectOption(value) {
-    this.props.onSelect(value);
-  }
-
-  render() {
-    const { children, onRequestClose, onRequestOpen, ...props } = this.props;
-
-    return (
-      <Dropdown
-        enabled={Children.count(children) > 0}
-        flip="mirror"
-        onRequestClose={onRequestClose}
-        onRequestOpen={onRequestOpen}
-        position="bottom"
-      >
-        <DropdownTarget>
-          <SelectInput {...omit(props, ["onSelect", "selectedValue"])} />
-        </DropdownTarget>
-
-        <DropdownSource focusOnOpen>
-          <DropdownContext>{children}</DropdownContext>
-        </DropdownSource>
-      </Dropdown>
+    const selectedItem = dropdownMenuRef?.querySelector(
+      ".ax-context-menu__item--selected"
     );
-  }
+    selectedItem?.focus({ preventScroll: true });
+    selectedItem?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [dropdownMenuRef]);
+
+  return (
+    <Dropdown {...rest}>
+      <DropdownTarget baseRef={dropdownTargetRef}>
+        <TextInput
+          isTarget
+          onChange={() => {}}
+          placeholder={placeholder}
+          value={selectedValue}
+          label={label}
+        >
+          <TextInputIcon name="chevron-down" />
+        </TextInput>
+      </DropdownTarget>
+      <DropdownSource>
+        <DropdownContext width={dropdownSourceWidth}>
+          <DropdownMenu
+            baseRef={(ele) => {
+              setDropdownMenuRef(ele);
+            }}
+          >
+            {options.map((item) => (
+              <DropdownMenuItem
+                key={item.id}
+                onClick={() => onChange(item.value)}
+                selected={selectedValue === item.value}
+              >
+                {item.name}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenu>
+        </DropdownContext>
+      </DropdownSource>
+    </Dropdown>
+  );
 }
+
+Select.propTypes = {
+  options: PropTypes.array.isRequired,
+  selectedValue: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  label: PropTypes.string.isRequired,
+};
+
+export default Select;

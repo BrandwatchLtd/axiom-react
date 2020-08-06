@@ -1,18 +1,18 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Select from "./Select";
+import Select_DEPRECATED from "./Select_DEPRECATED";
 import SelectOption from "./SelectOption";
 
 const getComponent = (props = {}) =>
   renderer.create(
-    <Select {...props}>
+    <Select_DEPRECATED {...props}>
       <SelectOption value="1" />
       <SelectOption value="2" />
       <SelectOption value="3" />
-    </Select>
+    </Select_DEPRECATED>
   );
 
-describe("Select", () => {
+describe("Select_DEPRECATED", () => {
   it("renders with defaultProps", () => {
     const component = getComponent();
     const tree = component.toJSON();
