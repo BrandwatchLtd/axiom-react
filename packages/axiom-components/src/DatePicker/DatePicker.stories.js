@@ -8,6 +8,7 @@ import DatePickerRangeSelection from "./DatePickerRangeSelection";
 import DatePickerSelection from "./DatePickerSelection";
 import DatePickerViewMonth from "./DatePickerViewMonth";
 import Button from "../Button/Button";
+import TextInput from "../Form/TextInput";
 import ButtonIcon from "../Button/ButtonIcon";
 
 export default {
@@ -25,11 +26,21 @@ export default {
 };
 
 export function SingleDate() {
-  const [appliedDate, setAppliedDate] = useState();
-  const [selectedDate, setSelectedDate] = useState();
+  const [appliedDate, setAppliedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  let formattedDate = null;
+
+  if (appliedDate) {
+    formattedDate = new Intl.DateTimeFormat("default", {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    }).format(appliedDate);
+  }
 
   return (
-    <div>
+    <div style={{ width: "100px" }}>
       <DatePicker
         onSelect={({ date }) => {
           setSelectedDate(date);
@@ -42,13 +53,12 @@ export function SingleDate() {
         }}
         selectedDate={selectedDate}
       >
-        <Button>
-          Show Date Picker <ButtonIcon name="chevron-down" />
-        </Button>
+        <TextInput
+          label="Start date"
+          value={formattedDate}
+          placeholder="dd/mm/yy"
+        />
       </DatePicker>
-      <div>
-        <pre>Date: {appliedDate?.toString()}</pre>
-      </div>
     </div>
   );
 }
