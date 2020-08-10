@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Duration, DateTime } from "luxon";
+import { mediumDate } from "@brandwatch/axiom-formatting";
 import DatePicker from "./DatePicker";
 import DatePickerContext from "./DatePickerContext";
 import DatePickerControls from "./DatePickerControls";
@@ -64,56 +66,65 @@ export function SingleDate() {
 }
 
 export function RangeSelect() {
-  const [dateEnd, setdateEnd] = useState();
-  const [dateStart, setdateStart] = useState();
-  const [range, setrange] = useState();
+  const [dateStart, setDateStart] = useState(null);
+  const [dateEnd, setDateEnd] = useState(null);
+  const [range, setRange] = useState(null);
 
-  const rangeSelections = [
-    {
-      label: "Today",
-      range: "P1D",
-    },
-    {
-      label: "7D",
-      range: "P7D",
-    },
-    {
-      label: "14D",
-      range: "P14D",
-    },
-    {
-      label: "1M",
-      range: "P1M",
-    },
-    {
-      label: "2M",
-      range: "P2M",
-    },
-  ];
+  const handleSelect = ({ dateEnd, dateStart, range }) => {
+    if (range) {
+      const end = DateTime.local().endOf("day");
+      dateEnd = end.toJSDate();
+      dateStart = end
+        .minus(Duration.fromISO(range))
+        .plus(1, "microsecond")
+        .toJSDate();
+    }
+
+    setDateStart(dateStart);
+    setDateEnd(dateEnd);
+    setRange(range);
+  };
+
+  const getSelectedDateValue = () => {
+    if (dateStart && dateEnd) {
+      return `${mediumDate(dateStart)} ${
+        dateEnd ? `- ${mediumDate(dateEnd)}` : ""
+      }`;
+    }
+
+    return "";
+  };
 
   return (
-    <div>
-      <DatePicker
-        onSelect={({ dateStart, dateEnd, range }) => {
-          setdateEnd(dateEnd);
-          setdateStart(dateStart);
-          setrange(range);
-        }}
-        rangeSelect
-        rangeSelections={rangeSelections}
-        selectedEndDate={dateEnd}
-        selectedRange={range}
-        selectedStartDate={dateStart}
-      >
-        <Button>
-          Show Date Picker <ButtonIcon name="chevron-down" />
-        </Button>
-      </DatePicker>
-      <div>
-        <pre>dateStart: {dateStart?.toString()}</pre>
-        <pre>dateEnd: {dateEnd?.toString()}</pre>
-        <pre>range: {range?.toString()}</pre>
-      </div>
-    </div>
+    <DatePicker
+      onSelect={handleSelect}
+      rangeSelect
+      rangeSelections={[
+        { label: "Today", range: "P1D" },
+        { label: "7D", range: "P7D" },
+        { label: "14D", range: "P14D" },
+        { label: "1M", range: "P1M" },
+        { label: "2M", range: "P2M" },
+      ]}
+      selectedStartDate={dateStart}
+      selectedEndDate={dateEnd}
+      selectedRange={range}
+      view="double"
+    >
+      <TextInput
+        placeholder="Select a date"
+        readOnly
+        value={getSelectedDateValue()}
+      />
+    </DatePicker>
   );
 }
+
+RangeSelect.story = {
+  parameters: {
+    docs: {
+      storyDescription:
+        "You will need to pass range formats that match your date library and convert them back into start/end dates as we do here in handleSelect",
+    },
+  },
+};
