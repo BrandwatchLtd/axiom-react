@@ -65,6 +65,42 @@ export function SingleDate() {
   );
 }
 
+export function DoubleDatePicker() {
+  const [dateStart, setDateStart] = useState(null);
+  const [dateEnd, setDateEnd] = useState(null);
+
+  const handleSelect = ({ dateEnd, dateStart }) => {
+    setDateStart(dateStart);
+    setDateEnd(dateEnd);
+  };
+
+  const getSelectedDateValue = () => {
+    if (dateStart && dateEnd) {
+      return `${mediumDate(dateStart)} ${
+        dateEnd ? `- ${mediumDate(dateEnd)}` : ""
+      }`;
+    }
+
+    return "";
+  };
+
+  return (
+    <DatePicker
+      onSelect={handleSelect}
+      rangeSelect
+      selectedStartDate={dateStart}
+      selectedEndDate={dateEnd}
+      view="double"
+    >
+      <TextInput
+        placeholder="Select a date"
+        readOnly
+        value={getSelectedDateValue()}
+      />
+    </DatePicker>
+  );
+}
+
 export function RangeSelect() {
   const [dateStart, setDateStart] = useState(null);
   const [dateEnd, setDateEnd] = useState(null);
