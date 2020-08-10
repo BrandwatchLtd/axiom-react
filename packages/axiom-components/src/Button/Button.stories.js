@@ -162,10 +162,11 @@ export function IconInButton() {
     </Button>
   );
 }
-IconInButton.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+
+IconInButton.parameters = {
+  docs: {
+    description: {
+      story:
         "Mono Icons will fill with the color of their parent. This can be useful when the color needs to change to provide contrast to a parent like in this Button.",
     },
   },

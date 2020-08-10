@@ -53,10 +53,10 @@ export function SpreadPropsToBase() {
   return <Paragraph textStrike>Strike Text</Paragraph>;
 }
 
-SpreadPropsToBase.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+SpreadPropsToBase.parameters = {
+  docs: {
+    description: {
+      story:
         "Internally nearly all components in Axiom render Base. This means you can pass Base properites via parent components and they will be spread into Base. In the example below Paragraph passes textStrike to Base",
     },
   },
@@ -75,10 +75,10 @@ export function Text() {
   );
 }
 
-Text.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+Text.parameters = {
+  docs: {
+    description: {
+      story:
         "Base supports a number of text styles. Use with caution and consider using the in built [Typography](http://localhost:6006/?path=/docs/typography--text-icon) components.",
     },
   },
@@ -100,10 +100,10 @@ export function BaseRef() {
   );
 }
 
-BaseRef.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+BaseRef.parameters = {
+  docs: {
+    description: {
+      story:
         "You can use BaseRef to get a reference to the underlying DOM element for each component.",
     },
   },

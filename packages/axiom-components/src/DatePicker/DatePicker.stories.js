@@ -156,10 +156,10 @@ export function RangeSelect() {
   );
 }
 
-RangeSelect.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+RangeSelect.parameters = {
+  docs: {
+    description: {
+      story:
         "You will need to pass range formats that match your date library and convert them back into start/end dates as we do here in handleSelect",
     },
   },

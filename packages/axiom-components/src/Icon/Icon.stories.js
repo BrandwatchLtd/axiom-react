@@ -90,10 +90,10 @@ export function SocialMono() {
   );
 }
 
-SocialMono.story = {
-  parameters: {
-    docs: {
-      storyDescription:
+SocialMono.parameters = {
+  docs: {
+    description: {
+      story:
         "Mono Icons will fill with the color of their parent. This can be useful when the color needs to change to provide contrast.",
     },
   },

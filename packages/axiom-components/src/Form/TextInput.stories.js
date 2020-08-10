@@ -25,11 +25,11 @@ export function InputEvents() {
   return <TextInput onKeyPress={handleOnKeyPress} />;
 }
 
-InputEvents.story = {
-  parameters: {
-    docs: {
-      storyDescription:
-        "TextInput spreads the props it doesnt use to the underlying HTML Input element. For example here we pass an onKeyPress listener.",
+InputEvents.parameters = {
+  docs: {
+    description: {
+      story:
+        "TextInput spreads the props it doesn't use to the underlying HTML Input element. For example here we pass an onKeyPress listener.",
     },
   },
 };
