@@ -84,10 +84,22 @@ class CardExampleContent extends Component {
   }
 }
 
-export function Default() {
+export function Default(props) {
   return (
     <CardExampleContainer>
-      <Card onClick={function () {}} shadow>
+      <Card onClick={function () {}} shadow {...props}>
+        <CardContent size="large">
+          <CardExampleContent />
+        </CardContent>
+      </Card>
+    </CardExampleContainer>
+  );
+}
+
+export function WithImage(props) {
+  return (
+    <CardExampleContainer>
+      <Card onClick={function () {}} shadow {...props}>
         <CardImage src="card.jpg">
           <CardCaption textStrong>
             <List style="inline">
@@ -104,10 +116,10 @@ export function Default() {
   );
 }
 
-export function WithCardList({ style }) {
+export function WithCardList({ style, ...rest }) {
   return (
     <CardList style={style}>
-      <Card>
+      <Card {...rest}>
         <CardContent>
           <Grid>
             <GridCell none>
@@ -127,7 +139,7 @@ export function WithCardList({ style }) {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card {...rest}>
         <CardContent>
           <Grid>
             <GridCell none>
@@ -147,7 +159,7 @@ export function WithCardList({ style }) {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card {...rest}>
         <CardContent>
           <Grid>
             <GridCell none>

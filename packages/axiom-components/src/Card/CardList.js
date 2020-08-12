@@ -1,44 +1,59 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
 
-export default class CardList extends Component {
-  static propTypes = {
-    /** Cards to be inserted in the CardList */
-    children: PropTypes.node.isRequired,
-    /** Class name to be appended to the element */
-    className: PropTypes.string,
-    /** Style of the list */
-    style: PropTypes.oneOf(["divided", "seamless", "separate"]),
-  };
+const cardListStyleProps = {
+  divided: {
+    border: false,
+    shadow: false,
+    space: "x0",
+  },
+  seamless: {
+    border: false,
+    shadow: false,
+    space: "x0",
+  },
+  separate: {
+    border: true,
+    shadow: false,
+    space: "x2",
+  },
+};
 
-  static defaultProps = {
-    style: "separate",
-  };
+export default function CardList({
+  children,
+  className,
+  style = "separate",
+  ...rest
+}) {
+  const classes = classnames(
+    "ax-card-list",
+    `ax-card-list--${style}`,
+    className
+  );
 
-  static childContextTypes = {
-    cardListStyle: PropTypes.string.isRequired,
-  };
+  const mappedChildren = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, {
+        ...cardListStyleProps[style],
+      });
+    }
+    return child;
+  });
 
-  getChildContext() {
-    return {
-      cardListStyle: this.props.style,
-    };
-  }
-
-  render() {
-    const { children, className, style, ...rest } = this.props;
-    const classes = classnames(
-      "ax-card-list",
-      `ax-card-list--${style}`,
-      className
-    );
-
-    return (
-      <Base {...rest} className={classes}>
-        {children}
-      </Base>
-    );
-  }
+  return (
+    <Base {...rest} className={classes}>
+      {mappedChildren}
+    </Base>
+  );
 }
+
+CardList.propTypes = {
+  /** Cards to be inserted in the CardList */
+  children: PropTypes.node.isRequired,
+  /** Class name to be appended to the element */
+  className: PropTypes.string,
+  /** Style of the list */
+  style: PropTypes.oneOf(["divided", "seamless", "separate"]),
+};
