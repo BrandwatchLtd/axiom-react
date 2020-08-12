@@ -52,7 +52,7 @@
   border: 0;
   background: none;
   color: inherit;
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: var(--component-line-height);
   transition-property: color;
   transition-duration: var(--transition-time-base);
