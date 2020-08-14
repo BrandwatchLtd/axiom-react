@@ -1,0 +1,91 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Source,
+  Subtitle,
+  Title,
+} from "@storybook/addon-docs/blocks";
+import * as stories from "./Form.stories.js";
+import Form from "./Form";
+
+<Meta title="Form" component={Form} />
+
+<Title>Form</Title>
+
+The Form component allows you to perform validation and handle submit.
+
+<Preview>
+  <Story name="Default" story={stories.Default} />
+</Preview>
+
+<Props />
+
+## Form Validation
+
+You can use the Form component and Axiom input elements to perform validation on input fields. Axiom also allows you to set custom validation errors and messages.
+You can see a full working example [here](https://codesandbox.io/s/zljzx99vyl?file=/src/index.js), this example is further explained below.
+<br/>
+
+### Required Validation
+
+<Preview>
+  <Story name="Required Validation" story={stories.SimpleValidation} />
+</Preview>
+
+In the example above we set required on the text input and provide a required message to the form element.
+
+```jsx
+<Form
+  onSubmit={handleSubmit}
+  requiredError="Please complete all the required fields"
+>
+<TextInput
+  required
+>
+```
+
+This validation error is then passed to our onSubmit callback. In our callback we are free to deal with the error how we see fit. This example makes use of the AlertBar to render any error.
+
+```js
+const handleSubmit = (event, validationError) => {
+  event.preventDefault();
+  setValidationError(validationError);
+
+  if (!validationError) {
+    window.alert("No validation errors! Your form has been submitted.");
+  }
+};
+
+{validationError && (
+  <AlertBar space="x1" type="error">
+    {validationError}
+  </AlertBar>
+)}
+```
+
+### Custom Validations
+
+If you want to further customise validation checks and messages you can use the error & pattern props.
+In this example we not only check the input text is required but also that it is a brandwatch email address.
+
+<Preview>
+  <Story name="Custom Validations" story={stories.CustomValidation} />
+</Preview>
+
+Axiom checks the user input against each of the provided patterns, if an error is found the error callback is called with the failed pattern. Finally we return the correct error message depending which pattern failed.
+
+```jsx
+<TextInput
+  error={(failedRegex) => {
+    if (failedRegex.includes(emailRegex)) {
+      return "Please enter a valid email address";
+    }
+    if (failedRegex.includes(brandwatchRegex)) {
+      return "Please enter a Brandwatch email address";
+    }
+  }}
+  patterns={[emailRegex, brandwatchRegex]}
+>
+```

@@ -3,9 +3,6 @@ import React, { Component } from "react";
 import Base from "../Base/Base";
 import Validation from "../Validation/Validation";
 
-/**
- * The Form component allows you to perform validation before submit.
- */
 export default class Form extends Component {
   static propTypes = {
     children: PropTypes.node,
