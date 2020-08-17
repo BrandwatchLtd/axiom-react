@@ -9,6 +9,12 @@ export default {
   component: Icon,
 };
 
+export function Default(props) {
+  return <Icon {...props} />;
+}
+
+Default.args = { name: "source" };
+
 export function All() {
   return (
     <Grid responsive={false}>
