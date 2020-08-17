@@ -155,6 +155,7 @@ export default class Icon extends Component {
       "4chan-mono",
       "sina-weibo-mono",
       "lexis-nexis-mono",
+      "source",
     ]).isRequired,
     /** Size of icon (with unit). Not used when height or width is provided */
     size: PropTypes.string,

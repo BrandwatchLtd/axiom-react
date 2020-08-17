@@ -105,6 +105,7 @@ const iconNames = [
   "sina-weibo-mono",
   "sina-weibo",
   "social-panel",
+  "source",
   "speech",
   "star",
   "sun",

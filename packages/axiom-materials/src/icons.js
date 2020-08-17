@@ -107,6 +107,7 @@ export default {
   "social-panel": require("./icon_svgs/social-panel.svg"),
   speech: require("./icon_svgs/speech.svg"),
   star: require("./icon_svgs/star.svg"),
+  source: require("./icon_svgs/source.svg"),
   sun: require("./icon_svgs/sun.svg"),
   switch: require("./icon_svgs/switch.svg"),
   tag: require("./icon_svgs/tag.svg"),
