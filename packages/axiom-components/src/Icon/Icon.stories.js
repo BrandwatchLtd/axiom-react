@@ -39,6 +39,9 @@ const socailIcons = [
   "4chan",
   "sina-weibo",
   "lexis-nexis",
+  "shuffle",
+  "social-panel",
+  "theme",
 ];
 
 export function Social() {
