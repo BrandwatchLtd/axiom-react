@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import EditableTitle from "./EditableTitle";
 import EditableLine from "./EditableLine";
 import Heading from "../Typography/Heading";
@@ -9,13 +9,15 @@ export default {
 };
 
 export function Default() {
+  const [value, setValue] = useState("Editable text...");
+
   return (
     <EditableTitle>
       <Heading textSize="headline">
         <EditableLine
-          onChange={function () {}}
+          onChange={(event) => setValue(event.target.value)}
           placeholder="Editable text here"
-          value="Editable text..."
+          value={value}
         />
       </Heading>
     </EditableTitle>
