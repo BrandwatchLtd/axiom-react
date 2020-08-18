@@ -13,6 +13,7 @@ export const ALERT_ICON_NAME_MAP = {
 };
 
 const SIZE_MAP = {
+  tiny: "0.75rem",
   small: "1rem",
   medium: "2rem",
   large: "3rem",
@@ -22,7 +23,7 @@ export default class AlertIcon extends Component {
   static propTypes = {
     className: PropTypes.string,
     /** Size of the indicator and icon */
-    size: PropTypes.oneOf(["small", "medium", "large"]),
+    size: PropTypes.oneOf(["tiny", "small", "medium", "large"]),
     /** Style of the indicator */
     style: PropTypes.oneOf(["primary", "secondary", "subtle"]),
     /** Color of the indicator and icon */

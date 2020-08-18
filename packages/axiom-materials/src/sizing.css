@@ -37,6 +37,7 @@
   --component-padding-horizontal-medium: calc(var(--spacing-grid-size) * 3);
   --component-padding-horizontal-large: calc(var(--spacing-grid-size) * 4);
 
+  --component-round-size-tiny: calc(var(--spacing-grid-size) * 4);
   --component-round-size-small: calc(var(--spacing-grid-size) * 6);
   --component-round-size-medium: calc(var(--spacing-grid-size) * 12);
   --component-round-size-large: calc(var(--spacing-grid-size) * 18);

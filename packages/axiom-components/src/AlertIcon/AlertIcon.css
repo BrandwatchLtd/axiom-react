@@ -7,6 +7,11 @@
   line-height: 0;
 }
 
+.ax-alert-icon--tiny {
+  width: var(--component-round-size-tiny);
+  height: var(--component-round-size-tiny);
+}
+
 .ax-alert-icon--small {
   width: var(--component-round-size-small);
   height: var(--component-round-size-small);

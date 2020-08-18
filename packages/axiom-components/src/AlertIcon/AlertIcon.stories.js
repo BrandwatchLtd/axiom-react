@@ -25,3 +25,19 @@ export function Error() {
 export function Warning() {
   return <AlertIcon type="warning" />;
 }
+
+export function Tiny() {
+  return <AlertIcon size="tiny" />;
+}
+
+export function Small() {
+  return <AlertIcon size="small" />;
+}
+
+export function Medium() {
+  return <AlertIcon size="medium" />;
+}
+
+export function Large() {
+  return <AlertIcon size="large" />;
+}
