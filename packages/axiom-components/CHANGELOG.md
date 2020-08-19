@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.5.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.4.0...@brandwatch/axiom-components@11.5.0) (2020-08-18)
+
+
+### Features
+
+* 🎸 Add source icon ([ba4a9ac](https://github.com/BrandwatchLtd/axiom-react/commit/ba4a9acef57392e0f4ff5f8fc54a7d963bc6dcd5))
+
+
+
+
+
+# [11.4.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.3.3...@brandwatch/axiom-components@11.4.0) (2020-08-17)
+
+
+### Bug Fixes
+
+* 🎸 Change Tab titles to be title-case to match design docs ([804396e](https://github.com/BrandwatchLtd/axiom-react/commit/804396e6576812210ab864e2416d222e706410fa))
+
+
+### Features
+
+* **Icons:** Add shuffle social and theme icon ([19039e4](https://github.com/BrandwatchLtd/axiom-react/commit/19039e41173969e1ecb22f65d230cbb0b34c8759))
+* 🎸 Add classname to TextInput ([03d83c4](https://github.com/BrandwatchLtd/axiom-react/commit/03d83c4d02e4f45bbdf700d2c75462cab269039f))
+* 🎸 Add inputClassName prop to pass classname to input ele ([8e26ad1](https://github.com/BrandwatchLtd/axiom-react/commit/8e26ad1f59b6e954427fb791c9d62422e7114865))
+
+
+
+
+
 ## [11.3.3](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@11.3.2...@brandwatch/axiom-components@11.3.3) (2020-08-05)
 
 **Note:** Version bump only for package @brandwatch/axiom-components

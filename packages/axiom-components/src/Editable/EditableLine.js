@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import classnames from "classnames";
 import "./EditableLine.css";
 
 export default class EditableLine extends Component {
   static propTypes = {
-    /** SKIP */
-    onBlur: PropTypes.func,
-    /** Callback with the value when the text has finished being edited */
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
+    /** Handler for when the input field is changed */
     onChange: PropTypes.func.isRequired,
-    /** SKIP */
+    /** Handler for when a key is pressed int the input field */
     onKeyDown: PropTypes.func,
     /** Placeholder content to be displayed when there is no value */
     placeholder: PropTypes.string,
@@ -16,41 +17,12 @@ export default class EditableLine extends Component {
     value: PropTypes.string.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: props.value,
-    };
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    this.setState({ value: nextProps.value });
-  }
-
-  handleOnBlur(event) {
-    if (this.state.value !== this.props.value) {
-      this.props.onChange(this.state.value);
-    }
-
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
-    }
-  }
-
-  handleChange(event) {
-    this.setState({
-      value: event.target.value,
-    });
-  }
-
   handleOnKeyDown(event) {
     switch (event.key) {
       case "Enter":
+      case "Escape":
         event.preventDefault();
         this.input.blur();
-        break;
-      case "Escape":
-        this.setState({ value: this.props.value }, () => this.input.blur());
         break;
     }
 
@@ -60,20 +32,16 @@ export default class EditableLine extends Component {
   }
 
   render() {
-    const { value } = this.state;
-    const { placeholder, ...rest } = this.props;
+    const { className, placeholder, value, ...rest } = this.props;
 
     return (
-      <div className="ax-editable-line">
+      <div className={classnames("ax-editable-line", className)}>
         <input
           {...rest}
           className="ax-editable-line__input"
-          onBlur={(event) => this.handleOnBlur(event)}
-          onChange={(event) => this.handleChange(event)}
           onKeyDown={(event) => this.handleOnKeyDown(event)}
           placeholder={placeholder}
           ref={(el) => (this.input = el)}
-          value={value}
         />
 
         <div className="ax-editable-line__structure">

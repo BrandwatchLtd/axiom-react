@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.29.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.28.0...@brandwatch/axiom-materials@1.29.0) (2020-08-18)
+
+
+### Features
+
+* 🎸 Add source icon ([ba4a9ac](https://github.com/BrandwatchLtd/axiom-react/commit/ba4a9acef57392e0f4ff5f8fc54a7d963bc6dcd5))
+
+
+
+
+
+# [1.28.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.27.1...@brandwatch/axiom-materials@1.28.0) (2020-08-17)
+
+
+### Features
+
+* **Icons:** Add shuffle social and theme icon ([19039e4](https://github.com/BrandwatchLtd/axiom-react/commit/19039e41173969e1ecb22f65d230cbb0b34c8759))
+
+
+
+
+
 ## [1.27.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.27.0...@brandwatch/axiom-materials@1.27.1) (2020-05-04)
 
 **Note:** Version bump only for package @brandwatch/axiom-materials
