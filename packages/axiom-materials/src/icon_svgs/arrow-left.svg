@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow Left Icon</title>
+    <g id="Icon/Arrow-Left-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Arrow-Left-Icon" transform="translate(2.000000, 3.000000)" fill="#000000">
+            <polygon id="Icon" points="11.99209 3.99191 3.83408995 3.99191 6.37108995 1.45691 4.95708995 0.04291 0.00708995232 4.99191 4.95808995 9.94191 6.37108995 8.52791 3.83408995 5.99191 11.99209 5.99191"></polygon>
+        </g>
+    </g>
+</svg>

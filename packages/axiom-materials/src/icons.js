@@ -6,6 +6,8 @@ export default {
   "arrow-down": require("./icon_svgs/arrow-down.svg"),
   "arrow-down-left": require("./icon_svgs/arrow-down-left.svg"),
   "arrow-down-right": require("./icon_svgs/arrow-down-right.svg"),
+  "arrow-left": require("./icon_svgs/arrow-left.svg"),
+  "arrow-right": require("./icon_svgs/arrow-right.svg"),
   "arrow-up": require("./icon_svgs/arrow-up.svg"),
   "arrow-up-left": require("./icon_svgs/arrow-up-left.svg"),
   "arrow-up-right": require("./icon_svgs/arrow-up-right.svg"),

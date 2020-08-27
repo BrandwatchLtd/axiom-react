@@ -24,6 +24,8 @@ export default class Icon extends Component {
       "arrow-down",
       "arrow-down-left",
       "arrow-down-right",
+      "arrow-left",
+      "arrow-right",
       "arrow-up",
       "arrow-up-left",
       "arrow-up-right",
