@@ -42,10 +42,11 @@ export default class EditableLine extends Component {
           onKeyDown={(event) => this.handleOnKeyDown(event)}
           placeholder={placeholder}
           ref={(el) => (this.input = el)}
+          value={value}
         />
 
         <div className="ax-editable-line__structure">
-          {value || placeholder || " "}
+          {value || placeholder || ""}
         </div>
       </div>
     );

@@ -6,6 +6,7 @@
 
 .ax-editable-line__structure {
   visibility: hidden;
+  min-width: 1em;
 }
 
 .ax-editable-line__input {

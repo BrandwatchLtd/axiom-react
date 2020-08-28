@@ -9,14 +9,14 @@ export default {
 };
 
 export function Default() {
-  const [value, setValue] = useState("Editable text...");
+  const [value, setValue] = useState("Editable text");
 
   return (
     <EditableTitle>
       <Heading textSize="headline">
         <EditableLine
           onChange={(event) => setValue(event.target.value)}
-          placeholder="Editable text here"
+          placeholder="Edit…"
           value={value}
         />
       </Heading>
