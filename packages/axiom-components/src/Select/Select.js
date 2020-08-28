@@ -23,6 +23,7 @@ function Select({
   disabled = false,
   size = "medium",
   multiSelect = false,
+  filterFunction,
   ...rest
 }) {
   const [dropdownMenuRef, setDropdownMenuRef] = useState(null);
@@ -55,19 +56,35 @@ function Select({
   return (
     <Dropdown position="bottom" offset="end" {...rest}>
       <DropdownTarget>
-        <TextInput
-          isTarget
-          disabled={disabled}
-          onChange={() => {}}
-          placeholder={placeholder}
-          value={selectedValue}
-          label={label}
-          inlineLabel={inlineLabel}
-          size={size}
-          inputIconContainerRef={dropdownTargetRef}
-        >
-          <TextInputIcon name="chevron-down" />
-        </TextInput>
+        {filterFunction ? (
+          <TextInput
+            disabled={disabled}
+            onChange={(event) => filterFunction(event)}
+            placeholder={placeholder}
+            value={selectedValue}
+            label={label}
+            inlineLabel={inlineLabel}
+            size={size}
+            inputIconContainerRef={dropdownTargetRef}
+          >
+            {" "}
+            <TextInputIcon name="chevron-down" />
+          </TextInput>
+        ) : (
+          <TextInput
+            isTarget
+            disabled={disabled}
+            onChange={() => {}}
+            placeholder={placeholder}
+            value={selectedValue}
+            label={label}
+            inlineLabel={inlineLabel}
+            size={size}
+            inputIconContainerRef={dropdownTargetRef}
+          >
+            <TextInputIcon name="chevron-down" />
+          </TextInput>
+        )}
       </DropdownTarget>
       <DropdownSource>
         <DropdownContext width={dropdownSourceWidth}>

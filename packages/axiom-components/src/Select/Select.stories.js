@@ -161,7 +161,8 @@ export function MutiSelect(props) {
   const toggleItem = (itemId) => {
     const itemIdInt = parseInt(itemId);
     setSelectedItems((items) => {
-      if (items.includes(itemIdInt)) return items.filter((id) => id !== itemIdInt);
+      if (items.includes(itemIdInt))
+        return items.filter((id) => id !== itemIdInt);
 
       return items.concat(itemIdInt);
     });
@@ -181,17 +182,44 @@ export function MutiSelect(props) {
   );
 }
 
+const filterOptions = [
+  {
+    id: 1,
+    name: "Afghanistan",
+    value: "AF",
+  },
+  {
+    id: 2,
+    name: "India",
+    value: "IN",
+  },
+  {
+    id: 3,
+    name: "Indonesia",
+    value: "ID",
+  },
+];
+
 export function Filter(props) {
-  const [selectedValue, setSelectedValue] = useState("5");
+  const [selectedValue, setSelectedValue] = useState(null);
+  const [filteredOptions, setFilteredOptions] = useState(filterOptions);
+
+  const filterFunction = (event) => {
+    console.log(event.target.value);
+    
+    setFilteredOptions(
+      filterOptions.filter((item) => item.name.startsWith(event.target.value))
+    );
+  };
 
   return (
     <div style={{ width: "200px" }}>
       <Select
         {...props}
-        options={shortOptions}
+        options={filteredOptions}
         selectedValue={selectedValue}
         onChange={setSelectedValue}
-        filter
+        filterFunction={filterFunction}
       />
     </div>
   );
