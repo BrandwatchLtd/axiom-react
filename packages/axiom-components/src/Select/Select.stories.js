@@ -69,7 +69,7 @@ export function AutoScrolls(props) {
 }
 
 export function InlineLabel(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <Select
@@ -150,12 +150,10 @@ const filterOptions = [
 ];
 
 export function Filter(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState("");
   const [filteredOptions, setFilteredOptions] = useState(filterOptions);
 
   const filterFunction = (event) => {
-    console.log(event.target.value);
-
     setFilteredOptions(
       filterOptions.filter((item) => item.name.startsWith(event.target.value))
     );
@@ -169,13 +167,14 @@ export function Filter(props) {
         selectedValue={selectedValue}
         onChange={setSelectedValue}
         filterFunction={filterFunction}
+        onClear={() => setSelectedValue("")}
       />
     </div>
   );
 }
 
 export function Small(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <div style={{ width: "150px" }}>
@@ -192,7 +191,7 @@ export function Small(props) {
 }
 
 export function Medium(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <div style={{ width: "150px" }}>
@@ -209,7 +208,7 @@ export function Medium(props) {
 }
 
 export function Large(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <div style={{ width: "150px" }}>

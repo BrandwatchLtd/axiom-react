@@ -24,6 +24,7 @@ function Select({
   size = "medium",
   multiSelect = false,
   filterFunction,
+  onClear,
   ...rest
 }) {
   const [dropdownMenuRef, setDropdownMenuRef] = useState(null);
@@ -50,7 +51,7 @@ function Select({
       return selectedValue.some((value) => value.id === item.id);
     }
 
-    return selectedValue === item.value;
+    return selectedValue?.value === item.value;
   };
 
   const getSelectedValue = (item) => {
@@ -62,18 +63,19 @@ function Select({
   };
 
   return (
-    <Dropdown position="bottom" offset="end" {...rest}>
+    <Dropdown position="bottom" flip="mirror" offset="end" {...rest}>
       <DropdownTarget>
         {filterFunction ? (
           <TextInput
             disabled={disabled}
             onChange={(event) => filterFunction(event)}
             placeholder={placeholder}
-            value={getSelectedValue()}
+            value={selectedValue?.name}
             label={label}
             inlineLabel={inlineLabel}
             size={size}
             inputIconContainerRef={dropdownTargetRef}
+            onClear={onClear}
           >
             <TextInputIcon name="chevron-down" />
           </TextInput>
@@ -118,8 +120,14 @@ function Select({
 }
 
 Select.propTypes = {
-  options: PropTypes.array.isRequired,
-  selectedValue: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      id: PropTypes.number,
+    })
+  ).isRequired,
+  selectedValue: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   label: PropTypes.string.isRequired,
