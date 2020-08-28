@@ -45,12 +45,20 @@ function Select({
     selectedItem?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [dropdownMenuRef]);
 
-  const getSelected = (item) => {
+  const getSelectedItem = (item) => {
     if (Array.isArray(selectedValue)) {
-      return selectedValue.includes(item.id);
+      return selectedValue.some((value) => value.id === item.id);
     }
 
     return selectedValue === item.value;
+  };
+
+  const getSelectedValue = (item) => {
+    if (Array.isArray(selectedValue)) {
+      return selectedValue.map((value) => value.name);
+    }
+
+    return selectedValue?.name;
   };
 
   return (
@@ -61,13 +69,12 @@ function Select({
             disabled={disabled}
             onChange={(event) => filterFunction(event)}
             placeholder={placeholder}
-            value={selectedValue}
+            value={getSelectedValue()}
             label={label}
             inlineLabel={inlineLabel}
             size={size}
             inputIconContainerRef={dropdownTargetRef}
           >
-            {" "}
             <TextInputIcon name="chevron-down" />
           </TextInput>
         ) : (
@@ -76,7 +83,7 @@ function Select({
             disabled={disabled}
             onChange={() => {}}
             placeholder={placeholder}
-            value={selectedValue}
+            value={getSelectedValue()}
             label={label}
             inlineLabel={inlineLabel}
             size={size}
@@ -97,8 +104,8 @@ function Select({
               <DropdownMenuItem
                 multiSelect={multiSelect}
                 key={item.id}
-                onClick={() => onChange(item.value)}
-                selected={getSelected(item)}
+                onClick={() => onChange(item)}
+                selected={getSelectedItem(item)}
               >
                 {item.name}
               </DropdownMenuItem>

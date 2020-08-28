@@ -155,16 +155,16 @@ export function Large(props) {
   );
 }
 
-export function MutiSelect(props) {
-  const [selectedItems, setSelectedItems] = useState([25, 22, 11]);
+export function MultiSelect(props) {
+  const [selectedItems, setSelectedItems] = useState([]);
 
-  const toggleItem = (itemId) => {
-    const itemIdInt = parseInt(itemId);
+  const toggleItem = (item) => {
+    const itemIdInt = parseInt(item.id);
     setSelectedItems((items) => {
       if (items.includes(itemIdInt))
         return items.filter((id) => id !== itemIdInt);
 
-      return items.concat(itemIdInt);
+      return items.concat(item);
     });
   };
 
