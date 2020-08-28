@@ -5,8 +5,8 @@
 }
 
 .ax-editable-line__structure {
+  min-width: 1em; /* stylelint-disable-line unit-blacklist */
   visibility: hidden;
-  min-width: 1em;
 }
 
 .ax-editable-line__input {
