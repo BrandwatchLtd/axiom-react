@@ -10,12 +10,19 @@ import DropdownMenuItem from "../Dropdown/DropdownMenuItem";
 import TextInput from "../Form/TextInput";
 import TextInputIcon from "../Form/TextInputIcon";
 
+/**
+ * Selects allow users to choose one or multiple options from a menu [Link].
+ */
 function Select({
   options,
   label,
+  inlineLabel = false,
   selectedValue,
   onChange,
   placeholder,
+  disabled = false,
+  size = "medium",
+  multiSelect = false,
   ...rest
 }) {
   const [dropdownMenuRef, setDropdownMenuRef] = useState(null);
@@ -37,15 +44,27 @@ function Select({
     selectedItem?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [dropdownMenuRef]);
 
+  const getSelected = (item) => {
+    if (Array.isArray(selectedValue)) {
+      return selectedValue.includes(item.id);
+    }
+
+    return selectedValue === item.value;
+  };
+
   return (
-    <Dropdown {...rest}>
-      <DropdownTarget baseRef={dropdownTargetRef}>
+    <Dropdown position="bottom" offset="end" {...rest}>
+      <DropdownTarget>
         <TextInput
           isTarget
+          disabled={disabled}
           onChange={() => {}}
           placeholder={placeholder}
           value={selectedValue}
           label={label}
+          inlineLabel={inlineLabel}
+          size={size}
+          inputIconContainerRef={dropdownTargetRef}
         >
           <TextInputIcon name="chevron-down" />
         </TextInput>
@@ -59,9 +78,10 @@ function Select({
           >
             {options.map((item) => (
               <DropdownMenuItem
+                multiSelect={multiSelect}
                 key={item.id}
                 onClick={() => onChange(item.value)}
-                selected={selectedValue === item.value}
+                selected={getSelected(item)}
               >
                 {item.name}
               </DropdownMenuItem>
@@ -79,6 +99,10 @@ Select.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   label: PropTypes.string.isRequired,
+  inlineLabel: PropTypes.bool,
+  disabled: PropTypes.bool,
+  multiSelect: PropTypes.bool,
+  size: PropTypes.string,
 };
 
 export default Select;

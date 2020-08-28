@@ -152,7 +152,7 @@ export default class Position extends Component {
             if (showArrow) {
               return [0, 15];
             } else {
-              return [2, 2];
+              return [0, 2];
             }
           },
         },

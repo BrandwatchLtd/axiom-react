@@ -38,6 +38,7 @@ export default class InputWrapper extends Component {
     usageHint: PropTypes.node,
     usageHintPosition: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     valid: PropTypes.bool,
+    inputIconContainerRef: PropTypes.object,
   };
 
   static defaultProps = {
@@ -64,6 +65,7 @@ export default class InputWrapper extends Component {
       usageHint,
       usageHintPosition,
       valid,
+      inputIconContainerRef,
       ...rest
     } = this.props;
     const classes = classnames("ax-input__wrapper", {
@@ -104,7 +106,7 @@ export default class InputWrapper extends Component {
             )}
           </Base>
         )}
-        <div className={innerClasses}>{children}</div>
+        <div ref={inputIconContainerRef} className={innerClasses}>{children}</div>
       </Base>
     );
   }

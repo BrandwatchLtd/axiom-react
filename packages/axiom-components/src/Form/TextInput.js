@@ -143,6 +143,7 @@ export default class TextInput extends Component {
       value,
       inputRef,
       inlineLabel,
+      inputIconContainerRef,
       ...rest
     } = this.props;
 
@@ -169,6 +170,7 @@ export default class TextInput extends Component {
             baseRef={baseRef}
           >
             <InputWrapper
+            inputIconContainerRef={inputIconContainerRef}
               disabled={disabled}
               hasFocus={hasFocus}
               inlineLabel={inlineLabel}
