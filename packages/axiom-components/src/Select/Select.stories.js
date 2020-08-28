@@ -13,10 +13,14 @@ const options = Array.from({ length: 50 }, (_, index) => ({
   value: `${index}`,
 }));
 
-const shortOptions = options.splice(1, 5);
+const shortOptions = options.slice(1, 5);
 
 export function Default(props) {
-  const [selectedValue, setSelectedValue] = useState("5");
+  const [selectedValue, setSelectedValue] = useState({
+    id: 4,
+    name: `item-4`,
+    value: `4`,
+  });
 
   return (
     <div style={{ width: "200px" }}>
@@ -37,7 +41,7 @@ Default.args = {
 };
 
 export function InForm(props) {
-  const [selectedValue, setSelectedValue] = useState("25");
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <Form>
@@ -53,7 +57,11 @@ export function InForm(props) {
 }
 
 export function AutoScrolls(props) {
-  const [selectedValue, setSelectedValue] = useState("25");
+  const [selectedValue, setSelectedValue] = useState({
+    id: 25,
+    name: `item-25`,
+    value: `25`,
+  });
 
   return (
     <Form>
