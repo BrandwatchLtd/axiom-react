@@ -104,57 +104,6 @@ export function Disabled(props) {
   );
 }
 
-export function Small(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
-
-  return (
-    <div style={{ width: "150px" }}>
-      <Select
-        {...props}
-        label="Items"
-        options={shortOptions}
-        selectedValue={selectedValue}
-        onChange={setSelectedValue}
-        size="small"
-      />
-    </div>
-  );
-}
-
-export function Medium(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
-
-  return (
-    <div style={{ width: "150px" }}>
-      <Select
-        {...props}
-        label="Items"
-        options={shortOptions}
-        selectedValue={selectedValue}
-        onChange={setSelectedValue}
-        size="medium"
-      />
-    </div>
-  );
-}
-
-export function Large(props) {
-  const [selectedValue, setSelectedValue] = useState(null);
-
-  return (
-    <div style={{ width: "150px" }}>
-      <Select
-        {...props}
-        label="Items"
-        options={shortOptions}
-        selectedValue={selectedValue}
-        onChange={setSelectedValue}
-        size="large"
-      />
-    </div>
-  );
-}
-
 export function MultiSelect(props) {
   const [selectedItems, setSelectedItems] = useState([]);
 
@@ -206,7 +155,7 @@ export function Filter(props) {
 
   const filterFunction = (event) => {
     console.log(event.target.value);
-    
+
     setFilteredOptions(
       filterOptions.filter((item) => item.name.startsWith(event.target.value))
     );
@@ -220,6 +169,57 @@ export function Filter(props) {
         selectedValue={selectedValue}
         onChange={setSelectedValue}
         filterFunction={filterFunction}
+      />
+    </div>
+  );
+}
+
+export function Small(props) {
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  return (
+    <div style={{ width: "150px" }}>
+      <Select
+        {...props}
+        label="Items"
+        options={shortOptions}
+        selectedValue={selectedValue}
+        onChange={setSelectedValue}
+        size="small"
+      />
+    </div>
+  );
+}
+
+export function Medium(props) {
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  return (
+    <div style={{ width: "150px" }}>
+      <Select
+        {...props}
+        label="Items"
+        options={shortOptions}
+        selectedValue={selectedValue}
+        onChange={setSelectedValue}
+        size="medium"
+      />
+    </div>
+  );
+}
+
+export function Large(props) {
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  return (
+    <div style={{ width: "150px" }}>
+      <Select
+        {...props}
+        label="Items"
+        options={shortOptions}
+        selectedValue={selectedValue}
+        onChange={setSelectedValue}
+        size="large"
       />
     </div>
   );
