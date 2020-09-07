@@ -15,7 +15,7 @@ export const TextInputIconWrapperRef = "TextInputIconWrapper";
 export default class TextInputIconWrapper extends Component {
   static propTypes = {
     /** Child element */
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     /** Alignment inside the input field */
     align: PropTypes.oneOf(["left", "right"]),
     /** Click handler, applies styling to indicate it is clickable. */

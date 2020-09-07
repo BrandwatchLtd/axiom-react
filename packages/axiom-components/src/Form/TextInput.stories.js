@@ -10,7 +10,7 @@ import InlineValidation from "../Validation/InlineValidation";
 export default {
   title: "Form/TextInput",
   component: TextInput,
-  subcomponents: { TextInputButton, TextInputIcon },
+  subcomponents: { TextInputButton, TextInputIcon, TextInputIconWrapper },
 };
 
 export function Default(args) {
