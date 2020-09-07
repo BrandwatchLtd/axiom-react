@@ -38,7 +38,6 @@ exports[`DurationPicker Snapshots renders with defaultProps 1`] = `
           value="Days"
         >
           <TextInputIcon
-            align="right"
             name="chevron-down"
           />
         </TextInput>
