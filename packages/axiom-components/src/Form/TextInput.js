@@ -5,6 +5,7 @@ import { findComponent } from "@brandwatch/axiom-utils";
 import Base from "../Base/Base";
 import Validate from "../Validation/Validate";
 import TextInputIcon, { TextInputIconRef } from "./TextInputIcon";
+import { TextInputIconWrapperRef } from "./TextInputIconWrapper";
 import { TextInputButtonRef } from "./TextInputButton";
 import ProgressInfinite from "../Progress/ProgressInfinite";
 import InputWrapper from "./InputWrapper";
@@ -146,7 +147,9 @@ export default class TextInput extends Component {
     } = this.props;
 
     const { hasFocus } = this.state;
-    const icon = findComponent(children, TextInputIconRef);
+    const icon =
+      findComponent(children, TextInputIconRef) ||
+      findComponent(children, TextInputIconWrapperRef);
     const button = findComponent(children, TextInputButtonRef);
     const showOnClear = onClear && value && !isInProgress;
     const showIcon = icon && (!isInProgress || icon.props.align === "left");

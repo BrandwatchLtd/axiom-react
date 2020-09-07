@@ -178,7 +178,7 @@ export default class DurationPicker extends Component {
                 readOnly
                 value={formatTimeUnit(selectedUnit)}
               >
-                <TextInputIcon name="chevron-down" />
+                <TextInputIcon align="right" name="chevron-down" />
               </TextInput>
             </DropdownTarget>
             <DropdownSource>

@@ -165,6 +165,8 @@ export default class Icon extends Component {
     spaceLeft: PropTypes.oneOf(["x1", "x2"]),
     /** Spacing applied to the right of the Icon. Must be used with the inline property */
     spaceRight: PropTypes.oneOf(["x1", "x2"]),
+    /** Style */
+    style: PropTypes.object,
     /** Width of icon (with unit). */
     width: PropTypes.string,
   };
@@ -183,9 +185,10 @@ export default class Icon extends Component {
       height,
       spaceLeft,
       spaceRight,
+      style = {},
       ...rest
     } = this.props;
-    const style =
+    const sizeStyle =
       height || width ? { width, height } : { width: size, height: size };
 
     const classes = classnames(className, "ax-icon", `ax-icon--${name}`, {
@@ -206,7 +209,10 @@ export default class Icon extends Component {
         Component="svg"
         className={classes}
         dangerouslySetInnerHTML={{ __html: body }}
-        style={style}
+        style={{
+          ...sizeStyle,
+          ...style,
+        }}
         viewBox={viewBox}
       />
     );

@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import React, { useEffect, useRef, useState } from "react";
+import Candytar from "../Avatar/Candytar";
 import TextInput from "./TextInput";
 import TextInputIcon from "./TextInputIcon";
+import TextInputIconWrapper from "./TextInputIconWrapper";
 import TextInputButton from "./TextInputButton";
 import InlineValidation from "../Validation/InlineValidation";
 
@@ -46,6 +48,16 @@ export function WithIcon() {
   return (
     <TextInput aria-label="Search">
       <TextInputIcon align="left" name="magnify-glass" />
+    </TextInput>
+  );
+}
+
+export function WithCustomIcon() {
+  return (
+    <TextInput>
+      <TextInputIconWrapper align="left">
+        <Candytar size="1rem" color="tiny-clanger" />
+      </TextInputIconWrapper>
     </TextInput>
   );
 }

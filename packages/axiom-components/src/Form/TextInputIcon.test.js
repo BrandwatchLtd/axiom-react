@@ -42,34 +42,4 @@ describe("TextInputIcon", () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it("renders with tooltip when string passed", () => {
-    props.tooltip = "I am a tooltip";
-
-    const component = getComponent(props);
-    const tree = component.toJSON();
-
-    const wrapper = shallow(<TextInputIcon {...props} />);
-    wrapper.simulate("mouseenter");
-
-    expect(tree).toMatchSnapshot();
-    expect(wrapper.find(TooltipContent)).toHaveLength(1);
-  });
-
-  it("renders with tooltip when TooltipContext passed", () => {
-    props.tooltip = (
-      <TooltipContext>
-        <TooltipContent size="tiny">I am a tooltip</TooltipContent>
-      </TooltipContext>
-    );
-
-    const component = getComponent(props);
-    const tree = component.toJSON();
-
-    const wrapper = shallow(<TextInputIcon {...props} />);
-    wrapper.simulate("mouseenter");
-
-    expect(tree).toMatchSnapshot();
-    expect(wrapper.find(TooltipContext)).toHaveLength(1);
-  });
 });
