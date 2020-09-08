@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputIconWrapper renders with align="left" 1`] = `
+<span
+  className="ax-input__icon ax-input__icon--align-left"
+>
+  <svg
+    className="ax-icon ax-icon--dot"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;
+
+exports[`TextInputIconWrapper renders with defaultProps 1`] = `
+<span
+  className="ax-input__icon ax-input__icon--align-right"
+>
+  <svg
+    className="ax-icon ax-icon--dot"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;
+
+exports[`TextInputIconWrapper renders with onClick 1`] = `
+<span
+  className="ax-input__icon ax-input__icon--align-right"
+>
+  <a
+    className="ax-link ax-link--style-subtle"
+    onClick={[Function]}
+  >
+    <svg
+      className="ax-icon ax-icon--dot"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </a>
+</span>
+`;
+
+exports[`TextInputIconWrapper renders with tooltip when TooltipContext passed 1`] = `
+<span
+  className="ax-input__icon ax-input__icon--align-right"
+>
+  <svg
+    className="ax-icon ax-icon--dot"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+    onMouseMove={[Function]}
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;
+
+exports[`TextInputIconWrapper renders with tooltip when string passed 1`] = `
+<span
+  className="ax-input__icon ax-input__icon--align-right"
+>
+  <svg
+    className="ax-icon ax-icon--dot"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+      }
+    }
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+    onMouseMove={[Function]}
+    style={
+      Object {
+        "height": "1rem",
+        "width": "1rem",
+      }
+    }
+    viewBox="0 0 16 16"
+  />
+</span>
+`;

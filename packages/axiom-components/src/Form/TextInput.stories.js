@@ -72,6 +72,19 @@ export function WithButton() {
   );
 }
 
+export function WithTooltipIcon() {
+  return (
+    <TextInput invalid={true} value="ExistingUsername">
+      <TextInputIcon
+        align="right"
+        iconColor="error"
+        name="information-circle"
+        tooltip="This username exists, please select a different one"
+      />
+    </TextInput>
+  );
+}
+
 export function WithValidation() {
   const [message, setMessage] = useState(null);
   const [value, setValue] = useState(null);
