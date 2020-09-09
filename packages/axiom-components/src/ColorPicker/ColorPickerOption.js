@@ -1,62 +1,20 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
 import "./ColorPickerOption.css";
+import DropdownReactContext from "../Dropdown/DropdownReactContext";
 
-export default class ColorPickerOption extends Component {
-  static propTypes = {
-    color: PropTypes.oneOf([
-      "forbidden-planet",
-      "tiny-clanger",
-      "critical-mass",
-      "fantastic-voyage",
-      "paradise-lost",
-      "serene-sea",
-      "event-horizon",
-      "electric-dreams",
-      "outer-limits",
-      "giant-leap",
-      "moon-lagoon",
-      "space-invader",
-      "extraterrestrial",
-      "terra-form",
-      "primeval-soup",
-      "future-shock",
-      "sun-maker",
-      "new-horizon",
-      "blast-off",
-      "crash-course",
-      "solar-rust",
-      "ground-control",
-      "space-oddity",
-      "rocky-planet",
-      "deep-thought",
-      "luna-dust",
-    ]),
-    disabled: PropTypes.bool,
-    onClick: PropTypes.func,
-    size: PropTypes.string,
-  };
+export default function ColorPickerOption({
+  color = "empty",
+  disabled = false,
+  onClick,
+  size = ".75rem",
+  ...rest
+}) {
+  const { closeDropdown } = useContext(DropdownReactContext);
 
-  constructor(props) {
-    super(props);
-    this.boundHandleClick = this.handleClick.bind(this);
-  }
-
-  static contextTypes = {
-    closeDropdown: PropTypes.func,
-  };
-
-  static defaultProps = {
-    disabled: false,
-    size: ".75rem",
-  };
-
-  handleClick(...args) {
-    const { closeDropdown } = this.context;
-    const { disabled, onClick } = this.props;
-
+  function handleClick(...args) {
     if (closeDropdown && !disabled) {
       closeDropdown();
     }
@@ -66,24 +24,55 @@ export default class ColorPickerOption extends Component {
     }
   }
 
-  render() {
-    const { color = "empty", disabled, onClick, size, ...rest } = this.props;
-    const classes = classnames(
-      "ax-color-picker__option",
-      `ax-color-picker__option--${color}`,
-      {
-        "ax-color-picker__option--clickable": onClick && !disabled,
-        "ax-color-picker__option--disabled": disabled,
-      }
-    );
+  const classes = classnames(
+    "ax-color-picker__option",
+    `ax-color-picker__option--${color}`,
+    {
+      "ax-color-picker__option--clickable": onClick && !disabled,
+      "ax-color-picker__option--disabled": disabled,
+    }
+  );
 
-    return (
-      <Base
-        {...rest}
-        className={classes}
-        onClick={this.boundHandleClick}
-        style={{ height: size, width: size }}
-      />
-    );
-  }
+  return (
+    <Base
+      {...rest}
+      className={classes}
+      onClick={handleClick}
+      style={{ height: size, width: size }}
+    />
+  );
 }
+
+ColorPickerOption.propTypes = {
+  color: PropTypes.oneOf([
+    "forbidden-planet",
+    "tiny-clanger",
+    "critical-mass",
+    "fantastic-voyage",
+    "paradise-lost",
+    "serene-sea",
+    "event-horizon",
+    "electric-dreams",
+    "outer-limits",
+    "giant-leap",
+    "moon-lagoon",
+    "space-invader",
+    "extraterrestrial",
+    "terra-form",
+    "primeval-soup",
+    "future-shock",
+    "sun-maker",
+    "new-horizon",
+    "blast-off",
+    "crash-course",
+    "solar-rust",
+    "ground-control",
+    "space-oddity",
+    "rocky-planet",
+    "deep-thought",
+    "luna-dust",
+  ]),
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  size: PropTypes.string,
+};
