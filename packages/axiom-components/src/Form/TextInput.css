@@ -103,7 +103,7 @@
   border-color: rgba(var(--rgb-ui-error), var(--opacity-input-border--valid));
 }
 
-.ax-input__icon-container--invalid:not(.ax-input__icon-container--focused) {
+.ax-input__icon-container--invalid {
   border-color: rgba(var(--rgb-ui-error), var(--opacity-input-border--invalid));
   color: var(--color-ui-error);
 
