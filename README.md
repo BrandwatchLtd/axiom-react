@@ -85,7 +85,7 @@ Please also checkout the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ##### Commits
 
-Commits use the [https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/master/convention.mdconventional][commit format from angular]. Optionally you can create commits in the appropriate form by running:
+Commits use the [commit format from angular](https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/master/convention.md). Optionally you can create commits in the appropriate form by running:
 
 ```shell script
 npx git-cz

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
 import Grid from "../Grid/Grid";
@@ -7,36 +7,31 @@ import GridCell from "../Grid/GridCell";
 import Icon from "../Icon/Icon";
 import Link from "../Typography/Link";
 
-export default class DialogHeader extends Component {
-  static propTypes = {
-    /** Header content inside the Dialog, a good place for a title */
-    children: PropTypes.node,
-    /** Class name to be appended to the element */
-    className: PropTypes.string,
-  };
+export default function DialogHeader(props) {
+  const { children, className, onRequestClose, ...rest } = props;
 
-  static contextTypes = {
-    onRequestClose: PropTypes.func.isRequired,
-  };
+  const classes = classnames("ax-dialog__header", className);
 
-  render() {
-    const { onRequestClose } = this.context;
-    const { children, className, ...rest } = this.props;
+  return (
+    <Base {...rest} className={classes}>
+      <Grid responsive={false} verticalAlign="middle">
+        <GridCell>{children}</GridCell>
 
-    const classes = classnames("ax-dialog__header", className);
-
-    return (
-      <Base {...rest} className={classes}>
-        <Grid responsive={false} verticalAlign="middle">
-          <GridCell>{children}</GridCell>
-
-          <GridCell shrink>
-            <Link onClick={onRequestClose} style="subtle">
-              <Icon name="cross" size="1.5rem" />
-            </Link>
-          </GridCell>
-        </Grid>
-      </Base>
-    );
-  }
+        <GridCell shrink>
+          <Link onClick={onRequestClose} style="subtle">
+            <Icon name="cross" size="1.5rem" />
+          </Link>
+        </GridCell>
+      </Grid>
+    </Base>
+  );
 }
+
+DialogHeader.propTypes = {
+  /** Header content inside the Dialog, a good place for a title */
+  children: PropTypes.node,
+  /** Class name to be appended to the element */
+  className: PropTypes.string,
+  /** SKIP */
+  onRequestClose: PropTypes.func,
+};
