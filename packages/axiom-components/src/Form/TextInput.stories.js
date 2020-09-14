@@ -62,9 +62,9 @@ export function WithCustomIcon() {
   );
 }
 
-export function WithButton() {
+export function WithButton(props) {
   return (
-    <TextInput aria-label="Submit">
+    <TextInput aria-label="Submit" {...props}>
       <TextInputButton align="left" name="magnify-glass">
         Submit
       </TextInputButton>
