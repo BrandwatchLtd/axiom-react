@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useContext } from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
 import Grid from "../Grid/Grid";
 import GridCell from "../Grid/GridCell";
 import Icon from "../Icon/Icon";
 import Link from "../Typography/Link";
+import DialogContext from "./DialogContext";
 
 export default function DialogHeader(props) {
-  const { children, className, onRequestClose, ...rest } = props;
-
+  const { children, className, ...rest } = props;
+  const { onRequestClose } = useContext(DialogContext);
   const classes = classnames("ax-dialog__header", className);
 
   return (
@@ -32,6 +33,4 @@ DialogHeader.propTypes = {
   children: PropTypes.node,
   /** Class name to be appended to the element */
   className: PropTypes.string,
-  /** SKIP */
-  onRequestClose: PropTypes.func,
 };

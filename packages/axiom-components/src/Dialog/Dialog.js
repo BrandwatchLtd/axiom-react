@@ -3,6 +3,7 @@ import React from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
 import Modal from "../Modal/Modal";
+import DialogContext from "./DialogContext";
 import "./Dialog.css";
 
 export default function Dialog({
@@ -29,17 +30,6 @@ export default function Dialog({
 
   const modalPadding = size === "fullscreen" ? "x0" : padding;
 
-  const mappedChildren = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      if (child.type.displayName === "DialogHeader") {
-        return React.cloneElement(child, {
-          onRequestClose,
-        });
-      }
-    }
-    return child;
-  });
-
   return (
     <Modal
       {...rest}
@@ -50,7 +40,9 @@ export default function Dialog({
       padding={modalPadding}
     >
       <Base className={classes} style={{ width }} theme={theme}>
-        {mappedChildren}
+        <DialogContext.Provider value={{ onRequestClose }}>
+          {children}
+        </DialogContext.Provider>
       </Base>
     </Modal>
   );
