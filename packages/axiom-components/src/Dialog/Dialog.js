@@ -5,6 +5,8 @@ import Base from "../Base/Base";
 import Modal from "../Modal/Modal";
 import "./Dialog.css";
 
+export const DialogContext = React.createContext({});
+
 export default function Dialog({
   children,
   className,
@@ -29,17 +31,6 @@ export default function Dialog({
 
   const modalPadding = size === "fullscreen" ? "x0" : padding;
 
-  const mappedChildren = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      if (child.type.displayName === "DialogHeader") {
-        return React.cloneElement(child, {
-          onRequestClose,
-        });
-      }
-    }
-    return child;
-  });
-
   return (
     <Modal
       {...rest}
@@ -50,7 +41,13 @@ export default function Dialog({
       padding={modalPadding}
     >
       <Base className={classes} style={{ width }} theme={theme}>
-        {mappedChildren}
+        <DialogContext.Provider
+          value={{
+            onRequestClose,
+          }}
+        >
+          {children}
+        </DialogContext.Provider>
       </Base>
     </Modal>
   );
