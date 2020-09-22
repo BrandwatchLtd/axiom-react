@@ -1,6 +1,6 @@
 /* stylelint-disable max-line-length */
 :root {
-  --rgb-theme-day-main: var(--rgb-ui-carbon);
+  --rgb-theme-day-mains: var(--rgb-ui-carbon);
   --rgb-theme-day-main--dark: var(--rgb-ui-carbon--dark);
   --rgb-theme-day-main--darker: var(--rgb-ui-carbon--darker);
 
