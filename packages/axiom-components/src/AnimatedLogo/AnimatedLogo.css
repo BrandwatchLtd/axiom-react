@@ -1,0 +1,235 @@
+/* Initial state: open */
+.ax-animated-logo {
+  --logo-animation-duration: 1.4s;
+  --logo-animation-delay: 1s;
+  --logo-tile-orange-offset: -93.7%;
+  --logo-tile-yellow-offset: -75.2%;
+  --logo-tile-red-offset: 89.7%;
+  --logo-tile-blue-offset: 95.7%;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  & .logo-text {
+    opacity: 1;
+  }
+
+  & .tile-orange {
+    transform: translate(var(--logo-tile-orange-offset), 0);
+  }
+
+  & .tile-yellow {
+    transform: translate(var(--logo-tile-yellow-offset), 0);
+  }
+
+  & .tile-red {
+    transform: translate(var(--logo-tile-red-offset), 0);
+  }
+
+  & .tile-blue {
+    transform: translate(var(--logo-tile-blue-offset), 0);
+  }
+}
+
+/* open animation */
+.ax-animated-logo--open {
+  & .logo-text {
+    animation:
+      ax-animated-logo--open-logo
+      var(--logo-animation-duration) both;
+  }
+
+  & .tile-orange {
+    animation:
+      ax-animated-logo--open-orange
+      var(--logo-animation-duration) both;
+  }
+
+  & .tile-yellow {
+    animation:
+      ax-animated-logo--open-yellow
+      var(--logo-animation-duration) both;
+  }
+
+  & .tile-red {
+    animation:
+      ax-animated-logo--open-red var(--logo-animation-duration)
+      both;
+  }
+
+  & .tile-blue {
+    animation:
+      ax-animated-logo--open-blue var(--logo-animation-duration)
+      both;
+  }
+}
+
+@keyframes ax-animated-logo--open-logo {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ax-animated-logo--open-orange {
+  0% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, 0);
+  }
+  80% {
+    transform: translate(var(--logo-tile-orange-offset), 0);
+  }
+  100% {
+    transform: translate(var(--logo-tile-orange-offset), 0);
+  }
+}
+
+@keyframes ax-animated-logo--open-yellow {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(var(--logo-tile-yellow-offset), 0);
+  }
+  100% {
+    transform: translate(var(--logo-tile-yellow-offset), 0);
+  }
+}
+
+@keyframes ax-animated-logo--open-red {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(var(--logo-tile-red-offset), 0);
+  }
+  100% {
+    transform: translate(var(--logo-tile-red-offset), 0);
+  }
+}
+
+@keyframes ax-animated-logo--open-blue {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(var(--logo-tile-blue-offset), 0);
+  }
+  100% {
+    transform: translate(var(--logo-tile-blue-offset), 0);
+  }
+}
+
+/* close animations */
+.ax-animated-logo--close {
+  & .logo-text {
+    animation:
+      ax-animated-logo--close-logo
+      var(--logo-animation-duration) var(--logo-animation-delay) both;
+  }
+
+  & .tile-orange {
+    animation:
+      ax-animated-logo--close-orange
+      var(--logo-animation-duration) var(--logo-animation-delay) both;
+  }
+
+  & .tile-yellow {
+    animation:
+      ax-animated-logo--close-yellow
+      var(--logo-animation-duration) var(--logo-animation-delay) both;
+  }
+
+  & .tile-red {
+    animation:
+      ax-animated-logo--close-red var(--logo-animation-duration)
+      var(--logo-animation-delay) both;
+  }
+
+  & .tile-blue {
+    animation:
+      ax-animated-logo--close-blue var(--logo-animation-duration)
+      var(--logo-animation-delay) both;
+  }
+}
+
+@keyframes ax-animated-logo--close-logo {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ax-animated-logo--close-orange {
+  0% {
+    transform: translate(var(--logo-tile-orange-offset), 0);
+  }
+  20% {
+    transform: translate(var(--logo-tile-orange-offset), 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ax-animated-logo--close-yellow {
+  0% {
+    transform: translate(var(--logo-tile-yellow-offset), 0);
+  }
+  40% {
+    transform: translate(var(--logo-tile-yellow-offset), 0);
+  }
+  60% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ax-animated-logo--close-red {
+  0% {
+    transform: translate(var(--logo-tile-red-offset), 0);
+  }
+  60% {
+    transform: translate(var(--logo-tile-red-offset), 0);
+  }
+  80% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ax-animated-logo--close-blue {
+  0% {
+    transform: translate(var(--logo-tile-blue-offset), 0);
+  }
+  80% {
+    transform: translate(var(--logo-tile-blue-offset), 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
