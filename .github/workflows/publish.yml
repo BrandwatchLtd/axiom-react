@@ -9,4 +9,5 @@ jobs:
     - run: yarn test
     - run: yarn build:packages
     - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
-    - run: npx lerna publish from-package -y --no-verify-access --conventional-commits --git-remote origin
+    - run: git remote add upstream git@github.com:BrandwatchLtd/axiom-react.git
+    - run: npx lerna publish --npm-client npm --conventional-commits --yes --git-remote upstream
