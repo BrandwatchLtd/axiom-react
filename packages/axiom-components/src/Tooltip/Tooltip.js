@@ -7,6 +7,9 @@ import PositionTarget from "../Position/PositionTarget";
 import { TooltipSourceRef } from "./TooltipSource";
 import { TooltipTargetRef } from "./TooltipTarget";
 
+/**
+ * Uses the Position component to show content on hover.
+ */
 const Tooltip = React.forwardRef(
   (
     {

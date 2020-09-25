@@ -38,7 +38,7 @@ export function Disabled() {
   return (
     <Tooltip enabled={false} position="bottom">
       <TooltipTarget>
-        <IconButton name="question-mark" size="small" />
+        <IconButton name="question-mark" size="small" disabled />
       </TooltipTarget>
 
       <TooltipSource width="auto">
