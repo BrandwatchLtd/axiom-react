@@ -32,4 +32,4 @@ export function Default({ name, timingFunction, children }) {
   );
 }
 
-Default.story = { args: { children: "Animated text" } };
+Default.args = { children: "Animated text" };

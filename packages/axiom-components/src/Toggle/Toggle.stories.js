@@ -16,4 +16,4 @@ export function Default({ children, ...rest }) {
   );
 }
 
-Default.story = { args: { children: "label" } };
+Default.args = { children: "label" };

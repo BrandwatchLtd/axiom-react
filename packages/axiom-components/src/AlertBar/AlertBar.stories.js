@@ -14,7 +14,7 @@ export function Default({ children, onRemoveClick, size, type }) {
   );
 }
 
-Default.story = { args: { children: "Alert Bar" } };
+Default.args = { children: "Alert Bar" };
 
 export function Info() {
   return <AlertBar type="info">Success AlertBar</AlertBar>;

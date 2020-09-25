@@ -14,4 +14,4 @@ export function Default({ border, children, size, shape }) {
   );
 }
 
-Default.story = { args: { children: "username", size: "4rem" } };
+Default.args = { children: "username", size: "4rem" };

@@ -17,7 +17,7 @@ export function Default({ children, size, color, status }) {
   );
 }
 
-Default.story = { args: { children: "Lozenge" } };
+Default.args = { children: "Lozenge" };
 
 export function StatusLozenges() {
   return (

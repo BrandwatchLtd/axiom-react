@@ -58,7 +58,7 @@ export function Configurable(args) {
   );
 }
 
-Configurable.story = { parameters: { docs: { disable: true } } };
+Configurable.args = { docs: { disable: true } };
 
 export function CardRow() {
   return (

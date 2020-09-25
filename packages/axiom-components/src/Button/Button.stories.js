@@ -39,7 +39,7 @@ export function Default({
   );
 }
 
-Default.story = { args: { children: "Button" } };
+Default.args = { children: "Button" };
 
 export function Variant() {
   return (

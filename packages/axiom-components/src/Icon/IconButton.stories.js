@@ -17,7 +17,7 @@ export function Default({ name, size, buttonStyle, iconColor }) {
   );
 }
 
-Default.story = { args: { name: "cross" } };
+Default.args = { name: "cross" };
 
 export function MenuOpen() {
   return <IconButton name="ellipsis" aria-label="open" />;
