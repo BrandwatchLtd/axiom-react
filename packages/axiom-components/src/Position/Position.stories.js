@@ -14,13 +14,13 @@ export default {
   subComponents: { PositionTarget, PositionSource },
 };
 
-export function Default() {
+export function Default(props) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div>
       <Toggle onToggle={() => setIsVisible((v) => !v)}>Show</Toggle>
-      <Position isVisible={isVisible} position="bottom" showArrow>
+      <Position isVisible={isVisible} position="bottom" showArrow {...props}>
         <PositionTarget>
           {isVisible ? (
             <Icon name="lock" size="2rem" />
