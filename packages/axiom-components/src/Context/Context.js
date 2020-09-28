@@ -41,12 +41,8 @@ export default class Context extends Component {
       ...rest
     } = this.props;
 
-    const classes = classnames(
-      className,
-      "ax-context",
-      `ax-context--${position}`,
-      {
-        [`ax-context--${color}`]: color,
+    const classes = classnames(className, "ax-context", {
+      [`ax-context--${color}`]: color,
       }
     );
     const content = () => (

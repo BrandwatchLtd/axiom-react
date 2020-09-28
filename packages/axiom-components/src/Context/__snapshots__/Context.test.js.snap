@@ -2,7 +2,7 @@
 
 exports[`Context renders custom maxHeight 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -24,7 +24,7 @@ exports[`Context renders custom maxHeight 1`] = `
 
 exports[`Context renders custom width 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "20rem",
@@ -46,7 +46,7 @@ exports[`Context renders custom width 1`] = `
 
 exports[`Context renders with "type" context error 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -69,7 +69,7 @@ exports[`Context renders with "type" context error 1`] = `
 
 exports[`Context renders with "type" context info 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -92,7 +92,7 @@ exports[`Context renders with "type" context info 1`] = `
 
 exports[`Context renders with "type" context success 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -115,7 +115,7 @@ exports[`Context renders with "type" context success 1`] = `
 
 exports[`Context renders with "type" context warning 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -138,7 +138,7 @@ exports[`Context renders with "type" context warning 1`] = `
 
 exports[`Context renders with arrowRef 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -171,7 +171,7 @@ exports[`Context renders with arrowRef 1`] = `
 
 exports[`Context renders with defaultProps 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -193,7 +193,7 @@ exports[`Context renders with defaultProps 1`] = `
 
 exports[`Context renders with position bottom 1`] = `
 <div
-  className="ax-context ax-context--bottom ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -215,7 +215,7 @@ exports[`Context renders with position bottom 1`] = `
 
 exports[`Context renders with position left 1`] = `
 <div
-  className="ax-context ax-context--left ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -237,7 +237,7 @@ exports[`Context renders with position left 1`] = `
 
 exports[`Context renders with position right 1`] = `
 <div
-  className="ax-context ax-context--right ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -259,7 +259,7 @@ exports[`Context renders with position right 1`] = `
 
 exports[`Context renders with position top 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -281,7 +281,7 @@ exports[`Context renders with position top 1`] = `
 
 exports[`Context renders with theme day 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--day"
+  className="ax-context ax-theme--day"
   style={
     Object {
       "width": "14.5rem",
@@ -303,7 +303,7 @@ exports[`Context renders with theme day 1`] = `
 
 exports[`Context renders with theme night 1`] = `
 <div
-  className="ax-context ax-context--top ax-theme--night"
+  className="ax-context ax-theme--night"
   style={
     Object {
       "width": "14.5rem",
