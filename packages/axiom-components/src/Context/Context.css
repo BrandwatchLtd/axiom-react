@@ -194,7 +194,7 @@
   margin-left: var(--spacing-grid-size--x2);
 }
 
-.ax-context-menu .ax-context-menu{
+.ax-context-menu .ax-context-menu {
   padding: 0;
 
   & .ax-context-menu__item {
