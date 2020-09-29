@@ -79,7 +79,7 @@ Text.parameters = {
   docs: {
     description: {
       story:
-        "Base supports a number of text styles. Use with caution and consider using the in built [Typography](/docs/typography--text-icon) components.",
+        "Base supports a number of text styles. You can pass these to Base via the in built [Typography](/docs/typography--text-icon) components.",
     },
   },
 };

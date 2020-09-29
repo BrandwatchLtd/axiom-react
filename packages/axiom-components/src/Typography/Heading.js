@@ -12,6 +12,7 @@ const TAG_MAP = {
 };
 
 /**
+ * Headings give page and section tiles more prominence over body text.
  * See [Typography](/?path=/docs/typography--headings) for more examples.
  */
 export default class Heading extends Component {
