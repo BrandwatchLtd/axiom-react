@@ -57,7 +57,7 @@ SpreadPropsToBase.parameters = {
   docs: {
     description: {
       story:
-        "Internally nearly all components in Axiom render Base. This means you can pass Base properites via parent components and they will be spread into Base. In the example below Paragraph passes textStrike to Base",
+        "Internally nearly all components in Axiom render Base. This means you can pass Base properties via parent components and they will be spread into Base. In the example below Paragraph passes textStrike to Base",
     },
   },
 };
@@ -79,7 +79,7 @@ Text.parameters = {
   docs: {
     description: {
       story:
-        "Base supports a number of text styles. Use with caution and consider using the in built [Typography](http://localhost:6006/?path=/docs/typography--text-icon) components.",
+        "Base supports a number of text styles. Use with caution and consider using the in built [Typography](/docs/typography--text-icon) components.",
     },
   },
 };
