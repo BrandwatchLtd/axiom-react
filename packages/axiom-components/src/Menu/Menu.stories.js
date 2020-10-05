@@ -8,9 +8,9 @@ export default {
   subcomponents: { MenuItem },
 };
 
-export function Default() {
+export function Default(props) {
   return (
-    <Menu>
+    <Menu {...props}>
       <MenuItem active>Menu item</MenuItem>
       <MenuItem>Menu item</MenuItem>
       <MenuItem disabled>Menu item</MenuItem>
