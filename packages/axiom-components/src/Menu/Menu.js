@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import omit from "lodash.omit";
 import Base from "../Base/Base";
+import MenuContext from "./MenuContext";
 import "./Menu.css";
 
 export default class Menu extends Component {
@@ -12,26 +12,16 @@ export default class Menu extends Component {
     size: PropTypes.oneOf(["medium", "large"]),
   };
 
-  static childContextTypes = {
-    size: PropTypes.string.isRequired,
-  };
-
   static defaultProps = {
     size: "large",
   };
 
-  getChildContext() {
-    return {
-      size: this.props.size,
-    };
-  }
-
   render() {
-    const { children, ...rest } = this.props;
+    const { children, size, ...rest } = this.props;
 
     return (
-      <Base {...omit(rest, ["size"])} Component="ul" className="ax-menu">
-        {children}
+      <Base {...rest} Component="ul" className="ax-menu">
+        <MenuContext.Provider value={size}>{children}</MenuContext.Provider>
       </Base>
     );
   }
