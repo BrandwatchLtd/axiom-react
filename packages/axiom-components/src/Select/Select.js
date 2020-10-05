@@ -6,6 +6,7 @@ import DropdownContext from "../Dropdown/DropdownContext";
 import DropdownSource from "../Dropdown/DropdownSource";
 import DropdownTarget from "../Dropdown/DropdownTarget";
 import SelectInput from "./SelectInput";
+import SelectContext from "./SelectContext";
 
 export default class Select extends Component {
   static propTypes = {
@@ -33,21 +34,9 @@ export default class Select extends Component {
     onSelect: () => {},
   };
 
-  static childContextTypes = {
-    handleSelectOption: PropTypes.func.isRequired,
-    selectedOptionValue: PropTypes.any,
-  };
-
   constructor(props) {
     super(props);
     this.handleSelectOption = this.handleSelectOption.bind(this);
-  }
-
-  getChildContext() {
-    return {
-      handleSelectOption: this.handleSelectOption,
-      selectedOptionValue: this.props.selectedValue,
-    };
   }
 
   handleSelectOption(value) {
@@ -70,7 +59,16 @@ export default class Select extends Component {
         </DropdownTarget>
 
         <DropdownSource focusOnOpen>
-          <DropdownContext>{children}</DropdownContext>
+          <DropdownContext>
+            <SelectContext.Provider
+              value={{
+                handleSelectOption: this.handleSelectOption,
+                selectedOptionValue: this.selectedOptionValue,
+              }}
+            >
+              {children}
+            </SelectContext.Provider>
+          </DropdownContext>
         </DropdownSource>
       </Dropdown>
     );
