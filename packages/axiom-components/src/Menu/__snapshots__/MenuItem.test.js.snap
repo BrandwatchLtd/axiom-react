@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MenuItem Passes size to Menu Item 1`] = `
+<ul
+  className="ax-menu"
+>
+  <li
+    className="ax-menu__item ax-text--size-headline ax-text--strong"
+  >
+    <button
+      className="ax-menu__item-button"
+      size="medium"
+    >
+      Lorem ipsum
+    </button>
+  </li>
+</ul>
+`;
+
 exports[`MenuItem renders with active 1`] = `
 <ul
   className="ax-menu"

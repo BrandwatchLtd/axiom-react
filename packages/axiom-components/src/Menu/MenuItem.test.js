@@ -28,4 +28,10 @@ describe("MenuItem", () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("Passes size to Menu Item", () => {
+    const component = getComponent({ size: "medium" });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
