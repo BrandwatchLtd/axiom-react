@@ -6319,6 +6319,11 @@ css-color-names@0.0.4:
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
   integrity sha1-gIrcLnnPhHOAabZGyyDsJ762KeA=
 
+css-global-variables@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/css-global-variables/-/css-global-variables-3.0.2.tgz#6b8d9486a9081c6e020b7c5ef0f01e7d520c2034"
+  integrity sha512-odsoHYarmcF3qdzXwi9bC889ATuBwmDj3mNSRnZBxP2gnXfBtyPPTBL+kYkGbWZGX8HvlWS55nv4sjYh2oI8/g==
+
 css-has-pseudo@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/css-has-pseudo/-/css-has-pseudo-0.10.0.tgz#3c642ab34ca242c59c41a125df9105841f6966ee"

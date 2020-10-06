@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import {CssVariableTable,CssColorVariableTable } from './themes';
 
 <Meta title="Customising Axiom" />
 
@@ -28,8 +29,8 @@ Some components render multiple children in this case we will provide a custom p
 ```
 
 ## Using Axiom CSS Variables
-This feature is not yet fully documented however `@brandwatch/axiom-materials` defines utility CSS variables which can be used to compose your own components 
-or add spacing or other styles that are consistent with the Axiom designs.
+`@brandwatch/axiom-materials` [exports](https://github.com/BrandwatchLtd/axiom-react/blob/master/packages/axiom-materials/src/importCssVariables.js) utility CSS variables which can be used to compose your own components 
+or add spacing or other styles that are consistent with the Axiom designs. See the table below for a complete list of available CSS vars.
 
 One common use case is to apply color or spacing e.g.
 
@@ -43,6 +44,15 @@ One common use case is to apply color or spacing e.g.
 
 ```
 
-Exported CSS variables can be found [here](https://github.com/BrandwatchLtd/axiom-react/blob/master/packages/axiom-materials/src/importCssVariables.js)
-
 You can also use this [Code Sandbox](https://codesandbox.io/s/axiom-materials-import-importcssvariables-9mwhi) as an example template.
+
+### CSS Variables
+Click table row to copy css var declaration to clipboard.
+
+#### Utility Constants
+
+<CssVariableTable/>
+
+#### Color Variables
+
+<CssColorVariableTable/>
