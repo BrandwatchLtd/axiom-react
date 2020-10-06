@@ -5,9 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
     - run: yarn install --frozen-lockfile
     - run: yarn test
     - run: yarn build:packages
     - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
-    - run: git remote add upstream git@github.com:BrandwatchLtd/axiom-react.git
-    - run: npx lerna publish --conventional-commits --yes --git-remote upstream
+    - run: git remote -v
+    - run: git config --global user.email "laurie@brandwatch.com"
+    - run: git config --global user.name "laurie"
+    - run: npx lerna updated -l
+    - run: npx lerna publish --yes
+    - run: npx lerna updated -l

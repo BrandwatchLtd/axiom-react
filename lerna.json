@@ -2,6 +2,7 @@
   "lerna": "3.4.0",
   "command": {
     "publish": {
+      "conventionalCommits": true,
       "message": "chore(release): Updated release notes and package versions."
     }
   },
