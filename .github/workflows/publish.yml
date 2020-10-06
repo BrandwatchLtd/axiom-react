@@ -21,6 +21,4 @@ jobs:
       run: |
         git config --global user.name 'lpoulter'
         git config --global user.email 'lpoulter@users.noreply.github.com'
-        npx lerna updated -l
         npx lerna publish --yes
-        npx lerna updated -l
