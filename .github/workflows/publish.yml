@@ -5,19 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Fetch repo code
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       with:
         fetch-depth: "0"
-    - name: Test and Build
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
-    - run: yarn build:packages
+    - name: NPM install
+      run: yarn install --frozen-lockfile
+    - name: Test
+      run: yarn test
+    - name: Build
+      run: yarn build:packages
     - name: Configure git credentials
       uses: OleksiyRudenko/gha-git-credentials@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set NPM token
+      run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
     - name: Publish New Version and Release
-    - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
-    - run: npx lerna updated -l
-    - run: npx lerna publish --yes
-    - run: npx lerna updated -l
+      run: |
+        npx lerna updated -l
+        npx lerna publish --yes
+        npx lerna updated -l
