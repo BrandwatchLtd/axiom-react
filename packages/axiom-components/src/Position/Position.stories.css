@@ -1,0 +1,19 @@
+.call-to-action-tooltip__content {
+  display: flex;
+}
+
+.call-to-action-tooltip__content__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.1875rem;
+  background-color: var(--color-theme-day-background--shade-2);
+  color: var(--color-theme-day-text--subtle);
+}
+
+.call-to-action-tooltip__content__text-container {
+  flex: 4;
+  padding: var(--spacing-grid-size--x4);
+  padding-right: var(--spacing-grid-size--x8);
+  padding-left: var(--spacing-grid-size--x8);
+}

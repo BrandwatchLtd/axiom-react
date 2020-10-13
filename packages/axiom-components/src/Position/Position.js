@@ -75,6 +75,10 @@ export default class Position extends Component {
     reference: PropTypes.object,
     /** Toggle that allows the arrow of the Context component to be hidden */
     showArrow: PropTypes.bool,
+    /**
+     * PopperJs Modifiers see https://popper.js.org/docs/v2/modifiers/
+     */
+    popperModifiers: PropTypes.array,
   };
 
   static defaultProps = {
@@ -84,6 +88,7 @@ export default class Position extends Component {
     offset: "middle",
     position: "top",
     showArrow: false,
+    popperModifiers: [],
   };
 
   constructor(props) {
@@ -103,7 +108,6 @@ export default class Position extends Component {
 
   componentDidUpdate() {
     const { enabled, isVisible, position, offset } = this.props;
-
     if (enabled && isVisible) {
       if (!this._popper) {
         this._popper = this.createPopper();
@@ -122,7 +126,13 @@ export default class Position extends Component {
   }
 
   createPopper() {
-    const { boundariesElement, flip, showArrow, reference } = this.props;
+    const {
+      boundariesElement,
+      flip,
+      showArrow,
+      reference,
+      popperModifiers,
+    } = this.props;
     const { placement } = this.state;
 
     const modifiers = [
@@ -163,6 +173,7 @@ export default class Position extends Component {
           boundariesElement,
         },
       },
+      ...popperModifiers,
     ];
 
     return createPopper(reference || this._target, this._content, {
