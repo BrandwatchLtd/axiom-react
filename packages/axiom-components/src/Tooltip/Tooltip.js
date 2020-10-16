@@ -4,8 +4,11 @@ import { findComponent } from "@brandwatch/axiom-utils";
 import Position from "../Position/Position";
 import PositionSource from "../Position/PositionSource";
 import PositionTarget from "../Position/PositionTarget";
-import { TooltipSourceRef } from "./TooltipSource";
-import { TooltipTargetRef } from "./TooltipTarget";
+import TooltipSource, { TooltipSourceRef } from "./TooltipSource";
+import TooltipTarget, { TooltipTargetRef } from "./TooltipTarget";
+import TooltipContext from "./TooltipContext";
+import TooltipContent from "./TooltipContent";
+import IconButton from "../Icon/IconButton";
 
 /**
  * Uses the Position component to show content on hover.
@@ -18,6 +21,8 @@ const Tooltip = React.forwardRef(
       onClick,
       position = "top",
       enabled = true,
+      content,
+      target,
       ...rest
     },
     ref
@@ -37,6 +42,32 @@ const Tooltip = React.forwardRef(
 
     function hideTooltip() {
       setIsVisible(false);
+    }
+
+    if (!children) {
+      return (
+        <Position
+          {...rest}
+          enabled={enabled}
+          isVisible={isVisible}
+          position={position}
+          showArrow
+        >
+          <PositionTarget delay={delay} onClick={onClick}>
+            <TooltipTarget showTooltip={showTooltip} hideTooltip={hideTooltip}>
+              {target}
+            </TooltipTarget>
+          </PositionTarget>
+
+          <PositionSource>
+            <TooltipSource>
+              <TooltipContext width="auto">
+                <TooltipContent>{content}</TooltipContent>
+              </TooltipContext>
+            </TooltipSource>
+          </PositionSource>
+        </Position>
+      );
     }
 
     return (
@@ -77,7 +108,7 @@ Tooltip.propTypes = {
    * Adds control to enable or disable showing the TooltipSource
    */
   enabled: PropTypes.bool,
-  /** SKIP */
+  /** @ignore */
   onClick: PropTypes.func,
   /**
    * Controls the starting position around TooltipTarget in which the
