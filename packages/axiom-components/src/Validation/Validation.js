@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
-import { Component } from "react";
+import React, { Component } from "react";
 import omit from "lodash.omit";
+import ValidationContext from "./ValidationContext";
 
-const getRequiredState = ({ required, value }) =>
-  !required ||
-  (value !== undefined &&
-    value !== null &&
-    (typeof value !== "string" || value.trim() !== ""));
+const getRequiredState = ({ required, value }) => {
+  return (
+    !required ||
+    (value !== undefined &&
+      value !== null &&
+      (typeof value !== "string" || value.trim() !== ""))
+  );
+};
 
 const getPatternsState = ({ patterns, value }) =>
   Array.isArray(patterns)
@@ -33,14 +37,6 @@ export default class Validation extends Component {
     requiredError: PropTypes.string,
   };
 
-  static childContextTypes = {
-    getValidity: PropTypes.func.isRequired,
-    checkPatternMet: PropTypes.func.isRequired,
-    checkRequiredMet: PropTypes.func.isRequired,
-    registerValidate: PropTypes.func.isRequired,
-    unregisterValidate: PropTypes.func.isRequired,
-  };
-
   constructor(props) {
     super(props);
     this.getUpdatedValidation = this.getUpdatedValidation.bind(this);
@@ -50,16 +46,6 @@ export default class Validation extends Component {
     this.registerValidate = this.registerValidate.bind(this);
     this.unregisterValidate = this.unregisterValidate.bind(this);
     this.state = { validators: {} };
-  }
-
-  getChildContext() {
-    return {
-      getValidity: this.getValidity,
-      checkPatternMet: this.checkPatternMet,
-      checkRequiredMet: this.checkRequiredMet,
-      registerValidate: this.registerValidate,
-      unregisterValidate: this.unregisterValidate,
-    };
   }
 
   registerValidate(validationState, id) {
@@ -135,9 +121,9 @@ export default class Validation extends Component {
   }
 
   getOverallRequiredValidity() {
-    return Object.keys(this.state.validators).every((id) =>
-      this.checkRequiredMet(id)
-    );
+    return Object.keys(this.state.validators).every((id) => {
+      return this.checkRequiredMet(id);
+    });
   }
 
   checkPatternMet(id, metPattern) {
@@ -160,6 +146,18 @@ export default class Validation extends Component {
   }
 
   render() {
-    return this.props.children(this.getUpdatedValidation);
+    return (
+      <ValidationContext.Provider
+        value={{
+          getValidity: this.getValidity,
+          checkPatternMet: this.checkPatternMet,
+          checkRequiredMet: this.checkRequiredMet,
+          registerValidate: this.registerValidate,
+          unregisterValidate: this.unregisterValidate,
+        }}
+      >
+        {this.props.children(this.getUpdatedValidation)}
+      </ValidationContext.Provider>
+    );
   }
 }
