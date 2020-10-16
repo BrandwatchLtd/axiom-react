@@ -10,9 +10,9 @@ export default class ButtonIcon extends Component {
   static propTypes = {
     /** Color of the Icon */
     color: PropTypes.string,
-    /** SKIP */
+    /** @ignore */
     isEnd: PropTypes.bool,
-    /** SKIP */
+    /** @ignore */
     isStart: PropTypes.bool,
     /** Name of the Icon */
     name: PropTypes.string.isRequired,

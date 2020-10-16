@@ -73,7 +73,7 @@ Button.propTypes = {
    * with a value of `true` otherwise at one of the breakpoints specified.
    */
   full: PropTypes.oneOf([true, "small", "medium", "large"]),
-  /** SKIP */
+  /** @ignore */
   joined: PropTypes.bool,
   /** Forces button to loose it's rounded styling on the left side */
   joinedLeft: PropTypes.bool,

@@ -9,11 +9,11 @@ export const LabelIconRef = "LabelIcon";
 
 export default class LabelIcon extends Component {
   static propTypes = {
-    /** SKIP */
+    /** @ignore */
     color: PropTypes.string,
-    /** SKIP */
+    /** @ignore */
     isEnd: PropTypes.bool,
-    /** SKIP */
+    /** @ignore */
     isStart: PropTypes.bool,
     /** Name of the icon. See <Icon>. */
     name: PropTypes.string.isRequired,

@@ -47,7 +47,7 @@ export default class DataPoint extends Component {
       "ui-warning",
       "ui-error",
     ]).isRequired,
-    /** SKIP */
+    /** @ignore */
     r: PropTypes.number,
     /** Style of the DataPoint */
     style: PropTypes.oneOf(["hollow", "solid"]),

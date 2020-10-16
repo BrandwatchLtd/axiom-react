@@ -6,7 +6,7 @@ import DropdownReactContext from "./DropdownReactContext";
 
 export default class DropdownMenuItem extends Component {
   static propTypes = {
-    /** SKIP */
+    /** @ignore */
     children: PropTypes.node,
     /** Disabled interactions and applies styling */
     disabled: PropTypes.bool,

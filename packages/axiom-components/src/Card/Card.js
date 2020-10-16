@@ -50,7 +50,7 @@ Card.propTypes = {
   border: PropTypes.bool,
   /** Applies border radius */
   borderRadius: PropTypes.oneOf(["small", "large"]),
-  /** SKIP */
+  /** @ignore */
   cardListStyle: PropTypes.oneOf(["divided", "seamless", "separate"]),
   /** Content to be inserted inside the Card */
   children: PropTypes.node.isRequired,

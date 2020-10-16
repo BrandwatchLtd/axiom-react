@@ -7,7 +7,7 @@ import DropdownReactContext from "../Dropdown/DropdownReactContext";
 export default class SelectInput extends Component {
   static propTypes = {
     children: PropTypes.node,
-    /** SKIP */
+    /** @ignore */
     onFocus: PropTypes.func,
   };
 

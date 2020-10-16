@@ -65,7 +65,7 @@ export default class TextInput extends Component {
     required: PropTypes.bool,
     /** Size of the input field */
     size: PropTypes.oneOf(["small", "medium", "large"]),
-    /** SKIP */
+    /** @ignore */
     space: PropTypes.string,
     /** Visual style variations of the input field */
     style: PropTypes.oneOf(["overlay"]),

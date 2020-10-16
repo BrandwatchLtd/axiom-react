@@ -8,7 +8,7 @@ import "./Icon.css";
 
 export default class Icon extends Component {
   static propTypes = {
-    /** SKIP */
+    /** @ignore */
     className: PropTypes.string,
     /**
      * Inline styling that allows the Icon to placed next to other inline

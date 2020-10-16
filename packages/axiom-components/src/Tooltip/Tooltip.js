@@ -77,7 +77,7 @@ Tooltip.propTypes = {
    * Adds control to enable or disable showing the TooltipSource
    */
   enabled: PropTypes.bool,
-  /** SKIP */
+  /** @ignore */
   onClick: PropTypes.func,
   /**
    * Controls the starting position around TooltipTarget in which the

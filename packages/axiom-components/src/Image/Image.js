@@ -17,9 +17,9 @@ export default class Image extends Component {
     height: PropTypes.string,
     /** @type {[type]} [description] */
     maxWidth: PropTypes.string,
-    /** SKIP */
+    /** @ignore */
     onError: PropTypes.func,
-    /** SKIP */
+    /** @ignore */
     onLoad: PropTypes.func,
     /** Shape of the image */
     shape: PropTypes.oneOf(["circle", "rounded", "square"]),

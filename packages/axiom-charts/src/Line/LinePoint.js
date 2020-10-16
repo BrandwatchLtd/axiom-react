@@ -68,17 +68,17 @@ export default class LinePoint extends Component {
     onDropdownClose: PropTypes.func,
     /** Call back for when a given Context component opens */
     onDropdownOpen: PropTypes.func,
-    /** SKIP */
+    /** @ignore */
     onMouseEnter: PropTypes.func,
     /** Size of the DataPoint */
     size: PropTypes.string.isRequired,
     /** Style of the DataPoint */
     style: PropTypes.oneOf(["hollow", "solid"]),
-    /** SKIP */
+    /** @ignore */
     value: PropTypes.number,
-    /** SKIP */
+    /** @ignore */
     x: PropTypes.number,
-    /** SKIP */
+    /** @ignore */
     y: PropTypes.number,
   };
 

@@ -11,7 +11,7 @@ export default class Reveal extends Component {
     children: PropTypes.node.isRequired,
     /** Removes children from the reveal container when it is collapsed */
     removeChildren: PropTypes.bool,
-    /** SKIP */
+    /** @ignore */
     space: PropTypes.string,
     /** Revealed status, true will expand out the content, false will collapse it. */
     visible: PropTypes.bool.isRequired,

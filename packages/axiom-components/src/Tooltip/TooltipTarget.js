@@ -9,10 +9,10 @@ export default class TooltipTarget extends Component {
   static propTypes = {
     children: PropTypes.node,
     delay: PropTypes.bool,
-    /** SKIP */
+    /** @ignore */
     hideTooltip: PropTypes.func,
     onClick: PropTypes.func,
-    /** SKIP */
+    /** @ignore */
     showTooltip: PropTypes.func,
   };
 
