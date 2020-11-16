@@ -23,11 +23,12 @@ export function Default() {
     <Table>
       <TableHeader>
         <TableHeaderLabel sortDirection="ascending">Column A</TableHeaderLabel>
-        <TableHeaderLabel>Column B</TableHeaderLabel>
+        <TableHeaderLabel>lower case</TableHeaderLabel>
         <TableHeaderLabel wrap={true}>
           Super long Column C label with wrapping Lorem ipsum
         </TableHeaderLabel>
-        <TableHeaderLabel>Column D</TableHeaderLabel>
+        <TableHeaderLabel>CAPS LOCK</TableHeaderLabel>
+        <TableHeaderLabel>Title Case Please</TableHeaderLabel>
       </TableHeader>
       <TableBody>
         <TableRow>

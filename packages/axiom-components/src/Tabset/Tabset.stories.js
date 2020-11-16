@@ -25,7 +25,7 @@ export function Default({ size, space, activeTabIndex }) {
         velit nec, accumsan dolor. Morbi in finibus mauris, id pretium ipsum.
         Sed quis massa tempus nunc molestie ultrices sit amet vel urna.
       </Tab>
-      <Tab title="Tab 3">
+      <Tab title="disabled" disabled>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris
         libero, suscipit eu dignissim eu, consectetur in mauris. Donec semper
         tristique ipsum non vehicula. In eget libero lobortis, sollicitudin

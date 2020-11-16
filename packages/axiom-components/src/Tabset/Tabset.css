@@ -51,7 +51,7 @@
   outline: 0;
   border: 0;
   background: none;
-  color: inherit;
+  color: var(--color-theme-text--subtle);
   text-transform: capitalize;
   line-height: var(--component-line-height);
   transition-property: color;
@@ -67,6 +67,10 @@
     color: var(--color-theme-text--disabled);
     cursor: default;
   }
+}
+
+.ax-tabset__list-item--active .ax-tabset__button {
+  color: var(--color-ui-accent--active);
 }
 
 .ax-tabset__list--medium .ax-tabset__button {
