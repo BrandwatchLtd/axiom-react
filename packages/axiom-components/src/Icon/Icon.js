@@ -158,6 +158,8 @@ export default class Icon extends Component {
       "sina-weibo-mono",
       "lexis-nexis-mono",
       "source",
+      "vk",
+      "vk-mono",
     ]).isRequired,
     /** Size of icon (with unit). Not used when height or width is provided */
     size: PropTypes.string,

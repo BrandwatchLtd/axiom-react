@@ -45,6 +45,7 @@ const socailIcons = [
   "4chan",
   "sina-weibo",
   "lexis-nexis",
+  "vk",
 ];
 
 export function Social() {
@@ -76,6 +77,7 @@ const socailIconsMono = [
   "4chan-mono",
   "sina-weibo-mono",
   "lexis-nexis-mono",
+  "vk-mono",
 ];
 
 export function SocialMono() {

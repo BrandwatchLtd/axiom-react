@@ -127,6 +127,8 @@ export default {
   twitter: require("./icon_svgs/twitter.svg"),
   unlock: require("./icon_svgs/unlock.svg"),
   user: require("./icon_svgs/user.svg"),
+  vk: require("./icon_svgs/vk.svg"),
+  "vk-mono": require("./icon_svgs/vk-mono.svg"),
   warning: require("./icon_svgs/warning.svg"),
   "warning-circle": require("./icon_svgs/warning-circle.svg"),
   "youtube-mono": require("./icon_svgs/youtube-mono.svg"),

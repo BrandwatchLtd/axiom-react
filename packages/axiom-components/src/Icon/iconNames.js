@@ -127,6 +127,8 @@ const iconNames = [
   "twitter",
   "unlock",
   "user",
+  "vk",
+  "vk-mono",
   "warning",
   "warning-circle",
   "youtube-mono",
