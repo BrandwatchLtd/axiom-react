@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { colors, colorUtils } from "@brandwatch/axiom-materials";
 import CrLogo from "./logos/CrLogo";
+import DataLogo from "./logos/DataLogo";
 import MyLogo from "./logos/MyLogo";
 import "./AnimatedLogo.css";
 
@@ -32,6 +33,7 @@ function AnimatedLogo({
 
   const getLogo = () => {
     if (logo === "cr") return <CrLogo />;
+    if (logo === "data") return <DataLogo />;
     if (logo === "my") return <MyLogo />;
   };
 
@@ -206,7 +208,7 @@ AnimatedLogo.propTypes = {
   shouldAnimate: PropTypes.bool,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  logo: PropTypes.oneOf(["my", "cr"]),
+  logo: PropTypes.oneOf(["my", "cr", "data"]),
 };
 
 export default AnimatedLogo;
