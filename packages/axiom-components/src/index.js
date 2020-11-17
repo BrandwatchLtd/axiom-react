@@ -5,6 +5,7 @@ export { default as AlertDialogBody } from "./AlertDialog/AlertDialogBody";
 export { default as AlertDialogHeader } from "./AlertDialog/AlertDialogHeader";
 export { default as AlertIcon } from "./AlertIcon/AlertIcon";
 export { default as Animation } from "./Animation/Animation";
+export { default as AnimatedLogo } from "./AnimatedLogo/AnimatedLogo";
 export { default as Animicon } from "./Icon/Animicon";
 export { default as Avatar } from "./Avatar/Avatar";
 export { default as Badge } from "./Badge/Badge";
