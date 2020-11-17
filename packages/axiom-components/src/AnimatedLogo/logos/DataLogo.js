@@ -3,7 +3,7 @@ import React from "react";
 function DataLogo() {
   return (
     <>
-      <rect fill="#57b7dd" x="0" y="0" width="28" height="28" />
+      <rect fill="#239edb" x="0" y="0" width="28" height="28" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="28"
