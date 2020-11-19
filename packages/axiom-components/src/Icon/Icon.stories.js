@@ -22,7 +22,7 @@ export function All() {
         <GridCell key={name} width={25}>
           <Grid gutters="tiny" none responsive={false} verticalAlign="middle">
             <GridCell>
-              <Icon name={name} />
+              <Icon name={name} size="3rem"/>
             </GridCell>
 
             <GridCell>{name}</GridCell>
@@ -55,7 +55,7 @@ export function Social() {
         <GridCell key={name} width={25}>
           <Grid gutters="tiny" none responsive={false} verticalAlign="middle">
             <GridCell>
-              <Icon name={name} />
+              <Icon name={name} size="3rem"/>
             </GridCell>
 
             <GridCell>{name}</GridCell>
@@ -87,7 +87,7 @@ export function SocialMono() {
         <GridCell key={name} width={25}>
           <Grid gutters="tiny" none responsive={false} verticalAlign="middle">
             <GridCell>
-              <Icon name={name} />
+              <Icon name={name} size="3rem"/>
             </GridCell>
 
             <GridCell>{name}</GridCell>
