@@ -35,4 +35,16 @@ describe("Icon", () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders with custom color", () => {
+    const component = getComponent({ color: "warning" });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("supports passing of text-color to Base", () => {
+    const component = getComponent({ color: "critical-mass" });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
