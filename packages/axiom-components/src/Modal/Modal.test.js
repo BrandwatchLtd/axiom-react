@@ -1,26 +1,40 @@
 import React from "react";
-import toJSON from "enzyme-to-json";
-import { mount } from "enzyme";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Modal from "./Modal";
 
+const renderModal = ({ isOpen = true, ...rest } = {}) =>
+  render(<Modal isOpen={isOpen} {...rest} />);
+
 describe("Modal", () => {
-  it("renders", () => {
-    const component = mount(<Modal isOpen />);
-    expect(toJSON(component)).toMatchSnapshot();
+  describe("when is open is true", () => {
+    it("renders Modal", () => {
+      renderModal();
+      expect(screen.getByRole("dialog")).toBeDefined();
+    });
   });
 
-  it("closes if a esc button was pressed", () => {
-    const spy = jest.fn();
-    const component = mount(
-      <Modal isOpen onOverlayClick={spy} shouldCloseOnEsc />
-    );
-    expect(toJSON(component)).toMatchSnapshot();
-
-    const keyboardEvent = new KeyboardEvent("keydown", {
-      keyCode: 27,
-      key: "Escape",
+  describe("when is open is false", () => {
+    it("does not render Modal", () => {
+      renderModal({ isOpen: false });
+      expect(screen.queryByRole("dialog")).toBeNull();
     });
-    document.body.dispatchEvent(keyboardEvent);
-    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  describe("shouldCloseOnEsc", () => {
+    describe("when shouldCloseOnEsc is true", () => {
+      it("closes Modal", () => {
+        const onOverlayClickSpy = jest.fn();
+
+        const { container } = renderModal({
+          shouldCloseOnEsc: true,
+          onOverlayClick: onOverlayClickSpy,
+        });
+
+        userEvent.type(container, "{esc}");
+
+        expect(onOverlayClickSpy).toHaveBeenCalledTimes(1);
+      });
+    });
   });
 });
