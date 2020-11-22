@@ -3,6 +3,7 @@
 exports[`Dialog renders with required props 1`] = `
 <div
   className="ax-modal__container ax-modal__container--padding-x6 ax-modal__container--overlay-shade-2"
+  role="dialog"
 >
   <div
     className="ax-modal__mask"
