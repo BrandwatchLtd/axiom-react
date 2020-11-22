@@ -12,6 +12,6 @@
     "@brandwatch/axiom-materials": "^1.33.1"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.8.6 || ~17.0.1"
   }
 }
