@@ -23,13 +23,15 @@
     "lodash.omit": "^4.5.0",
     "luxon": "^1.22.0",
     "prop-types": "^15.6.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "react-transition-group": "^2.3.0",
     "resize-observer-polyfill": "^1.5.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

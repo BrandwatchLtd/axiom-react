@@ -9,7 +9,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@brandwatch/axiom-materials": "^1.33.1",
+    "@brandwatch/axiom-materials": "^1.33.1"
+  },
+  "peerDependencies": {
     "react": "^16.8.6"
   }
 }

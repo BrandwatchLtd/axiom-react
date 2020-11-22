@@ -12,7 +12,9 @@
     "@brandwatch/axiom-automation-testing": "^0.0.11",
     "@brandwatch/axiom-components": "^12.7.0",
     "classnames": "^2.2.1",
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.6.0"
+  },
+  "peerDependencies": {
     "react": "^16.8.6"
   }
 }
