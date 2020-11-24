@@ -13,6 +13,8 @@ export default class Chip extends Component {
     children: PropTypes.node.isRequired,
     /** Disable interaction behaviour */
     disabled: PropTypes.bool,
+    /** Apply invalid styling */
+    invalid: PropTypes.bool,
     /** Name of the Icon located to the left of the main content */
     leftIcon: PropTypes.string,
     /** Metric content */
@@ -21,6 +23,8 @@ export default class Chip extends Component {
     rightIcon: PropTypes.string,
     /** Size of the chip */
     size: PropTypes.oneOf(["small", "medium", "large", "huge"]),
+    /** Apply valid styling */
+    valid: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -32,26 +36,32 @@ export default class Chip extends Component {
       active,
       children,
       disabled,
+      invalid,
       leftIcon,
       metric,
       rightIcon,
       size,
+      valid,
       ...rest
     } = this.props;
 
     const classes = classnames("ax-chip", `ax-chip--${size}`, {
       "ax-chip--active": active,
-    });
-
-    const metricClasses = classnames("ax-chip-metric", {
-      "ax-chip-metric--light": active,
+      "ax-chip--valid": valid,
+      "ax-chip--invalid": invalid,
     });
 
     return (
       <Base className={classes} disabled={disabled} {...rest}>
-        {leftIcon && <Icon className={"ax-chip-icon"} name={leftIcon} />}
+        {leftIcon && (
+          <Icon
+            className={"ax-chip-icon"}
+            name={leftIcon}
+            color={active ? "ui-accent" : ""}
+          />
+        )}
         <Base className="ax-chip-label">{children}</Base>
-        {metric && <Base className={metricClasses}> {metric}</Base>}
+        {metric && <Base className={"ax-chip-metric"}> {metric}</Base>}
         {rightIcon && <Icon className={"ax-chip-icon"} name={rightIcon} />}
       </Base>
     );

@@ -29,6 +29,8 @@
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
+    background-color: var(--color-theme-background--disabled);
+    color: var(--color-theme-text--disabled);
     cursor: default;
   }
 
@@ -47,15 +49,25 @@
 }
 
 .ax-chip--active {
-  background-color: var(--color-ui-accent);
-  color: var(--color-ui-white);
+  border-width: var(--component-border-width);
+  border-style: solid;
+  border-radius: var(--component-border-radius-huge);
+  border-color: var(--color-ui-accent);
+}
+
+.ax-chip--valid {
+  background-color: rgba(var(--rgb-ui-success), 0.2);
 
   &:hover {
-    background-color: var(--color-ui-accent--hover);
+    background-color: rgba(var(--rgb-ui-success--hover), 0.2);
   }
+}
 
-  &[disabled]:hover {
-    background-color: var(--color-ui-accent);
+.ax-chip--invalid {
+  background-color: rgba(var(--rgb-ui-error), 0.2);
+
+  &:hover {
+    background-color: rgba(var(--rgb-ui-error--hover), 0.2);
   }
 }
 
