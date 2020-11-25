@@ -57,7 +57,7 @@ export default class Chip extends Component {
           <Icon
             className={"ax-chip-icon"}
             name={leftIcon}
-            color={active ? "ui-accent" : ""}
+            color={active ? "ui-accent" : null}
           />
         )}
         <Base className="ax-chip-label">{children}</Base>

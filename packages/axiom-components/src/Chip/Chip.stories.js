@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Chip from "./Chip";
 import ChipList from "./ChipList";
 
@@ -24,19 +24,33 @@ export function Default() {
   );
 }
 
-export function InputChips(props) {
+export function InputChips() {
+  const CHIPS = [
+    { name: "Gaming", id: 1 },
+    { name: "Music", id: 2, disabled: true },
+    { name: "Art", id: 3, invalid: true },
+    { name: "Sports", id: 4, valid: true },
+  ];
+  const [chips, setChips] = useState(CHIPS);
+
+  const handleClick = (chipIdToRemove) => {
+    setChips(chips?.filter(({ id }) => id !== chipIdToRemove));
+  };
+
   return (
     <ChipList>
-      <Chip rightIcon="cross">Gaming</Chip>
-      <Chip valid rightIcon="cross">
-        Music
-      </Chip>
-      <Chip invalid rightIcon="cross">
-        Art
-      </Chip>
-      <Chip disabled rightIcon="cross">
-        Sports
-      </Chip>
+      {chips.map(({ name, id, valid, invalid, disabled }) => (
+        <Chip
+          key={id}
+          invalid={invalid}
+          valid={valid}
+          disabled={disabled}
+          rightIcon="cross"
+          onClick={() => handleClick(id)}
+        >
+          {name}
+        </Chip>
+      ))}
     </ChipList>
   );
 }
@@ -50,13 +64,30 @@ InputChips.parameters = {
   },
 };
 
-export function ChoiceChips(props) {
+export function ChoiceChips() {
+  const [selectedChips, setSelectedChips] = useState({ 2: true });
+
+  const CHIPS = [
+    { name: "Journalist", id: 1 },
+    { name: "Artist", id: 2 },
+  ];
+
+  const handleClick = (id) => {
+    setSelectedChips((chips) => ({ ...chips, [id]: !chips[id] }));
+  };
+
   return (
     <ChipList>
-      <Chip>Journalist</Chip>
-      <Chip active leftIcon={"tick"}>
-        Artist
-      </Chip>
+      {CHIPS.map(({ name, id }) => (
+        <Chip
+          active={selectedChips[id]}
+          onClick={() => handleClick(id)}
+          leftIcon={selectedChips[id] ? "tick" : null}
+          key={id}
+        >
+          {name}
+        </Chip>
+      ))}
     </ChipList>
   );
 }
