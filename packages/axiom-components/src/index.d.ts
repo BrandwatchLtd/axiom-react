@@ -1,47 +1,16 @@
 declare module '@brandwatch/axiom-components' {
 
-  enum AxiomSIZES {
-    tiny = "tiny",
-    small = "small",
-    medium = "medium",
-    large = "large",
-    huge = "huge"
-  }
+  export type AxiomALIGNMENTS = "start" | "middle" | "end"
 
-  enum AxiomVARIANTS {
-    primary = "primary",
-    secondary = "secondary",
-    tertiary = "tertiary",
-    quarternary = "quarternary",
-    subtle = "subtle"
-  }
+  export type AxiomBUTTON_COLORS = "accent" | "negative" | "positive"
 
-  enum AxiomTIMING {
-    easeIn = "ease-in",
-    easeOut = "ease-out",
-    easeInOut = "ease-in-out",
-    linear = "linear"
-  }
+  export type AxiomSTATUS_TYPES = "success" | "warning" | "error" | "info";
 
-  enum AxiomSHAPES {
-    circle = "circle",
-    rectangle = "rectangle",
-    stadium = "stadium",
-    square = "square",
-    rounded = "rounded"
-  }
+  export type AxiomLIST_STYLE = "divided" | "seamless" | "separate"
 
-  type AxiomALIGNMENTS = "start" | "middle" | "end"
+  export type AxiomPOSITIONS = "top" | "bottom" | "left" | "right"
 
-  type AxiomBUTTON_COLORS = "accent" | "negative" | "positive"
-
-  type AxiomSTATUS_TYPES = "success" | "warning" | "error" | "info";
-
-  type AxiomLIST_STYLE = "divided" | "seamless" | "separate"
-
-  type AxiomPOSITIONS = "top" | "bottom" | "left" | "right"
-
-  type AxiomCOLORS = "forbidden-planet"
+  export type AxiomCOLORS = "forbidden-planet"
     | "tiny-clanger"
     | "critical-mass"
     | "fantastic-voyage"
@@ -68,13 +37,13 @@ declare module '@brandwatch/axiom-components' {
     | "deep-thought"
     | "luna-dust";
 
-  type AxiomALL_COLORS = "faded"
+  export type AxiomALL_COLORS = "faded"
     | "highlight"
     | "success"
     | "error"
     | AxiomCOLORS;
 
-  type AxiomTEXT_COLORS = "body"
+  export type AxiomTEXT_COLORS = "body"
     | "day"
     | "night"
     | "error"
@@ -91,7 +60,7 @@ declare module '@brandwatch/axiom-components' {
     | "ui-accent"
     | AxiomCOLORS;
 
-  type AxiomFLAGS = "ad"
+  export type AxiomFLAGS = "ad"
     | "ae"
     | "af"
     | "ag"
@@ -349,7 +318,7 @@ declare module '@brandwatch/axiom-components' {
     | "un"
     | "uk"
 
-  type AxiomICONS = "4chan"
+  export type AxiomICONS = "4chan"
     | "4chan-mono"
     | "annotate"
     | "analytics-alert"
@@ -484,24 +453,24 @@ declare module '@brandwatch/axiom-components' {
     | "youtube-mono"
     | "youtube"
 
-  type AxiomCONSOLE_SHADES = "shade-2" | "shade-3" | "shade-4";
+  export type AxiomCONSOLE_SHADES = "shade-2" | "shade-3" | "shade-4";
 
-  type AxiomSHADES = "shade-1" | AxiomCONSOLE_SHADES;
+  export type AxiomSHADES = "shade-1" | AxiomCONSOLE_SHADES;
 
-  type AxiomSPACES = "x0" | "x1" | "x2" | "x3" | "x4" | "x5" | "x6" | "x7" | "x8";
+  export type AxiomSPACES = "x0" | "x1" | "x2" | "x3" | "x4" | "x5" | "x6" | "x8";
 
-  type AxiomMODAL_PADDING = "x0" | "x6" | "x8" | "x12" | "x16";
+  export type AxiomMODAL_PADDING = "x0" | "x6" | "x8" | "x12" | "x16";
 
-  type AxiomHEADING_SIZES = "display2"
+  export type AxiomHEADING_SIZES = "display2"
     | "display1"
     | "headline"
     | "headtitle"
     | "large"
     | "label"
 
-  type AxiomTEXT_SIZES = AxiomHEADING_SIZES | "body" | "small";
+  export type AxiomTEXT_SIZES = AxiomHEADING_SIZES | "body" | "small";
 
-  type AxiomTHEMES = "day" | "night";
+  export type AxiomTHEMES = "day" | "night";
 
 
   class AlertBar extends React.Component<React.PropsWithChildren<AlertBarProps>, any> {
@@ -511,7 +480,7 @@ declare module '@brandwatch/axiom-components' {
     /** An optional callback that when given adds a removable cross */
     onRemoveClick?: () => void
     /** Size of the AlertBar */
-    size?: AxiomSIZES.small | AxiomSIZES.medium
+    size?: "small" | "medium"
     /** Type of AlertBar that affects the coloring and icon */
     type?: AxiomSTATUS_TYPES
   }
@@ -525,7 +494,7 @@ declare module '@brandwatch/axiom-components' {
     /** Shade of the background color */
     shade?: AxiomSHADES
     /** Increases/decreases the size of the card */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    size?: "small" | "medium" | "large"
     /** Type of AlertBar that affects the coloring and icon */
     type?: AxiomSTATUS_TYPES
   }
@@ -561,9 +530,9 @@ declare module '@brandwatch/axiom-components' {
 
   interface AlertIconProps {
     /** Size of the indicator and icon */
-    size?: AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    size?: "tiny" | "small" | "medium" | "large"
     /** Style of the indicator */
-    style?: AxiomVARIANTS.primary | AxiomVARIANTS.secondary | AxiomVARIANTS.subtle
+    style?: "primary" | "secondary" | "subtle"
     /** Color of the indicator and icon */
     type?: AxiomSTATUS_TYPES
   }
@@ -584,7 +553,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface AnimationProps extends BaseProps {
     name?: "fade-in-right" | "fade-in-down" | "fade-in-left" | "fade-in-up"
-    timingFunction?: AxiomTIMING.easeIn | AxiomTIMING.easeOut | AxiomTIMING.easeInOut | AxiomTIMING.linear
+    timingFunction?: "ease-in" | "ease-out" | "ease-in-out" | "linear"
     toggled?: boolean
   }
 
@@ -601,7 +570,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface AvatarProps {
     /** Border around the avatar */
-    border?: AxiomSIZES.small | AxiomSIZES.large
+    border?: "small" | "large"
     /** Size of the Avatar */
     size: string
     /** Source of the image */
@@ -613,12 +582,12 @@ declare module '@brandwatch/axiom-components' {
 
   interface BadgeProps {
     /** Colour of the Badge */
-    color: AxiomALL_COLORS
+    color?: AxiomALL_COLORS
     /**
      * Controls the full width appearance of the badge either all of the time,
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
-    full?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    full?: true | "small" | "medium" | "large"
     /** Click handler that applied clickable styling */
     onClick?: () => void
     /** The opacity of the background of the Badge */
@@ -657,7 +626,7 @@ declare module '@brandwatch/axiom-components' {
      * Control over when the element should be hidden until.
      * Opposite of `visibleUntil`.
      */
-    hiddenUntil?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    hiddenUntil?: "small" | "medium" | "large",
     /** disables pointer events */
     pointerEventsDisabled?: boolean,
     /** Vertical margins given to the element */
@@ -675,7 +644,7 @@ declare module '@brandwatch/axiom-components' {
      * Text central alignment either all of the time, with a value of `true`
      * otherwise at one of the breakpoints specified.
      */
-    textCenter?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    textCenter?: true | "small" | "medium" | "large",
     /** Text color styling */
     textColor?: AxiomTEXT_COLORS,
     /** Text ellipsis styling */
@@ -686,12 +655,12 @@ declare module '@brandwatch/axiom-components' {
      * Text left alignment either all of the time, with a value of `true`
      * otherwise at one of the breakpoints specified.
      */
-    textLeft?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    textLeft?: true | "small" | "medium" | "large",
     /**
      * Text right alignment either all of the time, with a value of `true`
      * otherwise at one of the breakpoints specified.
      */
-    textRight?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    textRight?: true | "small" | "medium" | "large",
     /** Text size styling */
     textSize?: AxiomTEXT_SIZES,
     /** Text strike styling */
@@ -706,7 +675,7 @@ declare module '@brandwatch/axiom-components' {
      * Control over when the element should be visible until.
      * Opposite of `hiddenUntil`.
      */
-    visibleUntil?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    visibleUntil?: "small" | "medium" | "large"
   }
 
   class Button extends React.Component<React.PropsWithChildren<ButtonProps>, any> {
@@ -725,19 +694,17 @@ declare module '@brandwatch/axiom-components' {
      * Controls the full width appearance of the badge either all of the time,
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
-    full?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
-    /** @ignore */
-    joined?: boolean
+    full?: true | "small" | "medium" | "large",
     /** Forces button to loose its rounded styling on the left side */
     joinedLeft?: boolean
     /** Forces button to loose its rounded styling on the right side */
     joinedRight?: boolean
     /** Shape of the button */
-    shape?: AxiomSHAPES.circle | AxiomSHAPES.rectangle | AxiomSHAPES.stadium
+    shape?: "circle" | "rectangle" | "stadium"
     /** Size of standard shape */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large | AxiomSIZES.huge
+    size?: "small" | "medium" | "large" | "huge"
     /** variant of the Button, which affects its coloring and sizing */
-    variant?: AxiomVARIANTS.primary | AxiomVARIANTS.secondary | AxiomVARIANTS.tertiary | AxiomVARIANTS.quarternary
+    variant?: "primary" | "secondary" | "tertiary" | "quaternary"
   }
 
   class ButtonGroup extends React.Component<React.PropsWithChildren<ButtonGroupProps>, any> {
@@ -754,10 +721,6 @@ declare module '@brandwatch/axiom-components' {
   interface ButtonIconProps {
     /** Color of the Icon */
     color?: string
-    /** @ignore */
-    isEnd?: boolean
-    /** @ignore */
-    isStart?: boolean
     /** Name of the Icon */
     name: AxiomICONS
     /** Size of the Icon */
@@ -768,9 +731,9 @@ declare module '@brandwatch/axiom-components' {
   }
 
   interface CandytarProps extends BaseProps {
-    color?: any
-    picker?: any
-    size?: any
+    color?: AxiomCOLORS
+    picker?: (colors: AxiomCOLORS[]) => void
+    size: string
   }
 
   class Canvas extends React.Component<React.PropsWithChildren<CanvasProps>, any> {
@@ -784,7 +747,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface CanvasHeaderProps {
     separator?: boolean
-    size?: AxiomSIZES.small | AxiomSIZES.large
+    size?: "small" | "large"
   }
 
   class Card extends React.Component<React.PropsWithChildren<CardProps>, any> {
@@ -796,9 +759,7 @@ declare module '@brandwatch/axiom-components' {
     /** Applies border styling */
     border?: boolean
     /** Applies border radius */
-    borderRadius?: AxiomSIZES.small | AxiomSIZES.large
-    /** @ignore */
-    cardListStyle: AxiomLIST_STYLE
+    borderRadius?: "small" | "large"
     /** Class name to be appended to the element */
     className?: string
     /** Applies styling to indicate the Card is in an hovered state */
@@ -810,7 +771,7 @@ declare module '@brandwatch/axiom-components' {
     /** Applies a shadow to the card */
     shadow?: boolean
     /** Increases/decreases the size of the card */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    size?: "small" | "medium" | "large"
   }
 
   class CardCaption extends React.Component<React.PropsWithChildren<CardCaptionProps>, any> {
@@ -834,7 +795,7 @@ declare module '@brandwatch/axiom-components' {
     /** Shade of the background color */
     shade?: AxiomSHADES
     /** Increases/decreases the size of the content */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    size?: "small" | "medium" | "large"
   }
 
   class CardImage extends React.Component<React.PropsWithChildren<CardImageProps>, any> {
@@ -865,7 +826,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface CardListProps {
     /** Class name to be appended to the element */
-    className?: any
+    className?: string
     /** Style of the list */
     style?: AxiomLIST_STYLE
   }
@@ -879,7 +840,7 @@ declare module '@brandwatch/axiom-components' {
     /** Disables interactions and applies styling */
     disabled?: boolean,
     /** See Validate[error] */
-    error?: () => void,
+    error?: any,
     /** Partially checked state of the input */
     indeterminate?: boolean,
     /** Applies styling to indicate the users input was invalid */
@@ -935,7 +896,7 @@ declare module '@brandwatch/axiom-components' {
     /** Name of the Icon located to the right of the main content */
     rightIcon?: string
     /** Size of the chip */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large | AxiomSIZES.huge
+    size?: "small" | "medium" | "large" | "huge"
   }
 
   class ChipList extends React.Component<React.PropsWithChildren<ChipListProps>, any> {
@@ -945,7 +906,7 @@ declare module '@brandwatch/axiom-components' {
     /** Label of the List */
     label?: string
     /** Size of the chips in the chip list */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large | AxiomSIZES.huge
+    size?: "small" | "medium" | "large" | "huge"
   }
 
   class Cloak extends React.Component<CloakProps, any> {
@@ -968,7 +929,7 @@ declare module '@brandwatch/axiom-components' {
     /** Callback for when the color picker has been opened */
     onOpen?: () => void
     /** Callback for when a color has been selected, provided with the selected color */
-    onSelectColor: () => void
+    onSelectColor: (color: AxiomCOLORS) => void
     /** Colors that should be visible for selection */
     options?: AxiomCOLORS[]
     /** Color that should appear as selected */
@@ -1006,7 +967,7 @@ declare module '@brandwatch/axiom-components' {
   interface ConsoleHeaderProps {
     separator?: boolean
     shade?: AxiomCONSOLE_SHADES
-    size?: AxiomSIZES.small | AxiomSIZES.large
+    size?: "small" | "large"
   }
 
   class ConsoleMenuItem extends React.Component<React.PropsWithChildren<ConsoleMenuItemProps>, any> {
@@ -1039,9 +1000,9 @@ declare module '@brandwatch/axiom-components' {
     hasFullSeparator?: boolean
     height?: string
     maxHeight?: string
-    padding?: "none" | AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
-    paddingHorizontal?: "none" | AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
-    paddingVertical?: "none" | AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    padding?: "none" | "tiny" | "small" | "medium" | "large"
+    paddingHorizontal?: "none" | "tiny" | "small" | "medium" | "large"
+    paddingVertical?: "none" | "tiny" | "small" | "medium" | "large"
   }
 
   class ContextMenu extends React.Component<React.PropsWithChildren<ContextMenuProps>, any> {
@@ -1049,7 +1010,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface ContextMenuProps {
     className?: string
-    paddingVertical?: "none" | AxiomSIZES.medium
+    paddingVertical?: "none" | "medium"
   }
 
   class ContextMenuItem extends React.Component<React.PropsWithChildren<ContextMenuItemProps>, any> {
@@ -1062,7 +1023,7 @@ declare module '@brandwatch/axiom-components' {
     indeterminate?: boolean
     multiSelect?: boolean
     onClick?: () => void
-    paddingVertical?: AxiomSIZES.small | AxiomSIZES.medium
+    paddingVertical?: "small" | "medium"
     selected?: boolean
   }
 
@@ -1087,7 +1048,7 @@ declare module '@brandwatch/axiom-components' {
     /** Handler that is called when the color picker is opened */
     onColorPickerOpen?: () => void
     /** Handler that is called when a color is selected */
-    onSelectColor?: () => void
+    onSelectColor?: (color: AxiomCOLORS) => void
     /** Placeholder text that will be displayed when no value is provided */
     placeholder: string
     /** Value that will be displayed in the header. */
@@ -1109,37 +1070,42 @@ declare module '@brandwatch/axiom-components' {
   class DatePicker extends React.Component<React.PropsWithChildren<DatePickerProps>, any> {
   }
 
+  export interface AxiomDateRange {
+    startDate: Date
+    endDate: Date
+  }
+
   interface DatePickerProps {
     /**
      * The date that should be shown to the user when the picker opens.
      * When a selected date or range is given, that supersedes this
      * property. Defaults to 'today'.
      */
-    calendarOpenDate?: Date
+    calendarOpenDate?: Date | null
     /** A lower limit to the earliest date that can be selected */
-    earliestSelectableDate?: Date
+    earliestSelectableDate?: Date | null
     /** An upper limit to the latest date that can be selected */
-    latestSelectableDate?: Date
+    latestSelectableDate?: Date | null
     /** Callback for when the apply button has been clicked */
     onApply?: () => void
     /** Callback for when the cancel button has been clicked */
     onCancel?: () => void
     /** Callback for when a date, range with endDate and startDate, or a range
      * out of rangeSelections has been selected */
-    onSelect: () => void
+    onSelect: (date: Date | AxiomDateRange) => void
     /** Whether a date range can be selected */
     rangeSelect?: boolean
     /** Predefined date ranges offered for selection. label will be shown and
      * range is passed to onSelect when clicked. */
     rangeSelections?: { label: string, range: string }[]
     /** A single date that appears selected */
-    selectedDate?: Date
+    selectedDate?: Date | null
     /** The date selected at the end of the range */
-    selectedEndDate?: Date
+    selectedEndDate?: Date | null
     /** The selected range, specified as it's label */
     selectedRange?: string
     /** The date selected at the start of the range */
-    selectedStartDate?: Date
+    selectedStartDate?: Date | null
     /** Configuration for a single date picker view or two pickers side by side */
     view?: "single" | "double"
   }
@@ -1283,7 +1249,7 @@ declare module '@brandwatch/axiom-components' {
     /** Toggle if the Dialog should be closed by pressing Esc */
     shouldCloseOnEsc?: boolean,
     /** Provides defaults for dialog and modal size*/
-    size?: AxiomSIZES.large | "fullscreen",
+    size?: "large" | "fullscreen",
     /** Theme of the dialog */
     theme?: AxiomTHEMES,
     /** Custom width for Dialog */
@@ -1395,11 +1361,11 @@ declare module '@brandwatch/axiom-components' {
     /** Maximum height for the content area, exceeding this will make it scrollable */
     maxHeight?: string,
     /** Padding size applied to the content area */
-    padding?: "none" | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    padding?: "none" | "small" | "medium" | "large",
     /** Horizontal padding size applied to the content area */
-    paddingHorizontal: "none" | AxiomSIZES.small | AxiomSIZES.large,
+    paddingHorizontal: "none" | "small" | "large",
     /** Vertical padding size applied to the content area */
-    paddingVertical: "none" | AxiomSIZES.small | AxiomSIZES.large
+    paddingVertical: "none" | "small" | "large"
   }
 
   class DropdownContext extends React.Component<React.PropsWithChildren<DropdownContextProps>, any> {
@@ -1422,7 +1388,7 @@ declare module '@brandwatch/axiom-components' {
   }
 
   interface DropdownMenuProps {
-    paddingVertical?: "none" | AxiomSIZES.medium
+    paddingVertical?: "none" | "medium"
   }
 
   class DropdownMenuItem extends React.Component<React.PropsWithChildren<DropdownMenuItemProps>, any> {
@@ -1443,7 +1409,7 @@ declare module '@brandwatch/axiom-components' {
     /** Click handler  */
     onClick?: () => void,
     /**  Vertical padding size applied to the menu item */
-    paddingVertical?: AxiomSIZES.small | AxiomSIZES.medium,
+    paddingVertical?: "small" | "medium",
     /** Provides indication that the menu item is selected */
     selected?: boolean
   }
@@ -1533,7 +1499,7 @@ declare module '@brandwatch/axiom-components' {
      * @param {object} event Standard event form object
      * @param {string|null} error Error from Validation if present otherwise null.
      */
-    onSubmit?: () => void,
+    onSubmit?: (event?: any, error?: string | null) => void,
     /** See Validation[requiredError] */
     requiredError?: string
   }
@@ -1541,7 +1507,7 @@ declare module '@brandwatch/axiom-components' {
   class Grid extends React.Component<React.PropsWithChildren<GridProps>, any> {
   }
 
-  interface GridProps {
+  interface GridProps extends BaseProps {
     /** Class name to be appended to the element */
     className?: string,
     /** Controls the direction of the grid cells */
@@ -1550,19 +1516,19 @@ declare module '@brandwatch/axiom-components' {
      * Applies fill styling for all GridCell children.
      * See GridCell for fill explanation
      */
-    fill?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    fill?: true | "small" | "medium" | "large",
     /**
      * Applies fit styling for all GridCell children.
      * See GridCell for fit explanation
      */
-    fit?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    fit?: true | "small" | "medium" | "large",
     /**
      * Applies full styling for all GridCell children.
      * See GridCell for full explanation
      */
-    full?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    full?: true | "small" | "medium" | "large",
     /** Controls the horizontal and vertical spacing between cells */
-    gutters?: false | AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    gutters?: false | "tiny" | "small" | "medium" | "large"
     /** Controls the horizontal alignment of all cells */
     horizontalAlign?: "start"
       | "middle"
@@ -1570,12 +1536,12 @@ declare module '@brandwatch/axiom-components' {
       | "around"
       | "between",
     /** Controls the horizontal spacing between cells */
-    horizontalGutters?: false | AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    horizontalGutters?: false | "tiny" | "small" | "medium" | "large",
     /**
      * Applies none styling for all GridCell children.
      * See GridCell for none explanation
      */
-    none?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    none?: true | "small" | "medium" | "large"
     /**
      * Default behaviour of cells is to resize to 100% of the grids space when
      * on smaller screen sizes. This allows this behaviour to be suppressed.
@@ -1585,11 +1551,11 @@ declare module '@brandwatch/axiom-components' {
      * Applies shrink styling for all GridCell children.
      * See GridCell for shrink explanation
      */
-    shrink?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    shrink?: true | "small" | "medium" | "large",
     /** Controls the vertical alignment of all cells */
     verticalAlign?: AxiomALIGNMENTS,
     /** Controls the vertical spacing between cells */
-    verticalGutters?: false | AxiomSIZES.tiny | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    verticalGutters?: false | "tiny" | "small" | "medium" | "large",
     /** Allows cells to drop to a new line when they require more space */
     wrap?: boolean
   }
@@ -1613,7 +1579,7 @@ declare module '@brandwatch/axiom-components' {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    fill?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    fill?: true | "small" | "medium" | "large",
     /**
      * Sizes itself irrespective of its contents. This causes the grid to evenly
      * distribute all children cells. If the grid has wrapping enabled, the cell
@@ -1621,14 +1587,14 @@ declare module '@brandwatch/axiom-components' {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    fit?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    fit?: true | "small" | "medium" | "large",
     /**
      * Sizes itself to 100% of the available width within a grid. This causes
      * all other siblings to placed vertically of itself.
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    full?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    full?: true | "small" | "medium" | "large",
     /**
      * Sizes itself according to the size of its contents, similar to `shrink` it
      * will no increase to any available space but also will not decrease below
@@ -1636,7 +1602,7 @@ declare module '@brandwatch/axiom-components' {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    none?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    none?: true | "small" | "medium" | "large",
     /**
      * Sizes itself according to the size of its contents, but does not increase
      * to any available width within a grid. This allows all other siblings to
@@ -1644,7 +1610,7 @@ declare module '@brandwatch/axiom-components' {
      *
      * This can be configured to be all of the time or at specific breakpoints.
      */
-    shrink?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    shrink?: true | "small" | "medium" | "large",
     /**
      * Allows a grid cell function as a flex container itself.
      */
@@ -1704,10 +1670,10 @@ declare module '@brandwatch/axiom-components' {
   }
 
   interface IconButtonProps {
-    buttonStyle?: AxiomVARIANTS.primary | AxiomVARIANTS.secondary | AxiomVARIANTS.tertiary | AxiomVARIANTS.quarternary
+    buttonStyle?: "primary" | "secondary" | "tertiary" | "quaternary"
     iconColor?: AxiomTEXT_COLORS
     name: string
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large | AxiomSIZES.huge
+    size?: "small" | "medium" | "large" | "huge"
   }
 
   class Image extends React.Component<React.PropsWithChildren<ImageProps>, any> {
@@ -1715,19 +1681,15 @@ declare module '@brandwatch/axiom-components' {
 
   interface ImageProps {
     /** Border applied around the image */
-    border?: AxiomSIZES.small | AxiomSIZES.large,
+    border?: "small" | "large",
     /** Background color of the image */
     color?: string,
     /** Height of the image. When shape is circle this will be ignored and width will be applied. */
     height?: string,
     /** @type {[type]} [description] */
     maxWidth?: string,
-    /** @ignore */
-    onError?: () => void,
-    /** @ignore */
-    onLoad?: () => void,
     /** Shape of the image */
-    shape?: AxiomSHAPES.circle | AxiomSHAPES.square | AxiomSHAPES.rounded
+    shape?: "circle" | "square" | "rounded"
     /** Source of the image */
     src?: string,
     /** Width of the image. When shape is circle this will also be used for height. */
@@ -1776,7 +1738,7 @@ declare module '@brandwatch/axiom-components' {
     isValid?: boolean,
     label?: JSX.Element,
     labelSpace?: AxiomSPACES,
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    size?: "small" | "medium" | "large",
     space?: string,
     style?: string,
     usageHint?: JSX.Element,
@@ -1794,9 +1756,9 @@ declare module '@brandwatch/axiom-components' {
      * Controls the full width appearance of the badge either all of the time,
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
-    full?: true | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    full?: true | "small" | "medium" | "large",
     /** Size of standard shape */
-    size?: AxiomSIZES.small | AxiomSIZES.medium
+    size?: "small" | "medium"
   }
 
   class LabelGroup extends React.Component<React.PropsWithChildren<LabelGroupProps>, any> {
@@ -1809,12 +1771,6 @@ declare module '@brandwatch/axiom-components' {
   }
 
   interface LabelIconProps {
-    /** @ignore */
-    color?: string,
-    /** @ignore */
-    isEnd?: boolean,
-    /** @ignore */
-    isStart?: boolean,
     /** Name of the icon. See <Icon>. */
     name: string
   }
@@ -1894,7 +1850,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface LozengeProps {
     className?: string
-    size?: AxiomSIZES.small | AxiomSIZES.medium
+    size?: "small" | "medium"
     status?: AxiomSTATUS_TYPES | "none" | "loading"
     color?: AxiomCOLORS
       | "sentiment-positive"
@@ -1913,7 +1869,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface MenuProps extends BaseProps {
     /** Size of the menu */
-    size?: AxiomSIZES.medium | AxiomSIZES.large
+    size?: "medium" | "large"
   }
 
   class MenuItem extends React.Component<React.PropsWithChildren<MenuItemProps>, any> {
@@ -2062,12 +2018,12 @@ declare module '@brandwatch/axiom-components' {
      * When provided a mask will be placed behind PositionSource, where this
      * function is called when clicked.
      */
-    onMaskClick?: () => void,
+    onMaskClick?: any,
     /**
      * Optional handler that is called, with the new position, when PositionSource
      * has been positioned.
      */
-    onPositionChange?: () => void,
+    onPositionChange?: any,
     /**
      * Controls the starting position around PositionTarget in which the
      * PositionSource will attempt to be placed. If that position is not available
@@ -2113,7 +2069,7 @@ declare module '@brandwatch/axiom-components' {
     /** Percentage of progress */
     percent?: number,
     /** Size of the indicator */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    size?: "small" | "medium" | "large",
     /** Size in REM units */
     sizeRem?: string
   }
@@ -2123,7 +2079,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface ProgressButtonProps {
     isInProgress?: boolean,
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    size?: "small" | "medium" | "large"
   }
 
   class ProgressFinite extends React.Component<ProgressFiniteProps, any> {
@@ -2131,7 +2087,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface ProgressFiniteProps {
     percent: number
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
+    size?: "small" | "medium" | "large",
     sizeRem?: string
   }
 
@@ -2141,7 +2097,7 @@ declare module '@brandwatch/axiom-components' {
   interface ProgressInfiniteProps {
     className?: string
     color?: "subtle" | "white"
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    size?: "small" | "medium" | "large"
     sizeRem?: string
   }
 
@@ -2165,7 +2121,7 @@ declare module '@brandwatch/axiom-components' {
     /** Disables interactions and applies styling */
     disabled?: boolean,
     /** See Validate error */
-    error?: () => void,
+    error?: (error?: any) => void,
     /** Applies styling to indicate the users input was invalid */
     invalid?: boolean,
     /** Name of the group the input belongs to */
@@ -2201,15 +2157,15 @@ declare module '@brandwatch/axiom-components' {
     /** Minimum label */
     minLabel?: string,
     /** Called when the sliders value changes */
-    onChange: () => void,
+    onChange: (value?: any) => void,
     /** Called when the slider is let go */
     onSlideEnd?: () => void,
     /** Size of the slider */
-    size?: AxiomSIZES.small | AxiomSIZES.medium,
+    size?: "small" | "medium",
     /** Configures the increments of the slide */
     step?: number,
     /** Value formatter for the tooltip */
-    valueFormatter?: () => void,
+    valueFormatter?: (value?: any) => void,
     /** Values */
     values: number[],
     /** Enables a value indicating tooltip */
@@ -2224,8 +2180,6 @@ declare module '@brandwatch/axiom-components' {
     children: JSX.Element | JSX.Element[],
     /** Removes children from the reveal container when it is collapsed */
     removeChildren?: boolean,
-    /** @ignore */
-    space?: string,
     /** Revealed status, true will expand out the content, false will collapse it. */
     visible: boolean
   }
@@ -2241,7 +2195,7 @@ declare module '@brandwatch/axiom-components' {
     /** Invoked when the SelectMenu is opened. */
     onRequestOpen?: () => void,
     /** Event that is fired when an option is selected */
-    onSelect?: () => void,
+    onSelect?: (value?: any) => void,
     /** The value of the selected option  */
     selectedValue?: any,
     /** Value of the input field */
@@ -2289,11 +2243,11 @@ declare module '@brandwatch/axiom-components' {
     /** Minimum number that can be selected */
     min: number,
     /** Called when the sliders value changes */
-    onChange: () => void,
+    onChange: (x?: any) => void,
     /** Called when the slider is let go */
-    onSlideEnd?: () => void,
+    onSlideEnd?: (x?: any) => void,
     /** Size of the slider */
-    size?: AxiomSIZES.small | AxiomSIZES.medium,
+    size?: "small" | "medium",
     /** Configures the increments of the slide */
     step?: number,
     /** Value */
@@ -2351,13 +2305,13 @@ declare module '@brandwatch/axiom-components' {
   interface TableCellProps {
     className?: string,
     /** Sets the horizontal padding around the cell's content */
-    horizontalPadding?: "none" | AxiomSIZES.medium,
+    horizontalPadding?: "none" | "medium",
     /** Marks cell as selected */
     isSelected?: boolean,
     /** Set text-align */
     textAlign?: "left" | "right" | "centre",
     /** Sets the vertical padding around the cell's content */
-    verticalPadding?: "none" | AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large
+    verticalPadding?: "none" | "small" | "medium" | "large"
   }
 
   class TableHeader extends React.Component<React.PropsWithChildren<TableHeaderProps>, any> {
@@ -2409,7 +2363,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface TabsProps {
     /** Size control for the Tabs */
-    size?: AxiomSIZES.medium | AxiomSIZES.large
+    size?: "medium" | "large"
   }
 
   class Tabset extends React.Component<React.PropsWithChildren<TabsetProps>, any> {
@@ -2422,7 +2376,7 @@ declare module '@brandwatch/axiom-components' {
      */
     activeTabIndex?: number,
     /** Size control for the Tabs */
-    size?: AxiomSIZES.medium | AxiomSIZES.large,
+    size?: "medium" | "large",
     /** Vertical spacing between elements */
     space?: string
   }
@@ -2513,9 +2467,7 @@ declare module '@brandwatch/axiom-components' {
     /** See Validate[required] */
     required?: boolean,
     /** Size of the input field */
-    size?: AxiomSIZES.small | AxiomSIZES.medium | AxiomSIZES.large,
-    /** @ignore */
-    space?: string,
+    size?: "small" | "medium" | "large",
     /** Visual style variations of the input field */
     style?: "overlay",
     /** Type of the input field */
@@ -2581,7 +2533,7 @@ declare module '@brandwatch/axiom-components' {
     position?: string,
     /** The Tip can be configured to have a shadow effect. This value is true by default */
     shadow?: boolean,
-    size?: AxiomSIZES.small | AxiomSIZES.medium
+    size?: "small" | "medium"
   }
 
   class Toggle extends React.Component<React.PropsWithChildren<ToggleProps>, any> {
@@ -2595,7 +2547,7 @@ declare module '@brandwatch/axiom-components' {
     /** Called when the toggle is toggled/changed */
     onToggle: () => void,
     /** Size of the toggle */
-    size?: AxiomSIZES.small | AxiomSIZES.medium,
+    size?: "small" | "medium",
     /** Toggled/checked state of the switch */
     toggled: boolean
   }
@@ -2624,8 +2576,6 @@ declare module '@brandwatch/axiom-components' {
      * Adds control to enable or disable showing the TooltipSource
      */
     enabled?: boolean,
-    /** @ignore */
-    onClick?: () => void,
     /**
      * Controls the starting position around TooltipTarget in which the
      * TooltipSource will attempt to be placed. If that position is not available
@@ -2639,7 +2589,7 @@ declare module '@brandwatch/axiom-components' {
   }
 
   interface TooltipContentProps {
-    size?: AxiomSIZES.tiny | AxiomSIZES.small
+    size?: "tiny" | "small"
   }
 
   class TooltipContext extends React.Component<TooltipContextProps, any> {
@@ -2660,11 +2610,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface TooltipTargetProps {
     delay?: boolean,
-    /** @ignore */
-    hideTooltip?: () => void,
-    onClick?: () => void,
-    /** @ignore */
-    showTooltip?: () => void
+    onClick?: () => void
   }
 
   class Transition extends React.Component<React.PropsWithChildren<TransitionProps>, any> {
