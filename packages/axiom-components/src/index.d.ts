@@ -336,6 +336,7 @@ declare module '@brandwatch/axiom-components' {
     | "blog"
     | "box-collapse"
     | "box-expand"
+    | "brandwatch"
     | "chevron-down"
     | "chevron-left"
     | "chevron-right"
@@ -358,6 +359,7 @@ declare module '@brandwatch/axiom-components' {
     | "exclude"
     | "facebook-mono"
     | "facebook"
+    | "feedback"
     | "filter"
     | "filter-line"
     | "flip-horizontal"
@@ -888,7 +890,8 @@ declare module '@brandwatch/axiom-components' {
     active?: boolean
     /** Disable interaction behaviour */
     disabled?: boolean
-
+    /** Apply invalid styling */
+    invalid?: boolean,
     /** Name of the Icon located to the left of the main content */
     leftIcon?: string
     /** Metric content */
@@ -897,6 +900,8 @@ declare module '@brandwatch/axiom-components' {
     rightIcon?: string
     /** Size of the chip */
     size?: "small" | "medium" | "large" | "huge"
+    /** Apply invalid styling */
+    valid?: boolean,
   }
 
   class ChipList extends React.Component<React.PropsWithChildren<ChipListProps>, any> {
@@ -1656,6 +1661,7 @@ declare module '@brandwatch/axiom-components' {
 
   interface IconProps extends BaseProps {
     className?: string
+    color?: AxiomTEXT_COLORS
     height?: string
     inline?: boolean
     name: AxiomICONS
