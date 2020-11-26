@@ -53,7 +53,12 @@ export function CheckBoxGroups() {
 export function Indeterminate() {
   return (
     <CheckBoxGroup>
-      <CheckBox name="lorem" indeterminate title="Lorem ipsum dolor sit amet">
+      <CheckBox
+        name="lorem"
+        title="Lorem ipsum dolor sit amet"
+        onChange={() => {}}
+        indeterminate
+      >
         Indeterminate
       </CheckBox>
     </CheckBoxGroup>
@@ -64,10 +69,11 @@ export function Disabled() {
   return (
     <CheckBoxGroup>
       <CheckBox
-        disabled
         name="lorem"
-        checked
         title="Lorem ipsum dolor sit amet"
+        onChange={() => {}}
+        checked
+        disabled
       >
         Disabled
       </CheckBox>
@@ -78,8 +84,14 @@ export function Disabled() {
 export function Invaild() {
   return (
     <CheckBoxGroup>
-      <CheckBox invalid name="lorem" checked title="Lorem ipsum dolor sit amet">
-        Invaild
+      <CheckBox
+        name="lorem"
+        title="Lorem ipsum dolor sit amet"
+        onChange={() => {}}
+        invalid
+        checked
+      >
+        Invalid
       </CheckBox>
     </CheckBoxGroup>
   );

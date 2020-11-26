@@ -1,38 +1,32 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
 import CheckBox from "./CheckBox";
 
-const getComponent = (props = {}) =>
-  renderer.create(<CheckBox {...props}>Lorem ipsum</CheckBox>);
+const renderComponent = (props = {}) =>
+  render(<CheckBox {...props}>Lorem ipsum</CheckBox>);
 
 describe("CheckBox", () => {
-  it("renders with defaultProps", () => {
-    const component = getComponent();
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it("renders with disabled", () => {
-    const component = getComponent({ disabled: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    renderComponent({ disabled: true });
+
+    expect(screen.getByRole("checkbox", { disabled: true })).toBeDefined();
   });
 
   it("renders with invalid", () => {
-    const component = getComponent({ invalid: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    renderComponent({ invalid: true });
+
+    expect(screen.getByRole("checkbox", { invalid: true })).toBeDefined();
   });
 
   it("renders with indeterminate", () => {
-    const component = getComponent({ indeterminate: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    renderComponent({ indeterminate: true });
+
+    expect(screen.getByRole("checkbox", { checked: "mixed" })).toBeDefined();
   });
 
   it("renders with indeterminate and checked", () => {
-    const component = getComponent({ indeterminate: true, checked: true });
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    renderComponent({ indeterminate: true, checked: true });
+
+    expect(screen.getByRole("checkbox", { checked: true })).toBeDefined();
   });
 });
