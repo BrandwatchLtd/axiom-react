@@ -33,8 +33,7 @@ export default function Dialog({
   return (
     <Modal
       {...rest}
-      closeOnOverlayClick={closeOnOverlayClick}
-      onOverlayClick={onRequestClose}
+      onOverlayClick={closeOnOverlayClick ? onRequestClose : null}
       overlayShade={overlayShade}
       overlayTheme={overlayTheme}
       padding={modalPadding}

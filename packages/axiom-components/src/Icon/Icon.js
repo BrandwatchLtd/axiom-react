@@ -10,6 +10,50 @@ export default class Icon extends Component {
   static propTypes = {
     /** @ignore */
     className: PropTypes.string,
+    /** Text color styling */
+    color: PropTypes.oneOf([
+      "body",
+      "day",
+      "night",
+      "error",
+      "success",
+      "warning",
+      "disabled",
+      "subtle",
+      "twitter",
+      "facebook",
+      "instagram",
+      "forbidden-planet",
+      "tiny-clanger",
+      "critical-mass",
+      "fantastic-voyage",
+      "paradise-lost",
+      "serene-sea",
+      "event-horizon",
+      "electric-dreams",
+      "outer-limits",
+      "giant-leap",
+      "moon-lagoon",
+      "space-invader",
+      "extraterrestrial",
+      "terra-form",
+      "primeval-soup",
+      "future-shock",
+      "sun-maker",
+      "new-horizon",
+      "blast-off",
+      "crash-course",
+      "solar-rust",
+      "ground-control",
+      "space-oddity",
+      "rocky-planet",
+      "deep-thought",
+      "luna-dust",
+      "sentiment-negative",
+      "sentiment-positive",
+      "sentiment-neutral",
+      "ui-accent",
+    ]),
     /**
      * Inline styling that allows the Icon to placed next to other inline
      * elements or text.
@@ -34,6 +78,7 @@ export default class Icon extends Component {
       "benchmark",
       "box-collapse",
       "box-expand",
+      "brandwatch",
       "chevron-down",
       "chevron-left",
       "chevron-right",
@@ -55,6 +100,7 @@ export default class Icon extends Component {
       "email",
       "exclude",
       "facebook",
+      "feedback",
       "filter",
       "filter-line",
       "flip-horizontal",
@@ -179,6 +225,7 @@ export default class Icon extends Component {
 
   render() {
     const {
+      color,
       className,
       inline,
       name,
@@ -207,6 +254,7 @@ export default class Icon extends Component {
 
     return (
       <Base
+        textColor={color}
         {...rest}
         Component="svg"
         className={classes}

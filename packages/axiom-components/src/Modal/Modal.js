@@ -102,7 +102,7 @@ export default class Modal extends Component {
 
     return isOpen ? (
       <Portal>
-        <Base className={classes} theme={overlayTheme}>
+        <Base className={classes} theme={overlayTheme} role="dialog">
           {onOverlayClick && (
             <div className="ax-modal__mask" onClick={onOverlayClick} />
           )}

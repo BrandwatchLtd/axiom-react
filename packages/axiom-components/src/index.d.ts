@@ -888,6 +888,7 @@ declare module '@brandwatch/axiom-components' {
     active?: boolean
     /** Disable interaction behaviour */
     disabled?: boolean
+
     /** Name of the Icon located to the left of the main content */
     leftIcon?: string
     /** Metric content */

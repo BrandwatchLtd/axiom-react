@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.0.1...@brandwatch/axiom-components@13.1.0) (2020-11-25)
+
+
+### Bug Fixes
+
+* 🐛 add accessibility role to modal ([6594300](https://github.com/BrandwatchLtd/axiom-react/commit/65943008e97a98f67ce46b3d500e2732ed52ba1b))
+
+
+### Features
+
+* **Chips:** addressing comments ([768f30e](https://github.com/BrandwatchLtd/axiom-react/commit/768f30e3065e1e9853a8cf025474d51618159526))
+* **Chips:** updating design ([1ee6f66](https://github.com/BrandwatchLtd/axiom-react/commit/1ee6f660a9e0a68bbea8cc33d05f373c70e25345))
+
+
+
+
+
+## [13.0.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.0.0...@brandwatch/axiom-components@13.0.1) (2020-11-22)
+
+
+### Bug Fixes
+
+* 🐛 Dialog -pass onOverlayClick to Model ([baad36b](https://github.com/BrandwatchLtd/axiom-react/commit/baad36bdff5bac2f6464f5991b7af27e7e982502))
+
+
+
+
+
+# [13.0.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.7.0...@brandwatch/axiom-components@13.0.0) (2020-11-22)
+
+
+### chore
+
+* 🤖 set React as a peer dependency ([79b1033](https://github.com/BrandwatchLtd/axiom-react/commit/79b10331fe5cdf492a081830f3538db3dec96c8c))
+
+
+### BREAKING CHANGES
+
+* 🧨 React must now be decleared as a separate dependency.
+
+
+
+
+
+# [12.7.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.6.0...@brandwatch/axiom-components@12.7.0) (2020-11-20)
+
+
+### Features
+
+* 🎸 Add color prop to Icon ([5973bcf](https://github.com/BrandwatchLtd/axiom-react/commit/5973bcf27b4989ae30d979f214d1615d9ba7bfe7))
+
+
+
+
+
+# [12.6.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.5.2...@brandwatch/axiom-components@12.6.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* linting error ([4db8d60](https://github.com/BrandwatchLtd/axiom-react/commit/4db8d608c09af248770749a83894f0591d18d99c))
+
+
+### Features
+
+* **Icon:** Add feedback icon ([4c2f5cb](https://github.com/BrandwatchLtd/axiom-react/commit/4c2f5cb01d08ece5fad33d5bf449c2e68970e60d))
+
+
+
+
+
 ## [12.5.2](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@12.5.1...@brandwatch/axiom-components@12.5.2) (2020-11-17)
 
 

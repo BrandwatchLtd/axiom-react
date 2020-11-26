@@ -1,6 +1,6 @@
 {
   "name": "@brandwatch/axiom-components",
-  "version": "12.5.2",
+  "version": "13.1.0",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -15,21 +15,23 @@
   "dependencies": {
     "@brandwatch/axiom-automation-testing": "^0.0.11",
     "@brandwatch/axiom-formatting": "^0.0.11",
-    "@brandwatch/axiom-materials": "^1.32.0",
-    "@brandwatch/axiom-utils": "^0.1.53",
+    "@brandwatch/axiom-materials": "^1.33.1",
+    "@brandwatch/axiom-utils": "^1.0.1",
     "@popperjs/core": "^2.1.1",
     "classnames": "^2.2.6",
     "element-closest": "^2.0.2",
     "lodash.omit": "^4.5.0",
     "luxon": "^1.22.0",
     "prop-types": "^15.6.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "react-transition-group": "^2.3.0",
     "resize-observer-polyfill": "^1.5.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6 || ~17.0.1",
+    "react-dom": "^16.8.6 || ~17.0.1"
   }
 }

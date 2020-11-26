@@ -13,7 +13,7 @@ export default {
   subcomponents: { DialogHeader, DialogBody, DialogFooter },
 };
 
-export function Default() {
+export function Default(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeDialog = () => setIsOpen(false);
@@ -23,9 +23,9 @@ export function Default() {
     <React.Fragment>
       <Button onClick={openDialog}>Open Dialog</Button>
       <Dialog
+        {...props}
         isOpen={isOpen}
         onRequestClose={closeDialog}
-        shouldCloseOnEsc
         width="380px"
       >
         <DialogHeader>

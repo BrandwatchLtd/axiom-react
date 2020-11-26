@@ -1,4 +1,7 @@
 .ax-chip {
+  --chip-color-opacity: 0.2;
+  --chip-background-opacity: 0.08;
+  --chip-background-opacity-hover: 0.15;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +13,7 @@
   border-style: solid;
   border-radius: var(--component-border-radius-huge);
   border-color: transparent;
-  background-color: var(--color-ui-white-noise);
+  background-color: rgba(var(--rgb-ui-carbon), var(--chip-background-opacity));
   color: var(--color-ui-carbon);
   letter-spacing: var(--letter-spacing-loose);
   text-align: center;
@@ -22,14 +25,17 @@
   transition-timing-function: var(--transition-function);
 
   &:hover {
-    background-color: var(--color-ui-white-noise--dark);
+    background-color: rgba(var(--rgb-ui-carbon), var(--chip-background-opacity-hover));
     cursor: pointer;
   }
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
+    background-color: var(--color-theme-background--disabled);
+    color: var(--color-theme-text--disabled);
     cursor: default;
+    pointer-events: none;
   }
 
   &[disabled]:hover {
@@ -47,15 +53,25 @@
 }
 
 .ax-chip--active {
-  background-color: var(--color-ui-accent);
-  color: var(--color-ui-white);
+  border-width: var(--component-border-width);
+  border-style: solid;
+  border-radius: var(--component-border-radius-huge);
+  border-color: var(--color-ui-accent);
+}
+
+.ax-chip--valid {
+  background-color: rgba(var(--rgb-ui-success), var(--chip-color-opacity));
 
   &:hover {
-    background-color: var(--color-ui-accent--hover);
+    background-color: rgba(var(--rgb-ui-success--hover), var(--chip-color-opacity));
   }
+}
 
-  &[disabled]:hover {
-    background-color: var(--color-ui-accent);
+.ax-chip--invalid {
+  background-color: rgba(var(--rgb-ui-error), var(--chip-color-opacity));
+
+  &:hover {
+    background-color: rgba(var(--rgb-ui-error--hover), var(--chip-color-opacity));
   }
 }
 

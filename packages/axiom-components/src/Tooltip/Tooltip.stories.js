@@ -34,6 +34,31 @@ export function Default() {
   );
 }
 
+export function NightTheme() {
+  return (
+    <Tooltip position="bottom">
+      <TooltipTarget>
+        <IconButton name="question-mark" size="small" />
+      </TooltipTarget>
+
+      <TooltipSource width="auto" theme="night">
+        <TooltipContext>
+          <TooltipContent size="tiny">50%</TooltipContent>
+        </TooltipContext>
+      </TooltipSource>
+    </Tooltip>
+  );
+}
+
+NightTheme.parameters = {
+  docs: {
+    description: {
+      story:
+        "You can pass `theme='night'` to TooltipSource to show a dark themed tooltip",
+    },
+  },
+};
+
 export function Disabled() {
   return (
     <Tooltip enabled={false} position="bottom">
