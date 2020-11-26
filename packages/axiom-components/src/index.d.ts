@@ -472,7 +472,6 @@ declare module '@brandwatch/axiom-components' {
 
   export type AxiomTHEMES = "day" | "night";
 
-
   class AlertBar extends React.Component<React.PropsWithChildren<AlertBarProps>, any> {
   }
 
@@ -1111,7 +1110,6 @@ declare module '@brandwatch/axiom-components' {
   }
 
   class DatePickerContext extends React.Component<DatePickerContextProps, any> {
-
   }
 
   interface SelectedDateOrRange {
@@ -2646,7 +2644,7 @@ declare module '@brandwatch/axiom-components' {
     /**
      * Array of patterns to be run against this input.
      */
-    patterns: { (): void | RegExp} []
+    patterns: { (): void | RegExp } []
     /** If this is a required field */
     required?: boolean,
     /** Current value to run against the validations */
@@ -2661,6 +2659,4 @@ declare module '@brandwatch/axiom-components' {
     /** Error to output when required fields have not been met */
     requiredError?: string
   }
-
-
 }
