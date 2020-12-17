@@ -6,6 +6,9 @@ import Base from "../Base/Base";
 import Tabs from "./Tabs";
 import { TabRef } from "./Tab";
 
+/**
+ * Tabsets are useful to alternate between related views within the same context.
+ */
 export default class Tabset extends Component {
   static propTypes = {
     /**

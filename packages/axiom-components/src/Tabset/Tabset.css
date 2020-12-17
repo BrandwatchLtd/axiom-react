@@ -52,7 +52,6 @@
   border: 0;
   background: none;
   color: var(--color-theme-text--subtle);
-  text-transform: capitalize;
   line-height: var(--component-line-height);
   transition-property: color;
   transition-duration: var(--transition-time-base);
@@ -66,6 +65,10 @@
   &:disabled {
     color: var(--color-theme-text--disabled);
     cursor: default;
+  }
+
+  &::first-letter {
+    text-transform: capitalize;
   }
 }
 
