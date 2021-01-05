@@ -26,6 +26,7 @@ const PICTOGRAM_NAME_MAP = {
   "spline-chart": require("./svgs/spline-chart.svg"),
   "stream-graph": require("./svgs/stream-graph.svg"),
   table: require("./svgs/table.svg"),
+  "topics-wheel": require("./svgs/topics-wheel.svg"),
   "tree-map": require("./svgs/tree-map.svg"),
   "twitter-verified": require("./svgs/twitter-verified.svg"),
   video: require("./svgs/video.svg"),

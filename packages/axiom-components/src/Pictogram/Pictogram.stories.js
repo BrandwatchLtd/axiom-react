@@ -31,6 +31,7 @@ const pictogramNames = [
   "spline-chart",
   "stream-graph",
   "table",
+  "topics-wheel",
   "tree-map",
   "twitter-verified",
   "video",
