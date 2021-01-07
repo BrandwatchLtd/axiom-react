@@ -24,6 +24,7 @@ export default {
   "chevron-up": require("./icon_svgs/chevron-up.svg"),
   clock: require("./icon_svgs/clock.svg"),
   "cloud-upload": require("./icon_svgs/cloud-upload.svg"),
+  copy: require("./icon_svgs/copy.svg"),
   cross: require("./icon_svgs/cross.svg"),
   customise: require("./icon_svgs/customise.svg"),
   data: require("./icon_svgs/data.svg"),

@@ -24,6 +24,7 @@ const iconNames = [
   "chevron-up",
   "clock",
   "cloud-upload",
+  "copy",
   "cross",
   "customise",
   "data",

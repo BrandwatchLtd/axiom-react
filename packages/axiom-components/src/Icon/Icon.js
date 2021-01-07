@@ -85,6 +85,7 @@ export default class Icon extends Component {
       "chevron-up",
       "clock",
       "cloud-upload",
+      "copy",
       "cross",
       "customise",
       "data",
