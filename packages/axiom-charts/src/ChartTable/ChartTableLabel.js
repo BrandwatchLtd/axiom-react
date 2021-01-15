@@ -39,7 +39,7 @@ export default class ChartTableLabel extends Component {
           </GridCell>
           {onToggleRowVisibility && (
             <GridCell cloak={!disabled} shrink>
-              <Link style="subtle">
+              <Link variant="subtle">
                 <Icon name="preview" />
               </Link>
             </GridCell>
