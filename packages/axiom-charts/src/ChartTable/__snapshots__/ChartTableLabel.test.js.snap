@@ -73,7 +73,7 @@ exports[`ChartTableLabel renders with onToggleRowVisibility and disabled 1`] = `
         }
       >
         <a
-          className="ax-link ax-link--style-subtle"
+          className="ax-link ax-link--variant-subtle"
         >
           <svg
             className="ax-icon ax-icon--preview"

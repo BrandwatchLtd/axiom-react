@@ -53,7 +53,8 @@ exports[`DataPicker renders with defaultProps 1`] = `
                 onFocus={[Function]}
               >
                 <a
-                  className="ax-link ax-link--style-body"
+                  className="ax-link ax-link--variant-normal"
+                  style="body"
                 >
                   <div
                     className="ax-grid__container ax-space--x6"
@@ -173,7 +174,8 @@ exports[`DataPicker renders with just DataPickerDropdown 1`] = `
                 onFocus={[Function]}
               >
                 <a
-                  className="ax-link ax-link--style-body"
+                  className="ax-link ax-link--variant-normal"
+                  style="body"
                 >
                   <div
                     className="ax-grid__container ax-space--x6"
@@ -356,7 +358,8 @@ exports[`DataPicker renders with onSelectColor 1`] = `
                 onFocus={[Function]}
               >
                 <a
-                  className="ax-link ax-link--style-body"
+                  className="ax-link ax-link--variant-normal"
+                  style="body"
                 >
                   <div
                     className="ax-grid__container ax-space--x6"
@@ -476,7 +479,8 @@ exports[`DataPicker renders with value 1`] = `
                 onFocus={[Function]}
               >
                 <a
-                  className="ax-link ax-link--style-body"
+                  className="ax-link ax-link--variant-normal"
+                  style="body"
                 >
                   <div
                     className="ax-grid__container ax-space--x6"

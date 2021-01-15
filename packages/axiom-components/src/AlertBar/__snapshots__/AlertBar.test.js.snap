@@ -110,8 +110,9 @@ exports[`AlertBar renders with onRemoveClick 1`] = `
         }
       >
         <a
-          className="ax-link ax-link--style-night"
+          className="ax-link ax-link--variant-normal"
           onClick={[Function]}
+          style="night"
         >
           <svg
             className="ax-icon ax-icon--cross"

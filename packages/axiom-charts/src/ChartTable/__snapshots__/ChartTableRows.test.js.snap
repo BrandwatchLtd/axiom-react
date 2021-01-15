@@ -246,7 +246,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
     }
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-subtle"
       onClick={[Function]}
     >
       <div
@@ -546,7 +546,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
     }
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-subtle"
       onClick={[Function]}
     >
       <div
@@ -846,7 +846,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
     }
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-subtle"
       onClick={[Function]}
     >
       <div
@@ -1002,7 +1002,7 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
     }
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-subtle"
       onClick={[Function]}
     >
       <div

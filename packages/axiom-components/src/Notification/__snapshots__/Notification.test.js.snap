@@ -63,9 +63,10 @@ exports[`Notification renders with onRemoveClick 1`] = `
     className="ax-notification__remove"
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-normal"
       data-ax-at="166ebc0c761f"
       onClick={[Function]}
+      style="subtle"
     >
       <svg
         className="ax-icon ax-icon--cross"

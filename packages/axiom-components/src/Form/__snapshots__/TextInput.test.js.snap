@@ -66,8 +66,9 @@ exports[`TextInput renders TextInputIcon when left aligned renders when showing 
         className="ax-input__icon ax-input__icon--align-right"
       >
         <a
-          className="ax-link ax-link--style-subtle"
+          className="ax-link ax-link--variant-normal"
           onClick={[Function]}
+          style="subtle"
         >
           <svg
             className="ax-icon ax-icon--cross"
@@ -183,8 +184,9 @@ exports[`TextInput renders TextInputIcon when right aligned renders when showing
         className="ax-input__icon ax-input__icon--align-right"
       >
         <a
-          className="ax-link ax-link--style-subtle"
+          className="ax-link ax-link--variant-normal"
           onClick={[Function]}
+          style="subtle"
         >
           <svg
             className="ax-icon ax-icon--cross"
@@ -393,8 +395,9 @@ exports[`TextInput renders with onClear and value 1`] = `
         className="ax-input__icon ax-input__icon--align-right"
       >
         <a
-          className="ax-link ax-link--style-subtle"
+          className="ax-link ax-link--variant-normal"
           onClick={[Function]}
+          style="subtle"
         >
           <svg
             className="ax-icon ax-icon--cross"

@@ -89,8 +89,9 @@ exports[`Label with LabelIcon adds space all around if middle children 1`] = `
     className="ax-label__icon"
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-normal"
       size="medium"
+      style="subtle"
     >
       <svg
         className="ax-icon ax-icon--twitter"
@@ -122,8 +123,9 @@ exports[`Label with LabelIcon adds space to end if last child 1`] = `
     className="ax-label__icon ax-label__icon--end"
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-normal"
       size="medium"
+      style="subtle"
     >
       <svg
         className="ax-icon ax-icon--twitter"
@@ -153,8 +155,9 @@ exports[`Label with LabelIcon adds space to start if first child 1`] = `
     className="ax-label__icon ax-label__icon--start"
   >
     <a
-      className="ax-link ax-link--style-subtle"
+      className="ax-link ax-link--variant-normal"
       size="medium"
+      style="subtle"
     >
       <svg
         className="ax-icon ax-icon--twitter"
