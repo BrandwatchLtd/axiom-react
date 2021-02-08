@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>information</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="information" fill="#000000">
-            <path d="M10.5,14 L5.5,14 L5.5,12.75 L6.75,12.75 L6.75,7 L5.5,7 L5.5,5.75 L9.25,5.75 L9.25,12.75 L10.5,12.75 L10.5,14 Z M9.375,3 C9.375,3.759 8.75777778,4.375 8,4.375 C7.24222222,4.375 6.625,3.759 6.625,3 C6.625,2.24222222 7.24222222,1.625 8,1.625 C8.75777778,1.625 9.375,2.24222222 9.375,3 Z" id="Information"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m10.5 14h-5v-1.25h1.25v-5.75h-1.25v-1.25h3.75v7h1.25zm-1.125-11c0 .759-.61722222 1.375-1.375 1.375s-1.375-.616-1.375-1.375c0-.75777778.61722222-1.375 1.375-1.375s1.375.61722222 1.375 1.375z" fill-rule="evenodd"/></svg>

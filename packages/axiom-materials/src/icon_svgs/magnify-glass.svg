@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>magnify-glass</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="magnify-glass" fill="#000000">
-            <path d="M4,7 C4,5.343 5.343,4 7,4 C8.657,4 10,5.343 10,7 C10,8.657 8.657,10 7,10 C5.343,10 4,8.657 4,7 L4,7 Z M14,12.586 L11.168,9.754 C11.692,8.964 12,8.019 12,7 C12,4.239 9.761,2 7,2 C4.239,2 2,4.239 2,7 C2,9.761 4.239,12 7,12 C8.019,12 8.964,11.692 9.754,11.168 L12.586,14 L14,12.586 Z" id="Search"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m4 7c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zm10 5.586-2.832-2.832c.524-.79.832-1.735.832-2.754 0-2.761-2.239-5-5-5s-5 2.239-5 5 2.239 5 5 5c1.019 0 1.964-.308 2.754-.832l2.832 2.832z" fill-rule="evenodd"/></svg>

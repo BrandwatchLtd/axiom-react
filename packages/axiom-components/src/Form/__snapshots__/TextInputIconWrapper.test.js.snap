@@ -8,7 +8,7 @@ exports[`TextInputIconWrapper renders with align="left" 1`] = `
     className="ax-icon ax-icon--dot"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" fill-rule=\\"evenodd\\" r=\\"6\\"/>",
       }
     }
     style={
@@ -30,7 +30,7 @@ exports[`TextInputIconWrapper renders with defaultProps 1`] = `
     className="ax-icon ax-icon--dot"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" fill-rule=\\"evenodd\\" r=\\"6\\"/>",
       }
     }
     style={
@@ -56,7 +56,7 @@ exports[`TextInputIconWrapper renders with onClick 1`] = `
       className="ax-icon ax-icon--dot"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+          "__html": "<circle cx=\\"8\\" cy=\\"8\\" fill-rule=\\"evenodd\\" r=\\"6\\"/>",
         }
       }
       style={
@@ -79,7 +79,7 @@ exports[`TextInputIconWrapper renders with tooltip when TooltipContext passed 1`
     className="ax-icon ax-icon--dot"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" fill-rule=\\"evenodd\\" r=\\"6\\"/>",
       }
     }
     onClick={[Function]}
@@ -104,7 +104,7 @@ exports[`TextInputIconWrapper renders with tooltip when string passed 1`] = `
     className="ax-icon ax-icon--dot"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<circle cx=\\"8\\" cy=\\"8\\" r=\\"6\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        "__html": "<circle cx=\\"8\\" cy=\\"8\\" fill-rule=\\"evenodd\\" r=\\"6\\"/>",
       }
     }
     onClick={[Function]}

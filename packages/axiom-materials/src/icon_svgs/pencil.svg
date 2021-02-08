@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>pencil</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="pencil" fill="#000000">
-            <path d="M13.3516,3.4149 C13.7446,3.8079 13.7416,4.4379 13.3506,4.8289 L12.6436,5.5359 L10.5226,3.4139 L11.2296,2.7069 C11.6226,2.3139 12.2526,2.3159 12.6426,2.7059 L13.3516,3.4149 Z M4.1584,9.7781 L10.1684,3.7681 L12.2904,5.8891 L6.2794,11.8991 L4.1584,9.7781 Z M2.3907,13.6672 L3.4517,10.4852 L5.5727,12.6062 L2.3907,13.6672 Z" id="edit"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m13.3516 3.4149c.393.393.39 1.023-.001 1.414l-.707.707-2.121-2.122.707-.707c.393-.393 1.023-.391 1.413-.001zm-9.1932 6.3632 6.01-6.01 2.122 2.121-6.011 6.01zm-1.7677 3.8891 1.061-3.182 2.121 2.121z" fill-rule="evenodd"/></svg>

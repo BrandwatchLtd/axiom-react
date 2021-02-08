@@ -267,7 +267,7 @@ exports[`ChartTableRows renders with collapsedVisibleRowCount more than children
               className="ax-icon ax-icon--box-expand"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4z\\" fill-rule=\\"evenodd\\"/>",
                 }
               }
               style={
@@ -567,7 +567,7 @@ exports[`ChartTableRows renders with defaultProps 1`] = `
               className="ax-icon ax-icon--box-expand"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4z\\" fill-rule=\\"evenodd\\"/>",
                 }
               }
               style={
@@ -867,7 +867,7 @@ exports[`ChartTableRows renders with expandButtonSuffix 1`] = `
               className="ax-icon ax-icon--box-expand"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4z\\" fill-rule=\\"evenodd\\"/>",
                 }
               }
               style={
@@ -1023,7 +1023,7 @@ exports[`ChartTableRows renders with xAxisLabels 1`] = `
               className="ax-icon ax-icon--box-expand"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4H9z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                  "__html": "<path d=\\"M9 11V5h3L8 1 4 5h3v6H4l4 4 4-4z\\" fill-rule=\\"evenodd\\"/>",
                 }
               }
               style={

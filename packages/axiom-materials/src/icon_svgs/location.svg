@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>location</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="location" fill="#000000">
-            <path d="M8,14 C7.96337891,14 3.5,9.5 3.5,6.5 C3.5,4.01471863 5.51471863,2 8,2 C10.4852814,2 12.5,4.01471863 12.5,6.5 C12.5,9.5 8.03662109,14 8,14 Z M8,8 C8.82842712,8 9.5,7.32842712 9.5,6.5 C9.5,5.67157288 8.82842712,5 8,5 C7.17157288,5 6.5,5.67157288 6.5,6.5 C6.5,7.32842712 7.17157288,8 8,8 Z" id="Mask"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m8 14c-.03662109 0-4.5-4.5-4.5-7.5 0-2.48528137 2.01471863-4.5 4.5-4.5 2.4852814 0 4.5 2.01471863 4.5 4.5 0 3-4.46337891 7.5-4.5 7.5zm0-6c.82842712 0 1.5-.67157288 1.5-1.5s-.67157288-1.5-1.5-1.5-1.5.67157288-1.5 1.5.67157288 1.5 1.5 1.5z" fill-rule="evenodd"/></svg>

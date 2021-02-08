@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Arrow Down</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Axiom-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Arrow-Down" fill="#000000">
-            <polygon id="Path" points="6.99899995 2.0003 6.99899995 10.1583 4.46399995 7.6213 3.04999995 9.0353 7.29199995 13.2783 7.99899995 13.9853 12.949 9.0363 12.949 9.0343 11.535 7.6213 8.99899995 10.1583 8.99899995 2.0003"></polygon>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m6.99899995 2.0003v8.158l-2.535-2.537-1.414 1.414 4.242 4.243.707.707 4.95000005-4.949v-.002l-1.414-1.413-2.53600005 2.537v-8.158z" fill-rule="evenodd"/></svg>

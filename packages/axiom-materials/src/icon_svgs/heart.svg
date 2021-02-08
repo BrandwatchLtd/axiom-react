@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>heart</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="heart" fill="#000000">
-            <path d="M10.802,3 C9.63,3 8.531,3.989 8.002,4.547 C7.473,3.989 6.374,3 5.202,3 C3.199,3 2,4.253 2,6.351 C2,8.07 3.474,9.51 3.528,9.56 C3.528,9.56 7.895,14 8.002,14 C8.11,14 12.47,9.574 12.47,9.574 C12.531,9.51 14.004,8.07 14.004,6.351 C14.004,4.253 12.805,3 10.802,3" id="Heart"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m10.802 3c-1.172 0-2.271.989-2.8 1.547-.529-.558-1.628-1.547-2.8-1.547-2.003 0-3.202 1.253-3.202 3.351 0 1.719 1.474 3.159 1.528 3.209 0 0 4.367 4.44 4.474 4.44.108 0 4.468-4.426 4.468-4.426.061-.064 1.534-1.504 1.534-3.223 0-2.098-1.199-3.351-3.202-3.351" fill-rule="evenodd"/></svg>

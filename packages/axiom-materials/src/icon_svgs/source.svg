@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <g fill-rule="evenodd" transform="translate(1.333 1.333)">
-    <polygon points="6.665 0 9.667 1.841 9.667 4.827 6.679 6.667 3.667 4.827 3.667 1.839"/>
-    <polygon points="10.332 6 13.333 7.841 13.333 10.827 10.345 12.667 7.333 10.827 7.333 7.839"/>
-    <polygon points="2.999 6 6 7.841 6 10.827 3.012 12.667 0 10.827 0 7.839"/>
-  </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" transform="translate(1.333 1.333)"><path d="m6.665 0 3.002 1.841v2.986l-2.988 1.84-3.012-1.84v-2.988z"/><path d="m10.332 6 3.001 1.841v2.986l-2.988 1.84-3.012-1.84v-2.988z"/><path d="m2.999 6 3.001 1.841v2.986l-2.988 1.84-3.012-1.84v-2.988z"/></g></svg>

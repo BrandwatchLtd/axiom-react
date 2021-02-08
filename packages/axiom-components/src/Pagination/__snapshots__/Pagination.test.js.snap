@@ -17,7 +17,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
         className="ax-icon ax-icon--chevron-left"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\"/>",
           }
         }
         style={
@@ -80,7 +80,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
         className="ax-icon ax-icon--ellipsis"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-5 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+            "__html": "<path d=\\"M8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-5 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z\\" fill-rule=\\"evenodd\\"/>",
           }
         }
         style={
@@ -109,7 +109,7 @@ exports[`Composite: Pagination renders with defaultProps 1`] = `
         className="ax-icon ax-icon--chevron-right"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\"/>",
           }
         }
         style={
@@ -142,7 +142,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
         className="ax-icon ax-icon--chevron-left"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\"/>",
           }
         }
         style={
@@ -164,7 +164,7 @@ exports[`Composite: Pagination renders without displayRange 1`] = `
         className="ax-icon ax-icon--chevron-right"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\"/>",
           }
         }
         style={
@@ -197,7 +197,7 @@ exports[`Composite: Pagination renders without pages 1`] = `
         className="ax-icon ax-icon--chevron-left"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            "__html": "<path d=\\"M11 4L9.5 2.5 4 8l5.5 5.5L11 12 7 8z\\"/>",
           }
         }
         style={
@@ -219,7 +219,7 @@ exports[`Composite: Pagination renders without pages 1`] = `
         className="ax-icon ax-icon--chevron-right"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\" fill-rule=\\"nonzero\\" fill=\\"currentColor\\"/>",
+            "__html": "<path d=\\"M5 12l1.5 1.5L12 8 6.5 2.5 5 4l4 4z\\"/>",
           }
         }
         style={

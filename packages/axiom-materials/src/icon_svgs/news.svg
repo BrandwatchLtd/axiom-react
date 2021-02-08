@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Icon/News" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M1,14 L15,14 L15,2 L1,2 C1,2 1,14 1,14 Z M8,12 L3,12 L3,7 L8,7 L8,12 Z M12.9847909,12 L9,12 L9,11 L13,11 L13,12 L12.9847909,12 Z M13,10 L9,10 L9,9 L13,9 L13,10 Z M9,8 L9,7 L13,7 L13,8 L9,8 Z M3,4 L13,4 L13,6 L3,6 L3,4 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m1 14h14v-12h-14zm7-2h-5v-5h5zm4.9847909 0h-3.9847909v-1h4v1zm.0152091-2h-4v-1h4zm-4-2v-1h4v1zm-6-4h10v2h-10z"/></svg>

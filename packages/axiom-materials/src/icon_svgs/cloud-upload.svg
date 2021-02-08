@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>cloud-upload</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="cloud-upload" fill="#000000">
-            <path d="M12.967,7.174 C12.797,4.844 10.873,3 8.5,3 C6.535,3 4.882,4.268 4.268,6.024 C2.445,6.145 1,7.647 1,9.5 C1,11.433 2.567,13 4.5,13 L7,13 L7,10 L5,10 L8,6 L11,10 L9,10 L9,13 L12.5,13 L13,12.817 C14.162,12.403 15,11.305 15,10 C15,8.684 14.147,7.578 12.967,7.174" id="Upload-to-Cloud"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m12.967 7.174c-.17-2.33-2.094-4.174-4.467-4.174-1.965 0-3.618 1.268-4.232 3.024-1.823.121-3.268 1.623-3.268 3.476 0 1.933 1.567 3.5 3.5 3.5h2.5v-3h-2l3-4 3 4h-2v3h3.5l.5-.183c1.162-.414 2-1.512 2-2.817 0-1.316-.853-2.422-2.033-2.826" fill-rule="evenodd"/></svg>

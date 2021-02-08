@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
-    <title>Icon/User</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Icon/User" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="User" transform="translate(2.000000, 1.000000)" fill="#000000">
-          <path d="M7.8125,2.7 C7.8125,4.1904 6.5525,5.4 5,5.4 C3.4475,5.4 2.1875,4.1904 2.1875,2.7 C2.1875,1.2096 3.4475,0 5,0 C6.5525,0 7.8125,1.2096 7.8125,2.7 Z M5,6.6 C7.76125,6.6 10,9.018 10,12 L7.5,12 L0,12 C0,9.018 2.23875,6.6 5,6.6 Z" id="Icon"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7.8125 2.7c0 1.4904-1.26 2.7-2.8125 2.7s-2.8125-1.2096-2.8125-2.7 1.26-2.7 2.8125-2.7 2.8125 1.2096 2.8125 2.7zm-2.8125 3.9c2.76125 0 5 2.418 5 5.4h-2.5-7.5c0-2.982 2.23875-5.4 5-5.4z" fill-rule="evenodd" transform="translate(2 1)"/></svg>

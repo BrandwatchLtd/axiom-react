@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <g fill="none" fill-rule="evenodd">
-    <circle cx="8" cy="8" r="1.714" fill="#000"/>
-    <circle cx="3.714" cy="8" r="1.714" fill="#000"/>
-    <circle cx="12.286" cy="8" r="1.714" fill="#000"/>
-    <circle cx="8" cy="12.286" r="1.714" fill="#000"/>
-    <circle cx="3.714" cy="12.286" r="1.714" fill="#000"/>
-    <circle cx="12.286" cy="12.286" r="1.714" fill="#000"/>
-    <circle cx="8" cy="3.714" r="1.714" fill="#000"/>
-    <circle cx="3.714" cy="3.714" r="1.714" fill="#000"/>
-    <circle cx="12.286" cy="3.714" r="1.714" fill="#000"/>
-  </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-rule="evenodd"><circle cx="8" cy="8" r="1.714"/><circle cx="3.714" cy="8" r="1.714"/><circle cx="12.286" cy="8" r="1.714"/><circle cx="8" cy="12.286" r="1.714"/><circle cx="3.714" cy="12.286" r="1.714"/><circle cx="12.286" cy="12.286" r="1.714"/><circle cx="8" cy="3.714" r="1.714"/><circle cx="3.714" cy="3.714" r="1.714"/><circle cx="12.286" cy="3.714" r="1.714"/></g></svg>

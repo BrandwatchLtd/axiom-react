@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
-    <title>arrow-up-left</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="arrow-up-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Mask" fill="#000000" transform="translate(8.000020, 8.007200) rotate(-225.000000) translate(-8.000020, -8.007200) " points="6.99952005 2.0147 6.99952005 10.1727 4.46452005 7.6357 3.05052005 9.0497 7.29252005 13.2927 7.99952005 13.9997 12.94952 9.0507 12.94952 9.0487 11.53552 7.6357 8.99952005 10.1727 8.99952005 2.0147"></polygon>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m6.99952005 2.0147v8.158l-2.535-2.537-1.414 1.414 4.242 4.243.707.707 4.94999995-4.949v-.002l-1.414-1.413-2.53599995 2.537v-8.158z" fill-rule="evenodd" transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 19.318834 8.012277)"/></svg>

@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
-    <title>folder-closed</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="folder-closed" fill="#000000">
-            <path d="M13.5001,12 L13.5001,6 L13.5001,5.5005 C13.5001,5.2225 13.2781,5 13.0041,5 L7.5,5 L6.7785,3.918 C6.6225,3.684 6.277,3.5 6.0015,3.5 L2.9985,3.5 C2.7265,3.5 2.5,3.724 2.5,3.9995 L2.5,5 L2.5,12 L13.5001,12 Z" id="Mask"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m13.5001 12v-6-.4995c0-.278-.222-.5005-.496-.5005h-5.5041l-.7215-1.082c-.156-.234-.5015-.418-.777-.418h-3.003c-.272 0-.4985.224-.4985.4995v1.0005 7z" fill-rule="evenodd"/></svg>

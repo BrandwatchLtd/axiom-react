@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>trash</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="trash" fill="#000000">
-            <path d="M4,4.5 L12,4.5 L11.5525637,13.001289 C11.5235336,13.5528619 11.0621186,14 10.4970707,14 L5.50292933,14 C4.94902676,14 4.47655459,13.5545373 4.44743627,13.001289 L4,4.5 Z M3.5,3 L12.5,3 L12.5,4 L3.5,4 L3.5,3 Z M7,2 L9,2 L9,3 L7,3 L7,2 Z"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m4 4.5h8l-.4474363 8.501289c-.0290301.5515729-.4904451.998711-1.055493.998711h-4.99414137c-.55390257 0-1.02637474-.4454627-1.05549306-.998711zm-.5-1.5h9v1h-9zm3.5-1h2v1h-2z" fill-rule="evenodd"/></svg>

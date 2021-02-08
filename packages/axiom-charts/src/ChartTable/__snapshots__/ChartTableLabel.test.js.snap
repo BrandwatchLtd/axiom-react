@@ -79,7 +79,7 @@ exports[`ChartTableLabel renders with onToggleRowVisibility and disabled 1`] = `
             className="ax-icon ax-icon--preview"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<path d=\\"M9.5 8a1.5 1.5 0 1 1-3.001-.001A1.5 1.5 0 0 1 9.5 8M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0-7.5C4.134 3.5 1 8 1 8s3.134 4.5 7 4.5S15 8 15 8s-3.134-4.5-7-4.5\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+                "__html": "<path d=\\"M9.5 8a1.5 1.5 0 1 1-3.001-.001A1.5 1.5 0 0 1 9.5 8M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0-7.5C4.134 3.5 1 8 1 8s3.134 4.5 7 4.5S15 8 15 8s-3.134-4.5-7-4.5\\" fill-rule=\\"evenodd\\"/>",
               }
             }
             style={

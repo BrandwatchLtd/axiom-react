@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>followers</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="followers" fill="#000000">
-            <path d="M7.25,5.25 C7.25,6.492 6.242,7.5 5,7.5 C3.758,7.5 2.75,6.492 2.75,5.25 C2.75,4.008 3.758,3 5,3 C6.242,3 7.25,4.008 7.25,5.25 Z M11,7.5 C9.758,7.5 8.75,6.492 8.75,5.25 C8.75,4.008 9.758,3 11,3 C12.242,3 13.25,4.008 13.25,5.25 C13.25,6.492 12.242,7.5 11,7.5 Z M11,8.5 C13.209,8.5 15,10.515 15,13 L10,13 C10,11.585 9.508,10.297 8.706,9.321 C9.356,8.808 10.145,8.5 11,8.5 Z M5,8.5 C7.209,8.5 9,10.515 9,13 L7,13 L1,13 C1,10.515 2.791,8.5 5,8.5 Z" id="Mask"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7.25 5.25c0 1.242-1.008 2.25-2.25 2.25s-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25 2.25 1.008 2.25 2.25zm3.75 2.25c-1.242 0-2.25-1.008-2.25-2.25s1.008-2.25 2.25-2.25 2.25 1.008 2.25 2.25-1.008 2.25-2.25 2.25zm0 1c2.209 0 4 2.015 4 4.5h-5c0-1.415-.492-2.703-1.294-3.679.65-.513 1.439-.821 2.294-.821zm-6 0c2.209 0 4 2.015 4 4.5h-2-6c0-2.485 1.791-4.5 4-4.5z" fill-rule="evenodd"/></svg>

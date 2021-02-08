@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
-    <title>Symbols/Icon/download</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Symbols/Icon/download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M13,11 L13,13 L3,13 L3,11 L13,11 Z M9,2 L9,5 L11.75,5 L8,10 L4.25,5 L7,5 L7,2 L9,2 Z" id="Combined-Shape" fill="#000000"></path>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m13 11v2h-10v-2zm-4-9v3h2.75l-3.75 5-3.75-5h2.75v-3z" fill-rule="evenodd"/></svg>

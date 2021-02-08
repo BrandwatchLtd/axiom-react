@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>kred</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="kred" fill="#000000">
-            <path d="M12.8926,3.9482 L4.7466,10.3962 L2.9996,9.0002 L2.9996,4.5002 C2.9996,3.6722 3.6716,3.0002 4.4996,3.0002 L11.4996,3.0002 C12.1326,3.0002 12.6716,3.3932 12.8926,3.9482 Z M5.5469,11.0381 L12.9999,5.1381 L12.9999,8.0391 C12.9999,8.6461 12.7239,9.2211 12.2489,9.6011 L7.9999,13.0001 L5.5469,11.0381 Z" id="Mask"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m12.8926 3.9482-8.146 6.448-1.747-1.396v-4.5c0-.828.672-1.5 1.5-1.5h7c.633 0 1.172.393 1.393.948zm-7.3457 7.0899 7.453-5.9v2.901c0 .607-.276 1.182-.751 1.562l-4.249 3.399z" fill-rule="evenodd"/></svg>

@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>moon</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="moon" fill="#000000">
-            <path d="M7.30010753,3.04859747 C4.87002717,3.38898076 3,5.47610625 3,8 C3,10.7614237 5.23857625,13 8,13 C10.5238937,13 12.6110192,11.1299728 12.9514025,8.69989247 C12.2200687,9.49891471 11.1685517,10 10,10 C7.790861,10 6,8.209139 6,6 C6,4.8314483 6.50108529,3.77993135 7.30010753,3.04859747 Z" id="Mask"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7.30010753 3.04859747c-2.43008036.34038329-4.30010753 2.42750878-4.30010753 4.95140253 0 2.7614237 2.23857625 5 5 5 2.5238937 0 4.6110192-1.8700272 4.9514025-4.30010753-.7313338.79902224-1.7828508 1.30010753-2.9514025 1.30010753-2.209139 0-4-1.790861-4-4 0-1.1685517.50108529-2.22006865 1.30010753-2.95140253z" fill-rule="evenodd"/></svg>

@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>Filter</title>
-    <desc>Created with Sketch.</desc>
-    <g id="sort" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="sort" fill="#000000" points="3 3 13 3 9.5 8.00148437 9.5 13.0029687 6.5 13.0029687 6.5 8.00148437"></polygon>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m3 3h10l-3.5 5.00148437v5.00148433h-3v-5.00148433z" fill-rule="evenodd"/></svg>

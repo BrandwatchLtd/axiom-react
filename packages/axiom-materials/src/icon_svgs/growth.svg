@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>growth</title>
-    <desc>Created with Sketch.</desc>
-    <g id="growth" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon fill="#000000" points="8.749 3.5 10.75 5.5 8.25 8 6.25 6 1.25 11 3 12.75 6.25 9.5 8.25 11.5 12.499 7.249 14.499 9.25 14.499 3.5"></polygon>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m8.749 3.5 2.001 2-2.5 2.5-2-2-5 5 1.75 1.75 3.25-3.25 2 2 4.249-4.251 2 2.001v-5.75z" fill-rule="evenodd"/></svg>
