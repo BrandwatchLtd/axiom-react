@@ -28,6 +28,7 @@ const pictogramNames = [
   "organisation",
   "pie-chart",
   "polar-chart",
+  "social-panels",
   "spline-chart",
   "stream-graph",
   "table",
