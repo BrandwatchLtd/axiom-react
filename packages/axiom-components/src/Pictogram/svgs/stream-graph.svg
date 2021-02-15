@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Stream Graph</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Axiom-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Stream-Graph" fill="#000000">
-            <path d="M8,5 C5,5 0,0 0,0 L0,5 C0,5 3,7 8,7 C13,7 16,5 16,5 L16,0 C16,0 11,5 8,5" id="Path"></path>
-            <path d="M0,11 L0,16 C0,16 5,11 8,11 C11,11 16,16 16,16 L16,11 C16,11 13,9 8,9 C3,9 0,11 0,11" id="Path" fill-opacity="0.3"></path>
-            <path d="M0,5 L0,6 L0,10 L0,11 C0,11 3,9 8,9 C13,9 16,11 16,11 L16,10 L16,6 L16,5 C16,5 13,7 8,7 C3,7 0,5 0,5" id="Path" fill-opacity="0.75"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m8 5c-3 0-8-5-8-5v5s3 2 8 2 8-2 8-2v-5s-5 5-8 5"/><path d="m0 11v5s5-5 8-5 8 5 8 5v-5s-3-2-8-2-8 2-8 2" fill-opacity=".3"/><path d="m0 5v1 4 1s3-2 8-2 8 2 8 2v-1-4-1s-3 2-8 2-8-2-8-2" fill-opacity=".75"/></g></svg>

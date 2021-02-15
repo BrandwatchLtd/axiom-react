@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Tree Map</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Axiom-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Tree-Map" fill="#000000">
-            <rect id="Rectangle" x="0" y="0" width="10.5" height="10.25"></rect>
-            <rect id="Rectangle" fill-opacity="0.75" x="0" y="11.5" width="16" height="4.5"></rect>
-            <rect id="Rectangle" fill-opacity="0.3" x="11.5" y="0" width="4.5" height="4.5"></rect>
-            <rect id="Rectangle" fill-opacity="0.3" x="11.5" y="5.75" width="4.5" height="4.5"></rect>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m0 0h10.5v10.25h-10.5z"/><path d="m0 11.5h16v4.5h-16z" fill-opacity=".75"/><g fill-opacity=".3"><path d="m11.5 0h4.5v4.5h-4.5z"/><path d="m11.5 5.75h4.5v4.5h-4.5z"/></g></g></svg>
