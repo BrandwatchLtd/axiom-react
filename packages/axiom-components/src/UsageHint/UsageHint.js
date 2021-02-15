@@ -15,31 +15,36 @@ import Link from "../Typography/Link";
 export default class UsageHint extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
+    iconName: PropTypes.oneOf(["information-circle", "question-mark-circle"]),
+    inline: PropTypes.bool,
+    /** Padding size applied to the content area */
+    padding: PropTypes.oneOf(["none", "small", "medium", "large"]),
     position: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     showArrow: PropTypes.bool,
-    inline: PropTypes.bool,
     /** Total width of the usageHint dropdown context */
     width: PropTypes.string,
   };
 
   static defaultProps = {
-    showArrow: true,
     inline: false,
+    iconName: "question-mark-circle",
+    padding: "large",
+    showArrow: true,
   };
 
   render() {
-    const { children, inline, width, ...rest } = this.props;
+    const { children, inline, iconName, padding, width, ...rest } = this.props;
 
     return (
       <Dropdown {...rest} showArrow>
         <DropdownTarget>
           <Link style="subtle">
-            <Icon inline={inline} name="question-mark-circle" size="1rem" />
+            <Icon inline={inline} name={iconName} size="1rem" />
           </Link>
         </DropdownTarget>
         <DropdownSource>
           <DropdownContext width={width}>
-            <DropdownContent>{children}</DropdownContent>
+            <DropdownContent padding={padding}>{children}</DropdownContent>
           </DropdownContext>
         </DropdownSource>
       </Dropdown>
