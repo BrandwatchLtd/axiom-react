@@ -154,7 +154,9 @@ export default class DurationPicker extends Component {
     );
 
     const {
-      selectedUnit = filteredTimeUnits[0],
+      selectedUnit = filteredTimeUnits.includes("days")
+        ? "days"
+        : filteredTimeUnits[0],
       selectedValue = "",
     } = this.state;
 
