@@ -9,6 +9,8 @@ export default class Chip extends Component {
   static propTypes = {
     /** Apply active styling */
     active: PropTypes.bool,
+    /** Class name to be appended to the element */
+    className: PropTypes.string,
     /** Content for chip */
     children: PropTypes.node.isRequired,
     /** Disable interaction behaviour */
@@ -42,10 +44,11 @@ export default class Chip extends Component {
       rightIcon,
       size,
       valid,
+      className,
       ...rest
     } = this.props;
 
-    const classes = classnames("ax-chip", `ax-chip--${size}`, {
+    const classes = classnames("ax-chip", `ax-chip--${size}`, className, {
       "ax-chip--active": active,
       "ax-chip--valid": valid,
       "ax-chip--invalid": invalid,
