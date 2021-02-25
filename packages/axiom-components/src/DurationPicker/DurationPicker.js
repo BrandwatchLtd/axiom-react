@@ -61,6 +61,12 @@ const formatTimeUnit = (timeUnit) => {
   return `${timeUnit.slice(0, 1).toUpperCase()}${timeUnit.slice(1)}`;
 };
 
+const getFilteredTimeUnits = (excludedOptions) =>
+  validTimeUnits.filter((timeUnit) => !excludedOptions.includes(timeUnit));
+
+const getDefaultTimeUnit = (filteredTimeUnits) =>
+  filteredTimeUnits.includes("days") ? "days" : filteredTimeUnits[0];
+
 export default class DurationPicker extends Component {
   static propTypes = {
     /** Excluded time-unit options */
@@ -89,6 +95,12 @@ export default class DurationPicker extends Component {
     this.onChange = this.onChange.bind(this);
 
     this.state = getStateFromIsoDurationValue(props.value);
+
+    if (!this.state.selectedUnit) {
+      const filteredTimeUnits = getFilteredTimeUnits(props.excludedOptions);
+
+      this.state.selectedUnit = getDefaultTimeUnit(filteredTimeUnits);
+    }
   }
 
   onBlur() {
@@ -149,14 +161,9 @@ export default class DurationPicker extends Component {
       "value",
       "onChange",
     ]);
-    const filteredTimeUnits = validTimeUnits.filter(
-      (timeUnit) => !excludedOptions.includes(timeUnit)
-    );
-
+    const filteredTimeUnits = getFilteredTimeUnits(excludedOptions);
     const {
-      selectedUnit = filteredTimeUnits.includes("days")
-        ? "days"
-        : filteredTimeUnits[0],
+      selectedUnit = getDefaultTimeUnit(filteredTimeUnits),
       selectedValue = "",
     } = this.state;
 
