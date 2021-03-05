@@ -65,13 +65,17 @@ export default class TableHeaderLabel extends Component {
       width: `${Math.max(0, Math.min(width, 100))}%`,
     };
 
+    const buttonClasses = classnames("ax-table__header-button", {
+      "ax-table__header-button--disabled": !onClick,
+    });
+
     return (
       <Base {...rest} Component="th" className={classes} style={styles}>
         <div
-          className="ax-table__header-button"
-          disabled={!onClick}
+          className={buttonClasses}
           onClick={onClick}
           role="button"
+          aria-disabled={!onClick}
         >
           {wrap ? (
             <EllipsisTooltip className="ax-table__header-tooltip--wrap">

@@ -87,7 +87,7 @@
   color: var(--color-theme-text);
 }
 
-.ax-table__header-button:disabled {
+.ax-table__header-button--disabled {
   cursor: auto;
 }
 
@@ -114,7 +114,7 @@
   transform: scaleX(1) translateY(var(--spacing-grid-size--x2));
 }
 
-.ax-table__header-button:hover:not(:disabled) {
+.ax-table__header-button:hover:not(.ax-table__header-button--disabled) {
   color: var(--color-ui-accent--hover);
 }
 

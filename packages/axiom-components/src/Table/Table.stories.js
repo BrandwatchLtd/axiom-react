@@ -22,7 +22,9 @@ export function Default() {
   return (
     <Table>
       <TableHeader>
-        <TableHeaderLabel sortDirection="ascending">Column A</TableHeaderLabel>
+        <TableHeaderLabel sortDirection="ascending" onClick={() => {}}>
+          Column A
+        </TableHeaderLabel>
         <TableHeaderLabel>lower case</TableHeaderLabel>
         <TableHeaderLabel wrap={true}>
           Super long Column C label with wrapping Lorem ipsum
