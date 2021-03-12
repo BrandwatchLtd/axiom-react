@@ -10,6 +10,35 @@ if (typeof window !== "undefined") {
   require("element-closest");
 }
 
+/**
+ * Manage global document listeners
+ * Allows suppressing existing dropdown handlers, if a dropdown is nested
+ * E.g. clicking within dropdown B should not close dropdown A
+ */
+const createEventHandlerCache = (type) => {
+  const cache = new Set();
+  return {
+    add: (handler) => {
+      cache.forEach((cachedHandler) => {
+        document.removeEventListener(type, cachedHandler);
+      });
+      cache.add(handler);
+      document.addEventListener(type, handler);
+    },
+    remove: (handler) => {
+      cache.forEach((cachedHandler) => {
+        document.addEventListener(type, cachedHandler);
+      });
+      cache.delete(handler);
+      document.removeEventListener(type, handler);
+    },
+  };
+};
+
+const dropdownKeydownListeners = createEventHandlerCache("keydown");
+const dropdownMousedownListeners = createEventHandlerCache("mousedown");
+const dropdownMousemoveListeners = createEventHandlerCache("mousemove");
+
 const isFocusableMenuItem = (element) =>
   element && element.hasAttribute(contextMenuItemSelector) && !element.disabled;
 
@@ -46,15 +75,15 @@ export default class DropdownContext extends Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
-    document.removeEventListener("mousedown", this.handleClick);
-    document.removeEventListener("mousemove", this.handleMouseMove);
+    dropdownKeydownListeners.remove(this.handleKeyDown);
+    dropdownMousedownListeners.remove(this.handleClick);
+    dropdownMousemoveListeners.remove(this.handleMouseMove);
   }
 
   componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyDown);
-    document.addEventListener("mousedown", this.handleClick);
-    document.addEventListener("mousemove", this.handleMouseMove);
+    dropdownKeydownListeners.add(this.handleKeyDown);
+    dropdownMousedownListeners.add(this.handleClick);
+    dropdownMousemoveListeners.add(this.handleMouseMove);
   }
 
   handleClick(event) {
