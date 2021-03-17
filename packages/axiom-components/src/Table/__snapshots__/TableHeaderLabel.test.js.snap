@@ -5,8 +5,8 @@ exports[`TableHeaderLabel renders 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -34,8 +34,8 @@ exports[`TableHeaderLabel renders with grow 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--grow"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -63,8 +63,8 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -92,8 +92,8 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -121,8 +121,8 @@ exports[`TableHeaderLabel renders with sortable 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -135,8 +135,8 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
   className="ax-table__header-label ax-table__header-label--align-right"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -169,8 +169,8 @@ exports[`TableHeaderLabel renders with width 1`] = `
   }
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -198,8 +198,8 @@ exports[`TableHeaderLabel renders with wrap 1`] = `
   className="ax-table__header-label ax-table__header-label--align-left"
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     <div
@@ -237,8 +237,8 @@ exports[`TableHeaderLabel width overrides grow 1`] = `
   }
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test
@@ -271,8 +271,8 @@ exports[`TableHeaderLabel width overrides shrink 1`] = `
   }
 >
   <div
-    className="ax-table__header-button"
-    disabled={true}
+    aria-disabled={true}
+    className="ax-table__header-button ax-table__header-button--disabled"
     role="button"
   >
     Test

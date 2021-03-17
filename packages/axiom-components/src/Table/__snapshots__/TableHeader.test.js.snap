@@ -9,8 +9,8 @@ exports[`TableHeader renders 1`] = `
       className="ax-table__header-label ax-table__header-label--align-left"
     >
       <div
-        className="ax-table__header-button"
-        disabled={true}
+        aria-disabled={true}
+        className="ax-table__header-button ax-table__header-button--disabled"
         role="button"
       >
         Test
