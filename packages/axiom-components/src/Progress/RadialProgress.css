@@ -4,6 +4,11 @@
   margin-left: auto;
 }
 
+.ax-radial-progress--tiny {
+  width: var(--component-round-size-tiny);
+  height: var(--component-round-size-tiny);
+}
+
 .ax-radial-progress--small {
   width: var(--component-round-size-small);
   height: var(--component-round-size-small);

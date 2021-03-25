@@ -17,7 +17,7 @@ describe("RadialProgress", () => {
   });
 
   describe("renders with size", () => {
-    ["small", "medium", "large"].forEach((size) => {
+    ["tiny", "small", "medium", "large"].forEach((size) => {
       it(size, () => {
         const component = getComponent({ size });
         const tree = component.toJSON();

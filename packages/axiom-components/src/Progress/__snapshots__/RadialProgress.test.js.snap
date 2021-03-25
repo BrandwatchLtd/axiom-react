@@ -55,3 +55,17 @@ exports[`RadialProgress renders with size small 1`] = `
   </g>
 </svg>
 `;
+
+exports[`RadialProgress renders with size tiny 1`] = `
+<svg
+  className="lorem ax-radial-progress ax-radial-progress--tiny"
+  style={Object {}}
+  viewBox="0 0 75 75"
+>
+  <g
+    transform="translate(37.5, 37.5) rotate(-90)"
+  >
+    <svg />
+  </g>
+</svg>
+`;

@@ -12,7 +12,7 @@ export default class ProgressInfinite extends Component {
     /** Color of the indicator */
     color: PropTypes.oneOf(["subtle", "white"]),
     /** Size of the indicator */
-    size: PropTypes.oneOf(["small", "medium", "large"]),
+    size: PropTypes.oneOf(["tiny", "small", "medium", "large"]),
     /** Size in REM units */
     sizeRem: PropTypes.string,
   };
