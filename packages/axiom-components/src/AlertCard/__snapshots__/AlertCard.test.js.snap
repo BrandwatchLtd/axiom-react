@@ -85,8 +85,9 @@ exports[`AlertCard renders with onRemoveClick 1`] = `
         className="ax-alert-card__remove"
       >
         <a
-          className="ax-link ax-link--style-subtle"
+          className="ax-link ax-link--variant-normal"
           onClick={[Function]}
+          style="subtle"
         >
           <svg
             className="ax-icon ax-icon--cross"

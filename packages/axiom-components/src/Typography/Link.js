@@ -9,7 +9,7 @@ export default class Link extends Component {
     Component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     children: PropTypes.node,
     className: PropTypes.string,
-    style: PropTypes.oneOf([
+    variant: PropTypes.oneOf([
       "body",
       "day",
       "inherit",
@@ -22,13 +22,13 @@ export default class Link extends Component {
 
   static defaultProps = {
     Component: "a",
-    style: "normal",
+    variant: "normal",
   };
 
   render() {
-    const { className, children, Component, style, ...rest } = this.props;
+    const { className, children, Component, variant, ...rest } = this.props;
     const classes = classnames("ax-link", className, {
-      [`ax-link--style-${style}`]: style,
+      [`ax-link--variant-${variant}`]: variant,
     });
 
     return (

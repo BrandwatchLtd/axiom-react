@@ -49,8 +49,9 @@ exports[`TextInputIconWrapper renders with onClick 1`] = `
   className="ax-input__icon ax-input__icon--align-right"
 >
   <a
-    className="ax-link ax-link--style-subtle"
+    className="ax-link ax-link--variant-normal"
     onClick={[Function]}
+    style="subtle"
   >
     <svg
       className="ax-icon ax-icon--dot"

@@ -106,7 +106,7 @@ export default class ChartTableRows extends Component {
           className="ax-chart-table__collapse"
           style={{ visibility: collapsible ? "visible" : "hidden" }}
         >
-          <Link onClick={this.toggleReveal} style="subtle">
+          <Link onClick={this.toggleReveal} variant="subtle">
             <Grid gutters="tiny" responsive={false} verticalAlign="middle">
               <GridCell shrink>
                 <Icon name={`box-${collapsed ? "expand" : "collapse"}`} />

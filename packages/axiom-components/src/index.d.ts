@@ -1788,7 +1788,7 @@ declare module '@brandwatch/axiom-components' {
   interface LinkProps {
     Component?: (...args: any[]) => any | string,
     className?: string,
-    style?: "body"
+    variant?: "body"
       | "day"
       | "inherit"
       | "mono"

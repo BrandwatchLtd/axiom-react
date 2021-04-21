@@ -39,7 +39,7 @@ export default class RadarXAxisLabel extends Component {
         {onClick ? (
           <Link
             onClick={() => onClick(label)}
-            style={active ? "body" : "subtle"}
+            variant={active ? "body" : "subtle"}
           >
             {label}
           </Link>

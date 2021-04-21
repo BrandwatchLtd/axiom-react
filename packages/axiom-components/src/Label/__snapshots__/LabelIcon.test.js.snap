@@ -5,7 +5,8 @@ exports[`LabelIcon renders with color error 1`] = `
   className="ax-label__icon"
 >
   <a
-    className="ax-link ax-link--style-night"
+    className="ax-link ax-link--variant-normal"
+    style="night"
   >
     <svg
       className="ax-icon ax-icon--twitter"
@@ -31,7 +32,8 @@ exports[`LabelIcon renders with color success 1`] = `
   className="ax-label__icon"
 >
   <a
-    className="ax-link ax-link--style-night"
+    className="ax-link ax-link--variant-normal"
+    style="night"
   >
     <svg
       className="ax-icon ax-icon--twitter"
@@ -57,7 +59,8 @@ exports[`LabelIcon renders with color white 1`] = `
   className="ax-label__icon"
 >
   <a
-    className="ax-link ax-link--style-subtle"
+    className="ax-link ax-link--variant-normal"
+    style="subtle"
   >
     <svg
       className="ax-icon ax-icon--twitter"
@@ -83,7 +86,7 @@ exports[`LabelIcon renders with defaultProps 1`] = `
   className="ax-label__icon"
 >
   <a
-    className="ax-link ax-link--style-normal"
+    className="ax-link ax-link--variant-normal"
   >
     <svg
       className="ax-icon ax-icon--twitter"
@@ -109,7 +112,7 @@ exports[`LabelIcon renders with end spacing 1`] = `
   className="ax-label__icon ax-label__icon--end"
 >
   <a
-    className="ax-link ax-link--style-normal"
+    className="ax-link ax-link--variant-normal"
   >
     <svg
       className="ax-icon ax-icon--twitter"
@@ -135,7 +138,7 @@ exports[`LabelIcon renders with start spacing 1`] = `
   className="ax-label__icon ax-label__icon--start"
 >
   <a
-    className="ax-link ax-link--style-normal"
+    className="ax-link ax-link--variant-normal"
   >
     <svg
       className="ax-icon ax-icon--twitter"
