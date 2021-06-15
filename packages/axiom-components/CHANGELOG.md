@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.8.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.7.0...@brandwatch/axiom-components@13.8.0) (2021-06-15)
+
+
+### Features
+
+* adding mask icon ([5ed5b1c](https://github.com/BrandwatchLtd/axiom-react/commit/5ed5b1cc7daf994c93c10fd1ed81143fac9ffa83))
+
+
+
+
+
 # [13.7.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.6.1...@brandwatch/axiom-components@13.7.0) (2021-03-25)
 
 
