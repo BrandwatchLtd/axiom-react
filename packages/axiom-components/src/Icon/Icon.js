@@ -135,6 +135,7 @@ export default class Icon extends Component {
       "lock",
       "log",
       "magnify-glass",
+      "mask",
       "minus",
       "monitor",
       "news",
