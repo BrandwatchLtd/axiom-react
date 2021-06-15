@@ -79,6 +79,7 @@ export default {
   lock: require("./icon_svgs/lock.svg"),
   log: require("./icon_svgs/log.svg"),
   "magnify-glass": require("./icon_svgs/magnify-glass.svg"),
+  mask: require("./icon_svgs/mask.svg"),
   minus: require("./icon_svgs/minus.svg"),
   monitor: require("./icon_svgs/monitor.svg"),
   moon: require("./icon_svgs/moon.svg"),

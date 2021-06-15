@@ -79,6 +79,7 @@ const iconNames = [
   "lock",
   "log",
   "magnify-glass",
+  "mask",
   "minus",
   "monitor",
   "moon",
