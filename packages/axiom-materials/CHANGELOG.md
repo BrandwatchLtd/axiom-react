@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.35.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.35.0...@brandwatch/axiom-materials@1.35.1) (2021-06-16)
+
+
+### Bug Fixes
+
+* fixing mask so it works with IconButton ([55cfcad](https://github.com/BrandwatchLtd/axiom-react/commit/55cfcad45d0acd169df5d44c2f95a612429a92ae))
+
+
+
+
+
 # [1.35.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.34.1...@brandwatch/axiom-materials@1.35.0) (2021-06-15)
 
 
