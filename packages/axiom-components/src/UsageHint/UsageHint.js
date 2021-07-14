@@ -21,6 +21,10 @@ export default class UsageHint extends PureComponent {
     padding: PropTypes.oneOf(["none", "small", "medium", "large"]),
     position: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     showArrow: PropTypes.bool,
+    /** Spacing applied to the left of the Icon. Must be used with the inline property */
+    spaceLeft: PropTypes.oneOf(["x1", "x2"]),
+    /** Spacing applied to the right of the Icon. Must be used with the inline property */
+    spaceRight: PropTypes.oneOf(["x1", "x2"]),
     /** Total width of the usageHint dropdown context */
     width: PropTypes.string,
   };
@@ -33,13 +37,28 @@ export default class UsageHint extends PureComponent {
   };
 
   render() {
-    const { children, inline, iconName, padding, width, ...rest } = this.props;
+    const {
+      children,
+      inline,
+      iconName,
+      padding,
+      width,
+      spaceLeft,
+      spaceRight,
+      ...rest
+    } = this.props;
 
     return (
       <Dropdown {...rest} showArrow>
         <DropdownTarget>
           <Link style="subtle">
-            <Icon inline={inline} name={iconName} size="1rem" />
+            <Icon
+              inline={inline}
+              spaceLeft={spaceLeft}
+              spaceRight={spaceRight}
+              name={iconName}
+              size="1rem"
+            />
           </Link>
         </DropdownTarget>
         <DropdownSource>
