@@ -17,5 +17,5 @@
 
   --opacity-input-border--focused: 0.5;
   --opacity-input-border--valid: 0.4;
-  --opacity-input-border--invalid: 0.25;
+  --opacity-input-border--invalid: 0.75;
 }
