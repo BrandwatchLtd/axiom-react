@@ -22,16 +22,34 @@ export default class TextInputIconWrapper extends Component {
     onClick: PropTypes.func,
     /** Optional tooltip for the icon. */
     tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+    /** Optional tooltip color. Default is "carbon" */
+    tooltipColor: PropTypes.oneOf([
+      "success",
+      "warning",
+      "error",
+      "info",
+      "carbon",
+      "white",
+    ]),
   };
 
   static defaultProps = {
     align: "right",
+    tooltipColor: "carbon",
   };
 
   static typeRef = TextInputIconWrapperRef;
 
   render() {
-    const { align, onClick, tooltip, children, ...rest } = this.props;
+    const {
+      align,
+      onClick,
+      tooltip,
+      children,
+      tooltipColor,
+      ...rest
+    } = this.props;
+
     const className = classnames("ax-input__icon", {
       [`ax-input__icon--align-${align}`]: align,
     });
@@ -43,7 +61,7 @@ export default class TextInputIconWrapper extends Component {
           {isComponent(tooltip, TooltipContextRef) ? (
             tooltip
           ) : (
-            <TooltipContext>
+            <TooltipContext color={tooltipColor}>
               <TooltipContent size="tiny">{tooltip}</TooltipContent>
             </TooltipContext>
           )}

@@ -17,18 +17,36 @@ export default class TextInputIcon extends Component {
     onClick: PropTypes.func,
     /** Optional tooltip for the icon. */
     tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+    /** Optional tooltip color. Default is "carbon" */
+    tooltipColor: PropTypes.oneOf([
+      "success",
+      "warning",
+      "error",
+      "info",
+      "carbon",
+      "white",
+    ]),
   };
 
   static typeRef = TextInputIconRef;
 
   render() {
-    const { align, iconColor, name, onClick, tooltip, ...rest } = this.props;
+    const {
+      align,
+      iconColor,
+      name,
+      onClick,
+      tooltip,
+      tooltipColor,
+      ...rest
+    } = this.props;
 
     return (
       <TextInputIconWrapper
         align={align}
         onClick={onClick}
         tooltip={tooltip}
+        tooltipColor={tooltipColor}
         {...rest}
       >
         <Icon name={name} textColor={iconColor} size="1rem" />
