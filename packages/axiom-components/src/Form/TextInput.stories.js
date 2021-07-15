@@ -78,7 +78,7 @@ export function WithTooltipIcon() {
       <TextInputIcon
         align="right"
         iconColor="error"
-        name="information-circle"
+        name="warning-circle"
         tooltip="This username exists, please select a different one"
       />
     </TextInput>
