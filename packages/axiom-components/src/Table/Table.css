@@ -41,13 +41,13 @@
 }
 
 .ax-table__cell--horizontal-padding-none {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .ax-table__cell--horizontal-padding-medium {
-  padding-top: var(--spacing-grid-size--x4);
-  padding-bottom: var(--spacing-grid-size--x4);
+  padding-right: var(--spacing-grid-size--x4);
+  padding-left: var(--spacing-grid-size--x4);
 }
 
 .ax-table__cell--vertical-padding-none {
