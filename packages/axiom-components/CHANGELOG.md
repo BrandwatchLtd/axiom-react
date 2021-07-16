@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.9.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.8.1...@brandwatch/axiom-components@13.9.0) (2021-07-16)
+
+
+### Features
+
+* Use dark tooltips for text input icons ([7eba13e](https://github.com/BrandwatchLtd/axiom-react/commit/7eba13e32c2cc85c76d411422e9964b6253b4eaa))
+* Use warning-circle for invalid TextInputs ([b1d8e14](https://github.com/BrandwatchLtd/axiom-react/commit/b1d8e14a28fbea92b1b27e8c0ac337987f722c6f))
+* **usagehint:** Allow usage of space on UsageHint Icon ([eb1fc04](https://github.com/BrandwatchLtd/axiom-react/commit/eb1fc043d73f989be6f2e92ccc6c470e9dd55834))
+
+
+
+
+
 ## [13.8.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-components@13.8.0...@brandwatch/axiom-components@13.8.1) (2021-06-16)
 
 **Note:** Version bump only for package @brandwatch/axiom-components

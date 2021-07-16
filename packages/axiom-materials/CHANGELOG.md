@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.36.0](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.35.1...@brandwatch/axiom-materials@1.36.0) (2021-07-16)
+
+
+### Features
+
+* Set opacity-input-border--invalid to 0.75 ([0024075](https://github.com/BrandwatchLtd/axiom-react/commit/002407588c0c6b2b0a437fa18a1684930bd56a76))
+
+
+
+
+
 ## [1.35.1](https://github.com/BrandwatchLtd/axiom-react/compare/@brandwatch/axiom-materials@1.35.0...@brandwatch/axiom-materials@1.35.1) (2021-06-16)
 
 
