@@ -48,6 +48,7 @@
     "caniuse-lite": "^1.0.30000697",
     "color": "^3.1.0",
     "commitlint": "^8.3.5",
+    "css-global-variables": "^3.0.2",
     "css-loader": "^0.23.1",
     "d3-cloud": "^1.2.5",
     "ejs": "^2.5.2",
